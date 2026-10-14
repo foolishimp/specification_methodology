@@ -1,0 +1,4369 @@
+{
+  "indexes": 720,
+  "definition": "Exact canonical native projection-file byte sizes, including final newline; computed from fixed closure and native output fields, verified against fresh native projections below. No token/context/performance claim.",
+  "metrics": {
+    "clauses": {
+      "min": 108,
+      "median": 110.0,
+      "max": 165
+    },
+    "reference_only_bytes": {
+      "min": 1223986,
+      "median": 1240692.0,
+      "max": 1866150
+    },
+    "materialized_bytes": {
+      "min": 2407167,
+      "median": 2439621.0,
+      "max": 3677672
+    }
+  },
+  "fresh_checks": [
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.good-prose",
+      "clauses": 110,
+      "bytes": {
+        "reference-only": 1237620,
+        "materialized": 2433933
+      }
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.result-conjunction",
+      "clauses": 108,
+      "bytes": {
+        "reference-only": 1224101,
+        "materialized": 2407282
+      }
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.epistemic-status-of-the-construct",
+      "clauses": 129,
+      "bytes": {
+        "reference-only": 1339525,
+        "materialized": 2621285
+      }
+    }
+  ],
+  "all_indexes": [
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-001-closed-signature",
+      "clauses": 109,
+      "reference_only_bytes": 1229587,
+      "materialized_bytes": 2417868
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-002-scoped-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1229501,
+      "materialized_bytes": 2417709
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-003-reference-closure",
+      "clauses": 109,
+      "reference_only_bytes": 1229730,
+      "materialized_bytes": 2418141
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-004-relation-typing",
+      "clauses": 109,
+      "reference_only_bytes": 1229493,
+      "materialized_bytes": 2417693
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-005-authority-conservation",
+      "clauses": 109,
+      "reference_only_bytes": 1229719,
+      "materialized_bytes": 2418054
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-006-basis-coherence",
+      "clauses": 109,
+      "reference_only_bytes": 1229481,
+      "materialized_bytes": 2417669
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-007-constraint-and-refusal",
+      "clauses": 108,
+      "reference_only_bytes": 1224294,
+      "materialized_bytes": 2407475
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-008-explicit-latitude",
+      "clauses": 109,
+      "reference_only_bytes": 1230241,
+      "materialized_bytes": 2419163
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-009-residual-conservation",
+      "clauses": 109,
+      "reference_only_bytes": 1230327,
+      "materialized_bytes": 2419283
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-010-material-closure",
+      "clauses": 108,
+      "reference_only_bytes": 1224228,
+      "materialized_bytes": 2407409
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-011-projection",
+      "clauses": 108,
+      "reference_only_bytes": 1224162,
+      "materialized_bytes": 2407343
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-012-overlay",
+      "clauses": 109,
+      "reference_only_bytes": 1230204,
+      "materialized_bytes": 2419219
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-013-transformation",
+      "clauses": 109,
+      "reference_only_bytes": 1235464,
+      "materialized_bytes": 2429648
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-014-judgment-separation",
+      "clauses": 108,
+      "reference_only_bytes": 1224261,
+      "materialized_bytes": 2407442
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-015-functor-classification",
+      "clauses": 108,
+      "reference_only_bytes": 1224294,
+      "materialized_bytes": 2407475
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-016-typed-composition",
+      "clauses": 108,
+      "reference_only_bytes": 1224245,
+      "materialized_bytes": 2407426
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-017-interpretation-fidelity",
+      "clauses": 108,
+      "reference_only_bytes": 1224311,
+      "materialized_bytes": 2407492
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-018-structural-and-semantic-separation",
+      "clauses": 108,
+      "reference_only_bytes": 1224426,
+      "materialized_bytes": 2407607
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-019-valid-model",
+      "clauses": 108,
+      "reference_only_bytes": 1224173,
+      "materialized_bytes": 2407354
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-020-layer-and-release-separation",
+      "clauses": 108,
+      "reference_only_bytes": 1224360,
+      "materialized_bytes": 2407541
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.application-boundary",
+      "clauses": 109,
+      "reference_only_bytes": 1228685,
+      "materialized_bytes": 2416097
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.conformance-obligations",
+      "clauses": 109,
+      "reference_only_bytes": 1229783,
+      "materialized_bytes": 2418260
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.constraint",
+      "clauses": 110,
+      "reference_only_bytes": 1239756,
+      "materialized_bytes": 2438453
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.core-signature",
+      "clauses": 109,
+      "reference_only_bytes": 1234845,
+      "materialized_bytes": 2428660
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.derivation-provenance",
+      "clauses": 108,
+      "reference_only_bytes": 1224212,
+      "materialized_bytes": 2407393
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.exact-calculus-identity",
+      "clauses": 108,
+      "reference_only_bytes": 1224233,
+      "materialized_bytes": 2407414
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.exclusions",
+      "clauses": 110,
+      "reference_only_bytes": 1232249,
+      "materialized_bytes": 2423448
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.external-imports-and-specializations",
+      "clauses": 110,
+      "reference_only_bytes": 1233685,
+      "materialized_bytes": 2425636
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.fundamental-laws",
+      "clauses": 108,
+      "reference_only_bytes": 1224156,
+      "materialized_bytes": 2407337
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.interpretation-and-models",
+      "clauses": 108,
+      "reference_only_bytes": 1224255,
+      "materialized_bytes": 2407436
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.latitude",
+      "clauses": 110,
+      "reference_only_bytes": 1239567,
+      "materialized_bytes": 2438099
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.position",
+      "clauses": 108,
+      "reference_only_bytes": 1224068,
+      "materialized_bytes": 2407249
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.residual",
+      "clauses": 110,
+      "reference_only_bytes": 1239959,
+      "materialized_bytes": 2438883
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.scope",
+      "clauses": 109,
+      "reference_only_bytes": 1228208,
+      "materialized_bytes": 2415494
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.semantic-object",
+      "clauses": 110,
+      "reference_only_bytes": 1239462,
+      "materialized_bytes": 2437805
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.subject-and-carrier-boundaries",
+      "clauses": 108,
+      "reference_only_bytes": 1224305,
+      "materialized_bytes": 2407486
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.traversals-and-functor-kinds",
+      "clauses": 108,
+      "reference_only_bytes": 1224288,
+      "materialized_bytes": 2407469
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.typed-records",
+      "clauses": 110,
+      "reference_only_bytes": 1238821,
+      "materialized_bytes": 2436547
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.typed-relation",
+      "clauses": 110,
+      "reference_only_bytes": 1239520,
+      "materialized_bytes": 2437933
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239085,
+      "materialized_bytes": 2436829
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.references.GETTING_STARTED.md",
+      "clauses": 109,
+      "reference_only_bytes": 1240733,
+      "materialized_bytes": 2440133
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239569,
+      "materialized_bytes": 2437831
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.references.REFRESH.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239432,
+      "materialized_bytes": 2437635
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239605,
+      "materialized_bytes": 2437934
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+      "clauses": 109,
+      "reference_only_bytes": 1240058,
+      "materialized_bytes": 2438814
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239795,
+      "materialized_bytes": 2438288
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239952,
+      "materialized_bytes": 2438602
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-work.SKILL.md",
+      "clauses": 108,
+      "reference_only_bytes": 1224211,
+      "materialized_bytes": 2407392
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.schemas.installed-release-manifest.schema.json",
+      "clauses": 109,
+      "reference_only_bytes": 1236463,
+      "materialized_bytes": 2431410
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.schemas.product-definition.schema.json",
+      "clauses": 109,
+      "reference_only_bytes": 1236311,
+      "materialized_bytes": 2431210
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.AGENTS_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239731,
+      "materialized_bytes": 2438175
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.CLAUDE_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239731,
+      "materialized_bytes": 2438175
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.GOALS_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239350,
+      "materialized_bytes": 2437426
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.INTENT_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239304,
+      "materialized_bytes": 2437321
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.PRODUCT_DEFINITION_TEMPLATE.json",
+      "clauses": 109,
+      "reference_only_bytes": 1240300,
+      "materialized_bytes": 2439131
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.PRODUCT_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1239552,
+      "materialized_bytes": 2437804
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1241811,
+      "materialized_bytes": 2442036
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.README.md",
+      "clauses": 109,
+      "reference_only_bytes": 1241055,
+      "materialized_bytes": 2440940
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.TENANT_REGISTRY_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1241109,
+      "materialized_bytes": 2440637
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.common.README_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1240928,
+      "materialized_bytes": 2440306
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.common.design.README_TEMPLATE.md",
+      "clauses": 109,
+      "reference_only_bytes": 1241049,
+      "materialized_bytes": 2440462
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.common.design.adrs.ADR_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1260093,
+      "materialized_bytes": 2478059
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.common.design.adrs.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1260147,
+      "materialized_bytes": 2478128
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259304,
+      "materialized_bytes": 2476575
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259673,
+      "materialized_bytes": 2477227
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.adrs.ADR_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1260111,
+      "materialized_bytes": 2478082
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.adrs.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1260165,
+      "materialized_bytes": 2478151
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.fp.INTENT_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259885,
+      "materialized_bytes": 2477617
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.fp.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259885,
+      "materialized_bytes": 2477617
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.fp.edge-overrides.EDGE_OVERRIDE_TEMPLATE.json",
+      "clauses": 111,
+      "reference_only_bytes": 1260312,
+      "materialized_bytes": 2478164
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.build_tenants.variant.design.fp.edge-overrides.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1260150,
+      "materialized_bytes": 2477957
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.docs.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1258974,
+      "materialized_bytes": 2476131
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.requirements.README_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259283,
+      "materialized_bytes": 2476645
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:CARRIER.standards.templates.requirements.STARTER_REQUIREMENTS_TEMPLATE.md",
+      "clauses": 111,
+      "reference_only_bytes": 1259535,
+      "materialized_bytes": 2476967
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.1-authority-seam-closure",
+      "clauses": 110,
+      "reference_only_bytes": 1242722,
+      "materialized_bytes": 2443834
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.1-purpose",
+      "clauses": 113,
+      "reference_only_bytes": 1268375,
+      "materialized_bytes": 2494614
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.10-no-semantic-center-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1231980,
+      "materialized_bytes": 2422589
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.11-coupling-rule",
+      "clauses": 111,
+      "reference_only_bytes": 1251354,
+      "materialized_bytes": 2460937
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232868,
+      "materialized_bytes": 2424209
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.11b-opportunistic-optimization-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233860,
+      "materialized_bytes": 2426232
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.11c-recurrence-extraction-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1245520,
+      "materialized_bytes": 2449330
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.11d-post-ticket-design-review-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1235362,
+      "materialized_bytes": 2429249
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.12-interface-bleed-prohibition",
+      "clauses": 109,
+      "reference_only_bytes": 1232737,
+      "materialized_bytes": 2424051
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.13-proxy-interface-prohibition",
+      "clauses": 109,
+      "reference_only_bytes": 1232262,
+      "materialized_bytes": 2423101
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.14-design-review-questions",
+      "clauses": 121,
+      "reference_only_bytes": 1350003,
+      "materialized_bytes": 2655285
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.14a-functional-realization-review-checklist",
+      "clauses": 117,
+      "reference_only_bytes": 1309408,
+      "materialized_bytes": 2575124
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.15-adoption-guidance",
+      "clauses": 109,
+      "reference_only_bytes": 1234322,
+      "materialized_bytes": 2427351
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.16-relationship-to-other-method-surfaces",
+      "clauses": 114,
+      "reference_only_bytes": 1275609,
+      "materialized_bytes": 2508402
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.17-non-goals",
+      "clauses": 112,
+      "reference_only_bytes": 1260249,
+      "materialized_bytes": 2478424
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.2-essential-carrier-consolidation",
+      "clauses": 111,
+      "reference_only_bytes": 1254241,
+      "materialized_bytes": 2466462
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.2-position",
+      "clauses": 112,
+      "reference_only_bytes": 1260337,
+      "materialized_bytes": 2478692
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.3-core-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232149,
+      "materialized_bytes": 2423122
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.3-enforcement-after-proof",
+      "clauses": 110,
+      "reference_only_bytes": 1241690,
+      "materialized_bytes": 2441757
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.3a-odd-alignment-and-escalation-rule",
+      "clauses": 117,
+      "reference_only_bytes": 1303426,
+      "materialized_bytes": 2563359
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.3b-boundary-closure-evaluators",
+      "clauses": 115,
+      "reference_only_bytes": 1290928,
+      "materialized_bytes": 2538795
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.3b-ingress-collapse-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232932,
+      "materialized_bytes": 2424519
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.4-functional-bias-without-language-mandate",
+      "clauses": 111,
+      "reference_only_bytes": 1252134,
+      "materialized_bytes": 2462171
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.4a-python-typing-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1242912,
+      "materialized_bytes": 2444253
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.4b-ontology-first-design-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1235174,
+      "materialized_bytes": 2428938
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5-prime-law",
+      "clauses": 112,
+      "reference_only_bytes": 1261811,
+      "materialized_bytes": 2481553
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5a-irreducible-architectural-carrier-set-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1244715,
+      "materialized_bytes": 2447561
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5b-promotion-test",
+      "clauses": 110,
+      "reference_only_bytes": 1244407,
+      "materialized_bytes": 2447253
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5c-boundary-inflation-prohibition",
+      "clauses": 111,
+      "reference_only_bytes": 1253856,
+      "materialized_bytes": 2465692
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5d-reference-derived-module-design-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1234102,
+      "materialized_bytes": 2426664
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5e-ontology-and-three-view-behavioral-design-gate",
+      "clauses": 108,
+      "reference_only_bytes": 1224536,
+      "materialized_bytes": 2407717
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.5f-theoretical-framing-for-boundary-law",
+      "clauses": 109,
+      "reference_only_bytes": 1232463,
+      "materialized_bytes": 2423379
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.6-design-module-taxonomy",
+      "clauses": 109,
+      "reference_only_bytes": 1232747,
+      "materialized_bytes": 2424142
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+      "clauses": 110,
+      "reference_only_bytes": 1246898,
+      "materialized_bytes": 2451663
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1246557,
+      "materialized_bytes": 2451322
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.6c-module-lifecycle-confirmation-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233430,
+      "materialized_bytes": 2425346
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.7-immutable-carrier-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232098,
+      "materialized_bytes": 2422851
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.8-totality-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233791,
+      "materialized_bytes": 2426354
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.9-effect-edge-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233908,
+      "materialized_bytes": 2426549
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.admission-contract-use",
+      "clauses": 108,
+      "reference_only_bytes": 1224239,
+      "materialized_bytes": 2407420
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.atomic-functions-and-higher-order-composition",
+      "clauses": 111,
+      "reference_only_bytes": 1252431,
+      "materialized_bytes": 2462666
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.authority-model",
+      "clauses": 108,
+      "reference_only_bytes": 1224162,
+      "materialized_bytes": 2407343
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.boundary-and-governance-cost-stdo-up-005",
+      "clauses": 113,
+      "reference_only_bytes": 1270238,
+      "materialized_bytes": 2497791
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+      "clauses": 108,
+      "reference_only_bytes": 1224415,
+      "materialized_bytes": 2407596
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.capability-and-foundation-selection-stdo-up-023",
+      "clauses": 110,
+      "reference_only_bytes": 1246183,
+      "materialized_bytes": 2450385
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.computational-realization-projection-stdo-up-019",
+      "clauses": 108,
+      "reference_only_bytes": 1224525,
+      "materialized_bytes": 2407706
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.cross-view-axiom-evaluation",
+      "clauses": 108,
+      "reference_only_bytes": 1224294,
+      "materialized_bytes": 2407475
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.decision-complete-symbolic-design",
+      "clauses": 108,
+      "reference_only_bytes": 1224360,
+      "materialized_bytes": 2407541
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.domain-model",
+      "clauses": 109,
+      "reference_only_bytes": 1233167,
+      "materialized_bytes": 2425138
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.entity-and-lifecycle-completeness",
+      "clauses": 112,
+      "reference_only_bytes": 1263773,
+      "materialized_bytes": 2485235
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.gate-and-retrospective-work",
+      "clauses": 108,
+      "reference_only_bytes": 1224294,
+      "materialized_bytes": 2407475
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.governing-relations",
+      "clauses": 108,
+      "reference_only_bytes": 1224206,
+      "materialized_bytes": 2407387
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.iacs-revision-obligation",
+      "clauses": 112,
+      "reference_only_bytes": 1262702,
+      "materialized_bytes": 2483218
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "clauses": 109,
+      "reference_only_bytes": 1235536,
+      "materialized_bytes": 2429415
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.native-constructability-before-design-acceptance-stdo-up-002",
+      "clauses": 110,
+      "reference_only_bytes": 1246326,
+      "materialized_bytes": 2450528
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.ontology-evidence",
+      "clauses": 109,
+      "reference_only_bytes": 1232420,
+      "materialized_bytes": 2423586
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.ontology-projection-law",
+      "clauses": 108,
+      "reference_only_bytes": 1224250,
+      "materialized_bytes": 2407431
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.prime-semantic-atoms-and-universal-domain",
+      "clauses": 110,
+      "reference_only_bytes": 1241987,
+      "materialized_bytes": 2442124
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "clauses": 108,
+      "reference_only_bytes": 1224327,
+      "materialized_bytes": 2407508
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.recursive-prime-and-root-conservation-stdo-up-003",
+      "clauses": 111,
+      "reference_only_bytes": 1251230,
+      "materialized_bytes": 2460212
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.sequence-model",
+      "clauses": 109,
+      "reference_only_bytes": 1233139,
+      "materialized_bytes": 2425056
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.state-model",
+      "clauses": 109,
+      "reference_only_bytes": 1231959,
+      "materialized_bytes": 2422735
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+      "clauses": 108,
+      "reference_only_bytes": 1224536,
+      "materialized_bytes": 2407717
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.whole-family-prime-contraction",
+      "clauses": 110,
+      "reference_only_bytes": 1241861,
+      "materialized_bytes": 2441998
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.bounded-construction",
+      "clauses": 108,
+      "reference_only_bytes": 1224124,
+      "materialized_bytes": 2407305
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.canonical-transformations",
+      "clauses": 109,
+      "reference_only_bytes": 1229457,
+      "materialized_bytes": 2417673
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.configuration",
+      "clauses": 108,
+      "reference_only_bytes": 1224047,
+      "materialized_bytes": 2407228
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.construction-and-use",
+      "clauses": 109,
+      "reference_only_bytes": 1229677,
+      "materialized_bytes": 2418178
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.core-contract-derivations",
+      "clauses": 109,
+      "reference_only_bytes": 1228840,
+      "materialized_bytes": 2416602
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.finite-capacity-and-total-handling",
+      "clauses": 110,
+      "reference_only_bytes": 1243368,
+      "materialized_bytes": 2445131
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.foundational-commitments",
+      "clauses": 108,
+      "reference_only_bytes": 1224167,
+      "materialized_bytes": 2407348
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.identity-state-and-evidence",
+      "clauses": 108,
+      "reference_only_bytes": 1224195,
+      "materialized_bytes": 2407376
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.interpretation-and-representation",
+      "clauses": 109,
+      "reference_only_bytes": 1232245,
+      "materialized_bytes": 2423145
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.judgment-and-authority",
+      "clauses": 108,
+      "reference_only_bytes": 1224140,
+      "materialized_bytes": 2407321
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.orthogonal-descriptions",
+      "clauses": 108,
+      "reference_only_bytes": 1224156,
+      "materialized_bytes": 2407337
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.premises-and-standing",
+      "clauses": 108,
+      "reference_only_bytes": 1224129,
+      "materialized_bytes": 2407310
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.purpose-and-interfaces",
+      "clauses": 108,
+      "reference_only_bytes": 1224146,
+      "materialized_bytes": 2407327
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.reference-only-semantic-imports",
+      "clauses": 110,
+      "reference_only_bytes": 1237054,
+      "materialized_bytes": 2432882
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.result-algebra",
+      "clauses": 108,
+      "reference_only_bytes": 1224057,
+      "materialized_bytes": 2407238
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.result-conjunction",
+      "clauses": 108,
+      "reference_only_bytes": 1224101,
+      "materialized_bytes": 2407282
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.stdo-foundations",
+      "clauses": 109,
+      "reference_only_bytes": 1229808,
+      "materialized_bytes": 2418486
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.typed-composition-and-conservation",
+      "clauses": 108,
+      "reference_only_bytes": 1224272,
+      "materialized_bytes": 2407453
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.workspace-and-context",
+      "clauses": 108,
+      "reference_only_bytes": 1224135,
+      "materialized_bytes": 2407316
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.1-scoped-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1231098,
+      "materialized_bytes": 2421007
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.2-uniqueness-law",
+      "clauses": 109,
+      "reference_only_bytes": 1230620,
+      "materialized_bytes": 2420064
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.3-type-law",
+      "clauses": 109,
+      "reference_only_bytes": 1230606,
+      "materialized_bytes": 2420114
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.4-stability-law",
+      "clauses": 109,
+      "reference_only_bytes": 1230677,
+      "materialized_bytes": 2420191
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+      "clauses": 108,
+      "reference_only_bytes": 1224459,
+      "materialized_bytes": 2407640
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.consequence-for-implementations",
+      "clauses": 110,
+      "reference_only_bytes": 1239501,
+      "materialized_bytes": 2437402
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.defaults-from-a-bound-abg-realization",
+      "clauses": 110,
+      "reference_only_bytes": 1236152,
+      "materialized_bytes": 2430779
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.derivation-verification-material",
+      "clauses": 108,
+      "reference_only_bytes": 1224294,
+      "materialized_bytes": 2407475
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.derived-domain-overrides",
+      "clauses": 109,
+      "reference_only_bytes": 1230909,
+      "materialized_bytes": 2420538
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.domain-owned-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1230855,
+      "materialized_bytes": 2420469
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.engine-owned-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1230981,
+      "materialized_bytes": 2420721
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.governing-relations",
+      "clauses": 108,
+      "reference_only_bytes": 1224151,
+      "materialized_bytes": 2407332
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.human-readable-vs-opaque-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1231178,
+      "materialized_bytes": 2420959
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.identity-hierarchy",
+      "clauses": 110,
+      "reference_only_bytes": 1236505,
+      "materialized_bytes": 2431727
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.lawful",
+      "clauses": 110,
+      "reference_only_bytes": 1236514,
+      "materialized_bytes": 2431741
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.minimum-questions",
+      "clauses": 109,
+      "reference_only_bytes": 1228960,
+      "materialized_bytes": 2416731
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.override-publication-surface",
+      "clauses": 109,
+      "reference_only_bytes": 1231138,
+      "materialized_bytes": 2420944
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.parsing-law",
+      "clauses": 109,
+      "reference_only_bytes": 1233811,
+      "materialized_bytes": 2426511
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.position",
+      "clauses": 111,
+      "reference_only_bytes": 1243830,
+      "materialized_bytes": 2446258
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.release-version-boundary",
+      "clauses": 109,
+      "reference_only_bytes": 1231087,
+      "materialized_bytes": 2420894
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:IDENTITY_METHOD.unlawful",
+      "clauses": 110,
+      "reference_only_bytes": 1236540,
+      "materialized_bytes": 2431767
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.1-position",
+      "clauses": 112,
+      "reference_only_bytes": 1261364,
+      "materialized_bytes": 2480989
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.10-what-an-odd-product-is",
+      "clauses": 115,
+      "reference_only_bytes": 1284697,
+      "materialized_bytes": 2526733
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.11-core-law",
+      "clauses": 115,
+      "reference_only_bytes": 1315788,
+      "materialized_bytes": 2588952
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.111-typed-assets-and-nodes-are-explicit",
+      "clauses": 111,
+      "reference_only_bytes": 1248439,
+      "materialized_bytes": 2455024
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.112-graph-functions-are-the-primary-constructive-carrier",
+      "clauses": 112,
+      "reference_only_bytes": 1257226,
+      "materialized_bytes": 2472144
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.112a-outcome-first-realization-order",
+      "clauses": 113,
+      "reference_only_bytes": 1266603,
+      "materialized_bytes": 2490849
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.113-the-function-catalog-is-published",
+      "clauses": 113,
+      "reference_only_bytes": 1265328,
+      "materialized_bytes": 2488288
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.114-the-gtl-module-is-the-operative-publication-surface",
+      "clauses": 112,
+      "reference_only_bytes": 1257616,
+      "materialized_bytes": 2472937
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.115-current-state-is-a-projection-over-constructive-history",
+      "clauses": 111,
+      "reference_only_bytes": 1251228,
+      "materialized_bytes": 2460290
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.115a-abg-owns-continuation-and-re-entry",
+      "clauses": 112,
+      "reference_only_bytes": 1259860,
+      "materialized_bytes": 2477613
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.115b-execution-authority-audit",
+      "clauses": 111,
+      "reference_only_bytes": 1251098,
+      "materialized_bytes": 2460463
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.115c-projection-source-coherence",
+      "clauses": 110,
+      "reference_only_bytes": 1241414,
+      "materialized_bytes": 2441274
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "clauses": 110,
+      "reference_only_bytes": 1272006,
+      "materialized_bytes": 2502315
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.116-product-specific-semantics-sit-above-the-shared-carrier",
+      "clauses": 113,
+      "reference_only_bytes": 1267167,
+      "materialized_bytes": 2491746
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.117-manual-walkthrough-must-still-be-lawful",
+      "clauses": 113,
+      "reference_only_bytes": 1266981,
+      "materialized_bytes": 2491576
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.117a-conforming-agentic-development",
+      "clauses": 115,
+      "reference_only_bytes": 1318093,
+      "materialized_bytes": 2593338
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.117b-real-authority-path-negative-proof-stdo-up-010",
+      "clauses": 112,
+      "reference_only_bytes": 1260226,
+      "materialized_bytes": 2478189
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+      "clauses": 110,
+      "reference_only_bytes": 1241981,
+      "materialized_bytes": 2442265
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.119-global-convergence-must-be-stable-under-zoom",
+      "clauses": 111,
+      "reference_only_bytes": 1282128,
+      "materialized_bytes": 2522211
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.12-scenario-rule",
+      "clauses": 112,
+      "reference_only_bytes": 1290091,
+      "materialized_bytes": 2538260
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.13-installed-dev-rule",
+      "clauses": 112,
+      "reference_only_bytes": 1258293,
+      "materialized_bytes": 2474693
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.14-dogfooding-rule",
+      "clauses": 115,
+      "reference_only_bytes": 1283287,
+      "materialized_bytes": 2523935
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.15-release-boundary",
+      "clauses": 110,
+      "reference_only_bytes": 1241195,
+      "materialized_bytes": 2441005
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.16-failure-pattern",
+      "clauses": 115,
+      "reference_only_bytes": 1316876,
+      "materialized_bytes": 2591045
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.17-invocation-rule",
+      "clauses": 115,
+      "reference_only_bytes": 1314270,
+      "materialized_bytes": 2585865
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.18-cold-start-reading-order",
+      "clauses": 114,
+      "reference_only_bytes": 1274382,
+      "materialized_bytes": 2506329
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.19-ramp-up-checklist",
+      "clauses": 116,
+      "reference_only_bytes": 1325460,
+      "materialized_bytes": 2607960
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.2-method-role",
+      "clauses": 111,
+      "reference_only_bytes": 1250901,
+      "materialized_bytes": 2460249
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.20-canonical-compression",
+      "clauses": 111,
+      "reference_only_bytes": 1279499,
+      "materialized_bytes": 2517253
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.3-method-composition",
+      "clauses": 111,
+      "reference_only_bytes": 1250978,
+      "materialized_bytes": 2460326
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.4-method-folder-semantics",
+      "clauses": 110,
+      "reference_only_bytes": 1241532,
+      "materialized_bytes": 2441601
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.5-graph-model",
+      "clauses": 113,
+      "reference_only_bytes": 1263619,
+      "materialized_bytes": 2485273
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.6-product-boundary",
+      "clauses": 111,
+      "reference_only_bytes": 1250248,
+      "materialized_bytes": 2458870
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.7-self-host-boundary-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1241153,
+      "materialized_bytes": 2440843
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.8-responsibility-layers-and-local-binding",
+      "clauses": 112,
+      "reference_only_bytes": 1258841,
+      "materialized_bytes": 2475569
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.9-method-governance-and-audit",
+      "clauses": 112,
+      "reference_only_bytes": 1261588,
+      "materialized_bytes": 2481199
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.abg",
+      "clauses": 111,
+      "reference_only_bytes": 1250806,
+      "materialized_bytes": 2460171
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.general-odd-product",
+      "clauses": 112,
+      "reference_only_bytes": 1258548,
+      "materialized_bytes": 2475239
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.governing-relations",
+      "clauses": 109,
+      "reference_only_bytes": 1233131,
+      "materialized_bytes": 2425112
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.graph-functions",
+      "clauses": 111,
+      "reference_only_bytes": 1248783,
+      "materialized_bytes": 2456013
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.nodes",
+      "clauses": 110,
+      "reference_only_bytes": 1240101,
+      "materialized_bytes": 2438992
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.odd-method",
+      "clauses": 110,
+      "reference_only_bytes": 1239723,
+      "materialized_bytes": 2438166
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.odd-product",
+      "clauses": 112,
+      "reference_only_bytes": 1258316,
+      "materialized_bytes": 2474882
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.probabilistic-compute",
+      "clauses": 110,
+      "reference_only_bytes": 1246820,
+      "materialized_bytes": 2452229
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.product-realization-software-development-topology",
+      "clauses": 110,
+      "reference_only_bytes": 1240711,
+      "materialized_bytes": 2439640
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.product-specification-software-development-topology",
+      "clauses": 110,
+      "reference_only_bytes": 1240765,
+      "materialized_bytes": 2439722
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.query-and-service-layers",
+      "clauses": 111,
+      "reference_only_bytes": 1249498,
+      "materialized_bytes": 2457278
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.traversal",
+      "clauses": 113,
+      "reference_only_bytes": 1267325,
+      "materialized_bytes": 2492651
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.vectors",
+      "clauses": 111,
+      "reference_only_bytes": 1248695,
+      "materialized_bytes": 2455925
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.world-model-product",
+      "clauses": 113,
+      "reference_only_bytes": 1266729,
+      "materialized_bytes": 2491364
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.boundary",
+      "clauses": 109,
+      "reference_only_bytes": 1232970,
+      "materialized_bytes": 2424894
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.carrier-identity",
+      "clauses": 110,
+      "reference_only_bytes": 1239391,
+      "materialized_bytes": 2437406
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.categories",
+      "clauses": 110,
+      "reference_only_bytes": 1238774,
+      "materialized_bytes": 2436250
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.discussion-state-and-mutability",
+      "clauses": 110,
+      "reference_only_bytes": 1240751,
+      "materialized_bytes": 2439931
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.location",
+      "clauses": 110,
+      "reference_only_bytes": 1239573,
+      "materialized_bytes": 2437874
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.posting-guide",
+      "clauses": 110,
+      "reference_only_bytes": 1239834,
+      "materialized_bytes": 2438331
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.posting-rules",
+      "clauses": 110,
+      "reference_only_bytes": 1238871,
+      "materialized_bytes": 2436412
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.ratification",
+      "clauses": 110,
+      "reference_only_bytes": 1239710,
+      "materialized_bytes": 2438103
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.shared-method-adoption-and-propagation-stdo-up-012",
+      "clauses": 112,
+      "reference_only_bytes": 1262340,
+      "materialized_bytes": 2482335
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:POSTING_GUIDE.structure",
+      "clauses": 110,
+      "reference_only_bytes": 1239497,
+      "materialized_bytes": 2437709
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.activated-frame",
+      "clauses": 109,
+      "reference_only_bytes": 1226958,
+      "materialized_bytes": 2412826
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.active-frame-configuration",
+      "clauses": 109,
+      "reference_only_bytes": 1227202,
+      "materialized_bytes": 2413182
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.agentic-use",
+      "clauses": 114,
+      "reference_only_bytes": 1271418,
+      "materialized_bytes": 2500261
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.anti-patterns",
+      "clauses": 109,
+      "reference_only_bytes": 1229331,
+      "materialized_bytes": 2417434
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.applicability-and-required-results",
+      "clauses": 108,
+      "reference_only_bytes": 1224393,
+      "materialized_bytes": 2407574
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.authority",
+      "clauses": 109,
+      "reference_only_bytes": 1229728,
+      "materialized_bytes": 2418438
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.authority-coverage",
+      "clauses": 110,
+      "reference_only_bytes": 1233796,
+      "materialized_bytes": 2426223
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.basis",
+      "clauses": 109,
+      "reference_only_bytes": 1227028,
+      "materialized_bytes": 2413086
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.canonical-compression",
+      "clauses": 114,
+      "reference_only_bytes": 1281218,
+      "materialized_bytes": 2520158
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.capability-envelope",
+      "clauses": 109,
+      "reference_only_bytes": 1227299,
+      "materialized_bytes": 2413460
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.closure",
+      "clauses": 114,
+      "reference_only_bytes": 1270037,
+      "materialized_bytes": 2498323
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.completeness-boundary",
+      "clauses": 110,
+      "reference_only_bytes": 1234559,
+      "materialized_bytes": 2427705
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.coordinate",
+      "clauses": 109,
+      "reference_only_bytes": 1227151,
+      "materialized_bytes": 2413272
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.core-claims",
+      "clauses": 109,
+      "reference_only_bytes": 1228464,
+      "materialized_bytes": 2415886
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.coverage-basis",
+      "clauses": 109,
+      "reference_only_bytes": 1228827,
+      "materialized_bytes": 2416576
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.coverage-dimensions",
+      "clauses": 110,
+      "reference_only_bytes": 1231236,
+      "materialized_bytes": 2421263
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.coverage-ledger",
+      "clauses": 112,
+      "reference_only_bytes": 1258444,
+      "materialized_bytes": 2475361
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.diagnostic-order",
+      "clauses": 110,
+      "reference_only_bytes": 1233726,
+      "materialized_bytes": 2425922
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.disjointness-and-independence",
+      "clauses": 108,
+      "reference_only_bytes": 1224343,
+      "materialized_bytes": 2407524
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.engagement-atom-and-semantic-prime",
+      "clauses": 110,
+      "reference_only_bytes": 1237239,
+      "materialized_bytes": 2432877
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.establish-the-evaluation-basis",
+      "clauses": 110,
+      "reference_only_bytes": 1234506,
+      "materialized_bytes": 2427481
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.evaluate",
+      "clauses": 109,
+      "reference_only_bytes": 1228455,
+      "materialized_bytes": 2415747
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.evaluation",
+      "clauses": 108,
+      "reference_only_bytes": 1224134,
+      "materialized_bytes": 2407315
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.evaluation-inventory",
+      "clauses": 109,
+      "reference_only_bytes": 1229560,
+      "materialized_bytes": 2417801
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.evidence",
+      "clauses": 109,
+      "reference_only_bytes": 1226820,
+      "materialized_bytes": 2412634
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.evidence-or-coordinate-translation",
+      "clauses": 108,
+      "reference_only_bytes": 1224393,
+      "materialized_bytes": 2407574
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.failure-coverage",
+      "clauses": 110,
+      "reference_only_bytes": 1233943,
+      "materialized_bytes": 2426358
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.frame-qualification",
+      "clauses": 111,
+      "reference_only_bytes": 1245254,
+      "materialized_bytes": 2448650
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.frame-relations",
+      "clauses": 110,
+      "reference_only_bytes": 1236255,
+      "materialized_bytes": 2431145
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.frame-set",
+      "clauses": 109,
+      "reference_only_bytes": 1227044,
+      "materialized_bytes": 2413070
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.frame-set-optimization",
+      "clauses": 111,
+      "reference_only_bytes": 1238518,
+      "materialized_bytes": 2435340
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.high-risk-separately-activated-coverage",
+      "clauses": 109,
+      "reference_only_bytes": 1229312,
+      "materialized_bytes": 2417058
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.human-frame-set-declaration",
+      "clauses": 110,
+      "reference_only_bytes": 1232496,
+      "materialized_bytes": 2423506
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.independently-activated-co-evaluation",
+      "clauses": 108,
+      "reference_only_bytes": 1224426,
+      "materialized_bytes": 2407607
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.interaction-coverage",
+      "clauses": 109,
+      "reference_only_bytes": 1229053,
+      "materialized_bytes": 2416787
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.lens",
+      "clauses": 109,
+      "reference_only_bytes": 1227013,
+      "materialized_bytes": 2413068
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.material-composition",
+      "clauses": 108,
+      "reference_only_bytes": 1224239,
+      "materialized_bytes": 2407420
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.material-relation",
+      "clauses": 108,
+      "reference_only_bytes": 1224211,
+      "materialized_bytes": 2407392
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.material-relation-manifold",
+      "clauses": 109,
+      "reference_only_bytes": 1227498,
+      "materialized_bytes": 2413774
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.method-functions",
+      "clauses": 112,
+      "reference_only_bytes": 1271362,
+      "materialized_bytes": 2500853
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.method-self-qualification",
+      "clauses": 113,
+      "reference_only_bytes": 1279829,
+      "materialized_bytes": 2517422
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.minimal-evaluation-result",
+      "clauses": 109,
+      "reference_only_bytes": 1229666,
+      "materialized_bytes": 2418122
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.minimal-frame-activation-binding",
+      "clauses": 114,
+      "reference_only_bytes": 1271839,
+      "materialized_bytes": 2501011
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.minimal-frame-declaration",
+      "clauses": 110,
+      "reference_only_bytes": 1236896,
+      "materialized_bytes": 2432500
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.minimal-frame-set-declaration",
+      "clauses": 111,
+      "reference_only_bytes": 1239313,
+      "materialized_bytes": 2437017
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.missing-frame-signals",
+      "clauses": 110,
+      "reference_only_bytes": 1233781,
+      "materialized_bytes": 2425977
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.operational-full-coverage",
+      "clauses": 112,
+      "reference_only_bytes": 1258555,
+      "materialized_bytes": 2475472
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.position",
+      "clauses": 108,
+      "reference_only_bytes": 1224112,
+      "materialized_bytes": 2407293
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.reconfigure-when-necessary",
+      "clauses": 111,
+      "reference_only_bytes": 1238901,
+      "materialized_bytes": 2435889
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.reference-frame",
+      "clauses": 109,
+      "reference_only_bytes": 1229551,
+      "materialized_bytes": 2418012
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "clauses": 108,
+      "reference_only_bytes": 1224244,
+      "materialized_bytes": 2407425
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.result-conjunction",
+      "clauses": 108,
+      "reference_only_bytes": 1224217,
+      "materialized_bytes": 2407398
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.return-a-closed-result",
+      "clauses": 109,
+      "reference_only_bytes": 1231846,
+      "materialized_bytes": 2422347
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.revision-actions",
+      "clauses": 110,
+      "reference_only_bytes": 1235611,
+      "materialized_bytes": 2429656
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity",
+      "clauses": 109,
+      "reference_only_bytes": 1229655,
+      "materialized_bytes": 2417887
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-002-finite-attention",
+      "clauses": 109,
+      "reference_only_bytes": 1229696,
+      "materialized_bytes": 2418034
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-003-material-sufficiency",
+      "clauses": 108,
+      "reference_only_bytes": 1224316,
+      "materialized_bytes": 2407497
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-004-irrelevance-exclusion",
+      "clauses": 109,
+      "reference_only_bytes": 1231153,
+      "materialized_bytes": 2420883
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+      "clauses": 108,
+      "reference_only_bytes": 1224393,
+      "materialized_bytes": 2407574
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-006-authority-conservation",
+      "clauses": 108,
+      "reference_only_bytes": 1224338,
+      "materialized_bytes": 2407519
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation",
+      "clauses": 108,
+      "reference_only_bytes": 1224536,
+      "materialized_bytes": 2407717
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-008-overlap-without-identity-collapse",
+      "clauses": 109,
+      "reference_only_bytes": 1230074,
+      "materialized_bytes": 2418569
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-009-no-assumed-hierarchy",
+      "clauses": 109,
+      "reference_only_bytes": 1231527,
+      "materialized_bytes": 2421644
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-010-composition-on-demand",
+      "clauses": 109,
+      "reference_only_bytes": 1230056,
+      "materialized_bytes": 2418689
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-011-topology-mutation-and-recharting",
+      "clauses": 109,
+      "reference_only_bytes": 1230715,
+      "materialized_bytes": 2419864
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-012-closed-results",
+      "clauses": 108,
+      "reference_only_bytes": 1224256,
+      "materialized_bytes": 2407437
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-013-reconstructable-activation",
+      "clauses": 109,
+      "reference_only_bytes": 1229953,
+      "materialized_bytes": 2418418
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-014-capability-fit",
+      "clauses": 108,
+      "reference_only_bytes": 1224250,
+      "materialized_bytes": 2407431
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-015-residual-uncertainty",
+      "clauses": 109,
+      "reference_only_bytes": 1230419,
+      "materialized_bytes": 2419428
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-016-implementation-neutrality",
+      "clauses": 109,
+      "reference_only_bytes": 1229887,
+      "materialized_bytes": 2418299
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.rf-017-proportional-compression",
+      "clauses": 109,
+      "reference_only_bytes": 1232397,
+      "materialized_bytes": 2423332
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.role-persona-abstraction-and-component",
+      "clauses": 109,
+      "reference_only_bytes": 1227626,
+      "materialized_bytes": 2413886
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.select-and-activate",
+      "clauses": 113,
+      "reference_only_bytes": 1264625,
+      "materialized_bytes": 2486830
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.topology",
+      "clauses": 109,
+      "reference_only_bytes": 1227255,
+      "materialized_bytes": 2413504
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.using-frames-in-conjunction",
+      "clauses": 108,
+      "reference_only_bytes": 1224326,
+      "materialized_bytes": 2407507
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.worked-binding-product-chain-drift-evaluation",
+      "clauses": 115,
+      "reference_only_bytes": 1277074,
+      "materialized_bytes": 2511020
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.workspace",
+      "clauses": 109,
+      "reference_only_bytes": 1228770,
+      "materialized_bytes": 2416522
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:REFERENCE_FRAME_METHOD.workspace-coverage",
+      "clauses": 109,
+      "reference_only_bytes": 1228215,
+      "materialized_bytes": 2415304
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.acceptance-criteria",
+      "clauses": 110,
+      "reference_only_bytes": 1242477,
+      "materialized_bytes": 2443509
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.coordinated-release-matched-asset-cohorts",
+      "clauses": 110,
+      "reference_only_bytes": 1244299,
+      "materialized_bytes": 2446867
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.exact-cut-qualification",
+      "clauses": 110,
+      "reference_only_bytes": 1244343,
+      "materialized_bytes": 2447189
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.external-qualification-dependencies",
+      "clauses": 110,
+      "reference_only_bytes": 1242168,
+      "materialized_bytes": 2442683
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.historical-ref-and-public-uri-conservation",
+      "clauses": 110,
+      "reference_only_bytes": 1240673,
+      "materialized_bytes": 2439602
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.immutable-rc-publication",
+      "clauses": 110,
+      "reference_only_bytes": 1243733,
+      "materialized_bytes": 2445956
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.monotonic-version-line-advancement",
+      "clauses": 110,
+      "reference_only_bytes": 1242950,
+      "materialized_bytes": 2444260
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.mutable-candidate-construction",
+      "clauses": 110,
+      "reference_only_bytes": 1240122,
+      "materialized_bytes": 2438656
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.naming",
+      "clauses": 112,
+      "reference_only_bytes": 1257034,
+      "materialized_bytes": 2472239
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.open-questions",
+      "clauses": 110,
+      "reference_only_bytes": 1238798,
+      "materialized_bytes": 2436204
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.phases",
+      "clauses": 110,
+      "reference_only_bytes": 1239417,
+      "materialized_bytes": 2437551
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.position",
+      "clauses": 115,
+      "reference_only_bytes": 1307003,
+      "materialized_bytes": 2571597
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.product-subject-and-repository-carrier",
+      "clauses": 110,
+      "reference_only_bytes": 1240176,
+      "materialized_bytes": 2438653
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.project-qualified-git-refs",
+      "clauses": 110,
+      "reference_only_bytes": 1241316,
+      "materialized_bytes": 2441096
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.project-subtree-release-identity",
+      "clauses": 110,
+      "reference_only_bytes": 1240726,
+      "materialized_bytes": 2439838
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.qualification-and-recovery",
+      "clauses": 110,
+      "reference_only_bytes": 1243045,
+      "materialized_bytes": 2444554
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.release-identities",
+      "clauses": 109,
+      "reference_only_bytes": 1232966,
+      "materialized_bytes": 2424736
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.release-method",
+      "clauses": 110,
+      "reference_only_bytes": 1242358,
+      "materialized_bytes": 2443330
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.release-publication-context",
+      "clauses": 110,
+      "reference_only_bytes": 1239403,
+      "materialized_bytes": 2437250
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.release-scoped-assets",
+      "clauses": 110,
+      "reference_only_bytes": 1240232,
+      "materialized_bytes": 2438993
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.selector-and-consumer-adoption",
+      "clauses": 110,
+      "reference_only_bytes": 1244600,
+      "materialized_bytes": 2447612
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+      "clauses": 110,
+      "reference_only_bytes": 1245644,
+      "materialized_bytes": 2449531
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.two-commit-construction-and-one-publication-transaction",
+      "clauses": 110,
+      "reference_only_bytes": 1244187,
+      "materialized_bytes": 2446461
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.adr-conventions",
+      "clauses": 109,
+      "reference_only_bytes": 1231829,
+      "materialized_bytes": 2422547
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.adr-folder-convention",
+      "clauses": 109,
+      "reference_only_bytes": 1232586,
+      "materialized_bytes": 2423983
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "clauses": 108,
+      "reference_only_bytes": 1224366,
+      "materialized_bytes": 2407547
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.ambiguity-governance-rule",
+      "clauses": 108,
+      "reference_only_bytes": 1224173,
+      "materialized_bytes": 2407354
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+      "clauses": 108,
+      "reference_only_bytes": 1224624,
+      "materialized_bytes": 2407805
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.bootstrap-rule",
+      "clauses": 111,
+      "reference_only_bytes": 1257428,
+      "materialized_bytes": 2473212
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.bounded-causal-construction",
+      "clauses": 109,
+      "reference_only_bytes": 1232039,
+      "materialized_bytes": 2422811
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.bounded-context-semantic-resolution",
+      "clauses": 108,
+      "reference_only_bytes": 1224283,
+      "materialized_bytes": 2407464
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.bridge-prohibition",
+      "clauses": 109,
+      "reference_only_bytes": 1231770,
+      "materialized_bytes": 2422390
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.canonical-compression",
+      "clauses": 109,
+      "reference_only_bytes": 1232949,
+      "materialized_bytes": 2424697
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.change-management-rule",
+      "clauses": 115,
+      "reference_only_bytes": 1305487,
+      "materialized_bytes": 2568422
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.checkpoint-continuation-progress-and-churn",
+      "clauses": 109,
+      "reference_only_bytes": 1237618,
+      "materialized_bytes": 2433774
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.closure-criterion",
+      "clauses": 109,
+      "reference_only_bytes": 1232633,
+      "materialized_bytes": 2424129
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.collective-reference-frame-basis",
+      "clauses": 108,
+      "reference_only_bytes": 1224250,
+      "materialized_bytes": 2407431
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "clauses": 108,
+      "reference_only_bytes": 1224437,
+      "materialized_bytes": 2407618
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.computed-classification-and-treatment",
+      "clauses": 108,
+      "reference_only_bytes": 1224305,
+      "materialized_bytes": 2407486
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.consistency-gate-rule",
+      "clauses": 111,
+      "reference_only_bytes": 1253989,
+      "materialized_bytes": 2466311
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.constitutional-chain",
+      "clauses": 108,
+      "reference_only_bytes": 1224123,
+      "materialized_bytes": 2407304
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.constitutional-migration-options",
+      "clauses": 109,
+      "reference_only_bytes": 1235601,
+      "materialized_bytes": 2429870
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.constitutional-set-sufficiency",
+      "clauses": 109,
+      "reference_only_bytes": 1232594,
+      "materialized_bytes": 2423882
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.construction-assessment-and-delegation",
+      "clauses": 108,
+      "reference_only_bytes": 1224316,
+      "materialized_bytes": 2407497
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.core-interface-migration-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1235159,
+      "materialized_bytes": 2429025
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.counterexample-localization",
+      "clauses": 109,
+      "reference_only_bytes": 1234582,
+      "materialized_bytes": 2427897
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.design-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232031,
+      "materialized_bytes": 2423003
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.downstream-closure",
+      "clauses": 109,
+      "reference_only_bytes": 1231151,
+      "materialized_bytes": 2421152
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.drift-signals",
+      "clauses": 109,
+      "reference_only_bytes": 1231869,
+      "materialized_bytes": 2422646
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.evidence-rules",
+      "clauses": 111,
+      "reference_only_bytes": 1254746,
+      "materialized_bytes": 2467786
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.explicit-complete-consumer-update",
+      "clauses": 109,
+      "reference_only_bytes": 1236104,
+      "materialized_bytes": 2430863
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.fixture-and-proof-portability-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233245,
+      "materialized_bytes": 2425132
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.fundamental-migration-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1246759,
+      "materialized_bytes": 2452001
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.hard-break-discipline",
+      "clauses": 109,
+      "reference_only_bytes": 1232523,
+      "materialized_bytes": 2423857
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.inside-out-first-sequencing",
+      "clauses": 109,
+      "reference_only_bytes": 1231926,
+      "materialized_bytes": 2422585
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.installed-dev-proof-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1231792,
+      "materialized_bytes": 2422356
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.legacy-classification-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1231664,
+      "materialized_bytes": 2422067
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.live-surface-immutability",
+      "clauses": 110,
+      "reference_only_bytes": 1241143,
+      "materialized_bytes": 2440812
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.local-constitutional-binding",
+      "clauses": 109,
+      "reference_only_bytes": 1233417,
+      "materialized_bytes": 2425554
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.manifesto",
+      "clauses": 109,
+      "reference_only_bytes": 1234489,
+      "materialized_bytes": 2427945
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.method",
+      "clauses": 115,
+      "reference_only_bytes": 1310938,
+      "materialized_bytes": 2579532
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.one-constitutional-surface-and-version-boundary-stdo-surface-001",
+      "clauses": 108,
+      "reference_only_bytes": 1224602,
+      "materialized_bytes": 2407783
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.operational-lifecycle-sufficiency-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233497,
+      "materialized_bytes": 2425584
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.ownership",
+      "clauses": 109,
+      "reference_only_bytes": 1230713,
+      "materialized_bytes": 2420393
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.position",
+      "clauses": 108,
+      "reference_only_bytes": 1223986,
+      "materialized_bytes": 2407167
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.probabilistic-work-boundary",
+      "clauses": 108,
+      "reference_only_bytes": 1224195,
+      "materialized_bytes": 2407376
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.process-constitution",
+      "clauses": 109,
+      "reference_only_bytes": 1233507,
+      "materialized_bytes": 2425838
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+      "clauses": 108,
+      "reference_only_bytes": 1224338,
+      "materialized_bytes": 2407519
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.projection-discipline",
+      "clauses": 109,
+      "reference_only_bytes": 1232141,
+      "materialized_bytes": 2423087
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.proof-last-rule-for-core-interface-changes",
+      "clauses": 110,
+      "reference_only_bytes": 1244180,
+      "materialized_bytes": 2446635
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001",
+      "clauses": 109,
+      "reference_only_bytes": 1234353,
+      "materialized_bytes": 2427192
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.proportional-disposition",
+      "clauses": 108,
+      "reference_only_bytes": 1224162,
+      "materialized_bytes": 2407343
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+      "clauses": 108,
+      "reference_only_bytes": 1224382,
+      "materialized_bytes": 2407563
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.reconstruction-litmus",
+      "clauses": 108,
+      "reference_only_bytes": 1224129,
+      "materialized_bytes": 2407310
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.recursive-discovery-and-explicit-composition",
+      "clauses": 109,
+      "reference_only_bytes": 1233786,
+      "materialized_bytes": 2426084
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.recursive-product-taxonomy",
+      "clauses": 108,
+      "reference_only_bytes": 1224189,
+      "materialized_bytes": 2407370
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.release-version-boundary",
+      "clauses": 111,
+      "reference_only_bytes": 1253668,
+      "materialized_bytes": 2465594
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.renewal-path",
+      "clauses": 109,
+      "reference_only_bytes": 1232605,
+      "materialized_bytes": 2424138
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.required-definition-relations",
+      "clauses": 109,
+      "reference_only_bytes": 1232659,
+      "materialized_bytes": 2424018
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.required-migration-protocol",
+      "clauses": 109,
+      "reference_only_bytes": 1232182,
+      "materialized_bytes": 2423097
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.requirement-categories",
+      "clauses": 109,
+      "reference_only_bytes": 1232606,
+      "materialized_bytes": 2424003
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.requirement-classification-rules",
+      "clauses": 109,
+      "reference_only_bytes": 1232009,
+      "materialized_bytes": 2422686
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.scenario-bundle-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232250,
+      "materialized_bytes": 2423324
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.semantic-evidence-and-projection-separation-stdo-up-008",
+      "clauses": 109,
+      "reference_only_bytes": 1234158,
+      "materialized_bytes": 2426678
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.semantic-resolution-conformance-cases",
+      "clauses": 109,
+      "reference_only_bytes": 1233039,
+      "materialized_bytes": 2424681
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+      "clauses": 108,
+      "reference_only_bytes": 1224470,
+      "materialized_bytes": 2407651
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.significant-path-coverage-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232194,
+      "materialized_bytes": 2423082
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.spec-driven-homeostatic-methodology",
+      "clauses": 109,
+      "reference_only_bytes": 1238202,
+      "materialized_bytes": 2435027
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.spec-drivenness-litmus",
+      "clauses": 109,
+      "reference_only_bytes": 1231652,
+      "materialized_bytes": 2422102
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.specification-surface-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233390,
+      "materialized_bytes": 2425526
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.sprint-execution-boundary",
+      "clauses": 111,
+      "reference_only_bytes": 1257848,
+      "materialized_bytes": 2473963
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.standing-structural-qualification",
+      "clauses": 109,
+      "reference_only_bytes": 1233684,
+      "materialized_bytes": 2426023
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.stdo-method-identity",
+      "clauses": 109,
+      "reference_only_bytes": 1231656,
+      "materialized_bytes": 2422129
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+      "clauses": 108,
+      "reference_only_bytes": 1224503,
+      "materialized_bytes": 2407684
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.sufficient-execution-intake",
+      "clauses": 110,
+      "reference_only_bytes": 1249923,
+      "materialized_bytes": 2458266
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.test-authority-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1231410,
+      "materialized_bytes": 2421657
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.testing-strategy-taxonomy",
+      "clauses": 111,
+      "reference_only_bytes": 1260526,
+      "materialized_bytes": 2479180
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.trace-closure-and-anti-drift-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1232718,
+      "materialized_bytes": 2424085
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.transformation-wave-rule",
+      "clauses": 109,
+      "reference_only_bytes": 1233499,
+      "materialized_bytes": 2425770
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.transition-evidence-and-proof-cadence",
+      "clauses": 108,
+      "reference_only_bytes": 1224305,
+      "materialized_bytes": 2407486
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.universal-intake-triage",
+      "clauses": 114,
+      "reference_only_bytes": 1298151,
+      "materialized_bytes": 2553982
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.verification-layers",
+      "clauses": 109,
+      "reference_only_bytes": 1231949,
+      "materialized_bytes": 2422728
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.what-counts-as-a-core-interface",
+      "clauses": 109,
+      "reference_only_bytes": 1231622,
+      "materialized_bytes": 2421918
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.what-how-and-work-carriers",
+      "clauses": 109,
+      "reference_only_bytes": 1236596,
+      "materialized_bytes": 2431938
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.1-existing-authority-selects-the-basis",
+      "clauses": 110,
+      "reference_only_bytes": 1242901,
+      "materialized_bytes": 2443835
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.2-executive-activates-worker",
+      "clauses": 123,
+      "reference_only_bytes": 1374321,
+      "materialized_bytes": 2703796
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.3-worker-returns-to-executive",
+      "clauses": 131,
+      "reference_only_bytes": 1473776,
+      "materialized_bytes": 2900555
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+      "clauses": 109,
+      "reference_only_bytes": 1238074,
+      "materialized_bytes": 2434517
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review",
+      "clauses": 109,
+      "reference_only_bytes": 1235655,
+      "materialized_bytes": 2429536
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review",
+      "clauses": 124,
+      "reference_only_bytes": 1383303,
+      "materialized_bytes": 2721515
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.6-reviewer-returns-to-executive",
+      "clauses": 130,
+      "reference_only_bytes": 1462021,
+      "materialized_bytes": 2877316
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.7-executive-disposes-and-checkpoints",
+      "clauses": 110,
+      "reference_only_bytes": 1252335,
+      "materialized_bytes": 2462769
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence",
+      "clauses": 109,
+      "reference_only_bytes": 1236548,
+      "materialized_bytes": 2431556
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.adopt-this-baseline",
+      "clauses": 123,
+      "reference_only_bytes": 1387774,
+      "materialized_bytes": 2731345
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.anti-patterns",
+      "clauses": 118,
+      "reference_only_bytes": 1337932,
+      "materialized_bytes": 2632959
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation",
+      "clauses": 112,
+      "reference_only_bytes": 1269761,
+      "materialized_bytes": 2497051
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.authoritative-product-path",
+      "clauses": 112,
+      "reference_only_bytes": 1268157,
+      "materialized_bytes": 2494173
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.baseline-adoption-projection",
+      "clauses": 123,
+      "reference_only_bytes": 1387878,
+      "materialized_bytes": 2731449
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions",
+      "clauses": 122,
+      "reference_only_bytes": 1360923,
+      "materialized_bytes": 2677181
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.baseline-specific-project-basis-additions",
+      "clauses": 124,
+      "reference_only_bytes": 1398535,
+      "materialized_bytes": 2752308
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.canonical-compression",
+      "clauses": 109,
+      "reference_only_bytes": 1237100,
+      "materialized_bytes": 2432949
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.closure",
+      "clauses": 164,
+      "reference_only_bytes": 1860103,
+      "materialized_bytes": 3665536
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index",
+      "clauses": 111,
+      "reference_only_bytes": 1250070,
+      "materialized_bytes": 2458024
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition",
+      "clauses": 108,
+      "reference_only_bytes": 1224426,
+      "materialized_bytes": 2407607
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.computational-whole-path-evaluation",
+      "clauses": 112,
+      "reference_only_bytes": 1270905,
+      "materialized_bytes": 2499330
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.counterexample-localization",
+      "clauses": 110,
+      "reference_only_bytes": 1244883,
+      "materialized_bytes": 2448012
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "clauses": 117,
+      "reference_only_bytes": 1318004,
+      "materialized_bytes": 2593337
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.define-a-project-configuration",
+      "clauses": 112,
+      "reference_only_bytes": 1251254,
+      "materialized_bytes": 2460521
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-frame",
+      "clauses": 112,
+      "reference_only_bytes": 1268130,
+      "materialized_bytes": 2494146
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-interface-integration-frame",
+      "clauses": 127,
+      "reference_only_bytes": 1447055,
+      "materialized_bytes": 2848426
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame",
+      "clauses": 111,
+      "reference_only_bytes": 1252136,
+      "materialized_bytes": 2462649
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-generic-specialist-frame-set",
+      "clauses": 115,
+      "reference_only_bytes": 1297512,
+      "materialized_bytes": 2552713
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-integration-frame",
+      "clauses": 109,
+      "reference_only_bytes": 1237795,
+      "materialized_bytes": 2434115
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+      "clauses": 114,
+      "reference_only_bytes": 1292505,
+      "materialized_bytes": 2542028
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+      "clauses": 108,
+      "reference_only_bytes": 1224338,
+      "materialized_bytes": 2407519
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-unit-test-frame",
+      "clauses": 114,
+      "reference_only_bytes": 1286431,
+      "materialized_bytes": 2530094
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-user-acceptance-frame",
+      "clauses": 113,
+      "reference_only_bytes": 1283529,
+      "materialized_bytes": 2524419
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.derived-worker-frame",
+      "clauses": 112,
+      "reference_only_bytes": 1271768,
+      "materialized_bytes": 2501307
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.empirical-revision-boundary",
+      "clauses": 112,
+      "reference_only_bytes": 1250349,
+      "materialized_bytes": 2458408
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+      "clauses": 108,
+      "reference_only_bytes": 1224360,
+      "materialized_bytes": 2407541
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.engagement-frame",
+      "clauses": 110,
+      "reference_only_bytes": 1236313,
+      "materialized_bytes": 2431358
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.event-driven-executive-attention",
+      "clauses": 108,
+      "reference_only_bytes": 1224448,
+      "materialized_bytes": 2407629
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.exact-candidate",
+      "clauses": 109,
+      "reference_only_bytes": 1233293,
+      "materialized_bytes": 2425412
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.executive",
+      "clauses": 109,
+      "reference_only_bytes": 1232345,
+      "materialized_bytes": 2423588
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+      "clauses": 108,
+      "reference_only_bytes": 1224547,
+      "materialized_bytes": 2407728
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.executive-drift-locks",
+      "clauses": 108,
+      "reference_only_bytes": 1224327,
+      "materialized_bytes": 2407508
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.executive-promotion-constraint-projection",
+      "clauses": 111,
+      "reference_only_bytes": 1263075,
+      "materialized_bytes": 2483877
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.existing-authority-selects-the-configuration",
+      "clauses": 109,
+      "reference_only_bytes": 1233604,
+      "materialized_bytes": 2425486
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.extension-versus-replacement",
+      "clauses": 113,
+      "reference_only_bytes": 1260014,
+      "materialized_bytes": 2477772
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.failure-classification",
+      "clauses": 113,
+      "reference_only_bytes": 1270940,
+      "materialized_bytes": 2499364
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.generic-specialist-frame-family",
+      "clauses": 116,
+      "reference_only_bytes": 1304787,
+      "materialized_bytes": 2567208
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.handoff-projection",
+      "clauses": 130,
+      "reference_only_bytes": 1461878,
+      "materialized_bytes": 2877173
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.interface-integration-claim-boundaries",
+      "clauses": 109,
+      "reference_only_bytes": 1237533,
+      "materialized_bytes": 2433422
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.interface-integration-obligations",
+      "clauses": 122,
+      "reference_only_bytes": 1390811,
+      "materialized_bytes": 2736448
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.interface-integration-qualification",
+      "clauses": 127,
+      "reference_only_bytes": 1438531,
+      "materialized_bytes": 2830439
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.legitimate-path-and-technical-debt-erasure",
+      "clauses": 112,
+      "reference_only_bytes": 1268328,
+      "materialized_bytes": 2494344
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.material-combinatorial-complexity",
+      "clauses": 111,
+      "reference_only_bytes": 1249932,
+      "materialized_bytes": 2457886
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.missing-frame-and-re-entry-application",
+      "clauses": 111,
+      "reference_only_bytes": 1245080,
+      "materialized_bytes": 2448000
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.non-hierarchical-frame-configuration",
+      "clauses": 111,
+      "reference_only_bytes": 1249269,
+      "materialized_bytes": 2456563
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.product-chain-basis",
+      "clauses": 109,
+      "reference_only_bytes": 1235061,
+      "materialized_bytes": 2428725
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.profile-qualification",
+      "clauses": 112,
+      "reference_only_bytes": 1263836,
+      "materialized_bytes": 2485438
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.reviewer",
+      "clauses": 109,
+      "reference_only_bytes": 1232914,
+      "materialized_bytes": 2424738
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.reviewer-result-and-triage-projection",
+      "clauses": 109,
+      "reference_only_bytes": 1238065,
+      "materialized_bytes": 2434499
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.specialist-frame",
+      "clauses": 111,
+      "reference_only_bytes": 1243726,
+      "materialized_bytes": 2446092
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "clauses": 108,
+      "reference_only_bytes": 1224415,
+      "materialized_bytes": 2407596
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.steel-thread-delivery",
+      "clauses": 115,
+      "reference_only_bytes": 1303812,
+      "materialized_bytes": 2564497
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+      "clauses": 108,
+      "reference_only_bytes": 1224690,
+      "materialized_bytes": 2407871
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+      "clauses": 109,
+      "reference_only_bytes": 1235177,
+      "materialized_bytes": 2428840
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.testing-frame",
+      "clauses": 115,
+      "reference_only_bytes": 1299335,
+      "materialized_bytes": 2555816
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.work-result",
+      "clauses": 108,
+      "reference_only_bytes": 1224217,
+      "materialized_bytes": 2407398
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.worker",
+      "clauses": 113,
+      "reference_only_bytes": 1279208,
+      "materialized_bytes": 2516256
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.allowed-status",
+      "clauses": 109,
+      "reference_only_bytes": 1231918,
+      "materialized_bytes": 2422705
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.allowed-types",
+      "clauses": 109,
+      "reference_only_bytes": 1230502,
+      "materialized_bytes": 2419886
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.authority",
+      "clauses": 109,
+      "reference_only_bytes": 1231345,
+      "materialized_bytes": 2421631
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.bounded-context-term-binding",
+      "clauses": 109,
+      "reference_only_bytes": 1233239,
+      "materialized_bytes": 2425172
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.change-class",
+      "clauses": 115,
+      "reference_only_bytes": 1307231,
+      "materialized_bytes": 2572007
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.comments",
+      "clauses": 111,
+      "reference_only_bytes": 1246323,
+      "materialized_bytes": 2451145
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.condition-based-closure-and-reuse",
+      "clauses": 108,
+      "reference_only_bytes": 1224283,
+      "materialized_bytes": 2407464
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.core-model",
+      "clauses": 108,
+      "reference_only_bytes": 1224036,
+      "materialized_bytes": 2407217
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.default-layout",
+      "clauses": 109,
+      "reference_only_bytes": 1231418,
+      "materialized_bytes": 2421705
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+      "clauses": 110,
+      "reference_only_bytes": 1242727,
+      "materialized_bytes": 2443681
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+      "clauses": 108,
+      "reference_only_bytes": 1224569,
+      "materialized_bytes": 2407750
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.execution-contract-admission",
+      "clauses": 108,
+      "reference_only_bytes": 1224228,
+      "materialized_bytes": 2407409
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.execution-contracts",
+      "clauses": 109,
+      "reference_only_bytes": 1233232,
+      "materialized_bytes": 2425268
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.future-extensions",
+      "clauses": 109,
+      "reference_only_bytes": 1231006,
+      "materialized_bytes": 2420842
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.goals",
+      "clauses": 109,
+      "reference_only_bytes": 1230749,
+      "materialized_bytes": 2420484
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.impacted-interface-review-checklist",
+      "clauses": 109,
+      "reference_only_bytes": 1233401,
+      "materialized_bytes": 2425405
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.implementation-migration-category",
+      "clauses": 110,
+      "reference_only_bytes": 1250595,
+      "materialized_bytes": 2459562
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.implementation-migration-review-disambiguation",
+      "clauses": 110,
+      "reference_only_bytes": 1244277,
+      "materialized_bytes": 2446757
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.inside-out-first-ticket-sequencing",
+      "clauses": 110,
+      "reference_only_bytes": 1241231,
+      "materialized_bytes": 2440825
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.migration-strategy-requirements",
+      "clauses": 110,
+      "reference_only_bytes": 1244939,
+      "materialized_bytes": 2448270
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.milestone-and-phase-scoped-truth-stdo-up-006",
+      "clauses": 109,
+      "reference_only_bytes": 1232441,
+      "materialized_bytes": 2423368
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.mixed-state-negative-proof",
+      "clauses": 110,
+      "reference_only_bytes": 1241428,
+      "materialized_bytes": 2441335
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.multi-build-tenant-review-rule",
+      "clauses": 111,
+      "reference_only_bytes": 1257413,
+      "materialized_bytes": 2472964
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.multi-build-tenant-ticket-independence",
+      "clauses": 110,
+      "reference_only_bytes": 1249696,
+      "materialized_bytes": 2457705
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.one-durable-record-per-sprint",
+      "clauses": 109,
+      "reference_only_bytes": 1231662,
+      "materialized_bytes": 2422005
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.one-durable-record-per-ticket",
+      "clauses": 109,
+      "reference_only_bytes": 1231851,
+      "materialized_bytes": 2422383
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.one-truth-state-projection-and-drift-refusal-stdo-up-009",
+      "clauses": 109,
+      "reference_only_bytes": 1233334,
+      "materialized_bytes": 2424998
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.operating-mode",
+      "clauses": 109,
+      "reference_only_bytes": 1231063,
+      "materialized_bytes": 2420995
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.recommended-ticket-shape",
+      "clauses": 112,
+      "reference_only_bytes": 1274487,
+      "materialized_bytes": 2506952
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+      "clauses": 108,
+      "reference_only_bytes": 1224415,
+      "materialized_bytes": 2407596
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.recurring-realization-and-library-declaration",
+      "clauses": 109,
+      "reference_only_bytes": 1233914,
+      "materialized_bytes": 2426301
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.relationship-to-other-surfaces",
+      "clauses": 117,
+      "reference_only_bytes": 1321394,
+      "materialized_bytes": 2599651
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.required-break-order-and-break-to-closure-map",
+      "clauses": 110,
+      "reference_only_bytes": 1241369,
+      "materialized_bytes": 2440958
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.required-fields",
+      "clauses": 109,
+      "reference_only_bytes": 1233964,
+      "materialized_bytes": 2426784
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-admission",
+      "clauses": 115,
+      "reference_only_bytes": 1306300,
+      "materialized_bytes": 2570100
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-close-review",
+      "clauses": 109,
+      "reference_only_bytes": 1237525,
+      "materialized_bytes": 2433861
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-compliance-escrow",
+      "clauses": 109,
+      "reference_only_bytes": 1232948,
+      "materialized_bytes": 2424642
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-manifest-required-fields",
+      "clauses": 110,
+      "reference_only_bytes": 1247059,
+      "materialized_bytes": 2452525
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-rules",
+      "clauses": 109,
+      "reference_only_bytes": 1233161,
+      "materialized_bytes": 2425218
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprint-status",
+      "clauses": 110,
+      "reference_only_bytes": 1245532,
+      "materialized_bytes": 2449705
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.sprints",
+      "clauses": 109,
+      "reference_only_bytes": 1231611,
+      "materialized_bytes": 2422182
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.test-case-authority",
+      "clauses": 110,
+      "reference_only_bytes": 1242243,
+      "materialized_bytes": 2443060
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.ticket-category",
+      "clauses": 109,
+      "reference_only_bytes": 1232347,
+      "materialized_bytes": 2423550
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.ticket-lanes",
+      "clauses": 109,
+      "reference_only_bytes": 1232450,
+      "materialized_bytes": 2423795
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.ticket-method",
+      "clauses": 109,
+      "reference_only_bytes": 1234610,
+      "materialized_bytes": 2428103
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.tickets",
+      "clauses": 109,
+      "reference_only_bytes": 1231001,
+      "materialized_bytes": 2420962
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.triage-metadata",
+      "clauses": 115,
+      "reference_only_bytes": 1305405,
+      "materialized_bytes": 2568316
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.upward-propagation-check",
+      "clauses": 109,
+      "reference_only_bytes": 1232244,
+      "materialized_bytes": 2423228
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.work-carrier-to-execution-rule",
+      "clauses": 108,
+      "reference_only_bytes": 1224250,
+      "materialized_bytes": 2407431
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.acquire",
+      "clauses": 111,
+      "reference_only_bytes": 1256659,
+      "materialized_bytes": 2471648
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.bind",
+      "clauses": 109,
+      "reference_only_bytes": 1234948,
+      "materialized_bytes": 2428779
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.composition-law",
+      "clauses": 108,
+      "reference_only_bytes": 1224190,
+      "materialized_bytes": 2407371
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.conjoin",
+      "clauses": 109,
+      "reference_only_bytes": 1234963,
+      "materialized_bytes": 2428770
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.constraint-surface",
+      "clauses": 108,
+      "reference_only_bytes": 1224222,
+      "materialized_bytes": 2407403
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.contract-application",
+      "clauses": 108,
+      "reference_only_bytes": 1224245,
+      "materialized_bytes": 2407426
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.cost-and-contraction",
+      "clauses": 109,
+      "reference_only_bytes": 1237860,
+      "materialized_bytes": 2434395
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.dispose",
+      "clauses": 111,
+      "reference_only_bytes": 1263620,
+      "materialized_bytes": 2485550
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.evaluate",
+      "clauses": 108,
+      "reference_only_bytes": 1224113,
+      "materialized_bytes": 2407294
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.faithful-projection",
+      "clauses": 108,
+      "reference_only_bytes": 1224234,
+      "materialized_bytes": 2407415
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.foundational-contract",
+      "clauses": 108,
+      "reference_only_bytes": 1224255,
+      "materialized_bytes": 2407436
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.recovery-law",
+      "clauses": 108,
+      "reference_only_bytes": 1224157,
+      "materialized_bytes": 2407338
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.reference-only-semantic-imports",
+      "clauses": 110,
+      "reference_only_bytes": 1237265,
+      "materialized_bytes": 2433172
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.transform",
+      "clauses": 114,
+      "reference_only_bytes": 1299160,
+      "materialized_bytes": 2555789
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "clauses": 108,
+      "reference_only_bytes": 1224453,
+      "materialized_bytes": 2407634
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.transformation-library",
+      "clauses": 109,
+      "reference_only_bytes": 1229579,
+      "materialized_bytes": 2417807
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "clauses": 108,
+      "reference_only_bytes": 1224321,
+      "materialized_bytes": 2407502
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.authority-and-adoption",
+      "clauses": 110,
+      "reference_only_bytes": 1242473,
+      "materialized_bytes": 2443252
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "clauses": 115,
+      "reference_only_bytes": 1359006,
+      "materialized_bytes": 2674519
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "clauses": 116,
+      "reference_only_bytes": 1368231,
+      "materialized_bytes": 2692913
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "clauses": 110,
+      "reference_only_bytes": 1254838,
+      "materialized_bytes": 2467611
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.closed-event-kind-population",
+      "clauses": 111,
+      "reference_only_bytes": 1251113,
+      "materialized_bytes": 2460164
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.closed-profile-signature",
+      "clauses": 110,
+      "reference_only_bytes": 1247964,
+      "materialized_bytes": 2454201
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.closed-relation-families",
+      "clauses": 113,
+      "reference_only_bytes": 1319441,
+      "materialized_bytes": 2596312
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts",
+      "clauses": 113,
+      "reference_only_bytes": 1314524,
+      "materialized_bytes": 2586402
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.conformance-obligations",
+      "clauses": 119,
+      "reference_only_bytes": 1411969,
+      "materialized_bytes": 2779586
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.event-frontier-and-projection",
+      "clauses": 111,
+      "reference_only_bytes": 1251184,
+      "materialized_bytes": 2460282
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.exact-profile-identity",
+      "clauses": 111,
+      "reference_only_bytes": 1255768,
+      "materialized_bytes": 2469552
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.exclusions",
+      "clauses": 113,
+      "reference_only_bytes": 1267130,
+      "materialized_bytes": 2491942
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.finite-reference-domain-table",
+      "clauses": 110,
+      "reference_only_bytes": 1283743,
+      "materialized_bytes": 2525694
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.governing-relations",
+      "clauses": 109,
+      "reference_only_bytes": 1233546,
+      "materialized_bytes": 2425708
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.imported-calculus-boundary",
+      "clauses": 112,
+      "reference_only_bytes": 1304703,
+      "materialized_bytes": 2567290
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "clauses": 111,
+      "reference_only_bytes": 1272238,
+      "materialized_bytes": 2502330
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.occurrence-identity",
+      "clauses": 111,
+      "reference_only_bytes": 1251206,
+      "materialized_bytes": 2460473
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-001-seed-acyclicity",
+      "clauses": 111,
+      "reference_only_bytes": 1251234,
+      "materialized_bytes": 2460501
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-002-atomic-semantic-admission",
+      "clauses": 116,
+      "reference_only_bytes": 1367693,
+      "materialized_bytes": 2691772
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-003-correction-without-erasure",
+      "clauses": 112,
+      "reference_only_bytes": 1259105,
+      "materialized_bytes": 2475781
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-004-precedence-is-not-authority",
+      "clauses": 111,
+      "reference_only_bytes": 1251239,
+      "materialized_bytes": 2460337
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-005-mutable-reality-conservation",
+      "clauses": 110,
+      "reference_only_bytes": 1241950,
+      "materialized_bytes": 2442037
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-006-immutable-iteration-history",
+      "clauses": 112,
+      "reference_only_bytes": 1259293,
+      "materialized_bytes": 2476186
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.op-007-scope-conservation",
+      "clauses": 111,
+      "reference_only_bytes": 1251075,
+      "materialized_bytes": 2460126
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.position",
+      "clauses": 111,
+      "reference_only_bytes": 1251299,
+      "materialized_bytes": 2460802
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.scope",
+      "clauses": 112,
+      "reference_only_bytes": 1259597,
+      "materialized_bytes": 2477186
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRAVERSAL_OCCURRENCE_PROFILE.the-a_c-traversal-occurrence-profile-over-mutable-subjects",
+      "clauses": 112,
+      "reference_only_bytes": 1259286,
+      "materialized_bytes": 2475870
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.1-position",
+      "clauses": 137,
+      "reference_only_bytes": 1392313,
+      "materialized_bytes": 2735390
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.10-type-sharing-rule",
+      "clauses": 136,
+      "reference_only_bytes": 1384138,
+      "materialized_bytes": 2718999
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.11-accessibility-minimum",
+      "clauses": 136,
+      "reference_only_bytes": 1384182,
+      "materialized_bytes": 2719043
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.12-realization-discretion",
+      "clauses": 144,
+      "reference_only_bytes": 1462463,
+      "materialized_bytes": 2874777
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.13-adoption-guidance",
+      "clauses": 136,
+      "reference_only_bytes": 1384138,
+      "materialized_bytes": 2718999
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.13a-scaffold-and-exemption-law",
+      "clauses": 136,
+      "reference_only_bytes": 1384248,
+      "materialized_bytes": 2719109
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.13b-ux-sprint-compliance-escrow",
+      "clauses": 140,
+      "reference_only_bytes": 1420475,
+      "materialized_bytes": 2791095
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.14-failure-pattern",
+      "clauses": 141,
+      "reference_only_bytes": 1433581,
+      "materialized_bytes": 2817380
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.15-review-questions",
+      "clauses": 142,
+      "reference_only_bytes": 1444378,
+      "materialized_bytes": 2838892
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.16-relationship-to-other-method-surfaces",
+      "clauses": 143,
+      "reference_only_bytes": 1442378,
+      "materialized_bytes": 2834563
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.17-non-goals",
+      "clauses": 137,
+      "reference_only_bytes": 1389618,
+      "materialized_bytes": 2729976
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.18-canonical-compression",
+      "clauses": 141,
+      "reference_only_bytes": 1426270,
+      "materialized_bytes": 2802674
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.1a-constitutional-authority-rule",
+      "clauses": 136,
+      "reference_only_bytes": 1384270,
+      "materialized_bytes": 2719131
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.2-method-role",
+      "clauses": 137,
+      "reference_only_bytes": 1390298,
+      "materialized_bytes": 2731324
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.3-method-composition",
+      "clauses": 138,
+      "reference_only_bytes": 1396809,
+      "materialized_bytes": 2744195
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.3a-ux-projection-and-constructive-carrier-boundary",
+      "clauses": 136,
+      "reference_only_bytes": 1384468,
+      "materialized_bytes": 2719329
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.4-process-model--elm-architecture",
+      "clauses": 136,
+      "reference_only_bytes": 1384279,
+      "materialized_bytes": 2719140
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.4a-process-model-without-language-or-framework-mandate",
+      "clauses": 138,
+      "reference_only_bytes": 1403940,
+      "materialized_bytes": 2758011
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.5-state-transition-law",
+      "clauses": 136,
+      "reference_only_bytes": 1384160,
+      "materialized_bytes": 2719021
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.6-effect-membrane-rule",
+      "clauses": 136,
+      "reference_only_bytes": 1384160,
+      "materialized_bytes": 2719021
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.7-assetsurface-binding-rule",
+      "clauses": 136,
+      "reference_only_bytes": 1384215,
+      "materialized_bytes": 2719076
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.8-ux-twin-of-odd-115a--view-does-not-own-continuation",
+      "clauses": 137,
+      "reference_only_bytes": 1393855,
+      "materialized_bytes": 2737972
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.8a-msg-replay-proof-requirement",
+      "clauses": 136,
+      "reference_only_bytes": 1384259,
+      "materialized_bytes": 2719120
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.9-view-shape-rule",
+      "clauses": 137,
+      "reference_only_bytes": 1393083,
+      "materialized_bytes": 2736853
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.governing-relations",
+      "clauses": 136,
+      "reference_only_bytes": 1384127,
+      "materialized_bytes": 2718988
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.ux-method",
+      "clauses": 137,
+      "reference_only_bytes": 1387953,
+      "materialized_bytes": 2726677
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.1-observe",
+      "clauses": 121,
+      "reference_only_bytes": 1297004,
+      "materialized_bytes": 2539160
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.1-paired-evidence-collection",
+      "clauses": 137,
+      "reference_only_bytes": 1404621,
+      "materialized_bytes": 2750706
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.10-compose",
+      "clauses": 124,
+      "reference_only_bytes": 1308132,
+      "materialized_bytes": 2560499
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.11-align-optional",
+      "clauses": 127,
+      "reference_only_bytes": 1318928,
+      "materialized_bytes": 2579717
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.12-project",
+      "clauses": 124,
+      "reference_only_bytes": 1305932,
+      "materialized_bytes": 2556101
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.13-compile-optional",
+      "clauses": 128,
+      "reference_only_bytes": 1334259,
+      "materialized_bytes": 2610981
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.14-serve-or-query-optional",
+      "clauses": 123,
+      "reference_only_bytes": 1299511,
+      "materialized_bytes": 2543309
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "clauses": 137,
+      "reference_only_bytes": 1404654,
+      "materialized_bytes": 2750739
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.2-trace",
+      "clauses": 120,
+      "reference_only_bytes": 1289792,
+      "materialized_bytes": 2524841
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.3-extract",
+      "clauses": 120,
+      "reference_only_bytes": 1289528,
+      "materialized_bytes": 2524282
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.3-verification-by-treatment",
+      "clauses": 129,
+      "reference_only_bytes": 1339459,
+      "materialized_bytes": 2621219
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.4-assure",
+      "clauses": 120,
+      "reference_only_bytes": 1291643,
+      "materialized_bytes": 2528531
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.4-core-and-coat-decomposition",
+      "clauses": 138,
+      "reference_only_bytes": 1411780,
+      "materialized_bytes": 2764923
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.5-ledger",
+      "clauses": 123,
+      "reference_only_bytes": 1310455,
+      "materialized_bytes": 2565758
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.5-null-peer-discrimination",
+      "clauses": 130,
+      "reference_only_bytes": 1349100,
+      "materialized_bytes": 2640425
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.6-bound",
+      "clauses": 120,
+      "reference_only_bytes": 1289939,
+      "materialized_bytes": 2525135
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.6-overlay-publication",
+      "clauses": 133,
+      "reference_only_bytes": 1369560,
+      "materialized_bytes": 2681009
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.7-materialize",
+      "clauses": 129,
+      "reference_only_bytes": 1355474,
+      "materialized_bytes": 2654944
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.7-storage-shape",
+      "clauses": 134,
+      "reference_only_bytes": 1377780,
+      "materialized_bytes": 2697439
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.8-relate",
+      "clauses": 124,
+      "reference_only_bytes": 1307398,
+      "materialized_bytes": 2559030
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.9-publish",
+      "clauses": 123,
+      "reference_only_bytes": 1303106,
+      "materialized_bytes": 2550889
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.adjoint-mapping",
+      "clauses": 120,
+      "reference_only_bytes": 1288992,
+      "materialized_bytes": 2523138
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.admissibility",
+      "clauses": 123,
+      "reference_only_bytes": 1307886,
+      "materialized_bytes": 2560381
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.app",
+      "clauses": 120,
+      "reference_only_bytes": 1288023,
+      "materialized_bytes": 2521344
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.assurance",
+      "clauses": 120,
+      "reference_only_bytes": 1288375,
+      "materialized_bytes": 2521976
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.attribute-ledger",
+      "clauses": 123,
+      "reference_only_bytes": 1308759,
+      "materialized_bytes": 2562263
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.attribute-ledger-law",
+      "clauses": 122,
+      "reference_only_bytes": 1302571,
+      "materialized_bytes": 2549927
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.builder-project",
+      "clauses": 121,
+      "reference_only_bytes": 1298301,
+      "materialized_bytes": 2541656
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.builder-project-specialization-relation",
+      "clauses": 121,
+      "reference_only_bytes": 1298560,
+      "materialized_bytes": 2541915
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.companion-surfaces",
+      "clauses": 120,
+      "reference_only_bytes": 1288536,
+      "materialized_bytes": 2522185
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.composed-world-model",
+      "clauses": 124,
+      "reference_only_bytes": 1307424,
+      "materialized_bytes": 2558956
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.composition-law",
+      "clauses": 123,
+      "reference_only_bytes": 1301558,
+      "materialized_bytes": 2547367
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.constitutional-intents",
+      "clauses": 120,
+      "reference_only_bytes": 1289417,
+      "materialized_bytes": 2523904
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.control-plane-and-data-plane",
+      "clauses": 128,
+      "reference_only_bytes": 1334358,
+      "materialized_bytes": 2611080
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.covariance-edge",
+      "clauses": 120,
+      "reference_only_bytes": 1288260,
+      "materialized_bytes": 2521674
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.data-is-evidence-not-meaning-by-itself",
+      "clauses": 120,
+      "reference_only_bytes": 1290269,
+      "materialized_bytes": 2525423
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.discrimination",
+      "clauses": 123,
+      "reference_only_bytes": 1307897,
+      "materialized_bytes": 2560392
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.domains-are-functional-surfaces",
+      "clauses": 121,
+      "reference_only_bytes": 1291806,
+      "materialized_bytes": 2528320
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.entity-cut",
+      "clauses": 124,
+      "reference_only_bytes": 1314065,
+      "materialized_bytes": 2572694
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.entity-cut-construction-law",
+      "clauses": 124,
+      "reference_only_bytes": 1316480,
+      "materialized_bytes": 2577327
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.epistemic-status-of-the-construct",
+      "clauses": 129,
+      "reference_only_bytes": 1339525,
+      "materialized_bytes": 2621285
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.evidence-hierarchy",
+      "clauses": 120,
+      "reference_only_bytes": 1290120,
+      "materialized_bytes": 2525358
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.four-working-refinements-indicated-by-the-empirical-program",
+      "clauses": 139,
+      "reference_only_bytes": 1420039,
+      "materialized_bytes": 2780993
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.fragment",
+      "clauses": 120,
+      "reference_only_bytes": 1288136,
+      "materialized_bytes": 2521510
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.fully-qualified-naming-is-mandatory",
+      "clauses": 121,
+      "reference_only_bytes": 1292579,
+      "materialized_bytes": 2529825
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.governing-relations",
+      "clauses": 119,
+      "reference_only_bytes": 1283279,
+      "materialized_bytes": 2511751
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.manifesto",
+      "clauses": 129,
+      "reference_only_bytes": 1334591,
+      "materialized_bytes": 2611003
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.mappings-are-semantic-treatments",
+      "clauses": 123,
+      "reference_only_bytes": 1300539,
+      "materialized_bytes": 2545117
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.markov-object",
+      "clauses": 130,
+      "reference_only_bytes": 1345954,
+      "materialized_bytes": 2634282
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.markov-object-construction-law",
+      "clauses": 137,
+      "reference_only_bytes": 1404643,
+      "materialized_bytes": 2750728
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.markov-object-overlay",
+      "clauses": 138,
+      "reference_only_bytes": 1410679,
+      "materialized_bytes": 2762810
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.materialization-law",
+      "clauses": 125,
+      "reference_only_bytes": 1324864,
+      "materialized_bytes": 2594135
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.method-flow",
+      "clauses": 127,
+      "reference_only_bytes": 1332590,
+      "materialized_bytes": 2609536
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.method-objectives",
+      "clauses": 121,
+      "reference_only_bytes": 1292910,
+      "materialized_bytes": 2530696
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.method-output",
+      "clauses": 147,
+      "reference_only_bytes": 1470023,
+      "materialized_bytes": 2879194
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.method-role",
+      "clauses": 119,
+      "reference_only_bytes": 1283196,
+      "materialized_bytes": 2511668
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.position",
+      "clauses": 120,
+      "reference_only_bytes": 1289989,
+      "materialized_bytes": 2525216
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.probability-belongs-in-the-epistemic-overlay",
+      "clauses": 126,
+      "reference_only_bytes": 1312329,
+      "materialized_bytes": 2566307
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.projection",
+      "clauses": 124,
+      "reference_only_bytes": 1304923,
+      "materialized_bytes": 2554076
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.projection-law",
+      "clauses": 123,
+      "reference_only_bytes": 1299275,
+      "materialized_bytes": 2542814
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.proof-law",
+      "clauses": 131,
+      "reference_only_bytes": 1355917,
+      "materialized_bytes": 2654197
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.publication",
+      "clauses": 126,
+      "reference_only_bytes": 1326949,
+      "materialized_bytes": 2598148
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.publication-law",
+      "clauses": 122,
+      "reference_only_bytes": 1295998,
+      "materialized_bytes": 2536677
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.published-domain-artifact",
+      "clauses": 120,
+      "reference_only_bytes": 1288416,
+      "materialized_bytes": 2521866
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.query-plane",
+      "clauses": 120,
+      "reference_only_bytes": 1288257,
+      "materialized_bytes": 2521716
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.relation-to-design-module-method",
+      "clauses": 132,
+      "reference_only_bytes": 1354032,
+      "materialized_bytes": 2648549
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.representation-law",
+      "clauses": 138,
+      "reference_only_bytes": 1414274,
+      "materialized_bytes": 2770043
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.saturation-law",
+      "clauses": 124,
+      "reference_only_bytes": 1316413,
+      "materialized_bytes": 2577349
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.single-truth-surface",
+      "clauses": 123,
+      "reference_only_bytes": 1296218,
+      "materialized_bytes": 2536635
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.source-systems-remain-sovereign",
+      "clauses": 121,
+      "reference_only_bytes": 1295540,
+      "materialized_bytes": 2535816
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.temporal-reference-artifact",
+      "clauses": 120,
+      "reference_only_bytes": 1288465,
+      "materialized_bytes": 2521940
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.the-world-model-sits-above-apis-and-schemas",
+      "clauses": 124,
+      "reference_only_bytes": 1305725,
+      "materialized_bytes": 2555284
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.theoretical-underpinnings-of-the-markov-object",
+      "clauses": 130,
+      "reference_only_bytes": 1346400,
+      "materialized_bytes": 2634778
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.treatment-surface",
+      "clauses": 120,
+      "reference_only_bytes": 1288276,
+      "materialized_bytes": 2521682
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.value-lists-are-domain-artifacts-too",
+      "clauses": 122,
+      "reference_only_bytes": 1297594,
+      "materialized_bytes": 2539746
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.what-a-world-model-is",
+      "clauses": 125,
+      "reference_only_bytes": 1322528,
+      "materialized_bytes": 2589415
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.what-an-effective-blanket-actually-is",
+      "clauses": 139,
+      "reference_only_bytes": 1422996,
+      "materialized_bytes": 2787173
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.world-model-driven-development",
+      "clauses": 123,
+      "reference_only_bytes": 1298137,
+      "materialized_bytes": 2540339
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.world-model-method",
+      "clauses": 120,
+      "reference_only_bytes": 1287923,
+      "materialized_bytes": 2520959
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.world-model-object",
+      "clauses": 120,
+      "reference_only_bytes": 1288600,
+      "materialized_bytes": 2522318
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WORLD_MODEL_METHOD.world-models-externalize-expert-cognition",
+      "clauses": 120,
+      "reference_only_bytes": 1289509,
+      "materialized_bytes": 2523860
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.bad-prose",
+      "clauses": 110,
+      "reference_only_bytes": 1237190,
+      "materialized_bytes": 2433079
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.core-rule",
+      "clauses": 110,
+      "reference_only_bytes": 1237337,
+      "materialized_bytes": 2433380
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.current-surface-writing",
+      "clauses": 112,
+      "reference_only_bytes": 1261159,
+      "materialized_bytes": 2480308
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.good-prose",
+      "clauses": 110,
+      "reference_only_bytes": 1237620,
+      "materialized_bytes": 2433933
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.method-alignment",
+      "clauses": 109,
+      "reference_only_bytes": 1231134,
+      "materialized_bytes": 2421112
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.practical-layer-checks",
+      "clauses": 112,
+      "reference_only_bytes": 1262894,
+      "materialized_bytes": 2483791
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.remove-these-habits",
+      "clauses": 110,
+      "reference_only_bytes": 1237805,
+      "materialized_bytes": 2434186
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.specification-artifact-practice",
+      "clauses": 110,
+      "reference_only_bytes": 1239412,
+      "materialized_bytes": 2437244
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.style-rules",
+      "clauses": 110,
+      "reference_only_bytes": 1237430,
+      "materialized_bytes": 2433540
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.writing-guide",
+      "clauses": 110,
+      "reference_only_bytes": 1238107,
+      "materialized_bytes": 2434862
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:1-position-c72b1903e210",
+      "clauses": 141,
+      "reference_only_bytes": 1429579,
+      "materialized_bytes": 2809100
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:16-relationship-to-other-method-surfaces-45539d449bae",
+      "clauses": 149,
+      "reference_only_bytes": 1493427,
+      "materialized_bytes": 2935224
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:17-non-goals-621ab5c53456",
+      "clauses": 141,
+      "reference_only_bytes": 1425650,
+      "materialized_bytes": 2801002
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:2-method-role-194f2b49b482",
+      "clauses": 140,
+      "reference_only_bytes": 1417065,
+      "materialized_bytes": 2784258
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:3-method-composition-ce62ae66b191",
+      "clauses": 141,
+      "reference_only_bytes": 1423569,
+      "materialized_bytes": 2797122
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:anti-patterns-8d2be39d6187",
+      "clauses": 119,
+      "reference_only_bytes": 1342818,
+      "materialized_bytes": 2642767
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:authority-b80e403d2645",
+      "clauses": 110,
+      "reference_only_bytes": 1236831,
+      "materialized_bytes": 2432646
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:basis-and-acquisition-procedure-05e917554831",
+      "clauses": 111,
+      "reference_only_bytes": 1271266,
+      "materialized_bytes": 2500769
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:canonical-compression-f902a2db13ab",
+      "clauses": 116,
+      "reference_only_bytes": 1302641,
+      "materialized_bytes": 2562816
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:closure-e90d617d2b55",
+      "clauses": 165,
+      "reference_only_bytes": 1866150,
+      "materialized_bytes": 3677672
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:conditional-host-workflow-549338fdcdc8",
+      "clauses": 113,
+      "reference_only_bytes": 1301743,
+      "materialized_bytes": 2560991
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:conditional-template-instantiation-d99beec45e43",
+      "clauses": 134,
+      "reference_only_bytes": 1666862,
+      "materialized_bytes": 3282959
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:conformance-obligations-82795e29d39a",
+      "clauses": 120,
+      "reference_only_bytes": 1417237,
+      "materialized_bytes": 2790150
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:counterexample-localization-59a89edb6f08",
+      "clauses": 110,
+      "reference_only_bytes": 1244575,
+      "materialized_bytes": 2447704
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:evaluate-966591fe7e17",
+      "clauses": 109,
+      "reference_only_bytes": 1228247,
+      "materialized_bytes": 2415539
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:exclusions-fcc9f1f92978",
+      "clauses": 115,
+      "reference_only_bytes": 1275010,
+      "materialized_bytes": 2507840
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:governing-relations-75c5e9607187",
+      "clauses": 147,
+      "reference_only_bytes": 1452887,
+      "materialized_bytes": 2845862
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:json-schema-validation-8979d757bd14",
+      "clauses": 110,
+      "reference_only_bytes": 1248105,
+      "materialized_bytes": 2454770
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:manifesto-d112303f87d0",
+      "clauses": 130,
+      "reference_only_bytes": 1344903,
+      "materialized_bytes": 2631590
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:position-6d031af10da7",
+      "clauses": 133,
+      "reference_only_bytes": 1420052,
+      "materialized_bytes": 2782261
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:reference-only-semantic-imports-cd4156412624",
+      "clauses": 111,
+      "reference_only_bytes": 1244223,
+      "materialized_bytes": 2447248
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:release-version-boundary-d7111acbd240",
+      "clauses": 112,
+      "reference_only_bytes": 1260422,
+      "materialized_bytes": 2478974
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:family:scope-b073f6c68ef8",
+      "clauses": 113,
+      "reference_only_bytes": 1263496,
+      "materialized_bytes": 2485190
+    }
+  ]
+}

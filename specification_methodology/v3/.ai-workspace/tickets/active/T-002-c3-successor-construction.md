@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T07:36:13Z
+updated_at: 2026-10-14T16:36:35Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,9 +27,11 @@ links:
 
 ## Current Iteration
 
-The owner selects closure of round 2 and preparation of both implementation lines under [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; historical peer findings are routed for current-source evaluation without claiming they remain present. The [round-2 response](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md) records common repairs. Both next contracts are admitted against one recorded [shared input](#shared-i3-input-after-round-2). Their construction authority is distinct from final common acceptance, reserved member acceptance and release. Historical snapshots and contracts below retain their subjects.
+The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source awaits independent readback; the parent then records its exact input and the Codex successor admission. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
 
-2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 records the common amendment; this T-002 ticket records the exact input snapshot; T-002-CODEX records Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
+The round-2 shared input and the contracts recorded at `651581c` remain historical facts with unchanged bytes. Codex construction was separately selected and returned under its own contract. RT2-01/02 question the admitting actor and start of the Claude line; this common closure neither ratifies that admission nor activates that line. Its selected Executive resolves those records within its own authority. The peer's unresolved start record does not invalidate the Codex basis or block common source closure.
+
+2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 records the common amendment; this T-002 ticket records the exact input snapshot; T-002-CODEX records Codex execution. The historical setup and grants below retain their original subjects. For Codex, the current actor assignment is the owner-selected Codex session recorded in its tenant ticket. The Claude-line admission and start have the separate unresolved standing stated above; the older unbound Executive draft supplies neither line a current assignment. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
 ## Owner Instruction
 
@@ -112,7 +114,7 @@ Directory nesting under `specification_methodology/` creates no composition edge
 
 ## Executive Activation
 
-Historical setup draft: the actors were then unbound. Current successor actors and admissions are recorded in each tenant's Current Iteration 3 Contract, against the shared input above.
+Historical setup draft: the actors were then unbound. The Codex ticket records its selected construction actor and admissions. The Claude line resolves its own admission and start; no current binding is supplied by the historical table below.
 
 | Coordinate | Binding |
 |---|---|
@@ -156,7 +158,7 @@ The first activation of each tenant also returns the tenant's member list and th
 | Milestone | State | Closure condition |
 |---|---|---|
 | M0 wave authorised | DONE 2026-10-12 by Jim's approval | GOAL-002 selected; contract accepted as configuration; this ticket admitted as upstream authority |
-| M1 actors bound and first activation admitted | OPEN; Jim names the Executive and Reviewer per tenant | the Executive activation record is ledgered with an actor; the first execution contract is `admitted` |
+| M1 actors bound and first activation admitted | Codex construction actor and EC-CODEX-I3-02 admission recorded; its reviewed successor admission follows the new common input. Claude-line admission/start remains with that line. Acceptance-review assignments remain reserved. | The selected line records its admitting actor, authority and exact contract before execution. Historical construction admission supplies no acceptance-review assignment. |
 | M2 member 1 accepted per tenant | OPEN | REFERENCE_FRAME_METHOD restated, reviewed `satisfied` on all six criteria, disposed `accept`; the axioms shown to bear the load or `re_enter` recorded |
 | M3 all members accepted per tenant | OPEN | every frontier row disposed; every member accepted |
 | C3 closure | OPEN; Jim's | Jim accepts the checkpoint per tenant |
