@@ -477,3 +477,5 @@ Step 1 returned, committed as one commit (I3-2a, I3-2b, I3-2c, I3-2e):
 Variance: all four activations exceeded the 300,000-byte default, at an estimated 307 to 420 KB acquired, not instrumented. Recorded against the CONSTRUCTION_BINDING limits.
 
 Open items routed to step 2: WRITING_GUIDE and POSTING_GUIDE, the pillar 2 owner (IDENTITY proposed), DP-41 to DP-46 tracing, and the pillar column for F1 and F6 to F21.
+
+2026-10-14T17:46Z — Paused for token budget at the product owner's request ("how can i reduce token usage, i am almost out of tokens"). I3-3a was committed. I3-2r, I3-3g and I3-3d were stopped mid-work, and their partial unreviewed edits were saved to `git stash` ("I3 partial edits from stopped …"). Step 2 stopped with I3-3a, I3-3b and I3-3c committed. Remaining: I3-2r (WC-1 repairs), I3-3d, I3-3f to I3-3k, I3-3e, then steps 3 to 7. The resume plan uses one activation at a time, scoped narrowly, with working checks combined.
