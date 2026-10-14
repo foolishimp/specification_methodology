@@ -3,8 +3,8 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T01:32:33Z
 **Addresses**: the common specification `specification_methodology/v3/specification/` for iteration 3, at the commit the common pen names as frozen for each round
-**Status**: Round 1 complete (subject `7c058ed`). Round 2 expectations recorded (subject `55bbf9e`), before its diff is read. Expectations for round 1 were committed at `f4007ce`, before that subject was read.
-**Updated**: 2026-10-14T01:50:05Z
+**Status**: Round 2 complete (subject `55bbf9e`). Round 2 expectations were committed at `81695e5`, before its diff was read. Round 1 (subject `7c058ed`) expectations were committed at `f4007ce`.
+**Updated**: 2026-10-14T04:31:25Z (round 2 findings)
 
 ## Authority and independence
 
@@ -250,3 +250,89 @@ A round 1 finding closes only when the corrected text meets its expectation belo
   - I3-02, I3-05 and I3-11 match the reduction requirement.
 - **M10:** a conserved claim may have more than one successor locus, and the tier table's member lists are stated as binding or as illustrative.
 - **No regressions:** the repair text introduces no new contradiction, untestable obligation, second owner or naming in prose. It does not reopen a round 1 "holds" result (expectations 5, 10 and 12).
+
+## Round 2: findings, subject `55bbf9e`
+
+### Scope
+
+The subject is the corrected specification and work list at `55bbf9ee7bc8e37235ef0588f9afea0f8ccbabbc`, compared with `afb6ad6`. The changes cover 13 files, with 219 insertions and 97 deletions. Also read:
+- the pen's [disposition record](../codex/20261014T030729Z_REVIEW_I3_ROUND_1_DISPOSITION_AND_REPAIR.md) for every round 1 finding;
+- its three working reviews.
+
+`cab9800`, which adds the handoff and edits GOALS status lines, lies outside the frozen subject.
+
+Three Claude reviewers split the work. Their reports are in [round-2 assets](assets/20261014T013233Z_i3_review/round-2/):
+- [RR1](assets/20261014T013233Z_i3_review/round-2/RR1.md): closure of B1, M1 to M5 and M10;
+- [RR2](assets/20261014T013233Z_i3_review/round-2/RR2.md): M6 to M9, the disposition record and the working reviews;
+- [RR3](assets/20261014T013233Z_i3_review/round-2/RR3.md): a regression pass over every changed line.
+
+### Verdict
+
+The round made substantial progress, but the specification is not yet ready for sign-off.
+
+- The blocking finding is closed.
+- Six of the ten material groups are closed, and four are partly closed.
+- The disposition record accounts for all 69 round 1 findings and the nine ambiguities: 62 repaired, 5 narrowed, 2 declined. Both declines hold in part, and four of its labels misstate what was done (RR2).
+- The repair text introduced seven new material defects. They are narrow, but two touch rules the owner selected, and one breaks a recorded contract digest.
+
+### State of the round 1 findings
+
+| Finding | Round 2 state | Evidence |
+|---|---|---|
+| B1, acceptor of replacement relations | **Closed** | The product owner accepts each replacement relation before the dependent member is accepted (`PRODUCT.md:202`). Declining to let member acceptance carry the replacement is sound under the installed UP-020 (RR1) |
+| M1, pillars | **Partly closed** | The algebraic and computational calculi are now distinct pillars, linked to the C1 principles. Still missing: a reason for the "Axiomatic calculus" row and for four renamed or broadened rows. `INTENT.md:13` names the pillars differently (RR1) |
+| M1, owner's pillar list | **Open, the owner's decision** | The pen declined to ask for the owner's confirmation. The only owner words on record are the instruction sentence, and the list is the pen's paraphrase (T-001:45). A second paraphrase by the pen omits the algebraic calculus. The owner's sign-off can confirm `PRODUCT.md:39–50` (RR1) |
+| M2, reduction testable | **Partly closed** | Definitions, a pass rule and a whole-candidate check now exist. New gap RR1-N2: no rule decides whether more acquisition defeats a reduction, or which deciding paths must be compared |
+| M3, a_c in acceptance | **Closed** | RR1 |
+| M4, reopened decisions recorded | **Partly closed** | Four contract changes are unlisted, two of which move owner decisions earlier. The constraint-surface requirement still states no purpose (RR1). See also RR3-05 |
+| M5, acceptance composition | **Closed** in intent | See RR3-04 for its fit with the installed builder |
+| M6, the frame basis's result set | **Closed** | The frame basis now returns the installed evaluation (RR2) |
+| M7, process and authority | **Closed** | All four points are in the text (RR2) |
+| M8, work list covers one line | **Closed by scoping** (interested) | GOALS now limits the list's claim to the Codex line. Codex's review of the Claude candidate is committed byte-identical, and F1 to F5 are indexed as unassessed. The Claude line's iteration 3 obligations are tracked nowhere, which fits the fact that its iteration 3 is not admitted (RR2) |
+| M9, work-list mechanics | **Partly closed** | Decision tracking, the closure rule and the three items are fixed. Coverage is still checked against a packet the list defines itself, and the reviews it leaves out go unnamed (RR2-08) |
+| M10, boundaries | **Closed** | RR1 |
+
+### New findings from the repair text (RR3)
+
+All seven are material and none is blocking.
+
+1. **RR3-01. Member acceptance now has two records, and the author writes one of them.** The new frontier text and the predecessor-claims header put acceptance standing in the tenant's own frontier, which the author tenant writes (`PRODUCT.md:332`; `PREDECESSOR_CLAIMS.md:673`). The unchanged `PRODUCT.md:249–250` says the ticket, written by the pen, is the only record of a disposition. Correction: the tenant frontier records proposed dispositions; acceptance standing lives only in the ticket.
+2. **RR3-02. Three new conformance rows are process checks in a per-member table.** Criterion 5's table separates correct candidates from defective ones (`conformance/README.md:3`). Row 60 can pass or fail no candidate text, and row 12 lets two reviewers reach different member decisions. Correction: move these rows to the process or closure rules they test.
+3. **RR3-03. Criterion 4's limit test cannot be decided the same way twice.** Acquisition through declared routes is now allowed, but the Limits paragraph speaks only of context "measured before reading". Correction: say whether routed acquisition counts against the declared limit, and when it is measured.
+4. **RR3-04. The Reviewer's return does not match the installed builder.** The installed Reviewer returns one closed evaluation with one result. PRODUCT now asks for a six-result return and an "applicable mandatory" conjunction, and the installed builder governs where the two differ (`PRODUCT.md:321`). Correction: state the per-criterion results as refinements whose conjunction yields the installed single result, or record the variance.
+5. **RR3-05. The record of changed accepted items omits this round's own changes.** Among them:
+   - criterion 1 now requires "all successor loci" and drops "that resolves";
+   - a change to Development Isolation, which is a local axiom;
+   - a change to the single-ownership law the owner selected.
+
+   Correction: list each with its reason. The two owner-level changes need the owner's explicit acceptance.
+6. **RR3-06. An admitted contract was edited in place.** T-002-CODEX still records the block as the admitted contract under digest `fc6ed…`, but its bytes now hash to `bf1557…`. The installed ticket method makes the digest the evidence of admission. Correction: restore the admitted bytes and record a successor contract with its own digest and admission.
+7. **RR3-07. The closure rule conflicts with the new work-list rows.** The first-listed item is primary under the new rule, but the new H-M rows give a second primary for findings already routed above: CR2-04 and CR2-09, CR2-21, CR4-F3, CR5-04 and CR5-06. TC-03 is therefore not closed, although `T-001:37` records it as repaired. Correction: give each finding one primary item, and correct the TC-03 record.
+
+The reports list a further 13 minor findings from RR3 and low findings RR2-01 to RR2-08. RR2-01 asks whether the next tenant input waits for sign-off, and matters when that input is selected.
+
+### What holds
+
+- Expectation 5 (neutrality between tenants) holds.
+- Expectation 10 (the a_c dependency boundary) holds and is strengthened, with minor drift at `requirements/README.md:162` and `A_C_DEPENDENCY.md:43`.
+- Expectation 12 (writing) holds, with minor findings.
+- The three working reviews are accurate within their stated scopes. None of them checked SR1-09 to SR1-11, SR1-13 or SR4's N, T-5 to T-7, P and W findings, which include both declines (RR2).
+
+### Required corrections for round 3
+
+1. Remove the second acceptance record (RR3-01). Restore the admitted contract's bytes, and record any successor contract separately (RR3-06).
+2. List every changed accepted item, including this round's changes, with reasons. Bring the Development Isolation change and the single-ownership law change to the owner for explicit acceptance (RR3-05, M4).
+3. Fit the per-criterion results to the installed Reviewer's single result, or record the variance (RR3-04).
+4. Move the process-only conformance rows out of criterion 5 (RR3-02). Decide whether routed acquisition counts against the limit (RR3-03).
+5. Give each finding one primary work item, correct the TC-03 record, and name the reviews the coverage packet leaves out (RR3-07, RR2-08).
+6. Record reasons for the "Axiomatic calculus" row and the renamed pillars, and align the INTENT naming (M1).
+7. Add a rule on acquisition growth and on which deciding paths must be compared (RR1-N2).
+8. Add the purpose paragraph to the constraint-surface requirement (M4).
+
+Two decisions are the product owner's:
+- whether to confirm the pillar list at `PRODUCT.md:39–50` as his own;
+- whether to accept the two owner-level changes in RR3-05.
+
+### Independence and limits
+
+Claude is a governed tenant. M8 and some RR3 wording judgements concern the Claude line, or wording the pen adopted from Claude's round 1 corrections; the reports mark them interested. The reviewers read the subject from `git archive` copies at `55bbf9e`, sampled the predecessor-claims rows, and read neither candidate.
