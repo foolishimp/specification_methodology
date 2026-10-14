@@ -2,14 +2,12 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: 0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc
+source_digest: 616a43eff236c7d71e5884372b9440c5ef60dc0bbe61b5acc1dbae1cbebadd70
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 

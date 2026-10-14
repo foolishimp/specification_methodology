@@ -57,6 +57,8 @@ A later selected installed copy must verify exact subject membership and bytes b
 
 ## Proof Claims
 
+The interpretation serves the [constraint-surface and logic-compression requirement](README.md#constraint-surfaces-and-logic-compression). It makes the source's governing dependencies and remaining freedom recoverable for work. This relation is evaluated separately from checker validity: a well-formed model that omits a material condition can admit work the source prohibits. Required semantic coverage follows the method's owned determinations, not the number of clauses the checker happens to accept.
+
 For each selected, frozen tenant output, keep:
 
 - the source-to-model dispositions, which record how each source clause is represented in the a_c model;

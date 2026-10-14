@@ -1,0 +1,194 @@
+{
+  "case": "C2-cold-continuation-partial-work",
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "grant": {
+    "paths": [
+      "WORKLOG.md"
+    ],
+    "prefixes": [
+      "src/"
+    ],
+    "source": "TASK.json and workspace/PLAN.md steps 1-4; rv-2 alone owns step 5"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "cbe93814d19c463685f889abc71d7e93ad2b39b26a495c20d437dc4c59855c4a",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "96d9f3d549919f5878bd0cbe4e6913cb0565005883cc3a66e4e086ebc35cf9ea",
+      "bytes": 48790
+    },
+    "TASK.json": {
+      "sha256": "19c27c9273d1240e0a171075821ba7244eaa8335dc6db789970a90b24737ba2a",
+      "bytes": 1051
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "fb3c1e4a1c4060cf26cd7e3f77c2ed57a64466e91962b7809417e0d77da8fa9a",
+      "bytes": 2338
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "96d9f3d549919f5878bd0cbe4e6913cb0565005883cc3a66e4e086ebc35cf9ea",
+      "bytes": 48790
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "f42b19d7eb3173547333bf761932aafae2ab3ebf626f5debdc2983fd8eca7c19",
+      "bytes": 6913
+    },
+    "actor/RESULT.md": {
+      "sha256": "e90bc9f3f3e09ec246df488ec74ea7dd72df93223e86e8d74e61b7c2076ce66d",
+      "bytes": 4853
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/PLAN.md": {
+      "sha256": "3503d997ed4ff52161a96079f20763c649ed35c2c8069c06aafdc23abacadf4d",
+      "bytes": 268
+    },
+    "workspace/WORKLOG.md": {
+      "sha256": "780ed3f4ed43c44d3294cd00774790040702accfcd24eb752c138169311f9fdb",
+      "bytes": 41
+    },
+    "workspace/src/a.py": {
+      "sha256": "e5a9e7872a8c815bc788664a7547441b3a02f13376694656d5df93472eef311f",
+      "bytes": 42
+    },
+    "workspace/src/b.py": {
+      "sha256": "56cf7ade673d1f187016e6248c3891767099eb548838f3d6dd838faba1548d5a",
+      "bytes": 130
+    },
+    "workspace/src/c.py": {
+      "sha256": "fc4526ea7b15fcdc1e7c58d8b4518d4009b7ff81025eb7f2b80ea0dfa232c37c",
+      "bytes": 89
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "WORKLOG.md",
+    "src/b.py",
+    "src/c.py"
+  ],
+  "changed_paths": [
+    "WORKLOG.md",
+    "src/b.py",
+    "src/c.py"
+  ],
+  "before": {
+    "PLAN.md": {
+      "sha256": "3503d997ed4ff52161a96079f20763c649ed35c2c8069c06aafdc23abacadf4d",
+      "bytes": 268
+    },
+    "WORKLOG.md": {
+      "sha256": "780ed3f4ed43c44d3294cd00774790040702accfcd24eb752c138169311f9fdb",
+      "bytes": 41
+    },
+    "src/a.py": {
+      "sha256": "e5a9e7872a8c815bc788664a7547441b3a02f13376694656d5df93472eef311f",
+      "bytes": 42
+    },
+    "src/b.py": {
+      "sha256": "56cf7ade673d1f187016e6248c3891767099eb548838f3d6dd838faba1548d5a",
+      "bytes": 130
+    },
+    "src/c.py": {
+      "sha256": "fc4526ea7b15fcdc1e7c58d8b4518d4009b7ff81025eb7f2b80ea0dfa232c37c",
+      "bytes": 89
+    }
+  },
+  "after": {
+    "PLAN.md": {
+      "sha256": "3503d997ed4ff52161a96079f20763c649ed35c2c8069c06aafdc23abacadf4d",
+      "bytes": 268
+    },
+    "WORKLOG.md": {
+      "sha256": "43c04c20cf652f424706aa5c4929689709cd2ce3c442bcca3dc5c5ce45a390ee",
+      "bytes": 544
+    },
+    "src/a.py": {
+      "sha256": "e5a9e7872a8c815bc788664a7547441b3a02f13376694656d5df93472eef311f",
+      "bytes": 42
+    },
+    "src/b.py": {
+      "sha256": "16793d41d150069ce1b9ac6978d47c30ef0c95757877f2890467e99c85a749de",
+      "bytes": 133
+    },
+    "src/c.py": {
+      "sha256": "26ba8d98cd24b7b05d79680bee64de28460cb461fb468a7dd0887276ed1d04ce",
+      "bytes": 98
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "step 1: src/a.py contains no calc_total and defines compute_total",
+      "subject": "src/a.py as observed at resume",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "inspection of supplied file content; WORKLOG step 1 entry",
+      "effect": "not_requested"
+    },
+    {
+      "predicate": "step 2: src/b.py contains no calc_total reference",
+      "subject": "src/b.py proposed content",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "inspection of proposed content; observed pre-state was partial (summary() still called calc_total)",
+      "effect": "unknown",
+      "effect_note": "edit proposed only; application to sandbox not observed by this actor"
+    },
+    {
+      "predicate": "step 3: src/c.py contains no calc_total reference",
+      "subject": "src/c.py proposed content",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "inspection of proposed content",
+      "effect": "unknown",
+      "effect_note": "edit proposed only; application not observed"
+    },
+    {
+      "predicate": "step 4: completed steps recorded in WORKLOG.md",
+      "subject": "WORKLOG.md proposed content",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "proposed entries for steps 1-3; truthful only if the src edits are applied together with it",
+      "effect": "unknown",
+      "effect_note": "edit proposed only; application not observed"
+    },
+    {
+      "predicate": "rename complete everywhere in src/",
+      "subject": "src/ (only a.py, b.py, c.py observed)",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "evidence": "no calc_total in the three observed files (proposed state); completeness of the src/ listing not established",
+      "effect": "unknown"
+    },
+    {
+      "predicate": "step 5: independent review by rv-2 recorded by rv-2 in REVIEW.md",
+      "subject": "T-31 candidate (steps 1-3)",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "never started; this actor is the author and not rv-2 (TICKET_METHOD UP-007, RF-006)",
+      "effect": "not_requested"
+    },
+    {
+      "predicate": "T-31 closed: all plan steps 1-5 satisfied",
+      "subject": "T-31 per PLAN.md",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "evidence": "conjunction of the results above: steps 1-4 satisfied on proposed content, step 5 absent, src/ completeness indeterminate; PLAN Status left open",
+      "effect": "unknown"
+    }
+  ],
+  "actor_report": "Observed state (FOUNDATIONS Workspace and context; SPEC_METHOD UP-020 ordinary restart): PLAN.md is open. WORKLOG.md records only step 1. src/a.py is fully renamed. src/b.py was partially edited by the interrupted session, and that partial edit was not logged. Its import and report() already used compute_total, but summary() still called calc_total. That name is undefined after the import change, so b.py was in a broken intermediate state. src/c.py was untouched.\n\nWork: I resumed from the observed files rather than the worklog and kept the valid partial work. Renaming identifiers to their final values is safe to reapply on this subject, so there is no risk of duplicating an effect. Proposed edits complete b.py (summary call) and c.py (import plus two calls). I also proposed recording steps 2 and 3 in WORKLOG.md, together with their basis and the fact that they were not tested. I did not edit PLAN.md and did not change its Status.\n\nUnresolved:\n(1) Step 5 requires independent review by rv-2, recorded by rv-2. I am the author of these edits, so I cannot perform or record it (TICKET_METHOD UP-007; RF-006). REVIEW.md was not created.\n(2) T-31 closure is indeterminate because step 5 is missing (Condition-Based Closure; Result conjunction).\n(3) The goal is 'everywhere in src/'. I can only vouch for the three supplied files, since a partial view of the workspace does not prove there are no others (Workspace and context). The plan lists only a, b and c.\n(4) No execution was available, so the code was neither imported nor tested.\n(5) I only propose edits; whether they were applied to the sandbox files is for the host to observe. The WORKLOG entries for steps 2 and 3 are accurate only if the file edits are applied with them.",
+  "assertion_counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 3
+  },
+  "assertions_sha256": "cac36d84127b5cc61f16f1f322b7d54ee26d98a1aa131cbe643aa9b4405d20ba",
+  "inputs_unchanged": true
+}

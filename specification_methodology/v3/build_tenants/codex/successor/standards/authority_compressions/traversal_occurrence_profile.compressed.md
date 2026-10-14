@@ -2,18 +2,24 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/traversal-occurrence-profile/v1
 source_ref: ../TRAVERSAL_OCCURRENCE_PROFILE.md
-source_digest: 009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9
+source_digest: afd43348a3a9d10bbd1e0452b0efcfb2f93aa19fc6257a046673679096f2308d
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
   - evaluate_design_depth
   - evaluate_review_grade
-generated_by: codex
-generated_at: 2026-10-12
 stale_if_source_digest_changes: true
 ---
 
 # Traversal Occurrence Profile Compressed Authority
+
+The [core result contract](../FOUNDATIONS.md#result-algebra) owns outcomes and
+[result conjunction](../FOUNDATIONS.md#result-conjunction) owns their conjunctive
+combination. Domain labels below are refinements on their exact predicates,
+retaining original outcomes, performance and effect observations.
+[Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
+governs context reconstruction and conditional reuse.
+
 
 ## Identity And Boundary
 

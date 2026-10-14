@@ -27,36 +27,42 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 4f7f2353ff1d25c4e43d76023c1782a5a633ba3245ee4a90580a92d5c4517b2f
-  TRANSFORMATION_LIBRARY.md: f0f05a0847f8e5dee0d611163dc86369e9a11f7cf6c36bad2443e2ad3403a29a
-  AXIOMATIC_CALCULUS.md: 5580e16c42325f76fd07800fd92d1f445503a0dc3cacd7fc2f22f5adb1b8118d
-  TRAVERSAL_OCCURRENCE_PROFILE.md: 009b82597b56b3935ec28fbc7b2c9ca709e595b75c17cefce978ea3571aaeeb9
-  REFERENCE_FRAME_METHOD.md: 44bb25eacd05550240d31ef318dc2c23db2b8a147ba1b8daa342f688d343e488
-  STDO_REFERENCE_FRAME_BASELINE.md: ca38b577b2cb5ffddbcc7692857cfaaad2e9f686a3fdf2bf534c7c008de2633b
-  SPEC_METHOD.md: fbdc44e3ee5754521a95d6fb7d02e94c47ede7ae1c24dc04cd1b5983af112b43
+  FOUNDATIONS.md: e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b
+  TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
+  AXIOMATIC_CALCULUS.md: 8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09
+  TRAVERSAL_OCCURRENCE_PROFILE.md: afd43348a3a9d10bbd1e0452b0efcfb2f93aa19fc6257a046673679096f2308d
+  REFERENCE_FRAME_METHOD.md: 7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213
+  STDO_REFERENCE_FRAME_BASELINE.md: 3e42ef02d525f9dbc9c9d45b51490a7c7de335128aa6bc327338b716f90df4ca
+  SPEC_METHOD.md: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: d965d70f416955ade2a2ce995cc2368d809020cb5f53fffc73eef136fb4a2298
-  ODD_METHOD.md: 0156cb331b14fdede34ab89461cb04e8e08bedac8dcfab53007f0815cb643adc
-  WORLD_MODEL_METHOD.md: 31e754ad45c39db27618a5e6689cee372773d4863ee05cb77dd4512425fd028c
-  TICKET_METHOD.md: 2cbdc039c0a9033cb541a8b63d90da11a35923ea89ebe2d3132ffa7ddfb84417
-  UX_METHOD.md: 5fbbaba763c8d73e9fccd827fc4992b667daa813042076c1c7719fcd61c9f317
-  IDENTITY_METHOD.md: 4f871945701a38566df32dd73de1c589de7b73d2addf2949f4bffc5b9e43e8f7
-  RELEASE_METHOD.md: 26f48744f6344f11237f78ddc8a7012f0d85abf20043fcf1a8b84942bfb19373
-  POSTING_GUIDE.md: a9d67e70aa1dd8390f82ab44da7bb72f9240545efc30bf2873b1f7165a273cc1
+  DESIGN_MODULE_METHOD.md: e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018
+  ODD_METHOD.md: 616a43eff236c7d71e5884372b9440c5ef60dc0bbe61b5acc1dbae1cbebadd70
+  WORLD_MODEL_METHOD.md: 6e19e429fa7003c0885844fbc642cf1d6b6b4dbc6a7341bfcce555b791defba1
+  TICKET_METHOD.md: a91012c780f94c8cc0df85dd6912116ef1ad4c47a4bc070526fd39de2fbb1094
+  UX_METHOD.md: 37d3859c7b6e8ee0d293c9aae2421d379e2cbb10243afbed9a60174a5188a07f
+  IDENTITY_METHOD.md: 0b4158d98d7f0be980218865fa75e767042007a3ad49326b86252d67074e5a6d
+  RELEASE_METHOD.md: 6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede
+  POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
-  GLOSSARY_GUIDE.md: b2771ac69fd47d45d436c87bc35b57062e457f422c4df008f5caf5d441af18db
-generated_by: codex
-generated_at: 2026-10-12
+  GLOSSARY_GUIDE.md: d433155845187b39e504b34fbb079690fefcab141d213e1179e535b7027b88f3
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
 
 # STDO Compressed Authority
 
+The [core result contract](../FOUNDATIONS.md#result-algebra) owns outcomes and
+[result conjunction](../FOUNDATIONS.md#result-conjunction) owns their conjunctive
+combination. Domain labels below are refinements on their exact predicates,
+retaining original outcomes, performance and effect observations.
+[Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
+governs context reconstruction and conditional reuse.
+
+
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
 organise shared premises and transformation families. Detailed owners retain
-their exact applicability, result domains and operation grants. Use a sufficient
+their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
 
@@ -911,9 +917,9 @@ layer that owns the missing truth.
 - A state-value change preserves topology only when every material entity,
   relation, lifecycle, authority, capability, adjacency, and seam is preserved;
   otherwise the activation requires topology recharting.
-- The baseline result family is `satisfied`, `falsified`, `indeterminate`,
-  `out_of_frame`, or `invalid_basis`. Missing context, evidence, authority, or
-  capability cannot be converted to satisfaction.
+- Foundations owns the five core verdicts and their complete result record.
+  Frames apply its legal pairs and predicate-bound domain-refinement rule.
+  Missing context, evidence, authority or capability cannot become satisfaction.
 - Coverage is relative to an exact workspace, governed outcome, basis, known
   evaluation inventory, frame set, and time. It covers material interactions,
   semantic/operation/decision authority, failure, capability, separately
@@ -1001,8 +1007,9 @@ layer that owns the missing truth.
   path. Excluded threats give no retention claim; hypothetical hostility and
   internal location alone establish neither applicability nor trust. A repair
   proposal acquires obligation only through its owner.
-- Executive consumes that technical triage with the complete Product view and
-  current MVP or release mandate. It assigns priority, determines the effect on
+- Executive consumes that technical triage with the bounded Product frontier
+  material to its decision and current MVP or release mandate. It preserves
+  unresolved obligations outside the acquired view. It assigns priority, determines the effect on
   the current promotion boundary, applies exactly one existing `STDO-UP-020`
   disposition, and selects only an already-authorized next action. Severity,
   priority, frame result, boundary effect, and disposition remain distinct.
@@ -1019,11 +1026,13 @@ layer that owns the missing truth.
   Product role, authority, coverage, or return topology refuses, invalidates,
   or re-enters rather than enlarging the Executive frame.
 - For work requiring coordinated engagement, Executive attempts Worker activation; an
-  activation refusal returns directly to Executive and creates no Worker result;
-  after lawful activation, `satisfied`, `falsified`, `indeterminate`, and
-  `out_of_frame | invalid_basis` map exclusively to `candidate_ready`,
-  `refused`, `incomplete`, and `re_entry_requested`. Its Worker result returns
-  to Executive. For a candidate, Executive either dispositions directly when
+  activation refusal returns to the assigning authority or declared result
+  carrier and creates no Worker result;
+  after lawful activation, the Baseline's Work result binds each original
+  outcome and cause to the exact bounded-availability predicate under the core
+  rule. A verdict alone cannot recover the finer outcome; availability does not
+  establish fitness or acceptance. Its Worker result returns to Executive.
+  For a candidate, Executive either dispositions directly when
   independent review is not required or activates Reviewer, receives the closed
   review result, and then applies exactly one existing `STDO-UP-020`
   disposition.

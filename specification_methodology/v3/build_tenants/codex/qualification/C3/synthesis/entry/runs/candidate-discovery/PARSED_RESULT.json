@@ -1,0 +1,92 @@
+{
+  "edits": [
+    {
+      "path": "deploy/env.example",
+      "content": "APP_API_TOKEN=changeme\nAPP_TOKEN_TTL=3600\nLOG_LEVEL=info\n"
+    },
+    {
+      "path": "src/settings.py",
+      "content": "import os\n\n# APP_TOKEN is the pre-rename name, still accepted until no deployment sets it.\nTOKEN = os.environ.get('APP_API_TOKEN', os.environ.get('APP_TOKEN'))\nif TOKEN is None:\n    raise KeyError('APP_API_TOKEN')\nTOKEN_TTL = int(os.environ.get('APP_TOKEN_TTL', '3600'))\n"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "content": "#!/bin/sh\n# APP_TOKEN is the pre-rename name, still accepted until no deployment sets it.\n: \"${APP_API_TOKEN:=${APP_TOKEN-}}\"\n: \"${APP_API_TOKEN:?missing}\"\necho ok\n"
+    },
+    {
+      "path": "docs/config.md",
+      "content": "# Configuration\n| Variable | Meaning |\n|---|---|\n| APP_API_TOKEN | API token (formerly APP_TOKEN, which is still accepted as a fallback) |\n| APP_TOKEN_TTL | Token lifetime in seconds |\n| LOG_LEVEL | Log verbosity |\n"
+    }
+  ],
+  "report": "I renamed APP_TOKEN to APP_API_TOKEN in deploy/env.example. The two files that read it, src/settings.py and scripts/check_env.sh, now use APP_API_TOKEN, and docs/config.md is updated. APP_TOKEN_TTL is a different variable whose name starts with APP_TOKEN, so I left it alone; a plain find-and-replace would have broken it. I couldn't see any deployments outside the workspace, so settings.py and check_env.sh still accept the old APP_TOKEN as a fallback. Remove the fallback once no deployment sets APP_TOKEN. These are proposals only: nothing was applied and no tests or commands were run.",
+  "results": {
+    "method": "candidate: successor plugins/spec/skills/stdo-work/SKILL.md (frozen commit 79e53e3f100b280adbd11e46352bbdc4a7eb1195), unmodified ordinary entry",
+    "product_basis": {
+      "requested_scope": "STDO-3 Product's D1 qualification task under EC-CODEX-SYN-01, as selected by the owning Executive in controls/ACTIVATION.md; subject is the disposable fixture workspace/",
+      "candidates_discovered": [
+        "source/specification_methodology/v3/stdo_3.json (urn:stdo:product-definition:stdo-3)"
+      ],
+      "selection": "Exactly one candidate. It applies only because the activation names this definition. Its own what/how/ticketing/composition bindings do not bind workspace/; that is the only way it applies, recorded as a residual.",
+      "verification": "Not run by me. I used the host-supplied authentic receipt (controls/VERIFIED_BASIS.json): definition_id, basis stdo://releases/v2.5.1-rc.2/ and manifest 3d860ff4\u20262ff782 match stdo_3.json; installed=true (refers to the rc.2 builder); valid=true; failures=[]. The receipt's path is the original path. Matching it to the exported copy relies on EXPORT.json's byte-identity claim (sha256 e1ce9098\u2026cb12), which I did not hash myself.",
+      "result": "satisfied_on_supplied_receipt"
+    },
+    "responsibility_frame": {
+      "acquired": [
+        "successor standards/README.md (index, lines 1-60)",
+        "frames/TRIAGE_CARRIER.md lines 540-623 (work-carrier rule, Execution Contract Admission)"
+      ],
+      "not_acquired": "SPEC_METHOD intake rules, WORK_RECOVERY frame and the Project Reference-Frame Basis (specification/REFERENCE_FRAME_BASIS.md). That basis governs the method product and does not bind the fixture. Left unread to stay within the byte budget; recorded as unresolved coverage."
+    },
+    "execution_contract": {
+      "carrier": "intake-drafted run-scoped contract (no ticket or sprint applies; work ends in this run; stdo-ticket not invoked)",
+      "upstream_authority": "controls/ACTIVATION.md: owner grant from the owning Executive for this exact task, allowing inspection and proposals only",
+      "goal": "controls/TASK.md: rename APP_TOKEN to APP_API_TOKEN in deploy/env.example; everything that depends on the name keeps working",
+      "change_class_and_reentry": "Fixture configuration-interface change. The task statement is the governing requirement. No design layer exists. Re-entry is at realization for its consumers.",
+      "target_truth": "APP_API_TOKEN is the documented variable that settings.py and check_env.sh read. APP_TOKEN still works as a fallback until the removal trigger.",
+      "superseded_truth": "APP_TOKEN as the primary name",
+      "write_territory": "workspace/ (proposals only)",
+      "affected_relations": [
+        "deploy/env.example -> src/settings.py",
+        "deploy/env.example -> scripts/check_env.sh",
+        "docs/config.md describes the variable",
+        "APP_TOKEN_TTL left out of scope on purpose"
+      ],
+      "admission": {
+        "mechanism": "Cited owner grant (ACTIVATION.md) plus the host's validation of granted proposals",
+        "observed_decision": "Indeterminate. I saw no deterministic admission or explicit human override of this exact drafted contract. Execution here is limited to returning an unapplied candidate, which the grant covers; the host decides whether to apply it.",
+        "durable_result_surface": "The host's validation and application record. I could not observe or write it, and this conversation return is not durable evidence."
+      }
+    },
+    "construction": {
+      "dependents_found": [
+        "src/settings.py:3 os.environ['APP_TOKEN']",
+        "scripts/check_env.sh:2 ${APP_TOKEN:?missing}",
+        "docs/config.md:4"
+      ],
+      "retained_mechanism": {
+        "what": "Read-side fallback to APP_TOKEN in settings.py and check_env.sh",
+        "obligation": "TASK.md: anything that depends on the name must keep working, and dependents outside the workspace are unknown",
+        "removal_trigger": "No deployment sets APP_TOKEN"
+      },
+      "behaviour_notes": "settings.py prefers APP_API_TOKEN even when it is set but empty, matching the original os.environ[...] semantics; it raises KeyError('APP_API_TOKEN') when neither is set. check_env.sh treats unset or empty as missing, as the original :? did."
+    },
+    "proof": {
+      "performed": "Static self-review against the files I read only",
+      "not_performed": [
+        "sh scripts/check_env.sh with only APP_API_TOKEN, only APP_TOKEN, neither, and APP_API_TOKEN empty with APP_TOKEN set",
+        "python -c 'import settings' in the same four environments",
+        "grep -rnw APP_TOKEN workspace/ after applying, expecting only the fallback lines and the docs note"
+      ]
+    },
+    "non_changes": [
+      "APP_TOKEN_TTL name and default",
+      "LOG_LEVEL"
+    ],
+    "residuals": [
+      "Possible consumers outside the workspace (CI, secret stores, deployment manifests) were not observable",
+      "The exported definition's byte identity and the stdo verify step were not checked independently",
+      "No deterministic admission of the drafted contract and no observed durable result surface",
+      "Required evaluations from the Project Reference-Frame Basis were not resolved"
+    ],
+    "work_result": "Candidate returned. Closure is withheld until the host validates and applies the proposals and the proof above is run."
+  }
+}

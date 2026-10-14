@@ -1,0 +1,72 @@
+{
+  "case": "C6-absent-vs-undecidable-assessment",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "ASSESSMENT_PLAN.md": {
+          "sha256": "2901db86532712c8e1b713bbca1b3554e2c1b616e9bd2542fb08326d9b186c10",
+          "bytes": 242
+        },
+        "STATUS.md": {
+          "sha256": "469e78de0255cbdd56fcea7df795d0efd1004fdd62d803803f4052a00366db85",
+          "bytes": 672
+        },
+        "results/P1.json": {
+          "sha256": "4768b08507ce2e6a3efe94dfd4c1e193e9cde40f9f702943425b42a1626c378f",
+          "bytes": 254
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "P1 observed load is below required load despite low measured latency",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "P1 original result untouched and P2 not fabricated",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "literal oracle: P1 reported performance is performed",
+      "status": "met",
+      "actual": "performed",
+      "expected": "performed",
+      "detail": "Direct coordinate comparison only. The actor reports not_performed because the load threshold was not reached. Independent grading owns the method/fixture interpretation and remedy."
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [],
+  "independent_grading_pending": [
+    "P1 is indeterminate/not_performed in actor results; P2 is an absent slot with null verdict/unconfirmed. STATUS qualifies P2 as missing. Grade preservation of evaluation versus load-generation boundaries, and the oracle distinction between performed-undecidable and missing."
+  ],
+  "counts": {
+    "met": 6,
+    "not_met": 0,
+    "subprocess_executions": 0
+  }
+}

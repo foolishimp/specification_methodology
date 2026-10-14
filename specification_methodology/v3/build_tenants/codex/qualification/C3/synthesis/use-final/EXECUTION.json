@@ -1,0 +1,75 @@
+{
+  "actor_concurrency": 3,
+  "runs": [
+    {
+      "case": "C1-stale-summary-vs-workspace",
+      "host_exit": 0,
+      "elapsed_seconds": 22.392,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 53948, \"elapsed_seconds\": 22.355, \"total_cost_usd\": 0.1905628, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C2-cold-continuation-partial-work",
+      "host_exit": 0,
+      "elapsed_seconds": 29.052,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 53973, \"elapsed_seconds\": 29.015, \"total_cost_usd\": 0.2064188, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C3-completed-external-effect-lost-ack",
+      "host_exit": 0,
+      "elapsed_seconds": 27.597,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 54546, \"elapsed_seconds\": 27.558, \"total_cost_usd\": 0.20669880000000002, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C3b-unknown-external-effect-lawful-stop",
+      "host_exit": 0,
+      "elapsed_seconds": 26.439,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 54448, \"elapsed_seconds\": 26.399, \"total_cost_usd\": 0.1980108, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C4-invalidated-dependency-valid-independent-work",
+      "host_exit": 0,
+      "elapsed_seconds": 31.31,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 54137, \"elapsed_seconds\": 31.268, \"total_cost_usd\": 0.2072148, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C5-failed-A-plus-required-coverage-B-outside-plan",
+      "host_exit": 0,
+      "elapsed_seconds": 35.665,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 34997, \"elapsed_seconds\": 35.622, \"total_cost_usd\": 0.17561079999999998, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C6-absent-vs-undecidable-assessment",
+      "host_exit": 0,
+      "elapsed_seconds": 23.312,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 34515, \"elapsed_seconds\": 23.278, \"total_cost_usd\": 0.1424308, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C7-candidate-available-fitness-fails",
+      "host_exit": 0,
+      "elapsed_seconds": 27.706,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 34653, \"elapsed_seconds\": 27.666, \"total_cost_usd\": 0.1561788, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "C8-one-frame-direct-work",
+      "host_exit": 0,
+      "elapsed_seconds": 24.547,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 53864, \"elapsed_seconds\": 24.505, \"total_cost_usd\": 0.19274280000000002, \"transport\": null}",
+      "stderr": ""
+    },
+    {
+      "case": "D1-ordinary-discovery-probe",
+      "host_exit": 0,
+      "elapsed_seconds": 27.001,
+      "summary": "{\"exit_code\": 0, \"is_error\": false, \"subtype\": \"success\", \"selected_input_bytes\": 53709, \"elapsed_seconds\": 26.97, \"total_cost_usd\": 0.1989548, \"transport\": null}",
+      "stderr": ""
+    }
+  ]
+}

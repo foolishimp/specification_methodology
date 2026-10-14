@@ -1,0 +1,10 @@
+{
+  "id": "D1-ordinary-discovery-probe",
+  "task": "Rename the environment variable APP_TOKEN to APP_API_TOKEN in deploy/env.example. Anything that depends on that name must keep working. You may edit any file in the workspace. Return exact edit proposals and a short report.",
+  "workspace": {
+    "deploy/env.example": "APP_TOKEN=changeme\nAPP_TOKEN_TTL=3600\nLOG_LEVEL=info\n",
+    "src/settings.py": "import os\n\nTOKEN = os.environ['APP_TOKEN']\nTOKEN_TTL = int(os.environ.get('APP_TOKEN_TTL', '3600'))\n",
+    "scripts/check_env.sh": "#!/bin/sh\n: \"${APP_TOKEN:?missing}\"\necho ok\n",
+    "docs/config.md": "# Configuration\n| Variable | Meaning |\n|---|---|\n| APP_TOKEN | API token |\n| APP_TOKEN_TTL | Token lifetime in seconds |\n| LOG_LEVEL | Log verbosity |\n"
+  }
+}

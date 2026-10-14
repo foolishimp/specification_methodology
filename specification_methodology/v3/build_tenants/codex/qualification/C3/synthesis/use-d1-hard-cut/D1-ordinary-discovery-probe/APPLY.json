@@ -1,0 +1,183 @@
+{
+  "case": "D1-ordinary-discovery-probe",
+  "candidate_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "grant": {
+    "paths": [],
+    "prefixes": [
+      ""
+    ],
+    "source": "TASK.json: any file in the workspace"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "759539b8d492fb75edfe83dc6bb4835d4334ac11d8f7cdf3addbe76ad8d37340",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "7b4d079922f88cfdba959cdd094709345b5fb30be09cc6aa62374bdc15d08888",
+      "bytes": 55298
+    },
+    "TASK.json": {
+      "sha256": "eb899b3f8327c71f6ce1a27e680bddf6d30fe75013ac9f69e0596f94dad65f14",
+      "bytes": 958
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "00f4ae58d2250f55d3cf3c1a51205fb4091d7aa4a522db00ae8a4716b9e769f3",
+      "bytes": 2356
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "7b4d079922f88cfdba959cdd094709345b5fb30be09cc6aa62374bdc15d08888",
+      "bytes": 55298
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "e5cae1c421b6d607536a34ac069ba3ba946e44626511f7a9940a3097f4307d13",
+      "bytes": 7357
+    },
+    "actor/RESULT.md": {
+      "sha256": "99eb9a39bbe33e78a2f519590b5dcea789f85c3697cabfa98aba843189cf28fa",
+      "bytes": 5270
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "workspace/docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "workspace/scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "workspace/src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "application_action": "created_retained_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "changed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "before": {
+    "deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "after": {
+    "deploy/env.example": {
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098",
+      "bytes": 57
+    },
+    "docs/config.md": {
+      "sha256": "eaea8aab23849d46176afc88df76eab0eee08f5b660da7f158cc6784c22ef374",
+      "bytes": 155
+    },
+    "scripts/check_env.sh": {
+      "sha256": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233",
+      "bytes": 48
+    },
+    "src/settings.py": {
+      "sha256": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d",
+      "bytes": 104
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "Proposed content contains no exact token APP_TOKEN, i.e. no APP_TOKEN not followed by an identifier character, in any workspace file",
+      "subject": "proposed edits for deploy/env.example, src/settings.py, scripts/check_env.sh, docs/config.md",
+      "basis": "supplied workspace snapshot + task text",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "Static inspection of each proposed file: remaining APP_TOKEN substrings occur only within APP_TOKEN_TTL",
+      "effects": "not_requested (analysis only)"
+    },
+    {
+      "predicate": "APP_TOKEN_TTL is unchanged in every file",
+      "subject": "proposed edits",
+      "basis": "supplied workspace snapshot",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "APP_TOKEN_TTL lines in env.example, settings.py and docs/config.md are byte-identical to the originals",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "Every in-workspace dependent of the token variable uses APP_API_TOKEN consistently",
+      "subject": "proposed edits",
+      "basis": "supplied workspace snapshot",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "evidence": "Static review: settings.py, check_env.sh and docs/config.md all reference APP_API_TOKEN, matching env.example",
+      "effects": "not_requested"
+    },
+    {
+      "predicate": "In-workspace dependents keep working at runtime with the renamed variable",
+      "subject": "applied workspace",
+      "basis": "proposed edits",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "No execution tools; no runtime evaluation undertaken. Static consistency (above) is supporting but not deciding evidence",
+      "unresolved": "Host assertions / execution of settings.py import and check_env.sh with APP_API_TOKEN set"
+    },
+    {
+      "predicate": "Workspace files reflect the proposed edits",
+      "subject": "sandbox workspace",
+      "basis": "host application",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "effects": "unknown — the host applies the edits; I made no observation, and file mode preservation for scripts/check_env.sh is unobserved"
+    },
+    {
+      "predicate": "Dependents outside this workspace (deployment environments, CI secrets, other repositories) keep working",
+      "subject": "external configuration",
+      "basis": "not supplied",
+      "verdict": "out_of_frame",
+      "performance": "not_performed",
+      "evidence": "Outside the bound workspace subject; the hard cut removes any alias, so external setters of APP_TOKEN must migrate to APP_API_TOKEN",
+      "unresolved": "Owner of the external environments must update them"
+    },
+    {
+      "predicate": "Candidate accepted by independent assessment / owner",
+      "subject": "proposed edits",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "evidence": "Absent slot: only constructor self-review exists, which is not independent (STDO-UP-007)"
+    }
+  ],
+  "actor_report": "Observations: I read all four files in the supplied workspace snapshot. The exact name APP_TOKEN appears in four places. deploy/env.example line 1 declares it. src/settings.py reads it with os.environ['APP_TOKEN']. scripts/check_env.sh requires it with ${APP_TOKEN:?missing}. docs/config.md lists it in the variable table. APP_TOKEN_TTL also contains the substring APP_TOKEN, but it is a different exact name. The task says not to rename it, so every APP_TOKEN_TTL occurrence is left unchanged. No compatibility alias or historical note exists in the snapshot, so there was nothing extra to remove.\n\nWork: I propose replacing each exact APP_TOKEN with APP_API_TOKEN in all four files. Every other byte stays the same. This is a hard cut with no fallback to the old name, as the task grant requires. Per Workspace and context and Bounded construction, the affected relation set is the declaration, its two in-workspace consumers and its documentation. These are all inside the grant, so the change closes that set.\n\nLimits on what is established: I ran nothing, so no test, script or Python import was executed. My checks are a static review of the proposed file contents only. Whether the proposals were applied, and the resulting file state, are for the host to observe (Result algebra, effect observation). File mode is also not established: I propose content only, so I cannot confirm that scripts/check_env.sh keeps its executable bit.\n\nUnresolved: anything outside this workspace that still sets or reads APP_TOKEN will stop working after this hard cut. Examples are real deployment environments, CI secrets and other repositories. src/settings.py will raise KeyError and check_env.sh will exit with 'missing' until APP_API_TOKEN is provided. That is outside the bound workspace subject, so I report it as out_of_frame rather than satisfied (RF-003, Result algebra). No independent assessment or owner acceptance exists; this constructor self-review is not that assessment (STDO-UP-007, STDO-UP-020 Proportional Disposition).",
+  "assertion_counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 6
+  },
+  "assertions_sha256": "d43680b55c9660404452fde0ffc6d344cd035eca84aa7551b3b5f341906e379f",
+  "inputs_unchanged": true
+}

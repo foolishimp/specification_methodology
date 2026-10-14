@@ -1,0 +1,110 @@
+{
+  "case": "C5-failed-A-plus-required-coverage-B-outside-plan",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "scope": "host application and executable fixture evidence; semantic acceptance pending",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "checks": [
+    {
+      "name": "after tree is the full replacement proposal, with all unedited files retained",
+      "status": "met",
+      "actual": {
+        "ASSESSMENT_PLAN.md": {
+          "sha256": "3ac7e4af8f3f98c243213c61dabac7e934f3ae58ba039dea13dc03079f945cf1",
+          "bytes": 191
+        },
+        "COVERAGE.md": {
+          "sha256": "e0ef9972a6f52826c72f99e4cf5c24a162ac35336818a3d7285cb28ddd1799d5",
+          "bytes": 148
+        },
+        "GATE.md": {
+          "sha256": "aadb8ebc5099ecef0cf7292a67b49d0b99aa74242654f070d606192fe31f844c",
+          "bytes": 4131
+        },
+        "HEAD": {
+          "sha256": "3cb8dd09a272aaed9298b46f72822d93834817d8934302a82fd707ef13aaafe5",
+          "bytes": 8
+        },
+        "auth/login.py": {
+          "sha256": "73b6f13252c451dcd2fa64e7f93aaa2b5f40ed0b8c4d2c4405f7ff6fc5a7c767",
+          "bytes": 77
+        },
+        "evidence/A1.md": {
+          "sha256": "28d2322862c13642e22f4175f972b06f6a8b5a51f2ee4638eae1153d915174d0",
+          "bytes": 137
+        },
+        "export/export.py": {
+          "sha256": "b2c66e72f9872767e408a75ca96ebc029b27d0e7bd7d603cc0b9de7ef09175b1",
+          "bytes": 79
+        },
+        "results/A1.json": {
+          "sha256": "7a3d08f304021018846a0172707954c6a61934dfa89882024064622cd33288d5",
+          "bytes": 215
+        }
+      },
+      "expected": "exact original workspace plus validated full replacements",
+      "detail": null
+    },
+    {
+      "name": "A1 source fields and evidence match the declared plan",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "A1 failing producer outcome retained",
+      "status": "met",
+      "actual": "fail",
+      "expected": "fail",
+      "detail": null
+    },
+    {
+      "name": "actual line 3 supports the retained citation",
+      "status": "met",
+      "actual": "return rec['password'] == pw",
+      "expected": "return rec['password'] == pw",
+      "detail": null
+    },
+    {
+      "name": "gate retains every original A1 citation",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "only GATE.md changed",
+      "status": "met",
+      "actual": [
+        "GATE.md"
+      ],
+      "expected": [
+        "GATE.md"
+      ],
+      "detail": null
+    },
+    {
+      "name": "executing host assertions did not mutate retained after files",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "name": "all original stimuli and provider outputs remained unchanged",
+      "status": "met",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    }
+  ],
+  "executions": [],
+  "independent_grading_pending": [
+    "Grade conjunction, required coverage versus planned slots, authentication scope and any unsupported inference that no planned assessment proves no assessment ever ran. File-field matching is not a cryptographic attestation."
+  ],
+  "counts": {
+    "met": 8,
+    "not_met": 0,
+    "subprocess_executions": 0
+  }
+}

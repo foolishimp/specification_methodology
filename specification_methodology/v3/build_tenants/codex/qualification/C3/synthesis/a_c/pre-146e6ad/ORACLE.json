@@ -1,0 +1,776 @@
+{
+  "scope": "Explicit finite expectations from the selected source; separately specified from the executable, with same-Writer fidelity still requiring independent review",
+  "conjunction": [
+    {
+      "name": "all-required",
+      "values": [
+        "S",
+        "S"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "satisfied",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "failure-plus-missing",
+      "values": [
+        "F",
+        "M"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "falsified",
+      "failures": [
+        "A"
+      ],
+      "missing": [
+        "B"
+      ]
+    },
+    {
+      "name": "failure-plus-aborted",
+      "values": [
+        "F",
+        "H"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "falsified",
+      "failures": [
+        "A"
+      ],
+      "missing": [
+        "B"
+      ]
+    },
+    {
+      "name": "failure-plus-unknown",
+      "values": [
+        "F",
+        "U"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "falsified",
+      "failures": [
+        "A"
+      ],
+      "missing": []
+    },
+    {
+      "name": "failure-plus-invalid-contribution",
+      "values": [
+        "F",
+        "I"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "falsified",
+      "failures": [
+        "A"
+      ],
+      "missing": []
+    },
+    {
+      "name": "outer-basis-invalid",
+      "values": [
+        "F",
+        "S"
+      ],
+      "join": "S",
+      "basis": false,
+      "coverage": true,
+      "expected": "invalid_basis",
+      "failures": [
+        "A"
+      ],
+      "missing": []
+    },
+    {
+      "name": "invalid-contribution",
+      "values": [
+        "S",
+        "I"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "invalid_basis",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "out-of-frame-contribution",
+      "values": [
+        "S",
+        "O"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "out_of_frame",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "unauthenticated-failure",
+      "values": [
+        "S",
+        "X"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "indeterminate",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "missing-planned-evaluation",
+      "values": [
+        "S",
+        "M"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": true,
+      "expected": "indeterminate",
+      "failures": [],
+      "missing": [
+        "B"
+      ]
+    },
+    {
+      "name": "coverage-unknown",
+      "values": [
+        "S",
+        "S"
+      ],
+      "join": "S",
+      "basis": true,
+      "coverage": false,
+      "expected": "indeterminate",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "join-unknown",
+      "values": [
+        "S",
+        "S"
+      ],
+      "join": "U",
+      "basis": true,
+      "coverage": true,
+      "expected": "indeterminate",
+      "failures": [],
+      "missing": []
+    },
+    {
+      "name": "join-false",
+      "values": [
+        "S",
+        "S"
+      ],
+      "join": "F",
+      "basis": true,
+      "coverage": true,
+      "expected": "falsified",
+      "failures": [
+        "join"
+      ],
+      "missing": []
+    }
+  ],
+  "refinement": [
+    {
+      "domain": "candidate_ready",
+      "predicate": "availability",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "effect": "not_requested"
+    },
+    {
+      "domain": "assessment_undecidable",
+      "predicate": "fitness",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "effect": "not_requested"
+    },
+    {
+      "domain": "out_of_scope",
+      "predicate": "event_scope_compatible",
+      "verdict": "falsified",
+      "performance": "performed",
+      "effect": "not_started"
+    },
+    {
+      "domain": "lost_acknowledgment",
+      "predicate": "effect_completed",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "effect": "unknown"
+    },
+    {
+      "domain": "yield",
+      "predicate": "yield_contract",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "effect": "not_requested"
+    }
+  ],
+  "refused_predicate_substitutions": [
+    {
+      "domain": "candidate_ready",
+      "predicate": "fitness"
+    },
+    {
+      "domain": "candidate_ready",
+      "predicate": "acceptance"
+    },
+    {
+      "domain": "yield",
+      "predicate": "product_complete"
+    }
+  ],
+  "effect_observations": [
+    {
+      "units": [],
+      "expected": "not_requested",
+      "effect_free_scope": true
+    },
+    {
+      "units": [
+        false,
+        false
+      ],
+      "expected": "not_started"
+    },
+    {
+      "units": [
+        true,
+        true
+      ],
+      "expected": "completed"
+    },
+    {
+      "units": [
+        true,
+        false
+      ],
+      "expected": "partial"
+    },
+    {
+      "units": [
+        true,
+        null
+      ],
+      "expected": "unknown"
+    },
+    {
+      "units": [
+        false,
+        null
+      ],
+      "expected": "unknown"
+    },
+    {
+      "units": [
+        "reverted"
+      ],
+      "expected": "reverted"
+    },
+    {
+      "units": [
+        "reverted",
+        false
+      ],
+      "expected": "reverted"
+    },
+    {
+      "units": [
+        "reverted",
+        true
+      ],
+      "expected": "partial"
+    },
+    {
+      "units": [
+        "reverted",
+        null
+      ],
+      "expected": "unknown"
+    },
+    {
+      "units": [],
+      "effect_free_scope": false,
+      "expected": "unknown"
+    }
+  ],
+  "recovery": [
+    {
+      "state": "unknown",
+      "idempotent": false,
+      "grant": true,
+      "expected": "observe_or_return_unresolved"
+    },
+    {
+      "state": "unknown",
+      "idempotent": true,
+      "grant": false,
+      "expected": "withhold_effect"
+    },
+    {
+      "state": "unknown",
+      "idempotent": true,
+      "grant": true,
+      "expected": "permitted_idempotent_retry"
+    },
+    {
+      "state": "completed",
+      "idempotent": false,
+      "grant": true,
+      "expected": "retain_completed_progress"
+    },
+    {
+      "state": "not_started",
+      "idempotent": false,
+      "grant": true,
+      "expected": "permitted_initial_dispatch"
+    }
+  ],
+  "evaluation": [
+    {
+      "name": "C6-completed-inadequate-load",
+      "observed": {
+        "undertaken": true,
+        "extent": "completed_at_120rps_below_required_load",
+        "conclusion": "inconclusive",
+        "deciding": null,
+        "effect": "completed"
+      },
+      "performance": "performed",
+      "verdict": "indeterminate"
+    },
+    {
+      "name": "aborted-after-witnessed-failure",
+      "observed": {
+        "undertaken": true,
+        "extent": "partial_aborted",
+        "conclusion": "failure_witnessed",
+        "deciding": "falsified",
+        "effect": "partial"
+      },
+      "performance": "performed",
+      "verdict": "falsified"
+    },
+    {
+      "name": "missing-return-undertaking-unobserved",
+      "observed": {
+        "undertaken": null,
+        "extent": "unknown",
+        "conclusion": "absent",
+        "deciding": null,
+        "effect": "unknown"
+      },
+      "performance": "unconfirmed",
+      "verdict": "indeterminate"
+    },
+    {
+      "name": "authenticated-never-run",
+      "observed": {
+        "undertaken": false,
+        "extent": "none",
+        "conclusion": "absent",
+        "deciding": null,
+        "effect": "not_started"
+      },
+      "performance": "not_performed",
+      "verdict": "indeterminate"
+    },
+    {
+      "name": "separate-counterevidence-never-run",
+      "observed": {
+        "undertaken": false,
+        "extent": "none",
+        "conclusion": "absent",
+        "deciding": "falsified",
+        "independent": true,
+        "effect": "not_started"
+      },
+      "performance": "not_performed",
+      "verdict": "falsified"
+    },
+    {
+      "name": "counterevidence-no-independent-support",
+      "observed": {
+        "undertaken": false,
+        "extent": "none",
+        "conclusion": "absent",
+        "deciding": "falsified",
+        "independent": false,
+        "effect": "not_started"
+      },
+      "performance": "not_performed",
+      "verdict": "indeterminate"
+    },
+    {
+      "name": "separate-basis-diagnosis-unconfirmed",
+      "observed": {
+        "undertaken": null,
+        "extent": "unknown",
+        "conclusion": "absent",
+        "deciding": "invalid_basis",
+        "independent": true,
+        "effect": "unknown"
+      },
+      "performance": "unconfirmed",
+      "verdict": "invalid_basis"
+    },
+    {
+      "name": "claimed-success-without-undertaking",
+      "observed": {
+        "undertaken": null,
+        "extent": "unknown",
+        "conclusion": "absent",
+        "deciding": "satisfied",
+        "independent": true,
+        "completion": true,
+        "effect": "unknown"
+      },
+      "performance": "unconfirmed",
+      "verdict": "indeterminate"
+    },
+    {
+      "name": "undertaken-but-completion-obligation-missing",
+      "observed": {
+        "undertaken": true,
+        "extent": "partial",
+        "conclusion": "success_claim",
+        "deciding": "satisfied",
+        "completion": false,
+        "effect": "partial"
+      },
+      "performance": "performed",
+      "verdict": "indeterminate"
+    }
+  ],
+  "temporal_effects": [
+    {
+      "name": "deployment-then-rollback",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        },
+        {
+          "id": "rollback",
+          "part": "deployment",
+          "state": "reverted",
+          "supersedes": [
+            "deploy"
+          ],
+          "supersession_proved": true,
+          "begun_and_reversal_proved": true
+        }
+      ],
+      "effect": "reverted"
+    },
+    {
+      "name": "rollback-then-reapplication",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        },
+        {
+          "id": "rollback",
+          "part": "deployment",
+          "state": "reverted",
+          "supersedes": [
+            "deploy"
+          ],
+          "supersession_proved": true,
+          "begun_and_reversal_proved": true
+        },
+        {
+          "id": "reapply",
+          "part": "deployment",
+          "state": "completed",
+          "supersedes": [
+            "rollback"
+          ],
+          "supersession_proved": true
+        }
+      ],
+      "effect": "completed"
+    },
+    {
+      "name": "later-time-not-supersession",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        },
+        {
+          "id": "later",
+          "part": "deployment",
+          "state": "reverted",
+          "timestamp": 999,
+          "begun_and_reversal_proved": true
+        }
+      ],
+      "effect": "unknown"
+    },
+    {
+      "name": "requested-part-missing-after-dispatch",
+      "parts": [
+        "deployment",
+        "notification"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        }
+      ],
+      "effect": "unknown"
+    },
+    {
+      "name": "irreversible-message-survives-local-rollback",
+      "parts": [
+        "deployment",
+        "notification"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        },
+        {
+          "id": "rollback",
+          "part": "deployment",
+          "state": "reverted",
+          "supersedes": [
+            "deploy"
+          ],
+          "supersession_proved": true,
+          "begun_and_reversal_proved": true
+        },
+        {
+          "id": "sent",
+          "part": "notification",
+          "state": "completed"
+        }
+      ],
+      "effect": "partial"
+    },
+    {
+      "name": "established-effect-free-scope",
+      "parts": [],
+      "observations": [],
+      "effect": "not_requested",
+      "effect_free_scope": true
+    },
+    {
+      "name": "no-effect-claim-without-observation",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [],
+      "effect": "unknown"
+    },
+    {
+      "name": "known-no-effect-before-start",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "rejected",
+          "part": "deployment",
+          "state": "not_started"
+        }
+      ],
+      "effect": "not_started"
+    },
+    {
+      "name": "unsupported-supersession",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "deploy",
+          "part": "deployment",
+          "state": "completed"
+        },
+        {
+          "id": "rollback",
+          "part": "deployment",
+          "state": "reverted",
+          "supersedes": [
+            "deploy"
+          ],
+          "supersession_proved": false,
+          "begun_and_reversal_proved": true
+        }
+      ],
+      "effect": "unknown"
+    },
+    {
+      "name": "reversal-without-begun-evidence",
+      "parts": [
+        "deployment"
+      ],
+      "observations": [
+        {
+          "id": "rollback",
+          "part": "deployment",
+          "state": "reverted"
+        }
+      ],
+      "effect": "unknown"
+    },
+    {
+      "name": "no-request-alone-not-effect-free-proof",
+      "parts": [],
+      "observations": [],
+      "effect": "unknown"
+    },
+    {
+      "name": "nominal-read-only-possible-unintended-effect",
+      "parts": [
+        "cache_mutation"
+      ],
+      "observations": [],
+      "effect": "unknown"
+    },
+    {
+      "name": "unrequested-material-effect-observed",
+      "parts": [
+        "audit_message"
+      ],
+      "observations": [
+        {
+          "id": "sent",
+          "part": "audit_message",
+          "state": "completed"
+        }
+      ],
+      "effect": "completed"
+    }
+  ],
+  "operator_cases": [
+    {
+      "name": "required-join-false",
+      "operator": "and",
+      "input": [
+        true,
+        true,
+        false
+      ],
+      "expected": "falsified"
+    },
+    {
+      "name": "fallback-satisfied-earlier-failure-retained",
+      "operator": "or",
+      "input": [
+        false,
+        true,
+        true
+      ],
+      "expected": "satisfied"
+    },
+    {
+      "name": "implication-is-distinct-predicate",
+      "operator": "implies",
+      "input": [
+        false,
+        false,
+        true
+      ],
+      "expected": "satisfied"
+    },
+    {
+      "name": "overlapping-truth-falsity",
+      "operator": "overlap",
+      "input": [
+        true,
+        true,
+        true
+      ],
+      "expected": "invalid_basis"
+    },
+    {
+      "name": "truth-falsity-gap",
+      "operator": "gap",
+      "input": [
+        true,
+        true,
+        true
+      ],
+      "expected": "invalid_basis"
+    },
+    {
+      "name": "required-join-omitted",
+      "operator": "ignores_join",
+      "input": [
+        true,
+        true,
+        false
+      ],
+      "expected": "invalid_basis"
+    }
+  ],
+  "operator_unresolved": [
+    {
+      "name": "unproved-operator-cannot-decide-truth",
+      "input": [
+        true,
+        true,
+        true
+      ],
+      "expected": "indeterminate"
+    },
+    {
+      "name": "unproved-operator-cannot-decide-falsity",
+      "input": [
+        false,
+        true,
+        true
+      ],
+      "expected": "indeterminate"
+    },
+    {
+      "name": "negating-unproved-operator-remains-undecided",
+      "input": [
+        true,
+        true,
+        true
+      ],
+      "expected": "indeterminate"
+    }
+  ]
+}

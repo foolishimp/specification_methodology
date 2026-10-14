@@ -142,7 +142,9 @@ for key, folder in [('standards','standards'), ('plugin','plugins/spec')]:
     inventory['members'] = members
     inventory['member_count'] = len(members)
     if key == 'standards':
-        inventory['member_set_sha256'] = hashlib.sha256(json.dumps(members,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        stream = ''.join('%s  %s/%s\n' % (row['sha256'], inventory['source_root'], row['path'])
+                         for row in members)
+        inventory['member_set_sha256'] = hashlib.sha256(stream.encode()).hexdigest()
 manifest['auxiliary']['license']['sha256'] = sha(root/'LICENSE')
 manifest['auxiliary']['release_note'] = {'source_path':'releases/v0.0.0.md',
                                        'installed_path':'release/release-note.md',

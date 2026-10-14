@@ -99,13 +99,24 @@ If a sentence sounds informative but does not change authority, constraint, or d
 
 ## Practical Layer Checks
 
+Apply [workspace-derived acquisition](FOUNDATIONS.md#workspace-and-context)
+to the current owning surface before revising it. F1 supplies the writing
+purpose; F2 and F4 require preserved interpretation and obligations; F5
+motivates sufficient relevant context. The style choices in this guide are
+its own conventions, not deductions from a byte limit. A writing review uses
+the [core result](FOUNDATIONS.md#result-algebra) on the preservation or style
+predicate actually checked; shorter text alone establishes neither.
+
 When writing or revising a specification artifact, ask:
 
 1. Can the next downstream layer derive from this?
 2. Does this artifact state current truth rather than work in progress?
 3. Does any sentence belong in a lower layer instead?
 
-If any answer is wrong, rewrite or delete.
+If any answer is wrong, rewrite or delete within the owning authority. A
+predecessor determination retains its recorded
+[UP-015 disposition](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+and the authority required for that disposition.
 
 ---
 
@@ -113,7 +124,8 @@ If any answer is wrong, rewrite or delete.
 
 Active specification should describe the current constitutional surface in present tense.
 
-If something is no longer live:
+If something is no longer live, act within the owning authority and any
+required recorded UP-015 disposition:
 
 - delete it
 - supersede it

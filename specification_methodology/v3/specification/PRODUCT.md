@@ -10,7 +10,7 @@ The product succeeds the method's previous release, 2.5.1-rc.2. That release is 
 
 A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
-Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product establishes its foundational axioms and restates the predecessor corpus on them. Restatement requires the foundation-to-law, ownership-and-use, and standalone-conservation relationships defined there. Unchanged text is permitted when those relationships hold. The new release is complete without the previous release in force. Its corpus may be as large as its obligations require; each actor is activated on a reference frame for its selected task within its declared capability limits.
+Under the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), the product establishes its foundational commitments and reconstructs the method on them. Restatement requires foundation-to-law, ownership-and-use, standalone conservation and demonstrated reduction. Unchanged text is permitted when those relationships hold. The new release is complete without the previous release in force. Its size follows the obligations it must express; retaining an old member's layout or adding an explanatory layer does not establish reduction.
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
@@ -32,9 +32,27 @@ The product changes nothing in the 2.* line: not its source project, its release
 
 Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two candidate build tenants are described under [Source Project Construction](#source-project-construction).
 
+## Foundational Reduction
+
+The method recovers the essential contributions of the following pillars and expresses their shared laws once. These are related accounts of the method, not a prescribed document list, a fixed sequence of work or a claim that each is an independent axiom.
+
+| Pillar | Contribution the reconstruction must account for |
+|---|---|
+| Specification and project structure | Purpose and destination constraints; refinement from common WHAT to independent HOW realisations; ownership of specification, design, work and commentary. Project structure expresses those relations. |
+| World models, identity and Markov objects | Objects, boundaries, state and material relations; the evidence supporting a boundary and a claim that its observed state is sufficient. Ordinary bounded modelling does not establish stronger Markov properties. |
+| Functional design and algebra | Typed operations and composition, invariant preservation, explicit failure and effect boundaries. Shared transformations support different semantic instances without duplicating their machinery or conflating their responsibilities. |
+| Outcome-driven development | Construction through typed transitions toward a selected outcome, with evaluation, continuation, recovery and termination. Operation kind, actor and execution mechanism remain distinct. |
+| Information and interpretation | The relationship between a subject, its representations and their meaning; the distinctions a projection, translation or compression must preserve for its consumer. |
+| Reference frames | Task-sufficient acquisition under finite context and attention; bounded results and justified allocations of work, information and authority. |
+| Computational realisation | Binding operations and their laws to concrete human, machine or mixed execution, with material effects, resources, assumptions and costs. |
+| Evidence, correction and authority | Claims distinguished from observations and acceptance; changes driven by counterexamples and traced to their cause; permission and ownership distinct from capability or a successful check. |
+| Axiomatic calculus | Explicit, recoverable representation of the method's logical constraints, dependencies, permitted latitude and residual uncertainty, usable to construct the constraint surface for a task. |
+
+The [reduction requirement](requirements/README.md#foundational-reduction-requirement) owns the evidence needed to show that these contributions determine the method's deciding rules. The [constraint-surface requirement](requirements/README.md#constraint-surfaces-and-logic-compression) owns the relationship between prose, a_c, bounded acquisition and permissible work. Domain-specific policies retain their own premises and owners. Finite resources alone do not supply purpose, identity, authority or compatible composition.
+
 ## Construction And Context Management
 
-The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A distinguishes the material workspace state from the actor's account of it. The workspace is the continuing truth surface for the construction; context is a bounded, revisable account acquired from that surface and its authoritative inputs. An observation can correct that account. A stored belief or successful prior result cannot overrule contrary current evidence; unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
+The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A distinguishes material workspace state from each actor's account of it. The workspace is the continuing truth surface for construction; context is acquired from it under the [current-state and basis rule](requirements/README.md#bounded-transitions-and-reference-frames). Unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
 
 When the work exceeds one activation's capacity, it proceeds through bounded transitions A → B → C → … . Each transition retains the applicable outer obligations. Composition depends on compatible contracts and discharged preservation obligations. Discovery may add obligations or invalidate a claim. An authorised change may revise the destination; it does not establish that the previous destination was reached. Progress is judged against the selected outcome and evidence, rather than the number of remaining items alone.
 
@@ -65,7 +83,7 @@ Each refinement preserves the obligations above it. A material constituent repea
 
 Profiles include outcome-driven development of typed graph programs, user-interface construction from typed state and messages, and world modelling over authoritative source systems. Operational profiles specialise the reference-frame contract through task catalogues and justified coordination arrangements. Guides own writing, posting and glossary conventions; packaging carries the method's members and entry points.
 
-The a_c interpretation represents the method's laws, results and declared maps, retaining the distinction between premises, derived rules and policy choices. Reference-frame projections select the contract and material for a task from their owning members. Interpretation and projection apply across the tiers; their fidelity is evaluated against their owners.
+The a_c interpretation represents the method's laws, results and declared maps as a recoverable logic compression, retaining premises, dependencies, consequences, policy choices and unresolved conditions. Reference-frame projections select the governing constraint surface and material for a task from their owners. Interpretation and projection apply across the tiers; neither creates a second rule owner or an execution grant. Their fidelity and actual usefulness are evaluated against those owners and the selected task.
 
 ## Build-Tenant Binding
 
@@ -98,7 +116,7 @@ The Foundations own the method's single result algebra: one set of outcome value
 - work steps;
 - effects (changes made to files or systems).
 
-No member, profile or frame defines its own parallel set of outcomes. A refinement gives finer outcomes for one domain. It keeps the evaluated predicate and the domain's original outcome alongside the core value, and it never raises a result's standing. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md), the common test cases every member is checked against, check it in every member under acceptance criterion 5 of the [C3 Construction Contract](#c3-construction-contract).
+No member, profile or frame defines its own parallel set of evaluation or decision outcomes. A refinement gives finer outcomes for one domain. Its owner binds the predicate and the conditions that determine each value's meaning, keeps the original domain outcome alongside the core value, and never raises the result's standing. Recorded states remain distinct from judgments about those states. The precise obligation is the [single result algebra requirement](requirements/README.md#single-result-algebra-requirement). The [conformance discriminators](conformance/README.md), the common test cases every member is checked against, check it in every member under acceptance criterion 5 of the [C3 Construction Contract](#c3-construction-contract).
 
 ## Categorical Construction
 
@@ -167,7 +185,7 @@ These frames organise context and attention for their respective tasks. Their na
 
 C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
 
-A member restatement supplies the successor text and the relationships required by the [standalone successor requirement](requirements/README.md#standalone-successor-requirement). Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers, with their supported dispositions. The requirement permits unchanged text; neither relocation nor rewriting alone establishes its relationships.
+A member restatement supplies successor-owned determinations and the relationships required by the [standalone successor requirement](requirements/README.md#standalone-successor-requirement). Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers, with their supported dispositions. One shared successor owner may cover claims from several predecessor members; a predecessor member may also map to several justified successor owners. The requirement permits unchanged text; neither relocation nor rewriting alone establishes its relationships.
 
 The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose of a member restatement within its grant in four ways:
 
@@ -293,8 +311,8 @@ Where this section and the installed baseline (STDO_REFERENCE_FRAME_BASELINE, th
 
 Outcome. Each tenant produces a candidate of the product with three things:
 
-- its foundational axioms and every member of the previous release restated on them, per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement);
-- for every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), one UP-015 disposition, with a resolving successor locus for each conserved or superseded claim and the required bounded reason or owner decision for other dispositions;
+- its foundational commitments and a standalone method reconstructed on them, accounting for every material predecessor claim under the [standalone successor](requirements/README.md#standalone-successor-requirement) and [reduction](requirements/README.md#foundational-reduction-requirement) requirements;
+- for every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md), one UP-015 disposition, with a successor locus in the candidate's own text for each conserved or superseded claim, the accepted successor relation for each superseded claim, the owner's decision and reason for each intentionally removed claim, and a bounded reason for each not-applicable claim;
 - reference frames assembled from the candidate, as the unit every actor is started on.
 
 The previous release stays immutable and in force as the building tool until a release decision. It is not part of the new release.
@@ -307,7 +325,7 @@ Tier obligations. A tenant's organisation and wording are its own; what each tie
 |---|---|---|
 | foundations | ontology (what kinds of things exist), principles with their standing, the single [result algebra](#result-algebra), the reference frame as a first-class object for [context and attention management](requirements/README.md#bounded-transitions-and-reference-frames), bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |
 | Spec Method | the chain Intent → Product → Specification → Realisation, requirements and design law, [build-tenant binding](requirements/README.md#build-tenant-binding-requirement), work carriers and triage, assurance and testing law, change classes (the kinds of change, each with the stage it re-enters at) and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |
-| profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
+| profiles | domain or operational bindings that use the shared laws and state their additional necessary determinations; their assigned predecessor claims are accounted for through these bindings and shared owners | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |
 | guides | posting (how commentary posts are written), writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |
 | packaging | manifest, schemas, templates, compressions (the shortened summaries of the standards) or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before a release-candidate cut |
 
@@ -359,10 +377,10 @@ Acceptance criteria for one member restatement:
 
 1. Every row of the member's frontier cone has exactly one UP-015 disposition. Each `conserved` or `superseded` row also has a successor locus that resolves.
 2. For every `conserved` row, the Reviewer compares the source independently of the author and finds the claim's meaning present in the new release's own text. This is UP-015's semantic conservation, evidenced under the standalone successor requirement. A link to the source alone, a matching label, or a paraphrase that drops part of a rule fails.
-3. Every `superseded` row names the accepted successor relation. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason, one that states the limits of what it covers.
-4. Each selected task of the member has a frame that fits one bounded activation within the declared limits, supplies the material needed for the task and excludes irrelevant material. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory. This is evidence of adequate context and attention for the tested task, actor and conditions; byte fit alone does not establish it.
+3. Every `superseded` row names the accepted successor relation and its owning successor locus or loci, showing what replaces that row's claim. Proposed replacements remain pending until accepted. Every `intentionally removed` row names the product owner's decision and reason. Every `not applicable` row gives a bounded reason, one that states the limits of what it covers.
+4. Each selected task of the member has a frame that fits one bounded activation within the declared limits, supplies the material needed for the task and excludes irrelevant material. A fresh actor given only that frame and the subject applies it correctly. Its work is judged against expectations specified independently of the author, without private validator knowledge or the author's memory. The evidence identifies the exact frame, subject, task, supplied instructions and independent expectations used. Changed packets or tasks retain their own subjects; reuse on a successor requires supported applicability. A corrected run is not presented as an unchanged independent test of the correction. This is evidence of adequate context and attention for the tested task, actor and conditions; byte fit alone does not establish it.
 5. The [conformance discriminators](conformance/README.md) hold against the member's text under logical review, which is a reviewer's reasoned reading, not a mechanical check.
-6. The restatement adds no new obligation without naming the purpose and the material relation that require it, meaning why it exists and what it protects. It makes no needless change to work carriers or process.
+6. The restatement meets the [reduction requirement](requirements/README.md#foundational-reduction-requirement): shared laws govern the affected decisions, recurring independent determinations are contracted, and remaining material distinctions are justified. It adds no new obligation without naming its purpose and material relation, and makes no needless change to work carriers or process. Prose size or structural validation alone does not satisfy this criterion.
 
 Independence. The Reviewer is never the author of the subject. By default the Reviewer is from a different model family from the Writer. A same-family Reviewer is a declared exception, with its reason in the activation record, and its result is marked as such.
 
@@ -372,7 +390,7 @@ Closure. C3 closes for a tenant when every row of its frontier is disposed and e
 
 ## Open Owner Decisions
 
-- The Executive and Reviewer actors for each tenant in C3. The product owner names them in the tenant tickets. Until then every execution contract stays `drafted`.
+- Acceptance-review assignments for each tenant in C3 remain owner decisions. The owner's run-to-completion instruction authorises the Codex session to construct, coordinate bounded work and obtain defect reviews under T-002-CODEX. That execution assignment supplies no per-member `accept` disposition until the required independent-review assignment and ported-part policy are resolved. Other tenant activations retain their own recorded grants.
 - Review of a ported part. By default a member is reviewed by the peer tenant's model family, which is the source author of any part ported from the peer. The [Independence](#c3-construction-contract) rule forbids a Reviewer assessing its own authorship. The product owner decides how a ported part is reviewed before the first frontier cone with a contribution is accepted.
 - The steel thread: its selection, its work carrier, and its spend and time limits. The steel thread is step 2 of [Categorical Construction](#categorical-construction).
 - Identity and packaging of the new release. One question is whether the compressions are kept, superseded or removed. The other is how identifiers for a_c concepts and for the Traversal Occurrence Profile are issued and accepted into use without depending on files of the previous release. Decided before a release-candidate cut.

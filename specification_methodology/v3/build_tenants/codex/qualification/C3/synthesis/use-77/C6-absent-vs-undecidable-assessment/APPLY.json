@@ -1,0 +1,156 @@
+{
+  "case": "C6-absent-vs-undecidable-assessment",
+  "candidate_commit": "77f2efba557f502b00408094a0bf6d39877bb5ba",
+  "grant": {
+    "paths": [
+      "STATUS.md"
+    ],
+    "prefixes": [],
+    "source": "TASK.json: only STATUS.md"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "383dd10dd6eb8bba37ade2d0e7348c434df05070e40ba9890ca89f5a3a4f1ed4",
+      "bytes": 424
+    },
+    "PROMPT.txt": {
+      "sha256": "33d197b184e1ae8431d10c14dea648338d95fa594b1606cb6ed89595f5fe2f12",
+      "bytes": 35195
+    },
+    "TASK.json": {
+      "sha256": "303b8151a49e989b2215b29921ad52516fd48a0134cb24047e90f1055a353390",
+      "bytes": 935
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "2d9d6d22c3c67c9ac7b56c2a22f32fb6445689435ef7c8c91f77e8bf9a711b97",
+      "bytes": 2336
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "33d197b184e1ae8431d10c14dea648338d95fa594b1606cb6ed89595f5fe2f12",
+      "bytes": 35195
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "0e69affd4bdb265e9249603574dec8ce4e5a7174ee63deb46ffba30b7067f65d",
+      "bytes": 6163
+    },
+    "actor/RESULT.md": {
+      "sha256": "4c1084ba2d16f5b17be2fcae56f3229218641db9eaf3551325c57b68d1a644f8",
+      "bytes": 4183
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/ASSESSMENT_PLAN.md": {
+      "sha256": "2901db86532712c8e1b713bbca1b3554e2c1b616e9bd2542fb08326d9b186c10",
+      "bytes": 242
+    },
+    "workspace/STATUS.md": {
+      "sha256": "046548ee6339cdb291590953030041ac1cf0f3e778b94105ba8a63cf45d124d4",
+      "bytes": 35
+    },
+    "workspace/results/P1.json": {
+      "sha256": "4768b08507ce2e6a3efe94dfd4c1e193e9cde40f9f702943425b42a1626c378f",
+      "bytes": 254
+    }
+  },
+  "application_action": "created_retained_after",
+  "carrier": "single_json_fence",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "STATUS.md"
+  ],
+  "changed_paths": [
+    "STATUS.md"
+  ],
+  "before": {
+    "ASSESSMENT_PLAN.md": {
+      "sha256": "2901db86532712c8e1b713bbca1b3554e2c1b616e9bd2542fb08326d9b186c10",
+      "bytes": 242
+    },
+    "STATUS.md": {
+      "sha256": "046548ee6339cdb291590953030041ac1cf0f3e778b94105ba8a63cf45d124d4",
+      "bytes": 35
+    },
+    "results/P1.json": {
+      "sha256": "4768b08507ce2e6a3efe94dfd4c1e193e9cde40f9f702943425b42a1626c378f",
+      "bytes": 254
+    }
+  },
+  "after": {
+    "ASSESSMENT_PLAN.md": {
+      "sha256": "2901db86532712c8e1b713bbca1b3554e2c1b616e9bd2542fb08326d9b186c10",
+      "bytes": 242
+    },
+    "STATUS.md": {
+      "sha256": "469e78de0255cbdd56fcea7df795d0efd1004fdd62d803803f4052a00366db85",
+      "bytes": 672
+    },
+    "results/P1.json": {
+      "sha256": "4768b08507ce2e6a3efe94dfd4c1e193e9cde40f9f702943425b42a1626c378f",
+      "bytes": 254
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "P1: p95 latency < 200 ms at sustained 500 rps",
+      "subject": "svc@v2.0",
+      "basis": "ASSESSMENT_PLAN.md P1; results/P1.json",
+      "producer": "perf-team",
+      "authenticated": "producer/subject/assessment match plan",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "extent": "partial: requested_rps 500, achieved_rps 120, p95_ms 140, generator_cpu_pct 100",
+      "original_domain_outcome": "run completed at ~120 rps; generator CPU-limited",
+      "evidence": [
+        "results/P1.json"
+      ],
+      "unresolved": [
+        "required 500 rps load never generated; rerun with adequate generator capacity"
+      ]
+    },
+    {
+      "predicate": "P2: WCAG 2.2 AA",
+      "subject": "web@v2.0",
+      "basis": "ASSESSMENT_PLAN.md P2; expected results/P2.json",
+      "producer": "a11y-team",
+      "slot": "absent",
+      "verdict": null,
+      "performance": "unconfirmed",
+      "evidence": [],
+      "unresolved": [
+        "results/P2.json missing from workspace; no evidence whether the assessment ran"
+      ]
+    },
+    {
+      "predicate": "S-4: all planned assessments (P1 ∧ P2) satisfied",
+      "subject": "release S-4",
+      "basis": "ASSESSMENT_PLAN.md",
+      "verdict": "indeterminate",
+      "performance": "performed (combining rule applied)",
+      "components": {
+        "P1": "indeterminate/performed",
+        "P2": "absent slot/unconfirmed"
+      },
+      "known_failures": [],
+      "uncovered_coverage": [
+        "P2"
+      ],
+      "effect_state": "STATUS.md edit proposed only (not_started until host applies)",
+      "unresolved": [
+        "P1 undecided at required load",
+        "P2 result missing",
+        "release acceptance decision not in this frame's grant"
+      ]
+    }
+  ],
+  "actor_report": "Bind/Acquire: Release S-4. The required set is fixed by ASSESSMENT_PLAN.md as exactly P1 and P2. The edit grant is STATUS.md only. I proposed one replacement of STATUS.md and executed or applied nothing.\n\nP1 authentication: results/P1.json names producer perf-team, subject svc@v2.0 and assessment P1, which matches the plan.\n\nP1 evaluation: The criterion is p95 < 200 ms at sustained 500 rps. The run requested 500 rps but achieved 120 rps, generator CPU was at 100%, and the notes say load never rose above about 120 rps. Under FOUNDATIONS.md Result algebra this is a performed evaluation that could not generate its required load. The verdict is therefore indeterminate, not satisfied (p95 140 ms was measured at the wrong load) and not falsified (there is no counterexample at 500 rps). The partial extent is kept as evidence.\n\nP2: results/P2.json does not exist in the observed workspace. Under Result algebra and Result conjunction, an absent return establishes neither non-performance nor an undecidable evaluation. I recorded P2 as an absent planned slot with performance unconfirmed and did not fabricate a child result.\n\nOverall: Per Result conjunction steps 1–4, there is no authenticated falsification and no invalid_basis or out_of_frame judgment. The undecided P1 and missing P2 make the result indeterminate. The aggregate's performance is performed (the combining rule was applied); component performance is unchanged.\n\nEffects: The assessment run's effects on svc@v2.0 are not observed in the workspace and are not material to these predicates, so I do not claim any effect state for them. The proposed STATUS.md write is effect not_started until the host applies it.\n\nUnresolved:\n- P2 needs a12y-team's results/P2.json (or evidence it was never run) to decide WCAG 2.2 AA on web@v2.0.\n- P1 needs a rerun with a load generator able to sustain 500 rps.\n- Release acceptance is a separate decision predicate. No decision authority was supplied, and this frame grants none (EVALUATION_CONJUNCTION.md scope).",
+  "assertion_counts": {
+    "met": 6,
+    "not_met": 0,
+    "subprocess_executions": 0
+  },
+  "assertions_sha256": "b90e64a8d91c7fc8ace5ddf7b1e3bd89d0f4035fdacac538eee7cafb06fee40a",
+  "inputs_unchanged": true
+}

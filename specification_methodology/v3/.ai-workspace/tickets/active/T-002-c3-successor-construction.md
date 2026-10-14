@@ -5,7 +5,7 @@ type: feature
 ticket_category: ordinary
 status: active
 goal: GOAL-002
-change_intent: construct each tenant's v3.0.0 successor candidate, the axioms plus the full predecessor corpus restated, with every predecessor claim disposed under STDO-UP-015
+change_intent: reconstruct each tenant's v3.0.0 candidate from the essential pillars with demonstrated reduction and complete predecessor accounting
 change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
@@ -24,6 +24,12 @@ links:
 ---
 
 # T-002 — v3.0.0 Successor Construction
+
+## Current Iteration
+
+Current next step is the owner's consolidation instruction recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-iteration-3-direction). The [iteration 3 work list](T-002-iteration-3-work.md) is the current requirement-to-work and review-to-work index for Codex, with remaining work, status and closure evidence. It is an appendix to these existing tickets, not another work carrier or grant. The common standard applies to both candidates; this consolidation makes no assignment or status change to the peer line. Historical snapshots below keep their actual subjects; the successor snapshot is recorded only after the completed common update is reviewed.
+
+2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 owns the common amendment and exact input snapshot; T-002-CODEX owns the Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
 ## Owner Instruction
 
@@ -46,7 +52,7 @@ Performed by the common pen on 2026-10-12T01:32:20Z against [Universal Intake Tr
 
 ## Selected Contract
 
-Target truth: for each tenant, one candidate for STDO Specification Methodology v3.0.0 consisting of its foundational axioms and the full v2.5.1-rc.2 corpus restated on them; every row of the frontier carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; projected reference frames are the activation unit; each member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
+Target truth: for each tenant, one standalone candidate for STDO Specification Methodology v3.0.0 reconstructed from the [pillars](../../../specification/PRODUCT.md#foundational-reduction), with the [reduction](../../../specification/requirements/README.md#foundational-reduction-requirement) and [constraint-surface](../../../specification/requirements/README.md#constraint-surfaces-and-logic-compression) relationships demonstrated. Every frontier row carries one UP-015 disposition and, where conserved or superseded, a resolving successor locus; material obligations are preserved without prescribing their previous member partitions. Projected reference frames are the activation unit; each successor member is accepted under the disposition grant on an author-independent review; Jim accepts the checkpoint. Each tenant's candidate keeps its own base and may take named parts of the peer candidate under [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis).
 
 Superseded truth: the first-pass reading of STDO 3 as a thin core that conserves the predecessor by reference; the goal that the whole corpus fits one bounded activation; every first-pass standing claim and self-declared completion. The first pass remains on `main` as history.
 
@@ -157,3 +163,51 @@ Input commit: `bb76b1d0a158ff5b20c7fd2eb933f8ffc798160b`. Member hashes come fro
 | `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
 | `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 10918 | `d5dd09ccccd8838c5d66e5ce197302debf1f4b58683e3cae91e723626b1c4a0a` |
 | `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 15845 | `5865608a191aded349f6dcf7a563f83501ee20d3f267ec6f0502012d3f377f15` |
+
+### Codex rebuild input successor after independent review
+
+Input commit `98102157321990bdc483cd1c37f83f2b7aa477b9` supersedes bb76b1d for further reliance: the source/basis clarification and accurate pending-owner state are incorporated. The first input and review remain historical. No destination obligation is weakened.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 5434 | `dc80dd0e091afe33bfdd097a0850a94aef0d3a7e52ab46ac96b535e76afafec1` |
+| `specification/PRODUCT.md` | 42436 | `5527d270210c4d7603e5c4f330894a07e0f52d194e11e02318b18c784464db34` |
+| `specification/GOALS.md` | 14634 | `d2e2d025af9ded004eab6ad9acd922f89881b4b4b54f2f50bf8dd9bcc3af5c2e` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 6463 | `8f6d268bc51211ffccd7ab714b15891b6670429ecdabb9ffd8e0c8c0892090aa` |
+| `specification/requirements/README.md` | 17336 | `032541fc43652f7e8214c4dc8ca2ab5cbe871707efb4f7335b6bea914e515a50` |
+| `specification/requirements/PRINCIPLES.md` | 12599 | `0542778cdf097bf224f0e5305cf9a13f7bc9a30d39aa3f4e1d4c59c0ddf1803c` |
+| `specification/requirements/CAPABILITIES.md` | 2823 | `729f122f97e1f6f39ccee828319ca5203bfa74816d3bf2cc9f400080bce76cb4` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6469 | `e1ace7eb86a6c4a4a554c562fd3a9ec5b2c6e32027147b19c509bb52e370c9e4` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 8734 | `c4791ca16345345e5c5136a153d6e929d54ec1f191ad98d05ca57a4755485f95` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4060 | `3f25650ae4ce45ee31381bee876c47b8e7cb78d6aef50e5654591c7f5f8fd82b` |
+| `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 11655 | `3f30e3c8564eb6f77ee2c8d0e6ee5032911d771cbf86b2ac3e99d441a8ae8b0e` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 18046 | `9ba023a8f30be226485f9726c36422c5dfac34d6cf8ac31418fcdeb373ef34b8` |
+
+### C3 Codex iteration 3 input snapshot
+
+Input identity: `C3-CODEX-I3-01`. Input commit: `cae6fe366395148558efb84c85501b768f6593fc`. Every member below is read and hashed from that commit; the recording commit is its descendant. The substantive common amendment is reviewed at `c78de0d`; its low-severity routing finding is resolved by the admitted EC-CODEX-I3-01. This snapshot replaces the iteration 2 input for Codex iteration 3 only. It does not change the peer activation.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 6607 | `d813239dca237b37ffcb79f672ccb383e2acfc9eb804aaa7e0674fbc82d557c1` |
+| `specification/PRODUCT.md` | 46070 | `3d75f6e7f043cfc791b98aef1c0cb3105ef7f32b35425731efbb56a3bdddd663` |
+| `specification/GOALS.md` | 15445 | `776ecffffeb9d42a03d438eac55ba1eddef62bacc1c3e33cf77f9c410b1b7aff` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 7061 | `473175924e066a6af91e7469d9884b7a750e6c43ab6aed9406db85075b3cf097` |
+| `specification/requirements/README.md` | 23013 | `966c1a5955de78dba7199d311db0952b3732a0cd3385555a600a180411a317cc` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3831 | `49f2b455510459027ddbda997baf8055d8772763196667047d87e700282e3edd` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6975 | `75b98c363ac6026018a4e74ba8b23364bc8d31ef3897a6d58a05a7fbed91297f` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 10857 | `65301ddf829a7eb8c1794b6d2457a387d7bb0d04e362d2d5305fd79b9f5219a9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4455 | `35582d065c02a558784584e963026ac8f0cfe4e925dc2019d9e5ae43f668048b` |
+| `AGENTS.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `CLAUDE.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 66268 | `462b6df86855042121ac22721fa6aa8d10200ddbb900f9b2f4f82ce6e372aa19` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 21240 | `43cbb322cb4eea2b6dc9818de21ce3cfe21bf2efb2f4d452dadcae3955b0678e` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 25292 | `1fa297db869f99e0a058c09aa84241223c4a2ed9d6c12df6e9e098b1c806873c` |
+
+The builder remains installed 2.5.1-rc.2 at manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`; the mechanical dependency remains the A_C_DEPENDENCY pin in this tuple. Executive selects the dependency-ready design/core Writer. The separate tenant Writer creates its branch/worktree from this recording commit and writes only its own tenant. No earlier result is promoted to iteration 3 acceptance.

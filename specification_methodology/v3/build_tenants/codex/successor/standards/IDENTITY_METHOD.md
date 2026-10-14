@@ -1,15 +1,23 @@
 # Identity Method
 
-This member relates [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
-and the [Transformation Library](TRANSFORMATION_LIBRARY.md) for scoped,
-typed identity and authority conservation. The scoped identity minimum is
+## Governing Relations
+
+The premises are a subject to distinguish, an owning authority, a declared kind
+and a lifecycle across which references must remain usable. The identity and
+evidence commitments in [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
+then require consumers to distinguish the subject from its representation and
+to preserve admitted authority through composition. The scoped identity minimum is
 authority, kind and value. Governing basis and lifecycle qualify authority or
 applicability where their owning contract requires them; they are not universal
 object-identity fields. Equal representation
 alone supplies neither identity equality nor permission; continuing identity
-alone supplies no claim that content or evidence is current.
+alone supplies no claim that content or evidence is current. The choice of
+readable or opaque names, encoding, the concrete scoping hierarchy and optional coordinates remains
+with the adopting owner; those formats do not follow from finite context.
 
-Bind and Acquire recover the identity coordinates and their authentic owner.
+At the identity-reading boundary, Bind and Acquire recover the identity
+coordinates and their authentic owner under the
+[Transformation Library](TRANSFORMATION_LIBRARY.md).
 Transform and composition preserve the admitted identity and authority
 relations or use an explicit owning transition. Evaluate checks uniqueness,
 kind distinction, parsing, stability and applicable evidence. Dispose remains
@@ -22,6 +30,52 @@ owners. Bound ABG defaults are a conditional realization convenience; they do
 not define generic identity law. Release distinctions remain owned by release
 law; carrying release coordinates does not turn release identity into object
 identity.
+
+## Derivation Verification Material
+
+Historical derivation coordinates bind their original accepted cut, manifest,
+members and fragments. Resolving those coordinates is a verification operation;
+it does not require that predecessor to remain installed or operative. A complete
+successor can carry the exact verification evidence under its own immutable
+manifest without changing the historical coordinates or basis-record preimage.
+
+The verification material contains the exact historical manifest bytes and their
+declared digest. Each required historical member is either carried as exact
+evidence bytes or reconstructed by a declared ordered byte-range projection of
+successor-owned members, with literal reconstruction bytes where necessary.
+The source member path and digest resolve in the successor publication manifest;
+reconstructed bytes have the exact historical member digest in the historical
+manifest. The material records the semantic-address rule, and every required
+fragment resolves under it. Missing, duplicate, altered, incomplete or unbound
+material refuses the affected verification. Re-entry requires authentic complete
+verification material; an installed predecessor supplies no exception to these
+checks and is not an implicit fallback.
+
+The refusal retains its cause on the affected verification predicate. A
+demonstrated duplicate, alteration, incompleteness or absence in the complete
+authoritative member set is falsified. Unbound material, lacking an authentic
+basis binding, is invalid_basis; material not yet acquired leaves the predicate
+indeterminate. Missing reasons or unsupported labels follow the core
+missing-reason rule without erasing independently admissible findings.
+Absence from a sparse checkout does not establish authoritative absence.
+
+The [derivation resource](verification_material/DERIVATION_SOURCES.json) is
+distribution evidence for these byte predicates, not a second constitutional
+surface. It adds no field to the calculus or profile basis record; the existing
+publication-manifest digest binds its declared membership. Source projections
+bind the exact current member digests; changed sources require new verification
+material before reuse. A successful
+reconstruction establishes content and reference checks only. Acceptance of
+the historical cut, semantic derivation, successor admission and publication
+remain separate judgments at their existing owners.
+
+Verification returns the shared [result record](FOUNDATIONS.md#result-algebra)
+for the exact historical-coordinate and byte-reconstruction predicates. Conjoin
+required member, digest, fragment and unique-membership checks with
+[result conjunction](FOUNDATIONS.md#result-conjunction), preserving failed and
+unresolved checks separately. A successful byte check is `satisfied` only for
+that content predicate. It cannot be remapped to semantic derivation,
+acceptance or current authority by changing the predicate after evaluation.
 
 
 ## Position
@@ -340,6 +394,22 @@ Therefore:
 
 If a domain needs family ids, it should publish them explicitly as
 `requirement_family` identities rather than rely on string-shape accidents.
+
+At admission, the identity reader returns the shared
+[result record](FOUNDATIONS.md#result-algebra) on the declared scoped-identity
+predicate. Preserve any domain parsing/refusal outcome. A demonstrated kind,
+uniqueness or coordinate violation is `falsified` on a valid basis; unavailable
+decisive evidence is `indeterminate`; an unusable authoritative basis is
+`invalid_basis`; a request outside the reader's declared domain is
+`out_of_frame`. A check not run retains `not_performed`. Syntactic parsing alone
+can satisfy only its syntax predicate, not authenticity, grant validity or
+currentness.
+
+Before reuse, observe the current owning state and the relevant invalidators
+under [workspace and context](FOUNDATIONS.md#workspace-and-context). A stable
+identity cannot keep stale content, a revoked grant or an old observation
+current. A changed coordinate neither establishes nor ends continuity;
+continuity across it requires the owning transition relation above.
 
 ---
 

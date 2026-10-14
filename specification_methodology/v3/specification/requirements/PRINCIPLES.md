@@ -2,7 +2,7 @@
 
 Status: common WHAT for the principles layer. Each tenant's C1 realisation of these questions is reviewed and accepted separately (see C1 Disposition); this file is not replaced by a merged tenant basis and is not STDO 3 law.
 
-These six commitments organise the independent deep attempts. Existing STDO source provides recovery inputs; a related clause does not prove that a proposed generalisation is equivalent or universally true. Tenants may challenge the formulation, dependency graph, independence or completeness.
+These six commitments organise the independent deep attempts. The current [pillars](../PRODUCT.md#foundational-reduction) account for the substantive models recovered from the accumulated method; the [reduction requirement](README.md#foundational-reduction-requirement) determines how they govern the successor. A pillar is not automatically an independent axiom, a method member or a construction stage. Existing STDO source provides recovery inputs; a related clause does not prove that a proposed generalisation is equivalent or universally true. Tenants may challenge the formulation, dependency graph, independence or completeness.
 
 ## P1 Contextual Interpretation
 

@@ -1,0 +1,35 @@
+{
+  "activation": "RF-V2-V3-COMP-01",
+  "created_utc": "2026-10-13T22:46:06.001303+00:00",
+  "state": "admitted",
+  "authority": "Jim: can we eat our own dogfood and kick off a reviewer that compares v2 and v3",
+  "main_input_commit": "5bc180cabdb8bd50eaea4aede4b2a20044b81a73",
+  "v2": {
+    "cut": "v2.5.1-rc.2",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "installed_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+  },
+  "v3": {
+    "source_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+    "evidence_commit": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6",
+    "source_prefix": "specification_methodology/v3/build_tenants/codex/successor",
+    "tenant_worktree": "/Users/jim/src/apps/specification_methodology-codex"
+  },
+  "effect_territory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261013T224606Z_V2_V3_DOGFOOD_REVIEW",
+  "limits": {
+    "wall_minutes": 60,
+    "selected_bytes_per_reviewer_frame": 160000,
+    "selected_bytes_per_cli_call": 120000,
+    "cli_spend_usd": 8,
+    "cli_seconds_per_call": 900
+  },
+  "exclusions": [
+    "candidate edits",
+    "peer candidate assessment",
+    "construction repair",
+    "acceptance",
+    "release",
+    "push",
+    "tenant merge"
+  ]
+}

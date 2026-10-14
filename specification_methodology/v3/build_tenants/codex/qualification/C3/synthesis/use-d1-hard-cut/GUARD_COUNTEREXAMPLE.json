@@ -1,0 +1,77 @@
+{
+  "kind": "D1 additional guard-consumer counterexample",
+  "input_origin": "Independent grade-1 F1(b), outside the original host scenarios",
+  "predicate": "guard does not permit execution when the selected application token is empty",
+  "cases": [
+    {
+      "subject": "use-77/D1-ordinary-discovery-probe/after",
+      "file_sha256": {
+        "scripts/check_env.sh": "e1fb7e38823560212b5733ed1e47a01f39044e53cce067d9e3de45ee16058a89",
+        "src/settings.py": "0fef0b5af5e681a4fc6c6b547326e0acd7ad35829aff47c674e7f01dacf6bfd8"
+      },
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "APP_API_TOKEN": "",
+        "APP_TOKEN": "x"
+      },
+      "results": [
+        {
+          "command": [
+            "/bin/sh",
+            "scripts/check_env.sh"
+          ],
+          "exit_code": 0,
+          "stdout": "ok\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "/usr/local/bin/python3",
+            "-B",
+            "-c",
+            "import runpy; print(repr(runpy.run_path('src/settings.py')['TOKEN']))"
+          ],
+          "exit_code": 0,
+          "stdout": "''\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "subject": "use-d1-hard-cut/D1-ordinary-discovery-probe/after",
+      "file_sha256": {
+        "scripts/check_env.sh": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233",
+        "src/settings.py": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d"
+      },
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "APP_API_TOKEN": "",
+        "APP_TOKEN": "x"
+      },
+      "results": [
+        {
+          "command": [
+            "/bin/sh",
+            "scripts/check_env.sh"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "scripts/check_env.sh: line 2: APP_API_TOKEN: missing\n"
+        },
+        {
+          "command": [
+            "/usr/local/bin/python3",
+            "-B",
+            "-c",
+            "import runpy; print(repr(runpy.run_path('src/settings.py')['TOKEN']))"
+          ],
+          "exit_code": 0,
+          "stdout": "''\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "original_oracle_changed": false,
+  "finding": "Original fallback lets the shell report ok while Python sees an empty token. Explicit hard-cut successor rejects that environment in its guard. No actor files were repaired by this check."
+}

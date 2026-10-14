@@ -1,0 +1,306 @@
+{
+  "started_utc": "2026-10-13T19:33:18.501476+00:00",
+  "operations": [
+    {
+      "operation": "validate",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "reference-only",
+      "exit": 0
+    },
+    {
+      "operation": "project",
+      "mode": "materialized",
+      "exit": 0
+    },
+    {
+      "operation": "exact-join",
+      "exit": 0
+    },
+    {
+      "operation": "finite-interpretation",
+      "exit": 0
+    }
+  ],
+  "program_counts": {
+    "symbols": 14,
+    "clauses": 53,
+    "residuals": 2,
+    "frames": 5
+  },
+  "projection_parity": true,
+  "configuration_closure_clauses": 24,
+  "joined_input_bytes": 119727,
+  "selected_input_cap_bytes": 120000,
+  "finite_review_input_bytes": 82181,
+  "finite": {
+    "kind": "codex-v3-synthesis-finite-interpretation",
+    "valid": true,
+    "fixed_oracle_cases": 70,
+    "exhaustive_conjunction_cases": 1620,
+    "syntactic_coordinate_pairs": 15,
+    "potentially_legal_coordinate_pairs": 13,
+    "evidence_guard_coordinate_cases": 180,
+    "temporal_effect_cases": 15,
+    "operator_rows": 24,
+    "operator_fixed_cases": 9,
+    "and_associativity_cases": 125,
+    "effect_composition_cases": 216,
+    "exhaustive_verdicts": {
+      "invalid_basis": 1028,
+      "indeterminate": 143,
+      "satisfied": 1,
+      "falsified": 298,
+      "out_of_frame": 150
+    },
+    "detected_mutants": [
+      "unknown-erases-failure",
+      "missing-assessment-performed",
+      "candidate-means-fit",
+      "unknown-means-effect-not-started",
+      "out-of-scope-means-out-of-frame",
+      "known-prefix-means-partial",
+      "blind-retry",
+      "inconclusive-run-called-unperformed",
+      "raw-temporal-labels-joined",
+      "later-timestamp-is-supersession",
+      "arbitrary-operator-is-associative",
+      "reset-erases-workspace"
+    ],
+    "mutant_counterexamples": [
+      {
+        "mutant": "unknown-erases-failure",
+        "input": [
+          "F",
+          "M"
+        ],
+        "actual": "indeterminate",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "missing-assessment-performed",
+        "input": [
+          "satisfied",
+          "not_performed"
+        ],
+        "actual": true,
+        "expected": false
+      },
+      {
+        "mutant": "candidate-means-fit",
+        "input": [
+          "candidate_ready",
+          "fitness"
+        ],
+        "actual": {
+          "domain_outcome": "candidate_ready",
+          "predicate": "fitness",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "effect": "not_requested"
+        },
+        "expected": "refused predicate substitution"
+      },
+      {
+        "mutant": "unknown-means-effect-not-started",
+        "input": [
+          false,
+          null
+        ],
+        "actual": "not_started",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "out-of-scope-means-out-of-frame",
+        "input": [
+          "out_of_scope",
+          "event_scope_compatible"
+        ],
+        "actual": "out_of_frame",
+        "expected": "falsified"
+      },
+      {
+        "mutant": "known-prefix-means-partial",
+        "input": [
+          true,
+          null
+        ],
+        "actual": "partial",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "blind-retry",
+        "input": [
+          "unknown",
+          false,
+          true
+        ],
+        "actual": "permitted_initial_dispatch",
+        "expected": "observe_or_return_unresolved"
+      },
+      {
+        "mutant": "inconclusive-run-called-unperformed",
+        "input": {
+          "undertaken": true,
+          "extent": "completed_at_120rps_below_required_load",
+          "conclusion": "inconclusive",
+          "deciding": null,
+          "effect": "completed"
+        },
+        "actual": "not_performed",
+        "expected": "performed"
+      },
+      {
+        "mutant": "raw-temporal-labels-joined",
+        "input": {
+          "name": "deployment-then-rollback",
+          "parts": [
+            "deployment"
+          ],
+          "observations": [
+            {
+              "id": "deploy",
+              "part": "deployment",
+              "state": "completed"
+            },
+            {
+              "id": "rollback",
+              "part": "deployment",
+              "state": "reverted",
+              "supersedes": [
+                "deploy"
+              ],
+              "supersession_proved": true,
+              "begun_and_reversal_proved": true
+            }
+          ],
+          "effect": "reverted"
+        },
+        "actual": "partial",
+        "expected": "reverted"
+      },
+      {
+        "mutant": "later-timestamp-is-supersession",
+        "input": {
+          "name": "later-time-not-supersession",
+          "parts": [
+            "deployment"
+          ],
+          "observations": [
+            {
+              "id": "deploy",
+              "part": "deployment",
+              "state": "completed"
+            },
+            {
+              "id": "later",
+              "part": "deployment",
+              "state": "reverted",
+              "timestamp": 999,
+              "begun_and_reversal_proved": true
+            }
+          ],
+          "effect": "unknown"
+        },
+        "actual": "reverted",
+        "expected": "unknown"
+      },
+      {
+        "mutant": "arbitrary-operator-is-associative",
+        "input": [
+          false,
+          true,
+          false
+        ],
+        "actual": false,
+        "expected": true
+      },
+      {
+        "mutant": "reset-erases-workspace",
+        "input": {
+          "completed_units": 1,
+          "effect": "completed",
+          "basis": "r1"
+        },
+        "actual": {
+          "completed_units": 0,
+          "effect": "not_started",
+          "basis": "r1"
+        },
+        "expected": {
+          "completed_units": 1,
+          "effect": "completed",
+          "basis": "r1"
+        }
+      }
+    ],
+    "context_reset_trace": {
+      "workspace_retained": true,
+      "private_context_rebuilt": true,
+      "duplicate_effect": false
+    },
+    "elapsed_seconds": 0.006777500035241246,
+    "inputs": {
+      "ORACLE.json": "b4adf4d5f30146f86213f8523292279034ed1044c98f03ebfbe63cb5f87d0887",
+      "model.py": "6f72df2bbb60c29bfb09017be779f71bac1a4b299536db7c86ac66fd710fb6ae",
+      "finite_check.py": "04ba553f0f529125e7e25818388eedbf5afe6e960a10024e225130449de8a758",
+      "program.json": "3b4041b5c4875203dd87580da18d20ef48eac8ace827731dc3e68a71e56cc16a"
+    },
+    "limits": [
+      "Finite AND and declared Boolean operator domains only; no universal categorical proof",
+      "Effect associativity only for disjoint normalized current parts; temporal cases consume stipulated supersession proof",
+      "Thirteen potentially legal performance/verdict pairs still require evidence guards; enum membership does not admit a result",
+      "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+      "Context-reset trace is a finite state model, not an external transport or native-agent trial",
+      "ac.py does not execute these semantic predicates; independent source-first review is required"
+    ]
+  },
+  "source_observations_stable": true,
+  "input_commit": "9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd",
+  "historical_exclusions": [
+    "pre-9982/ (superseded a746 interpretation)",
+    "pre-146e6ad/ (superseded 77/d423 interpretation)"
+  ],
+  "historical_archive_unchanged": true,
+  "pins": {
+    "program-map-drift-mutant.json": "94306fd9c59191f05282744240ed8d47e1e476cc6c9535b255a4e8cfc159fc9b",
+    "bindings.json": "3341b7727bdd525442ec0e2b5bad00ae27caef5c973e08fed5deae36fc0c7f2d",
+    "program.json": "3b4041b5c4875203dd87580da18d20ef48eac8ace827731dc3e68a71e56cc16a",
+    "SOURCE.md": "6c3afb93b59286a0f9b630c97cf0130ab17d5f6174aacd42863f692cd1fb76e5",
+    "MAP_DRIFT_REFUSAL.json": "1e5df880289e7ca88585c213d257e9b186758a762b37ca5f6a773738bfdd091f",
+    "sections-finite.json": "7c54b45f2a6a598bf6288f16dc88b46084d578c6f9055cdac7c9ab426ed88377",
+    "projection-reference-only.json": "fc0cc683908db493ae354af7ec08b17a952f0b1af7d558dc1e9fea76c3ed7051",
+    "FINITE_REQUEST.txt": "4b0e5a4bc9b34be5881c4893fc9a646ea18a4ab3b7e044acee62457b1d24b4a6",
+    "SIGNATURE.md": "3b09ba3da0b192839241472572b4514bc023e262d7fa9e7e347623ca58329bbe",
+    "ORACLE.json": "b4adf4d5f30146f86213f8523292279034ed1044c98f03ebfbe63cb5f87d0887",
+    "model.py": "6f72df2bbb60c29bfb09017be779f71bac1a4b299536db7c86ac66fd710fb6ae",
+    "finite_check.py": "04ba553f0f529125e7e25818388eedbf5afe6e960a10024e225130449de8a758",
+    "CORE_SOURCE_EXCERPTS.md": "a11717578f978ce030731c88e528fbfc082eac33674d96ca6bee3a76a2f2169f",
+    "FINITE_RESULT.json": "8abc83b68cdec2a5694e24e752c9428419286ab21aeb7d2e3c94e652ded4295c",
+    "sections.json": "88efeb0cd9cb74e83bdee0da0285b80ece14d0958c1c69c475f63e3adfe8658d",
+    "SOURCE_INVENTORY.json": "43f03e29abb2978f050262546bb4982213ecc565f69a7fe45aa57bee3ae869bb",
+    "project-reference-only.report.json": "dff99398f155c811d6eb0fd2e2a029bd095f96cb4fe30e7693033f9b3d83ff41",
+    "validation.json": "54cd8bae71b0fa7325c95550b20d782089c9a8da8a3644cae0671a8aa48e4fb0",
+    "REINSPECTION.md": "3b30ad2339d11a99c2950bda7a59cf8679057d3d35963333fa8fb91761c38dd6",
+    "REQUEST.txt": "251d3522a542b4e62d381aeae94e9b39438d2e5ce3d2e631911a11de040cd7a8",
+    "SOURCE_APPLICABILITY.json": "ec29b605cd4e0d89d47434e096ed2b7f0ca238f54c331a0dc1ffafd5fb4bcf85",
+    "project-materialized.report.json": "dff99398f155c811d6eb0fd2e2a029bd095f96cb4fe30e7693033f9b3d83ff41",
+    "projection-configuration.json": "f0536a502f056efaddca786bb84c2ddd98e4fc6387615d3804759badf13352c0",
+    "projection-materialized.json": "589a3f751cc5a344258218265e707d496d274dd3a0a90e9e255ee99a9b8197e7",
+    "map.json": "27d99d1a7416f11551e4a9c60d0d338533880bda3352b5e6fcf2637dcbc39340",
+    "EMPTY_SELECTION_REFUSAL.json": "cba8d21604dc10346aa31704a0df85f2be9cd36a6a7bb0ae3e2c1fb2beb4f9b4",
+    "qualify.py": "1f4b4d35c4d1bcd4e56370a05b49db07e4d3e3be709e21d5dc4bba6344ce7545",
+    "build_program.py": "5f68aa4c7a63cf2987775aeae2a0036c4b046246a727c90fb7d8390e3af6377b",
+    "INSTALL_VERIFICATION.json": "a37f4caa8c8723040eedb4ea6af67d50e5fb82f639510570347b1e21e978cb07"
+  },
+  "elapsed_seconds": 0.8767580830026418,
+  "finished_utc": "2026-10-13T19:33:19.378245+00:00",
+  "valid": true,
+  "limits": [
+    "Author-owned bounded interpretation, not complete-corpus fidelity or acceptance",
+    "Fixed ac.py verifies structure and source relations only",
+    "Finite oracle is algorithmically separate, same Writer; independent source-first assessment remains required"
+  ]
+}

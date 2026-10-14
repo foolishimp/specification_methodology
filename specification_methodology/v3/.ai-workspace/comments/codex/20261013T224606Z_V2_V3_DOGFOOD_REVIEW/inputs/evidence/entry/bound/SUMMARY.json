@@ -1,0 +1,109 @@
+{
+  "source_commit": "9982ab803b4e1111b0f1fa9e0a654a254dd43f20",
+  "fixture_definition_sha256": "9932de5eb23444f982cd172ee3260efbc7c250556c73f6093634a1a7f2c886c2",
+  "oracle_sha256": "8024b42912ce25bc3ce8fdf851f37ddb5dffdab7e280d1d7b11ae3caed8ec9e3",
+  "calls": [
+    {
+      "name": "candidate-discovery",
+      "elapsed_seconds": 71.24161345895845,
+      "selected_material_bytes": 49973,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "cost_usd": 0.36025759999999996,
+      "acquisitions": 24,
+      "session_id": "2c3d7ee4-9305-437f-9ed0-267db8103358",
+      "token_usage": {
+        "input_tokens": 20,
+        "cache_creation_input_tokens": 23297,
+        "cache_read_input_tokens": 159608,
+        "output_tokens": 7094
+      },
+      "material_by_requested_path": {
+        "candidate_package": 18726,
+        "controls": 3480,
+        "fixture_definition_and_grant": 5466,
+        "directory_discovery": 8922,
+        "workspace": 388,
+        "rc2_package": 11969
+      }
+    },
+    {
+      "name": "rc2-discovery",
+      "elapsed_seconds": 42.34684304194525,
+      "selected_material_bytes": 30771,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "cost_usd": 0.2247264,
+      "acquisitions": 21,
+      "session_id": "ffac5d03-3b0f-4ef7-be24-827fd9ae28d3",
+      "token_usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 15269,
+        "cache_read_input_tokens": 70032,
+        "output_tokens": 4426
+      },
+      "material_by_requested_path": {
+        "rc2_package": 13012,
+        "controls": 3670,
+        "fixture_definition_and_grant": 5787,
+        "directory_discovery": 6520,
+        "workspace": 817
+      }
+    },
+    {
+      "name": "candidate-continuation",
+      "elapsed_seconds": 50.885744874947704,
+      "selected_material_bytes": 43623,
+      "tools_seen": [
+        "Glob",
+        "Grep",
+        "Read"
+      ],
+      "host_stop": null,
+      "workspace_unchanged_by_actor": true,
+      "cost_usd": 0.2906952,
+      "acquisitions": 21,
+      "session_id": "2525b8c1-5035-4551-8c29-f25a0f265ea1",
+      "token_usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 20265,
+        "cache_read_input_tokens": 85036,
+        "output_tokens": 5576
+      },
+      "material_by_requested_path": {
+        "candidate_package": 13208,
+        "controls": 3480,
+        "durable_records": 9353,
+        "workspace": 502,
+        "fixture_definition_and_grant": 5466,
+        "directory_discovery": 6348,
+        "rc2_package": 3880
+      }
+    }
+  ],
+  "total_cost_usd": 0.8756792,
+  "summed_call_seconds": 164.4742013758514,
+  "all_final_file_oracle_checks_pass": true,
+  "negative_before_positive_after_pass": true,
+  "candidate_frame_use_proved": false,
+  "candidate_entry_assisted_by_rc2": true,
+  "cold_current_state_continuation_proved_for_fixture": true,
+  "installed_v3_entry_proved": false,
+  "comparative_v3_effectiveness_proved": false,
+  "qualification_boundary": "Post-selection source-entry and rc2-assisted fixture execution; no installed-v3 or superiority claim",
+  "including_preserved_original_calls": {
+    "calls": 6,
+    "cost_usd": 1.9989918,
+    "summed_call_seconds": 397.61902304179966
+  }
+}

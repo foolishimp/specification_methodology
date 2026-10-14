@@ -1,0 +1,58 @@
+{
+  "activation": "RF-V2-V3-COMP-01",
+  "preparing_assessor": "/root/v2_v3_dogfood_reviewer",
+  "fresh_cli_packets": [
+    {
+      "name": "source_assessment",
+      "bytes": 103548,
+      "limit": 120000,
+      "fits": true
+    },
+    {
+      "name": "matched_v2",
+      "bytes": 92761,
+      "limit": 120000,
+      "fits": true
+    },
+    {
+      "name": "matched_v3",
+      "bytes": 114973,
+      "limit": 120000,
+      "fits": true
+    }
+  ],
+  "assessor_context": {
+    "same_context_across_acquisitions": true,
+    "declared_limit_bytes": 160000,
+    "conservative_cumulative_acquisition_lower_bound_bytes": 172190,
+    "contributions": {
+      "nine_complete_unified_diff_bodies": 136920,
+      "foundations_lines_296_643": 22893,
+      "work_skill": 12377
+    },
+    "within_envelope": false,
+    "exact_total_acquisition_bytes": null,
+    "resident_tokens": null,
+    "provider_overhead": null,
+    "excluded_from_lower_bound": [
+      "governing law",
+      "common requirements",
+      "other source",
+      "repeated reads",
+      "historical evidence",
+      "tool wrappers",
+      "memory routing"
+    ],
+    "interpretation": "Packet fit is not aggregate assessor-context fit. Semantic overlaps do not undo actual acquisition. No fresh assessor reset occurred between these reads."
+  },
+  "stop": "Further source acquisition and paid calls stopped when the lower bound was established. No additional acquisition was needed to finish the retained comparison. No repeated calls or fresh re-entry are required solely to repair this numeric mismatch.",
+  "executive_clarification": {
+    "source": "Parent Executive message after Jim challenged the limit; recorded by parent in T-002. Original activation remains unchanged.",
+    "limit_origin": "Carried forward from an earlier allowance, without model/token-window or task-performance calibration.",
+    "interpretation": "The measured lower bound establishes a local grant mismatch only. It establishes neither capacity exhaustion, degraded review quality nor a v3 method defect. P5 retains exact nonadherence to the initial envelope. Other predicate judgments depend on their own material evidence.",
+    "reentry": "Parent withdrew the proposed fresh re-entry solely to repair the numeric breach."
+  },
+  "reconstruction": "Frozen workspace material, manifests, raw returns and results are retained. No fresh process reconstructed this review after assessor context loss. The source demands a distinct exercise for that claim.",
+  "isolation_exception": "CLI temporary cwd is inside the admitted review directory. Safe mode disables CLAUDE.md and customizations; restricted mode and tools=[] were used. This differs from the C3 outside-repository fresh-actor convention and supplies no strict C3 acceptance evidence.",
+  "role_effects": "Preparation/report effects and paid calls were separately declared Writer operations. Semantic assessment did not edit either candidate. Root Executive and ledger Writer are separate parent responsibilities."
+}

@@ -1,0 +1,134 @@
+{
+  "kind": "codex-v3-synthesis-finite-interpretation",
+  "valid": true,
+  "fixed_oracle_cases": 36,
+  "exhaustive_conjunction_cases": 1620,
+  "core_coordinate_cases": 15,
+  "legal_core_coordinate_pairs": 7,
+  "effect_composition_cases": 216,
+  "exhaustive_verdicts": {
+    "invalid_basis": 1028,
+    "indeterminate": 143,
+    "satisfied": 1,
+    "falsified": 298,
+    "out_of_frame": 150
+  },
+  "detected_mutants": [
+    "unknown-erases-failure",
+    "missing-assessment-performed",
+    "candidate-means-fit",
+    "unknown-means-effect-not-started",
+    "out-of-scope-means-out-of-frame",
+    "known-prefix-means-partial",
+    "blind-retry",
+    "reset-erases-workspace"
+  ],
+  "mutant_counterexamples": [
+    {
+      "mutant": "unknown-erases-failure",
+      "input": [
+        "F",
+        "M"
+      ],
+      "actual": "indeterminate",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "missing-assessment-performed",
+      "input": [
+        "satisfied",
+        "not_performed"
+      ],
+      "actual": true,
+      "expected": false
+    },
+    {
+      "mutant": "candidate-means-fit",
+      "input": [
+        "candidate_ready",
+        "fitness"
+      ],
+      "actual": {
+        "predicate": "fitness",
+        "domain_outcome": "candidate_ready",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "effect": "not_requested"
+      },
+      "expected": "refused predicate substitution"
+    },
+    {
+      "mutant": "unknown-means-effect-not-started",
+      "input": [
+        false,
+        null
+      ],
+      "actual": "not_started",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "out-of-scope-means-out-of-frame",
+      "input": [
+        "out_of_scope",
+        "event_scope_compatible"
+      ],
+      "actual": "out_of_frame",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "known-prefix-means-partial",
+      "input": [
+        true,
+        null
+      ],
+      "actual": "partial",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "blind-retry",
+      "input": [
+        "unknown",
+        false,
+        true
+      ],
+      "actual": "permitted_initial_dispatch",
+      "expected": "observe_or_return_unresolved"
+    },
+    {
+      "mutant": "reset-erases-workspace",
+      "input": {
+        "completed_units": 1,
+        "effect": "completed",
+        "basis": "r1"
+      },
+      "actual": {
+        "completed_units": 0,
+        "effect": "not_started",
+        "basis": "r1"
+      },
+      "expected": {
+        "completed_units": 1,
+        "effect": "completed",
+        "basis": "r1"
+      }
+    }
+  ],
+  "context_reset_trace": {
+    "workspace_retained": true,
+    "private_context_rebuilt": true,
+    "duplicate_effect": false
+  },
+  "elapsed_seconds": 0.0052697500213980675,
+  "inputs": {
+    "ORACLE.json": "e6b4e6c550bd3a8089390174474be3906c3c9b49d92f3b370df338a166130b79",
+    "model.py": "a422d6cc55741e9fb9e29557867205282adbf4296dc06df83f59dfa2990b9b9d",
+    "finite_check.py": "61a57f2f9b1fde7fa40ca017cfc3dc6eebc7ba4bcfaafb50aeee5d2336318721",
+    "program.json": "b25cb4768cbcde7b167a727d79ee2e78071dede9f176de89573eab530d0f66c1"
+  },
+  "limits": [
+    "Finite AND domain only; no universal categorical proof",
+    "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+    "Context-reset trace is a finite state model, not an external transport or native-agent trial",
+    "ac.py does not execute these semantic predicates; independent source-first review is required"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "kind": "codex-v3-synthesis-finite-interpretation",
+  "valid": true,
+  "fixed_oracle_cases": 68,
+  "exhaustive_conjunction_cases": 1620,
+  "syntactic_coordinate_pairs": 15,
+  "potentially_legal_coordinate_pairs": 13,
+  "evidence_guard_coordinate_cases": 180,
+  "temporal_effect_cases": 13,
+  "operator_rows": 24,
+  "operator_fixed_cases": 9,
+  "and_associativity_cases": 125,
+  "effect_composition_cases": 216,
+  "exhaustive_verdicts": {
+    "invalid_basis": 1028,
+    "indeterminate": 143,
+    "satisfied": 1,
+    "falsified": 298,
+    "out_of_frame": 150
+  },
+  "detected_mutants": [
+    "unknown-erases-failure",
+    "missing-assessment-performed",
+    "candidate-means-fit",
+    "unknown-means-effect-not-started",
+    "out-of-scope-means-out-of-frame",
+    "known-prefix-means-partial",
+    "blind-retry",
+    "inconclusive-run-called-unperformed",
+    "raw-temporal-labels-joined",
+    "later-timestamp-is-supersession",
+    "arbitrary-operator-is-associative",
+    "reset-erases-workspace"
+  ],
+  "mutant_counterexamples": [
+    {
+      "mutant": "unknown-erases-failure",
+      "input": [
+        "F",
+        "M"
+      ],
+      "actual": "indeterminate",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "missing-assessment-performed",
+      "input": [
+        "satisfied",
+        "not_performed"
+      ],
+      "actual": true,
+      "expected": false
+    },
+    {
+      "mutant": "candidate-means-fit",
+      "input": [
+        "candidate_ready",
+        "fitness"
+      ],
+      "actual": {
+        "domain_outcome": "candidate_ready",
+        "predicate": "fitness",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "effect": "not_requested"
+      },
+      "expected": "refused predicate substitution"
+    },
+    {
+      "mutant": "unknown-means-effect-not-started",
+      "input": [
+        false,
+        null
+      ],
+      "actual": "not_started",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "out-of-scope-means-out-of-frame",
+      "input": [
+        "out_of_scope",
+        "event_scope_compatible"
+      ],
+      "actual": "out_of_frame",
+      "expected": "falsified"
+    },
+    {
+      "mutant": "known-prefix-means-partial",
+      "input": [
+        true,
+        null
+      ],
+      "actual": "partial",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "blind-retry",
+      "input": [
+        "unknown",
+        false,
+        true
+      ],
+      "actual": "permitted_initial_dispatch",
+      "expected": "observe_or_return_unresolved"
+    },
+    {
+      "mutant": "inconclusive-run-called-unperformed",
+      "input": {
+        "undertaken": true,
+        "extent": "completed_at_120rps_below_required_load",
+        "conclusion": "inconclusive",
+        "deciding": null,
+        "effect": "completed"
+      },
+      "actual": "not_performed",
+      "expected": "performed"
+    },
+    {
+      "mutant": "raw-temporal-labels-joined",
+      "input": {
+        "name": "deployment-then-rollback",
+        "parts": [
+          "deployment"
+        ],
+        "observations": [
+          {
+            "id": "deploy",
+            "part": "deployment",
+            "state": "completed"
+          },
+          {
+            "id": "rollback",
+            "part": "deployment",
+            "state": "reverted",
+            "supersedes": [
+              "deploy"
+            ],
+            "supersession_proved": true,
+            "begun_and_reversal_proved": true
+          }
+        ],
+        "effect": "reverted"
+      },
+      "actual": "partial",
+      "expected": "reverted"
+    },
+    {
+      "mutant": "later-timestamp-is-supersession",
+      "input": {
+        "name": "later-time-not-supersession",
+        "parts": [
+          "deployment"
+        ],
+        "observations": [
+          {
+            "id": "deploy",
+            "part": "deployment",
+            "state": "completed"
+          },
+          {
+            "id": "later",
+            "part": "deployment",
+            "state": "reverted",
+            "timestamp": 999,
+            "begun_and_reversal_proved": true
+          }
+        ],
+        "effect": "unknown"
+      },
+      "actual": "reverted",
+      "expected": "unknown"
+    },
+    {
+      "mutant": "arbitrary-operator-is-associative",
+      "input": [
+        false,
+        true,
+        false
+      ],
+      "actual": false,
+      "expected": true
+    },
+    {
+      "mutant": "reset-erases-workspace",
+      "input": {
+        "completed_units": 1,
+        "effect": "completed",
+        "basis": "r1"
+      },
+      "actual": {
+        "completed_units": 0,
+        "effect": "not_started",
+        "basis": "r1"
+      },
+      "expected": {
+        "completed_units": 1,
+        "effect": "completed",
+        "basis": "r1"
+      }
+    }
+  ],
+  "context_reset_trace": {
+    "workspace_retained": true,
+    "private_context_rebuilt": true,
+    "duplicate_effect": false
+  },
+  "elapsed_seconds": 0.007072124979458749,
+  "inputs": {
+    "ORACLE.json": "0741f681925545fa57d939f400da7db264aa21232ce5d9b22b4d666a2204cdb3",
+    "model.py": "0e41d40a25691caa825a13180167702e13362b512e439228e76483d5217f01f1",
+    "finite_check.py": "144a7dc1ed4489d87a9e02fd46f0758e9c6b978e2bc595fcc11f94ab648b251b",
+    "program.json": "d1e413030258e206d931e05c55d370858ca8734eaeba3e90e1051571a0727261"
+  },
+  "limits": [
+    "Finite AND and declared Boolean operator domains only; no universal categorical proof",
+    "Effect associativity only for disjoint normalized current parts; temporal cases consume stipulated supersession proof",
+    "Thirteen potentially legal performance/verdict pairs still require evidence guards; enum membership does not admit a result",
+    "Separate oracle algorithms and fixed expectations are same-Writer artifacts, not independent fidelity acceptance",
+    "Context-reset trace is a finite state model, not an external transport or native-agent trial",
+    "ac.py does not execute these semantic predicates; independent source-first review is required"
+  ]
+}

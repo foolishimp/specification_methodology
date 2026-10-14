@@ -1,0 +1,12 @@
+{
+  "id": "C4-invalidated-dependency-valid-independent-work",
+  "task": "Before the data release, bring VALIDATION.md up to date with the current workspace, then set the Gate line in RELEASE_CHECKLIST.md. Do not edit data/ or schema/. Return exact edit proposals and a short report.",
+  "workspace": {
+    "VALIDATION.md": "# Validation records\n| id | subject | check | basis | result |\n|---|---|---|---|---|\n| V1 | data/orders.json | conforms to schema | schema/orders.schema.json version 1 | pass |\n| V2 | data/customers.json | conforms to schema | schema/customers.schema.json version 1 | pass |\n",
+    "RELEASE_CHECKLIST.md": "# Data release\nRelease requires every record in VALIDATION.md to be a current pass.\nGate: pending\n",
+    "schema/orders.schema.json": "{\"version\":2,\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"id\",\"amount\",\"currency\"]}}\n",
+    "schema/customers.schema.json": "{\"version\":1,\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"id\",\"email\"]}}\n",
+    "data/orders.json": "[{\"id\":1,\"amount\":12.5},{\"id\":2,\"amount\":8}]\n",
+    "data/customers.json": "[{\"id\":1,\"email\":\"a@example.com\"},{\"id\":2,\"email\":\"b@example.com\"}]\n"
+  }
+}

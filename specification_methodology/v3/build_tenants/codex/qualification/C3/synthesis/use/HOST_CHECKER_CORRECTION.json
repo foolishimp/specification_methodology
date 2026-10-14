@@ -1,0 +1,51 @@
+{
+  "kind": "host checker repair, not a candidate or actor repair",
+  "initial_script_sha256": "5c4273349e1c639888bc22c6f94d216e81856c2f157b9774ad87b2719bdffc43",
+  "finding": "The host checker assumed /bin/sh returns 2 for a missing required environment variable. macOS /bin/sh returns 1. The fixture contract requires failure, not a particular nonzero code.",
+  "initial_executions": [
+    {
+      "name": "before: shell consumer fails with only the new variable",
+      "cwd": "D1-ordinary-discovery-probe/workspace",
+      "argv": [
+        "/bin/sh",
+        "scripts/check_env.sh"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C",
+        "APP_API_TOKEN": "fixture-token-only",
+        "APP_TOKEN_TTL": "3600",
+        "LOG_LEVEL": "info"
+      },
+      "returncode": 1,
+      "expected_returncode": 2,
+      "required_stderr_fragment": "APP_TOKEN",
+      "stdout": "",
+      "stderr": "scripts/check_env.sh: line 2: APP_TOKEN: missing\n",
+      "elapsed_seconds": 0.004536,
+      "status": "not_met"
+    },
+    {
+      "name": "after: shell consumer still rejects missing token",
+      "cwd": "D1-ordinary-discovery-probe/after",
+      "argv": [
+        "/bin/sh",
+        "scripts/check_env.sh"
+      ],
+      "environment": {
+        "PATH": "/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "LC_ALL": "C"
+      },
+      "returncode": 1,
+      "expected_returncode": 2,
+      "required_stderr_fragment": "APP_API_TOKEN",
+      "stdout": "",
+      "stderr": "scripts/check_env.sh: line 2: APP_API_TOKEN: missing\n",
+      "elapsed_seconds": 0.003705,
+      "status": "not_met"
+    }
+  ],
+  "repair": "Require nonzero exit plus the exact missing-variable stderr fragment. Keep the positive new-variable execution at exact exit 0."
+}

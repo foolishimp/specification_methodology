@@ -1,6 +1,6 @@
 # Standards Library
 
-This directory contains the deciding methods, explanatory account and
+This directory contains the deciding methods, foundational contracts and
 non-deciding views of the STDO Specification Methodology. The complete cut also includes its declared
 projections, schemas, templates, frames and interaction assets. A selectable
 release has one complete immutable constitutional member set with exact cut
@@ -13,6 +13,10 @@ interaction tooling retain separately declared responsibilities.
 
 [Foundations](FOUNDATIONS.md) states finite capacity, interpretation, purpose,
 identity, typed composition, total handling and separate judgment/authority.
+It owns the [single result algebra](FOUNDATIONS.md#result-algebra),
+[result conjunction](FOUNDATIONS.md#result-conjunction),
+[workspace-derived context](FOUNDATIONS.md#workspace-and-context) and
+[configuration contract](FOUNDATIONS.md#configuration).
 [Transformation Library](TRANSFORMATION_LIBRARY.md) supplies Bind, Acquire,
 Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
 material contracts and owners; these are not compulsory phases or a runtime API.
@@ -23,6 +27,16 @@ Responsibility views project selected material clauses:
 [domain binding](frames/DOMAIN_BINDING.md), and
 [release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
 no view is sufficient for every task.
+
+For intake triage, lawful re-entry, work-carrier selection or execution-contract
+admission, acquire the [triage/carrier frame](frames/TRIAGE_CARRIER.md).
+For typed construction handoffs and transformation admission, acquire the
+[constitutional-derivation frame](frames/CONSTITUTIONAL_DERIVATION.md), which
+projects the library specialization, its Design Method consumer and the
+SPEC_METHOD enclosing-admission owner. These selections follow the task's
+responsibility. Each view names its owner sections and exact member digests. Material
+coupled responsibilities outside the selection require source re-entry under
+the existing sufficiency law; a prepared frame grants no work or admission.
 
 ## Method owners
 

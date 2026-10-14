@@ -1,0 +1,820 @@
+Task
+Review only the final C1-C8 bounded repair against exact source. No tools. Source stays 9bc8962. These are qualification artifacts, not new method law. The C1 guard now selects every reported effect observation, with boundary completeness a consequence. C2/C4 premise edges are explicit and transitivity stated. C3 effect relevance is carried. C5 conflict precedence is explicitly finite-model policy, not source-derived; current code retains both claims. C6 authentication/subject/basis remain stipulated, not validated. C7 distinguishes unmodeled positive support from rejection. C8 residual wording is aligned. The declarations no longer claim whole-core implementation or family fidelity. Assess the current statements within that limited claim; confirm addressed counterexamples or name a remaining concrete contradiction. Do not infer acceptance, installed qualification or source superiority. Do not require implementation of disclosed residual domains. Return concise findings with explicit scope.
+
+Earlier review
+# Final reassessment: R1–R10 textual repairs and N1 finite refinement
+
+**Bottom line:** The N1 repair and seven of the ten R repairs hold. **R8 is not closed.** The repaired guard on `effect-observation` makes the clause silent in exactly the case it is meant to catch. R2 and R9 carry low-severity residue, and there are a few smaller items listed below. I am not inferring family fidelity, complete core coverage or acceptance from any of this.
+
+## 1. R1–R10 against the source
+
+| ID | Status | Basis |
+|---|---|---|
+| R1 | **Repaired** | `conjunction-rest` now has `effect-join` as a premise. It carries "Effect uncertainty prevents satisfaction where the predicate requires a known effect state" and the converse relevance protection. The "deployed with no partial writes" + `unknown` case can no longer be satisfied. The same rule is missing from `logical-operator` (see C3). |
+| R2 | **Repaired, with residue** | The guard now fires on plain sequential composition. The statement carries UP-016/017, AC-016, the recovery-path rule, unexecuted stages as coverage facts, and "applicable unresolved or invalid-basis". The qualification carries the absent-slot, extent and missing-conclusion rule. An unresolved outer interpretation now has a carrying clause. The clause still invokes "the operator rule above" without linking it (see C2). |
+| R3 | **Repaired** | The aggregate-performance sentence is now in `conjunction-failure`, `composite-invalid`, `conjunction-rest`, `logical-operator` and `nonperformance`. A falsified conjunction can no longer inherit `unconfirmed` or overwrite a component's performance. |
+| R4 | **Repaired** | Conflicting or insufficient observations now give `unknown`. Ordering is retained only, never used for selection. Temporal labels are joined only after mapping. Ownership now reads "the composite declares". The `completed`/`not_started` pair with no supersession support now gives `unknown`. |
+| R5 | **Repaired** | Both guards now cover "originated, reported, projected or consumed". The rule "Dispatch or admission alone does not establish performance" is now stated. An originated `unconfirmed`/`satisfied` result is barred. |
+| R6 | **Repaired (textual)** | The statement is the source verbatim: "remains indeterminate until admissible evidence decides it". The qualification routes positive evidence to its own performed record and forbids promoting an unconfirmed original. This matches the intended finite boundary. |
+| R7 | **Repaired** | "Value choices come from the purpose owner" and "truthful handling of" are both present. |
+| R8 | **Not closed** | The source text is now verbatim, but the new guard defeats it (see C1). |
+| R9 | **Repaired, same pattern recurs** | `total-control` and `coordinator` now have `premise-authority`; `acquisition` now has `outer-preservation`. New instances of the same pattern appear in C2 and C4. |
+| R10 | **Repaired** | All twelve clauses named in R10 now appear in `core-coverage` `subject_refs`, along with `composite-invalid`, `nonperformance` and `performance-compatibility`. The detail text is still misaligned with SOURCE.md (see C8). |
+
+## 2. N1 confirmations
+
+I traced each of these points through the code:
+
+- **The contribution's own claim cannot decide.**
+  - `mapped_evidence` overrides `deciding` with the reason-sensitive mapping, or `None` when the reason is missing or unsupported.
+  - It also forces `independent=False`.
+  - Grid 1 checks `own['verdict'] == mapped` over every `deciding` × `independent` value.
+  - All three original N1 traces are fixed: the positive substitution, the own negative claim, and the overwritten mapped `falsified`.
+- **Mapped failure is retained.**
+  - `'falsified' in (mapped_verdict, admitted)` takes precedence.
+  - `mapped_verdict` and `mapped_result` are always exposed.
+  - The two override counterexample rows return `falsified`.
+- **Separate-support guards.**
+  - Admission requires all of: the same predicate, `independent is True`, `admissible is True`, and a non-empty string provenance.
+  - Only negative or diagnostic claims are admitted. A positive or `indeterminate` separate claim is never admitted (confirmed in grid 2).
+  - The 15 binding cases each break one guard: 3 claims × 5 patches.
+- **Performance is preserved.**
+  - Every record derives performance from the original `undertaken` value via an `is True` / `is False` test.
+  - Unknown or non-boolean undertaking stays `unconfirmed`.
+  - A mapped `satisfied` requires `performed` and `completion is True`.
+  - Separate support never changes `performance` or `effect` (checked in grid 2).
+- **Counts match SOURCE.md.**
+  - The base grid is 5 outcomes × 7 predicates × 7 reasons × 3 undertaken values × 2 support values = 1,470.
+  - Each N1 grid multiplies that by 6 claims × 2 independence values, giving 17,640.
+  - There are 15 binding cases and 4 reviewer rows.
+- **Conflict is not hidden.** The `conflict` flag records disagreement between the mapped verdict and admitted support. Note that it is checked with the same formula the code uses, so the check is same-Writer.
+
+## 3. Remaining concrete counterexamples
+
+**C1 (medium): the `effect-observation` guard turns the boundary requirement into a precondition (R8).**
+- The guard reads: "an effect observation is reported on a boundary containing every material part … requested or unintended."
+- Counterexample:
+  - A read-only job reports `not_requested` on a boundary that omits its possible unintended cache write.
+  - Because the boundary is incomplete, the guard is false.
+  - The clause, including its read-only qualification, is never selected.
+  - So nothing requires the omitted part or forces `unknown`.
+- `effect-join` and `refinement` take this clause as a premise and inherit the gap.
+- Fix:
+  - Guard on "an effect observation is reported".
+  - Leave boundary completeness in the consequence, where the statement already has it ("For every effect value, the boundary includes…").
+
+**C2 (low–medium): `composition-order` invokes an unlinked operator rule.**
+- The statement says "Their returned result applies the operator rule above". Its premises are only `conjunction-rest` and `premise-composition`.
+- Counterexample:
+  - Take a recovery-path pipeline whose outer predicate is not a conjunction of stage postconditions. The source explicitly allows this.
+  - It must be decided by `logical-operator`'s well-formedness and truth/falsity rule.
+  - That clause is not in the argument. This is the R9 pattern again.
+- Fix: add `logical-operator` as a premise, and replace "above" with a reference to the clause.
+
+**C3 (low): `logical-operator` lacks the effect-dependency rule that R1 added to `conjunction-rest`.**
+- `logical-operator` has `effect-join` as a premise, so it composes effects, but nothing states that effect uncertainty prevents satisfaction.
+- Counterexample:
+  - A declared disjunction whose outer predicate requires a known effect state.
+  - One leaf is authentically satisfied and the composite effect is `unknown`.
+  - No `logical-operator` text bars satisfaction.
+- The source's sentence is phrased generally ("where the predicate requires a known effect state"), and its operator paragraph keeps "effect composition" from the rules above.
+- Fix: carry the same two sentences into `logical-operator`, unless the residual explicitly scopes them to conjunction.
+
+**C4 (low): premise links reached only through anaphora or transitivity.**
+- `refinement` says "uses the legal pairs above", but the legal pairs live in `performance-compatibility`, which is not a premise.
+- `conjunction-rest` decides "unresolved applicability → indeterminate", but reaches `applicability` only through `conjunction-failure`. This is acceptable only if premises are meant to be transitive, and SIGNATURE.md does not say so.
+
+**C5 (low; N1 policy): single-predicate precedence among conflicting verdicts is a model choice.**
+- The code resolves conflicts as follows:
+  - A mapped `falsified` plus admitted `invalid_basis` or `out_of_frame` gives `falsified`.
+  - A mapped `satisfied` plus an admitted diagnostic gives the diagnostic.
+- The source orders falsification before invalid basis only for **conjunction**. For one predicate, an established invalid basis arguably undercuts a falsification made on that basis.
+- Nothing is erased: `mapped_verdict` and `conflict` are retained.
+- The precedence should still be declared as a finite-model policy, not presented as source-derived.
+
+**C6 (low; declared-limit wording): separate support is bound by predicate name only.**
+- Subject and basis are not compared, so a falsification of `fitness` about a different candidate is admitted.
+- `independent`, `admissible` and `provenance` are caller-asserted tokens. Provenance accepts any non-empty string, including the contribution's own producer or `" "`.
+- The `refine` docstring states this ("fixed subject/basis and evidence authentication are fixture premises").
+- Neither SOURCE.md's residual nor the `core-coverage` detail says so. Add one sentence to make the declared limit match the code.
+
+**C7 (low): positive separate support looks the same as rejected support.**
+- A well-formed, independent, admissible, provenanced `satisfied` separate claim yields `admitted_separate_support=None`.
+- That is the same output as a claim rejected for failing a guard.
+- The raw claim is retained, but the result does not say "positive support not modeled here; needs its own record" versus "inadmissible".
+- A reason field would make the intentional R6 boundary visible in the result itself.
+
+**C8 (low, structural): the `core-coverage` detail drifts from SOURCE.md.**
+- The detail says "nonperformed conjunction slots"; SOURCE.md says "nonperformed **or unconfirmed**".
+- The detail says "non-Boolean dependency ordering"; SOURCE.md says "non-Boolean or undecided operator leaves, undecided operator joins and material-dependency ordering". The earlier minor item asked for this alignment, and it has not been applied in the detail.
+
+## 4. Editorial (no change in meaning)
+
+- **Missing sentence breaks.** Appended sentences have no terminating period before them. This occurs in five clauses:
+  - `composite-invalid`: "…aggregate scope The aggregate…"
+  - `conjunction-failure`
+  - `logical-operator`
+  - `nonperformance`: "…downstream predicate Dispatch…"
+  - `performance-compatibility`
+- **Duplicated sentence.** `logical-operator` now states aggregate performance twice.
+- **Context-dependent references.** Verbatim source paragraphs keep references that only resolve inside FOUNDATIONS.md:
+  - "above" and "this record";
+  - `effect-join`'s `[Result algebra](#result-algebra)` link, whose target is not among that clause's `source_refs`.
+
+## 5. Test-coverage notes (not counterexamples)
+
+- **Binding cases are narrow.** All 15 binding cases use the mapping-`None`, `undertaken=True` row. A guard failure is never exercised against a mapped `satisfied` or `falsified`, or with unconfirmed or not-performed undertaking. The code path is simple, but that combination is untested.
+- **`completion=False` is never exercised**, so the completion condition on a mapped `satisfied` is unchecked.
+- **`legal_coordinates(..., got['support'])` passes by construction.** `support` is the synthesized combined view, not the raw input; the raw input is in `raw_evidence`.
+- **The N1 change is local to `refine`.** `evaluation`/`admissible_decision` still accept a flat in-evidence `independent` flag on other paths. Those paths are outside this delta.
+
+## Summary
+
+The N1 boundary is confirmed as declared:
+- Only negative or diagnostic separate support is combined.
+- Mapped failure survives every claim.
+- A positive or non-independent claim never decides.
+- Undertaking is never upgraded.
+
+R1, R3–R7 and R10 are confirmed repaired. R2 and R9 are repaired with low residue (C2, C4). R8 needs the guard fix in C1. I am not reporting any acceptance or release judgment.
+
+
+Exact unchanged source
+## Result algebra
+
+A result makes a claim about one predicate on one subject and basis. Its core
+record contains the predicate, exact subject and basis, verdict, performance,
+original qualified domain outcome, supporting evidence and citations, unresolved
+obligations and material effect observations. A reference can carry these when
+its resolution preserves their meaning and availability. This is a semantic
+contract, not a mandatory serialization format or additional work carrier.
+
+The verdict has exactly these values:
+
+| Value | Meaning for the bound predicate |
+|---|---|
+| `satisfied` | Admissible evidence establishes the predicate under its declared evaluation rule. |
+| `falsified` | Admissible evidence establishes a counterexample or failure of that predicate. |
+| `indeterminate` | The available admissible evidence does not decide the predicate. |
+| `out_of_frame` | The predicate is outside the evaluation's bound scope or capability; it is not silently omitted from the wider obligation. |
+| `invalid_basis` | The subject, governing basis or required interpretation is invalid for the claimed evaluation. |
+
+Performance records whether the named predicate's declared evaluation was
+actually undertaken; it is `performed`, `not_performed` or `unconfirmed`.
+The activation identifies that evaluation separately from dispatch, admission
+or the work being assessed. Retain the observed extent, interruption and
+conclusion in its outcome and evidence. The legal pairs are:
+
+| Performance | Permitted verdicts | Meaning |
+|---|---|---|
+| `performed` | Any of the five verdicts | Evidence establishes that the evaluation was undertaken, including a scoped basis or capability diagnosis. Its extent and conclusion remain separate facts. |
+| `not_performed` | Any except `satisfied`, with the evidence condition below | Evidence establishes that the evaluation was not undertaken. Dispatch or admission alone does not establish performance. |
+| `unconfirmed` | Any except `satisfied`, with the evidence condition below | Whether the evaluation was undertaken is not established. |
+
+An interruption does not erase evaluation already undertaken or admissible
+evidence obtained. A suite aborted after a witnessed failure is performed with
+that partial extent and falsifies “all tests pass”. A completed load test that
+cannot generate its required load is performed but indeterminate on the
+requested service-performance predicate. Neither case is a never-run test.
+Satisfaction still requires all evidence and completion conditions selected by
+the predicate's evaluation rule; performed alone proves none of them.
+
+When the selected evaluation was not undertaken or its performance is
+unconfirmed, separately admissible counterevidence to its bound predicate can
+still establish falsified; an established basis or scope diagnosis can likewise
+establish invalid_basis or out_of_frame. The result identifies that independent
+support without inventing execution. Without deciding support it is
+indeterminate. An absent return establishes neither non-performance nor an
+undecidable evaluation: retain the missing slot and what is actually known.
+
+A missing required judgment stays an absent coverage slot, with the known
+performance fact or its uncertainty; it is not a fabricated child result. A
+performed but undecidable evaluation differs from a known unperformed one and
+from unconfirmed execution. A failed admission check can conclude while
+downstream work does not. The plan fixes which predicates are required; a
+precondition is evidence for its dependent evaluation unless the plan separately
+requires that precondition as a predicate. A concluding basis/scope diagnosis
+on P reports invalid_basis/out_of_frame on P with its supporting evidence; a
+different admission predicate is not silently substituted for P. An aborted
+procedure does not erase separately authenticated counterexamples observed
+during the attempt. Every result projection preserves these
+coordinates and the original predicate; a verdict alone is an insufficient
+handoff where performance is material.
+
+An effect observation is `not_requested`, `not_started`, `completed`, `partial`,
+`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation
+boundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including
+an authenticated rejection before mutation. Transport dispatch alone proves
+neither effect completion nor absence; `unknown` includes a lost acknowledgment
+after possible execution.
+`reverted` means that at least one part began and every begun part is observed to have been reversed within
+the declared boundary, with the reversal and any unstarted remainder retained
+as evidence. For every effect value, the boundary includes each material part
+the operation may have affected under its supported operating model and any
+observed departure, whether requested or unintended. Irreversible messages or
+other material external effects cannot be omitted to improve a result.
+`partial` means an observed
+completed part and an observed unexecuted or reverted remainder.
+If any material remainder has unknown completion, the state is `unknown`,
+retaining the completed parts as evidence. An effect can be completed while
+the intended product outcome is falsified.
+An empty local log or discarded context does not establish no effect.
+`not_requested` states an established effect-free scope under that operating
+model; lack of a request alone is insufficient. A material possible unintended
+effect without sufficient observation is `unknown`. If observation establishes
+that an unrequested possible part did not begin, it contributes `not_requested`
+at this boundary, retaining that observation and any earlier uncertainty.
+It is not an uncompleted requested remainder. A requested part observed not to
+begin remains `not_started`.
+
+A refined value is the pair of original domain outcome and cause in its
+declared reason domain, including an explicit missing-reason case. A domain
+refinement preserves that qualified original outcome and supplies a
+total, reason-sensitive map into this record. If the original outcome is too
+coarse to determine a verdict, its required reason distinguishes the cases; a
+consumer cannot guess from a word such as `refused`, `ready` or `accepted`.
+A missing required reason maps the claimed predicate to indeterminate and
+leaves that contribution inadmissible as deciding support for its slot;
+retain its raw outcome and unresolved authentication. Its claimed predicate
+remains indeterminate until admissible evidence decides it. Independently
+established counterevidence or a basis/scope diagnosis uses the legal pairs above
+on that same bound predicate; it does not invent execution or completion.
+Requested or material possible unintended effects without sufficient observation
+are unknown, never defaulted to not_requested. Unconfirmed evaluation performance
+stays unconfirmed. Domain meaning stays with its domain owner.
+No refinement turns failure, undecidability, non-performance or unknown effect
+completion into greater standing. A new result over a different predicate does
+not overwrite the earlier result.
+
+Candidate availability, candidate fitness and authorised acceptance are three
+predicates. `candidate_ready` can satisfy availability while fitness remains
+falsified or unassessed. A lawful yield can satisfy the selected yielding
+contract while product completion remains unresolved. A decision result binds
+the predicate “disposition D on subject S at basis B was made under mandate M
+by its bound authority”. A lawful rejection can satisfy that predicate while
+candidate fitness remains undecided. Recording the decision is not its authority.
+A not-applicable classification needs a supported applicability judgment; it is
+never a synonym for a missing evaluation.
+
+A stop reports the actual destination or task predicate through this record,
+with its reason, observed effects and outstanding obligations. Its verdict
+is indeterminate when the outcome remains undecided, falsified when admissible
+evidence defeats that predicate, or the established scope/basis diagnosis.
+Lawfulness of stopping is a separate decision predicate.
+
+## Result conjunction
+
+Conjunction evaluates whether all required predicates and their material joins
+hold on the declared composite subject and basis. It retains the contributing
+results, their authentication and predicate mapping, known failures and their
+citations, uncovered required coverage, uncertain effects and invalidators.
+The aggregate is another result in the same algebra, with those components
+available through sufficient references. Its summary never replaces them.
+
+The aggregate evaluation has performance performed when its combining rule is
+applied; this does not change component performance. The composite declares its
+effect boundary and the selected effect parts within it. First resolve a current
+observation for each part, retaining the contributing observations, identities,
+ordering and any supported supersession. A later timestamp alone is no
+supersession argument. Conflicting or insufficient observations leave the part
+unknown. Normalize every material possibly affected part, including one owned
+by an absent evaluation slot, through the effect-observation rule in
+[Result algebra](#result-algebra). That rule distinguishes a requested part
+that did not start from an unrequested possible part observed not to begin.
+The composite supplies no different classification for either case.
+
+Sequential stages can affect the same part. Their local completion labels are
+not inputs to the composite join until mapped onto that part's observed state
+at the composite boundary. A completed deployment followed by its completed
+rollback is reverted for the deployment effect; a subsequent completed
+reapplication is completed there. The historical rollback remains evidence.
+The declarations retain every material external part, including irreversible
+ones; a local reversal cannot silently remove them from the scope.
+
+Over the resulting disjoint part observations: any unknown gives unknown;
+all not_requested gives not_requested; completed with only completed or
+not_requested gives completed; not_started with only not_started or
+not_requested gives not_started; reverted with only reverted, not_started or
+not_requested gives reverted; every remaining fully observed mixture gives
+partial. Retain each observation's part and contributing components. The combining
+operation's own lack of mutation cannot label an effectful composite not_requested.
+
+First authenticate each contribution against its producer, subject, basis and
+required plan membership. An unauthenticated claim cannot discharge an
+obligation. A missing planned judgment remains an absent slot with its known performance
+fact or uncertainty; required coverage outside an authenticated plan remains
+uncovered. These are separate
+conditions. An invalid contribution does not erase an independently
+authenticated finding.
+
+For an interpretable composite predicate and governing basis:
+
+1. Any authenticated, applicable falsification of a required predicate or material join makes
+   the conjunction `falsified`. Missing or undecidable other coverage remains
+   explicit alongside it.
+2. With no such falsification, an invalid required basis prevents satisfaction
+   and yields `invalid_basis`; a required out-of-frame judgment yields
+   `out_of_frame` when no invalid basis applies.
+3. Otherwise any unresolved applicability, missing evaluation, undecidable
+   predicate or undecided material join yields `indeterminate`.
+4. `satisfied` requires every applicable obligation and material join to be
+   authentically satisfied, with coverage itself established. An empty list
+   proves nothing unless the declared required set is established as empty.
+
+The composite declaration distinguishes its admission conditions from the
+material joins of the predicate being evaluated. Each relation has one of
+those roles in that evaluation. A failed admission condition prevents an
+interpretation; a false required join is counterevidence within an admitted
+interpretation. The result names that declared role instead of reclassifying a
+known failed join as a missing basis. If the composite subject or governing basis itself cannot be interpreted, the
+aggregate is `invalid_basis`; independently valid component failures and their
+scope remain exposed. This does not pronounce them false or forgotten.
+Effect uncertainty prevents satisfaction where the predicate requires a known
+effect state. An unrelated effect does not automatically invalidate a different
+predicate; the dependency relation must justify its relevance.
+
+A declared operator states its truth and falsity conditions over exact leaf
+predicates and joins. On its fully decided admitted domain, those conditions
+are disjoint and exhaustive, including failure of a required join. An
+overlapping, incomplete or uninterpretable operator declaration is invalid_basis.
+Unresolved well-formedness makes the operator result indeterminate and supplies
+neither satisfaction nor falsification; independently valid leaf results remain
+visible. Once well-formedness is established, its result can be satisfied only when authenticated
+evidence establishes its truth condition and the material joins and coverage
+needed for that condition. It can be falsified only on an established falsity
+condition. Otherwise a material invalid_basis yields invalid_basis, a material
+out_of_frame yields out_of_frame when no invalid basis applies, and every
+remaining undecided case is indeterminate. Only dependencies needed to decide
+the bound predicate enter that ordering. Authentication, original failure
+retention, performance and effect composition remain the rules above. Negation
+or disjunction evaluates a different predicate; it cannot erase a failed leaf
+or pass that result off as conjunction of all leaves. A first-nonfailure rule
+cannot turn an undecided fallback into success.
+
+Sequential composition records an unreturned dependent evaluation as an absent
+slot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required
+leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
+hidden by the grouping. On that fixed domain, retained component sets combine
+by union, the conjunction precedence is associative, and the effect join over
+normalized disjoint parts is associative. This grants no associativity to an
+arbitrary declared operator; regrouping it requires preservation of the same
+outer predicate and its own demonstrated associativity law. An invalid
+intermediate join is a failed premise of that rewrite, not evidence that every
+arbitrary grouping is equivalent. Reordering
+operations additionally needs an effect-independence law; associativity alone
+supplies no such permission.
+
+Sequential operations compose under their applicable owning contracts:
+[UP-016/017](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+for design composition and [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+within a_c. Their returned result applies the operator rule above to the
+declared outer predicate using
+its preservation argument and the retained component results. For a pipeline
+whose contract requires every stage postcondition, this is the conjunction
+above; a recovery path need not require a failed earlier test to become true.
+Unexecuted stages remain coverage facts, with no invented evaluations. A
+sequence without an established outer interpretation or join returns the
+applicable unresolved or invalid-basis result rather than a guessed success.
+
+## Workspace and context
+
+The workspace is the continuing material state of the construction, including
+its authoritative requirements, work products and durable records. Material
+external state is observed through its owning interface. The actor's context is
+a bounded account acquired from these sources. It is fallible and disposable.
+Acquisition observes the subject and basis the activation actually binds,
+including frozen snapshots where selected. Admissible contrary current evidence
+reopens affected claims through their drift and re-entry rules; it does not
+silently select a different basis. Current observations correct stale beliefs;
+they do not grant permission to
+change a requirement to match the implementation. What exists and what must
+exist remain different questions on the same truth surface.
+
+Acquisition binds the current task, subject, destination constraints, authority
+and relevant observations. It includes known material dependencies directly or
+through declared available inputs, and excludes irrelevant material unless
+needed to establish irrelevance. A rule packet without its current subject is
+insufficient. A digest without accessible meaning is insufficient. A summary
+without supported freshness cannot override its owner. Absence from a partial
+projection, sparse checkout or empty local record is not evidence of absence
+in the bound subject; acquire its authoritative source or retain indeterminacy.
+
+An observation binds its source and observation time or version. Where the
+subject may change between observation and effect, the binding supplies the
+material freshness or concurrency condition: re-observe, compare a revision,
+use a protected snapshot or return uncertainty. No universal isolation scheme
+follows. The selected operation cannot assume a stale read is still current.
+
+The cycle is acquisition from current state, a bounded authorised operation,
+observation of its result, and acquisition for the next operation. Results use
+[the result algebra](#result-algebra). The cycle can stop after any operation
+without inventing completion. Private context can be discarded between cycles;
+resumption reconstructs sufficient context from the continuing workspace and
+authoritative inputs. It neither erases progress nor requires a transcript of
+every earlier activation.
+
+Reuse requires supported applicability: the same claim scope, adequate current
+basis and evidence, valid dependencies and required independent authorship.
+Changed support reopens the affected dependent claims. Unchanged independent
+work remains usable; when dependency independence cannot be established, inspect the
+wider affected scope. A stored green label is not a validity argument.
+
+Before repeating an operation with uncertain effects, observe or reconcile
+sufficiently to decide the next dependent action. A granted idempotent operation
+may be retried where its idempotence is established for that subject and effect.
+Otherwise select another permitted action or return the unresolved result.
+A workspace that retains partial progress does not make every operation
+idempotent. An event log may support observation, audit or domain-specific
+reconstruction; it is not universally the work state or a compulsory recovery
+algorithm.
+
+## Bounded construction
+
+A describes current material state and what is justified about it. Z is the
+selected set of constraints and acceptance conditions; many states may satisfy
+it. Intent, Product and Specification refine Z under their owning authority.
+Write material intermediate states as S0 → S1 → …, reserving Z for the
+destination constraint set and naming a satisfying endpoint separately. A
+transition binds its preconditions, permitted effects, result predicate and
+outer obligations. Where finite context or attention prevents one adequate
+activation, refine the task into supported transitions over those states.
+
+Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
+identity identifies the work; compatibility and assurance determine which
+transitions compose. These are additional premises, not consequences of a
+resource bound. Decomposition preserves all material outer obligations and
+the joins between parts. Local success establishes the outer outcome only
+when the required coverage and preservation argument hold.
+
+A total control contract supplies a response for every admitted control state,
+including unavailable input, unknown world conditions, failed preconditions,
+partial effects, exhausted capability and revoked or exhausted authority. Its
+outcomes use the core result algebra. Its alternatives may include repair,
+re-entry, refusal, yielding or termination under the actual grant. It does not
+promise to solve every problem or make an external process terminate.
+Deterministic, probabilistic and human operations retain their selected outcome
+models; their enclosing control handles the observed result truthfully.
+
+Progress is supported movement toward the selected destination. Useful discovery
+can enlarge the known frontier; counts alone are no distance metric. Stopping
+can be lawful without completion. Completion needs the required evidence and
+acceptance conditions on the current candidate. Changing Z follows its owner
+and cannot establish that the old destination was reached. Repeating a failed
+relation needs a supported causal change; elapsed activity is no repair.
+
+## Configuration
+
+A configuration allocates operations and information to capable actors and
+declares the material dependencies between their frames. It assigns effects
+only within grants the allocator holds and may delegate. Its existing design
+or frame record explains the allocation against operations, dependencies,
+capabilities, assurance, resource limits and failure assumptions.
+Finite context and attention, actor fallibility, communication costs and required
+assurance constrain that allocation. They do not uniquely derive a hierarchy
+or a fixed inventory of roles. An adequate configuration can use one actor,
+peers, a hierarchy or supported adaptive allocation.
+
+Producing, checking and accepting remain different responsibilities even where
+one actor is permitted to perform several. Required independent review retains
+its authorship and evidence conditions; a new context alone does not supply it.
+Roles acquire authority from their grants, never from their names. Functional
+decomposition, communication, authority and evaluation dependency are distinct.
+
+The optional [Executive arrangement](STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action)
+specialises this contract for longer-term delivery through bounded worker
+results. Its procedure and grants belong to that profile. Every allocation and reconfiguration, fixed or adaptive, preserves material
+dependencies, outstanding obligations, observed and uncertain effects, admitted
+authority and required independence. A claim that one arrangement is optimal names its
+objective, constraints, comparison scope and evidence.
+
+
+
+Current selected clauses
+[{"uri":"urn:codex-stdo3:synthesis:clause:composition-order","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:transition"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:conjunction-rest"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:premise-composition"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:logical-operator"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"sequential operations compose, results are regrouped or operations are reordered"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"Sequential composition records an unreturned dependent evaluation as an absent\nslot, retaining its observed performance, extent and missing conclusion. A lawful regrouping requires the same interpretable composite basis, required\nleaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure\nhidden by the grouping. On that fixed domain, retained component sets combine\nby union, the conjunction precedence is associative, and the effect join over\nnormalized disjoint parts is associative. This grants no associativity to an\narbitrary declared operator; regrouping it requires preservation of the same\nouter predicate and its own demonstrated associativity law. An invalid\nintermediate join is a failed premise of that rewrite, not evidence that every\narbitrary grouping is equivalent. Reordering\noperations additionally needs an effect-independence law; associativity alone\nsupplies no such permission."}],"statement":"Sequential operations compose under their applicable owning contracts:\n[UP-016/017](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)\nfor design composition and [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)\nwithin a_c. Their returned result applies logical-operator to the\ndeclared outer predicate using\nits preservation argument and the retained component results. For a pipeline\nwhose contract requires every stage postcondition, this is conjunction-failure and conjunction-rest; a recovery path need not require a failed earlier test to become true.\nUnexecuted stages remain coverage facts, with no invented evaluations. A\nsequence without an established outer interpretation or join returns the\napplicable unresolved or invalid-basis result rather than a guessed success.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/AXIOMATIC_CALCULUS.md#ac-016-typed-composition","repo://codex-v3/successor/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"]},{"uri":"urn:codex-stdo3:synthesis:clause:conjunction-failure","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:obligation"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:evidence"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:authentication"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:applicability"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:nonperformance"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"composite predicate/basis is interpretable and a required applicable predicate or material join is authentically falsified"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"an invalid contribution cannot erase an independently authenticated failure. The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."}],"statement":"aggregate verdict=falsified; retain its producer/citations plus all other uncovered coverage and uncertainty","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"]},{"uri":"urn:codex-stdo3:synthesis:clause:conjunction-rest","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:obligation"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:authentication"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:conjunction-failure"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:effect-join"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:nonperformance"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:applicability"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"interpretable composite has no authenticated applicable falsification"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"An empty list proves nothing unless the declared required set is established as empty. The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."}],"statement":"For an interpretable composite with no authenticated applicable falsification: an invalid required basis yields invalid_basis; otherwise a required out-of-frame judgment yields out_of_frame; otherwise unresolved applicability, missing evaluation, an undecidable predicate or undecided material join yields indeterminate. Satisfied requires every applicable obligation and material join authentically satisfied, with coverage itself established, subject also to the declared effect dependencies. Effect uncertainty prevents satisfaction where the predicate requires a known effect state. An unrelated effect does not automatically invalidate a different predicate; the dependency relation must justify its relevance.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"]},{"uri":"urn:codex-stdo3:synthesis:clause:effect-join","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:effect"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:effect-observation"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:authentication"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"observations combine over a declared composite effect scope"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"Conflicting or insufficient observations leave the part unknown. Retained ordering is not itself a selection or supersession rule. Temporal stage labels are not joined until mapped to the observed state of each part at the composite boundary."}],"statement":"The composite declares its\neffect boundary and the selected effect parts within it. First resolve a current\nobservation for each part, retaining the contributing observations, identities,\nordering and any supported supersession. A later timestamp alone is no\nsupersession argument. Conflicting or insufficient observations leave the part\nunknown. Normalize every material possibly affected part, including one owned\nby an absent evaluation slot, through the effect-observation rule in\nthe owning Foundations Result algebra. That rule distinguishes a requested part\nthat did not start from an unrequested possible part observed not to begin.\nThe composite supplies no different classification for either case.\n\nSequential stages can affect the same part. Their local completion labels are\nnot inputs to the composite join until mapped onto that part's observed state\nat the composite boundary. A completed deployment followed by its completed\nrollback is reverted for the deployment effect; a subsequent completed\nreapplication is completed there. The historical rollback remains evidence.\nThe declarations retain every material external part, including irreversible\nones; a local reversal cannot silently remove them from the scope.\n\nOver the resulting disjoint part observations: any unknown gives unknown;\nall not_requested gives not_requested; completed with only completed or\nnot_requested gives completed; not_started with only not_started or\nnot_requested gives not_started; reverted with only reverted, not_started or\nnot_requested gives reverted; every remaining fully observed mixture gives\npartial. Retain each observation's part and contributing components. The combining\noperation's own lack of mutation cannot label an effectful composite not_requested.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"]},{"uri":"urn:codex-stdo3:synthesis:clause:effect-observation","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#preserves","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:effect"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:result-binding"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:premise-interpretation"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"an effect observation is reported"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"These source conditions apply to every material possible part, including an unintended part of a nominally read-only operation; the effect observation is independent of the predicate verdict."}],"statement":"An effect observation is `not_requested`, `not_started`, `completed`, `partial`,\n`reverted` or `unknown`, on its declared observation boundary. These values describe the selected effect and observation\nboundary, not the predicate verdict. `not_started` needs evidence that the selected effect did not begin, including\nan authenticated rejection before mutation. Transport dispatch alone proves\nneither effect completion nor absence; `unknown` includes a lost acknowledgment\nafter possible execution.\n`reverted` means that at least one part began and every begun part is observed to have been reversed within\nthe declared boundary, with the reversal and any unstarted remainder retained\nas evidence. For every effect value, the boundary includes each material part\nthe operation may have affected under its supported operating model and any\nobserved departure, whether requested or unintended. Irreversible messages or\nother material external effects cannot be omitted to improve a result.\n`partial` means an observed\ncompleted part and an observed unexecuted or reverted remainder.\nIf any material remainder has unknown completion, the state is `unknown`,\nretaining the completed parts as evidence. An effect can be completed while\nthe intended product outcome is falsified.\nAn empty local log or discarded context does not establish no effect.\n`not_requested` states an established effect-free scope under that operating\nmodel; lack of a request alone is insufficient. A material possible unintended\neffect without sufficient observation is `unknown`. If observation establishes\nthat an unrequested possible part did not begin, it contributes `not_requested`\nat this boundary, retaining that observation and any earlier uncertainty.\nIt is not an uncompleted requested remainder. A requested part observed not to\nbegin remains `not_started`.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"]},{"uri":"urn:codex-stdo3:synthesis:clause:logical-operator","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:predicate"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:authentication"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:effect-join"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:nonperformance"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"a logical operator combines results"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"Authentic truth or falsity decides the declared outer predicate only after wellformedness is established; otherwise material deciding dependencies retain invalid_basis then out_of_frame then indeterminate; retain failed leaves and never pass negation, disjunction or fallback off as conjunction. The aggregate evaluation has performance performed when its combining rule is applied; this does not change component performance."}],"statement":"truth and falsity conditions are disjoint and exhaustive on fully decided admitted leaves and required joins; overlapping, incomplete or uninterpretable declarations are invalid_basis; unresolved wellformedness is indeterminate and supplies neither satisfaction nor falsification, preserving independently valid leaves. Effect uncertainty prevents satisfaction where the predicate requires a known effect state. An unrelated effect does not automatically invalidate a different predicate; the dependency relation must justify its relevance.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-conjunction"]},{"uri":"urn:codex-stdo3:synthesis:clause:performance-compatibility","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:result-binding"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:nonperformance"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"a core result is originated, reported, projected or consumed"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"possible enum pairs are not automatic admissibility; performance describes what evidence establishes, not an unobserved world fact; preserve extent, interruption, conclusion and all effect coordinates. Dispatch or admission alone does not establish performance."}],"statement":"evidence establishing undertaking permits performed with any of five evidence-supported verdicts; established nonundertaking and unconfirmed undertaking prohibit satisfied and permit a negative or diagnostic verdict only with separately admissible support; otherwise indeterminate","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"]},{"uri":"urn:codex-stdo3:synthesis:clause:refinement","clause_type":"constraint","operator":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#requires","arguments":[{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#standing","literal":"source-owned method law"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#input","ref":"urn:codex-stdo3:synthesis:symbol:result"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:verdict-domain"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:nonperformance"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:effect-observation"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#premise","ref":"urn:codex-stdo3:synthesis:clause:performance-compatibility"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#guard","literal":"domain outcome is reported"},{"role":"repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md#qualification","literal":"Admissible new evidence does not rewrite the original qualified outcome or observed performance. A separate performed positive evaluation retains its own record and deciding support under the legal-pair rule; an unconfirmed original is not promoted to satisfied."}],"statement":"A refined value is the pair of original domain outcome and cause in its\ndeclared reason domain, including an explicit missing-reason case. A domain\nrefinement preserves that qualified original outcome and supplies a\ntotal, reason-sensitive map into the result-binding record. If the original outcome is too\ncoarse to determine a verdict, its required reason distinguishes the cases; a\nconsumer cannot guess from a word such as `refused`, `ready` or `accepted`.\nA missing required reason maps the claimed predicate to indeterminate and\nleaves that contribution inadmissible as deciding support for its slot;\nretain its raw outcome and unresolved authentication. Its claimed predicate\nremains indeterminate until admissible evidence decides it. Independently\nestablished counterevidence or a basis/scope diagnosis uses the legal pairs in performance-compatibility\non that same bound predicate; it does not invent execution or completion.\nRequested or material possible unintended effects without sufficient observation\nare unknown, never defaulted to not_requested. Unconfirmed evaluation performance\nstays unconfirmed. Domain meaning stays with its domain owner.\nNo refinement turns failure, undecidability, non-performance or unknown effect\ncompletion into greater standing. A new result over a different predicate does\nnot overwrite the earlier result.","source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SIGNATURE.md","repo://codex-v3/successor/standards/FOUNDATIONS.md#result-algebra"]}]
+
+Current core residual
+{"uri":"urn:codex-stdo3:synthesis:residual:core-coverage","kind":"omission","subject_refs":["urn:codex-stdo3:synthesis:clause:acquisition","urn:codex-stdo3:synthesis:clause:allocation","urn:codex-stdo3:synthesis:clause:applicability","urn:codex-stdo3:synthesis:clause:composite-invalid","urn:codex-stdo3:synthesis:clause:composition-order","urn:codex-stdo3:synthesis:clause:conjunction-failure","urn:codex-stdo3:synthesis:clause:conjunction-rest","urn:codex-stdo3:synthesis:clause:context-reset","urn:codex-stdo3:synthesis:clause:coordinator","urn:codex-stdo3:synthesis:clause:decision-stop","urn:codex-stdo3:synthesis:clause:effect-join","urn:codex-stdo3:synthesis:clause:effect-observation","urn:codex-stdo3:synthesis:clause:freshness","urn:codex-stdo3:synthesis:clause:logical-operator","urn:codex-stdo3:synthesis:clause:nonperformance","urn:codex-stdo3:synthesis:clause:outer-preservation","urn:codex-stdo3:synthesis:clause:performance-compatibility","urn:codex-stdo3:synthesis:clause:progress-stop","urn:codex-stdo3:synthesis:clause:refinement","urn:codex-stdo3:synthesis:clause:reuse","urn:codex-stdo3:synthesis:clause:total-control"],"detail":"The program is selected textual interpretation, not complete core coverage. Finite implementation excludes complete result carriers, conjunction/effect dependency integration, retained-component-set union, applicability, independent negative support in nonperformed or unconfirmed conjunction slots, missing or unauthenticated joins, non-Boolean or undecided operator leaves, undecided operator joins and material-dependency ordering, workspace reacquisition/invalidation/freshness, construction and configuration. Family fidelity is unresolved without its exact source frame. Exact subject, basis and external evidence authentication are stipulated fixture premises; predicate equality and nonblank provenance tokens do not verify them. Single-predicate conflict precedence is a finite-model policy, not a source-derived resolution of contradictory evidence. Positive separate-evaluation combination remains unimplemented. Encoding under the RC2 tool does not establish successor-calculus equivalence.","re_entry_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"],"source_refs":["repo://codex-v3/qualification/C3/synthesis/a_c/SOURCE.md#residual-scope"]}
+
+Current interpretation signature
+# Synthesis interpretation signature
+
+This is the author-owned vocabulary of a bounded a_c.text interpretation, not
+another method constitution or a semantic engine. The exact owning source
+sections accompany every clause. Validation checks their resolution and
+authored relation graph. An independent assessor must judge source fidelity.
+
+## Concept
+
+A named semantic subject used by the selected method clauses.
+
+## Requires
+
+The declared guard and premises entail the named obligation within the source
+contract. An absent premise does not establish its conclusion.
+
+## Preserves
+
+The named transformation retains the specified identity, meaning, evidence or
+authority relation under its declared conditions.
+
+## Refines
+
+A source-owned domain supplies a reason-sensitive refinement of the common
+contract, preserving its own predicate and qualified outcome. This does not
+declare the full domain's policy equivalent to the common contract.
+
+## Consumes
+
+A responsibility or source family uses the named shared constraints while
+retaining its own semantic owner and adoption conditions. Consumption alone
+is not a reason-sensitive domain-outcome refinement or a conformance proof.
+
+## Assumes
+
+A foundational premise or separately chosen policy enters the interpretation.
+It is not claimed as a consequence of resource finitude alone.
+
+## Input
+
+The named subject, value or source-owned domain being constrained.
+
+## Premise
+
+A supporting clause whose satisfaction is required for the argument.
+Its own material premises are included transitively. Native projection follows
+these links; structural reachability alone does not establish their truth.
+
+## Guard
+
+The explicit condition selecting the obligation.
+
+## Consequence
+
+The required relation after all material premises hold.
+
+## Qualification
+
+A restriction, exception or boundary that travels with the clause.
+
+## Standing
+
+The clause is a premise, a source-owned method law, or an additional domain
+policy. Those standings do not imply adoption or independent acceptance.
+
+
+Current scope
+# Selected textual interpretation and finite test scope
+
+The source is the frozen Codex successor at the commit and member digests in
+SOURCE_INVENTORY.json. The program contains selected textual interpretations
+of core rules and material-family consumption relationships. This is not a
+complete formalization, complete core implementation or whole-corpus fidelity
+claim. The finite executable covers only the domains listed below.
+
+The archived pre-9982, pre-146e6ad, pre-independent-review-repair, pre-r1-r10-repair
+and pre-n1-repair directories
+preserve superseded checks and independent findings. They supply no current
+acceptance credit and are excluded from current program inputs and artifact
+pins. The archive manifests continue to be verified.
+
+## Results
+
+The source owners are Foundations, Result algebra and Result conjunction.
+The textual clauses carry selected result, refinement, conjunction, operator
+and effect obligations. The finite code tests a small AND decision projection,
+evidenced undertaking/decision compatibility, selected reason-sensitive
+refinement cases, disjoint effect joins, stipulated temporal normalization and
+Boolean operator validity. It is not a full core-result carrier and does not
+integrate conjunction truth with material effect dependencies.
+
+## Recovery
+
+The textual owner is Foundations, Workspace and context. Selected clauses
+state acquisition, freshness, conditional reuse and uncertain-effect handling.
+The finite recovery table checks five stipulated rows, assuming already acquired
+current authority, fresh observations and established applicable idempotence.
+No coverage is claimed for its other conservative fallback inputs. It does not prove reacquisition,
+claim invalidation, authority renewal, independent-work retention, concurrency
+or recovery from context loss. The former dictionary-copy trace is withdrawn.
+
+## Construction
+
+Selected textual clauses state outer preservation, total control responses and
+progress/stopping requirements under Foundations, Bounded construction. There
+is no finite executable construction interpreter or progress proof here.
+
+## Configuration
+
+Selected textual clauses state allocation constraints under Foundations,
+Configuration. The optional Executive procedure is additional policy owned by
+STDO_REFERENCE_FRAME_BASELINE. There is no executable allocation,
+reconfiguration, optimality or independent-review model here.
+
+## Material families
+
+The six library responsibilities and twelve source families consume shared
+contracts. Consumption is a separate vocabulary relation from reason-sensitive
+outcome refinement. The material-family index selects all eighteen consumption
+clauses. Other indexes select named roots and the fixed tool obtains their
+transitive premise closure; direct indexing of every clause is not asserted as
+a tool requirement. Validation reports the actual closure.
+
+Each family retains its source ownership, adoption conditions, grants and finer
+policy. No family relationship supplies a semantic fidelity judgment merely by
+resolving. Detailed family sources are not all reproduced in the review input;
+their independent fidelity remains unresolved. Traversal's j_a output relation
+is a textual claim only, not an implemented admission signature or graph proof.
+
+## Finite oracle
+
+The AND projection has exactly two required predicate slots A and B, one
+material join, established or unknown coverage, and an interpretable or invalid
+outer admission basis. S/F/U/O/I denote authenticated satisfied, falsified,
+indeterminate, out-of-frame and invalid-basis judgments. M denotes a missing
+judgment with evidenced nonundertaking; H a missing judgment after evidenced
+partial undertaking; N an absent return with undertaking unconfirmed; X an
+unauthenticated claim. N remains an absent slot. Required joins range only over
+S/F/U/O/I. The projection is not the full result/effect composition rule.
+
+The evidence grid ranges undertaking over true, false and unknown, claimed
+support over no claim and all five verdicts, and independence/completion facts
+over booleans. Claimed support is retained separately from admissible deciding
+support. Every evidence state must have exactly one guarded result, and every
+evaluation result must pass the same guard. Evidence authentication itself is
+stipulated, not performed by the fixture. Performance reports what the evidence
+establishes, not an omniscient fact about a run whose record is missing.
+
+The refinement domain contains five named outcomes, their declared predicate
+and reason cases, plus unsupported predicate pairs and an explicit missing
+reason. Unmapped or unsupported cases return an undecided claim while retaining
+raw outcome, reason, performance and effects. A separately supplied negative or
+diagnostic claim needs its own same-predicate provenance, stipulated admissibility
+and independence even when the original evaluation was performed. The mapped
+result remains explicit; optional claims cannot erase its supported falsification.
+Positive separate-evaluation combination is outside this finite model; the
+original missing-reason or unconfirmed record is never promoted. Subject, basis
+and external authentication are fixed fixture premises, not verified here. This bounded total map is not an
+implementation of every domain family's outcome signature or reason policy.
+
+The fixture's precedence for conflicting single-predicate evidence is an
+explicit finite-model policy: mapped falsification survives a conflicting
+diagnosis, and an admitted diagnosis overrides mapped satisfaction. The source's
+conjunction precedence does not derive this policy. Both records and a conflict
+flag remain; this model establishes no authority to resolve such real conflicts.
+The support status distinguishes an inadmissible claim from positive or undecided
+combination outside the model. Predicate-name equality and nonblank provenance
+tokens do not authenticate the subject, basis, independence or producer.
+
+Boolean operators declare truth/falsity over two leaves and one required join.
+Negation constructs a new bound predicate and checked table under the same
+required join, retaining the original result and leaves. It never flips a bare
+verdict. Unknown well-formedness gives neither truth nor falsity. Implication
+is a mathematical counterexample to arbitrary associativity, not a mutant.
+The 125-case AND associativity check covers verdict precedence only; it supplies
+no evidence for union of retained component results, citations or coverage.
+
+Temporal normalization consumes ordered fixture observations and separately
+stipulated identity, supersession and reversal support. List order is the
+fixture's declared order; this model does not authenticate or infer that order.
+The effect join covers disjoint normalized parts, not raw temporal stages.
+Material possible unintended effects stay in the boundary. Unknown observation
+tokens cannot establish nonstart. A verified unrequested nonstart retains its
+observation and contributes not_requested; requested nonstart is not_started.
+
+ORACLE.json contains fixed expectations; finite_check.py also states a separate
+exhaustive decision table. The same Writer authored these and model.py. Their
+agreement is consistency evidence, not independent source-fidelity acceptance.
+Nine counted faulty functions execute against same-typed expectations from the
+oracle or explicit literals. The suite is not rerun against mutated modules.
+Literal workspace-reset values, timestamp selections and the implication
+counterexample receive no mutant credit.
+
+## Residual scope
+
+Unimplemented finite core scope includes applicability/exclusion judgments;
+nonperformed or unconfirmed conjunction slots carrying independent negative
+support; missing or unauthenticated joins; conjunction/effect dependency
+integration and parts owned by absent slots; full result-carrier coordinates;
+retained-component union; non-Boolean or undecided operator leaves, undecided
+operator joins and material-dependency ordering;
+workspace reacquisition, freshness, changed-support invalidation and reuse;
+bounded construction and configuration. The textual program is a selected
+interpretation, not a claim to encode every source clause or domain policy.
+Exact subject and basis, external authentication and independence are stipulated
+fixture premises. Conflict precedence is a finite-model choice; positive separate
+evaluation combination remains unimplemented.
+
+Material-family source fidelity, their fine policies, traversal native
+admission, predecessor dispositions, ordinary entry paths, native transport,
+installation acceptance, general temporal supersession, categorical construction
+or equivalence, practical superiority and release remain unresolved here.
+
+The encoding/validation basis is the pinned RC2 Axiom Indexer and its RC2
+calculus. The successor AXIOMATIC_CALCULUS is a distinct interpreted source
+family. This carrier does not assert their equivalence or claim the historical
+checker validates the successor's full semantic signature. Structural validation,
+projection and exact joining do not execute or prove these predicates.
+
+The final combined REQUEST.txt supersedes the earlier standalone finite packet,
+which remains unchanged as a historical reviewed input. N1 combines only the
+declared negative and diagnostic support; no general evidence-merging engine
+is claimed. The two 17,640-case grids separately check untrusted original claims
+and separately supplied support; fifteen binding cases and four fixed reviewer
+counterexamples supplement them. These remain same-Writer consistency checks.
+
+
+Exact refinement code
+def refine(domain, predicate, cause, evidence, separate_support=None):
+    """Bounded map plus separately admitted negative/diagnostic support.
+
+    The fixed subject/basis and evidence authentication are fixture premises.
+    A flat deciding claim in the original contribution is retained, never
+    substituted for its reason-sensitive map. Separate positive combination
+    is outside this model: its own evaluation/result would be required.
+    """
+    mapping = REFINEMENTS.get((domain, predicate, cause))
+    supported_reason = mapping is not None and evidence.get('reason_supported') is True
+    mapped_evidence = dict(evidence, deciding=mapping if supported_reason else None,
+                           independent=False)
+    mapped_result = evaluation(mapped_evidence)
+    separate = dict(separate_support) if separate_support is not None else None
+    admitted = None
+    separate_status = 'not_supplied' if separate is None else 'not_admitted'
+    if (separate is not None and separate.get('predicate') == predicate and
+            separate.get('independent') is True and separate.get('admissible') is True and
+            isinstance(separate.get('provenance'), str) and bool(separate['provenance'].strip())):
+        if separate.get('deciding') in {'falsified', 'invalid_basis', 'out_of_frame'}:
+            admitted = separate['deciding']
+            separate_status = 'admitted_negative_or_diagnostic'
+        elif separate.get('deciding') == 'satisfied':
+            separate_status = 'positive_combination_not_modeled'
+        elif separate.get('deciding') == 'indeterminate':
+            separate_status = 'undecided_combination_not_modeled'
+    mapped_verdict = mapped_result['verdict']
+    # This conflict precedence is an explicit finite-model policy, not a
+    # derived source law for resolving contradictory single-predicate evidence.
+    # Retain both claims and expose conflict for an actual owner to decide.
+    if 'falsified' in (mapped_verdict, admitted):
+        verdict = 'falsified'
+    elif admitted in {'invalid_basis', 'out_of_frame'}:
+        verdict = admitted
+    else:
+        verdict = mapped_verdict
+    support = dict(mapped_evidence, deciding=None if verdict == 'indeterminate' else verdict,
+                   independent=admitted is not None)
+    result = evaluation(support)
+    result.update(domain_outcome=domain, predicate=predicate, cause=cause,
+                  raw_evidence=dict(evidence), reason_supported=supported_reason,
+                  unresolved_authentication=not supported_reason,
+                  mapped_verdict=mapped_verdict, mapped_result=mapped_result,
+                  separate_support=separate, admitted_separate_support=admitted,
+                  separate_support_status=separate_status,
+                  conflict=(admitted is not None and mapped_verdict != 'indeterminate'
+                            and admitted != mapped_verdict))
+    return result
+
+
+
+
+Affected checks
+    n1_binding_cases = 0
+    for row, undertaken, completion, claim, patch in itertools.product(
+            expected['refinement'], (True, False, None), (False, True),
+            ('falsified', 'invalid_basis', 'out_of_frame'),
+            ({'predicate': 'different-predicate'}, {'provenance': ''}, {'provenance': ' '},
+             {'provenance': None}, {'admissible': False}, {'independent': False})):
+        original = {'undertaken': undertaken, 'extent': 'observed', 'conclusion': 'returned',
+                    'effect': 'unknown', 'reason_supported': True, 'completion': completion}
+        separate = dict({'predicate': row['predicate'], 'deciding': claim, 'independent': True,
+                         'admissible': True, 'provenance': 'fixture/independent-counterexample'}, **patch)
+        baseline = model.refine(row['domain'], row['predicate'], row['cause'], original)
+        got = model.refine(row['domain'], row['predicate'], row['cause'], original, separate)
+        require(got['verdict'] == baseline['verdict'] and got['admitted_separate_support'] is None
+                and got['separate_support_status'] == 'not_admitted',
+                'N1 unbound or inadmissible separate claim decided predicate')
+        n1_binding_cases += 1
+    refinement_completion_cases = separate_status_cases = 0
+    for row, undertaken, completion in itertools.product(
+            expected['refinement'], (True, False, None), (False, True)):
+        original = {'undertaken': undertaken, 'extent': 'observed', 'conclusion': 'returned',
+                    'effect': 'unknown', 'reason_supported': True, 'completion': completion}
+        got = model.refine(row['domain'], row['predicate'], row['cause'], original)
+        want = row['verdict'] if undertaken is True else 'indeterminate'
+        if want == 'satisfied' and not completion:
+            want = 'indeterminate'
+        require(got['verdict'] == want, 'completion/undertaking guard changed mapped result')
+        refinement_completion_cases += 1
+        for claim, status in [('satisfied', 'positive_combination_not_modeled'),
+                              ('indeterminate', 'undecided_combination_not_modeled')]:
+            separate = {'predicate': row['predicate'], 'deciding': claim, 'independent': True,
+                        'admissible': True, 'provenance': 'fixture/independent-support'}
+            got = model.refine(row['domain'], row['predicate'], row['cause'], original, separate)
+            require(got['verdict'] == want and got['separate_support_status'] == status
+                    and got['admitted_separate_support'] is None,
+                    'unmodeled separate support was decided or hidden as rejection')
+            separate_status_cases += 1
+    for row in expected['n1_counterexamples']:
+        got = model.refine(row['domain'], row['predicate'], row['cause'], row['evidence'])
+        require(got['verdict'] == row['expected'] and got['mapped_verdict'] == row['mapped'],
+                'N1 reviewer counterexample persists')
+        cases += 1

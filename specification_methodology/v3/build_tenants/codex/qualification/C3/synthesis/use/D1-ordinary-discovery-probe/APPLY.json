@@ -1,0 +1,178 @@
+{
+  "case": "D1-ordinary-discovery-probe",
+  "candidate_commit": "a746559e00ebfd6b98a7278b219b3ccc9c929341",
+  "grant": {
+    "paths": [],
+    "prefixes": [
+      ""
+    ],
+    "source": "TASK.json: any file in the workspace"
+  },
+  "application_status": "applied",
+  "inputs_before": {
+    "INPUT.json": {
+      "sha256": "29bff8e1c2dcf2ccbcbc918cea1d46ee586baf076d33571db6f135b66fbed184",
+      "bytes": 415
+    },
+    "PROMPT.txt": {
+      "sha256": "35fe939b134feef8a0b3ec882fd7ec746a9759d008f505af4af05fcd2a5f0988",
+      "bytes": 48526
+    },
+    "TASK.json": {
+      "sha256": "a5d19daed9887a02150dbe9bf40bdca108beeb0c87b6f70817174121a2895e79",
+      "bytes": 781
+    },
+    "actor/MEASUREMENT.json": {
+      "sha256": "3fa47dbec566af4d25029c09b60d9bafae9fe4d1ecd2819b0e23435fb0368ed7",
+      "bytes": 2336
+    },
+    "actor/PROMPT.txt": {
+      "sha256": "35fe939b134feef8a0b3ec882fd7ec746a9759d008f505af4af05fcd2a5f0988",
+      "bytes": 48526
+    },
+    "actor/PROVIDER.json": {
+      "sha256": "d7f82002564398e5043b6ab7179bc71f304e5cdfc9c6b466d073c67b4009243b",
+      "bytes": 7338
+    },
+    "actor/RESULT.md": {
+      "sha256": "8745d2f6c38e35f37d47a25aecb2ab0af80678e751508b154a3a056f6bb43ab6",
+      "bytes": 5314
+    },
+    "actor/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "workspace/deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "workspace/docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "workspace/scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "workspace/src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "application_action": "reused_identical_after",
+  "carrier": "bare_json",
+  "provider_result_match": true,
+  "proposed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "changed_paths": [
+    "deploy/env.example",
+    "docs/config.md",
+    "scripts/check_env.sh",
+    "src/settings.py"
+  ],
+  "before": {
+    "deploy/env.example": {
+      "sha256": "9c5ee11481155f157190028d10bff0a0510771332c1b4c2778fb0fd979f46997",
+      "bytes": 53
+    },
+    "docs/config.md": {
+      "sha256": "ce73ba0e43fcd923e22c806c1e184b86a07f9ae082c8183a989e7278938afd3a",
+      "bytes": 151
+    },
+    "scripts/check_env.sh": {
+      "sha256": "7ad752c0d0df3d08811db681ea7db85b0916d365bcdcfdd1e9c4a534d359bbfc",
+      "bytes": 44
+    },
+    "src/settings.py": {
+      "sha256": "8897a34a45e96d4603bb4fdbcbb365ecd11fc0a96aaad8ab32c903ed6c994a18",
+      "bytes": 100
+    }
+  },
+  "after": {
+    "deploy/env.example": {
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098",
+      "bytes": 57
+    },
+    "docs/config.md": {
+      "sha256": "eaea8aab23849d46176afc88df76eab0eee08f5b660da7f158cc6784c22ef374",
+      "bytes": 155
+    },
+    "scripts/check_env.sh": {
+      "sha256": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233",
+      "bytes": 48
+    },
+    "src/settings.py": {
+      "sha256": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d",
+      "bytes": 104
+    }
+  },
+  "actor_results": [
+    {
+      "predicate": "Every in-workspace reference to the exact variable name APP_TOKEN is renamed to APP_API_TOKEN in the proposed candidate, and no other identifier (notably APP_TOKEN_TTL) is changed",
+      "subject": "proposed contents of deploy/env.example, src/settings.py, scripts/check_env.sh, docs/config.md",
+      "basis": "supplied workspace snapshot in the task; FOUNDATIONS Result algebra",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "effects": {
+        "sandbox_file_mutation": "unknown",
+        "note": "Edits are proposals only. This actor applied nothing. Application by the host is not observed from this actor's boundary."
+      },
+      "evidence": "Static comparison: there are 4 occurrences of the exact token APP_TOKEN across the 4 files, each replaced. There are 3 occurrences of APP_TOKEN_TTL, all byte-identical before and after.",
+      "unresolved": []
+    },
+    {
+      "predicate": "In-workspace consumers (src/settings.py, scripts/check_env.sh) work at runtime when only APP_API_TOKEN is set",
+      "subject": "proposed candidate",
+      "basis": "supplied snapshot",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "effects": {
+        "execution": "not_requested"
+      },
+      "evidence": "Static reading indicates both consumers read APP_API_TOKEN. No execution capability was available.",
+      "unresolved": [
+        "host assertions or runtime check"
+      ]
+    },
+    {
+      "predicate": "Anything that depends on the name APP_TOKEN keeps working after the rename",
+      "subject": "the workspace plus any external environments, CI, secrets or deployment config that set APP_TOKEN",
+      "basis": "supplied snapshot, which is a partial projection of the wider dependency surface",
+      "verdict": "indeterminate",
+      "performance": "performed",
+      "effects": {
+        "external": "not_requested"
+      },
+      "evidence": "All in-workspace dependents are updated. External setters of APP_TOKEN are not observable here. If they exist and are not migrated, settings.py raises KeyError and check_env.sh exits with 'missing'.",
+      "unresolved": [
+        "Identify and migrate external setters of APP_TOKEN, or have the owner decide on a transitional fallback (see report item 2)."
+      ]
+    },
+    {
+      "predicate": "Candidate accepted by its decision authority",
+      "subject": "proposed candidate",
+      "basis": "UP-020 Proportional Disposition",
+      "verdict": "indeterminate",
+      "performance": "not_performed",
+      "effects": {
+        "decision": "not_requested"
+      },
+      "evidence": "Acceptance is reserved to the existing decision authority. Self-review is not independent assessment (UP-007).",
+      "unresolved": [
+        "owner or host disposition"
+      ]
+    }
+  ],
+  "actor_report": "OBSERVATIONS (supplied workspace snapshot only): The exact name APP_TOKEN has three consumers besides deploy/env.example. src/settings.py reads it with os.environ['APP_TOKEN'], which is a hard KeyError if it is absent. scripts/check_env.sh requires it via ${APP_TOKEN:?missing}. docs/config.md documents it. APP_TOKEN_TTL is a separate variable that shares the prefix. The task names only APP_TOKEN, so APP_TOKEN_TTL is deliberately left unchanged in all four files. A blind substring replace would have renamed it too, which would be an unrequested Public change outside the grant.\n\nWORK: I propose a full-file replacement for each of the four files. Each one renames only the exact token APP_TOKEN to APP_API_TOKEN, with no other byte changes. Public delta: the identity APP_TOKEN is removed and APP_API_TOKEN is added. A rename is removal plus addition, per Computed Classification And Treatment item 2. Members retained unchanged: APP_TOKEN_TTL with default 3600, and LOG_LEVEL.\n\nSCOPE OF EVIDENCE: My evaluation is static inspection of the supplied snapshot and my proposed contents. I ran nothing and applied nothing. The host applies the edits and runs any assertions.\n\nUNRESOLVED:\n(1) External dependents. Deployed environments, CI or secret stores, container or orchestration manifests, and any files outside this projection may still set APP_TOKEN. Absence from a partial projection is not evidence of absence (FOUNDATIONS Workspace and context). Any such environment will fail at src/settings.py import time and in check_env.sh until it sets APP_API_TOKEN.\n(2) Transitional fallback. One option is to read APP_API_TOKEN and fall back to APP_TOKEN, which would keep old deployments working. I did not add it. It creates a second accepted name, a competing truth path, and that is a contract choice for the owner rather than part of a plain rename. If the owner wants it, the minimal change is a single line in src/settings.py: TOKEN = os.environ.get('APP_API_TOKEN') or os.environ['APP_TOKEN']. check_env.sh would need a matching change.\n(3) Runtime proof. Importing settings and running check_env.sh with only APP_API_TOKEN set was not performed.\n(4) Acceptance. Accepting these edits is reserved to the existing decision authority, not to me (SPEC_METHOD UP-020 Proportional Disposition; TICKET_METHOD UP-007).",
+  "assertion_counts": {
+    "met": 11,
+    "not_met": 0,
+    "subprocess_executions": 6
+  },
+  "assertions_sha256": "2fa4b8bc1caeffb8fda9af18221d785b03f65b51568ae5a44065e4b12fb3a7d4",
+  "inputs_unchanged": true
+}

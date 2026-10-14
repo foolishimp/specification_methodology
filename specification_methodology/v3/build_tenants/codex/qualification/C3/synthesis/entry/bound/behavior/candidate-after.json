@@ -1,0 +1,54 @@
+{
+  "subject": "candidate",
+  "phase": "after",
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "APP_API_TOKEN": "fixture-token"
+  },
+  "commands": [
+    {
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-c",
+        "import runpy; runpy.run_path('workspace/src/settings.py')"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/bin/sh",
+        "workspace/scripts/check_env.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "ok\n",
+      "stderr": ""
+    }
+  ],
+  "expected_pass": true,
+  "observation_matches_expectation": true,
+  "workspace": [
+    {
+      "path": "deploy/env.example",
+      "bytes": 57,
+      "sha256": "47f39190ed3fdabe3d08e18ba0c94fb00b338d380becac5661ecc58879744098"
+    },
+    {
+      "path": "docs/config.md",
+      "bytes": 155,
+      "sha256": "eaea8aab23849d46176afc88df76eab0eee08f5b660da7f158cc6784c22ef374"
+    },
+    {
+      "path": "scripts/check_env.sh",
+      "bytes": 48,
+      "sha256": "3321c75e08105b156ca6517b9d889a930836088773599a7d589e88ac2757f233"
+    },
+    {
+      "path": "src/settings.py",
+      "bytes": 104,
+      "sha256": "9d689c176d32787aac3b6243f71c0f3ca957b5c0c40fcb8cb242d49cc8185e6d"
+    }
+  ]
+}
