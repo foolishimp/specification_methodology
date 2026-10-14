@@ -81,11 +81,15 @@ def main():
         out = USE / 'arms' / arm
         (out / 'result').mkdir(parents=True)
         (out / 'ACTOR_TASKS.json').write_bytes(packet)
+        prompt = (HERE / 'ACTOR_PROMPT.md').read_text().replace('{{ARM}}', arm).replace('{{READER}}', str(HERE / 'acquire.py')).replace('{{RESULT}}', str(out / 'result'))
+        (out / 'ACTOR_PROMPT.md').write_text(prompt)
         activation = {'activation': 'I3-R2-MATCHED-USE-01', 'arm': arm, 'prepared_utc': datetime.now(timezone.utc).isoformat(),
                       'source': {'identity': identity, 'materialized_root': str(target), 'members': [{'path': p, 'sha256': sha(b), 'bytes': len(b)} for p,b in sorted(members.items())]},
                       'ordinary_entry': 'plugins/spec/skills/stdo-work/SKILL.md', 'task_sha256': TASK_SHA, 'assessment_boundary': boundary,
                       'limits': {'pass': 'one initial six-task pass; no untriaged retry', 'external_paid_calls': 'not selected', 'retained_context_or_platform_budget': 'uninstrumented; do not infer fit', 'within_arm_context': 'one fresh actor, reused across tasks'},
                       'reader': str(HERE / 'acquire.py')}
+        activation['actor_prompt_sha256'] = sha(prompt.encode())
+        activation['actor_prompt_boundary'] = 'The explicit trial task message; inherited platform instructions and host context are not measured.'
         (out / 'ACTIVATION.json').write_text(json.dumps(activation, indent=2) + '\n')
     print(json.dumps({'arms': ['A','B','C'], 'source_root': str(root), 'new_commit': args.new_commit, 'task_sha256': TASK_SHA}, indent=2))
 

@@ -48,6 +48,7 @@ SHARED_FIELDS = {
     'shared_result_contracts': 'result_contract',
     'argument_contracts': 'argument_contract',
 }
+SHARED_REFERENCE_FIELDS = {'contract_ref', 'scope_ref', 'input_ref'}
 
 
 def sha(data):
@@ -192,6 +193,17 @@ def check_semantics(row):
             raise ValueError(identifier + ': ' + field + ' must be explicit')
 
 
+def check_shared_references(value, contracts, subject):
+    if isinstance(value, list):
+        for item in value:
+            check_shared_references(item, contracts, subject)
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            if key in SHARED_REFERENCE_FIELDS and item not in contracts:
+                raise ValueError(subject + ': unresolved semantic reference ' + str(item))
+            check_shared_references(item, contracts, subject)
+
+
 def merge(base, contributions, carrier):
     result = copy.deepcopy(base)
     rows = {row['id']: row for row in result['determinations']}
@@ -261,6 +273,9 @@ def merge(base, contributions, carrier):
         missing = set(row['dependencies']) - set(rows)
         if missing:
             raise ValueError(row['id'] + ': missing dependencies ' + ', '.join(sorted(missing)))
+        check_shared_references(row, contracts, row['id'])
+    for key, contract in contracts.items():
+        check_shared_references(contract, contracts, key)
     inverse = {key: [] for key in rows}
     for row in rows.values():
         for dep in row['dependencies']:
