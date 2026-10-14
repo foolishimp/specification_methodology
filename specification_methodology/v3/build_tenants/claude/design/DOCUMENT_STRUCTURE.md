@@ -372,6 +372,16 @@ Pillar owners from [REDUCTION §2](REDUCTION.md#2-pillar-account):
   sections;
 - pillar 3: R29;
 - pillar 8: SPEC_METHOD §11 rule 5 gains an evidence form.
+- UP-007 (I3-3j, WC1-10). The four conditions under which a finding can
+  block promotion are tier-1 policy of EVALUATION §5, conserving UP-007:
+  P6 forces that a block bears on the claim's acceptance, and the four
+  conditions are the method's chosen enumeration of that, labelled as a
+  choice in the F6 table. Which boundaries require independent
+  assessment is Spec Method policy owned by TICKETS §7, which EVALUATION
+  §3 names in its body.
+- Pillar 2 is settled by I3-3j: IDENTITY §2 `Boundaries and sufficiency
+  claims` owns the generic law, and WORLD_MODEL §4 refines it. The text
+  below records the proposal as made.
 - Pillar 2 is open. REDUCTION leaves its tier-1 owner to "IDENTITY or
   FOUNDATIONS §2", and no step 1 or step 2 activation in PLAN states that
   owner text. This design proposes IDENTITY, under a fixed heading

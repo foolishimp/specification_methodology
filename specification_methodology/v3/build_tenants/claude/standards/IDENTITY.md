@@ -56,19 +56,20 @@ which the commitments do not supply:
 - (iii) a project publishes releases, whose versions are coordinates of
   the release and not of each object.
 
-| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
-|---|---|---|---|
-| P3 (independent); (i) | identity is always scoped and should be interpretable at minimum through authority, kind and value; it is unique within its lawful scope rather than as a naked global string, and it is typed, so different kinds of thing should not be collapsed into one identity space | [Scoped identity](#scoped-identity), [Uniqueness](#uniqueness), [Type](#type) | the optional further coordinates and the identity kinds in use: the authority that owns the objects, under [§5](#5-authority-split) |
-| P3 (independent), P4b (derived from P0 and P2) | identity should remain stable for the lifecycle it serves, and a changed identity should be related explicitly to the old one, never silently reused for a different object | [Stability](#stability) | none |
-| P3 (independent), P1 (independent); (ii) | readability is a convenience for recognition: an opaque identity is lawful, a readable one is lawful only while it preserves uniqueness in scope, and no reader should infer that a readable form is safer or more authoritative | [§3](#3-readable-and-opaque-identity) | whether an identity is opaque, readable or hybrid: the authority that owns it, under §5 |
-| P3 (independent); (i), (ii) | identity should be made unique by hierarchy where appropriate, so a family and its members, or a runtime identity and a domain identity, stay distinct kinds even where both serialise as strings | [§4](#4-identity-hierarchy) | the general model `authority / kind / value / revision`: this member; which segments a serialisation shows: the authority that owns the identity |
-| P3 (independent), P6 (independent); (i) | a runtime may give its own objects opaque identities under its own generation rules and should not impose domain grammar on domain objects; the domain owns the semantic identity grammar of its constitutional objects, which the runtime may transport but should not silently invent their meaning | [§5](#5-authority-split) | the generation rules of runtime identities: the runtime; the domain's identity kinds, distinctions, uniqueness and parsing: the domain |
-| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | P6 makes authority a permission that capability, labels and reachability never create, and P3 scopes every identity by authority and kind, so authority is an identity-bearing relation whose owner, kind, subject, scope and basis must survive every carrier: composition, delegation and projection restrict it or carry it faithfully and never silently widen it. P4b makes an authority decision a step-produced fact that cannot be re-acquired, so elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis, and a recorded ruling keeps its coordinates and cannot be widened by recording. Proxy identity and human-authority identity stay distinct for the same reason as any two kinds under P3 | [§6](#6-authority-identity-and-conservation-stdo-up-004) | what creates no authority and what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), with this section's instances; the nine grant fields: this section; each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile |
-| P3 (independent), P6 (independent) | a default identity format that a runtime realisation publishes is lawful only while derived domains may override it; an override is lawful only if it preserves scoped uniqueness, kind distinction, deterministic parsing or reading, non-aliasing between family and member identities and stable downstream traceability, and it is published in domain authority, not only as regex assumptions hidden in implementation code | [§7](#7-default-formats-and-overrides) | the defaults: the bound runtime realisation ([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)); each override and its publication surface: the domain |
-| P3 (independent), P1 (independent); (ii) | regex over prose is at most a provisional extractor; a parser distinguishes concrete identity kinds from grouping labels, and subordinate identities from the identity their readable form derives from | [§8](#8-parsing) | whether the domain needs family identities: the domain |
-| P3 (independent), P6 (independent); (iii) | release version is not object identity; object identity, release identity, publication or revision coordinates and mutable discovery selectors may relate and are not interchangeable | [§9](#9-release-version-boundary) | release identity, its names and its forms: [RELEASE](RELEASE.md) |
-| P3 (independent), P6 (independent) | an identity surface that cannot answer the minimum questions is under-defined | [§10](#10-minimum-questions) | the seven questions: this member |
-| P3 (independent), P1 (independent), P0 (recovered) | implementations should prefer typed identity readers and published identity law over regex mining; the first lawful repair contains the immediate bug, and the enduring repair publishes identity law and moves implementations onto it | [§12](#12-consequence-for-implementations) | none |
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent); (i) | By P3 an identity is declared as (authority, kind, value), and by (i) a project holds objects of many kinds and owners, so identity is always scoped and should be interpretable at minimum through authority, kind and value; it is unique within its lawful scope rather than as a naked global string, and, because kind is a coordinate, different kinds of thing should not be collapsed into one identity space | [Scoped identity](#scoped-identity), [Uniqueness](#uniqueness), [Type](#type) | the optional further coordinates and the identity kinds in use: the authority that owns the objects, under [§5](#5-authority-split) | 2 |
+| P3 (independent), P4b (derived from P0 and P2) | By P3 identity survives admissible change, and by P4b a recorded identity is a fact later steps rely on, so identity should remain stable for the lifecycle it serves, and a changed identity should be related explicitly to the old one, never silently reused for a different object | [Stability](#stability) | none | 2, 9 |
+| P3 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); (i) | By P3 a boundary is a claim with a proof obligation, and by P6 a claim holds only on its evidence, so a boundary claim names its object, evidence and basis and holds only as far as that evidence goes. By P5 a claim beyond the evidence is undecided, so a sufficiency claim is bounded by its task and is not completeness, and the stronger statistical Markov boundary stays a hypothesis that no work relies on as established | [Boundaries and sufficiency claims](#boundaries-and-sufficiency-claims) | the Markov-object construct and its epistemic status: [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct), a refinement; material sufficiency: [RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency) | 2, 6, 9 |
+| P3 (independent), P1 (independent); (ii) | By P1 a readable form carries no meaning of its own, and by P3 uniqueness is a property of the scope, so readability is a convenience for recognition: by (ii) people and parsers read the form, an opaque identity is lawful, a readable one is lawful only while it preserves uniqueness in scope, and no reader should infer that a readable form is safer or more authoritative | [§3](#3-readable-and-opaque-identity) | whether an identity is opaque, readable or hybrid: the authority that owns it, under §5 | 2, 6 |
+| P3 (independent); (i), (ii) | By P3 kind is a coordinate of identity, and by (i) and (ii) different kinds and owners serialise alike, so identity should be made unique by hierarchy where appropriate, and a family and its members, or a runtime identity and a domain identity, stay distinct kinds even where both serialise as strings | [§4](#4-identity-hierarchy) | the general model `authority / kind / value / revision`: this member; which segments a serialisation shows: the authority that owns the identity | 2 |
+| P3 (independent), P6 (independent); (i) | By P6 an authority decides only what it owns, and by (i) a runtime and a domain own different objects, so a runtime may give its own objects opaque identities under its own generation rules and should not impose domain grammar on domain objects; the domain owns the semantic identity grammar of its constitutional objects, which the runtime may transport but should not silently invent their meaning | [§5](#5-authority-split) | the generation rules of runtime identities: the runtime; the domain's identity kinds, distinctions, uniqueness and parsing: the domain | 2, 9 |
+| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | P6 makes authority a permission that capability, labels and reachability never create, and P3 scopes every identity by authority and kind, so authority is an identity-bearing relation whose owner, kind, subject, scope and basis must survive every carrier: composition, delegation and projection restrict it or carry it faithfully and never silently widen it. P4b makes an authority decision a step-produced fact that cannot be re-acquired, so elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis, and a recorded ruling keeps its coordinates and cannot be widened by recording. Proxy identity and human-authority identity stay distinct for the same reason as any two kinds under P3 | [§6](#6-authority-identity-and-conservation-stdo-up-004) | what creates no authority and what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), with this section's instances; the nine grant fields: this section; each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile | 2, 7, 9 |
+| P3 (independent), P6 (independent) | By P3 an identity's grammar belongs to its owner, and by P6 a default is not that owner's decision, so a default identity format that a runtime realisation publishes is lawful only while derived domains may override it; an override must keep what P3 requires (scoped uniqueness, kind distinction, deterministic parsing or reading, non-aliasing between family and member identities and stable downstream traceability), and by P6 it is published in domain authority, not only as regex assumptions hidden in implementation code | [§7](#7-default-formats-and-overrides) | the defaults: the bound runtime realisation ([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)); each override and its publication surface: the domain | 2, 8 |
+| P3 (independent), P1 (independent); (ii) | By P1 a pattern over prose is not the identity it matches, and by P3 kinds stay distinct, so regex over prose is at most a provisional extractor, and a parser distinguishes concrete identity kinds from grouping labels, and subordinate identities from the identity their readable form derives from | [§8](#8-parsing) | whether the domain needs family identities: the domain | 2, 6 |
+| P3 (independent), P6 (independent); (iii) | By P3 an object's identity and a release's identity are different coordinates, and by (iii) versions belong to releases, so release version is not object identity, and object identity, release identity, publication or revision coordinates and mutable discovery selectors may relate and are not interchangeable; by P6 none grants the other's authority | [§9](#9-release-version-boundary) | release identity, its names and its forms: [RELEASE](RELEASE.md) | 1, 2 |
+| P3 (independent), P6 (independent) | By P3 and P6 an identity surface must let a reader recover owner, kind, scope and relations, so an identity surface that cannot answer the minimum questions is under-defined | [§10](#10-minimum-questions) | the seven questions: this member | 2 |
+| P3 (independent), P1 (independent), P0 (recovered) | By P3 and P1 identity is read through its published law, not mined from text, so implementations should prefer typed identity readers and published identity law over regex mining; by P0 a repair is bounded to the step at hand, so the first lawful repair contains the immediate bug, and the enduring repair publishes identity law and moves implementations onto it | [§12](#12-consequence-for-implementations) | none | 2, 8 |
 
 §11 applies these rows to examples and decides nothing beyond them; §13
 records where each predecessor claim is carried and decides nothing. The
@@ -123,6 +124,29 @@ stable enough to support traceability, comparison, replay, publication
 and supersession. If an identity changes, the method should make the
 relationship explicit rather than silently reusing the old identity for a
 different object (P3, P4b; rc.2 #4-stability-law).
+
+### Boundaries and sufficiency claims
+
+An object's boundary, what belongs to the object and what its identity
+does not depend on, is a claim with a proof obligation
+([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments), P3), not a property that
+its storage, schema or name establishes. A boundary claim names its
+object, the evidence that supports it and the basis it holds on, and it
+holds only as far as that evidence goes (P3, P6). A claim that an
+object's observed boundary state is sufficient for a task is a material
+sufficiency claim of
+[RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency), bounded by
+that task: it is not completeness, and it does not establish that the
+boundary screens the object's interior from everything outside it. That
+stronger claim, a statistical Markov boundary, is a hypothesis
+([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as
+established, and a profile that uses such a construct states its
+epistemic status (P5). Purpose and material relation: this law was
+decided only in the optional world-model profile, so a Product that does
+not adopt that profile had no rule for boundary claims, and the common
+single ownership requirement, item 8, requires generic law to be
+available without an optional profile; [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct)
+refines it.
 
 ## 3. Readable and opaque identity
 
@@ -190,15 +214,13 @@ preserves owner, kind, governed subject, scope and governing basis (P6,
 P3; rc.2 #authority-identity-and-conservation-stdo-up-004; the Authority
 object and its kinds are FOUNDATIONS §2).
 
-Composition, delegation, adapters, projections, wrappers and registries
-may restrict or faithfully carry admitted authority. They do not silently
-widen scope, add a role, increase cardinality or change kind. Nor do they
-reconstruct authority from anything that creates none: that list is
-[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)', and
-its instances for an identity-bearing relation include actor identity,
-payload shape and available capability. Elevation, transfer, split,
-merge, proxy grant, revocation and retirement require an explicit
-authority decision and identifiable basis (P6, P4b).
+What composition, delegation, adapters, wrappers and registries may do
+with admitted authority, what creates none, and which changes need an
+explicit authority decision are stated once at
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority. Its instances for an identity-bearing relation are
+these: a projection is such a carrier, and actor identity, payload shape
+and available capability create no authority (P6, P4b).
 
 Human authority may act directly or through an explicitly admitted
 bounded proxy. Proxy actor identity and human-authority identity remain

@@ -374,7 +374,10 @@ propagates across substrates: what domain experts recognise as "objects"
 in an institutional system is the same kind of structure Friston
 described for biological systems, re-expressed through another
 substrate. The profile is the practice of making that structure explicit,
-traceable and publishable (P3, P6).
+traceable and publishable (P3, P6). The generic law for boundary claims,
+their evidence and the limit on stronger Markov claims is
+[IDENTITY §2 Boundaries and sufficiency claims](IDENTITY.md#boundaries-and-sufficiency-claims);
+this section refines it for the Markov-object construct.
 
 ### Effective blanket
 
