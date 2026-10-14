@@ -48,7 +48,7 @@ the existing sufficiency law; a prepared frame grants no work or admission.
 | Responsibility | Owning or locating member |
 |---|---|
 | Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
-| Frame declaration, evaluation and composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md); [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution) owns bounded-context term resolution |
+| Generic frame law: declaration, evaluation and composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md); [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution) owns bounded-context term resolution |
 | Operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
 | Constitutional WHAT and lawful construction | [Spec Method](SPEC_METHOD.md) |
 | Structural HOW, transformation admission and realization | [Design Module Method](DESIGN_MODULE_METHOD.md) |
@@ -58,14 +58,16 @@ the existing sufficiency law; a prepared frame grants no work or admission.
 | State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
 | UX surface realization | [UX Method](UX_METHOD.md) |
 | Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
-| Exact cuts, successor conservation and publication | [Release Method](RELEASE_METHOD.md); [Spec Method](SPEC_METHOD.md) owns Product-definition routing and consumer adoption |
+| Exact cuts, successor conservation, publication and adoption protocol | [Release Method](RELEASE_METHOD.md); [Spec Method](SPEC_METHOD.md) owns Product-definition routing; each consumer's authority decides its adoption |
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
-| Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
+| Semantic discovery and locator resolution | [Glossary Guide](GLOSSARY_GUIDE.md) |
 
 Each member's declared applicability and scope remain at that owner; this table
 does not reclassify a constitutional method as a guide or profile. The calculus
 and optional Traversal profile retain their own signatures; the Baseline
-retains its adoption boundary; the Glossary is a non-deciding locator.
+retains its adoption boundary. Reference Frame Method supplies generic frame
+law; particular actor configurations remain scoped profiles. The Glossary
+owns resolution of its locators, while each located method owns its meaning.
 Foundations and the library
 declare the premise layer and shared conditional contracts under the Methodology
 Product authority. Particular methods apply those shared decisions and retain their additional

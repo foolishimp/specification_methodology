@@ -9,7 +9,20 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+## Governing argument routes
+
+These source families state the premises, shared consequences and
+additional choices behind the selected clauses. Acquire the relevant
+argument when its derivation or applicability is material to this task;
+a route alone does not discharge that judgment.
+
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
+- [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+- [DESIGN_MODULE_METHOD.md — Governing Relations](../DESIGN_MODULE_METHOD.md#governing-relations).
+- [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
+- [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result algebra
 
@@ -134,7 +147,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result conjunction
 
@@ -230,7 +243,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -251,7 +270,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Bounded construction
 
@@ -288,7 +307,7 @@ and cannot establish that the old destination was reached. Repeating a failed
 relation needs a supported causal change; elapsed activity is no repair.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Transformation-admission specialization
 
@@ -313,7 +332,7 @@ validation pass. [Contract application](../TRANSFORMATION_LIBRARY.md#contract-ap
 shared decision; the design consumer binds its domain admission obligations.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24`.
+Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757`.
 
 #### Admission contract use
 
@@ -345,7 +364,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24`.
+Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757`.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 
@@ -451,7 +470,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -581,7 +600,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -672,7 +691,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
 
 ## Test Authority Rule
 
@@ -688,7 +707,7 @@ operator confidence, ambient habit, or an unlabeled test corpus.
 ---
 
 
-Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24`.
+Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757`.
 
 ### 1. Authority Seam Closure
 
@@ -710,7 +729,7 @@ unless an explicit migration design admits the difference. Negative proof
 covers structural drift as well as missing source truth.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24`.
+Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757`.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
@@ -733,8 +752,10 @@ affected subordinate projections. Changing an accepted governing relation
 requires re-entry at that relation before acceptance. Open a subordinate frame
 only for a material distinction unresolved at the governing altitude; neither
 a closure algorithm nor recursive documentation of irrelevant descendants is
-required. A locally valid action that violates, duplicates or silently
-reinterprets an affected governing invariant fails this obligation.
+required. A locally valid action that violates or silently reinterprets an
+affected governing invariant fails this obligation. Duplication follows
+[UP-018's action classification and explicit disposition](../DESIGN_MODULE_METHOD.md#invariant-reconstruction-sufficiency-stdo-up-018);
+an undisposed duplicate cannot establish preservation.
 
 Discovered functionality is evidence about required behavior. It is not yet an
 architectural operation. A discovered verb, screen action, endpoint, command,
@@ -757,7 +778,7 @@ constitutional functionality
 ```
 
 
-Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24`.
+Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757`.
 
 ## 8. Totality Rule
 
@@ -785,7 +806,7 @@ Closed handling does not promise external-computation termination.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-003 Material Sufficiency
 
@@ -797,7 +818,7 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -807,7 +828,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-006 Authority Conservation
 
@@ -817,7 +838,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-014 Capability Fit
 
@@ -827,7 +848,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Bind
 
@@ -836,20 +857,20 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Acquire
 
 Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
-summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
+summaries with observations. That owner distinguishes context fit from attention
+adequacy and states their evidence boundaries. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
 the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Transform
 
@@ -861,7 +882,7 @@ retains that owner's outcomes. These are original domain outcomes mapped under t
 the outer outcome or effect grant.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-012 Closed Results
 
@@ -901,7 +922,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ## Minimal Evaluation Result
 
@@ -927,7 +948,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Contract application
 
@@ -1043,7 +1064,7 @@ ambiguity, interpretation, projection, producer or consumer. It does not license
 changing the source to agree with its view.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -1074,11 +1095,16 @@ proves realisation conformance by passing structural validation.
 
 At design admission, each affected requirement identifies its realising
 operation or invariant, the preservation obligation at its interfaces, and the
-evidence capable of defeating the claimed realisation. Context, time, memory,
-communication, human effort and spend state their units and are measured at the
-boundary declared by that binding where they are material. Attention adequacy
-is evaluated through actual-use evidence; no universal attention unit or score
-is required. A requirement-to-operation route
+evidence capable of defeating the claimed realisation. The binding preserves
+applicable authority, required human decisions, independence, failure and
+recovery conditions; a convenient execution environment cannot weaken them.
+Context, time, memory, communication, human effort and spend state their units
+and are measured at the boundary declared by that binding where they are
+material. Context fit and attention adequacy apply their distinct evidence
+conditions in [Workspace and context](../FOUNDATIONS.md#workspace-and-context).
+A categorical preservation claim additionally applies
+[Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions).
+A requirement-to-operation route
 alone does not discharge preservation or demonstrate fitness. A tenant cannot
 repair an inconvenient requirement by silently changing the common `WHAT`.
 

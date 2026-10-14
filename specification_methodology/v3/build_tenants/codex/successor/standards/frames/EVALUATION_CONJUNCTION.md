@@ -9,7 +9,18 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+## Governing argument routes
+
+These source families state the premises, shared consequences and
+additional choices behind the selected clauses. Acquire the relevant
+argument when its derivation or applicability is material to this task;
+a route alone does not discharge that judgment.
+
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
+- [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+- [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result algebra
 
@@ -134,7 +145,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result conjunction
 
@@ -230,7 +241,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -251,7 +268,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ## Reference Frame Laws
 
@@ -265,6 +282,8 @@ last column. They do not follow from finite capacity alone.
 | Authority and overlapping meaning: RF-006–008 | F2 and F4 preserve meaning across typed relations; F6 separates evidence from grants. Shared material therefore cannot by itself equate meanings or confer authority. | This method distinguishes semantic, evaluation, operation and decision authority in a frame; each existing owner supplies its actual grant and each translation owner supplies the coordinate relation. |
 | Configuration and material combination: RF-009–011, RF-016 | F3 makes topology changes relevant to dependent support; F4 requires material joins to preserve the outer claim; F5 and F6 require bounded allocation without invented grants. Combining results alone need not combine internal execution. | This method selects composition-on-demand, explicit recharting and implementation neutrality. The frame-set owner chooses topology; the declared composition and decision owners bind the required joins under the shared laws. |
 | Closed results and uncertainty: RF-012, RF-015 | F2 requires evidence on an exact predicate; F5 admits undecidable or unperformed work; F6 prevents a result granting permission. A closed return must preserve those distinctions. | Foundations owns the result codomain and conjunction. This method owns the activation/work predicate split and each frame owns its declared refinements; the decision owner owns disposition. |
+| Engagement and conjunction procedures: Engagement, Using Frames In Conjunction, Human Frame-Set Declaration (including Frame-Set Optimization), Agentic Use | F1 fixes the selected evaluation; F2/F3 require an interpretable current subject; F4 preserves required joins; F5 bounds usable context; F6 distinguishes applicability, activation and decision authority. A list of possible frames cannot determine which evaluations are required or grant their activation. | This member chooses the frame tuple, explicit applicability and required-set bindings, sufficient direct engagement and composition on demand. The frame-set owner selects the concrete partition and available actors; each result applies the shared owner on its exact predicate. |
+| Discovery and qualification: Completeness Boundary, Discovery And Revision, Frame Qualification (including Method Self-Qualification), Anti-Patterns and Closure | F2/F3 require support on the actual scope and current basis; F4 preserves material dependencies; F5 limits any inspected population; F6 separates evidence from adoption. Local success therefore cannot prove every future frame sufficient or make an unselected configuration operative. | This member chooses bounded counterexample discovery, explicit residuals, recharting and claim-scoped qualification. Its completeness and closure policies bind the selected claim, while the adopting owner decides configuration and acceptance. |
 
 ### RF-001 Evaluation Relativity
 
@@ -453,7 +472,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### Applicability And Required Results
 
@@ -474,7 +493,7 @@ wrong-subject required results, and a sufficient positive result within a finite
 declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ## Using Frames In Conjunction
 
@@ -540,7 +559,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ## Minimal Evaluation Result
 
@@ -566,7 +585,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Bind
 
@@ -575,20 +594,20 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Acquire
 
 Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
-summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
+summaries with observations. That owner distinguishes context fit from attention
+adequacy and states their evidence boundaries. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
 the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Evaluate
 
@@ -608,7 +627,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Conjoin
 
@@ -621,7 +640,7 @@ authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Contract application
 

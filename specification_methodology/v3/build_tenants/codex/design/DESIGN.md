@@ -14,6 +14,25 @@ the pinned Axiom Indexer and the product owner's decisions. Byte counts measure
 selected inputs; wall time and CLI spend measure the declared process boundary.
 Unmeasured parent-session overhead remains unknown.
 
+The measured construction boundary starts when a bound activation receives
+its task and ends when it returns. Input sizes are UTF-8 bytes; acquisition
+counts include repeated reads; elapsed time is seconds; external tool charges
+are USD. Tool receipts name the Python executable and version, pinned checker
+and Git inputs actually used. Native actor identities, model-family
+independence, per-activation acquisition/time allowances and any shared spend
+allowance belong to the admitted run and its manifests. They are not fixed
+method constants. Unknown host instructions, retained context, reasoning cost
+and native session charges remain unknown in the measurements.
+
+The process assumes fallible actors and tools, partial returns, stale summaries,
+concurrent disjoint writes and potentially uncertain external effects. The
+workspace and exact source observations support re-entry; a failed activation
+does not erase valid bytes. Changed dependencies invalidate affected evidence.
+An unresolved effect is observed or returned before a dependent repetition.
+Independent task results remain usable only within their recorded subject,
+scope and invalidators. Same-family nonauthor working review does not supply
+cross-family or reserved acceptance evidence.
+
 The workspace is the continuing truth surface. Actor context is a bounded
 projection acquired from its current state and authoritative external inputs.
 The method must still work after that private projection is discarded. A stale

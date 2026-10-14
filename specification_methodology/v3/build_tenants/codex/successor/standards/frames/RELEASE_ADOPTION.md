@@ -9,7 +9,19 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+## Governing argument routes
+
+These source families state the premises, shared consequences and
+additional choices behind the selected clauses. Acquire the relevant
+argument when its derivation or applicability is material to this task;
+a route alone does not discharge that judgment.
+
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
+- [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
+- [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+- [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result algebra
 
@@ -134,7 +146,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
 
 ## Result conjunction
 
@@ -230,7 +242,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -251,7 +269,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
 
 ## Release Identities
 
@@ -286,7 +304,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
 
 ## Immutable RC Publication
 
@@ -339,7 +357,7 @@ prove `not_started` after possible dispatch. Preserve the core performance,
 coverage and observed-effect coordinates at each selected boundary.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
 
 ## Exact-Cut Qualification
 
@@ -359,7 +377,7 @@ Qualification binds:
 - the exact release-scoped claim bytes;
 - the governing Product and release basis;
 - each claimed property and its observation boundary;
-- evidence subjects, owner verdicts, and unresolved gaps; and
+- evidence subjects, assessment results, owner decisions and unresolved gaps; and
 - the complete successor relation to the declared predecessor.
 
 Evidence matches the claim. Source success does not prove packaged or installed
@@ -380,20 +398,19 @@ exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
 `cached green` or any other raw label without deciding support is
 `indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
 diagnosis and separately authenticated counterevidence under the core legal
-pairs. Missing reasons follow the core missing-reason rule. A missing required
-judgment remains an absent coverage slot, not a fabricated skipped evaluation;
-the declared conjunction retains a known failure beside that slot. Actual
-performance and uncertain effects are preserved independently of those labels.
+pairs. Missing reasons, absent judgments, performance and effect observations
+apply the [core result and conjunction law](../FOUNDATIONS.md#result-conjunction);
+the release labels supply no alternative rule for them.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
-requires any qualifying-byte change, the verdict remains attached to the old
+requires any qualifying-byte change, the review result remains attached to the old
 RC and a higher RC is published. The selector already advertises the highest
 published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
 
 ## Selector And Consumer Adoption
 
@@ -449,7 +466,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -513,7 +530,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
 
 #### Explicit Complete Consumer Update
 
@@ -573,7 +590,7 @@ required observation of every begun part. Keep staged-install and consumer
 effects on their actual boundaries, including `partial` or `unknown` effects.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -583,7 +600,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-006 Authority Conservation
 
@@ -593,7 +610,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
 
 ### RF-012 Closed Results
 
@@ -633,7 +650,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
 
 ## Contract application
 

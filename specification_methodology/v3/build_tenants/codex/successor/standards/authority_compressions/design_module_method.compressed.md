@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24
+source_digest: 0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -14,6 +14,13 @@ stale_if_source_digest_changes: true
 # DESIGN_MODULE_METHOD Compressed Authority
 
 ## Governing Claim
+
+The member separates generic design-contract law selected by Spec from an
+adoptable realization profile. UP-016–019 and module-derived unit-proof law
+apply to their declared relations. Using that law does not adopt the remaining
+Ontology, Prime/IACS, functional-realization, diagram or language policies.
+The profile-specific chain below applies at the boundary that adopts it, with
+its source-owned conditions and exceptions.
 
 A design module derives one realization contract between requirements and code.
 Its accepted Ontology is the prior semantic-design authority for entities,
@@ -61,8 +68,8 @@ module-derived `Unit Test` concept and proof relation. Unit proof derives from
 module ownership and the accepted Ontology/design basis; it does not acquire
 Product-level UAT or acceptance authority.
 
-This rule applies only to the named boundary where the project adopts this
-method. A material semantic boundary changes identity, authority, lifecycle,
+The Ontology realization profile applies to the named boundary where the
+project adopts it. A material semantic boundary changes identity, authority, lifecycle,
 public contract, externally observable Product meaning, cross-module topology,
 or accepted effect or closure law. The Ontology verdict may share the existing
 design pack and acceptance; it requires no extra document, ticket, or ceremony.

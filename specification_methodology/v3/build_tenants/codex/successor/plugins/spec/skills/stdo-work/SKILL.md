@@ -17,8 +17,12 @@ verified selection; that selection grants no work or mutation authority.
 
 ## Acquire The Responsibility Frame
 
+Resolve the member and section routes below through Product Basis Selection’s
+**Acquire A Member From The Selected Basis** procedure. Their root is the
+verified basis, independent of the plugin installation location.
+
 After the exact Product basis is selected, resolve the selected cut's
-[standards index](../../../../standards/README.md) and the accepted Project
+`standards/README.md` and the accepted Project
 Reference-Frame Basis for the responsibility named by the task. This is read-only
 acquisition inside an already-authorized inspection scope. Effectful work still
 needs its separately admitted work contract; acquisition is not another admission
@@ -47,7 +51,7 @@ Read the selected frame and the actual subject. Follow material source and
 coupled-obligation references when the task needs them. The view alone makes no
 universal sufficiency claim and supplies no role, effect or decision grant.
 If symbolic acquisition is material, follow the selected package's
-[method interpretation](../../../../interpretation/README.md). Verify its
+`interpretation/README.md`. Verify its
 document-source inventory and declared encoding/checker basis before consuming
 a projection, and re-enter its named sources for unresolved conditions. An
 interpretation's structural validity does not establish permission or semantic
@@ -59,8 +63,8 @@ refinement, support or stop; do not silently reduce the required predicate.
 
 ## Classify From The Available Evidence
 
-Apply the selected basis's [Universal Intake Triage](../../../../standards/SPEC_METHOD.md#universal-intake-triage)
-and [Computed Classification And Treatment](../../../../standards/SPEC_METHOD.md#computed-classification-and-treatment)
+Apply the selected basis's `standards/SPEC_METHOD.md#universal-intake-triage`
+and `standards/SPEC_METHOD.md#computed-classification-and-treatment`
 to this worksite and requested outcome. Those owners determine the classification
 and re-entry; this skill routes their application without another deciding table.
 Use declared source/worksite/proof tools for the complete relevant Public member
@@ -68,7 +72,7 @@ and value delta, authority routes and accepted-design trace coverage. Missing
 tools, targets or mappings remain unknown. The distribution manager is not a
 worksite analyzer, and a file diff is not a complete Public comparison.
 
-Acquire the library's [Contract application](../../../../standards/TRANSFORMATION_LIBRARY.md#contract-application)
+Acquire the library's `standards/TRANSFORMATION_LIBRARY.md#contract-application`
 from the selected frame or its exact owner. Bind it to the intake predicate,
 current subject and actual grant. Reuse supported facts and owner judgments;
 a role change alone requires no new derivation. Judge only the residual needed
@@ -77,8 +81,8 @@ requested outcome. Repricing belongs to the owner of the missing meaning.
 
 ## Establish The Work Basis
 
-Use [Work-Carrier-To-Execution](../../../../standards/TICKET_METHOD.md#work-carrier-to-execution-rule)
-and its [Execution Contract Admission](../../../../standards/TICKET_METHOD.md#execution-contract-admission)
+Use `standards/TICKET_METHOD.md#work-carrier-to-execution-rule`
+and its `standards/TICKET_METHOD.md#execution-contract-admission`
 on the already-authorised work. The former selects a carrier by the obligation's
 lifetime; the latter binds the exact contract, admission mechanism, authority,
 result surface and evidence. Read the deciding clauses before a dependent effect
@@ -98,7 +102,7 @@ a conversation return alone cannot discharge a durable recording duty.
 
 ## Construct And Prove
 
-Apply [Agentic Construction Execution](../../../../standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020)
+Apply `standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`
 to the selected causal cone. Its construction, assessment and disposition
 predicates remain distinct. The accepted frame configuration determines the
 required evaluations and actor arrangement. Direct Writer entry needs no
@@ -113,7 +117,7 @@ a new activation or wholesale rehash. Refresh material changed bindings.
 Construct within the granted write territory and inspect the material relations
 needed by the causal cone. Return cross-territory repairs to their owner. Tests
 follow the re-entry point and owning requirement, design and closure predicates.
-Use the cheapest adequate falsifier under [Method Proportionality](../../../../standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014).
+Use the cheapest adequate falsifier under `standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014`.
 The actual claim determines whether integration, installed-development or a live
 probabilistic lane is needed. Preserve failed and incomplete evidence.
 

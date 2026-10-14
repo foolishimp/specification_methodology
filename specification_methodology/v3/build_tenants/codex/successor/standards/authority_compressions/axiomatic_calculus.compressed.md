@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/axiomatic-calculus/v1
 source_ref: ../AXIOMATIC_CALCULUS.md
-source_digest: da2778fd029b6aa204d116d8451e18aa2af49ad5beda3663ddfe4ca909507df0
+source_digest: 2d9185bcc27933310d32a72ae03cd61dbc2eabd02af49e36cbaf2556353addde
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform

@@ -127,7 +127,22 @@ def render_views(package, support, common_input):
         routes = frame['routes']
         if len({(r['owner'], r['anchor']) for r in routes}) != len(routes):
             raise ValueError('Duplicate frame route: ' + frame['path'])
-        parts = [path.read_text().split('\nSource:', 1)[0].rstrip()]
+        header = path.read_text().split('\nSource:', 1)[0].rstrip()
+        header = header.split('\n## Governing argument routes\n', 1)[0].rstrip()
+        arguments = []
+        for route in frame.get('argument_routes', []):
+            owner = PARSE.confined(package, route['owner'])
+            heading, raw = PARSE.section(owner.read_text(), route['anchor'])
+            route.update(owner_sha256=sha(owner), section_sha256=hashlib.sha256(raw.encode()).hexdigest())
+            link = '../' + str(Path(route['owner']).relative_to('standards')) + '#' + route['anchor']
+            arguments.append('- [' + owner.name + ' — ' + heading['heading'] + '](' + link + ').')
+        if arguments:
+            header += ('\n\n## Governing argument routes\n\n'
+                       'These source families state the premises, shared consequences and\n'
+                       'additional choices behind the selected clauses. Acquire the relevant\n'
+                       'argument when its derivation or applicability is material to this task;\n'
+                       'a route alone does not discharge that judgment.\n\n' + '\n'.join(arguments))
+        parts = [header]
         for route in routes:
             owner = PARSE.confined(package, route['owner'])
             heading, raw = PARSE.section(owner.read_text(), route['anchor'])

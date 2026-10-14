@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0
+source_digest: 55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -355,8 +355,10 @@ preservation evidence; an a_c structural check cannot supply it.
   state and effect boundaries retain their checks; scope changes need their
   owner and cannot be inferred from a test.
 - For probabilistic or agentic construction, execute one bounded causal cone
-  from a reconstruction-sufficient governing basis supplied by `STDO-UP-016`
-  through `STDO-UP-019`. Identify the affected relations, selected computational
+  from a reconstruction-sufficient governing basis. Where the Design Module
+  Method applies, `STDO-UP-016` through `STDO-UP-019` supply its construction
+  inputs. Otherwise use the selected generic intake, work and construction
+  contracts. Identify the affected relations, selected computational
   dispositions, delegated construction and assessment authority, and upstream
   re-entry conditions. Do not rely on dialogue, commentary, worker memory, or
   folklore as that basis.

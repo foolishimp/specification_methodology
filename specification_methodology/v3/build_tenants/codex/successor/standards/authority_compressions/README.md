@@ -36,10 +36,11 @@ of the application-neutral Traversal Occurrence Profile. It cannot supply
 consumer adoption, subject interpretation, runtime semantics, or operation
 authority.
 
-`../GLOSSARY_GUIDE.md` is a non-deciding semantic locator index. The aggregate
+`../GLOSSARY_GUIDE.md` contains a semantic locator index and its route-resolution
+contract. Located methods retain their own semantic definitions. The aggregate
 compression watches it through separate `index_refs` and `index_digests` fields
 so locator drift makes the aggregate stale without promoting the index to an
-owner of meaning.
+owner of the meanings it locates.
 
 Each compression file carries the watched source path and digest it was
 derived from. The aggregate also carries watched index paths and digests. If a
