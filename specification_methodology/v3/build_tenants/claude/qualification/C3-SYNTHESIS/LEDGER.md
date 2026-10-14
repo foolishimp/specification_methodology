@@ -389,3 +389,14 @@ Executive disposition:
 - The inward merge of `6c2debb` (`6368875`) stays, because it only brings common text in under Development Isolation.
 - `qualification/C3-ITER3/EXPECTATIONS.md` is provisional, bound to the unfrozen `6c2debb`. It will be re-derived against the signed-off commit.
 - Revision 2b continues, since its repairs depend only on the `a7eba66` basis: RV2b, then the reruns of C3S-01 task B and C3S-03.
+
+2026-10-14T01:50Z — Revision 2b closed for this round:
+- RV2b found F1 and F2 closed. Its Medium RV2b-1 and Low RV2b-2 to RV2b-7 were repaired by R2c (`9ff93c8`), and the frames regenerated (`48a0683`; `--check` exits 0; 2,680 links resolve).
+- C6b reran C3S-01 task B and C3S-03 twice each on the revision 2b frames, for USD 0.84 (`cd9ec5e`).
+- AS3 graded the reruns:
+  - occ-24 is now `partial_effect(not_attained)` → `falsified` in both reruns, against `indeterminate` in r1 and r2.
+  - Both task B reruns reopen the out-of-family result and the rows that depend on it.
+  - Task B r4 has no failed required item; r3 still keeps one result closed (B21).
+  - The C3S-03 reruns fail only on recording occ-23's predicate.
+  - Remaining method findings MT-2 (narrowed), MT-7 and MT-8 are minor and held for the next round.
+- The Codex findings F1, F2, F4 and F5 are repaired on this branch, pending cross-family confirmation. F3, the a_c interpretation, waits for iteration 3.
