@@ -22,29 +22,74 @@ owning observation; a local file is no proof that a remote effect did not occur.
 
 ## Ownership and consumers
 
-| Owning locus | Responsibility | Deciding consumers |
-|---|---|---|
-| FOUNDATIONS: commitments | Premises and standing, scoped interpretation, authority/evidence separation | Every family's conditional argument |
-| FOUNDATIONS: result algebra | One result record, core values and conjunction; predicate and original outcome preserved | RF, a_c, work, admission, profiles, release |
-| FOUNDATIONS: workspace and context | Current material state, acquired context, validity and resumption | Library Acquire/Transform; Spec triage; frame acquisition; ticket reuse |
-| FOUNDATIONS: bounded construction | A-to-Z obligations, finite context/attention and conditional configuration | Spec construction, optional baseline, domain controllers |
-| TRANSFORMATION_LIBRARY | Bind, Acquire, Transform, Evaluate, Conjoin, Dispose as reusable responsibilities | Method family use contracts; no compulsory six-stage workflow |
-| REFERENCE_FRAME_METHOD | Frame objects, task sufficiency, evaluation contracts, configuration and diagnostic scope | All selected task frames |
-| AXIOMATIC_CALCULUS | Formal entities and a_c-specific evaluation/refinement mechanics | a_c interpretation and optional profiles |
-| SPEC_METHOD | Intent/Product/Specification/Realisation, tenant binding, triage and re-entry | Product construction and ordinary work entry |
-| DESIGN_MODULE_METHOD | Module contracts, admission and computational realisation | Implementation and integration |
-| IDENTITY_METHOD | Naming, coordinates, immutable basis and permitted identity changes | Source selection, install and release |
-| TICKET_METHOD; RELEASE_METHOD | Concrete work carriers; successor and release boundaries | Work scheduling and promotion decisions |
-| ODD; TRAVERSAL; WORLD_MODEL; UX | Additional domain choices, each with result refinement | Only explicitly adopted domain tasks |
-| STDO_REFERENCE_FRAME_BASELINE | Optional task catalogue and Executive arrangement | This construction's selected coordination; no universal role inventory |
-| Guides and distribution | Writing, discovery and faithful source projections | Humans, ordinary skills and cold task activations |
+The method has three kinds of material: shared deciding contracts, domain
+bindings with additional policies, and source-bound views for actual use.
+These are ownership relations, not three compulsory stages or a file-count
+constraint. A domain application uses the shared contract directly and supplies
+its own predicate, evidence rule, grants and exceptions. No additional
+admission record or generic validation pass is introduced.
 
-Premises constrain a rule but do not choose every policy. Each material family
-states its premises, conditional consequences and separately owned choices.
-Consumers bind the shared contracts at the deciding operation. A cross-reference
-without this use relation is insufficient. Existing domain wording is retained
-where it remains its unique owner; common result/context contracts are removed
-from competing owners or made explicit refinements.
+| Pillar contribution | Deciding owner | Domain binding and consumer |
+|---|---|---|
+| Purpose, requirements and independent realisation | Spec Method owns WHAT, tenant HOW and authority chain; Foundations F1 separates chosen purpose from capacity | Product triage and each tenant's concrete human, machine or mixed execution binding |
+| Objects, identity, state and material boundaries | Identity Method; Foundations current state; World Model's explicitly scoped Markov claims | Source selection, observation, recovery and entity-cut qualification |
+| Typed functional construction | Library Contract application and composition; Design's explicit functional and domain policies | Design admission, module seams, constrained effects and integration |
+| Outcome-driven transition and control | Foundations result and total handling; ODD's four functions and runtime authority | Published program selection, execution, continuation and truthful yield |
+| Meaning and information fidelity | Library Faithful projection | Public views, catalogs, frame projections and a_c interpretation |
+| Finite context and attention | Foundations workspace/context and configuration; Reference Frame domain definitions | Sufficient task acquisition and declared actor configurations |
+| Concrete computation and cost | Spec tenant binding and domain computational contracts | Human/machine effects, resource assumptions, cost boundaries and justified plan selection |
+| Evidence, correction and authority | Foundations result/conjunction/currentness; existing Frame authority definitions | Evaluation, acceptance, change propagation and release |
+| Recoverable logic and constraint surfaces | Library Constraint surface; AXIOMATIC_CALCULUS entities and interpretation laws | Explicit dependencies, permissible choices, unresolved conditions and source-first fidelity tests |
+
+F1–F6 distinguish adopted premises. They are not renamed versions of these nine
+contributions, nor proofs of arbitrary policy. Each application states its
+additional domain choices. Existing result/effect semantics remain the core
+regression boundary while duplicate decisions move to the library.
+
+## Contract reductions
+
+| Shared decision | Consumer changes | Conditions retained at domain owners |
+|---|---|---|
+| Current binding, material dependency closure and preservation | Design admission, Spec enclosing-relation admission, ODD evidence/runtime admission use Contract application | Complete-transition semantic commit; Design declaration and co-evolution rules; ODD continuation ownership and replay |
+| Source-to-view fidelity | Design projections, ODD publication, frame views, World Model projections and a_c interpretation use Faithful projection | Authoritative source and publication selectors, domain completeness, approximation policy, invalidators |
+| Currentness and re-entry | Product triage, carrier reuse, design reconstruction and profile continuation apply Foundations workspace/context | Frozen-subject selection, causal-event requirements, release immutability, actual concurrency protocols |
+| Evaluation and disposition | Use one result record and exact predicate; remove repeated generic tests from consumer checklists | Original reason-sensitive domain outcomes, declared coverage, independent assessment, reserved authority |
+
+The reconstruction removes a duplicate deciding body only after every unique
+condition has a successor owner and the consuming operation binds it. Keep
+useful source anchors as domain entry points where they still carry a complete
+binding; a bare route or new introductory table does not conserve a clause.
+Application checklists select owners instead of maintaining copies of their
+rules. A unique policy may remain unchanged when no shared contract expresses
+its distinction. The full predecessor map retains all obligations and authorised
+dispositions; no obligation is removed to achieve a text-size target.
+
+## Qualification design
+
+The iteration 3 evidence boundary is `qualification/C3/iteration-3/`.
+Historical C3 and synthesis artifacts retain their original subjects. Current
+entry points select the current inventory and interpretation explicitly.
+
+Qualification combines source-first challenge cases with mechanical
+reproduction. Source cases include legal distinct implementations, omitted
+conditions, unsupported source projections, valid failures beside uncovered
+coverage, stale basis, uncertain effects, bounded Markov claims and domain
+exceptions. Fixed oracles are specified before model execution. A finite model
+can check only its declared interpretation; it cannot establish source
+completeness or authenticate its own premises. Model/source disagreements are
+retained and repaired at their owning layer.
+
+Compare deciding operations with iteration 2 and the applicable rc.2 source:
+which independently interpreted rules remain, which have become one owner,
+which domain choices survive, and what a cold actor actually acquires. Report
+raw bytes, measured execution and comparison limits separately. Neither a
+smaller file nor checker success proves whole-method improvement.
+
+Ordinary entry must locate sufficient current law and material inputs through
+its actual supported basis. Source-only trials do not claim an installed v3
+release. A final independent source review covers the changed owners and
+bindings; per-member acceptance and the unselected categorical work item remain
+separate until their conditions are met.
 
 ## Source contributions
 

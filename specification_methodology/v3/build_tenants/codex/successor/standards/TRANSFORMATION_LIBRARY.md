@@ -1,22 +1,23 @@
 # Transformation Library
 
-This member owns the shared transformation contract vocabulary for the
+This member owns the shared transformation contracts for the
 purposeful, specification-governed construction domain declared by
 [Foundations](FOUNDATIONS.md#foundational-commitments). Bind, Acquire, Transform,
 Evaluate, Conjoin and Dispose are responsibilities that can be composed or
 co-located, not compulsory stages, actors or runtime APIs.
 
-The contracts below are conditional on selected foundational premises and
-instance choices. Particular methods retain ownership of their concrete types,
-result refinements, applicability, adoption, admission and operation grants.
-A contract definition does not supersede an owner determination or authorize
-its use.
+The contracts below decide recurring application, projection and composition
+questions. They are conditional on the selected foundational premises and
+instance choices. Particular methods bind concrete types, predicates, result
+refinements, applicability, adoption and grants. Those bindings apply the
+shared law; they do not restate it as a competing determination. A contract
+definition grants no operation or decision authority.
 
 Its shared contract vocabulary resolves in bounded context
 `urn:stdo:bounded-context:transformation-library`, owned by the STDO Specification
 Methodology Product authority. The basis is this exact member digest and its
 cited source-owned contracts under the activation's governing cut; its scope
-is the generic contract vocabulary, conditional specialization arguments and
+is the shared deciding contracts, conditional specialization arguments and
 the explicitly imported authority vocabulary.
 Named domain examples retain their source context; their role labels, types and
 outcome enums are not local definitions or a shared library contract. A linked family correspondence
@@ -92,6 +93,119 @@ already permitted actions. Bind supplies their current instance coordinates.
 A single function can discharge several responsibilities. Every result uses the [core algebra](FOUNDATIONS.md#result-algebra); domain
 refinements and independent assessment conditions stay with their owners.
 
+## Contract application
+
+A contract bounds an operation by its input and output domains, intended
+predicate, governing constraints, material relations, evidence rule and actual
+grants. Its binding names their owners and current basis. These are semantic
+coordinates, not a required record format. An existing design, frame, function
+or work carrier can supply them; this law requires no additional carrier or
+validation stage.
+
+The application predicate is: **this proposed operation or reliance is
+admissible under this bound contract**. It differs from the predicate that the
+operation achieves its intended outcome. Application uses the following
+conditions once at the responsible consumer:
+
+1. **Binding.** Identify the actual subject, intended predicate, governing
+   interpretation, applicable policy and source/current-state coordinates.
+   Names or equal bytes alone do not supply identity, standing or applicability.
+2. **Support.** Account for the conditions and material dependencies capable
+   of changing this determination. Inspect through an affected seam until its
+   governing obligations are covered or evidence establishes independence of
+   the far side. A task boundary, partial listing or absence of observed failure
+   does not establish that independence. The domain selects its completeness
+   and sufficiency criteria; the actor does not silently narrow them.
+3. **Preservation.** Show that required input, output and cross-boundary
+   relations hold under the declared compatibility or translation. Retain
+   identity, meaning, lifecycle, producer/evidence coordinates, constraints,
+   authority and effect distinctions where material. A difference may be
+   lawful; it needs the instance's admitted relation. Neither universal field
+   equality nor an invented translation decides compatibility.
+4. **Authority.** Establish the actual operation or decision grant for the
+   selected effect. Keep the owners of meaning, evidence, operation and
+   disposition distinct. Shared code, a source reference or a satisfied
+   judgment supplies no missing grant. Required independent assessment retains
+   its owning conditions.
+5. **Currentness.** Apply [workspace and context](FOUNDATIONS.md#workspace-and-context)
+   to evidence reuse, observations, concurrency and uncertain effects. A
+   supported changed dependency reopens the affected determination; an
+   unsupported currentness claim stays unresolved. A previously satisfied
+   check can be reused on supported unchanged premises; this law does not
+   require rechecking fixed graphs or every unchanged relation on every event.
+6. **Result.** Apply the [core result and conjunction law](FOUNDATIONS.md#result-algebra)
+   on the actual predicates. Retain known failures, absent required coverage,
+   scope/basis diagnoses, original domain outcomes, performance and effects.
+   Unknown applicability is not non-applicability. A supported failure does
+   not disappear because another required condition is undecided.
+
+A consumer binds these conditions to its decision and domain exceptions rather
+than copying the generic conditions into a second rule. Its dependency and
+authority arguments are part of the existing decision evidence. Conditional
+exceptions must be named at their owning policy; a generic application cannot
+invent one. A library helper can implement several consumers, but their
+subjects, required evidence and powers remain separate.
+
+These conditions constrain what counts as admissible; they do not give a
+universal algorithm for deciding arbitrary predicates. Insufficient support
+returns the applicable core uncertainty or scope/basis result. A known violated
+condition is retained with its evidence. A supported admissibility result
+permits only the already-granted operation; it predicts neither success nor
+termination. The control contract handles its observed outcome separately.
+
+### Constraint surface
+
+For a current subject and basis, the bound contract describes the work allowed
+by its constraints and grants. It also exposes obligations still unresolved.
+This is the task's constraint surface. It distinguishes the permitted choices
+inside the contract from the choices reserved to an owner. A missing condition
+is not freedom; a condition proved irrelevant to this task need not be loaded
+again while that proof remains applicable.
+
+The surface can be represented as prose, typed relations, predicates, a_c or a
+faithful task view. Dependencies can form a graph; they need not form a tree or
+prescribe one execution order. A model must retain the distinction between
+established facts, assumed premises, discretionary choices and unknowns. Its
+constraint satisfaction result does not authenticate its observations or
+appoint an actor. [a_c interpretation](AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+binds the source-to-model relation and its independent evidence.
+
+Two different implementations may both lie within this surface. Selection
+between them follows the declared outcome, cost and owner criteria, not a
+hidden requirement for the author's preferred implementation. A worker acquires
+the sufficient constraints **and the actual material subject**; the abstract
+surface alone is not a complete activation.
+
+### Faithful projection
+
+A projection or interpretation applies Contract application to a declared
+source-to-consumer relation. Its binding states the authoritative source and
+selector, target interpretation, consumer task, required distinctions, admitted
+loss or approximation, and invalidation conditions. Source and target retain
+their own identities. The domain owns additional publication and adoption
+conditions.
+
+For an exact projection, a consumer must recover the same material
+determinations from the view and the owning source. Approximation requires a
+declared adequacy relation and evidence of its end-to-end bound; local
+tolerances alone do not compose. Lost authority, a weakened condition or an
+unknown promoted to permission is a fidelity defect, not compression.
+
+The binding determines whether a full reproduction, a narrower sufficient view
+or an available authentic reference is required. Omitted task-irrelevant
+material can remain at its owner. Material omissions, stale sources or
+unavailable references prevent the corresponding reliance; they do not require
+copying every source body into every event. A view has no independent power to
+change its source meaning. Its currentness is established from the selected
+source and dependency state, not from its label or generation timestamp alone.
+
+Check fidelity against independently specified source decisions: at least the
+material permissible, prohibited and unresolved distinctions for the selected
+claim. A self-consistent model, matching schema, checksum or generated diff
+checks a different relation. Failure re-enters the first owning defect: source
+ambiguity, interpretation, projection, producer or consumer. It does not license
+changing the source to agree with its view.
+
 ## Work/recovery specialization
 
 This chain specializes the generic contract for interrupted, purposeful work.
@@ -137,8 +251,9 @@ The [design admission consumer](DESIGN_MODULE_METHOD.md#admission-contract-use)
 binds this contract to its transition relation and uses the consequences to
 distinguish valid support from a shape-correct candidate lacking material basis
 or authority. Its predicate, result refinement, commit-unit decomposition and
-permitted direct/composite/nested forms remain domain policy. This argument
-neither derives those choices nor creates an additional validation pass.
+permitted direct/composite/nested forms remain domain policy. This application neither derives those choices nor creates an additional
+validation pass. [Contract application](#contract-application) supplies the
+shared decision; the design consumer binds its domain admission obligations.
 
 ## Bind
 
@@ -215,28 +330,32 @@ are applied once at that owner; this library does not redefine them.
 
 ## Composition law
 
-[Transformation admission](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
-and [bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
-own design composition; [Foundations](FOUNDATIONS.md#result-conjunction) owns result conjunction;
-[Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction) binds its
-application to declared frames, and [the calculus](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
-owns its typed traversal composition. The account below preserves each owning
-contract's restrictions; an explicit translation is lawful only where that
-contract admits it.
+For T: X → Y and S: Y → Z, apply [Contract application](#contract-application)
+to the declared outer predicate and every material join. The binding specifies
+which outputs satisfy which preconditions, what each step may effect, and the
+relations the composite must preserve. Local correctness is insufficient when
+the join is unsupported. Distinct bases may compose under an admitted coherent
+topology; distinct authorities remain distinct.
 
-For a selected construction handoff T: X -> Y and S: Y -> Z, the applicable
-owner determines admission and the conserved meaning, identity, basis,
-lifecycle, effects and authorities. A coherent composite basis can join distinct
-bases under its declared topology; distinct authorities remain distinct and
-conserved. Neither matching every field nor translating every difference is a
-universal precondition. The outer contract determines required invariants. A
-shared helper may serve several contracts without changing their owners.
-Where independent judgment is required, author self-assessment does not replace it.
+[Design UP-016](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
+and [UP-017](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+bind design declarations; [Spec UP-021](SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021)
+binds complete-transition admission and its semantic commit boundary.
+[Frame Method](REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction) binds
+frame relations; [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition)
+binds typed calculus paths. Their extra policies remain part of the composite
+contract, rather than becoming generic rules for every composition.
 
-Identity and associative-composition claims follow their declared owner and
-domain laws. For an algorithmic/categorical model, those laws and their proof
-are separately required; this explanatory family establishes neither a new
-composition obligation nor a universal category theorem for arbitrary software.
+Combining evaluation results applies [result conjunction](FOUNDATIONS.md#result-conjunction)
+or the explicitly declared alternative operator. Combining effects preserves
+their actual boundary and observations. Regrouping, reordering and concurrent
+execution are different claims: associativity alone licenses neither reordered
+effects nor parallel execution. The selected computational binding supplies
+any additional independence or effect equations it relies on.
+
+For a categorical claim, declare the objects, arrows, equality, identities and
+composition and discharge the laws at that domain. A contract-preserving
+construction is not automatically a category, a functor or a proof of either.
 
 ## Recovery law
 

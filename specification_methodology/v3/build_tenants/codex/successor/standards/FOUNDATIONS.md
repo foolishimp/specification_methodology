@@ -8,9 +8,11 @@ contract operations; particular methods bind their types, predicates, refinement
 of the result algebra and authority. Neither adopted premises nor an entailment argument
 appoints an actor or supplies an operation grant.
 
-Particular methods own their deciding clauses. Their conditional specialization
-does not assign all software or calculus definitions a common purpose,
-signature or workflow.
+The core owns the shared decisions about results, current state, bounded work
+and contract application. Particular methods supply domain predicates, types,
+policies and authority bindings. They apply those decisions without maintaining
+parallel rules. A specialization does not assign unrelated software or calculus
+definitions a common purpose, signature or workflow.
 
 ## Premises and standing
 
@@ -98,8 +100,11 @@ owns that calculus-specific obligation. In reference-frame evaluation,
 [RF-007](REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation)
 owns separation of semantics, evidence and verdict. These examples supply no
 universal authority for interpretations outside their declared domains. The
-governing contract determines admissible loss, abstraction and which consumer
-distinctions must remain recoverable; this account supplies no additional loss law.
+governing contract selects admissible loss, abstraction and the consumer
+distinctions that must remain recoverable. The library's
+[faithful projection contract](TRANSFORMATION_LIBRARY.md#faithful-projection)
+decides whether an interpretation or projection supplies that selected
+relation. a_c and reference frames bind its particular subjects and evidence.
 
 ## Purpose and interfaces
 
@@ -172,8 +177,9 @@ handoff conserves the material outer contract and original producer coordinates.
 It retains known failures and their citations, required uncovered coverage and
 uncertainty. Local success cannot erase a failed or missing material relation.
 
-[Bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
-owns the design obligation. Conservation concerns recoverable meaning, not copying bodies. A reference is
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) owns the
+shared conservation decision. [Bounded-frame conservation](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
+binds its design declaration obligations. Conservation concerns recoverable meaning, not copying bodies. A reference is
 sufficient when its authentic owner, exact selector, availability and consumer
 resolution preserve the required relation. A digest of unavailable material
 does not supply context. Shared machinery may serve several instances while
@@ -290,8 +296,10 @@ source of authority. Independent evaluation may require overlapping context at
 a different capability or evidence altitude.
 
 Product acceptance, universal mathematical truth, operational efficiency and
-release each need their own evidence and authority. Foundational explanation
-does not transfer authority from a named detailed method owner.
+release each need their own evidence and authority. Shared law supplies deciding
+obligations within its declared scope; a domain binding supplies its particular
+predicate and policy. Neither supplies an actor with authority reserved to a
+named owner.
 
 ## Result algebra
 
