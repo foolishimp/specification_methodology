@@ -3,7 +3,7 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T15:10:55Z
 **Addresses**: the Codex tenant candidate at `3aaa2f2cf0d6f24a734a33c258373a58feceaf87` on `tenant/codex/c3-iteration-3`, the frozen package returned under `EC-CODEX-I3-02` as `candidate_ready`; its common input `C3-I3-R2-01` at `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`
-**Status**: Expectations, part A, recorded before the subject was opened. Part B, an independent oracle from the common specification, follows before any reviewer opens the subject.
+**Status**: Expectations parts A and B recorded before the subject was opened. Review in progress.
 
 ## Authority and independence
 
@@ -45,9 +45,24 @@ The [critical review of the frozen iteration 2 candidate](20261013T235754Z_REVIE
 - **M6, identity and version.** Successor identity does not depend on predecessor bytes, or the dependence is stated as open. The version is not asserted before the owner's decision.
 - **M7, premises and tiers.** The premises are traced by name where they are used. No choice is presented as derived. No mandatory member depends on an optional profile.
 
-## Expectations, part B
+## Expectations, part B: independent oracle
 
-To be added from the independent oracle before the subject is opened.
+[ORACLE.md](assets/20261014T151055Z_codex_i3_review/ORACLE.md) was written from the common specification at `355aa86` and the installed predecessor. Its author opened no candidate, no comment and no tenant ticket.
+
+| Group | Expectations |
+|---|---|
+| a, pillars | 11 |
+| b, the successor relationships, including reduction | 12 |
+| c, constraint surfaces and the a_c interpretation | 10 |
+| d, ownership and the result algebra | 11 |
+| e, transitions, recovery and acquisition | 8 |
+| f, build-tenant binding | 5 |
+| g, categorical demonstration | 6 |
+| h, frontier and dispositions | 11 |
+| i, acceptance, actual use and independence | 12 |
+| j, conformance rows | 55 |
+
+It also holds 12 negative expectations and records 12 ambiguities in the specification. Where the specification is ambiguous, findings name the reading they rely on.
 
 ## Findings
 
