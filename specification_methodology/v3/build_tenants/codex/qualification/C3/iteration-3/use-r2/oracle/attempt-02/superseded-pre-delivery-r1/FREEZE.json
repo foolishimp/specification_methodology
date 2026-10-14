@@ -1,0 +1,49 @@
+{
+  "schema": "stdo.matched-native-use.freeze.v1",
+  "suite_id": "I3-R2-ORACLE-01-attempt-02",
+  "frozen_utc": "2026-10-14T10:50:24.259436+00:00",
+  "began_utc": "2026-10-14T10:38:43Z",
+  "elapsed_wall_seconds": 701.259,
+  "files": [
+    {
+      "file": "ACTIVATION.json",
+      "bytes": 4729,
+      "sha256": "e37c7f56ae993eef8e49029e6b475eb287f5602aeaa8c0f7b8f85af61be3d77e"
+    },
+    {
+      "file": "ACQUISITION.json",
+      "bytes": 15560,
+      "sha256": "a5d16442d320cc4d6317ff57346d26128436f705f64d758dc77156934139e113"
+    },
+    {
+      "file": "ACTOR_TASKS.json",
+      "bytes": 35093,
+      "sha256": "3df4b460bb741bb938a623a8e200f8f8e69c15bdf6cb4bc929c07e782e61de50"
+    },
+    {
+      "file": "ORACLE.json",
+      "bytes": 54369,
+      "sha256": "6a1a381f2968d4daf9344c54ea8b8e038a1860a26a0265b3359ca6e0af53eda0"
+    },
+    {
+      "file": "SELF_CHECK.json",
+      "bytes": 1283,
+      "sha256": "c07e8fddfce8c0723634ff8e7159d6ccbb3cf73ef668b5fa63910f101c574a81"
+    }
+  ],
+  "actor_delivery": [
+    "ACTOR_TASKS.json"
+  ],
+  "withheld_before_actor_freeze": [
+    "ORACLE.json",
+    "ACTIVATION.json",
+    "ACQUISITION.json",
+    "SELF_CHECK.json"
+  ],
+  "host_context_bytes": null,
+  "active_context_upper_bound_bytes": null,
+  "host_spend": null,
+  "measurement_limits": "Host context, retained-context size and spend were not instrumented. Requested source-view bytes are recorded separately from unknown actual delivered/retained bytes. No context-fit or zero-cost claim.",
+  "next_boundary": "Executive may arrange later independently bound actors. This Author does not activate them, assess any candidate or confer member acceptance.",
+  "post_freeze_rule": "Do not edit this suite after actor exposure. Any material correction requires a distinct suite subject and declared fresh trial."
+}

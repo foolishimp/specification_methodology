@@ -1,0 +1,80 @@
+{
+  "valid": true,
+  "draft_valid": true,
+  "failures": [],
+  "row_count": 691,
+  "dispositions": {
+    "conserved": 639,
+    "not applicable": 1,
+    "superseded": 51
+  },
+  "draft_relations_accounted": 47,
+  "historical_changes": 34,
+  "carrying_loci": 732,
+  "source_members": 71,
+  "frozen": false,
+  "semantic_conservation": "indeterminate",
+  "owner_acceptance": "not_established",
+  "kind": "stdo.conservation-mechanical-check",
+  "map_sha256": "3ff7d2c3a23949f490e813ad183a3178f9e47ca2a5c1950d67965fe5cbdb5a72",
+  "semantic_sha256": "50bfa49184bf0614ee5550401acfd501e99103935cb63f6ed347cfe4f850298e",
+  "port_account_sha256": "64ac45b8363f8d01f1eec1cce59447b96b2cb7201de1c4e56bf2e2512fb330ff",
+  "negative_controls": [
+    {
+      "name": "duplicate stable row ID",
+      "expected_code": "row_identity",
+      "detected": true
+    },
+    {
+      "name": "missing secondary carrying anchor",
+      "expected_code": "carrying_locus",
+      "detected": true
+    },
+    {
+      "name": "supersession without its relation",
+      "expected_code": "replacement_relation",
+      "detected": true
+    },
+    {
+      "name": "author proposal promoted without owner decision",
+      "expected_code": "acceptance",
+      "detected": true
+    },
+    {
+      "name": "historical disposition change omitted",
+      "expected_code": "history",
+      "detected": true
+    },
+    {
+      "name": "unknown shared binding",
+      "expected_code": "binding_ref",
+      "detected": true
+    },
+    {
+      "name": "assessed row body digest changed",
+      "expected_code": "comparison_drift",
+      "detected": true
+    },
+    {
+      "name": "historical fact rewritten",
+      "expected_code": "historical_fact",
+      "detected": true
+    },
+    {
+      "name": "frontier semantic drift with unchanged IDs",
+      "expected_code": "frontier",
+      "detected": true
+    },
+    {
+      "name": "section claim excludes descendant heading",
+      "expected_code": "section_granularity",
+      "detected": true
+    }
+  ],
+  "elapsed_seconds": 1.149,
+  "limits": [
+    "Coordinate, shape and preservation checks do not prove semantic conservation.",
+    "Pending owner decisions and independent row/source/port assessments remain open.",
+    "Draft validity permits pending frozen pins; --require-frozen checks current-source binding separately."
+  ]
+}
