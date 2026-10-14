@@ -11,6 +11,7 @@ import tempfile
 HERE = Path(__file__).resolve().parent
 USE = HERE.parent
 TENANT = USE.parents[3]
+REPO = Path(subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=TENANT, text=True).strip())
 PREFIX = 'specification_methodology/v3/build_tenants/codex/successor/'
 PREVIOUS = '3ad1fca31dc93ba0847bbbbf308312a554daa1f6'
 MANIFEST = '3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782'
@@ -22,14 +23,14 @@ def sha(data):
 
 
 def git_bytes(commit, path):
-    return subprocess.check_output(['git', 'show', commit + ':' + path], cwd=TENANT)
+    return subprocess.check_output(['git', 'show', commit + ':' + path], cwd=REPO)
 
 
 def git_members(commit):
-    resolved = subprocess.check_output(['git', 'rev-parse', commit + '^{commit}'], cwd=TENANT, text=True).strip()
+    resolved = subprocess.check_output(['git', 'rev-parse', commit + '^{commit}'], cwd=REPO, text=True).strip()
     if resolved != commit:
         raise ValueError('Require full immutable source commit')
-    names = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', commit, '--', PREFIX], cwd=TENANT, text=True).splitlines()
+    names = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', commit, '--', PREFIX], cwd=REPO, text=True).splitlines()
     if not names:
         raise ValueError('No package members at selected source')
     return {p[len(PREFIX):]: git_bytes(commit, p) for p in names}
@@ -43,6 +44,8 @@ def installed_members(root):
     rows = [{'path': 'standards/' + p['path'], 'sha256': p['sha256']} for p in manifest['standards']['members']]
     rows += [{'path': 'plugins/spec/' + p['path'], 'sha256': p['sha256']} for p in manifest['auxiliary']['plugin']['members']]
     rows.append(manifest['auxiliary']['license'])
+    release_note = manifest['auxiliary']['release_note']
+    rows.append({'path': release_note['installed_path'], 'sha256': release_note['sha256']})
     result = {}
     for member in rows:
         value = (root / member['path']).read_bytes()

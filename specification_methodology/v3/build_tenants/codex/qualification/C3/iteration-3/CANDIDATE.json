@@ -2,11 +2,11 @@
   "kind": "stdo.documentary-candidate",
   "product": "STDO Specification Methodology",
   "target_version": "3.0.0",
-  "standing": "Codex iteration 3 author candidate; independent member and owner acceptance remain open.",
-  "source_input_commit": "cae6fe366395148558efb84c85501b768f6593fc",
+  "standing": "Codex I3 source candidate; independent member acceptance and installed qualification remain open.",
+  "source_input_commit": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
   "builder_basis": "stdo://releases/v2.5.1-rc.2/",
   "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
-  "candidate_body_input_commit": "b99ca785b05e4f818b1e012c20f38228be10e46d",
+  "candidate_body_input_commit": "3aaa2f2cf0d6f24a734a33c258373a58feceaf87",
   "members": [
     {
       "path": "LICENSE",
@@ -17,9 +17,72 @@
     },
     {
       "path": "README.md",
-      "sha256": "56bacbdfd8e2d2667046d41e6f23b13624eb61caaf55bfc9736430485753a6e9",
-      "bytes": 843,
+      "sha256": "feb368ba925f05b6f6c5df27eb8b1b44ca4b34bfef43b8909adf7a73f97c4578",
+      "bytes": 1299,
       "role": "package entry"
+    },
+    {
+      "path": "interpretation/FRAMES.md",
+      "sha256": "c610c4d305a95508ae4de66af0afc9e4e17b576125dcc7453616f36e1b0d9a7f",
+      "bytes": 201715,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/MAPPING.json",
+      "sha256": "a04e0da303eee045342b866cc72ede4f4839b875597ddfebbef77da571a32413",
+      "bytes": 567227,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/README.md",
+      "sha256": "f28a35c24d13f4846ab31a1eb4e8f15a3a273b36e7bf3e9678d31293a506c2e8",
+      "bytes": 2907,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/SIGNATURE.md",
+      "sha256": "2943cd359f4468cbbc7d61b4a10675ce7dc1e9e75697054e27ccc7a9909a7525",
+      "bytes": 3740,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/SOURCE_INVENTORY.json",
+      "sha256": "380f03780c0763ee7456c1daaa9df5a71713fb5bf2104c734e68ab9f31b36f49",
+      "bytes": 16106,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/bindings.py",
+      "sha256": "18b1cafbe1262866fa251dd23405a5a501ac9fa08d7249d4e841240ab1838244",
+      "bytes": 2069,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/map.json",
+      "sha256": "0c04d8239730f3f77ab46fab38d96b5a0bb6171ee639a1840d2dacbc089f0dcc",
+      "bytes": 8719086,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/program.json",
+      "sha256": "a94b6c762755f199b3a62848a885ce63908d174363c53c43dcc6063200ca3ae7",
+      "bytes": 8263040,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
+    },
+    {
+      "path": "interpretation/source-account.json",
+      "sha256": "9975f44bf3e7bc1768278405dfb609411ea3496eb8cc0e93ec9d4e1b85aeec5f",
+      "bytes": 4286852,
+      "role": "source-package interpretation",
+      "installation_mapping": "not selected by this source construction"
     },
     {
       "path": "plugins/spec/.claude-plugin/plugin.json",
@@ -51,8 +114,8 @@
     },
     {
       "path": "plugins/spec/references/GETTING_STARTED.md",
-      "sha256": "a04a480cdf42148c901af86b70587cd2c61f81dcdaac886ce59e2f2d2570ed81",
-      "bytes": 27411,
+      "sha256": "adff97ad2ad7544d99f87eed79819b98bb7a53a4c13495a873b1652e36d50804",
+      "bytes": 27422,
       "role": "Product member",
       "expected_installed_path": "plugins/spec/references/GETTING_STARTED.md"
     },
@@ -128,8 +191,8 @@
     },
     {
       "path": "plugins/spec/skills/stdo-work/SKILL.md",
-      "sha256": "22adf103a1c27d7f617eb9bb7f26574668d52124dda4c69879e20405cea82e10",
-      "bytes": 8052,
+      "sha256": "bb7f70c021a2fb3c196342ad423c0b30bc27c38e1959e9fc4317abf381b26958",
+      "bytes": 8555,
       "role": "Product member",
       "expected_installed_path": "plugins/spec/skills/stdo-work/SKILL.md"
     },
@@ -142,22 +205,22 @@
     },
     {
       "path": "standards/AXIOMATIC_CALCULUS.md",
-      "sha256": "4134002e63d76424af0b4b8158fd7209ca0e3ec3216ff578b3e7482013d32fda",
-      "bytes": 45871,
+      "sha256": "da2778fd029b6aa204d116d8451e18aa2af49ad5beda3663ddfe4ca909507df0",
+      "bytes": 53136,
       "role": "Product member",
       "expected_installed_path": "standards/AXIOMATIC_CALCULUS.md"
     },
     {
       "path": "standards/DESIGN_MODULE_METHOD.md",
-      "sha256": "10cbf1836846fff199a1c363d3fc64acfdd8f6fc78f6b96b4628a7a2885bc0f0",
-      "bytes": 114785,
+      "sha256": "721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24",
+      "bytes": 120657,
       "role": "Product member",
       "expected_installed_path": "standards/DESIGN_MODULE_METHOD.md"
     },
     {
       "path": "standards/FOUNDATIONS.md",
-      "sha256": "07775e1bfc5b3c3f9bbebe161e3e5693b0e8ae5080304b6a615d3b47a9e23fea",
-      "bytes": 45416,
+      "sha256": "aaaf14e33b81c884079d5e7e2d6db5865593fa21b087c132665b765205769189",
+      "bytes": 45675,
       "role": "Product member",
       "expected_installed_path": "standards/FOUNDATIONS.md"
     },
@@ -177,8 +240,8 @@
     },
     {
       "path": "standards/ODD_METHOD.md",
-      "sha256": "57a6da7f6f5696eb354947a799afc222050cdd0d13005f913577f5f6580b5998",
-      "bytes": 78871,
+      "sha256": "2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268",
+      "bytes": 86589,
       "role": "Product member",
       "expected_installed_path": "standards/ODD_METHOD.md"
     },
@@ -191,71 +254,71 @@
     },
     {
       "path": "standards/README.md",
-      "sha256": "10a7a285feb482c5e963d647ae7e032b76956afdcc2a38dec772fe7bd15b3103",
-      "bytes": 7205,
+      "sha256": "aea94857d4c17842a67e389ece75288a53d0616cd59de88942ef097e06d12d0e",
+      "bytes": 7785,
       "role": "Product member",
       "expected_installed_path": "standards/README.md"
     },
     {
       "path": "standards/REFERENCE_FRAME_METHOD.md",
-      "sha256": "34b4725df474fd3b2608b522370a19211bb2f47d37db6fec7bc959cba4c57ca2",
-      "bytes": 59333,
+      "sha256": "db49e65e30739c174331f92447be26b64f74e86a553de0076557e0fa55d9b2f1",
+      "bytes": 65889,
       "role": "Product member",
       "expected_installed_path": "standards/REFERENCE_FRAME_METHOD.md"
     },
     {
       "path": "standards/RELEASE_METHOD.md",
-      "sha256": "b12ccf45da4baa1038081e6c66a2b8ade0c4e19cfc9bfde36f07708468cd5062",
-      "bytes": 28774,
+      "sha256": "d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89",
+      "bytes": 36113,
       "role": "Product member",
       "expected_installed_path": "standards/RELEASE_METHOD.md"
     },
     {
       "path": "standards/SPEC_METHOD.md",
-      "sha256": "7478c7ed34672b0bc4ce8bbf70866ef85ed3b6edbb67196ebfb7d7be1c0c5529",
-      "bytes": 164444,
+      "sha256": "0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0",
+      "bytes": 184601,
       "role": "Product member",
       "expected_installed_path": "standards/SPEC_METHOD.md"
     },
     {
       "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
-      "sha256": "eae3b37f353fb781a22aca47255b395f4e027793598c558bea88ac4309b61230",
-      "bytes": 133160,
+      "sha256": "4b6b923a18527efca339496e8e1ae56e61786237b72cd3e51d8594efa6b18b1d",
+      "bytes": 138487,
       "role": "Product member",
       "expected_installed_path": "standards/STDO_REFERENCE_FRAME_BASELINE.md"
     },
     {
       "path": "standards/TICKET_METHOD.md",
-      "sha256": "baa5e557d06c2a1a6ac09b6ca53a2d954125e0a9baa82427920c28346c720646",
-      "bytes": 63262,
+      "sha256": "d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d",
+      "bytes": 71236,
       "role": "Product member",
       "expected_installed_path": "standards/TICKET_METHOD.md"
     },
     {
       "path": "standards/TRANSFORMATION_LIBRARY.md",
-      "sha256": "65a1dd7f6f360b5bed1b8cd96496a9be02f0250dfd127f54b95e266833eb283c",
-      "bytes": 27870,
+      "sha256": "596711d58bea2812fb2500630a1c803fa85939486c1a924dae3bb44a0783af09",
+      "bytes": 28081,
       "role": "Product member",
       "expected_installed_path": "standards/TRANSFORMATION_LIBRARY.md"
     },
     {
       "path": "standards/TRAVERSAL_OCCURRENCE_PROFILE.md",
-      "sha256": "ef5ded579753ac6ecf58f017faa04dcaf083d9773e5804becd2b53b94018b234",
-      "bytes": 77517,
+      "sha256": "94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a",
+      "bytes": 80238,
       "role": "Product member",
       "expected_installed_path": "standards/TRAVERSAL_OCCURRENCE_PROFILE.md"
     },
     {
       "path": "standards/UX_METHOD.md",
-      "sha256": "1aaa7aa4cb0dff936380b966681ebf9fd8dc7e9bb55b6a53feba8d45b9448711",
-      "bytes": 33342,
+      "sha256": "495d279bee2689ee8c8306e81741f385ff0df3ed231f31ad6bd208423a7b7ae4",
+      "bytes": 34615,
       "role": "Product member",
       "expected_installed_path": "standards/UX_METHOD.md"
     },
     {
       "path": "standards/WORLD_MODEL_METHOD.md",
-      "sha256": "462b4f8bb586a4ff7b6877c7380b77408fa126fc5b15f5c2420f70db91ee8680",
-      "bytes": 58555,
+      "sha256": "31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6",
+      "bytes": 60471,
       "role": "Product member",
       "expected_installed_path": "standards/WORLD_MODEL_METHOD.md"
     },
@@ -275,106 +338,106 @@
     },
     {
       "path": "standards/authority_compressions/axiomatic_calculus.compressed.md",
-      "sha256": "100a2658467721b898230ddc82c5f67e3e31fca7becbe525cc74cd05bf18f955",
-      "bytes": 12226,
+      "sha256": "401942563c7f48aa48dcde78caa65ec61f86aa0a43666be7e3648e5953ff5806",
+      "bytes": 12568,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/axiomatic_calculus.compressed.md"
     },
     {
       "path": "standards/authority_compressions/design_module_method.compressed.md",
-      "sha256": "3b8ec7e77676f6ace3cde06a4b53d530a051317f5001205befceb8b134dc3449",
-      "bytes": 22508,
+      "sha256": "2001759581059e5144ca9d6821ebddba6d1a1ac3620ae3054e40e266449c7670",
+      "bytes": 22714,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/design_module_method.compressed.md"
     },
     {
       "path": "standards/authority_compressions/odd_method.compressed.md",
-      "sha256": "60c300291acf53b206e3f467e901bdd285c9f4b00865a2607e25614c7b5d0265",
-      "bytes": 6425,
+      "sha256": "73576e4019a833f0c1b5601ca3014b0bd20f904c12fe5b31e63080cdb0fc9afe",
+      "bytes": 6860,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/odd_method.compressed.md"
     },
     {
       "path": "standards/authority_compressions/spec_method.compressed.md",
-      "sha256": "6afe539eae226c4b91c31fd047fa64716abdfd00452f3ac47e9a1a22da8f76c6",
-      "bytes": 29539,
+      "sha256": "543d46c65d4efb7cb22f5fa19c90a0f71cd0320f8f08d514b7cd38fca274f473",
+      "bytes": 30055,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/spec_method.compressed.md"
     },
     {
       "path": "standards/authority_compressions/stdo_bootstrap.md",
-      "sha256": "1d08ecae2043f1597cd666c5741d6109e51677496b8a84b9358163e8aafdfa9d",
-      "bytes": 6773,
+      "sha256": "508815ef08431e3cc42451c387fcdf8628c810393332f530ccdd945b01f986c4",
+      "bytes": 6803,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/stdo_bootstrap.md"
     },
     {
       "path": "standards/authority_compressions/stdo_compressed.md",
-      "sha256": "e1aec81478e4cf3e4b9a7956f7779c7328034a66e3bb6b62ca6c8068f39e9f23",
-      "bytes": 76075,
+      "sha256": "7ba1dab413b38338c915b539cf40620491905cfba7dd3bc521662d3160fd0cc9",
+      "bytes": 76728,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/stdo_compressed.md"
     },
     {
       "path": "standards/authority_compressions/ticket_method.compressed.md",
-      "sha256": "3cadd002b6e2cd235f6966c293053c460069de2e14ad860b9c5fa4a7485bcd29",
-      "bytes": 11629,
+      "sha256": "e9d38b12c7f22bc7dcaa980a2bedf16a38f7b0a5144e4853e25d3a86bdd08e67",
+      "bytes": 12086,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/ticket_method.compressed.md"
     },
     {
       "path": "standards/authority_compressions/traversal_occurrence_profile.compressed.md",
-      "sha256": "9ac8e5383b24a6ae9cb6f0c41ac47f8c2725214e3ac8cc1d1bf79e8ac0aa8e96",
-      "bytes": 12961,
+      "sha256": "1c3861e2c49644eec28ff85e661b2e2b81902e6e2d6e3bf3e2b38403e54a2907",
+      "bytes": 13388,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/traversal_occurrence_profile.compressed.md"
     },
     {
       "path": "standards/authority_compressions/ux_method.compressed.md",
-      "sha256": "b1292a17a6f029f8eb135933e9f2a43de8458536501ea4b25b271de94549a0a8",
-      "bytes": 1629,
+      "sha256": "68fa2dbc55fa67b861142df2c75744efc6e4dc69cd6fd101472d83693e204b91",
+      "bytes": 2024,
       "role": "Product member",
       "expected_installed_path": "standards/authority_compressions/ux_method.compressed.md"
     },
     {
       "path": "standards/frames/CONSTITUTIONAL_DERIVATION.md",
-      "sha256": "8e165c2fba2855b37f8c4f85524e90332e76996071bb3dae0fad1e1ae66643a7",
-      "bytes": 60273,
+      "sha256": "dccb35c42214c30d23a13e4cc7e98664fae50df7c3778111354ddab96da5fbc1",
+      "bytes": 69445,
       "role": "Product member",
       "expected_installed_path": "standards/frames/CONSTITUTIONAL_DERIVATION.md"
     },
     {
       "path": "standards/frames/DOMAIN_BINDING.md",
-      "sha256": "ec7030b90d67a7beea50b083d34fdb46ac71306280375f3e25bd5f4dabc933ef",
-      "bytes": 47456,
+      "sha256": "69c543050f5dab46c6c99b16712d7ed100653ce7e31eca6ea6db5eb065c90daf",
+      "bytes": 54985,
       "role": "Product member",
       "expected_installed_path": "standards/frames/DOMAIN_BINDING.md"
     },
     {
       "path": "standards/frames/EVALUATION_CONJUNCTION.md",
-      "sha256": "5cbd5c0589ba3a03890806ab5133de085613bdbe2ee5de5633bc99dd699d7fe5",
-      "bytes": 40634,
+      "sha256": "9cb83d3dec32c2cd42701d1fa921f095b61105eb7d05ca212546d573705a79fe",
+      "bytes": 44141,
       "role": "Product member",
       "expected_installed_path": "standards/frames/EVALUATION_CONJUNCTION.md"
     },
     {
       "path": "standards/frames/RELEASE_ADOPTION.md",
-      "sha256": "f20fe8841dbb4a8e8b0bf47b77081471055c814751992b248009d6594ac694ef",
-      "bytes": 40436,
+      "sha256": "298e27303169823da3a4722eac31047d553a55e8e8c08d7e7943d5dd84b3c72d",
+      "bytes": 46999,
       "role": "Product member",
       "expected_installed_path": "standards/frames/RELEASE_ADOPTION.md"
     },
     {
       "path": "standards/frames/TRIAGE_CARRIER.md",
+      "sha256": "1cb898f60c0ae628ac1be33e13febd2c81be2b75fd695aaed8128f5bb0ad36ba",
+      "bytes": 81733,
       "role": "Product member",
-      "expected_installed_path": "standards/frames/TRIAGE_CARRIER.md",
-      "sha256": "0510828810be9a63e27011f90b1e46321c481003cf0b762bb63753623cbb6aee",
-      "bytes": 72285
+      "expected_installed_path": "standards/frames/TRIAGE_CARRIER.md"
     },
     {
       "path": "standards/frames/WORK_RECOVERY.md",
-      "sha256": "58e08e0ad59e7ea958292478853771b0f40fe1d60007e43ea252a2f66757ea4d",
-      "bytes": 59053,
+      "sha256": "40411bee3a53946ab144dacda367bf6906e13a8ecaa2ccee9190bc3490d2dc83",
+      "bytes": 63001,
       "role": "Product member",
       "expected_installed_path": "standards/frames/WORK_RECOVERY.md"
     },
@@ -562,10 +625,10 @@
     },
     {
       "path": "standards/verification_material/DERIVATION_SOURCES.json",
+      "sha256": "838357c69e7fa27f0a3d05a72d7fd5301c980def6b47318942e8a3740d24197c",
+      "bytes": 46629,
       "role": "Product member",
-      "expected_installed_path": "standards/verification_material/DERIVATION_SOURCES.json",
-      "sha256": "de64ec165739f404cec06d9761cb786719f4eb4aed1c9309caaafc67cb70a0ec",
-      "bytes": 41952
+      "expected_installed_path": "standards/verification_material/DERIVATION_SOURCES.json"
     }
   ],
   "qualification_root": "../qualification/C3",
@@ -575,8 +638,9 @@
     "LICENSE": "LICENSE -> LICENSE"
   },
   "publication_decisions": "Common pen and Jim select the accepted tenant and actual cut/cohort; exact release notes and source materialization are publication obligations. Root README is source-package attribution, not a new installed-manifest auxiliary category.",
-  "inventory_input_commit": "b99ca785b05e4f818b1e012c20f38228be10e46d",
-  "snapshot_order": "Source commit precedes inventory recording.",
+  "inventory_input_commit": "3aaa2f2cf0d6f24a734a33c258373a58feceaf87",
+  "snapshot_order": "Document source precedes interpretation; complete source precedes this inventory recording.",
   "product_root": "../../successor",
-  "historical_common_input_commit": "b83ed1cc0b65842874bb3d7cabcb76492a4c0d48"
+  "historical_common_input_commit": "b83ed1cc0b65842874bb3d7cabcb76492a4c0d48",
+  "document_source_input_commit": "6bcc4126efd54c41e412affc29e3801dc9deeb5b"
 }
