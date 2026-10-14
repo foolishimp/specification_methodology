@@ -73,17 +73,17 @@ Standing of the commitments cited: P0 recovered; P1, P3 and P6
 independent; P4b derived from P0 and P2, and P5 derived from P0 and P6
 ([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)).
 
-| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
-|---|---|---|---|
-| P3; F9 imported; I2 | an occurrence model stays an ordinary `a_c` model under one exact basis, and the profile adds sorts and value domains but no record kind; its sorts, reference domains, event kinds and relation families are closed, so an unknown, missing or mistyped element refuses | [Imported calculus boundary](#imported-calculus-boundary); [Closed semantic-object sorts](#closed-semantic-object-sorts), [Finite reference-domain table](#finite-reference-domain-table), [Closed event-kind population](#closed-event-kind-population), [Closed relation families](#closed-relation-families); [Exact profile identity](#exact-profile-identity) | the closed sorts, reference domains, event kinds, relation families and qualifier domains: this member |
-| P3; P4b; I1 | each traversal application is one immutable occurrence; a reapplication mints a new one, and a correction appends without erasing | [Occurrence identity](#occurrence-identity), [OP-003](#op-003-correction-without-erasure), [OP-006](#op-006-immutable-iteration-history) | the identity inputs of an occurrence: this member |
-| P0; P3; I1 | the external subject stays the carrier of its reality; an observation, event or projection describes it and replaces none of it | [OP-005](#op-005-mutable-reality-conservation) | whether snapshot or rollback exists: a separately authorised application of the adopting Product |
-| P6; I3 | no operation is lawful without a matching grant, and functor kind, traversal, operation, executor, actor, grant and invocation stay distinct coordinates | [Mutable-subject effect relation](#mutable-subject-effect-relation) | a territory containment relation in place of exact equality: the adopting Product, in its compatible signature |
-| P1; P6 | a candidate, its judgment, its admitting event and the materialised relation stay distinct; precedence orders admitted facts and decides no authority | [Candidate, judgment, event and relation separation](#candidate-judgment-event-and-relation-separation), [OP-004](#op-004-precedence-is-not-authority) | the precedence law, evaluators and authorities of an application: the adopting Product |
-| P3; P6 | cause is admitted typed lineage, never inferred from time, order, adjacency, containment or correlation, and each identity or causal subgraph is acyclic | [Causality and typed lineage](#causality-and-typed-lineage), [OP-001](#op-001-seed-acyclicity) | which causal claims an application admits: the adopting Product, under its authorities |
-| P3; P4b; P5 | a projection binds one complete event frontier, and a new event makes a new frontier rather than advancing an old projection | [Event frontier and projection](#event-frontier-and-projection), [OP-007](#op-007-scope-conservation) | the event scope and frontier laws: the adopting Product |
-| P5; F3 and F9 imported | every judgment decision and stop, and every effect disposition of an occurrence that intends an effect, maps to exactly one core value for a named predicate; an effect whose outcome the evidence cannot decide stays indeterminate, an established non-attainment of its intended outcome is falsified whether or not its end is established, and no refusal maps to success | [Closed constraint, judgment, residual and stop kinds](#closed-constraint-judgment-residual-and-stop-kinds), [Mutable-subject effect relation](#mutable-subject-effect-relation) | the decision, stop and residual vocabularies and their mapping: this member; the meanings and core values of `hold`, `gap` and the two `refusal` values, and the cause of each refusal: [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); a refinement of those four values by cause for one traversal, each refined value keeping its parent's core value: that traversal record, under [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) |
-| P6 | availability is not adoption, and the profile grants no authority | [Authority and adoption](#authority-and-adoption) | adoption, with the subject interpretation, vocabulary mappings and authorities it declares: the adopting Product |
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent); F9 imported; I2 | By P3 a value binds one exact basis, and I2 selects one exact `a_c` basis, so an occurrence model is an ordinary `a_c` model on that basis. The profile adds sorts and value domains but no record kind, because a new record kind would be a second calculus beside F9. With closed populations, an unknown, missing or mistyped element is detected and refused, not read | [Imported calculus boundary](#imported-calculus-boundary); [Closed semantic-object sorts](#closed-semantic-object-sorts), [Finite reference-domain table](#finite-reference-domain-table), [Closed event-kind population](#closed-event-kind-population), [Closed relation families](#closed-relation-families); [Exact profile identity](#exact-profile-identity) | closing the sorts, reference domains, event kinds, relation families and qualifier domains, and their members: a policy of this member, chosen so that refusal of an unknown element is decidable | 2, 3, 10 |
+| P3 (independent); P4b (derived from P0 and P2); I1 | By P3 an identity binds its exact inputs, so a traversal applied again to any changed input is a different occurrence; by P4b an established fact is not erased. So each application is one immutable occurrence, a reapplication mints a new one, and a correction appends without erasing | [Occurrence identity](#occurrence-identity), [OP-003](#op-003-correction-without-erasure), [OP-006](#op-006-immutable-iteration-history) | the identity inputs of an occurrence: this member | 2, 9 |
+| P0 (recovered); P3 (independent); I1 | By I1 the subject's reality changes outside the model, and by P0 an actor holds only finite observations of it, so an observation, event or projection describes the subject and replaces none of it; the external subject stays the carrier of its reality | [OP-005](#op-005-mutable-reality-conservation) | whether snapshot or rollback exists: a separately authorised application of the adopting Product | 2, 6 |
+| P6 (independent); I3 | By P6 authority exists only through an admitted grant, and by I3 an effect is a separately identified operation under such a grant, so no operation is lawful without a matching grant, and functor kind, traversal, operation, executor, actor, grant and invocation stay distinct coordinates | [Mutable-subject effect relation](#mutable-subject-effect-relation) | a territory containment relation in place of exact equality: the adopting Product, in its compatible signature | 4, 8, 9 |
+| P1 (independent); P6 (independent) | By P1 a representation does not carry its meaning, and by P6 evaluation, admission and decision are separate authorities, so a candidate, its judgment, its admitting event and the materialised relation stay distinct; precedence orders admitted facts and decides no authority | [Candidate, judgment, event and relation separation](#candidate-judgment-event-and-relation-separation), [OP-004](#op-004-precedence-is-not-authority) | the precedence law, evaluators and authorities of an application: the adopting Product | 2, 9 |
+| P3 (independent); P6 (independent) | By P3 a relation holds only on its declared basis, and by P6 only an authority admits it, so cause is admitted typed lineage and is never inferred from time, order, adjacency, containment or correlation | [Causality and typed lineage](#causality-and-typed-lineage), [OP-001](#op-001-seed-acyclicity) | which causal claims an application admits: the adopting Product, under its authorities; that each identity or causal subgraph is acyclic: a policy of this member, chosen so that every lineage walk ends at a first cause | 2, 9 |
+| P3 (independent); P4b (derived from P0 and P2); P5 (derived from P0 and P6) | By P3 a projection binds its exact inputs, and by P4b admitted events persist, so a projection binds one complete event frontier, and a new event makes a new frontier rather than advancing an old projection; for the same reason the members of one admitted semantic cut name one identical source frontier, its successor is that frontier plus exactly the admitted event, and a cut with missing or inconsistent members refuses; by P5 a projection is not read beyond the frontier it binds | [Event frontier and projection](#event-frontier-and-projection), [OP-002](#op-002-atomic-semantic-admission), [OP-007](#op-007-scope-conservation) | the event scope and frontier laws: the adopting Product | 2, 6, 9 |
+| P5 (derived from P0 and P6); F3 and F9 imported | By P5 a value decides only what its evidence establishes, and F3 gives one core, so every judgment decision and stop, and every effect disposition of an occurrence that intends an effect, maps to exactly one core value for a named predicate; an effect whose outcome the evidence cannot decide stays indeterminate, an established non-attainment of its intended outcome is falsified whether or not its end is established, and no refusal maps to success | [Closed constraint, judgment, residual and stop kinds](#closed-constraint-judgment-residual-and-stop-kinds), [Mutable-subject effect relation](#mutable-subject-effect-relation) | the decision, stop and residual vocabularies and their mapping, and the exclusion of `out_of_frame` from the constraint value set: this member; the meanings and core values of `hold`, `gap` and the two `refusal` values, and the cause of each refusal: [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); a refinement of those four values by cause for one traversal, each refined value keeping its parent's core value: that traversal record, under [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | 3, 9, 10 |
+| P6 (independent) | By P6 authority exists only through an admitted grant, and inclusion in a method cut is no grant, so availability is not adoption, and the profile grants no authority | [Authority and adoption](#authority-and-adoption) | who adopts: Product authority, under [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis); the subject interpretation, vocabulary mappings and authorities an adoption declares: the adopting Product | 1, 7, 9 |
 
 The Scope, the Exclusions and the Conformance obligations apply these
 consequences, and every clause names the principle that requires it
@@ -758,7 +758,16 @@ partial_effect
 ```
 
 Every constraint predicate returns exactly one of `satisfied`,
-`falsified`, `indeterminate` or `invalid_basis`. `satisfied` maps to the
+`falsified`, `indeterminate` or `invalid_basis`. This value set refines
+the constraint outcomes of
+[AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
+by excluding `out_of_frame`. The reason: each constraint in the table
+below is evaluated only on the record kind its row names and inside the
+scope its row declares, so AC-007's out-of-scope case, a predicate asked
+outside its `applies_to`, does not arise. An event whose declared scope
+conflicts with the admitting authority falsifies `event_scope_compatible`;
+the stop `out_of_scope` is that falsification, mapped below with the
+difference from `out_of_frame` stated. `satisfied` maps to the
 judgment's positive decision, the first decision listed below;
 `invalid_basis` maps only to `invalid_basis`; the constraint table fixes
 every other mapping. An implementation cannot turn an omitted result, a
@@ -932,14 +941,18 @@ unchanged; a refined value names a kind and its cause and adds no kind
   post-observation, read under the outcome contract, show the intended
   outcome not met where nothing left of the effect can meet it, for
   example where the effect has ended short, or an interval that the
-  outcome contract bounds has closed with only part reached. The evidence
+  outcome contract bounds has closed with only part reached, or the part
+  already done has itself defeated the outcome, such as an effect that
+  has already deleted a record the outcome requires, which no later
+  completion of the effect restores. The evidence
   of non-attainment, such as the unreached part, is the counterexample.
   Whether the effect has ended is not part of this cause: where the
   evidence does not establish the end, the `partial_effect`
   residual records it beside the value, as
   [ACTIVATION §3 Effects](ACTIVATION.md#effects) states.
-- `partial_effect(undecided)`: every other `partial_effect`. The admitted
-  evidence cannot decide whether the intended outcome is or will be met:
+- `partial_effect(undecided)`: every other `partial_effect`, that is,
+  one whose admitted evidence does not establish non-attainment. The
+  admitted evidence cannot decide whether the intended outcome is or will be met:
   the bounded post-observation that the
   [effect law](#mutable-subject-effect-relation) requires is not yet
   acquired, or it shows part reached while a later completion of the
@@ -1412,7 +1425,10 @@ continuation or closure authority. Every material operation and judgment
 resolves an existing owner-issued grant. Copying a profile record or
 adopting the profile transfers no authority (P6).
 
-A Product adoption declares at least (P6, P1):
+Only Product authority adopts the profile, as
+[PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)
+states for every available profile; this section adds no adopter. For
+this profile, a Product adoption declares at least (P6, P1):
 
 - the exact traversal-occurrence-profile basis;
 - the exact subject and subject-binding interpretation;
