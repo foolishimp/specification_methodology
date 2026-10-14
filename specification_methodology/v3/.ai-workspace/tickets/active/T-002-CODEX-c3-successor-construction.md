@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T07:36:13Z
+updated_at: 2026-10-14T10:06:03Z
 priority: high
 dependencies: [T-002]
 ---
@@ -41,6 +41,23 @@ Current state: `EC-CODEX-I3-02` is admitted below for the owner's requested next
 - Return: one exact frozen candidate and its evidence, with source-linked remaining gaps and a closed installed work evaluation. Earlier trials and acceptance claims retain their subjects. No candidate merge, push, tag, publication, removal of an obligation, changed-meaning acceptance or categorical steel-thread execution follows from this contract.
 
 Admission record — 2026-10-14T07:36:13Z: the selecting Executive admits `EC-CODEX-I3-02` for draft construction under Jim's “do that close the round 2 findings” instruction and the preparation of both successor implementations recorded in [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). Decision: `admitted`, ready for the tenant session; no execution is inferred from recording it. Exact contract: 5,089 UTF-8 bytes, SHA-256 `b1a8ab9713b3425600c87ffcc24b35f387062a1272bfb1446d64d7c294e49ad0`, from the `### EC-CODEX-I3-02` heading through its Return line with one final newline. Input: `C3-I3-R2-01` at B `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, with 24 members recorded in descendant R in [T-002](T-002-c3-successor-construction.md#c3-i3-round-2-shared-input-snapshot). Evidence: the [contract/law review](../../comments/codex/20261014T073055Z_REVIEW_I3_ROUND_2_CONTRACT_CLOSURE.md) and [traceability/admission review](../../comments/codex/20261014T073015Z_REVIEW_I3_R2_CLOSURE_TRACE_AND_ADMISSION.md), installed-basis verification and reproduced contract/preimage checks. The common Ledger Writer records this decision before the tenant's next activation. Actor, territory, limits, stops and return are exactly the unchanged block above; reserved decisions remain reserved.
+
+## I3 Successor Execution
+
+2026-10-14T10:06:03Z — Jim instructs “and begin” after the checkpoint request. The tenant Executive starts EC-CODEX-I3-02 on the recorded common input. Intake: `design_reframe` for alignment of the tenant HOW with the revised common obligations, followed by scoped realisation repairs and proof. No common meaning change or peer implementation is selected. The existing source repairs remain work to inspect, not code to discard or rerun blindly. The common pen acts as Ledger Writer for this entry only.
+
+### I3-R2-INWARD-01 — receive the reviewed common input
+
+- Authority: Jim's “checkpoint commit” and “and begin”, under admitted EC-CODEX-I3-02. The existing main checkpoint is 651581cde793a4dc8948435a74dd66fb623263a9; no missing checkpoint work was found.
+- Actor: this session changes from tenant Executive to tenant Git Writer for the effect, then returns to Executive. Common Ledger Writer records the activation before it starts.
+- Subject and territory: /Users/jim/src/apps/specification_methodology-codex, branch tenant/codex/c3-iteration-3, clean preimage d832a51a4f91afca2ffa2e31636236f8729abf6c and tenant tree dd222838b69addb683343e42992a2b08c1e459a0.
+- Operation: merge the exact common recording commit 651581cde793a4dc8948435a74dd66fb623263a9 inward. Preserve the tenant source tree, all historical evidence and the sparse-checkout boundary. A conflict or unexpected tenant-tree change stops this operation for triage; no reset or peer effect is granted.
+- Exit proof: merge parent includes the recording commit; the current common requirement files match selected input B 355aa8655cca9c6ba6cf5c414f9bea3032ae89fd, except recorded work standing; the tenant tree remains exact and the worktree is clean. Return the merge commit and checks.
+- Resources: local Git and source reads only; elapsed time reported. Host context and reasoning cost are not fully instrumented. No paid actor call, candidate construction or acceptance is part of this Git activation.
+
+Admission: `I3-R2-INWARD-01` is admitted by the selecting Executive before effects; SHA-256 `6b28fba50c7083ce7f85628cbf420e4c69b0cb2fff9268bde3896d3f2abe1a32` over the heading-through-Resources block with one final newline. Authority, exact preimage and exit proof are the block above.
+
+Executive next selects three read-only evaluations under EC-CODEX-I3-02, all on frozen candidate d832a51 and common B355aa865: (1) deciding owners, result integration and preserved domain conditions, (2) current a_c/entry/view generation and required coverage, and (3) the 691-row conservation draft, named ports, and actual-use proof plan. Each is independently acquired within its assigned cone, returns a closed installed readiness evaluation and concrete repair scope, and supplies no acceptance of later repairs. No new peer read, paid trial or mutation is selected for these evaluations. Their returns determine dependency-ready Writer activations; the Executive itself makes no source changes.
 
 ## Current Owner Direction
 
