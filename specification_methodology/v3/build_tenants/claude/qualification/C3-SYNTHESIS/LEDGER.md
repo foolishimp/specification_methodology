@@ -400,3 +400,14 @@ Executive disposition:
   - The C3S-03 reruns fail only on recording occ-23's predicate.
   - Remaining method findings MT-2 (narrowed), MT-7 and MT-8 are minor and held for the next round.
 - The Codex findings F1, F2, F4 and F5 are repaired on this branch, pending cross-family confirmation. F3, the a_c interpretation, waits for iteration 3.
+
+2026-10-14T14:42Z — Owner decisions, recorded verbatim:
+- To "Do you sign off the iteration 3 specification at round 2 (55bbf9e), or wait for Codex's round 3 repairs?", the product owner answered "Wait for round 3 (Recommended)".
+- To "Which line should start iteration 3?", the product owner answered "Claude line".
+
+Effect: the Claude line's iteration 3 is admitted by the product owner. It starts only after:
+1. the common pen repairs the round 2 findings and freezes round 3;
+2. Claude reviews round 3;
+3. the product owner signs off the specification at a named commit.
+
+Iteration 3 then binds to that signed-off commit, merged inward. The provisional expectations in `qualification/C3-ITER3/EXPECTATIONS.md` are re-derived against that commit before any construction. Until then no Claude construction runs. The common pen is asked to record this owner decision in T-002-CLAUDE.
