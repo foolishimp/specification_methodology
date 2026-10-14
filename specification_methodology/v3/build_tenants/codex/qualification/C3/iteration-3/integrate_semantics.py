@@ -333,17 +333,61 @@ def source_checks(account):
                 raise ValueError('Clause body mismatch: ' + row['id'] + '#' + block['id'])
 
 
+def integration_controls(base, contributions, carrier):
+    """Counterexamples to data loss and false completeness at this boundary."""
+    controls = []
+
+    def refused(name, mutate, expected):
+        changed = copy.deepcopy(contributions)
+        mutate(changed)
+        try:
+            merge(base, changed, carrier)
+        except ValueError as error:
+            if expected not in str(error):
+                raise ValueError(name + ': wrong refusal: ' + str(error)) from error
+            controls.append({'case': name, 'result': str(error)})
+        else:
+            raise ValueError(name + ': unsafe integration succeeded')
+
+    refused('Previously unclassified semantic field',
+            lambda c: c['method']['bindings'][0].update(new_semantic_gate='must survive'),
+            'unclassified contribution fields')
+    pending = {r['id'] for r in base['determinations'] if r.get('coverage_standing') == 'source_carried_clause'}
+    missing_id = next(r['id'] for r in contributions['method']['bindings'] if r['id'] in pending)
+    refused('Missing source construction',
+            lambda c: c['method'].update(bindings=[r for r in c['method']['bindings'] if r['id'] != missing_id]),
+            'Unconstructed source units')
+    refused('Changed owner preimage',
+            lambda c: c['construction']['bindings'][0].update(owner_body_sha256='0' * 64),
+            'owner body preimage mismatch')
+    def missing_scope(c):
+        r = next(r for r in c['model']['bindings'] if r.get('applicability', {}).get('scope_ref'))
+        r['applicability']['scope_ref'] = 'absent-scope'
+    refused('Dangling shared applicability', missing_scope, 'unresolved shared reference')
+    def missing_dependency(c):
+        c['method']['bindings'][0]['dependencies'].append('ABSENT.required-owner')
+    refused('Dangling owner dependency', missing_dependency, 'missing dependencies')
+    def missing_predicate(c):
+        next(r for r in c['construction']['bindings'] if r['representation_kind'] == 'constraint')['predicate'] = None
+    refused('Undecomposed deciding source', missing_predicate, 'deciding row lacks a predicate')
+    return controls
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--write', action='store_true')
+    parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     contributions = {group: contribution(group) for group in GROUPS}
     carrier = read(HERE / 'semantic-contributions/carrier/bindings.json')
-    account = merge(base_account(), contributions, carrier)
+    base = base_account()
+    account = merge(base, contributions, carrier)
     source_checks(account)
     report = {'valid': True, 'source_commit': DOCUMENT_SOURCE, 'count': len(account['determinations']),
               'kinds': dict(Counter(r['representation_kind'] for r in account['determinations'])),
               'sha256': sha(json_bytes(account)), 'independent_fidelity': 'unassessed'}
+    if args.self_test:
+        report['counterexamples'] = integration_controls(base, contributions, carrier)
     if args.write:
         (HERE / 'DETERMINATIONS.json').write_bytes(json_bytes(account))
         (HERE / 'SEMANTIC_INTEGRATION_CHECK.json').write_text(json.dumps(report, indent=2) + '\n')
