@@ -1,13 +1,16 @@
 # Codex a_c Interpretation
 
-The current candidate interpretation is the [iteration 3 source binding](../qualification/C3/iteration-3/a_c/SOURCE.md),
-[program](../qualification/C3/iteration-3/a_c/program.json),
-[mechanical result](../qualification/C3/iteration-3/a_c/MECHANICAL_RESULT.json)
-and [iteration 3 return](../qualification/C3/iteration-3/RETURN.md).
-It exposes selected shared constraints and their dependencies. Structural
-validation and closure projection do not execute or authenticate the semantic
-predicates. Source fidelity, actual use and remaining scope are reported
-separately in that return.
+The current method package exposes its [source-bound interpretation](../successor/interpretation/README.md),
+[program](../successor/interpretation/program.json), [map](../successor/interpretation/map.json)
+and [source mapping](../successor/interpretation/MAPPING.json). Definitions, deciding
+constraints, consumer bindings and non-deciding locations retain their distinct
+types. Shared meanings have exact references; required task inputs are contracts,
+not assertions that a task has run or has an unknown result.
+
+[Mechanical qualification](../qualification/C3/iteration-3/a_c/current/MECHANICAL_RESULT.json)
+and the [iteration-3 return](../qualification/C3/iteration-3/RETURN.md) record the
+exact tested subject and limits. Structural validation and closure projection do
+not execute semantic predicates, establish fidelity or accept the method.
 
 ## Historical C3 Interpretations
 
