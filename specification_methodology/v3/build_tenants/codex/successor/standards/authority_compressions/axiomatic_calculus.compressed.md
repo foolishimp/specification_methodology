@@ -151,9 +151,13 @@ projection, overlay, transformation, and encoding.
   `domain_resolution`, `codomain_resolution`, `decision: equal`, and
   non-empty `evidence`. Both resolution tuples are exactly field-equal; missing,
   duplicate, extra, or differently resolved witnesses refuse.
-- A judgment points to an unchanged exact subject and binds kind, digest,
-  basis, evaluator, authority, decision, evidence, provenance, and time.
-  Judgment does not transform, reissue, or rename its subject.
+- A judgment points to an unchanged exact subject and carries the predicate,
+  core verdict, actual evaluation performance and observed effects, alongside
+  its kind, digest, basis, evaluator, authority, original domain decision,
+  evidence, provenance, residuals and time. Its exact closed signature and
+  reason-sensitive domain mapping are owned by AC-014. A domain decision is
+  not another verdict enum. Judgment does not transform, reissue, or rename
+  its subject.
 
 ## Traversal Functor Kinds
 

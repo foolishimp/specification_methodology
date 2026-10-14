@@ -150,7 +150,9 @@ Each judgment binds the exact unchanged subject identity and digest and has its
 declared claim-, event-, or semantic-cut-admission kind. The claim, event, and
 cut name one identical source frontier; the successor is exactly that frontier
 plus the admitted event once. A missing cut judgment or non-admitted decision
-refuses.
+leaves the cut unadmitted. The profile's cause-sensitive core mapping retains
+the difference between established failure, missing support and a basis or
+scope diagnosis; an absent or held judgment does not fabricate a refusal.
 
 The complete cut shares one profile basis and includes exactly
 `admits_claim(event,claim)`, `materializes_relation(event,relation)`, and

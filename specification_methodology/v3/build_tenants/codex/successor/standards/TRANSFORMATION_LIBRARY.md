@@ -317,8 +317,12 @@ Accept binds an exact checkpoint; it does not imply release. A Product-outcome
 acceptance interval is separately governed by
 [UP-013](SPEC_METHOD.md#product-outcome-conservation-stdo-up-013).
 
-Other instances retain their original domain classifications as core refinements. [Ticket Method](TICKET_METHOD.md)
-owns sprint/paydown and work-carrier closure classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
+Other instances retain their original domain classifications. Their owners
+distinguish recorded state, evaluation outcomes and decision dispositions, and
+bind each evaluation or decision to its exact core-result predicate. A recorded
+status alone is neither a judgment nor an operation grant.
+[Ticket Method](TICKET_METHOD.md) owns sprint/paydown and work-carrier closure
+classifications; [Release Method](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015)
 owns conserved/superseded/intentionally removed/not applicable. An actor carrying
 that contract's bound operation authority may record condition-based closure
 when that owning contract permits it.

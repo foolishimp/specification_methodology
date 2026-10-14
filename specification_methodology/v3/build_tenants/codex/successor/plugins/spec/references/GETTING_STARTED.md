@@ -585,7 +585,7 @@ progress by itself.
 Reviewer technical triage and Executive delivery priority are distinct. Under
 the STDO engagement profile, Reviewer may return technical severity, impact,
 confidence, blast radius, workaround, repair complexity, regression risk, and
-uncertainty. Executive combines that evidence with the complete Product view
+uncertainty. Executive combines that evidence with the sufficient bounded delivery view
 and current release or MVP mandate to assign Product-owned priority,
 promotion-boundary effect, disposition, and action. The Project Reference-
 Frame Basis owns the concrete scales, cutoff, and non-waivable hard stops. STDO

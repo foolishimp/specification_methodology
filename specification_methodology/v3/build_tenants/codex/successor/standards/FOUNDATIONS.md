@@ -130,8 +130,8 @@ permission.
 Work state is the current subject under construction. An event, assessment or
 receipt is evidence of a scoped observation or judgment. Acceptance is an owner
 decision. None of these substitutes for another. Historical evidence remains
-historical when current premises change. Reuse requires supported applicability,
-including identity, basis, freshness and the predicate actually assessed.
+historical when current premises change. Reuse follows the applicability rule
+owned by [Workspace and context](#workspace-and-context).
 
 ## Reference-only semantic imports
 
@@ -375,7 +375,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -579,6 +579,10 @@ basis and evidence, valid dependencies and required independent authorship.
 Changed support reopens the affected dependent claims. Unchanged independent
 work remains usable; when dependency independence cannot be established, inspect the
 wider affected scope. A stored green label is not a validity argument.
+Changed support invalidates the affected result for reliance, while retaining
+its historical observation. A role, conversation or resumption change alone is
+not an invalidator; the continuing consumer checks exact applicability before
+reusing the closed result.
 
 Before repeating an operation with uncertain effects, observe or reconcile
 sufficiently to decide the next dependent action. A granted idempotent operation
