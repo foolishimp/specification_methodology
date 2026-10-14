@@ -791,24 +791,51 @@ in the one core, which FOUNDATIONS §4 Results requires of every outcome
 ### Effects
 
 An effectful step's intended external effect has one of three values,
-mapped for the predicate "the intended effect occurred" (P5 with the
-open-world premise, P6):
+mapped for the predicate "the intended effect occurred", that is, the
+declared outcome of the effect is attained. The value turns on what the
+admitted evidence establishes about that outcome (P5 with the open-world
+premise, P6):
 
 | Value | Core value | Ground |
 |---|---|---|
-| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | the evidence cannot establish whether the intended effect occurred, as for an effect that began and whose end is not observed, or a request whose response was lost |
+| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
+| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
-not that evidence, and the value stays `completion_unknown`; §5 reconciles
-it before any repetition or dependent action. `completion_unknown` never
-maps to `completed` or to `not_effected`. The refinement is new. Its
-material relation is whether an action whose external effect may have
-occurred is repeated or relied on; §4 names a lost post-effect response as
-a case that no added core value solves, and this refinement records it in
-the existing core.
+not that evidence, and the value stays `completion_unknown`.
+`completion_unknown` never maps to `completed` or to `not_effected`.
+
+Whether the effect has ended is a second question, not the predicate
+above. An effect has ended where evidence about the subject establishes
+that it no longer acts on the subject or that it never began. Where an
+effect began and the evidence does not establish its end, the end is not
+established, and that is recorded beside the value as a residual naming
+the observation that would establish it. The end never decides a
+`not_effected` value and is never folded into one: when an interval that
+the declared outcome bounds has closed with part not done, the value is
+`not_effected` while the effect may still be acting. The residual does
+not weaken the counterexample, and the counterexample does not resolve
+the residual. `completed` alone requires the end established, so a
+counterexample stands without proof that the effect has ended, while
+success is never claimed for an effect that may still be acting
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Standing).
+
+An effect of uncertain completion is one whose value is
+`completion_unknown`, or whose value is `not_effected` with its end not
+established. §5 reconciles it, sufficiently for the next dependent
+action, before any repetition or dependent action. A `not_effected`
+value licenses neither treating the effect as absent nor repeating it
+while its end is not established.
+
+The refinement is new. Its material relation is whether an action whose
+external effect may have occurred is repeated or relied on; §4 names a
+lost post-effect response as a case that no added core value solves, and
+this refinement records it in the existing core. Keeping the end of the
+effect beside the value keeps two facts that one value would merge: a
+counterexample already established for the declared outcome, and an
+effect that may still be acting.
 
 ## 4. Totality and refinement
 
@@ -1107,9 +1134,10 @@ Discarding an actor's private context resets nothing: the workspace, the
 applicable valid work and the outstanding obligations remain as the work
 state records them. A missing trace in a context, a memory or a summary is
 no evidence about the subject. It shows neither that work was not done
-nor that an external effect did not occur; an effect of uncertain
-completion keeps the value `completion_unknown` until evidence about the
-subject decides it (§3 Effects) (P5).
+nor that an external effect did not occur, nor that it ended; an effect
+of uncertain completion keeps the value `completion_unknown`, or its end
+stays not established beside its `not_effected` value, until evidence
+about the subject decides it (§3 Effects) (P5).
 
 Work that an interruption left partly written is part of the current
 material state from which resumption (above) starts, and is assessed as
