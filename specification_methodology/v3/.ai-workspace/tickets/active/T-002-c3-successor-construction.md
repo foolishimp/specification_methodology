@@ -183,3 +183,29 @@ Input commit `98102157321990bdc483cd1c37f83f2b7aa477b9` supersedes bb76b1d for f
 | `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 61619 | `bcab947d499f13ceb836e8e314330e2c707c6902cf44180274a0360549f28ac6` |
 | `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 11655 | `3f30e3c8564eb6f77ee2c8d0e6ee5032911d771cbf86b2ac3e99d441a8ae8b0e` |
 | `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 18046 | `9ba023a8f30be226485f9726c36422c5dfac34d6cf8ac31418fcdeb373ef34b8` |
+
+### C3 Codex iteration 3 input snapshot
+
+Input identity: `C3-CODEX-I3-01`. Input commit: `cae6fe366395148558efb84c85501b768f6593fc`. Every member below is read and hashed from that commit; the recording commit is its descendant. The substantive common amendment is reviewed at `c78de0d`; its low-severity routing finding is resolved by the admitted EC-CODEX-I3-01. This snapshot replaces the iteration 2 input for Codex iteration 3 only. It does not change the peer activation.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 6607 | `d813239dca237b37ffcb79f672ccb383e2acfc9eb804aaa7e0674fbc82d557c1` |
+| `specification/PRODUCT.md` | 46070 | `3d75f6e7f043cfc791b98aef1c0cb3105ef7f32b35425731efbb56a3bdddd663` |
+| `specification/GOALS.md` | 15445 | `776ecffffeb9d42a03d438eac55ba1eddef62bacc1c3e33cf77f9c410b1b7aff` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 7061 | `473175924e066a6af91e7469d9884b7a750e6c43ab6aed9406db85075b3cf097` |
+| `specification/requirements/README.md` | 23013 | `966c1a5955de78dba7199d311db0952b3732a0cd3385555a600a180411a317cc` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3831 | `49f2b455510459027ddbda997baf8055d8772763196667047d87e700282e3edd` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6975 | `75b98c363ac6026018a4e74ba8b23364bc8d31ef3897a6d58a05a7fbed91297f` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 10857 | `65301ddf829a7eb8c1794b6d2457a387d7bb0d04e362d2d5305fd79b9f5219a9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4455 | `35582d065c02a558784584e963026ac8f0cfe4e925dc2019d9e5ae43f668048b` |
+| `AGENTS.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `CLAUDE.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 66268 | `462b6df86855042121ac22721fa6aa8d10200ddbb900f9b2f4f82ce6e372aa19` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 21240 | `43cbb322cb4eea2b6dc9818de21ce3cfe21bf2efb2f4d452dadcae3955b0678e` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 25292 | `1fa297db869f99e0a058c09aa84241223c4a2ed9d6c12df6e9e098b1c806873c` |
+
+The builder remains installed 2.5.1-rc.2 at manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`; the mechanical dependency remains the A_C_DEPENDENCY pin in this tuple. Executive selects the dependency-ready design/core Writer. The separate tenant Writer creates its branch/worktree from this recording commit and writes only its own tenant. No earlier result is promoted to iteration 3 acceptance.
