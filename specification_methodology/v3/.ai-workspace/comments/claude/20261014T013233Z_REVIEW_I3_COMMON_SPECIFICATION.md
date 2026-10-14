@@ -3,7 +3,7 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T01:32:33Z
 **Addresses**: the common specification `specification_methodology/v3/specification/` for iteration 3, at the commit the common pen names as frozen for each round
-**Status**: Round 3 expectations recorded (subject `355aa86`) before its diff was read. Round 2 complete (subject `55bbf9e`; expectations at `81695e5`). Round 1 complete (subject `7c058ed`; expectations at `f4007ce`).
+**Status**: Round 3 complete (subject `355aa86`, with the admissions recorded at `651581c`; expectations at `eff198e`). Round 2 complete (`55bbf9e`; `81695e5`). Round 1 complete (`7c058ed`; `f4007ce`).
 **Updated**: 2026-10-14T04:31:25Z (round 2 findings)
 
 ## Authority and independence
@@ -359,3 +359,74 @@ Claude is a governed tenant. M8 and some RR3 wording judgements concern the Clau
 9. **No regressions:** the repair text introduces no new contradiction, untestable obligation, second owner, retroactive rebinding or naming in prose, and earlier "holds" results stay held.
 
 **Also checked.** Whether the tenant contracts admitted at `355aa86` are consistent with the specification they bind: territory, authority, comparison baselines, and resource and acceptance limits. One of them, `EC-CLAUDE-I3-01`, governs this reviewer's own line, so judgements on it are marked interested.
+
+## Round 3: findings, subject `355aa86` and records at `651581c`
+
+### Correction to this review's own record
+
+The round 3 expectations said that after `355aa86`, `main` changes only GOALS status lines. That holds only for `specification/`. Commit `651581c` also changes the tickets: it records the shared input snapshot and admits both tenant contracts.
+
+The expectations also assumed that `EC-CLAUDE-I3-01` was admitted by `355aa86`. It was still a draft there. It was admitted at `651581c`, with a digest equal to its `355aa86` bytes.
+
+This round reviews both commits: the specification at `355aa86`, and the admissions at `651581c` as records about it.
+
+### Scope and reports
+
+The subject was read from `git archive` copies. Two Claude reviewers each covered part of the expectations. Their reports are in [round-3 assets](assets/20261014T013233Z_i3_review/round-3/):
+- [RT1](assets/20261014T013233Z_i3_review/round-3/RT1.md): closure of the round 2 corrections, contract digests, and the pen's [round 2 disposition record](../codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md);
+- [RT2](assets/20261014T013233Z_i3_review/round-3/RT2.md): a regression pass over the 770 changed lines, and the tenant contracts against the specification.
+
+### Verdict
+
+The specification text is close to ready for sign-off. Seven of the eight round 2 corrections are closed and one is partly closed. Of the 35 rows in the round 2 disposition record, 34 hold against the text. No blocking finding remains in the text.
+
+What is left concerns governance more than content:
+- One regression removes the product owner's sign-off from I3-00's exit.
+- The changes to accepted conditions are listed, but none is put to the owner as an item to accept, and two are still unlisted.
+- The Claude-line contract was admitted without an owner-selected admitting activation. The owner's recorded words do not decide when it starts.
+
+These are owner decisions and narrow recording repairs.
+
+### State of the round 2 corrections (RT1)
+
+| Correction | State |
+|---|---|
+| RR3-01, one acceptance record | **Closed** |
+| RR3-06, admitted contract bytes | **Closed**. Every admitted EC-CODEX digest reproduces, at `355aa86` and at its original admission commit. Two records with no stated byte range reproduce only by inference (minor) |
+| RR3-04, Reviewer result shape | **Closed**. The Reviewer returns one closed evaluation, and its overall result is the conjunction of the six criterion judgements under the installed Result Conjunction (`PRODUCT.md:202`) |
+| RR3-02 and RR3-03, process rows and routed acquisition | **Closed** |
+| RR3-07 and RR2-08, one primary per finding, TC-03, packet coverage | **Closed** |
+| M1, pillar reasons and INTENT alignment | **Closed**. T-001 now records the owner's pillar inputs and the reasons for the table's groupings. Whether to confirm the pillar list remains the owner's decision |
+| RR1-N2, acquisition growth and deciding paths | **Closed** |
+| RR3-05 and M4, changed accepted items and purpose | **Partly closed** (see the next list) |
+
+What remains open under RR3-05 and M4:
+- **Not put to the owner.** GOALS lists nine changes to accepted conditions with reasons (`GOALS.md:46–54`), including Development Isolation, a local axiom, and single ownership items 2 and 4. It states that "the historical C1/C2 dates do not accept these later bytes". None of the changes is put to the owner as a named item to accept, although they already govern construction through the input admitted at `651581c` (RT1-01).
+- **Two changes still unlisted** (RT1-02):
+  - the owner's actor-binding reservation;
+  - criterion 5's new a_c obligation.
+- **Mislabelled table.** It is headed "round-1-to-round-2", but its rows also describe the `355aa86` changes.
+
+### New findings (RT2)
+
+1. **RT2-03 (material, regression): I3-00 no longer requires the owner's sign-off to close.** A gate sentence in T-001 was rewritten in place, and I3-00 is marked "CLOSED FOR CONSTRUCTION". GOALS still says "Final common sign-off remains open". This reopens round 1's M7, which round 2 had recorded closed. Correction: I3-00's exit is the owner's sign-off. Construction under the owner's instruction may proceed meanwhile, and that standing is recorded as such.
+2. **RT2-01 (material, interested): the admitting activation for `EC-CLAUDE-I3-01` is not one the owner selected.** It was admitted by the Executive role of the Codex common-pen activation (`651581c:T-001:47`). The contract itself names the Claude tenant session as that line's Executive, and the frame basis requires the owner, or an activation he selects, to admit. Correction: the owner confirms or re-admits the contract, and the pen records his decision.
+3. **RT2-02 (material, interested): the owner's recorded words do not decide when the Claude-line contract starts.** "Do that close the round 2 findings" supports preparing both contracts. Starting before sign-off, on `355aa86`, is the pen's reading; starting after sign-off is the Claude Executive's. The owner's later answers to this reviewer ("Wait for round 3", "Claude line") are recorded only in the Claude tenant ledger, not in any ticket. Correction: the pen records those answers verbatim in T-002-CLAUDE.
+
+Minor findings are in the two reports.
+
+### What holds
+
+- **Both tenant contracts.** They are symmetric line by line and consistent with the specification they bind. Their digests and the 24 input hashes reproduce, and Codex's admission is lawful apart from the unnamed actor in RT2-01 (RT2).
+- **Earlier holds.** Neutrality, the a_c dependency boundary and the writing standard still hold, and nothing is presented as signed off.
+
+### Decisions for the product owner
+
+1. **Accept the changes to accepted conditions.** Accept or reject, as named items, the nine changes at `GOALS.md:46–54`, plus the two unlisted ones in RT1-02. Development Isolation is a local axiom, and single ownership items 2 and 4 is a law the owner selected; both need his explicit word.
+2. **Confirm the pillar list** at `PRODUCT.md:39–50` against his inputs as recorded in T-001.
+3. **Decide the Claude-line contract.** Confirm or re-admit `EC-CLAUDE-I3-01`, and say when it starts. His answer to this reviewer was "Claude line", to start after round 3 and sign-off.
+4. **Sign off the specification** at `355aa86`, once the pen restores sign-off as I3-00's exit (RT2-03). Signing off with decisions 1 to 3 recorded is enough to close this review.
+
+### Independence
+
+Claude is a governed tenant, and RT2-01 and RT2-02 concern its own line. Most round 3 closures adopt wording from this review's round 2 reports, so under `PRODUCT.md:401` they are defect rechecks, not independent acceptance.
