@@ -1,8 +1,10 @@
 # Integrated Determination and Rule Account
 
-This current construction account integrates the closed source-family returns
-under EC-CODEX-I3-02. It represents the declared material source units; independent
-semantic completeness, fidelity and acceptance remain separate obligations.
+This account integrates the closed source-family returns under EC-CODEX-I3-02.
+Compiler preflight found 25 retained core rows that still declare omitted source
+meaning. Their completion is open under I3-R2-CORE-READY-COMPLETE-01; the earlier
+integration completion result is superseded at that scope. Independent semantic
+fidelity and acceptance also remain open.
 
 ## Subject and schema
 
@@ -41,7 +43,9 @@ and 15 non-deciding locators. The account contains 37 shared semantic contracts.
 All 521 previously pending raw-source units received returned construction.
 Every previously ready or locator row was inspected in its assigned contribution;
 81 existing core bindings remain unchanged. Other ready bindings were refined or
-replaced. No declared source construction remains unfinished.
+replaced. The compiler identified 25 unchanged core bindings with explicit source omissions.
+Those rows need exact owner comparison and completion before compilation; their
+old ready label does not establish semantic completeness.
 
 | Owner population | Units |
 |---|---:|

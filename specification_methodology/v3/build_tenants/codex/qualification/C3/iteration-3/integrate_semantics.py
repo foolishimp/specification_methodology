@@ -68,25 +68,27 @@ def contribution(group):
     first = read(HERE / 'semantic-contributions' / group / 'bindings.json')
     if group != 'core':
         return first
-    second = read(HERE / 'semantic-contributions/core/baseline/bindings.json')
-    for row in (first, second):
+    phases = [first, read(HERE / 'semantic-contributions/core/baseline/bindings.json'),
+              read(HERE / 'semantic-contributions/core/ready-completion/bindings.json')]
+    for row in phases:
         if row.get('source_commit') != BASE_DOCUMENT_SOURCE or row.get('input_account_sha256') != BASE_SHA:
             raise ValueError('Core continuation input mismatch')
     result = copy.deepcopy(first)
-    result['bindings'] += second['bindings']
+    result['bindings'] = [binding for part in phases for binding in part['bindings']]
     represented = {r['id'] for r in result['bindings']}
     unfinished = []
-    for part in (first, second):
+    for part in phases:
         for key in ('unfinished_units', 'unfinished_ids', 'unfinished_source_ids', 'unresolved_construction_ids'):
             unfinished += [v if isinstance(v, str) else v['id'] for v in part.get(key, [])]
             result.pop(key, None)
     result['unfinished_ids'] = sorted(set(unfinished) - represented)
-    result['shared_contracts'] = copy.deepcopy(first.get('shared_contracts', {}))
-    for key, value in second.get('shared_contracts', {}).items():
-        if key in result['shared_contracts'] and result['shared_contracts'][key] != value:
-            raise ValueError('Core phases disagree on shared contract ' + key)
-        result['shared_contracts'][key] = value
-    result['phase_input_sha256'] = [sha(json_bytes(first)), sha(json_bytes(second))]
+    result['shared_contracts'] = {}
+    for part in phases:
+        for key, value in part.get('shared_contracts', {}).items():
+            if key in result['shared_contracts'] and result['shared_contracts'][key] != value:
+                raise ValueError('Core phases disagree on shared contract ' + key)
+            result['shared_contracts'][key] = value
+    result['phase_input_sha256'] = [sha(json_bytes(part)) for part in phases]
     return result
 
 
@@ -170,6 +172,8 @@ def normalize_shared(contribution, group):
 
 def check_semantics(row):
     identifier = row['id']
+    if row.get('unrepresented_scope'):
+        raise ValueError(identifier + ': explicit source meaning remains unrepresented')
     kind = row.get('representation_kind')
     if kind not in {'constraint', 'definition_data', 'consumer_binding', 'non_deciding_locator'}:
         raise ValueError(identifier + ': unknown representation kind')
@@ -247,6 +251,7 @@ def merge(base, contributions, carrier):
         input_names = ['semantic-contributions/' + group + '/bindings.json']
         if group == 'core':
             input_names.append('semantic-contributions/core/baseline/bindings.json')
+            input_names.append('semantic-contributions/core/ready-completion/bindings.json')
         records.append({'group': group, 'bindings': len(contribution['bindings']),
                         'input_files': [{'path': name, 'sha256': sha((HERE / name).read_bytes())} for name in input_names],
                         'normalized_contribution_sha256': sha(json_bytes(contribution))})

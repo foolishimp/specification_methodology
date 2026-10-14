@@ -1,9 +1,12 @@
 # Semantic Account Integration Return
 
-The source-family construction is complete for the declared 697-unit account.
-The integration result is `candidate_ready`: all frozen source pins and semantic
-references resolve, and six deliberate damage controls refuse. Independent
-semantic fidelity and member acceptance remain open.
+The declared account has 697 units, but source construction is not complete.
+Compiler preflight found 25 retained core rows with explicit source omissions.
+The earlier `candidate_ready` integration result is superseded at that scope;
+its pin/reference checks and six controls did not catch retained omission fields.
+A fresh bounded Writer is completing those rows. The integrator now refuses them.
+The diagnosed frozen account remains preserved at `a6d5f00`. Independent semantic
+fidelity and member acceptance remain open.
 
 Subject: documentary source `6bcc4126efd54c41e412affc29e3801dc9deeb5b`,
 common input `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, installed builder
