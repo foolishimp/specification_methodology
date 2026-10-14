@@ -653,8 +653,8 @@ material advance projects product progress; prerequisite readiness is
 its prerequisite work, which names the product obligation it enables and
 here also remains bounded; preservation is its preservation and repeated
 proof, useful evidence, not progress; regression maps to evidence that
-is not new progress, and this member adds one need to it: evidence of
-regression is the promotion block in the last paragraph of this section. Churn and the revision of the forecast are
+is not new progress, and this member adds one need to it: the promotion
+block in the last paragraph of this section. Churn and the revision of the forecast are
 ACTIVATION §5's, unchanged here.
 
 The exact bound outcome instance stops selecting later product-progress
