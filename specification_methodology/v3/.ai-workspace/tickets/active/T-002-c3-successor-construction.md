@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-13T09:34:52Z
+updated_at: 2026-10-14T03:07:29Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,7 +27,7 @@ links:
 
 ## Current Iteration
 
-Current next step is the owner's consolidation instruction recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-iteration-3-direction). The [iteration 3 work list](T-002-iteration-3-work.md) is the current requirement-to-work and review-to-work index for Codex, with remaining work, status and closure evidence. It is an appendix to these existing tickets, not another work carrier or grant. The common standard applies to both candidates; this consolidation makes no assignment or status change to the peer line. Historical snapshots below keep their actual subjects; the [successor snapshot](#c3-codex-iteration-3-consolidated-input-snapshot) records the completed, reviewed common update.
+Current next step is the owner's review-repair instruction recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-review-repair). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; reported peer findings are indexed without assignment or current peer assessment. It is an appendix, not another work carrier or grant. Round 2 of the common specification remains under review. Historical snapshots below retain their subjects: [C3-CODEX-I3-02](#c3-codex-iteration-3-consolidated-input-snapshot) records the earlier reviewed consolidation, not acceptance of subsequent repairs. A next input must be explicitly recorded after its selection; no tenant implementation is activated by this common repair.
 
 2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 owns the common amendment and exact input snapshot; T-002-CODEX owns the Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 

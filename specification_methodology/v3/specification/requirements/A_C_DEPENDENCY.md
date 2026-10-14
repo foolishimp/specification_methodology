@@ -2,11 +2,12 @@
 
 ## Standing
 
-Three things are kept distinct:
+Four concerns are kept distinct:
 
 - the a_c theory, which is the calculus itself;
 - a subject's interpretation in a_c: a model whose symbols and constraints are bound to that subject's meaning;
-- the carriers and tools that hold and check it.
+- the carrier that encodes that interpretation;
+- the checker and its declared checking contract.
 
 This product uses the separately owned Axiom Indexer, a program that checks a_c, for later evaluation. Each candidate owns its required method interpretation. Its documents, interpretation and encoded carrier have distinct content identities and proof boundaries; that separation does not exclude the interpretation from the candidate.
 
@@ -39,6 +40,8 @@ The dependent claim is then withheld and returned to its actual owner for verifi
 - Manifest SHA256: 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782
 - AXIOMATIC_CALCULUS.md SHA256: cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d
 
+This is the calculus basis used to encode the required interpretation. The method subject represented is the exact current tenant candidate, including its own calculus statements; it is a separate coordinate. Representing a successor theory does not silently replace this encoding basis or prove that theory true. Any required change to the dependency's theory or checking contract re-enters this common owner before dependent use. Compatible carrier structure remains mechanically checkable within the selected checker's declared contract.
+
 ## Immutable Mechanical Subject
 
 | Coordinate | Exact pin |
@@ -57,10 +60,11 @@ A later selected installed copy must verify exact subject membership and bytes b
 
 ## Proof Claims
 
-The interpretation serves the [constraint-surface and logic-compression requirement](README.md#constraint-surfaces-and-logic-compression). It makes the source's governing dependencies and remaining freedom recoverable for work. This relation is evaluated separately from checker validity: a well-formed model that omits a material condition can admit work the source prohibits. Required semantic coverage follows the method's owned determinations, not the number of clauses the checker happens to accept.
+The interpretation serves the [constraint-surface and logic-compression requirement](README.md#constraint-surfaces-and-logic-compression), which owns required coverage, independently specified fidelity cases and actual-use evidence. It makes the source's governing dependencies and remaining freedom recoverable for work. A well-formed model that omits a material condition can admit prohibited work. Coverage follows the method's owned determinations, not the number of clauses the checker accepts; a checked subset does not qualify the complete interpretation.
 
 For each selected, frozen tenant output, keep:
 
+- the exact method subject represented and the separate calculus basis used;
 - the source-to-model dispositions, which record how each source clause is represented in the a_c model;
 - the signature, which is the declared vocabulary;
 - the exact program, maps and bindings;

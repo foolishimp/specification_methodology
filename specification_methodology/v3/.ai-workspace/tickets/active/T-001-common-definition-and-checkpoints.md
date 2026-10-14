@@ -6,11 +6,11 @@ ticket_category: ordinary
 status: active
 goal: GOAL-002
 change_intent: reconstruct the method from its essential pillars and expose its logic as usable constraint surfaces
-change_class: requirement_reprice
-re_entry_point: specification_methodology/v3/specification/INTENT.md
-triaged_at: 2026-10-13T23:47:54Z
+change_class: product_reprice
+re_entry_point: specification_methodology/v3/specification/PRODUCT.md
+triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-13T23:47:54Z
+updated_at: 2026-10-14T03:00:21Z
 dependencies: []
 ---
 
@@ -18,9 +18,23 @@ dependencies: []
 
 ## Owner Instruction
 
+### Current review repair
+
+2026-10-14 — Jim instructs: “reviews have completed evaluate and correct”. The Executive evaluates Claude's common-specification round 1 at `afb6ad6e84d20e93fe98635736909ed562815d0a`, reviewing common subject `7c058ed52b9f3cdecf6277026be5d18507efc527`, and the completed Codex common/candidate review. The latter reviews Codex tenant `d832a51a4f91afca2ffa2e31636236f8729abf6c`; it adds no candidate defect beyond the already-open qualification work. Two read-only, same-family triage activations inspect the common findings and their owners. They contribute to repair design and are not independent acceptance of the repair.
+
+Executive triage: `product_reprice`. The intended successor and its pillars remain selected; the common acceptance and construction contracts need explicit replacement authority, result conjunction, integrated reduction and interpretation-fidelity closure. Dependent requirement, frame, conformance and tracking corrections follow that Product re-entry. Preserve the result/data distinction with its anti-evasion condition. The owner's existing instructions name the algebraic and computational calculi separately and supply a_c's logic-compression purpose; no new confirmation of those pillars is required. C1 premise decisions remain historical accepted decisions, not newly inferred theorems.
+
+Executive selects a bounded common Writer activation from main `afb6ad6`. Territory: common `specification/`, routing only where needed, this ticket, T-002, T-002-CODEX, the I3 work appendix and Codex commentary. Effects: correct the applicable review findings, index the peer findings without assigning peer work, preserve and checkpoint the two existing Codex review posts as written, verify the affected surfaces and freeze a round-2 subject on main. Excluded: tenant implementation, Claude's ticket and worktree, reinterpretation of old evidence, new paid trials, candidate merge, publication and acceptance. This recorded selection precedes the Writer effects.
+
+The same session now acts as the common Writer, not the Executive, for these effects. Context is bounded to the reviewed common owners, review returns and tracking records; the wider candidate corpus is acquired only through those returns. No new numeric resource limit is imposed: report elapsed time and any measured acquisition or spend, explicitly identify uninstrumented portions, and stop for material missing authority or a changed outcome. Exit: each applicable finding has a correction or reasoned disposition, source/links and builder checks pass, and a fresh nonauthor review reads the frozen repair. Any same-family review exception is recorded. Round 2 then goes to Claude and Jim; common sign-off and candidate acceptance remain open. No new tenant input is promoted merely by this repair commit.
+
+Writer return for the first round-2 freeze: 301 local and installed-source links across 16 affected/new Markdown files resolve; whitespace and installed-definition verification pass. Both existing Codex review hashes are unchanged. The tenant remains clean at `d832a51` with the same source tree. The [round-1 disposition record](../../comments/codex/20261014T030729Z_REVIEW_I3_ROUND_1_DISPOSITION_AND_REPAIR.md) evaluates every SR1–SR4 finding and A1–A9 ambiguity; common source is ready for frozen working review, not acceptance.
+
+Executive selects two fresh nonauthor working-review frames over that checkpoint: one checks conceptual/acceptance consistency against the installed owners; one checks review dispositions, tracking and process routes. The Ledger Writer records this selection here before their activation. Neither reviewer contributes to the repair, reads a mutable candidate or reviews tenant implementation. Each writes only its own Codex commentary post, with exact source, findings and limits, and returns a closed installed evaluation. These are declared same-family exceptions to gain independent acquisition and defect detection before Claude's round-2 review; they supply no cross-family or owner acceptance. Acquisition is limited to the assigned common documents, declared review sources and necessary installed clauses; no paid CLI actor call, full tenant acquisition or mutation is selected. The parent common Writer may checkpoint and correct evidenced defects within the existing grant, then returns the exact reviewed successor for Claude and Jim.
+
 ### Current iteration 3 direction
 
-Consolidation Writer return: common source freezes at `6c2debb1eb3791999f33f04f2a05061c94927b7b`. The [fresh nonauthor review](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md) found no actionable defect in the requirement clarification, affected routes or review-to-work coverage. The Writer verified 228 links, whitespace and the current installed-builder Product Definition. Executive selects the common Ledger Writer to record the successor input and descendant snapshot, and the separate tenant Git Writer to merge that basis inward without changing the repaired source. This records the completed common source review; snapshotting and inward integration complete the selected consolidation. C3 and owner acceptance remain open. The [work list](T-002-iteration-3-work.md) owns the current remaining-work status.
+Consolidation Writer return: common source freezes at `6c2debb1eb3791999f33f04f2a05061c94927b7b`. The [fresh nonauthor review](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md), a declared same-family working-review exception, found no actionable defect in the requirement clarification, affected routes or review-to-work coverage. The Writer verified 228 links, whitespace and the current installed-builder Product Definition. Executive selects the common Ledger Writer to record the successor input and descendant snapshot, and the separate tenant Git Writer to merge that basis inward without changing the repaired source. This records the completed common source review; snapshotting and inward integration complete the selected consolidation. C3 and owner acceptance remain open. The [work list](T-002-iteration-3-work.md) owns the current remaining-work status.
 
 2026-10-14 — Current owner steering: “i want the v3 iteration3 work plus the review work to be consolidated - the means complete the v3/sepicification update for iteration 3, then make a list of the work from the reviews and the updated specification, that way it can tracked to the new standard”. Common Writer continues the existing territory from `1317e43`: finish the requirement clarification, consolidate the work in the [T-002 appendix](T-002-iteration-3-work.md), obtain a nonauthor frozen-source review and record a successor input snapshot. Already-running Codex Writers finish their bounded repairs and stop. The appendix supplies traceability and current status, not a new method rule or execution grant. Review findings retain their subjects; no new peer work, tenant merge or paid trial is selected in this consolidation.
 

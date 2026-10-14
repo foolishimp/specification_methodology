@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-13T23:47:54Z
+updated_at: 2026-10-14T03:07:29Z
 priority: high
 dependencies: [T-002]
 ---
@@ -22,6 +22,8 @@ dependencies: [T-002]
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
 
 ## Current Owner Direction
+
+2026-10-14 — Common review repair is selected under [T-001](T-001-common-definition-and-checkpoints.md#current-review-repair). Claude's round-1 findings require common corrections before the next input is promoted. The completed Codex review of `d832a51` confirms bounded source repairs and the existing stale-distribution/qualification gap; it supplies no new tenant defect or acceptance. The tenant remains clean at `d832a51a4f91afca2ffa2e31636236f8729abf6c`, with source tree `dd222838b69addb683343e42992a2b08c1e459a0`. This common correction changes neither the candidate nor input amendment A1. I3-00's earlier completion means recording/consolidation only; common sign-off and I3-01–16 remain open at their stated scope.
 
 2026-10-14 — The owner selects consolidation before the next implementation increment. The [current work list](T-002-iteration-3-work.md) joins the iteration 3 specification and review findings. EC-CODEX-I3-01 remains the construction authority; the common successor snapshot will replace its input for subsequent work. Existing method, frame/calculus and profile Writers have returned their bounded repairs. Parent checkpoint Writer may freeze those returns, draft disposition corrections and evidence limits in its own tenant; it performs no further reconstruction or qualification during consolidation. The common Writer records the standard, review and snapshot on main. No candidate merge or acceptance follows from this checkpoint.
 
