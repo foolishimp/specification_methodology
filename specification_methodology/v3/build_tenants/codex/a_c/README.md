@@ -5,22 +5,31 @@ The current method package exposes its [source-bound interpretation](../successo
 and [source mapping](../successor/interpretation/MAPPING.json). Definitions, deciding
 constraints, consumer bindings and non-deciding locations retain their distinct
 types. Shared meanings have exact references; required task inputs are contracts,
-not assertions that a task has run or has an unknown result.
+not assertions that a task has run or has an unknown result. Source-owned open
+questions remain scoped residuals. Mandatory support is acquired through native
+references; conditional support and provenance retain exact discoverable routes.
+An unresolved condition cannot authorize a dependent action.
 
-The [current conversion return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_04.json)
+The [interpretation repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)
+binds the current source, native checks, acquisition measurements and remaining
+qualification limits. The [iteration-3 return](../qualification/C3/iteration-3/RETURN.md)
+owns the wider candidate qualification.
+
+## Historical I3 Conversion Evidence
+
+The [preceding conversion return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_04.json)
 records the exact successor and fresh native validation. Its
 [metadata comparison](../qualification/C3/iteration-3/a_c/INTERPRETATION_METADATA_04.json)
 binds reuse of the [prior mechanical controls](../qualification/C3/iteration-3/a_c/current/MECHANICAL_RESULT.json)
 to unchanged semantic fields and typed references; those controls retain their
 original subject and were not rerun.
 
-The current interpretation occupies 22,062,742 bytes. The preceding candidate's
+That interpretation occupied 22,062,742 bytes. Its preceding candidate's
 three measured materialized closures occupied 2.410–2.624 MB each. Their closure
 members remain unchanged; successor projection bytes were not remeasured.
 These remain adverse acquisition-cost observations, with no practical compression,
 semantic fidelity or method-acceptance claim. Comparative practical cost requires
-actual use. The [iteration-3 return](../qualification/C3/iteration-3/RETURN.md)
-owns the wider candidate qualification.
+actual use; those measurements retain their original subjects.
 
 The [preceding conversion return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_03.json)
 retains its original output and measurement identities.
@@ -38,9 +47,13 @@ its 53-clause interpretation and original evidence. The earlier
 subject. Neither is selected by this current entry or retrospectively regraded
 against the new candidate.
 
-## Preserved Earlier Interpretation
+## Historical Fixture Interpretation
 
-This territory holds a small separately bound interpretation of the frozen tenant candidate and the independently specified cost/ownership fixture. It encodes six symbols, seven clauses and two residuals; it is not a whole-STDO encoding or a proof of categorical equivalence.
+The root files in this territory preserve the earlier interpretation of its
+frozen tenant candidate and separately specified cost/ownership fixture. It
+encoded six symbols, seven clauses and two residuals. Those root files are
+historical fixture evidence and are not selected as the current whole-method
+interpretation or a proof of categorical equivalence.
 
 Use the [dependency and proof contract](../../../specification/requirements/A_C_DEPENDENCY.md). Keep source-to-model dispositions, signature, program/maps/bindings, mechanical output, independent fidelity judgment and actual-use claim distinct.
 

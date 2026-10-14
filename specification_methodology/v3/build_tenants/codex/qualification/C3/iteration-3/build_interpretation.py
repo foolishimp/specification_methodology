@@ -22,7 +22,7 @@ OUTPUT = PACKAGE / "interpretation"
 ACCOUNT = HERE / "DETERMINATIONS.json"
 INSTALL = TENANT / "a_c/install/axiom_indexer-v2.5.1-rc.2"
 TOOL = INSTALL / "build_tenants/core/code/ac.py"
-COMMON_INPUT = "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd"
+COMMON_INPUT = "1fce537bc0bd7f47a1b66b34d8c053ef3dad2816"
 THEORY_URI = "stdo://releases/v2.5.1-rc.2/"
 MANIFEST_SHA = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
 THEORY_SHA = "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
@@ -205,6 +205,7 @@ SEMANTIC_FIELDS = {
     'translation', 'locator_meaning', 'state_classifier', 'decision_rule',
     'function_contracts', 'causal_equation', 'compute_predicates', 'semantic_cut',
     'effect_predicates',
+    'source_residuals',
 }
 EVIDENCE_FIELDS = {
     'coverage_standing', 'interpretation_standing', 'proof_standing_ref',
@@ -226,7 +227,7 @@ CONSTRUCTION_STANDING = {
     'authored_conditional_argument_not_independent_entailment_proof',
 }
 LOCAL_REF_KEYS = {'value_ref', 'local_predicate_ref', 'local_binding_ref'}
-SHARED_REF_KEYS = {'contract_ref', 'scope_ref', 'input_ref'}
+SHARED_REF_KEYS = {'contract_ref', 'evaluation_contract_ref', 'scope_ref', 'input_ref'}
 
 
 def semantic_projection(account):
@@ -339,6 +340,69 @@ def contract_id(identifier):
     return NS + 'contract:' + identifier
 
 
+def acquisition_edges(value, ids, contracts, row=None):
+    """Classify exact relations without deciding their task applicability.
+
+    Native closure is unconditional. Conditional targets therefore remain exact
+    routes until a task establishes their condition and selects the target index.
+    Unclassified relations stay required; no relationship-name allowlist can
+    silently discard a material predicate dependency.
+    """
+    relations = value.get('dependency_relations', []) if isinstance(value, dict) else []
+    result = []
+    for edge in semantic_edges(value, ids, contracts, row):
+        edge = dict(edge, acquisition='required', qualification=None)
+        parts = edge['pointer'].strip('/').split('/')
+        enclosing, conditional = value, None
+        for part in parts:
+            if isinstance(enclosing, dict):
+                when = enclosing.get('required_when')
+                if when and when != 'within the declared applicability':
+                    conditional = enclosing
+                enclosing = enclosing.get(part.replace('~1', '/').replace('~0', '~'))
+            elif isinstance(enclosing, list):
+                enclosing = enclosing[int(part)]
+            else:
+                break
+        if any(p in {'source_refs', 'source_references'} for p in parts):
+            edge['acquisition'] = 'provenance'
+        elif parts[0] == 'dependencies':
+            target = edge['target'].removeprefix(NS + 'clause:')
+            matches = [i for i, rel in enumerate(relations) if rel.get('id') == target]
+            if matches:
+                # The complete typed occurrences determine acquisition. A flat
+                # duplicate must not turn their conditions into an always edge.
+                edge['acquisition'] = 'typed-duplicate'
+                edge['qualification'] = {'relation_pointers': ['/dependency_relations/' + str(i) for i in matches]}
+        elif parts[0] == 'dependency_relations':
+            rel = relations[int(parts[1])]
+            kind, when = rel.get('kind'), rel.get('required_when')
+            if kind in {'source_reference', 'source_provenance', 'illustrates', 'locator'}:
+                edge['acquisition'] = 'provenance'
+                edge['qualification'] = rel
+            elif when and when != 'within the declared applicability':
+                edge['acquisition'] = 'conditional'
+                edge['qualification'] = rel
+        elif conditional is not None:
+            edge['acquisition'] = 'conditional'
+            edge['qualification'] = conditional
+        result.append(edge)
+    return result
+
+
+def source_contract_owners(current):
+    """Only declared owners establish shared authority; users do not become it."""
+    rows = {r['id']: r for r in current['determinations']}
+    contracts = current['semantic_contracts']
+    owners = {}
+    for key, value in contracts.items():
+        refs = {edge['target'].removeprefix(NS + 'clause:')
+                for edge in semantic_edges(value, set(rows), contracts)
+                if edge['relation'] == 'governing-owner' and edge['target'].startswith(NS + 'clause:')}
+        owners[key] = sorted(refs)
+    return owners
+
+
 def validate_account(current, package=PACKAGE):
     rows = current.get('determinations')
     if not isinstance(rows, list) or not rows:
@@ -412,6 +476,11 @@ def validate_account(current, package=PACKAGE):
                 except (KeyError, IndexError, TypeError, ValueError):
                     raise ValueError('Unresolved local representation pointer: ' + row['id'] + pointer)
         semantic_edges(row, ids, contracts, row)
+        for residual in row.get('source_residuals', []):
+            if set(residual) != {'id', 'kind', 'detail', 'dependent_claim'} or not residual['id'] or not residual['detail'] or not residual['dependent_claim']:
+                raise ValueError(row['id'] + ': malformed source-owned residual')
+            if residual['kind'] not in {'ambiguity', 'conflict', 'omission', 'unresolved'}:
+                raise ValueError(row['id'] + ': unsupported source residual kind')
     for key, contract in contracts.items():
         if not re.fullmatch(r'[A-Za-z0-9_.:-]+', key):
             raise ValueError('Invalid shared semantic identity: ' + key)
@@ -420,39 +489,14 @@ def validate_account(current, package=PACKAGE):
 
 
 def contract_sources(current):
-    """Ground a shared meaning in declared owners and its bound source users."""
+    """Bind shared meanings to declared owners, without consumer fan-out.
+
+    An ownerless shared abbreviation is inlined at each use by build_program;
+    it has no independent authority and no standalone native clause.
+    """
     rows = {r['id']: r for r in current['determinations']}
-    contracts = current['semantic_contracts']
-    refs = {key: set() for key in contracts}
-    users = {key: set() for key in contracts}
-    shared_links = {key: set() for key in contracts}
-    for row in rows.values():
-        for edge in semantic_edges(row, set(rows), contracts, row):
-            if edge['target'].startswith(NS + 'contract:'):
-                users[edge['target'].removeprefix(NS + 'contract:')].update(sources(row))
-    for key, value in contracts.items():
-        for edge in semantic_edges(value, set(rows), contracts):
-            target = edge['target']
-            if target.startswith(NS + 'clause:'):
-                refs[key].update(sources(rows[target.removeprefix(NS + 'clause:')]))
-            else:
-                shared_links[key].add(target.removeprefix(NS + 'contract:'))
-        # Declared source owners suffice; otherwise retain source-bound users.
-        # Do not enumerate every consumer again when the owner is explicit.
-        if not any(edge['relation'] == 'governing-owner' for edge in semantic_edges(value, set(rows), contracts)):
-            refs[key].update(users[key])
-    changed = True
-    while changed:
-        changed = False
-        for key, linked in shared_links.items():
-            for target in linked:
-                before = len(refs[target])
-                refs[target].update(refs[key])
-                changed = changed or len(refs[target]) != before
-    for key, value in refs.items():
-        if not value:
-            raise ValueError('Shared contract has no declared owner or source-bound user: ' + key)
-    return {key: sorted(value) for key, value in refs.items()}
+    return {key: sorted({uri for owner in owners for uri in sources(rows[owner])})
+            for key, owners in source_contract_owners(current).items()}
 
 
 def family_mappings(current):
@@ -472,21 +516,54 @@ def build_program(current):
     ids = {r['id'] for r in rows}
     contracts = current['semantic_contracts']
     shared_sources = contract_sources(current)
+    by_id = {r['id']: r for r in rows}
+    member_hashes = {path: sha((PACKAGE / path).read_bytes()) for path in {r['owner']['path'] for r in rows}}
+    owner_routes = {identifier: {'source': original_source_uri(r['owner']), 'native_source': source_uri(r['owner']),
+        'source_member_sha256': member_hashes[r['owner']['path']], 'source_body_sha256': r['owner'].get('body_sha256')}
+        for identifier, r in by_id.items()}
     program = {'kind': 'axiom-indexer.axiomatic-program', 'schema_version': 1,
         'uri': NS + 'program:method-determinations', 'calculus_ref': THEORY_URI + 'standards/AXIOMATIC_CALCULUS.md',
         'source_basis': URI, 'frame_refs': [], 'vocabulary_refs': [], 'symbols': [], 'clauses': [], 'residuals': [], 'frame_indexes': []}
     mapping, families = [], {}
-    frame_sections = ['# Interpretation Acquisition Frames\n\nSelect an index explicitly for the task. The checker follows declared references; it does not evaluate their predicates or supply task inputs. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.\n']
+    frame_sections = ['# Interpretation Acquisition Frames\n\nSelect an index explicitly for the task. The checker closes always-required support; it does not evaluate predicates or supply task inputs. Each conditional route retains its condition and exact target index: establish applicability before dependent action, add an applicable target index, and retain an undecided condition as unresolved. Provenance routes remain discoverable without making their bodies prerequisites. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.\n']
 
-    def arguments(value, row=None):
+    def arguments(value, row=None, inline_stack=()):
         # One exact object literal keeps structure, order and local field refs.
         # Paired pointer/ref arguments expose actual links to native closure.
         args = [literal('semantic-record', value)]
-        for edge in semantic_edges(value, ids, contracts, row):
-            args.extend([literal('reference-location', edge['pointer']), reference(edge['relation'], edge['target'])])
+        for edge in acquisition_edges(value, ids, contracts, row):
+            target = edge['target']
+            if edge['acquisition'] == 'typed-duplicate':
+                # The original record preserves this occurrence; the typed
+                # relation exposes its exact required or conditional target.
+                continue
+            if target.startswith(NS + 'contract:'):
+                key = target.removeprefix(NS + 'contract:')
+                if not shared_sources[key]:
+                    if key in inline_stack:
+                        raise ValueError('Cyclic ownerless shared abbreviation: ' + key)
+                    args.append(literal('inlined-contract', {'pointer': edge['pointer'], 'identity': target,
+                        'definition_pointer': '/semantic_contracts/' + key.replace('~', '~0').replace('/', '~1'),
+                        'definition': contracts[key]}))
+                    # References inside an abbreviation keep their real owners.
+                    args.extend(arguments(contracts[key], inline_stack=inline_stack + (key,))[1:])
+                    continue
+            if edge['acquisition'] == 'required':
+                args.extend([literal('reference-location', edge['pointer']), reference(edge['relation'], target)])
+            else:
+                identifier = target.removeprefix(NS + 'clause:')
+                args.append(literal('acquisition-route', {
+                    'pointer': edge['pointer'], 'relation': edge['relation'], 'target': target,
+                    'acquisition': edge['acquisition'], 'qualification': edge['qualification'],
+                    'target_index': NS + 'index:' + identifier,
+                    **owner_routes[identifier],
+                    'unknown_applicability': 'unresolved; acquire required evidence and do not perform a dependent action until its governing condition is established'
+                        if edge['acquisition'] == 'conditional' else None}))
         return args
 
     for key, contract in sorted(contracts.items()):
+        if not shared_sources[key]:
+            continue
         program['clauses'].append({'uri': contract_id(key), 'clause_type': 'relation',
             'operator': VOCAB + 'shared-contract', 'arguments': arguments(contract),
             'statement': 'Shared semantic contract ' + key, 'source_refs': shared_sources[key]})
@@ -505,6 +582,11 @@ def build_program(current):
         program['clauses'].append({'uri': target, 'clause_type': 'constraint' if is_constraint else 'relation',
             'operator': VOCAB + operator, 'arguments': arguments(semantic, row),
             'statement': ('Constraint ' if is_constraint else 'Relation ') + identifier, 'source_refs': refs})
+        for residual in row.get('source_residuals', []):
+            program['residuals'].append({'uri': NS + 'residual:' + identifier + ':' + residual['id'],
+                'kind': residual['kind'], 'subject_refs': [target],
+                'detail': residual['detail'] + '\nDependent claim: ' + residual['dependent_claim'],
+                're_entry_refs': refs, 'source_refs': refs})
         families.setdefault(row['family'], []).append(target)
         program['frame_refs'].append(frame)
         program['frame_indexes'].append({'uri': index, 'frame_ref': frame,
@@ -581,6 +663,28 @@ This JSON Pointer identifies the occurrence in the preceding semantic record.
 The next argument supplies its typed native target. The pointer/ref pair preserves
 the distinction between an occurrence, its target identity and its relation.
 
+## Acquisition route
+
+The record preserves an exact relation occurrence without making its target an
+unconditional acquisition dependency. A provenance route records correspondence,
+example or navigation. A flat dependency enumeration retains its named targets
+in the semantic record; its typed relation supplies acquisition and conditions
+without a second unconditional edge. A conditional route retains its source-owned
+condition, binding, target index and exact source coordinates. Establish the
+condition for the task: when applicable, select that target index in addition
+to the current index; when established inapplicable, retain the reason; when
+undecided, retain the unresolved obligation and withhold dependent action.
+Route presence establishes neither applicability nor satisfaction. Every target
+resolves during compilation even when its body is not selected.
+
+## Inlined contract
+
+This exact shared abbreviation has no independently declared semantic owner.
+Its definition is carried at the source-bound use, with its identity and pointer
+in source-account.json retained. Its real references still acquire their owners.
+Inlining adds no owner, authority or instance truth. The complete set of users
+does not become a source dependency of every use.
+
 ## Declared dependency
 
 The source account declares this dependency. Its typed dependency relation and
@@ -645,6 +749,16 @@ applicability; acquire required observations, grants and source-owned conditions
 before dependent action. Definitions remain data, constraints require evidence,
 and a locator creates no deciding rule. A reference-only or materialized view
 preserves authored references without evaluating their truth or granting work.
+
+The native closure contains always-required support. Read each acquisition-route
+record in the selected result. Conditional support retains the exact condition
+and target index: establish applicability, add an applicable target index with
+another --frame-index argument, or retain the unresolved obligation and withhold
+dependent action. Established non-applicability needs its reason. Provenance and
+example routes preserve exact discoverable sources without importing their
+bodies as prerequisites. Unknown applicability is not non-applicability.
+Ownerless shared abbreviations are carried inline at each source-bound use;
+they do not materialize every other consumer or create a new authority owner.
 
 ## Representation coordinates
 

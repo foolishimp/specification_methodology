@@ -68,9 +68,105 @@ def assert_compilation(current, program, mapping):
 
 
 def projection(program, logical_map, bindings, index, mode, destination):
+    indexes = index if isinstance(index, list) else [index]
     invoke(['project', '--program', program, '--map', logical_map, '--bindings', bindings,
-            '--frame-index', index, '--mode', mode, '--output', destination])
+            *[part for selected in indexes for part in ('--frame-index', selected)],
+            '--mode', mode, '--output', destination])
     return build.read(destination)
+
+
+def acquisition_checks(bindings):
+    """Source-selected membership expectations; native validity alone is weaker."""
+    emitted_bytes = {}
+    def view(name, ids):
+        result = projection(OUTPUT / 'program.json', OUTPUT / 'map.json', bindings,
+            [build.NS + 'index:' + identifier for identifier in ids], 'reference-only', EVIDENCE / (name + '.json'))
+        emitted_bytes[result['projection_sha256']] = (EVIDENCE / (name + '.json')).stat().st_size
+        return result
+
+    def selected(result):
+        return {uri.removeprefix(build.NS + 'clause:') for uri in result['closure']['clauses']}
+
+    def routes(result):
+        return [json.loads(arg['literal']) for clause in result['clause_relations'] for arg in clause['arguments']
+                if arg['role'] == build.VOCAB + 'acquisition-route']
+
+    prose = view('acquisition-writing', ['WRITING_GUIDE.good-prose'])
+    require({'WRITING_GUIDE.good-prose', 'WRITING_GUIDE.method-alignment', 'FOUNDATIONS.result-algebra',
+             'FOUNDATIONS.result-conjunction'} <= selected(prose), 'Writing projection lost governing support')
+    require(not any(identifier.startswith(('DESIGN_MODULE_METHOD.', 'STDO_REFERENCE_FRAME_BASELINE.'))
+                    for identifier in selected(prose)), 'Unselected optional profile entered narrow prose closure')
+    require('TRANSFORMATION_LIBRARY.workrecovery-specialization' not in selected(prose),
+            'The recovery example became mandatory writing material')
+    require(any(r['target'] == build.clause_id('TRANSFORMATION_LIBRARY.workrecovery-specialization')
+                and r['acquisition'] == 'provenance' for r in routes(prose)), 'Recovery example route was erased')
+    require(build.contract_id('core.shared_contracts.definition_data') not in prose['closure']['clauses'],
+            'An ownerless abbreviation still imports all consumers')
+    recovery = view('acquisition-recovery', ['TRANSFORMATION_LIBRARY.workrecovery-specialization'])
+    recovery_required = {'TRANSFORMATION_LIBRARY.workrecovery-specialization', 'FOUNDATIONS.workspace-and-context',
+        'FOUNDATIONS.result-conjunction', 'REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates',
+        'TICKET_METHOD.work-carrier-to-execution-rule'}
+    require(recovery_required <= selected(recovery), 'Recovery projection erased currentness, work or known/missing results')
+    evaluate = view('acquisition-profile-undecided', ['TRANSFORMATION_LIBRARY.evaluate'])
+    reviewer = 'STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame'
+    require(reviewer not in selected(evaluate), 'Undecided Baseline adoption became unconditional')
+    profile_routes = [r for r in routes(evaluate) if r['target'] == build.clause_id(reviewer) and r['acquisition'] == 'conditional']
+    require(profile_routes and all(r['qualification']['required_when'] == 'Baseline Reviewer is adopted and lawfully activated'
+            and r['unknown_applicability'].startswith('unresolved;') for r in profile_routes),
+            'Missing profile evidence was silently treated as non-applicability')
+    adopted = view('acquisition-profile-adopted', ['TRANSFORMATION_LIBRARY.evaluate', reviewer])
+    require(reviewer in selected(adopted), 'Explicit adopted-profile selection lost its owner')
+    conjunction = view('acquisition-design-absent', ['FOUNDATIONS.result-conjunction'])
+    design = ['DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016',
+              'DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017']
+    require(not set(design) & selected(conjunction), 'DMM obligations were universalized')
+    for target in design:
+        require(any(r['target'] == build.clause_id(target) and r['acquisition'] == 'conditional'
+                    and r['qualification']['required_when'] == 'design composition is selected'
+                    for r in routes(conjunction)), 'DMM route/condition disappeared')
+    design_adopted = view('acquisition-design-adopted', ['FOUNDATIONS.result-conjunction', *design])
+    require(set(design) <= selected(design_adopted), 'Adopted design composition lost required support')
+    release_questions = view('acquisition-source-questions', ['RELEASE_METHOD.open-questions'])
+    require(len(release_questions['closure']['residuals']) == 2,
+            'Source-owned open Release choices were forced green or dropped')
+    combined = view('acquisition-evaluate-conjoin', ['TRANSFORMATION_LIBRARY.evaluate', 'TRANSFORMATION_LIBRARY.conjoin'])
+    require({'FOUNDATIONS.result-algebra', 'FOUNDATIONS.result-conjunction',
+             'FOUNDATIONS.judgment-and-authority'} <= selected(combined),
+            'Evaluation/conjunction lost result authentication or known-failure coverage law')
+    # A structurally valid compiler mutation may still lose required meaning.
+    # Prove that the source-selected oracle catches that loss after the fixed
+    # native checker has accepted and projected the malformed representation.
+    mutant = copy.deepcopy(build.read(OUTPUT / 'program.json'))
+    workspace = build.clause_id('FOUNDATIONS.workspace-and-context')
+    removed = 0
+    for clause in mutant['clauses']:
+        old = clause['arguments']
+        clause['arguments'] = [arg for arg in old if arg.get('ref') != workspace]
+        removed += len(old) - len(clause['arguments'])
+    require(removed > 0, 'Missing-support mutation changed no required edge')
+    mutant_path, mutant_map = EVIDENCE / 'omitted-required-support.program.json', EVIDENCE / 'omitted-required-support.map.json'
+    mutant_path.write_bytes(build.json_bytes(mutant))
+    invoke(['validate', '--program', mutant_path, '--bindings', bindings, '--emit-map', mutant_map])
+    bad = projection(mutant_path, mutant_map, bindings, build.NS + 'index:TRANSFORMATION_LIBRARY.workrecovery-specialization',
+                     'reference-only', EVIDENCE / 'omitted-required-support.projection.json')
+    require('FOUNDATIONS.workspace-and-context' not in selected(bad), 'Native omission control did not remove the material dependency')
+    require(not recovery_required <= selected(bad), 'Source-selected required-support oracle accepted the omission')
+    write('ACQUISITION_NEGATIVE_CONTROL.json', {'case': 'A valid native graph omits required recovery/currentness support',
+          'native_validation': 'valid', 'native_projection': 'emitted', 'source_selected_oracle': 'rejected',
+          'removed_native_edges': removed, 'missing_required_owner': 'FOUNDATIONS.workspace-and-context',
+          'limit': 'The source-selected oracle is authored; independent fidelity and actual use remain separate.'})
+    # These predicates assert selection fidelity. The checker does not establish
+    # real adoption, decide a task or authorize a dependent action.
+    cases = [('writing', prose), ('recovery', recovery), ('profile_undecided_or_established_absent', evaluate),
+             ('profile_adopted', adopted), ('design_absent', conjunction), ('design_adopted', design_adopted),
+             ('source_open_questions', release_questions), ('evaluate_conjoin', combined)]
+    return [{'case': name, 'selected_clauses': len(result['closure']['clauses']),
+             'residuals': len(result['closure']['residuals']), 'routes': len(routes(result)),
+             'projection_json_bytes': emitted_bytes[result['projection_sha256']],
+             'resolved_source_routes': len(result['resolved_sources']),
+             'source_fragment_bytes_acquired_by_actor': None,
+             'limit': 'Selection and retained-condition checks; actual task applicability and use remain separate.'}
+            for name, result in cases]
 
 
 def refusal(args, diagnostic):
@@ -188,8 +284,14 @@ def main():
     by_clause = {c['uri']: c for c in program['clauses']}
     null_definitions = [r for r in current['determinations'] if r.get('predicate') is None and r['representation_kind'] in {'definition_data', 'consumer_binding', 'non_deciding_locator'}]
     require(all(by_clause[build.clause_id(r['id'])]['clause_type'] == 'relation' for r in null_definitions), 'Null definition became a constraint')
-    require(not program['residuals'] and not any(c['operator'].endswith('acquire-source') for c in program['clauses']), 'Construction or task unknowns were manufactured')
-    controls.append({'case': 'Definition/locator and future-input distinction', 'result': {'null_relations': len(null_definitions), 'manufactured_residuals': 0}})
+    declared_residuals = {build.NS + 'residual:' + row['id'] + ':' + residual['id']
+                          for row in current['determinations'] for residual in row.get('source_residuals', [])}
+    require({r['uri'] for r in program['residuals']} == declared_residuals
+            and not any(c['operator'].endswith('acquire-source') for c in program['clauses']),
+            'A source-owned residual was lost, or a future task unknown was manufactured')
+    controls.append({'case': 'Source residuals distinct from definition and future inputs',
+                     'result': {'null_relations': len(null_definitions), 'source_residuals': len(declared_residuals), 'manufactured_residuals': 0}})
+    acquisition = acquisition_checks(binding_path)
     # Exact source-block corruption is detected before relying on source routes.
     damaged_current = copy.deepcopy(current)
     block_row = next(r for r in damaged_current['determinations'] if r.get('source_clauses'))
@@ -221,6 +323,7 @@ def main():
     report = {'kind': 'codex-current-interpretation-mechanics', 'valid': True,
         'document_source_input_commit': document_commit, 'complete_package_input_commit': complete_commit,
         'scope': 'documentary construction check' if args.document_only else 'frozen complete-package mechanical check',
+        'acquisition_checks': acquisition,
         'common_input_commit': build.COMMON_INPUT, 'dependency_verification': dependencies,
         'account_input_commit': generation['account_input_commit'], 'account_sha256': generation['account_input_sha256'], 'semantic_account_sha256': build.sha((OUTPUT / 'source-account.json').read_bytes()),
         'program_sha256': build.sha((OUTPUT / 'program.json').read_bytes()), 'map_sha256': build.sha((OUTPUT / 'map.json').read_bytes()),
