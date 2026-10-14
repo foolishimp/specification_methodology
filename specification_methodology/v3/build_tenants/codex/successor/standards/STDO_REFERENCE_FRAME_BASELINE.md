@@ -119,6 +119,17 @@ The ownership layers are distinct:
 | human and proxy identity | `IDENTITY_METHOD.md` plus project authority | binds the Executive actor and its decision envelope |
 | Product and release acceptance | current Product and `RELEASE_METHOD.md` | retains direct acceptance where those owners require it |
 
+The following families explain this optional profile's additional choices.
+Their premises are the named [Foundations commitments](FOUNDATIONS.md#foundational-commitments);
+their procedures consume the owners above rather than defining parallel law.
+
+| Profile family and consumers | Premises and conditional consequence | Profile choice and decision owner |
+|---|---|---|
+| Outcome, basis and handoff: Product-Chain Basis, Executive Drift Locks and Handoff Projection | F1 fixes the delivery outcome; F2/F3 require exact interpreted subject and current basis; F4 preserves material joins; F5 bounds each actor's view; F6 separates results from grants. A reduced handoff must therefore retain the conditions needed by its next decision, without silently selecting a new outcome or authority. | This profile chooses the Executive/Worker/Reviewer return relation where coordination is selected, the drift locks and compact handoff projection. Existing Product/work authorities supply the actual basis and permitted action. |
+| Coverage and recovery: Coverage Application and Missing-Frame And Re-Entry Application | F2/F4 require evidence for material claims and joins; F5 admits incomplete evaluations; F6 prevents an available capability creating permission. A missing required result cannot be treated as a pass, while an irrelevant available family need not be activated. | This profile binds the Frame Method applicability, coverage and diagnostic owners to the engagement frontier; it chooses no universal frame inventory or recovery algorithm. |
+| Adoption and qualification: Product-Owned Adoption Or Project-Defined Configuration, Profile Qualification, Baseline-Specific Project-Basis Additions and Baseline-Specific Activation Additions | F2/F3 require evidence on the exact configuration; F5 requires a sufficient actor envelope; F6 separates inclusion, selection and acceptance. A packaged profile therefore remains only available until the Product adopts it; a local qualification cannot prove every configuration adequate. | This profile chooses its adoption projection and claim-scoped discriminators. The Product authority selects the configuration, actors and applicable proof; the cited methods retain their laws. |
+| Failure and closure: Failure Classification, Anti-Patterns and Closure | F1 selects the outcome predicate; F2/F3 require its actual evidence and basis; F4 preserves required joins and failure; F6 retains reserved decisions. Neither a work-result label, completed review nor locally green artifact can close a different unsatisfied obligation. | This profile names failure examples and binds existing closure conditions to the selected engagement. Foundations owns result combination; Ticket owns work closure; the actual decision owner determines acceptance or the next permitted action. |
+
 Every requirement in this profile is either:
 
 1. an exact application of a cited owning STDO relation; or
@@ -1169,8 +1180,9 @@ exact runnable owner surface, validator, projection, receipt or reconstruction.
 transport of those observations to the testing frame.
 
 The profile's additional subject condition excludes a parallel owner state
-constructed by a harness, fixture, expected-value builder, proof script or
-Reviewer from raw payloads, events, logs, filenames or implementation fragments.
+constructed by a harness, fixture, expected-value builder, proof script,
+assurance evaluator or Reviewer from raw payloads, events, logs, filenames,
+labels or implementation fragments.
 Generic byte, digest, order, equality, membership, completeness and conjunction
 checks may evaluate owner-issued evidence; they may not mint its carriers,
 choose current history or the authoritative path, interpret owner lifecycle or
@@ -1761,8 +1773,8 @@ A representative profile trial establishes at least:
 24. Reviewer returns evidence-bound severity and technical implications while
     remaining unable to assign priority, block promotion, direct repair, or
     activate another frame;
-25. Executive consumes the exact technical triage with the complete Product
-    view and current MVP or release mandate, keeps severity, priority, frame
+25. Executive consumes the exact technical triage with the sufficient bounded
+    delivery view and current MVP or release mandate, keeps severity, priority, frame
     result, and promotion-boundary effect distinct, and selects only an
     authorized disposition and action; and
 26. a finding outside the exact claim boundary remains repricing input rather
@@ -1938,6 +1950,10 @@ joins to the applicable owning conditions below, then use
 this outcome, current basis, adopted configuration and actual grants. These
 shared decisions are applied to the existing work evidence, not through an
 additional closure pass or carrier.
+
+The profile supplies no new execution authority, local constitutional layer,
+actor topology, runtime or universal completeness claim. Its selected
+configuration and effects remain within the existing owners' grants.
 
 | Obligation group | Deciding conditions for this outcome |
 |---|---|

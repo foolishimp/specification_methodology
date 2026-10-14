@@ -1338,6 +1338,8 @@ does not.
 
 ## Composition Law
 
+Do not build one central monolith first.
+
 Compose local published domain artifacts and their entity cuts through the
 library's [composition contract](TRANSFORMATION_LIBRARY.md#composition-law).
 The binding is the participating cuts and exact bases, treatment predicates,
@@ -1352,18 +1354,24 @@ admits no generic translation exception. Claims of adjunction or equivalence
 require the evidence in [Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
 
 Prefer a federated world-model mesh to a flattened central model. Detailed
-mesh topology remains product-local until a reusable node/edge model is
-ratified by the method owner.
+mesh topology may remain product-local while the line is developed.
+Method-level mesh law should be ratified only once the reusable node and edge
+model is stable; stability alone supplies no ratification authority.
 
 ---
 
 ## Projection Law
 
-World-model projections apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
-with the semantic kernel as source. The material source relations are governing
-objects, evidence, treatments, covariance edges, adjoint mappings and temporal
-reference artifacts where applicable. Projection bindings retain their exact
-selectors and declared loss; publication supplies no new semantic authority.
+The semantic kernel remains primary. All world-model projections should remain
+traceable to their governing objects, evidence, treatments, covariance edges,
+adjoint mappings and applicable temporal reference artifacts. Projection is
+downstream convenience, not semantic authority.
+
+Reliance on a projection for a declared source-to-consumer claim applies
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) with that
+kernel as source. Bind the material source relations, exact selectors and
+declared loss required by that use. Publication alone establishes neither that
+fidelity claim nor new semantic authority.
 
 Tables, schemas, APIs, mapping documents and covariant transforms are forms
 over that kernel. Prefer `world model -> API contract -> schema contract`

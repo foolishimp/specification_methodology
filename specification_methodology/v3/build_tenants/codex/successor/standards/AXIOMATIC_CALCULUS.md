@@ -881,7 +881,8 @@ The kinds retain their distinct proposal, evaluation and human-decision
 contracts. `a_c` prescribes no universal `F_P -> F_D -> F_H` sequence. An
 application chooses its lawful topology and outer operator without changing
 the constituent predicates or AC-007 refinements. Categorical claims additionally
-meet the library's demonstration conditions.
+meet the complete demonstration standard in
+[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
 
 ## Interpretation And Models
 

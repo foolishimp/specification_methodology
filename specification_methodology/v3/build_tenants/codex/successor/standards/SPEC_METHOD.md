@@ -37,6 +37,21 @@ The bindings add no evaluation stage or carrier. Every mapping retains the
 core's legal performance pairs, diagnostic precedence, absent coverage and
 actual effects; a raw label cannot override independently admissible evidence.
 
+## Method Families
+
+The following arguments bind the remaining constitutional and procedural
+families to [F1–F6](FOUNDATIONS.md#foundational-commitments). A procedure applies
+the named owner; it does not acquire a second definition of that owner's law.
+The family scope includes the listed consumers and their local subsections.
+
+| Family and consumers | Premises and conditional consequence | Additional policy and owner |
+|---|---|---|
+| Constitutional authority: Position, Manifesto, Spec-Drivenness Litmus, Process Constitution and Specification Surface Rule | F1 requires an adequate outcome; F2 requires enough interpreted meaning to distinguish conformant work; F3 and F6 separate current subject, evidence and authority. A conformant realization therefore needs a recoverable governing meaning; observed behavior alone cannot supply it. | Spec chooses the directional constitutional chain, the WHAT/HOW split and one live constitutional surface. Product authority selects the actual obligations and locations. Present-tense law and commentary placement implement that selected surface, not a theorem about all documents. |
+| Delegated work: Probabilistic Work Boundary | F1/F2 require an outcome predicate and an interpretable boundary; F5 admits unknown and incomplete work; F6 bounds effects and decisions. A worker's internal search cannot establish its own permission or erase an unresolved outcome. | Spec places the admissibility contract at the work boundary and leaves the internal solution strategy to the adopting Product and worker. Domain profiles choose their narrower contracts. |
+| Bounded work and closure: Sprint Execution Boundary, Consistency Gate Rule and Universal Intake Triage | F1 fixes the selected outcome; F2/F3 make current governing facts and affected scope material; F4 preserves coupled obligations; F6 separates a work batch from authority. Finishing a batch or matching old tests cannot establish an inconsistent current claim. | Spec chooses the lawful re-entry classes and current-surface consistency gate; Ticket owns carrier admission, escrow and closure mechanics. The actual governing owner selects repricing, and an unchanged sufficient grant remains usable. |
+| Realization and correction: Design Rule, Renewal Path, Reconstruction Litmus, Method and ADR Conventions | F1/F2 require enough meaning to realize the selected outcome; F3 distinguishes the workspace from a prior account; F4 preserves the affected relations; F6 reserves changes to their owners. New observations can defeat a proposed realization or expose missing governing meaning, but do not authorize changing that meaning. | Spec chooses the goals-to-realization sequence, reverse gap-analysis route and traceable design decisions. ADRs and folder layout are declared conventions; the Product binding and adopted design profile determine their applicability. |
+| Current-surface transitions: Transformation Wave Rule, Legacy Classification Rule and Release Version Boundary | F2/F3 require unambiguous current meaning and identity; F4 preserves the affected outer contract; F6 prevents a migration carrier or published selector conferring authority. A transitional path therefore cannot silently become another owner or change a consumer's basis. | Spec chooses its migration and compatibility policy. Release owns immutable publication and the selector/adoption protocol; the consumer's Product authority owns adoption. |
+
 
 ## Canonical Compression
 
@@ -62,12 +77,13 @@ blocking or escalation is policy-driven by declared risk appetite, except for
 hard-stop prerequisite failures. Products, applications, modules, graph
 functions, build tenants, and runtime surfaces are implementations of the
 constitutional documents, not substitutes for them. Scenarios verify
-operational meaning where capability claims need end-to-end proof. Code
-realizes decisions. Design must
+operational meaning where capability claims need end-to-end proof. Realization,
+including code in a software binding, implements decisions. Design must
 be derivable from requirements, which are themselves derivable from goals,
-intent, and product definition; code must be derivable from requirements and
+intent, and product definition; realization must be derivable from requirements and
 design. Iteration is cumulative repricing, not waterfall.
-Events, projection, and delta reveal drift. Every live requirement family must
+Observations and their selected projections reveal drift; events are one durable
+observation carrier. Every live requirement family must
 have design ownership, explicit classification, and downstream closure or
 explicit deferment. Every design record must ground itself in requirements.
 Shipping behavior must trace back to constitutional authority. Live
@@ -250,7 +266,8 @@ We require **realisation** to be derivable from requirements and design, not def
 
 We treat spec-driven development as a **disambiguation pipeline**: each major gate reduces the space of lawful interpretations before downstream realization proceeds.
 
-We demand **evidence** for claims through scenarios, tests, events, projection, and delta.
+We demand **evidence** for claims through the observations and proof surfaces
+appropriate to their declared realization, including scenarios and tests.
 
 We treat **repricing** as part of correctness: when reality exposes a constitutional gap, the specification must change.
 
@@ -272,10 +289,10 @@ The work is not genuinely spec-driven if any of these fail:
 2. Given intent, a competent team cannot derive a conformant product-definition surface.
 3. Given product definition, a competent team cannot derive conformant requirements.
 4. Given requirements, a competent team cannot derive a conformant design.
-5. Given requirements and design, a competent team cannot derive conformant code.
+5. Given requirements and design, a competent team cannot derive a conformant realization in the selected execution environment.
 6. A live requirement has no explicit status, category, or owning design decision.
 7. A live requirement has no downstream realization or explicit deferment surface.
-8. Code behavior exists without requirement and design authority.
+8. Realized behavior exists without requirement and design authority.
 9. A live domain artifact is rewritten in place after becoming part of the live constitutional surface.
 10. A capability claim has no operational evidence.
 11. Drift is discovered, but the constitutional source is not repriced.
@@ -903,11 +920,16 @@ proves realisation conformance by passing structural validation.
 
 At design admission, each affected requirement identifies its realising
 operation or invariant, the preservation obligation at its interfaces, and the
-evidence capable of defeating the claimed realisation. Context, time, memory,
-communication, human effort and spend state their units and are measured at the
-boundary declared by that binding where they are material. Attention adequacy
-is evaluated through actual-use evidence; no universal attention unit or score
-is required. A requirement-to-operation route
+evidence capable of defeating the claimed realisation. The binding preserves
+applicable authority, required human decisions, independence, failure and
+recovery conditions; a convenient execution environment cannot weaken them.
+Context, time, memory, communication, human effort and spend state their units
+and are measured at the boundary declared by that binding where they are
+material. Context fit and attention adequacy apply their distinct evidence
+conditions in [Workspace and context](FOUNDATIONS.md#workspace-and-context).
+A categorical preservation claim additionally applies
+[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
+A requirement-to-operation route
 alone does not discharge preservation or demonstrate fitness. A tenant cannot
 repair an inconvenient requirement by silently changing the common `WHAT`.
 
@@ -1280,8 +1302,11 @@ stops regardless of risk appetite. Typical hard-stop classes include:
 
 A hard stop returns the affected task predicate through the
 [core stop rule](FOUNDATIONS.md#result-algebra). A witnessed invariant violation
-or unmet required authorization can falsify admissibility; missing evidence
-about a requirement or approval leaves it indeterminate. An unusable governing
+or unmet required authorization falsifies the corresponding admissibility
+predicate; missing evidence about that condition leaves it indeterminate.
+Admissibility and fulfillment of the interrupted task remain separate
+predicates: refusal alone does not establish that the intended outcome failed.
+An unusable governing
 basis or an evaluation outside capability retains its own diagnosis. The stop
 label proves neither non-performance nor absence of effects; an undeclared or
 uncertain effect needs actual observation before dependent action.
@@ -1576,6 +1601,9 @@ condition. Its consistency predicates require:
 - the upstream surface remains sufficient for the downstream surface
 - downstream artifacts do not contradict active upstream truth
 - tests and qualification prove the active intended behavior rather than stale precedent
+
+A review event, passing aggregate, completed artifact or status change does not
+discharge a missing required predicate in that conjunction.
 
 The shared Result condition governs that conjunction; a local artifact's
 fitness is a different predicate. `TICKET_METHOD.md` owns ticket-state recording
@@ -2778,9 +2806,11 @@ The methodology is specification-driven only if the layers are reconstructable i
 2. Given **Intent**, a competent team should be able to derive a conformant **Product** definition.
 3. Given **Product**, a competent team should be able to derive conformant **Requirements**.
 4. Given **Requirements**, a competent team should be able to derive a conformant **Design**.
-5. Given **Requirements + Design**, a competent team should be able to derive conformant **Code**.
+5. Given **Requirements + Design**, a competent team should be able to derive a conformant **Realization** in its selected execution environment.
 
-This does not mean the derivation is unique. Different designs may satisfy the same requirements, and different codebases may satisfy the same design. The test is sufficiency, not determinism.
+This does not mean the derivation is unique. Different designs may satisfy the
+same requirements, and different software, human or mixed realizations may
+satisfy the same design. The test is sufficiency, not determinism.
 
 Failures at any boundary indicate a specification defect:
 
@@ -2788,9 +2818,10 @@ Failures at any boundary indicate a specification defect:
 - If product cannot be derived from intent, the intent surface is too vague, contradictory, or not concrete enough to guide realization.
 - If requirements cannot be derived from product, the product surface is underspecified, contradictory, or not decomposable enough to govern implementation.
 - If design cannot be derived from requirements, the requirement surface is underspecified, contradictory, or polluted with accidental implementation detail.
-- If code cannot be derived from requirements plus design, the design surface is incomplete, ambiguous, or not operational enough.
+- If a realization cannot be derived from requirements plus design, the design surface is incomplete, ambiguous, or not operational enough for its declared binding.
 
-The purpose of ADRs and design documents is therefore not decorative explanation. They are the load-bearing bridge between constitutional truth and executable realization.
+ADRs and design documents provide the governing decisions needed to realize the
+constitutional obligations in the selected environment.
 
 Reconstruction sufficiency also depends on ambiguity governance. If a boundary
 can be crossed only by hiding a major unresolved ambiguity, the upstream surface
@@ -2802,9 +2833,10 @@ Reconstructability requires a correct reconstruction route, not its execution
 at every use. It grants no restart authority and does not excuse stale success.
 The claim determines the reconstruction span; a local selected function does
 not require recreating the whole Product. New material counterexamples still
-challenge the affected relation. `DESIGN_MODULE_METHOD.md` owns design-view
-coverage, its material-change gate and unchanged-boundary reuse; this litmus
-does not waive that gate or require recreating unchanged accepted views.
+challenge the affected relation. Where `DESIGN_MODULE_METHOD.md` applies, it
+owns design-view coverage, its material-change gate and unchanged-boundary
+reuse; this litmus does not waive that gate or require recreating unchanged
+accepted views.
 
 ## Design Rule
 
@@ -3269,21 +3301,29 @@ When a feature is introduced or changed:
 7. Prefer declarative expression of the problem and acceptance surface before adding imperative mechanism.
 8. Check the reconstruction boundary: can the current goals support the current intent, can the current intent support the current product, can the current product support the intended requirements, can the current requirements support the intended design, and can the current design support the intended implementation?
 9. Record any major ambiguity discovered at the active boundary, and govern it according to declared risk appetite rather than silent convenience.
-10. Develop **Code** under the selected design relation and reconcile design,
-    implementation, and tests before promotion or closure.
-11. Use **Events, Projection, and Delta** to verify whether reality still satisfies the requirements.
+10. Construct the **Realization** under its selected design and execution
+    binding, and reconcile design, realized behavior and applicable proof
+    before promotion or closure. Code is the software case of this step.
+11. Observe the realized state through its declared evidence sources and compare
+    it with the requirements. Events, projection and delta are used where that
+    binding selects them; adequate direct observation remains available.
 
 When bootstrapping a project or repricing a requirement surface:
 
 1. Resolve the applicable Product Definition, verify its exact installed STDO
    basis, load its declared bootstrap entrypoint, and then load `GOALS.md` or
    the bound equivalent current epic carrier.
-2. Perform the `goals → intent` step and write or confirm `INTENT.md`.
-3. Perform the `intent → product` step and write or confirm `PRODUCT.md` as the current product-definition bridge.
+2. Perform the `goals → intent` step and write or confirm the bound Intent surface.
+3. Perform the `intent → product` step and write or confirm the bound Product surface as the current product-definition bridge.
 4. Gather requirement source material from the relevant constitutional inputs.
-5. Perform the `product → requirements` step and write the resulting live surface under `requirements/`.
-6. Store requirements as individual files or grouped requirement families, whichever best preserves clarity and avoids monolithic sprawl.
-7. Make `requirements/` the sole live requirement authority before proceeding to design and code.
+5. Perform the `product → requirements` step and write the resulting live
+   surface at the locations selected by the Product Definition's `what` binding.
+6. Use individual requirements or grouped families in the selected carrier,
+   preserving clarity and recoverable ownership. `requirements/` is the default
+   repository convention, not a required authority location.
+7. Establish that bound surface as the live requirement authority, with no
+   co-equal rival, before treating downstream design and realization as governed
+   by it.
 8. Prefer declarative structure over procedural workaround while shaping the new requirement surface.
 9. Record any major ambiguity that remains at the current boundary before downstream realization proceeds.
 10. Only after that surface exists should downstream design and implementation be treated as constitutionally grounded.

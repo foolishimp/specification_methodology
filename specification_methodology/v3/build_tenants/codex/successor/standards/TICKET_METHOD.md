@@ -13,6 +13,19 @@ closure consume the shared [result algebra](FOUNDATIONS.md#result-algebra) and
 The bindings below preserve core performance, coverage, diagnostic precedence
 and actual effects. They add no evaluation pass or record to the existing work.
 
+## Carrier Families
+
+The carrier decisions below apply [F1–F6](FOUNDATIONS.md#foundational-commitments)
+through these scoped arguments. Their obligations come from the named owners;
+this table supplies no additional ticket, evaluation stage or acceptance act.
+
+| Family and consumers | Premises and conditional consequence | Additional policy and owner |
+|---|---|---|
+| Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection | F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof. | Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions. |
+| Term binding: Bounded-Context Term Binding | F2 requires interpreted meaning; F3 binds the subject/basis; F6 preserves the owning authority. A material ambiguous work term therefore cannot support admission or closure by familiarity alone. | Spec owns semantic resolution. Ticket chooses the work fields and relation references that carry the exact resolved meaning, and withholds the affected admission/closure until that relation is supplied. |
+| Evaluation and reuse: Evaluation Criteria And Non-Closure Conditions, Condition-Based Closure And Reuse, Test Case Authority | F1 supplies the exact work claim; F2/F3 require applicable current evidence; F4 preserves all required obligations; F6 distinguishes assessment and owner decisions. A passing local test, review event or recorded status cannot establish a different unresolved work claim. | Ticket chooses its closure-bearing carrier fields and admitted test authority. Foundations owns currentness and conjunction; Spec owns requirement/design truth and lawful re-entry. These policies do not add review when the applicable grant and law require none. |
+| Migration and extension: Migration Checklist, Implementation Migration Category and Future Extensions | F2/F3/F4/F6 require current unambiguous meaning, retained obligation identity and lawful ownership across a change. An implementation handoff cannot make predecessor behavior authoritative or transfer one tenant's closure to another. | Ticket chooses migration declarations, break-to-closure maps and local follow-up. Spec owns the migration law; the owning work authority selects any optional future carrier. |
+
 ## Core Model
 
 This carrier family assumes [F1, F3, F5 and F6](FOUNDATIONS.md#foundational-commitments)
@@ -962,6 +975,9 @@ An unqualified occurrence is permitted when those coordinates select exactly
 one meaning. For a cross-context or competing material occurrence, cite the
 applicable overlay disambiguation or owner-authorized semantic-relation carrier;
 consume its meaning rather than duplicate it in ticket prose.
+
+Ticket prose, actor familiarity, a matching glossary heading, tenant placement
+or comment context cannot select meaning or transfer authority.
 
 An unresolved or multiply resolved material term withholds the affected
 admission or closure. Recording it does not cure it: re-enter the owner of the

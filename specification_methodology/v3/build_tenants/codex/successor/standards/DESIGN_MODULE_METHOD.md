@@ -2,7 +2,13 @@
 
 ## Governing Relations
 
-This profile governs the adopted design boundary. At admission and review, apply
+This member owns generic design-contract law and an adoptable realization
+profile. UP-016–019 and module-derived unit-proof law govern their declared
+design and proof claims where Spec selects those relations. Referring to that
+law does not adopt the remaining profile: its Ontology, Prime/IACS,
+functional-realization, diagram and language policies apply at the design
+boundary that adopts them, with their stated conditions and exceptions.
+At admission and review of an applicable boundary, apply
 [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) with the
 governing Product and requirements, accepted Ontology/design basis, proposed
 boundary and its complete material-relation set `M(B)`, required evidence and
@@ -22,14 +28,16 @@ conjunction and the design authority's existing decision. Application of the
 shared law adds neither a compulsory workflow nor a second acceptance record.
 
 The following conditional arguments use [F1–F6](FOUNDATIONS.md#foundational-commitments)
-under this member's adoption. The last column names policy chosen here, not a
-consequence of capacity alone; project design owns its concrete realization.
+within each relation's declared applicability. Selecting generic design law
+does not select an optional profile policy in the same family. The last column
+names policy chosen here, not a consequence of capacity alone; project design
+owns its concrete realization.
 
 | Material family | Premise and shared consequence | Additional policy and owner |
 |---|---|---|
 | Ontology, constructability and admission: UP-002, UP-016, sections 4B and 5E | F2/F4/F6 require interpreted meaning, compatible realization and actual admission authority; structural validity alone cannot establish design fitness or authorize promotion. Contract application binds the accepted semantic basis and complete material relation at the gate. | This Design Method chooses Ontology-first derivation, native constructability, entity/lifecycle and authority matrices, and three-view evidence with proportional sequencing. Spec UP-021 owns enclosing-relation admission. |
 | Prime, IACS and boundary cost: UP-003, UP-005, sections 5–5C | F1/F4/F5 require adequate realization within material obligations and finite resources; factoring is lawful only while required meanings and roles survive composition. | This member chooses whole-family Prime contraction, declared atom domains, IACS, promotion and boundary-cost tests; it does not infer a unique implementation or a numerical minimum from F5. |
-| Affected frames and reconstruction: UP-017, UP-018 | F2/F3/F4/F5 require sufficient current support for the bounded action and every material join. Missing governing relations prevent a supported reconstruction or preservation claim. | This member chooses affected-frame declarations and the four action classifications below, allows frame networks and existing artifacts, and requires the private-history-withheld discriminator. |
+| Affected frames and reconstruction: UP-017, UP-018 | F2/F3/F4/F5 require sufficient current support for the bounded action and every material join. Missing governing relations prevent a supported reconstruction or preservation claim. | This member chooses affected-frame declarations and the four action classifications below, allows frame networks and existing artifacts, and uses the private-history-withheld discriminator where boundary sufficiency is tested. |
 | Computational realization and foundation selection: UP-019, UP-023 | F1/F4/F5/F6 require actual operations to preserve selected obligations, roles and grants within material resource limits. Shared machinery alone neither establishes role equivalence nor authority. | This member chooses the domain-to-computational projection, bounded discovery, candidate-composition and elimination evidence, and undominated frontier; the Product owns acceptance limits and workloads. |
 | Functional realization and seams: sections 3–4A and 7–13 | F2/F3/F4/F5/F6 require preserved meaning, supported current inputs, total bounded handling and effects under the actual grant. Shared projection/result laws decide those relations, not implementation style. | This member owns the stated preferences, prohibitions, conditional functional-claim duties, Python refinement, ingress, carrier, interface and dependency policies; their modal strength and adoption scope remain as stated below. |
 | Module proof, lifecycle and review: sections 5D, 6A–6C, 11B–11D and 14–14A | F1/F2/F6 require evidence for the exact claimed behavior and distinguish assessment from acceptance. Reuse applies the Foundations currentness relation to the actual accepted evidence. | This member chooses reference derivation, module-owned proof and lifecycle confirmation; optimization/recurrence and post-ticket review retain their local scope and re-entry limits. |
@@ -312,7 +320,8 @@ belong to declared ingress or effect boundaries. Identity creation is explicitly
 owned there. Invalid or incomplete truth is rejected at ingress; transforms use
 local admitted carriers directly rather than re-entering parsers or loaders on
 locally assembled truth. Defaults are explicit, ratified and carrier-owned.
-Each function has a declared responsibility: admission, semantics and effects
+Each function has one clear owner and a declared responsibility: admission,
+semantics and effects
 must not be mixed behind one convenience helper. Semantic algebra depends on
 carrier contracts rather than runtime shells; admission depends on validation
 rather than semantic orchestration. Package, bootstrap, controller, adapter and
@@ -568,8 +577,10 @@ affected subordinate projections. Changing an accepted governing relation
 requires re-entry at that relation before acceptance. Open a subordinate frame
 only for a material distinction unresolved at the governing altitude; neither
 a closure algorithm nor recursive documentation of irrelevant descendants is
-required. A locally valid action that violates, duplicates or silently
-reinterprets an affected governing invariant fails this obligation.
+required. A locally valid action that violates or silently reinterprets an
+affected governing invariant fails this obligation. Duplication follows
+[UP-018's action classification and explicit disposition](#invariant-reconstruction-sufficiency-stdo-up-018);
+an undisposed duplicate cannot establish preservation.
 
 Discovered functionality is evidence about required behavior. It is not yet an
 architectural operation. A discovered verb, screen action, endpoint, command,
@@ -1390,8 +1401,9 @@ support establishes neither predicate.
 This is a property of the existing Ontology, authority/admission relation,
 frame declaration, views and module mapping, not another artifact. It is bound
 to the declared action and affected set, not all possible future changes or
-the performance of a particular reviewer. Test named cases with independently
-known relations and expected decisions while withholding conversation history,
+the performance of a particular reviewer. Where boundary sufficiency is tested,
+use named cases with independently known relations and expected decisions while
+withholding conversation history,
 commentary, prior-worker memory and implementation folklore. Those materials
 cannot supply a missing governing relation.
 

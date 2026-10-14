@@ -266,8 +266,8 @@ are explicit results. A name, path, cached result or available tool is no grant.
 Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
-summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](FOUNDATIONS.md#finite-capacity-and-total-handling);
+summaries with observations. That owner distinguishes context fit from attention
+adequacy and states their evidence boundaries. For capacity misfit, apply [the admitted response rule](FOUNDATIONS.md#finite-capacity-and-total-handling);
 the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
@@ -357,9 +357,9 @@ execution are different claims: associativity alone licenses neither reordered
 effects nor parallel execution. The selected computational binding supplies
 any additional independence or effect equations it relies on.
 
-For a categorical claim, declare the objects, arrows, equality, identities and
-composition and discharge the laws at that domain. A contract-preserving
-construction is not automatically a category, a functor or a proof of either.
+Categorical claims apply the complete demonstration standard in
+[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions). A
+contract-preserving construction does not by itself establish such a claim.
 
 ## Recovery law
 

@@ -236,8 +236,9 @@ selection remains with its own named function; the explanation appoints none.
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,
 disposition, selected action and promotion effect remain distinct; their
-assignment follows the applicable mandate. The semantic result remains separate from the authoritative construction
-disposition to repair, re-enter, reject or accept.
+assignment follows the applicable mandate. The semantic result remains separate
+from the authoritative construction disposition, whose domain conditions belong
+to [Spec's proportional disposition](SPEC_METHOD.md#proportional-disposition).
 
 ## Orthogonal descriptions
 
@@ -255,8 +256,8 @@ For a proposed categorical model, A names the algorithmic account, I the
 interpreted informational account, and C_H the computational realization on a
 declared architecture H. They name categories only after the required objects,
 arrows and laws have been supplied. For a proposed span A -> I and A -> C_H,
-conformance to Sigma_contract, semantic
-equivalence and computational equivalence remain different claims. Categorical
+conformance to Sigma_contract, functorial preservation, semantic equivalence
+and computational equivalence remain different claims. Categorical
 equivalence additionally requires the appropriate quasi-inverse and natural
 isomorphisms on a stated domain; an analogy or matching result is insufficient.
 
@@ -517,7 +518,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -560,6 +567,14 @@ without supported freshness cannot override its owner. Absence from a partial
 projection, sparse checkout or empty local record is not evidence of absence
 in the bound subject; acquire its authoritative source or retain indeterminacy.
 
+Context fit and adequate attention are different predicates. The execution
+binding declares the material resource envelope and measurement boundary;
+counted bytes or tokens establish fit only for the context actually covered by
+that measurement. Actual use establishes whether the actor applies sufficient
+relevant material to the selected task under those conditions. Fitting a
+representation does not establish attention adequacy, and a successful task
+does not measure unobserved context. No universal attention score follows.
+
 An observation binds its source and observation time or version. Where the
 subject may change between observation and effect, the binding supplies the
 material freshness or concurrency condition: re-observe, compare a revision,
@@ -580,9 +595,10 @@ Changed support reopens the affected dependent claims. Unchanged independent
 work remains usable; when dependency independence cannot be established, inspect the
 wider affected scope. A stored green label is not a validity argument.
 Changed support invalidates the affected result for reliance, while retaining
-its historical observation. A role, conversation or resumption change alone is
-not an invalidator; the continuing consumer checks exact applicability before
-reusing the closed result.
+its historical observation. Production and invalidation of relied-on support
+remain recoverable. A function, component, role, conversation, status or
+resumption boundary alone is not an invalidator; the continuing consumer checks
+exact applicability before reusing the closed result.
 
 Before repeating an operation with uncertain effects, observe or reconcile
 sufficiently to decide the next dependent action. A granted idempotent operation

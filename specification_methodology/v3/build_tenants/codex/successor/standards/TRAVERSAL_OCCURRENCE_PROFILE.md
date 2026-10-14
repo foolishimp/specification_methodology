@@ -825,7 +825,17 @@ The closed constraint domains are:
 | `operation_grant_contains_effect` | `EffectSubject` | `effect_readiness` | `unauthorized` plus `refusal` | `hold` plus `unobserved_subject_state` |
 | `event_scope_compatible` | `FrameworkEvent` | `event_admission` | `out_of_scope` plus `refusal` | `hold` plus `unresolved_scope` |
 | `frontier_complete` | `Projection` | `frontier_projection` | `refused` plus `refusal`; established stale frontier retains `hold` plus `stale_frontier` | `hold` plus `unresolved_cause` |
-| `transition_subject_complete` | `TransitionSubject` | `transition_evaluation` | `refused` plus `refusal` | `indeterminate` plus `unobserved_subject_state` |
+| `transition_subject_complete` | `TransitionSubject` | `transition_evaluation` | `refused` plus `refusal`; intended-outcome basis diagnosis below | `indeterminate` plus `unobserved_subject_state` |
+
+`transition_subject_complete` is a prerequisite check, not the intended-outcome
+predicate. Its demonstrated failure retains the completeness counterexample
+and the original `refused` decision; for an intended-outcome evaluation that
+cannot use the incomplete subject, the core verdict is `invalid_basis`.
+Material subject information that is merely unacquired leaves that outcome
+`indeterminate`, with `unobserved_subject_state`. Neither diagnosis establishes
+that the intended outcome is false or that no effect occurred. Separately
+admissible outcome counterevidence retains its own predicate, valid basis and
+citations under the core result law; it is not erased by the prerequisite stop.
 
 Each constraint declares zero latitude unless its exact record names a
 `latitude_ref`. Silence is not latitude. The residual kind fixes re-entry:

@@ -353,6 +353,8 @@ last column. They do not follow from finite capacity alone.
 | Authority and overlapping meaning: RF-006–008 | F2 and F4 preserve meaning across typed relations; F6 separates evidence from grants. Shared material therefore cannot by itself equate meanings or confer authority. | This method distinguishes semantic, evaluation, operation and decision authority in a frame; each existing owner supplies its actual grant and each translation owner supplies the coordinate relation. |
 | Configuration and material combination: RF-009–011, RF-016 | F3 makes topology changes relevant to dependent support; F4 requires material joins to preserve the outer claim; F5 and F6 require bounded allocation without invented grants. Combining results alone need not combine internal execution. | This method selects composition-on-demand, explicit recharting and implementation neutrality. The frame-set owner chooses topology; the declared composition and decision owners bind the required joins under the shared laws. |
 | Closed results and uncertainty: RF-012, RF-015 | F2 requires evidence on an exact predicate; F5 admits undecidable or unperformed work; F6 prevents a result granting permission. A closed return must preserve those distinctions. | Foundations owns the result codomain and conjunction. This method owns the activation/work predicate split and each frame owns its declared refinements; the decision owner owns disposition. |
+| Engagement and conjunction procedures: Engagement, Using Frames In Conjunction, Human Frame-Set Declaration (including Frame-Set Optimization), Agentic Use | F1 fixes the selected evaluation; F2/F3 require an interpretable current subject; F4 preserves required joins; F5 bounds usable context; F6 distinguishes applicability, activation and decision authority. A list of possible frames cannot determine which evaluations are required or grant their activation. | This member chooses the frame tuple, explicit applicability and required-set bindings, sufficient direct engagement and composition on demand. The frame-set owner selects the concrete partition and available actors; each result applies the shared owner on its exact predicate. |
+| Discovery and qualification: Completeness Boundary, Discovery And Revision, Frame Qualification (including Method Self-Qualification), Anti-Patterns and Closure | F2/F3 require support on the actual scope and current basis; F4 preserves material dependencies; F5 limits any inspected population; F6 separates evidence from adoption. Local success therefore cannot prove every future frame sufficient or make an unselected configuration operative. | This member chooses bounded counterexample discovery, explicit residuals, recharting and claim-scoped qualification. Its completeness and closure policies bind the selected claim, while the adopting owner decides configuration and acceptance. |
 
 ### RF-001 Evaluation Relativity
 
@@ -1099,7 +1101,7 @@ or another Product-selected carrier without changing the relation.
 
 ## Frame
 - declaration identity and revision:
-- exact evaluation and closed result algebra:
+- exact evaluation and applicable core-result predicate or declared refinement:
 
 ## Subject And Basis
 - exact subject or candidate identity:
@@ -1342,7 +1344,7 @@ claim:
 # Frame: <stable local identity>
 
 ## Evaluation Family
-<questions, predicates, and closed result algebra>
+<questions, predicates, and applicable core-result refinement>
 
 ## Subject And Basis
 <workspace boundary, exact identity, version/time/topology coordinates>

@@ -3,8 +3,9 @@
 ## Governing Relations
 
 The premises are a subject to distinguish, an owning authority, a declared kind
-and a lifecycle across which references must remain usable. The identity and
-evidence commitments in [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
+and a lifecycle across which references must remain usable. F2 interpretation,
+F3 identity/current state, F4 composition and F6 evidence/authority in
+[Foundations](FOUNDATIONS.md#foundational-commitments)
 then require consumers to distinguish the subject from its representation and
 to preserve admitted authority through composition. The scoped identity minimum is
 authority, kind and value. Governing basis and lifecycle qualify authority or

@@ -24,7 +24,9 @@ checks and decisions without adding an evaluation stage or evidence carrier.
 `RELEASE_METHOD.md` owns the release-publication bounded context
 `urn:stdo:bounded-context:release-publication` under the selected complete STDO
 basis. It owns the identities and transitions used to qualify, publish, and
-select released cuts. It does not own Product meaning or consumer adoption.
+select released cuts, including the selector/adoption protocol below. It does
+not own the consumer's Product meaning or its decision to adopt a cut; those
+remain with the consumer's governing authority under Spec's Product binding.
 
 ## Position
 
@@ -271,7 +273,7 @@ Qualification binds:
 - the exact release-scoped claim bytes;
 - the governing Product and release basis;
 - each claimed property and its observation boundary;
-- evidence subjects, owner verdicts, and unresolved gaps; and
+- evidence subjects, assessment results, owner decisions and unresolved gaps; and
 - the complete successor relation to the declared predecessor.
 
 Evidence matches the claim. Source success does not prove packaged or installed
@@ -292,14 +294,13 @@ exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
 `cached green` or any other raw label without deciding support is
 `indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
 diagnosis and separately authenticated counterevidence under the core legal
-pairs. Missing reasons follow the core missing-reason rule. A missing required
-judgment remains an absent coverage slot, not a fabricated skipped evaluation;
-the declared conjunction retains a known failure beside that slot. Actual
-performance and uncertain effects are preserved independently of those labels.
+pairs. Missing reasons, absent judgments, performance and effect observations
+apply the [core result and conjunction law](FOUNDATIONS.md#result-conjunction);
+the release labels supply no alternative rule for them.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
-requires any qualifying-byte change, the verdict remains attached to the old
+requires any qualifying-byte change, the review result remains attached to the old
 RC and a higher RC is published. The selector already advertises the highest
 published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
