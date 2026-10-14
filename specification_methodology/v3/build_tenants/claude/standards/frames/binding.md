@@ -4,11 +4,14 @@ Task: State the build-tenant binding of a software tenant and a human-process te
 
 Purpose: The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.
 
-Each excerpt below is a verbatim copy of one owning section of a member
-of this method. The `Source:` line before it names the member and the
-section's anchor, and gives the SHA-256 of the whole owning member. The
-owning section decides; this frame owns no determination. Links inside
-an excerpt are relative to the owning member's directory.
+Each excerpt below copies one owning section of a member of this method
+byte for byte, except that each relative link destination is rebased
+to resolve from this directory to the same target. Fenced code, inline
+code and absolute and `stdo://` links are unchanged. The `Source:` line
+before an excerpt names the member and the section's anchor, and gives
+the SHA-256 of the whole owning member. The section digest recorded in
+FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
+owning section decides; this frame owns no determination.
 
 Routes, in order:
 
@@ -23,9 +26,9 @@ Routes, in order:
 9. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 10. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 70943 bytes.
+Size of this frame: 73765 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=0716a914948812f858b69a7a49473bba64c8bf11d8e331b89363c1536f8d80b5
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
 
 ## 11. Build-tenant binding
 
@@ -38,7 +41,7 @@ Terms used in this section:
 
 - A build tenant is one independent, project-owned HOW realisation of a
   product's WHAT. The build-tenancy context of
-  [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)
+  [PRODUCT_DEFINITION §8](../PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)
   names it, and the product definition's tenant registry locates each one.
 - The requirements calculus of a product is the set of obligations its
   WHAT states, the outcomes it permits, and its rules for refining and
@@ -59,9 +62,9 @@ Terms used in this section:
 - Author identity is the party responsible for the content of a realised
   subject; authorship is one of the conditions on which the independence
   of an assessment of that subject rests, with the evidence conditions
-  ([EVALUATION §3](EVALUATION.md#3-independent-assessment)). Actor
+  ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)). Actor
   identity is whoever performs one operation; it is an identity, not an
-  authority ([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)).
+  authority ([FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds)).
   Operation kind is what an operation does, such as construct, assess,
   relay, record, measure or decide, together with the authority that kind
   of operation requires.
@@ -99,9 +102,9 @@ Rules:
    identifies:
    - the operations, each with its inputs, outputs, effects and outcome
      values; each outcome value maps to exactly one core value under
-     [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and an intended
+     [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and an intended
      external effect, one of unknown completion included, is recorded as
-     [ACTIVATION §3 Effects](ACTIVATION.md#effects) states;
+     [ACTIVATION §3 Effects](../ACTIVATION.md#effects) states;
    - the composition laws, and the transformations the calculus permits;
    - the resource measures;
    - the operational assumptions on which conformance depends, among them
@@ -112,12 +115,12 @@ Rules:
    unit and its boundary: what is counted, and where measurement starts and
    stops. A resource claim without its unit or its boundary supports no
    conformance claim. The size of a selected context is measured as
-   [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
+   [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope)
    step 3 measures it, against the capacity the binding declares for the
    actor. Time, spend and the other resource limits of a step are those of
    the execution binding. Where a configuration states its resource limits
    and its assumptions about failure
-   ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration)), it takes
+   ([ACTIVATION §1 Configuration](../ACTIVATION.md#configuration)), it takes
    them from this binding (P0, P2, P5).
 4. Conformance evidence. The obligations of the requirements calculus
    decide fitness; the kind of executor alone neither accepts nor rejects a
@@ -125,11 +128,11 @@ Rules:
    the required meaning and constraints, including the applicable
    authority, independence, failure and recovery conditions. Conformance is
    judged under
-   [EVALUATION §6](EVALUATION.md#6-conformance-of-realisations), and two
+   [EVALUATION §6](../EVALUATION.md#6-conformance-of-realisations), and two
    conforming tenants need not behave identically outside the contract.
    Each assessment returns a core value for its predicate, and the tenant's
    conformance is their
-   [conjunction](FOUNDATIONS.md#conjunction-of-results), with the
+   [conjunction](../FOUNDATIONS.md#conjunction-of-results), with the
    obligations of the requirements calculus as its required coverage. A
    convenient stack never weakens an obligation. An execution plan that
    merges two required independent assessments, or substitutes an
@@ -140,7 +143,7 @@ Rules:
    outputs, lower cost or a faster run do not discharge the lost
    independence or authority. A claim that a binding preserves categorical
    structure is a further claim: it meets the Formal fragment of
-   [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) and stays distinct from
+   [FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra) and stays distinct from
    conformance on the equivalence ladder of EVALUATION §6 (P6, P1, P4b).
 5. Reuse. A computational calculus may be reused across tenants and
    execution environments wherever each binding satisfies its laws, and
@@ -150,16 +153,16 @@ Rules:
    execution binding, not the calculus (P1, P4a).
 6. Representation. A representation of the requirements calculus or of a
    binding in a_c, the axiomatic calculus of
-   [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md), prescribes no executor and
+   [AXIOMATIC_CALCULUS](../AXIOMATIC_CALCULUS.md), prescribes no executor and
    does not establish execution conformance by structural validation alone
-   ([AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)).
+   ([AC-018](../AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)).
    An a_c model of a human process that passes structural validation
    neither selects an automated executor nor shows that the process meets
    its requirements; execution conformance needs its own evidence under
    rule 4 (P1, P6).
 7. Three accounts. The algorithmic, informational and computational
    accounts of a construction, which
-   [FOUNDATIONS §2 Accounts of a construction](FOUNDATIONS.md#accounts-of-a-construction)
+   [FOUNDATIONS §2 Accounts of a construction](../FOUNDATIONS.md#accounts-of-a-construction)
    defines, apply across the binding, from the requirements calculus
    through the computational calculus to the execution environment. The
    binding keeps the three accounts apart, and where it maps one account
@@ -181,13 +184,13 @@ Development of several tenants. How a source project keeps its tenants'
 work apart and merges it, including branches, working copies, territories,
 review points and the merge rule, is that project's own law, bound in its
 product definition as local axioms
-([PRODUCT_DEFINITION §6](PRODUCT_DEFINITION.md#6-local-constitutional-binding))
+([PRODUCT_DEFINITION §6](../PRODUCT_DEFINITION.md#6-local-constitutional-binding))
 or chosen in a tenant's design. This method prescribes none of these
 mechanics. What it does prescribe for several tenants, the independence
 of each tenant's ticket lifecycle and the review of each tenant's
 tickets, is
-[TICKETS §4](TICKETS.md#multi-build-tenant-independence) and
-[§6 Multi-build-tenant review](TICKETS.md#multi-build-tenant-review)
+[TICKETS §4](../TICKETS.md#multi-build-tenant-independence) and
+[§6 Multi-build-tenant review](../TICKETS.md#multi-build-tenant-review)
 (P6, P0).
 
 Purpose and material relation: the same obligations can be realised by
@@ -206,7 +209,7 @@ behave identically outside the contract, which is new in that member.
 The rest of this section is new in this corpus.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=0716a914948812f858b69a7a49473bba64c8bf11d8e331b89363c1536f8d80b5
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=48ca227a40c5180af914164089c2e23670cd442b91d81881f74182a899614eb6
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -237,7 +240,7 @@ the affected invariant, asset or decision boundary; records the decision
 taken if work proceeds; and records whether the ambiguity was resolved,
 carried forward, escalated or blocked. Those outcomes are `resolved`,
 `carried`, `escalated` and `blocked` of
-[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome), which
+[ACTIVATION §3 Ambiguity outcome](../ACTIVATION.md#ambiguity-outcome), which
 gives each its core value for the predicate "the declared ambiguity is
 resolved on the exact basis". Only `resolved` is `satisfied`, so a later
 boundary rests no dependent claim on an ambiguity that is carried,
@@ -266,7 +269,7 @@ appetite escalates more major ambiguity to explicit human judgment; a
 higher one permits more bounded probabilistic decision-making. In either
 case the ambiguity and the decision are recorded.
 
-The hard stops of [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)
+The hard stops of [ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement)
 hold regardless of risk appetite. The method is therefore not "eliminate
 all ambiguity before work"; it is "make ambiguity visible, govern it
 explicitly, and reduce it progressively until downstream realisation is
@@ -289,7 +292,7 @@ Source: FOUNDATIONS.md#2-ontology sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606
 | Context | the declared scope under which an interpretation holds: subject, definitions, basis, admissible observations | P1 |
 | Outcome U | a selected, owner-defined, directly verifiable state with an acceptance interval; adequacy of a transformation is judged against it | P2 |
 | Object O | a subject with scoped identity (authority, kind, value), a boundary, current state and declared material relations; identity survives admissible state and encoding change | P3 |
-| Actor | whoever performs a step within a declared capability envelope (context, attention, time, capability); a role is a relation an actor occupies, not a kind of actor, and which roles exist is set by a configuration ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration)), not by this definition | P0, P6 |
+| Actor | whoever performs a step within a declared capability envelope (context, attention, time, capability); a role is a relation an actor occupies, not a kind of actor, and which roles exist is set by a configuration ([ACTIVATION §1 Configuration](../ACTIVATION.md#configuration)), not by this definition | P0, P6 |
 | Step | one bounded unit of work: intake, selected context, grant, execution, output | P0 |
 | Step-produced fact | a judgment, residual, observation or authority decision produced by a step that cannot be re-acquired from declared sources; an observation reproducible from declared sources is re-acquirable and is not one | P0, P4b |
 | Claim | an assertion with subject, property, basis, witness relation and falsifier | P6 |
@@ -306,7 +309,7 @@ and
 [bounded-context semantic resolution](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#bounded-context-semantic-resolution);
 identity conserves
 [IDENTITY_METHOD](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#1-scoped-identity),
-restated in [IDENTITY §2](IDENTITY.md#scoped-identity),
+restated in [IDENTITY §2](../IDENTITY.md#scoped-identity),
 and
 [AC-002](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-002-scoped-identity);
 outcome conserves
@@ -317,7 +320,7 @@ claim, judgment and authority conserve
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001),
 [AC-014](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-014-judgment-separation),
 [UP-004](stdo://releases/v2.5.1-rc.2/standards/IDENTITY_METHOD.md#authority-identity-and-conservation-stdo-up-004),
-restated in [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004);
+restated in [IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004);
 residual and basis conserve
 [AC-009](stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md#ac-009-residual-conservation)
 and
@@ -331,8 +334,8 @@ to the generic unit.
 ### Frame objects
 
 The reference frame and the objects it binds are first-class in this
-corpus. Each is defined here once; [REFERENCE_FRAME](REFERENCE_FRAME.md)
-states the laws over them and [ACTIVATION](ACTIVATION.md) the step that
+corpus. Each is defined here once; [REFERENCE_FRAME](../REFERENCE_FRAME.md)
+states the laws over them and [ACTIVATION](../ACTIVATION.md) the step that
 activates one. Provenance for this subsection and the three that follow is
 `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#definitions`
 and its child sections.
@@ -396,7 +399,7 @@ A reference frame F is the tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩
 material-relation manifold; C the coordinate and equality law; I the
 applicable invariant set; A the authority relation; E the admissible
 evidence and provenance law; X the exclusion and prohibited-assumption set;
-R the closed result algebra (§4 [Results](#results), or a refinement mapped
+R the closed result algebra (§4 [Results](../FOUNDATIONS.md#results), or a refinement mapped
 into it); J the invalidation and rechart
 condition; K the actor capability envelope; and D the optional set of
 declared dependencies, overlaps, inputs and outputs involving other frames.
@@ -459,7 +462,7 @@ carrier that holds it does not thereby make co-located material a
 member. A version-line selector is a mutable
 alias naming the highest-ordinal published release cut on one version
 line of one project; it is convenient discovery, not immutable identity,
-and not sufficient as an exact basis ([RELEASE §1](RELEASE.md#1-context-and-position)
+and not sufficient as an exact basis ([RELEASE §1](../RELEASE.md#1-context-and-position)
 states which).
 Equal version text does not collapse these objects. A selector or a
 mutable carrier may move; a release cut never moves. RELEASE §2 realises
@@ -493,7 +496,7 @@ distinct (P1, P0):
 - the computational realisation: how people, machines or combinations of
   them carry it out in a declared execution environment; for a build
   tenant that environment is the one
-  [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) defines.
+  [SPEC_METHOD §11](../SPEC_METHOD.md#11-build-tenant-binding) defines.
 
 The distinction is kept for any construction and is independent of the
 tiers of this corpus: a construction may need all three accounts, and no
@@ -551,7 +554,7 @@ adoption or authority binding reports that unresolved relation before
 dependent reliance rather than interpreting it from equal spelling (P3,
 P5). For an evaluation that depends on the imported concept, a missing
 source meaning, adoption or authority binding is an undeclared material
-relation, the ground of `out_of_frame` ([Results](#results), Out of frame
+relation, the ground of `out_of_frame` ([Results](../FOUNDATIONS.md#results), Out of frame
 or indeterminate); a changed member or basis whose applicability is not
 yet re-established is the ground of `invalid_basis` (§4 Results).
 
@@ -593,7 +596,7 @@ A valid parse, a valid map, a green test and a historical judgment each
 establish exactly their own claim. Evidence bound to a basis other than
 the evaluated one is excluded by basis; it is not admitted with a narrower
 scope (P3;
-[RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
+[RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
 Source: EVALUATION.md#3-independent-assessment sha256=6383bebb0238da55ec4ea779f44d077f558f0f32ccfcfbfca38845efed9946b6
@@ -671,29 +674,56 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=179a3368a8daee4eae477ace858bc77c42c1a2bc86a76293dc54c25ee759eaed
+Source: ACTIVATION.md#effects sha256=a414158726809d37b53a5a602cf6ca6ddbbcd3d2d996cf106effaeda0c1f465a
 
 ### Effects
 
 An effectful step's intended external effect has one of three values,
-mapped for the predicate "the intended effect occurred" (P5 with the
-open-world premise, P6):
+mapped for the predicate "the intended effect occurred", that is, the
+declared outcome of the effect is attained. The value turns on what the
+admitted evidence establishes about that outcome (P5 with the open-world
+premise, P6):
 
 | Value | Core value | Ground |
 |---|---|---|
-| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full |
-| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full; any part that did occur is named with the value |
-| `completion_unknown` | indeterminate | the evidence cannot establish whether the intended effect occurred, as for an effect that began and whose end is not observed, or a request whose response was lost |
+| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |
+| `not_effected` | falsified | evidence about the subject establishes that the intended effect did not occur in full and that no later completion of the effect can make it occur as declared: no effect began, the effect ended short, or an interval that the declared outcome bounds has closed with part of it not done; any part that did occur is named with the value |
+| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed, or it shows the intended effect in full while the effect may still be acting, so what it leaves on the subject is not settled; its residual names the observation that would decide |
 
 `not_effected` requires evidence about the subject. A lost response, an
 absent record, or an actor's context that holds no trace of the effect is
-not that evidence, and the value stays `completion_unknown`; §5 reconciles
-it before any repetition or dependent action. `completion_unknown` never
-maps to `completed` or to `not_effected`. The refinement is new. Its
-material relation is whether an action whose external effect may have
-occurred is repeated or relied on; §4 names a lost post-effect response as
-a case that no added core value solves, and this refinement records it in
-the existing core.
+not that evidence, and the value stays `completion_unknown`.
+`completion_unknown` never maps to `completed` or to `not_effected`.
+
+Whether the effect has ended is a second question, not the predicate
+above. An effect has ended where evidence about the subject establishes
+that it no longer acts on the subject or that it never began. Where an
+effect began and the evidence does not establish its end, the end is not
+established, and that is recorded beside the value as a residual naming
+the observation that would establish it. The end never decides a
+`not_effected` value and is never folded into one: when an interval that
+the declared outcome bounds has closed with part not done, the value is
+`not_effected` while the effect may still be acting. The residual does
+not weaken the counterexample, and the counterexample does not resolve
+the residual. `completed` alone requires the end established, so a
+counterexample stands without proof that the effect has ended, while
+success is never claimed for an effect that may still be acting
+([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Standing).
+
+An effect of uncertain completion is one whose value is
+`completion_unknown`, or whose value is `not_effected` with its end not
+established. §5 reconciles it, sufficiently for the next dependent
+action, before any repetition or dependent action. A `not_effected`
+value licenses neither treating the effect as absent nor repeating it
+while its end is not established.
+
+The refinement is new. Its material relation is whether an action whose
+external effect may have occurred is repeated or relied on; §4 names a
+lost post-effect response as a case that no added core value solves, and
+this refinement records it in the existing core. Keeping the end of the
+effect beside the value keeps two facts that one value would merge: a
+counterexample already established for the declared outcome, and an
+effect that may still be acting.
 
 
 Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
@@ -714,7 +744,7 @@ directly or as a refined value mapped into it (P5):
 This core is the only one. Results of constraints, judgments, frame
 evaluations, stops, work steps and effects are stated in it or in a
 refinement mapped into it, so that results from any members combine under
-one rule ([Conjunction of results](#conjunction-of-results)). Purpose and
+one rule ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)). Purpose and
 material relation: no combination can report success while a failure, an
 undecided question, an unperformed evaluation or an uncertain effect
 remains, and none of these can be mistaken for another (P5, P6).
@@ -743,7 +773,7 @@ No refinement or mapping raises a result's standing (P5, P6):
   `satisfied`;
 - an evaluation that was not performed stays distinct from one whose
   evidence cannot decide: it has no
-  [closed result](ACTIVATION.md#7-closed-result-and-reuse), and it is never mapped
+  [closed result](../ACTIVATION.md#7-closed-result-and-reuse), and it is never mapped
   to `indeterminate` or to any other core value;
 - an effect whose completion is unknown never maps to no effect or to
   completed.
@@ -764,9 +794,9 @@ whose five values the table restates unchanged, and
 whose rule that a failed, missing, indeterminate, out-of-scope or
 invalid-basis result follows the declared algebra rather than being
 coerced to success is the sentence before; both are restated here once.
-[REFERENCE_FRAME §3](REFERENCE_FRAME.md#rf-012-closed-results) states
+[REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results) states
 RF-012 as a law over frames and
-[AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
+[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
 states AC-007 as a law over constraints; each uses this core and neither
 defines it again.
 
@@ -789,19 +819,19 @@ material relation: a consumer that reads a parent value reads the same
 core value from each of its children, so a split by cause adds a domain
 distinction and never changes what the parent establishes (P5, P6). The
 refinements for admission, activation and steps are
-[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other
+[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition); each other
 member, profile and adopting Product states its mapping where it defines
 its values.
 
 Availability, assessment and acceptance are separate results, each with its
 own predicate: that a step produced a candidate; that the candidate meets
 its declared criteria; and that the
-[decision owner](ACTIVATION.md#roles-and-delegation) accepts it at its
+[decision owner](../ACTIVATION.md#roles-and-delegation) accepts it at its
 boundary. A step having produced a candidate never maps to the candidate's
 fitness or acceptance, and acceptance is never inferred from a successful
-step (P6; [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition),
-[EVALUATION §4](EVALUATION.md#4-review-results) and
-[§5](EVALUATION.md#5-acceptance)).
+step (P6; [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition),
+[EVALUATION §4](../EVALUATION.md#4-review-results) and
+[§5](../EVALUATION.md#5-acceptance)).
 
 Out of frame or indeterminate. The boundary between these values is drawn
 on what the activated frame declares and on what the step did with it (P5,
@@ -815,7 +845,7 @@ the third names none:
   evaluator capability that the activated frame does not declare. The
   result names the missing relation or capability, its owner where the
   subject gives one, and the reconfiguration pressure it creates
-  ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement); rc.2 RF
+  ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement); rc.2 RF
   #reconfigure-when-necessary). A term the claim depends on and the frame
   leaves undefined is an undeclared material relation: its meaning can
   alter the result and it enters through no declared input (rc.2 RF
@@ -839,12 +869,12 @@ the third names none:
   exists because the capability was not exercised, the evaluation was not
   performed and has no result: the step's stop state carries it,
   `incomplete` under
-  [construction availability](ACTIVATION.md#construction-availability), and
-  its work state ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart))
+  [construction availability](../ACTIVATION.md#construction-availability), and
+  its work state ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart))
   carries the unexercised capability as a residual (P6). In either case
   the unexercised part, B above, has no result: in every conjunction over
   it, it is a planned assessment without a closed result, and the known
-  failure A survives with it ([Conjunction of results](#conjunction-of-results)).
+  failure A survives with it ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)).
   The evaluation's result and the step's stop state answer different
   questions, so the step's stop value never becomes the evaluation's
   result.
@@ -852,7 +882,7 @@ the third names none:
 Foundation to law for results and their combination (family F3). The
 table covers every rule of §4 and the result grounds of §2 Imports
 between members, in the format of
-[Foundation to law](#foundation-to-law), which states the standing of its
+[Foundation to law](../FOUNDATIONS.md#foundation-to-law), which states the standing of its
 consequences. Purpose and material relation: a reader of §4 sees which
 commitments each result rule rests on and which choices it adds, with their
 owners (P6, P2). Instance premises, which the commitments do not supply:
@@ -863,31 +893,31 @@ core.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
 |---|---|---|---|
-| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section |
-| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
-| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
-| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](EVALUATION.md#5-acceptance) names |
-| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](ACTIVATION.md#construction-availability), construction availability |
-| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none |
-| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule |
-| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule |
-| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](#4-algebra) Composition; [Conjunction of results](#conjunction-of-results), Composition of results; [RF-010](REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation |
-| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation) |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](#4-algebra) Reference versus body | none |
-| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it |
-| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the design decision of [DESIGN_MODULE §5](DESIGN_MODULE.md#capability-and-foundation-selection-up-023) |
-| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim |
+| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section |
+| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
+| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
+| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names |
+| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability |
+| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
+| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none |
+| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule |
+| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule |
+| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation |
+| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) |
+| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none |
+| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it |
+| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the design decision of [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) |
+| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim |
 
-RF-012 in [REFERENCE_FRAME §3](REFERENCE_FRAME.md#rf-012-closed-results),
+RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),
 AC-007 in
-[AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
-and [EVALUATION §4](EVALUATION.md#4-review-results) apply the first row's
+[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)
+and [EVALUATION §4](../EVALUATION.md#4-review-results) apply the first row's
 algebra to frames, constraints and reviews and add no choice of their own
 beyond any refinement they map under the fifth row;
-[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) holds the
+[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) holds the
 step's refinements of the fifth row and the stop state of the seventh.
 
 
@@ -980,7 +1010,7 @@ Composition of results. The result of composed steps for the outer
 predicate is the conjunction of the steps' results, with the outer
 contract's obligations as the required coverage. That each step returned
 `satisfied` supports the outer predicate only where the refinement's
-premises hold ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement),
+premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 Provenance: rc.2 RF #result-conjunction and
