@@ -513,3 +513,5 @@ Execution decisions for the rest of the iteration:
 - `frontier/PREDECESSOR_CLAIMS.md`: `e490204a175667b38eb57c542dba78329ec891856cd9219adbaaa02b0114db0d`
 
 Next: step 6 as one combined final working review against ORACLE by a non-author sonnet subagent, with the desk-traced deciding-path comparisons and the interpretation fidelity cases written before the model is opened. No paid trials (owner decision); criterion 4 stays unevidenced.
+
+2026-10-14T18:46Z — Step 6 started: one non-author sonnet working reviewer on S2 `416bdb5` does the combined final review against ORACLE, writes 8 interpretation fidelity cases from the prose before opening the model and then judges them, and desk-traces deciding paths. Variance, declared before any trace exists: for the owner's token limit only a systematic sample is traced, every sixth path, DP-01, DP-07, DP-13, DP-19, DP-25, DP-31, DP-37 and DP-43, from route entry on S0, S1 and S2. The other 38 paths are not traced and are reported as such. Frame-entry traces are not run. No paid fresh-actor runs (owner decision).
