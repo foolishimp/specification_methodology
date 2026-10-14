@@ -19,10 +19,14 @@ HERE = Path(__file__).resolve().parent
 TENANT = HERE.parents[2]
 PACKAGE = TENANT / "successor"
 REPO = TENANT.parents[3]
-COMMON_INPUT = "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd"
+COMMON_INPUT = "1fce537bc0bd7f47a1b66b34d8c053ef3dad2816"
 PREIMAGE = "1ea382a283247fe1658e9d75d9570dd2682cf13d"
 PRIOR = "3ad1fca31dc93ba0847bbbbf308312a554daa1f6"
 BUILDER_SHA = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+DOCUMENT_SOURCE = "2476713d315c00ac61d336a3281d67e4a384d4ce"
+REPAIR_PREIMAGE = "0517eb2771b18a7369c69e52570a3db3e36f8229"
+PEER_SOURCE = "31f28f90c4a9b15243d84630fc4799024a9cd7ac"
+PEER_ROOT = "specification_methodology/v3/build_tenants/claude/standards/"
 INSTALLED = Path.home() / "Library/Application Support/STDO/releases/v2.5.1-rc.2"
 COMMON_PATH = "specification_methodology/v3/specification/requirements/PREDECESSOR_CLAIMS.md"
 OLD_MAP_PATH = "specification_methodology/v3/build_tenants/codex/qualification/C3/CONSERVATION.json"
@@ -155,6 +159,37 @@ def validate(mapping, frontier, ports, require_frozen=False):
     if len(integration) != 47 or {x.get("id") for x in integration} != draft_ids:
         fail("draft_coverage", "The exact 47 draft proposals are not each accounted once")
     by_id = {r.get("id"): r for r in rows}
+    repair = mapping.get("review_repair", {})
+    repair_path = HERE / "review-repair/conservation/RECONCILIATION.json"
+    repair_report = read(repair_path)
+    if repair.get("report_sha256") != sha(repair_path.read_bytes()):
+        fail("repair_report", "Current author report differs from the map-bound report")
+    if repair_report.get("document_source_commit") != DOCUMENT_SOURCE or repair_report.get("common_input_commit") != COMMON_INPUT:
+        fail("repair_basis", "Current reconciliation has a different documentary/common input")
+    inspection = []
+    immediate = json.loads(git_bytes(REPAIR_PREIMAGE, str((HERE / "CONSERVATION.json").relative_to(REPO))))
+    for prior_row in immediate["rows"]:
+        if prior_row.get("disposition") != "conserved" or not prior_row.get("source_anchor") or prior_row.get("source_selection") or prior_row.get("author_comparison"):
+            continue
+        name, _, anchor = prior_row["successor_locus"].partition("#")
+        source_path = str((PACKAGE / name).relative_to(REPO))
+        try:
+            if section_body(git_bytes(PRIOR, source_path).decode(), anchor) != section_body(git_bytes(REPAIR_PREIMAGE, source_path).decode(), anchor):
+                inspection.append(prior_row["id"])
+        except ValueError:
+            continue
+    if len(inspection) != 116 or repair_report.get("inspection_population") != inspection or repair.get("inspection_population") != inspection:
+        fail("repair_population", "The exact 116 changed conserved predecessor rows are not accounted")
+    for identity in inspection:
+        row = by_id.get(identity, {})
+        if not row.get("review_repair", {}).get("assessment") or row.get("author_comparison", {}).get("candidate_assessed_commit") != DOCUMENT_SOURCE:
+            fail("repair_assessment", identity)
+    for decision in repair_report.get("decisions", []):
+        row = by_id.get(decision.get("id"), {})
+        if any(decision.get(key) != row.get(key) for key in ("id", "disposition", "successor_loci")) or decision.get("assessment") != row.get("reason"):
+            fail("repair_decision", str(decision.get("id")))
+    if len(repair_report.get("decisions", [])) != repair_report.get("assessed_row_count"):
+        fail("repair_decision_count", "Bounded author-assessment population is incomplete")
     for decision in integration:
         row = by_id.get(decision.get("id"), {})
         if decision.get("current_disposition") != row.get("disposition") or not decision.get("assessment"):
@@ -262,6 +297,22 @@ def validate(mapping, frontier, ports, require_frozen=False):
                     fail("author_comparison", str(identity) + ": " + str(error))
     if len(relation_ids) != len(set(relation_ids)):
         fail("relation_identity", "Replacement relation IDs must be unique")
+    for row in rows:
+        if not set(row.get("shared_replacement_dependencies", [])).issubset(set(relation_ids)):
+            fail("shared_replacement", row["id"])
+    closure = by_id["STDO_REFERENCE_FRAME_BASELINE.md#closure"]
+    coverage = closure.get("successor_relation", {}).get("condition_coverage", [])
+    original = section_body((INSTALLED / closure["source_member"]).read_text(), closure["source_anchor"])
+    pieces = re.split(r"(?m)^(\d+)\. ", original)[1:]
+    clauses = {int(pieces[i]): pieces[i + 1].strip() for i in range(0, len(pieces), 2)}
+    if [item.get("condition") for item in coverage] != list(range(1, 25)):
+        fail("closure_coverage", "R024 must account each of the 24 predecessor conditions exactly once")
+    for item in coverage:
+        predecessor_text = clauses.get(item.get("condition"), "")
+        if item.get("predecessor_text") != predecessor_text or item.get("predecessor_sha256") != sha(predecessor_text.encode()):
+            fail("closure_predecessor", str(item.get("condition")))
+        if not item.get("assessment") or not item.get("successor_loci") or not set(item["successor_loci"]).issubset(closure["successor_loci"]):
+            fail("closure_carry", str(item.get("condition")))
     source_pins = mapping.get("source_member_pins", {})
     if set(source_pins) != set(expected.values()):
         fail("source_inventory", "Incomplete predecessor member pins")
@@ -276,7 +327,7 @@ def validate(mapping, frontier, ports, require_frozen=False):
     if {p.get("id") for p in ports.get("contributions", [])} != {"I3-R2-P%02d" % i for i in range(1, 6)}:
         fail("port_identity", "The five named contribution identities must be complete and unique")
     for port in ports.get("contributions", []):
-        if port.get("source_commit") != "31f28f90c4a9b15243d84630fc4799024a9cd7ac":
+        if port.get("source_commit") != PEER_SOURCE:
             fail("port_source", port.get("id"))
         try:
             inspect(port.get("receiving_owner_locus"))
@@ -288,8 +339,67 @@ def validate(mapping, frontier, ports, require_frozen=False):
                               if i in by_id and by_id[i].get("successor_relation")]
         if port.get("current_relation_ids") != expected_relations:
             fail("port_relation", port.get("id"))
-        if port.get("source_comparison", {}).get("result") != "indeterminate":
-            fail("port_standing", "No fresh source comparison was selected for " + str(port.get("id")))
+        if not port.get("source_coordinates") or not port.get("receiving_coordinates"):
+            fail("port_coordinates", port.get("id"))
+        for field, expected_commit in (("source_coordinates", PEER_SOURCE), ("receiving_coordinates", DOCUMENT_SOURCE)):
+            for coordinate in port.get(field, []):
+                path, anchor = coordinate.get("path", ""), coordinate.get("anchor", "")
+                allowed_peer = {PEER_ROOT + name for name in ("ACTIVATION.md", "FOUNDATIONS.md", "PROFILES.md", "TRAVERSAL_OCCURRENCE.md")}
+                if coordinate.get("commit") != expected_commit or (field == "source_coordinates" and path not in allowed_peer):
+                    fail("port_coordinate_scope", port.get("id"))
+                    continue
+                try:
+                    data = git_bytes(expected_commit, path)
+                    text = data.decode()
+                    selected = section_body(text, anchor)
+                    offset = text.index(selected)
+                    if (coordinate.get("file_sha256") != sha(data) or coordinate.get("file_bytes") != len(data)
+                            or coordinate.get("section_sha256") != sha(selected.encode())
+                            or coordinate.get("section_bytes") != len(selected.encode())
+                            or coordinate.get("line_start") != text[:offset].count("\n") + 1
+                            or coordinate.get("line_end") != text[:offset + len(selected)].count("\n")):
+                        fail("port_coordinate_pin", port.get("id") + ": " + path + anchor)
+                    if field == "receiving_coordinates":
+                        package_prefix = str(PACKAGE.relative_to(REPO)) + "/"
+                        if not path.startswith(package_prefix):
+                            fail("port_coordinate_scope", port.get("id"))
+                        else:
+                            inspect(path.removeprefix(package_prefix) + anchor)
+                            if (PACKAGE / path.removeprefix(package_prefix)).read_bytes() != data:
+                                fail("port_receiver_drift", port.get("id") + ": " + path)
+                except (ValueError, KeyError, OSError, subprocess.CalledProcessError) as error:
+                    fail("port_coordinate", port.get("id") + ": " + str(error))
+        expected_frontier = [{"id": identity, "disposition": by_id[identity]["disposition"],
+                             "relation_id": by_id[identity].get("successor_relation", {}).get("id")}
+                            for identity in port.get("affected_predecessor_ids", []) if identity in by_id]
+        actual_frontier = [{key: item.get(key) for key in ("id", "disposition", "relation_id")}
+                           for item in port.get("frontier_dispositions", [])]
+        if actual_frontier != expected_frontier:
+            fail("port_disposition", port.get("id"))
+        for identity in port.get("affected_predecessor_ids", []):
+            if port.get("receiving_owner_locus") not in by_id[identity].get("successor_loci", []):
+                fail("port_owner_carry", port.get("id") + ": " + identity)
+        predecessor_coordinates = port.get("predecessor_coordinates", [])
+        if [item.get("id") for item in predecessor_coordinates] != port.get("affected_predecessor_ids"):
+            fail("port_predecessor", port.get("id"))
+        for coordinate in predecessor_coordinates:
+            row = by_id.get(coordinate.get("id"), {})
+            try:
+                data = (INSTALLED / row["source_member"]).read_bytes()
+                section = section_body(data.decode(), row.get("source_anchor", ""))
+                if (coordinate.get("manifest_sha256") != BUILDER_SHA
+                        or coordinate.get("path") != row["source_member"] or coordinate.get("anchor") != row.get("source_anchor", "")
+                        or coordinate.get("file_sha256") != sha(data)
+                        or coordinate.get("section_sha256") != sha(section.encode()) or coordinate.get("section_bytes") != len(section.encode())):
+                    fail("port_predecessor", port.get("id") + ": " + row.get("id", ""))
+            except (KeyError, ValueError, OSError) as error:
+                fail("port_predecessor", port.get("id") + ": " + str(error))
+        comparison = port.get("source_comparison", {})
+        if (comparison.get("result") != "satisfied" or not comparison.get("scope") or not comparison.get("assessment")
+                or comparison.get("source_basis") != PEER_SOURCE or comparison.get("receiver_basis") != DOCUMENT_SOURCE):
+            fail("port_comparison", port.get("id"))
+        if port.get("integration_assessment", {}).get("result") != "indeterminate" or port.get("owner_decision"):
+            fail("port_standing", "Author comparison is not independent integration or owner acceptance: " + str(port.get("id")))
     frozen = mapping.get("pin_state") == "frozen_source_verified"
     if require_frozen and not frozen:
         fail("source_freeze", "Conservation pins await the exact complete frozen package")
@@ -343,6 +453,25 @@ def negative_controls(mapping, ports):
     run("unknown shared binding", lambda m: m["rows"][0]["consumer_binding_refs"].append("absent-binding-control"), "binding_ref")
     run("assessed row body digest changed", lambda m: next(r for r in m["rows"] if r.get("author_comparison"))["author_comparison"].update(candidate_section_sha256="0" * 64), "comparison_drift")
     run("historical fact rewritten", lambda m: m["historical_qualification"]["fields"]["synthesis"].update(meaning="dispositions all conserved"), "historical_fact")
+    run("closure condition omitted", lambda m: next(r for r in m["rows"] if r["id"] == "STDO_REFERENCE_FRAME_BASELINE.md#closure")["successor_relation"]["condition_coverage"].pop(), "closure_coverage")
+    run("inspected changed row loses its comparison", lambda m: next(r for r in m["rows"] if r["id"] == m["review_repair"]["inspection_population"][0]).pop("author_comparison"), "repair_assessment")
+    run("port owner absent from affected conserved row", lambda m: next(r for r in m["rows"] if r["id"] == "REFERENCE_FRAME_METHOD.md#rf-002-finite-attention")["successor_loci"].remove("standards/FOUNDATIONS.md#workspace-and-context"), "port_owner_carry")
+    run("invented shared replacement dependency", lambda m: m["rows"][0].update(shared_replacement_dependencies=["absent-replacement-control"]), "shared_replacement")
+
+    def run_port(name, mutate, expected_code):
+        candidate = copy.deepcopy(mapping)
+        candidate_ports = copy.deepcopy(ports)
+        mutate(candidate_ports)
+        candidate["port_account_semantic_sha256"] = sha(canonical(candidate_ports))
+        candidate["semantic_sha256"] = semantic_sha(candidate)
+        report = validate(candidate, frontier_for(candidate), candidate_ports)
+        controls.append({"name": name, "expected_code": expected_code,
+                         "detected": expected_code in {f["code"] for f in report["failures"]}})
+
+    run_port("historical port section digest changed", lambda p: p["contributions"][0]["source_coordinates"][0].update(section_sha256="0" * 64), "port_coordinate_pin")
+    run_port("conserved port frontier disposition omitted", lambda p: p["contributions"][0]["frontier_dispositions"].pop(1), "port_disposition")
+    run_port("author port comparison promoted to independent integration", lambda p: p["contributions"][0]["integration_assessment"].update(result="satisfied"), "port_standing")
+    run_port("port source redirected to unselected peer member", lambda p: p["contributions"][0]["source_coordinates"][0].update(path=PEER_ROOT + "UNSELECTED.md"), "port_coordinate_scope")
     bad_frontier = frontier_for(mapping)
     bad_frontier["rows"][0]["disposition"] = "unresolved"
     controls.append({"name": "frontier semantic drift with unchanged IDs", "expected_code": "frontier",
@@ -372,7 +501,7 @@ def main():
     report["draft_valid"] &= all(c["detected"] for c in report["negative_controls"])
     report["elapsed_seconds"] = round(time.monotonic() - started, 3)
     report["limits"] = ["Coordinate, shape and preservation checks do not prove semantic conservation.",
-                        "Pending owner decisions and independent row/source/port assessments remain open.",
+                        "The 184 bounded author comparisons and five exact-source port comparisons do not establish independent row/source/port assessment or owner acceptance.",
                         "Draft validity permits pending frozen pins; --require-frozen checks current-source binding separately."]
     if not args.no_write:
         (HERE / "CONSERVATION_CHECK.json").write_text(json.dumps(report, indent=2) + "\n")

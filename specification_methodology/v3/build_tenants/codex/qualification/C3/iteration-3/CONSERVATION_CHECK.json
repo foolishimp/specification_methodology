@@ -4,21 +4,21 @@
   "failures": [],
   "row_count": 691,
   "dispositions": {
-    "conserved": 639,
+    "conserved": 622,
     "not applicable": 1,
-    "superseded": 51
+    "superseded": 68
   },
   "draft_relations_accounted": 47,
   "historical_changes": 34,
-  "carrying_loci": 732,
+  "carrying_loci": 740,
   "source_members": 71,
   "frozen": true,
   "semantic_conservation": "indeterminate",
   "owner_acceptance": "not_established",
   "kind": "stdo.conservation-mechanical-check",
-  "map_sha256": "e9d5218a6990d91c180126fb1b7913e520baa305c7412f7bffa55736d7883305",
-  "semantic_sha256": "5c88e4009d05be1fd7253dc34c7d0e1461daf3fc95917f7d3aaa042d1c0a3e95",
-  "port_account_sha256": "64ac45b8363f8d01f1eec1cce59447b96b2cb7201de1c4e56bf2e2512fb330ff",
+  "map_sha256": "93157515bf7ff58a364dae5744c6642c25125e1887003e039f7145e4b993a37f",
+  "semantic_sha256": "1038f180758c2dedfdf143360f7c81da2b09ca85cc23cfa414d746eae90b557d",
+  "port_account_sha256": "b12ed6886c74219f672cc5137868d71ae7a5fa04c47fbb98265080869deb03af",
   "negative_controls": [
     {
       "name": "duplicate stable row ID",
@@ -61,6 +61,46 @@
       "detected": true
     },
     {
+      "name": "closure condition omitted",
+      "expected_code": "closure_coverage",
+      "detected": true
+    },
+    {
+      "name": "inspected changed row loses its comparison",
+      "expected_code": "repair_assessment",
+      "detected": true
+    },
+    {
+      "name": "port owner absent from affected conserved row",
+      "expected_code": "port_owner_carry",
+      "detected": true
+    },
+    {
+      "name": "invented shared replacement dependency",
+      "expected_code": "shared_replacement",
+      "detected": true
+    },
+    {
+      "name": "historical port section digest changed",
+      "expected_code": "port_coordinate_pin",
+      "detected": true
+    },
+    {
+      "name": "conserved port frontier disposition omitted",
+      "expected_code": "port_disposition",
+      "detected": true
+    },
+    {
+      "name": "author port comparison promoted to independent integration",
+      "expected_code": "port_standing",
+      "detected": true
+    },
+    {
+      "name": "port source redirected to unselected peer member",
+      "expected_code": "port_coordinate_scope",
+      "detected": true
+    },
+    {
       "name": "frontier semantic drift with unchanged IDs",
       "expected_code": "frontier",
       "detected": true
@@ -71,10 +111,10 @@
       "detected": true
     }
   ],
-  "elapsed_seconds": 2.133,
+  "elapsed_seconds": 5.87,
   "limits": [
     "Coordinate, shape and preservation checks do not prove semantic conservation.",
-    "Pending owner decisions and independent row/source/port assessments remain open.",
+    "The 184 bounded author comparisons and five exact-source port comparisons do not establish independent row/source/port assessment or owner acceptance.",
     "Draft validity permits pending frozen pins; --require-frozen checks current-source binding separately."
   ]
 }
