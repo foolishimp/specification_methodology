@@ -29,6 +29,37 @@ links:
 
 T-001 records owner-directed common closure on corrected source `dc5dc27b5b5a836a2fb584c3a3f79b63ae5d911a` and the satisfied nonauthor source readback. The selected next work is [EC-CODEX-I3-03](T-002-CODEX-c3-successor-construction.md#ec-codex-i3-03--complete-the-consolidated-i3-repair), carrying the [six consolidated repair packages](../../comments/codex/20261014T164500Z_PLAN_I3_CONSOLIDATED_BUILD_REPAIRS.md). C3-I3-CLOSED-01 is recorded from its input commit before this contract is admitted. Historical C3-I3-R2-01 remains immutable; this selection neither activates Claude nor accepts either candidate.
 
+## C3-I3-CLOSED-01 input snapshot
+
+Input commit B: `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816`. This descendant recording R is the commit that first contains this snapshot and the EC-CODEX-I3-03 admission. All 24 member hashes are read from B. The first fourteen members are common source/entry material; the remaining work and review sources retain supporting standing. Referenced review assets are read at that same exact commit. The unchanged historical C3-I3-R2-01 snapshot continues to bind its own run. This input closes the common revision, not a candidate, member, replacement or release.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 56501 | `668676f60990ac37178ddf939a6a9354a54a3d903de37998e50dc60bd96ec06f` |
+| `specification/GOALS.md` | 23958 | `27b6c9349498f19cdc44a15f1880d77bfeb5b3cf41d6bcdc0b99381533fe9f10` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 7624 | `4e9344f3a5eafbe9e40623d545db25f2d3dd7d5ca1b9cd94536280d41a1d9fa2` |
+| `specification/requirements/README.md` | 30915 | `6a82fa4d63704c739d7368492c6f458309c44380aee07c2b46aa8cba06a3d7fe` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16188 | `44f2ec9bb33e7d1df94cdb1bf46a03655d9285d0e056525e77dae6af82b932d1` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4176 | `da462a773d0002cbaef4d16149aeade6f9a29c6e411b2bc059c5f708d929c86d` |
+| `CLAUDE.md` | 4176 | `da462a773d0002cbaef4d16149aeade6f9a29c6e411b2bc059c5f708d929c86d` |
+| `build_tenants/README.md` | 5325 | `e2c86d9601219bf389745256de440b0d3fe5684bccb29cffadcdc0140aefc218` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 94295 | `33e8e892b2773f8ff7a415beb75c906d14b1bb32ed7a98c3691f1ee1fc0ce73c` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 37993 | `7d36044c3c8e3367e702542206bddefc1759369ba748b797ba1f3acfbf28d1fa` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 93273 | `0f337942aa7b7d8e6b1d4d5ef7386f2a6e653c8dfe85cda00722b923d76519ff` |
+| `.ai-workspace/tickets/active/T-002-iteration-3-work.md` | 32992 | `51d16688d54b41ff369b797fa452ba6d2686863b6a1c1fd871ee04620a81800b` |
+| `.ai-workspace/comments/codex/20261014T164028Z_DISPOSITION_I3_COMMON_ROUND_3_CLOSURE.md` | 10667 | `b146ad21ce95c6e35b9c56148ce5b01f766fcea7b20d8e486b967cb5628faabc` |
+| `.ai-workspace/comments/codex/20261014T165000Z_REVIEW_I3_SPECIFICATION_CLOSURE.md` | 13642 | `5c1df79081efebf34f37482122f306f46c0ef97128cbae34301169ca11406450` |
+| `.ai-workspace/comments/codex/20261014T164500Z_PLAN_I3_CONSOLIDATED_BUILD_REPAIRS.md` | 26983 | `edcae62d02b7d18b31c7eaa333616b81f96e48da87f24d246a0b68f7816fbaba` |
+| `.ai-workspace/comments/codex/20261014T154028Z_REVIEW_CODEX_V3_I3_0517EB2.md` | 20558 | `722c4eee9a97191508a2603697b6b38d68515e5229d59ca15f48d822c9ad603f` |
+| `.ai-workspace/comments/codex/20261014T155559Z_EVALUATION_CODEX_I3_REVIEW_0517EB2.md` | 7304 | `0787722c3ce11ca0411fdef33b1236b28dcad3f40e1bbbcdea0939378f67a278` |
+| `.ai-workspace/comments/claude/20261014T151055Z_REVIEW_CODEX_V3_I3_CANDIDATE.md` | 15771 | `dd29c0af4a9cab08b23b587856a561a78e071f2ee69dc35042dd1ee89a36a301` |
+
 ## Current Iteration
 
 The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source has a satisfied independent readback and its common closure is recorded. The parent records the exact successor input and Codex admission before tenant effects. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
