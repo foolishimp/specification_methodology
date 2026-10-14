@@ -147,6 +147,15 @@ def main():
             'bytes': {name: (EVIDENCE / name).stat().st_size for name in files},
             'scope': 'Explicit authored closure; no predicate evaluation or task-use acceptance'})
     controls = []
+    adapted = [r for r in mapping['rows'] if r['source'] != r['native_source']]
+    require(all(r['native_source'] == build.source_uri(r['owner']) for r in adapted), 'Native source adapter changes the exact owner')
+    controls.append({'case': 'Native fragments retain exact original heading/body identity',
+                     'result': [{'id': r['id'], 'original_source': r['source'], 'native_source': r['native_source'], 'body_sha256': r['owner']['body_sha256']} for r in adapted]})
+    ambiguous = '# A — B\n# A B\n# A B-1\n'.encode()
+    rejected(lambda: build.native_source_anchor({'path': 'synthetic.md', 'anchor': 'a-b', 'start_line': 2}, ambiguous),
+             'Ambiguous native fragment refuses carrier adaptation', controls)
+    rejected(lambda: build.native_source_anchor({'path': 'synthetic.md', 'anchor': 'missing', 'start_line': 1}, ambiguous),
+             'Nonmatching original fragment refuses carrier adaptation', controls)
     damaged = copy.deepcopy(program)
     damaged['clauses'][0]['statement'] += ' Unsupported alteration.'
     write('program-map-drift-mutant.json', damaged)

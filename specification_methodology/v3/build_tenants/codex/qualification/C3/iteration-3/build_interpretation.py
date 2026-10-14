@@ -53,12 +53,81 @@ def slug(value):
     return re.sub(r"\s", "-", re.sub(r"[^\w\-\s]", "", value))
 
 
-def source_uri(source):
+def original_source_uri(source):
     path = source["path"]
     if Path(path).is_absolute() or ".." in Path(path).parts or path.startswith("interpretation/"):
         raise ValueError("Source account must bind a documentary package member: " + path)
     anchor = source.get("anchor", "").lstrip("#")
     return URI + path + ("#" + anchor if anchor else "")
+
+
+def native_slug(title):
+    """The exact fragment rule of the separately pinned RC2 checker."""
+    base = re.sub(r"[^\w\- ]", "", title.strip().lower(), flags=re.UNICODE)
+    return re.sub(r"[\s\-]+", "-", base).strip("-")
+
+
+def native_source_anchor(source, raw):
+    """Bind a carrier route to the same exact original heading and body.
+
+    Semantic/source identities are unchanged. The old checker collapses runs
+    of hyphens; the source account uses its normal Markdown owner coordinate.
+    Any alias collision or nonmatching coordinate refuses the adapter.
+    """
+    anchor = source.get('anchor', '').lstrip('#')
+    if not anchor:
+        return ''
+    lines = raw.decode('utf-8').splitlines(keepends=True)
+    headings, github_counts, native_counts = [], {}, {}
+    fenced = None
+    for lineno, line in enumerate(lines, 1):
+        fence = re.match(r'^\s{0,3}(`{3,}|~{3,})', line)
+        in_fence = fenced is not None
+        if fence:
+            mark = fence.group(1)
+            if fenced is None:
+                fenced = (mark[0], len(mark))
+            elif mark[0] == fenced[0] and len(mark) >= fenced[1]:
+                fenced = None
+        match = re.match(r'^#{1,6}\s+(.+?)\s*#*\s*$', line)
+        if not match:
+            continue
+        title = match.group(1)
+        native_base = native_slug(title)
+        n = native_counts.get(native_base, 0)
+        native_counts[native_base] = n + 1
+        native = native_base if n == 0 else native_base + '-' + str(n)
+        original = None
+        if not in_fence:
+            original_base = slug(title)
+            g = github_counts.get(original_base, 0)
+            github_counts[original_base] = g + 1
+            original = original_base if g == 0 else original_base + '-' + str(g)
+        headings.append({'line': lineno, 'original': original, 'native': native})
+    candidates = [h for h in headings if h['original'] == anchor]
+    if len(candidates) != 1:
+        raise ValueError('Ambiguous or nonmatching original source anchor: ' + source['path'] + '#' + anchor)
+    heading = candidates[0]
+    if source.get('start_line') and source['start_line'] != heading['line']:
+        raise ValueError('Source anchor and exact heading coordinate disagree: ' + source['path'] + '#' + anchor)
+    if sum(h['native'] == heading['native'] for h in headings) != 1:
+        raise ValueError('Ambiguous native source fragment: ' + source['path'] + '#' + heading['native'])
+    if source.get('body_sha256') and 'start_line' in source and 'end_line' in source:
+        body = ''.join(lines[source['start_line']-1:source['end_line']]).encode()
+        if sha(body) != source['body_sha256']:
+            raise ValueError('Source adapter body pin differs: ' + source['path'] + '#' + anchor)
+    return heading['native']
+
+
+def source_uri(source):
+    original_source_uri(source)  # Validate the original documentary route.
+    anchor = native_source_anchor(source, (PACKAGE / source['path']).read_bytes())
+    return URI + source['path'] + ('#' + anchor if anchor else '')
+
+
+def unit_frame(identifier):
+    heading = 'Unit ' + native_slug(identifier) + ' ' + sha(identifier.encode())[:12]
+    return heading, URI + 'interpretation/FRAMES.md#' + native_slug(heading)
 
 
 def sources(row):
@@ -152,6 +221,8 @@ CONSTRUCTION_STANDING = {
     'authored_bounded_definition_argument', 'authored_conditional_argument_account_not_independent_proof',
     'authored_conditional_argument_not_independent_proof', 'conditional_source_argument_not_independent_proof',
     'source_mapping_bound_not_independently_qualified',
+    'author_source_to_representation_mapping_not_fidelity_verdict',
+    'authored_conditional_argument_not_independent_entailment_proof',
 }
 LOCAL_REF_KEYS = {'value_ref', 'local_predicate_ref', 'local_binding_ref'}
 SHARED_REF_KEYS = {'contract_ref', 'scope_ref', 'input_ref'}
@@ -320,6 +391,25 @@ def validate_account(current, package=PACKAGE):
             local_block = block_id.removeprefix(row['id'] + '#')
             if local_block not in block_ids:
                 raise ValueError('Unresolved source block: ' + row['id'] + '#' + block_id)
+        block_pins = {b['id']: b for b in row.get('source_clauses', [])}
+        for relation in row.get('source_clause_roles', []):
+            block = block_pins.get(relation['source_block_id'])
+            if not block or relation['source_clause_id'] != row['id'] + '#' + block['id'] or any(
+                relation[source_field] != block[pin_field]
+                for source_field, pin_field in [('source_block_sha256', 'sha256'), ('source_byte_start', 'byte_start'), ('source_byte_end', 'byte_end')]
+            ):
+                raise ValueError('Source-clause relation has stale or ambiguous coordinates: ' + row['id'])
+            for binding in relation['represented_at']:
+                pointer = binding['pointer']
+                if not isinstance(pointer, str) or not pointer.startswith('/'):
+                    raise ValueError('Invalid local representation pointer: ' + row['id'])
+                value = row
+                try:
+                    for part in pointer[1:].split('/'):
+                        part = part.replace('~1', '/').replace('~0', '~')
+                        value = value[int(part)] if isinstance(value, list) else value[part]
+                except (KeyError, IndexError, TypeError, ValueError):
+                    raise ValueError('Unresolved local representation pointer: ' + row['id'] + pointer)
         semantic_edges(row, ids, contracts, row)
     for key, contract in contracts.items():
         if not re.fullmatch(r'[A-Za-z0-9_.:-]+', key):
@@ -370,7 +460,7 @@ def family_mappings(current):
         groups.setdefault(row['family'], []).append(row['id'])
     return [{'family': family,
              'index': NS + 'index:family:' + slug(family) + '-' + sha(family.encode())[:12],
-             'source_frame': URI + 'interpretation/FRAMES.md#' + slug('Family ' + family + ' ' + sha(family.encode())[:12]),
+             'source_frame': URI + 'interpretation/FRAMES.md#' + native_slug('Family ' + native_slug(family) + ' ' + sha(family.encode())[:12]),
              'source_unit_ids': sorted(roots)}
             for family, roots in sorted(groups.items()) if len(roots) > 1]
 
@@ -403,7 +493,8 @@ def build_program(current):
         identifier, refs = row['id'], sources(row)
         kind = row['representation_kind']
         target = clause_id(identifier)
-        frame, index = URI + 'interpretation/FRAMES.md#' + slug(identifier), NS + 'index:' + identifier
+        frame_heading, frame = unit_frame(identifier)
+        index = NS + 'index:' + identifier
         is_constraint = kind == 'constraint' or (kind == 'consumer_binding' and bool(row.get('predicate')))
         operator = 'requires' if is_constraint else ('locates' if kind == 'non_deciding_locator' else 'defines')
         # Owner coordinates remain native source routes. Exact block pins stay
@@ -418,15 +509,17 @@ def build_program(current):
         program['frame_indexes'].append({'uri': index, 'frame_ref': frame,
             'scope': 'Apply the source-bound ' + kind.replace('_', ' ') + ' ' + identifier + ' with its declared conditions, references and task inputs.',
             'clause_refs': [target], 'residual_refs': [], 'source_refs': sorted(set(refs + [frame]))})
-        frame_sections.append('## ' + identifier + '\n\nIndex: `' + index + '`.\n\n' + '\n'.join('- [' + ref.removeprefix(URI) + '](' + ref.replace(URI, '../') + ')' for ref in refs) + '\n')
-        mapping.append({'id': identifier, 'source': source_uri(row['owner']), 'representation_kind': kind,
+        original_refs = sorted({original_source_uri(v) for v in [row['owner'], *row.get('supporting_sources', [])]})
+        frame_sections.append('## ' + frame_heading + '\n\nIndex: `' + index + '`.\n\n' + '\n'.join('- [' + ref.removeprefix(URI) + '](' + ref.replace(URI, '../') + ')' for ref in original_refs) + '\n')
+        mapping.append({'id': identifier, 'owner': row['owner'], 'source': original_source_uri(row['owner']),
+                        'native_source': source_uri(row['owner']), 'representation_kind': kind,
                         'clause': target, 'index': index})
     for family, roots in sorted(families.items()):
         if len(roots) < 2:
             continue  # The individual index already selects this exact root.
         identity = slug(family) + '-' + sha(family.encode())[:12]
-        heading = 'Family ' + family + ' ' + sha(family.encode())[:12]
-        frame, index = URI + 'interpretation/FRAMES.md#' + slug(heading), NS + 'index:family:' + identity
+        heading = 'Family ' + native_slug(family) + ' ' + sha(family.encode())[:12]
+        frame, index = URI + 'interpretation/FRAMES.md#' + native_slug(heading), NS + 'index:family:' + identity
         program['frame_refs'].append(frame)
         program['frame_indexes'].append({'uri': index, 'frame_ref': frame,
             'scope': 'Acquire the declared ' + family + ' relations and their typed references for a separately bound task.',
@@ -540,7 +633,10 @@ README = '''# Current Method Interpretation
 preserves source-body and block pins with the typed meanings; [MAPPING.json](MAPPING.json)
 connects each source unit and optional multi-root group to its index. The indexes
 are acquisition selectors, not required evaluations, actors or execution
-partitions. Family labels add no semantic owner or transformation. These representations refer to
+partitions. Family labels add no semantic owner or transformation. The mapping
+retains original owner coordinates separately from native checker routes; a
+carrier fragment must resolve uniquely to that same heading and body. These
+representations refer to
 the owning standards; they create no second authority for method law.
 
 Select an index for the actual task. Bind the subject, governing basis and
@@ -647,7 +743,8 @@ def main():
     dependencies = verify_dependencies(args.theory_root)
     program, mapping, frames = build_program(current)
     mapping_record = {'kind': 'stdo.method-interpretation-mapping', 'schema_version': 1,
-        'document_source_input_commit': commit, 'rows': mapping, 'optional_family_indexes': family_mappings(current)}
+        'document_source_input_commit': commit, 'rows': mapping, 'optional_family_indexes': family_mappings(current),
+        'source_route_rule': 'Original Markdown owner coordinates and semantic IDs are preserved. Native source routes use the pinned RC2 checker fragment convention at the same uniquely resolved heading/body. Alias collisions or nonmatching coordinates refuse.'}
     source_inventory = {'kind': 'stdo.method-interpretation-source', 'schema_version': 1,
         'document_source_input_commit': commit, 'document_members': members,
         'excluded_from_documentary_subject': ['interpretation/'],
@@ -682,7 +779,9 @@ def main():
         'account_input_commit': args.account_commit, 'account_input_sha256': args.account_sha256, 'semantic_account_sha256': sha(json_bytes(current)),
         'determinations': len(rows), 'shared_contracts': len(current['semantic_contracts']),
         'clauses': len(program['clauses']), 'residuals': len(program['residuals']), 'indexes': len(program['frame_indexes']),
-        'excluded_construction_metadata': exclusions, 'native_validation': 'passed',
+        'excluded_construction_metadata': exclusions,
+        'source_route_adaptations': [{'id': r['id'], 'owner': r['owner'], 'original_source': r['source'], 'native_source': r['native_source']} for r in mapping if r['source'] != r['native_source']],
+        'native_validation': 'passed',
         'package_members': [{'path': p.name, 'bytes': p.stat().st_size, 'sha256': sha(p.read_bytes())} for p in sorted(OUTPUT.iterdir()) if p.is_file()],
         'limits': ['Mechanical correspondence is not semantic completeness or fidelity.',
             'Conditional task-input contracts do not assert instance evidence or results.',

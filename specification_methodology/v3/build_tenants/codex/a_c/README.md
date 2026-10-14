@@ -8,9 +8,19 @@ types. Shared meanings have exact references; required task inputs are contracts
 not assertions that a task has run or has an unknown result.
 
 [Mechanical qualification](../qualification/C3/iteration-3/a_c/current/MECHANICAL_RESULT.json)
-and the [iteration-3 return](../qualification/C3/iteration-3/RETURN.md) record the
-exact tested subject and limits. Structural validation and closure projection do
-not execute semantic predicates, establish fidelity or accept the method.
+and the [interpretation return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_03.json)
+record the exact tested subject and limits. The interpretation occupies 22,095,505
+bytes; the three selected materialized closures occupy 2.410–2.624 MB each. These
+are adverse acquisition-cost observations. Structural validation and closure
+projection establish no practical compression, semantic fidelity or method
+acceptance; comparative practical cost requires actual use. The
+[iteration-3 return](../qualification/C3/iteration-3/RETURN.md) owns the wider
+candidate qualification.
+
+The [pending-input return](../qualification/C3/iteration-3/a_c/INTERPRETATION_PENDING_INPUT_01.json),
+[omission refusal](../qualification/C3/iteration-3/a_c/INTERPRETATION_GENERATION_ATTEMPT_01.log)
+and [fragment refusal](../qualification/C3/iteration-3/a_c/INTERPRETATION_GENERATION_ATTEMPT_02_VALIDATION.json)
+remain historical evidence of their named subjects.
 
 ## Historical C3 Interpretations
 
