@@ -602,7 +602,7 @@ or apply disposition.
 | requirement truth is missing | re-enter requirements, not code |
 | structural decision is missing | re-enter design |
 | code and test disagree | reconcile through governing authority |
-| independent review is required (the boundaries TICKETS §5 names) | freeze one exact review subject by identity before material reference exposure (EVALUATION §3 Protocol) and activate Reviewer |
+| independent review is required (the boundaries TICKETS §7 names) | freeze one exact review subject by identity before material reference exposure (EVALUATION §3 Protocol) and activate Reviewer |
 | a finding is adjacent to the current claim | return it as triage input; do not automatically block |
 | requested effect exceeds the grant | refuse and return to Product-owned decision authority |
 

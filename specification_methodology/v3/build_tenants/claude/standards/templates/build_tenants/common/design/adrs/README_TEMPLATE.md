@@ -38,11 +38,11 @@ See `ADR_TEMPLATE.md` in this directory for the canonical body shape.
 
 ## Boundary rule
 
-One ADR per decision boundary, not per requirement file. Cross-tenant scope is the constraint that distinguishes this folder from a tenant-local one: the decision must govern more than one tenant. If the scope narrows during implementation, move the ADR to the relevant tenant's `design/adrs/` and record the move in the supersession chain.
+One ADR per decision boundary, not per requirement file. Cross-tenant scope is the constraint that distinguishes this folder from a tenant-local one: the decision must govern more than one tenant. If the scope narrows during implementation, move the ADR to the relevant tenant's `design/adrs/` and record the move in the supersession chain (`SPEC_METHOD.md` section 10).
 
 ## Supersession
 
-When a later ADR supersedes this one, set `Status: superseded` and `Superseded by:` to the successor ADR's local ID, and leave the file in place. ADRs are append-only history; do not delete superseded ADRs unless they are being explicitly retired.
+When a later ADR supersedes this one, set `Status: superseded` and `Superseded by:` to the successor ADR's local ID, and leave the file in place. ADRs are append-only history; do not delete superseded ADRs unless they are being explicitly retired. `SPEC_METHOD.md` section 10, Design records, owns these rules.
 
 ## Optional registry
 

@@ -91,7 +91,7 @@ When writing a specification artifact (P3, P6):
 
 - state the current live truth, not a narrated transition;
 - keep each sentence in its right layer;
-- remove stale law rather than carrying it forward for comfort; and
+- remove stale law, as §9 states; and
 - keep design detail out of constitutional layers unless the detail is
   itself constitutional.
 
@@ -111,18 +111,15 @@ If any answer is wrong, rewrite or delete (P2).
 
 ## 9. Current-surface writing
 
-Active specification should describe the current constitutional surface in
-present tense (P3; rc.2 #current-surface-writing).
-
-Material that is no longer live is deleted, superseded or moved to
-commentary. Do not leave dead law in the active surface (P3, P6).
-
-During a change wave prefer terms such as active, current, base, live,
-shared and tenant-local (P3). Use an explicit version label only for an
-immutable release fact, an explicit mutable selector binding or clearly
-historical material (P3;
-[SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release) states the same
-boundary for constitutional surfaces).
+The rule for current-surface writing, with its force, is the
+[SPEC_METHOD §2 Specification surface rule](SPEC_METHOD.md#specification-surface-rule):
+constitutional specification is written in the present tense, material
+that is no longer live is deleted, superseded or moved to commentary, and
+an explicit version label is reserved for an immutable release fact, a
+selector binding, or clearly historical or superseded material (P3;
+rc.2 #current-surface-writing). This guide adds the writing practice:
+during a change wave prefer terms such as active, current, base, live,
+shared and tenant-local (P3).
 
 ## 10. Source dispositions
 
