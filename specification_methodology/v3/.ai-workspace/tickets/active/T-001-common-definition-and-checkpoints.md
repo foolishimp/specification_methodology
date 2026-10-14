@@ -28,6 +28,8 @@ Current common Writer activation: re-enter the requirement definition on that pr
 
 Exit evidence: the pillars determine the reconstruction requirements; constraint surfaces and a_c's role are explicit; shared laws govern their consumers; conservation does not mandate inherited document partitions; conformance rejects explanatory overlays and semantic loss disguised as compression. Changes remain in their declared owners with no fixed document count, role inventory, numeric context cap or automatic acceptance claim. The following Selected Contract is historical for the prior correction and is superseded by this activation where its scope differs.
 
+2026-10-14 — Common update frozen at `c78de0d6794cc39b616d11f1c4ced80a3663da4b`. The [independent working review](../../comments/codex/20261014T001000Z_REVIEW_ITERATION_3_COMMON_CONTRACT.md) found no blocking substantive defect and one low-severity prospective-admission route. Common Ledger Writer records EC-CODEX-I3-01, aligns the route, and records the exact input snapshot in a descendant commit before tenant activation. Product Definition verification and 269 common link checks passed. This permits authorised construction; final common acceptance remains Jim's.
+
 Jim assigns the common construction pen to Codex and authorises repair of the revised specification:
 
 > im handing the pen back to you fix the v3 revised specification

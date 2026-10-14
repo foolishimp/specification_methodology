@@ -13,7 +13,7 @@ C3 reconstruction. Each tenant continues its own candidate line from the exact p
 - [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md);
 - [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md).
 
-Nothing runs until an execution contract is admitted in that ticket. The actors for this phase are not yet named.
+Nothing runs until an execution contract is admitted in that ticket. Each ticket records its current actors, input and limits; historical contracts do not activate a successor. Codex iteration 3 is governed by EC-CODEX-I3-01. The peer line retains its own recorded activation.
 
 ## Territory And Returns
 
