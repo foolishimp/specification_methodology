@@ -222,6 +222,7 @@ CONSTRUCTION_STANDING = {
     'authored_conditional_argument_not_independent_proof', 'conditional_source_argument_not_independent_proof',
     'source_mapping_bound_not_independently_qualified',
     'author_source_to_representation_mapping_not_fidelity_verdict',
+    'Author conditional argument; source-specific specialization and policy are explicit; independent entailment/fidelity judgment remains separate.',
     'authored_conditional_argument_not_independent_entailment_proof',
 }
 LOCAL_REF_KEYS = {'value_ref', 'local_predicate_ref', 'local_binding_ref'}

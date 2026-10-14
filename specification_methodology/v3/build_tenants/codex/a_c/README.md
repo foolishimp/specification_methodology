@@ -7,15 +7,23 @@ constraints, consumer bindings and non-deciding locations retain their distinct
 types. Shared meanings have exact references; required task inputs are contracts,
 not assertions that a task has run or has an unknown result.
 
-[Mechanical qualification](../qualification/C3/iteration-3/a_c/current/MECHANICAL_RESULT.json)
-and the [interpretation return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_03.json)
-record the exact tested subject and limits. The interpretation occupies 22,095,505
-bytes; the three selected materialized closures occupy 2.410–2.624 MB each. These
-are adverse acquisition-cost observations. Structural validation and closure
-projection establish no practical compression, semantic fidelity or method
-acceptance; comparative practical cost requires actual use. The
-[iteration-3 return](../qualification/C3/iteration-3/RETURN.md) owns the wider
-candidate qualification.
+The [current conversion return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_04.json)
+records the exact successor and fresh native validation. Its
+[metadata comparison](../qualification/C3/iteration-3/a_c/INTERPRETATION_METADATA_04.json)
+binds reuse of the [prior mechanical controls](../qualification/C3/iteration-3/a_c/current/MECHANICAL_RESULT.json)
+to unchanged semantic fields and typed references; those controls retain their
+original subject and were not rerun.
+
+The current interpretation occupies 22,062,742 bytes. The preceding candidate's
+three measured materialized closures occupied 2.410–2.624 MB each. Their closure
+members remain unchanged; successor projection bytes were not remeasured.
+These remain adverse acquisition-cost observations, with no practical compression,
+semantic fidelity or method-acceptance claim. Comparative practical cost requires
+actual use. The [iteration-3 return](../qualification/C3/iteration-3/RETURN.md)
+owns the wider candidate qualification.
+
+The [preceding conversion return](../qualification/C3/iteration-3/a_c/INTERPRETATION_RETURN_03.json)
+retains its original output and measurement identities.
 
 The [pending-input return](../qualification/C3/iteration-3/a_c/INTERPRETATION_PENDING_INPUT_01.json),
 [omission refusal](../qualification/C3/iteration-3/a_c/INTERPRETATION_GENERATION_ATTEMPT_01.log)
