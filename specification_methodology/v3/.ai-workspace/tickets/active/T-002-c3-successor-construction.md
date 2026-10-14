@@ -25,9 +25,13 @@ links:
 
 # T-002 — v3.0.0 Successor Construction
 
+## Closed I3 common basis
+
+T-001 records owner-directed common closure on corrected source `dc5dc27b5b5a836a2fb584c3a3f79b63ae5d911a` and the satisfied nonauthor source readback. The selected next work is [EC-CODEX-I3-03](T-002-CODEX-c3-successor-construction.md#ec-codex-i3-03--complete-the-consolidated-i3-repair), carrying the [six consolidated repair packages](../../comments/codex/20261014T164500Z_PLAN_I3_CONSOLIDATED_BUILD_REPAIRS.md). C3-I3-CLOSED-01 is recorded from its input commit before this contract is admitted. Historical C3-I3-R2-01 remains immutable; this selection neither activates Claude nor accepts either candidate.
+
 ## Current Iteration
 
-The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source awaits independent readback; the parent then records its exact input and the Codex successor admission. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
+The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source has a satisfied independent readback and its common closure is recorded. The parent records the exact successor input and Codex admission before tenant effects. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
 
 The round-2 shared input and the contracts recorded at `651581c` remain historical facts with unchanged bytes. Codex construction was separately selected and returned under its own contract. RT2-01/02 question the admitting actor and start of the Claude line; this common closure neither ratifies that admission nor activates that line. Its selected Executive resolves those records within its own authority. The peer's unresolved start record does not invalidate the Codex basis or block common source closure.
 

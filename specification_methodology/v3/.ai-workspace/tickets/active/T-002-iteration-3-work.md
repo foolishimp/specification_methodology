@@ -10,7 +10,7 @@ The peer keeps its own ticket and execution line.
 
 The owner now selects common I3 closure, followed by the Codex fixes that hold
 against the actual candidate. Common source corrections are complete; independent
-readback and the exact closure record remain pending under T-001.
+readback is satisfied on `dc5dc27`; T-001 records owner-directed common closure.
 The historical round-2 input was ready for draft construction. Codex constructed
 its successor under EC-CODEX-I3-02: complete package
 `3aaa2f2cf0d6f24a734a33c258373a58feceaf87`, current inventory/checks
@@ -109,7 +109,7 @@ older review's subject or verdict.
 
 | ID | Work, owner and current state | Observable exit proof |
 |---|---|---|
-| I3-00 | **SOURCE CORRECTIONS COMPLETE; INDEPENDENT READBACK PENDING.** The latest owner instruction selects common specification closure and then dependent Codex repair. Round-2 inputs, reviews and contract bytes remain historical and unchanged. | Owner closure instruction separately recorded in T-001, exact corrected source frozen, and satisfied independent readback recorded against it. Construction-input preparation alone does not close this item. No tenant implementation, member or release acceptance follows from common closure. |
+| I3-00 | **CLOSED.** T-001 records the owner closure instruction and satisfied independent readback on `dc5dc27`; dependent Codex repair follows on C3-I3-CLOSED-01. Round-2 inputs, reviews and contract bytes remain historical and unchanged. | Owner closure instruction separately recorded in T-001, exact corrected source frozen, and satisfied independent readback recorded against it. Construction-input preparation alone does not close this item. No tenant implementation, member or release acceptance follows from common closure. |
 | I3-01 | **Foundation-to-law coverage — authored coverage complete; independent fidelity OPEN.** The current account covers 697 source units and 37 shared contracts; selected source/account findings have repaired readbacks. Tenant design/member Writers account for material deciding families, including inherited rules, and distinguish premises, consequences and owned policy. | Every material deciding rule is covered by an intelligible argument and consuming binding. Independent review finds neither unaccounted families nor a policy represented as a theorem. The old 77-law count is evidence to examine, not a mandatory partition. R1–R2; H1. |
 | I3-02 | **Shared ownership and actual reduction — implementation returned; whole-corpus assessment OPEN.** Current matched-use acquisition costs do not demonstrate reduction against rc.2. Tenant core/consumer Writers reconcile conjunction, applicability, result and attention owners; generic causal localisation is moved to Spec with Baseline consuming it. | One determination per question, usable without an optional profile where generic; affected consumers obey it. Compare actual decisions and acquisition with exact rc.2 and Codex iteration 2 on comparable tasks and conditions. Show removed determinations/reconciliations, justify remaining distinctions and preserve meaning. Independent integrated assessment covers cross-member consumers; added argument prose alone proves no reduction. R2–R3. |
 | I3-03 | **Domain result integration — current authored inventory returned; independent completeness OPEN.** Member owners finish predicate-and-condition mappings, particularly Ticket sprint close, Release UP-015, Spec UP-021, RF coverage and a_c refusal/treatment. | Account for the review's value sets as actual results or domain data. Every evaluation/decision has a total owner-defined core mapping; no caller/core loop, label guessing or promotion of failed/unknown work. Exercise failure plus missing coverage and unavailable causes. R3–R4; H2. |
@@ -226,7 +226,7 @@ and its Construction Authority; this table only routes their consequences.
 
 | Existing decision | Needed before |
 |---|---|
-| Current common revision closure | The owner has selected closure; record the corrected source and satisfied independent readback in T-001 before marking I3-00 closed and recording the dependent Codex input. Historical construction evidence keeps its original basis. |
+| Current common revision closure | CLOSED: T-001 records the owner instruction and satisfied source readback on `dc5dc27`. Record and verify the dependent Codex input before tenant effects. Historical construction evidence keeps its original basis. |
 | Exact changed-meaning replacements or removals | Acceptance of their affected claims in I3-06/I3-14; evaluation and proposed relations can be prepared first. |
 | Acceptance-review assignments and ported-part review policy | Acceptance-grade I3-14 and the first dependent ported cone; construction, port accounting and authorised defect reviews may proceed. |
 | Compression disposition and standalone identifier policy | Dependent I3-08/I3-13 member or C3 acceptance; refreshing a draft does not decide final retention/removal. |
@@ -235,9 +235,9 @@ and its Construction Authority; this table only routes their consequences.
 
 ## Sequence after consolidation
 
-1. Complete I3-00's independent readback and record the selected common
-   closure on its exact corrected source. Land that basis, then record a Codex
-   successor input and contract before tenant effects. Preserve every historical
+1. I3-00 is closed on `dc5dc27` under the recorded owner instruction and
+   satisfied nonauthor source readback. Record C3-I3-CLOSED-01 and admit
+   EC-CODEX-I3-03 before tenant effects. Preserve every historical
    snapshot and the existing candidate while carrying forward the findings that
    hold against it. No peer activation follows from this sequence.
 2. Reconcile design and finish I3-01–05 as one source-consistent increment.
