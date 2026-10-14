@@ -42,6 +42,7 @@ current state under explicit uncertainty.
 | find the clause that owns a term | [GLOSSARY](GLOSSARY.md), with its [§17](GLOSSARY.md#17-labels-with-several-senses) for a label that has several senses, then [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) to resolve the occurrence |
 | see which commitments a rule rests on | [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) for the table format and the index of material families, then the family table in the member it names |
 | acquire what a task needs | [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), Acquisition: a derived surface whose sources are current where one serves the task, otherwise the deciding owner sections; the verbatim frames in `frames/` are such surfaces, and so is a constraint surface projected from a current `a_c` interpretation under [AXIOMATIC_CALCULUS §9 Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces) |
+| use the formal interpretation of this corpus | [a_c/i3/README.md](../a_c/i3/README.md) for its current subject, what it covers, and the tasks for which it is insufficient. It is an optional derived surface under ACTIVATION §2 Acquisition; for a task it does not cover, acquire the deciding owner sections. Earlier sets under `a_c/` are historical and are not current |
 
 ## Documents
 
