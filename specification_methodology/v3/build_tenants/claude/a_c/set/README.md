@@ -1,3 +1,5 @@
+Historical: this set binds earlier member bytes and is not current; the current interpretation is [../i3/](../i3/README.md).
+
 # a_c Interpretation of the whole set (Claude tenant, T4)
 
 Status: the seven-file document set is frozen and encoded as one program;

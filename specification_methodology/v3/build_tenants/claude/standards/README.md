@@ -110,12 +110,14 @@ Acquisition. The frames and their tasks:
 | [binding](frames/binding.md) | state the build-tenant binding of a software tenant and a human-process tenant of one requirement set, keep author, actor and operation kind distinct, and give the results of a structural check and a conformance predicate |
 | [stale-summary](frames/stale-summary.md) | resume interrupted work from a retained summary that disagrees with the workspace, give results for its predicates, say which retained work survives a changed dependency, and give the next action |
 
-The a_c programs in [`../a_c/`](../a_c/README.md), set-2 to set-6, are
-bound to member digests from before the current rebuild of these members.
-They are not current interpretations of the rebuilt members, and
-re-encoding them is open work. The verbatim frames above are the
-activation unit. The predecessor's compressed summaries keep their
-`unresolved` rows in the frontier pending the product owner's ruling.
+The current interpretation is [`../a_c/i3/`](../a_c/i3/README.md), a
+partial encoding whose subject, coverage and limits its README states. The
+other programs in [`../a_c/`](../a_c/README.md), `t1/` to `t3/`, `set/` and
+`set-2/` to `set-6/`, are historical: they bind member digests from before
+the current rebuild and are not current interpretations. The verbatim
+frames above are the activation unit. The predecessor's compressed
+summaries keep their `unresolved` rows in the frontier, pending the
+product owner's acceptance of their proposed supersession.
 
 ## Library and installed basis
 

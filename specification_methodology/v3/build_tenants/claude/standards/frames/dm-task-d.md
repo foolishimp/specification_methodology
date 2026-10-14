@@ -22,9 +22,9 @@ Routes, in order:
 5. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 6. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 90213 bytes.
+Size of this frame: 94271 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=0e85a89839ef654a18aa6564b76fef077d65b88c918db98e7fc85e45994ee5d1
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=2a21a8b51cc33d7bad92b00fd9d1c34cbd975abd07ff6d59254380c739abe90e
 
 ## 5. Ontology-first design
 
@@ -54,7 +54,9 @@ relation identities plus a version or basis that makes source change,
 staleness and the affected projection set decidable (P3; FOUNDATIONS §2,
 Basis). A reprice of a governing source invalidates only the affected
 Ontology relations and downstream projections until their impact is
-re-evaluated. Code, tests, generated schemas or a single implementing
+re-evaluated; the reprice is an instance of the material input change of
+[ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), which owns the
+invalidators. Code, tests, generated schemas or a single implementing
 agent cannot self-ratify missing Ontology authority (P6). The Ontology
 verdict may live in the same design pack and acceptance record as the
 three-view verdict (§7); this rule does not require a second document,
@@ -186,7 +188,10 @@ decision, projections contradict one another, or two materially
 non-equivalent networks remain admissible. Local algorithm and layout
 choices may remain open only when every admitted choice is semantically
 equivalent under the accepted network. Contradictory projections make the
-design unsatisfiable and block promotion (P1, P5). Decision completeness
+design unsatisfiable and block promotion (P1, P5): an unsatisfiable design
+fails the design gate's acceptance criterion, so this block is a
+precondition of the gate (§7 Gate and retrospective work), not a decision
+on a review finding. Decision completeness
 does not require another document: the constraint network may be expressed
 through the existing Ontology, algebra, module mapping and views when those
 surfaces jointly carry the complete relation (P2).
@@ -301,7 +306,10 @@ A discovery gap that could materially alter the frontier prevents
 selection; an immaterial residual records why it cannot change the current
 decision. A later candidate that satisfies the applicability criteria and
 could materially alter the lawful frontier invalidates the affected
-selection evidence and re-enters this relation (P6, P5, P3).
+selection evidence and re-enters this relation (P6, P5, P3); such a
+candidate is newly acquired admissible evidence material to the selection,
+an instance of the material input change of
+[ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse).
 
 This relation operates inside the Product boundary and, where applicable,
 the migration strategy already admitted by their existing owners. It does
@@ -355,7 +363,9 @@ richest feature set. A rejected material candidate records the decisive
 evidence or falsifier. Unsupported preference is not design closure (P6).
 
 Reuse does not automatically confer or transfer semantic, admission or
-other operation authority (IDENTITY §6). A selected foundation may realise
+other operation authority (IDENTITY §6; an instance of
+[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What
+creates no authority). A selected foundation may realise
 an explicitly assigned authority-bearing role when accepted design
 preserves the declared relation's owner, role kind, subject, scope, basis
 and material lifecycle and refusal invariants. Foundation capability,
@@ -433,14 +443,20 @@ implementation convenience. Pure subordinate helpers inherit the authority
 envelope of their owning Ontology function and do not require peer
 authority rows unless they cross one of those boundaries.
 
-Composition does not widen authority implicitly. A composed or
+What cannot create authority is stated once in
+[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What
+creates no authority. This paragraph applies its items on composition,
+projection, labels, capability strings and payload shape to the Ontology's
+functions and adds only these design instances (P6; IDENTITY §6).
+Composition does not widen authority implicitly: a composed or
 higher-order function has no more authority than the authority law
 admitted for its inputs, constituent functions and current basis.
 Delegation, elevation, transfer or retirement authority requires a named
-typed transition and an owning admission boundary. Projections cannot
-create authority, and downstream code cannot reconstruct an authority
-witness from actor labels, capability strings or payload shape (P6;
-IDENTITY §6).
+typed transition and an owning admission boundary; these carry in the
+design the explicit authority decision that FOUNDATIONS requires and do not
+replace it. Projections cannot create authority, and downstream code
+cannot reconstruct an authority witness from actor labels, capability
+strings or payload shape.
 
 ### Transformation admission completeness (UP-016)
 
@@ -507,7 +523,9 @@ produce a candidate transformation, but projection status does not confer
 admission authority; any consequential result re-enters the governing
 admission relation against its explicit predecessor basis, and a
 reconstructed projection state is not self-authenticating admission
-evidence (P6).
+evidence (P6; projection is an item of
+[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What
+creates no authority).
 
 This law is false if any of the following holds (P6, P4b): two materially
 non-equivalent admission relations remain reachable for the same governed
@@ -663,7 +681,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=0e85a89839ef654a18aa6564b76fef077d65b88c918db98e7fc85e45994ee5d1
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=2a21a8b51cc33d7bad92b00fd9d1c34cbd975abd07ff6d59254380c739abe90e
 
 ## 7. Ontology and three-view design gate
 
@@ -869,7 +887,15 @@ what the design pack concludes about one axiom for the active boundary,
 and each maps to exactly one core value for the predicate "on the exact
 Ontology and design basis, the boundary's design meets the axiom, or the
 axiom does not apply to the boundary"; the value travels with that
-predicate and with the verdict, whose meaning stays here (P5, P6):
+predicate and with the verdict, whose meaning stays here (P5, P6). This
+profile declares that predicate as a disjunction that includes
+non-application, the case that
+[ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and
+the core, permits and bounds. That paragraph decides what follows for the
+verdicts: `not_applicable` rests on a false applicability premise, an
+unresolved premise supports no `not_applicable`, and the `satisfied` of a
+`not_applicable` verdict counts toward this disjunction only, never toward
+the predicate that the design meets the axiom:
 
 | Verdict | Ground | Core value |
 |---|---|---|
@@ -877,25 +903,21 @@ predicate and with the verdict, whose meaning stays here (P5, P6):
 | `not_applicable` | the axiom's applicability premise is false for the active boundary on basis-bound facts, and the reason names those facts and the authority whose scope declaration excludes the axiom ([ACTIVATION §1 Applicability](../ACTIVATION.md#applicability)) | `satisfied` |
 | `fail` | the axiom applies, and the evidence names an element, message, transition, authority path or enforcement that violates it; that is the counterexample | `falsified` |
 
-`satisfied` for a `not_applicable` verdict establishes that the axiom
-imposes no obligation on the boundary, never that the design meets the
-axiom; the verdict keeps that distinction (FOUNDATIONS §4 Results,
-Recording). A missing or ambiguous applicability premise leaves
-applicability unresolved, not false, and supports no `not_applicable`
-(ACTIVATION §1 Applicability). An evaluated axiom that reaches none of the
-three verdicts records in the Verdict column the core value its cause
-selects, with what would decide it: `indeterminate` where the admissible
-evidence cannot decide the predicate, as where the applicability premise
-is unresolved and the design does not meet the axiom; `out_of_frame`
-where the evaluation needs a relation or evaluator capability that the
-activated frame does not declare; `invalid_basis` where the Ontology or
-design basis cannot support it. An applicable axiom that the pack did not
-evaluate has no result (FOUNDATIONS §4 Results, Not performed). None of
-these is `pass`. The mapping and the direct core values are new in this
-corpus. Purpose and material relation: a design gate that combines axiom
-verdicts with other results reads them in the one core, so an excluded
-axiom is never read as conforming or as failing, and an undecided or
-unevaluated axiom is never read as a pass or a fail (P5, P6).
+The verdict, recorded with its value, keeps the distinction between not
+applying and meeting the axiom (FOUNDATIONS §4 Results, Recording). An evaluated axiom that reaches none of the three
+verdicts records in the Verdict column the core value its cause selects,
+with what would decide it: `indeterminate` where the admissible evidence
+cannot decide the predicate, as where the applicability premise is
+unresolved and the design does not meet the axiom; `out_of_frame` where
+the evaluation needs a relation or evaluator capability that the activated
+frame does not declare; `invalid_basis` where the Ontology or design basis
+cannot support it. An applicable axiom that the pack did not evaluate has
+no result (FOUNDATIONS §4 Results, Not performed). None of these is
+`pass`. The mapping and the direct core values are new in this corpus.
+Purpose and material relation: a design gate that combines axiom verdicts
+with other results reads them in the one core, so an excluded axiom is
+never read as conforming or as failing, and an undecided or unevaluated
+axiom is never read as a pass or a fail (P5, P6).
 
 ### Gate and retrospective work
 
@@ -982,7 +1004,9 @@ rc.2 #computational-realization-projection-stdo-up-019).
 
 Component role sets. Every material realisation component has an explicit
 set of semantic and operational roles. Technology capability does not
-confer authority. A component's declared role set is design authority;
+confer authority (an instance of
+[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What
+creates no authority). A component's declared role set is design authority;
 where a role carries authority, composition and use preserve the
 applicable authority relation under IDENTITY §6, which is supporting law
 here rather than the owner of the role model (P6). A component may
@@ -1064,7 +1088,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=3e342be653c6f80c7b8b84c3249776059221cd80962a8558d0bd42b58b4938ad
+Source: ACTIVATION.md#disposition sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
 
 ### Disposition
 
@@ -1106,7 +1130,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=3f8a6cdc93649f370441356961275676c3472f2117d0045c7849ab9351194994
+Source: SPEC_METHOD.md#change-classes sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
 
 ### Change classes
 
@@ -1144,7 +1168,7 @@ evaluation result, so a change classed `realization_refactor` cannot stand
 in for a `satisfied` result that no upstream drift occurred (P5, P1).
 
 
-Source: FOUNDATIONS.md#results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
+Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
 ### Results
 
@@ -1309,25 +1333,26 @@ of several evaluations, steps or members are combined into one decision;
 (iii) members, profiles and adopting Products need outcomes finer than the
 core.
 
-| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
-|---|---|---|---|
-| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section |
-| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule |
-| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it |
-| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names |
-| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability |
-| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none |
-| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule |
-| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule |
-| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation |
-| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none |
-| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it |
-| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the design decision of [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) |
-| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim |
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section | 3, 9 |
+| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |
+| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it | 6, 3 |
+| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section | 9 |
+| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it | 3, 6 |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names | 9 |
+| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability | 7, 9 |
+| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none | 6 |
+| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |
+| P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |
+| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
+| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
+| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |
+| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | 3 |
+| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none | 6, 7 |
+| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it | 3 |
+| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the accepted design of the realisation that would share it, which [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) refines for software design where that profile is selected | 4 |
+| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim | 3 |
 
 RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),
 AC-007 in
@@ -1339,7 +1364,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=259ef2fe5f1d6056d237c5ff0cdc0c051f89606f53e85c2137c9398cf6fafc71
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
 ### Conjunction of results
 
@@ -1371,6 +1396,35 @@ uncovered or both, and each item. An uncovered obligation is never
 reported as satisfied or as an omitted planned assessment; a planned
 assessment without a closed result is never reported as uncovered or as an
 `indeterminate` component.
+
+Stale results. A held result is stale for a composite when the basis it
+binds is not the basis the composite requires of that component, because
+a later state has superseded or advanced it or because it binds another
+subject or basis (§2, Basis). Two questions stay apart, so that one
+composite has one reported value (P3, P5, P6):
+
+- an evaluation performed on a subject or basis that is stale, advanced,
+  ambiguous or mismatched against the one it must bind returns
+  `invalid_basis` for its own predicate, or is reactivated on the current
+  basis; [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)
+  states this law over frames, and a conjunction that receives that
+  `invalid_basis` holds it as a returned result;
+- a component whose only held result is stale has no closed result
+  applicable to the composite: on the basis the composite requires, its
+  evaluation was not performed. It is a planned assessment without a
+  closed result, in the second input, and a gap. Its stale value is
+  neither counted as a returned result nor relabelled `invalid_basis` for
+  the composite, and it stays in the record with its own basis;
+- the declared basis relations disagree (Reported value below) only among
+  returned results, each bound to the basis the composite requires of it,
+  whose bases the declared rule requires to agree or to join in a coherent
+  composite basis, and which do not.
+
+A stale `satisfied` never counts toward the composite. Purpose and
+material relation: answering one stale component as a gap in one place and
+as `invalid_basis` in another would give one composite two reported
+values; keeping the evaluation's own value apart from the composite's gap
+keeps the reported value unique and the stale result visible.
 
 Survival. Every known failure (a `falsified` result with its
 counterexample), every planned assessment without a closed result and

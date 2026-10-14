@@ -8,7 +8,12 @@ accepted.
 
 ## Status
 
-The programs here are bound to member digests from before the C3
+The current interpretation is [i3/](i3/README.md), bound to the members at
+the iteration 3 source-settlement commit `3ab7ef9`. It is a partial
+encoding: its README states what it covers and the tasks for which it is
+insufficient. Every other directory here is historical.
+
+The historical programs are bound to member digests from before the C3
 cross-synthesis rebuild. They are not current interpretations of the
 rebuilt members. Checked on 2026-10-14 against the current members:
 set-2, set-3 and set-4 match no current member's digest, and set-5 and
@@ -30,6 +35,7 @@ pending the product owner's ruling; nothing here decides it.
 
 | Directory | Subject it binds | Frames |
 |---|---|---|
+| [i3/](i3/README.md) | current: the members at `3ab7ef9`; shared-owner determinations of G1 to G4 only (64 clauses) | 4 frame indexes, no published frame |
 | [t1/](t1/README.md) | the T1.2 increment: FOUNDATIONS, CALCULUS §1–3, EVALUATION §1–4 | 1 |
 | [t2/](t2/README.md) | the T2 increment: adds CALCULUS §4–7 and SPEC_METHOD | 2 |
 | [t3/](t3/README.md) | the T3 increment: adds EVALUATION §5–8, CONFORMANCE and PROFILES | 3 |
