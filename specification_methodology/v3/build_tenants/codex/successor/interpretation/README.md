@@ -18,6 +18,16 @@ before dependent action. Definitions remain data, constraints require evidence,
 and a locator creates no deciding rule. A reference-only or materialized view
 preserves authored references without evaluating their truth or granting work.
 
+The native closure contains always-required support. Read each acquisition-route
+record in the selected result. Conditional support retains the exact condition
+and target index: establish applicability, add an applicable target index with
+another --frame-index argument, or retain the unresolved obligation and withhold
+dependent action. Established non-applicability needs its reason. Provenance and
+example routes preserve exact discoverable sources without importing their
+bodies as prerequisites. Unknown applicability is not non-applicability.
+Ownerless shared abbreviations are carried inline at each source-bound use;
+they do not materialize every other consumer or create a new authority owner.
+
 ## Representation coordinates
 
 [SOURCE_INVENTORY.json](SOURCE_INVENTORY.json) binds four distinct coordinates:

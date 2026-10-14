@@ -1,6 +1,6 @@
 # Interpretation Acquisition Frames
 
-Select an index explicitly for the task. The checker follows declared references; it does not evaluate their predicates or supply task inputs. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.
+Select an index explicitly for the task. The checker closes always-required support; it does not evaluate predicates or supply task inputs. Each conditional route retains its condition and exact target index: establish applicability before dependent action, add an applicable target index, and retain an undecided condition as unresolved. Provenance routes remain discoverable without making their bodies prerequisites. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.
 
 ## Unit axiomatic_calculusac-001-closed-signature df4aa4f36366
 
@@ -943,6 +943,18 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.typed-composition-and-c
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.workspace-and-context`.
 
 - [standards/FOUNDATIONS.md#workspace-and-context](../standards/FOUNDATIONS.md#workspace-and-context)
+
+## Unit glossary_guideacquisition-use 531ad725b11d
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:GLOSSARY_GUIDE.acquisition-use`.
+
+- [standards/GLOSSARY_GUIDE.md#acquisition-use](../standards/GLOSSARY_GUIDE.md#acquisition-use)
+
+## Unit glossary_guideindex-contract c62514623f8f
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:GLOSSARY_GUIDE.index-contract`.
+
+- [standards/GLOSSARY_GUIDE.md#index-contract](../standards/GLOSSARY_GUIDE.md#index-contract)
 
 ## Unit identity_method1-scoped-identity af820a560c41
 
@@ -2264,6 +2276,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.method`.
 
 - [standards/SPEC_METHOD.md#method](../standards/SPEC_METHOD.md#method)
 
+## Unit spec_methodmethod-families a0645327de31
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.method-families`.
+
+- [standards/SPEC_METHOD.md#method-families](../standards/SPEC_METHOD.md#method-families)
+
 ## Unit spec_methodone-constitutional-surface-and-version-boundary-stdo-surface-001 d7c1b51a2342
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.one-constitutional-surface-and-version-boundary-stdo-surface-001`.
@@ -2947,6 +2965,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.authority`.
 Index: `urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.bounded-context-term-binding`.
 
 - [standards/TICKET_METHOD.md#bounded-context-term-binding](../standards/TICKET_METHOD.md#bounded-context-term-binding)
+
+## Unit ticket_methodcarrier-families ed8232ad6166
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:TICKET_METHOD.carrier-families`.
+
+- [standards/TICKET_METHOD.md#carrier-families](../standards/TICKET_METHOD.md#carrier-families)
 
 ## Unit ticket_methodchange-class 7ac732055a66
 
@@ -4247,6 +4271,10 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:family:evaluate-966591fe7e17`. Sele
 ## Family exclusions fcc9f1f92978
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:family:exclusions-fcc9f1f92978`. Select only when this family is material to the task.
+
+## Family glossary-acquisition 9368a60f32a7
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:family:glossary-acquisition-9368a60f32a7`. Select only when this family is material to the task.
 
 ## Family governing-relations 75c5e9607187
 

@@ -44,6 +44,28 @@ This JSON Pointer identifies the occurrence in the preceding semantic record.
 The next argument supplies its typed native target. The pointer/ref pair preserves
 the distinction between an occurrence, its target identity and its relation.
 
+## Acquisition route
+
+The record preserves an exact relation occurrence without making its target an
+unconditional acquisition dependency. A provenance route records correspondence,
+example or navigation. A flat dependency enumeration retains its named targets
+in the semantic record; its typed relation supplies acquisition and conditions
+without a second unconditional edge. A conditional route retains its source-owned
+condition, binding, target index and exact source coordinates. Establish the
+condition for the task: when applicable, select that target index in addition
+to the current index; when established inapplicable, retain the reason; when
+undecided, retain the unresolved obligation and withhold dependent action.
+Route presence establishes neither applicability nor satisfaction. Every target
+resolves during compilation even when its body is not selected.
+
+## Inlined contract
+
+This exact shared abbreviation has no independently declared semantic owner.
+Its definition is carried at the source-bound use, with its identity and pointer
+in source-account.json retained. Its real references still acquire their owners.
+Inlining adds no owner, authority or instance truth. The complete set of users
+does not become a source dependency of every use.
+
 ## Declared dependency
 
 The source account declares this dependency. Its typed dependency relation and
