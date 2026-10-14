@@ -31,6 +31,26 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## Tenant Re-Entry
 
+### EC-CODEX-I3-01 input amendment A1
+
+The remaining work under EC-CODEX-I3-01 binds common input
+`C3-CODEX-I3-02` at `7b2f9339bab876f51d341a94358ab37df4b7b8d6`, recorded in the
+descendant [T-002 snapshot](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot).
+Its requirement-to-work and review-to-work trace is the
+[consolidated work list](T-002-iteration-3-work.md). The candidate preimage is
+`de8232a64ccc5388bfe47e1d5df3051cbbf3d8d0`: all three bounded Writers returned,
+and their own source hashes were verified before checkpointing. Previous checks
+remain bound to `b99ca785` and do not qualify this repair checkpoint.
+
+The original outcome, tenant territory, installed builder, resources and
+reserved decisions remain unchanged. The parent tenant Git Writer brings this
+recording commit inward and verifies the candidate tree is unchanged. Later
+member activations name their work-list items, exact source and exit proof
+before effects. This amendment selects no additional source reconstruction,
+paid trial, peer work, candidate merge or acceptance during consolidation.
+
+Executive disposition: input amendment A1 is ADMITTED on the owner's consolidation instruction, SHA-256 `63daa64261017e4f8b525db5c53d60bd916623bdc45c79e4dced76602a8879d1`. The common Ledger Writer records it before the inward integration.
+
 ### EC-CODEX-I3-01 — reconstruct the Codex method from its pillars
 
 - Authority: Jim's instruction, “update v3/specification given the current pillars, and then do v3 iteration 3”, continuing his run-to-completion instruction. Iteration 2 is checkpointed and merged at `a9adce2` for review; its completed contracts and limits are historical.

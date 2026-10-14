@@ -27,7 +27,7 @@ links:
 
 ## Current Iteration
 
-Current next step is the owner's consolidation instruction recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-iteration-3-direction). The [iteration 3 work list](T-002-iteration-3-work.md) is the current requirement-to-work and review-to-work index for Codex, with remaining work, status and closure evidence. It is an appendix to these existing tickets, not another work carrier or grant. The common standard applies to both candidates; this consolidation makes no assignment or status change to the peer line. Historical snapshots below keep their actual subjects; the successor snapshot is recorded only after the completed common update is reviewed.
+Current next step is the owner's consolidation instruction recorded in [T-001](T-001-common-definition-and-checkpoints.md#current-iteration-3-direction). The [iteration 3 work list](T-002-iteration-3-work.md) is the current requirement-to-work and review-to-work index for Codex, with remaining work, status and closure evidence. It is an appendix to these existing tickets, not another work carrier or grant. The common standard applies to both candidates; this consolidation makes no assignment or status change to the peer line. Historical snapshots below keep their actual subjects; the [successor snapshot](#c3-codex-iteration-3-consolidated-input-snapshot) records the completed, reviewed common update.
 
 2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 owns the common amendment and exact input snapshot; T-002-CODEX owns the Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
@@ -211,3 +211,60 @@ Input identity: `C3-CODEX-I3-01`. Input commit: `cae6fe366395148558efb84c85501b7
 | `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 25292 | `1fa297db869f99e0a058c09aa84241223c4a2ed9d6c12df6e9e098b1c806873c` |
 
 The builder remains installed 2.5.1-rc.2 at manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`; the mechanical dependency remains the A_C_DEPENDENCY pin in this tuple. Executive selects the dependency-ready design/core Writer. The separate tenant Writer creates its branch/worktree from this recording commit and writes only its own tenant. No earlier result is promoted to iteration 3 acceptance.
+
+### C3 Codex iteration 3 consolidated input snapshot
+
+Input identity: `C3-CODEX-I3-02`. Input commit B: `7b2f9339bab876f51d341a94358ab37df4b7b8d6`.
+This entry is recorded in a descendant commit R. All 30 member hashes below
+come from B, not from the mutable worktree. The common requirement amendment
+was independently reviewed at `6c2debb`; B adds its returned review and the
+reviewed work-list state. This supersedes `C3-CODEX-I3-01` for subsequent Codex
+work. Completed construction and reviews retain their earlier bases.
+
+The snapshot makes inputs available; it does not require an activation to load
+all of them. Each activation selects the relevant requirements, subject and
+review cone. The full review packets remain supporting artifacts in B. Current
+ticket and work-list statuses evolve after B; their historical bytes in this
+snapshot remain reproducible. The constitutional requirement bytes are unchanged
+by the recording step.
+
+| Member | Bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 6607 | `d813239dca237b37ffcb79f672ccb383e2acfc9eb804aaa7e0674fbc82d557c1` |
+| `specification/PRODUCT.md` | 46649 | `e9724fe4f22347cdbc0929f7988d1727f69782cbb1877f8273e5d3978ca6b440` |
+| `specification/GOALS.md` | 15770 | `db49984cc88edde71ee50d6a9a487d86a8ff1fe47a7ccf27f6bff558fbe5c769` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 7061 | `473175924e066a6af91e7469d9884b7a750e6c43ab6aed9406db85075b3cf097` |
+| `specification/requirements/README.md` | 25134 | `a655a43a52ee2e508170695d3d9f85561f05d92fa17b5213afda385a950060a6` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3831 | `49f2b455510459027ddbda997baf8055d8772763196667047d87e700282e3edd` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 6975 | `75b98c363ac6026018a4e74ba8b23364bc8d31ef3897a6d58a05a7fbed91297f` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195125 | `fbeb8fd2eda0af32873c287130457fc3800d44987da3b6675a00c8b4333c2f69` |
+| `specification/conformance/README.md` | 12755 | `515227236f145176708009e925344c4e6c4ba94d1cc66e4743acc5b73c03d445` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `build_tenants/README.md` | 4455 | `35582d065c02a558784584e963026ac8f0cfe4e925dc2019d9e5ae43f668048b` |
+| `AGENTS.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `CLAUDE.md` | 3801 | `4a10ccd0f596637ebfb912f9620438ece68938909095c84199a89418ef7e44e6` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 67955 | `ffacdbe940589a0157128b8b449e55d3b3ca7c91d0f4086a394604f666e8c0a6` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 24891 | `dc206ed38368fdd7577c4354860ac2cfee723921151f6cedd9b9bbe04bd611c3` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 29773 | `155c7e0764fe9d224dd63d8bd1906cf7d57b0f642e242a85421e6729652c391d` |
+| `.ai-workspace/tickets/active/T-002-iteration-3-work.md` | 19134 | `cc5958a1d66d8a1215369f02ba92601d5544f61ad07bcabce6ff87473f15643a` |
+| `.ai-workspace/comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md` | 4118 | `6c39b0cc397d762382fb84fb323b116f8dfe607fe4a4fa09cb36a833642d75eb` |
+| `.ai-workspace/comments/codex/20261013T234239Z_REVIEW_CODEX_V3_REVISION_2_PURPOSE_AND_IMPLEMENTATION.md` | 20714 | `1a001f0f8aef2c50f4b021f88a5633e58d97870ab5e7ff7885d91bdd3b13b6dd` |
+| `.ai-workspace/comments/claude/20261013T235754Z_REVIEW_CODEX_V3_FROZEN_CANDIDATE.md` | 21438 | `3cbb45e497274b96277c3acc0bc6ddfaad439bef03148e6385121762d406beef` |
+| `.ai-workspace/comments/claude/assets/20261013T235754Z_codex_review/CR1.md` | 20866 | `3eecd9ec1896413653d6f3b2cedff4cd29268399db44e5b05ef8bf8fb234b9a6` |
+| `.ai-workspace/comments/claude/assets/20261013T235754Z_codex_review/CR2.md` | 35734 | `d0522ed51d3932081e81ee943cdfd3a21529847b35dfcae9bca509e5e2fec848` |
+| `.ai-workspace/comments/claude/assets/20261013T235754Z_codex_review/CR3.md` | 32073 | `37673cdb2fde8761dcd400f0e930c5d6cd82e1e291d5b8dad7765eb506976d28` |
+| `.ai-workspace/comments/claude/assets/20261013T235754Z_codex_review/CR4.md` | 28665 | `3c1528e9be2372b65d86a5d34dbef560170016866265a31990d9d53196c3fd01` |
+| `.ai-workspace/comments/claude/assets/20261013T235754Z_codex_review/CR5.md` | 33241 | `20081083c8b697f9d333337e104cf566321cad675f9b2073756e50dc11fe8b4c` |
+| `.ai-workspace/comments/codex/20261014T004200Z_REVIEW_ITERATION_3_SHARED_CONTRACT.md` | 6389 | `4c83a59ce62d98b8694abc42d421a0f35a934dbb8abee18ca8d11d82bd0948d3` |
+| `.ai-workspace/comments/codex/20261014T003000Z_ITERATION_3_SOURCE_REVIEW/REVIEW.md` | 14133 | `ee2ed611c440dd2d4041a23a4f3b933680a6f3ef6e3cc9628264411ffefdbbae` |
+| `.ai-workspace/comments/codex/20261014T003000Z_ITERATION_3_SOURCE_REVIEW/MEASUREMENT.json` | 2361 | `733afdfc0957d4fc799a7a888b893561dfe8b8df7918a5b651f1150e981f221a` |
+| `.ai-workspace/comments/codex/20261014T010500Z_REVIEW_ITERATION_3_INTERPRETATION_RETURN.md` | 1971 | `21e35922a58051fa17fa52592a2d3e44dd09affb6ec70ca99fa2a6b6e72079f2` |
+
+Executive disposition: the common consolidation I3-00 is complete after the
+recorded review, 228-link and whitespace checks, installed-builder definition
+verification and successful snapshot-hash verification. I3-01–16 retain their
+work-list status. Common acceptance, candidate acceptance and release are not
+inferred. The separate tenant Git Writer merges R inward to the Codex worktree
+and verifies the tenant source tree is unchanged from `de8232a`; it starts no
+further source reconstruction or qualification during this consolidation.

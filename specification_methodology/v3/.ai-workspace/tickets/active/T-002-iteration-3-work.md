@@ -17,7 +17,7 @@ not a qualified distribution, completed C3 or an accepted release.
 
 The governing builder is installed `v2.5.1-rc.2`, manifest
 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
-The successor common input is recorded in [T-002's snapshot](T-002-c3-successor-construction.md).
+The successor common input is recorded in [T-002's snapshot](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot).
 The previous input `C3-CODEX-I3-01` at `cae6fe3` remains the basis on which the
 initial iteration 3 construction and bounded repairs were performed.
 
@@ -80,7 +80,7 @@ older review's subject or verdict.
 
 | ID | Work, owner and current state | Observable exit proof |
 |---|---|---|
-| I3-00 | **Common standard and consolidation — REVIEWED; snapshot recording next.** The [fresh review](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md) found no actionable common defect at `6c2debb`. Common pen records the input snapshot. | Nonauthor review of the frozen common update; corrected findings; links and exact builder checks; input B and descendant recording R with matching hashes. |
+| I3-00 | **Common standard and consolidation — COMPLETE.** The [fresh review](../../comments/codex/20261014T011752Z_REVIEW_ITERATION_3_CONSOLIDATION.md) found no actionable common defect at `6c2debb`. [C3-CODEX-I3-02](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot) records input `7b2f933` and its 30 member hashes. Owner acceptance remains separate. | Nonauthor review of the frozen common update; corrected findings; links and exact builder checks; input B and descendant recording R with matching hashes. |
 | I3-01 | **Foundation-to-law coverage — OPEN; bounded arguments returned.** Tenant design/member Writers account for material deciding families, including inherited rules, and distinguish premises, consequences and owned policy. | Every material deciding rule is covered by an intelligible argument and consuming binding. Independent review finds neither unaccounted families nor a policy represented as a theorem. The old 77-law count is evidence to examine, not a mandatory partition. R1–R2; H1. |
 | I3-02 | **Shared ownership and actual contraction — REPAIR RETURNED, whole-corpus audit open.** Tenant core/consumer Writers reconcile conjunction, applicability, result and attention owners; generic causal localisation is moved to Spec with Baseline consuming it. | One determination per question, usable without an optional profile where generic; affected consumers obey it. Show which independent decisions/reconciliations disappeared and justify remaining distinctions. Added argument prose alone proves no reduction. R2–R3. |
 | I3-03 | **Domain result integration — REPAIR RETURNED, inventory open.** Member owners finish predicate-and-condition mappings, particularly Ticket sprint close, Release UP-015, Spec UP-021, RF coverage and a_c refusal/treatment. | Account for the review's value sets as actual results or domain data. Every evaluation/decision has a total owner-defined core mapping; no caller/core loop, label guessing or promotion of failed/unknown work. Exercise failure plus missing coverage and unavailable causes. R3–R4; H2. |
