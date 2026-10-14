@@ -1,0 +1,81 @@
+{
+  "protocol_id": "I3-six-task-v1",
+  "oracle_id": "I3-six-task-oracle-v1",
+  "status": "prepared_not_executed",
+  "materialization_role": "I3-R3-ORACLE Writer",
+  "grant": {
+    "main_commit_reported_by_parent": "bab0f4b48a061fa0f88d1e3f61e2c57605c4f485",
+    "carrier": "T-002-CODEX",
+    "section": "I3-R3-ORACLE",
+    "verification": "Grant supplied by parent; no Git operation performed in this materialization activation."
+  },
+  "preparation_source": {
+    "repository": "/Users/jim/src/apps/specification_methodology",
+    "commit": "dc5dc27b5b5a836a2fb584c3a3f79b63ae5d911a",
+    "mechanism": "Read-only git show during the prior preparation activation.",
+    "paths": [
+      "specification_methodology/v3/specification/PRODUCT.md",
+      "specification_methodology/v3/specification/requirements/README.md",
+      "specification_methodology/v3/specification/conformance/README.md",
+      "specification_methodology/v3/specification/REFERENCE_FRAME_BASIS.md"
+    ],
+    "closed_common_report": {
+      "reference_as_supplied_by_parent": "B1fce537",
+      "assertion": "Owning common clauses at dc5 are unchanged in closed B1fce537.",
+      "verification": "Parent-supplied assertion; not independently read or verified in this activation."
+    }
+  },
+  "independence_boundary": {
+    "role": "Fresh independent expectation author",
+    "not_inspected": [
+      "tenant content",
+      "candidate content",
+      "candidate review reports",
+      "prior task actor responses",
+      "author repair rationale",
+      "installed builder content"
+    ],
+    "materialization_reads": "Own previously returned text and files within the admitted oracle directory only."
+  },
+  "preservation": {
+    "I3-six-task-v1.md": "Verbatim Artifact A text from the prior response, with UTF-8 encoding and LF line endings.",
+    "I3-six-task-oracle-v1.md": "Verbatim Artifact B text from the prior response, with UTF-8 encoding and LF line endings.",
+    "companion_extracts": "Wrapper, task packets and case resource bodies are extracted from Artifact A without changing their text. Source-route labels are transcribed from its table."
+  },
+  "acquisition_and_limits": {
+    "preparation_supplied_bytes": null,
+    "preparation_cumulative_acquired_bytes_including_repeated_reads": null,
+    "preparation_active_retained_context_bytes": null,
+    "preparation_wall_time_seconds": null,
+    "preparation_spend": null,
+    "preparation_measurement_status": "Uninstrumented. Source reads included repeated reads and truncated displays. No complete platform-context measurement or total-context fit claim is made.",
+    "trial_supplied_byte_limit": null,
+    "trial_cumulative_acquisition_byte_limit": null,
+    "trial_total_active_context_byte_limit": null,
+    "trial_wall_time_limit_seconds": null,
+    "trial_actual_limits_owner": "Parent's later separately frozen run manifests.",
+    "suggestions_only": {
+      "supplied_bytes": 32768,
+      "cumulative_acquired_bytes": 65536,
+      "total_active_context_bytes_including_host": 262144,
+      "wall_time_seconds": 240
+    },
+    "fit_limit": "Unknown or unmeasured host context leaves total-context fit indeterminate; no unknown value is represented as zero."
+  },
+  "execution_boundary": {
+    "trials_performed": false,
+    "assessment_performed": false,
+    "candidate_bindings_selected": false,
+    "git_operations_in_materialization": false,
+    "paid_calls_in_materialization": false,
+    "external_effects": false,
+    "writes": "Only files under the admitted oracle directory."
+  },
+  "exposure": {
+    "initial_actor_input": "Shared wrapper plus one task packet and its separately selected candidate frame.",
+    "method_routes": "Bound by the parent run manifest before execution.",
+    "T5_resources": "Available through declared acquisition routes; not preloaded into the actor packet.",
+    "hidden_oracle": "Assessor only; exclude from actor context and acquisition routes.",
+    "full_protocol_and_provenance": "Preparation and admission artifacts; not a substitute for the per-task actor input."
+  }
+}

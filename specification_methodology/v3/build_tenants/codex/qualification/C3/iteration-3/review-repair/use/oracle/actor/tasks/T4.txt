@@ -1,0 +1,29 @@
+TASK: T4
+Subject: fictional Lantern documentation bundles.
+
+All object identifiers below denote immutable fixture contents:
+- L0 = {manual M3, format F2}, dependency D4.
+- L1 = {manual M4, format F2}, dependency D4.
+M4 differs materially from M3.
+
+The local preview-release contract requires:
+1. package integrity for the exact bundle;
+2. an independent compatibility assessment against its dependency;
+3. the release owner's approval for that bundle and channel.
+
+Records:
+- Integrity I0 passes for L0.
+- Independent compatibility K0 passes for L0 with D4.
+- Owner decision O0 approves L0 for the preview channel.
+- No L1 assessment or approval is supplied.
+- No stable-channel approval is supplied.
+
+Workspace Maple's adoption contract requires compatibility and its own
+owner's adoption decision. K-Maple passes compatibility with L0. No Maple
+adoption decision is supplied.
+
+Authority: prepare simulated decisions only.
+No publication, installation or external state change.
+
+Produce decisions for L0-preview, L1-preview, L0-stable and Maple adoption
+of L0. Identify the exact subject and scope supported by each record.
