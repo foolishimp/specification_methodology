@@ -460,3 +460,20 @@ Points for the product owner (PLAN §7):
 Each point blocks only the work that depends on it.
 
 Step 1 starts: I3-2a (FOUNDATIONS, ACTIVATION), I3-2b (EVALUATION, REFERENCE_FRAME, AXIOMATIC_CALCULUS, IDENTITY), I3-2c (SPEC_METHOD, TICKETS, RELEASE, ASSURANCE, PRODUCT_DEFINITION) and I3-2e (design records), with disjoint territories.
+
+2026-10-14T17:23Z — Owner decisions, recorded verbatim:
+- To "May the Claude line run the pinned Axiom Indexer (v2.5.1-rc.2, the a_c checker) on its frozen iteration-3 a_c program? …", the product owner answered "Yes, select it (Recommended)". The mechanical evaluation is selected under A_C_DEPENDENCY: verify the installed checker against its pinned digests, validate the program, and project the frame indexes. The result is structural validation only.
+- To "Paid fresh-actor trials for this iteration: is my default allowance of USD 15 right? …", the product owner answered "No paid trials". The allowance is USD 0. Step 6's paid trials are dropped. The deciding-path comparisons are done as desk traces by non-author reviewers. Criterion 4 (actual use) stays unevidenced in this iteration and is reported as such.
+
+Step 1 returned, committed as one commit (I3-2a, I3-2b, I3-2c, I3-2e):
+- the shared owners are settled, and the rivals refer or refine with maps;
+- the Pillar column is added (F2 to F5 filled; the rest pending);
+- EVALUATION §5 owns when a finding blocks promotion;
+- AXIOMATIC_CALCULUS §9 states constraint surfaces;
+- F2's recurrence at PRODUCT_DEFINITION is confirmed and repaired;
+- the inventory gains R30 to R34 and DP-41 to DP-46, both added before any measurement;
+- delta rows re-read: 28, 20 and 21. No meaning changes, so no supersessions are proposed.
+
+Variance: all four activations exceeded the 300,000-byte default, at an estimated 307 to 420 KB acquired, not instrumented. Recorded against the CONSTRUCTION_BINDING limits.
+
+Open items routed to step 2: WRITING_GUIDE and POSTING_GUIDE, the pillar 2 owner (IDENTITY proposed), DP-41 to DP-46 tracing, and the pillar column for F1 and F6 to F21.
