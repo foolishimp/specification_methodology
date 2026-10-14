@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T07:19:45Z
+updated_at: 2026-10-14T07:36:13Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,7 +27,7 @@ links:
 
 ## Current Iteration
 
-The owner selects closure of round 2 and preparation of both implementation lines under [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; historical peer findings are routed for current-source evaluation without claiming they remain present. The [round-2 response](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md) records common repairs. Both next contracts are prepared against one [shared input](#shared-i3-input-after-round-2); each is admitted only after the exact input is recorded. Their construction authority is distinct from final common acceptance, reserved member acceptance and release. Historical snapshots and contracts below retain their subjects.
+The owner selects closure of round 2 and preparation of both implementation lines under [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). The [iteration 3 work list](T-002-iteration-3-work.md) traces common requirements, Codex work and the declared reviews; historical peer findings are routed for current-source evaluation without claiming they remain present. The [round-2 response](../../comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md) records common repairs. Both next contracts are admitted against one recorded [shared input](#shared-i3-input-after-round-2). Their construction authority is distinct from final common acceptance, reserved member acceptance and release. Historical snapshots and contracts below retain their subjects.
 
 2026-10-14: Jim identifies the current candidates as iteration 2 and selects the next sequence: update the common specification around the identified pillars and a_c constraint surfaces, then construct Codex iteration 3. Codex iteration 2 is checkpointed on main at `a9adce2`. T-001 records the common amendment; this T-002 ticket records the exact input snapshot; T-002-CODEX records Codex execution. The historical setup and grants below retain their original subjects. Current actor assignments are those in the admitted tenant contracts, not the older unbound Executive draft. This selection gives no new peer-tenant, removal, release or acceptance authority.
 
@@ -41,9 +41,42 @@ This ticket is the upstream work authority for that wave. It governs the install
 
 ## Shared I3 Input After Round 2
 
-Preparation identity: `C3-I3-R2-01`. The owner requests both successive implementations after the common repair. The common Writer prepares [EC-CODEX-I3-02](T-002-CODEX-c3-successor-construction.md#ec-codex-i3-02--construct-the-successor-on-the-repaired-i3-input) and [EC-CLAUDE-I3-01](T-002-CLAUDE-c3-successor-construction.md#ec-claude-i3-01--construct-the-successor-on-the-repaired-i3-input). The input commit B and member hashes are recorded here in a descendant R after fresh nonauthor source review. Until that recording and the separate admissions, these contracts remain drafts.
+Input identity: `C3-I3-R2-01`. Input commit B: `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`. The owner requests both successive implementations after the common repair. T-001 records the two closed working reviews and the Executive's selection. [EC-CODEX-I3-02](T-002-CODEX-c3-successor-construction.md#ec-codex-i3-02--construct-the-successor-on-the-repaired-i3-input) and [EC-CLAUDE-I3-01](T-002-CLAUDE-c3-successor-construction.md#ec-claude-i3-01--construct-the-successor-on-the-repaired-i3-input) have separate exact admissions in their tickets. This recording commit R is a descendant of B and is the commit that first adds the following snapshot and those admissions. The tenant Git Writer resolves that commit from main and merges it inward; source construction starts only after its coordinate and unchanged-tenant-tree checks.
 
 Both lines receive the same common requirement bytes. Each keeps its own candidate preimage, preceding comparison subject, territory and findings. The Codex work appendix records its open implementation work. The Claude contract requires current-source evaluation of the reported F1–F5 and complete accounting against the same common requirements; it makes no current defect or acceptance claim about that branch. No new peer-source inspection is selected. Common acceptance is separate from this explicitly selected draft-construction basis.
+
+### C3 I3 round-2 shared input snapshot
+
+All 24 member hashes below are read from B. The first fourteen entries contain the common specification, definition and entry routes. The remaining entries fix work and review inputs; they are supporting material, not another constitutional surface. The snapshot makes them available for bounded acquisition and does not require loading the packet into one frame. Other previously selected review sources remain available at their declared frozen coordinates through the work index. No new peer-candidate reading is selected.
+
+This descendant recording changes work standing and admissions only. The governing Product, Intent, requirements, conformance and frame-basis bytes remain those reviewed at B. Goals and ticket copies in B preserve the pre-admission history; the current recording supplies their later work standing. The contract bodies are unchanged from B, with exact digests recorded in their admission entries. The two review posts recorded with R are the evidence for selecting B, not additional requirement sources.
+
+| Member relative to v3 | Bytes at B | SHA-256 at B |
+|---|---:|---|
+| `specification/INTENT.md` | 8652 | `d668a54ddebd96ae22992b645cd720d993776450dfe2dfd58aa120aabc10329a` |
+| `specification/PRODUCT.md` | 55832 | `e859dfb6d84f3353ca7631e21bf3640b6e69e14848daba0e474c4a8e4c5cf9f1` |
+| `specification/GOALS.md` | 21878 | `82db6afb20a4203e86cd17f91b411f04c9e738d4e1f48b870b30ebb2ea93b84f` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 7624 | `4e9344f3a5eafbe9e40623d545db25f2d3dd7d5ca1b9cd94536280d41a1d9fa2` |
+| `specification/requirements/README.md` | 30553 | `b04dad3be3fd6f4f2b9600a9ec2767681c8edd21cb6546bac34951229ab79fc8` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16142 | `f835e7b500101ee0b3d5ccc7a03a5f2bc03e861caa7f25a5498a14311ea79d7f` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 3969 | `5badb756b5fb463e52717261e0917d2ae860292a45d08ef56a10ae01236fedf5` |
+| `CLAUDE.md` | 3969 | `5badb756b5fb463e52717261e0917d2ae860292a45d08ef56a10ae01236fedf5` |
+| `build_tenants/README.md` | 4633 | `18fbd45d02c112d46c64ef4f0515bbf76b290579459cd5001641796da05cdb12` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 82450 | `a971a4da6bfdab28814102a0f3fe2363e42dde8b5fca574403037b7eba61c2c5` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 31954 | `9dee2d8879b77dbdba2cca934c59b6086f7cba156db30ebc80a16e608b98be09` |
+| `.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md` | 38631 | `93d22a8f4a763010ac4ee09a4d78e2fb1c7b6924e7a2c25d5c03e19f1d4aec54` |
+| `.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md` | 67543 | `f2ef8491f763137fcc9ad05246eb48b465576f9aaa4ad92ef290b7461569a148` |
+| `.ai-workspace/tickets/active/T-002-iteration-3-work.md` | 29040 | `afea4ebd12681275ca63e4b8eb6732c198fb32442213e0879c0fd044d9f8938d` |
+| `.ai-workspace/comments/codex/20261014T064039Z_REVIEW_I3_ROUND_2_DISPOSITION_AND_REPAIR.md` | 16421 | `58cf54c31a8a4f18574575a3e91085f880ea70df423c4ba296cef359bacdec94` |
+| `.ai-workspace/comments/claude/20261014T013233Z_REVIEW_I3_COMMON_SPECIFICATION.md` | 30594 | `7b351aa3f49e57b792fea623de7dbf922792e3304b8615399e7591e9e89c9d57` |
+| `.ai-workspace/comments/claude/assets/20261014T013233Z_i3_review/round-2/RR1.md` | 21783 | `58b49b31c0c5241522ee3ab120dfaad21d74490ea67a97b2f64de93f558c6d85` |
+| `.ai-workspace/comments/claude/assets/20261014T013233Z_i3_review/round-2/RR2.md` | 23704 | `ef87b1bb6f429370dcb617e596320ab4f2e68a35f0122c41d165d4f6e5dc17df` |
+| `.ai-workspace/comments/claude/assets/20261014T013233Z_i3_review/round-2/RR3.md` | 19244 | `dd41c835552a0ed7d023fc95b9c1f22cba9355b636269331ab4be74011a57517` |
 
 ## Intake Triage
 

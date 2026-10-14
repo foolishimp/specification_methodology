@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/claude/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T07:19:45Z
+updated_at: 2026-10-14T07:36:13Z
 priority: high
 dependencies: [T-002]
 ---
@@ -23,7 +23,7 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## Current Iteration 3 Contract
 
-Preparation state: drafted for the owner's requested next implementation. The common input and this contract are admitted in the descendant recording step after frozen-source review. No tenant starts from a draft. Earlier sections retain their historical subjects; this section selects the successor for the next run rather than rewriting an old admission.
+Current state: `EC-CLAUDE-I3-01` is admitted below for the owner's requested next implementation on `C3-I3-R2-01`. The separate tenant session can begin after bringing the shared recording commit inward and checking its preimage. No tenant worker was started by the common repair. Earlier contracts and entries retain their historical subjects and are superseded for this next run only; their bytes and admissions remain preserved.
 
 ### EC-CLAUDE-I3-01 — construct the successor on the repaired I3 input
 
@@ -40,7 +40,7 @@ Preparation state: drafted for the owner's requested next implementation. The co
 - Stops and continuation: preserve valid workspace progress, observe unknown effects before dependent action, and return material missing authority or input drift to its owner. Continue independent authorised work. Required acceptance or publication decisions block only the action that depends on them.
 - Return: one exact frozen candidate and its evidence, with source-linked remaining gaps and a closed installed work evaluation. Earlier trials and acceptance claims retain their subjects. No candidate merge, push, tag, publication, removal of an obligation, changed-meaning acceptance or categorical steel-thread execution follows from this contract.
 
-Admission record: pending the common repair review and shared input recording. The contract's digest is the UTF-8 block from its `### EC-CLAUDE-I3-01` heading through its Return line, with one final newline.
+Admission record — 2026-10-14T07:36:13Z: the selecting Executive admits `EC-CLAUDE-I3-01` for draft construction under Jim's “do that close the round 2 findings” instruction and the preparation of both successor implementations recorded in [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). Decision: `admitted`, ready for the tenant session; no execution is inferred from recording it. Exact contract: 5,163 UTF-8 bytes, SHA-256 `3c928885b7c185d467ad3764289ae796b259c0982d71f8ee46be6b944860b859`, from the `### EC-CLAUDE-I3-01` heading through its Return line with one final newline. Input: `C3-I3-R2-01` at B `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, with 24 members recorded in descendant R in [T-002](T-002-c3-successor-construction.md#c3-i3-round-2-shared-input-snapshot). Evidence: the [contract/law review](../../comments/codex/20261014T073055Z_REVIEW_I3_ROUND_2_CONTRACT_CLOSURE.md) and [traceability/admission review](../../comments/codex/20261014T073015Z_REVIEW_I3_R2_CLOSURE_TRACE_AND_ADMISSION.md), installed-basis verification and reproduced contract/preimage checks. The common Ledger Writer records this decision before the tenant's next activation. Actor, territory, limits, stops and return are exactly the unchanged block above; reserved decisions remain reserved.
 
 ## Tenant Re-Entry
 
