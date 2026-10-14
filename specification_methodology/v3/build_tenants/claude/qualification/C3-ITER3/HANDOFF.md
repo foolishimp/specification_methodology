@@ -38,7 +38,7 @@ Digests at `2beed8d`: SHA-256 of the sorted `shasum -a 256` lines of each tree's
   - IDENTITY §2 `Boundaries and sufficiency claims`, pillar 2's generic law, which WORLD_MODEL refines;
   - AXIOMATIC_CALCULUS §9 `Constraint surfaces`, pillar 10;
   - SPEC_METHOD §10 for the ADR lifecycle rules.
-- **Family tables.** All 21 families now argue in the form "By … so …", label their policy choices with owners, and carry a Pillar column. The FOUNDATIONS §3 index has every Pillar cell.
+- **Family tables.** Every family table carries a Pillar column, and the FOUNDATIONS §3 index has every Pillar cell. The tables of F1, F2, F4 to F15 and F19 to F21 were rewritten as derivations in the form "By … so …", with each policy choice labelled and owned. F3 (FOUNDATIONS §4) carries no derivations. F16 to F18 (EXECUTIVE_BASELINE, DESIGN_MODULE, ODD) were made real before the pause and use mixed forms.
 - **Consumers.** The plugins, templates, UX, WORLD_MODEL, PROFILES, TICKETS, RELEASE and ASSURANCE cite their owners instead of restating them. GLOSSARY §17 lists the labels that have several senses.
 - **CONFORMANCE** maps all 52 common discriminators and the 3 closure checks.
 - **Frontier.** Rebound to the `355aa86` inventory. A script finds all 707 keyed rows present exactly once, plus 9 tenant child rows. Every row has a disposition. Every supersession is marked proposed and pending the product owner.
@@ -53,7 +53,7 @@ Digests at `2beed8d`: SHA-256 of the sorted `shasum -a 256` lines of each tree's
 | Check | Subject | Result |
 |---|---|---|
 | WC-1 (`reviews/WC-1.md`) | step 1 | `local_repair`; repaired in I3-2r |
-| WC-2 (`reviews/WC-2.md`, non-author) | step 2 | `local_repair`: 1 High, 3 Medium, 8 Low; repaired in I3-3r. Table check: 71 of 204 rows sampled, 62 real, 9 weak, 0 hollow |
+| WC-2 (`reviews/WC-2.md`, non-author) | step 2 work after the pause (`007727a..2a2af3a`) | `local_repair`: 1 High, 3 Medium, 8 Low; repaired in I3-3r. Table check: 71 of 204 rows sampled in 17 tables (all except F3, F16, F17 and F18), 62 real, 9 weak, 0 hollow |
 | FINAL (`reviews/FINAL.md`, non-author) | freeze `416bdb5` against ORACLE | `local_repair`: 0 High, 4 Medium, 7 Low. FR-01, FR-03 to FR-06, FR-08 to FR-11 repaired in I3-8r. FR-02 and FR-07 go to the product owner (below). Closure checks: no proposal is presented as accepted (J54); J53 and J55 need the integrated and cross-family reviews |
 | Fidelity (`a_c/i3/fidelity/`) | `a_c/i3` at `416bdb5` | 8 cases: 3 faithful, 3 defects, 2 not encoded. The 3 defects were repaired in I3-8r, but the repairs have not been re-reviewed |
 | Desk traces (`paths/DESK-TRACES.md`) | DP-43 only | against S0: "not established" (S0's route never reaches the owner); against S1: "simpler to determine and apply", on condition that the shall-to-indicative convention is accepted (FR-02) |
@@ -62,6 +62,7 @@ Digests at `2beed8d`: SHA-256 of the sorted `shasum -a 256` lines of each tree's
 
 - **Criterion 4 (actual use) is unevidenced.** The product owner chose no paid fresh-actor trials, so no fresh actor used the frames or the method. Desk traces and reviews do not stand in for actual use.
 - **Desk traces.** The declared sample was 8 paths. Only DP-43 was traced; the reviewer ran out of budget. DP-01, -07, -13, -19, -25, -31, -37 and the other 38 paths were not traced. No reduction verdict exists for them.
+- **EXECUTIVE_BASELINE, DESIGN_MODULE and ODD.** Their step 2 work (I3-3a, I3-3b, I3-3c) was committed before the pause. WC-2's diff and table check began after it, so no working check examined that work. Only FINAL read their tables and source dispositions, and more lightly.
 - **Row re-assessment (I3-4a, I3-4b).** WC-2 read both texts for about 30 of about 75 changed rows and judged the rest from the deltas. Those rows are partly evidenced.
 - **Interpretation coverage.** The partial coverage blocks C3 closure for interpretation coverage (conformance discriminator 14). The fidelity repairs are unreviewed.
 - **Frames.** Frames do not yet carry the family-table rows and result maps that their sections need (tradeoff TO1). The F5 `kind` label is not done.
@@ -70,6 +71,10 @@ Digests at `2beed8d`: SHA-256 of the sorted `shasum -a 256` lines of each tree's
   - one read-only extraction subagent was used besides the two reviewers;
   - the README paragraph was changed after settlement;
   - the finite result file was stale at the first freeze.
+
+## Rerunning the checks
+
+The scripts behind the frontier, locus, link and checker proofs are in `qualification/C3-ITER3/tools/` (see its README). The interpretation's own tools are in `a_c/i3/tools/`. The frame generator and the finite check are in `qualification/instruments/`.
 
 ## Open decisions for the product owner
 
