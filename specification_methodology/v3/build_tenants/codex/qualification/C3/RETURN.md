@@ -1,7 +1,7 @@
 # Codex C3 Construction Return
 
-The current construction is [iteration 3](iteration-3/RETURN.md), under the
-repaired common input C3-I3-R2-01 and admitted EC-CODEX-I3-02. Its return binds
+The current construction is the [consolidated iteration-3 repair](iteration-3/review-repair/RETURN.md), under
+closed common input C3-I3-CLOSED-01 and admitted EC-CODEX-I3-03. Its return binds
 the frozen package, current checks, working reviews, actual-use evidence and
 remaining obligations. [The current inventory](iteration-3/CANDIDATE.json)
 and [conservation record](iteration-3/CONSERVATION.json) belong to that subject.
@@ -15,7 +15,7 @@ The [preceding synthesis return](synthesis/RETURN.md) retains product source
 `9bc8962e44aff2cd1dc29a9bac95356cdccf7cdd` and evidence
 `3ad1fca31dc93ba0847bbbbf308312a554daa1f6`. The
 [surface correction](surface-repair/RETURN.md),
-[earlier bounded repair round](round-1/RETURN.md), and earlier iteration-3
+[earlier bounded repair round](round-1/RETURN.md), [preceding iteration-3 return](iteration-3/RETURN.md), and earlier iteration-3
 attempts retain their actual subjects. Their results apply to a successor only
 through a supported unchanged relation or a separately recorded readback.
 
