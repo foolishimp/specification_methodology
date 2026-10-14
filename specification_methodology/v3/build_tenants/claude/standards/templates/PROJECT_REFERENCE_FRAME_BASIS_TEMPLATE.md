@@ -166,8 +166,11 @@ grant. Changing roles does not create authority or independent assessment.
   residuals:
 - terminal closure predicate for the exact claim:
 
-Coverage is complete as `REFERENCE_FRAME.md` section 8, Coverage ledger,
-states; record each material row's status in its values. A `residual` row is
+Coverage is complete only when every mandatory material evaluation and
+interaction is closed, or governing authority explicitly retains its residual
+consistently with the claim (`REFERENCE_FRAME.md` section 8, Operational full
+coverage). Record each material row's status in the values of that section's
+Coverage ledger. A `residual` row is
 `excluded_by_authority` where governing authority explicitly retains its
 residual consistently with the claim, and otherwise `conditionally_covered` or
 `uncovered`. A `non_material` row is no material evaluation and takes no

@@ -1475,8 +1475,8 @@ inherited constitutional documents from the prior line become migration
 source material, not live authority in the new line; it is lawful to zero
 inherited constitutional surfaces on the migration line and rebuild them
 from first principles; nothing carries forward by default, and every
-retained statement, requirement, design choice or guide rule is explicitly
-re-adopted; every carry-forward is intentional and should land in the
+retained statement, requirement, design choice or guide rule must be
+explicitly re-adopted; every carry-forward is intentional and should land in the
 correct layer, goals, intent, product, requirements, design, guide or template; old
 design and code may be used as reference implementations but do not govern
 the new constitutional surface unless explicitly re-derived and re-adopted;

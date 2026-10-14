@@ -410,9 +410,9 @@ the priority scale and the current-boundary decision cutoff, and names
 which conditions of the governed outcome are hard stops. What a hard stop
 is, its classes, and that it holds whatever the priority, cutoff or risk
 appetite, so that no decision waives it, are
-[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) Hard stops; each
-condition the basis names is an instance of a class that section states,
-and the basis adds no kind of stop. "Non-waivable hard stop" in this
+[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) Hard stops,
+whose classes are typical, not closed; the basis names its own
+non-waivable hard stops, each holding as that section states. "Non-waivable hard stop" in this
 profile and in EVALUATION §5 means such a stop. This profile imposes no
 universal numeric scale. Severity, priority, the frame result
 (FOUNDATIONS §4 Results) and the current-boundary effect are four distinct

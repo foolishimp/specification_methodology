@@ -402,7 +402,8 @@ the task needs, acquired as
 [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
 Acquisition states: a current derived surface or projected frame of this
 member where one serves the task, otherwise the deciding sections of this
-member, rather than require the worker to rediscover it. If a worker
+member carried in the prompt, rather than require the worker to rediscover
+it from the raw member. If a worker
 changes product truth through UI behaviour, the prompt must name the
 admitted carrier and action path. If the prompt cannot identify that
 carrier and action path, the correct result is a block or re-entry, not

@@ -111,8 +111,9 @@ outcome or enlarge the grant.
 Use the accepted Project Reference-Frame Basis to determine applicable
 evaluations, including those required by an affected owner. A known false
 condition omits that evaluation; an unknown condition is unresolved, not
-false, and the claim that depends on it is withheld until evidence or the
-owning decision resolves it (ACTIVATION §1 Applicability). Missing required
+false: it needs a bounded resolution or an explicit residual, and the claim
+that depends on it is withheld until evidence or the owning decision
+resolves it (ACTIVATION §1 Applicability). Missing required
 results cannot count as satisfied. Availability of a frame does not require activating it.
 
 When that basis permits direct Writer use and one sufficient context/grant
