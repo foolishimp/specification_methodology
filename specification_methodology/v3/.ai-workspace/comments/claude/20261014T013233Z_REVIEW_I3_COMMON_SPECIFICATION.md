@@ -3,7 +3,7 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T01:32:33Z
 **Addresses**: the common specification `specification_methodology/v3/specification/` for iteration 3, at the commit the common pen names as frozen for each round
-**Status**: Round 2 complete (subject `55bbf9e`). Round 2 expectations were committed at `81695e5`, before its diff was read. Round 1 (subject `7c058ed`) expectations were committed at `f4007ce`.
+**Status**: Round 3 expectations recorded (subject `355aa86`) before its diff was read. Round 2 complete (subject `55bbf9e`; expectations at `81695e5`). Round 1 complete (subject `7c058ed`; expectations at `f4007ce`).
 **Updated**: 2026-10-14T04:31:25Z (round 2 findings)
 
 ## Authority and independence
@@ -336,3 +336,26 @@ Two decisions are the product owner's:
 ### Independence and limits
 
 Claude is a governed tenant. M8 and some RR3 wording judgements concern the Claude line, or wording the pen adopted from Claude's round 1 corrections; the reports mark them interested. The reviewers read the subject from `git archive` copies at `55bbf9e`, sampled the predecessor-claims rows, and read neither candidate.
+
+## Round 3: expectations, recorded before reading the diff
+
+**Subject.** `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, "Repair I3 round-two common contract and prepare tenant successors". It is the shared input `C3-I3-R2-01` that both tenants' iteration 3 contracts bind (T-002; `EC-CLAUDE-I3-01` in T-002-CLAUDE). The comparison is with round 2's `55bbf9e`: 8 specification files, with 98 insertions and 51 deletions. After `355aa86`, `main` changes only GOALS status lines up to `65c0210`, and this round reads them as status only.
+
+**Authority.**
+- The product owner instructed the pen to "do that close the round 2 findings" (recorded in T-001).
+- He then answered this reviewer: "Wait for round 3 (Recommended)" before sign-off, and "Claude line" for iteration 3.
+- GOALS records "Final common sign-off remains open".
+
+**What closes each round 2 item.** A round 2 required correction or partly closed finding closes only when the text at `355aa86` meets it:
+
+1. **RR3-01:** acceptance standing has one record, the ticket written by the pen. The tenant frontier records proposals only.
+2. **RR3-06:** the admitted contract's bytes match its recorded digest. Any successor contract has its own digest and admission. This applies to every contract admitted at or before `355aa86`, including `EC-CLAUDE-I3-01`.
+3. **RR3-05 and M4:** every accepted item changed since `a7eba66` is listed with its reason, including round 2's own changes. The Development Isolation change and the single-ownership law change are presented for the owner's explicit acceptance, not applied as accepted. The constraint-surface requirement has its purpose paragraph.
+4. **RR3-04:** the per-criterion results fit the installed Reviewer's single result, or the variance is recorded.
+5. **RR3-02 and RR3-03:** process-only conformance rows are out of criterion 5. Whether routed acquisition counts against the limit is decided.
+6. **RR3-07 and RR2-08:** each finding has one primary work item, the TC-03 record is correct, and the reviews left out of the coverage packet are named.
+7. **M1:** reasons are recorded for the "Axiomatic calculus" row and the renamed pillars, and INTENT's pillar naming agrees with PRODUCT. Confirming the pillar list remains the owner's decision.
+8. **RR1-N2:** a rule decides whether more acquisition defeats a reduction, and which deciding paths must be compared.
+9. **No regressions:** the repair text introduces no new contradiction, untestable obligation, second owner, retroactive rebinding or naming in prose, and earlier "holds" results stay held.
+
+**Also checked.** Whether the tenant contracts admitted at `355aa86` are consistent with the specification they bind: territory, authority, comparison baselines, and resource and acceptance limits. One of them, `EC-CLAUDE-I3-01`, governs this reviewer's own line, so judgements on it are marked interested.
