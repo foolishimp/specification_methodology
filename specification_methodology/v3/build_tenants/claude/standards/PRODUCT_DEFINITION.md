@@ -498,7 +498,9 @@ Equal spelling, capitalisation, shape, file location, directory nesting,
 actor or implementation does not establish equal meaning, concept identity,
 equivalence, inheritance or authority; different spelling does not prove
 different meaning. Those relations follow only from the applicable semantic
-address or from an explicit authorised relation (P1, P3).
+address or from an explicit authorised relation (P1, P3). This applies the
+Representation row of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) to
+terms; the list names the representations a term takes in this member.
 
 Resolution proceeds in this order (P1, P5):
 

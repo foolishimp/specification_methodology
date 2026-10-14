@@ -593,7 +593,12 @@ Admission), and acquiring material grants no role, operation or decision
 ([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
 creates no authority). A derived surface is material derived from owning
 sources by copying, projection or compression, such as a projected frame
-for a task; it names its sources and owns no determination. Where a derived surface whose sources
+for a task; it names its sources and owns no determination. Where a
+current interpretation of the subject in `a_c` exists, the constraint
+surface it yields for the task is such a derived surface, under the
+conditions of
+[AXIOMATIC_CALCULUS §9 Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces).
+Where a derived surface whose sources
 are current serves the task, the actor acquires it. For another task, or
 where the derived surface is stale ([Staleness of derived surfaces](#staleness-of-derived-surfaces)),
 missing or insufficient for a named unresolved question, the actor acquires the deciding owner sections
@@ -1320,8 +1325,10 @@ benefits. The method does not prescribe an internal decomposition, search,
 collaboration, tool or synthesis procedure when variation in that procedure
 cannot affect a governed semantic, authority, evidence, safety or release
 property. Increased actor capability may enlarge the bounded relation an
-actor can resolve; it grants no authority, weakens no invariant and waives
-no acceptance (P6). The owning law may justify one coherent constraint
+actor can resolve; it grants no authority, an instance of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority, and it weakens no invariant and waives no
+acceptance (P6). The owning law may justify one coherent constraint
 family once; no rationale field, receipt or repeated audit is required for
 every clause or consumer application.
 
@@ -1520,7 +1527,7 @@ reconstructed semantic outcomes (P5, P6).
 | RF-012, AC-007 | conserved; the core algebra, its meanings and its two labelled tightenings are FOUNDATIONS §4 Results, whose §6 lists them; REFERENCE_FRAME §3 and AXIOMATIC_CALCULUS §4 dispose their rows; §3 here refines the core for steps |
 | RF Result Conjunction, the conjunction sentences of Applicability And Required Results | conserved; the conjunction rule, including the rule for a composite over several results formerly stated in §3, is FOUNDATIONS §4 Conjunction of results; §1 Applicability refers to it |
 | TICKET_METHOD work-carrier-to-execution rule, execution contract admission | the admission relation is restated in §1 with provenance; the mapping of admission outcomes into the core is new, in §3 Admission and activation, with its purpose stated there; the rows are disposed at the TICKETS member |
-| Baseline work result | superseded in its mapping, because the rc.2 claim pairs `incomplete` with `indeterminate`. The replacement relation is the common single result algebra requirement, item 3: an evaluation that was not performed stays distinct from one whose evidence cannot decide. FOUNDATIONS §4 Results restates that item in its no-raise rule, and §3 Construction availability applies it by mapping `incomplete` to falsified for "a candidate is available". `re_entry_requested` is split by its cause into two values, each mapped once; the rest of the mapping, its totality and exclusivity are conserved in §3. The activation-refusal exclusion is stated for tier 1 in §3 Admission and activation; the variant readings and the exclusion's reading for the Worker stay in EXECUTIVE_BASELINE §5, which disposes the row |
+| Baseline work result | conserved in §3, except the pairing of `incomplete` with `indeterminate`, which is proposed `superseded`, pending the product owner. Proposed replacement relation: §3 Construction availability maps `incomplete` to falsified for "a candidate is available", so an evaluation that was not performed stays distinct from one whose evidence cannot decide. The common single result algebra requirement, item 3, requires that distinction and accepts no particular replacement; FOUNDATIONS §4 Results restates it in its no-raise rule. `re_entry_requested` is split by its cause into two values, each mapped once; the rest of the mapping, its totality and exclusivity are conserved in §3. The activation-refusal exclusion is stated for tier 1 in §3 Admission and activation; the variant readings and the exclusion's reading for the Worker stay in EXECUTIVE_BASELINE §5, which disposes the row |
 | UP-020 dispositions | conserved in §3 Disposition; their core values for acceptance are new, with the purpose stated there |
 | Ambiguity Governance outcomes and hard stops | outcomes conserved in §3 Ambiguity outcome, their core values new, with the purpose stated there; the hard-stop classes conserved in full in §4 Hard stops, which owns them; SPEC_METHOD §5 disposes the row |
 | Effects | no rc.2 row; §3 Effects is new, with its purpose and material relation stated there |

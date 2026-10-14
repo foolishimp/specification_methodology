@@ -304,7 +304,7 @@ follows:
 | Consumed condition | Effect on the current promotion boundary |
 |---|---|
 | a valid falsification of a mandatory claim governed by a non-waivable hard stop | the boundary blocks, whatever the assigned priority or the decision cutoff |
-| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the current mandate, the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |
+| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the governed outcome or decision the work serves ([ACTIVATION §1, Intake](ACTIVATION.md#intake)), the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |
 | a finding meeting none of the four conditions | it does not block |
 | an observation outside the exact reviewed claim | repricing or re-entry input, returned as §4 states: by itself it does not widen the reviewed subject, block its bounded claim, or require a new ticket, artifact, review round or implementation increment |
 
@@ -312,9 +312,12 @@ Severity selects neither priority nor a block mechanically, and priority
 neither erases severity nor waives a hard stop. The decision cutoff is the
 adopting Product's policy; this member sets no cutoff (P6, P2; conserves
 [UP-007](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007)'s
-blocking conditions and the
+blocking conditions). The table is new tier-1 law: it states for the
+decision owner of any promotion boundary the rule that the predecessor's
 [Executive promotion constraint projection](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-promotion-constraint-projection)
-with the Executive written as the decision owner). Purpose and material
+states for the Executive only, which
+[EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#promotion-constraint-projection)
+keeps as its instance. Purpose and material
 relation: the method stated these conditions in a work carrier, a design
 profile and the Executive profile, so an actor reconciled three texts; one
 statement gives every review consumer the same answer, and the conditions
@@ -535,7 +538,7 @@ observations (P6):
 | `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority and residual boundary; missing authority or evaluation basis refuses |
 | `activate` | activation with an exact subject and basis and a capable actor succeeds; stale, ambiguous, topology-mismatched, unauthorised and capability-incompatible activations refuse or return the applicable closed pressure |
 | `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame` and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |
-| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy and a declared veto return conflict, indeterminate or refusal without flattening frame meaning |
+| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy and a veto or deferral the decision rule declares return the outcomes of [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions): `conflict`, `indeterminate`, or `invalid_basis` for a basis mismatch, which is the stale-results case of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology); none flattens frame meaning |
 | `translate` | preserved coordinates and provenance reach the target; declared loss stays explicit; identity, basis, authority or equality mismatch refuses |
 | `audit_coverage` | evaluation, interaction, semantic, operation and decision authority, failure, capability and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
 | `revise` | historical failure, topology mutation, evidence change and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction and coverage claim requiring reevaluation |

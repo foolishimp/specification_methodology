@@ -904,8 +904,8 @@ clarification that finds a recorded activation outside its frame's family,
 so that the result fails the exact applicability check of ACTIVATION §7
 ([RF-001](#rf-001-evaluation-relativity);
 [Diagnostic order](#diagnostic-order) question 1), or newly acquired
-admissible evidence that bears on a closed result, an instance of the
-revising observation of ACTIVATION §7, reopens that result
+admissible evidence that is material to a closed result, a material
+input change under ACTIVATION §7, reopens that result
 and every coverage ledger row and coverage claim that consumed it, and
 preserves every demonstrably independent surviving result. A harmless
 explanatory clarification, which changes no material input and is no

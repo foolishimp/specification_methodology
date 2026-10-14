@@ -1271,7 +1271,11 @@ names: a valid falsification of a mandatory claim governed by a
 non-waivable hard stop; any other finding meeting one of that section's
 four conditions, a finding below the Product-owned decision cutoff
 included; a finding meeting none of them; and an observation outside the
-exact evaluated claim. This profile adds one row, its application of the
+exact evaluated claim. For the Executive, the governed outcome or decision
+that section names is the current Product mandate, so the Executive
+determines blocking from the exact affected claim, the current mandate,
+the applicable hard stops and the Product-owned cutoff policy. This
+profile adds one row, its application of the
 `indeterminate` row of
 [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection)
 and of the Executive's exclusions (§8):

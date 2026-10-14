@@ -281,30 +281,28 @@ local paydown debt only when the governing method allows that debt to
 survive as explicit follow-up; it cannot accept hidden authority drift
 (P6).
 
-Close classifications as dispositions. A close classification is the
+Close classifications and the core. A close classification is the
 outcome of close review for one reviewed item, made against the sprint
-authority the manifest cites. It is a disposition of
-[ACTIVATION §3 Disposition](ACTIVATION.md#disposition), refined for the
-sprint's close boundary: the candidate is the reviewed item, and its
-declared boundary is the sprint's close under the cited authority. The
-law of that section applies to it unchanged: it consumes the core
-results of the item's review and stays separate from them, as acceptance
-stays separate from assessment
-([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)), and an assessor's
-proposed classification is a recommendation, not the classification.
-Each classification is exactly one disposition and takes that
-disposition's core value, for the predicate "the reviewed item is
-accepted as compliant under the sprint authority", the disposition's
-predicate at this boundary (P5, P6):
+authority the manifest cites; the close review classifies, under that
+authority. The classification uses
+[ACTIVATION §3 Disposition](ACTIVATION.md#disposition) only for its
+result mapping: the candidate is the reviewed item, its boundary is the
+sprint's close under the cited authority, and the classification consumes
+the core results of the item's review and stays separate from them, as
+acceptance stays separate from assessment
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)). Each classification
+takes exactly one core value, for the predicate "the reviewed item is
+accepted as compliant under the sprint authority", and the table names
+the disposition whose condition it matches, where one does (P5, P6):
 
-| Classification | Disposition | Core value | Ground, and how it narrows or differs from the disposition's condition |
+| Classification | Matching disposition | Core value | Ground, and how it narrows or differs from the disposition's condition |
 |---|---|---|---|
 | `accepted` | `accept` | satisfied | the item is compliant under the sprint authority |
 | `local_paydown` | `local_repair` | falsified | local debt remains and is captured by a paydown ticket; the debt is the counterexample. The governing relation stays coherent, because an item whose governing authority must change takes a repricing classification instead. It differs from `local_repair` in where the repair is carried: by the paydown ticket, which survives the close where the method allows that debt to survive |
 | `design_reframe` | `re_enter` | invalid_basis | the accepted design that governs the item must change, so the authority the sprint cites cannot support accepting it |
 | `requirement_reprice` | `re_enter` | invalid_basis | a governing requirement must change, with the same consequence |
 | `product_reprice` | `re_enter` | invalid_basis | the work changes the product definition, which the authority the sprint cites cannot support |
-| `remove` | `reject` | falsified | the work is backed out or kept out of closure. Its condition is wider than `reject`'s: the reason for removal is the counterexample, whether or not it is a violated governing relation or a competing truth path |
+| `remove` | none | falsified | the work is backed out or kept out of closure; the reason for removal is the counterexample. No disposition of ACTIVATION §3 has this condition, because removal does not require a violated governing relation or a competing truth path |
 
 The layer that `design_reframe`, `requirement_reprice` and
 `product_reprice` name is a declared fact, not a further result: it is
@@ -312,10 +310,11 @@ the change class of [SPEC_METHOD §4](SPEC_METHOD.md#change-classes) at
 which the work re-enters, and it travels with the core value as the
 domain outcome (FOUNDATIONS §4 Results, Recording). The outcome of a
 debt entry, accepted, ticketed, repriced or removed (Sprint status,
-`closed`), is likewise a disposition at the close boundary, for the
-predicate "the debt entry is accepted under the sprint authority":
-accepted is `accept` (`satisfied`), ticketed is `local_repair` and
-removed is `reject` (`falsified`), and repriced is `re_enter`
+`closed`), is likewise classified by the close review and mapped at the
+close boundary, for the predicate "the debt entry is accepted under the
+sprint authority": accepted matches `accept` (`satisfied`), ticketed
+matches `local_repair` (`falsified`), removed takes `falsified` with no
+matching disposition, and repriced matches `re_enter`
 (`invalid_basis`), on the grounds of `accepted`, `local_paydown`,
 `remove` and the repricing classifications respectively. The mappings
 add no disposition and no core value. The condition for `closed`
@@ -1042,15 +1041,12 @@ review occurred, an unbound conversation summary or an unavailable draft is
 not the review verdict. This rule requires no separate receipt, carrier or
 review round (P6, P4b).
 
-A review verdict is bounded by the exact reviewed claim and its applicable
-hard stops. A finding blocks current promotion only when it falsifies that
-claim; exposes competing or ambiguous authority on its acceptance path;
-violates applicable active authority, safety or retained accepted
-behaviour; or establishes a material architectural decision with durable
-consequences that forecloses an admitted product outcome. A valid
-observation outside that boundary is repricing input: by itself it does not
-widen the reviewed subject, block its bounded claim, or require a new
-ticket, artifact, review round or implementation increment (P2, P6).
+A ticket's review verdict is bounded by the exact reviewed claim and its
+applicable hard stops. When a finding blocks current promotion, and what a
+valid observation outside that boundary does, are stated once at
+[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion);
+this carrier applies that section to a ticket's review and adds no
+trigger (P2, P6).
 
 A direct or lawfully proxied human ruling receives a durable disposition
 before the next affected acceptance boundary. Its source wording stays
@@ -1163,11 +1159,11 @@ applies it as the gate over a declared change span.
 
 Review evaluates these conditions; its occurrence is not the closing event.
 Where applicable law requires no independent review or reserved
-acceptance, the authorised constructor may record the satisfied bounded result in
-the existing carrier, without adding a ticket, a coordinating appointment,
-a review or a recreated design view solely to mark completion. This waives
-no condition that actually applies, including sprint-close law (§3) and the
-design profile's law (P6, P2).
+acceptance, a work claim is recorded as
+[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)
+states in Recording a result without review, with the ticket as the
+existing carrier. The conditions that still apply include sprint-close
+law (§3) and the design profile's law (P6, P2).
 
 An unchanged obligation reuses valid applicable evidence and recorded J
 and O under the reuse rule of

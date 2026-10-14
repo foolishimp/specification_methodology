@@ -406,7 +406,9 @@ Latitude = {
 ```
 
 Silence is not latitude. Latitude grants no authority beyond its owner,
-scope, basis and invalidation law (P6).
+scope, basis and invalidation law, an instance of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority (P6).
 
 ### Residual
 

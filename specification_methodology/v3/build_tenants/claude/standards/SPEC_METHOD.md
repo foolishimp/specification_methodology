@@ -333,16 +333,13 @@ not operational enough. ADRs and design documents are therefore not
 decorative explanation; they are the load-bearing bridge between
 constitutional truth and executable realisation.
 
-Reconstruction sufficiency depends on ambiguity governance (§5): a boundary
-that can be crossed only by hiding a major unresolved ambiguity is not yet
-sufficient even if some downstream artifact can be produced. For an already
-accepted relation, reconstruction may reuse its exact current basis and
-sufficient evidence after checking applicability and invalidation (ACTIVATION
-§7). Reconstructability requires a correct reconstruction route, not its
-execution at every use; it grants no restart authority and does not excuse
-stale success. The claim determines the reconstruction span: a local
-selected function does not require recreating the whole product. New
-material counterexamples still challenge the affected relation. The design
+Reconstruction sufficiency depends on ambiguity governance (§5). The
+hidden-ambiguity limit, reuse of an accepted relation's evidence, what
+reconstructability requires and grants, and the reconstruction span are
+stated once at
+[EVALUATION §6 Layered sufficiency](EVALUATION.md#6-conformance-of-realisations);
+this litmus applies them to the method's own chain, where the span of a
+local selected function excludes recreating the whole product. The design
 profile owns design-view coverage, its material-change gate and
 unchanged-boundary reuse; this litmus neither waives that gate nor requires
 recreating unchanged accepted views ([DESIGN_MODULE](DESIGN_MODULE.md)).
@@ -648,17 +645,16 @@ outcome (P2; rc.2 #product-outcome-conservation-stdo-up-013; FOUNDATIONS §2
 Outcome U is the generic object).
 
 Evidence distinguishes material advance, prerequisite readiness,
-preservation and regression. The first three refine the progress
+preservation and regression. The four refine the progress
 categories of [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)
 (Progress) for a product outcome: material advance is progress there,
 accepted material movement toward the selected product outcome, and only
 material advance projects product progress; prerequisite readiness is
 its prerequisite work, which names the product obligation it enables and
 here also remains bounded; preservation is its preservation and repeated
-proof, useful evidence, not progress. Regression is this member's added
-category, which ACTIVATION §5 does not name: evidence of regression
-projects no progress, and its need is the promotion block in the last
-paragraph of this section. Churn and the revision of the forecast are
+proof, useful evidence, not progress; regression maps to evidence that
+is not new progress, and this member adds one need to it: evidence of
+regression is the promotion block in the last paragraph of this section. Churn and the revision of the forecast are
 ACTIVATION §5's, unchanged here.
 
 The exact bound outcome instance stops selecting later product-progress
@@ -1515,21 +1511,28 @@ lawful form of supersession, not a violation of live surface immutability
 silently mutating the old one.
 
 The four classes of inherited constitutional material record the
-standing each inherited statement holds in the new line's constitutional
-surfaces. That is the question the legacy classifications of
+adoption decision the new line takes on each inherited statement. For an
+inherited requirement, the legacy classifications of
 [§2 Requirement categories and classification](#requirement-categories-and-classification)
-answer for an inherited requirement, so for a requirement the two are one
-classification: adopted is Active, explicitly re-adopted as live law of
-the new line, and superseded, deferred and orphaned are Superseded,
-Deferred and Orphaned, with that table's meanings. For other inherited
+record a different thing: the standing of a requirement that is in the
+live surface. The two relate as follows, and are not one classification:
+- an adopted requirement enters the live surface as Active, or as Deferred
+  when it is adopted as an explicitly not-yet-operative obligation;
+- a requirement whose adoption is deferred is not in the live surface: it
+  has no legacy classification and no authority until it is adopted,
+  because absence from the new surface means "not yet adopted";
+- a superseded or orphaned inherited requirement takes Superseded or
+  Orphaned, with that table's meanings.
+
+For other inherited
 constitutional material the classes keep their names and the steps
 above. They are declared states of the new line's surfaces and, as §2
 states, none of them is or supplies the
 [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
 disposition of a predecessor claim (P3, P6). Purpose and material
 relation: an inherited requirement in a migration falls under both this
-step and the legacy classification rule, and reading them as one
-classification leaves no two records of one standing to reconcile (P3).
+step and the legacy classification rule, and stating how the two records
+relate leaves no two records of one standing to reconcile (P3).
 
 ### Transformation wave
 

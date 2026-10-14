@@ -873,6 +873,13 @@ activation that does it.
   - AC-002 refers to IDENTITY §2.
   - AC-006 refers to RF-005 for exact basis, adding only a_c bindings
     (I3-2a, I3-2b, I3-3h).
+- Resolution taken (I3-2r, WC1-15): FOUNDATIONS §2 Representation owns
+  the rule in general form, "equal representations do not establish equal
+  meaning", and holds no spelling list. AC-002 and PRODUCT_DEFINITION §5
+  keep their lists as instances naming the representations of their own
+  domain, and each cites the owner. This differs from the action above,
+  which put one list at FOUNDATIONS: one general rule with cited domain
+  instances leaves one decider without forcing one list onto two domains.
 
 ### R20 Categorical and refinement claims
 
