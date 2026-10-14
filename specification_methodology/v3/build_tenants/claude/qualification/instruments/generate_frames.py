@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Generate verbatim reference frames from owning sections; confers no acceptance.
+"""Generate reference frames copied from owning sections; confers no acceptance.
 
 Reads the frame specifications in standards/frames/FRAME_INPUTS.json (frame
 id, task, scope, ordered owner#anchor routes). For each route it extracts the
-owning section byte for byte, prefixes it with a `Source:` line naming the
-member, the anchor and the SHA-256 of the whole owning member, and writes
+owning section byte for byte, rebases its relative link destinations (Link
+rebasing below), prefixes it with a `Source:` line naming the member, the
+anchor and the SHA-256 of the whole owning member, and writes
 standards/frames/<id>.md with a short header (task, purpose, routes, measured
 size). It records owner_sha256, section_sha256, the frame's bytes and sha256
 back into FRAME_INPUTS.json. Regeneration from the same inputs is
@@ -18,8 +19,27 @@ Section rule (design/CROSS_SYNTHESIS.md, part 5, requirements 1 to 4):
 - a heading is `#` to `######` and a space, at column 0, outside fenced
   blocks; a section ends at the next heading of equal or higher level, or
   at the end of the member;
-- the section digest is over the exact bytes of that extent, and the frame
-  carries those same bytes.
+- the section digest is over the exact bytes of that extent in the owning
+  member. The frame carries those bytes with only their relative link
+  destinations rebased.
+
+Link rebasing. A relative destination in an excerpt is relative to the
+owning member's directory; in the frame it must resolve from
+standards/frames/ to the same target. `rebase` prefixes each relative
+destination with the path from the frames directory to the owner's
+directory (`X.md#a` becomes `../X.md#a`), and rewrites an in-member
+fragment against the owning member (`#a` in FOUNDATIONS.md becomes
+`../FOUNDATIONS.md#a`). A destination with a scheme (`stdo://`, `https:`,
+`mailto:`) or starting with `/` is unchanged. Fenced code and inline code
+spans are unchanged. Inline links, images and link reference definitions
+are rebased. Not rebased: HTML attributes such as `href`, and indented code
+blocks, which this rule does not recognise; a four-space-indented line is
+read as text, as in a list continuation. The rewrite is a deterministic
+function of the extent and the owner path, so `--check` compares against
+the same rebased bytes. Adapted from Codex `relocate`
+(qualification/C3/refresh_views.py:20-26, called at :59, at 31f28f9). Codex
+refuses an in-member fragment and does not skip code; here the fragment is
+rewritten against the owner coordinate and code is skipped.
 
 Refusal, never truncation: on any refusal no file is written, the refusal is
 printed as `refusal: <member>:<line>: <reason>` and the exit status is 2.
@@ -34,6 +54,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import posixpath
 import re
 import sys
 import unicodedata
@@ -205,6 +226,186 @@ def load_member(root: Path, owner: str) -> Member:
     return Member(owner, path.read_bytes())
 
 
+SCHEME = re.compile(r'^[A-Za-z][A-Za-z0-9+.-]*:')
+REFERENCE_DEFINITION = re.compile(r'^( {0,3}\[(?:[^\]\\\n]|\\.)+\]:[ \t]*)(<[^<>\n]*>|\S+)')
+BLOCK_START = re.compile(r'^ {0,3}(\||[-*+](?: |$)|\d{1,9}[.)](?: |$))')
+
+
+def rebase_destination(destination: str, owner: str) -> str:
+    """One link destination, rebased from the owner's directory to the frames directory."""
+    angle = destination.startswith('<') and destination.endswith('>')
+    target = destination[1:-1] if angle else destination
+    if not target or SCHEME.match(target) or target.startswith('/'):
+        return destination
+    if target.startswith(('#', '?')):
+        target = posixpath.basename(owner) + target
+    prefix = posixpath.relpath(posixpath.dirname(posixpath.normpath(owner)), FRAMES_RELATIVE.as_posix())
+    target = f'{prefix}/{target}'
+    return f'<{target}>' if angle else target
+
+
+def _code_spans(text: str):
+    """[start, end) of each inline code span: a backtick string closed by one of equal length."""
+    spans, i, n = [], 0, len(text)
+    while i < n:
+        if text[i] == '\\':
+            i += 2
+            continue
+        if text[i] != '`':
+            i += 1
+            continue
+        j = i
+        while j < n and text[j] == '`':
+            j += 1
+        k, close = j, None
+        while k < n:
+            if text[k] != '`':
+                k += 1
+                continue
+            m = k
+            while m < n and text[m] == '`':
+                m += 1
+            if m - k == j - i:
+                close = m
+                break
+            k = m
+        if close is None:
+            i = j
+        else:
+            spans.append((i, close))
+            i = close
+    return spans
+
+
+def _skip_space(text: str, i: int) -> int:
+    while i < len(text) and text[i] in ' \t\n':
+        i += 1
+    return i
+
+
+def _destination(text: str, i: int):
+    """(start, end) of the destination of an inline link whose `(` is at i - 1, or None if no link."""
+    n = len(text)
+    start = i = _skip_space(text, i)
+    if i < n and text[i] == '<':
+        j = i + 1
+        while j < n and text[j] not in '<>\n':
+            j += 2 if text[j] == '\\' else 1
+        if j >= n or text[j] != '>':
+            return None
+        end = j + 1
+    else:
+        depth, j = 0, i
+        while j < n:
+            ch = text[j]
+            if ch == '\\' and j + 1 < n:
+                j += 2
+                continue
+            if ch in ' \t\n' or ord(ch) < 0x20:
+                break
+            if ch == '(':
+                depth += 1
+            elif ch == ')':
+                if depth == 0:
+                    break
+                depth -= 1
+            j += 1
+        if depth:
+            return None
+        end = j
+    k = _skip_space(text, end)
+    if k > end and k < n and text[k] in '"\'(':
+        closer = ')' if text[k] == '(' else text[k]
+        m = k + 1
+        while m < n and text[m] != closer:
+            m += 2 if text[m] == '\\' else 1
+        if m >= n:
+            return None
+        k = _skip_space(text, m + 1)
+    if k >= n or text[k] != ')' or end == start:
+        return None
+    return start, end
+
+
+def _rebase_inline(text: str, owner: str) -> str:
+    """Rebase the destination of every inline link and image in one block of text."""
+    code = _code_spans(text)
+    out, last, openers, i, c = [], 0, 0, 0, 0
+    while i < len(text):
+        while c < len(code) and code[c][1] <= i:
+            c += 1
+        if c < len(code) and code[c][0] <= i:
+            i = code[c][1]
+            continue
+        ch = text[i]
+        if ch == '\\':
+            i += 2
+            continue
+        if ch == '[':
+            openers += 1
+        elif ch == ']' and openers:
+            openers -= 1
+            if text.startswith('(', i + 1):
+                found = _destination(text, i + 2)
+                if found:
+                    start, end = found
+                    out.append(text[last:start])
+                    out.append(rebase_destination(text[start:end], owner))
+                    last = end
+                    i = end
+                    continue
+        i += 1
+    out.append(text[last:])
+    return ''.join(out)
+
+
+def _rebase_block(lines, owner: str) -> str:
+    """One block of consecutive text lines: leading reference definitions, then inline links."""
+    head = []
+    for index, line in enumerate(lines):
+        definition = REFERENCE_DEFINITION.match(line)
+        if not definition:
+            break
+        head.append(line[:definition.start(2)] + rebase_destination(definition[2], owner)
+                    + line[definition.end(2):])
+    else:
+        index = len(lines)
+    return ''.join(head) + _rebase_inline(''.join(lines[index:]), owner)
+
+
+def rebase(member: Member, start: int, end: int) -> bytes:
+    """The extent of lines [start, end) of `member` with its relative link destinations rebased.
+
+    Fenced lines and blank lines are copied unchanged. The other lines are
+    grouped into blocks, which end at a blank or fenced line; a heading, a
+    table row and a list item marker start a new block, and a heading or a
+    table row is a block of its own. An inline code span never crosses a
+    block, and nothing inside one is rewritten.
+    """
+    pieces, block = [], []
+
+    def flush():
+        if block:
+            pieces.append(_rebase_block(block, member.name))
+            block.clear()
+
+    heading_lines = {h[0] for h in member.headings}
+    for i in range(start, end):
+        text = member.lines[i].decode('utf-8')
+        if member.fenced[i] or bare(member.lines[i]).strip() == '':
+            flush()
+            pieces.append(text)
+            continue
+        single = i in heading_lines or bare(member.lines[i]).lstrip(' ').startswith('|')
+        if single or BLOCK_START.match(text):
+            flush()
+        block.append(text)
+        if single:
+            flush()
+    flush()
+    return ''.join(pieces).encode('utf-8')
+
+
 def source_line(owner: str, anchor: str, owner_sha256: str) -> bytes:
     return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}'.encode('utf-8')
 
@@ -220,11 +421,14 @@ def header(frame: dict, size: int) -> bytes:
         '\n'
         f'Purpose: {frame["scope"]}\n'
         '\n'
-        'Each excerpt below is a verbatim copy of one owning section of a member\n'
-        'of this method. The `Source:` line before it names the member and the\n'
-        "section's anchor, and gives the SHA-256 of the whole owning member. The\n"
-        'owning section decides; this frame owns no determination. Links inside\n'
-        "an excerpt are relative to the owning member's directory.\n"
+        'Each excerpt below copies one owning section of a member of this method\n'
+        'byte for byte, except that each relative link destination is rebased\n'
+        'to resolve from this directory to the same target. Fenced code, inline\n'
+        'code and absolute and `stdo://` links are unchanged. The `Source:` line\n'
+        "before an excerpt names the member and the section's anchor, and gives\n"
+        'the SHA-256 of the whole owning member. The section digest recorded in\n'
+        "FRAME_INPUTS.json is over the owner's bytes, not over this copy. The\n"
+        'owning section decides; this frame owns no determination.\n'
         '\n'
         'Routes, in order:\n'
         '\n'
@@ -281,7 +485,7 @@ def build(root: Path, inputs_path: Path):
                     raise Refusal(owner, start + 1,
                                   f'frame "{fid}": route "{anchor}" overlaps route "{other_anchor}"')
             spans.setdefault(owner, []).append((start, end, anchor))
-            blocks.append((source_line(owner, anchor, member.sha256), extent))
+            blocks.append((source_line(owner, anchor, member.sha256), rebase(member, start, end)))
             routes_out.append({
                 'owner': owner,
                 'owner_sha256': member.sha256,

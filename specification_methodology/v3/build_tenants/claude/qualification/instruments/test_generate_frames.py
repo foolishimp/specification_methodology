@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tests for generate_frames.py: the five generator requirements of
 design/CROSS_SYNTHESIS.md part 5, the RW1 F14 sections, byte-identical
-regeneration and the frame layout.
+regeneration, the frame layout and link rebasing.
 
 Run: python3 -I qualification/instruments/test_generate_frames.py
 """
@@ -9,6 +9,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import posixpath
 import re
 import shutil
 import tempfile
@@ -334,11 +335,11 @@ class Digests(unittest.TestCase):
             owner_bytes = (self.tree.root / route['owner']).read_bytes()
             self.assertEqual(route['owner_sha256'], sha256(owner_bytes))
             m = gf.Member(route['owner'], owner_bytes)
-            _, _, extent = m.section(route['anchor'])
+            start, end, extent = m.section(route['anchor'])
             self.assertEqual(route['section_sha256'], sha256(extent))
             line = (f'Source: {Path(route["owner"]).name}#{route["anchor"]} '
                     f'sha256={route["owner_sha256"]}').encode()
-            self.assertIn(line + b'\n\n' + extent, data)
+            self.assertIn(line + b'\n\n' + gf.rebase(m, start, end), data)
         self.assertIn(b'## Still inside the tilde block\n', data)
         self.assertTrue(data.endswith(b'\n'))
         self.assertEqual(list(manifest), ['kind', 'limits', 'frames'])
@@ -433,6 +434,180 @@ class TenantFrames(unittest.TestCase):
             sources = re.findall(rb'^Source: (\S+)#(\S+) sha256=([0-9a-f]{64})$', data, re.M)
             self.assertEqual([(Path(o).name, a) for o, a in routes],
                              [(s[0].decode(), s[1].decode()) for s in sources])
+
+
+def rebased(text: str, name='standards/M.md') -> str:
+    """The whole member `text` as its frame would carry it."""
+    m = member(text, name)
+    return gf.rebase(m, 0, len(m.lines)).decode('utf-8')
+
+
+# A member with every link form the rule names. Each line's expected
+# rebasing from standards/frames/ is in LINKED_EXPECTED.
+LINKED = """## A
+
+See [X](X.md#a), [X file](X.md), [here](#a), [query](?v=1) and ![img](img/p.png).
+Up [spec](../../specification/requirements/README.md#single-result-algebra-requirement).
+Kept [rc2](stdo://releases/v2.5.1-rc.2/standards/X.md#a), [web](https://example.org/x.md),
+[mail](mailto:a@example.org), [root](/abs/X.md) and [empty]().
+Title [t](X.md "a title") and angle [s](<Y Z.md#b>) and nested [a [b] c](X.md#n).
+A link whose text
+spans [two
+lines](X.md#two).
+Code `[c](X.md)` and ``[d](X.md) ` x`` stay; a span `[e](X.md)
+over two lines` stays.
+Escaped \\[f](X.md) and notation f[t](a, b) are not links.
+
+[ref]: X.md#r
+[abs]: stdo://x/Y.md
+
+- item [li](X.md#li)
+  continued `code
+- next` item [li2](X.md)
+
+| col | [cell](X.md#c) |
+
+```markdown
+[fenced](X.md#f)
+```
+
+~~~
+[tilde](#t)
+~~~
+"""
+
+LINKED_EXPECTED = """## A
+
+See [X](../X.md#a), [X file](../X.md), [here](../M.md#a), [query](../M.md?v=1) and ![img](../img/p.png).
+Up [spec](../../../specification/requirements/README.md#single-result-algebra-requirement).
+Kept [rc2](stdo://releases/v2.5.1-rc.2/standards/X.md#a), [web](https://example.org/x.md),
+[mail](mailto:a@example.org), [root](/abs/X.md) and [empty]().
+Title [t](../X.md "a title") and angle [s](<../Y Z.md#b>) and nested [a [b] c](../X.md#n).
+A link whose text
+spans [two
+lines](../X.md#two).
+Code `[c](X.md)` and ``[d](X.md) ` x`` stay; a span `[e](X.md)
+over two lines` stays.
+Escaped \\[f](X.md) and notation f[t](a, b) are not links.
+
+[ref]: ../X.md#r
+[abs]: stdo://x/Y.md
+
+- item [li](../X.md#li)
+  continued `code
+- next` item [li2](../X.md)
+
+| col | [cell](../X.md#c) |
+
+```markdown
+[fenced](X.md#f)
+```
+
+~~~
+[tilde](#t)
+~~~
+"""
+
+
+class LinkRebasing(unittest.TestCase):
+    """F5: relative links in an excerpt resolve from standards/frames/; nothing else changes."""
+
+    def test_every_link_form(self):
+        got = rebased(LINKED).splitlines()
+        want = LINKED_EXPECTED.splitlines()
+        self.assertEqual(len(got), len(want))
+        for n, (g, w) in enumerate(zip(got, want), 1):
+            self.assertEqual(g, w, f'line {n}')
+
+    def test_relative_and_in_member_fragment(self):
+        self.assertEqual(rebased('[a](X.md#a)\n'), '[a](../X.md#a)\n')
+        self.assertEqual(rebased('[a](#a)\n', 'standards/FOUNDATIONS.md'), '[a](../FOUNDATIONS.md#a)\n')
+        self.assertEqual(rebased('[a](sub/Y.md)\n'), '[a](../sub/Y.md)\n')
+
+    def test_absolute_and_stdo_unchanged(self):
+        for text in ('[a](stdo://releases/v2.5.1-rc.2/standards/X.md#a)\n', '[a](https://example.org/#x)\n',
+                     '[a](urn:stdo:concept:x)\n', '[a](/X.md#a)\n', '[a](//host/X.md)\n'):
+            with self.subTest(text=text):
+                self.assertEqual(rebased(text), text)
+
+    def test_fenced_code_untouched(self):
+        text = '## A\n\n```text\n[a](X.md#a) F_K[v](X_v)\n```\n\n````\n```\n[b](#b)\n````\n'
+        self.assertEqual(rebased(text), text)
+
+    def test_owner_in_a_subdirectory(self):
+        self.assertEqual(rebased('[a](X.md#a) [b](#b)\n', 'standards/schemas/S.md'),
+                         '[a](../schemas/X.md#a) [b](../schemas/S.md#b)\n')
+
+    def test_section_digest_is_over_owner_bytes_and_check_compares_rebased(self):
+        owner = '## A\n\nSee [b](#b) and [X](X.md#x).\n\n## B\n\nBody.\n'
+        tree = TempTree({'M.md': owner, 'X.md': '## X\n'}, [frame('f', ('M.md', 'a'))])
+        try:
+            self.assertEqual(tree.run(), 0)
+            manifest = json.loads(tree.inputs.read_text())
+            route = manifest['frames'][0]['routes'][0]
+            raw = b'## A\n\nSee [b](#b) and [X](X.md#x).\n\n'
+            copy = b'## A\n\nSee [b](../M.md#b) and [X](../X.md#x).\n\n'
+            self.assertEqual(route['section_sha256'], sha256(raw))
+            self.assertNotEqual(route['section_sha256'], sha256(copy))
+            path = tree.root / 'standards' / 'frames' / 'f.md'
+            data = path.read_bytes()
+            self.assertIn(copy, data)
+            self.assertNotIn(raw, data)
+            self.assertEqual(tree.run('--check'), 0)
+            path.write_bytes(data.replace(copy, raw))
+            self.assertEqual(tree.run('--check'), 1)
+            self.assertEqual(tree.run(), 0)
+            self.assertEqual(path.read_bytes(), data)
+        finally:
+            tree.close()
+
+
+class TenantLinkResolution(unittest.TestCase):
+    """F5: from the published location standards/frames/, every rebased link of every tenant
+    frame resolves to the target its original resolves to from the owner's directory, the
+    target file exists, and each fragment names a heading of its target member."""
+
+    LINK = re.compile(r'\]\(([^)\s]+)')   # this test's own finder, not the generator's
+
+    def test_resolution_from_frames_directory(self):
+        inputs = TENANT / gf.INPUTS_RELATIVE
+        manifest = json.loads(gf.build(TENANT, inputs)[inputs])
+        pairs, seen = 0, set()
+        frames_dir = gf.FRAMES_RELATIVE.as_posix()
+        for entry in manifest['frames']:
+            for route in entry['routes']:
+                if (route['owner'], route['anchor']) in seen:
+                    continue
+                seen.add((route['owner'], route['anchor']))
+                m = gf.load_member(TENANT, route['owner'])
+                start, end, extent = m.section(route['anchor'])
+                raw_lines = gf.split_lines(extent)
+                copy_lines = gf.split_lines(gf.rebase(m, start, end))
+                self.assertEqual(len(raw_lines), len(copy_lines))
+                owner_dir = posixpath.dirname(route['owner'])
+                for k, (raw, copy) in enumerate(zip(raw_lines, copy_lines)):
+                    where = f'{route["owner"]}:{start + k + 1}'
+                    if m.fenced[start + k]:
+                        self.assertEqual(raw, copy, where)
+                        continue
+                    originals = self.LINK.findall(raw.decode('utf-8'))
+                    copies = self.LINK.findall(copy.decode('utf-8'))
+                    self.assertEqual(len(originals), len(copies), where)
+                    for original, rebased_link in zip(originals, copies):
+                        pairs += 1
+                        if gf.SCHEME.match(original) or original.startswith('/'):
+                            self.assertEqual(original, rebased_link, where)
+                            continue
+                        path, _, fragment = original.partition('#')
+                        new_path, _, new_fragment = rebased_link.partition('#')
+                        target = posixpath.normpath(posixpath.join(owner_dir, path)) if path else route['owner']
+                        resolved = posixpath.normpath(posixpath.join(frames_dir, new_path))
+                        self.assertEqual((resolved, new_fragment), (target, fragment), where)
+                        self.assertTrue((TENANT / resolved).is_file(), f'{where}: {rebased_link} names no file')
+                        if fragment and resolved.endswith('.md'):
+                            anchors = {h[3] for h in gf.Member(resolved, (TENANT / resolved).read_bytes()).headings}
+                            self.assertIn(fragment, anchors, f'{where}: {rebased_link} names no heading')
+        self.assertGreater(pairs, 0)
 
 
 if __name__ == '__main__':

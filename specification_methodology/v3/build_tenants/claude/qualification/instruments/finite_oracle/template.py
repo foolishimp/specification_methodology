@@ -10,18 +10,21 @@ disposition. An instance is a directory with three files:
 - mutants.py, deliberately wrong variants of that rule, returned by
   variants(model);
 - check.py, the oracle: the declared domain, the properties written from
-  an independent source (declared in ORACLE_SOURCE), the cardinalities
-  derived by hand, the expected counterexamples of each mutant, and the
-  limits of what the check proves. It loads this template and calls run().
+  their sources (declared in ORACLE_SOURCES) without reading the model, the
+  cardinalities derived by hand, the expected counterexamples of each
+  mutant, and the limits of what the check proves. It loads this template
+  and calls run().
 
 run() refuses (exit 2), writing nothing, when a declared section has
 changed since it was encoded. Otherwise it enumerates every case of the
 domain; asserts every property on every lawful value of every output of
 the model; evaluates the same properties on each mutant and counts its
 counterexamples, a counterexample being a case on which any output fails
-any property; asserts the expected cardinalities and counterexample
-counts; binds the digests of source, oracle source, model, mutants and
-executables; and writes the result. A failed assertion writes nothing.
+any property, and counts the cases on which its outputs, its flat reported
+values and its records differ from the model's; asserts the expected
+cardinalities and counts; binds the digests of source, oracle sources,
+model, mutants and executables; and writes the result. A failed assertion
+writes nothing.
 `--check` writes nothing and exits 1 when the result on disk differs from
 the one the run would write.
 
@@ -136,7 +139,7 @@ def run(oracle, argv):
     model = load('model', root / 'model.py')
     mutants = load('mutants', root / 'mutants.py')
     source = bind(model.SOURCE, frames)
-    oracle_source = bind(oracle.ORACLE_SOURCE, frames)
+    oracle_sources = [bind(declaration, frames) for declaration in oracle.ORACLE_SOURCES]
 
     names = [name for name, _ in oracle.DIMENSIONS]
     domain = [dict(zip(names, values)) for values in itertools.product(*[v for _, v in oracle.DIMENSIONS])]
@@ -164,7 +167,7 @@ def run(oracle, argv):
     mutant_reports = {}
     for name, rule in mutants.variants(model).items():
         by_property, first_by_property = {}, {}
-        counterexamples = output_differs = value_set_differs = 0
+        counterexamples = output_differs = value_set_differs = record_differs = 0
         first = None
         for case, expected in zip(domain, model_outputs):
             evaluated = evaluate(oracle, model, rule, case)
@@ -182,6 +185,8 @@ def run(oracle, argv):
                 output_differs += 1
             if evaluated[0][1] != expected[0][1]:
                 value_set_differs += 1
+            if [r for _, _, r, _ in evaluated] != [r for _, _, r, _ in expected]:
+                record_differs += 1
         mutant_reports[name] = {
             'predicate': f'the variant {name} meets every property on the declared domain',
             'core_value': 'falsified' if counterexamples else 'satisfied',
@@ -189,6 +194,7 @@ def run(oracle, argv):
             'by_property': dict(sorted(by_property.items())),
             'output_differs_from_model': output_differs,
             'value_set_differs_from_model': value_set_differs,
+            'record_differs_from_model': record_differs,
             'first_counterexample': first,
             'first_counterexample_by_property': dict(sorted(first_by_property.items())),
         }
@@ -203,7 +209,8 @@ def run(oracle, argv):
     for name, report in mutant_reports.items():
         want = oracle.EXPECTED_MUTANTS[name]
         count.check(report['counterexample_cases'] > 0, f'mutant {name} is not detected')
-        for key in ('counterexample_cases', 'by_property', 'output_differs_from_model', 'value_set_differs_from_model'):
+        for key in ('counterexample_cases', 'by_property', 'output_differs_from_model',
+                    'value_set_differs_from_model', 'record_differs_from_model'):
             count.check(report[key] == want[key], f'mutant {name} {key} {report[key]} != {want[key]}')
 
     bound = lambda path: {'path': relative(path), 'sha256': sha256(path)}
@@ -215,7 +222,7 @@ def run(oracle, argv):
                    'domain_outcome': f'all {count.made} assertions hold; every declared mutant is falsified'},
         'bindings': {
             'source': source,
-            'oracle_source': oracle_source,
+            'oracle_sources': oracle_sources,
             'model': bound(root / 'model.py'),
             'mutants': bound(root / 'mutants.py'),
             'executable': [bound(TEMPLATE), bound(Path(oracle.__file__)), bound(SECTION_RULE)],
