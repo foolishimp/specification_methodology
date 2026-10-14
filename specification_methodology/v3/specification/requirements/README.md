@@ -24,6 +24,8 @@ Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#su
 
 Conservation is about meaning. Similar naming does not prove it, and the absence of an edit carrying a claim does not prove the claim was lost. UP-015 does not by itself require a kept claim to be rewritten in the successor's wording. `reframed` is a note on how a conserved claim was carried, not a disposition.
 
+Each supersession names the affected claim, the replacement determination and its owning successor locus or loci. A shared relation may replace several claims, but each row identifies how its claim is replaced. A changed obligation is not conserved merely because its heading survives. During construction a proposed disposition and replacement remain distinguishable from an accepted one; a refreshed hash supplies neither semantic comparison nor acceptance.
+
 ## Standalone Successor Requirement
 
 Source: this Product. The successor stands alone. Every `conserved` claim is stated in the successor's own text, so that the successor is complete and usable without the predecessor in force. A link to the predecessor shows where a claim came from, not that it is conserved. Under this requirement a link alone satisfies no disposition. This requirement is why construction comes in this order: the axioms first, then the whole predecessor restated on them.
@@ -35,7 +37,7 @@ Restated on the axioms. The successor is on its axioms when four relationships h
    - the consequences that follow from them;
    - any additional domain or policy choices, with their owners.
 
-   The whole set of members is accounted for. A demonstration over a few members is not presented as a derivation of every member.
+   The whole set of material deciding rules is accounted for, including inherited rules. The candidate states its grouping and binds the covered rules to each argument; a document preamble or a choice of coarser groups cannot hide an unsupported rule. Numbering and file boundaries do not prescribe the grouping. A demonstration over a few members is not presented as a derivation of every member.
 2. Ownership and use. The Spec Method and the profiles use the shared contracts at the points where an actor actually enters and applies them, not only by cross-reference, without conflicting definitions or competing owners. An explanatory cross-reference alone does not establish this relationship.
 3. Standalone conservation. Text the successor owns supplies every conserved determination needed for use.
 4. Reduction. The pillars determine the shared laws and their specialisations under the [reduction requirement](#foundational-reduction-requirement). Repeated determinations are contracted into their shared owners, and material independent mechanisms that remain have a stated need.
@@ -49,6 +51,8 @@ Source: this Product's [Foundational Reduction](../PRODUCT.md#foundational-reduc
 1. Account for each pillar's material contribution. Separate foundational premises, derived consequences, domain policies and implementation choices. A named calculus or a conceptual correspondence is insufficient without the deciding rules and consumers it governs.
 2. Identify recurring determinations across the predecessor and the candidate. Establish one shared owner and replace their independent determination at each affected consumer with that law or an explicit refinement. Adding a common introduction while the consumers retain rival rules does not satisfy reduction.
 3. Preserve required distinctions while consolidating machinery. Different domains may use the same transformation without acquiring equal identity, meaning, authority or evidence. A retained material primitive or independent policy identifies the distinction it supplies and why the shared contracts do not already decide it. This is stated in existing design and proof surfaces, not a new record for every helper.
+
+   Conservation includes a rule's scope, modal force, triggers and exceptions. Moving a conditional or preferred policy into shared machinery cannot silently make it unconditional; replacing a domain rule with a reference cannot lose a required trigger or send responsibility back to the referring consumer. The shared contract supplies its determination, and the domain owner supplies the additional binding or policy it needs.
 4. Reconstruct member boundaries from those responsibilities. Predecessor files, headings, procedural stages and actor arrangements impose no one-to-one successor partition. A conserved determination may move to a shared owner. Its consumers carry their necessary bindings; they do not reproduce the common law as a second authority. Intentionally removing a material obligation still requires its owning decision under the disposition requirement.
 5. Demonstrate contraction on actual deciding paths. Identify which independently interpreted rules, mechanisms, exceptions or cross-document reconciliations are removed or made unnecessary, and which remain justified. Compare the resulting decisions and acquisition with the predecessor and the preceding candidate where available. Word count, a diagram, rewritten prose and a passing structural checker cannot establish this claim alone.
 6. Challenge the reconstruction with independently specified successful, refused and unresolved cases where applicable, including cross-domain composition, failure preservation and recovery. Disclose the compared subjects, tasks, acquisition conditions and evidence limits. A few selected cases establish only their covered relations; complete predecessor accounting and member acceptance remain required.
@@ -108,6 +112,7 @@ A determination's owner is an owning locus: one section of one member. Owner her
 5. Conserved text restated under the [standalone successor requirement](#standalone-successor-requirement) is the successor's own owning locus for that determination, not a duplicate of the predecessor.
 6. A part ported under [Cross-Synthesis](../PRODUCT.md#cross-synthesis) takes one owning locus in the receiving candidate.
 7. Where two loci decide the same question, one is made the owner and the other refers to it or refines it. No rule of precedence between loci substitutes for that.
+8. A required generic determination is available without adopting an optional profile. The generic owner supplies that obligation; a profile owns the additional policy that applies when it is selected.
 
 Purpose and material relation, meaning why the requirement exists and what it protects: a question decided in two places is interpreted twice and can be answered two ways. One owning locus gives one answer per question within a candidate. The [single result algebra requirement](#single-result-algebra-requirement) is this requirement applied to results.
 
@@ -119,7 +124,7 @@ Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)). It unifie
 - AC-007, the constraint and refusal outcomes of a_c.
 
 1. The Foundations own exactly one core result algebra. Results of constraints, judgements, frames, stops, work and effects are stated in it or as refinements of it.
-2. A member or profile that needs finer outcomes defines a refinement. Every refined value maps to exactly one core value, and no outcome exists outside the core.
+2. A member or profile that needs finer outcomes defines a refinement at its owning locus. Every refined value, on its declared predicate and with the conditions needed to determine its meaning, maps to exactly one core value. Missing required conditions remain explicit; the consumer does not guess from a label. A referral to the core is insufficient when the core requires the domain to supply that mapping. No evaluation or decision outcome exists outside the core.
 3. A refinement never raises a result's standing:
    - a falsified or failed result never maps to a satisfied or successful one;
    - a result that admissible evidence cannot decide never maps to satisfied;
@@ -129,6 +134,8 @@ Source: this Product ([Result Algebra](../PRODUCT.md#result-algebra)). It unifie
 5. A step having produced a candidate never maps to the candidate's fitness or acceptance. Availability, assessment and acceptance remain separate results.
 6. Conjunction and composition of results are defined once, over the core.
 7. A reference frame whose task returns a result carries the core algebra or its profile's mapping into it.
+
+A recorded lifecycle state, classification or selected action is not automatically an evaluation result. Its owner states its purpose and how any evaluation or decision using it returns through the core. Calling an output a state does not exempt a determination that decides compliance, admission, closure or disposition. Assessing a condition and exercising authority to act on that assessment remain distinct, even when they use the same domain word.
 
 Purpose and material relation: this is the [single ownership requirement](#single-ownership-requirement) applied to results, as the [Intent](../INTENT.md#what-the-product-is) directs. One set of outcome values across the tiers removes competing ownership of results. Items 3 to 5 keep, when results are combined, the distinctions between failure, undecidability, non-performance and uncertain effects. Those distinctions are required by [P5 and P6](PRINCIPLES.md): finite capacity with graceful handling, and justified claims with separate authority.
 
