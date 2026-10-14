@@ -81,9 +81,12 @@ population refuse.
   scope, and permitted claim and occurrence bindings; unknown kinds or scope
   values refuse.
 - Relation qualifiers use closed cardinality, preservation, loss, and refusal
-  domains. Constraint predicates return only satisfied, falsified,
-  indeterminate, or invalid basis. Every constraint maps to a type-matched
-  judgment with exact evidence, stop, residual, and re-entry law.
+  domains. Constraint evaluations retain all five core verdicts: `satisfied`,
+  `falsified`, `indeterminate`, `invalid_basis` and `out_of_frame`. Missing
+  material scope or capability on an in-domain subject retains `out_of_frame`
+  and its cause; an outside-domain request stops at the invocation boundary.
+  Every constraint maps to a type-matched judgment with exact evidence, stop,
+  residual, and re-entry law.
 - Every relation and claim qualifier has the exact nine-field
   `OccurrenceRelationQualifiers` shape. Relation ids and `(kind,source,target)`
   triples are duplicate-free before any set comparison.

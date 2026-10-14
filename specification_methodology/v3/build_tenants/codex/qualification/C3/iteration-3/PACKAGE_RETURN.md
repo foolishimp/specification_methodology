@@ -54,6 +54,28 @@ conservation results supersede this intermediate only on their exact subjects.
 
 ## Limits
 
+The declared frame files are larger than at the preceding candidate
+`3ad1fca31dc93ba0847bbbbf308312a554daa1f6`:
+
+| Frame | Previous bytes | Current documentary bytes |
+|---|---:|---:|
+| Evaluation/conjunction | 33,463 | 44,141 |
+| Constitutional derivation | 55,748 | 69,445 |
+| Domain binding | 40,164 | 54,985 |
+| Release/adoption | 33,794 | 46,999 |
+| Work/recovery | 53,174 | 63,001 |
+| Triage/carrier | 67,563 | 81,733 |
+
+These are file sizes, not actual actor acquisition or retained context. The
+added source distinguishes conditions, result causes, computational bindings
+and authority boundaries; file growth alone proves neither necessary cost nor
+improved use. The matched trials compare correctness, actually acquired bytes,
+repeated acquisition and elapsed time against both rc.2 and the preceding
+candidate. Preservation of permitted/prohibited work takes priority over a
+smaller packet. Any claimed deciding-path reduction must name the independent
+determination or reconciliation it removes and justify adverse cost separately.
+The reviewer assesses that tradeoff; no global efficiency claim is made here.
+
 Whole-view fidelity, complete interpretation fidelity and actual use of the
 selected frames require fresh evidence. The source-package interpretation has
 no issued installation mapping through this construction. The inherited
@@ -63,3 +85,7 @@ acceptance. Owner decisions and member acceptance remain separate.
 Source acquisition was targeted; full host context, active retained context,
 reasoning tokens and cost were not instrumented. No external paid actor call,
 peer implementation read, release, adoption or merge to main occurred.
+
+## Independent view findings and bounded correction
+
+The frozen f2cb review identified two material omissions in summaries. The traversal summary now retains all five core verdicts and the distinction between missing capability within the domain and an outside-domain request. The aggregate work-carrier summary now retains the explicit ticket-state-authority instruction exception without granting execution admission. Both changes follow unchanged owning clauses. Their review subject and later repaired subject remain distinct; the independent readback is pending.

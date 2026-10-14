@@ -384,7 +384,9 @@ layer that owns the missing truth.
   identity. Absence of a durable ticket neither requires nor authorizes creating
   one. Create or update a ticket only when work or an obligation outlives the
   local carrier boundary: the admitted sprint when inside one, otherwise the
-  current run, and only under ticket-state authority.
+  current run, and only under ticket-state authority. An explicit instruction
+  from ticket-state authority may also select a durable record. That instruction
+  neither admits an execution contract nor widens upstream work authority.
 - Drafting and admission remain distinct relations; execution may occur in one
   invocation. Ticket existence, lane placement, `active` status, a generic
   work request, or the model's own draft cannot supply admission. Drafted or

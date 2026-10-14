@@ -115,11 +115,15 @@ def main():
     if not args.draft:
         if current.get('source_input_commit') != common or not current.get('document_source_input_commit'):
             check.fail('source', 'Common/document source coordinates are missing or inconsistent')
-        run = subprocess.run([sys.executable, '-B', str(HERE / 'check_conservation.py'), '--require-frozen', '--self-test'],
+        run = subprocess.run([sys.executable, '-B', str(HERE / 'check_conservation.py'), '--require-frozen', '--no-write'],
                              cwd=TENANT, capture_output=True, text=True)
-        report = read(HERE / 'CONSERVATION_CHECK.json') if (HERE / 'CONSERVATION_CHECK.json').exists() else {}
-        check.details['conservation_owner_check'] = {'exit_code': run.returncode, 'report_sha256': sha(HERE / 'CONSERVATION_CHECK.json') if report else None,
-            'draft_valid': report.get('draft_valid'), 'stdout': run.stdout, 'stderr': run.stderr}
+        try:
+            report = json.loads(run.stdout)
+        except ValueError:
+            report = {}
+        check.details['conservation_owner_check'] = {'exit_code': run.returncode,
+            'checker_sha256': sha(HERE / 'check_conservation.py'), 'report': report,
+            'stderr': run.stderr}
         if run.returncode or not report.get('draft_valid'):
             check.fail('conservation', 'Owning conservation check did not establish a current frozen draft')
     if args.idempotence:
@@ -146,6 +150,7 @@ def main():
               'document_source_input_commit': current.get('document_source_input_commit'),
               'fingerprint_before': before, 'fingerprint_after': after,
               'checker_sha256': sha(Path(__file__)), 'historical_algorithms_sha256': sha(PREVIOUS / 'synthesis/check_artifacts.py'),
+              'python_executable': sys.executable, 'python_version': sys.version,
               'counts': check.counts, 'details': check.details, 'failures': check.failures,
               'elapsed_seconds': round(time.monotonic() - started, 3),
               'limits': ['Author artifact checks, not semantic acceptance or whole-method fitness.',
