@@ -378,3 +378,14 @@ Started in parallel:
   - the generator rebases frame links, and 42 tests pass.
 - Role change to Writer: frames regenerated and design row 5 updated (`716e20c`). `--check` exits 0, and all 2,672 relative links across the members and frames resolve; 526 were broken before.
 - RV2b (working review of RF1, TR2 and I4) and R0i3 (independent expectations for iteration 3) are running. Next: rerun C3S-01 task B and C3S-03 on the regenerated frames, then iteration 3.
+
+2026-10-14T01:17Z — Iteration 3 on hold. The product owner asked: "how can you do I3 without i3.specificaiton completeing which codex is holding the pen on?".
+
+The objection is correct. The common iteration 3 specification is still being written by the common pen: `main` moved from `1317e43` to `6c2debb` within the hour, and the main checkout holds uncommitted edits to common files. Binding iteration 3 to a moving, unsigned snapshot would have produced work and an oracle that both need redoing.
+
+Executive disposition:
+- I3-1 is stopped before writing anything.
+- Claude-line iteration 3 construction waits until the common pen freezes the iteration 3 specification and the product owner signs it off.
+- The inward merge of `6c2debb` (`6368875`) stays, because it only brings common text in under Development Isolation.
+- `qualification/C3-ITER3/EXPECTATIONS.md` is provisional, bound to the unfrozen `6c2debb`. It will be re-derived against the signed-off commit.
+- Revision 2b continues, since its repairs depend only on the `a7eba66` basis: RV2b, then the reruns of C3S-01 task B and C3S-03.
