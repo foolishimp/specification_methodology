@@ -71,7 +71,7 @@ These checks evaluate the recorded construction decisions and integrated candida
 |---|---|
 | Each member passes its local checks while two members still decide the same shared question differently | C3 closure requires the integrated reduction assessment. Separate satisfied member results cannot erase the cross-member contradiction. |
 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | Review may support the proposal; dependent member acceptance waits for the exact replacement decision recorded in the ticket. A construction grant does not supply that acceptance. |
-| Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | The installed conjunction withholds member acceptance and preserves all component results. A general favourable verdict cannot replace missing or adverse evidence. Supported inapplicability is recorded separately from a result. |
+| Five member criteria are satisfied and the sixth is missing, stale or falsified | The installed conjunction withholds member acceptance and preserves all component results. A general favourable verdict cannot replace missing or adverse evidence. Supported inapplicability of a conditional obligation is recorded separately; it does not waive any of the six criteria. |
 
 Logical review is a reviewer's reasoned reading. It finds counterexamples and contradictions without running anything. Actual-use cases do real construction, observe genuine defects, keep the uncertainty of effects, and re-enter the method at the right stage.
 

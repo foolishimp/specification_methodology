@@ -13,7 +13,7 @@ C3 reconstruction. Each tenant continues its own candidate line from the exact p
 - [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md);
 - [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md).
 
-Nothing runs until an execution contract is admitted in that ticket. Each ticket records its current actors, input and limits; historical contracts do not activate a successor. The prepared successors are EC-CODEX-I3-02 and EC-CLAUDE-I3-01 against the shared C3-I3-R2-01 input. Their ticket admission records, not this route, determine when they may start. Earlier contracts and evidence retain their historical subjects.
+Nothing runs until an execution contract is admitted in that ticket. Each ticket records its current actors, input and limits; historical contracts do not activate a successor. The current owner instruction closes the reviewed I3 common specification, then carries supported fixes into Codex. T-001 records the corrected source and independent readback before the new Codex input and contract are recorded. EC-CODEX-I3-02 and EC-CLAUDE-I3-01 retain the historical C3-I3-R2-01 input. The Claude-line admitting actor and start are resolved on its own line; this route neither ratifies that admission nor starts it. Earlier contracts and evidence retain their historical subjects.
 
 ## Territory And Returns
 
@@ -36,7 +36,7 @@ The product owner authorises reviews between tenants one at a time, under Develo
 - makes no repair;
 - does not assess work it authored.
 
-An actual Claude review runs as Claude, and an actual Codex review runs as Codex. The C1 reviews written into peer `qualification/C1_REVIEW.md` files and peer tickets before this rule are historical records, not a template.
+Cross-tenant review means assessment of the other tenant's candidate; its access and assignment require the owner's authorisation. Model family is a separate independence condition. A different-family nonauthor reviewing the activating tenant's own candidate does not thereby acquire access to the peer candidate or authority to act for that peer. Its activation, effects, independence and any spend still require the applicable grant. An actual Claude review runs as Claude, and an actual Codex review runs as Codex. The C1 reviews written into peer `qualification/C1_REVIEW.md` files and peer tickets before this rule are historical records, not a template.
 
 ## Activation Checks And Stops
 
