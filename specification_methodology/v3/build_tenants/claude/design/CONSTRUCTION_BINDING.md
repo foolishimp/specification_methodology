@@ -6,9 +6,14 @@ applies the common
 (items 1 to 6) and item 4 of the
 [Bounded Transitions And Reference Frames requirement](../../../specification/requirements/README.md#bounded-transitions-and-reference-frames)
 to this tenant's construction. It is tenant HOW, not common WHAT, and not
-accepted. The decisions and defaults in force for the current rebuild are
-recorded in the [C3-SYNTHESIS ledger](../qualification/C3-SYNTHESIS/LEDGER.md);
-this file is the design they apply.
+accepted. The decisions and defaults in force are recorded in the
+[C3-SYNTHESIS ledger](../qualification/C3-SYNTHESIS/LEDGER.md); this file is
+the design they apply. Iteration 3 runs under execution contract
+`EC-CLAUDE-I3-01` (ledger section
+[Iteration 3](../qualification/C3-SYNTHESIS/LEDGER.md#iteration-3)); its
+work plan is [C3-ITER3/PLAN](../qualification/C3-ITER3/PLAN.md), and its
+reduction and interpretation designs are [REDUCTION](REDUCTION.md) and
+[INTERPRETATION](INTERPRETATION.md).
 
 Terms used here:
 
@@ -75,6 +80,18 @@ is a working check:
 - its result is evidence for the Executive's `local_repair`, `re_enter` or
   `reject`, and never supports `accept`.
 
+The same reading covers expectations. Independently specified
+expectations do not come from the author of the behaviour assessed
+([C3 Construction Contract, Independence](../../../specification/PRODUCT.md#c3-construction-contract)).
+A Claude-family actor that opened no candidate, such as the writer of
+[C3-ITER3/ORACLE](../qualification/C3-ITER3/ORACLE.md), still shares the
+family of this candidate's author. Its expectations are therefore a
+declared same-family exception for this candidate: usable for working
+checks and trial design, with the exception, its reason and its limits
+recorded where they are used, and never offered as acceptance evidence.
+Expectations, fidelity cases and acceptance reviews meant to count go to
+a non-Claude actor through the product owner.
+
 The activations the ledger calls same-family Reviewers are working checks
 in this sense. That a context did not write the subject is an actor fact,
 recorded with the check; it is not independence of authorship. Acceptance
@@ -87,21 +104,39 @@ leaves that review to the product owner's decision.
 
 ## 2. Requirements calculus bound
 
-This construction is bound to:
+Iteration 3 is bound to:
 
-- the common specification at the input snapshot recorded in the
-  [ledger](../qualification/C3-SYNTHESIS/LEDGER.md#basis);
+- the shared input `C3-I3-R2-01`: the common specification at
+  `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, merged inward at `22991db`
+  with the tenant tree unchanged, its 24 member hashes checked as recorded
+  in the [ledger](../qualification/C3-SYNTHESIS/LEDGER.md#iteration-3);
+- execution contract `EC-CLAUDE-I3-01` in T-002-CLAUDE at `651581c`
+  (SHA-256 `3c928885b7c185d467ad3764289ae796b259c0982d71f8ee46be6b944860b859`),
+  confirmed by the product owner at 2026-10-14T16:01Z. Its two fixed
+  comparison subjects are the installed predecessor and the preceding
+  candidate `5ab44d5c51bf5956d12b120d83159f6c28eee3a9`;
 - the [C3 Construction Contract](../../../specification/PRODUCT.md#c3-construction-contract),
   including acceptance criteria 1 to 6, its Independence and Limits
   paragraphs, and the installed 2.5.1-rc.2 Executive engagement it
   configures;
-- the 31 [conformance discriminators](../../../specification/conformance/README.md);
+- the 52 member-conformance discriminators and the 3 construction and
+  integrated-closure checks of the
+  [conformance questions](../../../specification/conformance/README.md);
 - [Development Isolation](../../../specification/PRODUCT.md#development-isolation)
   and [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis);
-- the product owner's instruction, recorded verbatim in the
-  [ledger](../qualification/C3-SYNTHESIS/LEDGER.md#owner-instruction),
-  which admits this rebuild and is the basis of the declared variances in
-  section 5.
+- the oracle [C3-ITER3/ORACLE](../qualification/C3-ITER3/ORACLE.md)
+  (98 expectations), under the same-family exception in section 1.
+
+The product owner's sign-off on that common specification is still open.
+The ledger carries the open decisions of the round 3 review as known
+gaps: the changes to accepted conditions, the pillar list and the
+replacement relations.
+
+Revision 2 and revision 2b were bound to the earlier snapshot recorded in
+the [ledger basis](../qualification/C3-SYNTHESIS/LEDGER.md#basis) and the
+product owner's instruction recorded verbatim in the
+[ledger](../qualification/C3-SYNTHESIS/LEDGER.md#owner-instruction). That
+instruction is still the basis of the declared variances in section 5.
 
 The installed release `stdo://releases/v2.5.1-rc.2/` governs this
 construction until a release decision. The candidate's own members, its
@@ -142,9 +177,17 @@ own closed result.
    result starts. A Review reads only a committed subject, so the subject is
    frozen before the Reviewer sees it. Record writes the tenant ledger; the
    pen's entry in T-002-CLAUDE follows later (variance V1, section 5).
-2. Concurrency. At most three activations run at once. Activations that
+2. Concurrency. At most four activations run at once in iteration 3; the
+   revision 2 limit was three (Operational assumptions gives the reason
+   for each). Activations that
    run at the same time have disjoint territories: no file appears in two of
-   them. Files that every member's work touches (the frontier copy, GLOSSARY,
+   them. A read-only working check has no territory and counts toward the
+   limit. Proposed by I3-1 for the Executive's disposition, not yet in
+   force: read-only helpers that an activation starts inside its own
+   grant, with no territory and no effect, are part of that activation,
+   and its return discloses their number, their concurrency and what they
+   acquired. The law as it stood during I3-1 did not address such
+   helpers. Files that every member's work touches (the frontier copy, GLOSSARY,
    the standards README, cross-member links) are changed only by a serial
    integration activation that applies the deltas the others return.
 3. Dependency. An activation starts only when each input it names is at a
@@ -175,6 +218,7 @@ own closed result.
 | Resource | Unit | Boundary | Measurement | Record |
 |---|---|---|---|---|
 | Declared context | bytes | the intake text and every file the activation is told to read, at the named commits | `wc -c` before the activation reads | the activation's return or review file |
+| Acquired context | bytes, three figures | supplied: the declared context above; cumulative: every file or section actually read, repeated reads counted again; active retained: the measured or supported upper bound on material held at once | `wc -c` of each file or section read, summed by the activation; a read-only helper inside an activation reports its own sum | the return or review file, the three figures kept apart ([C3 Limits](../../../specification/PRODUCT.md#c3-construction-contract)) |
 | Fresh-actor context | bytes and input tokens | the whole input of the headless process, framework overhead included | `qualification/instruments/bounded_step.py` measures bytes before start and logs host-reported tokens | the run directory |
 | Wall time | minutes | from the activation's start, which the Executive logs in the ledger, to its closed result | UTC timestamps: `date -u` at start and at return, and the ledger's entries | the ledger and the return or review file |
 | Spend | USD | one headless run | `total_cost_usd` as the host CLI reports it | the run directory |
@@ -215,7 +259,7 @@ recorded with the result.
 | Executive acting as Writer (set up, merge inward, commit, record) | the files the effect changes and the ledger | 15 minutes per effect | counted in the Executive's limit | the role-change entry in the ledger, with UTC times |
 | Writer (subagent) | 300,000 bytes of declared material | 45 minutes, the size in PLAN's activation conventions | USD 20 | declared bytes by `wc -c` before reading, in the return file; host-added context: not measured; start in the ledger and end by `date -u`; spend: `unavailable` |
 | Working check (subagent) | 300,000 bytes of declared material | 45 minutes | USD 20 | as for a Writer, in the review file |
-| Fresh actor (headless run) | the cap in its task card, at most 120,000 bytes of whole input | 10 minutes | USD 2 per run, and USD 15 for all runs of the rebuild, the upper end of PLAN's estimate for activation C6 | whole input in bytes before start and host-reported tokens, by `bounded_step.py`; duration from the run log; `total_cost_usd` after the run; all in the run directory |
+| Fresh actor (headless run) | the cap in its task card, at most 120,000 bytes of whole input; a run with read-only tools also declares a cap on active retained context | 10 minutes | USD 2 per run. Iteration 3: the ledger's allowance of USD 15 for all iteration 3 trials (balance USD 15.00 at 2026-10-14T16:01Z); revision 2 and 2b runs keep their own allowance and balance | whole input in bytes before start and host-reported tokens, by `bounded_step.py`; for a run with tools, every acquired file and its bytes from the transcript; duration from the run log; `total_cost_usd` after the run; all in the run directory; the balance in the ledger after each batch |
 
 Generate frames, Encode and Check run inside the Writer activation that
 performs them and count against its limits. The product owner's
@@ -231,8 +275,15 @@ limit and records their elapsed time.
   activations open, minutes of reviewer work returned hours later, and one
   Writer wrote nothing in 3 h 20 min. The limit of three in composition
   law 2 is a choice: that record shows six to eight was too many, and it
-  does not show that four or five would fail. Three keeps each return
-  disposed before the next activation on a dependent input starts.
+  does not show that four or five would fail. Three kept each return
+  disposed before the next activation on a dependent input started.
+  Iteration 3 raises the limit to four, on the Executive's selection for
+  the I3-1 activation: its work divides into four disjoint member groups
+  (Foundations and tier 1; Spec Method; profiles; packaging, frames and
+  instruments) and the interpretation into fragments of the same groups.
+  The dependency rule (law 3) still holds: no activation starts on an
+  input whose return is not disposed. If returns wait undisposed, the
+  Executive reduces concurrency (Reconfiguration).
 - A model actor's report of its own work is not evidence. The Executive
   checks files and commits, and Reviewers read the committed subject.
 - Same-family actors share the tenant's authorship (section 1) and may
@@ -240,7 +291,12 @@ limit and records their elapsed time.
 - Instruction files load into a headless actor started inside a repository
   (`bounded_step.py` lines 21 to 24 record about 6,900 context tokens inside
   this repository against about 2,260 outside it). Fresh actors therefore
-  run in an empty directory outside any repository.
+  run in an empty directory outside any repository. An empty directory does
+  not by itself exclude user-level instruction files, memory or skill
+  listings, and the common contract excludes them regardless of working
+  directory. Before any iteration 3 run, the instrument proves exclusion
+  with a canary probe ([C3-ITER3/PLAN](../qualification/C3-ITER3/PLAN.md),
+  activation I3-7a); a run without that proof is not counted as fresh.
 - The a_c checker validates structure only. A passing check is not
   evidence of fidelity.
 - The common specification may change on `main` during the rebuild. The
@@ -256,7 +312,7 @@ limit and records their elapsed time.
 | Fresh actors | headless `claude -p` processes with no tools, no MCP servers (Model Context Protocol servers, which give a model external tools and data) and no session memory, started by `qualification/instruments/bounded_step.py` in an empty directory outside any repository |
 | Repository | the git worktree `/Users/jim/src/apps/specification_methodology-claude` on branch `tenant/claude/c3-synthesis`, sparse to the common specification, `.ai-workspace/` and this tenant |
 | Builder | the installed release at `stdo://releases/v2.5.1-rc.2/`, manifest SHA-256 `3d860ff4…2782` |
-| a_c checker | `axiom_indexer/build_tenants/core/code/ac.py` read with `git show` from tag `refs/tags/axiom_indexer/v2.5.1-rc.2` (commit `9a9c4797…`), SHA-256 `5a2e0cb5…6c8`, run from a scratch copy with `python3 -I`, as pinned by the [a_c dependency contract](../../../specification/requirements/A_C_DEPENDENCY.md#immutable-mechanical-subject) |
+| a_c checker | the pinned Axiom Indexer of the [a_c dependency contract](../../../specification/requirements/A_C_DEPENDENCY.md#immutable-mechanical-subject): tag `refs/tags/axiom_indexer/v2.5.1-rc.2` (commit `9a9c4797…`), its seven Product members materialised from the tag with `git show` into a scratch copy outside any repository, each member and the inventory aggregate `55a2061b…` verified before use, `ac.py` (SHA-256 `5a2e0cb5…6c8`) run with `python3 -I`. Run only on an evaluation the product owner selects; [INTERPRETATION §5](INTERPRETATION.md#5-checker-route) gives the route |
 | Porting source | the Codex tenant candidate at `31f28f90c4a9b15243d84630fc4799024a9cd7ac`, read with `git show` only |
 | Common pen and cross-family review | Codex sessions, outside this tenant's actors; reached only through the product owner |
 | Human process | the product owner: names the Executive and Reviewer actors; accepts the checkpoint; decides every `intentionally removed` disposition, every merge to `main`, how ported parts are reviewed, and other rulings; relays reviews between sessions. Member `accept` is the named Executive's disposition, not the product owner's. |
@@ -268,7 +324,7 @@ follows, with its evidence. The Independence obligation is open.
 
 | Obligation | How the binding meets it | Evidence |
 |---|---|---|
-| Meaning and constraints | each member's restated text is assessed against acceptance criteria 1 to 6 and the 31 discriminators; each frame is tested in actual use | working-check review files, which are not acceptance evidence; cross-family acceptance review files when performed; run directories for criterion 4 |
+| Meaning and constraints | each member's restated text is assessed against acceptance criteria 1 to 6 and the applicable member-conformance discriminators (52 rows); the integrated candidate against the 3 closure checks; each frame is tested in actual use | working-check review files, which are not acceptance evidence; cross-family acceptance review files when performed; run directories for criterion 4 |
 | Authority | every authored file change lies in a declared territory; Set up and Merge inward have only the effects Development Isolation directs and author no common file; the Executive writes nothing while Executive; tickets and common files are written only by the common pen; ledger entries precede the pen's ticket entries under variance V1 | commits per territory; the ledger's role-change entries; the pen's transcription into T-002-CLAUDE |
 | Independence | open. Working checks assess the tenant's own authorship (section 1), are marked as such with their reason, and never support `accept`. Acceptance needs a cross-family Reviewer's `satisfied` and, for a cone that contains a ported part, the product owner's ruling on how ported parts are reviewed | review files recording actor, family and the working-check marking; cross-family acceptance review files when performed |
 | Required human decisions | naming the Executive and Reviewer actors, checkpoint acceptance, `intentionally removed`, merges, the review of ported parts and release stay with the product owner; member `accept` stays with the Executive the product owner names; no automated result substitutes for them | the ledger's verbatim rulings, transcribed by the pen |
@@ -296,7 +352,10 @@ rule.
   common specification the pen's ticket entry, not the ledger, is the
   record that can authorise an action. Nothing in the ledger is
   acceptance: no member `accept`, merge to `main` or common-file change
-  rests on a ledger entry.
+  rests on a ledger entry. In iteration 3 the run-scoped contract exists:
+  `EC-CLAUDE-I3-01` is admitted in T-002-CLAUDE, and every iteration 3
+  activation runs under it. V1 still covers the order of records: the
+  ledger records each disposition first and the pen transcribes it.
 - **V2, unmeasured context and spend.** The C3 Limits paragraph requires
   each activation to report its context measured before reading and its
   spend afterwards. A subagent's whole context and the spend of subagent
@@ -309,7 +368,11 @@ rule.
   and under the common specification no execution contract leaves
   `drafted` until it is made. This session acts as Executive under the
   product owner's instruction; its dispositions are working dispositions,
-  and it makes no member `accept`.
+  and it makes no member `accept`. In iteration 3, `EC-CLAUDE-I3-01`
+  names the Claude tenant session as Executive for this line, with no
+  effects in that role. Acceptance-review assignments and the review of
+  ported parts remain reserved to the product owner, so V3 still holds for
+  every member `accept`.
 
 ## 6. Reuse and representation
 
@@ -326,11 +389,24 @@ structure only (item 6).
 The configuration is derived from the task, as the Bounded Transitions
 requirement, item 4, asks, not from a fixed list of roles.
 
-**Operations.** The rebuild changes or adds text in 23 members, takes six
+**Operations.** Revision 2 changed or added text in 23 members, took six
 parts from five items nominated in the Claude cross-assessment
-([CROSS_SYNTHESIS](CROSS_SYNTHESIS.md)), regenerates frames, runs fresh
-actors and checks every member against criteria 1 to 6 and the 31
-discriminators.
+([CROSS_SYNTHESIS](CROSS_SYNTHESIS.md)), regenerated frames, ran fresh
+actors and checked every member against criteria 1 to 6 and the 31
+discriminators then in force. Iteration 3 reconciles the shared owners
+and their consumers under the reduction requirement, completes the
+foundation-to-law arguments and result mappings, re-assesses the claim
+dispositions whose text changes, builds a current a_c interpretation,
+regenerates frames, compares deciding paths against the two fixed
+baselines and runs controlled actual-use trials
+([C3-ITER3/PLAN](../qualification/C3-ITER3/PLAN.md)).
+
+**Expectations and cases.** Trial expectations and interpretation
+fidelity cases are written before the subject they test is opened, by an
+actor that wrote neither the member text nor the frame or model under
+test. Under section 1 a Claude actor doing this is a declared same-family
+exception; expectations meant to count are requested from a non-Claude
+actor through the product owner.
 
 **Dependencies.** The owners of results, conjunction and measurement must
 change before the members that use them (step 2 before step 4). Families'
@@ -379,9 +455,9 @@ no authority.
 **Alternatives considered.** One Writer for the whole line fails on
 context and attention. A peer configuration with no Executive is lawful in
 general, but the C3 contract configures the installed Executive
-engagement for this construction. More than three concurrent activations
-is not chosen; the limit of three is the choice stated under Operational
-assumptions.
+engagement for this construction. More than four concurrent activations
+is not chosen; the limits of three (revision 2) and four (iteration 3) are
+the choices stated under Operational assumptions.
 
 **Reconfiguration.** The Executive may split an activation that returns
 `incomplete` or `re_entry_requested`, reduce concurrency, or change an
