@@ -1,5 +1,17 @@
 # Intent
 
+## Executive Summary
+
+The Specification Methodology defines how to turn a required outcome into software or a process, and establish that the result is acceptable. It reconstructs accumulated practice around [shared principles and laws](PRODUCT.md#foundational-reduction). The aim is less independent interpretation and reconciliation, with necessary distinctions preserved. Shared laws govern actual decisions and replace repeated determinations.
+
+Work begins at a described current state A and seeks a destination Z defined by constraints. Bounded transitions carry work toward that outcome while preserving applicable obligations. Evidence and authority determine whether to continue, repair, recover or stop. The workspace persists; an actor's account of it can be discarded and rebuilt. Resumption starts from the current state and retains valid progress.
+
+Finite context and attention require task-specific reference frames: sufficient relevant material, governing rules and authority for a task. Roles and coordination structures follow from the work, actor capabilities and required assurance. Each realisation justifies its arrangement.
+
+The product consists of method documents and their interpretation in the axiomatic calculus, a_c. [Foundations](PRODUCT.md#method-structure) own shared laws; the Spec Method applies them to defining, constructing, evaluating and releasing products; profiles add domain-specific rules. Shared meaning has one owner. Evaluations use one result algebra that preserves failures, uncertainty and domain distinctions.
+
+The method relates what an algorithm does, what its information means and how work is carried out. Category theory expresses these relationships with explicit preservation obligations. Each [build tenant](PRODUCT.md#build-tenant-binding) binds common requirements to a computational calculus and a human, machine or mixed execution environment. The a_c interpretation compresses the method's logic into constraints and dependencies an actor can acquire for its task, preserving permitted choices and unknowns. Its fidelity and usefulness require evidence from the represented rules and actual use.
+
 ## Mission
 
 To define a precise method for constructing software and processes from a coherent core of principles, expressed as constraints within which people and computational actors can work. The method uses categorical relationships and an axiomatic representation to make its logic explicit, check its constructions and apply the method to itself.
