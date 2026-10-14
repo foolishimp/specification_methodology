@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T10:19:10Z
+updated_at: 2026-10-14T13:42:23Z
 priority: high
 dependencies: [T-002]
 ---
@@ -23,7 +23,7 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## Current Iteration 3 Contract
 
-Current state: `EC-CODEX-I3-02` is admitted below for the owner's requested next implementation on `C3-I3-R2-01`. The separate tenant session can begin after bringing the shared recording commit inward and checking its preimage. No tenant worker was started by the common repair. Earlier contracts and entries retain their historical subjects and are superseded for this next run only; their bytes and admissions remain preserved.
+Current state: `EC-CODEX-I3-02` returns a coherent frozen draft, `candidate_ready` for review. Complete package `3aaa2f2`, evidence and current return `939ce0c146ed46e34aabec6080e4900f3b2d460c`, branch `tenant/codex/c3-iteration-3`. The three fixed comparison arms each meet 30/30 assertions across 21 cases. [The visible return](../../comments/codex/20261014T134223Z_RETURN_CODEX_V3_I3_R2.md) records exact subjects, costs and remaining qualification. Construction workers have returned; member acceptance, integration, installed qualification and release remain open. Earlier contracts, admissions and evidence retain their bytes and historical subjects.
 
 ### EC-CODEX-I3-02 — construct the successor on the repaired I3 input
 
@@ -219,6 +219,8 @@ Complete-package finalization correctly refuses two conservation comparison subj
 2026-10-14 — The [conversion readback](../../comments/codex/I3_R2_COMPILED_RELATION_READBACK.md), SHA-256 `7a09e179991495b58922b67d839bcd8cef22c5886cf6f14c47ccc8153f9be5bf`, satisfies F1's exact successor predicate: only the 67 identified construction-standing fields were removed; all remaining values and typed relations are preserved on `3aaa2f2`. The original falsified review remains unchanged. All three matched-use actors have now been activated under the frozen trial inputs, with no feedback or oracle exposure. Construction source stays fixed while their answers are produced.
 
 2026-10-14 — All three initial matched-use returns are closed and frozen at tenant `6627800d30b14cfb862d82709bf8ec5c86ca0401`. Each contains six tasks and 21 cases; their self-check counts are not independent correctness verdicts. Candidate source remains `3aaa2f2`. Executive now activates the original independent oracle Author for the grading already selected by I3-R2-MATCHED-USE-01. Exact expectations remain attempt-02-r2, oracle SHA-256 `088aa6f69ff2c243a530deea11b23ab4d4901fd98cba254c78a8cca47526a461`, actor packet `d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559`. Read the frozen returns and only their material method/fixture dependencies. Write only Codex `qualification/C3/iteration-3/use-r2/assessment/` and disposable isolated probes. Preserve oracle, tasks, actor answers and acquisition logs; no feedback-driven retry or source repair is selected. Grade every fixed semantic assertion, independently exercise the supplied construction artifact where required, disclose missing evidence and ambiguity, and separate protocol findings from method defects. Record comparison measurements within their actual boundaries. Return the bounded assessment before final construction reporting; no whole-method superiority, acceptance or release follows.
+
+2026-10-14T13:42:23Z — Executive consumes the closed fixed-oracle assessment, SHA-256 `d5ec5a7aa5449f62be86b9d2fccd0577634c0f3151cdf7293590b44a76681120`: 30/30 assertions and all 21 cases answered in each of the three arms; independent artifact probes agree. No semantic counterexample or retry is selected. The continuing FINALIZE Writer returns `candidate_ready` / `satisfied` for coherent draft construction, exact package `3aaa2f2`, current checks `cb14a63`, actor returns `6627800`, final evidence/return `939ce0c146ed46e34aabec6080e4900f3b2d460c`. Executive records that bounded construction return; it supplies no member acceptance. The [visible return](../../comments/codex/20261014T134223Z_RETURN_CODEX_V3_I3_R2.md) and updated shared work-list status expose whole-source fidelity, practical compression, proposed policy changes and reserved qualification/acceptance. Actor wall times are 16m01s / 20m40s / 19m51s; total logged emissions 235739 / 339549 / 284930 bytes. Native context/tokens/spend remain uninstrumented; no additional external paid call occurred. All delegated work has returned. Common Ledger Writer checkpoints these standing records, preserving both admitted contract digests and frozen source; the tenant Git Writer may receive that exact common standing commit inward with its own tree unchanged. No candidate merge to main, push, tag, acceptance or release is selected.
 
 ## Current Owner Direction
 
