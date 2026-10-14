@@ -140,7 +140,7 @@ affects.
 | rc.2 member | Disposition |
 |---|---|
 | ODD_METHOD | conserved in full in ODD (all 48 rows; its §21), indexed in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
-| TRAVERSAL_OCCURRENCE_PROFILE | 25 rows conserved and 1 superseded, disposed in TRAVERSAL_OCCURRENCE, Source dispositions; indexed in §2 |
+| TRAVERSAL_OCCURRENCE_PROFILE | 25 rows conserved and 1 proposed superseded, pending the product owner, disposed in TRAVERSAL_OCCURRENCE, Source dispositions; indexed in §2 |
 | baseline runtime bindings | disposed row by row in EXECUTIVE_BASELINE, with STDO_REFERENCE_FRAME_BASELINE; §6 is its index entry |
 | DESIGN_MODULE_METHOD | disposed row by row in DESIGN_MODULE, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
 | UX_METHOD | disposed row by row in UX; §4 is its index entry. The first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance was candidate text with no source in UX_METHOD, so it is no predecessor claim; it is withdrawn |

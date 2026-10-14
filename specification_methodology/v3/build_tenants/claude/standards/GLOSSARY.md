@@ -360,7 +360,44 @@ imports (§2; P1, P3).
 | closure obligations: `closure_obligations_met`; `closure_unproven` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 | carrier admission: `carrier_admitted`; `carrier_missing` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
-## 17. Source dispositions
+## 17. Labels with several senses
+
+Some labels name different things in different clauses. Each row below
+locates one sense with the clause that owns it; the label's meaning at an
+occurrence is the sense its owning clause gives, and the occurrence
+qualifies the label or states its predicate where it is used. Equal
+spelling across these rows establishes no equivalence (§1; P1, P3).
+Purpose and material relation: an actor that read one sense into another
+clause reconciled the two by itself; this index points each sense to its
+owner.
+
+| Label | Sense | Owning clause |
+|---|---|---|
+| `indeterminate` | a core result value: admissible evidence cannot decide | [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) |
+| `indeterminate` | a triage payload class, not a result | [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection) |
+| `not_applicable` | a triage payload class, not a result | [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection) |
+| `not_applicable` | a successor disposition with a bounded reason | [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) |
+| `not_applicable` | a lifecycle phase declared not to apply, with its reason | [SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency) |
+| `not_applicable` | a design-grounded exclusion and an entity-lifecycle matrix entry | [DESIGN_MODULE](DESIGN_MODULE.md), the head and the state model; [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) |
+| `not_applicable` | a traversal judgment value | [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) |
+| `refusal`, `refused` | an activation or translation refusal of a method function | [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) |
+| `refusal`, `refused` | a constraint or basis refusal of an a_c operation | [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `refusal`, `refused` | a traversal judgment decision and stop | [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) |
+| `refusal`, `refused` | a refused admission of a work contract | [ACTIVATION §1 Admission](ACTIVATION.md#admission) |
+| `gap` | an a_c stop, with a core value | [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `gap` | a conjunction gap, which has no value of its own | [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results) |
+| disposition | an acceptance disposition at a boundary | [ACTIVATION §3 Disposition](ACTIVATION.md#disposition) |
+| disposition | a successor disposition of a predecessor claim | [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) |
+| disposition | a repricing disposition of an obligation | [TICKETS §7 Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) |
+| disposition | a planning choice for an evaluation in a basis inventory, not a coverage status | `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`, Coverage And Residuals |
+| missing | the absence of a closed result | [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed |
+| adoption | Product adoption of an available profile | [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis) |
+| adoption | adoption of a shared method lesson | [SPEC_METHOD §6](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012) |
+| adoption | a consumer's adoption of a release basis | [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption) |
+| `Closed`, `closed` | a post's discussion state | [POSTING_GUIDE §7](POSTING_GUIDE.md#7-discussion-state-and-mutability) |
+| `Closed`, `closed` | a ticket or sprint status | [TICKETS §4 Status](TICKETS.md#status) |
+
+## 18. Source dispositions
 
 Rows of rc.2 GLOSSARY_GUIDE.md. Anchors are into rc.2 GLOSSARY_GUIDE.md; a
 locus is a section of this file. Every conserved row is restated in this
