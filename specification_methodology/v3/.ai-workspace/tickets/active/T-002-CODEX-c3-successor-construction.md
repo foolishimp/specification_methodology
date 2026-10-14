@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-13T23:47:54Z
+updated_at: 2026-10-14T07:36:13Z
 priority: high
 dependencies: [T-002]
 ---
@@ -21,7 +21,30 @@ dependencies: [T-002]
 
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
 
+## Current Iteration 3 Contract
+
+Current state: `EC-CODEX-I3-02` is admitted below for the owner's requested next implementation on `C3-I3-R2-01`. The separate tenant session can begin after bringing the shared recording commit inward and checking its preimage. No tenant worker was started by the common repair. Earlier contracts and entries retain their historical subjects and are superseded for this next run only; their bytes and admissions remain preserved.
+
+### EC-CODEX-I3-02 — construct the successor on the repaired I3 input
+
+- Authority and outcome: Jim's instruction to close round 2 and prepare both successive implementations. Continue this tenant's own candidate to a coherent frozen draft of the common Product, ready for independent review. This is construction authority, with no common, member, checkpoint or release acceptance.
+- Common input: `C3-I3-R2-01`, whose exact input commit and member hashes are recorded in [T-002](T-002-c3-successor-construction.md#shared-i3-input-after-round-2). The installed builder is `v2.5.1-rc.2`, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`. The input selection does not adopt the candidate as the builder.
+- Candidate preimage: `d832a51a4f91afca2ffa2e31636236f8729abf6c`, tenant tree `dd222838b69addb683343e42992a2b08c1e459a0`. Resume that work on `tenant/codex/c3-iteration-3` in `/Users/jim/src/apps/specification_methodology-codex`. A separately declared tenant Git Writer may merge the shared recording commit inward, verifying the tenant tree is unchanged before source construction. Material candidate drift is reported before dependent work; it is not silently overwritten.
+- Comparison: the installed predecessor and the preceding tenant candidate `3ad1fca31dc93ba0847bbbbf308312a554daa1f6` are the two fixed comparison subjects. Compare materially affected deciding paths under the reduction requirement, including adverse changes. This selection precedes the new reconstruction and cannot be replaced after seeing results. Existing permitted peer contributions retain the frozen `31f28f90c4a9b15243d84630fc4799024a9cd7ac` porting basis; no new peer inspection is selected.
+- Actors: the Codex tenant session acts as Executive for its line, with no effects in that role. It selects bounded Writer activations and consumes their closed returns under the installed process. Writers act only in the tenant territory below; the common pen records admissions and dispositions in this ticket. Fresh nonauthor working reviewers inspect frozen subjects. Same-family defect reviews disclose their limits; cross-tenant reviews retain the owner's separate authorisation. Acceptance-review assignments and the ported-part acceptance policy remain reserved.
+- Territory and effects: candidate design, documents, a_c representation, derived material, trials and returns only under `specification_methodology/v3/build_tenants/codex/`. Record returns in its existing qualification surface. Authorised reviewers write their own comments; they do not repair. No common, peer, v2, release or cohort mutation is granted to the tenant.
+- Required work: Continue the returned source repairs under I3-01–14 in the shared work appendix. Recheck applicable old counterexamples against the actual repaired source; regenerate stale frames, compressions, pins and a_c outputs before using them as current evidence. The recorded 47 draft replacement relations and 691 claim rows still require supported dispositions; no author return supplies acceptance.
+- Sequence: reconcile design and shared owners; repair their consumer bindings; complete the claim dispositions and named port accounting; regenerate current interpretations and views; freeze the candidate; run applicable independent source and actual-use assessments; triage and repair supported defects before retry. Each Writer receives its exact cone, source, authority, limits and exit proof. Common-specification defects return to the common pen.
+- Evidence: all six criteria retain their common scope and installed evaluation semantics. Preserve original findings, failure citations, unresolved coverage, modal force, authority and domain exceptions. Compare against the two declared baselines; test actual ordinary entry, recovery and selected frames with independently specified expectations. A changed source, frame or task retains its own evidence subject.
+- Resources: each activation declares the context, elapsed-time and spend boundaries required by Product. Report supplied context, cumulative acquisition, active retained context, wall time and spend separately where instrumented; identify unknown platform portions and make no unsupported fit claim. The owner has imposed no new universal numeric cap. Any paid actor trial must bind a separately recorded applicable allowance and its remaining balance; a new contract does not reset an old allowance.
+- Stops and continuation: preserve valid workspace progress, observe unknown effects before dependent action, and return material missing authority or input drift to its owner. Continue independent authorised work. Required acceptance or publication decisions block only the action that depends on them.
+- Return: one exact frozen candidate and its evidence, with source-linked remaining gaps and a closed installed work evaluation. Earlier trials and acceptance claims retain their subjects. No candidate merge, push, tag, publication, removal of an obligation, changed-meaning acceptance or categorical steel-thread execution follows from this contract.
+
+Admission record — 2026-10-14T07:36:13Z: the selecting Executive admits `EC-CODEX-I3-02` for draft construction under Jim's “do that close the round 2 findings” instruction and the preparation of both successor implementations recorded in [T-001](T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs). Decision: `admitted`, ready for the tenant session; no execution is inferred from recording it. Exact contract: 5,089 UTF-8 bytes, SHA-256 `b1a8ab9713b3425600c87ffcc24b35f387062a1272bfb1446d64d7c294e49ad0`, from the `### EC-CODEX-I3-02` heading through its Return line with one final newline. Input: `C3-I3-R2-01` at B `355aa8655cca9c6ba6cf5c414f9bea3032ae89fd`, with 24 members recorded in descendant R in [T-002](T-002-c3-successor-construction.md#c3-i3-round-2-shared-input-snapshot). Evidence: the [contract/law review](../../comments/codex/20261014T073055Z_REVIEW_I3_ROUND_2_CONTRACT_CLOSURE.md) and [traceability/admission review](../../comments/codex/20261014T073015Z_REVIEW_I3_R2_CLOSURE_TRACE_AND_ADMISSION.md), installed-basis verification and reproduced contract/preimage checks. The common Ledger Writer records this decision before the tenant's next activation. Actor, territory, limits, stops and return are exactly the unchanged block above; reserved decisions remain reserved.
+
 ## Current Owner Direction
+
+2026-10-14 — Common review repair is selected under [T-001](T-001-common-definition-and-checkpoints.md#current-review-repair). Claude's round-1 findings require common corrections before the next input is promoted. The completed Codex review of `d832a51` confirms bounded source repairs and the existing stale-distribution/qualification gap; it supplies no new tenant defect or acceptance. The tenant remains clean at `d832a51a4f91afca2ffa2e31636236f8729abf6c`, with source tree `dd222838b69addb683343e42992a2b08c1e459a0`. This common correction changes neither the candidate nor input amendment A1. I3-00's earlier completion means recording/consolidation only; common sign-off and I3-01–16 remain open at their stated scope.
 
 2026-10-14 — The owner selects consolidation before the next implementation increment. The [current work list](T-002-iteration-3-work.md) joins the iteration 3 specification and review findings. EC-CODEX-I3-01 remains the construction authority; the common successor snapshot will replace its input for subsequent work. Existing method, frame/calculus and profile Writers have returned their bounded repairs. Parent checkpoint Writer may freeze those returns, draft disposition corrections and evidence limits in its own tenant; it performs no further reconstruction or qualification during consolidation. The common Writer records the standard, review and snapshot on main. No candidate merge or acceptance follows from this checkpoint.
 
@@ -30,6 +53,28 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 2026-10-13T23:47:54Z — Checkpoint Writer activation, selected by the Executive on that instruction. Exact inputs are main `04b0c9a52b7c893ee792273babe0927da26e17f1` and clean Codex head `3ad1fca31dc93ba0847bbbbf308312a554daa1f6`. Territory: this ticket, the two pending Codex review posts, the [review applicability record](../../comments/codex/20261013T234754Z_REVIEW_ITERATION_2_FINDINGS_AND_SUCCESSOR.md), and the Git operations required to checkpoint and merge this tenant. Preserve both pending reviews as written, all frozen evidence, peer worktrees and the installed builder. Check the merge's source tree and scope; remove the merged Codex branch and worktree after verification under Development Isolation. Iteration 3 receives a new tenant branch after the common input is recorded. No push or tag is selected.
 
 ## Tenant Re-Entry
+
+Input-amendment A1 Writer return: recording commit `5543840bc92dc618d525695002c40569b5a92630` is merged inward at `d832a51a4f91afca2ffa2e31636236f8729abf6c`. The Codex tenant tree remains `dd222838b69addb683343e42992a2b08c1e459a0`, equal to repair checkpoint `de8232a`, and the worktree is clean. All 30 snapshot members match input B; the recording step changes no requirement bytes. Executive records I3-00 complete for consolidation and leaves I3-01–16 at their stated status. No further Writer or trial is running under this consolidation.
+
+### EC-CODEX-I3-01 input amendment A1
+
+The remaining work under EC-CODEX-I3-01 binds common input
+`C3-CODEX-I3-02` at `7b2f9339bab876f51d341a94358ab37df4b7b8d6`, recorded in the
+descendant [T-002 snapshot](T-002-c3-successor-construction.md#c3-codex-iteration-3-consolidated-input-snapshot).
+Its requirement-to-work and review-to-work trace is the
+[consolidated work list](T-002-iteration-3-work.md). The candidate preimage is
+`de8232a64ccc5388bfe47e1d5df3051cbbf3d8d0`: all three bounded Writers returned,
+and their own source hashes were verified before checkpointing. Previous checks
+remain bound to `b99ca785` and do not qualify this repair checkpoint.
+
+The original outcome, tenant territory, installed builder, resources and
+reserved decisions remain unchanged. The parent tenant Git Writer brings this
+recording commit inward and verifies the candidate tree is unchanged. Later
+member activations name their work-list items, exact source and exit proof
+before effects. This amendment selects no additional source reconstruction,
+paid trial, peer work, candidate merge or acceptance during consolidation.
+
+Executive disposition: input amendment A1 is ADMITTED on the owner's consolidation instruction, SHA-256 `63daa64261017e4f8b525db5c53d60bd916623bdc45c79e4dced76602a8879d1`. The common Ledger Writer records it before the inward integration.
 
 ### EC-CODEX-I3-01 — reconstruct the Codex method from its pillars
 
@@ -47,6 +92,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 - Closure: coherent frozen candidate with affected checks, independent working review and explicit unproved scope, ready for Jim's review. No new merge, push, tag, release, common acceptance or tenant selection is implied.
 
 2026-10-14 — Executive selects EC-CODEX-I3-01 on Jim's instruction and the common review's bounded return. Common Ledger Writer records it ADMITTED, contract SHA-256 `fc6ed417487bcf6abac656e2da9fd47620632655bda416aeba18006de1f585c9`. Tenant activation waits for the descendant snapshot recording commit, then creates its worktree from that commit. This is the current contract; EC-CODEX-SYN-01 and RF-V2-V3-COMP-01 are completed historical scopes. Finding F1 is resolved by this selection and the aligned tenant entry route.
+
+Historical contract repair: the in-place routing revision at `ca8b9c3` hashed to `bf1557dc1d1e7918d9ed50ca333890e3743ae461c904bce16437b132814850ac` and was not admitted. RR3-06 identified that mismatch. The original block above is restored byte-for-byte from `dad25ef`; its recorded `fc6ed…` admission digest now reproduces. Its original execution and input amendment A1 retain that historical basis. The new construction contract has its own identity and admission below; no current edit changes what was admitted or executed before.
 
 The tenant's design must be reframed before realisation: the first-pass design carried the retired goal that the whole corpus fits one bounded activation and treated a route to the predecessor as conservation. Re-entry is at the tenant's `design/`, which must state the accepted outcome, the tenant's member list and the map from every rc.2 member to the tenant members that receive it, before member 1 is restated.
 

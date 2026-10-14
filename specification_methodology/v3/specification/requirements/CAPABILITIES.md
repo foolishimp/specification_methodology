@@ -1,6 +1,6 @@
 # Capabilities And Evidence
 
-The current reconstruction must provide the capabilities required by the [pillars](../PRODUCT.md#foundational-reduction), [standalone successor](README.md#standalone-successor-requirement), [reduction](README.md#foundational-reduction-requirement) and [constraint-surface](README.md#constraint-surfaces-and-logic-compression) requirements. The questions below test their adequacy. A particular trial's subject and acceptance scope are selected in its work contract; the categorical steel thread retains its separate selection.
+The current reconstruction must provide the capabilities required by the [pillars](../PRODUCT.md#foundational-reduction), [standalone successor](README.md#standalone-successor-requirement), [reduction](README.md#foundational-reduction-requirement) and [constraint-surface](README.md#constraint-surfaces-and-logic-compression) requirements. The questions below are review prompts for those obligations, not separately optional capability contracts. A trial binds explicit expectations, applicability and coverage in its work contract; its selection does not make an existing obligation optional. The categorical steel thread retains its separate selection.
 
 Which capabilities follow from the accepted principles, and with which assumptions?
 
