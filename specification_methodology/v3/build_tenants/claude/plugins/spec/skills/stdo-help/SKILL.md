@@ -51,7 +51,7 @@ Explain the next functional outcome in the user's terms. Determine whether
 they need orientation, construction, evidence assessment, an owner ruling,
 continuation, recovery, adoption or conclusion; route only the affected part.
 A sufficient local instruction may use a direct Writer where the accepted
-frame basis permits it. Do not add an Executive, ticket or review merely to
+frame basis permits it. Do not add a coordinating activation, ticket or review merely to
 answer a help request. Ask for a missing owner choice only when the next action
 depends on it; reuse a sufficient existing ruling.
 

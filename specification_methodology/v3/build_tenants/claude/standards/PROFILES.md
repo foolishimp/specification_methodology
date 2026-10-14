@@ -131,13 +131,19 @@ not roles imported by spelling, as its lead declares (P1, P6).
 
 ## 7. Source dispositions
 
+Each cell names where the rows of one rc.2 member receive their
+dispositions. Every row's disposition is one of the four values of
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015); a
+row with none is unresolved, which blocks qualification of the claim it
+affects.
+
 | rc.2 member | Disposition |
 |---|---|
 | ODD_METHOD | conserved in full in ODD (all 48 rows; its §21), indexed in §2; the generic parts (bounded unit, refinement, loop structure) are generalised into ACTIVATION; the declared-binding rule of §1 is new |
-| TRAVERSAL_OCCURRENCE_PROFILE | restated in TRAVERSAL_OCCURRENCE (all 26 rows, 25 conserved and 1 superseded; its Source dispositions), indexed in §2 |
-| baseline runtime bindings | received with STDO_REFERENCE_FRAME_BASELINE by EXECUTIVE_BASELINE and disposed there; §6 is its index entry |
-| DESIGN_MODULE_METHOD | restated in full in DESIGN_MODULE, which disposes its rows, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
-| UX_METHOD | restated in full in UX, which disposes its rows; §4 is its index entry; the first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance had no source in UX_METHOD and is withdrawn |
-| WORLD_MODEL_METHOD | restated in full in WORLD_MODEL, which disposes its rows; §5 is its index entry; the generic identity and boundary law stays FOUNDATIONS §2 and P3 and IDENTITY, and the entity-cut law is WORLD_MODEL §9, bound to P3 by WORLD_MODEL's declared binding |
-| Authority compressions, schemas, templates | schemas and templates restated under standards/schemas/ and standards/templates/; the ten compressions and the requirements template's bootstrap entrypoint are unresolved, pending the product owner's ruling on supersession by projected frames |
+| TRAVERSAL_OCCURRENCE_PROFILE | 25 rows conserved and 1 superseded, disposed in TRAVERSAL_OCCURRENCE, Source dispositions; indexed in §2 |
+| baseline runtime bindings | disposed row by row in EXECUTIVE_BASELINE, with STDO_REFERENCE_FRAME_BASELINE; §6 is its index entry |
+| DESIGN_MODULE_METHOD | disposed row by row in DESIGN_MODULE, with 6A to 6C in ASSURANCE §14 to §16 and the core rule and non-goals in SPEC_METHOD §2; §3 is its index entry; the first-pass residual on the cost of the derivation chain is answered by DESIGN_MODULE §5 and §7 |
+| UX_METHOD | disposed row by row in UX; §4 is its index entry. The first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance was candidate text with no source in UX_METHOD, so it is no predecessor claim; it is withdrawn |
+| WORLD_MODEL_METHOD | disposed row by row in WORLD_MODEL; §5 is its index entry; the generic identity and boundary law stays FOUNDATIONS §2 and P3 and IDENTITY, and the entity-cut law is WORLD_MODEL §9, bound to P3 by WORLD_MODEL's declared binding |
+| Authority compressions, schemas, templates | schemas and templates conserved under standards/schemas/ and standards/templates/; the ten compressions and the requirements template's bootstrap entrypoint have no disposition yet, so they are unresolved, pending the product owner's ruling on supersession by projected frames |
 | no rc.2 member | the import rule of §1 is new in this corpus and receives no predecessor claim |

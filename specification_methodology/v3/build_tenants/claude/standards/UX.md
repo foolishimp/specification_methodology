@@ -71,8 +71,10 @@ profile even when the surrounding ecosystem conventionally accepts them
 
 ### Authority
 
-When a product, ticket, design module or review adopts this profile for a
-UX surface, this profile is the sole UX realisation authority for that
+When Product authority adopts this profile for a UX surface
+([PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)),
+recording the adoption in a product definition, ticket, design module or
+review, this profile is the sole UX realisation authority for that
 surface (P6; rc.2 #1a-constitutional-authority-rule). Project-local ADRs
 may choose the stack; they may not weaken the process model. Existing
 code, component-library convention, screenshots, comments, design
@@ -82,7 +84,13 @@ in a concrete case, the surface fails closed under SPEC_METHOD §5: the
 work either satisfies the stricter interpretation, reprices through the
 governing constitutional method, or records a scoped exemption in the
 design module before implementation proceeds (P5, P6; §15 states the
-result).
+result). Each exit is an outcome of
+[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome):
+satisfying the stricter interpretation is `resolved`, under this
+profile's fail-closed policy; repricing is `escalated` to the owner of the
+governing surface; a scoped exemption is `carried`, the exemption being
+its recorded residual; until one of them is taken, the ambiguity is
+`blocked` and implementation does not proceed.
 
 ### Foundation to law
 
@@ -117,18 +125,18 @@ adopted with it and do not follow from the foundations (P1, P6):
 - I5: UX work iterates in short cycles, in which proof for each change
   can cost more than the expected correction.
 
-| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
-|---|---|---|---|
-| P6 (independent), P1 (independent); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)), F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)); I1, I2 | a UX surface renders admitted truth and changes it only through an admitted carrier, so the UX layer never becomes the hidden constructive carrier; where no carrier exists, the surface is blocked and the work re-enters to author the carrier or reprice the requirement instead of inventing one | [§3](#3-product-truth-and-admitted-carriers); [§7](#7-carrier-binding) | the five carrier kinds and the five binding requirements: this profile; which carriers and contracts exist: the product's design |
-| P0 (recovered), P1 (independent), P4a (independent); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)); I3 | product-meaningful state changes only through typed transitions over declared inputs, so a surface's behaviour follows from those inputs | [§1](#1-position); [§4](#4-process-model); [§5](#5-state-transitions); [§9](#9-view-shape) | the Elm Architecture as the process model, with State, Msg, Update, View, Cmd and Sub, transitions computed without effects from the current state and a declared message, and a view that is a function of state alone; the unmount test for view-local ephemera: this profile |
-| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)) | effects occur only at a declared boundary, so no effect hides in rendering or in decision logic | [§6](#6-effect-membrane) | the effect membrane, a refinement of [DESIGN_MODULE §10 Effect edge](DESIGN_MODULE.md#effect-edge), which interprets declared Cmd values and returns their outcomes as typed messages, and the handler forms it names: this profile; the interpreter mechanism: the project |
-| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent); F4 imported ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)) | a surface's behaviour is reproducible from its recorded inputs, so continuation never leaks into the view, and a product surface claims closure only with an executable replay proof for each product-meaningful interaction family | [§8](#8-continuation-and-replay); [§8 Msg-replay proof](#msg-replay-proof) | the Msg-replay test, which replays messages against an empty state, and the six contents of a replay proof: this profile; the proof surface: the project's design module ([§12](#12-adoption), step 7) |
-| P3 (independent), P1 (independent), P6 (independent); I4 | UX-consumed types come from the contract shared by front end and back end, and data crossing an untrusted or out-of-process seam is validated at runtime before it enters state | [§10](#10-type-sharing) | the six seams, at which this profile makes the preference of [DESIGN_MODULE §4](DESIGN_MODULE.md#4-functional-bias-and-typing) for parsing foreign data once at ingress an obligation, and one typed schema yielding both compile-time types and runtime validators: this profile; the schema mechanism: the project |
-| P2 (independent), P6 (independent); I1 | a surface that is the public face of a product capability declares the accessibility minimum, and an internal debug surface is exempt only with its exemption recorded | [§11](#11-accessibility-minimum) | the five declarations, with WCAG AA as the recommended default for web: this profile; a stricter accessibility refinement: the project |
-| P2 (independent), P1 (independent); I3 | the stack is free while the process model is preserved, and realisations are tested against the model, never ranked | [§4 Process model without stack mandate](#process-model-without-stack-mandate); [§4 Realisation discretion](#realisation-discretion) | the process model without stack mandate, mirroring [DESIGN_MODULE §4 Functional bias without language mandate](DESIGN_MODULE.md#functional-bias-without-language-mandate): this profile; which of the two compliance tests governs, the test over §4 to §10 with no §13 failure pattern or the test over §4 to §8: pending the product owner's ruling; §15 applies the stricter while the ruling is pending, under the fail-closed rule of [§1 Authority](#authority); the language, framework, state container, effect interpreter, runtime validator and toolchain: the project, in its design module |
-| P6 (independent); F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)); I3 | an adopting surface has one UX realisation authority; existing code, conventions and artifacts are evidence only, and an ambiguity fails closed instead of weakening the process model | [§1 Authority](#authority); [§2](#2-role-and-composition) | adoption, per project and per surface, with its scope: the adopting project's design modules ([§12](#12-adoption)); the stack: the project's ADRs, which may not weaken the process model |
-| P6 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); F4 imported ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)), F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)), F13 imported ([TICKETS §5](TICKETS.md#5-from-carrier-to-execution)); I5 | a scaffold is exempt only with a recorded scope and retirement condition and never becomes production by accumulation; a UX sprint defers proof only as visible escrow that closure still pays, and closes only with every finding classified | [§12 Scaffold and exemption](#scaffold-and-exemption); [§12 UX sprint compliance escrow](#ux-sprint-compliance-escrow) | the five default-governance conditions, the escrowable and non-escrowable items and the close triggers: this profile; the generic escrow law and the six close classifications: [TICKETS §3](TICKETS.md#3-sprint-rules); the sprint boundary: [SPEC_METHOD §4](SPEC_METHOD.md#sprint-execution-boundary) |
-| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F3 imported ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) | each verdict of this profile is a refined value mapped to exactly one core value for a named predicate, so a review, a replay proof, a closure claim and a carrier check combine with other results without one being read as another or coerced to success | [§15](#15-results-of-this-profile) | the four refinements and their values: this profile |
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P1 (independent); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)), F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)); I1, I2 | By P6 a change to product truth needs an admitted authority, and by I2 the product's design declares the carriers that change it, so a UX surface renders admitted truth and changes it only through an admitted carrier, and the UX layer never becomes the hidden constructive carrier; by P1 a control's appearance carries no authority, so where no carrier exists the surface is blocked and the work re-enters to author the carrier or reprice the requirement instead of inventing one | [§3](#3-product-truth-and-admitted-carriers); [§7](#7-carrier-binding) | the five carrier kinds and the five binding requirements: this profile; which carriers and contracts exist: the product's design | 4, 5, 9 |
+| P0 (recovered), P1 (independent), P4a (independent); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)); I3 | By P0 an actor holds only finite context, and by P4a separately declared parts compose only through declared relations, so product-meaningful state changes only through typed transitions over declared inputs, and a surface's behaviour follows from those inputs; I3 makes the choice of one process model a policy, because stacks differ | [§1](#1-position); [§4](#4-process-model); [§5](#5-state-transitions); [§9](#9-view-shape) | a policy of this profile: the Elm Architecture as the process model, with State, Msg, Update, View, Cmd and Sub, transitions computed without effects from the current state and a declared message, and a view that is a function of state alone; the unmount test for view-local ephemera: this profile | 3, 4 |
+| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise); F2 imported ([ACTIVATION §1](ACTIVATION.md#1-the-step)) | By P0 an effect not visible at a declared point cannot be found by a later actor, and by P5 an undeclared effect cannot be evaluated, so effects occur only at a declared boundary and none hides in rendering or in decision logic | [§6](#6-effect-membrane) | the effect membrane, a refinement of [DESIGN_MODULE §10 Effect edge](DESIGN_MODULE.md#effect-edge), which interprets declared Cmd values and returns their outcomes as typed messages, and the handler forms it names: this profile; the interpreter mechanism: the project | 4, 8 |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent); F4 imported ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)) | By P4b the record of a step is not re-acquirable from memory, so a surface's behaviour must be reproducible from its recorded inputs; continuation therefore never leaks into the view, and by P6 a closure claim needs its evidence, so a product surface claims closure only with an executable replay proof for each product-meaningful interaction family | [§8](#8-continuation-and-replay); [§8 Msg-replay proof](#msg-replay-proof) | the Msg-replay test, which replays messages against an empty state, and the six contents of a replay proof: this profile; the proof surface: the project's design module ([§12](#12-adoption), step 7) | 6, 8, 9 |
+| P3 (independent), P1 (independent), P6 (independent); I4 | By P3 a value binds one exact basis, and by I4 data crosses seams the surface does not control, so UX-consumed types come from the contract shared by front end and back end, and by P6 data crossing an untrusted or out-of-process seam is validated at runtime before it enters state | [§10](#10-type-sharing) | the six seams, at which this profile makes the preference of [DESIGN_MODULE §4](DESIGN_MODULE.md#4-functional-bias-and-typing) for parsing foreign data once at ingress an obligation, and one typed schema yielding both compile-time types and runtime validators: this profile; the schema mechanism: the project | 2, 3, 4 |
+| P2 (independent), P6 (independent); I1 | By P2 obligations follow the outcome, and by I1 a public surface is how people reach the product's capability, so a surface that is the public face of a product capability declares the accessibility minimum; by P6 an exemption needs an authority, so an internal debug surface is exempt only with its exemption recorded | [§11](#11-accessibility-minimum) | the five declarations, with WCAG AA as the recommended default for web: this profile; a stricter accessibility refinement: the project | 1, 9 |
+| P2 (independent), P1 (independent); I3 | By P2 the method fixes only what the outcome needs, and by P1 a stack's name carries no meaning, so the stack is free while the process model is preserved, and realisations are tested against the model, never ranked | [§4 Process model without stack mandate](#process-model-without-stack-mandate); [§4 Realisation discretion](#realisation-discretion) | the process model without stack mandate, mirroring [DESIGN_MODULE §4 Functional bias without language mandate](DESIGN_MODULE.md#functional-bias-without-language-mandate): this profile; which of the two compliance tests governs, the test over §4 to §10 with no §13 failure pattern or the test over §4 to §8: pending the product owner's ruling; §15 applies the stricter while the ruling is pending, under the fail-closed rule of [§1 Authority](#authority); the language, framework, state container, effect interpreter, runtime validator and toolchain: the project, in its design module | 4, 8 |
+| P6 (independent); F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)); I3 | By P6 authority exists only through an admitted grant, so an adopting surface has one UX realisation authority, and existing code, conventions and artifacts are evidence only; by F11 an ambiguity is resolved, carried, escalated or blocked, so an ambiguity fails closed through those outcomes instead of weakening the process model | [§1 Authority](#authority); [§2](#2-role-and-composition) | who adopts: Product authority, under [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis); the adopted surfaces and scope, recorded in the adopting project's design modules ([§12](#12-adoption)); the stack: the project's ADRs, which may not weaken the process model; the map of the three exits to the ambiguity outcomes: this profile, under [ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome) | 1, 7, 9 |
+| P6 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); F4 imported ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)), F11 imported ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)), F13 imported ([TICKETS §5](TICKETS.md#5-from-carrier-to-execution)); I5 | By P6 an exemption needs an authority and by P4b a deferred obligation persists until paid, so a scaffold is exempt only with a recorded scope and retirement condition and never becomes production by accumulation; I5 makes per-change proof costly, so a UX sprint defers proof only as visible escrow that closure still pays, and closes only with every finding classified | [§12 Scaffold and exemption](#scaffold-and-exemption); [§12 UX sprint compliance escrow](#ux-sprint-compliance-escrow) | the five default-governance conditions, the escrowable and non-escrowable items and the close triggers: this profile; the generic escrow law and the six close classifications: [TICKETS §3](TICKETS.md#3-sprint-rules); the sprint boundary: [SPEC_METHOD §4](SPEC_METHOD.md#sprint-execution-boundary) | 1, 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F3 imported ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) | By P5 a value decides only what its evidence establishes, and F3 gives one core, so each verdict of this profile is a refined value mapped to exactly one core value for a named predicate, and a review, a replay proof, a closure claim and a carrier check combine with other results without one being read as another or coerced to success | [§15](#15-results-of-this-profile) | the four refinements and their values: this profile | 3, 9 |
 
 No row cites the adoption steps and scope at the opening of §12, the
 failure patterns (§13) or the review questions (§14); these sections
@@ -390,8 +398,11 @@ applies the same binding law to that contract. Absence of an admitted
 contract blocks product-truth-changing UX actions (P6, P5).
 
 A prompt for UI or operator-surface work must carry the governing UX law
-as a derived surface or projected frame of this member, rather than
-require the worker to rediscover it from the raw member. If a worker
+the task needs, acquired as
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)
+Acquisition states: a current derived surface or projected frame of this
+member where one serves the task, otherwise the deciding sections of this
+member, rather than require the worker to rediscover it. If a worker
 changes product truth through UI behaviour, the prompt must name the
 admitted carrier and action path. If the prompt cannot identify that
 carrier and action path, the correct result is a block or re-entry, not
@@ -426,7 +437,13 @@ the answer is no, continuation has leaked into the view (P4b).
 
 Every product UX surface carries at least one executable Msg-replay proof
 for each product-meaningful interaction family before claiming closure
-under this profile (P4b, P6; rc.2 #8a-msg-replay-proof-requirement). A
+under this profile (P4b, P6; rc.2 #8a-msg-replay-proof-requirement).
+Purpose and material relation: the Msg log is the surface's recorded work
+state, and replay is resumption from it
+([ACTIVATION §5 The workspace and an actor's account](ACTIVATION.md#the-workspace-and-an-actors-account)).
+A surface whose behaviour cannot be reproduced from its log holds state
+that no later actor or session can recover or check, so the proof is the
+evidence that the view owns no hidden continuation (P0, P4b). A
 replay proof includes:
 
 - an initial State fixture;
@@ -520,7 +537,8 @@ from their design modules (P2).
 
 ## 12. Adoption
 
-A project adopts this profile by (P6, P4b; rc.2 #13-adoption-guidance):
+Product authority adopts this profile for a project (§1 Authority), and
+the adoption is recorded by (P6, P4b; rc.2 #13-adoption-guidance):
 
 1. naming the profile in the project's UX-related design modules;
 2. recording the realisation stack choice (§4 Realisation discretion) and

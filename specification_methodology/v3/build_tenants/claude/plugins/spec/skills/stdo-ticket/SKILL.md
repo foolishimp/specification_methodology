@@ -71,7 +71,8 @@ rulings, and no active non-closure condition. Review checks that evidence when
 required; occurrence of review is not the closing event. Record reusable
 judgments with their question, subject/basis, support, actor/authority,
 conclusion, uncertainty and revising observation. Preserve an owner's original
-ruling separately from interpretation and invalidate only affected support.
+ruling separately from interpretation and invalidate only affected support,
+under the invalidators of `ACTIVATION.md` section 7.
 Use this ticket's existing proof/result routes; do not create a judgment registry.
 When repricing, give each affected obligation a retained, superseded, deferred
 or withdrawn disposition with its owner and applicable evidence. Preserve

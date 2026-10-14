@@ -380,14 +380,16 @@ the next action needs.
 
 ### Find The First Changed Layer
 
-| First changed layer | Change class | Re-entry point |
+The table quotes SPEC_METHOD §4 Change classes, which owns them.
+
+| Change | Change class | Re-entry point |
 |---|---|---|
-| current work-wave focus | `goal_reprice` | Goals |
-| purpose or scope | `intent_reprice` | Intent |
-| Product shape, terms, or boundary | `product_reprice` | Product |
-| invariant truth | `requirement_reprice` | Requirements |
-| realization structure | `design_reframe` | Design |
-| code or configuration only | `realization_refactor` | realized surface |
+| current bounded work-wave focus changes | `goal_reprice` | Goals |
+| directional or scope change | `intent_reprice` | Intent |
+| current product realisation changes while directional intent stays stable | `product_reprice` | Product |
+| constitutional truth changes while project direction stays stable | `requirement_reprice` | Requirements |
+| realisation structure changes while active intent and requirement truth stay stable | `design_reframe` | Design |
+| local code, configuration or attribute change with no intended constitutional or structural change; it must prove no upstream drift | `realization_refactor` | the realised surface only |
 
 Before substantive execution, establish applicable upstream work authority,
 then derive and admit one run-scoped execution contract from the first matching
@@ -600,7 +602,7 @@ or apply disposition.
 | requirement truth is missing | re-enter requirements, not code |
 | structural decision is missing | re-enter design |
 | code and test disagree | reconcile through governing authority |
-| independent review is required | stabilize one exact review subject and activate Reviewer; freeze before material reference exposure where generic-method qualification requires it |
+| independent review is required (the boundaries TICKETS §5 names) | freeze one exact review subject by identity before material reference exposure (EVALUATION §3 Protocol) and activate Reviewer |
 | a finding is adjacent to the current claim | return it as triage input; do not automatically block |
 | requested effect exceeds the grant | refuse and return to Product-owned decision authority |
 

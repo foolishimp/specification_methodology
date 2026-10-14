@@ -240,7 +240,13 @@ prerequisite or experiment basis; it does not admit that basis, and
 drafting, admitting or retaining a contract creates or renews no authority
 its owner has not admitted (P6, P2;
 [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
-creates no authority). The admitted contract names one
+creates no authority). Only an admitted contract activates a step: no
+result, child completion, tool output, model response, shared actor or
+lateral handoff activates another step or authorises continuation by
+itself, and a profile that routes results names its instances of this
+rule. Purpose and material relation: a profile and a template each stated
+this list for one configuration, so the generic rule had no owner (P6).
+The admitted contract names one
 durable result and evidence surface; every result, withheld closure and
 residual obligation is recorded there before return, a conversation return
 alone is not durable evidence, and if no such surface is authorised and

@@ -594,9 +594,9 @@ decisions. They stay distinct ledger entries even where a Product-defined
 policy maps one to another (P6, RF-007).
 
 Every result returns to the Executive, to a declared conjunction or to
-another frame through an explicit declared relation. No lateral handoff,
-child completion, model response, tool output or shared actor implicitly
-activates another frame or authorises continuation. A consumer receives the
+another frame through an explicit declared relation. That none of them
+activates another frame or authorises continuation by itself is
+[ACTIVATION §1 Admission](ACTIVATION.md#admission), applied here. A consumer receives the
 closed result and its source routes, not the child's hidden reasoning
 context (P6, P4a; ACTIVATION §7).
 

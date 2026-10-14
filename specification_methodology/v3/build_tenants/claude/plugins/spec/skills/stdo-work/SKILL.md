@@ -110,14 +110,16 @@ outcome or enlarge the grant.
 
 Use the accepted Project Reference-Frame Basis to determine applicable
 evaluations, including those required by an affected owner. A known false
-condition omits that evaluation; an unknown condition needs a bounded
-resolution or explicit residual. Missing required results cannot count as
-satisfied. Availability of a frame does not require activating it.
+condition omits that evaluation; an unknown condition is unresolved, not
+false, and the claim that depends on it is withheld until evidence or the
+owning decision resolves it (ACTIVATION §1 Applicability). Missing required
+results cannot count as satisfied. Availability of a frame does not require activating it.
 
 When that basis permits direct Writer use and one sufficient context/grant
-covers the outcome, construct directly without an additional Executive,
-Reviewer or durable ticket. Activate coordination for a material dependency,
-authority or context boundary. While occupying Executive, do not edit files or
+covers the outcome, construct directly without an additional coordinating
+activation, Reviewer or durable ticket. Activate the coordination the
+applicable configuration selects for a material dependency, authority or
+context boundary. While occupying Executive, do not edit files or
 Git state; the same actor must first enter a separately bound Writer activation.
 An actual independence requirement still needs an independent capable actor.
 One exact Writer grant may cover its declared construction, status and checkpoint
@@ -163,7 +165,8 @@ Keep reusable judgments and owner rulings in the existing carrier: exact
 question, subject/basis, supporting computed evidence, actor and authority,
 conclusion, scope, uncertainty and revising observation. Preserve the original
 owner ruling separately from interpretation. Invalidate the affected claim
-when its support changes; retain unrelated valid results. Reuse does not
+when one of the invalidators of `ACTIVATION.md` section 7 occurs; retain
+unrelated valid results. Reuse does not
 manufacture an owner ruling or satisfy required independent assessment.
 
 On repricing, retain, supersede, defer or withdraw each affected obligation with
