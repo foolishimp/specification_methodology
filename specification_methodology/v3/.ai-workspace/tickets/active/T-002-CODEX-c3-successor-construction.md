@@ -59,6 +59,10 @@ Under EC-CODEX-I3-03, the Executive selects `/root/i3_repair_oracle` as a separa
 
 ### Previous construction return
 
+### I3-R3 conservation activation
+
+The raw-source Writer returned 13 stable deciding members. The Git Writer froze them at `6a07b601fe77c7442203156f2b028a1e07fed209`; derivative and account construction remain separate. Under EC-CODEX-I3-03, the Executive activates a fresh native Conservation Writer for RP5, with this source and the consolidated plan as its input. It owns current `CONSERVATION.json`, `FRONTIER.json`, `PORT_ACCOUNT.json`, their current conservation refresh/check support and `review-repair/conservation/` only. Resolve supported changed-meaning examples and complete carrying/replacement/port coordinates, using only the already-selected peer port source at `31f28f9`. Do not grant acceptance or read the current peer. Preserve historical records; final package pins wait for the parent's complete-package freeze. The Writer returns exact semantic changes, checks and pending owner decisions. The parent Git Writer checkpoints only returned territory. Native context/spend remain uninstrumented; no paid calls, common law or peer effects are selected.
+
 Current state: `EC-CODEX-I3-02` returns a coherent frozen draft, `candidate_ready` for review. Complete package `3aaa2f2`, evidence and current return `939ce0c146ed46e34aabec6080e4900f3b2d460c`, branch `tenant/codex/c3-iteration-3`. The three fixed comparison arms each meet 30/30 assertions across 21 cases. [The visible return](../../comments/codex/20261014T134223Z_RETURN_CODEX_V3_I3_R2.md) records exact subjects, costs and remaining qualification. Construction workers have returned; member acceptance, integration, installed qualification and release remain open. Earlier contracts, admissions and evidence retain their bytes and historical subjects.
 
 ### EC-CODEX-I3-02 — construct the successor on the repaired I3 input
