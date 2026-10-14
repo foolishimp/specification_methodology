@@ -1,0 +1,283 @@
+{
+  "task_id": "T2",
+  "selected_realization": "total_cents.py:total_cents (plan r)",
+  "trace": [
+    {
+      "layer": "Intent",
+      "source": "K.intent",
+      "meaning": "Exact total of all submitted records, preserving multiplicity."
+    },
+    {
+      "layer": "Product",
+      "source": "K.product",
+      "meaning": "Finite record list to one exact signed integer; record_id is identity; no external effect."
+    },
+    {
+      "layer": "Specification",
+      "source": "K.spec",
+      "meaning": "Exactly-once contribution, zero for empty, subtraction for negatives, mathematical integers, complete disjoint partitions."
+    },
+    {
+      "layer": "Design choice",
+      "source": "Actor choice permitted by K.product and M.proportional",
+      "meaning": "Single sequential accumulator initialized to zero, adding cents for each original occurrence; standard Python integer operations. No parallelism, deduplication or optional graph profile is needed."
+    },
+    {
+      "layer": "Realisation",
+      "source": "total_cents.py",
+      "meaning": "total_cents implements r; partition_total validates and implements p; candidate_q is diagnostic rejected code only."
+    }
+  ],
+  "partition_precondition": "The original list has unique record IDs. Each partition member denotes exactly one original record. Across the finite partitions every original record ID occurs exactly once, with no foreign ID. Empty partitions are permitted. Values may repeat and partitions need not preserve original order.",
+  "preservation_argument": {
+    "r_invariant": "After k iterations, accumulator equals the sum of cents for exactly the first k original records. Initially k=0 and accumulator=0. Each iteration adds exactly the next signed integer once, preserving the invariant. At k=n the accumulator is the required total. A negative integer subtracts by integer addition.",
+    "p_argument": "Complete disjoint ID coverage makes the flattened partitions a permutation of the original records with multiplicity one. Associativity groups additions into partial totals; commutativity permits their order; identity 0 handles empty partitions and the empty input. Therefore p equals r under the declared precondition.",
+    "q_failure": "Deduplication by cents changes multiplicity whenever two distinct record IDs in one partition have the same nonzero cents. K1 yields 1 rather than 5; the smaller counterexample yields 4 rather than 8. Coincidental equal totals, zeros or distinct-valued inputs do not repair the universal contract.",
+    "number_model": "Python integer arithmetic preserves exact signed integer values without fixed-width overflow or approximation. Resource or input failure is not reported as a successful approximate total. Physical resource sufficiency for every finite mathematical input is not claimed."
+  },
+  "identity_binding": "record_id equality is the input identity relation; the fixture uses string IDs. The algorithm does not equate records by cents. Python checks uniqueness with ID equality, and partition resolution uses that same relation.",
+  "plan_dispositions": {
+    "p": "accept as a bounded realization under the explicit partition precondition",
+    "q": "reject",
+    "r": "accept as the selected bounded realization"
+  },
+  "counterexample": {
+    "input": [
+      {
+        "record_id": "a",
+        "cents": 4
+      },
+      {
+        "record_id": "b",
+        "cents": 4
+      }
+    ],
+    "partition_record_ids": [
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "required_total_cents": 8,
+    "p": 8,
+    "q": 4,
+    "r": 8,
+    "violated_clause": "K.intent: repeated equal amounts are separate records; K.spec: every occurrence contributes exactly once"
+  },
+  "categorical_claim": "None. This is an integer algebra and loop-invariant preservation argument, not a category-theoretic proof. Source/target categories and identity/composition laws have not been supplied, so no categorical functor claim is made.",
+  "method_sources": [
+    "M.chain",
+    "M.proportional",
+    "M.construction",
+    "M.functor_limit"
+  ],
+  "fixture_sources": [
+    "K.intent",
+    "K.product",
+    "K.spec",
+    "K.plans"
+  ],
+  "cases": [
+    {
+      "case_id": "K1",
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "case_source": "task T2 / initial_fixture_state.cases[K1]",
+      "method_sources": [
+        "M.chain",
+        "M.construction",
+        "M.results",
+        "M.functor_limit"
+      ],
+      "dependencies": {
+        "total": [
+          "every record occurrence",
+          "signed integer cents",
+          "K.spec"
+        ],
+        "p_and_q_partition": [
+          "complete and disjoint record-ID coverage"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "observation": {
+        "case_id": "K1",
+        "input": [
+          {
+            "record_id": "r1",
+            "cents": 4
+          },
+          {
+            "record_id": "r2",
+            "cents": 4
+          },
+          {
+            "record_id": "r3",
+            "cents": -3
+          }
+        ],
+        "partition_record_ids": [
+          [
+            "r1",
+            "r2"
+          ],
+          [
+            "r3"
+          ]
+        ],
+        "required_total_cents": 5,
+        "outputs": {
+          "p": 5,
+          "q": 1,
+          "r": 5
+        },
+        "matches_this_case": {
+          "p": true,
+          "q": false,
+          "r": true
+        }
+      },
+      "evaluation": {
+        "p": "satisfied",
+        "q": "falsified",
+        "r": "satisfied"
+      },
+      "decision": "Use r as the delivered realization. p is valid under the partition precondition. Reject q as a general realization even when this case happens to match.",
+      "permitted_action": "Local construction and deterministic computation only.",
+      "artifact": "total_cents.py"
+    },
+    {
+      "case_id": "K2",
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "case_source": "task T2 / initial_fixture_state.cases[K2]",
+      "method_sources": [
+        "M.chain",
+        "M.construction",
+        "M.results",
+        "M.functor_limit"
+      ],
+      "dependencies": {
+        "total": [
+          "every record occurrence",
+          "signed integer cents",
+          "K.spec"
+        ],
+        "p_and_q_partition": [
+          "complete and disjoint record-ID coverage"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "observation": {
+        "case_id": "K2",
+        "input": [],
+        "partition_record_ids": [
+          [],
+          []
+        ],
+        "required_total_cents": 0,
+        "outputs": {
+          "p": 0,
+          "q": 0,
+          "r": 0
+        },
+        "matches_this_case": {
+          "p": true,
+          "q": true,
+          "r": true
+        }
+      },
+      "evaluation": {
+        "p": "satisfied",
+        "q": "satisfied for this input only",
+        "r": "satisfied"
+      },
+      "decision": "Use r as the delivered realization. p is valid under the partition precondition. Reject q as a general realization even when this case happens to match.",
+      "permitted_action": "Local construction and deterministic computation only.",
+      "artifact": "total_cents.py"
+    },
+    {
+      "case_id": "K3",
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "case_source": "task T2 / initial_fixture_state.cases[K3]",
+      "method_sources": [
+        "M.chain",
+        "M.construction",
+        "M.results",
+        "M.functor_limit"
+      ],
+      "dependencies": {
+        "total": [
+          "every record occurrence",
+          "signed integer cents",
+          "K.spec"
+        ],
+        "p_and_q_partition": [
+          "complete and disjoint record-ID coverage"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "observation": {
+        "case_id": "K3",
+        "input": [
+          {
+            "record_id": "r4",
+            "cents": 8
+          },
+          {
+            "record_id": "r5",
+            "cents": -8
+          },
+          {
+            "record_id": "r6",
+            "cents": 5
+          }
+        ],
+        "partition_record_ids": [
+          [
+            "r4"
+          ],
+          [
+            "r5",
+            "r6"
+          ]
+        ],
+        "required_total_cents": 5,
+        "outputs": {
+          "p": 5,
+          "q": 5,
+          "r": 5
+        },
+        "matches_this_case": {
+          "p": true,
+          "q": true,
+          "r": true
+        }
+      },
+      "evaluation": {
+        "p": "satisfied",
+        "q": "satisfied for this input only",
+        "r": "satisfied"
+      },
+      "decision": "Use r as the delivered realization. p is valid under the partition precondition. Reject q as a general realization even when this case happens to match.",
+      "permitted_action": "Local construction and deterministic computation only.",
+      "artifact": "total_cents.py"
+    }
+  ]
+}

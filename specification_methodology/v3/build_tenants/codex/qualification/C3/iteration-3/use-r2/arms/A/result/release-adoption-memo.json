@@ -1,0 +1,260 @@
+{
+  "task_id": "T4",
+  "cases": [
+    {
+      "case_id": "L1",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "case_source": "task T4 / initial_fixture_state.cases[L1]",
+      "method_sources": [
+        "M.release",
+        "M.results",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "release": [
+          "successful exact-candidate member checks",
+          "successful exact-candidate integrated checks",
+          "remy exact release decision"
+        ],
+        "consumer_selection": [
+          "release standing",
+          "arden exact adoption decision"
+        ]
+      },
+      "unresolved": [
+        "Direct human release decision from remy for release-7 and sha256:manifest-seven is absent.",
+        "Human adoption decision from arden for consumer-c, release-7 and sha256:manifest-seven is absent."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "candidate": "release-7",
+      "manifest_digest": "sha256:manifest-seven",
+      "observations": {
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "integrated_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "staging_install": "release-7 files present; no decision authority supplied by this fact"
+      },
+      "release_decision_coordinates": null,
+      "adoption_decision_coordinates": null,
+      "release_evaluation": {
+        "checks_result": "satisfied",
+        "exact_human_decision_present": false,
+        "standing": "checks satisfied; release withheld pending exact human decision"
+      },
+      "consumer_selection_evaluation": {
+        "exact_adoption_decision_present": false,
+        "standing": "retain existing selected basis"
+      },
+      "permitted_simulated_action": "Record successful checks and staging presence; withhold release and consumer-selection change.",
+      "consumer_effective_basis_after_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_effects": "Decision memo only; no publication, installation, adoption or consumer mutation performed."
+    },
+    {
+      "case_id": "L2",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "case_source": "task T4 / initial_fixture_state.cases[L2]",
+      "method_sources": [
+        "M.release",
+        "M.results",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "release": [
+          "successful exact-candidate member checks",
+          "successful exact-candidate integrated checks",
+          "remy exact release decision"
+        ],
+        "consumer_selection": [
+          "release standing",
+          "arden exact adoption decision"
+        ]
+      },
+      "unresolved": [
+        "Human adoption decision from arden for consumer-c, release-7 and sha256:manifest-seven is absent."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "candidate": "release-7",
+      "manifest_digest": "sha256:manifest-seven",
+      "observations": {
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "integrated_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "staging_install": "release-7 files present; no decision authority supplied by this fact"
+      },
+      "release_decision_coordinates": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision_coordinates": null,
+      "release_evaluation": {
+        "checks_result": "satisfied",
+        "exact_human_decision_present": true,
+        "standing": "release supported by all declared conditions"
+      },
+      "consumer_selection_evaluation": {
+        "exact_adoption_decision_present": false,
+        "standing": "retain existing selected basis"
+      },
+      "permitted_simulated_action": "Recognize/apply the exact release decision in the simulation; retain consumer-c's current basis.",
+      "consumer_effective_basis_after_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_effects": "Decision memo only; no publication, installation, adoption or consumer mutation performed."
+    },
+    {
+      "case_id": "L3",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "case_source": "task T4 / initial_fixture_state.cases[L3]",
+      "method_sources": [
+        "M.release",
+        "M.results",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "release": [
+          "successful exact-candidate member checks",
+          "successful exact-candidate integrated checks",
+          "remy exact release decision"
+        ],
+        "consumer_selection": [
+          "release standing",
+          "arden exact adoption decision"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "candidate": "release-7",
+      "manifest_digest": "sha256:manifest-seven",
+      "observations": {
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "integrated_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "staging_install": "release-7 files present; no decision authority supplied by this fact"
+      },
+      "release_decision_coordinates": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision_coordinates": {
+        "issuer": "arden",
+        "consumer": "consumer-c",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "adopt"
+      },
+      "release_evaluation": {
+        "checks_result": "satisfied",
+        "exact_human_decision_present": true,
+        "standing": "release supported by all declared conditions"
+      },
+      "consumer_selection_evaluation": {
+        "exact_adoption_decision_present": true,
+        "standing": "adoption supported"
+      },
+      "permitted_simulated_action": "Recognize/apply the exact release decision, then apply arden's exact consumer adoption decision in the simulation.",
+      "consumer_effective_basis_after_simulated_decisions": {
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven"
+      },
+      "actual_effects": "Decision memo only; no publication, installation, adoption or consumer mutation performed."
+    },
+    {
+      "case_id": "L4",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "case_source": "task T4 / initial_fixture_state.cases[L4]",
+      "method_sources": [
+        "M.release",
+        "M.results",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "release": [
+          "successful exact-candidate member checks",
+          "successful exact-candidate integrated checks",
+          "remy exact release decision"
+        ],
+        "consumer_selection": [
+          "release standing",
+          "arden exact adoption decision"
+        ]
+      },
+      "unresolved": [
+        "Arden's authentic adoption decision names sha256:manifest-other, not required sha256:manifest-seven. An exact matching adoption decision is missing."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "candidate": "release-7",
+      "manifest_digest": "sha256:manifest-seven",
+      "observations": {
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "integrated_checks": "successful, current and authenticated for the exact candidate/manifest",
+        "staging_install": "release-7 files present; no decision authority supplied by this fact"
+      },
+      "release_decision_coordinates": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision_coordinates": {
+        "issuer": "arden",
+        "consumer": "consumer-c",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-other",
+        "decision": "adopt"
+      },
+      "release_evaluation": {
+        "checks_result": "satisfied",
+        "exact_human_decision_present": true,
+        "standing": "release supported by all declared conditions"
+      },
+      "consumer_selection_evaluation": {
+        "exact_adoption_decision_present": false,
+        "standing": "retain existing selected basis"
+      },
+      "permitted_simulated_action": "Recognize/apply the exact release decision in the simulation; refuse the mismatched adoption for this candidate and retain consumer-c's current basis.",
+      "consumer_effective_basis_after_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_effects": "Decision memo only; no publication, installation, adoption or consumer mutation performed."
+    }
+  ],
+  "staging_distinction": "Staging installation is an observation about file presence. It neither supplies remy's release decision nor arden's consumer-specific exact-digest adoption decision."
+}

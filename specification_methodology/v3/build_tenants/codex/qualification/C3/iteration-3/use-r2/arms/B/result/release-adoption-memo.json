@@ -1,0 +1,452 @@
+{
+  "task_id": "T4",
+  "scope": "Decision memo only. Actions and resulting consumer selections below are simulated; no publication, installation or adoption is executed.",
+  "staging_install": "release-7 files present. Presence supports availability only; it supplies neither remy's release decision nor arden's consumer adoption.",
+  "cases": [
+    {
+      "case_id": "L1",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "fixture_case_locator": "task T4 / cases[L1]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "release_qualification",
+        "consumer_adoption"
+      ],
+      "exact_check_evidence": {
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, authenticated and current",
+        "integrated_checks": "successful, authenticated and current",
+        "source": "L.evidence"
+      },
+      "release_decision": null,
+      "adoption_decision": null,
+      "release_standing": "Qualified candidate with release decision absent; release is withheld.",
+      "release_gate": {
+        "predicate": "Successful exact checks and remy's direct decision authorize release of this candidate and manifest",
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "basis": "L.product",
+        "verdict": "indeterminate",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "release_permitted": false,
+          "decision": null
+        },
+        "evidence": [
+          "L.evidence",
+          "L.product",
+          "L1.release_decision"
+        ],
+        "unresolved_obligations": [
+          "Direct human release decision from remy for release-7 / sha256:manifest-seven is absent."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "adoption_gate": {
+        "predicate": "Arden's exact decision authorizes consumer-c to adopt release-7 / manifest-seven",
+        "subject": "consumer-c -> release-7 / sha256:manifest-seven",
+        "basis": "L.consumer",
+        "verdict": "indeterminate",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "adoption_permitted": false,
+          "decision": null
+        },
+        "evidence": [
+          "L.consumer",
+          "L1.adoption_decision"
+        ],
+        "unresolved_obligations": [
+          "Arden's adoption decision for consumer-c / release-7 / sha256:manifest-seven is absent."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_simulated_actions": [
+        "Retain candidate/staging evidence; obtain exact remy release decision.",
+        "Retain consumer-c on release-6 / manifest-six."
+      ],
+      "consumer_effective_basis_after_permitted_simulation": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_trial_effects": {
+        "publication": "not_requested",
+        "consumer_mutation": "not_requested",
+        "reason": "Fixture permissions authorize decision simulation only."
+      },
+      "dependencies": [
+        "L.product release predicate and remy's exact mandate.",
+        "L.evidence authentic exact checks and authentic decision objects.",
+        "L.consumer owns the independent consumer selection transition."
+      ],
+      "unresolved": [
+        "Direct human release decision from remy for release-7 / sha256:manifest-seven is absent.",
+        "Arden's adoption decision for consumer-c / release-7 / sha256:manifest-seven is absent."
+      ]
+    },
+    {
+      "case_id": "L2",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "fixture_case_locator": "task T4 / cases[L2]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "release_qualification",
+        "consumer_adoption"
+      ],
+      "exact_check_evidence": {
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, authenticated and current",
+        "integrated_checks": "successful, authenticated and current",
+        "source": "L.evidence"
+      },
+      "release_decision": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision": null,
+      "release_standing": "All fixture release conditions and exact remy decision satisfied; simulated release is supported.",
+      "release_gate": {
+        "predicate": "Successful exact checks and remy's direct decision authorize release of this candidate and manifest",
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "basis": "L.product",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "release_permitted": true,
+          "decision": {
+            "issuer": "remy",
+            "release": "release-7",
+            "manifest_digest": "sha256:manifest-seven",
+            "decision": "release"
+          }
+        },
+        "evidence": [
+          "L.evidence",
+          "L.product",
+          "L2.release_decision"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "adoption_gate": {
+        "predicate": "Arden's exact decision authorizes consumer-c to adopt release-7 / manifest-seven",
+        "subject": "consumer-c -> release-7 / sha256:manifest-seven",
+        "basis": "L.consumer",
+        "verdict": "indeterminate",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "adoption_permitted": false,
+          "decision": null
+        },
+        "evidence": [
+          "L.consumer",
+          "L2.adoption_decision"
+        ],
+        "unresolved_obligations": [
+          "Arden's adoption decision for consumer-c / release-7 / sha256:manifest-seven is absent."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_simulated_actions": [
+        "Simulate release of release-7 / manifest-seven under remy's exact decision.",
+        "Retain consumer-c on release-6 / manifest-six."
+      ],
+      "consumer_effective_basis_after_permitted_simulation": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_trial_effects": {
+        "publication": "not_requested",
+        "consumer_mutation": "not_requested",
+        "reason": "Fixture permissions authorize decision simulation only."
+      },
+      "dependencies": [
+        "L.product release predicate and remy's exact mandate.",
+        "L.evidence authentic exact checks and authentic decision objects.",
+        "L.consumer owns the independent consumer selection transition."
+      ],
+      "unresolved": [
+        "Arden's adoption decision for consumer-c / release-7 / sha256:manifest-seven is absent."
+      ]
+    },
+    {
+      "case_id": "L3",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "fixture_case_locator": "task T4 / cases[L3]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "release_qualification",
+        "consumer_adoption"
+      ],
+      "exact_check_evidence": {
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, authenticated and current",
+        "integrated_checks": "successful, authenticated and current",
+        "source": "L.evidence"
+      },
+      "release_decision": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision": {
+        "issuer": "arden",
+        "consumer": "consumer-c",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "adopt"
+      },
+      "release_standing": "All fixture release conditions and exact remy decision satisfied; simulated release is supported.",
+      "release_gate": {
+        "predicate": "Successful exact checks and remy's direct decision authorize release of this candidate and manifest",
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "basis": "L.product",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "release_permitted": true,
+          "decision": {
+            "issuer": "remy",
+            "release": "release-7",
+            "manifest_digest": "sha256:manifest-seven",
+            "decision": "release"
+          }
+        },
+        "evidence": [
+          "L.evidence",
+          "L.product",
+          "L3.release_decision"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "adoption_gate": {
+        "predicate": "Arden's exact decision authorizes consumer-c to adopt release-7 / manifest-seven",
+        "subject": "consumer-c -> release-7 / sha256:manifest-seven",
+        "basis": "L.consumer",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "adoption_permitted": true,
+          "decision": {
+            "issuer": "arden",
+            "consumer": "consumer-c",
+            "release": "release-7",
+            "manifest_digest": "sha256:manifest-seven",
+            "decision": "adopt"
+          }
+        },
+        "evidence": [
+          "L.consumer",
+          "L3.adoption_decision"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_simulated_actions": [
+        "Simulate release of release-7 / manifest-seven under remy's exact decision.",
+        "Simulate explicit consumer-c selection of release-7 / manifest-seven under arden's exact decision."
+      ],
+      "consumer_effective_basis_after_permitted_simulation": {
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven"
+      },
+      "actual_trial_effects": {
+        "publication": "not_requested",
+        "consumer_mutation": "not_requested",
+        "reason": "Fixture permissions authorize decision simulation only."
+      },
+      "dependencies": [
+        "L.product release predicate and remy's exact mandate.",
+        "L.evidence authentic exact checks and authentic decision objects.",
+        "L.consumer owns the independent consumer selection transition."
+      ],
+      "unresolved": []
+    },
+    {
+      "case_id": "L4",
+      "fixture_sources": [
+        "L.product",
+        "L.consumer",
+        "L.evidence"
+      ],
+      "fixture_case_locator": "task T4 / cases[L4]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "release_qualification",
+        "consumer_adoption"
+      ],
+      "exact_check_evidence": {
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "required_members": [
+          "method",
+          "guide"
+        ],
+        "member_checks": "successful, authenticated and current",
+        "integrated_checks": "successful, authenticated and current",
+        "source": "L.evidence"
+      },
+      "release_decision": {
+        "issuer": "remy",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven",
+        "decision": "release"
+      },
+      "adoption_decision": {
+        "issuer": "arden",
+        "consumer": "consumer-c",
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-other",
+        "decision": "adopt"
+      },
+      "release_standing": "All fixture release conditions and exact remy decision satisfied; simulated release is supported.",
+      "release_gate": {
+        "predicate": "Successful exact checks and remy's direct decision authorize release of this candidate and manifest",
+        "subject": {
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven"
+        },
+        "basis": "L.product",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "release_permitted": true,
+          "decision": {
+            "issuer": "remy",
+            "release": "release-7",
+            "manifest_digest": "sha256:manifest-seven",
+            "decision": "release"
+          }
+        },
+        "evidence": [
+          "L.evidence",
+          "L.product",
+          "L4.release_decision"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "adoption_gate": {
+        "predicate": "Arden's exact decision authorizes consumer-c to adopt release-7 / manifest-seven",
+        "subject": "consumer-c -> release-7 / sha256:manifest-seven",
+        "basis": "L.consumer",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "adoption_permitted": false,
+          "decision": {
+            "issuer": "arden",
+            "consumer": "consumer-c",
+            "release": "release-7",
+            "manifest_digest": "sha256:manifest-other",
+            "decision": "adopt"
+          }
+        },
+        "evidence": [
+          "L.consumer",
+          "L4.adoption_decision"
+        ],
+        "unresolved_obligations": [
+          "Arden's authentic adoption decision names sha256:manifest-other, not sha256:manifest-seven; an exact matching adoption decision is required."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_simulated_actions": [
+        "Simulate release of release-7 / manifest-seven under remy's exact decision.",
+        "Retain consumer-c on release-6 / manifest-six."
+      ],
+      "consumer_effective_basis_after_permitted_simulation": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "actual_trial_effects": {
+        "publication": "not_requested",
+        "consumer_mutation": "not_requested",
+        "reason": "Fixture permissions authorize decision simulation only."
+      },
+      "dependencies": [
+        "L.product release predicate and remy's exact mandate.",
+        "L.evidence authentic exact checks and authentic decision objects.",
+        "L.consumer owns the independent consumer selection transition."
+      ],
+      "unresolved": [
+        "Arden's authentic adoption decision names sha256:manifest-other, not sha256:manifest-seven; an exact matching adoption decision is required."
+      ]
+    }
+  ]
+}

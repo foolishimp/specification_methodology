@@ -1,0 +1,222 @@
+{
+  "task_id": "T5",
+  "case_id": "W1",
+  "fixture_sources": [
+    "W.outcome",
+    "W.workspace",
+    "W.cached_handoff",
+    "W.recovery"
+  ],
+  "fixture_case_locator": "task T5 / cases[W1]",
+  "method_citations": [
+    "result",
+    "conjunction",
+    "workspace",
+    "recovery",
+    "closure"
+  ],
+  "destination": [
+    "Produce the index of current dataset record IDs, sorted ascending.",
+    "Retain a successful style assessment for the current style bytes.",
+    "Ensure one notice with transaction identity notice-44 has been delivered; at most one submission is allowed."
+  ],
+  "retained_artifacts": [
+    {
+      "identity": "W.workspace.current_dataset",
+      "original": {
+        "revision": "data-2",
+        "records": [
+          {
+            "id": "b"
+          },
+          {
+            "id": "a"
+          },
+          {
+            "id": "c"
+          }
+        ]
+      },
+      "standing": "current_authoritative_input",
+      "applicability": "Use data-2 to determine the complete current index."
+    },
+    {
+      "identity": "W.workspace.previous_dataset",
+      "original": {
+        "revision": "data-1",
+        "records": [
+          {
+            "id": "b"
+          },
+          {
+            "id": "a"
+          }
+        ]
+      },
+      "standing": "historical_only",
+      "applicability": "Explains the old index; it cannot stand in for the current data-2 dataset."
+    },
+    {
+      "identity": "W.workspace.existing_index",
+      "original": {
+        "dataset_revision": "data-1",
+        "ids": [
+          "a",
+          "b"
+        ]
+      },
+      "standing": "valid_for_previous_dataset_only",
+      "applicability": "The a,b index is complete for data-1 but stale for data-2; preserve it as predecessor evidence."
+    },
+    {
+      "identity": "W.workspace.partial_index",
+      "original": {
+        "dataset_revision": "data-2",
+        "ids": [
+          "a",
+          "b"
+        ],
+        "complete": false
+      },
+      "standing": "current_basis_partial_work",
+      "applicability": "Preserve observed progress but do not promote it to complete; data-2 additionally contains c."
+    },
+    {
+      "identity": "W.workspace.style_bytes_identity",
+      "original": "style-9",
+      "standing": "current_unchanged_dependency",
+      "applicability": "The retained style assessment still names the current style-9 bytes."
+    },
+    {
+      "identity": "W.workspace.style_assessment",
+      "original": {
+        "subject": "style-9",
+        "result": "successful",
+        "evidence": "style-check-19"
+      },
+      "standing": "applicable_independent_success",
+      "applicability": "Reuse style-check-19 for style-9. Its only declared dependency is style_bytes, so the dataset revision does not invalidate it; no invented rerun."
+    },
+    {
+      "identity": "W.workspace.notice_attempt_journal",
+      "original": {
+        "transaction": "notice-44",
+        "entry": "attempt started; outcome was not durably recorded"
+      },
+      "standing": "retained_attempt_evidence_not_a_delivery_or_no_effect_observation",
+      "applicability": "An attempt began locally, but its result was not durably recorded. Reconcile with the complete current operation-owner answer."
+    },
+    {
+      "identity": "W.cached_handoff",
+      "original": {
+        "summary": "All local work is complete; current index has a,b; the notice was not sent.",
+        "basis": "data-1",
+        "created_before_current_observation": true
+      },
+      "standing": "stale_non_authoritative_account",
+      "applicability": "Its local completeness statement is defeated by current data-2/partial-index evidence. Its notice statement must be checked against the case owner projection."
+    }
+  ],
+  "owner_projection": {
+    "source": "W1.owner_projection",
+    "authority": "W.recovery.observation_route",
+    "record": {
+      "transaction": "notice-44",
+      "state": "delivered",
+      "receipt": "delivery-301",
+      "payload": "Dataset processing has started."
+    },
+    "standing": "complete_current_owner_answer_for_this_independent_case"
+  },
+  "local_construction": {
+    "performed": true,
+    "artifact": "current-index.json",
+    "result": {
+      "dataset_revision": "data-2",
+      "ids": [
+        "a",
+        "b",
+        "c"
+      ],
+      "complete": true
+    },
+    "source": "W.workspace.current_dataset",
+    "replaces_for_current_use": "W.workspace.existing_index and W.workspace.partial_index",
+    "check": "IDs are exactly all data-2 IDs once and sorted ascending; see artifact-checks.json."
+  },
+  "style_result_reuse": {
+    "retained": {
+      "subject": "style-9",
+      "result": "successful",
+      "evidence": "style-check-19"
+    },
+    "current_subject": "style-9",
+    "evidence": "style-check-19",
+    "rerun_performed": false,
+    "reason": "W.outcome declares style_assessment -> style_bytes only; style-9 is current and unchanged."
+  },
+  "cached_account_reconciliation": {
+    "local_work": "Cached data-1 completeness is stale: data-2 contains a,b,c. The new complete index has a,b,c.",
+    "notice": "The owner's delivered projection and delivery-301 contradict the cached 'not sent' claim. Retain the attempted journal and current receipt; propose no new submission."
+  },
+  "notice_result": {
+    "predicate": "The required notice-44 has been delivered",
+    "subject": "notice-44 / Dataset processing has started.",
+    "basis": "W.outcome + W.recovery",
+    "verdict": "satisfied",
+    "performance": "performed",
+    "original_domain_outcome": {
+      "owner_state": "delivered",
+      "owner_receipt": "delivery-301"
+    },
+    "evidence": [
+      "W1.owner_projection",
+      "W.recovery",
+      "W.workspace.notice_attempt_journal"
+    ],
+    "unresolved_obligations": [],
+    "effects": {
+      "boundary": "Synthetic notice-44 delivery at operation owner.",
+      "observation": "completed"
+    }
+  },
+  "next_permitted_action": "No notice submission. Return satisfied bounded destination based on current index, retained style success and delivery-301.",
+  "proposed_external_effect": null,
+  "actual_external_effect_performed": false,
+  "destination_result": {
+    "predicate": "Every W.outcome destination obligation is currently satisfied",
+    "subject": "resumed work W1 at data-2/style-9/notice-44",
+    "basis": "W.outcome + W.workspace + W.recovery",
+    "verdict": "satisfied",
+    "performance": "performed",
+    "original_domain_outcome": {
+      "local_index": "complete",
+      "style_assessment": "retained successful",
+      "notice": "delivered"
+    },
+    "evidence": [
+      "current-index.json",
+      "style-check-19",
+      "W1.owner_projection"
+    ],
+    "unresolved_obligations": [],
+    "effects": {
+      "boundary": "Synthetic destination effects: constructed current index plus required notice delivery.",
+      "observation": "completed"
+    }
+  },
+  "current_false_vs_future_work": null,
+  "dependencies": {
+    "index": [
+      "W.workspace.current_dataset:data-2"
+    ],
+    "style_assessment": [
+      "W.workspace.style_bytes_identity:style-9",
+      "style-check-19"
+    ],
+    "notice_delivery": [
+      "notice-44 owner observation"
+    ]
+  },
+  "unresolved": []
+}

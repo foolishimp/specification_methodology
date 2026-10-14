@@ -1,0 +1,441 @@
+{
+  "task_id": "T6",
+  "case_independence": "Each case starts at displayed_label Maximum 100 records and worker_count 1 as applicable; I1 does not change I2 and I3 does not supply a grant or result to I4.",
+  "cases": [
+    {
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "method_citations": [
+        "triage",
+        "classification",
+        "upward",
+        "carrier",
+        "execution_admission",
+        "direct_writer",
+        "closure",
+        "configuration"
+      ],
+      "actor_configuration": "One capable direct Writer/evaluator. No optional coordination profile or independent reviewer is selected by the fixture.",
+      "real_world_effects": "Only local result artifacts are written; all Product/work-record changes described here are simulated.",
+      "case_id": "I1",
+      "request": "Make the displayed maximum match the Product.",
+      "change_class": "realization_refactor",
+      "earliest_changed_description": "Realisation: the displayed label.",
+      "outcome": "Display the existing Product maximum of 1000.",
+      "scope": "Label only, plus evidence in work-17.",
+      "observation": {
+        "displayed_label": "Maximum 100 records",
+        "product_maximum": 1000,
+        "design_relation": "The label displays the Product maximum; it owns no separate maximum."
+      },
+      "authority": {
+        "carrier": "work-17",
+        "source": "I.work.carrier_w17",
+        "admission": "The supplied work authority explicitly admits this exact label correction and evidence recording.",
+        "contract_identity": "work-17 / correct displayed maximum to I.product",
+        "new_approval_required": false
+      },
+      "work_record_amendment": {
+        "carrier": "work-17",
+        "before": {
+          "displayed_label": "Maximum 100 records"
+        },
+        "after": {
+          "displayed_label": "Maximum 1000 records"
+        },
+        "result_artifact": "I1-label.json",
+        "target_truth": "Label displays I.product.maximum_export_records.",
+        "closure_law": "Exact displayed value equals 1000; scope remains label only; retain evidence in work-17.",
+        "assessment": "Self-check exact value against I.product/I.design; no independent review selected.",
+        "non_closure_conditions": [
+          "Label value differs from Product.",
+          "Unrequested Product, export behavior or accepted-design change."
+        ]
+      },
+      "upstream_preservation": {
+        "Goals": "No change selected.",
+        "Intent": "No change selected.",
+        "Product": "1000 remains maximum; required export behavior unchanged.",
+        "Requirements": "Existing Product maximum is enforced in the label.",
+        "Design": "Existing label-as-projection relation unchanged."
+      },
+      "proof": {
+        "before": 100,
+        "expected": 1000,
+        "after": 1000,
+        "equality": true,
+        "design_coverage": "I.design.ui_text explicitly covers the label."
+      },
+      "result": {
+        "predicate": "The label matches the Product maximum within work-17's exact grant",
+        "subject": "I1 label",
+        "basis": "I.product + I.design + I.work.carrier_w17",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "displayed_label": "Maximum 1000 records"
+        },
+        "evidence": [
+          "I1-label.json",
+          "I.product",
+          "I.design",
+          "I.work.carrier_w17"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Simulated label change represented by I1-label.json.",
+          "observation": "completed"
+        }
+      },
+      "required_steps": [
+        "Triage and bind the existing exact admitted work authority.",
+        "Change the label within its grant and self-check against the governing Product.",
+        "Record the bounded result/evidence in the existing work-17 amendment."
+      ],
+      "optional_choices": [
+        "A separate ticket, Executive appointment, reviewer or separate design document is not required for this supplied local claim."
+      ],
+      "additional_carrier": {
+        "required": false,
+        "reason": "work-17 covers the exact work and evidence; no new independent lifetime or obligation is selected."
+      },
+      "reentry_destination": "Existing work-17 at the label realization; no upstream re-entry is needed.",
+      "dependencies": [
+        "I.product.maximum_export_records",
+        "I.design.ui_text",
+        "I.work.carrier_w17"
+      ],
+      "unresolved": []
+    },
+    {
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "method_citations": [
+        "triage",
+        "classification",
+        "upward",
+        "carrier",
+        "execution_admission",
+        "direct_writer",
+        "closure",
+        "configuration"
+      ],
+      "actor_configuration": "One capable direct Writer/evaluator. No optional coordination profile or independent reviewer is selected by the fixture.",
+      "real_world_effects": "Only local result artifacts are written; all Product/work-record changes described here are simulated.",
+      "case_id": "I2",
+      "request": "Make batches of 2000 records admissible.",
+      "change_class": "product_reprice",
+      "earliest_changed_description": "Product: maximum_export_records must change from 1000 to 2000 to admit the requested batch.",
+      "outcome": "Proposed Product outcome: batches of 2000 become admissible.",
+      "scope": "Intake proposal and reserved-owner re-entry only; no execution admitted.",
+      "observation": {
+        "current_maximum": 1000,
+        "requested_maximum": 2000,
+        "current_rule": "Reject a batch above 1000.",
+        "selected_work": "work-17",
+        "selected_work_scope": "Label correction only."
+      },
+      "authority": {
+        "existing_carrier": "work-17",
+        "covers_requested_work": false,
+        "reserved_owner": "priya",
+        "missing": "Product owner priya's decision changing maximum_export_records, followed by a work grant/contract that covers the resulting downstream changes.",
+        "route": "priya via Product decision record"
+      },
+      "work_record_amendment": {
+        "kind": "Unadmitted request-intake proposal retained in this result surface",
+        "selected_existing_record": "work-17",
+        "disposition": "Scope mismatch; do not widen work-17 or mark this work admitted.",
+        "proposed_target": {
+          "maximum_export_records": 2000
+        },
+        "operative_simulated_product_retained": {
+          "maximum_export_records": 1000
+        },
+        "dependent_surfaces": [
+          "Product maximum",
+          "Downstream requirement/acceptance boundary at 1000 versus 2000",
+          "Accepted design/configuration and label projections affected by the owner change",
+          "Export boundary tests and evidence"
+        ],
+        "non_closure_conditions": [
+          "Priya's exact Product decision absent.",
+          "No admitted downstream change contract."
+        ]
+      },
+      "proof": {
+        "comparison": "2000 > I.product.maximum_export_records (1000).",
+        "source": "I.product",
+        "scope_check": "I.work.carrier_w17 grants only label correction."
+      },
+      "result": {
+        "predicate": "The 2000-record change is authorized under work-17",
+        "subject": "I2 request",
+        "basis": "I.product + I.work.carrier_w17",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "disposition": "re_enter",
+          "reason": "Requested Product change exceeds the exact label-only grant."
+        },
+        "evidence": [
+          "I2",
+          "I.product",
+          "I.work.carrier_w17"
+        ],
+        "unresolved_obligations": [
+          "Priya's reserved Product decision and an exact downstream work basis are needed."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "required_steps": [
+        "Re-enter Product owner priya for the changed maximum.",
+        "If admitted, propagate the owner decision through affected requirements, design, realization and evidence before relying on 2000."
+      ],
+      "optional_choices": [
+        "A durable ticket is a later organizational choice unless admitted work or an obligation needs independent state past the applicable local boundary."
+      ],
+      "additional_carrier": {
+        "required_now": false,
+        "reason": "No applicable upstream change authority exists. Creating a ticket would not supply priya's reserved decision. Retain the unresolved intake in this authorized result surface."
+      },
+      "reentry_destination": "priya via Product decision record, then work owner for an exact admitted contract.",
+      "dependencies": [
+        "I.product.reserved_decisions",
+        "I.work.carrier_w17 scope",
+        "I.observations.owner_routes"
+      ],
+      "unresolved": [
+        "Priya's decision is absent.",
+        "Dependent authorized scope, carrier lifetime and execution admission are not yet supplied."
+      ]
+    },
+    {
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "method_citations": [
+        "triage",
+        "classification",
+        "upward",
+        "carrier",
+        "execution_admission",
+        "direct_writer",
+        "closure",
+        "configuration"
+      ],
+      "actor_configuration": "One capable direct Writer/evaluator. No optional coordination profile or independent reviewer is selected by the fixture.",
+      "real_world_effects": "Only local result artifacts are written; all Product/work-record changes described here are simulated.",
+      "case_id": "I3",
+      "request": "Set worker_count to 2.",
+      "change_class": "realization_refactor",
+      "earliest_changed_description": "Realisation: worker_count configuration.",
+      "outcome": "Set worker_count to 2 under existing admitted work-18.",
+      "scope": "worker_count only, plus evidence in work-18.",
+      "observation": {
+        "worker_count": 1,
+        "admitted_range": [
+          1,
+          4
+        ],
+        "accepted_design": "A configurable integer from 1 through 4; selecting a value inside that range changes no Product or accepted design obligation."
+      },
+      "authority": {
+        "carrier": "work-18",
+        "source": "I.work.carrier_w18",
+        "admission": "The supplied work authority explicitly admits setting worker_count to 2 and recording evidence.",
+        "contract_identity": "work-18 / set worker_count 2",
+        "new_approval_required": false
+      },
+      "work_record_amendment": {
+        "carrier": "work-18",
+        "before": {
+          "worker_count": 1
+        },
+        "after": {
+          "worker_count": 2
+        },
+        "result_artifact": "I3-config.json",
+        "target_truth": "worker_count is 2 within the admitted 1..4 range.",
+        "closure_law": "Exact value 2 is present and remains covered by I.product and I.design; evidence retained in work-18.",
+        "assessment": "Focused self-check only; no separately selected independent review.",
+        "non_closure_conditions": [
+          "Value is not 2.",
+          "Value is outside 1..4.",
+          "A Product/design obligation changes."
+        ]
+      },
+      "upstream_preservation": {
+        "Goals": "Existing work-18 outcome retained.",
+        "Intent": "No change selected.",
+        "Product": "Range remains 1..4; export behavior and maximum remain unchanged.",
+        "Requirements": "No changed requirement.",
+        "Design": "Existing configurable integer choice already covers 2."
+      },
+      "proof": {
+        "integer": true,
+        "lower_bound": 1,
+        "value": 2,
+        "upper_bound": 4,
+        "in_range": true,
+        "design_coverage": "I.design.worker_count explicitly permits this selection."
+      },
+      "result": {
+        "predicate": "worker_count is 2 within work-18 and the accepted range",
+        "subject": "I3 configuration",
+        "basis": "I.product + I.design + I.work.carrier_w18",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "worker_count": 2
+        },
+        "evidence": [
+          "I3-config.json",
+          "I.product",
+          "I.design",
+          "I.work.carrier_w18"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Simulated configuration change represented by I3-config.json.",
+          "observation": "completed"
+        }
+      },
+      "required_steps": [
+        "Triage and reuse work-18's exact grant.",
+        "Set 2, check range and unchanged accepted design, then record evidence in work-18."
+      ],
+      "optional_choices": [
+        "No extra ticket, Executive appointment, reviewer or design reframe is required."
+      ],
+      "additional_carrier": {
+        "required": false,
+        "reason": "work-18 already covers the exact operation and its evidence."
+      },
+      "reentry_destination": "Existing work-18 at the realized configuration.",
+      "dependencies": [
+        "I.product.worker_count_range",
+        "I.design.worker_count",
+        "I.work.carrier_w18"
+      ],
+      "unresolved": [],
+      "claim_limit": "No latency improvement or performance target satisfaction is claimed."
+    },
+    {
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "method_citations": [
+        "triage",
+        "classification",
+        "upward",
+        "carrier",
+        "execution_admission",
+        "direct_writer",
+        "closure",
+        "configuration"
+      ],
+      "actor_configuration": "One capable direct Writer/evaluator. No optional coordination profile or independent reviewer is selected by the fixture.",
+      "real_world_effects": "Only local result artifacts are written; all Product/work-record changes described here are simulated.",
+      "case_id": "I4",
+      "request": "Make it fast enough.",
+      "change_class": "unresolved",
+      "earliest_changed_description": "Undetermined: the intended performance outcome and scope must be defined before the earliest changed governing layer can be classified.",
+      "outcome": "Unspecified 'fast enough' outcome.",
+      "scope": "Bounded intake clarification record only; no implementation or benchmark effect is granted.",
+      "observation": {
+        "latency_target": null,
+        "observed_latency": null,
+        "workload": null,
+        "selected_work": null,
+        "target_or_effect_grant": null
+      },
+      "authority": {
+        "existing_carrier": null,
+        "missing": "An exact performance outcome, subject/workload, scope and work/effect grant from the work owner.",
+        "route": "work owner via request intake record",
+        "execution_admitted": false
+      },
+      "work_record_amendment": {
+        "kind": "Unadmitted intake draft",
+        "state": "needs owner input",
+        "requested_inputs": [
+          "What operation and workload must meet what measurable latency/throughput target, under what operating conditions?",
+          "What is the current observed result and desired boundary?",
+          "Which actions, write territory, evaluation and work lifetime are authorized?"
+        ],
+        "no_candidate_config_change": true,
+        "non_closure_conditions": [
+          "Target and affected subject unknown.",
+          "No observation establishes a defect.",
+          "No effect grant or admitted execution contract."
+        ]
+      },
+      "proof": {
+        "source": "I.observations.performance_measurements and I4.target_or_effect_grant",
+        "finding": "Neither target nor observed latency is supplied, so no supported performance-gap classification or concrete repair can be derived."
+      },
+      "result": {
+        "predicate": "The request selects an exact outcome and sufficient admitted work scope",
+        "subject": "I4 request",
+        "basis": "I.work + I.observations",
+        "verdict": "indeterminate",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "disposition": "return_missing_input",
+          "change_class": "unresolved"
+        },
+        "evidence": [
+          "I4",
+          "I.observations",
+          "I.work.carrier_policy"
+        ],
+        "unresolved_obligations": [
+          "Defined target, workload, evidence, scope and exact work/effect authority."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "required_steps": [
+        "Return missing outcome/scope to the work owner through the intake record.",
+        "After sufficient inputs, classify the earliest affected governing layer and admit its smallest sufficient work contract before effects."
+      ],
+      "optional_choices": [
+        "Do not choose an architecture, benchmark, worker_count, ticket or actor hierarchy solely from this vague request."
+      ],
+      "additional_carrier": {
+        "required_now": false,
+        "reason": "No execution authority or work lifetime is established. Keep this draft in the authorized result surface; a ticket cannot supply the missing outcome or grant."
+      },
+      "reentry_destination": "Work owner via request intake record; governing-layer re-entry remains conditional on that owner's defined outcome.",
+      "dependencies": [
+        "I.observations.owner_routes",
+        "I.work.carrier_policy"
+      ],
+      "unresolved": [
+        "Target, workload, observations, affected boundary and scope are absent.",
+        "Effect grant and execution admission are absent.",
+        "Carrier lifetime cannot yet be determined."
+      ]
+    }
+  ]
+}

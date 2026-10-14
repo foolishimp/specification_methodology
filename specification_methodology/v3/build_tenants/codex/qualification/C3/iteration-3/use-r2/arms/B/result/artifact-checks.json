@@ -1,0 +1,319 @@
+{
+  "schema": "arm-B-local-artifact-checks.v1",
+  "checked_at_utc": "2026-10-14T13:11:29.159774+00:00",
+  "authority": "Self-check of this initial bounded return; no oracle, other arm or independent review used.",
+  "checks": [
+    {
+      "name": "K1 concrete p/q/r outputs",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "p": 5,
+          "q": 1,
+          "r": 5
+        },
+        "actual": {
+          "p": 5,
+          "q": 1,
+          "r": 5
+        }
+      }
+    },
+    {
+      "name": "K2 concrete p/q/r outputs",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "p": 0,
+          "q": 0,
+          "r": 0
+        },
+        "actual": {
+          "p": 0,
+          "q": 0,
+          "r": 0
+        }
+      }
+    },
+    {
+      "name": "K3 concrete p/q/r outputs",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "p": 5,
+          "q": 5,
+          "r": 5
+        },
+        "actual": {
+          "p": 5,
+          "q": 5,
+          "r": 5
+        }
+      }
+    },
+    {
+      "name": "K1 is a retained q counterexample",
+      "passed": true,
+      "detail": {
+        "q": 1,
+        "required": 5,
+        "lost_occurrence": "r2 contributes a separate +4"
+      }
+    },
+    {
+      "name": "r preserves a total above fixed-width integer ranges",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "p preserves a total above fixed-width integer ranges",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negative-only total",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate partition occurrence refused",
+      "passed": true,
+      "detail": {
+        "rejection": "partition must cover every record ID exactly once"
+      }
+    },
+    {
+      "name": "omitted partition occurrence refused",
+      "passed": true,
+      "detail": {
+        "rejection": "partition must cover every record ID exactly once"
+      }
+    },
+    {
+      "name": "foreign partition identity refused",
+      "passed": true,
+      "detail": {
+        "rejection": "partition must cover every record ID exactly once"
+      }
+    },
+    {
+      "name": "duplicate input identity refused",
+      "passed": true,
+      "detail": {
+        "rejection": "duplicate record_id"
+      }
+    },
+    {
+      "name": "float coercion refused",
+      "passed": true,
+      "detail": {
+        "rejection": "cents must be an exact integer, not a coercible value"
+      }
+    },
+    {
+      "name": "bool-as-int coercion refused",
+      "passed": true,
+      "detail": {
+        "rejection": "cents must be an exact integer, not a coercible value"
+      }
+    },
+    {
+      "name": "usable stdin CLI computes K1",
+      "passed": true,
+      "detail": {
+        "command": [
+          "/usr/local/bin/python3",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/use-r2/arms/B/result/total_cents.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"total_cents\": 5}",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "CLI refuses approximation input",
+      "passed": true,
+      "detail": {
+        "exit_code": 2,
+        "stdout": "{\"outcome\": \"rejected\", \"cause\": \"cents must be an exact integer, not a coercible value\"}"
+      }
+    },
+    {
+      "name": "JSON readable: answers.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: assessment-ledger.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: construction-assessment.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: domain-results.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: release-adoption-memo.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: current-index.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: recovery-W1.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: recovery-W2.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: recovery-W3.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: intake-records.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: I1-label.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: I3-config.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: method-citations.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: acquisition-record.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "JSON readable: computed-totals.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all six tasks and all 21 named cases present",
+      "passed": true,
+      "detail": {
+        "T1": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "T2": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "T3": [
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ],
+        "T4": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "T5": [
+          "W1",
+          "W2",
+          "W3"
+        ],
+        "T6": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ]
+      }
+    },
+    {
+      "name": "every answer case cites registered fixture and method sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every named usable artifact exists",
+      "passed": true,
+      "detail": [
+        "assessment-ledger.json",
+        "total_cents.py",
+        "construction-assessment.json",
+        "computed-totals.json",
+        "domain-results.json",
+        "release-adoption-memo.json",
+        "current-index.json",
+        "recovery-W1.json",
+        "recovery-W2.json",
+        "recovery-W3.json",
+        "intake-records.json",
+        "I1-label.json",
+        "I3-config.json"
+      ]
+    },
+    {
+      "name": "all 21 detailed case pointers resolve",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "native core result records retain required coordinates and legal pairs",
+      "passed": true,
+      "detail": {
+        "records": 42,
+        "failures": []
+      }
+    },
+    {
+      "name": "current index is complete for data-2 and sorted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "I1 concrete label",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "I3 concrete configuration",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "summary": {
+    "passed": 38,
+    "failed": 0,
+    "total": 38
+  },
+  "limits": [
+    "Finite execution checks supplement the mathematical argument; they do not establish universal resource fit.",
+    "Schema/reference checks do not independently establish semantic correctness.",
+    "The q counterexample and all refusal observations are retained."
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "task_id": "T2",
+  "fixture_sources": [
+    "K.intent",
+    "K.product",
+    "K.spec",
+    "K.plans"
+  ],
+  "method_citations": [
+    "bounded",
+    "typed_composition",
+    "orthogonal",
+    "conservation",
+    "outcome",
+    "totality",
+    "test_authority"
+  ],
+  "realization": "total_cents.py",
+  "chosen_plan": "r",
+  "choice_basis": "K.product explicitly leaves algorithm, technology and sequential/parallel execution open. Choose a direct sequential Python integer accumulator for a small complete realization; no optional graph profile, actor hierarchy or categorical model is selected.",
+  "trace": [
+    {
+      "from": "Intent",
+      "source": "K.intent",
+      "meaning": "Exact signed total of all submitted records; repeated equal amounts remain separate records.",
+      "to": "Product",
+      "preservation": "No deduplication or approximation is introduced."
+    },
+    {
+      "from": "Product",
+      "source": "K.product",
+      "meaning": "Finite list of uniquely identified records -> one exact integer total_cents; no external effects.",
+      "to": "Specification",
+      "preservation": "Record identity remains independent of cents equality."
+    },
+    {
+      "from": "Specification",
+      "source": "K.spec",
+      "meaning": "Each occurrence once; empty -> 0; negatives subtract; exact arithmetic; partitions preserve each ID once.",
+      "to": "Realisation",
+      "preservation": "Integer accumulator initialized to 0 and updated once per original record. Boundary validates finite list, integer amounts and unique identities."
+    },
+    {
+      "from": "Realisation",
+      "source": "total_cents.py:total_cents",
+      "meaning": "Python int addition with no fixed-width conversion or floating-point step.",
+      "to": "Evidence",
+      "preservation": "K1/K2/K3 outputs plus explicit invariant argument and bounded large-integer and invalid-input checks."
+    }
+  ],
+  "algorithmic_account": "r is a left fold of integer addition starting at zero. p partitions occurrences by ID and performs an inner fold in each partition followed by an outer fold. q additionally quotients cents values within partitions.",
+  "informational_account": "The material distinctions are occurrence multiplicity, record identity and signed integer value. r and a valid p retain every occurrence contribution. q discards multiplicity whenever different records have equal amounts in one partition.",
+  "computational_account": "The delivered implementation uses Python arbitrary-precision int and a sequential process. Resource exhaustion or invalid input yields a refusal/indeterminate boundary response and never a fabricated total. No claim of universal capacity or optimal cost is made.",
+  "preconditions": [
+    "The admitted input is a finite list of records with unique record_id under stable record-identity equality, and cents in the mathematical integers.",
+    "The implementation binds mathematical integers to Python int and rejects float/bool cents instead of coercing.",
+    "For p and q's supplied partitions, every original record ID occurs exactly once across the concatenated partition ID lists; no unknown ID, duplicate ID, omitted ID or altered amount is allowed. Empty partitions are permitted.",
+    "Reading one invocation's admitted list is stable for the duration of its local calculation."
+  ],
+  "preservation_argument": {
+    "r": "After k iterations, accumulator = sum of cents in exactly the first k input occurrences. Base k=0 is the additive identity. The next update adds the (k+1)th occurrence once, preserving the invariant. The finite list terminates at n, so every occurrence contributes once. Signed integer addition handles negative amounts; n=0 yields 0.",
+    "p": "Given the partition precondition, the multiset of partition occurrences is exactly the input occurrence multiset. Associativity allows regrouping the same additions, commutativity allows any permitted partition/reassembly order, and 0 handles empty partitions. Thus sum of partition sums equals the original occurrence total.",
+    "q": "Invalid as a general realization: equal amounts are not equal record identities. K1 has two distinct IDs r1 and r2, both with cents 4, in one partition. q gives 4 + (-3) = 1 whereas the required total is 4 + 4 + (-3) = 5. Its correct K2/K3 outputs do not remove that counterexample.",
+    "evidence_kind": "Mathematically argued loop and partition preservation; finite concrete outputs are locally checked. No categorical proof, functor, categorical equivalence or universal operational qualification is claimed."
+  },
+  "plans": [
+    {
+      "plan": "p",
+      "contract_verdict": "satisfied",
+      "scope": "Every admitted input with a valid exact-once identity partition and exact integer arithmetic.",
+      "counterexample_under_preconditions": null,
+      "precondition_failure_example": {
+        "input": [
+          {
+            "record_id": "x",
+            "cents": 7
+          }
+        ],
+        "partition_record_ids": [
+          [
+            "x"
+          ],
+          [
+            "x"
+          ]
+        ],
+        "naive_output": 14,
+        "required_output": 7,
+        "standing": "Rejected by partition validation; outside p's admitted partition precondition, not a counterexample to valid p."
+      }
+    },
+    {
+      "plan": "q",
+      "contract_verdict": "falsified",
+      "scope": "General admitted input family.",
+      "counterexample": "K1: required 5, q outputs 1, losing r2's separate +4 contribution."
+    },
+    {
+      "plan": "r",
+      "contract_verdict": "satisfied",
+      "scope": "Every admitted finite list with exact integer arithmetic.",
+      "counterexample_under_preconditions": null
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "K1",
+      "input": [
+        {
+          "record_id": "r1",
+          "cents": 4
+        },
+        {
+          "record_id": "r2",
+          "cents": 4
+        },
+        {
+          "record_id": "r3",
+          "cents": -3
+        }
+      ],
+      "partition_record_ids": [
+        [
+          "r1",
+          "r2"
+        ],
+        [
+          "r3"
+        ]
+      ],
+      "expected_total_cents": 5,
+      "outputs": {
+        "p": 5,
+        "q": 1,
+        "r": 5
+      },
+      "partition_precondition_holds": true,
+      "case_conformance": {
+        "p": true,
+        "q": false,
+        "r": true
+      },
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "method_citations": [
+        "bounded",
+        "typed_composition",
+        "orthogonal",
+        "conservation"
+      ],
+      "dependencies": [
+        "K.spec exact integer laws",
+        "K.product identity and admitted finite input",
+        "Exact-once partition for p/q"
+      ],
+      "unresolved": [],
+      "permitted_action": "Compute and return local totals; no submission or release."
+    },
+    {
+      "case_id": "K2",
+      "input": [],
+      "partition_record_ids": [
+        [],
+        []
+      ],
+      "expected_total_cents": 0,
+      "outputs": {
+        "p": 0,
+        "q": 0,
+        "r": 0
+      },
+      "partition_precondition_holds": true,
+      "case_conformance": {
+        "p": true,
+        "q": true,
+        "r": true
+      },
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "method_citations": [
+        "bounded",
+        "typed_composition",
+        "orthogonal",
+        "conservation"
+      ],
+      "dependencies": [
+        "K.spec exact integer laws",
+        "K.product identity and admitted finite input",
+        "Exact-once partition for p/q"
+      ],
+      "unresolved": [],
+      "permitted_action": "Compute and return local totals; no submission or release."
+    },
+    {
+      "case_id": "K3",
+      "input": [
+        {
+          "record_id": "r4",
+          "cents": 8
+        },
+        {
+          "record_id": "r5",
+          "cents": -8
+        },
+        {
+          "record_id": "r6",
+          "cents": 5
+        }
+      ],
+      "partition_record_ids": [
+        [
+          "r4"
+        ],
+        [
+          "r5",
+          "r6"
+        ]
+      ],
+      "expected_total_cents": 5,
+      "outputs": {
+        "p": 5,
+        "q": 5,
+        "r": 5
+      },
+      "partition_precondition_holds": true,
+      "case_conformance": {
+        "p": true,
+        "q": true,
+        "r": true
+      },
+      "fixture_sources": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans"
+      ],
+      "method_citations": [
+        "bounded",
+        "typed_composition",
+        "orthogonal",
+        "conservation"
+      ],
+      "dependencies": [
+        "K.spec exact integer laws",
+        "K.product identity and admitted finite input",
+        "Exact-once partition for p/q"
+      ],
+      "unresolved": [],
+      "permitted_action": "Compute and return local totals; no submission or release."
+    }
+  ],
+  "dependencies": [
+    "K.intent",
+    "K.product",
+    "K.spec",
+    "K.plans"
+  ],
+  "unresolved": [],
+  "limit": "Three fixture outputs alone do not prove the universal claims; the stated invariants and admitted laws supply the preservation argument."
+}

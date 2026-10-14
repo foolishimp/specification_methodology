@@ -1,0 +1,685 @@
+{
+  "task_id": "T1",
+  "artifact": "assessment-ledger.json",
+  "predicate": "All required checksum, retention and access assessments are applicable, authenticated and successful for bundle:17 on requirements:4.",
+  "actor_grant": "Evaluate and construct a recommendation record. No actual owner approval or repair.",
+  "cases": [
+    {
+      "case_id": "E1",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "standing": "applicable_authenticated_failure",
+          "observation": {
+            "id": "obs-41",
+            "text": "For subject 17, checksum expected aa11 but observed bb22."
+          },
+          "original_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "failed",
+            "evidence": "obs-41"
+          },
+          "original_result": {
+            "predicate": "checksum satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "falsified",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "failed",
+              "producer": "checker-a"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-41"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "falsified",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E1.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "standing": "uncovered_required_check_outside_assessment_plan",
+          "observation": null,
+          "original_assessment": null,
+          "original_result": null,
+          "applicability_to_required_subject": false,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": false,
+            "result": null,
+            "known_performance": "unconfirmed"
+          },
+          "dependency": "E.contract required_checks and checker-b assessment on bundle:17/requirements:4",
+          "unresolved": [
+            "No applicable retention judgment supplied; its execution is unconfirmed. Required coverage remains open."
+          ],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E1.other_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "standing": "authentic_other_subject_result_inadmissible_for_required_slot",
+          "observation": {
+            "id": "obs-42",
+            "text": "For subject 16, access restriction was met."
+          },
+          "original_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:16",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-42"
+          },
+          "original_result": {
+            "predicate": "access satisfies its requirement",
+            "subject": "urn:fixture:bundle:16",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-c"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-42"
+            ]
+          },
+          "applicability_to_required_subject": false,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": false,
+            "result": null,
+            "known_performance": "unconfirmed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [
+            "Need checker-c access judgment on bundle:17/requirements:4; existing obs-42 remains valid only on bundle:16."
+          ],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E1.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "obs-41",
+          "text": "For subject 17, checksum expected aa11 but observed bb22."
+        },
+        {
+          "id": "obs-42",
+          "text": "For subject 16, access restriction was met."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "falsified",
+        "performance": "performed",
+        "qualified_domain_outcome": "approval_recommendation_withheld",
+        "recommend_approval": false,
+        "owner_approval": "not made; outside actor grant",
+        "effect": {
+          "boundary": "fixture approval or repair",
+          "state": "not_requested"
+        },
+        "evidence": [
+          "obs-41",
+          "obs-42"
+        ],
+        "unresolved": [
+          "No applicable retention judgment supplied; its execution is unconfirmed. Required coverage remains open.",
+          "Need checker-c access judgment on bundle:17/requirements:4; existing obs-42 remains valid only on bundle:16."
+        ]
+      },
+      "decision": "Withhold approval recommendation; preserve the checksum failure and all coverage conditions.",
+      "dependencies": [
+        "All three required checks, named producer authenticity, exact subject/basis, and the recommendation condition in E.contract."
+      ],
+      "unresolved": [
+        "No applicable retention judgment supplied; its execution is unconfirmed. Required coverage remains open.",
+        "Need checker-c access judgment on bundle:17/requirements:4; existing obs-42 remains valid only on bundle:16."
+      ],
+      "fixture_citations": [
+        "E.contract",
+        "E.evidence",
+        "E1"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.conjunction",
+        "M.applicability",
+        "M.authority"
+      ]
+    },
+    {
+      "case_id": "E2",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "standing": "applicable_authenticated_failure",
+          "observation": {
+            "id": "obs-41",
+            "text": "For subject 17, checksum expected aa11 but observed bb22."
+          },
+          "original_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "failed",
+            "evidence": "obs-41"
+          },
+          "original_result": {
+            "predicate": "checksum satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "falsified",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "failed",
+              "producer": "checker-a"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-41"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "falsified",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E2.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "standing": "applicable_authenticated_success",
+          "observation": {
+            "id": "obs-44",
+            "text": "For subject 17, retention duration is 30 days as required."
+          },
+          "original_assessment": {
+            "check": "retention",
+            "producer": "checker-b",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-44"
+          },
+          "original_result": {
+            "predicate": "retention satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-b"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-44"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "satisfied",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract required_checks and checker-b assessment on bundle:17/requirements:4",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E2.other_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "standing": "applicable_authenticated_success",
+          "observation": {
+            "id": "obs-43",
+            "text": "For subject 17, access restriction is met."
+          },
+          "original_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-43"
+          },
+          "original_result": {
+            "predicate": "access satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-c"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-43"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "satisfied",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E2.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "obs-41",
+          "text": "For subject 17, checksum expected aa11 but observed bb22."
+        },
+        {
+          "id": "obs-43",
+          "text": "For subject 17, access restriction is met."
+        },
+        {
+          "id": "obs-44",
+          "text": "For subject 17, retention duration is 30 days as required."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "falsified",
+        "performance": "performed",
+        "qualified_domain_outcome": "approval_recommendation_withheld",
+        "recommend_approval": false,
+        "owner_approval": "not made; outside actor grant",
+        "effect": {
+          "boundary": "fixture approval or repair",
+          "state": "not_requested"
+        },
+        "evidence": [
+          "obs-41",
+          "obs-43",
+          "obs-44"
+        ],
+        "unresolved": []
+      },
+      "decision": "Withhold approval recommendation; preserve the checksum failure and all coverage conditions.",
+      "dependencies": [
+        "All three required checks, named producer authenticity, exact subject/basis, and the recommendation condition in E.contract."
+      ],
+      "unresolved": [],
+      "fixture_citations": [
+        "E.contract",
+        "E.evidence",
+        "E2"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.conjunction",
+        "M.applicability",
+        "M.authority"
+      ]
+    },
+    {
+      "case_id": "E3",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "standing": "applicable_authenticated_success",
+          "observation": {
+            "id": "obs-45",
+            "text": "For subject 17 in a case that cites obs-45, checksum expected aa11 and observed aa11."
+          },
+          "original_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-45"
+          },
+          "original_result": {
+            "predicate": "checksum satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-a"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-45"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "satisfied",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E3.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "standing": "applicable_authenticated_success",
+          "observation": {
+            "id": "obs-44",
+            "text": "For subject 17, retention duration is 30 days as required."
+          },
+          "original_assessment": {
+            "check": "retention",
+            "producer": "checker-b",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-44"
+          },
+          "original_result": {
+            "predicate": "retention satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-b"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-44"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "satisfied",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract required_checks and checker-b assessment on bundle:17/requirements:4",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E3.other_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "standing": "applicable_authenticated_success",
+          "observation": {
+            "id": "obs-43",
+            "text": "For subject 17, access restriction is met."
+          },
+          "original_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-43"
+          },
+          "original_result": {
+            "predicate": "access satisfies its requirement",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "qualified_domain_outcome": {
+              "domain": "fixture assessment",
+              "outcome": "successful",
+              "producer": "checker-c"
+            },
+            "effects": {
+              "boundary": "assessment record; no fixture mutation",
+              "state": "not_requested"
+            },
+            "evidence": [
+              "obs-43"
+            ]
+          },
+          "applicability_to_required_subject": true,
+          "required_slot": {
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "covered": true,
+            "result": "satisfied",
+            "known_performance": "performed"
+          },
+          "dependency": "E.contract review_authority and exact subject/basis",
+          "unresolved": [],
+          "fixture_citations": [
+            "E.contract",
+            "E.evidence",
+            "E3.returned_assessments"
+          ],
+          "method_citations": [
+            "M.result",
+            "M.conjunction",
+            "M.applicability"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "id": "obs-45",
+          "text": "For subject 17 in a case that cites obs-45, checksum expected aa11 and observed aa11."
+        },
+        {
+          "id": "obs-43",
+          "text": "For subject 17, access restriction is met."
+        },
+        {
+          "id": "obs-44",
+          "text": "For subject 17, retention duration is 30 days as required."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "qualified_domain_outcome": "approval_recommendation_supported",
+        "recommend_approval": true,
+        "owner_approval": "not made; outside actor grant",
+        "effect": {
+          "boundary": "fixture approval or repair",
+          "state": "not_requested"
+        },
+        "evidence": [
+          "obs-45",
+          "obs-43",
+          "obs-44"
+        ],
+        "unresolved": []
+      },
+      "decision": "Record a positive approval recommendation for this exact subject and basis.",
+      "dependencies": [
+        "All three required checks, named producer authenticity, exact subject/basis, and the recommendation condition in E.contract."
+      ],
+      "unresolved": [],
+      "fixture_citations": [
+        "E.contract",
+        "E.evidence",
+        "E3"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.conjunction",
+        "M.applicability",
+        "M.authority"
+      ]
+    }
+  ],
+  "comparative_explanation": [
+    "E1 has an applicable checksum failure (obs-41), an authentic access success for another subject (obs-42), and unplanned uncovered retention. The applicable failure falsifies the conjunction even though coverage is incomplete.",
+    "E2 supplies exact-subject access (obs-43) and an independently authenticated retention success (obs-44). Retention was outside the plan but is admissible under E.contract's required set and named authority. That supplied judgment closes its evidence slot; the checksum failure still defeats recommendation.",
+    "E3 is independent: checksum now has obs-45, and obs-41 is not an observation in E3. All required exact-subject assessments succeed. Recommend approval without making the owner's approval decision."
+  ],
+  "artifacts": [
+    "assessment-ledger.json"
+  ],
+  "unresolved": [
+    "No applicable retention judgment supplied; its execution is unconfirmed. Required coverage remains open.",
+    "Need checker-c access judgment on bundle:17/requirements:4; existing obs-42 remains valid only on bundle:16."
+  ]
+}
+

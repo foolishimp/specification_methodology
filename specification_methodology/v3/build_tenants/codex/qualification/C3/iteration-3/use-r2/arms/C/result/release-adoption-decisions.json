@@ -1,0 +1,337 @@
+{
+  "task_id": "T4",
+  "artifact": "release-adoption-decisions.json",
+  "cases": [
+    {
+      "case_id": "L1",
+      "observations": {
+        "checks": "Required method and guide member checks and integrated checks are successful, current and authenticated for release-7/sha256:manifest-seven.",
+        "staging_install": "release-7 files present; presence supplies neither release nor consumer adoption.",
+        "release_decision": null,
+        "adoption_decision": null
+      },
+      "release_standing": "Qualification supported; release withheld because the direct exact human release decision is absent.",
+      "release_authorization": {
+        "predicate": "Supplied conditions authorize release-7/manifest-seven.",
+        "subject": "release-7",
+        "basis": "L.product and L.evidence",
+        "verdict": "falsified",
+        "performance": "performed",
+        "performance_scope": "This actor's normalization or assessment of the stated predicate; original operation/evaluation facts are retained separately.",
+        "qualified_domain_outcome": {
+          "domain": "release decision",
+          "outcome": "withheld",
+          "reason": "Required exact remy release decision is null in the complete case."
+        },
+        "evidence": [
+          "L.product",
+          "L.evidence",
+          "L1"
+        ],
+        "unresolved": [
+          "Direct remy release decision naming release-7 and sha256:manifest-seven."
+        ],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "adoption_standing": "No consumer adoption decision; retain selected basis.",
+      "permitted_simulated_action": "Withhold release and adoption; retain consumer-c on release-6/manifest-six.",
+      "effective_consumer_basis_after_authorized_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "supporting_decision_coordinates": {
+        "release": null,
+        "adoption": null,
+        "rejected_or_missing_adoption": null
+      },
+      "decision": "Record the permitted simulation and exact withheld decisions only. No actual publication, install, adoption or dispatch is executed.",
+      "dependencies": [
+        "L.product required member/integrated checks and remy exact human decision.",
+        "L.consumer arden exact consumer/release/manifest decision; publication and staging install cannot substitute."
+      ],
+      "unresolved": [
+        "Direct remy release decision naming release-7 and sha256:manifest-seven.",
+        "Direct arden adopt decision naming consumer-c, release-7 and sha256:manifest-seven."
+      ],
+      "fixture_citations": [
+        "L.product",
+        "L.consumer",
+        "L.evidence",
+        "L1"
+      ],
+      "method_citations": [
+        "M.release",
+        "M.adoption",
+        "M.authority",
+        "M.result",
+        "M.conjunction"
+      ],
+      "actual_external_effects": "not_requested in this artifact-only trial"
+    },
+    {
+      "case_id": "L2",
+      "observations": {
+        "checks": "Required method and guide member checks and integrated checks are successful, current and authenticated for release-7/sha256:manifest-seven.",
+        "staging_install": "release-7 files present; presence supplies neither release nor consumer adoption.",
+        "release_decision": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption_decision": null
+      },
+      "release_standing": "Qualification supported and direct exact human release decision present. Simulated release is permitted; actual publication is not performed or observed by this actor.",
+      "release_authorization": {
+        "predicate": "Supplied conditions authorize release-7/manifest-seven.",
+        "subject": "release-7",
+        "basis": "L.product and L.evidence",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "This actor's normalization or assessment of the stated predicate; original operation/evaluation facts are retained separately.",
+        "qualified_domain_outcome": {
+          "domain": "release decision",
+          "outcome": "authorized",
+          "reason": "Exact remy release decision and required successful checks."
+        },
+        "evidence": [
+          "L.product",
+          "L.evidence",
+          "L2"
+        ],
+        "unresolved": [],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "adoption_standing": "No consumer adoption decision; retain selected basis.",
+      "permitted_simulated_action": "Release release-7/manifest-seven; retain consumer-c on release-6/manifest-six.",
+      "effective_consumer_basis_after_authorized_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "supporting_decision_coordinates": {
+        "release": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption": null,
+        "rejected_or_missing_adoption": null
+      },
+      "decision": "Record the permitted simulation and exact withheld decisions only. No actual publication, install, adoption or dispatch is executed.",
+      "dependencies": [
+        "L.product required member/integrated checks and remy exact human decision.",
+        "L.consumer arden exact consumer/release/manifest decision; publication and staging install cannot substitute."
+      ],
+      "unresolved": [
+        "Direct arden adopt decision naming consumer-c, release-7 and sha256:manifest-seven."
+      ],
+      "fixture_citations": [
+        "L.product",
+        "L.consumer",
+        "L.evidence",
+        "L2"
+      ],
+      "method_citations": [
+        "M.release",
+        "M.adoption",
+        "M.authority",
+        "M.result",
+        "M.conjunction"
+      ],
+      "actual_external_effects": "not_requested in this artifact-only trial"
+    },
+    {
+      "case_id": "L3",
+      "observations": {
+        "checks": "Required method and guide member checks and integrated checks are successful, current and authenticated for release-7/sha256:manifest-seven.",
+        "staging_install": "release-7 files present; presence supplies neither release nor consumer adoption.",
+        "release_decision": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption_decision": {
+          "issuer": "arden",
+          "consumer": "consumer-c",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "adopt"
+        }
+      },
+      "release_standing": "Qualification supported and direct exact human release decision present. Simulated release is permitted; actual publication is not performed or observed by this actor.",
+      "release_authorization": {
+        "predicate": "Supplied conditions authorize release-7/manifest-seven.",
+        "subject": "release-7",
+        "basis": "L.product and L.evidence",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "This actor's normalization or assessment of the stated predicate; original operation/evaluation facts are retained separately.",
+        "qualified_domain_outcome": {
+          "domain": "release decision",
+          "outcome": "authorized",
+          "reason": "Exact remy release decision and required successful checks."
+        },
+        "evidence": [
+          "L.product",
+          "L.evidence",
+          "L3"
+        ],
+        "unresolved": [],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "adoption_standing": "Exact consumer adoption authorized.",
+      "permitted_simulated_action": "Release release-7/manifest-seven and adopt that exact release for consumer-c.",
+      "effective_consumer_basis_after_authorized_simulated_decisions": {
+        "release": "release-7",
+        "manifest_digest": "sha256:manifest-seven"
+      },
+      "supporting_decision_coordinates": {
+        "release": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption": {
+          "issuer": "arden",
+          "consumer": "consumer-c",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "adopt"
+        },
+        "rejected_or_missing_adoption": null
+      },
+      "decision": "Record the permitted simulation and exact withheld decisions only. No actual publication, install, adoption or dispatch is executed.",
+      "dependencies": [
+        "L.product required member/integrated checks and remy exact human decision.",
+        "L.consumer arden exact consumer/release/manifest decision; publication and staging install cannot substitute."
+      ],
+      "unresolved": [],
+      "fixture_citations": [
+        "L.product",
+        "L.consumer",
+        "L.evidence",
+        "L3"
+      ],
+      "method_citations": [
+        "M.release",
+        "M.adoption",
+        "M.authority",
+        "M.result",
+        "M.conjunction"
+      ],
+      "actual_external_effects": "not_requested in this artifact-only trial"
+    },
+    {
+      "case_id": "L4",
+      "observations": {
+        "checks": "Required method and guide member checks and integrated checks are successful, current and authenticated for release-7/sha256:manifest-seven.",
+        "staging_install": "release-7 files present; presence supplies neither release nor consumer adoption.",
+        "release_decision": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption_decision": {
+          "issuer": "arden",
+          "consumer": "consumer-c",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-other",
+          "decision": "adopt"
+        }
+      },
+      "release_standing": "Qualification supported and direct exact human release decision present. Simulated release is permitted; actual publication is not performed or observed by this actor.",
+      "release_authorization": {
+        "predicate": "Supplied conditions authorize release-7/manifest-seven.",
+        "subject": "release-7",
+        "basis": "L.product and L.evidence",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "This actor's normalization or assessment of the stated predicate; original operation/evaluation facts are retained separately.",
+        "qualified_domain_outcome": {
+          "domain": "release decision",
+          "outcome": "authorized",
+          "reason": "Exact remy release decision and required successful checks."
+        },
+        "evidence": [
+          "L.product",
+          "L.evidence",
+          "L4"
+        ],
+        "unresolved": [],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "adoption_standing": "Supplied adoption is authentic but has the wrong manifest; target adoption withheld.",
+      "permitted_simulated_action": "Release release-7/manifest-seven; retain consumer-c on release-6/manifest-six.",
+      "effective_consumer_basis_after_authorized_simulated_decisions": {
+        "release": "release-6",
+        "manifest_digest": "sha256:manifest-six"
+      },
+      "supporting_decision_coordinates": {
+        "release": {
+          "issuer": "remy",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-seven",
+          "decision": "release"
+        },
+        "adoption": null,
+        "rejected_or_missing_adoption": {
+          "issuer": "arden",
+          "consumer": "consumer-c",
+          "release": "release-7",
+          "manifest_digest": "sha256:manifest-other",
+          "decision": "adopt"
+        }
+      },
+      "decision": "Record the permitted simulation and exact withheld decisions only. No actual publication, install, adoption or dispatch is executed.",
+      "dependencies": [
+        "L.product required member/integrated checks and remy exact human decision.",
+        "L.consumer arden exact consumer/release/manifest decision; publication and staging install cannot substitute."
+      ],
+      "unresolved": [
+        "The arden decision names sha256:manifest-other, not sha256:manifest-seven; exact matching adoption decision required."
+      ],
+      "fixture_citations": [
+        "L.product",
+        "L.consumer",
+        "L.evidence",
+        "L4"
+      ],
+      "method_citations": [
+        "M.release",
+        "M.adoption",
+        "M.authority",
+        "M.result",
+        "M.conjunction"
+      ],
+      "actual_external_effects": "not_requested in this artifact-only trial"
+    }
+  ],
+  "artifacts": [
+    "release-adoption-decisions.json",
+    "release-adoption-table.md"
+  ],
+  "unresolved": [
+    "Direct remy release decision naming release-7 and sha256:manifest-seven.",
+    "Direct arden adopt decision naming consumer-c, release-7 and sha256:manifest-seven.",
+    "Direct arden adopt decision naming consumer-c, release-7 and sha256:manifest-seven.",
+    "The arden decision names sha256:manifest-other, not sha256:manifest-seven; exact matching adoption decision required."
+  ],
+  "boundary": "Consumer basis values are the outcomes of authorized simulated decisions, not changes to any real Product Definition."
+}
+

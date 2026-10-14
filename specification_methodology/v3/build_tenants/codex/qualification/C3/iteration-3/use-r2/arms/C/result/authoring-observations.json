@@ -1,0 +1,24 @@
+{
+  "unresolved_delivery": [
+    "Initial task all response was truncated; all task parts reacquired individually."
+  ],
+  "unsuccessful_operations": [
+    {
+      "operation": "acquire read EVALUATION_CONJUNCTION.md --start 458 --end 741",
+      "outcome": "ValueError: Invalid source interval",
+      "resolution": "Acquired 458-625 and contract-application section 626-737."
+    },
+    {
+      "operation": "apply_patch updating generated artifacts by Delete File and Add File on same paths",
+      "outcome": "Patch verification rejected multiple operations targeting acquisition-records.json; whole patch not applied.",
+      "resolution": "Use Update File on generated outputs; retain this observation."
+    }
+  ],
+  "rejected_candidate": {
+    "artifact": "total_cents.py",
+    "function": "plan_q",
+    "evidence": "K1 expected 5; q returns 1. Preserved deliberately as assessment helper."
+  },
+  "protocol_deviations": []
+}
+

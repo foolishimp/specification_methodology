@@ -1,0 +1,36 @@
+{
+  "activation": "I3-R2-MATCHED-USE-01",
+  "input_recording_commit": "cb14a63a2e75815a535d913fe93a65d9cdfd5c0e",
+  "candidate_source_commit": "3aaa2f2cf0d6f24a734a33c258373a58feceaf87",
+  "arms": {
+    "A": {
+      "agent": "/root/i3_use_a",
+      "dispatched_by_utc": "2026-10-14T12:54:27.784501+00:00",
+      "message": "Exact ACTOR_PROMPT.md text; fork_turns none; inherited parent model, no override.",
+      "closed_return_observed_utc": "2026-10-14T13:11:24.183623+00:00",
+      "answers_json_sha256": "a66e936cc1824d233cbbd0f9a29d50551d522fc7a91ec96e9bef50c6cac1f0a8",
+      "RETURN_md_sha256": "7032760f35cb3d9d875b649862e76730a5709172b3ca06a1268faed3e30266a4"
+    },
+    "B": {
+      "agent": "/root/i3_use_b",
+      "dispatched_by_utc": "2026-10-14T12:54:27.784642+00:00",
+      "message": "Exact ACTOR_PROMPT.md text; fork_turns none; inherited parent model, no override.",
+      "closed_return_observed_utc": "2026-10-14T13:15:39.571150+00:00",
+      "answers_json_sha256": "d12e95d8f3913832dbfca35cdd743917d9e887a5ef37174cd9b851718b6e2b3a",
+      "RETURN_md_sha256": "53fddf3bd3df87f92b97907c29e1ea1f184ae3dc7b870ab04b650254fd9bab19"
+    },
+    "C": {
+      "agent": "/root/i3_use_c",
+      "dispatched_by_utc": "2026-10-14T12:57:58.875024+00:00",
+      "message": "Exact ACTOR_PROMPT.md text; fork_turns none; inherited parent model, no override.",
+      "closed_return_observed_utc": "2026-10-14T13:18:29.756467+00:00",
+      "answers_json_sha256": "74d97984db72cad8fb60db35bc03d9c967fe2758f8a0456b4c6b9a7bd0278b62",
+      "RETURN_md_sha256": "7e7bf43700e9da0a565319387dc9f330ed1f6289a0dad0453084c803b44b679d"
+    }
+  },
+  "limits": [
+    "Dispatch observation is recorded after the tool call, not a host invocation start timestamp.",
+    "One fresh native context per arm, reused across six tasks.",
+    "Model-family sameness is not independence or a cross-model result."
+  ]
+}
