@@ -40,7 +40,7 @@ Routes, in order:
 23. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 24. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 88243 bytes.
+Size of this frame: 88228 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -372,7 +372,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-001 Evaluation relativity
 
@@ -381,7 +381,7 @@ declared evaluation family has no testable sufficiency boundary (P2; rc.2
 #rf-001-evaluation-relativity).
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-002 Finite attention
 
@@ -398,7 +398,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-003 Material sufficiency
 
@@ -411,7 +411,7 @@ material relation exists (P2; P0 with the open-world premise; rc.2
 #rf-003-material-sufficiency).
 
 
-Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-004 Irrelevance exclusion
 
@@ -421,7 +421,7 @@ does not expand because adjacent workspace material exists (P2; rc.2
 #rf-004-irrelevance-exclusion).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-005 Exact basis and coordinates
 
@@ -432,7 +432,7 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 #rf-005-exact-basis-and-coordinates).
 
 
-Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-006 Authority conservation
 
@@ -445,7 +445,7 @@ evidence shape, implementation reachability and frame selection (P6;
 rc.2 #rf-006-authority-conservation).
 
 
-Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-007 Semantic, evidence and verdict separation
 
@@ -459,7 +459,7 @@ exact grant as a further role the declaration keeps apart (P6; rc.2
 #rf-007-semantic-evidence-and-verdict-separation).
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-011 Topology mutation and recharting
 
@@ -472,7 +472,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 #rf-011-topology-mutation-and-recharting).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-012 Closed results
 
@@ -491,7 +491,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-013 Reconstructable activation
 
@@ -502,7 +502,7 @@ conversational or historical context (P0 with the actor-change premise;
 rc.2 #rf-013-reconstructable-activation).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-014 Capability fit
 
@@ -518,7 +518,7 @@ silently omit material relations to fit its context (P0, P5; rc.2
 #rf-014-capability-fit).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-015 Residual uncertainty
 
@@ -529,7 +529,7 @@ universal completeness (P4b, P6; open-world premise; rc.2
 #rf-015-residual-uncertainty).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#5-method-functions sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 5. Method functions
 
@@ -601,8 +601,8 @@ capability the evaluation needs, `activate` returns `out_of_frame` itself
 ([ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope),
 Activation). Where the conjunction reports `out_of_frame` or
 `invalid_basis`, `conjoin` returns that value; the signatures name no
-outcome for either case, and the `refusal` that EVALUATION §7 names for
-`conjoin` on a basis mismatch is this returned `invalid_basis`. Under a
+outcome for either case, and a basis mismatch is this returned
+`invalid_basis`, as EVALUATION §7 names it for `conjoin`. Under a
 declared veto or deferral, `conjoin` returns the outcome above whose cause
 holds for the value the conjunction reports
 ([FOUNDATIONS §4](../FOUNDATIONS.md#conjunction-of-results)), or that value
@@ -618,7 +618,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#7-frame-relations sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#7-frame-relations sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 7. Frame relations
 
@@ -646,7 +646,7 @@ only the relations its evaluations and coverage claims need (P3, P2;
 RF-009).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 11. The activation packet
 
@@ -720,7 +720,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### Minimal frame declaration
 
@@ -767,7 +767,7 @@ Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=cf7cbb080a4660e5e5c0
 ```
 
 
-Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### Minimal evaluation result
 
@@ -796,7 +796,7 @@ The out_of_frame residual field is new in this corpus; it carries what
 result to name, and reads `none` for any other result (P5).
 
 
-Source: EVALUATION.md#frame-qualification sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#frame-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ### Frame qualification
 
@@ -855,7 +855,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#admission-and-activation sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Admission and activation
 
@@ -893,7 +893,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#disposition sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Disposition
 
@@ -935,7 +935,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 7. Closed result and reuse
 

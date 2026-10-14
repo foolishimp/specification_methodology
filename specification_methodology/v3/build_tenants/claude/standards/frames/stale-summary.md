@@ -30,7 +30,7 @@ Routes, in order:
 
 Size of this frame: 81521 bytes.
 
-Source: ACTIVATION.md#transitions sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#transitions sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Transitions
 
@@ -116,7 +116,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 2. Context construction under an envelope
 
@@ -342,7 +342,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#construction-availability sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Construction availability
 
@@ -393,7 +393,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Effects
 
@@ -446,7 +446,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#5-work-state-and-restart sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 5. Work state and restart
 
@@ -583,7 +583,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 7. Closed result and reuse
 

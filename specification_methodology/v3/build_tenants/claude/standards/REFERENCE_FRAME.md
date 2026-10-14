@@ -548,8 +548,8 @@ capability the evaluation needs, `activate` returns `out_of_frame` itself
 ([ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
 Activation). Where the conjunction reports `out_of_frame` or
 `invalid_basis`, `conjoin` returns that value; the signatures name no
-outcome for either case, and the `refusal` that EVALUATION §7 names for
-`conjoin` on a basis mismatch is this returned `invalid_basis`. Under a
+outcome for either case, and a basis mismatch is this returned
+`invalid_basis`, as EVALUATION §7 names it for `conjoin`. Under a
 declared veto or deferral, `conjoin` returns the outcome above whose cause
 holds for the value the conjunction reports
 ([FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results)), or that value

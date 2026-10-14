@@ -30,7 +30,7 @@ One row per heading section of `standards/REFERENCE_FRAME.md` at the source-sett
 | `#engagement-atom-and-semantic-atom` | 416-429 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#4-frame-set-declaration` | 430-451 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#frame-set-selection` | 452-480 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#5-method-functions` | 481-566 | encoded | clause:rf-decision-holds, clause:rf-decision-fails |
+| `#5-method-functions` | 481-566 | encoded-in-part | clause:rf-decision-holds, clause:rf-decision-fails; the rest of the section is not encoded |
 | `#6-frames-in-conjunction` | 567-571 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#independently-activated-co-evaluation` | 572-580 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#result-conjunction` | 581-589 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |

@@ -73,6 +73,7 @@ Each heading section of an encoded member has exactly one disposition in
 | Value | Meaning |
 |---|---|
 | `encoded` | the section's determinations are clauses of this program |
+| `encoded-in-part` | some of the section's determinations are clauses of this program, named in the row; the rest is uncovered, as for `not-encoded-i3` |
 | `uses owner` | the section applies another section's determination; a `uses` relation records it |
 | `refines owner` | the section refines an owner; `maps-to` relations record it |
 | `residual` | the section leaves a question open; a residual records it |

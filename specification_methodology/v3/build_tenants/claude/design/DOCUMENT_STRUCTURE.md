@@ -460,7 +460,7 @@ I3-3k); this table does not.
 | J51, J52 | functor claims; rewrite and refinement steps | FOUNDATIONS §4 Formal fragment; EVALUATION §6; ACTIVATION §4 Refinement |
 | J53 | members pass locally but disagree | the integrated assessment (PLAN I3-7x) over REDUCTION §3 and §4 |
 | J54 | a clear replacement with no owner decision | the Disposition record below; the ticket record (PLAN §7 point 3) |
-| J55 | five criteria satisfied, the sixth missing or adverse | the core conjunction, applied by the Executive at member acceptance |
+| J55 | five criteria satisfied, the sixth missing or adverse | the installed builder's Result Conjunction (rc.2 REFERENCE_FRAME_METHOD), applied by the Executive at member acceptance; the integrated assessment also reads it |
 
 ## Disposition record
 

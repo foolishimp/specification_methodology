@@ -21,7 +21,7 @@ STANDING = 'urn:stdo-3:claude:i3:standing:'
 CORE = 'urn:stdo-3:claude:i3:core:'
 CORE_VALUES = {CORE + v for v in ('satisfied', 'falsified', 'indeterminate', 'out_of_frame', 'invalid_basis')}
 SOURCE = 'stdo-3://build_tenants/claude/standards/'
-DISPOSITIONS = ('encoded', 'uses owner', 'refines owner', 'residual', 'no determination', 'not-encoded-i3')
+DISPOSITIONS = ('encoded', 'encoded-in-part', 'uses owner', 'refines owner', 'residual', 'no determination', 'not-encoded-i3')
 
 
 class Refusal(Exception):

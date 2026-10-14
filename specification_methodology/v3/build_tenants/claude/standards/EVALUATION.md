@@ -252,6 +252,12 @@ The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
 
+Purpose and material relation of this projection's generality: the
+predecessor stated it for the Reviewer and the Executive only. Stating it
+for any assessor and decision owner gives every configuration the same
+separation of severity, priority, boundary effect and disposition, and
+EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
+
 ## 5. Acceptance
 
 Acceptance is the decision owner's disposition over an unchanged subject;
@@ -663,5 +669,5 @@ STDO_REFERENCE_FRAME_BASELINE.md):
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #executive-promotion-constraint-projection | conserved; the four consumed conditions as the table of §5 When a finding blocks promotion, with the Executive written as the decision owner; the Executive's application stays in EXECUTIVE_BASELINE | §5 When a finding blocks promotion |
-| #reviewer-result-and-triage-projection | conserved; all five result rows and the adjacent-observation rule; "Reviewer" written as assessor and "Executive" as decision owner; the sentence on the recommended disposition reconciles §4's "recommends a disposition" with the predecessor's "no priority or disposition" | §4 Result and triage projection |
+| #executive-promotion-constraint-projection | conserved at EXECUTIVE_BASELINE §12, which keeps the Executive as the decision owner; the table of §5 When a finding blocks promotion states the same rows for the decision owner of any promotion boundary as new tier-1 law, with its purpose stated there | §5 When a finding blocks promotion |
+| #reviewer-result-and-triage-projection | conserved at EXECUTIVE_BASELINE, which keeps the Reviewer and the Executive; §4 Result and triage projection states all five result rows and the adjacent-observation rule for any assessor and decision owner as new tier-1 law, with its purpose stated there; the sentence on the recommended disposition reconciles §4's "recommends a disposition" with the predecessor's "no priority or disposition" | §4 Result and triage projection |

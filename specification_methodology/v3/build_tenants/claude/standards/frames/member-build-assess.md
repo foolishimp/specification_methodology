@@ -24,7 +24,7 @@ Routes, in order:
 7. [RELEASE.md#9-successor-baseline-conservation-stdo-up-015](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
 8. [CONFORMANCE.md#5-coverage-of-the-common-discriminators](../CONFORMANCE.md#5-coverage-of-the-common-discriminators)
 
-Size of this frame: 62541 bytes.
+Size of this frame: 62993 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -478,7 +478,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#3-independent-assessment sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 3. Independent assessment
 
@@ -534,7 +534,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#4-review-results sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 4. Review results
 
@@ -598,6 +598,12 @@ The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
 
+Purpose and material relation of this projection's generality: the
+predecessor stated it for the Reviewer and the Executive only. Stating it
+for any assessor and decision owner gives every configuration the same
+separation of severity, priority, boundary effect and disposition, and
+EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
+
 
 Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac
 
@@ -648,7 +654,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=5a8ca372fa8819e66cd93bac2be2aaf0424431082990d03a342c70e859d38f81
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=f0d0c34359f1a9d87ebd63d584a6b85f27d5366a5a4db4ad37f921a9f942503a
 
 ## 5. Coverage of the common discriminators
 
@@ -740,7 +746,7 @@ evaluates them before closure:
 |---|---|---|
 | J53 | Each member passes its local checks while two members still decide the same shared question differently | the integrated assessment (L-J53) |
 | J54 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | the integrated assessment (L-J54) |
-| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55) |
+| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction |
 
 Coverage. Eleven of the 52 discriminators are exercised by cases: 22
 (T-03), 23 (T-04), 25 (T-01), 32 and 33 (CD-01), 36 (T-06), 38 (CD-03),

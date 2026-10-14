@@ -32,7 +32,7 @@ Routes, in order:
 15. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 85132 bytes.
+Size of this frame: 85483 bytes.
 
 Source: EXECUTIVE_BASELINE.md#executive sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
 
@@ -686,7 +686,7 @@ does not become an additional independent Reviewer result because the actor
 used reviewer-like tools (P6, P1).
 
 
-Source: ACTIVATION.md#construction-availability sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#construction-availability sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Construction availability
 
@@ -737,7 +737,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#disposition sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#disposition sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Disposition
 
@@ -779,7 +779,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 7. Closed result and reuse
 
@@ -850,7 +850,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#3-independent-assessment sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 3. Independent assessment
 
@@ -906,7 +906,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#4-review-results sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 4. Review results
 
@@ -969,6 +969,12 @@ severity alone (P6, P2).
 The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
+
+Purpose and material relation of this projection's generality: the
+predecessor stated it for the Reviewer and the Executive only. Stating it
+for any assessor and decision owner gives every configuration the same
+separation of severity, priority, boundary effect and disposition, and
+EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
 Source: ASSURANCE.md#10-testing-evidence-composition sha256=64462c9543445d8f6074d82b102d376c8c0992f16875c08fdd40bd60fc885d23

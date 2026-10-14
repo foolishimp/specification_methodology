@@ -38,7 +38,7 @@ Routes, in order:
 
 Size of this frame: 97484 bytes.
 
-Source: ACTIVATION.md#transitions sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#transitions sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Transitions
 
@@ -124,7 +124,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#intake sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Intake
 
@@ -168,7 +168,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#configuration sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Configuration
 
@@ -294,7 +294,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#roles-and-delegation sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Roles and delegation
 
@@ -372,7 +372,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 2. Context construction under an envelope
 
@@ -598,7 +598,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 7. Closed result and reuse
 
@@ -669,7 +669,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#construction-availability sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Construction availability
 
@@ -720,7 +720,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Effects
 
@@ -773,7 +773,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-002 Finite attention
 
@@ -790,7 +790,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-009 No assumed hierarchy
 
@@ -814,7 +814,7 @@ grant or as a dependency would move authority or change a result without a
 declared relation.
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-012 Closed results
 
@@ -833,7 +833,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-014 Capability fit
 
@@ -849,7 +849,7 @@ silently omit material relations to fit its context (P0, P5; rc.2
 #rf-014-capability-fit).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 11. The activation packet
 
@@ -923,7 +923,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#3-independent-assessment sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 3. Independent assessment
 
@@ -979,7 +979,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#frame-qualification sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#frame-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ### Frame qualification
 

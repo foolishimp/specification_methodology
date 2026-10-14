@@ -24,9 +24,9 @@ Routes, in order:
 7. [RELEASE.md#8-acceptance](../RELEASE.md#8-acceptance)
 8. [RELEASE.md#9-successor-baseline-conservation-stdo-up-015](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
 
-Size of this frame: 46841 bytes.
+Size of this frame: 47192 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+Source: EVALUATION.md#4-review-results sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 4. Review results
 
@@ -90,8 +90,14 @@ The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
 
+Purpose and material relation of this projection's generality: the
+predecessor stated it for the Reviewer and the Executive only. Stating it
+for any assessor and decision owner gives every configuration the same
+separation of severity, priority, boundary effect and disposition, and
+EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
-Source: EVALUATION.md#5-acceptance sha256=fe3f947a077b6826a5cb54390c9f2f8a6d2856d85b42dbc9d7ce6cad8bf1946c
+
+Source: EVALUATION.md#5-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
 
 ## 5. Acceptance
 
@@ -170,7 +176,7 @@ keep a bounded review from blocking on observations outside its claim
 while a non-waivable hard stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#disposition sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Disposition
 

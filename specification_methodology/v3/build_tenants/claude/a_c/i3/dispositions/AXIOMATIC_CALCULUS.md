@@ -23,7 +23,7 @@ One row per heading section of `standards/AXIOMATIC_CALCULUS.md` at the source-s
 | `#ac-004-relation-typing` | 484-490 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#ac-005-authority-conservation` | 491-500 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#ac-006-basis-coherence` | 501-512 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#ac-007-constraint-and-refusal` | 513-612 | encoded | clause:ac-holds, clause:ac-failed, clause:ac-indeterminate, clause:ac-out-of-scope, clause:ac-invalid-basis, clause:ac-declared-result, clause:ac-hold, clause:ac-gap, clause:ac-refusal-constraint, clause:ac-refusal-basis |
+| `#ac-007-constraint-and-refusal` | 513-612 | encoded-in-part | clause:ac-holds, clause:ac-failed, clause:ac-indeterminate, clause:ac-out-of-scope, clause:ac-invalid-basis, clause:ac-declared-result, clause:ac-hold, clause:ac-gap, clause:ac-refusal-constraint, clause:ac-refusal-basis; the rest of the section is not encoded |
 | `#ac-008-explicit-latitude` | 613-620 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#ac-009-residual-conservation` | 621-627 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#ac-010-material-closure` | 628-647 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
@@ -44,7 +44,7 @@ One row per heading section of `standards/AXIOMATIC_CALCULUS.md` at the source-s
 | `#9-application-boundary-imports-and-exclusions` | 1252-1253 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#application-boundary` | 1254-1262 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#external-imports-and-specialisations` | 1263-1272 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#constraint-surfaces` | 1273-1351 | encoded | clause:surface-definition, clause:surface-no-strategy |
+| `#constraint-surfaces` | 1273-1351 | encoded-in-part | clause:surface-definition, clause:surface-no-strategy; the rest of the section is not encoded |
 | `#exclusions` | 1352-1366 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#10-conformance-obligations` | 1367-1394 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#11-source-dispositions` | 1395-1446 | no determination | records where predecessor claims are carried; decides nothing |

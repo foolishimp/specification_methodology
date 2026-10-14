@@ -152,7 +152,7 @@ def write_dispositions():
             ids = encoded.get((member, s))
             title = lines[n - 1].lstrip('#').strip().lower()
             if ids:
-                d, why = 'encoded', ', '.join('clause:' + i for i in ids)
+                d, why = 'encoded-in-part', ', '.join('clause:' + i for i in ids) + '; the rest of the section is not encoded'
             elif title.endswith('source dispositions'):
                 d, why = 'no determination', 'records where predecessor claims are carried; decides nothing'
             else:

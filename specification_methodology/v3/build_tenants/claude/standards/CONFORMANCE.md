@@ -196,7 +196,7 @@ evaluates them before closure:
 |---|---|---|
 | J53 | Each member passes its local checks while two members still decide the same shared question differently | the integrated assessment (L-J53) |
 | J54 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | the integrated assessment (L-J54) |
-| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55) |
+| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction |
 
 Coverage. Eleven of the 52 discriminators are exercised by cases: 22
 (T-03), 23 (T-04), 25 (T-01), 32 and 33 (CD-01), 36 (T-06), 38 (CD-03),

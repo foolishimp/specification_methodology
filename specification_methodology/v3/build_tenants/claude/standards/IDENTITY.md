@@ -408,7 +408,7 @@ realization of the ABG role" are written "bound runtime realisation" and
 "consumer-bound runtime realisation". "Id" is written "identity"; the
 predecessor's "must" is written in the indicative and its "should",
 "may", "at minimum", "at most", "optional", "useful" and "suitable" keep
-their force. Release version boundary: superseded. The predecessor
+their force. Release version boundary: superseded, proposed and pending the product owner's acceptance. The predecessor
 clause, which cites RELEASE_METHOD for its content, calls the mutable
 selector "latest-accepted"; that determination is replaced by the release
 law it cites, under which the selector names the highest-ordinal

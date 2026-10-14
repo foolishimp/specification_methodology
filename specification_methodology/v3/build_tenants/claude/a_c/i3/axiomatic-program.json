@@ -23,6 +23,7 @@
     "urn:stdo-3:claude:i3:vocabulary:role:choice",
     "urn:stdo-3:claude:i3:vocabulary:role:condition",
     "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+    "urn:stdo-3:claude:i3:vocabulary:role:exception",
     "urn:stdo-3:claude:i3:vocabulary:role:force",
     "urn:stdo-3:claude:i3:vocabulary:role:owner",
     "urn:stdo-3:claude:i3:vocabulary:role:predicate",
@@ -806,6 +807,14 @@
           "literal": "must-not"
         },
         {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "by default"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:exception",
+          "literal": "the kinds may coincide in a lawful case"
+        },
+        {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
           "ref": "urn:stdo-3:claude:i3:clause:p6"
         }
@@ -1102,7 +1111,7 @@
     {
       "uri": "urn:stdo-3:claude:i3:clause:block-outside-claim",
       "clause_type": "constraint",
-      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
       "arguments": [
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
@@ -1113,8 +1122,8 @@
           "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
         },
         {
-          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
-          "literal": "must-not"
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification",
+          "literal": "repricing or re-entry input, returned as §4 states: by itself"
         },
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
@@ -2040,6 +2049,14 @@
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
           "literal": "may"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "an unchanged consumer that checks exact applicability"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:exception",
+          "literal": "A reused judgment does not satisfy a separately required independent judgment"
         },
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:support",

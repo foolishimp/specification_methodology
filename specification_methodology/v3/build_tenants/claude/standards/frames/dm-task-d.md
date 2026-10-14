@@ -24,7 +24,7 @@ Routes, in order:
 
 Size of this frame: 94271 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=2a21a8b51cc33d7bad92b00fd9d1c34cbd975abd07ff6d59254380c739abe90e
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1
 
 ## 5. Ontology-first design
 
@@ -681,7 +681,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=2a21a8b51cc33d7bad92b00fd9d1c34cbd975abd07ff6d59254380c739abe90e
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1
 
 ## 7. Ontology and three-view design gate
 
@@ -1088,7 +1088,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#disposition sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ### Disposition
 

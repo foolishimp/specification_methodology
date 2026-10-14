@@ -12,7 +12,7 @@ One row per heading section of `standards/IDENTITY.md` at the source-settlement 
 | `#uniqueness` | 96-107 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#type` | 108-118 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#stability` | 119-127 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#boundaries-and-sufficiency-claims` | 128-150 | encoded | clause:boundary-claim-proof, clause:markov-boundary-hypothesis |
+| `#boundaries-and-sufficiency-claims` | 128-150 | encoded-in-part | clause:boundary-claim-proof, clause:markov-boundary-hypothesis; the rest of the section is not encoded |
 | `#3-readable-and-opaque-identity` | 151-164 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#4-identity-hierarchy` | 165-186 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#5-authority-split` | 187-188 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |

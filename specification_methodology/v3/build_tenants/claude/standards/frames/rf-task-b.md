@@ -32,7 +32,7 @@ Routes, in order:
 15. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 
-Size of this frame: 88608 bytes.
+Size of this frame: 88593 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -364,7 +364,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-001 Evaluation relativity
 
@@ -373,7 +373,7 @@ declared evaluation family has no testable sufficiency boundary (P2; rc.2
 #rf-001-evaluation-relativity).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-005 Exact basis and coordinates
 
@@ -384,7 +384,7 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 #rf-005-exact-basis-and-coordinates).
 
 
-Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-008 Overlap without identity collapse
 
@@ -395,7 +395,7 @@ evaluation uses is declared where it is used (P1, P3; rc.2
 #rf-008-overlap-without-identity-collapse).
 
 
-Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-010 Composition on demand
 
@@ -408,7 +408,7 @@ conjunction or decision rule (P4a; §6; rc.2
 #rf-010-composition-on-demand).
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-011 Topology mutation and recharting
 
@@ -421,7 +421,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 #rf-011-topology-mutation-and-recharting).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-012 Closed results
 
@@ -440,7 +440,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ### RF-015 Residual uncertainty
 
@@ -451,7 +451,7 @@ universal completeness (P4b, P6; open-world premise; rc.2
 #rf-015-residual-uncertainty).
 
 
-Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 4. Frame-set declaration
 
@@ -505,7 +505,7 @@ cannot waive another applicable semantic, authority, evidence or
 independence constraint (P2, P6).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#5-method-functions sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 5. Method functions
 
@@ -577,8 +577,8 @@ capability the evaluation needs, `activate` returns `out_of_frame` itself
 ([ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope),
 Activation). Where the conjunction reports `out_of_frame` or
 `invalid_basis`, `conjoin` returns that value; the signatures name no
-outcome for either case, and the `refusal` that EVALUATION §7 names for
-`conjoin` on a basis mismatch is this returned `invalid_basis`. Under a
+outcome for either case, and a basis mismatch is this returned
+`invalid_basis`, as EVALUATION §7 names it for `conjoin`. Under a
 declared veto or deferral, `conjoin` returns the outcome above whose cause
 holds for the value the conjunction reports
 ([FOUNDATIONS §4](../FOUNDATIONS.md#conjunction-of-results)), or that value
@@ -594,7 +594,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 6. Frames in conjunction
 
@@ -645,7 +645,7 @@ future interaction does not require a general composition law in every
 frame (P4a, P6, P2; rc.2 #material-composition).
 
 
-Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 8. Workspace coverage
 
@@ -804,7 +804,7 @@ Operational full coverage is relative to its tuple. It is not a claim that
 no undiscovered evaluation exists (P6; P0 with the open-world premise).
 
 
-Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=cf7cbb080a4660e5e5c058e7c270a78f52f29d34f41b7cc73cd3610b78fdd1b4
+Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
 
 ## 10. Discovery and revision
 
@@ -911,7 +911,7 @@ reuse still requires the consumer's exact applicability check (P3, P6;
 rc.2 #return-a-closed-result).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=973f4cec2412520a96f0376e0740cf7238e297dfe577cac6113ff1678c2ba293
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
 
 ## 7. Closed result and reuse
 
