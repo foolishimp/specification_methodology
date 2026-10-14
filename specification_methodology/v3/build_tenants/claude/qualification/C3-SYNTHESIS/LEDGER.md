@@ -338,3 +338,21 @@ C3 recorded four ambiguities: occ-25, the revision of Task B's E1, the meaning o
 - AS2 returned (`0c69364`): C3S-05 to C3S-08. 4 of 8 runs are `satisfied`, all 8 reached their required core results, and no failure traces to method text or frames. Minor method findings M1 to M3.
 - AS1 returned: C3S-01 to C3S-04. All 10 runs are `falsified` under strict grading. The required core result was reached in four of five tasks; C3S-03 was not (occ-24). Method-text findings MT-1 to MT-6, with MT-1 a conservation defect in REFERENCE_FRAME §10. Disposition: recorded open for the next round.
 - Handoff written: [HANDOFF.md](HANDOFF.md). This run stops here, at the product owner's review. No member is accepted, no merge is requested, and the pen has transcribed nothing yet.
+
+2026-10-14T00:41Z — Cross-family review received. Codex reviewed this candidate at `768cf8c`: `.ai-workspace/comments/codex/20261014T000519Z_REVIEW_CLAUDE_V3_REVISION_2_PURPOSE_AND_IMPLEMENTATION.md`, SHA-256 `758baef0ed7c14fc9afae3695fba1f39765c05c7cf88e1fde09383f0d8012fe8`, relayed by the product owner. Its verdict: retain the core architecture and require changes before acceptance. Each finding was checked against the source. Executive dispositions:
+
+- **F1 (High), accepted:** REFERENCE_FRAME §10 lets an unchanged frame declaration stand as a reason to reopen no result. It is the same clause as AS1 MT-1 and was inherited from the base. Disposition `local_repair`, separating the two questions:
+  - whether the frame definition needs a new coordinate;
+  - whether affected results stay valid, which the reuse rule in ACTIVATION §7 owns.
+
+  Harmless explanatory metadata preserves reuse. Changed admissible evidence or a wrong-family activation reopens the affected claims, and demonstrably independent work is kept.
+- **F2 (High), accepted:** introduced by B3 in this rebuild. The split `partial_effect(ended)` → `falsified` and `partial_effect(unknown)` → `indeterminate` lets an unknown termination mask an established failure of the intended outcome. Codex's closed-interval counterexample is decisive. Disposition `local_repair` in TRAVERSAL, keeping ACTIVATION §3 Effects consistent:
+  - established non-attainment of the declared predicate → `falsified`, with the effect's completion recorded separately as `completion_unknown` and its residual kept;
+  - an undecidable outcome → `indeterminate`.
+
+  Blind retry stays prohibited in both cases. This also decides the occ-24 oracle conflict in favour of C3S-03's `falsified`, wherever the fixture's facts establish non-attainment.
+- **F3 (High, completion gap), accepted:** no a_c interpretation is current. This was already stated in the handoff. The common specification has since added a Constraint Surfaces And Logic Compression requirement (the iteration 3 inputs on `main`), which makes a current interpretation required work, not optional.
+- **F4 (Medium), accepted:** the finite check does not reject an invented reported value. It is the same finding as RC12-3. Disposition `local_repair`: specify the permissible reported values independently, add mutations that change only the reported value, and state the limited domain.
+- **F5 (Low), accepted:** the frames' copied relative links break. Disposition `local_repair`: the generator rebases relative links for the frames directory, and source identities and section digests stay over the owner bytes.
+
+Codex also notes that the common specification's new Foundational Reduction requirement is not retroactive to this rebuild's `a7eba66` basis, and that a Claude iteration 3 needs an explicitly bound task. No repair has started. The product owner is asked whether to repair F1, F2, F4 and F5 now on this branch, and whether the Claude line starts iteration 3.
