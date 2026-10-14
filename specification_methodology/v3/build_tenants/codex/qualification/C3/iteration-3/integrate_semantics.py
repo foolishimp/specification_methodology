@@ -27,6 +27,26 @@ SEMANTIC_FIELDS = {
     'dependencies', 'dependency_relations', 'result_mapping', 'argument',
     'inputs', 'required_unknown_inputs', 'source_references', 'source_clause_ids',
     'semantic_roles', 'source_clause_roles',
+    'signature_components', 'population_map', 'fields', 'closed_fields',
+    'tuple', 'states', 'concept_identities',
+    'contract_bindings', 'imported_concepts', 'translation', 'locator_meaning',
+    'state_classifier', 'external_inputs',
+    'decision_rule', 'function_contracts', 'causal_equation', 'compute_predicates',
+    'semantic_cut', 'effect_predicates',
+}
+CONTRIBUTION_EVIDENCE_FIELDS = {
+    'id', 'owner', 'owner_body_sha256', 'source_member_sha256',
+    'unrepresented_scope', 'bounded_discriminator_projection', 'ready_row_repair',
+    'proof_standing_ref',
+    'prior_standing',
+    'coverage_standing',
+}
+SHARED_FIELDS = {
+    'shared_contracts': 'shared_contract',
+    'owner_scopes': 'owner_scope',
+    'external_input_catalog': 'input_contract',
+    'shared_result_contracts': 'result_contract',
+    'argument_contracts': 'argument_contract',
 }
 
 
@@ -99,7 +119,52 @@ def normalize(row, families):
         # This is the returned, more specific input set, not an extension of an
         # older generic request to interpret the source.
         row['inputs'] = row.pop('required_unknown_inputs')
+    if 'external_inputs' in row:
+        row['inputs'] = row.pop('external_inputs')
     return row
+
+
+def normalize_shared(contribution, group):
+    """Give shared meanings exact identities; preserve references, not copies."""
+    part = copy.deepcopy(contribution)
+    contracts = {}
+    for field, kind in SHARED_FIELDS.items():
+        for key, value in part.get(field, {}).items():
+            contracts[group + '.' + field + '.' + key] = dict(value, contract_kind=kind)
+
+    def resolve(value, path=()):
+        if isinstance(value, list):
+            return [resolve(item, path) for item in value]
+        if not isinstance(value, dict):
+            return value
+        result = {}
+        for key, item in value.items():
+            field = None
+            if key == 'scope_ref' and 'owner_scopes' in part:
+                field = 'owner_scopes'
+            elif key == 'input_ref' and 'external_input_catalog' in part:
+                field = 'external_input_catalog'
+            elif key == 'contract_ref':
+                if 'argument' in path and item in part.get('argument_contracts', {}):
+                    field = 'argument_contracts'
+                elif 'result_mapping' in path and item in part.get('shared_result_contracts', {}):
+                    field = 'shared_result_contracts'
+                elif item in part.get('shared_contracts', {}):
+                    field = 'shared_contracts'
+                else:
+                    raise ValueError(group + ': unresolved shared contract ' + str(item))
+            if field:
+                target = group + '.' + field + '.' + item
+                if target not in contracts:
+                    raise ValueError(group + ': unresolved shared reference ' + target)
+                result[key] = target
+            else:
+                result[key] = resolve(item, path + (key,))
+        return result
+
+    part['bindings'] = [resolve(row) for row in part['bindings']]
+    contracts = {key: resolve(value) for key, value in contracts.items()}
+    return part, contracts
 
 
 def check_semantics(row):
@@ -114,8 +179,10 @@ def check_semantics(row):
     for field in ('applicability', 'result_mapping', 'argument'):
         if not row.get(field):
             raise ValueError(identifier + ': missing ' + field)
-    if kind in {'constraint', 'consumer_binding'} and not row.get('predicate'):
+    if kind == 'constraint' and not row.get('predicate'):
         raise ValueError(identifier + ': deciding row lacks a predicate')
+    if kind == 'consumer_binding' and not row.get('predicate') and not (row.get('definition') and row.get('dependencies')):
+        raise ValueError(identifier + ': consumer lacks a predicate or defined owner relation')
     if kind == 'definition_data' and not (row.get('definition') or row.get('predicate')):
         raise ValueError(identifier + ': definition lacks semantic content')
     if any(word in str(row.get('interpretation_standing', '')) for word in ('pending', 'unfinished', 'unrepresented')):
@@ -138,12 +205,16 @@ def merge(base, contributions, carrier):
             raise ValueError(group + ': contribution input drift')
         if any(contribution.get(k) for k in ('unresolved_construction_ids', 'unfinished_ids', 'unfinished_source_ids', 'unfinished_units')):
             raise ValueError(group + ': contributor returned unfinished work')
-        for key, value in contribution.get('shared_contracts', {}).items():
+        contribution, shared = normalize_shared(contribution, group)
+        for key, value in shared.items():
             if key in contracts and contracts[key] != value:
                 raise ValueError('Conflicting shared semantic contract: ' + key)
             contracts[key] = value
         for binding in contribution['bindings']:
             identifier = binding['id']
+            unknown_fields = set(binding) - SEMANTIC_FIELDS - CONTRIBUTION_EVIDENCE_FIELDS
+            if unknown_fields:
+                raise ValueError(identifier + ': unclassified contribution fields: ' + ', '.join(sorted(unknown_fields)))
             if identifier not in rows or identifier.split('.', 1)[0] not in GROUPS[group]:
                 raise ValueError(group + ': out-of-territory or unknown ID ' + identifier)
             if identifier in replacements:
@@ -161,7 +232,12 @@ def merge(base, contributions, carrier):
             rows[identifier] = normalize(row, base['owner_families'])
             check_semantics(rows[identifier])
             replacements.add(identifier)
-        records.append({'group': group, 'bindings': len(contribution['bindings']), 'sha256': sha(json_bytes(contribution))})
+        input_names = ['semantic-contributions/' + group + '/bindings.json']
+        if group == 'core':
+            input_names.append('semantic-contributions/core/baseline/bindings.json')
+        records.append({'group': group, 'bindings': len(contribution['bindings']),
+                        'input_files': [{'path': name, 'sha256': sha((HERE / name).read_bytes())} for name in input_names],
+                        'normalized_contribution_sha256': sha(json_bytes(contribution))})
     # Every pending source unit must receive a real returned semantic binding.
     pending = {row['id'] for row in base['determinations'] if row.get('coverage_standing') == 'source_carried_clause' and row.get('representation_kind') != 'non_deciding_locator'}
     if pending - replacements:

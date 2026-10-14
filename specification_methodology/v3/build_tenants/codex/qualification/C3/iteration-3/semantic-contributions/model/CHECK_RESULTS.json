@@ -1,0 +1,390 @@
+{
+  "schema": "stdo.author-semantic-check.v1",
+  "checked_at": "2026-10-14T11:37:00.916323+00:00",
+  "standing": "Author pin/coverage and selected source-discriminant checks only; no independent fidelity or acceptance claim.",
+  "bindings_sha256": "9e750fa32f2eba09345ff4496292a29d20f4528cd388a9d6309b3ea0f2116043",
+  "input_account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+  "source_checks": [
+    {
+      "path": "standards/WORLD_MODEL_METHOD.md",
+      "sha256": "31953eec26e4e1fe1ef766e93ea7831c648221e425ccfbb0aa3ee59be0c2dab6",
+      "bytes": 60471,
+      "verified_body_count": 81
+    },
+    {
+      "path": "standards/UX_METHOD.md",
+      "sha256": "495d279bee2689ee8c8306e81741f385ff0df3ed231f31ad6bd208423a7b7ae4",
+      "bytes": 34615,
+      "verified_body_count": 26
+    }
+  ],
+  "coverage": {
+    "assigned": 107,
+    "constructed_pending": 98,
+    "ready_inspected_replaced": 7,
+    "unchanged_ready": 0,
+    "unfinished": 0
+  },
+  "checks": [
+    "input account pin",
+    "member pins",
+    "107 exact body pins",
+    "107 stable IDs exactly once",
+    "typed dependency IDs exist",
+    "shared contract/input references resolve",
+    "definitions and locators create no Boolean law",
+    "all pending and prior-ready coverage named",
+    "selected positive/adverse/unknown examples preserve independent result boundaries"
+  ],
+  "case_count": 38,
+  "cases": [
+    {
+      "id": "entity_sparse_supported_absence",
+      "kind": "entity_admission",
+      "observed": {
+        "eligibility": "satisfied",
+        "requires_overlay": false
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "entity_unsupported_absence",
+      "kind": "entity_admission",
+      "observed": {
+        "eligibility": "indeterminate",
+        "requires_overlay": false
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "entity_failed_and_missing",
+      "kind": "entity_admission",
+      "observed": {
+        "eligibility": "falsified",
+        "requires_overlay": false
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "entity_unknown_discrimination",
+      "kind": "entity_admission",
+      "observed": {
+        "eligibility": "indeterminate",
+        "requires_overlay": false
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_verified_candidate",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "satisfied",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_pca_rejected",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "falsified",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_verification_unrun",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "indeterminate",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_uniqueness_failed_transfer_missing",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "falsified",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_missing_space",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "indeterminate",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_lost_provenance",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": true,
+        "eligibility": "falsified",
+        "statistical_standing": "candidate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "overlay_not_selected",
+      "kind": "overlay_eligibility",
+      "observed": {
+        "applicable": false,
+        "eligibility": null
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "directions_same_space",
+      "kind": "direction_composition",
+      "observed": {
+        "verdict": "satisfied"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "directions_cross_space",
+      "kind": "direction_composition",
+      "observed": {
+        "verdict": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "directions_space_unknown",
+      "kind": "direction_composition",
+      "observed": {
+        "verdict": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "statistical_gate_still_failed",
+      "kind": "statistical_promotion",
+      "observed": {
+        "verdict": "falsified",
+        "publication_verified": true
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "statistical_gate_unrun",
+      "kind": "statistical_promotion",
+      "observed": {
+        "verdict": "indeterminate",
+        "publication_verified": true
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "ephemera_hover_local",
+      "kind": "local_ephemera",
+      "observed": {
+        "local_cell_allowed": "satisfied"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "ephemera_shared_draft",
+      "kind": "local_ephemera",
+      "observed": {
+        "local_cell_allowed": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "ephemera_lost_selection",
+      "kind": "local_ephemera",
+      "observed": {
+        "local_cell_allowed": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "ephemera_unknown_visibility",
+      "kind": "local_ephemera",
+      "observed": {
+        "local_cell_allowed": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "carrier_admitted",
+      "kind": "product_action",
+      "observed": {
+        "action_eligible": "satisfied"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "carrier_known_absent",
+      "kind": "product_action",
+      "observed": {
+        "action_eligible": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "carrier_unresolved",
+      "kind": "product_action",
+      "observed": {
+        "action_eligible": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_unknown_effect_correct",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "satisfied",
+        "performance": "performed",
+        "effect": "unknown"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_projection_empty_cmd",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "satisfied",
+        "performance": "performed",
+        "effect": "not_requested"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_hidden_state",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "falsified",
+        "performance": "performed",
+        "effect": "unknown"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_unrun",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "indeterminate",
+        "performance": "not_performed",
+        "effect": "not_requested"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_missing_trace",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "indeterminate",
+        "performance": "unconfirmed",
+        "effect": "unknown"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "replay_bad_order_known_complete_effect",
+      "kind": "effect_and_replay",
+      "observed": {
+        "replay": "falsified",
+        "performance": "performed",
+        "effect": "completed"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "scaffold_bounded_complete",
+      "kind": "scaffold",
+      "observed": {
+        "exemption_valid": "satisfied"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "scaffold_no_retirement",
+      "kind": "scaffold",
+      "observed": {
+        "exemption_valid": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "scaffold_unknown_mutation_bound",
+      "kind": "scaffold",
+      "observed": {
+        "exemption_valid": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "escrow_replay_updates",
+      "kind": "escrow",
+      "observed": {
+        "escrow_eligible": "satisfied"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "escrow_new_selection_authority",
+      "kind": "escrow",
+      "observed": {
+        "escrow_eligible": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "sprint_closed_proof_open",
+      "kind": "sprint_close",
+      "observed": {
+        "sprint_close": "satisfied",
+        "item_compliance": "indeterminate",
+        "method_closure": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "sprint_closed_defect_retained",
+      "kind": "sprint_close",
+      "observed": {
+        "sprint_close": "satisfied",
+        "item_compliance": "falsified",
+        "method_closure": "falsified"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "sprint_unclassified_continuation",
+      "kind": "sprint_close",
+      "observed": {
+        "sprint_close": "falsified",
+        "item_compliance": "indeterminate",
+        "method_closure": "indeterminate"
+      },
+      "status": "matched_authored_expectation"
+    },
+    {
+      "id": "remove_lawful_compliance_unknown",
+      "kind": "treatment",
+      "observed": {
+        "decision": "satisfied",
+        "compliance": "indeterminate",
+        "effect": "unknown",
+        "treatment": "remove"
+      },
+      "status": "matched_authored_expectation"
+    }
+  ],
+  "limits": [
+    "Reference evaluators cover selected discriminants only and are authored with the bindings.",
+    "Passing them does not prove all natural-language semantics, usefulness of integrated representation, or any live Product conformance."
+  ]
+}

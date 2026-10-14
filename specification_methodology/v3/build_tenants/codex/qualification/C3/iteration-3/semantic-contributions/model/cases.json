@@ -1,0 +1,780 @@
+[
+  {
+    "id": "entity_sparse_supported_absence",
+    "kind": "entity_admission",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.admissibility"
+    ],
+    "source_discriminant": "A sparse unique cut can satisfy all surfaces with supported absence; no geometric/null/intervention prerequisite.",
+    "input": {
+      "surfaces": {
+        "identity": "satisfied",
+        "boundary": "satisfied",
+        "authority": "satisfied",
+        "state": "satisfied",
+        "evidence": "satisfied",
+        "treatment": "satisfied",
+        "covariance": "satisfied",
+        "ambiguity": "satisfied"
+      },
+      "discrimination": "satisfied",
+      "comparison_population": false,
+      "repeated_contexts": false,
+      "intervention_permission": false,
+      "overlay_present": false,
+      "treatment_value": "supported absence"
+    },
+    "expected": {
+      "eligibility": "satisfied",
+      "requires_overlay": false
+    }
+  },
+  {
+    "id": "entity_unsupported_absence",
+    "kind": "entity_admission",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.admissibility"
+    ],
+    "source_discriminant": "An absence statement needs support; spelling the field is insufficient.",
+    "input": {
+      "surfaces": {
+        "identity": "satisfied",
+        "boundary": "satisfied",
+        "authority": "satisfied",
+        "state": "satisfied",
+        "evidence": "satisfied",
+        "treatment": "indeterminate",
+        "covariance": "satisfied",
+        "ambiguity": "satisfied"
+      },
+      "discrimination": "satisfied",
+      "comparison_population": false,
+      "repeated_contexts": false,
+      "intervention_permission": false,
+      "overlay_present": false,
+      "treatment_value": "absence asserted without support"
+    },
+    "expected": {
+      "eligibility": "indeterminate",
+      "requires_overlay": false
+    }
+  },
+  {
+    "id": "entity_failed_and_missing",
+    "kind": "entity_admission",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.admissibility"
+    ],
+    "source_discriminant": "Known boundary failure remains despite a missing evidence judgment.",
+    "input": {
+      "surfaces": {
+        "identity": "satisfied",
+        "boundary": "falsified",
+        "authority": "satisfied",
+        "state": "satisfied",
+        "evidence": null,
+        "treatment": "satisfied",
+        "covariance": "satisfied",
+        "ambiguity": "satisfied"
+      },
+      "discrimination": "satisfied",
+      "comparison_population": false,
+      "repeated_contexts": false,
+      "intervention_permission": false,
+      "overlay_present": false,
+      "treatment_value": "supported absence"
+    },
+    "expected": {
+      "eligibility": "falsified",
+      "requires_overlay": false
+    }
+  },
+  {
+    "id": "entity_unknown_discrimination",
+    "kind": "entity_admission",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.discrimination"
+    ],
+    "source_discriminant": "Source availability without established discrimination cannot satisfy admission.",
+    "input": {
+      "surfaces": {
+        "identity": "satisfied",
+        "boundary": "satisfied",
+        "authority": "satisfied",
+        "state": "satisfied",
+        "evidence": "satisfied",
+        "treatment": "satisfied",
+        "covariance": "satisfied",
+        "ambiguity": "satisfied"
+      },
+      "discrimination": "indeterminate",
+      "comparison_population": false,
+      "repeated_contexts": false,
+      "intervention_permission": false,
+      "overlay_present": false,
+      "treatment_value": "supported absence"
+    },
+    "expected": {
+      "eligibility": "indeterminate",
+      "requires_overlay": false
+    }
+  },
+  {
+    "id": "overlay_verified_candidate",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.3-verification-by-treatment",
+      "WORLD_MODEL_METHOD.5-null-peer-discrimination"
+    ],
+    "source_discriminant": "Treatment and null-peer success establish eligibility only, with size overlap allowed and statistical candidate standing retained.",
+    "input": {
+      "selected": true,
+      "declared_space": true,
+      "paired_evidence": true,
+      "extraction": "mean_offset",
+      "verification": "satisfied",
+      "uniqueness": "satisfied",
+      "transfer": "satisfied",
+      "stored_surfaces": true,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "satisfied",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_pca_rejected",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law",
+      "WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "WORLD_MODEL_METHOD.7-storage-shape"
+    ],
+    "source_discriminant": "Maximum-variance directions fail even when later behavior looks favorable.",
+    "input": {
+      "selected": true,
+      "declared_space": true,
+      "paired_evidence": true,
+      "extraction": "pca",
+      "verification": "satisfied",
+      "uniqueness": "satisfied",
+      "transfer": "satisfied",
+      "stored_surfaces": true,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "falsified",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_verification_unrun",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law",
+      "WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "WORLD_MODEL_METHOD.7-storage-shape"
+    ],
+    "source_discriminant": "No acceptable treatment verification means publication eligibility stays unresolved.",
+    "input": {
+      "selected": true,
+      "declared_space": true,
+      "paired_evidence": true,
+      "extraction": "mean_offset",
+      "verification": null,
+      "uniqueness": "satisfied",
+      "transfer": "satisfied",
+      "stored_surfaces": true,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "indeterminate",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_uniqueness_failed_transfer_missing",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law",
+      "WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "WORLD_MODEL_METHOD.7-storage-shape"
+    ],
+    "source_discriminant": "One failed required null-peer predicate remains failed while the other is missing.",
+    "input": {
+      "selected": true,
+      "declared_space": true,
+      "paired_evidence": true,
+      "extraction": "mean_offset",
+      "verification": "satisfied",
+      "uniqueness": "falsified",
+      "transfer": null,
+      "stored_surfaces": true,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "falsified",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_missing_space",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law",
+      "WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "WORLD_MODEL_METHOD.7-storage-shape"
+    ],
+    "source_discriminant": "An unknown representation binding cannot be invented.",
+    "input": {
+      "selected": true,
+      "declared_space": null,
+      "paired_evidence": true,
+      "extraction": "mean_offset",
+      "verification": "satisfied",
+      "uniqueness": "satisfied",
+      "transfer": "satisfied",
+      "stored_surfaces": true,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "indeterminate",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_lost_provenance",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law",
+      "WORLD_MODEL_METHOD.2-identity-direction-extraction",
+      "WORLD_MODEL_METHOD.7-storage-shape"
+    ],
+    "source_discriminant": "A storage layout losing required support is not lawful.",
+    "input": {
+      "selected": true,
+      "declared_space": true,
+      "paired_evidence": true,
+      "extraction": "mean_offset",
+      "verification": "satisfied",
+      "uniqueness": "satisfied",
+      "transfer": "satisfied",
+      "stored_surfaces": false,
+      "statistical_standing": "candidate",
+      "core_size_matches_null": true
+    },
+    "expected": {
+      "applicable": true,
+      "eligibility": "falsified",
+      "statistical_standing": "candidate"
+    }
+  },
+  {
+    "id": "overlay_not_selected",
+    "kind": "overlay_eligibility",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.markov-object-construction-law"
+    ],
+    "source_discriminant": "Supported absence of overlay selection excludes only overlay duties; it creates no extra verdict.",
+    "input": {
+      "selected": false
+    },
+    "expected": {
+      "applicable": false,
+      "eligibility": null
+    }
+  },
+  {
+    "id": "directions_same_space",
+    "kind": "direction_composition",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.composition-law"
+    ],
+    "source_discriminant": "Space compatibility holds for this isolated join; other joins still need evidence.",
+    "input": {
+      "same_space": true,
+      "generic_translation_available": true
+    },
+    "expected": {
+      "verdict": "satisfied"
+    }
+  },
+  {
+    "id": "directions_cross_space",
+    "kind": "direction_composition",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.composition-law"
+    ],
+    "source_discriminant": "Generic translation availability cannot waive the domain prohibition.",
+    "input": {
+      "same_space": false,
+      "generic_translation_available": true
+    },
+    "expected": {
+      "verdict": "falsified"
+    }
+  },
+  {
+    "id": "directions_space_unknown",
+    "kind": "direction_composition",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.composition-law"
+    ],
+    "source_discriminant": "Unknown space identity cannot be treated as compatible.",
+    "input": {
+      "same_space": null,
+      "generic_translation_available": true
+    },
+    "expected": {
+      "verdict": "indeterminate"
+    }
+  },
+  {
+    "id": "statistical_gate_still_failed",
+    "kind": "statistical_promotion",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.epistemic-status-of-the-construct"
+    ],
+    "source_discriminant": "Publication verification cannot erase failed conditional independence.",
+    "input": {
+      "conditional_independence": "falsified",
+      "publication_verified": true
+    },
+    "expected": {
+      "verdict": "falsified",
+      "publication_verified": true
+    }
+  },
+  {
+    "id": "statistical_gate_unrun",
+    "kind": "statistical_promotion",
+    "unit_ids": [
+      "WORLD_MODEL_METHOD.epistemic-status-of-the-construct"
+    ],
+    "source_discriminant": "Verified publication cannot fill an unrun stronger test.",
+    "input": {
+      "conditional_independence": "indeterminate",
+      "publication_verified": true
+    },
+    "expected": {
+      "verdict": "indeterminate",
+      "publication_verified": true
+    }
+  },
+  {
+    "id": "ephemera_hover_local",
+    "kind": "local_ephemera",
+    "unit_ids": [
+      "UX_METHOD.5-state-transition-law"
+    ],
+    "source_discriminant": "A truly local hover flag may use a local cell.",
+    "input": {
+      "other_view_observes": false,
+      "product_state": false,
+      "unmount_consequence": false
+    },
+    "expected": {
+      "local_cell_allowed": "satisfied"
+    }
+  },
+  {
+    "id": "ephemera_shared_draft",
+    "kind": "local_ephemera",
+    "unit_ids": [
+      "UX_METHOD.5-state-transition-law"
+    ],
+    "source_discriminant": "A draft observed by another view needs reducer ownership.",
+    "input": {
+      "other_view_observes": true,
+      "product_state": false,
+      "unmount_consequence": false
+    },
+    "expected": {
+      "local_cell_allowed": "falsified"
+    }
+  },
+  {
+    "id": "ephemera_lost_selection",
+    "kind": "local_ephemera",
+    "unit_ids": [
+      "UX_METHOD.5-state-transition-law"
+    ],
+    "source_discriminant": "Losing Product selection on unmount defeats the local-cell exception.",
+    "input": {
+      "other_view_observes": false,
+      "product_state": true,
+      "unmount_consequence": true
+    },
+    "expected": {
+      "local_cell_allowed": "falsified"
+    }
+  },
+  {
+    "id": "ephemera_unknown_visibility",
+    "kind": "local_ephemera",
+    "unit_ids": [
+      "UX_METHOD.5-state-transition-law"
+    ],
+    "source_discriminant": "Unknown visibility does not establish the exception.",
+    "input": {
+      "other_view_observes": null,
+      "product_state": false,
+      "unmount_consequence": false
+    },
+    "expected": {
+      "local_cell_allowed": "indeterminate"
+    }
+  },
+  {
+    "id": "carrier_admitted",
+    "kind": "product_action",
+    "unit_ids": [
+      "UX_METHOD.3a-ux-projection-and-constructive-carrier-boundary"
+    ],
+    "source_discriminant": "A product-truth action needs actual admitted carrier; a Cmd or UI label cannot supply it.",
+    "input": {
+      "admitted_carrier": true
+    },
+    "expected": {
+      "action_eligible": "satisfied"
+    }
+  },
+  {
+    "id": "carrier_known_absent",
+    "kind": "product_action",
+    "unit_ids": [
+      "UX_METHOD.3a-ux-projection-and-constructive-carrier-boundary"
+    ],
+    "source_discriminant": "A product-truth action needs actual admitted carrier; a Cmd or UI label cannot supply it.",
+    "input": {
+      "admitted_carrier": false
+    },
+    "expected": {
+      "action_eligible": "falsified"
+    }
+  },
+  {
+    "id": "carrier_unresolved",
+    "kind": "product_action",
+    "unit_ids": [
+      "UX_METHOD.3a-ux-projection-and-constructive-carrier-boundary"
+    ],
+    "source_discriminant": "A product-truth action needs actual admitted carrier; a Cmd or UI label cannot supply it.",
+    "input": {
+      "admitted_carrier": null
+    },
+    "expected": {
+      "action_eligible": "indeterminate"
+    }
+  },
+  {
+    "id": "replay_unknown_effect_correct",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "Correct replay of typed lost-acknowledgment outcome does not prove mutation absent/completed.",
+    "input": {
+      "expected_trace_matches": true,
+      "performance": "performed",
+      "possible_effect": true
+    },
+    "expected": {
+      "replay": "satisfied",
+      "performance": "performed",
+      "effect": "unknown"
+    }
+  },
+  {
+    "id": "replay_projection_empty_cmd",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "A declared effect-free projection can prove empty Cmd trace.",
+    "input": {
+      "expected_trace_matches": true,
+      "performance": "performed",
+      "possible_effect": false,
+      "established_effect_free": true
+    },
+    "expected": {
+      "replay": "satisfied",
+      "performance": "performed",
+      "effect": "not_requested"
+    }
+  },
+  {
+    "id": "replay_hidden_state",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "Matching output obtained through excluded hidden state fails the replay contract.",
+    "input": {
+      "expected_trace_matches": true,
+      "performance": "performed",
+      "possible_effect": true,
+      "hidden_dependency": true
+    },
+    "expected": {
+      "replay": "falsified",
+      "performance": "performed",
+      "effect": "unknown"
+    }
+  },
+  {
+    "id": "replay_unrun",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "A predicted matching trace cannot satisfy an unperformed replay.",
+    "input": {
+      "expected_trace_matches": true,
+      "performance": "not_performed",
+      "possible_effect": false,
+      "established_effect_free": true
+    },
+    "expected": {
+      "replay": "indeterminate",
+      "performance": "not_performed",
+      "effect": "not_requested"
+    }
+  },
+  {
+    "id": "replay_missing_trace",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "Missing trace establishes neither performance nor effects.",
+    "input": {
+      "expected_trace_matches": null,
+      "performance": "unconfirmed",
+      "possible_effect": true
+    },
+    "expected": {
+      "replay": "indeterminate",
+      "performance": "unconfirmed",
+      "effect": "unknown"
+    }
+  },
+  {
+    "id": "replay_bad_order_known_complete_effect",
+    "kind": "effect_and_replay",
+    "unit_ids": [
+      "UX_METHOD.6-effect-membrane-rule",
+      "UX_METHOD.8a-msg-replay-proof-requirement"
+    ],
+    "source_discriminant": "Actual effect completion cannot rescue a wrong ordered command trace.",
+    "input": {
+      "expected_trace_matches": false,
+      "performance": "performed",
+      "observed_effect": "completed"
+    },
+    "expected": {
+      "replay": "falsified",
+      "performance": "performed",
+      "effect": "completed"
+    }
+  },
+  {
+    "id": "scaffold_bounded_complete",
+    "kind": "scaffold",
+    "unit_ids": [
+      "UX_METHOD.13a-scaffold-and-exemption-law"
+    ],
+    "source_discriminant": "All named exemption fields are established.",
+    "input": {
+      "scope": true,
+      "operations": true,
+      "mutation_bound": true,
+      "visible_label": true,
+      "superseding_surface": true,
+      "retirement_ticket_condition": true,
+      "nonclosure": true
+    },
+    "expected": {
+      "exemption_valid": "satisfied"
+    }
+  },
+  {
+    "id": "scaffold_no_retirement",
+    "kind": "scaffold",
+    "unit_ids": [
+      "UX_METHOD.13a-scaffold-and-exemption-law"
+    ],
+    "source_discriminant": "A visible debug label cannot replace retirement ownership.",
+    "input": {
+      "scope": true,
+      "operations": true,
+      "mutation_bound": true,
+      "visible_label": true,
+      "superseding_surface": true,
+      "retirement_ticket_condition": false,
+      "nonclosure": true
+    },
+    "expected": {
+      "exemption_valid": "falsified"
+    }
+  },
+  {
+    "id": "scaffold_unknown_mutation_bound",
+    "kind": "scaffold",
+    "unit_ids": [
+      "UX_METHOD.13a-scaffold-and-exemption-law"
+    ],
+    "source_discriminant": "Unknown operations do not establish a bounded exemption.",
+    "input": {
+      "scope": true,
+      "operations": true,
+      "mutation_bound": null,
+      "visible_label": true,
+      "superseding_surface": true,
+      "retirement_ticket_condition": true,
+      "nonclosure": true
+    },
+    "expected": {
+      "exemption_valid": "indeterminate"
+    }
+  },
+  {
+    "id": "escrow_replay_updates",
+    "kind": "escrow",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "Replay update debt is permitted local proof work inside an authorized sprint.",
+    "input": {
+      "local_allowed_debt": true,
+      "forbidden_semantic_change": false
+    },
+    "expected": {
+      "escrow_eligible": "satisfied"
+    }
+  },
+  {
+    "id": "escrow_new_selection_authority",
+    "kind": "escrow",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "Meaning-changing selection authority cannot hide in UX escrow.",
+    "input": {
+      "local_allowed_debt": true,
+      "forbidden_semantic_change": true
+    },
+    "expected": {
+      "escrow_eligible": "falsified"
+    }
+  },
+  {
+    "id": "sprint_closed_proof_open",
+    "kind": "sprint_close",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "Classified permitted durable local debt allows sprint closure but not method closure.",
+    "input": {
+      "all_classified": true,
+      "debt_permitted": true,
+      "followup_durable": true,
+      "no_unclassified_carrier_continuation_authority": true,
+      "item_compliance": "indeterminate",
+      "applicable_ux_checks": [
+        "satisfied",
+        "indeterminate"
+      ]
+    },
+    "expected": {
+      "sprint_close": "satisfied",
+      "item_compliance": "indeterminate",
+      "method_closure": "indeterminate"
+    }
+  },
+  {
+    "id": "sprint_closed_defect_retained",
+    "kind": "sprint_close",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "Lawful local paydown can coexist with an actual defect; the failure remains.",
+    "input": {
+      "all_classified": true,
+      "debt_permitted": true,
+      "followup_durable": true,
+      "no_unclassified_carrier_continuation_authority": true,
+      "item_compliance": "falsified",
+      "applicable_ux_checks": [
+        "falsified",
+        "indeterminate"
+      ]
+    },
+    "expected": {
+      "sprint_close": "satisfied",
+      "item_compliance": "falsified",
+      "method_closure": "falsified"
+    }
+  },
+  {
+    "id": "sprint_unclassified_continuation",
+    "kind": "sprint_close",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "An unclassified hidden-continuation finding blocks sprint close.",
+    "input": {
+      "all_classified": true,
+      "debt_permitted": true,
+      "followup_durable": true,
+      "no_unclassified_carrier_continuation_authority": false,
+      "item_compliance": "indeterminate",
+      "applicable_ux_checks": [
+        "satisfied",
+        "indeterminate"
+      ]
+    },
+    "expected": {
+      "sprint_close": "falsified",
+      "item_compliance": "indeterminate",
+      "method_closure": "indeterminate"
+    }
+  },
+  {
+    "id": "remove_lawful_compliance_unknown",
+    "kind": "treatment",
+    "unit_ids": [
+      "UX_METHOD.13b-ux-sprint-compliance-escrow"
+    ],
+    "source_discriminant": "A lawful removal decision is independent of compliance evidence and observed removal effects.",
+    "input": {
+      "actual_mandate_and_conditions": true,
+      "compliance": "indeterminate",
+      "effect": "unknown",
+      "treatment": "remove"
+    },
+    "expected": {
+      "decision": "satisfied",
+      "compliance": "indeterminate",
+      "effect": "unknown",
+      "treatment": "remove"
+    }
+  }
+]
