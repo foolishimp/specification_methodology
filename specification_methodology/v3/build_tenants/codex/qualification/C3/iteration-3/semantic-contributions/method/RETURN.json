@@ -1,0 +1,143 @@
+{
+  "schema_version": "stdo.bounded-writer-return.v1",
+  "activation": "I3-R2-ACCOUNT-COMPLETE-01",
+  "execution_contract": "EC-CODEX-I3-02",
+  "actor": "Codex method semantic-construction Writer",
+  "work_result": "candidate_ready",
+  "result": {
+    "predicate": "The granted five-owner semantic contribution is authored for all stable account units, retains the pinned source identities, and passes the declared reproducible author checks.",
+    "subject": "semantic-contributions/method/bindings.json at 4c4342136fcf51de0df042fd67634e91ccf38d843a26c2f56b3dd72b7d297ce0",
+    "basis": {
+      "grant_commit": "216a631",
+      "documentary_source_commit": "f2cb3e593757d094d008102551925e871a0204ff",
+      "input_account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+      "installed_builder": "v2.5.1-rc.2",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+    },
+    "verdict": "satisfied",
+    "performance": "performed",
+    "evidence": [
+      "AUTHOR_CHECK.json",
+      "ACQUISITION.json"
+    ],
+    "effects": {
+      "boundary": "Only semantic-contributions/method/ contribution and author-check artifacts.",
+      "state": "completed"
+    },
+    "standing": "author construction result, not independent semantic fidelity, integration acceptance, Product acceptance or release"
+  },
+  "coverage": {
+    "stable_units": 173,
+    "by_owner": {
+      "SPEC_METHOD": 81,
+      "TICKET_METHOD": 49,
+      "RELEASE_METHOD": 23,
+      "POSTING_GUIDE": 10,
+      "WRITING_GUIDE": 10
+    },
+    "formerly_pending_units_authored": 147,
+    "formerly_ready_units_reauthored": 21,
+    "formerly_locator_units_inspected": 5,
+    "unfinished_source_ids": [],
+    "unchanged_ready_ids": [],
+    "representation_kind_corrections": 23
+  },
+  "material_distinctions": [
+    "Ticket-state authority can explicitly select durability without ordinary surviving-state need; that does not admit execution or widen work scope.",
+    "Closure uses all actual obligations and reserved decisions, with conditional direct Writer recording when independent review/acceptance is not required.",
+    "Ticket/sprint/release dispositions remain data or separate decisions, never aliases that erase compliance failures, missing coverage or actual effects.",
+    "Complete transition admission, semantic commit, atomicity and supported-form applicability have separate predicates and reason maps.",
+    "Definitions/locators remain data or source routes; actual local conditions, permissions, extra policy and typed owning dependencies are explicit."
+  ],
+  "checks": {
+    "source_member_pins": true,
+    "live_source_preserved": true,
+    "body_hashes": 173,
+    "clause_hashes": 1087,
+    "stable_id_coverage": 173,
+    "unfinished": 0,
+    "all_21_ready_rows_reauthored": 21,
+    "typed_dependency_targets_resolve": true,
+    "reproduction": true,
+    "installed_rc2_pin_verified": true
+  },
+  "discriminators": {
+    "models": 8,
+    "cases": 29,
+    "passed": 29,
+    "boundary": "Explicit narrow projections with supplied case facts; positive/adverse/unknown cases per model. They are author checks, not the withheld oracle or an implementation of every source predicate."
+  },
+  "reproduce": "PYTHONDONTWRITEBYTECODE=1 python3 specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/semantic-contributions/method/check_author.py",
+  "acquisition": {
+    "owner_unique_bytes": 301872,
+    "selected_shared_body_bytes": 76557,
+    "elapsed_seconds_at_measurement": 1670.037,
+    "boundary": "Unique selected source bytes, not full prompt, peak retained context or cumulative acquisition.",
+    "deviations": [
+      "An initial file-discovery command unnecessarily enumerated sibling AGENTS paths; sibling file bodies were not read.",
+      "An initial ticket extraction displayed historical lines beyond the requested grant. They were not relied on; the exact section was subsequently selected and pinned.",
+      "Installed bootstrap was independently loaded during final verification rather than before first contribution write. The parent-selected exact grant and Product frame were already bound."
+    ],
+    "unknowns": [
+      "Full inherited prompt/context size, peak active retained context, attention and reasoning-token use are not instrumented.",
+      "Cumulative repeated acquisition and complete tool-output bytes were not instrumented; no resource-fit or efficiency claim is made."
+    ]
+  },
+  "limitations": [
+    "No independent fidelity judgment or author-independent completeness proof is claimed; source fidelity and integrated dependency sufficiency remain for their authorized consumers.",
+    "The contribution is a source-bound semantic account with eight limited executable discriminator projections, not a complete formal decision procedure over arbitrary external observations.",
+    "No paid calls, subdelegation, Git mutation, source-law/account-integrator/generator/oracle/peer/common edits, acceptance or release were performed. Read-only Git object acquisition was used as the grant required.",
+    "All required source was available. No available-source construction was reclassified as a world-input residual.",
+    "Early overbroad routing/grant acquisition and late independent bootstrap loading are recorded in ACQUISITION.json; they were not used to expand authority."
+  ],
+  "artifacts": {
+    "ACQUISITION.json": {
+      "sha256": "a2c45a8a65e4dd76d883980345cdab3107b25c8e9734c30e98072a167ab9999d",
+      "bytes": 7869
+    },
+    "AUTHOR_CHECK.json": {
+      "sha256": "5cc9a3acb54c165ada0822919670afbf0bb18b762827991f551fe61900fa7b8e",
+      "bytes": 24357
+    },
+    "author_bindings.py": {
+      "sha256": "eb930862ac4e4ccadabcf4a9f0d186c1f36070fd808d7847005ff9daaf5a5532",
+      "bytes": 18764
+    },
+    "bindings.json": {
+      "sha256": "4c4342136fcf51de0df042fd67634e91ccf38d843a26c2f56b3dd72b7d297ce0",
+      "bytes": 797158
+    },
+    "check_author.py": {
+      "sha256": "053763e1823165f45b449382c6d0d0d8e3bcffaf3a63ed496bc80e02578fd700",
+      "bytes": 14304
+    },
+    "discriminator_models.py": {
+      "sha256": "1dc36bb70a7a28e677c54cf7ed1c1d2e969f335c1d19fd65539d765d7533783e",
+      "bytes": 8217
+    },
+    "release_bindings.py": {
+      "sha256": "ec0d6ffac309bdc58032ac122a8c44ce2b52c7ac6b5acfea71399a67e12f1a28",
+      "bytes": 21865
+    },
+    "spec_bindings.py": {
+      "sha256": "fbf2fbce31f04778da93ea607999c20c666af9acc6d6267eea07029f8b1f9af1",
+      "bytes": 28783
+    },
+    "spec_change_bindings.py": {
+      "sha256": "cdbe0f9cb2a717a58677b06b57d9253ac511e8ecbda6d0300082e5e76a548790",
+      "bytes": 12326
+    },
+    "spec_execution_bindings.py": {
+      "sha256": "cf1e6a19918c63116ff9b646e3a5b3efaa6e136fd7d32a2e2c9c748a661eaa8e",
+      "bytes": 19921
+    },
+    "spec_final_bindings.py": {
+      "sha256": "3b592d2704e43f84c0b47dbc52772e2943eb58bde39df828f2402b510873e450",
+      "bytes": 25547
+    },
+    "ticket_bindings.py": {
+      "sha256": "169f3bbac9f1f65f19f24bbef80a49e58302929cebc131f880399d9505a2359b",
+      "bytes": 41806
+    }
+  }
+}

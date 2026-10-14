@@ -1,0 +1,686 @@
+{
+  "schema_version": "stdo.semantic-contribution-author-check.v1",
+  "standing": "bounded_author_checks_only_not_independent_acceptance",
+  "source_commit": "f2cb3e593757d094d008102551925e871a0204ff",
+  "input_account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+  "bindings_sha256": "4c4342136fcf51de0df042fd67634e91ccf38d843a26c2f56b3dd72b7d297ce0",
+  "checks": {
+    "source_member_pins": true,
+    "live_source_preserved": true,
+    "body_hashes": 173,
+    "clause_hashes": 1087,
+    "stable_id_coverage": 173,
+    "unfinished": 0,
+    "all_21_ready_rows_reauthored": 21,
+    "typed_dependency_targets_resolve": true,
+    "reproduction": true,
+    "installed_rc2_pin_verified": true
+  },
+  "source_members": [
+    {
+      "path": "standards/SPEC_METHOD.md",
+      "bytes": 184601,
+      "sha256": "0ad457c67cf08e34e287b914f3dff1f5ea72835c6da80adadb1d1170e247a8c0",
+      "live_equals_frozen": true
+    },
+    {
+      "path": "standards/TICKET_METHOD.md",
+      "bytes": 71236,
+      "sha256": "d4c54b1cb2b49a3240ddd40adf68fd67d31d1712a0f294bafe2e852d7d8f6d3d",
+      "live_equals_frozen": true
+    },
+    {
+      "path": "standards/RELEASE_METHOD.md",
+      "bytes": 36113,
+      "sha256": "d391520a4755e589702d3b09a081f25b1eada96d429f8c268a8004c064f88e89",
+      "live_equals_frozen": true
+    },
+    {
+      "path": "standards/POSTING_GUIDE.md",
+      "bytes": 5717,
+      "sha256": "a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179",
+      "live_equals_frozen": true
+    },
+    {
+      "path": "standards/WRITING_GUIDE.md",
+      "bytes": 4205,
+      "sha256": "284c155448284e995b6eb2f98ee5d47b43f1d1c11a37896175ba743d2f229c0f",
+      "live_equals_frozen": true
+    }
+  ],
+  "representation_kind_corrections": [
+    {
+      "id": "WRITING_GUIDE.good-prose",
+      "before": "non_deciding_locator",
+      "after": "constraint"
+    },
+    {
+      "id": "WRITING_GUIDE.bad-prose",
+      "before": "non_deciding_locator",
+      "after": "definition_data"
+    },
+    {
+      "id": "RELEASE_METHOD.release-method",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "TICKET_METHOD.core-model",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "TICKET_METHOD.sprint-rules",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "TICKET_METHOD.upward-propagation-check",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "TICKET_METHOD.operating-mode",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "TICKET_METHOD.relationship-to-other-surfaces",
+      "before": "consumer_binding",
+      "after": "definition_data"
+    },
+    {
+      "id": "TICKET_METHOD.future-extensions",
+      "before": "non_deciding_locator",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.spec-driven-homeostatic-methodology",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.required-definition-relations",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.constitutional-chain",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.constitutional-migration-options",
+      "before": "definition_data",
+      "after": "constraint"
+    },
+    {
+      "id": "SPEC_METHOD.projection-discipline",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.release-version-boundary",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.evidence-rules",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.semantic-evidence-and-projection-separation-stdo-up-008",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.verification-layers",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.testing-strategy-taxonomy",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.trace-closure-and-anti-drift-rule",
+      "before": "constraint",
+      "after": "consumer_binding"
+    },
+    {
+      "id": "SPEC_METHOD.drift-signals",
+      "before": "constraint",
+      "after": "definition_data"
+    },
+    {
+      "id": "SPEC_METHOD.legacy-classification-rule",
+      "before": "constraint",
+      "after": "definition_data"
+    }
+  ],
+  "discriminator_cases": [
+    {
+      "name": "ticket.explicit-authority-selects-durability",
+      "source_id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "case_kind": "positive",
+      "facts": {
+        "upstream_authority": true,
+        "exact_admitted_ticket": false,
+        "explicit_record_instruction": true,
+        "ticket_state_authority": true,
+        "surviving_state": false,
+        "admitted_sprint": false
+      },
+      "expected": "durable_ticket",
+      "actual": "durable_ticket",
+      "distinction": "An exact ticket-state instruction selects durable record despite no surviving state; this says nothing about execution admission.",
+      "passed": true
+    },
+    {
+      "name": "ticket.no-authority-no-execution-carrier",
+      "source_id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "case_kind": "adverse",
+      "facts": {
+        "upstream_authority": false,
+        "exact_admitted_ticket": false,
+        "explicit_record_instruction": false,
+        "ticket_state_authority": true,
+        "surviving_state": false,
+        "admitted_sprint": false
+      },
+      "expected": "no_admitted_contract",
+      "actual": "no_admitted_contract",
+      "distinction": "Carrier creation cannot replace work authority.",
+      "passed": true
+    },
+    {
+      "name": "ticket.unknown-lifetime-is-not-one-run",
+      "source_id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "case_kind": "unknown",
+      "facts": {
+        "upstream_authority": true,
+        "exact_admitted_ticket": false,
+        "explicit_record_instruction": false,
+        "ticket_state_authority": true,
+        "surviving_state": null,
+        "admitted_sprint": false
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Unknown surviving obligations cannot be guessed absent.",
+      "passed": true
+    },
+    {
+      "name": "ticket.exact-ticket-reuse",
+      "source_id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "case_kind": "positive",
+      "facts": {
+        "upstream_authority": true,
+        "exact_admitted_ticket": true,
+        "explicit_record_instruction": false,
+        "ticket_state_authority": true,
+        "surviving_state": true,
+        "admitted_sprint": false
+      },
+      "expected": "reuse_exact_ticket",
+      "actual": "reuse_exact_ticket",
+      "distinction": "Existing exact ticket takes priority over new durable ticket.",
+      "passed": true
+    },
+    {
+      "name": "ticket.missing-ticket-authority-retains-debt",
+      "source_id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "case_kind": "adverse",
+      "facts": {
+        "upstream_authority": true,
+        "exact_admitted_ticket": false,
+        "explicit_record_instruction": false,
+        "ticket_state_authority": false,
+        "surviving_state": true,
+        "admitted_sprint": false
+      },
+      "expected": "retain_on_authorized_result_surface_and_withhold_ticket_dependent_closure",
+      "actual": "retain_on_authorized_result_surface_and_withhold_ticket_dependent_closure",
+      "distinction": "Missing ticket authority does not erase a surviving obligation or grant record creation.",
+      "passed": true
+    },
+    {
+      "name": "closure.writer-with-no-reserved-review",
+      "source_id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "case_kind": "positive",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "authenticated_failure": false,
+        "required_invalid_basis": false,
+        "required_out_of_frame": false,
+        "all_applicable_obligations_satisfied": true,
+        "required_coverage_complete": true,
+        "active_nonclosure": false,
+        "required_acceptance_satisfied": true
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "No invented review or Executive appointment when all actual obligations including applicable decision law hold.",
+      "passed": true
+    },
+    {
+      "name": "closure.failure-survives-missing-slot",
+      "source_id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "authenticated_failure": true,
+        "required_invalid_basis": false,
+        "required_out_of_frame": false,
+        "all_applicable_obligations_satisfied": false,
+        "required_coverage_complete": false,
+        "active_nonclosure": false,
+        "required_acceptance_satisfied": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Known failure remains visible beside uncovered required evidence.",
+      "passed": true
+    },
+    {
+      "name": "closure.unconfirmed-owner-acceptance",
+      "source_id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "case_kind": "unknown",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "authenticated_failure": false,
+        "required_invalid_basis": false,
+        "required_out_of_frame": false,
+        "all_applicable_obligations_satisfied": true,
+        "required_coverage_complete": true,
+        "active_nonclosure": false,
+        "required_acceptance_satisfied": null
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "A lawful other disposition or recorded review cannot supply required acceptance.",
+      "passed": true
+    },
+    {
+      "name": "closure.required-out-of-frame",
+      "source_id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "authenticated_failure": false,
+        "required_invalid_basis": false,
+        "required_out_of_frame": true,
+        "all_applicable_obligations_satisfied": false,
+        "required_coverage_complete": true,
+        "active_nonclosure": false,
+        "required_acceptance_satisfied": true
+      },
+      "expected": "out_of_frame",
+      "actual": "out_of_frame",
+      "distinction": "Required scope diagnosis is not silently omitted.",
+      "passed": true
+    },
+    {
+      "name": "meaning.unique-address",
+      "source_id": "SPEC_METHOD.bounded-context-semantic-resolution",
+      "case_kind": "positive",
+      "facts": {
+        "valid_semantic_address": true,
+        "within_capability": true,
+        "candidate_set_complete": true,
+        "admissible_concept_count": 1
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "One complete admissible candidate set permits meaning selection.",
+      "passed": true
+    },
+    {
+      "name": "meaning.known-collision",
+      "source_id": "SPEC_METHOD.bounded-context-semantic-resolution",
+      "case_kind": "adverse",
+      "facts": {
+        "valid_semantic_address": true,
+        "within_capability": true,
+        "candidate_set_complete": true,
+        "admissible_concept_count": 2
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Equal spelling with multiple meanings does not choose one.",
+      "passed": true
+    },
+    {
+      "name": "meaning.partial-search-not-zero",
+      "source_id": "SPEC_METHOD.bounded-context-semantic-resolution",
+      "case_kind": "unknown",
+      "facts": {
+        "valid_semantic_address": true,
+        "within_capability": true,
+        "candidate_set_complete": false,
+        "admissible_concept_count": 0
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Incomplete acquisition is not a proved zero-candidate result.",
+      "passed": true
+    },
+    {
+      "name": "admission.coherent-composite",
+      "source_id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "case_kind": "positive",
+      "facts": {
+        "composite_basis_interpretable": true,
+        "demonstrated_violation": false,
+        "all_participants_and_joins_established": true,
+        "currentness_established": true,
+        "actual_trust_boundary_validation_established": true,
+        "grant_established": true
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "Coherent composite bases are permitted; satisfaction does not prove semantic commit.",
+      "passed": true
+    },
+    {
+      "name": "admission.stale-predecessor",
+      "source_id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "case_kind": "adverse",
+      "facts": {
+        "composite_basis_interpretable": true,
+        "demonstrated_violation": true,
+        "all_participants_and_joins_established": true,
+        "currentness_established": false,
+        "actual_trust_boundary_validation_established": true,
+        "grant_established": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Stale predecessor on interpretable basis is violation, not invalid_basis.",
+      "passed": true
+    },
+    {
+      "name": "admission.unchanged-assertion-crosses-trust",
+      "source_id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "case_kind": "unknown",
+      "facts": {
+        "composite_basis_interpretable": true,
+        "demonstrated_violation": false,
+        "all_participants_and_joins_established": true,
+        "currentness_established": true,
+        "actual_trust_boundary_validation_established": null,
+        "grant_established": true
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Unchanged assertion still needs actual trust-boundary validation.",
+      "passed": true
+    },
+    {
+      "name": "admission.uninterpretable-mixed-basis",
+      "source_id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "case_kind": "adverse",
+      "facts": {
+        "composite_basis_interpretable": false,
+        "demonstrated_violation": false,
+        "all_participants_and_joins_established": true,
+        "currentness_established": true,
+        "actual_trust_boundary_validation_established": true,
+        "grant_established": true
+      },
+      "expected": "invalid_basis",
+      "actual": "invalid_basis",
+      "distinction": "No interpretable composite basis differs from an incompatible join on a coherent basis.",
+      "passed": true
+    },
+    {
+      "name": "release.accepted-current-channel-plan",
+      "source_id": "RELEASE_METHOD.selector-and-consumer-adoption",
+      "case_kind": "positive",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_gate_violation": false,
+        "observed_remote_complete": true,
+        "annotated_selector_and_cut": true,
+        "selector_matches_highest_published_ordinal": true,
+        "same_line_downgrade": false,
+        "plan_current": true,
+        "exact_plan_accepted_by_authority": true
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "The gate is satisfied independently of whether adoption effect completed.",
+      "passed": true
+    },
+    {
+      "name": "release.stale-plan-refuses",
+      "source_id": "RELEASE_METHOD.selector-and-consumer-adoption",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_gate_violation": true,
+        "observed_remote_complete": true,
+        "annotated_selector_and_cut": true,
+        "selector_matches_highest_published_ordinal": true,
+        "same_line_downgrade": false,
+        "plan_current": false,
+        "exact_plan_accepted_by_authority": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Prior digest acceptance does not authorize changed target/definition bytes.",
+      "passed": true
+    },
+    {
+      "name": "release.unavailable-remote",
+      "source_id": "RELEASE_METHOD.selector-and-consumer-adoption",
+      "case_kind": "unknown",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_gate_violation": false,
+        "observed_remote_complete": null,
+        "annotated_selector_and_cut": true,
+        "selector_matches_highest_published_ordinal": true,
+        "same_line_downgrade": false,
+        "plan_current": true,
+        "exact_plan_accepted_by_authority": true
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Unknown remote state cannot become latest-release evidence.",
+      "passed": true
+    },
+    {
+      "name": "release.channel-downgrade",
+      "source_id": "RELEASE_METHOD.selector-and-consumer-adoption",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_gate_violation": true,
+        "observed_remote_complete": true,
+        "annotated_selector_and_cut": true,
+        "selector_matches_highest_published_ordinal": true,
+        "same_line_downgrade": true,
+        "plan_current": true,
+        "exact_plan_accepted_by_authority": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Channel downgrade is refused; explicitly pinned old-cut sync is a separate allowed route.",
+      "passed": true
+    },
+    {
+      "name": "qualification.exact-cut-performed",
+      "source_id": "RELEASE_METHOD.exact-cut-qualification",
+      "case_kind": "positive",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "performance": "performed",
+        "all_exact_claim_evidence": true,
+        "coverage_complete": true,
+        "admissible_counterevidence": false,
+        "raw_label": "passed"
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "Actual exact-claim coverage and evidence, rather than passed label, establish the property.",
+      "passed": true
+    },
+    {
+      "name": "qualification.failure-not-erased-by-green",
+      "source_id": "RELEASE_METHOD.exact-cut-qualification",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "performance": "performed",
+        "all_exact_claim_evidence": true,
+        "coverage_complete": true,
+        "admissible_counterevidence": true,
+        "raw_label": "passed"
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "A stale green label cannot overwrite current admissible counterevidence.",
+      "passed": true
+    },
+    {
+      "name": "qualification.cached-green-unconfirmed",
+      "source_id": "RELEASE_METHOD.exact-cut-qualification",
+      "case_kind": "unknown",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "performance": "unconfirmed",
+        "all_exact_claim_evidence": null,
+        "coverage_complete": true,
+        "admissible_counterevidence": false,
+        "raw_label": "cached green"
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Cached label supplies neither performance nor deciding support.",
+      "passed": true
+    },
+    {
+      "name": "sprint.lawful-close-with-open-paydown",
+      "source_id": "TICKET_METHOD.sprint-close-review",
+      "case_kind": "positive",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_close_violation": false,
+        "all_items_and_debt_classified": true,
+        "remaining_debt_permitted": true,
+        "followup_durable": true,
+        "required_close_review_performed": true,
+        "item_compliance": "falsified",
+        "paydown_open": true
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "Close eligibility can hold while item compliance is false and debt remains unpaid.",
+      "passed": true
+    },
+    {
+      "name": "sprint.hidden-authority-drift",
+      "source_id": "TICKET_METHOD.sprint-close-review",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_close_violation": true,
+        "all_items_and_debt_classified": true,
+        "remaining_debt_permitted": false,
+        "followup_durable": true,
+        "required_close_review_performed": true,
+        "item_compliance": "falsified",
+        "paydown_open": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Durable ticket cannot make forbidden debt acceptable.",
+      "passed": true
+    },
+    {
+      "name": "sprint.unknown-followup-durability",
+      "source_id": "TICKET_METHOD.sprint-close-review",
+      "case_kind": "unknown",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "demonstrated_close_violation": false,
+        "all_items_and_debt_classified": true,
+        "remaining_debt_permitted": true,
+        "followup_durable": null,
+        "required_close_review_performed": true,
+        "item_compliance": "falsified",
+        "paydown_open": true
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Classification words cannot substitute for durable follow-up.",
+      "passed": true
+    },
+    {
+      "name": "conservation.authorized-removal-is-not-retention",
+      "source_id": "RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+      "case_kind": "positive",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "semantic_counterexample": false,
+        "disposition": "intentionally removed",
+        "retains_meaning": false,
+        "excluded_from_governing_set": true,
+        "actual_removal_decision_authorized": true
+      },
+      "expected": "satisfied",
+      "actual": "satisfied",
+      "distinction": "The exclusion predicate can hold without retained predecessor meaning; actual decision remains separate.",
+      "passed": true
+    },
+    {
+      "name": "conservation.false-retention",
+      "source_id": "RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+      "case_kind": "adverse",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "semantic_counterexample": true,
+        "disposition": "conserved",
+        "retains_meaning": false,
+        "excluded_from_governing_set": true,
+        "actual_removal_decision_authorized": true
+      },
+      "expected": "falsified",
+      "actual": "falsified",
+      "distinction": "Recording conserved does not establish retained semantics.",
+      "passed": true
+    },
+    {
+      "name": "conservation.unknown-no-effect",
+      "source_id": "RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+      "case_kind": "unknown",
+      "facts": {
+        "governing_basis_interpretable": true,
+        "semantic_counterexample": false,
+        "disposition": "not applicable",
+        "retains_meaning": false,
+        "excluded_from_governing_set": true,
+        "actual_removal_decision_authorized": true,
+        "supported_no_successor_effect": null
+      },
+      "expected": "indeterminate",
+      "actual": "indeterminate",
+      "distinction": "Unknown applicability cannot become non-applicability.",
+      "passed": true
+    }
+  ],
+  "discriminator_case_count": 29,
+  "limits": [
+    "Structural/source integrity checks are complete for the five selected owner members, not semantic completeness proof.",
+    "The 8 executable projections cover only named distinctions with supplied facts; they do not observe external state, decide all 173 predicates, confer grants or execute effects.",
+    "The author selected and assessed these cases; they are not the withheld oracle, independent source-first review, Product acceptance or release."
+  ]
+}
