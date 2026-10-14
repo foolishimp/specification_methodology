@@ -3,7 +3,7 @@
 **Author**: Dimitar Popov
 **Date**: 2026-10-14T01:32:33Z
 **Addresses**: the common specification `specification_methodology/v3/specification/` for iteration 3, at the commit the common pen names as frozen for each round
-**Status**: Round 1 complete (subject `7c058ed`). Expectations committed at `f4007ce`, before the subject was read.
+**Status**: Round 1 complete (subject `7c058ed`). Round 2 expectations recorded (subject `55bbf9e`), before its diff is read. Expectations for round 1 were committed at `f4007ce`, before that subject was read.
 **Updated**: 2026-10-14T01:50:05Z
 
 ## Authority and independence
@@ -214,3 +214,39 @@ About 45 further findings, including undefined terms, wording and cross-referenc
 Claude is a tenant governed by this specification. Findings M8 and SR4 N-1 concern the Claude line and are marked interested. Several new clauses respond to Claude's own earlier findings on the Codex candidate (H1, H2), and judging those clauses is not fully independent.
 
 The reviewers sampled `PREDECESSOR_CLAIMS.md` rather than reading every row, and read neither candidate. They read Codex's review of the Claude candidate from the working tree, identified by its SHA-256, because it is uncommitted. Nothing in this round selects repairs. The pen repairs, the next frozen commit is round 2, and the product owner's sign-off closes the review.
+
+## Round 2: expectations, recorded before reading the diff
+
+The pen's [round 2 handoff](../codex/20261014T033341Z_HANDOFF_I3_SPECIFICATION_ROUND_2.md) names the subject: `55bbf9ee7bc8e37235ef0588f9afea0f8ccbabbc`. It is compared with `afb6ad6`, whose specification equals round 1's `7c058ed`. The handoff was read before these expectations were written; the diff and the corrected text were not.
+
+A round 1 finding closes only when the corrected text meets its expectation below:
+
+- **B1:** a named acceptor (the product owner or another explicitly named authority) accepts each replacement relation. The acceptance is recorded before the dependent member's `accept`, and no other route leaves a superseded row pending forever.
+- **M1:**
+  - The algebraic calculus and the computational calculus are distinct pillars, each with what a candidate must show.
+  - Each merge, rename or addition carries its reason.
+  - The pillars are linked to the C1 principles.
+
+  Whether the owner's list needs his verbatim confirmation is his decision. The pen declined to ask, and this review reports that decline rather than treating it as closed.
+- **M2:**
+  - Reduction has a pass rule a second reviewer would apply the same way.
+  - "Deciding path", the acquisition measure and the "preceding" candidate are defined.
+  - Nothing lets the comparison be skipped.
+  - A whole-candidate check exists alongside the per-member criterion.
+- **M3:** constraint-surface and a_c fidelity are in the C3 outcome, a criterion and the closure rule. Partial coverage is either barred or declared with its limits. The theory being modelled is named.
+- **M4:** each changed accepted item (C1, C2, C3 and the Mission sentence) is listed with its reason, and each new requirement has its purpose paragraph.
+- **M5:** one stated rule combines per-criterion results into member acceptance, and adverse or missing evidence cannot be absorbed.
+- **M6:** the frame basis's review result set maps into the core, or is replaced by core values with a domain outcome.
+- **M7:**
+  - Each role's write surfaces are stated.
+  - The owner-directed merge is recorded as a variance, or the rule is reconciled with it.
+  - "Author" is defined for reviewer independence.
+  - I3-00 closes only on the owner's sign-off, with a GOALS row.
+- **M8 (interested):** either the work list carries the Claude line (Codex's F1–F5 with their current state, and the new standard's obligations for that line), or the GOALS claim is scoped to what the list covers. Codex's review of the Claude candidate is committed.
+- **M9:**
+  - Coverage is checked against the source reports, not only the list's own keys.
+  - Owner decisions are tracked as decisions.
+  - Findings routed to several items have a closure rule.
+  - I3-02, I3-05 and I3-11 match the reduction requirement.
+- **M10:** a conserved claim may have more than one successor locus, and the tier table's member lists are stated as binding or as illustrative.
+- **No regressions:** the repair text introduces no new contradiction, untestable obligation, second owner or naming in prose. It does not reopen a round 1 "holds" result (expectations 5, 10 and 12).
