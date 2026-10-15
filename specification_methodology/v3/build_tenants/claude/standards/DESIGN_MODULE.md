@@ -358,6 +358,13 @@ helpers that both decide meaning and perform writes; and proxy interfaces
 that partially imitate a new design while preserving the old authority
 path (P6, P4a; §10).
 
+Both lists bind. A project that adopts this profile prefers the first
+and avoids the second as an obligation of the profile, not as a
+description of practice: a realisation that takes an avoided shape, or
+forgoes a preferred one where it is practical, does not conform unless
+its design module records the reason (P6, P2; the predecessor's "must
+prefer" and "must avoid").
+
 ### Python typing
 
 When this profile governs a Python boundary, repo-authored Python is fully
@@ -1954,7 +1961,16 @@ Ontology, design verdict and sufficient reconstruction evidence as closed
 results under [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse),
 which owns reuse and its three invalidators: the check confirms their
 exact scope, traces and applicability, and that none of those invalidators
-has occurred. A new role, conversation or review occurrence is not one of
+has occurred. The invalidators those rules name are instances of
+ACTIVATION §7's three, and no fourth exists: a reprice of a governing
+source, which invalidates only the affected Ontology relations and
+downstream projections until their impact is re-evaluated (§5), is a
+changed basis for those relations and projections; a later candidate
+that satisfies the applicability criteria and could materially alter the
+lawful frontier (§7) is a material input change for the affected
+selection evidence; new evidence or another material dimension that
+defeats a dominance relation (§7) is a material input change for that
+relation. A new role, conversation or review occurrence is not one of
 them, so it does not itself require re-authoring that evidence or
 recreating the three views. Missing, stale or ambiguous coverage is not a
 no-delta proof. A material changed relation or a new counterexample is an

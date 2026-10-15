@@ -30,7 +30,7 @@ Routes, in order:
 
 Size of this frame: 105085 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780
 
 ## 5. Ontology-first design
 
@@ -687,7 +687,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780
 
 ## 7. Ontology and three-view design gate
 
@@ -1496,7 +1496,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: DESIGN_MODULE.md#foundation-to-law sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1 rows=3/26 selected by the anchors this frame carries
+Source: DESIGN_MODULE.md#foundation-to-law sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780 rows=3/26 selected by the anchors this frame carries
 
 ### Foundation to law
 
