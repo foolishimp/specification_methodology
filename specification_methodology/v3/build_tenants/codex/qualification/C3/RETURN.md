@@ -1,6 +1,6 @@
 # Codex C3 Construction Return
 
-The current construction is the [consolidated iteration-3 repair](iteration-3/review-repair/RETURN.md), under
+The current construction is the [iteration-3 repair and ODD follow-up](iteration-3/review-repair/odd-binding-fix/RETURN.md), under
 closed common input C3-I3-CLOSED-01 and admitted EC-CODEX-I3-03. Its return binds
 the frozen package, current checks, working reviews, actual-use evidence and
 remaining obligations. [The current inventory](iteration-3/CANDIDATE.json)
