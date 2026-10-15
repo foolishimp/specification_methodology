@@ -85,10 +85,13 @@ This member imports the concepts below into
 `urn:stdo:bounded-context:reference-frame-evaluation` under the import rule
 of [FOUNDATIONS §2](FOUNDATIONS.md#imports-between-members), which states
 what an import is, its direction and loss, and that it transfers no
-ownership and confers no authority; this declaration restates none of
-that. FOUNDATIONS, ACTIVATION and EVALUATION declare no bounded-context
-identity, so each row's source context is its member; the target context
-and its owner are declared in Scope above (P1, P3).
+ownership and confers no authority. As that rule requires of a
+declaration: the direction is from each source member named below to
+this context, and the loss is none, for every concept in the table; the
+target context is `urn:stdo:bounded-context:reference-frame-evaluation`,
+owned by this member as Scope above declares. FOUNDATIONS, ACTIVATION and
+EVALUATION declare no bounded-context identity, so each row's source
+context is its member (P1, P3).
 
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|

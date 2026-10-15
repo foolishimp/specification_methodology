@@ -801,7 +801,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ### RF-002 Finite attention
 
@@ -818,7 +818,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ### RF-009 No assumed hierarchy
 
@@ -842,7 +842,7 @@ grant or as a dependency would move authority or change a result without a
 declared relation.
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ### RF-012 Closed results
 
@@ -861,7 +861,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ### RF-014 Capability fit
 
@@ -877,7 +877,7 @@ silently omit material relations to fit its context (P0, P5; rc.2
 #rf-014-capability-fit).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ## 11. The activation packet
 
@@ -1697,7 +1697,7 @@ the adopting Product makes, so no profile choice is presented as following
 from the foundations (P6, P2).
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686 rows=18/36 selected by the anchors this frame carries
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8 rows=18/36 selected by the anchors this frame carries
 
 ### Foundation to law
 

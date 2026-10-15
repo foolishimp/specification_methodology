@@ -419,7 +419,7 @@ source-linked prose, and representation cannot create, widen or replace it
 (P3, P6).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
 
 ## 11. The activation packet
 
@@ -1052,7 +1052,7 @@ are traced by family F3 at
 dispositions and decides nothing.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686 rows=15/36 selected by the anchors this frame carries
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8 rows=15/36 selected by the anchors this frame carries
 
 ### Foundation to law
 

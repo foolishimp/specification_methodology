@@ -362,9 +362,9 @@ path (P6, P4a; §10).
 Both lists bind. A project that adopts this profile prefers the first
 and avoids the second as an obligation of the profile, not as a
 description of practice: a realisation that takes an avoided shape, or
-forgoes a preferred one where it is practical, does not conform (P6, P2;
-the predecessor's "must prefer" and "must avoid", which admit no
-exception).
+forgoes a preferred one, does not conform (P6, P2; the predecessor's
+"must prefer" and "must avoid", which admit no exception beyond the one
+item that says "where practical").
 
 ### Python typing
 

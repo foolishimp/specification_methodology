@@ -1,0 +1,22 @@
+{
+ "batch": "10",
+ "reviewer": "fable, same-family nonauthor, fresh context",
+ "rows": [
+  {"id": "DESIGN_MODULE_METHOD.md#4-functional-bias-without-language-mandate",
+   "result": "changed",
+   "modal_force": "weakened",
+   "predecessor_quote": "must prefer: immutable data carriers over mutable shared objects [...] explicit failure carriers over ambient exception-driven control flow where practical",
+   "successor_quote": "a realisation that takes an avoided shape, or forgoes a preferred one where it is practical, does not conform",
+   "what_changed": "The binding sentence conditions every preferred shape on practicality; the predecessor's 'must prefer' carried 'where practical' only on the failure-carrier item, so forgoing the other five preferred shapes as impractical becomes conforming. The recorded-reason exception is gone; the avoid list is conserved.",
+   "counterexample": "A realisation keeps one mutable shared configuration object and records that an immutable carrier is impractical for its hot path. Predecessor: nonconforming, since 'must prefer immutable data carriers over mutable shared objects' admits no practicality condition (only the failure-carrier item does). Successor: conforming, since it forgoes a preferred shape where that shape is not practical, which the binding sentence exempts.",
+   "smallest_repair": "Delete 'where it is practical' from the binding sentence; the failure-carrier item keeps its own 'where practical'."},
+  {"id": "STDO_REFERENCE_FRAME_BASELINE.md#closure",
+   "result": "indeterminate",
+   "modal_force": "preserved",
+   "predecessor_quote": "every Product, Product Composition, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof family material to the outcome",
+   "successor_quote": "every one of the twelve families material to the outcome has an exact declaration or acquisition path",
+   "what_changed": "Not decided: item 22 refers to 'the twelve families' enumerated outside the supplied text; the predecessor names them inline. With TICKETS §7 supplied, the closure condition, the indeterminate-result rule and items 1–21 and 23–24 compare as conserved.",
+   "counterexample": "",
+   "smallest_repair": "Supply the EXECUTIVE_BASELINE section that enumerates the twelve families, or name them in item 22; every other determination, TICKETS §7 included, compares as conserved."}
+ ]
+}
