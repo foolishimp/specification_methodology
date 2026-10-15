@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T06:18:57Z
+updated_at: 2026-10-15T06:19:53Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -34,7 +34,7 @@ The owner selects Codex's common I4 update, then both tenants' synthesis after r
 | Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
 | Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
 | Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
-| I4 common proposal | C3-I4-02 successor correction; source and descendant recording follow below. C3-I4-01 remains historical |
+| I4 common proposal | C3-I4-02 at `23ad611ed9c44df214e97d8bc9edaa2ba61b7842`; proposed tuple recorded below. C3-I4-01 remains historical |
 
 The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
 
@@ -61,6 +61,37 @@ Review observations, evaluated against the owning Product: I4-04 supplies one co
 Read the proposed D6 finding count with the impacts and coverage Product requires; fewer but materially more consequential findings are not an automatic win. Any unresolved tradeoff remains the product owner's decision. The port lists remain inputs with reasoned exclusions, not mandatory copying.
 
 A subagent is a possible actual-use mechanism under criterion 4, not proof of fresh context or context fit by its label. The selected activation must establish no inherited private or unselected repository context, disclose supplied and acquired inputs, support the active-context bound, and retain independent expectations and assessment. Session-token use remains a resource cost; any external spend depends on the selected mechanism and is not established by this review. D5 and the actual trial remain unselected. No external call or new subagent is activated by this correction.
+
+## C3-I4-02 proposed input snapshot
+
+Input commit B: `23ad611ed9c44df214e97d8bc9edaa2ba61b7842`, on main. Recording R is the descendant commit that first contains this section. All 22 member hashes and byte counts are read from B: fourteen common source/entry members and eight supporting work/review records. The recording ticket's current bytes are not members of the input it records. C3-I4-01 and its original tuple below remain immutable historical inputs.
+
+Standing: successor correction, NOT_RATIFIED, with affected independent readback pending. The review at `7789e26` applies to `5d2b257`; unchanged conclusions retain their scope, including the reviewer's declared policy authorship, and no verdict is reassigned to this successor. F1–F3 and the ticket observations have author dispositions in the listed Codex post. The product owner's exact-commit ratification and both tenant admissions remain unrecorded.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 60517 | `1f4dddeee7ec7d24968c790ff2f4c7588a125e7744f9a29f8909d4fa8aad8c88` |
+| `specification/GOALS.md` | 24762 | `04f12e70982fe062ae11cdd67726049fd9bff43eda8850e8698ccad6ce042eb1` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8406 | `7dadf0acb6dd374b0301e446d7a3ce893ed69a8e14daea0b64e407882c756267` |
+| `specification/requirements/README.md` | 32072 | `263b874e2b93538c794edb534d1b2d9fd0361c05d1d33f65b113e51427869c93` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16794 | `3cca632a3e3d58d27f95c75a6e78cf99483753b910d624857ced93bcdb49f2c9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `CLAUDE.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `build_tenants/README.md` | 5546 | `7a61ca24bc6fb72a3a32b786d7409a46a9d14bc0c342a01e180a72a657bd45b7` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 103843 | `4af90b219e126baf1853022a624527b644829eeb8de788b6a91cfe1eb4d3c9c9` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 54042 | `ddf860a4e3b6c939bcf795bd01130b5965f1259d178bea9072c957abbf90ceef` |
+| `.ai-workspace/comments/codex/20261015T053000Z_EXPECTATIONS_I4_CLAUDE_AND_COMMON_REPRICE.md` | 3555 | `22b9d742ba3e4b634482dd55c5a95fe57eeb8996c774c90750e13410a77d9666` |
+| `.ai-workspace/comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md` | 10488 | `e3dd522f742a898287e339c3650f345ef49547e997c9f938a90971e2c280a33d` |
+| `.ai-workspace/comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md` | 18564 | `2a4b9e9dfe42da5af0ac770505fdc062f6fc867a716e48218872cace21b2c0fc` |
+| `.ai-workspace/comments/claude/20261015T060155Z_EXPECTATIONS_REVIEW_C3_I4_01_5D2B257.md` | 5093 | `4fdfc757789799109033085a089fad6fe9a3f721a1c781f0c31ed25128abd1e0` |
+| `.ai-workspace/comments/claude/20261015T060639Z_REVIEW_C3_I4_01_COMMON_SPECIFICATION_5D2B257.md` | 9090 | `fa862409516eadef34a733c5bea77b4e93dbbb461fb0e6ce9a58a102d23ee324` |
+| `.ai-workspace/comments/codex/20261015T061653Z_DISPOSITION_C3_I4_01_COMMON_REVIEW.md` | 4670 | `376e5dcf6e6e25e2fe37c6d4153b5d6734a2cccdda86e89e2f35655f052cfb71` |
 
 ## C3-I4-01 proposed input snapshot
 

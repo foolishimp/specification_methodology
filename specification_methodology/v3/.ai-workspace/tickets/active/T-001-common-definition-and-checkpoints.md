@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T06:18:57Z
+updated_at: 2026-10-15T06:20:38Z
 dependencies: []
 ---
 
@@ -27,6 +27,10 @@ The same party acts separately as Git Writer to freeze the correction, then Ledg
 Writer correction return: F1–F3 are addressed in the successor proposal. The [disposition](../../comments/codex/20261015T061653Z_DISPOSITION_C3_I4_01_COMMON_REVIEW.md) records the supported fixes and qualified observations. The peer review remains bound to `5d2b257`; its policy-authorship limits remain explicit. C3-I4-02 awaits affected independent readback and exact-commit ratification. The Git Writer checkpoints these bounded changes after verification, then the Ledger Writer records the successor tuple in a descendant; no tenant admission follows from either commit.
 
 2026-10-15T06:18:57Z — Author verification: the Product Definition verifies against installed rc.2; 190 local/installed links across six changed/new files resolve; scoped whitespace passes. C3-I4-01 and historical admissions are byte-preserved, protected sources are unchanged, and both tenant worktrees remain clean at their original heads. The Git Writer now freezes the bounded correction on main. The new source receives its own descendant input record; no independent successor verdict or owner ratification is claimed.
+
+2026-10-15T06:19:53Z — Ledger Writer records C3-I4-02 at source `23ad611ed9c44df214e97d8bc9edaa2ba61b7842` in [T-002](T-002-c3-successor-construction.md#c3-i4-02-proposed-input-snapshot), with 22 members read from B and the fourteen common members unchanged during recording. The bounded successor corrects F1–F3 and records the observations' applicability. Claude's earlier review remains on its original subject; affected readback, the product owner's ratification, actual-use resource selection and both tenant admissions are pending. The Git Writer checkpoints this descendant record only, without a tenant effect or push.
+
+2026-10-15T06:20:38Z — Recording verification: all 22 member hashes and byte counts reproduce from source B; the fourteen common source/entry files remain byte-identical to B. The C3-I4-01 snapshot and prior admission/history blocks are preserved. The new recording link resolves, source links retain the 190-link check, and scoped whitespace passes. Observed Writer/recording interval since 06:13:54 is 6 minutes 44 seconds, excluding earlier acquisition. No trial, new agent, external paid call, tenant effect, ratification or admission occurred; full context and spend remain uninstrumented. The next readback is the bounded `7789e26..23ad611` correction and its record, with prior review conclusions retained only on their supported scope.
 
 ### Iteration 4 common specification
 
