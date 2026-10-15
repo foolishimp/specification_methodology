@@ -1,0 +1,65 @@
+{
+  "kind": "stdo.codex-i3.independent-review-verification",
+  "recorded_utc": "2026-10-14T15:43:56.950568+00:00",
+  "checkpoint": "0517eb2771b18a7369c69e52570a3db3e36f8229",
+  "package": "3aaa2f2cf0d6f24a734a33c258373a58feceaf87",
+  "common_input": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
+  "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+  "review_report_sha256": "722c4eee9a97191508a2603697b6b38d68515e5229d59ca15f48d822c9ad603f",
+  "observations": {
+    "package_members_verified": 89,
+    "conservation_rows_checked": 691,
+    "conservation_adverse_controls_passed": 10,
+    "cold_identity_adverse_controls_passed": 19,
+    "assertion_records": 90,
+    "evidence_references_resolved": 322,
+    "frozen_actor_evidence_files_verified": 24,
+    "result_artifact_pins_verified": 71,
+    "successful_reader_events": {
+      "A": 23,
+      "B": 26,
+      "C": 40
+    },
+    "emitted_bytes_recounted": {
+      "A": 235739,
+      "B": 339549,
+      "C": 284930
+    },
+    "task_packets_equal_sha256": "d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559",
+    "interpretation_reads_in_matched_traces": 0,
+    "raw_trace_digests_match_recorded_measurements": true
+  },
+  "evidence": [
+    {
+      "path": "artifact-check.json",
+      "bytes": 3965,
+      "sha256": "5576a34fa1f8d6661fc4050d6e953944f19485e71ed93c44b7e120de246915be"
+    },
+    {
+      "path": "identity-check.json",
+      "bytes": 5955,
+      "sha256": "f354f4b7b3fda8ec2a490411c78a266d7071508b7f6fcaf155821c0fb779fa61"
+    },
+    {
+      "path": "acquisition-check.json",
+      "bytes": 517,
+      "sha256": "f6df2ab389c3fbdde1b59b698291f8eee93d005295464d4c251c0f30849dba3b"
+    },
+    {
+      "path": "trial-artifact-proof.json",
+      "bytes": 10690,
+      "sha256": "35efc68f3f6f9637d8982e125e7e2e27c33d94a003c13ee53b5031b2e8273487"
+    },
+    {
+      "path": "interpretation-projections.json",
+      "bytes": 152536,
+      "sha256": "f5df937791a898bd820baa0399e4bb0912b4ad9f12f6c1ca476f20b09d5b79b5"
+    }
+  ],
+  "limits": [
+    "Source-based defect review, not per-member acceptance.",
+    "Evidence reference verification does not re-adjudicate every semantic grade.",
+    "No new actor trial, issued identity, installed-v3, categorical join or release qualification.",
+    "Same-family nonauthor reviewers; active context, tokens and inference spend uninstrumented."
+  ]
+}
