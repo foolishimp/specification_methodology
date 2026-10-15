@@ -2679,23 +2679,98 @@ section. The six close classifications of §12 belong to TICKETS §3 and are
 not mapped here (P6).
 ```
 
-Extra, rc.2 `UX_METHOD.md#12-realization-discretion`:
+Extra, rc.2 `UX_METHOD.md#13a-scaffold-and-exemption-law`:
 
 ```text
-The method is opinionated about the process model. It is not opinionated about the realization stack.
+A UX surface is governed by this method by default when any of these are true:
 
-The project chooses:
+- it is reachable from the product shell
+- it is used as proof for a ticket, requirement, design module, release, or
+  review
+- it can mutate product truth
+- it can spawn, attach, resume, or dispatch work
+- it can change Context, selection authority, closure, continuation, evidence,
+  or provenance
 
-- the language
-- the framework or runtime
-- the state-container library (if any)
-- the effect-interpreter mechanism
-- the runtime validator (if any)
-- the build, bundling, and deployment toolchain
+A scaffold, prototype, debug pane, or temporary proof surface may be exempt only
+when the design module or ticket records:
 
-The project records its choices in the design module along with a short justification of how each choice preserves the §4 Elm process model and the §6 effect-membrane rule.
+- the exemption scope
+- the permitted operations
+- whether mutation is forbidden or explicitly bounded
+- a visible scaffold/debug label where user-facing
+- the authoritative surface that will supersede it
+- the retirement condition and owning ticket
+- the non-closure condition preventing release if the scaffold remains
 
-The method does not rank stacks. It tests realizations. A realization is method-compliant when §4–§10 hold under inspection and the §14 failure patterns are absent.
+An exempt scaffold cannot become the production UX by accumulation. It must be
+retired, repriced into a governed UX surface, or kept outside product closure.
+```
+
+Extra, rc.2 `UX_METHOD.md#13b-ux-sprint-compliance-escrow`:
+
+```text
+UX is the primary governed use case for sprint compliance escrow.
+
+Under `SPEC_METHOD.md` and `TICKET_METHOD.md`, a UX sprint may defer local UX
+compliance proof during a short iteration window when per-change proof cost is
+higher than expected correction cost.
+
+This is a cost-optimization rule. It does not weaken the UX process model.
+
+A UX sprint may escrow:
+
+- screenshots or walkthrough capture
+- visual review
+- copy, spacing, density, and layout cleanup
+- accessibility review and remediation
+- Msg-replay proof updates for product-meaningful interaction families
+- design-module wording cleanup
+- trace cleanup between changed UX states and governing authority
+
+A UX sprint may not escrow:
+
+- product-truth-changing `Msg` variants that lack an admitted carrier
+- new or changed `AssetSurface` contracts or equivalent typed product contracts
+- new navigation, information architecture, or selection authority that changes
+  product meaning
+- runtime, governance, closure, continuation, lineage, provenance, or evidence
+  semantics
+- release criteria or method law
+
+If one of those appears, the sprint records the finding and the work exits the
+UX sprint path through standalone repricing or sprint supersession. The UX layer
+must still not become the hidden constructive carrier.
+
+A UX sprint should close when continued iteration is more expensive or less
+trustworthy than review. Valid close triggers include:
+
+- the declared timebox ends
+- accumulated changed states are too numerous for casual review
+- screenshots or walkthrough evidence no longer explain the current surface
+- interaction behavior changed beyond visual polish
+- reviewer uncertainty makes more iteration unsafe without reconciliation
+
+UX sprint close is a forensic walkthrough. The walkthrough reviews each changed
+screen, state, and product-meaningful interaction against the cited authority.
+
+Each finding is classified as:
+
+- `accepted`: compliant with this method and the cited design
+- `local_paydown`: local UX debt remains and is captured by a paydown ticket
+- `design_reframe`: design authority must change
+- `requirement_reprice`: requirement authority must change
+- `product_reprice`: product definition must change
+- `remove`: the change should be backed out or kept out of closure
+
+The sprint may close with explicit local paydown tickets only where the debt is
+local to UX realization and the governing method allows follow-up. It may not
+close while product-truth carrier gaps, hidden state continuation, or authority
+drift remain unclassified.
+
+Method closure for a product UX surface still requires the §8A Msg-replay proof
+and §11 accessibility obligations unless an explicit exemption is recorded. The
+sprint can defer those obligations during iteration; it cannot erase them.
 
 ---
 ```
