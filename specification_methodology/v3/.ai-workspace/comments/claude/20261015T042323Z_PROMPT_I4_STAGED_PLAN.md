@@ -13,21 +13,33 @@ choosing one candidate. Nothing in it is a rebuild: it is repair, port
 and evidence on a specification that decides what the tenants have so
 far assumed.
 
+Revision 2. It takes the six corrections of Codex's review of revision 1
+at commit `0045cb0`: divergences are classified before any common
+decision; a port does not erase authorship; a repair review covers the
+changed material and its dependents; criterion 4 does not qualify the
+other candidate; a freeze is immutable and authority lives in the
+ticket; the Codex donor package is `d490dd6`.
+
 ## Terms
 
 - The **common specification** is
-  `specification_methodology/v3/specification/`. It states WHAT the
-  product is. Only the pen holder edits it.
+  `specification_methodology/v3/specification/` on `main`. It states
+  WHAT the product is. Only the pen holder edits it, and every change to
+  it lands on `main` as a pen commit. Today it stands at `1fce537`.
 - A **tenant** is one line of realization under
-  `specification_methodology/v3/build_tenants/<agent>/`. It states HOW.
-  Each agent edits only its own tenant.
+  `specification_methodology/v3/build_tenants/<agent>/`, on its own
+  branch. It states HOW. Each agent edits only its own tenant.
 - The **pen** is the sole right to edit the common specification, the
-  tickets, `build_tenants/README.md`, `CLAUDE.md` and `AGENTS.md`. The
-  other agent sends common defects to the pen through posts, and writes
-  no common files.
-- A **freeze** is a named commit. After it, the frozen text changes only
-  by a recorded variance in the tenant **ledger**, the tenant's running
-  record of decisions, variances and results.
+  tickets, `build_tenants/README.md`, `CLAUDE.md` and `AGENTS.md`. It is
+  held by one named session, D1, not by a family. The other agent sends
+  common defects to the pen through posts, and writes no common files.
+- The **ticket** is the authority record: owner decisions, dispositions,
+  admissions and sign-offs. The pen writes it. A tenant **ledger** is
+  that tenant's record of work, results, variances and proposals. A
+  ledger proposes; a ticket decides.
+- A **freeze** is a named commit and is immutable. A repair never changes
+  a freeze; it creates a successor freeze, and the ticket names the
+  current one.
 - A **candidate** is a tenant's frozen build for one iteration.
 - The **donor** of a tenant is the other tenant's named candidate. A
   **port** is a part taken from the donor into the receiving tenant.
@@ -38,41 +50,65 @@ far assumed.
   is of the other family. In iteration 4 both are interested parties,
   since each family builds a competing candidate, and every review must
   say so.
+- An **acceptance-bearing** review is one whose result may support an
+  acceptance claim for the part it covers. A **supplementary** review is
+  evidence that may not. Which is which is fixed by D4 and Stage 3.
 - The **six acceptance criteria**, the **52 member-conformance
   discriminators** and the **closure checks J53 to J55** are those of
   the common specification. Supported inapplicability waives none of
   the six criteria.
 - The **product owner** is the human. Owner acts are **gates**: no agent
-  proceeds past a gate until the owner's act is recorded.
+  proceeds past a gate until the pen has recorded the owner's act in the
+  ticket.
 
 ## Decisions by the product owner
 
-These are fixed before this prompt is issued. The pen holder copies them
-into the iteration 4 contract record. Neither agent changes them. Items
-in square brackets are for the product owner to fill in or confirm.
+These are fixed before this prompt is issued. The pen copies them into
+the iteration 4 ticket. Neither agent changes them. Items in square
+brackets are for the product owner to fill in or confirm.
 
 | # | Decision | Value |
 |---|---|---|
-| D1 | Pen holder for iteration 4 | Codex |
-| D2 | Donor commits | Claude: `2beed8d` on `tenant/claude/c3-synthesis`, handoff `96ccdcc`. Codex: `fb855df` on `tenant/codex/c3-iteration-3`, repair package `14bd92f` [confirm] |
+| D1 | Pen holder for iteration 4 | One named Codex session or activation: [name]. Recorded in the ticket. Any other session, of either family, has no pen |
+| D2 | Donor commits | Claude: `2beed8d` on `tenant/claude/c3-synthesis`, handoff `96ccdcc`. Codex: `fb855df` on `tenant/codex/c3-iteration-3`, which binds package `d490dd6` [confirm] |
 | D3 | Port lists | Into Claude from Codex: C1 to C6. Into Codex from Claude: X1 to X9. As listed in `comments/claude/20261015T021914Z_REVIEW_I3_CANDIDATES_BEST_OF_BOTH.md`, with these edits by the product owner: [none] |
-| D4 | Ported-part policy | A ported part is the receiving tenant's text. The receiver rebinds it to its own anchors and re-evidences it with its own tooling and its own same-family nonauthor review. The donor's evidence does not carry. The receiver's ledger records the port by donor commit and locus |
-| D5 | Criterion 4, actual use, for the Claude line | [A: fund one isolated-actor protocol run on the Claude candidate, port C2, same protocol and caps as Codex's. B: leave unevidenced. B makes the Claude candidate unacceptable under the six criteria and decides Stage 4 for Codex] |
-| D6 | Choice rule for Stage 4 | The candidate that meets all six criteria with the fewest recorded residuals. If both meet them, the product owner's preference on readability and maintainability, recorded with a reason. If neither, no choice: the product owner decides between an iteration 5 and stopping |
-| D7 | Common input | The signed iteration 4 commit of the common specification, the Stage 1 gate. Both tenants rebind to it. No build starts before it |
+| D4 | Ported-part policy | A ported part is the receiving tenant's text: the receiver rebinds it to its own anchors and re-evidences it with its own tooling. Porting does not erase authorship. The acceptance-bearing review of a ported part is the receiver's same-family nonauthor review of Stage 2, which did not write the part. The donor's cross-family reading of its own ported part in Stage 3 is supplementary. The receiver's ledger records each port by donor commit and locus, and its handoff names, per port, which review bears |
+| D5 | Criterion 4, actual use, for the Claude line | [A: fund one isolated-actor protocol run on the Claude candidate, port C2, with the same protocol and caps as Codex's. B: leave unevidenced.] B removes the Claude candidate from the Stage 4 choice. It qualifies nothing: the Codex candidate must still meet the six criteria and the closure checks on its own |
+| D6 | Choice rule for Stage 4 | A candidate is eligible only if it meets all six criteria and the closure checks J53 to J55. An obligation that was not assessed is a failed criterion, not a residual. Among eligible candidates, the one with the fewest non-blocking residuals over comparable coverage. If equal, the product owner's preference on readability and maintainability, recorded with a reason. If none is eligible, no choice: the product owner decides between an iteration 5 and stopping |
+| D7 | Common input | The signed iteration 4 commit of the common specification on `main`, the Stage 1 gate. Both tenants rebind to it. No tenant is admitted to Stage 2 before it |
 | D8 | Budget rule, Claude line | Sequential work in the main session. At most one subagent at a time, Sonnet, with an exact file and line scope. Never parallel agents. Never a message to a finished agent |
-| D9 | Standing rules, both | No merge to main, no push, no acceptance claim by any agent. Reviews are posted under `.ai-workspace/comments/<agent>/`, expectations first, with no repair of the subject. Writing: plain, every term defined at first use, "the product owner" for the human, exact modal force |
+| D9 | Standing rules, both | No merge to main by a tenant, no push, no acceptance claim by any agent. Reviews are posted under `.ai-workspace/comments/<agent>/`, expectations first, with no repair of the subject. Writing: plain, every term defined at first use, "the product owner" for the human, exact modal force |
 
 ## Stage 1: the iteration 4 common specification
 
 Goal: the common specification decides what the tenants have been
-assuming. Gate: the product owner signs off a named commit.
+assuming, and nothing else. Gate: the product owner signs off a named
+commit on `main`.
+
+The two iteration 3 candidates were built on different common inputs:
+Claude on `355aa86`, Codex on `1fce537`. Some divergences are therefore
+one line's distance from the current input, not a gap in it. Every
+divergence is classified before any common text is written.
+
+Classes:
+
+- **implementation defect**: one line fails the common specification at
+  `1fce537`. It goes to that line's Stage 2 repair list. No common text.
+- **permitted design choice**: both resolutions are admissible under
+  `1fce537`. Recorded as such. No common text.
+- **specification gap**: `1fce537` does not decide it, and two correct
+  builds would differ in what the product owner accepts. Common text.
+- **reserved owner decision**: the specification reserves it to the
+  product owner. Decided by the owner, recorded by the pen, carried in
+  common text where it binds every tenant.
+
+Steps:
 
 1. **Claude** posts the divergence list under `comments/claude/`: each
-   point where the two iteration 3 candidates resolved the same common
-   input differently, written as a question to the pen, with the loci in
-   both candidates. The starting list is below. Claude writes no common
-   files.
+   point where the two candidates resolved the same question
+   differently, with the loci in both candidates, the clause of
+   `1fce537` that bears on it, and a proposed class. The starting list
+   is below. Claude writes no common files.
 2. **Codex** reviews the Claude candidate `2beed8d`, entered through its
    handoff `96ccdcc`, expectations first, and posts under
    `comments/codex/`. Scope: the 52 discriminators and J53 to J55 over
@@ -81,55 +117,41 @@ assuming. Gate: the product owner signs off a named commit.
    EXECUTIVE_BASELINE, DESIGN_MODULE and ODD family tables, which no
    working check examined. No repair. Standing: cross-family, interested
    party.
-3. **Codex** revises the common specification as a requirement reprice:
-   the smallest change that answers every question on the divergence
-   list with exact modal force, ratifies the convergences, carries the
-   seven owner decision groups of the Claude handoff
-   (`build_tenants/claude/qualification/C3-ITER3/HANDOFF.md`), and
-   answers those of findings CX-03 to CX-09 that need a common answer.
-   The revision also names the evidence every candidate owes in Stage 2.
-   Codex freezes at a commit named `C3-I4-01` and posts the freeze.
-4. **Claude** reviews the frozen commit, expectations first: every
-   question answered, no new ambiguity, the owed evidence named. Posts
-   under `comments/claude/`. Codex repairs and re-freezes. Repeat until
-   Claude reports no blocking defect, or the product owner overrules.
-5. **The product owner** signs off: the commit hash and the word
-   "signed", recorded by the pen in the iteration 4 contract record.
-   Gate.
+3. **Codex**, as the pen, confirms or reclassifies each item of the
+   divergence list with a reason, then revises the common specification
+   as a requirement reprice: the smallest change that decides every gap
+   and carries every owner decision with exact modal force, ratifies the
+   convergences, carries the seven owner decision groups of the Claude
+   handoff (`build_tenants/claude/qualification/C3-ITER3/HANDOFF.md`),
+   and answers those of findings CX-03 to CX-09 that are gaps. The
+   revision names the evidence every candidate owes in Stage 2. Codex
+   commits it on `main`, freezes it under the name `C3-I4-01`, records
+   the commit in the ticket, and posts the freeze.
+4. **Claude** reviews the frozen commit, expectations first: every gap
+   decided, every classification sound, no new ambiguity, the owed
+   evidence named. Posts under `comments/claude/`. Codex repairs as a
+   successor commit on `main` and re-freezes. Repeat until Claude
+   reports no blocking defect, or the product owner overrules.
+5. **The product owner** signs off. The pen records the commit hash and
+   the word "signed" in the ticket. Gate.
 
 ### Divergence list, starting version
 
-Each item is a question the iteration 4 specification answers.
+Classes are proposed by Claude and confirmed or reclassified by the pen
+in step 3.
 
-1. **Conserved versus superseded.** Same 691 rows, same criterion, 68
-   replacements in Codex and 15 in Claude. The test for "changed
-   meaning" is not operational. State it, or state who decides each row
-   and by when.
-2. **Authority compressions.** Codex keeps them as pinned read models;
-   Claude proposes superseding them by projection. Are they in the
-   successor's scope?
-3. **Modal force.** Codex keeps "must" and "shall"; Claude writes them
-   in the indicative. Fix the convention, and say whether a conversion
-   is a replacement.
-4. **Result algebra.** Codex adds performance and effect-observation
-   coordinates; Claude has five core values and no value for an
-   evaluation that was not performed. What does the common result carry?
-5. **Criterion 4.** Codex ran six isolated same-family task actors;
-   Claude ran none. Name the minimal admissible evidence of actual use
-   and the actor independence it requires.
-6. **Independence levels.** Both lines use "independent" for different
-   things. Define same-family nonauthor, cross-family and fresh actor,
-   and say which claim needs which.
-7. **Reduction.** Claude declared paths, measures and a guard; Codex
-   measured bytes on six operations against two baselines. Fix the
-   baseline, the paths or their selection rule, and the measure.
-8. **Frames.** Claude declares a byte capacity and one frame per
-   contract task; Codex declares neither. Are both required?
-9. **Pillars and accepted conditions.** Claude binds a pillar to every
-   family row; Codex binds none. Both wait on the product owner's list.
-   Put the list in the specification.
-10. **Identity, version, ported-part review, the UX compliance test.**
-    Owner-only items with no home yet. One sentence each.
+| # | Divergence | Proposed class |
+|---|---|---|
+| 1 | **Conserved versus superseded.** Same 691 rows, same criterion, 68 replacements in Codex and 15 in Claude. The test for "changed meaning" is not operational | Gap: the test. Owner decision: each row's acceptance |
+| 2 | **Authority compressions.** Codex keeps them as pinned read models; Claude proposes superseding them by projection | Owner decision: are they in the successor's scope |
+| 3 | **Modal force.** Codex keeps "must" and "shall"; Claude writes them in the indicative | Gap: what conserves modal force, and whether a conversion is a replacement. Owner decision on the Claude line's FR-02 |
+| 4 | **Result algebra.** Codex adds performance and effect-observation coordinates; Claude has five core values and no value for an evaluation that was not performed | Permitted design choice. `1fce537` already requires that a not-performed evaluation stays distinct from an undecidable one (`requirements/README.md`, line 143) and that a member's own values map to the core with a declared predicate (`conformance/README.md`, line 59) |
+| 5 | **Criterion 4.** Codex ran six isolated same-family task actors; Claude ran none | Gap: the minimal admissible evidence of actual use and the actor independence it requires. Owner decision: funding, D5 |
+| 6 | **Independence levels.** Both lines use "independent" for different things | Gap: define same-family nonauthor, cross-family and fresh actor, and which claim needs which |
+| 7 | **Reduction.** Claude declared paths, measures and a guard; Codex measured bytes on six operations against two baselines | Partly answered at `1fce537`, which the Claude line has not rebound to: a rebind defect for Claude. Remaining gap, if the pen confirms: the baseline and the path-selection rule |
+| 8 | **Frames.** Claude declares a byte capacity and one frame per contract task; Codex declares neither | `1fce537` requires measured activations under finite context and attention (`INTENT.md`, line 43; `REFERENCE_FRAME_BASIS.md`, C3 Writer row). A declared capacity figure and one frame per contract task: permitted design choice unless the pen finds a clause that requires them |
+| 9 | **Pillars.** Claude binds a pillar to every family row; Codex binds none | The pillar list exists (`PRODUCT.md#foundational-reduction`). Owner decision: the proposed changes to accepted conditions and the pillar list. For the binding itself, CX-03: gap or Codex implementation defect; the pen classifies |
+| 10 | **Identity, version, the UX compliance test** | Owner decisions with no home yet. One sentence each |
 
 ### Convergences to ratify
 
@@ -141,15 +163,18 @@ Each item is a question the iteration 4 specification answers.
 ## Stage 2: the builds
 
 Goal: each tenant returns one frozen candidate on the signed commit.
-Gate: both handoffs posted.
+Gate: both handoffs posted and both admissions recorded in the ticket.
 
 Each agent, in its own tenant only:
 
-1. **Rebind** to the signed commit and record the rebind in the ledger.
+1. **Rebind** to the signed commit on `main` and record the rebind in
+   the ledger. The pen records the admission in the ticket.
 2. **Repair.** Codex: CX-03 to CX-09 from
-   `comments/claude/20261015T021914Z_REVIEW_CODEX_I3_C29B2BE.md`.
-   Claude: the findings of Codex's Stage 1 review. Each finding is
-   repaired, or declined with a reason in the ledger.
+   `comments/claude/20261015T021914Z_REVIEW_CODEX_I3_C29B2BE.md`, less
+   those the pen classified as gaps and decided in Stage 1. Claude: the
+   findings of Codex's Stage 1 review, and the implementation defects of
+   the divergence list. Each finding is repaired, or declined with a
+   reason in the ledger.
 3. **Port** from the donor commit under D3 and D4.
 4. **Evidence**, as the signed specification names it, and at least:
    - self-mapping of the 52 discriminators and J53 to J55;
@@ -162,10 +187,11 @@ Each agent, in its own tenant only:
    - reduction measured as the signed specification requires;
    - criterion 4 under D5;
    - one same-family nonauthor working review, expectations first, and
-     the repair of its findings.
+     the repair of its findings; for each ported part, this is the
+     acceptance-bearing review, D4.
 5. **Freeze**: commit, digests, and a handoff under the tenant's
-   `qualification/` naming the commit, every gap and every variance. No
-   acceptance claim.
+   `qualification/` naming the commit, every port with its bearing
+   review, every gap and every variance. No acceptance claim.
 
 Scope rule: no new members, no new scope, no re-derivation of settled
 text, unless the signed specification requires it.
@@ -173,25 +199,35 @@ text, unless the signed specification requires it.
 ## Stage 3: cross-family reviews
 
 Goal: each candidate is read by the other family against the signed
-specification. Gate: both reviews and both repair re-freezes posted.
+specification. Gate: both reviews and both successor freezes posted.
 
 1. Each agent reviews the other's candidate at the handoff's commit:
    expectations first; the six criteria; the 52 discriminators and J53
-   to J55; the ported parts read as the receiver's text; standing
-   declared as interested party; no repair. Posted under
-   `comments/<agent>/`.
-2. Each agent repairs its own candidate's findings in one round,
-   re-freezes, and posts the repair commit and digests. The reviewer
-   re-reads the repairs only and posts a confirmation or a residual.
+   to J55; standing declared as interested party; no repair. Posted
+   under `comments/<agent>/`. For a ported part the reviewer authored
+   as donor, its reading is supplementary and the post marks it so; the
+   acceptance-bearing review of that part is the receiver's Stage 2
+   nonauthor review, D4.
+2. Each agent repairs its own candidate's findings in one round. The
+   repair is a successor freeze. The repairer posts the successor commit,
+   its digests, the changed loci, and a **dependency statement**: every
+   frame, result mapping, interpretation clause, conservation row and
+   evidence item that depends on the changed material, and for each
+   whether it was regenerated, rerun or left as it was.
+3. The reviewer reads the changed material and every named dependent,
+   and records, for each reused evidence item, whether it still applies
+   to the successor commit. A dependent the statement did not name is a
+   finding. The reviewer posts a confirmation or the residuals.
 
 ## Stage 4: the choice
 
-1. The product owner applies D6 to the two re-frozen candidates and
-   records the choice and the reason.
+1. The product owner applies D6 to the two successor freezes. The pen
+   records the choice and the reason in the ticket.
 2. The chosen line's agent prepares the release cut on the product
-   owner's instruction: the tenant branch and the signed specification
-   merged to main, then the release process of the common
-   specification. No agent merges or pushes without that instruction.
+   owner's instruction: the chosen tenant branch merged to `main`, where
+   the signed specification already stands, then the release process of
+   the common specification. No agent merges or pushes without that
+   instruction.
 3. The other line is retired: branch kept, not merged, not deleted.
 
 ## Stops
@@ -199,5 +235,5 @@ specification. Gate: both reviews and both repair re-freezes posted.
 Stop and report to the product owner when: the signed commit is missing
 or changes; a port cannot be rebound without changing its meaning; a
 required evidence item cannot be produced within the budget rule; a
-finding needs a common decision. Never proceed past a gate on an
-assumption.
+repair arrives without a dependency statement; a finding needs a common
+decision. Never proceed past a gate on an assumption.
