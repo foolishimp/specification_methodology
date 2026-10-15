@@ -84854,13 +84854,31 @@
         "clauses": [
           {
             "conditional_domain_owners": {
-              "design_declarations": [
-                "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
-                "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017"
-              ],
-              "complete_transition_admission_and_semantic_commit": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
-              "frame_relations": "REFERENCE_FRAME_METHOD.using-frames-in-conjunction",
-              "typed_calculus_paths": "AXIOMATIC_CALCULUS.ac-016-typed-composition"
+              "design_declarations": {
+                "required_when": "design composition",
+                "owners": [
+                  "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+                  "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017"
+                ]
+              },
+              "complete_transition_admission_and_semantic_commit": {
+                "required_when": "consequential admission",
+                "owners": [
+                  "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021"
+                ]
+              },
+              "frame_relations": {
+                "required_when": "frame-governed composition",
+                "owners": [
+                  "REFERENCE_FRAME_METHOD.using-frames-in-conjunction"
+                ]
+              },
+              "typed_calculus_paths": {
+                "required_when": "a_c composition",
+                "owners": [
+                  "AXIOMATIC_CALCULUS.ac-016-typed-composition"
+                ]
+              }
             },
             "scope": "Extra domain policies are part of the selected composite contract; they do not become generic law for every composition."
           }

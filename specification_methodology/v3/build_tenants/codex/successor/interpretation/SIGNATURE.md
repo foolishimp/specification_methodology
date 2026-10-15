@@ -40,12 +40,18 @@ missing or that an actual task has an unknown result.
 
 ## Reference location
 
-This JSON Pointer identifies the occurrence in the preceding semantic record.
-The next argument supplies its typed native target. The pointer/ref pair preserves
-the distinction between an occurrence, its target identity and its relation.
+The literal encodes an object with scope and pointer. Scope is clause-local:
+semantic-record selects the clause's sole semantic record; a contract URI selects
+the exact definition registered by a preceding inlined-contract argument in that
+clause. Pointer is an RFC 6901 JSON Pointer relative to that explicit base.
+The next argument supplies its typed native target. Compilation checks that the
+pointer resolves and names that target. Scope never changes implicitly, including
+when an occurrence returns to the outer record after an inline definition.
+The pointer/ref pair distinguishes an occurrence, its target and its relation.
 
 ## Acquisition route
 
+Scope and pointer select the occurrence by the Reference location rules.
 The record preserves an exact relation occurrence without making its target an
 unconditional acquisition dependency. A provenance route records correspondence,
 example or navigation. A flat dependency enumeration retains its named targets
@@ -61,8 +67,12 @@ resolves during compilation even when its body is not selected.
 ## Inlined contract
 
 This exact shared abbreviation has no independently declared semantic owner.
-Its definition is carried at the source-bound use, with its identity and pointer
-in source-account.json retained. Its real references still acquire their owners.
+Its scope and pointer locate the use by the Reference location rules. Identity
+registers the carried definition as an explicit clause-local pointer base;
+definition_pointer locates that same definition in source-account.json.
+Repeated registrations of one identity must carry the same exact definition.
+Nested definitions declare their parent scope, and each later occurrence names
+its own scope. Its real references still acquire their owners.
 Inlining adds no owner, authority or instance truth. The complete set of users
 does not become a source dependency of every use.
 
