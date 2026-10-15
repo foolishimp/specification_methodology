@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T16:54:24Z
+updated_at: 2026-10-15T17:19:52Z
 dependencies: []
 ---
 
@@ -41,6 +41,10 @@ Writer return for EC-COMMON-I5-02: the [consolidated disposition](../../comments
 The Git Writer checkpoints the scoped source, work records and unchanged Codex review inputs on main. The Ledger Writer then records C3-I5-02 from that exact source commit in a descendant. The fresh nonauthor Reviewer has [fixed expectations](../../comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md), SHA-256 `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051`, before successor acquisition. It receives the frozen commit for affected readback; its result and the product owner's exact-source ratification remain pending.
 
 Concurrent-input disposition: main advances to `447ed4d` only through Claude's handoff commentary. The common preimage remains unchanged. The Writer includes the named successor `c66ed4e` and corrected handoff `1092f9a` for bounded finding applicability. Read-only checks corroborate R1/R2/R4 repairs and R3's grading repair, retaining its stale control-arm description and the new constitutional provenance note as narrower residuals. The disposition and work map preserve supported repair; no peer effect, whole-candidate acceptance or changed common grant follows. The Git Writer may checkpoint atop this commentary-only advance after verifying the staged path list.
+
+The Executive consumes the [independent successor readback](../../comments/codex/20261015T165424Z_REVIEW_I5_CONSOLIDATED_COMMON_C0F16EE.md), SHA-256 `36455ddd9ccfac5914061c8bb12cfa02f4360cddce9bbbc1bf1500880be1d67b`: `satisfied` for common-source coherence and feedback coverage at `c0f16eeaabca530421e09c4240007baec3c65726`, with no material defect and all 14 primary findings plus remaining I4 duties mapped. It independently reproduces the prior 18 pins, proposed 27 pins, contract digest and historical-tail preservation. The declared same-family nonauthor check is a working review; it supplies no exact-source ratification, tenant admission, replacement decision or candidate acceptance. Its review phase took 412 seconds through initial report verification; host context and native spend remain uninstrumented.
+
+The Ledger Writer records [C3-I5-02](T-002-c3-successor-construction.md#c3-i5-02-proposed-input-snapshot), whose 27 members are read from source `c0f16ee`, and projects the satisfied readback in current work state. Source and input history remain unchanged. The Git Writer checkpoints only this result, the descendant snapshot, Goals' status and the review. Common consolidation is `candidate_ready` for the product owner's exact-source ratification; both I5 builds remain unadmitted. This return completes EC-COMMON-I5-02's preparation and working-review scope.
 
 ### Iteration 5 universal construction
 
