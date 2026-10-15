@@ -43,7 +43,7 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 117236 bytes.
+Size of this frame: 117515 bytes.
 
 Source: EXECUTIVE_BASELINE.md#executive sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
@@ -697,7 +697,7 @@ does not become an additional independent Reviewer result because the actor
 used reviewer-like tools (P6, P1).
 
 
-Source: ACTIVATION.md#construction-availability sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#construction-availability sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Construction availability
 
@@ -748,7 +748,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#disposition sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#disposition sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Disposition
 
@@ -790,16 +790,20 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ## 7. Closed result and reuse
 
 A closed result identifies the frame and its activation, the subject, the
 basis, the evaluation, the actor, the evidence, the verdict, the residual
 uncertainty and the invalidation conditions (the minimal shape is
-REFERENCE_FRAME §13). The frame's internal working context is not
+REFERENCE_FRAME §13). The frame's internal working context need not be
 transferred when the closed result and its provenance are sufficient for
-the consuming decision (P4b, P0; rc.2 RF #return-a-closed-result).
+the consuming decision; it may still be attached, for audit or otherwise,
+without changing the result. Independent evaluations may share valid
+mechanical evidence under the declared independence conditions of
+[EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
+permission (P4b, P0; rc.2 RF #return-a-closed-result).
 
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates

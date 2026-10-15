@@ -47,9 +47,9 @@ Routes, in order:
 23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 148696 bytes.
+Size of this frame: 148975 bytes.
 
-Source: ACTIVATION.md#transitions sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#transitions sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Transitions
 
@@ -135,7 +135,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#intake sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Intake
 
@@ -179,7 +179,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#configuration sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Configuration
 
@@ -305,7 +305,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#roles-and-delegation sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Roles and delegation
 
@@ -383,7 +383,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ## 2. Context construction under an envelope
 
@@ -621,16 +621,20 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ## 7. Closed result and reuse
 
 A closed result identifies the frame and its activation, the subject, the
 basis, the evaluation, the actor, the evidence, the verdict, the residual
 uncertainty and the invalidation conditions (the minimal shape is
-REFERENCE_FRAME §13). The frame's internal working context is not
+REFERENCE_FRAME §13). The frame's internal working context need not be
 transferred when the closed result and its provenance are sufficient for
-the consuming decision (P4b, P0; rc.2 RF #return-a-closed-result).
+the consuming decision; it may still be attached, for audit or otherwise,
+without changing the result. Independent evaluations may share valid
+mechanical evidence under the declared independence conditions of
+[EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
+permission (P4b, P0; rc.2 RF #return-a-closed-result).
 
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
@@ -692,7 +696,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#construction-availability sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Construction availability
 
@@ -743,7 +747,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#effects sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Effects
 

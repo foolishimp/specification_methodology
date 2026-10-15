@@ -493,7 +493,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#intake sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Intake
 
@@ -537,7 +537,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#admission sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Admission
 
@@ -581,7 +581,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ## 2. Context construction under an envelope
 

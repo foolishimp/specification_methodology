@@ -1097,7 +1097,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
+Source: ACTIVATION.md#disposition sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
 
 ### Disposition
 

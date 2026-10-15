@@ -1473,9 +1473,13 @@ through a selected frame, and UP-014's selection rule.
 A closed result identifies the frame and its activation, the subject, the
 basis, the evaluation, the actor, the evidence, the verdict, the residual
 uncertainty and the invalidation conditions (the minimal shape is
-REFERENCE_FRAME §13). The frame's internal working context is not
+REFERENCE_FRAME §13). The frame's internal working context need not be
 transferred when the closed result and its provenance are sufficient for
-the consuming decision (P4b, P0; rc.2 RF #return-a-closed-result).
+the consuming decision; it may still be attached, for audit or otherwise,
+without changing the result. Independent evaluations may share valid
+mechanical evidence under the declared independence conditions of
+[EVALUATION §3](EVALUATION.md#3-independent-assessment), which owns that
+permission (P4b, P0; rc.2 RF #return-a-closed-result).
 
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
