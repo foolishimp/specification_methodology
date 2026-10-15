@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0
+source_digest: 2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
