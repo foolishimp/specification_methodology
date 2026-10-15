@@ -13,12 +13,16 @@ choosing one candidate. Nothing in it is a rebuild: it is repair, port
 and evidence on a specification that decides what the tenants have so
 far assumed.
 
-Revision 2. It takes the six corrections of Codex's review of revision 1
-at commit `0045cb0`: divergences are classified before any common
+Revision 3. Revision 2 took the six corrections of Codex's review of
+revision 1 at commit `0045cb0`: divergences are classified before any common
 decision; a port does not erase authorship; a repair review covers the
 changed material and its dependents; criterion 4 does not qualify the
 other candidate; a freeze is immutable and authority lives in the
-ticket; the Codex donor package is `d490dd6`.
+ticket; the Codex donor package is `d490dd6`. Revision 3 takes the three
+edits of Codex's review of revision 2 at `e78afaf`: a missing assessment
+blocks eligibility but is not a falsification; a repaired port is read
+back by a nonauthor at the final freeze; a common decision carries
+through as a tenant task or a recorded reason that none is needed.
 
 ## Terms
 
@@ -72,9 +76,9 @@ brackets are for the product owner to fill in or confirm.
 | D1 | Pen holder for iteration 4 | One named Codex session or activation: [name]. Recorded in the ticket. Any other session, of either family, has no pen |
 | D2 | Donor commits | Claude: `2beed8d` on `tenant/claude/c3-synthesis`, handoff `96ccdcc`. Codex: `fb855df` on `tenant/codex/c3-iteration-3`, which binds package `d490dd6` [confirm] |
 | D3 | Port lists | Into Claude from Codex: C1 to C6. Into Codex from Claude: X1 to X9. As listed in `comments/claude/20261015T021914Z_REVIEW_I3_CANDIDATES_BEST_OF_BOTH.md`, with these edits by the product owner: [none] |
-| D4 | Ported-part policy | A ported part is the receiving tenant's text: the receiver rebinds it to its own anchors and re-evidences it with its own tooling. Porting does not erase authorship. The acceptance-bearing review of a ported part is the receiver's same-family nonauthor review of Stage 2, which did not write the part. The donor's cross-family reading of its own ported part in Stage 3 is supplementary. The receiver's ledger records each port by donor commit and locus, and its handoff names, per port, which review bears |
+| D4 | Ported-part policy | A ported part is the receiving tenant's text: the receiver rebinds it to its own anchors and re-evidences it with its own tooling. Porting does not erase authorship. The acceptance-bearing review of a ported part is the receiver's same-family nonauthor review of Stage 2, which did not write the part. The donor's cross-family reading of its own ported part in Stage 3 is supplementary. The receiver's ledger records each port by donor commit and locus, and its handoff names, per port, which review bears. A port that a later repair changes, or whose evidence a repair invalidates, is read back by the receiver's same-family nonauthor on the successor freeze, Stage 3 step 4 |
 | D5 | Criterion 4, actual use, for the Claude line | [A: fund one isolated-actor protocol run on the Claude candidate, port C2, with the same protocol and caps as Codex's. B: leave unevidenced.] B removes the Claude candidate from the Stage 4 choice. It qualifies nothing: the Codex candidate must still meet the six criteria and the closure checks on its own |
-| D6 | Choice rule for Stage 4 | A candidate is eligible only if it meets all six criteria and the closure checks J53 to J55. An obligation that was not assessed is a failed criterion, not a residual. Among eligible candidates, the one with the fewest non-blocking residuals over comparable coverage. If equal, the product owner's preference on readability and maintainability, recorded with a reason. If none is eligible, no choice: the product owner decides between an iteration 5 and stopping |
+| D6 | Choice rule for Stage 4 | A candidate is eligible only if it meets all six criteria and the closure checks J53 to J55. An unassessed required obligation blocks eligibility and is recorded as missing; it does not by itself establish falsification, and it is not a residual. Among eligible candidates, the one with the fewest non-blocking residuals over comparable coverage. If equal, the product owner's preference on readability and maintainability, recorded with a reason. If none is eligible, no choice: the product owner decides between an iteration 5 and stopping |
 | D7 | Common input | The signed iteration 4 commit of the common specification on `main`, the Stage 1 gate. Both tenants rebind to it. No tenant is admitted to Stage 2 before it |
 | D8 | Budget rule, Claude line | Sequential work in the main session. At most one subagent at a time, Sonnet, with an exact file and line scope. Never parallel agents. Never a message to a finished agent |
 | D9 | Standing rules, both | No merge to main by a tenant, no push, no acceptance claim by any agent. Reviews are posted under `.ai-workspace/comments/<agent>/`, expectations first, with no repair of the subject. Writing: plain, every term defined at first use, "the product owner" for the human, exact modal force |
@@ -170,11 +174,15 @@ Each agent, in its own tenant only:
 1. **Rebind** to the signed commit on `main` and record the rebind in
    the ledger. The pen records the admission in the ticket.
 2. **Repair.** Codex: CX-03 to CX-09 from
-   `comments/claude/20261015T021914Z_REVIEW_CODEX_I3_C29B2BE.md`, less
-   those the pen classified as gaps and decided in Stage 1. Claude: the
-   findings of Codex's Stage 1 review, and the implementation defects of
-   the divergence list. Each finding is repaired, or declined with a
-   reason in the ledger.
+   `comments/claude/20261015T021914Z_REVIEW_CODEX_I3_C29B2BE.md`.
+   Claude: the findings of Codex's Stage 1 review, and the implementation
+   defects of the divergence list. Each finding is repaired, or declined
+   with a reason in the ledger. A common decision does not repair a
+   candidate: where the pen classified a finding as a gap and decided it
+   in Stage 1, the finding is replaced by the implementation or evidence
+   task the decision yields, or by a recorded reason that the decision
+   requires no tenant change. The same holds for every Stage 1 decision,
+   in both tenants.
 3. **Port** from the donor commit under D3 and D4.
 4. **Evidence**, as the signed specification names it, and at least:
    - self-mapping of the 52 discriminators and J53 to J55;
@@ -218,6 +226,12 @@ specification. Gate: both reviews and both successor freezes posted.
    and records, for each reused evidence item, whether it still applies
    to the successor commit. A dependent the statement did not name is a
    finding. The reviewer posts a confirmation or the residuals.
+4. A ported part that the repair changed, or whose Stage 2 evidence the
+   dependency statement or the reviewer marks as no longer applying, is
+   read back on the successor commit by the receiver's same-family
+   nonauthor, never by the donor. The readback is posted with the
+   successor freeze under the receiver's `qualification/`. Evidence the
+   repair did not affect keeps its standing.
 
 ## Stage 4: the choice
 
