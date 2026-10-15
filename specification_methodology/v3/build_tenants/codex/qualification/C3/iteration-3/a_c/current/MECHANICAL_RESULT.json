@@ -2,7 +2,7 @@
   "kind": "codex-current-interpretation-mechanics",
   "valid": true,
   "document_source_input_commit": "2476713d315c00ac61d336a3281d67e4a384d4ce",
-  "complete_package_input_commit": "14bd92fc3924d2190f8745a2821a246ab9b15477",
+  "complete_package_input_commit": "d490dd62d8c1a99e57eec5d1f9caca477f02edd2",
   "scope": "frozen complete-package mechanical check",
   "acquisition_checks": [
     {
@@ -10,7 +10,7 @@
       "selected_clauses": 12,
       "residuals": 0,
       "routes": 42,
-      "projection_json_bytes": 158643,
+      "projection_json_bytes": 165063,
       "resolved_source_routes": 13,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
@@ -20,7 +20,7 @@
       "selected_clauses": 26,
       "residuals": 0,
       "routes": 108,
-      "projection_json_bytes": 386049,
+      "projection_json_bytes": 405627,
       "resolved_source_routes": 27,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
@@ -30,7 +30,7 @@
       "selected_clauses": 8,
       "residuals": 0,
       "routes": 34,
-      "projection_json_bytes": 116420,
+      "projection_json_bytes": 120632,
       "resolved_source_routes": 9,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
@@ -40,7 +40,7 @@
       "selected_clauses": 46,
       "residuals": 0,
       "routes": 187,
-      "projection_json_bytes": 703088,
+      "projection_json_bytes": 738572,
       "resolved_source_routes": 48,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
@@ -50,18 +50,58 @@
       "selected_clauses": 6,
       "residuals": 0,
       "routes": 19,
-      "projection_json_bytes": 84880,
+      "projection_json_bytes": 87586,
       "resolved_source_routes": 7,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
     },
     {
       "case": "design_adopted",
-      "selected_clauses": 40,
+      "selected_clauses": 18,
       "residuals": 0,
-      "routes": 174,
-      "projection_json_bytes": 573525,
-      "resolved_source_routes": 43,
+      "routes": 91,
+      "projection_json_bytes": 323430,
+      "resolved_source_routes": 21,
+      "source_fragment_bytes_acquired_by_actor": null,
+      "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
+    },
+    {
+      "case": "composition_domain_established_inapplicable",
+      "selected_clauses": 11,
+      "residuals": 0,
+      "routes": 57,
+      "projection_json_bytes": 197132,
+      "resolved_source_routes": 12,
+      "source_fragment_bytes_acquired_by_actor": null,
+      "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
+    },
+    {
+      "case": "composition_domain_unresolved_retains_obligation",
+      "selected_clauses": 11,
+      "residuals": 0,
+      "routes": 57,
+      "projection_json_bytes": 197132,
+      "resolved_source_routes": 12,
+      "source_fragment_bytes_acquired_by_actor": null,
+      "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
+    },
+    {
+      "case": "composition_design_applicable_explicitly_selected",
+      "selected_clauses": 18,
+      "residuals": 0,
+      "routes": 91,
+      "projection_json_bytes": 323519,
+      "resolved_source_routes": 21,
+      "source_fragment_bytes_acquired_by_actor": null,
+      "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
+    },
+    {
+      "case": "ac013_domain_unselected",
+      "selected_clauses": 26,
+      "residuals": 0,
+      "routes": 114,
+      "projection_json_bytes": 378638,
+      "resolved_source_routes": 27,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
     },
@@ -70,7 +110,7 @@
       "selected_clauses": 11,
       "residuals": 2,
       "routes": 41,
-      "projection_json_bytes": 156214,
+      "projection_json_bytes": 162364,
       "resolved_source_routes": 12,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
@@ -80,12 +120,17 @@
       "selected_clauses": 9,
       "residuals": 0,
       "routes": 37,
-      "projection_json_bytes": 129462,
+      "projection_json_bytes": 134532,
       "resolved_source_routes": 11,
       "source_fragment_bytes_acquired_by_actor": null,
       "limit": "Selection and retained-condition checks; actual task applicability and use remain separate."
     }
   ],
+  "occurrence_checks": {
+    "reference_occurrences": 7738,
+    "acquisition_routes": 2081,
+    "inlined_contracts": 410
+  },
   "common_input_commit": "1fce537bc0bd7f47a1b66b34d8c053ef3dad2816",
   "dependency_verification": {
     "install_root": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2",
@@ -102,13 +147,13 @@
     "theory_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
     "theory_member_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
   },
-  "account_input_commit": "578570dad66f7a8ca04e7163064e6b4f62a86c2a",
-  "account_sha256": "5617a43aae006a39c40b0589d4f7a08f2dd1d3b4b439f3bb0ea80ce09d1bd8f4",
-  "semantic_account_sha256": "3f8e642220ed97aea320281d2ab7dc70ccdb0ea65654083f1b90581b7d77be98",
-  "program_sha256": "a889e51ca38487864a99a8c2ec0bfc126428a7c161f3b789b8286489043e9f65",
-  "map_sha256": "27893cc820dcd42e98b65dc2e528ed741bd093d6f8c3745baa354d82f117dc7a",
-  "checker_sha256": "fe52556ca45f85b00d3c362a34e44ccf971cac5bac3dd31953c96981eb4489a7",
-  "generator_sha256": "1ff75239af3d6b65cce14b1dd5e3e14f25f723aee18130044940c6aa2a001df9",
+  "account_input_commit": "674ad4e623a3a0f51d6c4e8035d7d974790d323a",
+  "account_sha256": "cb85385c6c074f4f47623bf29d5009bfe639bef109b2788e8846aa80f80f1b84",
+  "semantic_account_sha256": "1cd966c085d84b3856e07448120fe32dd22ff60231c864b3ee31e3a962b81494",
+  "program_sha256": "c34f7b203045d839d83a2bbc5c70ffa696125e876cad956d87d8d52f88b4a756",
+  "map_sha256": "e522b3bf866d58814a401c9dcfecd5317fe257d9bce3989f22425207863e8fe4",
+  "checker_sha256": "b29e0ab6919f0143dce78f7186b16c661c65e73092b41ec4bd3d916e8ba590c8",
+  "generator_sha256": "16b59d45785562bab54d6d9ec2c3188c4a4d5c69c3a662f477cb6cb2ce4b6b14",
   "represented_units": 701,
   "shared_contracts": 37,
   "representation_kinds": {
@@ -119,16 +164,30 @@
   },
   "selected_projections": [
     {
-      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.19-ramp-up-checklist",
-      "clauses": 24,
+      "index": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.good-prose",
+      "clauses": 12,
       "residuals": 0,
       "files": [
-        "odd_method19-ramp-up-checklist-reference-only.json",
-        "odd_method19-ramp-up-checklist-materialized.json"
+        "writing_guidegood-prose-reference-only.json",
+        "writing_guidegood-prose-materialized.json"
       ],
       "bytes": {
-        "odd_method19-ramp-up-checklist-reference-only.json": 418834,
-        "odd_method19-ramp-up-checklist-materialized.json": 828765
+        "writing_guidegood-prose-reference-only.json": 165063,
+        "writing_guidegood-prose-materialized.json": 324536
+      },
+      "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "clauses": 26,
+      "residuals": 0,
+      "files": [
+        "transformation_libraryworkrecovery-specialization-reference-only.json",
+        "transformation_libraryworkrecovery-specialization-materialized.json"
+      ],
+      "bytes": {
+        "transformation_libraryworkrecovery-specialization-reference-only.json": 405627,
+        "transformation_libraryworkrecovery-specialization-materialized.json": 801593
       },
       "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
     },
@@ -141,8 +200,8 @@
         "transformation_libraryevaluate-materialized.json"
       ],
       "bytes": {
-        "transformation_libraryevaluate-reference-only.json": 116420,
-        "transformation_libraryevaluate-materialized.json": 228160
+        "transformation_libraryevaluate-reference-only.json": 120632,
+        "transformation_libraryevaluate-materialized.json": 236584
       },
       "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
     },
@@ -155,8 +214,64 @@
         "transformation_libraryconjoin-materialized.json"
       ],
       "bytes": {
-        "transformation_libraryconjoin-reference-only.json": 96760,
-        "transformation_libraryconjoin-materialized.json": 189096
+        "transformation_libraryconjoin-reference-only.json": 100324,
+        "transformation_libraryconjoin-materialized.json": 196224
+      },
+      "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:ODD_METHOD.19-ramp-up-checklist",
+      "clauses": 24,
+      "residuals": 0,
+      "files": [
+        "odd_method19-ramp-up-checklist-reference-only.json",
+        "odd_method19-ramp-up-checklist-materialized.json"
+      ],
+      "bytes": {
+        "odd_method19-ramp-up-checklist-reference-only.json": 436534,
+        "odd_method19-ramp-up-checklist-materialized.json": 864165
+      },
+      "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.composition-law",
+      "clauses": 11,
+      "residuals": 0,
+      "files": [
+        "transformation_librarycomposition-law-reference-only.json",
+        "transformation_librarycomposition-law-materialized.json"
+      ],
+      "bytes": {
+        "transformation_librarycomposition-law-reference-only.json": 197132,
+        "transformation_librarycomposition-law-materialized.json": 388669
+      },
+      "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:AXIOMATIC_CALCULUS.ac-013-transformation",
+      "clauses": 26,
+      "residuals": 0,
+      "files": [
+        "axiomatic_calculusac-013-transformation-reference-only.json",
+        "axiomatic_calculusac-013-transformation-materialized.json"
+      ],
+      "bytes": {
+        "axiomatic_calculusac-013-transformation-reference-only.json": 378638,
+        "axiomatic_calculusac-013-transformation-materialized.json": 747752
+      },
+      "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
+    },
+    {
+      "index": "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.1-position",
+      "clauses": 24,
+      "residuals": 0,
+      "files": [
+        "ux_method1-position-reference-only.json",
+        "ux_method1-position-materialized.json"
+      ],
+      "bytes": {
+        "ux_method1-position-reference-only.json": 324421,
+        "ux_method1-position-materialized.json": 640600
       },
       "scope": "Explicit authored closure; no predicate evaluation or task-use acceptance"
     }
@@ -234,10 +349,10 @@
       "result": "native map_mismatch"
     }
   ],
-  "elapsed_seconds": 181.87027433305047,
+  "elapsed_seconds": 293.67270891705994,
   "package_unchanged": true,
-  "package_interpretation_bytes": 25116136,
-  "retained_evidence_directory": "a_c/current/checks/20261015T022724.471201Z",
+  "package_interpretation_bytes": 26060853,
+  "retained_evidence_directory": "a_c/current/checks/20261015T032635.324656Z",
   "limits": [
     "Mechanical account/compiler consistency does not prove source completeness or fidelity.",
     "Authored predicate logic requires independent source-first semantic assessment.",

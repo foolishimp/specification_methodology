@@ -1,9 +1,10 @@
 # Codex C3 Construction Return
 
-The current construction is the [iteration-3 repair and ODD follow-up](iteration-3/review-repair/odd-binding-fix/RETURN.md), under
-closed common input C3-I3-CLOSED-01 and admitted EC-CODEX-I3-03. Its return binds
-the frozen package, current checks, working reviews, actual-use evidence and
-remaining obligations. [The current inventory](iteration-3/CANDIDATE.json)
+The current construction is the [iteration-3 native interpretation repair](iteration-3/review-repair/native-fidelity-fix/RETURN.md), under
+closed common input C3-I3-CLOSED-01, admitted EC-CODEX-I3-03 and the product
+owner's bounded repair instruction. Its return binds the frozen package,
+current author checks, the applicability of historical reviews and task-use
+evidence, and remaining obligations. [The current inventory](iteration-3/CANDIDATE.json)
 and [conservation record](iteration-3/CONSERVATION.json) belong to that subject.
 
 Read the [method package](../../successor/README.md),
