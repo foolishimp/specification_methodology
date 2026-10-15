@@ -10,13 +10,25 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T17:19:52Z
+updated_at: 2026-10-15T23:22:22Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 low-finding successor
+
+2026-10-15T23:22:22Z — The owner forwards Claude's [review of C3-I5-02](../../comments/claude/20261015T230124Z_REVIEW_C3_I5_02_CONSOLIDATED_COMMON_C0F16EE.md), committed at `5603a07` after expectations at `87c4e34`. It finds no blocking defect and identifies L1–L3. The existing common-pen instruction selects their bounded correction; the forwarded recommendation is not an owner ratification. Intake: `requirement_reprice` at the binding requirement and its conformance consumer, plus correction of the Goals revision record.
+
+Execution contract `EC-COMMON-I5-03`: produce one successor from main preimage `5603a0799b79899a20f3fa3179e0a48c744add64`, preserving the reviewed construction model, work map and criteria. Basis: installed STDO 2.5.1-rc.2, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`, verified. The separate common Writer may restore executor neutrality in `specification/conformance/README.md`, define generic procedures in `specification/requirements/README.md`, and name criterion 4's amendment in `specification/GOALS.md`. The Ledger Writer records this activation, results and the successor input in T-001/T-002 and updates Goals' work standing. The Git Writer makes scoped source and descendant recording commits on main. Preserve historical snapshots, prior admissions, peer commentary, tenant trees and unrelated work. No tenant build, ratification, acceptance, push or release is selected.
+
+Expected readback: L1 preserves both the positive and negative executor-neutrality test alongside the human-process case; L2 gives generic procedures a scope without making every procedure or optional profile universal; L3 identifies the actual amendment while preserving the six-criterion structure and the I4 admission basis. Product, the 14-finding work map and all other governing source remain unchanged. A fresh nonauthor working Reviewer checks the frozen correction and affected consumers, with no repair grant, and writes only its Codex commentary. This same-family exception supplies bounded successor evidence; Claude's cross-family review retains its original subject and can be reused only where unchanged. Exact-source acceptance remains the product owner's.
+
+Admission and role transition: the common Ledger Writer records this bounded contract under the existing owner instruction; the common Writer now performs its three edits. Git and final Ledger effects use the separate activations above. The selected phase checkpoint is 20 minutes, with no paid external actor calls or empirical trials. Relevant common clauses, the three findings and their dependents bound acquisition; host context and native spend are uninstrumented, so no context-fit claim is made. A material contradiction, scope expansion or concurrent governing change returns for triage rather than silently extending this grant.
+
+Writer return: L1 restores the exact executor-neutrality sentence beside the existing case. L2 defines generic procedures by their scope across execution environments, without making optional profiles universal. L3 names criterion 4's amendment and preserves existing I4 admissions. Product, the work map and prior ticket/snapshot tails are byte-identical. Author checks reproduce all 27 C3-I5-02 pins and resolve 263 local/installed links across eleven affected or dependent Markdown files; scoped whitespace passes. The Product Definition verifies against the selected installed builder. The fresh Reviewer's expectations are fixed from `5603a07` before successor acquisition. The separate Git Writer now freezes these five common files; affected independent readback and the descendant C3-I5-03 recording follow.
 
 ### Iteration 5 review consolidation
 
