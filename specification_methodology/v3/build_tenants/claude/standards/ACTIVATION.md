@@ -548,7 +548,13 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. The measurement applies wherever B declares a
+   measured, and no fit claim covers it. Fit is established from the
+   recorded complete active inputs, or from a supported upper bound that
+   includes any host-supplied context; where neither exists the fit
+   judgment is `indeterminate`, unless a counterexample, such as a measured
+   excess, establishes `falsified`. A correct task result keeps its own
+   bounded standing and does not satisfy a missing fit judgment. The
+   measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record

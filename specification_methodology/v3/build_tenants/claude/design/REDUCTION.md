@@ -119,11 +119,13 @@ replacement relation for the product owner, never a silent edit.
 
 The common Product's
 [pillar table](../../../specification/PRODUCT.md#foundational-reduction)
-names ten contributions. The product owner's sign-off on that list is
-open (ledger, Iteration 3). This account binds the current list and
-changes with it.
+names ten contributions. The ratified iteration 4 common text keeps that list
+unchanged; this account binds it.
 
-**State found.** The candidate binds no pillar. None of the 21 family
+**State found** at I3-1, on the candidate at `5ab44d5`; the frozen
+candidates from `2beed8d` on carry the repairs the ledger records
+(I3-2: a Pillar column in every family table). Read as history. The
+candidate bound no pillar. None of the 21 family
 tables names a pillar contribution. The family-table format
 (`FOUNDATIONS.md:496`) has columns for premises, consequence and policy
 but none for a pillar. Relation 1 of the

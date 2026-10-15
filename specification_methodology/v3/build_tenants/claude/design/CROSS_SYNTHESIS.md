@@ -30,6 +30,10 @@ git -C /Users/jim/src/apps/specification_methodology show \
   31f28f9:specification_methodology/v3/build_tenants/codex/<path>
 ```
 
+Iteration 4 donor: the Codex candidate at handoff `fb855df`, package
+`d490dd6`, read the same way at those commits. Its evaluation is
+[C3-ITER4/ports.md](../qualification/C3-ITER4/ports.md).
+
 `<path>` is the path in the table. Line numbers of Codex files are those
 of that output; a citation of a Codex file names Codex or a Codex path.
 Line citations of this candidate's own members are to its base,
@@ -207,22 +211,16 @@ Ported text keeps no link to `build_tenants/codex/`, and every term it
 uses resolves in this candidate. Its result values map into this
 candidate's core result algebra (FOUNDATIONS §4 Results).
 
-How a ported part is reviewed for acceptance is the product owner's open
-decision ([PRODUCT, Open Owner Decisions](../../../specification/PRODUCT.md#open-owner-decisions)).
-The Independence rule forbids a Reviewer assessing its own authorship. The
-Codex tenant is the source author of every ported part, this tenant is the
-author of the text around it, and an adapted sentence has both authors.
-The product owner decides how a ported part, adapted sentences included,
-is reviewed before the first frontier cone with a contribution is
-accepted. Until that ruling this design applies the default the ledger
-takes
-([ledger default 3](../qualification/C3-SYNTHESIS/LEDGER.md#defaults-taken-for-the-open-decisions)):
-ported text stays verbatim where possible; a Claude working check that did
-not port it makes both comparisons above; the Claude-written text around a
-port is left for Codex's cross-family review. That default yields working
-checks only, and no cone that contains a ported part is accepted before
-the product owner's ruling. The acceptance Reviewer the ruling selects
-makes the same two comparisons.
+Under the ratified [Cross-Synthesis](../../../specification/PRODUCT.md#cross-synthesis)
+(iteration 4), porting does not erase authorship: the Codex tenant is the
+source author of every ported part, this tenant is the author of the text
+around it, and an adapted sentence has both authors. The independent
+assessment of a received part is this line's same-family nonauthor
+Reviewer, with the reason for that model-family exception and its limits
+recorded in the review; Codex's reading of its own part is supplementary.
+That Reviewer makes the two comparisons above. The I3 default recorded in
+[ledger default 3](../qualification/C3-SYNTHESIS/LEDGER.md#defaults-taken-for-the-open-decisions)
+is historical. Each handoff names which review covers each part.
 
 A part with no predecessor row is new law and states its purpose and the
 material relation it protects (acceptance criterion 6).
