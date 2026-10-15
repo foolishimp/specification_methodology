@@ -41,6 +41,33 @@ The direction separates lawful construction from the chosen constrained outcome.
 
 Only I5-00 is active. I5-01–04 describe dependent tenant work for later admissions. They do not select a donor, spend, shared comparison protocol, categorical trial or release. The exact I4 construction returns remain inputs on their own subjects; no complete I4 acceptance or qualification is inferred. Reviewable source and its input hashes are checkpointed separately under the existing snapshot rule.
 
+## C3-I5-01 proposed input snapshot
+
+Input commit B: `455ce5d32bc3dfb31ba5882d51311a549612de90`, on main. Recording R is the descendant commit that first contains this section. All 18 member hashes and byte counts are read from B: fourteen common source/entry members, two work records and two supporting commentary inputs. The recording ticket's current bytes are not input members.
+
+Standing: PROPOSED common source. The owner selected preparation of the construction synthesis; independent successor readback and exact-source ratification remain pending. I4 inputs and admissions retain their historical bytes and authority. This snapshot admits no tenant work.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 9657 | `ea81598d30c59c5d7189a62b011ea50f9998462b5f3aa209c6c4a4406aa2971e` |
+| `specification/PRODUCT.md` | 63949 | `830dfae64b3a7b67a4f15a76bf9a2d21e0e12f1b59d940388c9c656c37537550` |
+| `specification/GOALS.md` | 25924 | `2861e8f8e372a57326e4594087f240262c5fc6a25e09d622efbd93b336631653` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8606 | `b76a946109c33ab93d2d7767d42ac3b8c5cdcf3e260d8560d6ac7aec79c7bc99` |
+| `specification/requirements/README.md` | 37847 | `0b51b607ed3b99c47045a54c0bdff5fdffb958d72f0e37faf8e3370f306ef09e` |
+| `specification/requirements/PRINCIPLES.md` | 14539 | `b6d9885d13e7aa319db3cef0db54bc5185dc884970581e7f5ca1b09da4eace3e` |
+| `specification/requirements/CAPABILITIES.md` | 4790 | `5636ade98ba1c664601ff8f905c864bfdd575a28b781093f1363651bc32f46c9` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 20065 | `ed5610cf75938b070c8a566dedd2d2960a0676ef67c52522b2b65c44b29aba5b` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4122 | `d62c8f1d302e021fa87cbbe43dfb73dcaab5bd0392977fe89325ec8956034549` |
+| `CLAUDE.md` | 4122 | `d62c8f1d302e021fa87cbbe43dfb73dcaab5bd0392977fe89325ec8956034549` |
+| `build_tenants/README.md` | 6049 | `bb775f0493f5e42a9d5fb23d76d72b9f4019e816460d86d0be8af8190d596f55` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 114689 | `b8251531f1f54e8509fbd3b56aa49694a4559eb62b68b359c6cebc97e1a2a9ce` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 65411 | `93ef3580aa68536b9be1b608b56c6a650ff396c649b674bc3c9c3a305775ade4` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10832 | `31fd487fc42e95fe63923abb29dc0d76b0e404c035c5b91426c6ed7ac27f464b` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9800 | `8587937705d7e8e8394c676121808c21952920acd711563e92d2c1c22b61932a` |
+
 ## Iteration 4 staging
 
 The product owner ratifies C3-I4-03 through “ok i approve i4”, recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-ratification). Both synthesis lines use source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and the 25-member snapshot recorded at `a960032`. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) supplies the classified work below. Each line records a separate admission before tenant effects. The frozen snapshots below retain their historical standing at creation; this later decision supplies ratification.

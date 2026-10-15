@@ -32,6 +32,8 @@ I5 standing: common authorship selected; successor review and ratification pendi
 
 2026-10-15T15:40:22Z — The common Writer returns the construction model, its P1–P6 synthesis, shared requirement, nine member discriminators and integrated-use check. The [research record](../../comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md) separates formal results, assumptions and local choices. The Product Definition verifies; 356 local/installed links and scoped whitespace pass. P1–P6 bodies, prior I4 ticket sections and unrelated root edits are byte-preserved. The Git Writer checkpoints these exact common/commentary files for nonauthor readback, then the Ledger Writer records their input from that commit in a descendant. This is a source return, not ratification or tenant acceptance.
 
+The Ledger Writer records [C3-I5-01](T-002-c3-successor-construction.md#c3-i5-01-proposed-input-snapshot) from source `455ce5d32bc3dfb31ba5882d51311a549612de90` in a descendant commit. Its 18 pins bind the exact proposed common source and supporting inputs. The independent working readback addresses that source; the recording operation changes no governing clause.
+
 ### Iteration 4 ratification
 
 2026-10-15 — The product owner states “ok i approve i4” after the comparison of closed I3 with C3-I4-03. Decision: RATIFIED common input C3-I4-03, source `3c4c503d291e7cb19ba21333ba6caf6167be77c9`, with its 25-member snapshot recorded at `a96003250ffcd9d88863347b4946aa5b1836434f`. This is the common specification decision for the selected two-line synthesis. It accepts no tenant member, predecessor replacement, candidate, merge or release. Historical snapshots retain their original standing at recording.
