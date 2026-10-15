@@ -1,0 +1,249 @@
+diff --git a/specification_methodology/v3/build_tenants/claude/qualification/instruments/generate_frames.py b/specification_methodology/v3/build_tenants/claude/qualification/instruments/generate_frames.py
+index 47d423b..4a57e43 100644
+--- a/specification_methodology/v3/build_tenants/claude/qualification/instruments/generate_frames.py
++++ b/specification_methodology/v3/build_tenants/claude/qualification/instruments/generate_frames.py
+@@ -62,7 +62,7 @@ import unicodedata
+ TENANT_ROOT = Path(__file__).resolve().parents[2]
+ INPUTS_RELATIVE = Path('standards') / 'frames' / 'FRAME_INPUTS.json'
+ FRAMES_RELATIVE = Path('standards') / 'frames'
+-MAX_FRAME_BYTES = 100_000
++MAX_FRAME_BYTES = 150_000
+ FRAME_ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
+ 
+ # Ported verbatim from Codex qualification/C3/refresh_views.py:12-18 at 31f28f9.
+@@ -374,7 +374,60 @@ def _rebase_block(lines, owner: str) -> str:
+ 
+ 
+ def rebase(member: Member, start: int, end: int) -> bytes:
+-    """The extent of lines [start, end) of `member` with its relative link destinations rebased.
++    """The extent of lines [start, end) of `member` with its relative link destinations rebased."""
++    return rebase_lines(member, range(start, end))
++
++
++LINK_DESTINATION = re.compile(r'\]\(([^)\s]+)\)')
++
++
++def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_owner: dict):
++    """Line indices of the extent [start, end) keeping, in every table whose header has a
++    `Consequence` column, only the rows that link to a section this frame carries.
++
++    Prose, headings, blank and fenced lines, table headers and separators, and every row of
++    a table that is not a family table are kept. A family-table row is kept when one of its
++    link destinations is `#anchor` (this member) or `MEMBER.md#anchor` and that anchor is a
++    route of this frame in that member. Returns (indices, family rows total, rows kept)."""
++    indices, total, kept = [], 0, 0
++    state = None  # None: outside a table; 'header', 'separator', then ('family', bool)
++    for i in range(start, end):
++        raw = bare(member.lines[i]).lstrip(' ')
++        is_row = (not member.fenced[i]) and raw.startswith('|')
++        if not is_row:
++            state = None
++            indices.append(i)
++            continue
++        text = member.lines[i].decode('utf-8')
++        if state is None:
++            state = ('header', 'Consequence' in text)
++            indices.append(i)
++            continue
++        if state[0] == 'header':
++            state = ('rows', state[1])
++            indices.append(i)
++            continue
++        if not state[1]:
++            indices.append(i)
++            continue
++        total += 1
++        keep = False
++        for destination in LINK_DESTINATION.findall(text):
++            path, _, anchor = destination.partition('#')
++            if not anchor or path.startswith(('http', 'stdo:', '/', 'mailto:')):
++                continue
++            target = Path(owner).name if path == '' else Path(path).name
++            if anchor in anchors_by_owner.get(target, set()):
++                keep = True
++                break
++        if keep:
++            indices.append(i)
++            kept += 1
++    return indices, total, kept
++
++
++def rebase_lines(member: Member, indices) -> bytes:
++    """The given lines of `member`, in order, with their relative link destinations rebased.
+ 
+     Fenced lines and blank lines are copied unchanged. The other lines are
+     grouped into blocks, which end at a blank or fenced line; a heading, a
+@@ -390,7 +443,7 @@ def rebase(member: Member, start: int, end: int) -> bytes:
+             block.clear()
+ 
+     heading_lines = {h[0] for h in member.headings}
+-    for i in range(start, end):
++    for i in indices:
+         text = member.lines[i].decode('utf-8')
+         if member.fenced[i] or bare(member.lines[i]).strip() == '':
+             flush()
+@@ -406,8 +459,8 @@ def rebase(member: Member, start: int, end: int) -> bytes:
+     return ''.join(pieces).encode('utf-8')
+ 
+ 
+-def source_line(owner: str, anchor: str, owner_sha256: str) -> bytes:
+-    return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}'.encode('utf-8')
++def source_line(owner: str, anchor: str, owner_sha256: str, note: str = '') -> bytes:
++    return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}{note}'.encode('utf-8')
+ 
+ 
+ def header(frame: dict, size: int) -> bytes:
+@@ -428,7 +481,11 @@ def header(frame: dict, size: int) -> bytes:
+         "before an excerpt names the member and the section's anchor, and gives\n"
+         'the SHA-256 of the whole owning member. The section digest recorded in\n'
+         "FRAME_INPUTS.json is over the owner's bytes, not over this copy. The\n"
+-        'owning section decides; this frame owns no determination.\n'
++        'owning section decides; this frame owns no determination. An excerpt\n'
++        'whose `Source:` line says `rows=k/n` is a family table of which only\n'
++        'the k rows that cite a section this frame carries are copied, with the\n'
++        "table's preamble, header and every non-family table; the other rows\n"
++        'stay in the owning member and are not needed for this task.\n'
+         '\n'
+         'Routes, in order:\n'
+         '\n'
+@@ -474,6 +531,10 @@ def build(root: Path, inputs_path: Path):
+         blocks = []
+         routes_out = []
+         spans = {}
++        anchors_by_owner = {}
++        for route in frame['routes']:
++            if not (route.get('rows') or {}).get('mode'):
++                anchors_by_owner.setdefault(Path(route['owner']).name, set()).add(route['anchor'])
+         for route in frame['routes']:
+             owner, anchor = route['owner'], route['anchor']
+             if owner not in members:
+@@ -485,13 +546,25 @@ def build(root: Path, inputs_path: Path):
+                     raise Refusal(owner, start + 1,
+                                   f'frame "{fid}": route "{anchor}" overlaps route "{other_anchor}"')
+             spans.setdefault(owner, []).append((start, end, anchor))
+-            blocks.append((source_line(owner, anchor, member.sha256), rebase(member, start, end)))
+-            routes_out.append({
++            mode = (route.get('rows') or {}).get('mode')
++            if mode == 'frame-anchors':
++                indices, total, kept = select_rows(member, start, end, owner, anchors_by_owner)
++                block = rebase_lines(member, indices)
++                note = f' rows={kept}/{total} selected by the anchors this frame carries'
++            elif mode:
++                raise Refusal(str(inputs_path), None, f'frame "{fid}": unknown rows mode "{mode}"')
++            else:
++                block, note, total, kept = rebase(member, start, end), '', None, None
++            blocks.append((source_line(owner, anchor, member.sha256, note), block))
++            entry = {
+                 'owner': owner,
+                 'owner_sha256': member.sha256,
+                 'anchor': anchor,
+                 'section_sha256': digest(extent),
+-            })
++            }
++            if mode:
++                entry['rows'] = {'mode': mode, 'selected': kept, 'total': total, 'excerpt_sha256': digest(block)}
++            routes_out.append(entry)
+         record = {
+             'id': fid,
+             'path': str(FRAMES_RELATIVE / f'{fid}.md'),
+diff --git a/specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md b/specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md
+index 989f7fd..567fec8 100644
+--- a/specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md
++++ b/specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md
+@@ -267,7 +267,9 @@ obligations apply to the exact subject. Their declared predicates are
+ evaluated from sufficient basis-bound facts: a true predicate requires the
+ applicable evaluation and its result; a false predicate excludes only that
+ obligation, under its cited authority; a missing or ambiguous premise
+-leaves applicability unresolved, not false. A frame name, an available
++leaves applicability unresolved, not false. A supported inapplicability
++of a conditional obligation is recorded as such, apart from any result
++value, and waives no criterion of the member's acceptance. A frame name, an available
+ tool or a listed family triggers no activation by itself. Where
+ applicability needs residual semantic judgment, that judgment and its
+ evidence are retained as a judgment, never represented as a computed fact
+@@ -548,7 +550,13 @@ the actor's envelope B:
+    compared with that capacity. The measurement, the capacity and the
+    outcome of the comparison are recorded before the read. A fit holds
+    only for the measured boundary: context outside it is recorded as not
+-   measured, and no fit claim covers it. The measurement applies wherever B declares a
++   measured, and no fit claim covers it. Fit is established from the
++   recorded complete active inputs, or from a supported upper bound that
++   includes any host-supplied context; where neither exists the fit
++   judgment is `indeterminate`, unless a counterexample, such as a measured
++   excess, establishes `falsified`. A correct task result keeps its own
++   bounded standing and does not satisfy a missing fit judgment. The
++   measurement applies wherever B declares a
+    context capacity, whatever question the step governs, because without
+    it a fit claim against that capacity is an assertion, and a context
+    that exceeds it would be cut without record
+diff --git a/specification_methodology/v3/build_tenants/claude/standards/CONFORMANCE.md b/specification_methodology/v3/build_tenants/claude/standards/CONFORMANCE.md
+index f9fe7d8..01b27da 100644
+--- a/specification_methodology/v3/build_tenants/claude/standards/CONFORMANCE.md
++++ b/specification_methodology/v3/build_tenants/claude/standards/CONFORMANCE.md
+@@ -161,7 +161,7 @@ states; this member does not restate it.
+ | 25 | The context a task needs is interdependent and does not fit one actor | ACTIVATION §2 step 3, §4 Refinement; REFERENCE_FRAME RF-014 | T-01 |
+ | 26 | A frame fits its byte limit but irrelevant material obscures a required dependency | ACTIVATION §2 steps 2 and 3; EVALUATION §7 Frame qualification; REFERENCE_FRAME RF-003, RF-004 | L-26 fit is not attention; the actual use it calls for is the frame qualification of EVALUATION §7 |
+ | 27 | A frame or task changes after its trial, or actor instructions supply the expected answer | EVALUATION §7 Frame qualification (Adequate attention), §3 Protocol | L-27 |
+-| 28 | An author opens a fresh context to review its own candidate | EVALUATION §3; ACTIVATION §1 Configuration (Reconfiguration) | L-28 a fresh context is not independence |
++| 28 | An author opens a fresh context to review its own candidate | EVALUATION §3, including authorship of a received contribution; ACTIVATION §1 Configuration (Reconfiguration) | L-28 a fresh context is not independence; a contributor's reading of its contribution is not independent acceptance |
+ | 29 | A coordination frame omits frontier items from its current attention | ACTIVATION §1 Transitions (Open work outside attention); REFERENCE_FRAME RF-015 | L-29 out of view stays open |
+ | 30 | A new observation exposes more obligations, or a destination is revised to make the current candidate pass | ACTIVATION §1 Transitions (Discovery, Destination change, Completion, Progress), §5 (Progress) | L-30 discovery and destination change |
+ | 31 | One directly authorised task fits a sufficient frame | ACTIVATION §1 Configuration (Allocation, Direct entry), Roles and delegation | L-31 direct entry |
+@@ -182,7 +182,7 @@ states; this member does not restate it.
+ | 46 | Two loci in one candidate decide the same question | FOUNDATIONS §2 Imports between members; PRODUCT_DEFINITION §11 | L-46 one owner per question |
+ | 47 | A member or profile defines its own result values | FOUNDATIONS §4 Results (Recording, Refinements, the rule that nothing raises standing); ACTIVATION §3; each member or profile that defines result values | L-47 refined values map once, including two effects: one whose declared outcome requires five updates by 12:00, where at 12:01 the evidence establishes three and not whether the effect has ended, is `not_effected` (`falsified`) with the two missing updates as counterexample and the unestablished end as a residual; one whose response was lost with no counterexample observed is `completion_unknown` (`indeterminate`); neither is repeated before reconciliation |
+ | 48 | A lifecycle label or classification is used to decide admission, compliance or closure | FOUNDATIONS §4 Results (Recording, Refinements); ACTIVATION §3 Disposition; TICKETS §3; SPEC_METHOD §2 Requirement categories and classification | L-48 |
+-| 49 | A conserved heading now carries a different obligation, or a superseded row names only the old section | RELEASE §9; each member's Source dispositions | L-49 |
++| 49 | A conserved heading now carries a different obligation, or a superseded row names only the old section | RELEASE §9, the comparison test on required and permitted decisions, modal force, triggers, scope and exceptions; each member's Source dispositions | L-49; an indicative rewrite is judged by its meaning |
+ | 50 | A frame's task returns a result | each frame whose task returns a result; REFERENCE_FRAME RF-012, §11; ACTIVATION §2 (Standalone scope) | L-50 result-returning frames carry the algebra |
+ | 51 | A functor or categorical join is claimed | FOUNDATIONS §4 Formal fragment; EVALUATION §6 Equivalence ladder; AXIOMATIC_CALCULUS §5 | L-51 categorical claims carry their demonstration |
+ | 52 | A rewrite or refinement step is applied | ACTIVATION §4 Refinement | L-52 steps are licensed |
+@@ -196,7 +196,7 @@ evaluates them before closure:
+ |---|---|---|
+ | J53 | Each member passes its local checks while two members still decide the same shared question differently | the integrated assessment (L-J53) |
+ | J54 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | the integrated assessment (L-J54) |
+-| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction |
++| J55 | Five member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction; ACTIVATION §1 Applicability, under which a supported inapplicability of a conditional obligation is recorded separately and waives no criterion |
+ 
+ Coverage. Eleven of the 52 discriminators are exercised by cases: 22
+ (T-03), 23 (T-04), 25 (T-01), 32 and 33 (CD-01), 36 (T-06), 38 (CD-03),
+diff --git a/specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md b/specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md
+index d3d03b8..03777be 100644
+--- a/specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md
++++ b/specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md
+@@ -183,7 +183,9 @@ supplies no review authority the author lacks: an author that opens a
+ fresh context to review its own candidate is still its author, and its
+ review is self-review, which stays construction output and cannot be
+ relabelled as independent assessment (P6; UP-007 applied to a fresh
+-context).
++context). Authorship attaches to the text wherever it is carried: a
++contribution received from another author stays that author's, and that
++author's reading of it supplies no independent acceptance of it (P6).
+ 
+ Independence across actor families is declared, not assumed. Whether two
+ activations of one model family are independent for a semantic judgment is a
+diff --git a/specification_methodology/v3/build_tenants/claude/standards/RELEASE.md b/specification_methodology/v3/build_tenants/claude/standards/RELEASE.md
+index ff3372d..a38ebed 100644
+--- a/specification_methodology/v3/build_tenants/claude/standards/RELEASE.md
++++ b/specification_methodology/v3/build_tenants/claude/standards/RELEASE.md
+@@ -655,7 +655,19 @@ An unresolved disposition blocks qualification of the affected claim.
+ Conservation is semantic: patch absence does not prove loss when a
+ successor-native realisation preserves behaviour, and naming or code
+ similarity does not prove conservation without relevant evidence (P6,
+-P1).
++P1). The comparison that decides `conserved` is made on the same material
++case, scope and authority: what must happen, what may happen, what is
++prohibited, and what follows when a trigger, exception or required
++premise is absent, in the owning text and in the consumer bindings that
++apply it, with the counterexamples that would expose a changed decision.
++Modal wording is judged by that meaning: indicative wording can state a
++binding law, and rewriting "must" or "shall" is neither conservation nor
++supersession by itself; an obligation stays obligatory, a preference
++stays a preference, and every permitted exception and scope condition
++survives, or the claim is not conserved. A statement that a whole
++package's wording is equivalent establishes none of this for any claim
++(P6, P1; the common successor disposition requirement, carried here as
++the test this section applies).
+ 
+ Each disposition is a claim the successor makes about one predecessor
+ claim ([EVALUATION §1](EVALUATION.md#1-claims)), not a result value; its
