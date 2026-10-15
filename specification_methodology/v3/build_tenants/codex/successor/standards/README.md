@@ -33,6 +33,12 @@ Responsibility views project selected material clauses:
 [release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
 no view is sufficient for every task.
 
+For construction or assessment of one member, the
+[member construction/assessment view](frames/MEMBER_CONSTRUCTION_ASSESSMENT.md)
+supplies generic method rules. Bind it to the actual Product requirements,
+member subject, authority and required evidence. Product-specific acceptance
+criteria remain at their owner; selecting this view grants no acceptance.
+
 For intake triage, lawful re-entry, work-carrier selection or execution-contract
 admission, acquire the [triage/carrier frame](frames/TRIAGE_CARRIER.md).
 For typed construction handoffs and transformation admission, acquire the

@@ -21,7 +21,7 @@ a route alone does not discharge that judgment.
 - [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result algebra
 
@@ -31,6 +31,15 @@ original qualified domain outcome, supporting evidence and citations, unresolved
 obligations and material effect observations. A reference can carry these when
 its resolution preserves their meaning and availability. This is a semantic
 contract, not a mandatory serialization format or additional work carrier.
+
+F1 selects the question and F2/F6 restrict its answer to supported evidence.
+Because an execution can be interrupted and its effects can outlive its actor
+(F3/F5), evaluation performance, the predicate's truth and effect completion
+are separate questions. The informational contribution is the recoverable
+meaning of each answer; the computational contribution is what was performed
+and observed. The following value choices implement those distinctions.
+RF-012 and every domain refinement bind all three questions before consuming a
+label such as `ready` or `refused`; no label decides the other predicates.
 
 The verdict has exactly these values:
 
@@ -146,7 +155,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result conjunction
 
@@ -156,6 +165,14 @@ results, their authentication and predicate mapping, known failures and their
 citations, uncovered required coverage, uncertain effects and invalidators.
 The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
+
+The required set comes from the composite's applicability and coverage
+contract, not from the list of returns received. F4's preservation obligation
+therefore makes a missing required return visible even when every available
+return is satisfied. F2/F6 also retain an authenticated counterexample when
+another slot is missing. Frame conjunction and the library's Conjoin operation
+apply this same distinction; their owners supply which predicates and joins
+are required, not another rule for erasing failures or filling gaps.
 
 The aggregate evaluation has performance performed when its combining rule is
 applied; this does not change component performance. The composite declares its
@@ -269,7 +286,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Release Identities
 
@@ -304,7 +321,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Immutable RC Publication
 
@@ -357,17 +374,23 @@ prove `not_started` after possible dispatch. Preserve the core performance,
 coverage and observed-effect coordinates at each selected boundary.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Exact-Cut Qualification
 
-Given F1–F4 and F6, evidence for a narrower or different subject cannot establish
-this cut's claim, and a satisfied assessment cannot make an owner decision.
+This family assumes a declared cut, its claim set and the observation boundary
+for each claim. F1 and F2 make the evidence answer that claim rather than a
+nearby predicate; F3 binds the answer to the cut actually observed; F4 preserves
+every required item in the release conjunction. Consequently a source check,
+a package check and an installed-use check can support different predicates
+even when all report success. F6 leaves acceptance to the bound decision owner.
 The shared [result/conjunction contract](../FOUNDATIONS.md#result-conjunction)
-supplies those consequences. Release policy separately chooses exact-cut review,
-required operator checks and human acceptance; the Product declares its claim
-set, external dependencies and any lawful narrowing. Supported alternative
-realizations use those same claim conditions, not an assumed preferred build.
+preserves those distinctions and any uncovered item.
+
+Release policy chooses exact-cut review, required operator checks and human
+acceptance. The Product declares its claim set, external dependencies and any
+lawful narrowing. These choices determine what qualification owes; a preferred
+build shape does not exclude another realization satisfying the same claims.
 
 Qualification binds:
 
@@ -410,7 +433,7 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Selector And Consumer Adoption
 
@@ -466,7 +489,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `66d76a3dbfb93f29c5c8981f495ff6e19815307972ea6ae5ad646d2a004e5fe3`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -530,7 +553,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
 
 #### Explicit Complete Consumer Update
 
@@ -590,7 +613,7 @@ required observation of every begun part. Keep staged-install and consumer
 effects on their actual boundaries, including `partial` or `unknown` effects.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -600,7 +623,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-006 Authority Conservation
 
@@ -610,7 +633,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-012 Closed Results
 
@@ -650,7 +673,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
 
 ## Contract application
 
@@ -712,6 +735,14 @@ condition is retained with its evidence. A supported admissibility result
 permits only the already-granted operation; it predicts neither success nor
 termination. The control contract handles its observed outcome separately.
 
+At design admission the bound instance is the proposed transition and its
+complete enclosing relation. At frame activation it is the declared evaluation,
+subject, basis and actor. Both use these same conditions; the design commit
+predicate and frame capability predicate remain different domain decisions.
+A consumer uses the supported condition once and retains its validity route;
+a boundary crossing alone neither requires a second proof nor permits omission
+of a changed material dependency.
+
 ### Constraint surface
 
 For a current subject and basis, the bound contract describes the work allowed
@@ -764,3 +795,40 @@ claim. A self-consistent model, matching schema, checksum or generated diff
 checks a different relation. Failure re-enters the first owning defect: source
 ambiguity, interpretation, projection, producer or consumer. It does not license
 changing the source to agree with its view.
+
+The consuming task determines which distinctions the check must preserve.
+For an RF-017 frame view these include the evaluation's failure detections and
+capability conditions; for an AC-017 interpretation they include the represented
+predicates, dependencies and permitted latitude. A representation adequate for
+one of those claims is not evidence for the other without the corresponding
+source-to-consumer binding. This is the informational consequence of F2/F4;
+neither predicate decidability nor a particular serialization follows from it.
+
+
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+
+## Judgment and authority
+
+The [frame authority law](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+owns authority conservation for frame evaluation. Within a_c,
+[AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
+judgment separation. Where a consumer has adopted the construction engagement
+profile and lawfully activated the applicable engagement,
+[the Baseline](../STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
+owns its exact Reviewer/Executive application of the detailed laws. Other
+domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
+have distinct standing. A judgment binds a predicate, exact subject, basis,
+evidence, assessor and any required independence. An operation grant permits
+specified effects; decision authority retains its separately bound mandate.
+Neither evidence shape nor actor capability
+mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
+Reviewer and Executive retain their exact roles from that profile. This account
+assigns neither role or its authority. Domain control such as ODD next-action
+selection remains with its own named function; the explanation appoints none.
+
+Unknown applicability, missing context, incompatible basis and failed predicates
+remain observable. Severity grades the supported consequence if a finding manifests. Priority,
+disposition, selected action and promotion effect remain distinct; their
+assignment follows the applicable mandate. The semantic result remains separate
+from the authoritative construction disposition, whose domain conditions belong
+to [Spec's proportional disposition](../SPEC_METHOD.md#proportional-disposition).
