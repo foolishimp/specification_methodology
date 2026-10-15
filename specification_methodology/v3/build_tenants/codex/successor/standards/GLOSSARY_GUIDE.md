@@ -41,6 +41,34 @@ An unusable basis is invalid_basis. A route outside the bound evaluation scope
 is out_of_frame. Acquiring irrelevant members is no condition of resolution.
 Missing reasons follow the core rule. None reports semantic acceptance.
 
+## Labels With Several Senses
+
+These routes locate uses of the same spelling in different owning contexts.
+The selected occurrence's owner supplies its meaning, predicate and applicable
+result mapping. The table adds no definition or precedence between owners.
+An unresolved occurrence follows [bounded-context semantic
+resolution](SPEC_METHOD.md#bounded-context-semantic-resolution).
+
+| Label | Use to locate | Owning route |
+|---|---|---|
+| `indeterminate` | Verdict about a bound predicate | [Result algebra](FOUNDATIONS.md#result-algebra) |
+| `indeterminate` | Intake classification and its reason-sensitive result | [Universal intake triage](SPEC_METHOD.md#universal-intake-triage) |
+| `not_applicable` | Supported applicability of a required evaluation | [Applicability and required results](REFERENCE_FRAME_METHOD.md#applicability-and-required-results) |
+| `not_applicable` | A predecessor claim's successor disposition | [Successor baseline conservation](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) |
+| `not_applicable` | A phase in a Product's operational lifecycle | [Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency-rule) |
+| `refused` | A method function's outcome and its actual cause | [Method functions](REFERENCE_FRAME_METHOD.md#method-functions) |
+| `refused` | Constraint or basis refusal in a_c | [AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `refused` | An adopted traversal judgment | [Traversal judgment kinds](TRAVERSAL_OCCURRENCE_PROFILE.md#closed-constraint-judgment-residual-and-stop-kinds) |
+| `missing` | An absent required judgment, distinct from a returned verdict | [Result algebra](FOUNDATIONS.md#result-algebra) |
+| `gap` | Uncovered coverage in a conjunction | [Result conjunction](FOUNDATIONS.md#result-conjunction) |
+| `gap` | An a_c stop or source residual | [AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `disposition` | An authorised decision on a candidate or work item | [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) |
+| `disposition` | A predecessor claim's conservation or replacement relation | [Successor baseline conservation](RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) |
+| `adoption` | A consumer's selection of a release basis | [Selector and consumer adoption](RELEASE_METHOD.md#selector-and-consumer-adoption) |
+| `adoption` | Propagation of a shared method change | [Shared method adoption](POSTING_GUIDE.md#shared-method-adoption-and-propagation-stdo-up-012) |
+| `Closed` | A ticket or sprint lifecycle status | [Ticket method](TICKET_METHOD.md) |
+| `Closed` | A commentary discussion state | [Posting guide](POSTING_GUIDE.md) |
+
 ## Method Identity Index
 
 | Indexed term | Bounded-context identity | Owning concept clause | Relation clause |

@@ -126,14 +126,18 @@ dispositions; no obligation is removed to achieve a text-size target.
 
 ## Qualification design
 
-The iteration 3 evidence boundary is `qualification/C3/iteration-3/`.
-Historical C3 and synthesis artifacts retain their original subjects. Current
-entry points select the current inventory and interpretation explicitly.
+The current construction and evidence boundary is
+`qualification/C3/iteration-4/`, bound to common input C3-I4-03 at
+`3c4c503d291e7cb19ba21333ba6caf6167be77c9`. Historical C3, synthesis and
+iteration 3 artifacts retain their original subjects. Current entry points
+select the current inventory and interpretation explicitly.
 
-[The determination account](../qualification/C3/iteration-3/RULE_ACCOUNT.md)
-and its [machine-readable inventory](../qualification/C3/iteration-3/DETERMINATIONS.json)
-bind the current source owners, arguments, consumers and unrepresented clauses.
-They are construction evidence, not additional law or acceptance. The account
+The current determination account binds source owners, arguments, consumers
+and unrepresented clauses. Its preceding account is preserved at
+[`iteration-3/DETERMINATIONS.json`](../qualification/C3/iteration-3/DETERMINATIONS.json);
+the [current work plan](../qualification/C3/iteration-4/PLAN.md) records the
+successor's completion and freeze. These are construction evidence, not
+additional law or acceptance. The account
 distinguishes predicates, definitions or domain data, consumer bindings and
 non-deciding locators. Available source whose conditions have not yet been
 decomposed remains unfinished interpretation work. It is neither an unknown
@@ -148,7 +152,9 @@ can check only its declared interpretation; it cannot establish source
 completeness or authenticate its own premises. Model/source disagreements are
 retained and repaired at their owning layer.
 
-Compare deciding operations with iteration 2 and the applicable rc.2 source:
+Compare deciding operations with this line's preceding candidate at
+`fb855df1aac377c45ea9f4e614933d48827fd844` (package `d490dd6`) and the
+applicable installed rc.2 source:
 which independently interpreted rules remain, which have become one owner,
 which domain choices survive, and what a cold actor actually acquires. Report
 raw bytes, measured execution and comparison limits separately. Neither a
@@ -162,9 +168,16 @@ separate until their conditions are met.
 
 ## Source contributions
 
-Own lineage starts at 31f28f90c4a9b15243d84630fc4799024a9cd7ac and retains the
-repairs through 5b4aebb9773acd4a7027d74814772faaa17820f1. Peer reads use only the
-Claude tree at 31f28f90c4a9b15243d84630fc4799024a9cd7ac.
+This line continues its own preceding candidate at `fb855df`, whose complete
+package is `d490dd6`. Current synthesis evaluates the Claude donor at
+`2beed8d9a043cfa572bd240793e5020134300410`, with handoff `96ccdcc`. The
+[port proposals](../qualification/C3/iteration-4/PLAN.md#peer-contributions-to-evaluate)
+are evaluated individually against the receiving responsibility. Exclusion
+requires a reason; a named proposal is not automatically imported.
+
+The earlier contributions below retain their historical donor at
+`31f28f90c4a9b15243d84630fc4799024a9cd7ac`. Later donor coordinates do not
+rewrite their authorship or make earlier reviews apply to changed material.
 
 | Named peer contribution | Receiving responsibility | Adaptation and rejected overreach |
 |---|---|---|
