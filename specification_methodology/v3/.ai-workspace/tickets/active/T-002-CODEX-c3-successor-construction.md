@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T11:21:30Z
+updated_at: 2026-10-15T13:28:52Z
 priority: high
 dependencies: [T-002]
 ---
@@ -63,6 +63,18 @@ All paths below are relative to `build_tenants/codex/`. Each Writer reads its as
 Per source activation: acquire selected clauses in bounded slices, with at most 512 KiB cumulative source text and 60 minutes for this return, sized for the assigned documentary owners and their relevant dependencies. The entire file need not enter actor context to inspect its scoped argument and consumers. Record acquired-source bytes and elapsed time where measurable; host context/native cost remain unknown, so this is not a context-fit qualification. No paid external calls or further subagents are selected. If the scope cannot be completed within this envelope, return the exact remaining dependency rather than dropping it. A resource stop returns bounded progress for lawful continuation; it does not terminate the encompassing construction.
 
 The parent separately acts as Design/Qualification Writer for `design/`, tenant entry routes, `successor/standards/GLOSSARY_GUIDE.md`, current frame/packaging support and `qualification/C3/iteration-4/` outside the three source-return subdirectories. It may plan and implement X3–X8 qualification/adaptation mechanisms while the source is being written, but source-dependent regeneration and new candidate qualification wait for the appropriate freeze. Preserve all historical I3 receipts and source subjects. No shared actual-use oracle or trial is selected; comparison resources remain separate. The Git Writer checkpoints only completed returned territories. Fresh nonauthor working review is selected after each material source freeze, with port authorship and model-family limits disclosed; no member acceptance is inferred.
+
+### I4 construction return
+
+2026-10-15T13:28:52Z — EC-CODEX-I4-01 returns `candidate_ready` for the frozen construction subject: documentary source `01b01274b244ae6e5de10bf6bacb60087462cbb5`, authored account `e4651935fcd40ea97995cc51b73bffb63faacb36`, complete package `903f1198ac038b05c941c0cbc2abeceb9b3978fd`, evidence/return `9a93c5a3834837283b62f97cabe7182c60245114` on `tenant/codex/c3-iteration-4`. The [visible return](../../comments/codex/20261015T132852Z_RETURN_CODEX_I4_CONSTRUCTION.md) exposes the current candidate, reviews, all nine work-item states and remaining qualification. All construction Workers and working Reviewers have returned.
+
+The parent Design/Qualification Writer integrated the closed source returns, current frames, authenticated source-pair view, finite model, semantic account and native package. Follow-on Writer returns and delegation messages record the selector repair, family-routing corrections, local DMM argument, conservation proposal and DMM permission repair. This entry consolidates those records after execution; it is not a backdated admission or member disposition. The [working source readback](../../comments/codex/20261015T131804Z_REVIEW_I4_SOURCE_SUCCESSOR.md) closes the DMM account finding on its exact successor and preserves bounded ODD/Identity conclusions. The [integration review](../../comments/codex/20261015T132600Z_REVIEW_I4_INTEGRATION.md) reconstructs its frozen 701-row subject, preserves scoped foreign/local fields and rejects 706 altered preimages; the separate readback covers the sole later semantic delta. Same-family and acquisition limitations remain disclosed. No independent whole-method judgment is inferred.
+
+Current checks pass for 90 package members, 1,932 links, 32 compression pins, seven views, native generation, six projection runs, three native/refusal controls, cold identity and 19 negative controls. The 42,336-case finite conjunction model retains its bounded source/script and independent reproduction. I3/synthesis records are unchanged. The current conservation map has 621 conserved claims, 69 proposed replacements and one bounded inapplicability across 691 claims; the 55 common cases are mapped without being marked passed. Criterion 4 actual use and complete criteria 2/3/5/6 coverage remain unresolved; no all-criteria conjunction, member acceptance or integrated closure is recorded.
+
+The activation-checkpoint-to-return interval was 112.2 minutes, excluding earlier rebind/admission. No additional paid external actor call occurred. Parent/native context, tokens and costs remain uninstrumented. Original resource overruns and unknown portions remain visible. Serialized interpretation cost grew from 26,060,853 to 43,616,887 bytes; no practical efficiency gain is claimed.
+
+Executive disposition: return this frozen candidate for the already-defined review/comparison boundary, with the complete outstanding work retained. Common Ledger Writer records this result and visible post; Git Writer checkpoints those exact common files and may merge the recording commit inward with the tenant tree unchanged. Shared actual-use protocol/resources, acceptance review assignments, replacement decisions, owner selection, candidate merge, push and release remain unselected. The admitted EC-CODEX-I4-01 body and digest are unchanged.
 
 ## Current Iteration 3 Contract
 
