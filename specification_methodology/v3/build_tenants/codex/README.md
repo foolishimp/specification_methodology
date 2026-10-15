@@ -10,8 +10,9 @@ This tenant realizes the shared [Intent](../../specification/INTENT.md) and
 limits and remaining acceptance work.
 
 The [I4 work plan](qualification/C3/iteration-4/PLAN.md) binds the ratified
-common input and the successor construction. The package remains the preceding
-candidate until the affected work is completed and frozen.
+common input and successor construction. The I4 package is frozen at
+`903f1198ac038b05c941c0cbc2abeceb9b3978fd`. Its return separates completed
+construction checks from open assessment, comparison and acceptance.
 
 The common pen owns requirements and tickets. Tenant implementation writes stay
 here. Codex reviews and construction commentary are posted under

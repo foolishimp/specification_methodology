@@ -1,0 +1,207 @@
+{
+  "valid": true,
+  "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+  "common_input": "3c4c503d291e7cb19ba21333ba6caf6167be77c9",
+  "semantic_account_sha256": "06c53fad38a8381d93e08a8668dbad121d1a504a7756a8246ae8c6b591fbc0b9",
+  "program_sha256": "3fafe4c17269fe84b985faa8a43b5f7e3fda4c4505b5b9ffd42dad3ac609bc70",
+  "map_sha256": "aaf09ccf45fafe6d05778a854f4c38b0161aaf3daa86edb818b6c2f2d34a31a0",
+  "checker_sha256": "c17098b47c51765391f4439df17f601c81db81d301a30b92a49791fcbd109fe5",
+  "acquisition_oracle_sha256": "d17dc4c5f323c0e30b38b314b41314fff3b4c219924bc5abb9af0b60df98eaa7",
+  "native_projections": [
+    {
+      "case": "evaluate-conjoin",
+      "mode": "reference-only",
+      "bytes": 291358,
+      "sha256": "87ba5302d00b01e5d81f457b24578e8395d06e75651d8aeb593c448406871731",
+      "elapsed_seconds": 8.8230716669932,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "evaluate-conjoin",
+      "mode": "materialized",
+      "bytes": 576638,
+      "sha256": "a2038374b4cc88d32cc63a85a9dc00ae03ee1ffe81949bbc89e39823eb90bbab",
+      "elapsed_seconds": 8.822208124911413,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "clauses",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "residuals",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "symbols",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "good-prose",
+      "mode": "reference-only",
+      "bytes": 356843,
+      "sha256": "de9b181c116de4937de247de02116889428e78b53dfb3672ee03c56c80f4099a",
+      "elapsed_seconds": 8.948735583922826,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "good-prose",
+      "mode": "materialized",
+      "bytes": 708096,
+      "sha256": "24342b2a1b694e6cad5b0828e589bfd47ad0e67f986e6424aed8ff06c5e0b33b",
+      "elapsed_seconds": 8.999898790963925,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "clauses",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "residuals",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "symbols",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "work-recovery",
+      "mode": "reference-only",
+      "bytes": 1015182,
+      "sha256": "7a77466015d4e3a479c2ab961faba7a76338926bef8aa4d13abadfd0f25b3b0e",
+      "elapsed_seconds": 8.912668291013688,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "work-recovery",
+      "mode": "materialized",
+      "bytes": 2020703,
+      "sha256": "a9595e49448b0d24faa90901c56a9ef8b75d7d2b2ccb35395a7c2ddd74d76ba3",
+      "elapsed_seconds": 8.913853333098814,
+      "top_level_fields": [
+        "calculus_ref",
+        "clause_relations",
+        "clauses",
+        "closure",
+        "frame_indexes",
+        "frame_refs",
+        "kind",
+        "map_sha256",
+        "mode",
+        "program_sha256",
+        "program_uri",
+        "projection_sha256",
+        "residual_routes",
+        "residuals",
+        "resolved_sources",
+        "schema_version",
+        "source_basis",
+        "source_routes",
+        "symbols",
+        "vocabulary_refs"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "Optional profile promoted to unconditional input",
+      "reason": "The optional Baseline Reviewer became an unconditional requirement"
+    },
+    {
+      "case": "Material result owner omitted",
+      "reason": "Prose lost a material predicate owner"
+    },
+    {
+      "case": "Source changed behind frozen documentary inventory",
+      "exit_code": 1,
+      "reason": "Documentary subject drift: standards/ODD_METHOD.md"
+    }
+  ],
+  "cold_binding": "passed",
+  "paired_source": {
+    "id": "ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+    "body_sha256": "84b80e726ea08ea686e9450a54cc45f38da2fc8e496936f29af448c1fdde02f0"
+  },
+  "limits": [
+    "Authored mechanical checks, not shared trials or semantic acceptance.",
+    "Projection bytes are emitted artifact sizes, not retained actor context or efficiency gains."
+  ]
+}

@@ -133,7 +133,9 @@ iteration 3 artifacts retain their original subjects. Current entry points
 select the current inventory and interpretation explicitly.
 
 The current determination account binds source owners, arguments, consumers
-and unrepresented clauses. Its preceding account is preserved at
+and unrepresented clauses in
+[the current account](../qualification/C3/iteration-4/DETERMINATIONS.json).
+Its preceding account is preserved at
 [`iteration-3/DETERMINATIONS.json`](../qualification/C3/iteration-3/DETERMINATIONS.json);
 the [current work plan](../qualification/C3/iteration-4/PLAN.md) records the
 successor's completion and freeze. These are construction evidence, not

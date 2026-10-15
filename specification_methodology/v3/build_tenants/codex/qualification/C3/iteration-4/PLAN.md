@@ -2,13 +2,13 @@
 
 The [admitted contract](../../../../../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md#current-iteration-4-contract) binds the ratified common input, own preceding candidate, donor, actors and limits. The common input is C3-I4-03 at `3c4c503`; admission is recorded at `ebf07c3`. This line continues the Codex design from `fb855df`, whose package is `d490dd6`. Its selected donor is Claude at `2beed8d`, with handoff `96ccdcc`.
 
-The current package remains the preceding I3 implementation while the I4 work below is performed. Existing evidence keeps its exact subject. The inward merge at `21b42c3` preserves the Codex tenant tree `fa177342c17e7519b670cc922fe465ce753c97dc`. This plan records work; it does not accept a replacement, port or candidate.
+The I4 source, reading views and native interpretation are implemented and frozen. [RETURN.md](RETURN.md) records the exact package and current checks. Existing evidence keeps its exact subject. The inward merge at `21b42c3` preserves the Codex tenant tree `fa177342c17e7519b670cc922fe465ce753c97dc`. This plan records work; it does not accept a replacement, port or candidate.
 
 ## Work and dependencies
 
 | Work | Common owner | Local responsibility and required change | Exit evidence |
 |---|---|---|---|
-| I4-01 Rebind | Product Cross-Synthesis | Keep exact input/admission in this work record; update current entry routes. Reconcile `design/DESIGN.md` qualification and comparison coordinates when its I4 design is written. Preserve old return and package pins. | Verified input and unchanged starting tree; every affected binding has a correction or a justified no-change disposition. Admission and initial routing are complete; the design update remains open. |
+| I4-01 Rebind | Product Cross-Synthesis | Keep exact input/admission in this work record; update current entry routes. Reconcile `design/DESIGN.md` qualification and comparison coordinates when its I4 design is written. Preserve old return and package pins. | Verified input and unchanged starting tree; every affected binding has a correction or a justified no-change disposition. Admission, current routing and the I4 design are complete; final package/evidence coordinates are recorded in the return. |
 | I4-02 Foundations and ownership | Standalone successor relations 1–2; foundational reduction | Use `design/DESIGN.md`, the deciding-family tables in `successor/standards/`, and the current determination/argument routes. Bind each material family argument to its applicable pillars and actual consumers. Split a family where one consequence fails to describe its distinct decisions. | Source-specific arguments, domain choices and consumer routes; counterexamples and nonauthor readback. A new Pillar column alone does not establish the relationship. |
 | I4-03 Ports | Product Cross-Synthesis | Evaluate X1–X9 below at the exact donor; retain one receiving owner and the Codex result/effect design. Record adaptations and exclusions in the current port account when the affected source is frozen. | Frozen donor loci, receiving loci, affected claims and dependencies; nonauthor review of received material. |
 | I4-04 Conservation | Successor disposition | Carry the existing `CONSERVATION.json`, `FRONTIER.json` and relation records forward through the owning refresh mechanism after source changes. Compare obligations, permissions, exceptions and triggers on the same cases. | Current carrying relations with semantic evidence; proposed replacements grouped by question for the common pen, retaining each claim and dependent acceptance. |
@@ -22,7 +22,7 @@ The [common work list](../../../../../.ai-workspace/tickets/active/T-002-c3-succ
 
 ## Peer contributions to evaluate
 
-These are proposals from the frozen best-of-both post selected by the contract. The candidate source has not yet been read for this activation; no port is adopted here. Each evaluation reads the donor's exact owning locus and the receiving consumer before choosing an adaptation or exclusion.
+These proposals from the frozen best-of-both post selected by the contract have been evaluated at their exact donor loci. [PORT_ACCOUNT.md](PORT_ACCOUNT.md) records each adaptation or exclusion and its review standing. Construction use does not accept the port or candidate.
 
 | Proposal | Receiving responsibility | Evaluation boundary |
 |---|---|---|
@@ -36,8 +36,8 @@ These are proposals from the frozen best-of-both post selected by the contract. 
 | X8 Finite conjunction oracle with mutants | Result-algebra qualification | Adapt cases to Codex's performance and effect coordinates. State the finite domain and what the oracle cannot establish. |
 | X9 Plain prose | Affected source and ordinary entry routes | Define unfamiliar terms, preserve modal force and name the governing owner once. Wording changes still receive semantic comparison. |
 
-## First construction work
+## Construction sequence
 
-The first dependency-ready source scope is I4-02 with X1/X2: establish the family-to-pillar argument and its consumer routes within the existing architecture. Start from the current family tables and `review-repair/source/ARGUMENT_ROUTES.json`, then inspect the donor's corresponding arguments. Its return names affected determination records, frames and conservation claims before those derivatives are regenerated.
+The first source scope was I4-02 with X1/X2: establish the family-to-pillar argument and its consumer routes within the existing architecture. Start from the current family tables and `review-repair/source/ARGUMENT_ROUTES.json`, then inspect the donor's corresponding arguments. Its return names affected determination records, frames and conservation claims before those derivatives are regenerated.
 
 I4-03 evaluations and the conformance/reduction inventories can proceed in disjoint qualification territory when their own activations are recorded. Interpretation and view generation wait for stable owner source. The shared comparison protocol is not authored by this candidate builder; its disclosure and trial conditions follow the common contract. Owner-reserved replacement and packaging decisions block only their dependent acceptance.

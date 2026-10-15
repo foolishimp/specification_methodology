@@ -10,10 +10,17 @@ questions remain scoped residuals. Mandatory support is acquired through native
 references; conditional support and provenance retain exact discoverable routes.
 An unresolved condition cannot authorize a dependent action.
 
-The [interpretation repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)
-binds the current source, native checks, acquisition measurements and remaining
-qualification limits. The [iteration-3 return](../qualification/C3/iteration-3/RETURN.md)
-owns the wider candidate qualification.
+The [I4 interpretation generation record](../qualification/C3/iteration-4/interpretation/GENERATION.json)
+binds the current source and native checks. The [iteration-4 return](../qualification/C3/iteration-4/RETURN.md)
+owns the candidate's evidence and qualification limits. Its
+[source-pair tool](../qualification/C3/iteration-4/tools/source_pair.py) exposes one
+authenticated source body beside its interpretation for review without copying
+all bodies into native values. Current [native checks](../qualification/C3/iteration-4/interpretation/NATIVE_CHECK.json)
+exercise three selectors in both projection modes, cold binding and source-drift
+refusal. [Serialized cost](../qualification/C3/iteration-4/SERIALIZED_COST.json)
+records the increased interpretation size; it supplies no practical efficiency
+claim. The [I3 repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)
+retains its historical checks, measurements and subject.
 
 ## Historical I3 Conversion Evidence
 

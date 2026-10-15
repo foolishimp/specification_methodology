@@ -1,11 +1,10 @@
 # Codex C3 Construction Return
 
-The current construction is the [iteration-3 native interpretation repair](iteration-3/review-repair/native-fidelity-fix/RETURN.md), under
-closed common input C3-I3-CLOSED-01, admitted EC-CODEX-I3-03 and the product
-owner's bounded repair instruction. Its return binds the frozen package,
-current author checks, the applicability of historical reviews and task-use
-evidence, and remaining obligations. [The current inventory](iteration-3/CANDIDATE.json)
-and [conservation record](iteration-3/CONSERVATION.json) belong to that subject.
+The current construction is [iteration 4](iteration-4/RETURN.md), under
+ratified common input C3-I4-03 and admitted EC-CODEX-I4-01. Its return binds
+the source and package freezes, working reviews, mechanical checks and
+remaining obligations. [The current inventory](iteration-4/CANDIDATE.json)
+and [conservation record](iteration-4/CONSERVATION.json) belong to that subject.
 
 Read the [method package](../../successor/README.md),
 [standards index](../../successor/standards/README.md), or
@@ -17,10 +16,10 @@ The [preceding synthesis return](synthesis/RETURN.md) retains product source
 `3ad1fca31dc93ba0847bbbbf308312a554daa1f6`. The
 [surface correction](surface-repair/RETURN.md),
 [earlier bounded repair round](round-1/RETURN.md), [preceding iteration-3 return](iteration-3/RETURN.md), and earlier iteration-3
-attempts retain their actual subjects. Their results apply to a successor only
+attempts, including the [native interpretation repair](iteration-3/review-repair/native-fidelity-fix/RETURN.md), retain their actual subjects. Their results apply to a successor only
 through a supported unchanged relation or a separately recorded readback.
 
-This is a candidate construction return. Per-member acceptance, the reserved
-ported-part review policy, owner checkpoint acceptance, tenant integration,
+This is a candidate construction return. Per-member and received-part assessment,
+owner checkpoint acceptance, tenant integration,
 immutable installed qualification and release retain their own decisions.
 The categorical steel thread has not been selected by this increment.

@@ -19,8 +19,8 @@ authority, capability and envelope. A rule excerpt alone is not that frame.
 
 The member construction assembly and the affected existing routes address
 task gaps in the previous six-frame package. Their actual bytes and source
-routes are frozen in the current frame input account. Until that generation is
-complete, this is a construction plan. Product-specific criteria belong in the
+routes are frozen in [FRAME_INPUTS.json](FRAME_INPUTS.json); all seven views are
+rendered from exact owner sections. This establishes assembly reproduction. Product-specific criteria belong in the
 activated task, not in a universal method frame. A generated route and passing
 excerpt check establish neither task sufficiency nor criterion 4.
 
