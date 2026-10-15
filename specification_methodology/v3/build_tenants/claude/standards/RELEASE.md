@@ -655,7 +655,19 @@ An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
 successor-native realisation preserves behaviour, and naming or code
 similarity does not prove conservation without relevant evidence (P6,
-P1).
+P1). The comparison that decides `conserved` is made on the same material
+case, scope and authority: what must happen, what may happen, what is
+prohibited, and what follows when a trigger, exception or required
+premise is absent, in the owning text and in the consumer bindings that
+apply it, with the counterexamples that would expose a changed decision.
+Modal wording is judged by that meaning: indicative wording can state a
+binding law, and rewriting "must" or "shall" is neither conservation nor
+supersession by itself; an obligation stays obligatory, a preference
+stays a preference, and every permitted exception and scope condition
+survives, or the claim is not conserved. A statement that a whole
+package's wording is equivalent establishes none of this for any claim
+(P6, P1; the common successor disposition requirement, carried here as
+the test this section applies).
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](EVALUATION.md#1-claims)), not a result value; its

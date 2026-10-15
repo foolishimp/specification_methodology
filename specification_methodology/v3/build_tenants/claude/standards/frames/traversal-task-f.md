@@ -1133,7 +1133,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#effects sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ### Effects
 

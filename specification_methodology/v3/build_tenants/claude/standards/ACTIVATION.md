@@ -267,7 +267,9 @@ obligations apply to the exact subject. Their declared predicates are
 evaluated from sufficient basis-bound facts: a true predicate requires the
 applicable evaluation and its result; a false predicate excludes only that
 obligation, under its cited authority; a missing or ambiguous premise
-leaves applicability unresolved, not false. A frame name, an available
+leaves applicability unresolved, not false. A supported inapplicability
+of a conditional obligation is recorded as such, apart from any result
+value, and waives no criterion of the member's acceptance. A frame name, an available
 tool or a listed family triggers no activation by itself. Where
 applicability needs residual semantic judgment, that judgment and its
 evidence are retained as a judgment, never represented as a computed fact

@@ -31,7 +31,7 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 78077 bytes.
+Size of this frame: 79561 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -485,7 +485,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
+Source: EVALUATION.md#3-independent-assessment sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
 
 ## 3. Independent assessment
 
@@ -533,7 +533,9 @@ supplies no review authority the author lacks: an author that opens a
 fresh context to review its own candidate is still its author, and its
 review is self-review, which stays construction output and cannot be
 relabelled as independent assessment (P6; UP-007 applied to a fresh
-context).
+context). Authorship attaches to the text wherever it is carried: a
+contribution received from another author stays that author's, and that
+author's reading of it supplies no independent acceptance of it (P6).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -541,7 +543,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
+Source: EVALUATION.md#4-review-results sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
 
 ## 4. Review results
 
@@ -612,7 +614,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -631,7 +633,19 @@ An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
 successor-native realisation preserves behaviour, and naming or code
 similarity does not prove conservation without relevant evidence (P6,
-P1).
+P1). The comparison that decides `conserved` is made on the same material
+case, scope and authority: what must happen, what may happen, what is
+prohibited, and what follows when a trigger, exception or required
+premise is absent, in the owning text and in the consumer bindings that
+apply it, with the counterexamples that would expose a changed decision.
+Modal wording is judged by that meaning: indicative wording can state a
+binding law, and rewriting "must" or "shall" is neither conservation nor
+supersession by itself; an obligation stays obligatory, a preference
+stays a preference, and every permitted exception and scope condition
+survives, or the claim is not conserved. A statement that a whole
+package's wording is equivalent establishes none of this for any claim
+(P6, P1; the common successor disposition requirement, carried here as
+the test this section applies).
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](../EVALUATION.md#1-claims)), not a result value; its
@@ -661,7 +675,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=f0d0c34359f1a9d87ebd63d584a6b85f27d5366a5a4db4ad37f921a9f942503a
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=e8a3f3faa270a26515a39b4e3bbc8ece946f6ec48b11eadea682426966496f09
 
 ## 5. Coverage of the common discriminators
 
@@ -718,7 +732,7 @@ states; this member does not restate it.
 | 25 | The context a task needs is interdependent and does not fit one actor | ACTIVATION §2 step 3, §4 Refinement; REFERENCE_FRAME RF-014 | T-01 |
 | 26 | A frame fits its byte limit but irrelevant material obscures a required dependency | ACTIVATION §2 steps 2 and 3; EVALUATION §7 Frame qualification; REFERENCE_FRAME RF-003, RF-004 | L-26 fit is not attention; the actual use it calls for is the frame qualification of EVALUATION §7 |
 | 27 | A frame or task changes after its trial, or actor instructions supply the expected answer | EVALUATION §7 Frame qualification (Adequate attention), §3 Protocol | L-27 |
-| 28 | An author opens a fresh context to review its own candidate | EVALUATION §3; ACTIVATION §1 Configuration (Reconfiguration) | L-28 a fresh context is not independence |
+| 28 | An author opens a fresh context to review its own candidate | EVALUATION §3, including authorship of a received contribution; ACTIVATION §1 Configuration (Reconfiguration) | L-28 a fresh context is not independence; a contributor's reading of its contribution is not independent acceptance |
 | 29 | A coordination frame omits frontier items from its current attention | ACTIVATION §1 Transitions (Open work outside attention); REFERENCE_FRAME RF-015 | L-29 out of view stays open |
 | 30 | A new observation exposes more obligations, or a destination is revised to make the current candidate pass | ACTIVATION §1 Transitions (Discovery, Destination change, Completion, Progress), §5 (Progress) | L-30 discovery and destination change |
 | 31 | One directly authorised task fits a sufficient frame | ACTIVATION §1 Configuration (Allocation, Direct entry), Roles and delegation | L-31 direct entry |
@@ -739,7 +753,7 @@ states; this member does not restate it.
 | 46 | Two loci in one candidate decide the same question | FOUNDATIONS §2 Imports between members; PRODUCT_DEFINITION §11 | L-46 one owner per question |
 | 47 | A member or profile defines its own result values | FOUNDATIONS §4 Results (Recording, Refinements, the rule that nothing raises standing); ACTIVATION §3; each member or profile that defines result values | L-47 refined values map once, including two effects: one whose declared outcome requires five updates by 12:00, where at 12:01 the evidence establishes three and not whether the effect has ended, is `not_effected` (`falsified`) with the two missing updates as counterexample and the unestablished end as a residual; one whose response was lost with no counterexample observed is `completion_unknown` (`indeterminate`); neither is repeated before reconciliation |
 | 48 | A lifecycle label or classification is used to decide admission, compliance or closure | FOUNDATIONS §4 Results (Recording, Refinements); ACTIVATION §3 Disposition; TICKETS §3; SPEC_METHOD §2 Requirement categories and classification | L-48 |
-| 49 | A conserved heading now carries a different obligation, or a superseded row names only the old section | RELEASE §9; each member's Source dispositions | L-49 |
+| 49 | A conserved heading now carries a different obligation, or a superseded row names only the old section | RELEASE §9, the comparison test on required and permitted decisions, modal force, triggers, scope and exceptions; each member's Source dispositions | L-49; an indicative rewrite is judged by its meaning |
 | 50 | A frame's task returns a result | each frame whose task returns a result; REFERENCE_FRAME RF-012, §11; ACTIVATION §2 (Standalone scope) | L-50 result-returning frames carry the algebra |
 | 51 | A functor or categorical join is claimed | FOUNDATIONS §4 Formal fragment; EVALUATION §6 Equivalence ladder; AXIOMATIC_CALCULUS §5 | L-51 categorical claims carry their demonstration |
 | 52 | A rewrite or refinement step is applied | ACTIVATION §4 Refinement | L-52 steps are licensed |
@@ -753,7 +767,7 @@ evaluates them before closure:
 |---|---|---|
 | J53 | Each member passes its local checks while two members still decide the same shared question differently | the integrated assessment (L-J53) |
 | J54 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | the integrated assessment (L-J54) |
-| J55 | Five applicable member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction |
+| J55 | Five member criteria are satisfied and the sixth is missing, stale or falsified | the integrated assessment (L-J55), and the decision owner at member acceptance, who applies the installed builder's result conjunction; ACTIVATION §1 Applicability, under which a supported inapplicability of a conditional obligation is recorded separately and waives no criterion |
 
 Coverage. Eleven of the 52 discriminators are exercised by cases: 22
 (T-03), 23 (T-04), 25 (T-01), 32 and 33 (CD-01), 36 (T-06), 38 (CD-03),
@@ -780,7 +794,7 @@ run and assessed is never counted as passed, and no mapping exempts a
 member from logical review (P6, P2).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=7/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=7/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -817,7 +831,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -848,7 +862,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac rows=2/12 selected by the anchors this frame carries
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2 rows=2/12 selected by the anchors this frame carries
 
 ### Foundation to law: release and successor conservation
 

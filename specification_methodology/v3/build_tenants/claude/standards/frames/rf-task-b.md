@@ -916,7 +916,7 @@ reuse still requires the consumer's exact applicability check (P3, P6;
 rc.2 #return-a-closed-result).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ## 7. Closed result and reuse
 

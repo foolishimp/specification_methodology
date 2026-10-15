@@ -803,7 +803,7 @@ The out_of_frame residual field is new in this corpus; it carries what
 result to name, and reads `none` for any other result (P5).
 
 
-Source: EVALUATION.md#frame-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
+Source: EVALUATION.md#frame-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
 
 ### Frame qualification
 
@@ -862,7 +862,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#admission-and-activation sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ### Admission and activation
 
@@ -900,7 +900,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#disposition sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ### Disposition
 
@@ -942,7 +942,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ## 7. Closed result and reuse
 
@@ -1335,7 +1335,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=1/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1366,7 +1366,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=4/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=4/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 

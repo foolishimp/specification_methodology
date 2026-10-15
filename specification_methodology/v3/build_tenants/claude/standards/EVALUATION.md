@@ -183,7 +183,9 @@ supplies no review authority the author lacks: an author that opens a
 fresh context to review its own candidate is still its author, and its
 review is self-review, which stays construction output and cannot be
 relabelled as independent assessment (P6; UP-007 applied to a fresh
-context).
+context). Authorship attaches to the text wherever it is carried: a
+contribution received from another author stays that author's, and that
+author's reading of it supplies no independent acceptance of it (P6).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a

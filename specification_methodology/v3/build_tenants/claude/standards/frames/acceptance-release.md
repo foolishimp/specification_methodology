@@ -32,9 +32,9 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 63299 bytes.
+Size of this frame: 64174 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
+Source: EVALUATION.md#4-review-results sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
 
 ## 4. Review results
 
@@ -105,7 +105,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: EVALUATION.md#5-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031
+Source: EVALUATION.md#5-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
 
 ## 5. Acceptance
 
@@ -184,7 +184,7 @@ keep a bounded review from blocking on observations outside its claim
 while a non-waivable hard stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
+Source: ACTIVATION.md#disposition sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
 
 ### Disposition
 
@@ -587,7 +587,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac
+Source: RELEASE.md#8-acceptance sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
 
 ## 8. Acceptance
 
@@ -627,7 +627,7 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -646,7 +646,19 @@ An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
 successor-native realisation preserves behaviour, and naming or code
 similarity does not prove conservation without relevant evidence (P6,
-P1).
+P1). The comparison that decides `conserved` is made on the same material
+case, scope and authority: what must happen, what may happen, what is
+prohibited, and what follows when a trigger, exception or required
+premise is absent, in the owning text and in the consumer bindings that
+apply it, with the counterexamples that would expose a changed decision.
+Modal wording is judged by that meaning: indicative wording can state a
+binding law, and rewriting "must" or "shall" is neither conservation nor
+supersession by itself; an obligation stays obligatory, a preference
+stays a preference, and every permitted exception and scope condition
+survives, or the claim is not conserved. A statement that a whole
+package's wording is equivalent establishes none of this for any claim
+(P6, P1; the common successor disposition requirement, carried here as
+the test this section applies).
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](../EVALUATION.md#1-claims)), not a result value; its
@@ -676,7 +688,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=4/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=4/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -710,7 +722,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -741,7 +753,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac rows=3/12 selected by the anchors this frame carries
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2 rows=3/12 selected by the anchors this frame carries
 
 ### Foundation to law: release and successor conservation
 
