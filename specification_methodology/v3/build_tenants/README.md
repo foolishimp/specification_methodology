@@ -8,7 +8,7 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 ## Current Task
 
-The common pen is preparing the [I5 universal construction revision](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-5-common-preparation). The proposal changes no existing admission. Each tenant continues to read its named immutable input; I5 construction follows exact common ratification and a new admission. Its scope is the existing principles connected through construction, strategy, feedback and assurance, as specified by the reviewed successor.
+The common pen is consolidating [I5 and both candidate reviews](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-5-consolidated-work) into one shared input for two successor builds. Each tenant keeps its own preceding implementation and design, repairs applicable findings, and evaluates useful peer contributions under Cross-Synthesis. The proposal changes no existing admission. Each tenant continues to read its named immutable input; I5 construction follows exact common ratification and a new admission. Current review dispositions and exit evidence are recorded in the common work map; a shared requirement does not itself repair either candidate.
 
 I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) and [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging):
 

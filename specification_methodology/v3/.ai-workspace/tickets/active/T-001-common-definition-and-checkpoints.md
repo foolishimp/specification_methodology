@@ -10,13 +10,37 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T15:52:00Z
+updated_at: 2026-10-15T16:54:24Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 review consolidation
+
+2026-10-15T16:54:24Z — The product owner directs: “as we did with i4, - take i5 + claude's feedback + your feedback into common requirements that resolve all issues” and “you have pen to update i5”. This selects common preparation for both successor builds. The proposed sequence remains common ratification followed by separate tenant admissions. Intake is `requirement_reprice` at the existing common owners; the accepted purpose and independent tenant designs remain.
+
+### EC-COMMON-I5-02
+
+Outcome: one revised I5 common input integrating the universal construction model and the evaluated findings from both I4 candidate reviews, with one traceable tenant work map and independent source readback.
+
+Basis and subject: main preimage `54bbf1dcdba9cf4f13ea87f84f772bc6f43d353d`; proposed C3-I5-01 source `455ce5d32bc3dfb31ba5882d51311a549612de90`; installed STDO 2.5.1-rc.2 manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`, verified. I4 remains the ratified tenant input. Review inputs are Claude's common review at `27ee76c`, Claude's Codex review/comparison at `54bbf1d`, and the unchanged local Codex comparison post `20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` (SHA-256 `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00`) with its evidence. Each finding retains its original subject; successor applicability is checked where needed.
+
+Operation and territory: the common Writer updates affected common specification, v3 routing, shared tenant entry, T-001/T-002 and Codex commentary. Separate Ledger and Git Writer acts record decisions and make scoped checkpoint commits on main, then record member hashes from that source in a descendant. Preserve all historical snapshots/admissions, peer commentary, both tenant trees, installed releases, sibling products and unrelated dirt. No tenant implementation, admission, acceptance, merge, push or release is selected.
+
+Evaluation: classify each finding against its owning source, confirm its counterexample or evidence gap, and distinguish an existing obligation, a common clarification, a permitted choice and an owner decision. Do not copy reviewer repair designs into the WHAT. Every applicable gap has one primary work item, its owning requirement and observable exit evidence; a corrected requirement does not claim a candidate repair. Two bounded read-only evaluators advise on I5/common findings and the Codex-review evidence. A separate fresh nonauthor Reviewer records expectations from the preimage before reading the successor, then checks the frozen changes and material dependents. It writes only its expectations/review in common Codex commentary. This same-family working review is a disclosed exception; it supplies no owner ratification or cross-family claim.
+
+Resources and stops: use selected common owners, reviews and exact source excerpts, with no new empirical trial or paid external actor call. Review progress at 60 minutes and reprice the remaining bounded work if necessary. Full host context and native spend are uninstrumented; report observed elapsed time and artifact checks, and claim no criterion-4 context fit. Missing authority, contradictory owner decisions or changes outside this grant return to their owner. Durable return: this ticket, T-002's consolidated work map and a Codex disposition post. Exit: checked, frozen common source and an independent readback, with ratification and dependent tenant work explicitly pending.
+
+Admission: `EC-COMMON-I5-02`, 2998 UTF-8 bytes, SHA-256 `cdf3c89f26fee76fed651bb2b1e3b37720dc98aec3d6049b63d1b83fad175ad1`. The product owner's exact common-pen instruction supplies the operation grant above. The coordinating activation selects this bounded contract for execution; the pen records its identity and digest before source effects. The parent enters the common Writer frame for those effects and returns to coordination only for result disposition. The two read-only evaluators supply advice, not independent acceptance of wording they propose.
+
+Writer return for EC-COMMON-I5-02: the [consolidated disposition](../../comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md) and [work map](T-002-c3-successor-construction.md#iteration-5-consolidated-work) account for all four common-review findings, all ten candidate-review findings and remaining qualification obligations. Three owning common documents clarify their application; no tenant file is changed. Author checks pass: installed Product Definition valid, 385 local/installed links across 23 Markdown files, scoped whitespace/JSON checks, unchanged P1–P6/claim inventory/Product Definition, preserved historical ticket tails and unchanged unrelated root files. Counts identify this check's scope, not semantic acceptance.
+
+The Git Writer checkpoints the scoped source, work records and unchanged Codex review inputs on main. The Ledger Writer then records C3-I5-02 from that exact source commit in a descendant. The fresh nonauthor Reviewer has [fixed expectations](../../comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md), SHA-256 `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051`, before successor acquisition. It receives the frozen commit for affected readback; its result and the product owner's exact-source ratification remain pending.
+
+Concurrent-input disposition: main advances to `447ed4d` only through Claude's handoff commentary. The common preimage remains unchanged. The Writer includes the named successor `c66ed4e` and corrected handoff `1092f9a` for bounded finding applicability. Read-only checks corroborate R1/R2/R4 repairs and R3's grading repair, retaining its stale control-arm description and the new constitutional provenance note as narrower residuals. The disposition and work map preserve supported repair; no peer effect, whole-candidate acceptance or changed common grant follows. The Git Writer may checkpoint atop this commentary-only advance after verifying the staged path list.
 
 ### Iteration 5 universal construction
 
