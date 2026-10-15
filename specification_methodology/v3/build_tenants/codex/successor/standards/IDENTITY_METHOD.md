@@ -431,12 +431,13 @@ continuity across it requires the owning transition relation above.
 
 Release version is not the same thing as object identity.
 
-Per `RELEASE_METHOD.md` and `SPEC_METHOD.md`:
+Under [Release Identities](RELEASE_METHOD.md#release-identities) and
+[Selector And Consumer Adoption](RELEASE_METHOD.md#selector-and-consumer-adoption):
 
 - an immutable `v<version>-rc.<n>` cut tag is the only exact operative release
   identifier
-- the mutable `v<version>` tag is only the latest-accepted version-line
-  selector
+- the mutable `v<version>` tag is a version-line discovery selector naming the
+  highest-ordinal published immutable RC cut for that project and version line
 - release version is a release-process fact
 - release version is not the live constitutional identity of every object in
   the project
@@ -449,6 +450,11 @@ So the method must distinguish:
 - mutable discovery selectors
 
 These may relate, but they are not interchangeable.
+
+The selector's target is determined by publication, independently of the cut's
+acceptance. Moving it does not change a consumer's operative basis; consumer
+adoption remains the explicit transition owned by the consumer's governing
+authority under Release Method.
 
 ---
 
