@@ -10,13 +10,25 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-14T16:36:35Z
+updated_at: 2026-10-15T05:30:00Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 4 common specification
+
+2026-10-15 — Jim selects three stages: “codex will do the v3/specification i4 update”; “once ratified each build tenant will borrow from the other in keeping with v3 i4 to synthesise their new best effort”; “we will then evaluate between the two and take one as the new v3 basis”. His following instruction is “start the work”. There is one Codex party and one Claude party; no session-number selection is required.
+
+This activates the common I4 preparation, not either tenant's I4 construction. Preimage: main `fa8e1726a3f58ecaa597ba595b9e81cabef0d440`; governing common input C3-I3-CLOSED-01 at `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816`. Comparison inputs are Claude candidate `2beed8d` with handoff `96ccdcc`, and Codex handoff `fb855df1aac377c45ea9f4e614933d48827fd844` binding package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2`. The installed builder is 2.5.1-rc.2 at manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`, verified before this activation. The [staged proposal, revision 4](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md), read at the preimage, supplies review questions; the owner's three-stage instruction controls the work.
+
+Re-entry is Product, `product_reprice`: reconcile synthesis, comparison and review conditions while preserving the accepted purpose and pillars. Classify each reported divergence against the existing common owner before changing law: implementation defect, permitted design choice, specification gap or reserved owner decision. A tenant defect becomes tenant work; a lawful design difference does not become a new common requirement.
+
+The parent now acts as common Writer. Territory: common specification, v3 routing, `build_tenants/README.md`, T-001 and T-002, and its own Codex commentary. Read the authorised Claude subject only at its frozen commit; write no peer file or tenant candidate. Record review expectations before the new candidate-body review and disclose prior acquisition and contribution. The same party acts separately as Git Writer for scoped checkpoints on main, then Ledger Writer to record C3-I4-01 member hashes from a source commit in a descendant recording. Preserve earlier admitted contracts and snapshots byte-for-byte, unrelated dirty files, sibling products and installed releases. No push, tenant merge, candidate acceptance or release is selected.
+
+Resource boundary: the common contract, staged questions and the affected frozen candidate sources. No new paid actor call or whole-corpus reconstruction is selected. Report elapsed time and measured checks; host context, reasoning-token and spend totals are uninstrumented. Missing material authority or an outcome change returns to the owner. Exit is a checked, frozen I4 common proposal with a classified work list, ready for Claude's independent review and Jim's ratification. Neither author checks nor the recording commit supply that ratification. Both I4 tenant admissions wait for it.
 
 ### Iteration 3 specification closure
 
