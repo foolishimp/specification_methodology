@@ -1139,7 +1139,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
+Source: SPEC_METHOD.md#change-classes sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9
 
 ### Change classes
 
@@ -1569,7 +1569,7 @@ are choices this profile, the adopting Product or another owner makes, so
 no profile choice is presented as following from the foundations (P6, P2).
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821 rows=1/10 selected by the anchors this frame carries
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9 rows=1/10 selected by the anchors this frame carries
 
 ### Foundation to law: change management and ambiguity
 

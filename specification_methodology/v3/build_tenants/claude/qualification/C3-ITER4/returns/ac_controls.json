@@ -27,13 +27,13 @@
   {
    "control": "validate-positive",
    "expects": "exit 0, status valid, 0 diagnostics, report and map byte-identical to a_c/i3",
-   "holds": false,
+   "holds": true,
    "detail": {
     "exit": 0,
     "status": "valid",
     "diagnostics": 0,
-    "report_identical": false,
-    "map_identical": false
+    "report_identical": true,
+    "map_identical": true
    }
   },
   {
@@ -61,62 +61,62 @@
   {
    "control": "project-positive",
    "expects": "all 8 projections from the fresh map exit 0 and are byte-identical to a_c/i3/projections",
-   "holds": false,
+   "holds": true,
    "detail": [
     [
      "authority-kinds",
      "reference-only",
      0,
-     false,
+     true,
      ""
     ],
     [
      "authority-kinds",
      "materialized",
      0,
-     false,
+     true,
      ""
     ],
     [
      "promotion-block",
      "reference-only",
      0,
-     false,
+     true,
      ""
     ],
     [
      "promotion-block",
      "materialized",
      0,
-     false,
+     true,
      ""
     ],
     [
      "result-algebra-and-conjunction",
      "reference-only",
      0,
-     false,
+     true,
      ""
     ],
     [
      "result-algebra-and-conjunction",
      "materialized",
      0,
-     false,
+     true,
      ""
     ],
     [
      "reuse-and-invalidation",
      "reference-only",
      0,
-     false,
+     true,
      ""
     ],
     [
      "reuse-and-invalidation",
      "materialized",
      0,
-     false,
+     true,
      ""
     ]
    ]
@@ -140,5 +140,5 @@
   "ac_py_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
  },
  "elapsed_seconds": 1.2,
- "holds_all": false
+ "holds_all": true
 }

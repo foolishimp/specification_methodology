@@ -118,11 +118,19 @@ for A3 and A5, cumulative acquired bytes and the largest active set.
 
 ## 7. Grading and attribution
 
-Criterion 4 is judged on `M` items only. An `M` item that any A0 run
-passes is re-tagged `F`, excluded from attribution and reported. A
-failed `M` item in A1 is attributed by triangulation to frame content,
-owner text, task wording or actor application, by the Executive after
-grading, and the attribution is a finding, not a grade. A1 is the
+Criterion 4 is judged on every applicable item of every A1 and A3 run:
+an item the method decides stays a criterion-4 item whatever the control
+did, because a control that answers correctly may have inferred the
+answer rather than read it in the fixture, and a frame that misdirects
+its actor on that item still fails it. Control outcomes are reported
+beside the criterion-4 results and are used only for attribution: the
+benefit attributed to the method excludes items every A0 run also
+passed, and those items are listed. A failed `M` item in A1 is
+attributed by triangulation to frame content, owner text, task wording or
+actor application, by the Executive after grading, and the attribution
+is a finding, not a grade. (Corrected after Codex's finding R3 of
+2026-10-15, which showed that re-tagging such items removed applicable
+failures from the criterion.) A1 is the
 curated-frame measure; A5 is the ordinary-discovery measure; they are
 reported side by side and neither stands in for the other. No earlier
 run of any iteration is reused.

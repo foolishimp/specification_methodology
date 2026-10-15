@@ -205,8 +205,14 @@ Requirements define invariant truths the system must satisfy. Design
 defines the structural decisions, interfaces, carrier surfaces and delivery
 topology that make those truths achievable; ADRs are one durable form of
 design record, not a second constitutional layer above design. Code
-realises those decisions. Events record what happened. Projection
-reconstructs current truth from the event stream. Delta reveals drift
+realises those decisions where the selected execution environment is
+software; a performed human procedure realises them where it is a human
+process, and both where it is mixed (§11). Events are the retained
+record of what happened, in the carrier the binding selects: an event
+stream, a ledger, a signed record or an observation log. Projection
+reconstructs current truth from that retained record where the record is
+sufficient for the product's obligations; it need not replay a complete
+event stream. Delta reveals drift
 between intended truth and realised state. Scenarios test operational
 meaning: whether the system can do what the words describe. Gap analysis
 identifies where real use cases hit the current model and reveal
@@ -218,7 +224,12 @@ P1; rc.2 #constitutional-chain).
 This is the homeostatic loop. Every link is load-bearing. A break at any
 link, goals with no downstream repricing path, an unowned requirement, an
 ungrounded design record, code without a design decision, creates
-accidental law (P6).
+accidental law (P6). Load-bearing means owned, not software: the links
+Code, Events and Projection name responsibilities every realisation
+carries in the carrier its binding selects (§11), and no product owes a
+code base or an event store that its binding does not select (P2, P6;
+corrected at iteration 4 after a cross-family finding that the chain
+contradicted the human and mixed realisations §11 permits).
 
 The goals surface is the bounded work-wave surface: it captures the current
 overriding concerns for the next body of work, keeps temporary focus out of

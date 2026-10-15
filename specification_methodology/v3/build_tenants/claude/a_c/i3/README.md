@@ -102,25 +102,17 @@ then `python3 -I a_c/i3/tools/assemble.py`, then the checker commands of
 
 | File | SHA-256 |
 |---|---|
-| `axiomatic-program.json` | `3a9fe2576a6d2e71432529b3efc2c41591ba89ddb1105d539c56dd348d9f502e` |
+| `axiomatic-program.json` | `8dd7f70191e312bfb940b82e95e9865b505289377a98b865cd91826e96f2004f` |
 | `bindings.json` | `816d211c2a92c3e3d2e8adc13d07fb1ae5ecc9fb8b8b4ba593b6f7f6009e201f` |
 | `coverage.json` | `126d9033fc871762ed15d52de4b9cb25a9e7658e9638cac6e2c0e3e75ef70493` |
-| `validation-report.json` | `4e982a5824c11a8bb62cadfc6867e27f0dc8eaa602883437fba1c7c62cf7e1e1` |
-| `logical-constraint-map.json` | `9e13c4f7e924b18b8e9bdeb84511b6d096c822d347126ace552553d7a6be049d` |
-| `projections/projection-authority-kinds-materialized.json` | `bcae91a148c7f4fd64b7191a759a2b6c8fd87b95188d8997fa344380847a651f` |
-| `projections/projection-authority-kinds-reference-only.json` | `d82fb5d96d79049e9d692c138486159a944d9615750beabb2b7a1921e0e37979` |
-| `projections/projection-promotion-block-materialized.json` | `2a8841a03bcb00620223d56e721fa790ef12de572a1f94ead8a7ba9bf80146fb` |
-| `projections/projection-promotion-block-reference-only.json` | `c7eef7394aefc7bfd39d88c8d8d7d1777050dd41f5c3efece9c086b43d9c9873` |
-| `projections/projection-result-algebra-and-conjunction-materialized.json` | `ebc04a49aeafea2d56acde00b74e6b000c3853b333429eef290c34d591e8ef54` |
-| `projections/projection-result-algebra-and-conjunction-reference-only.json` | `54fde60ec2d75f3911c06068db1c2f2449e0de836bc10f14a32c99e1955f6e11` |
-| `projections/projection-reuse-and-invalidation-materialized.json` | `f0b35a67e8c39eba17875bd6eeaa8d416d1df645fc93657ad003ed7d76a62cf6` |
-| `projections/projection-reuse-and-invalidation-reference-only.json` | `a549f90ef06cc37991c170d5323c30245351191355de9148e2b74d42f74710cd` |
-| `fragments/G1.json` | `db54bfbfb65bdedb21ee751ca0253b8458a6551a653a92791b1874bb7beae34d` |
-| `fragments/G2.json` | `ef56d1163c6ca55c44ead1c132ba4dd506f3920ec853a5796cf94b6b83420916` |
-| `fragments/G3.json` | `8509ec52e220ecc3f39388ad32b503d09da361f6249355bc546523259f5d19d6` |
-| `fragments/G4.json` | `9c2b0372bd083d0dc52b3082ad9537523220504d25a1ecf2f45effe5023befe8` |
-| `SIGNATURE.md` | `3e9642a83db380bca8a4b5767dbf506187d92d4875e2832872bc643599997ca4` |
-| `tools/assemble.py` | `8a28ef757ac565ac21a0b73dacebbbf0264941e1c65330d8b1ac32cffcf62462` |
-| `tools/build_fragments.py` | `ffd0bd57fa4006b075454c87bf0370e09f7f97d45f5a1a6464ce73c4ad9f6f7f` |
-| `tools/spec.py` | `6226452bf4f9f0dfec80357f7c975ce6edc516f7b4014509592ace87b38ab5de` |
-| `tools/test_assemble.py` | `efbac1b2d2dff5bfaa52dd7dcb2025f6c177528db02153d06f65f4a662923eef` |
+| `consumers.json` | `d10f69eb67061cb9ff566a3cbe1c6638db0c942b638102fdb4fb88fe945cdcdb` |
+| `validation-report.json` | `9436ff437a678a790a65f31e1db1d06eb2797cda9fdb26eafbf95b90ec723ebb` |
+| `logical-constraint-map.json` | `2d21ebbdc316e655f021f7e2ee7eca8145141df9cab4159a191549136bc33954` |
+| `projections/projection-authority-kinds-materialized.json` | `2582b319284f5555dc87de172c6f1f553852e18ccee368ac77b90f690af04a70` |
+| `projections/projection-authority-kinds-reference-only.json` | `b0207e608076a89ce646a9b09b63c554143aa274965abb288e3900a82c2f7c3f` |
+| `projections/projection-promotion-block-materialized.json` | `7e18d1fd07e51b2034126f5cdae2f56332ddfb845dc9bad536876ea241ff4066` |
+| `projections/projection-promotion-block-reference-only.json` | `d5937180fa33a5483f4c80fb704365ca2e690d87b83be8923f5b5b12ff9e05d6` |
+| `projections/projection-result-algebra-and-conjunction-materialized.json` | `bb8cf91d97acf004fd705e6bce71a03394dbcd360a497448ba600a6b03a389f1` |
+| `projections/projection-result-algebra-and-conjunction-reference-only.json` | `eba8c1f644b463441cf25dd69b19643803a8bd335dc1601c56517c1c70de55ff` |
+| `projections/projection-reuse-and-invalidation-materialized.json` | `5e26ee613376cf34936cf937e1f3dfb9e2acacace686959a2c4db3b22ee68db3` |
+| `projections/projection-reuse-and-invalidation-reference-only.json` | `f14623c0ebfe7a2899e51a41755fb5f6ea2829e056813adcd476af1e3de64b5a` |
