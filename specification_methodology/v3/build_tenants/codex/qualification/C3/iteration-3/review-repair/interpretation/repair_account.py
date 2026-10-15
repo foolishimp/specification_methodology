@@ -161,6 +161,54 @@ def add_dependency(row, target, kind='contract_application', required_when=None,
         relations.append(rel)
 
 
+def repair_odd_entry_binding(row, source):
+    """Keep section 19's recommendation and sufficiency judgments separate."""
+    recommendation = ('The cold actor can readily recover the Product source-to-outcome semantic chain; '
+                      'typed assets/nodes; public graph functions, machine-readable catalog and GTL module; '
+                      'ABG/Product split; and the exact loop, dispositions and proof lane.')
+    sufficient = ('The acquired local Product subjects and selected owning contracts let the actor determine '
+                  'source coherence and structural-drift refusal, execution-authority containment, '
+                  'observation-to-action control, replay-visible yield, outer closure with missing inner proof, '
+                  'and lawful agentic traversal with deterministic artifact admission for this ODD entry.')
+    recommended_result = copy.deepcopy(row['result_mapping'])
+    recommended_result['bound_predicate'] = recommendation
+    recommended_result['falsified'] = 'Admissible counterevidence defeats the stated recoverability predicate; this does not by itself falsify entry sufficiency.'
+    recommended_result['indeterminate'] = 'Whether the actor can recover the named distinctions is unresolved without deciding counterevidence or a supported scope/basis diagnosis; this is not an entry-sufficiency result.'
+    recommended_result['normative_force'] = ('This evaluates attainment of the source recommendation only when that question is selected. '
+                                             'A result does not convert should into a mandatory entry prerequisite or grant an action.')
+    row['predicate'] = sufficient
+    row['obligations'] = [
+        'Acquire the actual local Product subjects and the owning contracts selected by section 16 under the cold-start route.',
+        'Claim sufficient entry only when the acquired material supports every named required determination; apply Contract application to that claim.',
+        'An established unanswered required relation means the Product is not sufficiently specified for this entry; a glossary or generic rule packet cannot supply the actual subject.']
+    row['permissions_exceptions'] = [
+        'Readily recovering the listed distinctions is a should recommendation, retained in its own binding; its result alone does not decide entry sufficiency.',
+        'The reading route does not require unrelated corpus or an unselected profile.']
+    row['applicability']['when'] = 'A cold actor enters a concrete ODD Product and sufficiency of that entry is claimed or assessed.'
+    row['result_mapping']['bound_predicate'] = sufficient
+    row['result_mapping']['falsified'] = ('Admissible counterevidence defeats entry sufficiency, including an established unanswered required relation. '
+                                        'Retain that failure even if another required relation is unresolved.')
+    row['result_mapping']['indeterminate'] = ('Evidence about whether the acquired material supports a required determination is unresolved, '
+                                            'without an established unanswered relation, other deciding counterevidence or a supported scope/basis diagnosis.')
+    row['contract_bindings'] = [
+        {'name': 'ramp_up_recommendation', 'modality': 'should',
+         'applicability': 'A cold actor enters a concrete ODD Product under the declared cold-start route.',
+         'predicate': recommendation, 'source_clause_ids': ['ramp_up_recommendation'],
+         'assessment_when': 'The selected question assesses attainment of the recommended recoverability, separately from entry sufficiency.',
+         'result_mapping': recommended_result},
+        {'name': 'entry_sufficiency', 'modality': 'required_for_claim',
+         'contract': 'TRANSFORMATION_LIBRARY.contract-application',
+         'predicate_ref': '/predicate', 'applicability_ref': '/applicability',
+         'result_mapping_ref': '/result_mapping', 'source_clause_ids': ['c2']}]
+    start = source.index(b'A cold actor should readily recover', source.index(b'## 19. Ramp-Up Checklist'))
+    end = source.index(b'\n\n', start)
+    block = {'id': 'ramp_up_recommendation', 'sha256': digest(source[start:end]),
+             'roles': ['recommendation', 'scope'], 'byte_start': start, 'byte_end': end}
+    row['source_clauses'] = [c for c in row['source_clauses'] if c['id'] != block['id']] + [block]
+    row['source_excerpt'] = source[start:end].decode('utf-8')
+    add_dependency(row, 'FOUNDATIONS.result-algebra', kind='result_contract')
+
+
 def repair_documentary_deltas(rows):
     """Reconcile the 39 changed owned bodies, rather than merely their pins."""
     changed = set()
@@ -302,10 +350,6 @@ def repair_documentary_deltas(rows):
     for rel in r['dependency_relations']:
         if rel['id'] == 'TRANSFORMATION_LIBRARY.faithful-projection' and rel['kind'] == 'contract_application':
             rel['required_when'] = 'a declared source-to-consumer fidelity claim relies on this projection'
-    r = take('ODD_METHOD.19-ramp-up-checklist')
-    r['predicate'] = 'The cold actor should readily recover the Product source-to-outcome semantic chain and the named typed/graph/catalog/GTL/ABG/loop/proof distinctions using the actual Product subjects and selected contracts.'
-    r['obligations'] = ['Preserve the source should modality of the ramp-up checklist; its reading route does not require unrelated corpus or unselected profile acquisition.']
-
     r = take('CARRIER.plugins.spec.references.PRODUCT_BASIS.md')
     r['obligations'] += ['Resolve workflow member routes relative to the verified immutable basis URI using stdo resolve on the member URI without its fragment; read the returned installed member and then its exact heading.',
                          'Check membership and digest against the verified manifest. A missing member/heading remains unavailable; any permitted owning-source alternative stays on that basis, never a nearby checkout/plugin/newer cut.',
@@ -656,6 +700,10 @@ def main():
         if previous_owner['body_sha256'] != row['owner']['body_sha256'] or remapped:
             repinned.append({'id': row['id'], 'previous_body_sha256': previous_owner['body_sha256'],
                              'body_sha256': row['owner']['body_sha256'], 'coarsened_block_routes': remapped})
+    # Bind the two current section-19 paragraphs after historical block remapping.
+    # Fresh block coordinates must never be interpreted against the old source.
+    repair_odd_entry_binding(rows['ODD_METHOD.19-ramp-up-checklist'], source['standards/ODD_METHOD.md'])
+    changed.add('ODD_METHOD.19-ramp-up-checklist')
     # Every changed meaning needs an authored repair or a named reviewed
     # preservation decision. This guard is completed from the Source return.
     pending = [r['id'] for r in repinned if r['id'] not in changed]

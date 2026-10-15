@@ -1,6 +1,6 @@
 # Selected interpretation acquisition
 
-The package is frozen at `ef5e514f5ffff4176b55ca687e56fe3c8b97efc1`.
+The recorded T1 package is frozen at `ef5e514f5ffff4176b55ca687e56fe3c8b97efc1`.
 Its documentary input is `2476713d315c00ac61d336a3281d67e4a384d4ce` and its
 source-account/compiler input is `72e97bc34b55d40c110bd683ea12a0efc9ea1a99`.
 The assessment subject remains distinct from the installed STDO builder.
@@ -20,12 +20,21 @@ same closure, relations and routes: 129,462 file bytes, SHA-256
 These counts measure the emitted representation, not the actor's complete
 context, acquired source bytes, token use, attention or task performance.
 
-Run these commands from the Codex tenant root to reproduce the materialized
-export with the fixed checker and a verified installed encoding basis:
+Run these commands from the selected Codex tenant root to produce its
+materialized export with the fixed checker and verified installed encoding
+basis. The theory directory contains `manifest.json` and `standards/`; the
+binding script verifies both the fixed manifest and theory-member digests.
+For the exact historical bytes above, select the recorded T1 package. For a
+successor, select its [current complete inventory](../../CANDIDATE.json);
+changed package identities require their own export even when selected clause
+meanings are unchanged. The commands do not overwrite the recorded T1 exports.
 
 ```sh
-python3 -B successor/interpretation/bindings.py > /tmp/codex-i3-interpretation-bindings.json
-python3 -B a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py project --program successor/interpretation/program.json --map successor/interpretation/map.json --bindings /tmp/codex-i3-interpretation-bindings.json --frame-index urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.evaluate --frame-index urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.conjoin --mode materialized --output /tmp/codex-i3-evaluate-conjoin.json
+set -eu
+codex_i3_projection_output=$(mktemp -d "${TMPDIR:-/tmp}/codex-i3-projection.XXXXXX")
+python3 -B successor/interpretation/bindings.py --theory-root "$HOME/Library/Application Support/STDO/releases/v2.5.1-rc.2" > "$codex_i3_projection_output/bindings.json"
+python3 -B a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py project --program successor/interpretation/program.json --map successor/interpretation/map.json --bindings "$codex_i3_projection_output/bindings.json" --frame-index urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.evaluate --frame-index urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.conjoin --mode materialized --output "$codex_i3_projection_output/evaluate-conjoin.json"
+printf '%s\n' "$codex_i3_projection_output/evaluate-conjoin.json"
 ```
 
 The independently authored task supplies its subject, predicate, required set,
