@@ -8,12 +8,15 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 ## Current Task
 
-C3 reconstruction. Each tenant continues its own candidate line from the exact preceding cut named in its admitted contract and may take named parts of the other's ([Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis)). The original synthesis bases at `31f28f9` remain historical inputs. Both successive implementations consume the repaired common pillar and constraint-surface input; each keeps its own candidate and comparison subject. The work is carried by each tenant's ticket under [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md):
+I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) and [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging):
 
-- [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md);
-- [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md).
+1. Codex prepares the common revision, Claude reviews its exact freeze, and Jim ratifies it.
+2. Each tenant rebinds to that ratified input and synthesises its own candidate with selected contributions from its peer, under [Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis).
+3. The two frozen candidates receive the shared comparison and Jim selects the next basis.
 
-Nothing runs until an execution contract is admitted in that ticket. Each ticket records its current actors, input and limits; historical contracts do not activate a successor. The current owner instruction closes the reviewed I3 common specification, then carries supported fixes into Codex. T-001 records the corrected source and independent readback before the new Codex input and contract are recorded. EC-CODEX-I3-02 and EC-CLAUDE-I3-01 retain the historical C3-I3-R2-01 input. The Claude-line admitting actor and start are resolved on its own line; this route neither ratifies that admission nor starts it. Earlier contracts and evidence retain their historical subjects.
+I4 common preparation is active. Tenant I4 construction waits for ratification and each line's admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
+
+The tenant tickets are [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md) and [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md). Each new contract names the common input, own preceding candidate, donor, tasks, actors and resource envelopes. A draft contract starts no work. Common ratification and construction admission accept no tenant candidate or predecessor replacement.
 
 ## Territory And Returns
 
@@ -23,7 +26,7 @@ Construction territory is the tenant's own `build_tenants/<tenant>/`. Returns ar
 
 A tenant reads its peer's candidate only in two cases:
 
-- under [Porting reads](../specification/PRODUCT.md#development-isolation), at the commit named in Cross-Synthesis;
+- under [Porting reads](../specification/PRODUCT.md#development-isolation), at the donor commit named in its admitted contract;
 - in a review the product owner authorises.
 
 ## Reviews
@@ -34,7 +37,7 @@ The product owner authorises reviews between tenants one at a time, under Develo
 - records its expectations from the sources before opening the candidate;
 - writes the review under `.ai-workspace/comments/<reviewer>/`;
 - makes no repair;
-- does not assess work it authored.
+- does not supply independent acceptance evidence for work it authored. A donor reading its own port is explicitly supplementary; the receiving line obtains the nonauthor review required by Cross-Synthesis.
 
 Cross-tenant review means assessment of the other tenant's candidate; its access and assignment require the owner's authorisation. Model family is a separate independence condition. A different-family nonauthor reviewing the activating tenant's own candidate does not thereby acquire access to the peer candidate or authority to act for that peer. Its activation, effects, independence and any spend still require the applicable grant. An actual Claude review runs as Claude, and an actual Codex review runs as Codex. The C1 reviews written into peer `qualification/C1_REVIEW.md` files and peer tickets before this rule are historical records, not a template.
 

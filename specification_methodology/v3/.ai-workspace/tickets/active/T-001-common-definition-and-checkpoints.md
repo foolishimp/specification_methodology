@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T05:30:00Z
+updated_at: 2026-10-15T05:41:12Z
 dependencies: []
 ---
 
@@ -29,6 +29,10 @@ Re-entry is Product, `product_reprice`: reconcile synthesis, comparison and revi
 The parent now acts as common Writer. Territory: common specification, v3 routing, `build_tenants/README.md`, T-001 and T-002, and its own Codex commentary. Read the authorised Claude subject only at its frozen commit; write no peer file or tenant candidate. Record review expectations before the new candidate-body review and disclose prior acquisition and contribution. The same party acts separately as Git Writer for scoped checkpoints on main, then Ledger Writer to record C3-I4-01 member hashes from a source commit in a descendant recording. Preserve earlier admitted contracts and snapshots byte-for-byte, unrelated dirty files, sibling products and installed releases. No push, tenant merge, candidate acceptance or release is selected.
 
 Resource boundary: the common contract, staged questions and the affected frozen candidate sources. No new paid actor call or whole-corpus reconstruction is selected. Report elapsed time and measured checks; host context, reasoning-token and spend totals are uninstrumented. Missing material authority or an outcome change returns to the owner. Exit is a checked, frozen I4 common proposal with a classified work list, ready for Claude's independent review and Jim's ratification. Neither author checks nor the recording commit supply that ratification. Both I4 tenant admissions wait for it.
+
+Common Writer return, 2026-10-15T05:41:12Z: `candidate_ready` for the I4 common proposal, with independent common review and owner ratification pending. The [bounded source review and divergence classification](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) supports the [I4 work list](T-002-c3-successor-construction.md#iteration-4-staging). Current source clarifies semantic and modal preservation, task/frame coverage, port authorship and successor readback; it adds the matched-comparison and selection contract and removes historical candidate coordinates from live law. Intent, the pillar list, result requirements, claim inventory, six criteria and installed builder retain their meaning. Product's Development Isolation port-reading route now takes the exact donor from the admitted ticket; the authority and territory boundaries are retained. Changes remain proposed, not self-ratified.
+
+Author verification: Product Definition verification is valid on installed rc.2; the initial link pass resolves 267 links across the twelve changed/new Markdown surfaces; scoped whitespace passes. All 52 member discriminators and three integrated checks remain present. Eight protected common/tenant files, historical admitted and snapshot blocks, both candidate trees, sibling sources and installed release are preserved; both tenant worktrees remain clean at their original heads. T-002's old Current Iteration heading is relabeled historical, without changing its recorded I3 content. These checks are mechanical and author readback, not independent semantic acceptance. No paid actor call or tenant execution occurred. Complete host context, reasoning tokens and spend are uninstrumented. The separate Git Writer now freezes the returned common files and this review on main; the Ledger Writer then records C3-I4-01 from that source commit, with the checks and independent review still required before ratification.
 
 ### Iteration 3 specification closure
 

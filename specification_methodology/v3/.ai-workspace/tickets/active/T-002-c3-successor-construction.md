@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T16:36:35Z
+updated_at: 2026-10-15T05:41:12Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -24,6 +24,35 @@ links:
 ---
 
 # T-002 — v3.0.0 Successor Construction
+
+## Iteration 4 staging
+
+The owner selects Codex's common I4 update, then both tenants' synthesis after ratification, then comparison for his choice of the next v3 basis. [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) owns this common preparation. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) disposes the staged questions against the current owners. The I4 specification is proposed; Claude's exact-commit review and Jim's ratification are pending. No I4 tenant contract is admitted by this entry.
+
+| Input | Exact subject |
+|---|---|
+| Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
+| Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
+| Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
+| I4 common proposal | C3-I4-01; source commit and descendant hash recording follow below |
+
+The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
+
+| Work | Owning requirement | Codex work | Claude work | Observable return |
+|---|---|---|---|---|
+| I4-01 Rebind | Product Cross-Synthesis | Bind the ratified I4 input and current package; retain the completed ODD and native-fidelity repairs where applicable | Rebind from the older I3 input, accounting for both the closed I3 changes and I4 | Exact admitted input and an effect or reasoned no-change disposition for every applicable common decision |
+| I4-02 Foundation and ownership | Requirements, standalone successor relations 1 and 2 | Resolve CX-03's pillar-to-argument binding; make CX-05's owning family argument reachable at each affected determination | Complete source-first assessment of the family arguments and shared-owner/consumer joins, including Executive, Design Module and ODD | Arguments bind applicable pillars, actual rules and consumers; choices have owners; unsupported relations remain explicit |
+| I4-03 Ports | Product Cross-Synthesis and independence | Evaluate X1–X9 from the staged proposal on the named donor | Evaluate C1–C6 on the named donor | Selected contributions, adaptations or reasoned exclusions; single receiving owner; nonauthor review and affected successor readback |
+| I4-04 Conservation | Requirements, successor disposition | Complete semantic accounting and decisions for proposed replacements; counts or row pins alone do not close it | Complete the row re-assessment and modal-force evidence; retain unresolved compression dispositions | Each material claim's whole meaning is carried or has its exact accepted replacement/removal decision; unresolved decisions block dependent acceptance |
+| I4-05 Interpretation | Requirements, constraint surfaces | Check required coverage and fidelity of current account, program and native acquisition after I4 changes; retain supported recent repairs | Complete the required coverage beyond the partial G1–G4 encoding and check changed projections | Independently assessed source fidelity, required coverage and reproducible native acquisition, including permitted, prohibited and unresolved cases |
+| I4-06 Actual use | Product criterion 4 and Limits | Cover remaining material task/frame conditions; support active-context fit rather than only emitted-byte caps | Obtain actual-use evidence after resources are selected; desk traces do not substitute | Shared tasks and fixed nonauthor expectations; exact packets, routes and actor conditions; correct use and supported fit, with every uncovered obligation visible |
+| I4-07 Reduction | Requirements, foundational reduction | Establish deciding-path reduction where earlier evidence only measured acquisition | Complete declared material path coverage beyond DP-43 or justify equivalent groupings under independent review | Own preceding-candidate and rc.2 comparisons, plus the matched head-to-head protocol; removed determinations and retained distinctions, costs and tradeoffs |
+| I4-08 Package and routing | Standalone successor and Product open decisions | Resolve CX-06 historical routing, CX-08 provisional version wording and CX-09 independence labeling at the current subject | Resolve stale construction standing after rebind; preserve standalone identity and packaging limits | Current entry routes and honest package identity; historical evidence remains bound to its old subject |
+| I4-09 Review and selection | Product six criteria, Candidate Comparison, conformance integrated checks | Account for all common discriminators, including CX-04; return frozen source and supporting evidence | Reassess all common discriminators and integrated claims on the successor, retaining the limits of the present map | Six-criterion and integrated results for both exact candidates; dependency-aware repair readback; owner choice or no qualified choice |
+
+The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. Same-family nonauthor assessment of received ports is the proposed independence arrangement; a donor's assessment of its own contribution is supplementary. This arrangement requires ratification with the common revision before it can bear acceptance.
+
+Before actual-use activations, the owner selects the resources and the Executive records the shared protocol and envelopes. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
 
 ## Closed I3 common basis
 
@@ -60,7 +89,7 @@ Input commit B: `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816`. This descendant reco
 | `.ai-workspace/comments/codex/20261014T155559Z_EVALUATION_CODEX_I3_REVIEW_0517EB2.md` | 7304 | `0787722c3ce11ca0411fdef33b1236b28dcad3f40e1bbbcdea0939378f67a278` |
 | `.ai-workspace/comments/claude/20261014T151055Z_REVIEW_CODEX_V3_I3_CANDIDATE.md` | 15771 | `dd29c0af4a9cab08b23b587856a561a78e071f2ee69dc35042dd1ee89a36a301` |
 
-## Current Iteration
+## Historical I3 Selection
 
 The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source has a satisfied independent readback and its common closure is recorded. The parent records the exact successor input and Codex admission before tenant effects. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
 
