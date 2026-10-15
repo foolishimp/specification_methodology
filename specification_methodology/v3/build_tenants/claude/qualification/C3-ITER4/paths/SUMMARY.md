@@ -19,4 +19,27 @@ decide the required improvement), `falsified` (a counterexample), or
 | DP-19 | `indeterminate` | `indeterminate` | 4→1 | 5→2 | 2,330→28,087 | 8→15 | G passes; three rivals and three reconciliations removed (elimination witness); remaining on S2: EXECUTIVE_BASELINE's two field lists (§16 and §19, conserved from rc.2) and the "binding" homonym PROFILES §1 introduces; the README growth, the PROFILES index hops and two member leads are increases no declared tradeoff explains; S1 and S2 byte-identical on the route |
 | DP-25 | `indeterminate` | `indeterminate` | 2→0 | 1→0 | 2,330→28,087 | 8→1 | G passes; two rivals and one reconciliation removed, hops 8 to 1; the entry README's growth and the acquired bytes of the one owning section (ACTIVATION §1, 63 KB cumulative) are increases no declared tradeoff explains; S1 and S2 differ on the route only by the I4 applicability sentence (275 bytes) |
 | DP-31 | `satisfied` | `indeterminate` | 1→0 | 1→0 | 3,712→4,031 (skill) | 6→7 | G passes on all three; one rival and one reconciliation removed; the hop and acquisition rise is TO2 (generic resumption law in tier-1 ACTIVATION §5, reached by the skill's named-section route); adverse on S0: the owner of the uncertain-effect reconciliation rule is unreachable by route; against S1 the loci are byte-identical |
+| DP-37 | `indeterminate` | `indeterminate` | 1→0 | 3→1 | 2,330→28,087 | 8→10 | G passes on S2 (G1 fails on S0: ambiguity exits unmapped there); one rival and two reconciliations removed; the README growth and three route-forced non-deciding UX hops (§4, §8, §12) are increases no declared tradeoff covers; TO2 and TO3 explain the rest; S1 and S2 differ only by ACTIVATION §2's I4 sentence |
 | DP-43 (I3) | `indeterminate` | `indeterminate` | | | | | see `../../C3-ITER3/paths/DESK-TRACES.md` §0 |
+
+## Reading of the sample
+
+Seven of the eight sample paths are traced at iteration 4, all on the
+same three subjects. Against the predecessor every traced path removes
+rival deciders or reconciliations with the guard passing (an elimination
+witness on all seven), and one, DP-31, is `satisfied` under the
+pre-declared rule because its extra hops are the declared tradeoff TO2.
+The other six are `indeterminate` for one recurring reason: the entry
+README grew from 2,330 to 28,087 bytes to carry task routes, and that
+increase in M4a was not declared as a tradeoff before measurement, so the
+rule cannot excuse it. The increase is an adverse change reported against
+both baselines, and a candidate tradeoff (an entry that routes by task,
+in exchange for fewer hops and rivals) for a later iteration to declare
+before it measures. Against the preceding candidate `2beed8d` every path
+is `indeterminate`, because the iteration 4 edits did not touch the
+traced routes: this iteration added evidence, not reduction, on these
+paths. Two residual rivals were named by DP-19 (EXECUTIVE_BASELINE §16
+and §19 field lists; the "binding" homonym of PROFILES §1) and one
+unreachable owner by DP-31 on the predecessor. No frame-entry trace was
+made, so TO1's acceptance condition stays `unresolved`. The remaining 38
+paths are `unresolved`.
