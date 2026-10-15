@@ -62,7 +62,7 @@ import unicodedata
 TENANT_ROOT = Path(__file__).resolve().parents[2]
 INPUTS_RELATIVE = Path('standards') / 'frames' / 'FRAME_INPUTS.json'
 FRAMES_RELATIVE = Path('standards') / 'frames'
-MAX_FRAME_BYTES = 100_000
+MAX_FRAME_BYTES = 150_000
 FRAME_ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
 
 # Ported verbatim from Codex qualification/C3/refresh_views.py:12-18 at 31f28f9.
@@ -374,7 +374,60 @@ def _rebase_block(lines, owner: str) -> str:
 
 
 def rebase(member: Member, start: int, end: int) -> bytes:
-    """The extent of lines [start, end) of `member` with its relative link destinations rebased.
+    """The extent of lines [start, end) of `member` with its relative link destinations rebased."""
+    return rebase_lines(member, range(start, end))
+
+
+LINK_DESTINATION = re.compile(r'\]\(([^)\s]+)\)')
+
+
+def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_owner: dict):
+    """Line indices of the extent [start, end) keeping, in every table whose header has a
+    `Consequence` column, only the rows that link to a section this frame carries.
+
+    Prose, headings, blank and fenced lines, table headers and separators, and every row of
+    a table that is not a family table are kept. A family-table row is kept when one of its
+    link destinations is `#anchor` (this member) or `MEMBER.md#anchor` and that anchor is a
+    route of this frame in that member. Returns (indices, family rows total, rows kept)."""
+    indices, total, kept = [], 0, 0
+    state = None  # None: outside a table; 'header', 'separator', then ('family', bool)
+    for i in range(start, end):
+        raw = bare(member.lines[i]).lstrip(' ')
+        is_row = (not member.fenced[i]) and raw.startswith('|')
+        if not is_row:
+            state = None
+            indices.append(i)
+            continue
+        text = member.lines[i].decode('utf-8')
+        if state is None:
+            state = ('header', 'Consequence' in text)
+            indices.append(i)
+            continue
+        if state[0] == 'header':
+            state = ('rows', state[1])
+            indices.append(i)
+            continue
+        if not state[1]:
+            indices.append(i)
+            continue
+        total += 1
+        keep = False
+        for destination in LINK_DESTINATION.findall(text):
+            path, _, anchor = destination.partition('#')
+            if not anchor or path.startswith(('http', 'stdo:', '/', 'mailto:')):
+                continue
+            target = Path(owner).name if path == '' else Path(path).name
+            if anchor in anchors_by_owner.get(target, set()):
+                keep = True
+                break
+        if keep:
+            indices.append(i)
+            kept += 1
+    return indices, total, kept
+
+
+def rebase_lines(member: Member, indices) -> bytes:
+    """The given lines of `member`, in order, with their relative link destinations rebased.
 
     Fenced lines and blank lines are copied unchanged. The other lines are
     grouped into blocks, which end at a blank or fenced line; a heading, a
@@ -390,7 +443,7 @@ def rebase(member: Member, start: int, end: int) -> bytes:
             block.clear()
 
     heading_lines = {h[0] for h in member.headings}
-    for i in range(start, end):
+    for i in indices:
         text = member.lines[i].decode('utf-8')
         if member.fenced[i] or bare(member.lines[i]).strip() == '':
             flush()
@@ -406,8 +459,8 @@ def rebase(member: Member, start: int, end: int) -> bytes:
     return ''.join(pieces).encode('utf-8')
 
 
-def source_line(owner: str, anchor: str, owner_sha256: str) -> bytes:
-    return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}'.encode('utf-8')
+def source_line(owner: str, anchor: str, owner_sha256: str, note: str = '') -> bytes:
+    return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}{note}'.encode('utf-8')
 
 
 def header(frame: dict, size: int) -> bytes:
@@ -428,7 +481,11 @@ def header(frame: dict, size: int) -> bytes:
         "before an excerpt names the member and the section's anchor, and gives\n"
         'the SHA-256 of the whole owning member. The section digest recorded in\n'
         "FRAME_INPUTS.json is over the owner's bytes, not over this copy. The\n"
-        'owning section decides; this frame owns no determination.\n'
+        'owning section decides; this frame owns no determination. An excerpt\n'
+        'whose `Source:` line says `rows=k/n` is a family table of which only\n'
+        'the k rows that cite a section this frame carries are copied, with the\n'
+        "table's preamble, header and every non-family table; the other rows\n"
+        'stay in the owning member and are not needed for this task.\n'
         '\n'
         'Routes, in order:\n'
         '\n'
@@ -474,6 +531,10 @@ def build(root: Path, inputs_path: Path):
         blocks = []
         routes_out = []
         spans = {}
+        anchors_by_owner = {}
+        for route in frame['routes']:
+            if not (route.get('rows') or {}).get('mode'):
+                anchors_by_owner.setdefault(Path(route['owner']).name, set()).add(route['anchor'])
         for route in frame['routes']:
             owner, anchor = route['owner'], route['anchor']
             if owner not in members:
@@ -485,13 +546,25 @@ def build(root: Path, inputs_path: Path):
                     raise Refusal(owner, start + 1,
                                   f'frame "{fid}": route "{anchor}" overlaps route "{other_anchor}"')
             spans.setdefault(owner, []).append((start, end, anchor))
-            blocks.append((source_line(owner, anchor, member.sha256), rebase(member, start, end)))
-            routes_out.append({
+            mode = (route.get('rows') or {}).get('mode')
+            if mode == 'frame-anchors':
+                indices, total, kept = select_rows(member, start, end, owner, anchors_by_owner)
+                block = rebase_lines(member, indices)
+                note = f' rows={kept}/{total} selected by the anchors this frame carries'
+            elif mode:
+                raise Refusal(str(inputs_path), None, f'frame "{fid}": unknown rows mode "{mode}"')
+            else:
+                block, note, total, kept = rebase(member, start, end), '', None, None
+            blocks.append((source_line(owner, anchor, member.sha256, note), block))
+            entry = {
                 'owner': owner,
                 'owner_sha256': member.sha256,
                 'anchor': anchor,
                 'section_sha256': digest(extent),
-            })
+            }
+            if mode:
+                entry['rows'] = {'mode': mode, 'selected': kept, 'total': total, 'excerpt_sha256': digest(block)}
+            routes_out.append(entry)
         record = {
             'id': fid,
             'path': str(FRAMES_RELATIVE / f'{fid}.md'),

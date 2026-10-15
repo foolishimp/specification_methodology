@@ -1,6 +1,160 @@
 # I4-04 reading batch 04
 
-Rows: 18. Members: ['SPEC_METHOD.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
+Rows: 16. Members: ['SPEC_METHOD.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
+
+
+### Row `SPEC_METHOD.md#ambiguity-governance-rule` (modal; disposition `conserved`)
+
+Predecessor, `SPEC_METHOD.md#ambiguity-governance-rule` at rc.2:
+
+```text
+`SPEC_METHOD.md` owns the substrate-neutral ambiguity-governance bounded
+context `urn:stdo:bounded-context:ambiguity-governance` under the selected
+complete STDO basis. Graph/runtime shorthands such as `F_D`, `F_P`, and `F_H`
+remain in the graph-native ODD context unless an explicit relation imports or
+translates them.
+
+Spec-driven development is not only a derivation pipeline. It is a governed
+disambiguation pipeline.
+
+The point of the upstream chain is to progressively reduce ambiguity:
+
+- goals narrow active priority and work-wave focus
+- intent narrows direction and scope
+- product narrows current realization shape and terms
+- requirements narrow constitutional obligation
+- build-tenant or stack choice narrows executable realization class
+- design narrows structural interpretation
+- implementation narrows local realization detail
+
+This narrowing is not uniform. The methodology distinguishes between:
+
+- **major ambiguity**: ambiguity that materially changes architecture, stack,
+  product boundary, execution/deployment admissibility, public contract shape,
+  or other downstream realization law
+- **micro ambiguity**: local implementation choice that remains inside an
+  already-governed design boundary
+
+Major ambiguity must always be surfaced and governed. It may not remain hidden
+inside informal operator judgment, ambient precedent, or silent model choice.
+
+Therefore, at each major boundary the process must:
+
+- detect and record the major ambiguity that remains or is newly introduced
+- identify the affected invariant, asset, or decision boundary
+- record the decision taken if work proceeds
+- record whether the ambiguity was resolved, carried forward, escalated, or
+  blocked
+
+Ambiguity detection is mandatory. Blocking is policy.
+
+**Lawful Probabilistic Processing**
+(`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing`) is
+bounded non-human processing permitted by declared policy to carry or resolve
+declared ambiguity. **Human Adjudication**
+(`urn:stdo:concept:ambiguity-governance:human-adjudication`) is explicit human
+judgment admitted by authority to resolve declared ambiguity where policy or
+risk appetite requires it.
+
+The default governance model is:
+
+- ambiguity may be carried or decided by lawful probabilistic processing when
+  project policy allows it
+- ambiguity may be escalated to explicit human adjudication when project policy
+  requires it
+- the threshold between those actions is determined by declared risk appetite,
+  not by silent convenience
+
+Projects may therefore choose different ambiguity-handling policies. A lower
+risk appetite escalates more major ambiguity to explicit human judgment. A
+higher risk appetite permits more bounded probabilistic decision-making. In either
+case, the ambiguity and the decision must be recorded.
+
+Some conditions are not optional ambiguity decisions and therefore remain hard
+stops regardless of risk appetite. Typical hard-stop classes include:
+
+- violated invariant or guarantee
+- absent required authority surface
+- missing declared capability for an executional or operational stage
+- undeclared irreversible side effect
+- explicit policy gate requiring human approval
+
+The methodology is therefore not "eliminate all ambiguity before work." It is
+"make ambiguity visible, govern it explicitly, and reduce it progressively until
+downstream realization is sufficiently constrained."
+
+---
+```
+
+Successor, `SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`:
+
+```text
+This member owns the substrate-neutral ambiguity-governance bounded context
+`urn:stdo:bounded-context:ambiguity-governance` under the selected complete
+basis; a profile's runtime shorthands for its own frames stay in that
+profile's context unless an explicit relation imports or translates them
+(P3, P1; rc.2 #ambiguity-governance-rule).
+
+Spec-driven development is not only a derivation pipeline; it is a governed
+disambiguation pipeline. The upstream chain progressively reduces
+ambiguity: goals narrow active priority and work-wave focus; intent narrows
+direction and scope; product narrows current realisation shape and terms;
+requirements narrow constitutional obligation; build-tenant or stack
+choice, a tenant's binding under §11, narrows the executable realisation
+class; design narrows structural
+interpretation; implementation narrows local realisation detail (P2).
+
+The narrowing is not uniform. Major ambiguity materially changes
+architecture, stack, product boundary, execution or deployment
+admissibility, public contract shape or other downstream realisation law;
+micro ambiguity is a local implementation choice inside an already-governed
+design boundary. Major ambiguity is always surfaced and governed; it may
+not remain hidden inside informal operator judgment, ambient precedent or
+silent model choice. At each major boundary the process detects and
+records the major ambiguity that remains or is newly introduced; identifies
+the affected invariant, asset or decision boundary; records the decision
+taken if work proceeds; and records whether the ambiguity was resolved,
+carried forward, escalated or blocked. Those outcomes are `resolved`,
+`carried`, `escalated` and `blocked` of
+[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome), which
+gives each its core value for the predicate "the declared ambiguity is
+resolved on the exact basis". Only `resolved` is `satisfied`, so a later
+boundary rests no dependent claim on an ambiguity that is carried,
+escalated or blocked as if it were resolved. Ambiguity detection is
+mandatory; blocking is policy (P6, P5).
+
+Lawful probabilistic processing
+(`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing`)
+is bounded non-human processing permitted by declared policy to carry or
+resolve declared ambiguity. Human adjudication
+(`urn:stdo:concept:ambiguity-governance:human-adjudication`) is explicit
+human judgment admitted by authority to resolve declared ambiguity where
+policy or risk appetite requires it. That admission makes an operation
+human adjudication. A person who relays, records or carries out a step
+does not adjudicate by doing so, and a person who carries or decides a
+declared ambiguity where policy permits it, without that admission, acts
+under the policy and recording that govern lawful probabilistic
+processing; who performs an operation does not decide its kind (§11, rule
+2). The default governance model: ambiguity
+may be carried or decided by lawful probabilistic processing when project
+policy allows it; it may be escalated to explicit human adjudication when
+project policy requires it; the threshold between those actions is
+determined by declared risk appetite, not by silent convenience. Projects
+may therefore choose different ambiguity-handling policies: a lower risk
+appetite escalates more major ambiguity to explicit human judgment; a
+higher one permits more bounded probabilistic decision-making. In either
+case the ambiguity and the decision are recorded.
+
+The hard stops of [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)
+hold regardless of risk appetite. The method is therefore not "eliminate
+all ambiguity before work"; it is "make ambiguity visible, govern it
+explicitly, and reduce it progressively until downstream realisation is
+sufficiently constrained".
+
+The operational lifecycle sufficiency rule (§2) is this governance applied
+to lifecycle phases: an unanswered phase is a recorded gap, never a silent
+absence.
+```
 
 
 ### Row `SPEC_METHOD.md#bootstrap-rule` (modal; disposition `conserved`)
@@ -1554,129 +1708,4 @@ reads them returns its own core value with its predicate under
 relation: a declared state is never combined as an evaluation result, so
 a phase marked answered or not applicable cannot stand in for a
 `satisfied` result (P5, P1).
-```
-
-
-### Row `SPEC_METHOD.md#ownership` (modal; disposition `conserved`)
-
-Predecessor, `SPEC_METHOD.md#ownership` at rc.2:
-
-```text
-- Every live requirement family must map to one or more owning design
-  decisions.
-- Every ADR or other design record must ground itself in requirements via an
-  explicit `Implements:` line.
-```
-
-Successor, `SPEC_METHOD.md#trace-closure-and-anti-drift`:
-
-```text
-Spec-driven development requires constitutional trace closure: the rule
-that closes the constitution over realised behaviour, stricter than
-documentation completeness (P6, P4b; rc.2
-#trace-closure-and-anti-drift-rule).
-
-Ownership: every live requirement family maps to one or more owning design
-decisions; every ADR or other design record grounds itself in requirements
-through an explicit `Implements:` line (rc.2 #ownership).
-
-Downstream closure: no live requirement remains a free-floating statement
-of intent; if it is live it is realised through the downstream chain or
-explicitly deferred with an honest surface that records the deferment, so
-every live requirement family has downstream closure, realised in design,
-code and tests or explicitly deferred. No shipping code or tests exist as
-ungoverned behaviour: behaviour that exists traces back to live
-requirements and the design decisions that authorise it. No hidden product
-surface is allowed; behaviour without trace authority is accidental law
-even if it works (rc.2 #downstream-closure).
-
-Drift signals (rc.2 #drift-signals): unowned requirements, ungrounded
-design records, deferred requirements without explicit deferment, and code
-without trace authority are design drift. An ADR or other design artifact
-with no requirement grounding is design without constitutional authority.
-Code behaviour with no design owner means the design has already drifted.
-Shipping code or tests that cannot trace back out to live requirement and
-design authority are ungoverned product surface. Tests that validate
-implementation habit rather than requirement truth lock in drift. Events
-and projection that reveal persistent delta mean either the code is wrong
-or the requirement and design stack is stale. A capability with
-requirements and design but no scenario has unverified operational meaning.
-A requirement treated as a product feature when it is a guarantee,
-governance rule or verification obligation is misclassified. A live
-constitutional artifact corrected by in-place mutation rather than
-supersession or withdrawal has corrupted constitutional history. A real use
-case that reveals a gap not expressible in current requirements needs a new
-intent, not a code hack.
-```
-
-
-### Row `SPEC_METHOD.md#projection-discipline` (modal; disposition `conserved`)
-
-Predecessor, `SPEC_METHOD.md#projection-discipline` at rc.2:
-
-```text
-Projections, reports, status views, and topology views may reflect the
-authoritative carrier.
-
-They must not become a second closure surface.
-
-Therefore:
-
-- if runtime, reporting, topology, and proof can disagree about closure because
-  they consume different carriers or different closure laws, the migration is
-  incomplete
-- if a projection can independently close while the authoritative carrier is
-  still open, the migration is incomplete
-- if the authoritative carrier can close while a projection still depends on an
-  older law, the migration is incomplete
-```
-
-Successor, `SPEC_METHOD.md#projection-discipline`:
-
-```text
-Projections, reports, status views and topology views may reflect the
-authoritative carrier; they do not become a second closure surface (P6,
-P1; rc.2 #projection-discipline). If runtime, reporting, topology and proof
-can disagree about closure because they consume different carriers or
-different closure laws, the migration is incomplete; if a projection can
-independently close while the authoritative carrier is still open, the
-migration is incomplete; if the authoritative carrier can close while a
-projection still depends on an older law, the migration is incomplete.
-```
-
-
-### Row `SPEC_METHOD.md#proof-last-rule-for-core-interface-changes` (modal; disposition `conserved`)
-
-Predecessor, `SPEC_METHOD.md#proof-last-rule-for-core-interface-changes` at rc.2:
-
-```text
-Complete migration-closure proof is not valid while producers and consumers
-are split across old and new contracts. Bounded Product-slice proof may establish
-only the exact intermediate outcome permitted by the path-relative promotion
-rule; it cannot establish migration closure.
-
-Therefore:
-
-- tests that pass only because bridge-state semantics remain alive do not count
-  as closure proof
-- green local tests do not overrule a split architecture
-- migration-closure proof belongs after migration, not during a partially
-  migrated state
-- per-break proof must show the severed old seam is rejected or fails closed
-  before downstream hardening can count as progress
-```
-
-Successor, `SPEC_METHOD.md#proof-last-rule`:
-
-```text
-Complete migration-closure proof is not valid while producers and
-consumers are split across old and new contracts. Bounded product-slice
-proof may establish only the exact intermediate outcome permitted by the
-path-relative promotion rule; it cannot establish migration closure (P6;
-rc.2 #proof-last-rule-for-core-interface-changes). Tests that pass only
-because bridge-state semantics remain alive do not count as closure proof;
-green local tests do not overrule a split architecture; migration-closure
-proof belongs after migration, not during a partially migrated state;
-per-break proof shows the severed old seam is rejected or fails closed
-before downstream hardening can count as progress.
 ```

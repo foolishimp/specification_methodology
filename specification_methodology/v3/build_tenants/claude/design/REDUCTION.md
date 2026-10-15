@@ -1395,8 +1395,8 @@ No path here is removed or redefined.
 | Subject | Exact coordinates |
 |---|---|
 | S0, predecessor | installed `stdo://releases/v2.5.1-rc.2/`, manifest `3d860ff4…2782` |
-| S1, preceding candidate | `5ab44d5c51bf5956d12b120d83159f6c28eee3a9`, `build_tenants/claude/standards/` |
-| S2, iteration 3 candidate | the frozen iteration 3 commit (PLAN I3-6) |
+| S1, preceding candidate | at iteration 4: `2beed8d`, the frozen iteration 3 candidate, `build_tenants/claude/standards/`. At iteration 3 it was `5ab44d5c51bf5956d12b120d83159f6c28eee3a9`; the DP-43 trace in `qualification/C3-ITER3/paths/` keeps that subject |
+| S2, current candidate | the frozen iteration 4 commit (C3-ITER4 PLAN, I4-09). At iteration 3 it was `416bdb5` |
 
 Each path is traced from two kinds of entry. They are kept apart because
 their acquisition conditions differ.
@@ -1451,6 +1451,18 @@ witness, meaning one removed rival or reconciliation with G passing,
 keeps that narrower standing either way. Adverse changes are reported
 against both baselines.
 
+Standing of a verdict under the common
+[reduction requirement](../../../specification/requirements/README.md#foundational-reduction-requirement)
+as ratified at iteration 4: "simpler to determine and apply" against a
+baseline is criterion 6 `satisfied` for that path and baseline; "not
+established" is `indeterminate` where the measures cannot decide the
+required improvement, and `falsified` where a counterexample defeats it
+(G fails, or M2 or M3 increases); a path not traced is `unresolved`, and
+partial evidence is supporting evidence only and never makes criterion 6
+`satisfied` for the path. A verdict that rests on a proposed replacement
+relation or on an undecided conservation row stays `indeterminate` until
+that decision is recorded.
+
 ### 4.3 Declared tradeoffs and expected adverse changes
 
 | Id | Tradeoff | Accepted when |
@@ -1463,6 +1475,30 @@ Expected adverse, declared before measurement: on the frame-entry
 measure, M4a on DP-01, DP-03, DP-04 and DP-08 against S1 (TO1); M5 on DP-01 and DP-03 against S0
 (TO2); M4a on DP-23 (bootstrap), direction unknown; and DP-27, which has
 no comparable entry on S0 or S1.
+
+TO1 realised at iteration 4 (I4-06). Each frame now carries, for every
+family table of a member it draws from, the rows that cite a section the
+frame carries, with the table's preamble and header (`rows=k/n` on the
+excerpt's `Source:` line). The declared frame capacity rose from 100,000
+to 150,000 bytes. The increase in M4a per frame, measured by the
+generator, is disclosed here against both baselines; the frame-entry
+traces that would show whether M3 falls on the same paths are not yet
+made, so TO1's acceptance condition is `unresolved`.
+
+| Frame | M4a before | M4a after | Increase | Family rows carried |
+|---|---:|---:|---:|---|
+| `rf-task-a` | 88,228 | 119,210 | +30,982 | 21 of 65 |
+| `rf-task-b` | 88,593 | 102,468 | +13,875 | 10 of 36 |
+| `ac-task-a` | 65,923 | 74,039 | +8,116 | 9 of 19 |
+| `traversal-task-f` | 97,040 | 109,721 | +12,681 | 11 of 28 |
+| `eb-task-d` | 85,483 | 116,684 | +31,201 | 19 of 62 |
+| `dm-task-d` | 94,271 | 105,085 | +10,814 | 4 of 36 |
+| `configuration` | 97,484 | 147,702 | +50,218 | 35 of 84 |
+| `binding` | 81,457 | 102,646 | +21,189 | 12 of 71 |
+| `stale-summary` | 81,521 | 87,933 | +6,412 | 3 of 11 |
+| `bootstrap` | 66,291 | 95,129 | +28,838 | 19 of 59 |
+| `acceptance-release` | 47,192 | 63,299 | +16,107 | 9 of 52 |
+| `member-build-assess` | 62,993 | 78,077 | +15,084 | 10 of 41 |
 
 ### 4.4 Selected paths
 

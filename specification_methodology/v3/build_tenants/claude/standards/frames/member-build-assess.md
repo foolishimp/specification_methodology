@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -23,8 +27,11 @@ Routes, in order:
 6. [EVALUATION.md#4-review-results](../EVALUATION.md#4-review-results)
 7. [RELEASE.md#9-successor-baseline-conservation-stdo-up-015](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
 8. [CONFORMANCE.md#5-coverage-of-the-common-discriminators](../CONFORMANCE.md#5-coverage-of-the-common-discriminators)
+9. [EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance](../EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance)
+10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
+11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 62993 bytes.
+Size of this frame: 78077 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -771,4 +778,108 @@ whether actual use or only a reasoned reading exercises it and which
 sections it reads, so a discriminator mapped to a case that has not been
 run and assessed is never counted as passed, and no mapping exempts a
 member from logical review (P6, P2).
+
+
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=7/17 selected by the anchors this frame carries
+
+### Foundation to law: claims, evidence, assessment and acceptance
+
+This family, claims, evidence, assessment and acceptance (F6 in the index
+of [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a claim is supported, how it is assessed and who accepts it.
+It covers §1 to §5 of this member. Its instance premises are: (a) claims
+about exact subjects are relied on for promotion, closure or release; (b)
+the evidence available is finite, and may observe a weaker or different
+subject, or another basis, than the one claimed; (c) a constructing actor
+may be probabilistic or otherwise fallible; (d) each boundary at which a
+claim is relied on has a decision owner. They are conditions of the work
+this family governs, not commitments, and do not follow from finite
+capacity alone.
+P0's premise that a step's output is a candidate until evaluated is cited
+by name. The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise c | By P6 assessment is a separate authority from construction, and by P0 and (c) a step's output is a fallible candidate until evaluated, so a constructor's self-review is construction output, not assessment; where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary | [§3](../EVALUATION.md#3-independent-assessment), first paragraph | the boundaries at which this method requires independent assessment: the Spec Method policy at [TICKETS, UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007); further boundaries: the governing basis of each promotion | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | By P3 a judgment binds the exact subject it read, and by P6 and (c) the assessor's judgment must be its own, so assessment binds an exact subject: frozen by identity before material reference exposure where method qualification applies, and otherwise stabilised by an immutable identity or an equivalent exact-subject relation sufficient for the claim, never a mutable working tree; the assessor makes no repair and does not assess its own authorship. Shared mechanical evidence may be reused; the constructor's judgment may not. A revision after exposure is a declared intervention or a new qualification subject, and cannot make the original frozen construction pass retroactively | [§3](../EVALUATION.md#3-independent-assessment), Protocol | recording the assessor's expectations from the governing source before it opens the candidate: a policy choice of this section; actor type and count, review rounds, engine, prompt and orchestration: the governing authority, through the configuration of [ACTIVATION §1](../ACTIVATION.md#configuration); policies of this section: the assessor makes no repair, and a revision after exposure is a declared intervention or a new qualification subject; where the freeze applies: method qualification (§7) | 2, 7, 9 |
+| P6 (independent); instance premise c | By P6 independence is a relation between the author and the assessor, and by (c) an author's judgment is fallible in a way that persists across its contexts, so independence rests on authorship and the evidence conditions, not on a new context, and the assessor may read the constructor's governing sources. An author that opens a fresh context to review its own candidate is still its author; its review stays self-review and cannot be relabelled as independent assessment. Independence across actor families is declared, not assumed | [§3](../EVALUATION.md#3-independent-assessment), the last two paragraphs | whether two activations of one model family are independent for a semantic judgment: the governing basis of the claim; the default where it is silent, that they are not: this section | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](../EVALUATION.md#3-independent-assessment), the author-identity paragraph | none | 2, 9 |
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a result must let its consumer check and dispose it, and by P5 an unevaluated predicate has no result, so a review result carries, for each predicate it evaluated, the exact subject and basis, the evidence consulted, the findings ranked by consequence with each finding's evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions. A recommended disposition is evidence only and never a disposition, and the review applies none; a finding without evidence a consumer can chase is commentary | [§4](../EVALUATION.md#4-review-results), first paragraph | none | 3, 9 |
+| P6 (independent), P3 (independent); instance premise d | By P6 and (d) a decision is the owner's, exercised directly or through a grant it admits, and by P3 a proxy's identity stays distinct from the human authority's, so a human decision may be exercised directly or through an explicitly admitted bounded proxy; a change a proxy cannot make, under FOUNDATIONS §2's proxy limit, re-enters at its owning relation | [§5](../EVALUATION.md#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it | 9 |
+| P6 (independent), P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance premise a | By P4b and P3 a successor's predecessor claims persist and bind exact identities, and by P6 and (a) acceptance relies on qualified claims, so where the subject is a successor its acceptance evidence includes the successor disposition record. A claim whose disposition is unresolved cannot be qualified and so cannot be accepted; an intentionally removed disposition is a decision of the current Product authority, and its record is that decision | [§5](../EVALUATION.md#5-acceptance), second paragraph | the disposition values and how the record is evaluated: [RELEASE §9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15); each removal: the current Product authority | 1, 9 |
+
+The core result a review returns for each evaluated predicate, the rule
+that a planned predicate not evaluated has no result, and the projection of
+the triage payload over the core values (§4) apply the core result algebra;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+what §4 decides about the review record, triage and returns.
+
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=1/12 selected by the anchors this frame carries
+
+### Foundation to law: conformance, equivalence and qualification
+
+This family, conformance, equivalence and qualification (F7 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a realisation, a frame or the method itself is shown fit for
+what it claims. It covers §6 and §7 of this member and the
+[CONFORMANCE](../CONFORMANCE.md) member; a rule in CONFORMANCE is marked
+"outside this member" in the third column. Its instance premises are: (a)
+one specification may have several realisations; (b) realisations, frames
+and the method are made by fallible constructors and relied on by actors
+who did not make them; (c) qualification evidence comes from a finite set
+of cases, run by actors inside declared envelopes. They are conditions of
+the work this family governs, not commitments, and do not follow from
+finite capacity alone. P0's actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory, is cited by name. The standing of the consequences
+below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | By P6 a pass is an assessor's verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](../CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history | 3, 9 |
+
+§8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
+cases, which are the choices named in the last two rows, its §5 maps the
+common discriminators to cases and logical-review checks, and its §6
+records dispositions.
+
+
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=4d3aff0f9a5be53b7e4f2f73998b677ade78ad862279ef16cac650c6d94b7aac rows=2/12 selected by the anchors this frame carries
+
+### Foundation to law: release and successor conservation
+
+This family (F15 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how a product's releases are identified, published, qualified,
+accepted and selected, and how a successor conserves its predecessor's
+claims. Its instance premises, which the commitments do not supply, are
+named in the rows as follows: recursive products, a released product may
+build other products and the next version of itself; published cuts, a
+project publishes point-in-time cuts of its product for review, replay and
+adoption by consumers it does not control; mutable carriers, the carrier
+that holds a release has movable names and may hold several independently
+released projects; derived assets, some products are released with
+derived or distributed assets that must match their source; external
+services, some claims depend on services outside the carrier; successor
+lines, a product evolves from a predecessor release whose claims may
+affect it. The index also assigns to this family
+[FOUNDATIONS §2 Product lineage objects](../FOUNDATIONS.md#product-lineage-objects);
+the table traces that section in its first two rows, whose rule column
+names it, and owns none of it. Each commitment's standing is written as
+the table of commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: successor lines | By P4b and P3 a successor evolves one exact, immutable predecessor whose established claims persist, so it names that predecessor, and every predecessor claim that can affect it receives one disposition. By P6 and P1 a disposition is a claim evaluated on evidence, so naming or code similarity does not prove conservation, and a missing patch does not prove loss when a successor-native realisation preserves behaviour; by P5 an unresolved disposition leaves a gap, so the affected claim cannot be qualified. | [§9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015) | the four disposition values: this member, restating UP-015; each removal: the current Product authority; the record of a successor's dispositions: that successor's construction | 1, 9 |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P6 (independent); instance: successor lines | By P4b a change on a support line persists into what the successor retains, and by P6 its effect needs a disposition by evidence, so where a maintenance or support line may affect retained claims, the release basis names its watched source, observation boundary, inclusion policy and successor candidate, and relevant changes receive a disposition at integration and at qualification. | [§9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015), the support-line paragraph | the record, branch strategy, comparison and proof mechanism: the consumer; a policy of this member: the four items the release basis names (watched source, observation boundary, inclusion policy, successor candidate) | 1, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
+objects. §10 records open questions and decides nothing; §11 records
+dispositions and decides nothing.
 

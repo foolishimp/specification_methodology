@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -30,8 +34,10 @@ Routes, in order:
 13. [ACTIVATION.md#effects](../ACTIVATION.md#effects)
 14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
+17. [TRAVERSAL_OCCURRENCE.md#foundation-to-law](../TRAVERSAL_OCCURRENCE.md#foundation-to-law)
 
-Size of this frame: 97040 bytes.
+Size of this frame: 109721 bytes.
 
 Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=c74ae098171a857319aadf4bb31728625ce62a57883ede743bd536f032da0326
 
@@ -1127,7 +1133,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#effects sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Effects
 
@@ -1500,4 +1506,79 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=c74ae098171a857319aadf4bb31728625ce62a57883ede743bd536f032da0326 rows=3/19 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F9, the `a_c` calculus. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Instance premises,
+which the commitments do not supply:
+
+- (i) a governed symbolic system is represented by a finite model whose
+  records stand for its objects, relations, constraints, residuals,
+  traversals, transformations and judgments;
+- (ii) a model is interpreted from an exact subject and may be encoded in
+  a carrier, and subject, model and carrier are separately identified;
+- (iii) some predicates over a model are decided mechanically, and others
+  need bounded probabilistic construction or explicit human adjudication.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent), P5 (derived from P0 and P6); (i) | By P3 every element binds one identity and basis, by P5 an unclosed population would leave results undecided, and by (i) the model is finite, so every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](../AXIOMATIC_CALCULUS.md#2-signature), [§3](../AXIOMATIC_CALCULUS.md#3-typed-records), [AC-001](../AXIOMATIC_CALCULUS.md#ac-001-closed-signature), [AC-003](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family's sorts, value domains, reference domains and admissible kinds: the owning signature | 3, 10 |
+| P3 (independent), P4a (independent) | By P3 identity is declared and scoped, and by P4a relations compose only by the types they declare, so identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](../AXIOMATIC_CALCULUS.md#ac-002-scoped-identity), [AC-004](../AXIOMATIC_CALCULUS.md#ac-004-relation-typing) | each relation kind's sorts, qualifiers and any declared symmetry: the owning signature | 2, 3, 10 |
+| P5 (derived from P0 and P6), P6 (independent) | By P5 a value decides only what its evidence establishes, and by P6 a judgment is separate from its acceptance, so a constraint's judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal's cause is part of its value, a demonstrated violation it names mapping to falsified and a condition of the basis the operation acts on to invalid_basis | [AC-007](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), the stop algebra | the cause of a refusal that names both a demonstrated violation and a condition of the basis, `refusal(constraint)`, with the basis condition reported beside it as its own invalid_basis result: this member, in AC-007; the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature's stop contract; the stop mapping of one traversal: its record, under §5 | 3, 9, 10 |
+
+§11 records where each predecessor claim is carried and decides nothing.
+The table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which rules of the calculus follow from the
+foundations and which are choices, with the owner of each choice, so no
+choice is presented as derived (P6, P1).
+
+
+Source: TRAVERSAL_OCCURRENCE.md#foundation-to-law sha256=0191f387d4656aa191d2b3064570ac5380208e3497f99e533fd0c637e3f6ac33 rows=8/9 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F19, traversal occurrence. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. The family imports
+two families under [PROFILES §1](../PROFILES.md#1-the-boundary): F3, results
+and their combination ([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)),
+and F9, the `a_c` calculus ([AXIOMATIC_CALCULUS §1](../AXIOMATIC_CALCULUS.md#1-position)).
+Its instance premises hold where a Product adopts the profile; they are
+adopted with it and do not follow from the foundations (P1, P6):
+
+- I1: a subject's reality changes outside the model, and a stable binding
+  names that subject;
+- I2: the adopting Product selects one exact `a_c` basis;
+- I3: an effect on the subject is a separately identified operation under
+  an owner-issued grant.
+
+Standing of the commitments cited: P0 recovered; P1, P3 and P6
+independent; P4b derived from P0 and P2, and P5 derived from P0 and P6
+([FOUNDATIONS §3](../FOUNDATIONS.md#3-commitments)).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent); F9 imported; I2 | By P3 a value binds one exact basis, and I2 selects one exact `a_c` basis, so an occurrence model is an ordinary `a_c` model on that basis. The profile adds sorts and value domains but no record kind, because a new record kind would be a second calculus beside F9. With closed populations, an unknown, missing or mistyped element is detected and refused, not read | [Imported calculus boundary](../TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary); [Closed semantic-object sorts](../TRAVERSAL_OCCURRENCE.md#closed-semantic-object-sorts), [Finite reference-domain table](../TRAVERSAL_OCCURRENCE.md#finite-reference-domain-table), [Closed event-kind population](../TRAVERSAL_OCCURRENCE.md#closed-event-kind-population), [Closed relation families](../TRAVERSAL_OCCURRENCE.md#closed-relation-families); [Exact profile identity](../TRAVERSAL_OCCURRENCE.md#exact-profile-identity) | closing the sorts, reference domains, event kinds, relation families and qualifier domains, and their members: a policy of this member, chosen so that refusal of an unknown element is decidable | 2, 3, 10 |
+| P3 (independent); P4b (derived from P0 and P2); I1 | By P3 an identity binds its exact inputs, so a traversal applied again to any changed input is a different occurrence; by P4b an established fact is not erased. So each application is one immutable occurrence, a reapplication mints a new one, and a correction appends without erasing | [Occurrence identity](../TRAVERSAL_OCCURRENCE.md#occurrence-identity), [OP-003](../TRAVERSAL_OCCURRENCE.md#op-003-correction-without-erasure), [OP-006](../TRAVERSAL_OCCURRENCE.md#op-006-immutable-iteration-history) | the identity inputs of an occurrence: this member | 2, 9 |
+| P6 (independent); I3 | By P6 authority exists only through an admitted grant, and by I3 an effect is a separately identified operation under such a grant, so no operation is lawful without a matching grant, and functor kind, traversal, operation, executor, actor, grant and invocation stay distinct coordinates | [Mutable-subject effect relation](../TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation) | a territory containment relation in place of exact equality: the adopting Product, in its compatible signature | 4, 8, 9 |
+| P1 (independent); P6 (independent) | By P1 a representation does not carry its meaning, and by P6 evaluation, admission and decision are separate authorities, so a candidate, its judgment, its admitting event and the materialised relation stay distinct; precedence orders admitted facts and decides no authority | [Candidate, judgment, event and relation separation](../TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation), [OP-004](../TRAVERSAL_OCCURRENCE.md#op-004-precedence-is-not-authority) | the precedence law, evaluators and authorities of an application: the adopting Product | 2, 9 |
+| P3 (independent); P6 (independent) | By P3 a relation holds only on its declared basis, and by P6 only an authority admits it, so cause is admitted typed lineage and is never inferred from time, order, adjacency, containment or correlation | [Causality and typed lineage](../TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage), [OP-001](../TRAVERSAL_OCCURRENCE.md#op-001-seed-acyclicity) | which causal claims an application admits: the adopting Product, under its authorities; that each identity or causal subgraph is acyclic: a policy of this member, chosen so that every lineage walk ends at a first cause | 2, 9 |
+| P3 (independent); P4b (derived from P0 and P2); P5 (derived from P0 and P6) | By P3 a projection binds its exact inputs, and by P4b admitted events persist, so a projection binds one complete event frontier, and a new event makes a new frontier rather than advancing an old projection; for the same reason the members of one admitted semantic cut name one identical source frontier, its successor is that frontier plus exactly the admitted event, and a cut with missing or inconsistent members refuses; by P5 a projection is not read beyond the frontier it binds | [Event frontier and projection](../TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection), [OP-002](../TRAVERSAL_OCCURRENCE.md#op-002-atomic-semantic-admission), [OP-007](../TRAVERSAL_OCCURRENCE.md#op-007-scope-conservation) | the event scope and frontier laws: the adopting Product | 2, 6, 9 |
+| P5 (derived from P0 and P6); F3 and F9 imported | By P5 a value decides only what its evidence establishes, and F3 gives one core, so every judgment decision and stop, and every effect disposition of an occurrence that intends an effect, maps to exactly one core value for a named predicate; an effect whose outcome the evidence cannot decide stays indeterminate, an established non-attainment of its intended outcome is falsified whether or not its end is established, and no refusal maps to success | [Closed constraint, judgment, residual and stop kinds](../TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), [Mutable-subject effect relation](../TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation) | the decision, stop and residual vocabularies and their mapping, and the exclusion of `out_of_frame` from the constraint value set: this member; the meanings and core values of `hold`, `gap` and the two `refusal` values, and the cause of each refusal: [AXIOMATIC_CALCULUS AC-007](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); a refinement of those four values by cause for one traversal, each refined value keeping its parent's core value: that traversal record, under [AXIOMATIC_CALCULUS §5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | 3, 9, 10 |
+| P6 (independent) | By P6 authority exists only through an admitted grant, and inclusion in a method cut is no grant, so availability is not adoption, and the profile grants no authority | [Authority and adoption](../TRAVERSAL_OCCURRENCE.md#authority-and-adoption) | who adopts: Product authority, under [PRODUCT_DEFINITION §7](../PRODUCT_DEFINITION.md#7-collective-reference-frame-basis); the subject interpretation, vocabulary mappings and authorities an adoption declares: the adopting Product | 1, 7, 9 |
+
+The Scope, the Exclusions and the Conformance obligations apply these
+consequences, and every clause names the principle that requires it
+([FOUNDATIONS §1](../FOUNDATIONS.md#1-vocabulary-of-standing)). The table is
+new in this corpus. Purpose and material relation: an actor started on
+this member sees which rules follow from the foundations and which are
+choices, and who owns each choice, so no choice is presented as derived
+(P6, P1).
 

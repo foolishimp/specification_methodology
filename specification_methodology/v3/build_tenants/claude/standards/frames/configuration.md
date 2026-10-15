@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -35,10 +39,14 @@ Routes, in order:
 18. [FOUNDATIONS.md#disjointness-and-independence](../FOUNDATIONS.md#disjointness-and-independence)
 19. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 20. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+21. [EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance](../EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance)
+22. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
+23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
+24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 97484 bytes.
+Size of this frame: 147702 bytes.
 
-Source: ACTIVATION.md#transitions sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#transitions sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Transitions
 
@@ -124,7 +132,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#intake sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Intake
 
@@ -168,7 +176,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#configuration sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Configuration
 
@@ -294,7 +302,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#roles-and-delegation sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Roles and delegation
 
@@ -372,7 +380,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 2. Context construction under an envelope
 
@@ -406,7 +414,13 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. The measurement applies wherever B declares a
+   measured, and no fit claim covers it. Fit is established from the
+   recorded complete active inputs, or from a supported upper bound that
+   includes any host-supplied context; where neither exists the fit
+   judgment is `indeterminate`, unless a counterexample, such as a measured
+   excess, establishes `falsified`. A correct task result keeps its own
+   bounded standing and does not satisfy a missing fit judgment. The
+   measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -598,7 +612,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 7. Closed result and reuse
 
@@ -669,7 +683,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#construction-availability sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Construction availability
 
@@ -720,7 +734,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#effects sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Effects
 
@@ -1527,4 +1541,207 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=6/17 selected by the anchors this frame carries
+
+### Foundation to law: claims, evidence, assessment and acceptance
+
+This family, claims, evidence, assessment and acceptance (F6 in the index
+of [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a claim is supported, how it is assessed and who accepts it.
+It covers §1 to §5 of this member. Its instance premises are: (a) claims
+about exact subjects are relied on for promotion, closure or release; (b)
+the evidence available is finite, and may observe a weaker or different
+subject, or another basis, than the one claimed; (c) a constructing actor
+may be probabilistic or otherwise fallible; (d) each boundary at which a
+claim is relied on has a decision owner. They are conditions of the work
+this family governs, not commitments, and do not follow from finite
+capacity alone.
+P0's premise that a step's output is a candidate until evaluated is cited
+by name. The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P1 (independent) | P1 keeps a representation apart from its meaning, and P6 makes a verdict a claim on evidence that a separate decision authority disposes. So the semantic basis, the evidence basis and the state projection stay distinct, as do semantic law, evidence, the evaluator's application and the disposition, and the record keeps them distinguishable where one actor performs several. It follows that an evidence change can invalidate a verdict without any change of law, a projection change can invalidate a view without changing semantic truth, and a semantic change invalidates affected downstream acceptance; a changed broad digest shows a changed representation, not that every semantic relation changed | [§2](../EVALUATION.md#2-separation), first two paragraphs | when an evidence change invalidates a verdict, with mandatory force where it does: [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) (family F4); when a derived view is stale: [ACTIVATION §2](../ACTIVATION.md#staleness-of-derived-surfaces); the re-entry a semantic change takes: [SPEC_METHOD §4](../SPEC_METHOD.md#4-change-management) (family F11); invalidating a review conservatively on a broad digest change: permitted by this section, required nowhere; the frame and a_c bindings of these separations: RF-007 and AC-018 | 6, 9 |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise c | By P6 assessment is a separate authority from construction, and by P0 and (c) a step's output is a fallible candidate until evaluated, so a constructor's self-review is construction output, not assessment; where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary | [§3](../EVALUATION.md#3-independent-assessment), first paragraph | the boundaries at which this method requires independent assessment: the Spec Method policy at [TICKETS, UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007); further boundaries: the governing basis of each promotion | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | By P3 a judgment binds the exact subject it read, and by P6 and (c) the assessor's judgment must be its own, so assessment binds an exact subject: frozen by identity before material reference exposure where method qualification applies, and otherwise stabilised by an immutable identity or an equivalent exact-subject relation sufficient for the claim, never a mutable working tree; the assessor makes no repair and does not assess its own authorship. Shared mechanical evidence may be reused; the constructor's judgment may not. A revision after exposure is a declared intervention or a new qualification subject, and cannot make the original frozen construction pass retroactively | [§3](../EVALUATION.md#3-independent-assessment), Protocol | recording the assessor's expectations from the governing source before it opens the candidate: a policy choice of this section; actor type and count, review rounds, engine, prompt and orchestration: the governing authority, through the configuration of [ACTIVATION §1](../ACTIVATION.md#configuration); policies of this section: the assessor makes no repair, and a revision after exposure is a declared intervention or a new qualification subject; where the freeze applies: method qualification (§7) | 2, 7, 9 |
+| P6 (independent); instance premise c | By P6 independence is a relation between the author and the assessor, and by (c) an author's judgment is fallible in a way that persists across its contexts, so independence rests on authorship and the evidence conditions, not on a new context, and the assessor may read the constructor's governing sources. An author that opens a fresh context to review its own candidate is still its author; its review stays self-review and cannot be relabelled as independent assessment. Independence across actor families is declared, not assumed | [§3](../EVALUATION.md#3-independent-assessment), the last two paragraphs | whether two activations of one model family are independent for a semantic judgment: the governing basis of the claim; the default where it is silent, that they are not: this section | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](../EVALUATION.md#3-independent-assessment), the author-identity paragraph | none | 2, 9 |
+| P6 (independent), P3 (independent); instance premise d | By P6 and (d) a decision is the owner's, exercised directly or through a grant it admits, and by P3 a proxy's identity stays distinct from the human authority's, so a human decision may be exercised directly or through an explicitly admitted bounded proxy; a change a proxy cannot make, under FOUNDATIONS §2's proxy limit, re-enters at its owning relation | [§5](../EVALUATION.md#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it | 9 |
+
+The core result a review returns for each evaluated predicate, the rule
+that a planned predicate not evaluated has no result, and the projection of
+the triage payload over the core values (§4) apply the core result algebra;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+what §4 decides about the review record, triage and returns.
+
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=3/12 selected by the anchors this frame carries
+
+### Foundation to law: conformance, equivalence and qualification
+
+This family, conformance, equivalence and qualification (F7 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a realisation, a frame or the method itself is shown fit for
+what it claims. It covers §6 and §7 of this member and the
+[CONFORMANCE](../CONFORMANCE.md) member; a rule in CONFORMANCE is marked
+"outside this member" in the third column. Its instance premises are: (a)
+one specification may have several realisations; (b) realisations, frames
+and the method are made by fallible constructors and relied on by actors
+who did not make them; (c) qualification evidence comes from a finite set
+of cases, run by actors inside declared envelopes. They are conditions of
+the work this family governs, not commitments, and do not follow from
+finite capacity alone. P0's actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory, is cited by name. The standing of the consequences
+below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P2 (independent); instance premises b, c | By P6 a frame's claims hold only on evidence, and by P2 the evidence needed follows the claims made, so a candidate frame is qualified in proportion to its claims, by at least the decision, reconstruction, sensitivity, irrelevance, basis, authority, counterexample, capability and result-consumption tests. Qualification binds the exact frame revision, actor envelope, evaluation family, basis class and evidence conditions evaluated, and does not generalise to an unevaluated population by naming the frame generically | [Frame qualification](../EVALUATION.md#frame-qualification), the tests and the paragraph after them | the nine minimum tests: this section; the representative cases for each claim: the qualification that evaluates it | 7, 9 |
+| P0 (recovered), P6 (independent); instance premise c | By P0 fit is a property of the representation and the envelope, and by P6 attention is shown only by evidence of use, so fit and adequate attention are evaluated separately. Fit, for the context dimension, is the measured size of the selected representation against the declared capacity; adequate attention is established only by actual-use evidence, judged against expectations recorded from the governing sources before the results are opened. A size measurement or any byte or token threshold establishes fit and nothing about attention; actual-use evidence binds the frame revision, actor class, tasks and conditions evaluated and establishes no universal attention score | [Frame qualification](../EVALUATION.md#frame-qualification), Adequate attention | the tasks and conditions evaluated: the qualification; the size measurement: [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3 (family F1); time, spend and other resource limits: the selected execution binding, under [ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality) (family F5) | 7, 8, 9 |
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | By P6 a pass is an assessor's verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](../CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history | 3, 9 |
+
+§8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
+cases, which are the choices named in the last two rows, its §5 maps the
+common discriminators to cases and logical-review checks, and its §6
+records dispositions.
+
+
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc rows=8/19 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F16, Engagement baseline (operational
+profile). The table below shows which of its rules follow from which
+premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. An actor enters the
+family here, at the choice between direct entry and coordination. The
+family imports seven families under
+[PROFILES §1](../PROFILES.md#1-the-boundary): F1, frames and context
+([REFERENCE_FRAME §1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit));
+F2, transitions, steps and configuration
+([ACTIVATION §1](../ACTIVATION.md#1-the-step)); F3, results and their
+combination ([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)); F4, work
+state, resumption and reuse
+([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart)); F5,
+proportionality and cost
+([ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality)); F6, claims,
+evidence, assessment and acceptance
+([EVALUATION §1](../EVALUATION.md#1-claims)); and F13, work carriers
+([TICKETS §5](../TICKETS.md#5-from-carrier-to-execution)), for the
+boundaries of independent review and the closure condition. A row that
+cites an imported family uses that family's consequences as premises; the
+rules that state them keep their owners, and the choice column names them
+as imported, never as this profile's choices. Standing of the commitments
+cited ([FOUNDATIONS §3](../FOUNDATIONS.md#3-commitments)): P0 recovered; P1,
+P2, P3, P4a and P6 independent; P4b derived from P0 and P2, with P0's
+premise that step-produced facts are not re-acquirable; P5 derived from P0
+and P6, with P0's open-world premise. Its instance premises hold where
+the executive configuration is selected; they are adopted with it and do
+not follow from the foundations (P1, P6):
+
+- I1: the work is a series of bounded tasks under one governed outcome,
+  and carrying out a bounded change and managing delivery across the tasks
+  need separate attention;
+- I2: existing project authority (Goals, Product, requirements, accepted
+  design, a work item, identity or release law) holds every decision grant
+  the configuration applies;
+- I3: the actors are fallible and have finite context and attention, and a
+  constructing actor may be probabilistic.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P0 (recovered), P2 (independent); F2 imported | F2 makes a one-frame configuration lawful and lets a sufficient task be entered directly, with its admission, carrier and recording of a result without review ([ACTIVATION §1](../ACTIVATION.md#roles-and-delegation)). By P2 an obligation with no route to the outcome is unjustified, so using this profile adds no review, ticket, diagram recreation or owner ceremony to such a task. By P0 the direct step still realises the same outer contract, so the direct route binds the same intake, territory, obligations, evidence, stop conditions and result consumer as the coordinated route | [§3](../EXECUTIVE_BASELINE.md#3-engagement-applicability), before this section | the name Worker (Writer) for the directly entering frame: this profile | 1, 7 |
+| P0 (recovered), P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F2, F5 imported; I1, I3 | Under I1 carrying out a bounded change and managing delivery across tasks need separate attention, and by P0 each frame's context fits a finite envelope, so the two go to different frames. Under I3 a constructor can be wrong about its own candidate, and by P6 its self-review is construction output, so required assessment goes to a frame other than the constructor's. F2 requires a configuration's allocation to be explained, with its resource limits (declared under F5) and failure assumptions, and evaluated against the task, so this configuration states its explanation and fits only where I1 holds. By P5 an activation can fail, so a refused activation returns with its cause. By P6 selecting a configuration waives no grant, limit or prohibition, so each holds wherever it is selected | [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration); [the lead](../EXECUTIVE_BASELINE.md#executive_baseline); [§5](../EXECUTIVE_BASELINE.md#5-profile-terms) Engagement frame, Executive, Worker, Reviewer | the three frames, their names and the explanation of their allocation: this profile; the values of the resource limits: the selected execution binding, under [ACTIVATION §6 Resource limits](../ACTIVATION.md#resource-limits); the selection for a project: the existing authority that [§16](../EXECUTIVE_BASELINE.md#16-adoption-or-project-defined-configuration) binds | 5, 7, 8, 9 |
+| P6 (independent), P3 (independent); F2 imported; I2, I3 | Under I2 existing project authority holds every decision grant the configuration applies, and by P6 a label mints none ([FOUNDATIONS §2](../FOUNDATIONS.md#authority-kinds)), so the Executive applies only decision authority already granted and acquires no operation authority from its label; a mutation needs the exact operation grant of the frame that performs it. By P3 an actor and the frame it occupies are distinct identities, so a role transition is a separate fact, known only where recorded. Under I3 a coordinator that changed the subject would dispose of its own construction on its own evidence (P6); that is this profile's reason for the choice in the next column, which the premises do not force | [§6](../EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) The three duties, No mutation while Executive; [§8](../EXECUTIVE_BASELINE.md#8-derived-executive-frame) | the prohibition of every Executive edit, small, test-only or reversible ones included, and recording a role transition in the work carrier before the effect: this profile | 7, 9 |
+| P0 (recovered), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P2 (independent), P3 (independent), P6 (independent); F2, F3, F4 imported; I1 | By P0 the Executive's envelope cannot hold every evaluator's working context, and by P4b the producing step records the facts the outer contract needs, so the Executive holds the frontier and the closed-result ledger and acquires more through its frame inputs or a further bounded evaluation, as F2's rule for a coordinator's bounded view requires. By P3 and P6 a result supports its claim only on the basis it binds, so the bases are revalidated before activation and before disposition, and a failed lock takes the value or move its owner gives (F2, F3). By P2 re-entering the cycle without a decision need has no route to the outcome, so attention waits for decision-relevant input, and by P6 waiting discharges no verification, evidence, assessment or authority duty | [§6](../EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) Attention cycle, Event-driven attention, Drift locks; [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), Coordination | the five locks, and event-driven attention as the default with bounded fallback observation: this profile | 5, 7, 9 |
+| P1 (independent), P3 (independent), P6 (independent), P0 (recovered), P4a (independent), P2 (independent); F1, F2 imported | F1 keeps the relation structures RF-009 lists distinct and never one hierarchy, and lets frames overlap without collapsing identity (RF-008), so the structures this configuration uses are instances of RF-009's list, and the Executive, Worker and Reviewer may share basis, outcome, checkpoint, candidate, evidence and residuals while each evaluates its own question and holds only its own authority (P6). By P0 and P4a an activated evaluation is one engagement frame with its material specialist frames on an exact subject and basis with a capable actor; by P2 a product schema or a frame runtime with no route to the outcome is not required | [§7](../EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration), its opening | naming three of RF-009's structures in this configuration's terms, and the notation of an activated evaluation: this profile; the list of structures and its rule: [RF-009](../REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy), outside this member | 7 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F3 imported | By P5 a step's result algebra carries outcomes other than success, and F3 maps each refined value to exactly one core value with its predicate; ACTIVATION §3 Construction availability is that refinement for "a candidate is available", with its values, grounds and map. So a Worker returns one of those values, selected by the cause ACTIVATION §3 states, and this profile states no ground of its own. By P6, as F3 states, availability is neither assessment nor acceptance, so no value is read as either; a refused activation creates no step, so it creates no Worker result | [§5 Work result](../EXECUTIVE_BASELINE.md#work-result); [§9](../EXECUTIVE_BASELINE.md#9-derived-worker-frame); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) steps 2 and 3 | what the Worker reports and what its consumer does with each value: this profile. The values, grounds and core values ([ACTIVATION §3](../ACTIVATION.md#construction-availability)) and the outcomes of `activate` ([REFERENCE_FRAME §5](../REFERENCE_FRAME.md#5-method-functions)) are imported, not chosen here | 3, 5, 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F4 imported; I3 | By P5 a step can stop with an external effect whose completion its evidence cannot decide, as where a response is lost under I3, and F4 requires such an effect to be reconciled before any repetition or dependent action (ACTIVATION §5). The Executive cannot reconcile an effect it is not told of, so a work result names each intended external effect with its value, and the Executive has an effect of uncertain completion reconciled, sufficiently for the next dependent action, before reactivating work or taking that action | [§13](../EXECUTIVE_BASELINE.md#13-handoff-projection), work result; [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) step 4; [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), failure assumptions | the effect field of the work-result projection: this profile. The effect values ([ACTIVATION §3 Effects](../ACTIVATION.md#effects)) and the reconciliation rule ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart)) are imported | 4, 5 |
+| P6 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise); F6 imported; I3 | Under I3 a constructor can be wrong about its candidate, and by P6 its self-review is construction output (F6), so self-review stays Worker evidence, and where independent assessment is required a separately activated Reviewer that is not the author evaluates the exact live subject (F6). By P6 a verdict is evidence for the decision owner, so the Reviewer returns evidence-bound triage and no disposition, priority or next activation. By P1 and P5 a cause or repair risk the evidence cannot support is returned as uncertainty, not given precision | [§10](../EXECUTIVE_BASELINE.md#10-derived-reviewer-frame); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) steps 4 to 6; [§17](../EXECUTIVE_BASELINE.md#17-actor-binding-and-independence) | the triage fields: this profile; the severity scale: the adopting Product. When independent assessment is required ([TICKETS UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007), with the boundaries a governing basis adds) and what counts as independent ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)) are imported | 9 |
+
+The table accounts for this whole member: the lead and §1 to §22, each
+section traced by a row that names it or its parent section. Three parts add no
+rule of their own: §5 Terms owned by ASSURANCE uses the tier-2 terms as
+ASSURANCE §7 defines them; this table is a trace; and §23 records
+dispositions and decides nothing. The rows name pillars 1 to 9. No row
+names pillar 10, axiomatic calculus: this profile states no rule of the
+a_c calculus and binds none.
+
+The table is new in this corpus; it has no rc.2 row. Purpose and material
+relation: a reader of this profile sees which of its rules rest on the
+commitments and imported families, and which are choices this profile or
+the adopting Product makes, so no profile choice is presented as following
+from the foundations (P6, P2).
+
+
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d rows=18/36 selected by the anchors this frame carries
+
+### Foundation to law
+
+This family, frames and context (F1 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides how a finite actor engages a body of work through bounded reference
+frames: how a frame is declared, sized, bound, activated, related to other
+frames, used to audit coverage and revised. It covers this member; the
+context construction of
+[ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope);
+and the frame objects, authority kinds, disjointness and independence and
+frame tuple of [FOUNDATIONS §2](../FOUNDATIONS.md#frame-objects). A rule in
+another member is marked "outside this member" in the third column; the
+table owns none of the rules it names. Its instance premises are: (a) a
+workspace holds more material than one actor's capability envelope (its
+competence, context capacity, tools and access) can evaluate at once; (b)
+the evaluations to be made are declared questions about a governed
+outcome; (c) several frames and actors may bear on one workspace, and their
+material may overlap; (d) the workspace, its topology and the actors'
+capabilities change between activations; (e) an actor may read both owning
+sources and surfaces derived from them by copying, projection or
+compression. They are conditions of the work this family governs, not
+commitments, and do not follow from finite capacity alone. Two of P0's
+premises are cited by name: its actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory; and its open-world premise, that the world is open.
+The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P0 (recovered, with its actor-change premise), P2 (independent), P6 (independent); instance premise a | By P0 and its actor-change premise an attention surface must fit and be reconstructable by the actor that uses it, so an activated frame's attention surface is finite and fits the selected actor's declared envelope; a frame that needs undeclared ambient memory, conversation history or an effectively global workspace context is not reconstructable for that actor. Where the envelope declares a context capacity, the selected context's size is measured before the actor reads it, over a stated boundary, and recorded with the capacity and the comparison; context outside the boundary is recorded as not measured. The measurement applies there and only there, is no budget and no universal gate, and shows fit and nothing else | [RF-002](../REFERENCE_FRAME.md#rf-002-finite-attention); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the size measurement, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 10 | the capacity and its unit, bytes or tokens: the actor's declared envelope; the measured boundary, and time, spend and other resource limits: the selected execution binding ([SPEC_METHOD §11](../SPEC_METHOD.md#11-build-tenant-binding)) | 7, 8 |
+| P2 (independent), P0 (recovered, with its open-world premise), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P2 and P5 a result is sound only if every relation that can change it is present, and by P0's open-world premise relations not held are not thereby absent, so every known relation whose lawful change can alter the result, the validity of the basis, the sufficiency of evidence, operation authority or decision authority appears in the frame or enters through a declared authoritative input, and omitting one makes the frame insufficient; the law does not require proof that no undiscovered material relation exists. The context starts as the material closure of the intake's seed set (the subject, outcome and affected relations it names) under that relation family, and a closure that is not finite and unique on the exact basis stops the step and is not guessed | [RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 1, outside this member | the closure law: [AC-010](../AXIOMATIC_CALCULUS.md#ac-010-material-closure); the stop's outcome, `closure_unresolved`: [ACTIVATION §3 Admission and activation](../ACTIVATION.md#admission-and-activation) | 6, 7 |
+| P2 (independent) | By P2 attention is spent only on what bears on the evaluation, so relations that cannot affect the declared evaluation stay outside active attention unless they are needed to establish that irrelevance; adjacent material, or the presence of the corpus, is no reason to load or read it. The closure is projected to the selected context with its boundary recorded | [RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 2 and Acquisition, outside this member | the seams the boundary records (excluded, external, unresolved, translated, invalidation-sensitive): ACTIVATION §2 step 2, applying [AC-011](../AXIOMATIC_CALCULUS.md#ac-011-projection) | 7 |
+| P6 (independent), P3 (independent); instance premise c | By P6 authority exists only through an admitted grant, and by P3 it binds its owner and scope, so a frame carries and applies admitted authority and never mints, widens, transfers or reconstructs it from actor identity, capability, evidence shape, implementation reachability or frame selection; declaring, selecting, activating or executing a frame, or naming a role, grants none. The kinds of authority may coincide in a lawful case and never collapse by default, and actor identity is not an authority. A read-only evaluation declares no operation authority; an effectful one inherits the exact operation grant from its existing owner. A proxy for human authority keeps its identity distinct from the human authority's | [RF-006](../REFERENCE_FRAME.md#rf-006-authority-conservation); [FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds) and [Frame objects](../FOUNDATIONS.md#frame-objects), Role, persona, abstraction, component, outside this member; [§2](../REFERENCE_FRAME.md#2-core-claims) claim 8; [§12](../REFERENCE_FRAME.md#12-violations) item 6 | the division into frame-set, semantic, evaluation, operation and decision authority, with actor identity apart, and frame-set authority as human authority: FOUNDATIONS §2 Authority kinds; when a bounded proxy may act: [IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004) | 7, 9 |
+| P6 (independent) | By P6 meaning, evidence, application, operation and decision are separate authorities, so semantic law defines what the evaluation means, evidence supplies observations, the evaluator applies the declared relation, the existing operation owner supplies any operation grant, and decision authority disposes the result; a frame declaration keeps these roles distinguishable even when one actor performs several. The evaluator applies the frame's declared invariants, evidence rules and result algebra and records every assumption whose failure could change the result | [RF-007](../REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Evaluation, outside this member | none; [EVALUATION §2](../EVALUATION.md#2-separation) applies this law to review (family F6) | 7, 9 |
+| P3 (independent), P1 (independent), P6 (independent), P2 (independent); instance premise c | By P3 and P1 a relation holds only where it is declared, and by P6 and P2 each structure answers its own question, so parent and child relations among frames apply only where declared. Functional decomposition, communication, authority precedence, frame configuration, subject topology and evaluation dependency are distinct relation structures, which a consumer may align where the governed subject warrants it and never silently treats as one hierarchy; an exchange of information grants no authority and establishes neither a decomposition nor an evaluation dependency. No frame relation is the default topology, and a project declares only the relations its evaluations and coverage claims need | [RF-009](../REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy); [§7](../REFERENCE_FRAME.md#7-frame-relations); [§12](../REFERENCE_FRAME.md#12-violations) item 3 | the ten named frame relations: this member (§7); which relations a project declares, and where it aligns relation structures: that project, for its governed subject | 4, 7 |
+| P6 (independent), P1 (independent); instance premise c | By P6 and P1 each kind of independence is a different relation, so frame disjointness (structural), evaluation independence (procedural) and assurance independence (claim-relative) are three relations: disjoint frames need not be independently evaluated, independently activated evaluations need not be disjoint, and the unqualified word "independent" establishes none of them. Separately activated evaluations may overlap in subject, manifold or evidence, and neither consumes nor influences the other's unclosed working result | [FOUNDATIONS §2 Disjointness and independence](../FOUNDATIONS.md#disjointness-and-independence), outside this member; [Independently activated co-evaluation](../REFERENCE_FRAME.md#independently-activated-co-evaluation) | the conditions a verdict needs to count as independent assurance: the governing assurance law ([EVALUATION §3](../EVALUATION.md#3-independent-assessment), family F6) | 7, 9 |
+| P4a (independent), P6 (independent), P2 (independent) | By P4a composition is needed only where parts combine through declared relations, and by P2 nothing is composed that the evaluation does not need, so using several frames does not require composing their internal manifolds. Composition law is required only when the evaluation combines their internal variables, transports evidence or values across them, or treats their operations as one material execution relation. Independently activated evaluations may instead return closed results to one declared conjunction or decision rule. A material composition is introduced only when the evaluation requires it, and declares its shared invariants, effect or decision order where material, closure, failure and the conservation of semantic, operation and decision authority | [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand); [§6](../REFERENCE_FRAME.md#6-frames-in-conjunction), Result conjunction and Material composition; [§12](../REFERENCE_FRAME.md#12-violations) items 4 and 5 | each material composition: the owning application; the conjunction: [FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results) (family F3); the choices its declared rule leaves open: the member or profile that applies the conjunction, in its declared rule | 3, 4, 7 |
+| P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance premise d | By P3 a result binds coordinates that a topology change can alter, and by P4b a stale result persists until re-evaluated, so an activated frame declares the topology changes capable of invalidating its coordinates or its materiality judgment, and a detected material topology mutation causes reevaluation, frame revision or recharting before a previous result is reused. A material revision of a frame produces a new revision coordinate and states which prior activations, results and coverage claims need reevaluation; every result bound to the prior revision is reopened until a recorded re-check finds it independent of the change or it is re-evaluated, and silence keeps no result closed. A revision that changes no declaration of the frame needs no new coordinate, and an unchanged declaration is no ground for keeping a result closed: whether a closed result stays valid is decided by the reuse rule of ACTIVATION §7 | [RF-011](../REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting); [Revision actions](../REFERENCE_FRAME.md#revision-actions); [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Topology, outside this member; [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), the reuse rule, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 11 | each frame's invalidation and rechart conditions: its declaration (J of the frame tuple); the revision actions listed: this member (§10) | 2, 7 |
+| P0 (recovered, with its actor-change premise), P6 (independent), P2 (independent), P3 (independent) | By P0's actor-change premise a frame must work for a fresh actor, and by P6 and P3 that actor receives only declared, bound inputs, so a fresh competent actor inside the declared envelope can reconstruct the activated evaluation from the frame declaration, the exact subject, the basis and the admissible inputs, without undocumented conversational or historical context. An actor receives one activated frame or one declared active frame configuration, never an implied demand to reconstruct the workspace from ambient context; it may own its internal reasoning where the governing method permits, returns through the declared result relation, and hidden reasoning substitutes for no required evidence, provenance or authority. Every field of the binding resolves through stable identities and source references, for which paths, line numbers, counts, summaries and matching labels do not substitute | [RF-013](../REFERENCE_FRAME.md#rf-013-reconstructable-activation); [§11](../REFERENCE_FRAME.md#11-the-activation-packet); [Minimal activation binding](../REFERENCE_FRAME.md#minimal-activation-binding) | the packet's minimum contents and the binding's fields: this member; the carrier: its consumer (RF-016) | 7, 9 |
+| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P0 an actor's envelope is finite, and by P5 a step cannot report success on what it did not hold, so frame adequacy includes actor usability. When the material manifold exceeds an actor's envelope, the lawful responses are another actor, a refined frame or outer contract, sequenced activations, a lawful compression or `out_of_frame`; silently omitting material relations to fit is never one of them, and a frame never silently grows beyond the selected actor's envelope. Actor capability may justify a different frame size or activation sequence, and can neither waive an invariant nor widen authority | [RF-014](../REFERENCE_FRAME.md#rf-014-capability-fit); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the responses when the context does not fit, outside this member; [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Capability envelope, outside this member; [§11](../REFERENCE_FRAME.md#11-the-activation-packet), frame size; [§12](../REFERENCE_FRAME.md#12-violations) item 10 | the selection among these responses: human authority, directly or in advance through the grant; which responses a step selects within its grant (refinement, sequencing, compression) and which re-enter the owner of the grant or envelope (another actor, a larger envelope): ACTIVATION §2 step 3 | 7, 8 |
+| P2 (independent), P0 (recovered), P6 (independent) | By P2 a compression serves the evaluation, and by P0 it must fit the envelope, so a compression preserves the material distinctions and failure detections the evaluation family requires while fitting the envelope; it need not be a unique smallest frame. Intentional overlap is kept where it supplies independently activated evaluation, different capability fit, different evidence altitude or useful fault detection, and frames are merged only when the merged frame preserves evaluation meaning, authority, capability fit and proportional reasoning cost. Whether a compression preserved what the evaluation needs is a claim: the compressing step records the compression and its preservation argument | [RF-017](../REFERENCE_FRAME.md#rf-017-proportional-compression); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, compression, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 13 | whether that claim is assessed independently: the promotion it serves ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)) | 6, 7 |
+| P2 (independent), P0 (recovered) | By P2 the method requires only what the outcome needs, and by P0 an actor needs the relations, not a carrier, so this member requires the declared relations and the observable outcomes, and no frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or software framework. A frame and the method functions may be realised in any conforming form, and the signatures describe relations, not callable interfaces; the minimal declarations are the least content that declares a frame, a frame set and an evaluation result, in any carrier | [RF-016](../REFERENCE_FRAME.md#rf-016-implementation-neutrality); [§1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit), Substrate; [§5](../REFERENCE_FRAME.md#5-method-functions), the signatures; [§13](../REFERENCE_FRAME.md#13-minimal-declarations); [§12](../REFERENCE_FRAME.md#12-violations) item 14 | the carrier: its consumer; the fields of the three minimal declarations: this member, with the out_of_frame residual field carrying what [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results) requires | 7, 8 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent) | By P5 each outcome answers its own predicate, and by P6 an outcome is not its acceptance, so the outcomes of `activate`, `conjoin` and `translate`, and the coverage statuses, each answer their own named predicate. A refused activation performs no evaluation; `decision(holds)` assesses the composite predicate and is not its acceptance; a coverage status is a result of the audit, never of the covered evaluation, and an excluded row is met by its cited exclusion, never covered or performed | [§5](../REFERENCE_FRAME.md#5-method-functions), the outcome table and the paragraph after it; [Coverage ledger](../REFERENCE_FRAME.md#coverage-ledger), the status table and the paragraph after it | the outcome and status names and their causes: this member; the mapping of each into one core value follows [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Refinements (family F3) | 3, 7 |
+| P0 (recovered, with its actor-change premise), P3 (independent), P6 (independent); instance premise e | By P0's actor-change premise and P3 an input is acquired by exact identity from the selected basis, and by P6 absence from view grants nothing, so declared inputs are acquired by exact identity, and only from the exact selected basis: a declared input absent from the actor's view is neither licence to read elsewhere nor evidence that it is absent, and a candidate source, a moving selector or another basis is no substitute. Where a derived surface is stale, missing or insufficient for a named question, the deciding owner sections are acquired directly. Acquisition is read-only, grants no role, operation or decision, and a missing binding is returned with its outcome before any dependent action | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 4 and Acquisition, outside this member | acquiring a current derived surface in preference to its owning sections where it serves the task: ACTIVATION §2 Acquisition; which derived surfaces are published: their publisher, and none owns a determination | 2, 7 |
+| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise), P3 (independent), P6 (independent) | By P0 an actor loads only what its frame declares, and by P5 and P3 a declaration is not evidence about one activation, so activation binds each reusable frame declaration to the exact subject and basis and loads the declared material relations and evidence sources, never an undifferentiated workspace dump; a reusable declaration is not evidence that a particular activation was correct. When no available frame and actor pairing can lawfully perform the evaluation, activation returns `out_of_frame` or the refusal whose cause holds, and work does not proceed through implied context | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Activation, outside this member; [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Activated frame, outside this member | who selects the frame: the actor or the assigning authority, as the configuration allocates ([ACTIVATION §1 Configuration](../ACTIVATION.md#configuration), family F2) | 7, 8 |
+| P6 (independent), P1 (independent); instance premise e | By P6 a derived surface owns no determination, and by P1 it is a representation of its sources, so a derived surface or projected frame decides standalone only the questions its own source members own. For a question another member owns, or one that joins the law of several owners, the step returns `out_of_frame` naming the owning members, and the question is decided from those members or from a derived surface whose declared sources include every owner | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Standalone scope, outside this member | none | 6, 7, 9 |
+| P6 (independent), P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a prompt holds no authority of its own, and by P0 and P5 it carries only what the step needs, so a prompt is a rendered contract over typed authority, not source law. It projects the current authority references, obligations, contracts, boundaries, proof expectations and fallback conditions the step needs, and the material Acquisition selects; it carries no historical workaround prose unless a current surface still needs that constraint. Construction starts from the highest live authority surface the question needs and names an unresolved upstream authority gap before fallback context is read | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Prompt construction, outside this member | the design, ODD, UX and ticket specialisations: [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review), [ODD §11.5D](../ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](../ODD.md#117a-conforming-agentic-development), [UX §7](../UX.md#7-carrier-binding), and [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and [§7](../TICKETS.md#7-authority-judgment-closure-and-state) | 6, 7 |
+
+RF-012, and the mapping of the outcomes of §5 and the coverage statuses of
+§8 into the core, apply the core result algebra and its refinement rule;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+only what those rules decide about frames. Claim 9 of §2 and item 8 of §12
+state RF-012 and go with it to F3. §2 states ten core claims that the rules
+named in the rows, or RF-012, make precise; it adds no rule of its own. §12
+lists violations, each of the rule it cites, and each is traced in that
+rule's row or, for item 8, in F3. §14 states when a project operates under this member: when the
+rules named in the rows hold for its frame set, with no frame machinery,
+global context, universal completeness or domain authority inferred from
+adopting the member. §15 records dispositions and decides nothing.
 

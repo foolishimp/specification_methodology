@@ -1,6 +1,6 @@
 # I4-04 reading batch 03
 
-Rows: 25. Members: ['DESIGN_MODULE_METHOD.md', 'IDENTITY_METHOD.md', 'REFERENCE_FRAME_METHOD.md', 'RELEASE_METHOD.md', 'SPEC_METHOD.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
+Rows: 27. Members: ['DESIGN_MODULE_METHOD.md', 'IDENTITY_METHOD.md', 'REFERENCE_FRAME_METHOD.md', 'RELEASE_METHOD.md', 'SPEC_METHOD.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
 
 
 ### Row `DESIGN_MODULE_METHOD.md#native-constructability-before-design-acceptance-stdo-up-002` (modal; disposition `conserved`)
@@ -1039,6 +1039,172 @@ to the generic unit.
 ```
 
 
+### Row `REFERENCE_FRAME_METHOD.md#canonical-compression` (delta-judged; disposition `conserved`)
+
+Predecessor, `REFERENCE_FRAME_METHOD.md#canonical-compression` at rc.2:
+
+```text
+A human or computational actor has finite context, finite attention, finite
+time, and bounded capability. A material workspace may contain more relevant
+truth, history, topology, authority, and evidence than one actor can evaluate
+at once.
+
+The Reference Frame Method makes that limit explicit:
+
+```text
+declared evaluation family
+  + exact workspace and topology basis
+  + finite material relations and coordinates
+  + applicable invariants and authorities
+  + admissible evidence and exclusions
+  + actor capability envelope
+  = activated reference frame
+  -> satisfied | falsified | indeterminate | out_of_frame | invalid_basis
+```
+
+A project engages a body of work through a declared frame set:
+
+```text
+workspace and governed outcome
+  + accumulated practice and historical failures
+  + available actor capabilities
+  + human judgment
+  -> declared frame set
+  -> bounded evaluations
+  -> conjunction or translation where required
+  -> coverage ledger and residual uncertainty
+  -> empirical frame-set revision
+```
+
+The reference frame is the atomic engagement unit. Frame-set selection,
+activation, evaluation, conjunction, translation, coverage, and revision are
+separate method functions. A frame does not need to contain a universal theory
+of its possible relationships before it can support a bounded evaluation.
+
+`Atomic engagement unit` names the unit that can be activated and evaluated as
+one bounded context. It does not assert that every relation inside the frame is
+one irreducible semantic atom. A frame may carry several semantic atoms and
+several owner relations without merging their meaning or authority.
+
+---
+```
+
+Successor, `REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`:
+
+```text
+An actor, human or computational, has finite context, attention, time and
+capability. A workspace may hold more material truth, history, topology,
+authority and evidence than one actor can evaluate at once. This member
+makes that limit explicit (P0; rc.2 #canonical-compression):
+
+```text
+declared evaluation family
+  + exact workspace and topology basis
+  + finite material relations and coordinates
+  + applicable invariants and authorities
+  + admissible evidence and exclusions
+  + actor capability envelope
+  = activated reference frame
+  -> one closed result in the core algebra of FOUNDATIONS §4 Results
+```
+
+A project engages a body of work through a declared frame set (P6, P2):
+
+```text
+workspace and governed outcome
+  + accumulated practice and historical failures
+  + available actor capabilities
+  + human judgment
+  -> declared frame set
+  -> bounded evaluations
+  -> conjunction or translation where required
+  -> coverage ledger and residual uncertainty
+  -> empirical frame-set revision
+```
+
+The reference frame is the atomic engagement unit: the unit that is
+activated and evaluated as one bounded context. Frame-set selection,
+activation, evaluation, conjunction, translation, coverage and revision are
+separate functions over it (§5). A frame supports a bounded evaluation
+without first containing a universal theory of its possible relationships.
+"Atomic" is said at engagement altitude only. It does not assert that every
+relation inside the frame is one irreducible semantic atom; a frame may
+carry several semantic atoms and several owner relations without merging
+their meaning or authority (P1, P3).
+
+Scope. This member governs how finite actors construct and use bounded
+reasoning or execution contexts over a changing body of work. It applies to
+human work, agentic work, deterministic evaluation, probabilistic
+construction, assurance and mixed work wherever the governing product or
+method permits them. It is engagement law only: it defines no application
+profile, role mapping, product-owned frame-basis binding, domain product,
+specification taxonomy, design ontology, runtime, workflow, adoption
+relation or assurance implementation. Other members and products may import or
+specialise its relations under their own authority, and that external
+relation neither enters nor amends this member (P2: an obligation stops
+where its purpose stops). This member owns the reference-frame-evaluation
+bounded context, `urn:stdo:bounded-context:reference-frame-evaluation`,
+under its exact publication basis. This member owns only its frame
+declaration, activation, evaluation, basis, relation, result, coverage,
+revision and qualification concepts. The context also holds the concepts
+imported below, each kept by its owner. A same-spelled profile, product,
+role or runtime carrier is not imported by proximity or nominal match (P3,
+P1; rc.2 #position).
+
+Substrate. A reference frame may be represented in prose, structured data,
+a prompt, a design asset, a typed carrier, a runtime context or any other
+form its consumer selects. No class, aggregate, actor, controller, service,
+registry, graph or frame engine is required (P2; RF-016).
+```
+
+
+### Row `REFERENCE_FRAME_METHOD.md#closure` (delta-judged; disposition `conserved`)
+
+Predecessor, `REFERENCE_FRAME_METHOD.md#closure` at rc.2:
+
+```text
+A project operates under this method when:
+
+1. human authority has declared the governed workspace, outcome, evaluation
+   inventory, and frame set;
+2. every active frame is finite, evaluation-bound, basis-bound, authority-safe,
+   and usable inside its actor capability envelope;
+3. frame results preserve semantic, evidence, inference, and decision
+   distinctions;
+4. cross-frame conjunction, translation, or composition exists only where a
+   material evaluation requires it;
+5. workspace coverage maps every known material evaluation and interaction to
+   a capable frame or explicit residual;
+6. operational full coverage is stated relative to its exact tuple;
+7. topology, capability, evidence, and historical failures can trigger frame
+   revision or recharting; and
+8. no executable frame machinery, global context, universal completeness, or
+   domain authority is inferred from method adoption.
+```
+
+Successor, `REFERENCE_FRAME.md#14-closure`:
+
+```text
+A project operates under this member when (rc.2 #closure):
+
+1. human authority has declared the governed workspace, outcome,
+   evaluation inventory and frame set (§4);
+2. every active frame is finite, evaluation-bound, basis-bound,
+   authority-safe and usable inside its actor capability envelope (§3);
+3. frame results preserve semantic, evidence, inference and decision
+   distinctions (RF-007);
+4. cross-frame conjunction, translation or composition exists only where a
+   material evaluation requires it (§6);
+5. workspace coverage maps every known material evaluation and interaction
+   to a capable frame or an explicit residual (§8);
+6. operational full coverage is stated relative to its exact tuple (§8);
+7. topology, capability, evidence and historical failures can trigger
+   frame revision or recharting (§10); and
+8. no executable frame machinery, global context, universal completeness
+   or domain authority is inferred from adopting this member (RF-016, §9).
+```
+
+
 ### Row `REFERENCE_FRAME_METHOD.md#return-a-closed-result` (modal; disposition `conserved`)
 
 Predecessor, `REFERENCE_FRAME_METHOD.md#return-a-closed-result` at rc.2:
@@ -1106,6 +1272,88 @@ could alter it (P3, P6). Whether a revision of a frame needs a new
 revision coordinate is
 [REFERENCE_FRAME §10](REFERENCE_FRAME.md#revision-actions)'s question;
 whether a result it touches stays valid is this section's.
+```
+
+
+### Row `REFERENCE_FRAME_METHOD.md#revision-actions` (delta-judged; disposition `conserved`)
+
+Predecessor, `REFERENCE_FRAME_METHOD.md#revision-actions` at rc.2:
+
+```text
+A revision may:
+
+- clarify activation or evidence acquisition;
+- change the capability envelope;
+- add or remove a material relation;
+- split an overloaded frame;
+- merge duplicative frames where capability and authority remain sound;
+- add intentional overlap;
+- add or revise a conjunction or translation;
+- retire a frame whose evaluation family is no longer material; or
+- revise the project evaluation inventory.
+
+Every material revision changes frame identity or revision coordinates and
+states which prior activations, results, and coverage claims require
+reevaluation.
+
+---
+```
+
+Successor, `REFERENCE_FRAME.md#revision-actions`:
+
+```text
+A revision may (P4b; rc.2 #revision-actions): clarify activation or
+evidence acquisition; change the capability envelope; add or remove a
+material relation; split an overloaded frame; merge duplicative frames
+where capability and authority stay sound; add intentional overlap; add or
+revise a conjunction or translation; retire a frame whose evaluation family
+is no longer material; or revise the project evaluation inventory. Every
+material revision changes frame identity or revision coordinates and states
+which prior activations, results and coverage claims require reevaluation
+(P3, P4b).
+
+Stated plainly: a material revision of a frame produces a new frame
+revision coordinate. Every prior closed result bound to the previous
+revision of a materially revised frame is bound to a mismatched coordinate
+(RF-005) and is invalidated for reuse until it is re-checked against the
+new revision (RF-011; ACTIVATION §7). The revision record lists those
+results as reopened; a result leaves that list only by a recorded re-check
+that finds it demonstrably independent of the change, or by re-evaluation
+on the new revision. A material revision does not select which of the
+results bound to the prior revision it reopens, and silence does not keep
+a result closed. The reopening by default is a tightening the predecessor
+implies and does not state (P3, P4b; rc.2 #revision-actions, which makes
+the revision state the results that require reevaluation,
+#rf-005-exact-basis-and-coordinates, #rf-011-topology-mutation-and-recharting
+and #return-a-closed-result, whose demonstrably independent surviving
+results are the re-check's one survival route).
+
+Whether a revision needs a new frame revision coordinate turns on the
+frame's declarations; whether a result already closed stays valid is a
+separate question. A revision is material when it changes a frame
+declaration in a way that is material under
+[FOUNDATIONS §2](FOUNDATIONS.md#2-ontology). A revision that changes no
+declaration of the frame needs no new coordinate. That answer decides
+nothing about any result: an unchanged declaration is no ground for
+keeping a result closed. Whether a closed result stays valid is decided
+by the reuse rule of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), with materiality
+as [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) defines it, and that rule
+can reopen results although no declaration changed; results it reopens
+without a material revision are recorded as reopened in the work state
+([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)). For example, a
+clarification that finds a recorded activation outside its frame's family,
+so that the result fails the exact applicability check of ACTIVATION §7
+([RF-001](#rf-001-evaluation-relativity);
+[Diagnostic order](#diagnostic-order) question 1), or newly acquired
+admissible evidence that is material to a closed result, a material
+input change under ACTIVATION §7, reopens that result
+and every coverage ledger row and coverage claim that consumed it, and
+preserves every demonstrably independent surviving result. A harmless
+explanatory clarification, which changes no material input and is no
+revising observation, invalidates no result by itself;
+reuse still requires the consumer's exact applicability check (P3, P6;
+rc.2 #return-a-closed-result).
 ```
 
 
@@ -1493,158 +1741,4 @@ allowed when the owning design surface already uses them. A `REGISTRY.md`
 index alongside the ADR files is recommended for tooling and review and is
 not required: the constitutional source remains each ADR file, and a
 registry is a read model that may drift unless tooling maintains it.
-```
-
-
-### Row `SPEC_METHOD.md#ambiguity-governance-rule` (modal; disposition `conserved`)
-
-Predecessor, `SPEC_METHOD.md#ambiguity-governance-rule` at rc.2:
-
-```text
-`SPEC_METHOD.md` owns the substrate-neutral ambiguity-governance bounded
-context `urn:stdo:bounded-context:ambiguity-governance` under the selected
-complete STDO basis. Graph/runtime shorthands such as `F_D`, `F_P`, and `F_H`
-remain in the graph-native ODD context unless an explicit relation imports or
-translates them.
-
-Spec-driven development is not only a derivation pipeline. It is a governed
-disambiguation pipeline.
-
-The point of the upstream chain is to progressively reduce ambiguity:
-
-- goals narrow active priority and work-wave focus
-- intent narrows direction and scope
-- product narrows current realization shape and terms
-- requirements narrow constitutional obligation
-- build-tenant or stack choice narrows executable realization class
-- design narrows structural interpretation
-- implementation narrows local realization detail
-
-This narrowing is not uniform. The methodology distinguishes between:
-
-- **major ambiguity**: ambiguity that materially changes architecture, stack,
-  product boundary, execution/deployment admissibility, public contract shape,
-  or other downstream realization law
-- **micro ambiguity**: local implementation choice that remains inside an
-  already-governed design boundary
-
-Major ambiguity must always be surfaced and governed. It may not remain hidden
-inside informal operator judgment, ambient precedent, or silent model choice.
-
-Therefore, at each major boundary the process must:
-
-- detect and record the major ambiguity that remains or is newly introduced
-- identify the affected invariant, asset, or decision boundary
-- record the decision taken if work proceeds
-- record whether the ambiguity was resolved, carried forward, escalated, or
-  blocked
-
-Ambiguity detection is mandatory. Blocking is policy.
-
-**Lawful Probabilistic Processing**
-(`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing`) is
-bounded non-human processing permitted by declared policy to carry or resolve
-declared ambiguity. **Human Adjudication**
-(`urn:stdo:concept:ambiguity-governance:human-adjudication`) is explicit human
-judgment admitted by authority to resolve declared ambiguity where policy or
-risk appetite requires it.
-
-The default governance model is:
-
-- ambiguity may be carried or decided by lawful probabilistic processing when
-  project policy allows it
-- ambiguity may be escalated to explicit human adjudication when project policy
-  requires it
-- the threshold between those actions is determined by declared risk appetite,
-  not by silent convenience
-
-Projects may therefore choose different ambiguity-handling policies. A lower
-risk appetite escalates more major ambiguity to explicit human judgment. A
-higher risk appetite permits more bounded probabilistic decision-making. In either
-case, the ambiguity and the decision must be recorded.
-
-Some conditions are not optional ambiguity decisions and therefore remain hard
-stops regardless of risk appetite. Typical hard-stop classes include:
-
-- violated invariant or guarantee
-- absent required authority surface
-- missing declared capability for an executional or operational stage
-- undeclared irreversible side effect
-- explicit policy gate requiring human approval
-
-The methodology is therefore not "eliminate all ambiguity before work." It is
-"make ambiguity visible, govern it explicitly, and reduce it progressively until
-downstream realization is sufficiently constrained."
-
----
-```
-
-Successor, `SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`:
-
-```text
-This member owns the substrate-neutral ambiguity-governance bounded context
-`urn:stdo:bounded-context:ambiguity-governance` under the selected complete
-basis; a profile's runtime shorthands for its own frames stay in that
-profile's context unless an explicit relation imports or translates them
-(P3, P1; rc.2 #ambiguity-governance-rule).
-
-Spec-driven development is not only a derivation pipeline; it is a governed
-disambiguation pipeline. The upstream chain progressively reduces
-ambiguity: goals narrow active priority and work-wave focus; intent narrows
-direction and scope; product narrows current realisation shape and terms;
-requirements narrow constitutional obligation; build-tenant or stack
-choice, a tenant's binding under §11, narrows the executable realisation
-class; design narrows structural
-interpretation; implementation narrows local realisation detail (P2).
-
-The narrowing is not uniform. Major ambiguity materially changes
-architecture, stack, product boundary, execution or deployment
-admissibility, public contract shape or other downstream realisation law;
-micro ambiguity is a local implementation choice inside an already-governed
-design boundary. Major ambiguity is always surfaced and governed; it may
-not remain hidden inside informal operator judgment, ambient precedent or
-silent model choice. At each major boundary the process detects and
-records the major ambiguity that remains or is newly introduced; identifies
-the affected invariant, asset or decision boundary; records the decision
-taken if work proceeds; and records whether the ambiguity was resolved,
-carried forward, escalated or blocked. Those outcomes are `resolved`,
-`carried`, `escalated` and `blocked` of
-[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome), which
-gives each its core value for the predicate "the declared ambiguity is
-resolved on the exact basis". Only `resolved` is `satisfied`, so a later
-boundary rests no dependent claim on an ambiguity that is carried,
-escalated or blocked as if it were resolved. Ambiguity detection is
-mandatory; blocking is policy (P6, P5).
-
-Lawful probabilistic processing
-(`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing`)
-is bounded non-human processing permitted by declared policy to carry or
-resolve declared ambiguity. Human adjudication
-(`urn:stdo:concept:ambiguity-governance:human-adjudication`) is explicit
-human judgment admitted by authority to resolve declared ambiguity where
-policy or risk appetite requires it. That admission makes an operation
-human adjudication. A person who relays, records or carries out a step
-does not adjudicate by doing so, and a person who carries or decides a
-declared ambiguity where policy permits it, without that admission, acts
-under the policy and recording that govern lawful probabilistic
-processing; who performs an operation does not decide its kind (§11, rule
-2). The default governance model: ambiguity
-may be carried or decided by lawful probabilistic processing when project
-policy allows it; it may be escalated to explicit human adjudication when
-project policy requires it; the threshold between those actions is
-determined by declared risk appetite, not by silent convenience. Projects
-may therefore choose different ambiguity-handling policies: a lower risk
-appetite escalates more major ambiguity to explicit human judgment; a
-higher one permits more bounded probabilistic decision-making. In either
-case the ambiguity and the decision are recorded.
-
-The hard stops of [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)
-hold regardless of risk appetite. The method is therefore not "eliminate
-all ambiguity before work"; it is "make ambiguity visible, govern it
-explicitly, and reduce it progressively until downstream realisation is
-sufficiently constrained".
-
-The operational lifecycle sufficiency rule (§2) is this governance applied
-to lifecycle phases: an unanswered phase is a recorded gap, never a silent
-absence.
 ```

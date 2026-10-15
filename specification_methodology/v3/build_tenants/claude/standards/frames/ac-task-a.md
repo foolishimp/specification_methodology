@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -30,8 +34,9 @@ Routes, in order:
 13. [AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
 14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
 
-Size of this frame: 65923 bytes.
+Size of this frame: 74039 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -1206,4 +1211,41 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=c74ae098171a857319aadf4bb31728625ce62a57883ede743bd536f032da0326 rows=9/19 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F9, the `a_c` calculus. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Instance premises,
+which the commitments do not supply:
+
+- (i) a governed symbolic system is represented by a finite model whose
+  records stand for its objects, relations, constraints, residuals,
+  traversals, transformations and judgments;
+- (ii) a model is interpreted from an exact subject and may be encoded in
+  a carrier, and subject, model and carrier are separately identified;
+- (iii) some predicates over a model are decided mechanically, and others
+  need bounded probabilistic construction or explicit human adjudication.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent), P5 (derived from P0 and P6); (i) | By P3 every element binds one identity and basis, by P5 an unclosed population would leave results undecided, and by (i) the model is finite, so every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](../AXIOMATIC_CALCULUS.md#2-signature), [§3](../AXIOMATIC_CALCULUS.md#3-typed-records), [AC-001](../AXIOMATIC_CALCULUS.md#ac-001-closed-signature), [AC-003](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family's sorts, value domains, reference domains and admissible kinds: the owning signature | 3, 10 |
+| P3 (independent), P4a (independent) | By P3 identity is declared and scoped, and by P4a relations compose only by the types they declare, so identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](../AXIOMATIC_CALCULUS.md#ac-002-scoped-identity), [AC-004](../AXIOMATIC_CALCULUS.md#ac-004-relation-typing) | each relation kind's sorts, qualifiers and any declared symmetry: the owning signature | 2, 3, 10 |
+| P6 (independent), P4b (derived from P0 and P2), P3 (independent) | By P6 authority is not transferred by handling a record, by P3 every record binds its basis, and by P4b recorded facts persist, so copying, interpreting, encoding, evaluating or transporting a record transfers no authority, and every record, model and result binds an exact basis, mixed bases only under an owned composite-basis relation | [AC-005](../AXIOMATIC_CALCULUS.md#ac-005-authority-conservation), [AC-006](../AXIOMATIC_CALCULUS.md#ac-006-basis-coherence) | each composite-basis relation: the owner it names | 9, 10 |
+| P5 (derived from P0 and P6), P6 (independent) | By P5 a value decides only what its evidence establishes, and by P6 a judgment is separate from its acceptance, so a constraint's judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal's cause is part of its value, a demonstrated violation it names mapping to falsified and a condition of the basis the operation acts on to invalid_basis | [AC-007](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), the stop algebra | the cause of a refusal that names both a demonstrated violation and a condition of the basis, `refusal(constraint)`, with the basis condition reported beside it as its own invalid_basis result: this member, in AC-007; the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature's stop contract; the stop mapping of one traversal: its record, under §5 | 3, 9, 10 |
+| P1 (independent), P6 (independent) | By P1 a difference in representation is not a difference in meaning unless declared, and by P6 latitude is granted only by its owner, so two values differ only through a declared latitude or transformation relation; silence is not latitude, and latitude grants no authority beyond its owner, scope, basis and invalidation law | [Latitude](../AXIOMATIC_CALCULUS.md#latitude), [AC-008](../AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude) | each latitude record: its owner | 6, 10 |
+| P4b (derived from P0 and P2), P6 (independent) | By P4b an unresolved condition persists until disposed, and by P6 only an authority disposes it, so a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](../AXIOMATIC_CALCULUS.md#residual), [AC-009](../AXIOMATIC_CALCULUS.md#ac-009-residual-conservation) | each residual kind's domains: the owning signature; each disposition: the competent authority | 9, 10 |
+| P4b (derived from P0 and P2), P3 (independent), P6 (independent) | By P4b a transformation's effects are facts that persist, by P3 they bind exact records, and by P6 their classification is accountable, so a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record | 3, 4, 10 |
+| P6 (independent), P3 (independent) | By P6 judgment and promotion are separate authorities, and by P3 a judgment binds its exact subject, so a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) | none | 9, 10 |
+| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; deterministic evaluation, probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |
+
+§11 records where each predecessor claim is carried and decides nothing.
+The table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which rules of the calculus follow from the
+foundations and which are choices, with the owner of each choice, so no
+choice is presented as derived (P6, P1).
 

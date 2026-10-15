@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -31,8 +35,9 @@ Routes, in order:
 14. [ACTIVATION.md#7-closed-result-and-reuse](../ACTIVATION.md#7-closed-result-and-reuse)
 15. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+17. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 88593 bytes.
+Size of this frame: 102468 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
 
@@ -911,7 +916,7 @@ reuse still requires the consumer's exact applicability check (P3, P6;
 rc.2 #return-a-closed-result).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 7. Closed result and reuse
 
@@ -1302,4 +1307,61 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d rows=10/36 selected by the anchors this frame carries
+
+### Foundation to law
+
+This family, frames and context (F1 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides how a finite actor engages a body of work through bounded reference
+frames: how a frame is declared, sized, bound, activated, related to other
+frames, used to audit coverage and revised. It covers this member; the
+context construction of
+[ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope);
+and the frame objects, authority kinds, disjointness and independence and
+frame tuple of [FOUNDATIONS §2](../FOUNDATIONS.md#frame-objects). A rule in
+another member is marked "outside this member" in the third column; the
+table owns none of the rules it names. Its instance premises are: (a) a
+workspace holds more material than one actor's capability envelope (its
+competence, context capacity, tools and access) can evaluate at once; (b)
+the evaluations to be made are declared questions about a governed
+outcome; (c) several frames and actors may bear on one workspace, and their
+material may overlap; (d) the workspace, its topology and the actors'
+capabilities change between activations; (e) an actor may read both owning
+sources and surfaces derived from them by copying, projection or
+compression. They are conditions of the work this family governs, not
+commitments, and do not follow from finite capacity alone. Two of P0's
+premises are cited by name: its actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory; and its open-world premise, that the world is open.
+The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P2 (independent), P1 (independent); instance premise b | By P2 a frame exists for an evaluation, and by P1 wording carries no meaning of its own, so a frame's sufficiency can be tested only against the evaluation family it declares, so every frame declares one; a module, file, service, role, persona, prompt or lens with no declared evaluation relation is not a frame. Similar wording does not show that two evaluations share a family: an evaluation is within a frame's family only when the question it decides is one that family states at the frame's declared coordinates, whatever the frame's name or its membership in the set | [RF-001](../REFERENCE_FRAME.md#rf-001-evaluation-relativity); [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Evaluation, Evaluation family and Role, persona, abstraction, component, outside this member; [Diagnostic order](../REFERENCE_FRAME.md#diagnostic-order), question 1; [§12](../REFERENCE_FRAME.md#12-violations) item 2 | each frame's evaluation family: the frame's declaration, made under the frame-set authority (§4) | 7 |
+| P3 (independent), P1 (independent) | By P3 a result binds its exact basis, and by P1 equal names or shapes do not establish equal meaning, so every result binds its exact subject, basis, coordinates and evidence scope. A stale, advanced, ambiguous or mismatched basis returns `invalid_basis` or requires reactivation; equal names, values, shapes, locations or apparent topology positions never substitute for declared coordinate equality | [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates); [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Coordinate, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 7 | each frame's coordinate and equality law: its declaration (C of the frame tuple) | 2, 7 |
+| P1 (independent), P3 (independent); instance premise c | By P1 shared material does not share meaning, and by P3 each frame binds its own basis, so frames may share entities, variables, evidence or coordinates; shared material establishes neither identical meaning nor identical basis, authority or result, and every cross-frame equality or translation an evaluation uses is declared where it is used | [RF-008](../REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse); [§12](../REFERENCE_FRAME.md#12-violations) item 7 | none | 2, 7 |
+| P4a (independent), P6 (independent), P2 (independent) | By P4a composition is needed only where parts combine through declared relations, and by P2 nothing is composed that the evaluation does not need, so using several frames does not require composing their internal manifolds. Composition law is required only when the evaluation combines their internal variables, transports evidence or values across them, or treats their operations as one material execution relation. Independently activated evaluations may instead return closed results to one declared conjunction or decision rule. A material composition is introduced only when the evaluation requires it, and declares its shared invariants, effect or decision order where material, closure, failure and the conservation of semantic, operation and decision authority | [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand); [§6](../REFERENCE_FRAME.md#6-frames-in-conjunction), Result conjunction and Material composition; [§12](../REFERENCE_FRAME.md#12-violations) items 4 and 5 | each material composition: the owning application; the conjunction: [FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results) (family F3); the choices its declared rule leaves open: the member or profile that applies the conjunction, in its declared rule | 3, 4, 7 |
+| P1 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance premise c | By P1 a value carried across frames keeps its meaning only through a declared relation, and by P4b what is lost must travel with it, so where one frame supplies evidence or a value consumed inside another, the translation declares source and target coordinates, preserved meaning, accepted loss, provenance, equality law and refusal conditions; a loss inside the accepted loss travels with the value as a residual | [Evidence or coordinate translation](../REFERENCE_FRAME.md#evidence-or-coordinate-translation); [§5](../REFERENCE_FRAME.md#5-method-functions), the outcomes of `translate` | the accepted loss and the refusal conditions of each translation: its declarer | 3, 6, 7 |
+| P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance premise d | By P3 a result binds coordinates that a topology change can alter, and by P4b a stale result persists until re-evaluated, so an activated frame declares the topology changes capable of invalidating its coordinates or its materiality judgment, and a detected material topology mutation causes reevaluation, frame revision or recharting before a previous result is reused. A material revision of a frame produces a new revision coordinate and states which prior activations, results and coverage claims need reevaluation; every result bound to the prior revision is reopened until a recorded re-check finds it independent of the change or it is re-evaluated, and silence keeps no result closed. A revision that changes no declaration of the frame needs no new coordinate, and an unchanged declaration is no ground for keeping a result closed: whether a closed result stays valid is decided by the reuse rule of ACTIVATION §7 | [RF-011](../REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting); [Revision actions](../REFERENCE_FRAME.md#revision-actions); [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Topology, outside this member; [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), the reuse rule, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 11 | each frame's invalidation and rechart conditions: its declaration (J of the frame tuple); the revision actions listed: this member (§10) | 2, 7 |
+| P0 (recovered, with its open-world premise), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent) | By P0's open-world premise unknown relations exist, and by P4b and P6 an absence of a counterexample is not evidence, so coverage and evaluation results keep known uncertainty explicit: unresolved relations, uncovered evaluations, contested evidence and unknown capability. Absence of a recorded counterexample is not evidence of completeness. Without an independently established closed-domain completeness predicate, a finite frame set cannot establish, by inspecting its own inventory, that no material evaluation is undiscovered; coverage therefore stays falsifiable and states an explicit residual boundary | [RF-015](../REFERENCE_FRAME.md#rf-015-residual-uncertainty); [§9](../REFERENCE_FRAME.md#9-completeness-boundary) | a closed-domain completeness predicate, where one is used: the owner of that domain, who establishes it independently | 7, 9 |
+| P2 (independent), P0 (recovered) | By P2 the method requires only what the outcome needs, and by P0 an actor needs the relations, not a carrier, so this member requires the declared relations and the observable outcomes, and no frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or software framework. A frame and the method functions may be realised in any conforming form, and the signatures describe relations, not callable interfaces; the minimal declarations are the least content that declares a frame, a frame set and an evaluation result, in any carrier | [RF-016](../REFERENCE_FRAME.md#rf-016-implementation-neutrality); [§1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit), Substrate; [§5](../REFERENCE_FRAME.md#5-method-functions), the signatures; [§13](../REFERENCE_FRAME.md#13-minimal-declarations); [§12](../REFERENCE_FRAME.md#12-violations) item 14 | the carrier: its consumer; the fields of the three minimal declarations: this member, with the out_of_frame residual field carrying what [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results) requires | 7, 8 |
+| P6 (independent), P2 (independent); instance premise b | By P6 human authority may declare what it owns, and by P2 and (b) a declaration serves the outcome from known evidence, so human authority may declare a project frame set from accumulated practice, known failure modes, domain expertise, the outcome's risk and knowledge of the available actors, without reconstructing it from the workspace bottom up. The declaration records the governed workspace and outcome, the evaluation inventory, the frames and their envelopes, intentional overlaps, dependencies or translations, the authorities, exclusions and residual uncertainty, and the conditions for revision. Human selection proves neither that the set is complete nor that its frames hold authority over the relations they inspect, and a frame set need not be a partition, tree, stack or exhaustive ontology | [§4](../REFERENCE_FRAME.md#4-frame-set-declaration); [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Frame set, outside this member; [§2](../REFERENCE_FRAME.md#2-core-claims) claim 4 | the frame set: the frame-set authority, which FOUNDATIONS §2 Authority kinds names as human authority; the items the declaration records: this member | 1, 7, 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent) | By P5 each outcome answers its own predicate, and by P6 an outcome is not its acceptance, so the outcomes of `activate`, `conjoin` and `translate`, and the coverage statuses, each answer their own named predicate. A refused activation performs no evaluation; `decision(holds)` assesses the composite predicate and is not its acceptance; a coverage status is a result of the audit, never of the covered evaluation, and an excluded row is met by its cited exclusion, never covered or performed | [§5](../REFERENCE_FRAME.md#5-method-functions), the outcome table and the paragraph after it; [Coverage ledger](../REFERENCE_FRAME.md#coverage-ledger), the status table and the paragraph after it | the outcome and status names and their causes: this member; the mapping of each into one core value follows [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Refinements (family F3) | 3, 7 |
+
+RF-012, and the mapping of the outcomes of §5 and the coverage statuses of
+§8 into the core, apply the core result algebra and its refinement rule;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+only what those rules decide about frames. Claim 9 of §2 and item 8 of §12
+state RF-012 and go with it to F3. §2 states ten core claims that the rules
+named in the rows, or RF-012, make precise; it adds no rule of its own. §12
+lists violations, each of the rule it cites, and each is traced in that
+rule's row or, for item 8, in F3. §14 states when a project operates under this member: when the
+rules named in the rows hold for its frame set, with no frame machinery,
+global context, universal completeness or domain authority inferred from
+adopting the member. §15 records dispositions and decides nothing.
 

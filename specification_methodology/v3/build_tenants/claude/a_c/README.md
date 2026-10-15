@@ -23,7 +23,8 @@ the earlier text. Re-encoding the rebuilt members is open work.
 
 The activation unit for the rebuilt members is the set of verbatim frames
 in [standards/frames/](../standards/frames/FRAME_INPUTS.json). Each frame
-copies, byte for byte, the owning sections one task needs, names each
+copies the owning sections one task needs verbatim, with their
+relative link destinations rebased so they resolve from the frame, names each
 source with its digest, and owns no determination. When an actor reads a
 frame and when it reads the owning sections instead is
 [ACTIVATION §2](../standards/ACTIVATION.md#2-context-construction-under-an-envelope),

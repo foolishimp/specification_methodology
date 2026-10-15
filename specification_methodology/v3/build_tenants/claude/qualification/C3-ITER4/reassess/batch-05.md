@@ -1,6 +1,131 @@
 # I4-04 reading batch 05
 
-Rows: 20. Members: ['SPEC_METHOD.md', 'STDO_REFERENCE_FRAME_BASELINE.md', 'TICKET_METHOD.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
+Rows: 18. Members: ['SPEC_METHOD.md', 'STDO_REFERENCE_FRAME_BASELINE.md']. Each row gives the predecessor section at the installed rc.2 and the successor locus text at the current tree, verbatim.
+
+
+### Row `SPEC_METHOD.md#ownership` (modal; disposition `conserved`)
+
+Predecessor, `SPEC_METHOD.md#ownership` at rc.2:
+
+```text
+- Every live requirement family must map to one or more owning design
+  decisions.
+- Every ADR or other design record must ground itself in requirements via an
+  explicit `Implements:` line.
+```
+
+Successor, `SPEC_METHOD.md#trace-closure-and-anti-drift`:
+
+```text
+Spec-driven development requires constitutional trace closure: the rule
+that closes the constitution over realised behaviour, stricter than
+documentation completeness (P6, P4b; rc.2
+#trace-closure-and-anti-drift-rule).
+
+Ownership: every live requirement family maps to one or more owning design
+decisions; every ADR or other design record grounds itself in requirements
+through an explicit `Implements:` line (rc.2 #ownership).
+
+Downstream closure: no live requirement remains a free-floating statement
+of intent; if it is live it is realised through the downstream chain or
+explicitly deferred with an honest surface that records the deferment, so
+every live requirement family has downstream closure, realised in design,
+code and tests or explicitly deferred. No shipping code or tests exist as
+ungoverned behaviour: behaviour that exists traces back to live
+requirements and the design decisions that authorise it. No hidden product
+surface is allowed; behaviour without trace authority is accidental law
+even if it works (rc.2 #downstream-closure).
+
+Drift signals (rc.2 #drift-signals): unowned requirements, ungrounded
+design records, deferred requirements without explicit deferment, and code
+without trace authority are design drift. An ADR or other design artifact
+with no requirement grounding is design without constitutional authority.
+Code behaviour with no design owner means the design has already drifted.
+Shipping code or tests that cannot trace back out to live requirement and
+design authority are ungoverned product surface. Tests that validate
+implementation habit rather than requirement truth lock in drift. Events
+and projection that reveal persistent delta mean either the code is wrong
+or the requirement and design stack is stale. A capability with
+requirements and design but no scenario has unverified operational meaning.
+A requirement treated as a product feature when it is a guarantee,
+governance rule or verification obligation is misclassified. A live
+constitutional artifact corrected by in-place mutation rather than
+supersession or withdrawal has corrupted constitutional history. A real use
+case that reveals a gap not expressible in current requirements needs a new
+intent, not a code hack.
+```
+
+
+### Row `SPEC_METHOD.md#projection-discipline` (modal; disposition `conserved`)
+
+Predecessor, `SPEC_METHOD.md#projection-discipline` at rc.2:
+
+```text
+Projections, reports, status views, and topology views may reflect the
+authoritative carrier.
+
+They must not become a second closure surface.
+
+Therefore:
+
+- if runtime, reporting, topology, and proof can disagree about closure because
+  they consume different carriers or different closure laws, the migration is
+  incomplete
+- if a projection can independently close while the authoritative carrier is
+  still open, the migration is incomplete
+- if the authoritative carrier can close while a projection still depends on an
+  older law, the migration is incomplete
+```
+
+Successor, `SPEC_METHOD.md#projection-discipline`:
+
+```text
+Projections, reports, status views and topology views may reflect the
+authoritative carrier; they do not become a second closure surface (P6,
+P1; rc.2 #projection-discipline). If runtime, reporting, topology and proof
+can disagree about closure because they consume different carriers or
+different closure laws, the migration is incomplete; if a projection can
+independently close while the authoritative carrier is still open, the
+migration is incomplete; if the authoritative carrier can close while a
+projection still depends on an older law, the migration is incomplete.
+```
+
+
+### Row `SPEC_METHOD.md#proof-last-rule-for-core-interface-changes` (modal; disposition `conserved`)
+
+Predecessor, `SPEC_METHOD.md#proof-last-rule-for-core-interface-changes` at rc.2:
+
+```text
+Complete migration-closure proof is not valid while producers and consumers
+are split across old and new contracts. Bounded Product-slice proof may establish
+only the exact intermediate outcome permitted by the path-relative promotion
+rule; it cannot establish migration closure.
+
+Therefore:
+
+- tests that pass only because bridge-state semantics remain alive do not count
+  as closure proof
+- green local tests do not overrule a split architecture
+- migration-closure proof belongs after migration, not during a partially
+  migrated state
+- per-break proof must show the severed old seam is rejected or fails closed
+  before downstream hardening can count as progress
+```
+
+Successor, `SPEC_METHOD.md#proof-last-rule`:
+
+```text
+Complete migration-closure proof is not valid while producers and
+consumers are split across old and new contracts. Bounded product-slice
+proof may establish only the exact intermediate outcome permitted by the
+path-relative promotion rule; it cannot establish migration closure (P6;
+rc.2 #proof-last-rule-for-core-interface-changes). Tests that pass only
+because bridge-state semantics remain alive do not count as closure proof;
+green local tests do not overrule a split architecture; migration-closure
+proof belongs after migration, not during a partially migrated state;
+per-break proof shows the severed old seam is rejected or fails closed
+before downstream hardening can count as progress.
+```
 
 
 ### Row `SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001` (modal; disposition `conserved`)
@@ -969,6 +1094,206 @@ activation (P5, P6).
 ```
 
 
+### Row `STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression` (delta-judged; disposition `conserved`)
+
+Predecessor, `STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression` at rc.2:
+
+```text
+`REFERENCE_FRAME_METHOD.md` defines the finite engagement atom. The selected
+complete STDO cut defines specification, design, construction, assessment,
+disposition, checkpoint, continuation, identity, and release law. This profile
+maps three practical engagement frames onto those existing owners:
+
+```text
+existing project authority
+  + selected complete STDO and Reference Frame Method basis
+  + exact governed Product or Product-chain outcome and workspace basis
+  + known evaluation inventory, dependencies, and residuals
+  -> sufficient direct Worker activation, or materially required coordination
+  -> where coordinated: Executive outcome/basis lock and finite ready frontier
+  -> Worker and applicable specialist evaluations; Reviewer only where required
+  -> closed results, applicable technical triage, and declared conjunction
+  -> existing bounded decision authority, result recording, and next lawful action
+  -> updated basis, coverage, residuals, and frontier
+  -> repeat or stop
+```
+
+The three available frames are overlapping evaluation contexts, not a hierarchy
+or actor topology. The Worker supplies the candidate subject but never activates the
+Reviewer. The Reviewer evaluates but does not implement. The Executive applies
+only decision authority already granted by Product, Goals, requirements,
+accepted design, ticket, identity, or release law. The Worker carries only the
+construction or transformation authority in its admitted intake. No frame gains
+admission, publication, mutation, or other operation authority from its label.
+
+This profile also derives twelve generic specialist-frame families: Product,
+Product Composition, Design, Design Component, Public Boundary, Entity,
+Operator, Owner, Effect, Reuse/Foundation, Install, and Proof. They separate recurring evaluation
+questions that otherwise collapse across constitutional `WHAT`, structural
+`HOW`, identity, authority, effects, foundations, installed subjects, and
+evidence. They are available frame families, not mandatory actors, stages,
+components, services, files, or runtime types. An activation selects only the
+families material to its exact evaluation and retains an explicit residual for
+any material family it cannot cover.
+
+This profile also derives four Product-testing specialist-frame families:
+user acceptance, end to end, integration, and unit. They are activated inside
+the same conditionally selected engagement relation; they are not new
+roles, stages, authorities, or a testing hierarchy. Their ordinary evidence
+topology is:
+
+```text
+Product and accepted design
+  |- user-outcome claims -> user-acceptance frames
+  |- runnable causal-path claims -> end-to-end frames
+  |- composition-boundary claims -> integration frames
+  `- module-owned laws -> unit frames
+
+bound results -> declared conjunction -> Product or release disposition
+```
+
+The fan-out assigns claims to their congruent evidence frames; it is not an
+authority hierarchy or a claim that one frame decomposes into another.
+Evidence may relate through declared conjunction, translation, falsification,
+and re-entry. A broader frame cannot make a module-owned law true, and any
+number of narrower green frames cannot establish an unevaluated Product
+composition or user outcome.
+
+A project may adopt this profile or define another reference-frame
+configuration. That choice is admitted by the existing project authority that
+owns the affected decision. A local axioms file may carry the decision; the file
+does not become a new constitutional owner merely by carrying it.
+
+---
+```
+
+Successor, `EXECUTIVE_BASELINE.md#1-canonical-compression`:
+
+```text
+REFERENCE_FRAME defines the finite engagement unit. The selected complete
+method cut defines specification, design, construction, assessment,
+disposition, checkpoint, continuation, identity and release law. This
+profile maps three practical engagement frames onto those owners; it owns
+only the bindings its lead names and no rule of those owners (P6, P0; rc.2
+#canonical-compression):
+
+```text
+existing project authority
+  + selected complete method basis, REFERENCE_FRAME included
+  + exact governed Product or Product-chain outcome and workspace basis
+  + known evaluation inventory, dependencies and residuals
+  -> a sufficient direct Worker activation, or coordination where material
+  -> when coordinated: Executive locks outcome and basis, holds a finite ready frontier
+  -> Worker and the applicable specialist evaluations; Reviewer only where required
+  -> closed results, technical triage where applicable, declared conjunction
+  -> existing bounded decision authority, result recording, next lawful action
+  -> updated basis, coverage, residuals and frontier
+  -> repeat or stop
+```
+
+The three frames are overlapping evaluation contexts. They are neither a
+hierarchy nor an actor topology (P6; RF-009). The Worker supplies the
+candidate and never activates the Reviewer. The Reviewer evaluates and does
+not implement. The Executive applies only decision authority already
+granted by Product, Goals, requirements, accepted design, a ticket, identity
+law or release law. The Worker carries only the construction or
+transformation authority of its admitted intake. No frame acquires
+admission, publication, mutation or any other operation authority from its
+label (P6).
+
+The profile derives twelve generic specialist-frame families (§11):
+Product, Product Composition, Design, Design Component, Public Boundary,
+Entity, Operator, Owner, Effect, Reuse/Foundation, Install and Proof. They
+keep apart recurring evaluation questions that otherwise collapse across
+constitutional WHAT, structural HOW, identity, authority, effects,
+foundations, installed subjects and evidence. They are available families,
+not mandatory actors, stages, components, services, files or runtime types.
+An activation selects only the families material to its exact evaluation
+and keeps an explicit residual for any material family it cannot cover (P2,
+P1).
+
+The four product testing frames (user acceptance, end to end, integration,
+unit) are tier-2 law in ASSURANCE §7. Under this profile they are activated
+inside the same conditionally selected engagement relation; they add no
+role, stage, authority or testing hierarchy. Their evidence topology, the
+assignment of claims to congruent evidence frames, is ASSURANCE §7; a
+broader frame cannot make a module-owned law true, and any number of
+narrower green frames cannot establish an unevaluated Product composition
+or user outcome (P6, P4a).
+
+A project may adopt this profile or define another frame configuration
+(§16). The executive configuration is selected where it fits the task; it
+is not the method's default (§7 The executive configuration). Adopting the
+profile is the Product authority's act (PRODUCT_DEFINITION §7), and each
+decision a configuration makes is admitted by the existing authority that
+owns it (ACTIVATION §1 Configuration, Admission of a configuration; §16).
+A local axioms file may carry the decision; carrying it does not make the
+file a new constitutional owner (P6).
+```
+
+Successor, `ASSURANCE.md#the-set`:
+
+```text
+Where the governing frame configuration (PRODUCT_DEFINITION §7) or the
+admitted work authority selects testing frames for a Product promotion,
+closure or release-assurance claim, testing is configured as a
+claim-relative set of testing frames. Placement in this member makes the
+set, and the law of §8 to §13 that serves it, available; it adopts nothing,
+and each activation is decided by ACTIVATION §1 (Applicability). The kind
+of runner does not select the frame; the evaluated claim, subject, path,
+population, oracle and falsification boundary do (P6, P2; provenance
+#derived-product-testing-frame-set). Each frame's `invalidation` row,
+here and in §13, lists named instances of the material input change or
+the changed basis of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); it adds no
+other kind of invalidator. The ordinary configuration holds four
+distinct frames:
+
+- user acceptance evaluates the Product outcome from the user's supported
+  frame;
+- end to end evaluates the complete runnable causal realisation of that
+  outcome;
+- integration evaluates one material composition boundary and its
+  interaction population; and
+- unit evaluates one module-owned law; internal combinatorial complexity
+  decides the proportional size and strategy of that evidence, not whether
+  the law is eligible for unit proof.
+
+They add no role, stage, authority or testing hierarchy. Their ordinary
+evidence topology assigns each claim to its congruent frame (P6, P4a;
+provenance #canonical-compression):
+
+```text
+Product and accepted design
+  |- user-outcome claims -> user-acceptance frames
+  |- runnable causal-path claims -> end-to-end frames
+  |- composition-boundary claims -> integration frames
+  `- module-owned laws -> unit frames
+
+bound results -> declared conjunction -> Product or release disposition
+```
+
+The fan-out assigns claims to evidence; it is neither an authority
+hierarchy nor a claim that one frame decomposes into another. Evidence
+may relate through declared conjunction
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+translation (REFERENCE_FRAME §6), falsification and re-entry (P4a). A
+broader frame cannot make a module-owned
+law true, and any number of narrower green frames cannot establish an
+unevaluated Product composition or user outcome (EVALUATION §1, the weaker
+property never substitutes for the claimed one).
+
+The frames may overlap, and one execution may supply evidence to several of
+them; every result stays bound to its own claim. A label such as `UAT`,
+`E2E`, `integration` or `unit` has no assurance value without the
+corresponding frame declaration (P1, P6). Each frame below is given in the
+shape of a frame declaration (REFERENCE_FRAME §13); "core result", here
+and in §13, is a value of the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), recorded with the
+predicate the frame's claim states.
+```
+
+
 ### Row `STDO_REFERENCE_FRAME_BASELINE.md#closure` (modal; disposition `conserved`)
 
 Predecessor, `STDO_REFERENCE_FRAME_BASELINE.md#closure` at rc.2:
@@ -1334,457 +1659,4 @@ Configuration states, never by its labels, its topology or its difference
 from this profile. A local axioms document may carry the accepted
 configuration; its authority is the cited Goals, Product, requirement or
 accepted-design decision, not the document's category (P6, P1).
-```
-
-
-### Row `STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action` (modal; disposition `conserved`)
-
-Predecessor, `STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action` at rc.2:
-
-```text
-Executive is the profile frame for three inseparable duties over one governed
-outcome:
-
-1. **attention management** maintains the exact outcome and basis, Product-role
-   map, evaluation inventory, dependency relation, unresolved frontier, actor
-   envelopes, current MVP or release mandate, applicable triage policy, and
-   residual boundary, then selects the smallest
-   dependency-ready activation set sufficient for the next decision within the
-   finite actor envelopes;
-2. **evaluation orchestration** activates capable Workers, Reviewers, or
-   specialists, preserves their exact subjects and bases, and consumes only
-   closed results or declared translations; and
-3. **authorized action selection** assigns priority, determines the effect on
-   the current promotion boundary, applies an existing disposition, and issues
-   only the next already-authorized activation or action.
-
-Executive does not contain the complete workspace, perform every evaluation,
-or acquire Product meaning, implementation, mutation, acceptance, publication,
-or other operation authority from the role. A material effect remains owned by
-the actor carrying its exact operation grant.
-
-An actor occupying Executive must not modify candidate, Product or worktree
-bytes or perform an implementation effect. Filesystem or tool access and an
-edit being small, test-only, reversible or apparently obvious supply no
-exception. Mutation requires a separately activated Worker or Writer relation
-with the exact operation grant, subject and write territory. A same-actor role
-transition is explicit and recorded in the existing work carrier before the
-effect; the actor is no longer acting as Executive for that effect. Recording
-or delegating after an Executive edit cannot authorize it retroactively.
-
-The attention cycle is:
-
-```text
-U0 = every known material evaluation not closed on the current basis
-
-while U is non-empty:
-  select a finite dependency-ready subset M that fits the assigned actors
-  activate each member of M against the exact outcome and basis
-  keep assurance-independent evaluations free of unclosed peer results
-  when no other authorized decision is ready:
-    await decision-relevant input under Event-Driven Executive Attention
-  record every closed result, technical triage, residual, and invalidation condition
-  apply only declared conjunctions or translations
-  assign priority and boundary effect only under the current Product mandate
-  invalidate affected results when the subject or basis changes
-  update U from coverage, dependencies, conflicts, and discovered materiality
-
-stop only when every mandatory evaluation is closed, or governing authority
-has explicitly retained every remaining residual consistently with the claim
-```
-
-This relation requires no scheduler or frame engine. `M` may contain parallel
-activations. Recursion follows declared evaluation dependencies and bounded
-refinements; it does not nest or join undifferentiated copies of every frame.
-The Executive retains the frontier and closed-result ledger in attention, not
-the undocumented working context of every evaluator.
-
-Severity supplied by Reviewer is evaluation evidence. Priority, current-boundary
-effect, `STDO-UP-020` disposition, and subsequent action are Executive decisions.
-They remain distinct ledger entries even when a Product-defined policy maps one
-to another.
-
-Every result returns to Executive, a declared conjunction, or another frame
-through an explicit `D` relation. No lateral handoff, child completion, model
-response, tool output, or shared actor implicitly activates another frame or
-authorizes continuation. A consumer receives the closed result and its source
-routes, not the child's hidden reasoning context.
-```
-
-Successor, `EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action`:
-
-```text
-
-```
-
-
-### Row `STDO_REFERENCE_FRAME_BASELINE.md#generic-specialist-frame-family` (modal; disposition `conserved`)
-
-Predecessor, `STDO_REFERENCE_FRAME_BASELINE.md#generic-specialist-frame-family` at rc.2:
-
-```text
-A **generic specialist-frame family** is a reusable evaluation-family
-archetype in this profile. It identifies a recurring distinction that a
-project must either instantiate it where material, have capable authority
-establish it as non-material for the governed outcome, or retain it as an
-explicit coverage residual.
-
-The family does not select a concrete carrier, component, actor, architecture,
-owner, or implementation. One project may instantiate several frames in one
-family. One declared frame may cover several families only when its evaluation
-and result relations preserve every material distinction rather than flattening
-them behind one broad label.
-```
-
-Successor, `EXECUTIVE_BASELINE.md#generic-specialist-frame-family`:
-
-```text
-A generic specialist-frame family is a reusable evaluation-family archetype
-of this profile (§11). It names a recurring distinction that a project
-either instantiates where material, has capable authority establish as
-non-material for the governed outcome, or keeps as an explicit coverage
-residual (P2, P6; rc.2 #generic-specialist-frame-family).
-
-A family selects no concrete carrier, component, actor, architecture, owner
-or implementation. One project may instantiate several frames in one
-family. One declared frame may cover several families only when its
-evaluation and result relations preserve every material distinction instead
-of flattening them behind one broad label (P1, RF-008).
-```
-
-
-### Row `TICKET_METHOD.md#authority` (modal; disposition `conserved`)
-
-Predecessor, `TICKET_METHOD.md#authority` at rc.2:
-
-```text
-- `ticketing.goals` locates the epic layer
-- `ticketing.sprints.root`, when present, is the bounded execution-batch and
-  sprint-close review layer
-- `ticketing.tickets.lanes.backlog`, `.active`, and `.completed` locate the
-  ticket authority
-- `ticketing.comments.root` locates the discussion and publication layer
-
-The paths shown in the default layout are the bindings supplied by
-`stdo_default.json`. The definition locates these carriers but does not own
-their ticket or comment content.
-
-There is no separate mandatory `ACTIVE_TASKS.md` in this model.
-
-If a project later wants a board view, it may generate one from the bound
-ticket authority. That board is a projection only and must not become the
-source of truth unless the Product Definition Overlay explicitly rebinds the
-ticket authority to that carrier and no rival remains.
-
----
-```
-
-Successor, `TICKETS.md#bindings-and-projections`:
-
-```text
-The bindings (P6, P3; rc.2 #authority): `ticketing.goals` locates the epic
-layer; `ticketing.sprints.root`, when present, is the bounded
-execution-batch and sprint-close review layer;
-`ticketing.tickets.lanes.backlog`, `.active` and `.completed` locate the
-ticket authority; `ticketing.comments.root` locates the discussion and
-publication layer. The paths of the default layout are the bindings
-supplied by `stdo_default.json`. The definition locates these carriers and
-does not own their ticket or comment content.
-
-There is no separate mandatory `ACTIVE_TASKS.md` in this model. A project
-that wants a board view may generate one from the bound ticket authority;
-that board is a projection only and does not become the source of truth
-unless the product definition explicitly rebinds the ticket authority to
-that carrier and no rival remains (§7).
-```
-
-
-### Row `TICKET_METHOD.md#change-class` (modal; disposition `conserved`)
-
-Predecessor, `TICKET_METHOD.md#change-class` at rc.2:
-
-```text
-Ticket type and change class are orthogonal.
-
-- ticket type answers: what kind of work record is this?
-- change class answers: where does this change lawfully re-enter the
-  constitutional chain?
-
-Tickets must record the `change_class` declared by intake triage, using the
-change classes from `SPEC_METHOD.md`.
-
-Common pairings are:
-
-- `feature` with `goal_reprice`, `intent_reprice`, `product_reprice`,
-  `requirement_reprice`, or `design_reframe`
-- `bug` with `requirement_reprice`, `design_reframe`, or
-  `realization_refactor`
-- `chore` with `design_reframe` or `realization_refactor`
-- `spike` as exploratory work that still carries the current triage class and
-  should terminate either in a more specific downstream ticket or in an
-  explicit decision that no further substantive change is required
-
-Ticket category and change class are also orthogonal.
-
-- `change_class` governs lawful constitutional re-entry
-- `ticket_category` governs ticket execution and closure discipline
-
-So a ticket may be:
-
-- `type: bug`
-- `ticket_category: implementation_migration`
-- `change_class: design_reframe`
-
-without contradiction.
-```
-
-Successor, `TICKETS.md#change-class`:
-
-```text
-Ticket type and change class are orthogonal: type answers what kind of
-work record this is; change class answers where the change lawfully
-re-enters the constitutional chain. A ticket records the `change_class`
-declared by intake triage, using the classes of
-[SPEC_METHOD §4](SPEC_METHOD.md#change-classes) (P4b, P2; rc.2
-#change-class).
-
-Common pairings: `feature` with `goal_reprice`, `intent_reprice`,
-`product_reprice`, `requirement_reprice` or `design_reframe`; `bug` with
-`requirement_reprice`, `design_reframe` or `realization_refactor`; `chore`
-with `design_reframe` or `realization_refactor`; `spike` as exploratory
-work that still carries the current triage class and should terminate
-either in a more specific downstream ticket or in an explicit decision
-that no further substantive change is required.
-
-Ticket category and change class are also orthogonal: `change_class`
-governs lawful constitutional re-entry; `ticket_category` governs ticket
-execution and closure discipline. A ticket may therefore be `type: bug`,
-`ticket_category: implementation_migration`, `change_class: design_reframe`
-without contradiction (P3).
-```
-
-
-### Row `TICKET_METHOD.md#execution-contract-admission` (modal; disposition `conserved`)
-
-Predecessor, `TICKET_METHOD.md#execution-contract-admission` at rc.2:
-
-```text
-The runtime execution flow should treat the ticket, sprint entry, or drafted
-work contract as an admission candidate, not as automatic truth.
-
-Minimum expected states are:
-
-- `drafted`
-- `admitted`
-- `rejected`
-- `superseded`
-
-An admitted execution contract should be:
-
-- logged in runtime/event truth
-- available to prompt assembly
-- available to later closure checking
-
-The system must not allow the model to silently self-certify its own execution
-basis without deterministic admission or explicit human override.
-
-Execution-contract admission validates a proposed contract against its cited
-Product outcome, prerequisite, or experiment basis; it does not admit that
-growth basis. Admission or renewal of the basis belongs to the authority owning
-the selected Goals work wave, or its explicitly bounded proxy, and remains
-durably legible in existing Goals or ticket authority. Drafting, admitting, or
-retaining an active execution contract cannot create or renew authority that
-the owning work-wave authority has not admitted.
-```
-
-Successor, `TICKETS.md#execution-contract-admission`:
-
-```text
-The runtime execution flow should treat a ticket, a sprint entry or a
-drafted work contract as an admission candidate, never as automatic truth;
-the contract carries at minimum the states named in ACTIVATION §1
-(drafted, admitted, rejected, superseded). An admitted execution contract
-should be logged in runtime and event truth, available to prompt assembly,
-and available to later closure checking, so that execution and closure
-read the same admitted basis (P6,
-P4b; rc.2 #execution-contract-admission). The refusal of self-certification
-is ACTIVATION §1.
-
-Admission validates a contract against its cited product outcome,
-prerequisite or experiment basis and does not admit that basis (ACTIVATION
-§1). Admission or renewal of the basis belongs to the authority owning the
-selected goals work wave, or its explicitly bounded proxy, and stays
-durably legible in the existing goals or ticket authority
-([SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation)). A ticket's
-`active` status, its lane, or an admitted or retained contract is therefore
-never the admission of a growth basis (P6, P2).
-```
-
-Successor, `ACTIVATION.md#admission`:
-
-```text
-Drafting a step's contract and admitting it are distinct relations, even
-inside one invocation that drafts, validates, admits and executes; no
-separate turn, carrier or approval ceremony is implied by the distinction.
-A contract carries at minimum the states drafted, admitted, rejected and
-superseded ([TICKETS §5](TICKETS.md#execution-contract-admission)).
-Execution begins only after deterministic admission or an
-explicit human override of the exact contract. The drafting actor never
-infers admission from its own draft, from the presence of a carrier
-(ticket, sprint entry, work contract), from lane placement or from an
-`active` label. The admitted result identifies the admission mechanism and
-its authority, the exact contract identity or digest, the decision and the
-evidence, including any human override; absent those coordinates the
-contract stays drafted or rejected, and prose asserting admission is not
-admission evidence (P6; the actor cannot self-certify its own execution
-basis). Admission validates the contract against its cited outcome,
-prerequisite or experiment basis; it does not admit that basis, and
-drafting, admitting or retaining a contract creates or renews no authority
-its owner has not admitted (P6, P2;
-[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
-creates no authority). Only an admitted contract activates a step: no
-result, child completion, tool output, model response, shared actor or
-lateral handoff activates another step or authorises continuation by
-itself, and a profile that routes results names its instances of this
-rule. Purpose and material relation: a profile and a template each stated
-this list for one configuration, so the generic rule had no owner (P6).
-The admitted contract names one
-durable result and evidence surface; every result, withheld closure and
-residual obligation is recorded there before return, a conversation return
-alone is not durable evidence, and if no such surface is authorised and
-available, admission refuses (P4b). Absent or rejected admission returns
-the missing work authority without execution, as `admission_refused` with
-its cause ([§3 Admission and activation](#admission-and-activation)).
-Provenance:
-[work-carrier-to-execution rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule)
-and
-[execution contract admission](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#execution-contract-admission);
-the selection of the carrier (ticket, sprint entry, run-scoped contract)
-is tier-2 law in the [TICKETS](TICKETS.md) member, which disposes those rows.
-```
-
-Successor, `SPEC_METHOD.md#3-outcome-conservation`:
-
-```text
-Every product-outcome-bearing work wave identifies one explicitly selected,
-unresolved, directly verifiable product-defined outcome and declares the
-acceptance interval for that instance. Product-progress claims and
-promotion onto the supported product path are judged against that same
-outcome (P2; rc.2 #product-outcome-conservation-stdo-up-013; FOUNDATIONS §2
-Outcome U is the generic object).
-
-Evidence distinguishes material advance, prerequisite readiness,
-preservation and regression. The four refine the progress
-categories of [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)
-(Progress) for a product outcome: material advance is progress there,
-accepted material movement toward the selected product outcome, and only
-material advance projects product progress; prerequisite readiness is
-its prerequisite work, which names the product obligation it enables and
-here also remains bounded; preservation is its preservation and repeated
-proof, useful evidence, not progress; regression maps to evidence that
-is not new progress, and this member adds one need to it: the promotion
-block in the last paragraph of this section. Churn and the revision of the forecast are
-ACTIVATION §5's, unchanged here.
-
-The exact bound outcome instance stops selecting later product-progress
-work when the owning authority accepts it; its witnesses remain regression
-and preservation evidence. Acceptance exhausts only that instance and its
-declared acceptance interval; it does not discharge an enduring guarantee,
-a recurring obligation or a broader product family beyond the accepted
-instance. Further work against the accepted instance is preservation, a
-named bounded prerequisite for another admitted outcome, or a new change
-requiring lawful repricing; it is not additional progress against the
-accepted instance (EVALUATION §5).
-
-Selecting the next unresolved outcome already defined by the product is a
-goals and work-sequencing decision. Changing an outcome's meaning or scope,
-or introducing a new product outcome, requires lawful re-entry at the
-product (§4).
-
-Evidence evaluates and constrains its bound product claim. Completion of a
-proof surface, matrix, coverage ledger, inventory, design-method artifact,
-test suite or other evidence surface cannot by itself select, enlarge or
-replace the product outcome. If an assurance capability is explicitly
-defined as product behaviour, delivery of that capability is judged as
-product progress; its evidence still does not author the claim. The same
-artifact may be product output for one claim and evidence for another only
-when those roles are declared separately (P6).
-
-Within a product-outcome-bearing work wave, material realisation growth
-derives its authority from the selected unresolved product outcome, an
-admitted named bounded prerequisite to it, or an admitted named bounded
-experiment whose stated observation discriminates a stated decision for it.
-A prerequisite or experiment authorises only its declared provisional
-bound; it does not select or enlarge the product outcome, authorise
-downstream work, confer promotion or closure, or waive applicable design,
-safety, authority or release law, including the prime law of a design
-profile where one applies.
-
-Admission or renewal of a prerequisite or experiment belongs to the
-authority owning the selected work wave, or its explicitly bounded proxy,
-and is recorded in the existing durable goals or ticket authority. The
-admitted basis states its provisional bound and its exhaustion or
-falsification condition. Satisfaction of an experiment's stated
-decision-discriminating observation exhausts that experiment. Drafting or
-validating a ticket or execution contract, retaining active status, or
-holding a prior admission cannot create, extend or renew the basis
-(ACTIVATION §1, Admission).
-
-Acceptance of the selected outcome, discharge of an admitted prerequisite,
-or resolution of an admitted experiment's stated decision exhausts that
-basis. A basis or bound also ends when another admitted terminal condition
-is reached or it is rejected, withdrawn, superseded, repriced away or
-falsified by evidence. Ended authority cannot be renewed by repair,
-continuation, evidence, active ticket or run state, or prior admission;
-further material work requires a new admission by the owning authority or
-its explicitly bounded proxy (P6).
-
-Retention as supported product behaviour, required evidence, regression
-protection or bounded donor material confers no further growth authority.
-Consumers own deletion, archival, quarantine and salvage mechanics. Salvage
-carries only the explicitly re-adopted semantics; it inherits neither the
-enclosing work's authority, dependencies or completion claim nor its power
-to select further work.
-
-A regression or unresolved gap blocks further promotion on the affected
-path until repaired, repriced or accepted by the owning authority. It does
-not globally serialise independent work: parallel work may proceed under
-its own admitted basis and cannot be laundered into the governed outcome's
-progress claim. Outcome success is necessary delivery evidence, not
-complete product or release closure (§6).
-```
-
-
-### Row `TICKET_METHOD.md#future-extensions` (modal; disposition `conserved`)
-
-Predecessor, `TICKET_METHOD.md#future-extensions` at rc.2:
-
-```text
-This minimal method can later grow into:
-
-- a generated active board
-- ticket dependency checks
-- links from tickets to scenario, requirement, or ADR surfaces
-- external sync with a real ticketing system
-- message-board integration through a standard tool-protocol capability
-
-The durable local-file model remains the default and must remain valid when
-selected. Another carrier is not required to reproduce its folders, but it must
-preserve the same ticket authority and refusal laws.
-```
-
-Successor, `TICKETS.md#carrier-substitution`:
-
-```text
-The durable local-file model is the default and remains valid whenever it
-is selected. Another carrier is not required to reproduce its folders, but
-it preserves the same ticket authority and refusal laws (§3 and §4, one
-durable record). Growth the model admits includes a generated active board,
-ticket dependency checks, links from tickets to scenario, requirement or
-ADR surfaces, external sync with a real ticketing system, and message-board
-integration through a standard tool-protocol capability. Under the bindings
-above, a generated board is a projection, and a tracker that holds tickets
-is lawful only as an explicit rebinding of the ticket authority by the
-product definition with no rival surface remaining, so neither growth
-changes the authority or refusal laws (P2, P6; rc.2 #future-extensions).
 ```

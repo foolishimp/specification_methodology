@@ -11,13 +11,23 @@ exec(open('qualification/C3-ITER4/tools/frontier_review.py').read().split('asses
 rev = json.load(open('frontier/REVIEW.json')); byid = {r['id']: r for r in rev['rows']}
 want = {r['id']: 'modal' for r in rev['rows'] if r['modal_conversion']}
 # WC-2 rows marked D: anchors in rows whose first cell ends with ' D'
-dn = 0
+dn = 0; unmatched = []
+title2id = {}; member = None
+for line in open('frontier/PREDECESSOR_CLAIMS.md', encoding='utf-8'):
+    if line.startswith('## '): member = line[3:].strip(); continue
+    if not line.startswith('| '): continue
+    c = [x.strip() for x in line.rstrip('\n').strip('|').split(' | ')]
+    am = re.search(r'`#([^`]+)`', c[1]) if len(c) > 5 else None
+    if am: title2id.setdefault(re.sub(r'^(&nbsp;)+', '', c[0]).strip().lower(), []).append(f'{member}#{am.group(1)}')
 for line in open('qualification/C3-ITER3/reassess/rows.md', encoding='utf-8'):
-    if not line.startswith('| ') or not re.match(r'\| [A-Z]+\d+ D \|', line): continue
-    for a in re.findall(r'`#([^`]+)`', line):
-        hits = [i for i in byid if i.endswith('#' + a)]
-        for i in hits:
-            if i not in want: want[i] = 'delta-judged'; dn += 1
+    m = re.match(r'\| (\d+) (.+?) D \|', line)
+    if not m: continue
+    title = m.group(2).strip().lower()
+    hits = title2id.get(title) or [i for t, ids in title2id.items() if t.endswith(' ' + title) or t == title for i in ids]
+    if not hits: unmatched.append(m.group(2)); continue
+    for i in hits:
+        if i not in want: want[i] = 'delta-judged'; dn += 1
+print('delta-judged unmatched titles:', unmatched)
 cache = {}
 def text(member_file, anchor, root):
     k = (root, member_file)

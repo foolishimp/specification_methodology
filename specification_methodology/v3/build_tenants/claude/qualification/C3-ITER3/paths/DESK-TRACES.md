@@ -2,6 +2,20 @@
 
 Same-family working evidence (a Claude tracer that authored none of the iteration 3 member text; CONSTRUCTION_BINDING section 1 exception). It is not the independent integrated assessment, and it is not actual use by fresh actors.
 
+## 0. Standing at iteration 4
+
+Read under `design/REDUCTION.md` section 4.2 as rebound at iteration 4.
+The DP-43 verdict against S0, "not established", is `indeterminate`: the
+measures show no decrease in M2 or M3 and no counterexample. The verdict
+against S1 (`5ab44d5`), "simpler on condition that the shall-to-indicative
+convention is accepted", is `indeterminate` until the product owner
+decides the Q7 relation (`WRITING_GUIDE.md#current-surface-writing`) and
+the I4-04 reading records the conservation of the SPEC_METHOD §2 rows the
+path applies. The subjects of this trace are historical: at iteration 4
+the preceding candidate is `2beed8d`. The seven untraced sample paths and
+the other 38 paths are `unresolved`; criterion 6 is not `satisfied` on any
+path by this record.
+
 ## 1. What was done and what was not
 
 - Declared sample, fixed before any trace (systematic, every sixth path): DP-01, DP-07, DP-13, DP-19, DP-25, DP-31, DP-37, DP-43. The paths, dimensions and outcome rule are those of `design/REDUCTION.md` section 4 at S2 (`416bdb5`), read at lines 1382-1550 and the DP rows of the table at lines 1465-1527 and 1639-1644. DP-41 to DP-46 are defined in section 4.7, not in the section 4.4 table.

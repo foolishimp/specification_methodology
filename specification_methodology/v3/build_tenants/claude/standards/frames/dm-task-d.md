@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -21,8 +25,10 @@ Routes, in order:
 4. [SPEC_METHOD.md#change-classes](../SPEC_METHOD.md#change-classes)
 5. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 6. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
+8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 94271 bytes.
+Size of this frame: 105085 bytes.
 
 Source: DESIGN_MODULE.md#5-ontology-first-design sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1
 
@@ -1088,7 +1094,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#disposition sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Disposition
 
@@ -1488,4 +1494,101 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: DESIGN_MODULE.md#foundation-to-law sha256=67c460a337331a1d91f560c06983f4ef540f903ce09b07685ed8a98c70e7acb1 rows=3/26 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F17, software design. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. An actor enters the
+family here, when it designs, implements or reviews a boundary that this
+profile governs. The family imports these families under
+[PROFILES §1](../PROFILES.md#1-the-boundary), and its rows cite them as
+premises: F1, frames and context, for
+[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds); F2,
+transitions, steps and configuration ([ACTIVATION §1](../ACTIVATION.md#1-the-step));
+F3, results and their combination
+([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)); F4, work state,
+resumption and reuse ([ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse));
+F6, claims, evidence, assessment and acceptance
+([EVALUATION §1](../EVALUATION.md#1-claims)); F8, identity
+([IDENTITY §1](../IDENTITY.md#1-position)); F10, constitutional chain,
+outcome and build-tenant binding ([SPEC_METHOD §2](../SPEC_METHOD.md#2-the-chain));
+and F12, binding a project to the method
+([PRODUCT_DEFINITION §1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)).
+Standing of the commitments cited
+([FOUNDATIONS §3](../FOUNDATIONS.md#3-commitments)): P0 recovered; P1, P2,
+P3, P4a and P6 independent; P4b derived from P0 and P2, with P0's premise
+that step-produced facts are not re-acquirable; P5 derived from P0 and P6,
+with P0's open-world premise. Its instance premises hold where a project
+adopts this profile for a boundary; they are adopted with it and do not
+follow from the foundations (P1, P6):
+
+- I1: a Product has decided the outcomes and capabilities it builds, and
+  adopts this profile for a named boundary of its realisation;
+- I2: realisation code can hold one meaning in typed carriers and explicit
+  transforms or in orchestration, helpers, open payloads and shared
+  mutable state, and in more than one place;
+- I3: bounded actors design, implement, test, review and later change the
+  boundary, and an actor taking a later local action generally does not
+  hold the reasoning that produced the design;
+- I4: a mechanism the boundary needs can be built locally or taken from
+  existing foundations, and similar computation recurs across boundaries
+  and over time.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P1 (independent), P3 (independent), P6 (independent); F10 imported; I1 | the constitutional WHAT owns Product meaning (F10) and no realisation mints authority (P6), so a new or materially changed semantic boundary derives its semantic model from one accepted Ontology subordinate to that WHAT, and implementation cannot self-ratify missing Ontology authority; identities are declared and survive change (P3), so the Ontology carries stable identities and a basis that makes staleness decidable; a projection keeps meaning only through a declared contract (P1), so every design projection traces to the Ontology, an untraceable element is ungrounded, and a realisation derived from a reference line shows its derivation, not code comparison alone | [§5](../DESIGN_MODULE.md#5-ontology-first-design), its opening, [Ontology projection](../DESIGN_MODULE.md#ontology-projection); [§6 Reference-derived module design](../DESIGN_MODULE.md#reference-derived-module-design); [§7 Ontology evidence](../DESIGN_MODULE.md#ontology-evidence) | the ten terms of the Ontology, the definition of a material semantic boundary and the evidence items: this profile; who accepts the Ontology: the design authority ([§7 Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work)); proportionality: [ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality); the invalidators, of which a reprice is an instance: [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) | 1, 2, 6 |
+| P1 (independent), P5 (derived), P6 (independent); F3 imported; I3 | a view is a representation, not the meaning (P1), so each of three distinct views is a fidelity-checked projection of the accepted Ontology, not a peer truth surface, and a later actor reads the behaviour from them, not from memory (I3); a gate cannot report success on an axiom it did not decide (P5) and needs evidence for each claim (P6), so before promotion or a design-method closure claim every applicable axiom is evaluated across the views, and each verdict maps to one core value of F3; an axiom that does not apply satisfies only the declared disjunction and never counts as met | [§7](../DESIGN_MODULE.md#7-ontology-and-three-view-design-gate); [Domain model](../DESIGN_MODULE.md#domain-model), [Sequence model](../DESIGN_MODULE.md#sequence-model), [State model](../DESIGN_MODULE.md#state-model); [Cross-view axiom evaluation](../DESIGN_MODULE.md#cross-view-axiom-evaluation) | the three Mermaid views, the stereotypes, the ten matrix columns, and the axiom verdicts with their disjunctive predicate: this profile; another text-native format: the project's ratification; applicability and exclusion: [ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and the core | 6, 3, 9 |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); F3, F4, F6 imported | a produced design pack is a candidate until evaluated (P0), and acceptance is the owner's disposition, distinct from assessment (P6, F6), so the Ontology verdict and the design verdict are the design authority's dispositions at the design gate, and no assessment result or produced pack is the verdict; a combination with a non-satisfied mandatory result or a gap is never `satisfied` (F3), so without both verdicts `accepted` a new or semantically changed boundary is not promoted, published or closed, and implementation under co-evolution stays provisional evidence until the gate is accepted; an unchanged consumer reuses a closed result (F4), so an unchanged `realization_refactor` reuses its verdict on a proof of no delta | [Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work) | the design gate as the acceptance boundary of a semantic boundary: this profile; the decision owner: the design authority that accepts the Ontology (§5); the dispositions and their core values: [ACTIVATION §3](../ACTIVATION.md#disposition) | 9, 3 |
+
+Consumers outside this member that apply these rows, each keeping its
+owner: [ASSURANCE §14 to §16](../ASSURANCE.md#14-design-to-module-evidence-route)
+apply the module-taxonomy row through the binding at the head;
+[UX](../UX.md#1-position) refines the §4 and §10 rows for modules that
+realise a UX surface ([PROFILES §4](../PROFILES.md#4-ux)); TICKETS §6
+records the recurrence row at ticket level;
+[FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra) Shared machinery is refined for
+software design by the capability-selection row; and
+[ACTIVATION §1 Intake](../ACTIVATION.md#intake) uses the design evidence of
+the frame-conservation row when this profile governs the boundary.
+
+The table accounts for this whole member: the head, §1 to §12 and the
+binding the head declares; §13 records dispositions and decides nothing.
+Its Pillar column follows FOUNDATIONS §3. It is new in this corpus and has
+no rc.2 row. Purpose and material relation: a reader of this profile sees
+which of its rules rest on the commitments and imported families and which
+are choices this profile, the adopting Product or another owner makes, so
+no profile choice is presented as following from the foundations (P6, P2).
+
+
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821 rows=1/10 selected by the anchors this frame carries
+
+### Foundation to law: change management and ambiguity
+
+This family (F11 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how a change enters the chain, how its classification is computed
+and reused, how ambiguity is governed and how a shared interface is
+migrated. Its instance premises, which the commitments do not supply, are
+named in the rows as follows: changing specification, the specification
+changes while work proceeds; one front door, reports of every kind arrive
+at one product; shared interfaces, a shared interface has several
+producers and consumers; reserved decisions, a decision may be taken
+under declared policy or be reserved to a human authority. Standing of
+the commitments cited (FOUNDATIONS §3): P0 recovered; P1, P2, P3, P4a and
+P6 independent; P4b derived from P0 and P2, with P0's premise that
+step-produced facts are not re-acquirable; P5 derived from P0 and P6,
+with P0's open-world premise.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 independent; P2 independent; instance: changing specification, one front door | By P6 a governing relation is accepted only by its owner, so a change re-enters at the layer that owns what it changes and is accepted there. By P2 the work follows what changes, not what the report is called, so the label a report arrives under does not select its process, and a change that re-enters below Goals asserts that nothing above it changes. | [§4](../SPEC_METHOD.md#4-change-management); [Universal intake triage](../SPEC_METHOD.md#universal-intake-triage), the six determinations; [Change classes](../SPEC_METHOD.md#change-classes); [Procedures](../SPEC_METHOD.md#procedures) | the six change classes with their names, re-entry points and flows, and the four procedures: domain choices of this member; where the class is recorded: [TICKETS §4](../TICKETS.md#change-class) | 1, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §4, §5 and §7.
 

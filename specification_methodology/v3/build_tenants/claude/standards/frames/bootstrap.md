@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -27,8 +31,11 @@ Routes, in order:
 10. [ACTIVATION.md#admission](../ACTIVATION.md#admission)
 11. [ACTIVATION.md#2-context-construction-under-an-envelope](../ACTIVATION.md#2-context-construction-under-an-envelope)
 12. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
+13. [PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method](../PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method)
+14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
+15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 66291 bytes.
+Size of this frame: 95129 bytes.
 
 Source: SPEC_METHOD.md#canonical-statement sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
 
@@ -483,7 +490,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#intake sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Intake
 
@@ -527,7 +534,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#admission sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Admission
 
@@ -571,7 +578,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 2. Context construction under an envelope
 
@@ -605,7 +612,13 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. The measurement applies wherever B declares a
+   measured, and no fit claim covers it. Fit is established from the
+   recorded complete active inputs, or from a supported upper bound that
+   includes any host-supplied context; where neither exists the fit
+   judgment is `indeterminate`, unless a counterexample, such as a measured
+   excess, establishes `falsified`. A correct task result keeps its own
+   bounded standing and does not satisfy a missing fit judgment. The
+   measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -991,4 +1004,137 @@ algebra to frames, constraints and reviews and add no choice of their own
 beyond any refinement they map under the fifth row;
 [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) holds the
 step's refinements of the fifth row and the stop state of the seventh.
+
+
+Source: PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method sha256=2786351a7de4257b80df0b740ca40451ce63b74afe6e9e8f3414cf3f8bddae19 rows=3/10 selected by the anchors this frame carries
+
+### Foundation to law: binding a project to the method
+
+This family (F12 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how one project binds to the method. Its instance premises, which
+the commitments do not supply, are named in the rows as follows: own
+authorities, a project has its own product WHAT under its own authorities
+and adopts the method without becoming part of it; chosen layout, the
+project's governing documents, realisations and work carriers already
+live where the project placed them; shared workspace, several projects,
+product definitions, tenants and actors share one workspace or machine;
+recurring terms, one term occurs in several bounded contexts with
+different meanings; released method, the method is published as
+immutable released versions that a project selects, installs and later
+replaces. The index also assigns to this family the rule of
+[FOUNDATIONS §2 Imports between members](../FOUNDATIONS.md#imports-between-members);
+the table traces that rule in its sixth row, whose rule column names that
+section, and owns none of it. Each commitment's standing is written as the
+table of commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent); P3 (independent); P2 (independent); P1 (independent); instance: own authorities, chosen layout | By P6 each surface keeps its own authority, and by P2 binding adds only what the outcome needs, so a project binds to the method through one definition for each distinct product WHAT, which locates the governing surfaces and records their relations without holding their content; adoption therefore needs no restructuring, and by P3 content repeated in the definition would be a second record of one fact, a rival authority. | [§1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence); [§2](../PRODUCT_DEFINITION.md#2-required-definition-relations) | the JSON overlay, the filename convention and Definition Label, the schema and template, and the relation fields of §2: interoperability choices of this member, accepted under [§11](../PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary) | 1, 9 |
+| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P1 (independent); instance: own authorities, shared workspace | By P3 each identity binds its own exact basis, and by P1 a locator, filename, path or nesting carries no meaning, so each definition line, Product, release, tenant and project keeps its own identity, and location mints no identity, authority, inheritance or composition. By P5 an ambiguous selection is no selection, so discovery selects exactly one applicable definition for a scope or fails closed, and by P6 composition is explicit and verifies the identity it expects. | [§1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence), the identity paragraphs; [§9](../PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition) | the composition entry fields and the checks of a conforming discovered set: domain choices of this member | 1, 2 |
+| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); instance: released method | By P6 and P3 one law has one owner on one released basis, so the method has one authority surface, each law has one owning member, and the members govern only together, as one released version. By P4b a derived surface depends on its sources, so it preserves the owning clauses' conditions, carries their digests and is stale when one changes; by P1 a matching digest establishes identity, not fidelity. | [§11](../PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary) | the generic staleness law, which the digest binding refines for the carriers of a cut or installation: [ACTIVATION §2 Staleness of derived surfaces](../ACTIVATION.md#staleness-of-derived-surfaces); which concrete forms the method accepts as interoperability boundaries: this member (§1, §4); any widening of Product scope to an executable tool, runtime or realisation: separate explicit human authorisation; a policy of this member: the members govern only together, as one released version | 1, 6, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §12 and for FOUNDATIONS §2 Imports between
+members; the grounds of `out_of_frame` and `invalid_basis` stated there
+are traced by family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results). §13 records
+dispositions and decides nothing.
+
+
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d rows=15/36 selected by the anchors this frame carries
+
+### Foundation to law
+
+This family, frames and context (F1 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides how a finite actor engages a body of work through bounded reference
+frames: how a frame is declared, sized, bound, activated, related to other
+frames, used to audit coverage and revised. It covers this member; the
+context construction of
+[ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope);
+and the frame objects, authority kinds, disjointness and independence and
+frame tuple of [FOUNDATIONS §2](../FOUNDATIONS.md#frame-objects). A rule in
+another member is marked "outside this member" in the third column; the
+table owns none of the rules it names. Its instance premises are: (a) a
+workspace holds more material than one actor's capability envelope (its
+competence, context capacity, tools and access) can evaluate at once; (b)
+the evaluations to be made are declared questions about a governed
+outcome; (c) several frames and actors may bear on one workspace, and their
+material may overlap; (d) the workspace, its topology and the actors'
+capabilities change between activations; (e) an actor may read both owning
+sources and surfaces derived from them by copying, projection or
+compression. They are conditions of the work this family governs, not
+commitments, and do not follow from finite capacity alone. Two of P0's
+premises are cited by name: its actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory; and its open-world premise, that the world is open.
+The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P0 (recovered), P1 (independent), P2 (independent), P3 (independent), P6 (independent) | By P0 an actor engages only a finite specification, and by P1 and P3 a carrier is a representation of it, not the relation, so a reference frame is a finite specification of the attention, coordinates, authority, evidence and result relations one evaluation family requires. It specifies a relation, not a required schema or runtime carrier; a prompt, context packet or program is a projection of an activated frame, not the frame. A frame is bound only when every material coordinate resolves to an exact source, subject, basis, authority, evidence route, actor envelope, result relation and invalidation condition, and representation cannot create, widen or replace that binding | [FOUNDATIONS §2 The frame tuple](../FOUNDATIONS.md#the-frame-tuple) and [Frame objects](../FOUNDATIONS.md#frame-objects), Workspace, Material-relation manifold, Reference frame and Active frame configuration, outside this member | the twelve components ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩: FOUNDATIONS §2 The frame tuple | 6, 7 |
+| P0 (recovered, with its actor-change premise), P2 (independent), P6 (independent); instance premise a | By P0 and its actor-change premise an attention surface must fit and be reconstructable by the actor that uses it, so an activated frame's attention surface is finite and fits the selected actor's declared envelope; a frame that needs undeclared ambient memory, conversation history or an effectively global workspace context is not reconstructable for that actor. Where the envelope declares a context capacity, the selected context's size is measured before the actor reads it, over a stated boundary, and recorded with the capacity and the comparison; context outside the boundary is recorded as not measured. The measurement applies there and only there, is no budget and no universal gate, and shows fit and nothing else | [RF-002](../REFERENCE_FRAME.md#rf-002-finite-attention); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the size measurement, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 10 | the capacity and its unit, bytes or tokens: the actor's declared envelope; the measured boundary, and time, spend and other resource limits: the selected execution binding ([SPEC_METHOD §11](../SPEC_METHOD.md#11-build-tenant-binding)) | 7, 8 |
+| P2 (independent), P0 (recovered, with its open-world premise), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P2 and P5 a result is sound only if every relation that can change it is present, and by P0's open-world premise relations not held are not thereby absent, so every known relation whose lawful change can alter the result, the validity of the basis, the sufficiency of evidence, operation authority or decision authority appears in the frame or enters through a declared authoritative input, and omitting one makes the frame insufficient; the law does not require proof that no undiscovered material relation exists. The context starts as the material closure of the intake's seed set (the subject, outcome and affected relations it names) under that relation family, and a closure that is not finite and unique on the exact basis stops the step and is not guessed | [RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 1, outside this member | the closure law: [AC-010](../AXIOMATIC_CALCULUS.md#ac-010-material-closure); the stop's outcome, `closure_unresolved`: [ACTIVATION §3 Admission and activation](../ACTIVATION.md#admission-and-activation) | 6, 7 |
+| P2 (independent) | By P2 attention is spent only on what bears on the evaluation, so relations that cannot affect the declared evaluation stay outside active attention unless they are needed to establish that irrelevance; adjacent material, or the presence of the corpus, is no reason to load or read it. The closure is projected to the selected context with its boundary recorded | [RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 2 and Acquisition, outside this member | the seams the boundary records (excluded, external, unresolved, translated, invalidation-sensitive): ACTIVATION §2 step 2, applying [AC-011](../AXIOMATIC_CALCULUS.md#ac-011-projection) | 7 |
+| P6 (independent), P3 (independent); instance premise c | By P6 authority exists only through an admitted grant, and by P3 it binds its owner and scope, so a frame carries and applies admitted authority and never mints, widens, transfers or reconstructs it from actor identity, capability, evidence shape, implementation reachability or frame selection; declaring, selecting, activating or executing a frame, or naming a role, grants none. The kinds of authority may coincide in a lawful case and never collapse by default, and actor identity is not an authority. A read-only evaluation declares no operation authority; an effectful one inherits the exact operation grant from its existing owner. A proxy for human authority keeps its identity distinct from the human authority's | [RF-006](../REFERENCE_FRAME.md#rf-006-authority-conservation); [FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds) and [Frame objects](../FOUNDATIONS.md#frame-objects), Role, persona, abstraction, component, outside this member; [§2](../REFERENCE_FRAME.md#2-core-claims) claim 8; [§12](../REFERENCE_FRAME.md#12-violations) item 6 | the division into frame-set, semantic, evaluation, operation and decision authority, with actor identity apart, and frame-set authority as human authority: FOUNDATIONS §2 Authority kinds; when a bounded proxy may act: [IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004) | 7, 9 |
+| P6 (independent) | By P6 meaning, evidence, application, operation and decision are separate authorities, so semantic law defines what the evaluation means, evidence supplies observations, the evaluator applies the declared relation, the existing operation owner supplies any operation grant, and decision authority disposes the result; a frame declaration keeps these roles distinguishable even when one actor performs several. The evaluator applies the frame's declared invariants, evidence rules and result algebra and records every assumption whose failure could change the result | [RF-007](../REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Evaluation, outside this member | none; [EVALUATION §2](../EVALUATION.md#2-separation) applies this law to review (family F6) | 7, 9 |
+| P0 (recovered, with its actor-change premise), P6 (independent), P2 (independent), P3 (independent) | By P0's actor-change premise a frame must work for a fresh actor, and by P6 and P3 that actor receives only declared, bound inputs, so a fresh competent actor inside the declared envelope can reconstruct the activated evaluation from the frame declaration, the exact subject, the basis and the admissible inputs, without undocumented conversational or historical context. An actor receives one activated frame or one declared active frame configuration, never an implied demand to reconstruct the workspace from ambient context; it may own its internal reasoning where the governing method permits, returns through the declared result relation, and hidden reasoning substitutes for no required evidence, provenance or authority. Every field of the binding resolves through stable identities and source references, for which paths, line numbers, counts, summaries and matching labels do not substitute | [RF-013](../REFERENCE_FRAME.md#rf-013-reconstructable-activation); [§11](../REFERENCE_FRAME.md#11-the-activation-packet); [Minimal activation binding](../REFERENCE_FRAME.md#minimal-activation-binding) | the packet's minimum contents and the binding's fields: this member; the carrier: its consumer (RF-016) | 7, 9 |
+| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P0 an actor's envelope is finite, and by P5 a step cannot report success on what it did not hold, so frame adequacy includes actor usability. When the material manifold exceeds an actor's envelope, the lawful responses are another actor, a refined frame or outer contract, sequenced activations, a lawful compression or `out_of_frame`; silently omitting material relations to fit is never one of them, and a frame never silently grows beyond the selected actor's envelope. Actor capability may justify a different frame size or activation sequence, and can neither waive an invariant nor widen authority | [RF-014](../REFERENCE_FRAME.md#rf-014-capability-fit); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the responses when the context does not fit, outside this member; [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Capability envelope, outside this member; [§11](../REFERENCE_FRAME.md#11-the-activation-packet), frame size; [§12](../REFERENCE_FRAME.md#12-violations) item 10 | the selection among these responses: human authority, directly or in advance through the grant; which responses a step selects within its grant (refinement, sequencing, compression) and which re-enter the owner of the grant or envelope (another actor, a larger envelope): ACTIVATION §2 step 3 | 7, 8 |
+| P2 (independent), P0 (recovered), P6 (independent) | By P2 a compression serves the evaluation, and by P0 it must fit the envelope, so a compression preserves the material distinctions and failure detections the evaluation family requires while fitting the envelope; it need not be a unique smallest frame. Intentional overlap is kept where it supplies independently activated evaluation, different capability fit, different evidence altitude or useful fault detection, and frames are merged only when the merged frame preserves evaluation meaning, authority, capability fit and proportional reasoning cost. Whether a compression preserved what the evaluation needs is a claim: the compressing step records the compression and its preservation argument | [RF-017](../REFERENCE_FRAME.md#rf-017-proportional-compression); [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 3, compression, outside this member; [§12](../REFERENCE_FRAME.md#12-violations) item 13 | whether that claim is assessed independently: the promotion it serves ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)) | 6, 7 |
+| P2 (independent), P0 (recovered) | By P2 the method requires only what the outcome needs, and by P0 an actor needs the relations, not a carrier, so this member requires the declared relations and the observable outcomes, and no frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or software framework. A frame and the method functions may be realised in any conforming form, and the signatures describe relations, not callable interfaces; the minimal declarations are the least content that declares a frame, a frame set and an evaluation result, in any carrier | [RF-016](../REFERENCE_FRAME.md#rf-016-implementation-neutrality); [§1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit), Substrate; [§5](../REFERENCE_FRAME.md#5-method-functions), the signatures; [§13](../REFERENCE_FRAME.md#13-minimal-declarations); [§12](../REFERENCE_FRAME.md#12-violations) item 14 | the carrier: its consumer; the fields of the three minimal declarations: this member, with the out_of_frame residual field carrying what [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results) requires | 7, 8 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent) | By P5 each outcome answers its own predicate, and by P6 an outcome is not its acceptance, so the outcomes of `activate`, `conjoin` and `translate`, and the coverage statuses, each answer their own named predicate. A refused activation performs no evaluation; `decision(holds)` assesses the composite predicate and is not its acceptance; a coverage status is a result of the audit, never of the covered evaluation, and an excluded row is met by its cited exclusion, never covered or performed | [§5](../REFERENCE_FRAME.md#5-method-functions), the outcome table and the paragraph after it; [Coverage ledger](../REFERENCE_FRAME.md#coverage-ledger), the status table and the paragraph after it | the outcome and status names and their causes: this member; the mapping of each into one core value follows [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Refinements (family F3) | 3, 7 |
+| P0 (recovered, with its actor-change premise), P3 (independent), P6 (independent); instance premise e | By P0's actor-change premise and P3 an input is acquired by exact identity from the selected basis, and by P6 absence from view grants nothing, so declared inputs are acquired by exact identity, and only from the exact selected basis: a declared input absent from the actor's view is neither licence to read elsewhere nor evidence that it is absent, and a candidate source, a moving selector or another basis is no substitute. Where a derived surface is stale, missing or insufficient for a named question, the deciding owner sections are acquired directly. Acquisition is read-only, grants no role, operation or decision, and a missing binding is returned with its outcome before any dependent action | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 4 and Acquisition, outside this member | acquiring a current derived surface in preference to its owning sections where it serves the task: ACTIVATION §2 Acquisition; which derived surfaces are published: their publisher, and none owns a determination | 2, 7 |
+| P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise), P3 (independent), P6 (independent) | By P0 an actor loads only what its frame declares, and by P5 and P3 a declaration is not evidence about one activation, so activation binds each reusable frame declaration to the exact subject and basis and loads the declared material relations and evidence sources, never an undifferentiated workspace dump; a reusable declaration is not evidence that a particular activation was correct. When no available frame and actor pairing can lawfully perform the evaluation, activation returns `out_of_frame` or the refusal whose cause holds, and work does not proceed through implied context | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Activation, outside this member; [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Activated frame, outside this member | who selects the frame: the actor or the assigning authority, as the configuration allocates ([ACTIVATION §1 Configuration](../ACTIVATION.md#configuration), family F2) | 7, 8 |
+| P6 (independent), P1 (independent); instance premise e | By P6 a derived surface owns no determination, and by P1 it is a representation of its sources, so a derived surface or projected frame decides standalone only the questions its own source members own. For a question another member owns, or one that joins the law of several owners, the step returns `out_of_frame` naming the owning members, and the question is decided from those members or from a derived surface whose declared sources include every owner | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Standalone scope, outside this member | none | 6, 7, 9 |
+| P6 (independent), P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a prompt holds no authority of its own, and by P0 and P5 it carries only what the step needs, so a prompt is a rendered contract over typed authority, not source law. It projects the current authority references, obligations, contracts, boundaries, proof expectations and fallback conditions the step needs, and the material Acquisition selects; it carries no historical workaround prose unless a current surface still needs that constraint. Construction starts from the highest live authority surface the question needs and names an unresolved upstream authority gap before fallback context is read | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Prompt construction, outside this member | the design, ODD, UX and ticket specialisations: [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review), [ODD §11.5D](../ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](../ODD.md#117a-conforming-agentic-development), [UX §7](../UX.md#7-carrier-binding), and [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and [§7](../TICKETS.md#7-authority-judgment-closure-and-state) | 6, 7 |
+
+RF-012, and the mapping of the outcomes of §5 and the coverage statuses of
+§8 into the core, apply the core result algebra and its refinement rule;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+only what those rules decide about frames. Claim 9 of §2 and item 8 of §12
+state RF-012 and go with it to F3. §2 states ten core claims that the rules
+named in the rows, or RF-012, make precise; it adds no rule of its own. §12
+lists violations, each of the rule it cites, and each is traced in that
+rule's row or, for item 8, in F3. §14 states when a project operates under this member: when the
+rules named in the rows hold for its frame set, with no frame machinery,
+global context, universal completeness or domain authority inferred from
+adopting the member. §15 records dispositions and decides nothing.
+
+
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821 rows=1/13 selected by the anchors this frame carries
+
+### Foundation to law: chain, outcome and build-tenant binding
+
+This family (F10 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how a product's specification governs its realisations. Its
+instance premises, which the commitments do not supply, are named in the
+rows as follows: owned layers, a product has a selected outcome and an
+owning authority for each layer of its specification; layered surfaces,
+its specification is written as layered surfaces that actors interpret;
+several realisations, one specification may have several realisations,
+which change over time; immutable releases, a release is an immutable
+identity. Standing of the commitments cited (FOUNDATIONS §3): P0
+recovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and
+P2, with P0's premise that step-produced facts are not re-acquirable; P5
+derived from P0 and P6, with P0's open-world premise.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 independent; P6 independent; instance: immutable releases, several realisations | By P3 each lineage object binds its own identity, so lineage objects keep distinct identities, and a consumer selects one complete released version. By P6 a reusable method change has authority only through its relation to its evidence, so it keeps one authority relation from that evidence to the consumer that realises it. | [§6](../SPEC_METHOD.md#6-lineage-and-release); [Shared method adoption and propagation](../SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012) | the eight-step adoption chain: a policy choice of this member; the lineage objects: [FOUNDATIONS §2](../FOUNDATIONS.md#product-lineage-objects) | 1, 2 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §3, §6 and §9 to §11. §1 Canonical statement
+decides nothing of its own: each clause names its owning section. §8
+binds the step of ACTIVATION to this method's terms; its delivery
+priority is accounted for by family F5 at ACTIVATION §6, and the rest of
+it by family F2 at ACTIVATION §1, whose paragraph after its table names
+the rows §8 applies and the families that trace its statement of the
+step's results and its use of the tenant's binding. §12 records
+dispositions and decides nothing.
 

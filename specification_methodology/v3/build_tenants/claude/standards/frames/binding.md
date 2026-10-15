@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -25,8 +29,13 @@ Routes, in order:
 8. [ACTIVATION.md#effects](../ACTIVATION.md#effects)
 9. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 10. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+11. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
+12. [EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance](../EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance)
+13. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
+14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
+15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 81457 bytes.
+Size of this frame: 102646 bytes.
 
 Source: SPEC_METHOD.md#11-build-tenant-binding sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
 
@@ -762,7 +771,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#effects sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Effects
 
@@ -1135,4 +1144,164 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=c74ae098171a857319aadf4bb31728625ce62a57883ede743bd536f032da0326 rows=1/19 selected by the anchors this frame carries
+
+### Foundation to law
+
+This member is material family F9, the `a_c` calculus. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Instance premises,
+which the commitments do not supply:
+
+- (i) a governed symbolic system is represented by a finite model whose
+  records stand for its objects, relations, constraints, residuals,
+  traversals, transformations and judgments;
+- (ii) a model is interpreted from an exact subject and may be encoded in
+  a carrier, and subject, model and carrier are separately identified;
+- (iii) some predicates over a model are decided mechanically, and others
+  need bounded probabilistic construction or explicit human adjudication.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P1 (independent), P6 (independent), P4b (derived from P0 and P2); (ii), (iii) | By P1 an interpretation is a proposal about meaning, by P6 its acceptance is separate, by P4b its provenance persists, and by (ii) and (iii) models are interpreted from exact subjects and partly checked mechanically, so an interpretation proposes a model that its construction does not accept; every admitted record has exact provenance or is identified as model-local, every evaluated subject declaration has a disposition, structural success is evidence for semantic review and never a substitute, and a valid model satisfies every applicable law | [§6](../AXIOMATIC_CALCULUS.md#6-interpretation-and-models), [AC-017](../AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity), [AC-018](../AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation), [AC-019](../AXIOMATIC_CALCULUS.md#ac-019-valid-model) | the interpretation contract and the semantic selection and acceptance authority: the downstream authority of the subject; a decision contract for a semantic subset: the model that supplies it | 6, 10 |
+
+§11 records where each predecessor claim is carried and decides nothing.
+The table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which rules of the calculus follow from the
+foundations and which are choices, with the owner of each choice, so no
+choice is presented as derived (P6, P1).
+
+
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=6/17 selected by the anchors this frame carries
+
+### Foundation to law: claims, evidence, assessment and acceptance
+
+This family, claims, evidence, assessment and acceptance (F6 in the index
+of [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a claim is supported, how it is assessed and who accepts it.
+It covers §1 to §5 of this member. Its instance premises are: (a) claims
+about exact subjects are relied on for promotion, closure or release; (b)
+the evidence available is finite, and may observe a weaker or different
+subject, or another basis, than the one claimed; (c) a constructing actor
+may be probabilistic or otherwise fallible; (d) each boundary at which a
+claim is relied on has a decision owner. They are conditions of the work
+this family governs, not commitments, and do not follow from finite
+capacity alone.
+P0's premise that a step's output is a candidate until evaluated is cited
+by name. The standing of the consequences below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P1 (independent) | P1 keeps a representation apart from its meaning, and P6 makes a verdict a claim on evidence that a separate decision authority disposes. So the semantic basis, the evidence basis and the state projection stay distinct, as do semantic law, evidence, the evaluator's application and the disposition, and the record keeps them distinguishable where one actor performs several. It follows that an evidence change can invalidate a verdict without any change of law, a projection change can invalidate a view without changing semantic truth, and a semantic change invalidates affected downstream acceptance; a changed broad digest shows a changed representation, not that every semantic relation changed | [§2](../EVALUATION.md#2-separation), first two paragraphs | when an evidence change invalidates a verdict, with mandatory force where it does: [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) (family F4); when a derived view is stale: [ACTIVATION §2](../ACTIVATION.md#staleness-of-derived-surfaces); the re-entry a semantic change takes: [SPEC_METHOD §4](../SPEC_METHOD.md#4-change-management) (family F11); invalidating a review conservatively on a broad digest change: permitted by this section, required nowhere; the frame and a_c bindings of these separations: RF-007 and AC-018 | 6, 9 |
+| P1 (independent), P6 (independent), P3 (independent) | Structural conformance decides closed syntax, types, identities, references, bases and mechanically decidable predicates; semantic fidelity decides meaning and materiality. A checker decides the structural subset and claims a semantic or authority subset only under an exact lawful decision contract. A valid parse, a valid map, a green test and a historical judgment each establish exactly their own claim, and evidence bound to another basis is excluded, not admitted with a narrower scope | [§2](../EVALUATION.md#2-separation), second paragraph | each decision contract under which a checker decides a semantic subset: the model that supplies it ([AXIOMATIC_CALCULUS §6](../AXIOMATIC_CALCULUS.md#6-interpretation-and-models)) | 6, 8, 9 |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise c | By P6 assessment is a separate authority from construction, and by P0 and (c) a step's output is a fallible candidate until evaluated, so a constructor's self-review is construction output, not assessment; where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary | [§3](../EVALUATION.md#3-independent-assessment), first paragraph | the boundaries at which this method requires independent assessment: the Spec Method policy at [TICKETS, UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007); further boundaries: the governing basis of each promotion | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | By P3 a judgment binds the exact subject it read, and by P6 and (c) the assessor's judgment must be its own, so assessment binds an exact subject: frozen by identity before material reference exposure where method qualification applies, and otherwise stabilised by an immutable identity or an equivalent exact-subject relation sufficient for the claim, never a mutable working tree; the assessor makes no repair and does not assess its own authorship. Shared mechanical evidence may be reused; the constructor's judgment may not. A revision after exposure is a declared intervention or a new qualification subject, and cannot make the original frozen construction pass retroactively | [§3](../EVALUATION.md#3-independent-assessment), Protocol | recording the assessor's expectations from the governing source before it opens the candidate: a policy choice of this section; actor type and count, review rounds, engine, prompt and orchestration: the governing authority, through the configuration of [ACTIVATION §1](../ACTIVATION.md#configuration); policies of this section: the assessor makes no repair, and a revision after exposure is a declared intervention or a new qualification subject; where the freeze applies: method qualification (§7) | 2, 7, 9 |
+| P6 (independent); instance premise c | By P6 independence is a relation between the author and the assessor, and by (c) an author's judgment is fallible in a way that persists across its contexts, so independence rests on authorship and the evidence conditions, not on a new context, and the assessor may read the constructor's governing sources. An author that opens a fresh context to review its own candidate is still its author; its review stays self-review and cannot be relabelled as independent assessment. Independence across actor families is declared, not assumed | [§3](../EVALUATION.md#3-independent-assessment), the last two paragraphs | whether two activations of one model family are independent for a semantic judgment: the governing basis of the claim; the default where it is silent, that they are not: this section | 7, 9 |
+| P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](../EVALUATION.md#3-independent-assessment), the author-identity paragraph | none | 2, 9 |
+
+The core result a review returns for each evaluated predicate, the rule
+that a planned predicate not evaluated has no result, and the projection of
+the triage payload over the core values (§4) apply the core result algebra;
+they are traced in family F3 at
+[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
+what §4 decides about the review record, triage and returns.
+
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=899503b3b2eb22d438589d3b572bf67957ab67354aba53261da50324a004a031 rows=1/12 selected by the anchors this frame carries
+
+### Foundation to law: conformance, equivalence and qualification
+
+This family, conformance, equivalence and qualification (F7 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law)),
+decides when a realisation, a frame or the method itself is shown fit for
+what it claims. It covers §6 and §7 of this member and the
+[CONFORMANCE](../CONFORMANCE.md) member; a rule in CONFORMANCE is marked
+"outside this member" in the third column. Its instance premises are: (a)
+one specification may have several realisations; (b) realisations, frames
+and the method are made by fallible constructors and relied on by actors
+who did not make them; (c) qualification evidence comes from a finite set
+of cases, run by actors inside declared envelopes. They are conditions of
+the work this family governs, not commitments, and do not follow from
+finite capacity alone. P0's actor-change premise, that the actor of one
+step need not be the actor of the next and may re-acquire declared sources
+but not private memory, is cited by name. The standing of the consequences
+below is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | By P6 a pass is an assessor's verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](../CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history | 3, 9 |
+
+§8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
+cases, which are the choices named in the last two rows, its §5 maps the
+common discriminators to cases and logical-review checks, and its §6
+records dispositions.
+
+
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821 rows=3/13 selected by the anchors this frame carries
+
+### Foundation to law: chain, outcome and build-tenant binding
+
+This family (F10 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how a product's specification governs its realisations. Its
+instance premises, which the commitments do not supply, are named in the
+rows as follows: owned layers, a product has a selected outcome and an
+owning authority for each layer of its specification; layered surfaces,
+its specification is written as layered surfaces that actors interpret;
+several realisations, one specification may have several realisations,
+which change over time; immutable releases, a release is an immutable
+identity. Standing of the commitments cited (FOUNDATIONS §3): P0
+recovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and
+P2, with P0's premise that step-produced facts are not re-acquirable; P5
+derived from P0 and P6, with P0's open-world premise.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P2 independent; P1 independent; P6 independent; instance: several realisations | By P2 obligations follow the outcome, not the means, so the same obligations may be realised by different means, and the obligations decide fitness. By P6 executing an operation is not adjudicating it, so the kind of executor alone neither accepts nor rejects a realisation, a person performing an operation does not thereby adjudicate, and a convenient stack weakens no obligation; by P1 a representation that validates structurally is not thereby executed correctly. Only an obligation's owner can weaken it (P6), so a change that needs a weaker obligation is a change to the WHAT at its owning layer. | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rules 1, 2, 4 and 6, and Application in this method | the division of a binding into requirements calculus, computational calculus and execution environment: a domain choice of this member; each tenant's calculus and environment: that tenant's design | 4, 8 |
+| P0 recovered; P1 independent; P2 independent; P4a independent; P6 independent; P5 derived; instance: several realisations | By P0 and P5 a binding's results must be evaluable by a finite actor, so a binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. By P4a a calculus composes by its declared laws, so it may serve wherever its laws hold, whoever executes it. By P6 a project's mechanics for developing several tenants are that project's own law. | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, the limits on them, and their units and boundaries: each tenant's binding, as its obligations require, under the resource-limit law of [ACTIVATION §6 Resource limits](../ACTIVATION.md#resource-limits); the development mechanics: the project's product definition or the tenant's design | 3, 8 |
+| P1 independent; P0 recovered; P4a independent; P6 independent; instance: several realisations | By P1 and P4a the steps of a construction, what its data means and how it is carried out are separately declared, so they stay three separate accounts across the binding. A mapping from one account to another is a transformation, so it states and discharges its preservation under the law of [ACTIVATION §4 Refinement](../ACTIVATION.md#refinement) and, where it is recorded in a_c, of [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation). | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rule 7 | which accounts a mapping joins, and the evidence that discharges its preservation in the environment: each tenant's binding; the three accounts of a construction: an added choice whose owner is the Intent of the Product that owns this corpus, in its Direction, defined at [FOUNDATIONS §2 Accounts of a construction](../FOUNDATIONS.md#accounts-of-a-construction) | 6, 8 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §3, §6 and §9 to §11. §1 Canonical statement
+decides nothing of its own: each clause names its owning section. §8
+binds the step of ACTIVATION to this method's terms; its delivery
+priority is accounted for by family F5 at ACTIVATION §6, and the rest of
+it by family F2 at ACTIVATION §1, whose paragraph after its table names
+the rows §8 applies and the families that trace its statement of the
+step's results and its use of the tenant's binding. §12 records
+dispositions and decides nothing.
+
+
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821 rows=1/10 selected by the anchors this frame carries
+
+### Foundation to law: change management and ambiguity
+
+This family (F11 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides how a change enters the chain, how its classification is computed
+and reused, how ambiguity is governed and how a shared interface is
+migrated. Its instance premises, which the commitments do not supply, are
+named in the rows as follows: changing specification, the specification
+changes while work proceeds; one front door, reports of every kind arrive
+at one product; shared interfaces, a shared interface has several
+producers and consumers; reserved decisions, a decision may be taken
+under declared policy or be reserved to a human authority. Standing of
+the commitments cited (FOUNDATIONS §3): P0 recovered; P1, P2, P3, P4a and
+P6 independent; P4b derived from P0 and P2, with P0's premise that
+step-produced facts are not re-acquirable; P5 derived from P0 and P6,
+with P0's open-world premise.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P5 derived; P6 independent; P2 independent; instance: reserved decisions | By P5 an ambiguity left unrecorded would be read as resolved, so major ambiguity at a boundary is detected and recorded with its outcome, and no dependent claim rests on an ambiguity that is carried, escalated or blocked as if it were resolved. By P2 whether it blocks depends on the risk the outcome bears, so it is policy, and by P6 a hard stop holds whatever the policy. | [§5](../SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); [Spec-drivenness litmus](../SPEC_METHOD.md#spec-drivenness-litmus) item 12 | the risk appetite, which sets the threshold between probabilistic decision and human adjudication: the project's declared policy; the order of narrowing, the major and micro split and the two concept identities: domain choices of this member; the hard-stop classes: [ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement) | 6, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §4, §5 and §7.
 

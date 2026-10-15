@@ -11,7 +11,11 @@ code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
 the SHA-256 of the whole owning member. The section digest recorded in
 FRAME_INPUTS.json is over the owner's bytes, not over this copy. The
-owning section decides; this frame owns no determination.
+owning section decides; this frame owns no determination. An excerpt
+whose `Source:` line says `rows=k/n` is a family table of which only
+the k rows that cite a section this frame carries are copied, with the
+table's preamble, header and every non-family table; the other rows
+stay in the owning member and are not needed for this task.
 
 Routes, in order:
 
@@ -27,10 +31,11 @@ Routes, in order:
 10. [TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009)
 11. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 81521 bytes.
+Size of this frame: 87933 bytes.
 
-Source: ACTIVATION.md#transitions sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#transitions sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Transitions
 
@@ -116,7 +121,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 2. Context construction under an envelope
 
@@ -150,7 +155,13 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. The measurement applies wherever B declares a
+   measured, and no fit claim covers it. Fit is established from the
+   recorded complete active inputs, or from a supported upper bound that
+   includes any host-supplied context; where neither exists the fit
+   judgment is `indeterminate`, unless a counterexample, such as a measured
+   excess, establishes `falsified`. A correct task result keeps its own
+   bounded standing and does not satisfy a missing fit judgment. The
+   measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -342,7 +353,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#construction-availability sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Construction availability
 
@@ -393,7 +404,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#effects sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ### Effects
 
@@ -446,7 +457,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#5-work-state-and-restart sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 5. Work state and restart
 
@@ -583,7 +594,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=a1d0788c5f4ed86004ca344c80248d647b99e0a1638991e459dca1ef786d871c
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=8cb70114f940d1810593b03867b45a8adc5cef536705c7ba003d5f5567a1422c
 
 ## 7. Closed result and reuse
 
@@ -1168,4 +1179,35 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6 rows=3/11 selected by the anchors this frame carries
+
+### Foundation to law: work carriers
+
+This family (F13 in the index of
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))
+decides which record carries a piece of work, what that record may claim
+and when the work closes. Its instance premises, which the commitments do
+not supply, are named in the rows as follows: lifetimes, work and its
+obligations last one run, one bounded batch or longer; several surfaces,
+goals, tickets, comments, boards and summaries can each appear to state
+the same work state; several tenants, one work item may be realised in
+more than one build tenant; migrations, some work replaces one
+authoritative truth path with another across producers, consumers and
+proofs; carriers vary, a project may keep its carriers in files, trackers
+or services. Each commitment's standing is written as the table of
+commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); instance: several surfaces, carriers vary | By P3 one state binds one authority and basis, and by P6 a projection is not authority, so work state has one authority chain: goals own the work wave, the ticket owns its state and milestone authority its milestones, and a board, comment, index or summary is a projection that answers one question. By P5 contradictory authorities cannot both be read as satisfied, so contradiction among them blocks closure; by P4b a milestone's acceptance establishes only its own claim. A comment is a post: provisional until its content is adopted into the owning surface, with its own discussion state. Another carrier is lawful only as an explicit rebinding with no rival left. | [One-truth state projection and drift refusal (UP-009)](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009); §1 [Comments](../TICKETS.md#comments), [Milestones and phase-scoped truth (UP-006)](../TICKETS.md#milestones-and-phase-scoped-truth-up-006); §2 [Default layout](../TICKETS.md#default-layout), [Bindings and projections](../TICKETS.md#bindings-and-projections), [Carrier substitution](../TICKETS.md#carrier-substitution); §4 [Status](../TICKETS.md#status), [Lanes](../TICKETS.md#lanes); §9 [Relationship to other surfaces](../TICKETS.md#relationship-to-other-surfaces); [POSTING_GUIDE §2](../POSTING_GUIDE.md#2-boundary), [§7](../POSTING_GUIDE.md#7-discussion-state-and-mutability), [§9](../POSTING_GUIDE.md#9-ratification) | the default layout, the lanes and the minimum status sets: domain choices of this member, which a project may extend; a rebinding of ticket authority: the product definition; the post categories, structure and discussion states: [POSTING_GUIDE](../POSTING_GUIDE.md) | 1, 6, 9 |
+| P6 (independent); P1 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); P2 (independent); P3 (independent) | By P6 authority to author is not independent authority to verify. By P1 and P3 a verdict means only the claim it binds, so a review verdict is bounded by its claim and traceable to it. By P0 and P4b a judgment or ruling must survive a change of actor, so it is recorded once, in its original terms, and reused while it applies; by P5 changed evidence invalidates what it affects. | §7 [Execution and verification authority separation (UP-007)](../TICKETS.md#execution-and-verification-authority-separation-up-007), [Recorded judgment and owner-ruling continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity) | the four repricing dispositions of an obligation: this member. The assessment protocol and the reuse law are [EVALUATION §3](../EVALUATION.md#3-independent-assessment) and [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), not choices | 7, 9 |
+| P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable) | By P5 a claim is satisfied only by valid evidence for each obligation, under the conjunction of FOUNDATIONS §4, so a work claim is complete only when every applicable obligation is satisfied and no non-closure condition remains. By P6 review evaluates and does not decide, so its occurrence is not the closing event; by P6 a test's expected result needs work authority, so it comes from admitted work authority, never from the implementation. | §7 [Condition-based closure and reuse](../TICKETS.md#condition-based-closure-and-reuse), [Test case authority](../TICKETS.md#test-case-authority) | the five-step reconciliation order: this member. The conjunction and the general test law are [FOUNDATIONS §4](../FOUNDATIONS.md#conjunction-of-results) and [ASSURANCE §3](../ASSURANCE.md#3-test-authority), not choices | 3, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §9, and for POSTING_GUIDE §2, §7 and §9,
+which have no family table of their own. §10 records dispositions and
+decides nothing.
 
