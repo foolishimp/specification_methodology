@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T15:28:12Z
+updated_at: 2026-10-15T15:52:00Z
 dependencies: []
 ---
 
@@ -28,11 +28,13 @@ The common Writer is admitted for the affected Intent, Product, principles, requ
 
 The bounded working review is assigned to a fresh nonauthor Codex activation, with expectations fixed from the preceding common source before candidate inspection. It reviews a named successor and material dependents, writes only its review in common Codex comments and performs no repair or Git effects. This same-family working check is available within the current session; it is not a Claude review, a cross-family acceptance or the owner's decision. Review and research limits are disclosed in their returns; no paid external actor call is selected. Primary-source research is read-only. Construction and assurance costs are included in the account; complete host context and native token spend are uninstrumented.
 
-I5 standing: common authorship selected; successor review and ratification pending. The [work map](T-002-c3-successor-construction.md#iteration-5-common-preparation) identifies affected owners and proof. Prior I4 ratification, admissions and evidence retain their exact subjects.
+I5 standing: source prepared and nonauthor working review satisfied on `455ce5d`; exact-source owner ratification pending. The [work map](T-002-c3-successor-construction.md#iteration-5-common-preparation) identifies affected owners and proof. Prior I4 ratification, admissions and evidence retain their exact subjects.
 
 2026-10-15T15:40:22Z — The common Writer returns the construction model, its P1–P6 synthesis, shared requirement, nine member discriminators and integrated-use check. The [research record](../../comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md) separates formal results, assumptions and local choices. The Product Definition verifies; 356 local/installed links and scoped whitespace pass. P1–P6 bodies, prior I4 ticket sections and unrelated root edits are byte-preserved. The Git Writer checkpoints these exact common/commentary files for nonauthor readback, then the Ledger Writer records their input from that commit in a descendant. This is a source return, not ratification or tenant acceptance.
 
 The Ledger Writer records [C3-I5-01](T-002-c3-successor-construction.md#c3-i5-01-proposed-input-snapshot) from source `455ce5d32bc3dfb31ba5882d51311a549612de90` in a descendant commit. Its 18 pins bind the exact proposed common source and supporting inputs. The independent working readback addresses that source; the recording operation changes no governing clause.
+
+2026-10-15T15:52:00Z — The Executive consumes the [nonauthor working review](../../comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md): `satisfied`, with no required common-law repair on `455ce5d`. It separates lawful intermediate work from the evidence required at completion and retains conditional proof, uncertainty and owner-governed outcomes. The same-family review covers common-source coherence, not tenant implementation, empirical effectiveness, cross-family acceptance or ratification. Its recorded 536-second review and 240,313-byte source/diff-output subtotal disclose acquisition limits; native spend and complete active context remain unmeasured. The Ledger Writer projects this result in Goals and T-002. A separate Writer removes one empty EOF line from each of the two new commentary posts, closing the P3 editorial note without changing their meaning; the frozen input retains their original bytes. The Git Writer checkpoints only the review, these work-state projections and the editorial repair. All deciding clauses retain source `455ce5d`, and C3-I5-01 remains unchanged.
 
 ### Iteration 4 ratification
 

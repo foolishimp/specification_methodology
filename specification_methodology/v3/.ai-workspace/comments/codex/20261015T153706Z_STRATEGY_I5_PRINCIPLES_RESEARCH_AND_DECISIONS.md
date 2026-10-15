@@ -45,4 +45,3 @@ For example, if every permitted operation leaves an unsatisfactory state unchang
 A research subactivation inspected the Simon, Russell/Wefald, Ashby and Conant/Ashby sources in approximately five minutes and returned explicit limits. The common author inspected the construction and categorical sources and assembled this synthesis. The separate nonauthor working reviewer fixed expectations before seeing candidate edits; its subsequent report supplies the actual review finding. No external paid actor calls occurred. Full host context and native token cost are uninstrumented.
 
 Common source becomes the next tenant input only after exact-source review and owner ratification. Research and checkpoint visibility supply neither.
-

@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T15:40:22Z
+updated_at: 2026-10-15T15:52:00Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -40,6 +40,8 @@ The direction separates lawful construction from the chosen constrained outcome.
 | I5-04 Use and integrated proof | Universal Construction Discriminators; Construction And Integrated Closure | Existing or new evidence demonstrates the affected end-to-end composition, with independent expectations, exact subjects and disclosed resource/tradeoff limits. A separate execution per discriminator is not required. |
 
 Only I5-00 is active. I5-01–04 describe dependent tenant work for later admissions. They do not select a donor, spend, shared comparison protocol, categorical trial or release. The exact I4 construction returns remain inputs on their own subjects; no complete I4 acceptance or qualification is inferred. Reviewable source and its input hashes are checkpointed separately under the existing snapshot rule.
+
+I5-00 source is prepared at `455ce5d`, with the satisfied nonauthor working readback and its limits recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-universal-construction). Exact-source ratification remains pending. The snapshot below retains its standing at recording; this current projection changes no input or admission.
 
 ## C3-I5-01 proposed input snapshot
 

@@ -91,4 +91,3 @@ Proposed discriminators:
 | Local steps pass but the end-to-end feature fails | Preserve the outer failure; task completion cannot substitute for the required composition. |
 
 The test of I5 is a simpler, coherent account governing actual delivery decisions. Outstanding I4 member acceptance, interpretation fidelity, practical comparison and release qualification remain separate obligations.
-
