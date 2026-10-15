@@ -36,9 +36,9 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 88785 bytes.
+Size of this frame: 88849 bytes.
 
-Source: ACTIVATION.md#transitions sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#transitions sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Transitions
 
@@ -124,7 +124,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 2. Context construction under an envelope
 
@@ -362,7 +362,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#construction-availability sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Construction availability
 
@@ -413,7 +413,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#effects sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Effects
 
@@ -466,7 +466,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#5-work-state-and-restart sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 5. Work state and restart
 
@@ -603,7 +603,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 7. Closed result and reuse
 
@@ -661,8 +661,9 @@ whether a result it touches stays valid is this section's.
 A reviewable transition identifies the exact candidate, the affected
 relations, the changed realisation paths, the authority paths added or
 removed, the retained and open seams, the focused proof, any required
-integration proof, the explicit non-changes, and the decision owner's
-disposition or the assessor's recommended disposition (§3). Consumers
+integration proof, the explicit non-changes, and, where an assessor was
+activated, the assessor's recommended disposition, with the decision
+owner's disposition beside it once one is made (§3). Consumers
 choose the representation. Transition evidence is a read
 model; it does not become specification, design or admission authority
 (P6, P4b; provenance rc.2 SPEC_METHOD

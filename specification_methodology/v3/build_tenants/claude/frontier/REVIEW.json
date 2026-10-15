@@ -9108,7 +9108,7 @@
    "successor_loci": [
     {
      "locus": "ACTIVATION.md#transition-evidence",
-     "sha256": "a946fa2e8951c5ed2554fc6dc26551e1aa74a09af4c81cde013f1329c8750ae2"
+     "sha256": "4b69b1a11eb4f7db7ddff2598e7bb2d385e4486c3d580229fda040ed6eae790b"
     }
    ],
    "modal_conversion": true,
@@ -10323,7 +10323,7 @@
    "source_anchor": "#canonical-compression",
    "identifiers": "",
    "disposition": "conserved",
-   "disposition_note": "conserved; the testing-frame evidence topology moves to ASSURANCE \u00a77 with the frames; \"adds no owner of its own\" is written as owning only the bindings the lead names, as an operational profile under the common single ownership requirement, item 2",
+   "disposition_note": "conserved, save the adoption clause split to the child row below; the testing-frame evidence topology moves to ASSURANCE \u00a77 with the frames; \"adds no owner of its own\" is written as owning only the bindings the lead names, as an operational profile under the common single ownership requirement, item 2",
    "proposed_replacement": false,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
@@ -10348,6 +10348,36 @@
     "what_changed": "Adoption of the profile is assigned to the Product authority; the predecessor let the existing authority owning the affected decision admit it. Whether Goals, requirement or accepted-design authority may adopt depends on PRODUCT_DEFINITION \u00a77 and ACTIVATION \u00a71 Configuration, not given.",
     "counterexample": "",
     "smallest_repair": "Either state that adoption may be admitted by any authority the rc.2 rule allowed, or declare the actor narrowing as a replacement relation."
+   }
+  },
+  {
+   "id": "STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression-adoption-authority",
+   "source_member": "STDO_REFERENCE_FRAME_BASELINE.md",
+   "source_anchor": "#canonical-compression-adoption-authority",
+   "identifiers": "",
+   "disposition": "superseded",
+   "disposition_note": "superseded, proposed and pending the product owner's acceptance, by PRODUCT_DEFINITION \u00a77, under which adopting the profile is the Product authority's act, in place of \"admitted by the existing project authority that owns the affected decision\", which let a Goals, requirement or accepted-design authority admit it; each decision a configuration makes stays admitted by the authority that owns it. The same relation as the adoption rows of DESIGN_MODULE_METHOD #15 and UX_METHOD #1a and #13 (question Q2 of the consolidated list; I4-04 batch 05). Child row of `#canonical-compression`, its anchor synthetic",
+   "proposed_replacement": true,
+   "disposition_standing": "author_proposal",
+   "acceptance": "ticket_decision_pending",
+   "predecessor_sha256": null,
+   "successor_loci": [
+    {
+     "locus": "EXECUTIVE_BASELINE.md#1-canonical-compression",
+     "sha256": "e6c05d4b0024f4b8cb26208978cbf6f7280328844208c49505892a5eee399c98"
+    },
+    {
+     "locus": "PRODUCT_DEFINITION.md#7-collective-reference-frame-basis",
+     "sha256": "0b38fcd6ccbadb97da54c958d01734bfbec5e8c8c2bd69ea926393903ab6c4b5"
+    }
+   ],
+   "modal_conversion": false,
+   "semantic_review": {
+    "result": "indeterminate",
+    "scope": "author disposition; no nonauthor assessment recorded for this row",
+    "remaining_obligations": [
+     "author-independent comparison of required and permitted decisions, modal force, triggers, scope and exceptions"
+    ]
    }
   },
   {
@@ -12098,7 +12128,7 @@
    "source_anchor": "#define-a-project-configuration",
    "identifiers": "",
    "disposition": "conserved",
-   "disposition_note": "conserved; the explanation of the allocation and the evaluation of a configuration by its task, which ACTIVATION \u00a71 Configuration requires of every configuration, are applied here",
+   "disposition_note": "conserved, save the record's tenth item split to the child row below; the nine record items of the predecessor are kept, and the evaluation of a configuration by its task, which ACTIVATION \u00a71 Configuration requires of every configuration, is applied here",
    "proposed_replacement": false,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
@@ -12119,6 +12149,36 @@
     "what_changed": "A tenth required record item is added: the allocation explanation with material resource limits and failure assumptions. A configuration record complete under rc.2's nine items is incomplete under the successor.",
     "counterexample": "An accepted-design record defines a project frame configuration with the nine rc.2 items and no allocation explanation. rc.2: the configuration is lawfully recorded. Successor: the record lacks a required item.",
     "smallest_repair": "Declare the added record item as new law from ACTIVATION \u00a71 Configuration with its own replacement relation, not as conservation of rc.2."
+   }
+  },
+  {
+   "id": "STDO_REFERENCE_FRAME_BASELINE.md#define-a-project-configuration-allocation-explanation",
+   "source_member": "STDO_REFERENCE_FRAME_BASELINE.md",
+   "source_anchor": "#define-a-project-configuration-allocation-explanation",
+   "identifiers": "",
+   "disposition": "superseded",
+   "disposition_note": "superseded, proposed and pending the product owner's acceptance, by ACTIVATION \u00a71 Configuration, which requires every configuration record to carry the explanation of its allocation with its material resource limits and failure assumptions. The predecessor's record has nine items and no such requirement; a record complete under the predecessor is incomplete under the successor, so the tenth item is new law with its purpose stated at ACTIVATION \u00a71 Configuration, not a conserved claim (I4-04 batch 05). Child row of `#define-a-project-configuration`, its anchor synthetic",
+   "proposed_replacement": true,
+   "disposition_standing": "author_proposal",
+   "acceptance": "ticket_decision_pending",
+   "predecessor_sha256": null,
+   "successor_loci": [
+    {
+     "locus": "EXECUTIVE_BASELINE.md#define-a-project-configuration",
+     "sha256": "1571863149d99f7fa20ef5c41f0788d69f1b6652a805a9339b28d4bbb3c23548"
+    },
+    {
+     "locus": "ACTIVATION.md#configuration",
+     "sha256": "47724f89bf5e45bd6e26f8d858c2050173c8cb7f8a887a9e03a458c39658c207"
+    }
+   ],
+   "modal_conversion": false,
+   "semantic_review": {
+    "result": "indeterminate",
+    "scope": "author disposition; no nonauthor assessment recorded for this row",
+    "remaining_obligations": [
+     "author-independent comparison of required and permitted decisions, modal force, triggers, scope and exceptions"
+    ]
    }
   },
   {
@@ -17459,18 +17519,18 @@
    }
   }
  ],
- "row_count": 645,
- "semantic_sha256": "8e295249b1d9f0b27f95c3d78847b04b488df71659b1da8edf4710c149879c02",
+ "row_count": 647,
+ "semantic_sha256": "c874c29d9a07cf2e10f7cbf1cae91a9ebb244076ae1844236918bdb0f56d97be",
  "counts": {
   "modal_conversion": 125,
   "assessed": 85,
-  "unresolved_predecessor_anchor": 12,
+  "unresolved_predecessor_anchor": 14,
   "unresolved_successor_locus": 0,
-  "proposed_replacement": 15,
+  "proposed_replacement": 17,
   "by_disposition": {
    "conserved": 611,
    "not": 19,
-   "superseded": 15
+   "superseded": 17
   }
  }
 }

@@ -1524,8 +1524,9 @@ whether a result it touches stays valid is this section's.
 A reviewable transition identifies the exact candidate, the affected
 relations, the changed realisation paths, the authority paths added or
 removed, the retained and open seams, the focused proof, any required
-integration proof, the explicit non-changes, and the decision owner's
-disposition or the assessor's recommended disposition (§3). Consumers
+integration proof, the explicit non-changes, and, where an assessor was
+activated, the assessor's recommended disposition, with the decision
+owner's disposition beside it once one is made (§3). Consumers
 choose the representation. Transition evidence is a read
 model; it does not become specification, design or admission authority
 (P6, P4b; provenance rc.2 SPEC_METHOD

@@ -43,7 +43,7 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 117515 bytes.
+Size of this frame: 117579 bytes.
 
 Source: EXECUTIVE_BASELINE.md#executive sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
@@ -697,7 +697,7 @@ does not become an additional independent Reviewer result because the actor
 used reviewer-like tools (P6, P1).
 
 
-Source: ACTIVATION.md#construction-availability sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#construction-availability sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Construction availability
 
@@ -748,7 +748,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#disposition sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#disposition sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Disposition
 
@@ -790,7 +790,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 7. Closed result and reuse
 
@@ -848,8 +848,9 @@ whether a result it touches stays valid is this section's.
 A reviewable transition identifies the exact candidate, the affected
 relations, the changed realisation paths, the authority paths added or
 removed, the retained and open seams, the focused proof, any required
-integration proof, the explicit non-changes, and the decision owner's
-disposition or the assessor's recommended disposition (§3). Consumers
+integration proof, the explicit non-changes, and, where an assessor was
+activated, the assessor's recommended disposition, with the decision
+owner's disposition beside it once one is made (§3). Consumers
 choose the representation. Transition evidence is a read
 model; it does not become specification, design or admission authority
 (P6, P4b; provenance rc.2 SPEC_METHOD

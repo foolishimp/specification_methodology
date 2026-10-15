@@ -50,7 +50,7 @@ Routes, in order:
 26. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 27. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 119620 bytes.
+Size of this frame: 119684 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
@@ -865,7 +865,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#admission-and-activation sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Admission and activation
 
@@ -903,7 +903,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#disposition sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Disposition
 
@@ -945,7 +945,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 7. Closed result and reuse
 
@@ -1003,8 +1003,9 @@ whether a result it touches stays valid is this section's.
 A reviewable transition identifies the exact candidate, the affected
 relations, the changed realisation paths, the authority paths added or
 removed, the retained and open seams, the focused proof, any required
-integration proof, the explicit non-changes, and the decision owner's
-disposition or the assessor's recommended disposition (§3). Consumers
+integration proof, the explicit non-changes, and, where an assessor was
+activated, the assessor's recommended disposition, with the decision
+owner's disposition beside it once one is made (§3). Consumers
 choose the representation. Transition evidence is a read
 model; it does not become specification, design or admission authority
 (P6, P4b; provenance rc.2 SPEC_METHOD

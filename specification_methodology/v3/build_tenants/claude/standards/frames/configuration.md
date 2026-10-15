@@ -47,9 +47,9 @@ Routes, in order:
 23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 148975 bytes.
+Size of this frame: 149039 bytes.
 
-Source: ACTIVATION.md#transitions sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#transitions sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Transitions
 
@@ -135,7 +135,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#intake sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Intake
 
@@ -179,7 +179,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#configuration sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Configuration
 
@@ -305,7 +305,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#roles-and-delegation sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Roles and delegation
 
@@ -383,7 +383,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 2. Context construction under an envelope
 
@@ -621,7 +621,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ## 7. Closed result and reuse
 
@@ -679,8 +679,9 @@ whether a result it touches stays valid is this section's.
 A reviewable transition identifies the exact candidate, the affected
 relations, the changed realisation paths, the authority paths added or
 removed, the retained and open seams, the focused proof, any required
-integration proof, the explicit non-changes, and the decision owner's
-disposition or the assessor's recommended disposition (§3). Consumers
+integration proof, the explicit non-changes, and, where an assessor was
+activated, the assessor's recommended disposition, with the decision
+owner's disposition beside it once one is made (§3). Consumers
 choose the representation. Transition evidence is a read
 model; it does not become specification, design or admission authority
 (P6, P4b; provenance rc.2 SPEC_METHOD
@@ -696,7 +697,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#construction-availability sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Construction availability
 
@@ -747,7 +748,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=b90f9006a996ed4e59afd8a6429b0e937378a85c9416284adacb2f07e8754e54
+Source: ACTIVATION.md#effects sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
 
 ### Effects
 
