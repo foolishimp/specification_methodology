@@ -14,4 +14,5 @@ decide the required improvement), `falsified` (a counterexample), or
 | Path | Against S0 | Against S1 | M2 S0→S2 | M3 S0→S2 | M4a S0→S2 | M5 S0→S2 | Note |
 |---|---|---|---|---|---|---|---|
 | DP-01 | `indeterminate` | `indeterminate` | 4→0 | 2→0 | 2,330→28,087 | 21→5 | G passes on S2; elimination witness (four rivals and two reconciliations removed); the entry README's size is an increase no declared tradeoff explains, which the pre-declared rule does not let the trace excuse; S1 and S2 byte-identical on the route |
+| DP-07 | `indeterminate` | `indeterminate` | 3→0 | 3→0 | 2,330→28,087 | 13→4 | G passes on all three; M2, M3, M4b and M5 fall against S0; the only unexplained increase is the entry README's growth; against S1 nothing is left to remove and the 340-byte M4b rise is a preserved distinction |
 | DP-43 (I3) | `indeterminate` | `indeterminate` | | | | | see `../../C3-ITER3/paths/DESK-TRACES.md` §0 |
