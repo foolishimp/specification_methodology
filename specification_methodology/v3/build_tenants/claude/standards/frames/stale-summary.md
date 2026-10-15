@@ -5,7 +5,8 @@ Task: Resume interrupted work as a new session from a retained summary that disa
 Purpose: The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -33,9 +36,9 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 87933 bytes.
+Size of this frame: 88506 bytes.
 
-Source: ACTIVATION.md#transitions sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#transitions sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Transitions
 
@@ -121,7 +124,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ## 2. Context construction under an envelope
 
@@ -155,13 +158,15 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. Fit is established from the
-   recorded complete active inputs, or from a supported upper bound that
-   includes any host-supplied context; where neither exists the fit
-   judgment is `indeterminate`, unless a counterexample, such as a measured
-   excess, establishes `falsified`. A correct task result keeps its own
-   bounded standing and does not satisfy a missing fit judgment. The
-   measurement applies wherever B declares a
+   measured, and no fit claim covers it. The fit claim for a measured
+   boundary and the step's fit judgment are distinct: the judgment is
+   established from the recorded complete active inputs, or from a
+   supported upper bound that includes any host-supplied context; where
+   neither exists it is `indeterminate`, unless a counterexample, such as
+   a measured excess, establishes `falsified`. A correct task result keeps
+   its own bounded standing and does not satisfy a missing fit judgment
+   (P0, P5; new law carried at iteration 4 from the common construction
+   contract's Limits). The measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -234,7 +239,11 @@ The actor reads the selected material and the actual subject, and follows
 the material source and coupled-obligation references the task needs
 (step 2; [RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency));
 presence of the corpus is no reason to read it (step 2;
-[RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). Before any dependent action, a missing binding is returned with
+[RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). No frame,
+derived surface or acquisition carries a universal sufficiency claim:
+sufficiency is decided for the named question against the task's
+material relations, never for the corpus or the frame as a whole
+([RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency)). Before any dependent action, a missing binding is returned with
 its outcome of [§3 Admission and activation](../ACTIVATION.md#admission-and-activation),
 naming what is missing: where no available frame declares what the
 evaluation needs, `out_of_frame`; where the basis the step requires is
@@ -353,7 +362,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#construction-availability sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Construction availability
 
@@ -404,7 +413,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#effects sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Effects
 
@@ -457,7 +466,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#5-work-state-and-restart sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ## 5. Work state and restart
 
@@ -594,7 +603,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ## 7. Closed result and reuse
 
@@ -859,7 +868,7 @@ evidence remains history and cannot be projected as current acceptance
 (P6, P4b).
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1055,7 +1064,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 

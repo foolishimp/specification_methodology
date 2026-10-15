@@ -5,7 +5,8 @@ Task: Decide whether an assessed candidate or an exact release cut is accepted: 
 Purpose: The owning sections for review results and triage, acceptance and when a finding blocks promotion, the four dispositions, the core result algebra and its conjunction, condition-based closure, release acceptance criteria, and successor baseline conservation.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -32,9 +35,9 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 64174 bytes.
+Size of this frame: 64468 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#4-review-results sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 4. Review results
 
@@ -105,7 +108,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: EVALUATION.md#5-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#5-acceptance sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 5. Acceptance
 
@@ -184,7 +187,7 @@ keep a bounded review from blocking on observations outside its claim
 while a non-waivable hard stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#disposition sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Disposition
 
@@ -226,7 +229,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -422,7 +425,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 
@@ -587,7 +590,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
+Source: RELEASE.md#8-acceptance sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b
 
 ## 8. Acceptance
 
@@ -627,7 +630,7 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -658,7 +661,9 @@ stays a preference, and every permitted exception and scope condition
 survives, or the claim is not conserved. A statement that a whole
 package's wording is equivalent establishes none of this for any claim
 (P6, P1; the common successor disposition requirement, carried here as
-the test this section applies).
+the test this section applies). A `conserved` disposition recorded
+before this test applied is re-evaluated under it before the affected
+claim qualifies; until then its standing is `unresolved`.
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](../EVALUATION.md#1-claims)), not a result value; its
@@ -688,7 +693,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=4/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=4/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -722,7 +727,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=1/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -753,7 +758,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2 rows=3/12 selected by the anchors this frame carries
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b rows=3/12 selected by the anchors this frame carries
 
 ### Foundation to law: release and successor conservation
 

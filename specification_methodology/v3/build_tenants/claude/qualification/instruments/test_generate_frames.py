@@ -246,7 +246,7 @@ class Refusals(unittest.TestCase):
             tree.close()
 
     def test_frame_over_limit_is_refused_not_truncated(self):
-        big = '## A\n\n' + ('x' * 99 + '\n') * 1000
+        big = '## A\n\n' + ('x' * 99 + '\n') * (gf.MAX_FRAME_BYTES // 100 + 10)
         tree = TempTree({'M.md': big}, [frame('big', ('M.md', 'a'))])
         try:
             before = tree.files()
@@ -431,7 +431,7 @@ class TenantFrames(unittest.TestCase):
             routes = [(r['owner'], r['anchor']) for r in entry['routes']]
             self.assertIn(('standards/FOUNDATIONS.md', 'results'), routes)
             data = outputs[TENANT / entry['path']]
-            sources = re.findall(rb'^Source: (\S+)#(\S+) sha256=([0-9a-f]{64})$', data, re.M)
+            sources = re.findall(rb'^Source: (\S+)#(\S+) sha256=([0-9a-f]{64})(?: rows=\d+/\d+ [^\n]*)?$', data, re.M)
             self.assertEqual([(Path(o).name, a) for o, a in routes],
                              [(s[0].decode(), s[1].decode()) for s in sources])
 
@@ -608,6 +608,57 @@ class TenantLinkResolution(unittest.TestCase):
                             anchors = {h[3] for h in gf.Member(resolved, (TENANT / resolved).read_bytes()).headings}
                             self.assertIn(fragment, anchors, f'{where}: {rebased_link} names no heading')
         self.assertGreater(pairs, 0)
+
+
+
+
+class RowSelection(unittest.TestCase):
+    """Requirement 6 of design/CROSS_SYNTHESIS.md part 5: `rows: frame-anchors`."""
+    TEXT = (
+        '# M\n\n## Entry\n\ntext\n\n## Foundation to law\n\npreamble\n\n'
+        '| Instance premise | Standing |\n|---|---|\n| I1 | adopted |\n\n'
+        '| Premises, with standing | Consequence that follows | Rule in this member that states it | Added choice | Pillar |\n'
+        '|---|---|---|---|---|\n'
+        '| P1 | by P1 so a | [§1](#entry) | none | 1 |\n'
+        '| P2 | by P2 so b | [§9](#other) | none | 2 |\n'
+        '| P3 | by P3 so c | [Y §2](Y.md#yy); [§1](#entry) | none | 3 |\n'
+        '| P4 | by P4 so d | (#entry) in code `[x](#entry)` | none | 4 |\n\n'
+        'after the table\n\n## Other\n\nz\n')
+
+    def test_keeps_header_prose_and_cited_rows_only(self):
+        m = member(self.TEXT, 'standards/M.md')
+        start, end, _ = m.section('foundation-to-law')
+        idx, total, kept = gf.select_rows(m, start, end, 'standards/M.md', {'M.md': {'entry'}, 'Y.md': set()})
+        text = b''.join(m.lines[i] for i in idx).decode()
+        self.assertEqual((total, kept), (4, 2))
+        self.assertIn('| I1 | adopted |', text)            # non-family table kept whole
+        self.assertIn('| P1 | by P1 so a', text)
+        self.assertIn('| P3 | by P3 so c', text)
+        self.assertNotIn('| P2 | by P2 so b', text)
+        self.assertNotIn('| P4 |', text)                    # bare (#entry) is not a link destination
+        self.assertIn('preamble', text); self.assertIn('after the table', text)
+
+    def test_cross_member_link_counts_when_that_owner_route_is_carried(self):
+        m = member(self.TEXT, 'standards/M.md')
+        start, end, _ = m.section('foundation-to-law')
+        idx, total, kept = gf.select_rows(m, start, end, 'standards/M.md', {'Y.md': {'yy'}})
+        self.assertEqual((total, kept), (4, 1))
+
+    def test_build_records_rows_and_marks_source_line(self):
+        tree = TempTree({'M.md': self.TEXT, 'Y.md': '# Y\n\n## yy\n\nq\n'},
+                        [{'id': 'f', 'task': 't', 'scope': 's', 'routes': [
+                            {'owner': 'standards/M.md', 'anchor': 'entry'},
+                            {'owner': 'standards/M.md', 'anchor': 'foundation-to-law', 'rows': {'mode': 'frame-anchors'}}]}])
+        try:
+            out = gf.build(tree.root, tree.inputs)
+            frame = out[tree.root / 'standards/frames/f.md'].decode()
+            manifest = json.loads(out[tree.inputs].decode())
+            self.assertIn('rows=2/4 selected by the anchors this frame carries', frame)
+            rows = manifest['frames'][0]['routes'][1]['rows']
+            self.assertEqual((rows['mode'], rows['selected'], rows['total']), ('frame-anchors', 2, 4))
+            self.assertEqual(len(rows['excerpt_sha256']), 64)
+        finally:
+            tree.close()
 
 
 if __name__ == '__main__':

@@ -630,7 +630,7 @@ Members and sections with no family table, each with its reason:
   and decides no outcome of its own; family F10 traces its use at
   SPEC_METHOD §11. FOUNDATIONS §5: its hypotheses are not law and decide
   no outcome.
-- PROFILES: §1 owns the import rule that every profile table cites in its
+- PROFILES: §1 owns the family-import rule, which families a profile imports and how a row cites them under the import rule of §2, that every profile table cites in its
   premise column; §2 to §6 index the profiles, whose own tables trace
   their bindings.
 - POSTING_GUIDE and WRITING_GUIDE: their conventions are policy choices

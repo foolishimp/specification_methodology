@@ -1111,7 +1111,7 @@
     {
       "uri": "urn:stdo-3:claude:i3:clause:block-outside-claim",
       "clause_type": "constraint",
-      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
       "arguments": [
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
@@ -1122,8 +1122,16 @@
           "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
         },
         {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "by itself"
+        },
+        {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification",
-          "literal": "repricing or re-entry input, returned as §4 states: by itself"
+          "literal": "the observation is repricing or re-entry input, returned as §4 states"
         },
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:support",

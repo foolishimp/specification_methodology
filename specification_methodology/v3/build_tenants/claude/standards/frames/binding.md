@@ -5,7 +5,8 @@ Task: State the build-tenant binding of a software tenant and a human-process te
 Purpose: The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -35,7 +38,7 @@ Routes, in order:
 14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 102846 bytes.
+Size of this frame: 102944 bytes.
 
 Source: SPEC_METHOD.md#11-build-tenant-binding sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
 
@@ -298,7 +301,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#2-ontology sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ## 2. Ontology
 
@@ -628,7 +631,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: EVALUATION.md#2-separation sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#2-separation sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 2. Separation
 
@@ -677,7 +680,7 @@ scope (P3;
 [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#3-independent-assessment sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 3. Independent assessment
 
@@ -725,9 +728,9 @@ supplies no review authority the author lacks: an author that opens a
 fresh context to review its own candidate is still its author, and its
 review is self-review, which stays construction output and cannot be
 relabelled as independent assessment (P6; UP-007 applied to a fresh
-context). Authorship attaches to the text wherever it is carried: a
-contribution received from another author stays that author's, and that
-author's reading of it supplies no independent acceptance of it (P6).
+context). A contribution received from another author stays that
+author's wherever it is carried, and that author's reading of it supplies
+no independent acceptance of it (P6).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -773,7 +776,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#effects sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Effects
 
@@ -826,7 +829,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1022,7 +1025,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 
@@ -1177,7 +1180,7 @@ foundations and which are choices, with the owner of each choice, so no
 choice is presented as derived (P6, P1).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=6/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=6/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1213,7 +1216,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=1/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 

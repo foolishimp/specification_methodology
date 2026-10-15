@@ -5,7 +5,8 @@ Task: Enter this method for a task not yet specified: say what the method is, bi
 Purpose: The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, the frame tuple and the activation packet; the step's intake and admission; context construction with the size measurement, acquisition, activation and evaluation; and the core result algebra.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -35,7 +38,7 @@ Routes, in order:
 14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 95129 bytes.
+Size of this frame: 95702 bytes.
 
 Source: SPEC_METHOD.md#canonical-statement sha256=500e420a4d9cdbf0b88c8817de26a4a6a4ed41edec529d99b7ac6f6dcfb49821
 
@@ -82,7 +85,7 @@ cost and forcing close review; they are not authority layers and cannot hide
 drift (§4).
 
 
-Source: FOUNDATIONS.md#product-lineage-objects sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#product-lineage-objects sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Product lineage objects
 
@@ -324,7 +327,7 @@ source may author a future cut; it must not silently govern a consumer
 (P6, P3).
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Authority kinds
 
@@ -391,7 +394,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#the-frame-tuple sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#the-frame-tuple sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### The frame tuple
 
@@ -416,7 +419,7 @@ source-linked prose, and representation cannot create, widen or replace it
 (P3, P6).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 11. The activation packet
 
@@ -490,7 +493,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#intake sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Intake
 
@@ -534,7 +537,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#admission sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Admission
 
@@ -578,7 +581,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ## 2. Context construction under an envelope
 
@@ -612,13 +615,15 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. Fit is established from the
-   recorded complete active inputs, or from a supported upper bound that
-   includes any host-supplied context; where neither exists the fit
-   judgment is `indeterminate`, unless a counterexample, such as a measured
-   excess, establishes `falsified`. A correct task result keeps its own
-   bounded standing and does not satisfy a missing fit judgment. The
-   measurement applies wherever B declares a
+   measured, and no fit claim covers it. The fit claim for a measured
+   boundary and the step's fit judgment are distinct: the judgment is
+   established from the recorded complete active inputs, or from a
+   supported upper bound that includes any host-supplied context; where
+   neither exists it is `indeterminate`, unless a counterexample, such as
+   a measured excess, establishes `falsified`. A correct task result keeps
+   its own bounded standing and does not satisfy a missing fit judgment
+   (P0, P5; new law carried at iteration 4 from the common construction
+   contract's Limits). The measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -691,7 +696,11 @@ The actor reads the selected material and the actual subject, and follows
 the material source and coupled-obligation references the task needs
 (step 2; [RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency));
 presence of the corpus is no reason to read it (step 2;
-[RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). Before any dependent action, a missing binding is returned with
+[RF-004](../REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). No frame,
+derived surface or acquisition carries a universal sufficiency claim:
+sufficiency is decided for the named question against the task's
+material relations, never for the corpus or the frame as a whole
+([RF-003](../REFERENCE_FRAME.md#rf-003-material-sufficiency)). Before any dependent action, a missing binding is returned with
 its outcome of [§3 Admission and activation](../ACTIVATION.md#admission-and-activation),
 naming what is missing: where no available frame declares what the
 evaluation needs, `out_of_frame`; where the basis the step requires is
@@ -810,7 +819,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1043,7 +1052,7 @@ are traced by family F3 at
 dispositions and decides nothing.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d rows=15/36 selected by the anchors this frame carries
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686 rows=15/36 selected by the anchors this frame carries
 
 ### Foundation to law
 

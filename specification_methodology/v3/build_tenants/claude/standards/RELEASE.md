@@ -667,7 +667,9 @@ stays a preference, and every permitted exception and scope condition
 survives, or the claim is not conserved. A statement that a whole
 package's wording is equivalent establishes none of this for any claim
 (P6, P1; the common successor disposition requirement, carried here as
-the test this section applies).
+the test this section applies). A `conserved` disposition recorded
+before this test applied is re-evaluated under it before the affected
+claim qualifies; until then its standing is `unresolved`.
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](EVALUATION.md#1-claims)), not a result value; its

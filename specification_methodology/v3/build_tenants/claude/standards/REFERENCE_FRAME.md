@@ -83,13 +83,12 @@ registry, graph or frame engine is required (P2; RF-016).
 
 This member imports the concepts below into
 `urn:stdo:bounded-context:reference-frame-evaluation` under the import rule
-of [FOUNDATIONS §2](FOUNDATIONS.md#imports-between-members). Source and
-target meanings are identical owner-qualified references, not new local
-definitions. Direction is from the named source to this context; loss is
-none and no translation or ownership transfer is asserted. FOUNDATIONS,
-ACTIVATION and EVALUATION declare no bounded-context identity, so each
-row's source context is its member; the target context and its owner are
-declared in Scope above (P1, P3).
+of [FOUNDATIONS §2](FOUNDATIONS.md#imports-between-members), which states
+what an import is, its direction and loss, and that it transfers no
+ownership and confers no authority; this declaration restates none of
+that. FOUNDATIONS, ACTIVATION and EVALUATION declare no bounded-context
+identity, so each row's source context is its member; the target context
+and its owner are declared in Scope above (P1, P3).
 
 | Referenced concept | Source context | Exact source concept and owner |
 |---|---|---|
@@ -105,9 +104,7 @@ declared in Scope above (P1, P3).
 | the closed result and its reuse | ACTIVATION | [Closed result and reuse](ACTIVATION.md#7-closed-result-and-reuse), ACTIVATION §7 |
 | qualification of a frame and of this method | EVALUATION | [Qualification of frames and of the method](EVALUATION.md#7-qualification-of-frames-and-of-the-method), EVALUATION §7 |
 
-These are reference-only imports into
-`urn:stdo:bounded-context:reference-frame-evaluation`. They provide no
-semantic, evaluation, operation or decision authority. Scope bounds what
+Scope bounds what
 this member owns; a concept of those kinds that another member defines,
 such as evaluation, basis, the activation step, the core results or
 qualification, is imported here, and this member defines it no second

@@ -5,7 +5,8 @@ Task: Write the transformation record for one step between two exact models, sta
 Purpose: The owning sections for the model signature and typed records, the laws a transformation and its application obey with their outcomes, judgment separation and promotion, traversals, authority kinds, and the core result algebra with its conjunction.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -36,9 +39,9 @@ Routes, in order:
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
 
-Size of this frame: 74039 bytes.
+Size of this frame: 74170 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Authority kinds
 
@@ -891,7 +894,7 @@ universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
 topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1087,7 +1090,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 

@@ -5,7 +5,8 @@ Task: Judge causal claims, an event correction, a typed lineage edge and a prece
 Purpose: The owning sections for occurrence events, relation families, constraint, judgment, residual and stop kinds with their core mapping, occurrence identity, admission and correction, causality and precedence, effects, frontiers, authority, the calculus laws they import, and the core result algebra with its conjunction.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -37,7 +40,7 @@ Routes, in order:
 16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
 17. [TRAVERSAL_OCCURRENCE.md#foundation-to-law](../TRAVERSAL_OCCURRENCE.md#foundation-to-law)
 
-Size of this frame: 109721 bytes.
+Size of this frame: 109852 bytes.
 
 Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=c74ae098171a857319aadf4bb31728625ce62a57883ede743bd536f032da0326
 
@@ -1133,7 +1136,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#effects sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ### Effects
 
@@ -1186,7 +1189,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1382,7 +1385,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 

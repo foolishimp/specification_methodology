@@ -5,7 +5,8 @@ Task: Build or assess one member of this corpus: state its family table in the r
 Purpose: The owning sections for the foundation-to-law table format and family index, authority kinds, imports between members, the core result algebra, independent assessment and review results, successor dispositions, and the coverage of the common conformance discriminators.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -31,9 +34,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 79561 bytes.
+Size of this frame: 79918 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Authority kinds
 
@@ -100,7 +103,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#imports-between-members sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Imports between members
 
@@ -160,7 +163,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#foundation-to-law sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Foundation to law
 
@@ -267,7 +270,7 @@ Members and sections with no family table, each with its reason:
   and decides no outcome of its own; family F10 traces its use at
   SPEC_METHOD §11. FOUNDATIONS §5: its hypotheses are not law and decide
   no outcome.
-- PROFILES: §1 owns the import rule that every profile table cites in its
+- PROFILES: §1 owns the family-import rule, which families a profile imports and how a row cites them under the import rule of §2, that every profile table cites in its
   premise column; §2 to §6 index the profiles, whose own tables trace
   their bindings.
 - POSTING_GUIDE and WRITING_GUIDE: their conventions are policy choices
@@ -289,7 +292,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -485,7 +488,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#3-independent-assessment sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 3. Independent assessment
 
@@ -533,9 +536,9 @@ supplies no review authority the author lacks: an author that opens a
 fresh context to review its own candidate is still its author, and its
 review is self-review, which stays construction output and cannot be
 relabelled as independent assessment (P6; UP-007 applied to a fresh
-context). Authorship attaches to the text wherever it is carried: a
-contribution received from another author stays that author's, and that
-author's reading of it supplies no independent acceptance of it (P6).
+context). A contribution received from another author stays that
+author's wherever it is carried, and that author's reading of it supplies
+no independent acceptance of it (P6).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -543,7 +546,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63
+Source: EVALUATION.md#4-review-results sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
 ## 4. Review results
 
@@ -614,7 +617,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -645,7 +648,9 @@ stays a preference, and every permitted exception and scope condition
 survives, or the claim is not conserved. A statement that a whole
 package's wording is equivalent establishes none of this for any claim
 (P6, P1; the common successor disposition requirement, carried here as
-the test this section applies).
+the test this section applies). A `conserved` disposition recorded
+before this test applied is re-evaluated under it before the affected
+claim qualifies; until then its standing is `unresolved`.
 
 Each disposition is a claim the successor makes about one predecessor
 claim ([EVALUATION §1](../EVALUATION.md#1-claims)), not a result value; its
@@ -794,7 +799,7 @@ run and assessed is never counted as passed, and no mapping exempts a
 member from logical review (P6, P2).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=7/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=7/17 selected by the anchors this frame carries
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -831,7 +836,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=44fb25040cd703b8978c5425e331d033dd52c6a2d8171694f173830d1e8e4e63 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=1/12 selected by the anchors this frame carries
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -862,7 +867,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=feed9aabdb71e1a460406e1db88f844bb1fb996eba7273ecc83b90b6a2b00aa2 rows=2/12 selected by the anchors this frame carries
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b rows=2/12 selected by the anchors this frame carries
 
 ### Foundation to law: release and successor conservation
 

@@ -48,7 +48,7 @@ Line citations of this candidate's own members are to its base,
 | 3 | Reference-only import declarations | `successor/standards/FOUNDATIONS.md:128–162`. `successor/standards/TRANSFORMATION_LIBRARY.md:27–57` is a second instance of the same declaration, read for comparison only; nothing is taken from it | REFERENCE_FRAME §1, `### Imports into this context`, replacing its "Statement of ownership" paragraph. It follows the import rule owned by FOUNDATIONS §2 (decision D7 in [DOCUMENT_STRUCTURE](DOCUMENT_STRUCTURE.md#ownership-decisions)), which is this line's own text | adapted: direction, loss and no-transfer sentences (130–132, 155–156) with this candidate's context and owner names substituted; table columns unchanged; rows written for this candidate's concepts | single ownership items 3 and 4: a use of another member's concept names its owner |
 | 4 | Equivalence ladder: conformance, then semantic, computational and categorical equivalence | `successor/standards/FOUNDATIONS.md:249–258`: category and functor assertion 249–250; naming of A, I and C_H from 251 to "supplied." on 254; the ladder from "For a proposed span" on 254 to 258 | EVALUATION §6 Conformance of realisations, which already separates conformance from semantic and computational equivalence (`EVALUATION.md:184–188`); FOUNDATIONS §4 Formal fragment refers to it | the ladder adapted to this candidate's symbols 𝒜, ℐ and 𝒞_H; lines 249 to the end of the naming sentence on 254 not ported, because `FOUNDATIONS.md:379–382` of this candidate already states that obligation | item 4 of the [categorical demonstration standard](../../../specification/requirements/README.md#categorical-demonstration-standard): conformance, equivalence and functorial preservation are distinct claims |
 | 5 | Verbatim, digest-bound frames with a manifest, and direct acquisition of deciding owners | Frame layout: `successor/standards/frames/WORK_RECOVERY.md` (preface 1–21, `Source:` line 25 with the owning member's digest, verbatim section from 27); the other four frames in `successor/standards/frames/` follow it. Manifest: `qualification/C3/FRAME_INPUTS.json`, with seven top-level keys: `kind`, `limits`, `frames`, `source_linked_summaries`, `view_subject_binding`, `initial_derivation_commit`, `initial_derivation_commit_standing`. Generator: `qualification/C3/refresh_views.py:1–18` (digest and heading-slug functions) and `:44–66` (frame regeneration). Acquisition rule: `successor/plugins/spec/skills/stdo-work/SKILL.md:18–39`, chiefly 28–32 | frames and manifest: `standards/frames/` with `standards/frames/FRAME_INPUTS.json`; generator: `qualification/instruments/generate_frames.py`; acquisition rule: ACTIVATION §2 (owner), routed from the `stdo-work` skill in packaging | frame mechanism verbatim, except that relative links inside each copied section are rebased so they resolve from `standards/frames/` (revision 2b, Codex review F5); each section digest is still computed over the owner bytes, and the `Source:` line format differs from Codex's. Manifest adapted: `kind`, `limits` and `frames` (per frame `path`, `bytes`, `sha256`, `scope`, `routes[]` with `owner`, `owner_sha256`, `anchor`, `section_sha256`) taken verbatim; the other four keys not taken, because they bind Codex's source-linked summaries and its derivation history. Generator adapted under the requirements below; prefaces rewritten; acquisition rule adapted | stale and oversized a_c-projected frames; single ownership item 4 (a frame's copy names its owner); single result algebra item 7 |
-| 6 | Finite check with mutant counterexamples | `qualification/C3/a_c/finite_check.py:1–95`, with the files in the same directory that it reads (`SOURCE.md`, `program.json`, `program-mutant.json`) and writes (`FINITE_RESULT.json`), and `ENCODING.md` | `qualification/instruments/finite_oracle/` as an oracle template for criterion 4 case designs; the method law it serves is EVALUATION §7 Frame qualification | pattern adapted; Codex lines 6–9, 11–13 and 94–95 copied verbatim (re-indented), the rest adapted or not ported, as `returns/C2.md` records; no domain copied | expectations specified independently of the author, checked exhaustively where the domain is finite |
+| 6 | Finite check with mutant counterexamples | `qualification/C3/a_c/finite_check.py:1–95`, with the files in the same directory that it reads (`SOURCE.md`, `program.json`, `program-mutant.json`) and writes (`FINITE_RESULT.json`), and `ENCODING.md` | `qualification/instruments/finite_oracle/` as an oracle template for criterion 4 case designs; the method law it serves is EVALUATION §7 Frame qualification | pattern adapted; Codex lines 6–9, 12–13 and 94–95 copied verbatim (re-indented); line 11 adapted, `TEMPLATE = Path(__file__).resolve()` for the donor's `root = Path(__file__).resolve().parent` (corrected at I4), the rest adapted or not ported, as `returns/C2.md` records; no domain copied | expectations specified independently of the author, checked exhaustively where the domain is finite |
 
 ### Frontier cone of each part
 
@@ -80,11 +80,20 @@ cone with its own source coordinates.
 
 **Part 1.** Codex's three columns are premises, conditional consequence,
 and particular contract with independent choice. Relation 1 asks for
-premises, consequences, and added choices with their owners, so this line
-uses four columns:
+premises, consequences, and added choices with their owners, and relation
+1 also asks that the applicable pillar contributions be bound to each
+argument, so this line uses five columns, the fifth added at I3-2 and
+not in the source:
 
-| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner |
-|---|---|---|---|
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+
+Three further additions are this line's own text, not in the source:
+the ten-pillar definition under the table (what a Pillar cell names);
+the trace paragraph each family writes above its table (which family it
+is, where an actor enters it, which families it imports), so the actor
+meets the trace where it applies the rules; and the placement rule that
+the table sits in the owning member at the family's entry section.
 
 FOUNDATIONS §3 Foundation to law owns this format and states once, adapted
 from Codex 108–112, the standing of every family's consequences: they are
@@ -103,7 +112,14 @@ others. The standing column uses only the four standing terms of
 FOUNDATIONS §1: "recovered" for P0, "independent" for P1, P2, P3, P4a and
 P6, and "derived from …" for P4b and P5. The paragraph states that the
 recovered and independent commitments are the adopted premises (decision
-D6). The "Distinction retained" column is kept.
+D6). The "Distinction retained" column is kept. Differences beyond those,
+each this line's own text: a new opening sentence introducing the
+commitments; a gloss that finite capacity alone derives none of them;
+"each with its owner" on the domain and policy choices, because relation
+1 asks for owners; a reworded closing sentence and a purpose sentence,
+as every section of this candidate carries. The owner sentence at Codex
+55–56 is not carried: FOUNDATIONS §3 already names the owner of the
+commitments table in its own voice.
 
 For every adapted part, the receiving Writer's return shows each changed
 sentence beside its source. That record is the author's evidence and an
@@ -122,9 +138,39 @@ tier-2 owner. Decision D7 therefore places the import rule in FOUNDATIONS
 §2; PRODUCT_DEFINITION §5 keeps translation, equivalence and
 disambiguation and refers to FOUNDATIONS §2 for import.
 
+What was ported where, corrected at I4 after the R2b readback:
+FOUNDATIONS §2 Imports between members carries the direction, loss and
+no-transfer sentences (Codex 130–132, adapted to this corpus) and the
+no-authority and basis sentences (Codex 141–144 and 161–162, near
+verbatim); those sentences are a ported contribution in FOUNDATIONS'
+cone with these source coordinates, not this line's own text.
+REFERENCE_FRAME §1 `Imports into this context` is the declaration for
+one context: it names the owner of the rule and carries only the table
+and what is specific to this context. The sentences it repeated from the
+rule were removed at I4 so the rule has one owner. Two rules in that
+declaration are this line's own text, with their reasons: a refinement
+this member states names its owner and maps back to it (single result
+algebra, one owner per determination); a frame or frame family that a
+profile or product declares in this context is that owner's
+specialisation and is not imported (PROFILES §1 owns family import).
+Not carried from the source, with reasons: the source and target basis
+pins (an import is a relation between owning sections; the basis an
+activation binds is FOUNDATIONS §2 Basis, stated once there); the
+review-carrier and role-label sentences (carriers are TICKETS' and role
+labels are PROFILES' matter).
+
 **Part 4.** The categorical rung keeps Codex's condition: categorical
 equivalence needs a quasi-inverse and natural isomorphisms on a stated
-domain, and an analogy or matching result is insufficient.
+domain, and an analogy or matching result is insufficient. Differences
+from Codex 249–258, each this line's own: `Sigma_contract` is written Σ,
+this candidate's symbol for the contract; the natural-isomorphism
+condition names the functor and its quasi-inverse explicitly (corrected
+at I4 from "the pair"); the items a categorical claim must meet are not
+restated, they are referred to FOUNDATIONS §4 Formal fragment, which
+owns them (corrected at I4); a sentence disambiguates this rung from the
+cross-context relations of PRODUCT_DEFINITION §5; and the rule that the
+rungs are not ordered, so evidence for one is not evidence for another,
+is stated because EVALUATION §1 requires it.
 
 **Part 5.** The Codex frame prefaces state that a frame "makes no
 material-sufficiency claim" and that no result enumeration follows from it
@@ -141,6 +187,21 @@ digest (`section_sha256`) of every route, so a copy that differs from its
 owner is detected by regeneration. a_c projections are optional: they may
 be published beside the verbatim frames, and they are not the activation
 unit.
+
+Differences from the Codex frame layout and acquisition rule beyond the
+above, each this line's own: a frame specification carries an `id` and a
+`task` beside its scope and routes, so a frame is selected by task; the
+acquisition rule of ACTIVATION §2 adds the order "derived surface first
+where its sources are current, else the deciding owner sections", the
+stale fallback, and the naming of the outcome when a binding is missing;
+and, at I4 (I4-06, tradeoff TO1), a route may carry `rows: frame-anchors`,
+under which the generator copies from a family table only the rows that
+cite a section the frame carries, with the table's preamble, header and
+every non-family table, so that a frame carries the derivations of its
+own sections and excludes the others; such an excerpt is not a byte copy
+of its section and its `Source:` line says so (`rows=k/n`). The sentence
+of Codex `SKILL.md` that no acquisition makes a universal sufficiency
+claim is carried in ACTIVATION §2 (restored at I4).
 
 The generator `qualification/instruments/generate_frames.py` is written
 by activation C1 of the [PLAN](../qualification/C3-SYNTHESIS/PLAN.md). It
@@ -176,6 +237,12 @@ must meet these requirements:
 5. Tests. Each refusal has a test, and so does each section that RW1
    (finding F14) lists as ending early under Codex's rule at a heading
    inside a fenced block: each is extracted to its full extent.
+6. Row selection (I4). A `rows: frame-anchors` route keeps prose,
+   headings, blank and fenced lines, every table header and separator,
+   every row of a table whose header has no `Consequence` column, and
+   the family-table rows whose link destinations name an anchor the
+   frame carries in that member; the route records `selected`, `total`
+   and the excerpt digest. It has a test.
 
 **Part 6.** The pattern taken is: enumerate a declared finite domain
 exhaustively (Codex 34–56); derive the expected cardinalities

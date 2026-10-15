@@ -269,7 +269,9 @@ applicable evaluation and its result; a false predicate excludes only that
 obligation, under its cited authority; a missing or ambiguous premise
 leaves applicability unresolved, not false. A supported inapplicability
 of a conditional obligation is recorded as such, apart from any result
-value, and waives no criterion of the member's acceptance. A frame name, an available
+value, and waives no criterion of the member's acceptance (P5, P6; new
+law carried at iteration 4 from the common construction contract's
+conformance case on inapplicability). A frame name, an available
 tool or a listed family triggers no activation by itself. Where
 applicability needs residual semantic judgment, that judgment and its
 evidence are retained as a judgment, never represented as a computed fact
@@ -550,13 +552,15 @@ the actor's envelope B:
    compared with that capacity. The measurement, the capacity and the
    outcome of the comparison are recorded before the read. A fit holds
    only for the measured boundary: context outside it is recorded as not
-   measured, and no fit claim covers it. Fit is established from the
-   recorded complete active inputs, or from a supported upper bound that
-   includes any host-supplied context; where neither exists the fit
-   judgment is `indeterminate`, unless a counterexample, such as a measured
-   excess, establishes `falsified`. A correct task result keeps its own
-   bounded standing and does not satisfy a missing fit judgment. The
-   measurement applies wherever B declares a
+   measured, and no fit claim covers it. The fit claim for a measured
+   boundary and the step's fit judgment are distinct: the judgment is
+   established from the recorded complete active inputs, or from a
+   supported upper bound that includes any host-supplied context; where
+   neither exists it is `indeterminate`, unless a counterexample, such as
+   a measured excess, establishes `falsified`. A correct task result keeps
+   its own bounded standing and does not satisfy a missing fit judgment
+   (P0, P5; new law carried at iteration 4 from the common construction
+   contract's Limits). The measurement applies wherever B declares a
    context capacity, whatever question the step governs, because without
    it a fit claim against that capacity is an assertion, and a context
    that exceeds it would be cut without record
@@ -629,7 +633,11 @@ The actor reads the selected material and the actual subject, and follows
 the material source and coupled-obligation references the task needs
 (step 2; [RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency));
 presence of the corpus is no reason to read it (step 2;
-[RF-004](REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). Before any dependent action, a missing binding is returned with
+[RF-004](REFERENCE_FRAME.md#rf-004-irrelevance-exclusion)). No frame,
+derived surface or acquisition carries a universal sufficiency claim:
+sufficiency is decided for the named question against the task's
+material relations, never for the corpus or the frame as a whole
+([RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency)). Before any dependent action, a missing binding is returned with
 its outcome of [§3 Admission and activation](#admission-and-activation),
 naming what is missing: where no available frame declares what the
 evaluation needs, `out_of_frame`; where the basis the step requires is
@@ -1578,7 +1586,7 @@ SM rows received by this member (anchors into rc.2 SPEC_METHOD.md):
 | #agentic-construction-execution-stdo-up-020 | conserved; the normative relation and the non-prescription of worker internals | §1 The step |
 | #sufficient-execution-intake | conserved; all six items; the design-profile input laws are consumed by reference to DESIGN_MODULE | §1 Intake |
 | #bounded-causal-construction | conserved | §1 Execution unit |
-| #construction-assessment-and-delegation | conserved; constructor, assessor and decision owner are named as the responsibilities a configuration allocates where its operations include construction, assessment or disposition, not as an inventory of roles (§1 Configuration); "No Executive activation is required" is written "No coordinating activation is required"; "Executive mutation restrictions remain applicable" is conserved at EXECUTIVE_BASELINE, whose Executive keeps its no-mutation rule, and §1 states the general case for the coordinating role a configuration selects, which is new; the proxy's permitted decisions inside a step are here, and what a proxy cannot change is the proxy limit of FOUNDATIONS §2 Authority kinds, which this section applies; "condition-based result recording" is stated in full in Recording a result without review | §1 Roles and delegation |
+| #construction-assessment-and-delegation | conserved; constructor, assessor and decision owner are named as the responsibilities a configuration allocates where its operations include construction, assessment or disposition, not as an inventory of roles (§1 Configuration); "No Executive activation is required" is written "No coordinating activation is required"; "Executive mutation restrictions remain applicable" is conserved at EXECUTIVE_BASELINE, whose Executive keeps its no-mutation rule, and §1 states the general case for the coordinating role a configuration selects, which is new; the proxy's permitted decisions inside a step are here, and what a proxy cannot change is the proxy limit of FOUNDATIONS §2 Authority kinds, which this section applies; "condition-based result recording" is stated in full in Recording a result without review | §1 Roles and delegation; EXECUTIVE_BASELINE, at the section the disposition names |
 | #proportional-disposition | conserved, save the returning party split to the child row below; the four dispositions with their conditions | §3 Disposition |
 | #proportional-disposition-returning-party | superseded, proposed and pending the product owner's acceptance, by §3 Disposition: the decision owner disposes an assessed candidate, and an assessor's recommendation is evidence for it. The rc.2 sentence "Assessment returns one of these semantic dispositions" gives the act to assessment. Child row of `#proportional-disposition`, its anchor synthetic | §3 Disposition |
 | #transition-evidence-and-proof-cadence | conserved; "the assessor disposition" is read as the decision owner's disposition or the assessor's recommended disposition, which §3 Disposition separates | §7 Transition evidence |

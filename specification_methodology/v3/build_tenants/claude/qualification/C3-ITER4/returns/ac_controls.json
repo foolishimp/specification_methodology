@@ -3,15 +3,26 @@
  "controls": [
   {
    "control": "identity-positive",
-   "expects": "materialised ac.py digest equals the recorded digest",
+   "expects": "the materialised executable, schema and output contract match the digests in A_C_DEPENDENCY.md",
    "holds": true,
-   "detail": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+   "detail": {
+    "expected": {
+     "Executable": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+     "Schema": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+     "Output-contract": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+    },
+    "mismatches": []
+   }
   },
   {
    "control": "identity-adverse",
-   "expects": "a tampered copy fails the same digest comparison",
+   "expects": "the same identity check refuses when one member is tampered (one byte appended to the schema)",
    "holds": true,
-   "detail": "c434ceb5e7b82ca5d6295b1cf9c22a3fd5bb9e92192fd289875c4e2f7c75d04e"
+   "detail": {
+    "mismatches": [
+     "Schema"
+    ]
+   }
   },
   {
    "control": "validate-positive",
@@ -49,62 +60,62 @@
   },
   {
    "control": "project-positive",
-   "expects": "all 8 projections exit 0 and are byte-identical to a_c/i3/projections",
+   "expects": "all 8 projections from the fresh map exit 0 and are byte-identical to a_c/i3/projections",
    "holds": false,
    "detail": [
     [
      "authority-kinds",
      "reference-only",
-     1,
+     0,
      false,
      ""
     ],
     [
      "authority-kinds",
      "materialized",
-     1,
+     0,
      false,
      ""
     ],
     [
      "promotion-block",
      "reference-only",
-     1,
+     0,
      false,
      ""
     ],
     [
      "promotion-block",
      "materialized",
-     1,
+     0,
      false,
      ""
     ],
     [
      "result-algebra-and-conjunction",
      "reference-only",
-     1,
+     0,
      false,
      ""
     ],
     [
      "result-algebra-and-conjunction",
      "materialized",
-     1,
+     0,
      false,
      ""
     ],
     [
      "reuse-and-invalidation",
      "reference-only",
-     1,
+     0,
      false,
      ""
     ],
     [
      "reuse-and-invalidation",
      "materialized",
-     1,
+     0,
      false,
      ""
     ]
@@ -112,13 +123,14 @@
   },
   {
    "control": "project-adverse-dropped-clause",
-   "expects": "a program with one clause dropped from a frame index projects differently from the frozen projection",
+   "expects": "a program with one clause dropped from a frame index validates, and its projection differs from the fresh positive projection of that index (the passing baseline), and from the frozen one",
    "holds": true,
    "detail": {
     "dropped": "urn:stdo-3:claude:i3:clause:what-creates-no-authority",
     "exit": 0,
     "validate_status": "valid",
-    "exists": true,
+    "baseline_exists": true,
+    "differs_from_fresh": true,
     "stderr": ""
    }
   }
@@ -127,6 +139,6 @@
   "ids": "tag 9bff233c3f0e7d80f63307fa3b12800dd3db681c commit 9a9c479776ffd974fbcafcf48341980918209aef tree 3a553ceb8db2e8de4ac779abdc2a2ceae5708c7d subtree 6dae168d0a258ca506f4d6b9d5cd0a0c835fb546",
   "ac_py_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
  },
- "elapsed_seconds": 1.1,
+ "elapsed_seconds": 1.2,
  "holds_all": false
 }

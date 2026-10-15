@@ -41,6 +41,18 @@ the same rebased bytes. Adapted from Codex `relocate`
 refuses an in-member fragment and does not skip code; here the fragment is
 rewritten against the owner coordinate and code is skipped.
 
+Row selection (I4-06, tradeoff TO1). A route may carry
+`"rows": {"mode": "frame-anchors"}`. Its excerpt then keeps prose, headings,
+blank and fenced lines, every table header and separator, every row of a
+table whose header has no `Consequence` column, and, in a family table,
+only the rows whose link destinations (`#anchor` or `MEMBER.md#anchor`)
+name an anchor that another route of the same frame carries in that
+member. Such an excerpt is not a byte copy of its section: its `Source:`
+line says `rows=k/n`, the manifest records `selected`, `total` and the
+excerpt digest beside the section digest, and the omitted rows stay in
+the owning member. `select_rows` below is the one implementation and has
+a test.
+
 Refusal, never truncation: on any refusal no file is written, the refusal is
 printed as `refusal: <member>:<line>: <reason>` and the exit status is 2.
 
@@ -412,7 +424,7 @@ def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_own
             continue
         total += 1
         keep = False
-        for destination in LINK_DESTINATION.findall(text):
+        for destination in LINK_DESTINATION.findall(re.sub(r'`[^`]*`', '', text)):
             path, _, anchor = destination.partition('#')
             if not anchor or path.startswith(('http', 'stdo:', '/', 'mailto:')):
                 continue
@@ -475,7 +487,8 @@ def header(frame: dict, size: int) -> bytes:
         f'Purpose: {frame["scope"]}\n'
         '\n'
         'Each excerpt below copies one owning section of a member of this method\n'
-        'byte for byte, except that each relative link destination is rebased\n'
+        'byte for byte, except a `rows=k/n` excerpt (see below) and except that\n'
+        'each relative link destination is rebased\n'
         'to resolve from this directory to the same target. Fenced code, inline\n'
         'code and absolute and `stdo://` links are unchanged. The `Source:` line\n'
         "before an excerpt names the member and the section's anchor, and gives\n"
@@ -485,7 +498,9 @@ def header(frame: dict, size: int) -> bytes:
         'whose `Source:` line says `rows=k/n` is a family table of which only\n'
         'the k rows that cite a section this frame carries are copied, with the\n'
         "table's preamble, header and every non-family table; the other rows\n"
-        'stay in the owning member and are not needed for this task.\n'
+        "stay in the owning member and are not copied. The frame's\n"
+        'qualification, not this selection, decides whether the frame is\n'
+        'sufficient for its task.\n'
         '\n'
         'Routes, in order:\n'
         '\n'

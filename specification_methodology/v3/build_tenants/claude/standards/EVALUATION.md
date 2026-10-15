@@ -183,9 +183,9 @@ supplies no review authority the author lacks: an author that opens a
 fresh context to review its own candidate is still its author, and its
 review is self-review, which stays construction output and cannot be
 relabelled as independent assessment (P6; UP-007 applied to a fresh
-context). Authorship attaches to the text wherever it is carried: a
-contribution received from another author stays that author's, and that
-author's reading of it supplies no independent acceptance of it (P6).
+context). A contribution received from another author stays that
+author's wherever it is carried, and that author's reading of it supplies
+no independent acceptance of it (P6).
 
 Independence across actor families is declared, not assumed. Whether two
 activations of one model family are independent for a semantic judgment is a
@@ -369,13 +369,10 @@ distinct from every rung.
 For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H, conformance to Σ, semantic
 equivalence and computational equivalence remain different claims.
 A claim of categorical equivalence meets each item of the Formal fragment
-that applies to it: its categories with their objects, arrows, arrow
-equality, identities and composition; its maps defined on objects and
-arrows and called functors only once preservation of identities and
-composition is proved; its representation in a_c; and its evidence class.
-This rung adds one requirement of its own to those items: a quasi-inverse
-functor, and natural isomorphisms between each composite of the pair and
-the identity functor, on a stated domain. An analogy or matching result
+that applies to it, as that section states them. This rung adds one
+requirement of its own to those items: a quasi-inverse functor, and
+natural isomorphisms between each composite of the functor with its
+quasi-inverse and the identity functor, on a stated domain. An analogy or matching result
 is insufficient. Evidence for one claim is not reported as a result for
 another (§1). The ladder is new law: it keeps a matching output, an analogy
 or a passing conformance check from being read as equivalence or as

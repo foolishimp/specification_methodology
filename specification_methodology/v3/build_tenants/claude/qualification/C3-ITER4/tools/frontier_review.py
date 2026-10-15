@@ -2,7 +2,14 @@
 
 Usage, from the tenant root: python3 -I qualification/C3-ITER4/tools/frontier_review.py
 Reads the installed rc.2 standards and this candidate's standards; writes
-frontier/REVIEW.json. Every semantic_review.result is `indeterminate` unless
+frontier/REVIEW.json. A section's text, for its hash, runs to the next heading of
+any level: the frontier's own granularity rule (one row per heading section, a
+parent's row not covering its children), which differs on purpose from the frame
+generator's whole-section rule. modal_conversion is raised only for `conserved`
+rows with a successor locus: a `superseded` row is decided by its proposed
+replacement relation, not by the conservation reading; a row without a locus has
+nothing to compare. Fields beyond the donor schema: identifiers, disposition_note,
+proposed_replacement, acceptance and the summary counts. Every semantic_review.result is `indeterminate` unless
 frontier/REVIEW_ASSESSMENTS.json records a nonauthor assessment for the row.
 """
 import hashlib, json, os, re, sys

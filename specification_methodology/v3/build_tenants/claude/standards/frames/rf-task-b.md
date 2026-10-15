@@ -5,7 +5,8 @@ Task: Produce the coverage ledger for a declared coverage tuple with one row and
 Purpose: The owning sections for workspace coverage and its statuses, frame-set declaration and selection, frames in conjunction, discovery and revision, the reuse of closed results, and the core result algebra with its conjunction.
 
 Each excerpt below copies one owning section of a member of this method
-byte for byte, except that each relative link destination is rebased
+byte for byte, except a `rows=k/n` excerpt (see below) and except that
+each relative link destination is rebased
 to resolve from this directory to the same target. Fenced code, inline
 code and absolute and `stdo://` links are unchanged. The `Source:` line
 before an excerpt names the member and the section's anchor, and gives
@@ -15,7 +16,9 @@ owning section decides; this frame owns no determination. An excerpt
 whose `Source:` line says `rows=k/n` is a family table of which only
 the k rows that cite a section this frame carries are copied, with the
 table's preamble, header and every non-family table; the other rows
-stay in the owning member and are not needed for this task.
+stay in the owning member and are not copied. The frame's
+qualification, not this selection, decides whether the frame is
+sufficient for its task.
 
 Routes, in order:
 
@@ -37,9 +40,9 @@ Routes, in order:
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 17. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 102468 bytes.
+Size of this frame: 102599 bytes.
 
-Source: FOUNDATIONS.md#2-ontology sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#2-ontology sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ## 2. Ontology
 
@@ -369,7 +372,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-001 Evaluation relativity
 
@@ -378,7 +381,7 @@ declared evaluation family has no testable sufficiency boundary (P2; rc.2
 #rf-001-evaluation-relativity).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-005 Exact basis and coordinates
 
@@ -389,7 +392,7 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 #rf-005-exact-basis-and-coordinates).
 
 
-Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-008 Overlap without identity collapse
 
@@ -400,7 +403,7 @@ evaluation uses is declared where it is used (P1, P3; rc.2
 #rf-008-overlap-without-identity-collapse).
 
 
-Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-010 Composition on demand
 
@@ -413,7 +416,7 @@ conjunction or decision rule (P4a; §6; rc.2
 #rf-010-composition-on-demand).
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-011 Topology mutation and recharting
 
@@ -426,7 +429,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 #rf-011-topology-mutation-and-recharting).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-012 Closed results
 
@@ -445,7 +448,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ### RF-015 Residual uncertainty
 
@@ -456,7 +459,7 @@ universal completeness (P4b, P6; open-world premise; rc.2
 #rf-015-residual-uncertainty).
 
 
-Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 4. Frame-set declaration
 
@@ -510,7 +513,7 @@ cannot waive another applicable semantic, authority, evidence or
 independence constraint (P2, P6).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#5-method-functions sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 5. Method functions
 
@@ -599,7 +602,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 6. Frames in conjunction
 
@@ -650,7 +653,7 @@ future interaction does not require a general composition law in every
 frame (P4a, P6, P2; rc.2 #material-composition).
 
 
-Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 8. Workspace coverage
 
@@ -809,7 +812,7 @@ Operational full coverage is relative to its tuple. It is not a claim that
 no undiscovered evaluation exists (P6; P0 with the open-world premise).
 
 
-Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d
+Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686
 
 ## 10. Discovery and revision
 
@@ -916,7 +919,7 @@ reuse still requires the consumer's exact applicability check (P3, P6;
 rc.2 #return-a-closed-result).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=71667e0e9ac5314faafaf0be3354a681c41978556bc44b166198f91b517adef5
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=69f97dcf86cd3a2a04c690315ee4638bee0afeaced64989d775e69d293ca2681
 
 ## 7. Closed result and reuse
 
@@ -987,7 +990,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: FOUNDATIONS.md#results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Results
 
@@ -1183,7 +1186,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4fb8ff98d3e1c45344a0a989158937f71f15b06840fac86f2cfffd7d14db194b
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
 
 ### Conjunction of results
 
@@ -1309,7 +1312,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=1b0565ff0aeda1e44d2ee0c9ef508f560771202e3d007406b8cd308b8af4567d rows=10/36 selected by the anchors this frame carries
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=39076764341401991c7c274a459baa8f69266bf81248cff2b5e27b875fdb9686 rows=10/36 selected by the anchors this frame carries
 
 ### Foundation to law
 
