@@ -14,7 +14,7 @@ I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-
 2. Each tenant rebinds to that ratified input and synthesises its own candidate with selected contributions from its peer, under [Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis).
 3. The two frozen candidates receive the shared comparison and the product owner selects the next basis.
 
-I4 common preparation is active. Tenant I4 construction waits for ratification and each line's admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
+I4 common input C3-I4-03 at `3c4c503` is ratified, as recorded in T-001. Each tenant proceeds under its separate admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
 
 The tenant tickets are [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md) and [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md). Each new contract names the common input, own preceding candidate, donor, tasks, actors and resource envelopes. A draft contract starts no work. Common ratification and construction admission accept no tenant candidate or predecessor replacement.
 

@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T09:46:38Z
+updated_at: 2026-10-15T11:16:02Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,16 +27,16 @@ links:
 
 ## Iteration 4 staging
 
-The owner selects Codex's common I4 update, then both tenants' synthesis after ratification, then comparison for his choice of the next v3 basis. [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) owns this common preparation. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) disposes the staged questions against the current owners. The I4 specification remains proposed. Claude's readback at `73ad32e` confirms F1–F3 and reports no blocking defect on C3-I4-02. C3-I4-03 applies its Low F4 clarification and records protocol disclosure timing, pending exact-change readback and the product owner's ratification. No I4 tenant contract is admitted by this entry.
+The product owner ratifies C3-I4-03 through “ok i approve i4”, recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-ratification). Both synthesis lines use source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and the 25-member snapshot recorded at `a960032`. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) supplies the classified work below. Each line records a separate admission before tenant effects. The frozen snapshots below retain their historical standing at creation; this later decision supplies ratification.
 
 | Input | Exact subject |
 |---|---|
 | Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
 | Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
 | Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
-| I4 common proposal | C3-I4-03 at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; proposed tuple recorded below. C3-I4-01 and C3-I4-02 remain historical |
+| Ratified I4 common input | C3-I4-03 at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; tuple recorded at `a960032`. C3-I4-01 and C3-I4-02 remain historical |
 
-The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
+The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is the common decomposition for the separate I4 contracts. It accepts no disposition; each admitted activation selects its own bounded work. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
 
 | Work | Owning requirement | Codex work | Claude work | Observable return |
 |---|---|---|---|---|
@@ -50,7 +50,7 @@ The I3 inputs and contracts below are historical, unchanged, and retain their or
 | I4-08 Package and routing | Standalone successor and Product open decisions | Resolve CX-06 historical routing, CX-08 provisional version wording and CX-09 independence labeling at the current subject | Resolve stale construction standing after rebind; preserve standalone identity and packaging limits | Current entry routes and honest package identity; historical evidence remains bound to its old subject |
 | I4-09 Review and selection | Product six criteria, Candidate Comparison, conformance integrated checks | Account for all common discriminators, including CX-04; return frozen source and supporting evidence | Reassess all common discriminators and integrated claims on the successor, retaining the limits of the present map | Six-criterion and integrated results for both exact candidates; dependency-aware repair readback; owner choice or no qualified choice |
 
-The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. Same-family nonauthor assessment of received ports is the proposed independence arrangement; a donor's assessment of its own contribution is supplementary. This arrangement requires ratification with the common revision before it can bear acceptance.
+The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. The ratified common revision assigns nonauthor assessment of received ports to the receiving line; its same-family exception and limits are recorded in the activation. A donor's assessment of its own contribution is supplementary. Exact review activations remain separate from this policy decision.
 
 Before actual-use activations, the owner selects resources; a nonauthor specifies the protocol and the common pen records it in one common record named here, with the same immutable version bound by both tenant contracts. Record the shared protocol body only after both candidate freezes; any earlier selection records its hash alone until then, and expected answers remain withheld from task actors. The Executive applies its declared envelopes. That shared protocol has not yet been selected. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
 
@@ -61,6 +61,8 @@ Review observations, evaluated against the owning Product: I4-04 supplies one co
 Read the proposed D6 finding count with the impacts and coverage Product requires; fewer but materially more consequential findings are not an automatic win. Any unresolved tradeoff remains the product owner's decision. The port lists remain inputs with reasoned exclusions, not mandatory copying.
 
 A subagent is a possible actual-use mechanism under criterion 4, not proof of fresh context or context fit by its label. The selected activation must establish no inherited private or unselected repository context, disclose supplied and acquired inputs, support the active-context bound, and retain independent expectations and assessment. Session-token use remains a resource cost; any external spend depends on the selected mechanism and is not established by this review. D5 and the actual trial remain unselected. No external call or new subagent is activated by this correction.
+
+The Codex synthesis is admitted as [EC-CODEX-I4-01](T-002-CODEX-c3-successor-construction.md#current-iteration-4-contract), with rebind and work mapping as its first bounded activation. The Claude line records its own admission; this common record neither creates nor assesses that peer activation.
 
 ## C3-I4-03 proposed input snapshot
 

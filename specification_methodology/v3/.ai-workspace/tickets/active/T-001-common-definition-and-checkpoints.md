@@ -10,13 +10,27 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T09:46:38Z
+updated_at: 2026-10-15T11:21:30Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 4 ratification
+
+2026-10-15 — The product owner states “ok i approve i4” after the comparison of closed I3 with C3-I4-03. Decision: RATIFIED common input C3-I4-03, source `3c4c503d291e7cb19ba21333ba6caf6167be77c9`, with its 25-member snapshot recorded at `a96003250ffcd9d88863347b4946aa5b1836434f`. This is the common specification decision for the selected two-line synthesis. It accepts no tenant member, predecessor replacement, candidate, merge or release. Historical snapshots retain their original standing at recording.
+
+The common Ledger Writer records this decision, updates current routing and prepares the Codex admission under the existing three-stage instruction. Territory is T-001, T-002, T-002-CODEX, Goals, v3 AGENTS/CLAUDE, the shared tenant entry and Codex commentary; governing Product and requirement bytes stay at the ratified source. The Git Writer checkpoints the records on main. A separate tenant Git Writer may create `tenant/codex/c3-iteration-4` from the current Codex line, merge the admission inward and verify the unchanged candidate tree before construction. The Claude ticket and worktree remain with its own line.
+
+Independent readback activation `I4-COMMON-FINAL-READBACK`: a fresh nonauthor Codex Reviewer checks the exact `23ad611..3c4c503` comparison correction and its protocol-timing record, using the ratified common owners. This is a declared same-family working review: Claude's earlier review retains its subject and disclosed authorship; no family substitution is represented as cross-family review. Read the bounded clauses before prior findings, assess preservation of criterion/discriminator coverage, actual-use conditions and authority, and write only one review in common `.ai-workspace/comments/codex/`. No repair, Git, paid call or candidate read. Scope is this delta and material owning clauses, with elapsed time and acquisition limits disclosed. The parent records its result before Codex construction admission; the owner's ratification is already recorded and is not replaced by that result.
+
+Readback acquisition clarification: the reviewer encountered the Goals routing summary before recording its expectations. It continues as a nonauthor defect readback with prior issue context disclosed; this is not a blind trial or a fresh-actor claim. Knowledge of the reported issue does not itself author the repair or invalidate its governing basis. No replacement activation or repeated whole review is required.
+
+2026-10-15T11:18:20Z — Recording verification passes: all 25 frozen input hashes, the exact installed builder, unchanged governing source, preserved snapshot/admission bodies, six new links and scoped whitespace. The Codex contract is drafted at 4,939 UTF-8 bytes, SHA-256 `610a83a9d47a0e198cd8f19af01668377236e62b9dab33e8118fe3fb1bb74610` over its heading through Durable return with one final newline. Its source, donor, territory, evidence surface and owner-reserved decisions are bound; admission awaits the bounded readback. The Git Writer checkpoints ratification and current routing now, preserving unrelated work.
+
+2026-10-15T11:21:30Z — The Executive consumes the [fresh nonauthor readback](../../comments/codex/20261015T111809Z_REVIEW_I4_COMMON_FINAL_READBACK.md): `satisfied`, with disclosed prior issue context and no repair counterexample. Claude's [exact-application readback](../../comments/claude/20261015T101500Z_READBACK_C3_I4_03_3C4C503.md) landed concurrently at `8bd17af`; it confirms the proposed wording and retains its authorship limit. No governing source changed. The Codex contract's validation and admission are recorded in [T-002-CODEX](T-002-CODEX-c3-successor-construction.md#current-iteration-4-contract). The Git Writer checkpoints these records and reviews, then prepares only the Codex branch/worktree. The Claude line's admission and work remain its own records; no peer effect is performed here.
 
 ### Iteration 4 final comparison clarification
 
