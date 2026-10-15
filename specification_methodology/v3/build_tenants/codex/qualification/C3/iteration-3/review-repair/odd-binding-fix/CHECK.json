@@ -1,0 +1,74 @@
+{
+  "valid": true,
+  "counterexample_preimage": "c29b2be37f9a12e050478be97793927d99c01781",
+  "program_sha256": "a889e51ca38487864a99a8c2ec0bfc126428a7c161f3b789b8286489043e9f65",
+  "map_sha256": "27893cc820dcd42e98b65dc2e528ed741bd093d6f8c3745baa354d82f117dc7a",
+  "source_account_sha256": "3f8e642220ed97aea320281d2ab7dc70ccdb0ea65654083f1b90581b7d77be98",
+  "mechanical_predicate_binding": "passed",
+  "negative_controls": [
+    {
+      "case": "original mixed predicate",
+      "result": "rejected",
+      "reason": "entry predicate and result differ"
+    },
+    {
+      "case": "recommendation result rebound to entry",
+      "result": "rejected",
+      "reason": "recommendation result binds another predicate"
+    },
+    {
+      "case": "should promoted to required",
+      "result": "rejected",
+      "reason": "recommendation was made mandatory"
+    }
+  ],
+  "published_command": {
+    "valid": true,
+    "guide_sha256": "334a81c8e5ff81fc02c317614baa0741661ac9fb6cfc166a159b5afb13beb325",
+    "script_sha256": "35736c48d36c89ccde5aeab7832179e6bc1974fa68e4f31347f8e8b227984485",
+    "output_bytes": 252846,
+    "output_sha256": "5e0fe3c2ac0a2768e81786596d7564f532421e449e742555930a362b643fdca5",
+    "historical_T1_selected_fields_unchanged": [
+      "clauses",
+      "clause_relations",
+      "closure",
+      "residuals",
+      "symbols",
+      "source_routes",
+      "residual_routes"
+    ],
+    "native_report": {
+      "diagnostics": [],
+      "frame_index_refs": [
+        "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.conjoin",
+        "urn:codex-stdo3:iteration-3-r2:index:TRANSFORMATION_LIBRARY.evaluate"
+      ],
+      "kind": "axiom-indexer.projection-report",
+      "map_sha256": "sha256:acc9bce1303f56cd729684198d49dbb5962fb8ecc69b86b59a23d8b71f64d42e",
+      "program_uri": "urn:codex-stdo3:iteration-3-r2:program:method-determinations",
+      "schema_version": 1,
+      "status": "valid"
+    }
+  },
+  "odd_projections": [
+    {
+      "mode": "reference-only",
+      "bytes": 418834,
+      "sha256": "c45aad48fbc3327bed5255fb1511419c1ebd09d8481ec57455170ddee371c799",
+      "closure_clauses": 24,
+      "both_bindings_preserved": true
+    },
+    {
+      "mode": "materialized",
+      "bytes": 828765,
+      "sha256": "994a1bce7af18a0f341da49227dd4f38d970de67cca15e1b73a87c4e85f8a28c",
+      "closure_clauses": 24,
+      "both_bindings_preserved": true
+    }
+  ],
+  "limits": [
+    "Checks field relations, source pins and native carrier preservation; does not execute prose predicates.",
+    "Semantic fidelity and adequate/adverse/unresolved source cases require the separate nonauthor readback.",
+    "Historical T1 meaning is compared; changed package identity is not a new actor run."
+  ]
+}
