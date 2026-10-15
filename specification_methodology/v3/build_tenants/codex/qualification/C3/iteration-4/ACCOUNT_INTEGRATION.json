@@ -1,0 +1,640 @@
+{
+  "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+  "input_sha256": "cb85385c6c074f4f47623bf29d5009bfe639bef109b2788e8846aa80f80f1b84",
+  "patch_inputs": [
+    {
+      "path": "source/core/ACCOUNT_PATCH.json",
+      "sha256": "3d3582b66894b99c92976b1d56707b00ae1ab2387b5fe778003dc2c00a0f228f"
+    },
+    {
+      "path": "source/delivery/ACCOUNT_PATCH.json",
+      "sha256": "84a52481f50710a06da4c77dcba1a6248b082c0485698c1fd809a46e5042fc1d"
+    },
+    {
+      "path": "source/profiles/ACCOUNT_PATCH.json",
+      "sha256": "73a5bd332187db6fe3499e10e252d58c37035c614418733ddd3abe40aecb3259"
+    }
+  ],
+  "direct_patches": [
+    {
+      "id": "AXIOMATIC_CALCULUS.fundamental-laws",
+      "before_body_sha256": "1d9f2be74edcf0e6a7860ba7e40ab294b468d826d8309933e1090d16583b7495",
+      "body_sha256": "640a6fe4d997b0d7df5425bcee3e9c22dd43a7414f05374e2954fe7ad63940e1",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before_body_sha256": "bae061af7124f0b56eff5feab016083e6066339822a489cb8daec5271befd0bb",
+      "body_sha256": "706325a2b36f3beb3a634c85dbd0072ff8256282bdf7a39937a03ca08371003b",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "before_body_sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+      "body_sha256": "fbe901154d6facaabc0357a8b23fdd367efb44aa5e7b70783eca66f0d3da55b5",
+      "fields": [
+        "argument",
+        "definition",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.foundational-commitments",
+      "before_body_sha256": "fe5327e32bbe34a67a24cc6c3fba125b66cbd185e3a0b6d9aafe91f87ccd9e8a",
+      "body_sha256": "e63d38cbbad66411ce0762c790a360c6affb91612fecf1a8f4d9ffcf7965e947",
+      "fields": [
+        "argument",
+        "obligations",
+        "permissions_exceptions"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.result-algebra",
+      "before_body_sha256": "5bc92abd303a9e6369980d927077ee400050790e4749b0321e7941686bcef8d6",
+      "body_sha256": "011ede48f05af806c251fa60d803af4819491b70e6e4c5ecbe0e89b00aea423f",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.result-conjunction",
+      "before_body_sha256": "d730340de39eb49bc2ae212577b52aba036528884048fe98ce108b99774d7323",
+      "body_sha256": "e2fc7bc28a6ff223f77a951d85f20fa32f8e187b0ec1d28dd07bab3a95cea7f6",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "before_body_sha256": "585b6382c064592460181077ac18c2be8e0c45d429885ab1359c51dbdb4fe332",
+      "body_sha256": "9e22093f58c0ad0cd092662f3ac972573403545fa0d3834084c27c57b575475f",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+      "before_body_sha256": "e8fc7640c1dbac0caf80acaf4b91f283a61c70b7ef15317f5cdbfb18055d0e67",
+      "body_sha256": "84b80e726ea08ea686e9450a54cc45f38da2fc8e496936f29af448c1fdde02f0",
+      "fields": [
+        "argument",
+        "dependencies",
+        "obligations",
+        "predicate"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before_body_sha256": "df12089a450d2df54373d894865eb1dc25ecce866baf33c023ea1584b3ec62ef",
+      "body_sha256": "ba3f55d7d734b8fd0834dd7b9ffdc929afc11ccef9f1bcae35d331e2052c7c9b",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.frame-qualification",
+      "before_body_sha256": "e5ece8b91610eff8d68faf016636c43fddd13b84a55a36f0e882ac706c675251",
+      "body_sha256": "d5b0100975c42a358320a1f34f584429a568d8e8d1665df2617ad87b8cf93d9b",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "before_body_sha256": "d824645b30304c362094a86713729d117bd1540658196140333746cb2337fdde",
+      "body_sha256": "53dfbcecde17253e1c340de6fb2598b629df953374a40ee470ae2422501d29fc",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity",
+      "before_body_sha256": "24c2bbc487f301cd2e66b8390715504e2a9ca26612e2c904e7f3dc0afcbbc2aa",
+      "body_sha256": "b26a9a2df8962801c1e42c2d9de41ab64aa53a6b57ed5bc9105ca3f34c2e7553",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-010-composition-on-demand",
+      "before_body_sha256": "2e010e042239632e793e938a99a02dc75c069cdb370c3e1a5c43c51da8f4a58c",
+      "body_sha256": "e4e61e21d90a05c3a95567aa93a267702617a74d5af41952471999452abc19b9",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.select-and-activate",
+      "before_body_sha256": "0680b9b439eec530316500a54d970024dd5b0488f6d223922f3e79bed99cb6b8",
+      "body_sha256": "6a51e1109781f6636d256f3ecaa88935d58b5e6f162178125bc5fac9c541f3ad",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.workspace-coverage",
+      "before_body_sha256": "ab65447074ba3bdba7d725e657172d2f0e537934234ac209ccfb66cf36586d5f",
+      "body_sha256": "6507663275ca10bf7f68983e39ae51be8c5dfb596f838801ec71f991eb60bda2",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "RELEASE_METHOD.exact-cut-qualification",
+      "before_body_sha256": "df0b0a767d37a0922d1ed56cb50ef3bdb4f8b6e5db5790ea1ff8b3cdba88016c",
+      "body_sha256": "f31ec2bda6c1f2be2c67227714109286c98db235cfba2fdc47f5864fd5a6d1e0",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "RELEASE_METHOD.release-publication-context",
+      "before_body_sha256": "2389f0cee390825d5fdbb15c5dfc797f23897bb4d7afe90f4b1ccfd19daa30f4",
+      "body_sha256": "0a29a71a46251f51d6ad3c03805f67e72bbebf4aee6127e1a49f3bb4c20dd77b",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "before_body_sha256": "e8724cd5e85bd822e16a3482a3973c344b84e4c6dd314c83c95785a1ec54d437",
+      "body_sha256": "91149d68491756845f6f978c31a0903898587bc6ce1591f67e23d58ef6b33225",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.method-families",
+      "before_body_sha256": "6f514b47798227367a5632852ebfb0c4fb7e3268aea30777d9f3e16b42d44e4f",
+      "body_sha256": "abe196f3e38fe45d59cc5a9bf8ecf37925bdf93c33861627400dd32f75dda612",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "before_body_sha256": "b35d4bd21df976bde14c89660cd213d2ec89e4c0caeaac0cb726f6131200ddb0",
+      "body_sha256": "641e07fb28763f68617fd8f0f9383d03b5a90a06d900ca8bf98c8a36e4f9708e",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+      "before_body_sha256": "cb8238f1776802e24aa64bb25f5f615cabb1c2ae7d0eec4aa5e51d3f202b26d7",
+      "body_sha256": "2a0aecc8ceb3acfde41aec3b5f5139d4e56af8c9452e91c3c6f039e9edd01409",
+      "fields": [
+        "argument",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "before_body_sha256": "43f1c1b6b41466eb4b08ba622de6bb0cca3da166b120f325007e45879bd0c574",
+      "body_sha256": "19af527a3ed8c0371973fb12f95920548407fe800859500314969fea399c177e",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+      "before_body_sha256": "ad7d4fc3966b473dc12718e278b0657f339491d262b3276b1ec338867861ed3f",
+      "body_sha256": "903b38b82bca3edda0040327c42ef064eeee0b9da9bd3e335c6fe3a1f130be58",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+      "before_body_sha256": "faf233e53549ba80f9bd5db47de9351b18cfdf305e0fd628b201d8c3a0b40545",
+      "body_sha256": "0a2ad3b1f367dc22e007bf508e629bbfbbbbbb77fbecf3b1e457640535c36670",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "before_body_sha256": "257929f9044f9b24a118d27e8fe519173351b3069af44c4c095a678d48c09e76",
+      "body_sha256": "e7d271b4729f433e4298c3b4f5f1592d6384ac981b6f81dbf90ef1f03a18ea01",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.carrier-families",
+      "before_body_sha256": "fdb3ffd3e818490f6ad732225ad4866880001cdf87143db0c6fdca28b9ac4d0d",
+      "body_sha256": "fc23199c564813ed9214270f53c95dd56b126ba55ec0d76c7e5d11c0558e5d8e",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "before_body_sha256": "ca0f94ee2514f43d44e27df300839a39f5a498c0f2d1258e4d783326c65af16e",
+      "body_sha256": "b123190c253c1a41678712a699b239875d4f22e4fda126c7cec29c12633d0bb8",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "before_body_sha256": "7cf2667f167011ccf47c1de1be6aae4ed5f32f3385e8aab841b35573bb8cfbad",
+      "body_sha256": "dc8a139b13a8dec37e0c6cdc8b39f4580d7757706de8127b2b8d11f2cb8f40ac",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.contract-application",
+      "before_body_sha256": "c70d788cdeea693e2e05b32e337e2179cb181c6ccb5cf81785435d44963de536",
+      "body_sha256": "59a48d959ca599d2da1edbe7c2b745aa2b9c09acaecf83420b762d5ba6fb19f4",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+      "before_body_sha256": "fbe6152d82b1114820901c7ecb1fa999745d93fd6ce561b5674ca02abe6986bd",
+      "body_sha256": "b0233b44f370b986613d2cbce25538296cc19767135213064d88341a03bcf783",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "before_body_sha256": "2666579aa001da30363f6bcdd47a47418ac1ac2a6254adc5217a582c8fadfc78",
+      "body_sha256": "3b827c84f938e10c3668a233708153a6cdccb994b0ce34cfe295e6469e0f59ad",
+      "fields": [
+        "argument",
+        "definition",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "before_body_sha256": "15eb947a9b023ecf1ff22aac814ca9b6d3948f84ad91b2229c96790aabf5f5f6",
+      "body_sha256": "10df2044232536136ce0b86c15afb39389ed0fb2228cfcd8d0174ca67d700774",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "before_body_sha256": "a7e2727c5f0c52badd0c35eedb49e3e5badf70d83052f2cdefd5516d9593be6c",
+      "body_sha256": "a265a7c8a47033958f7d887d8c02826a736ea536299343cefbe80a3f2c22e188",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRAVERSAL_OCCURRENCE_PROFILE.governing-relations",
+      "before_body_sha256": "19d65d301b5f2e3ae3367cf84f17201017f01cc93bd3b19724fbdb01c4dc1a2e",
+      "body_sha256": "bbfb80615c250480401ad7ccb2ff44dd7577c0869c26afbe908bb1d0aaedf58f",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "UX_METHOD.governing-relations",
+      "before_body_sha256": "5d7ffbb2c24c8222d9c6d4a7128b17cef6fad932077ef0bd28108c6bf7fdc93e",
+      "body_sha256": "f805e2af1100010de2c61517ff68cffc96292295f3a61f549a0dc128075a3dd0",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "WORLD_MODEL_METHOD.governing-relations",
+      "before_body_sha256": "0cd76c90afefdf5621b2ba8071ac36d8e798109c189c6b1b4a84e1b996bfd39f",
+      "body_sha256": "74483e8c6f1e83bf4174c0103fd612b2377972a9a1bd8488d5ef18cb13c34c75",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    }
+  ],
+  "dependent_patches": [
+    "IDENTITY_METHOD.1-scoped-identity",
+    "IDENTITY_METHOD.2-uniqueness-law",
+    "IDENTITY_METHOD.3-type-law",
+    "IDENTITY_METHOD.4-stability-law",
+    "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+    "IDENTITY_METHOD.defaults-from-a-bound-abg-realization",
+    "IDENTITY_METHOD.derivation-verification-material",
+    "IDENTITY_METHOD.derived-domain-overrides",
+    "IDENTITY_METHOD.domain-owned-identity",
+    "IDENTITY_METHOD.engine-owned-identity",
+    "IDENTITY_METHOD.human-readable-vs-opaque-identity",
+    "IDENTITY_METHOD.identity-hierarchy",
+    "IDENTITY_METHOD.override-publication-surface",
+    "IDENTITY_METHOD.parsing-law",
+    "IDENTITY_METHOD.release-version-boundary",
+    "RELEASE_METHOD.acceptance-criteria",
+    "RELEASE_METHOD.coordinated-release-matched-asset-cohorts",
+    "RELEASE_METHOD.external-qualification-dependencies",
+    "RELEASE_METHOD.historical-ref-and-public-uri-conservation",
+    "RELEASE_METHOD.immutable-rc-publication",
+    "RELEASE_METHOD.monotonic-version-line-advancement",
+    "RELEASE_METHOD.naming",
+    "RELEASE_METHOD.product-subject-and-repository-carrier",
+    "RELEASE_METHOD.project-subtree-release-identity",
+    "RELEASE_METHOD.release-identities",
+    "RELEASE_METHOD.release-scoped-assets",
+    "RELEASE_METHOD.selector-and-consumer-adoption",
+    "RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+    "SPEC_METHOD.adr-conventions",
+    "SPEC_METHOD.computed-classification-and-treatment",
+    "SPEC_METHOD.consistency-gate-rule",
+    "SPEC_METHOD.constitutional-chain",
+    "SPEC_METHOD.counterexample-localization",
+    "SPEC_METHOD.design-rule",
+    "SPEC_METHOD.legacy-classification-rule",
+    "SPEC_METHOD.manifesto",
+    "SPEC_METHOD.method",
+    "SPEC_METHOD.position",
+    "SPEC_METHOD.probabilistic-work-boundary",
+    "SPEC_METHOD.process-constitution",
+    "SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+    "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+    "SPEC_METHOD.reconstruction-litmus",
+    "SPEC_METHOD.release-version-boundary",
+    "SPEC_METHOD.renewal-path",
+    "SPEC_METHOD.spec-drivenness-litmus",
+    "SPEC_METHOD.specification-surface-rule",
+    "SPEC_METHOD.sprint-execution-boundary",
+    "SPEC_METHOD.trace-closure-and-anti-drift-rule",
+    "SPEC_METHOD.transformation-wave-rule",
+    "SPEC_METHOD.what-how-and-work-carriers",
+    "TICKET_METHOD.authority",
+    "TICKET_METHOD.bounded-context-term-binding",
+    "TICKET_METHOD.core-model",
+    "TICKET_METHOD.execution-contract-admission",
+    "TICKET_METHOD.implementation-migration-category",
+    "TICKET_METHOD.migration-strategy-requirements",
+    "TICKET_METHOD.milestone-and-phase-scoped-truth-stdo-up-006",
+    "TICKET_METHOD.mixed-state-negative-proof",
+    "TICKET_METHOD.multi-build-tenant-review-rule",
+    "TICKET_METHOD.multi-build-tenant-ticket-independence",
+    "TICKET_METHOD.one-truth-state-projection-and-drift-refusal-stdo-up-009",
+    "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+    "TICKET_METHOD.sprint-close-review",
+    "TICKET_METHOD.sprint-compliance-escrow",
+    "TICKET_METHOD.test-case-authority",
+    "TICKET_METHOD.upward-propagation-check"
+  ],
+  "coarsened_coordinates": [
+    {
+      "id": "AXIOMATIC_CALCULUS.fundamental-laws",
+      "coarsened_blocks": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "FOUNDATIONS.result-conjunction",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body",
+        "c4"
+      ]
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "coarsened_blocks": [
+        "body",
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.select-and-activate",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "RELEASE_METHOD.exact-cut-qualification",
+      "coarsened_blocks": [
+        "body",
+        "c1"
+      ]
+    },
+    {
+      "id": "RELEASE_METHOD.release-publication-context",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.method-families",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "coarsened_blocks": [
+        "c11"
+      ]
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "coarsened_blocks": [
+        "c3"
+      ]
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "TICKET_METHOD.carrier-families",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "coarsened_blocks": [
+        "c2"
+      ]
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "coarsened_blocks": [
+        "c2"
+      ]
+    },
+    {
+      "id": "TRAVERSAL_OCCURRENCE_PROFILE.governing-relations",
+      "coarsened_blocks": [
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "id": "UX_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "id": "WORLD_MODEL_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "c3",
+        "c4"
+      ]
+    }
+  ],
+  "rows": 701,
+  "validation": "source pins, semantic reference closure and pointer resolution passed",
+  "limits": [
+    "Coordinate and reference checks do not establish source fidelity.",
+    "I3 source/account and evidence files are unchanged."
+  ]
+}
