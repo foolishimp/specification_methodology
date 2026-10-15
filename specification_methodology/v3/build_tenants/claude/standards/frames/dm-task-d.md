@@ -31,9 +31,9 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 105216 bytes.
+Size of this frame: 105371 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=bb4bfad8efa9d8a514187b0137ac713a9521f8380c907bf65cd89b5bbf06b2cf
 
 ## 5. Ontology-first design
 
@@ -690,7 +690,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=bb4bfad8efa9d8a514187b0137ac713a9521f8380c907bf65cd89b5bbf06b2cf
 
 ## 7. Ontology and three-view design gate
 
@@ -1499,7 +1499,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: DESIGN_MODULE.md#foundation-to-law sha256=910e8a4617daff10c7f7a4bb01f6927b64f17de785041b3ab529f4de59412780 rows=3/26 selected by the anchors this frame carries
+Source: DESIGN_MODULE.md#foundation-to-law sha256=bb4bfad8efa9d8a514187b0137ac713a9521f8380c907bf65cd89b5bbf06b2cf rows=3/26 selected by the anchors this frame carries
 
 ### Foundation to law
 
@@ -1529,6 +1529,7 @@ that step-produced facts are not re-acquirable; P5 derived from P0 and P6,
 with P0's open-world premise. Its instance premises hold where a project
 adopts this profile for a boundary; they are adopted with it and do not
 follow from the foundations (P1, P6):
+It also imports F18, graph-native construction ([ODD §1](../ODD.md#1-position)), for the constructive-carrier law its first row defers to.
 
 - I1: a Product has decided the outcomes and capabilities it builds, and
   adopts this profile for a named boundary of its realisation;
@@ -1545,7 +1546,7 @@ follow from the foundations (P1, P6):
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
 | P1 (independent), P3 (independent), P6 (independent); F10 imported; I1 | the constitutional WHAT owns Product meaning (F10) and no realisation mints authority (P6), so a new or materially changed semantic boundary derives its semantic model from one accepted Ontology subordinate to that WHAT, and implementation cannot self-ratify missing Ontology authority; identities are declared and survive change (P3), so the Ontology carries stable identities and a basis that makes staleness decidable; a projection keeps meaning only through a declared contract (P1), so every design projection traces to the Ontology, an untraceable element is ungrounded, and a realisation derived from a reference line shows its derivation, not code comparison alone | [§5](../DESIGN_MODULE.md#5-ontology-first-design), its opening, [Ontology projection](../DESIGN_MODULE.md#ontology-projection); [§6 Reference-derived module design](../DESIGN_MODULE.md#reference-derived-module-design); [§7 Ontology evidence](../DESIGN_MODULE.md#ontology-evidence) | the ten terms of the Ontology, the definition of a material semantic boundary and the evidence items: this profile; who accepts the Ontology: the design authority ([§7 Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work)); proportionality: [ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality); the invalidators, of which a reprice is an instance: [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) | 1, 2, 6 |
-| P1 (independent), P5 (derived), P6 (independent); F3 imported; I3 | a view is a representation, not the meaning (P1), so each of three distinct views is a fidelity-checked projection of the accepted Ontology, not a peer truth surface, and a later actor reads the behaviour from them, not from memory (I3); a gate cannot report success on an axiom it did not decide (P5) and needs evidence for each claim (P6), so before promotion or a design-method closure claim every applicable axiom is evaluated across the views, and each verdict maps to one core value of F3; an axiom that does not apply satisfies only the declared disjunction and never counts as met | [§7](../DESIGN_MODULE.md#7-ontology-and-three-view-design-gate); [Domain model](../DESIGN_MODULE.md#domain-model), [Sequence model](../DESIGN_MODULE.md#sequence-model), [State model](../DESIGN_MODULE.md#state-model); [Cross-view axiom evaluation](../DESIGN_MODULE.md#cross-view-axiom-evaluation) | the three Mermaid views, the stereotypes, the ten matrix columns, and the axiom verdicts with their disjunctive predicate: this profile; another text-native format: the project's ratification; applicability and exclusion: [ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and the core | 6, 3, 9 |
+| P1 (independent), P5 (derived from P0 and P6), P6 (independent); F3 imported; I3 | a view is a representation, not the meaning (P1), so each of three distinct views is a fidelity-checked projection of the accepted Ontology, not a peer truth surface, and a later actor reads the behaviour from them, not from memory (I3); a gate cannot report success on an axiom it did not decide (P5) and needs evidence for each claim (P6), so before promotion or a design-method closure claim every applicable axiom is evaluated across the views, and each verdict maps to one core value of F3; an axiom that does not apply satisfies only the declared disjunction and never counts as met | [§7](../DESIGN_MODULE.md#7-ontology-and-three-view-design-gate); [Domain model](../DESIGN_MODULE.md#domain-model), [Sequence model](../DESIGN_MODULE.md#sequence-model), [State model](../DESIGN_MODULE.md#state-model); [Cross-view axiom evaluation](../DESIGN_MODULE.md#cross-view-axiom-evaluation) | the three Mermaid views, the stereotypes, the ten matrix columns, and the axiom verdicts with their disjunctive predicate: this profile; another text-native format: the project's ratification; applicability and exclusion: [ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and the core | 6, 3, 9 |
 | P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); F3, F4, F6 imported | a produced design pack is a candidate until evaluated (P0), and acceptance is the owner's disposition, distinct from assessment (P6, F6), so the Ontology verdict and the design verdict are the design authority's dispositions at the design gate, and no assessment result or produced pack is the verdict; a combination with a non-satisfied mandatory result or a gap is never `satisfied` (F3), so without both verdicts `accepted` a new or semantically changed boundary is not promoted, published or closed, and implementation under co-evolution stays provisional evidence until the gate is accepted; an unchanged consumer reuses a closed result (F4), so an unchanged `realization_refactor` reuses its verdict on a proof of no delta | [Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work) | the design gate as the acceptance boundary of a semantic boundary: this profile; the decision owner: the design authority that accepts the Ontology (§5); the dispositions and their core values: [ACTIVATION §3](../ACTIVATION.md#disposition) | 9, 3 |
 
 Consumers outside this member that apply these rows, each keeping its

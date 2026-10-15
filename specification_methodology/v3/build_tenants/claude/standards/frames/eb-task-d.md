@@ -43,9 +43,9 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 116982 bytes.
+Size of this frame: 117236 bytes.
 
-Source: EXECUTIVE_BASELINE.md#executive sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#executive sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ### Executive
 
@@ -63,7 +63,7 @@ universal semantic owner, controller, manager service or runtime executive
 observer (P6, RF-016).
 
 
-Source: EXECUTIVE_BASELINE.md#reviewer sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#reviewer sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ### Reviewer
 
@@ -77,7 +77,7 @@ assign priority, apply disposition or activate the next frame (P6; rc.2
 #reviewer).
 
 
-Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ### Technical triage, severity, priority and boundary effect
 
@@ -140,7 +140,7 @@ constrains its consumption is EVALUATION §4 (Result and triage
 projection).
 
 
-Source: EXECUTIVE_BASELINE.md#work-result sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#work-result sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ### Work result
 
@@ -200,7 +200,7 @@ revises only the affected results, preserving originals and supported
 surviving claims (ACTIVATION §7; P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ## 6. Executive attention, evaluation and action
 
@@ -376,7 +376,7 @@ Cut or exact Install stays immutable under its own lifecycle law and imposes
 no immutability on the Source Project constructing a successor (P3, P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ### The executive configuration
 
@@ -459,7 +459,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ## 12. Complete engagement transition
 
@@ -667,7 +667,7 @@ and of the Executive's exclusions (§8):
 | an unsupported or materially incomplete technical assessment | a capable evaluation is reactivated, or `indeterminate` is kept; Reviewer evidence is not rewritten |
 
 
-Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc
+Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2
 
 ## 17. Actor binding and independence
 
@@ -1442,7 +1442,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=1405342346a63cee2d50ffe7552cc7c9305adcbeab3dc9b5dfe26195f05262bc rows=10/19 selected by the anchors this frame carries
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=50bfe119452265c09f07f84425bfc85c49d72e039ec23ad6ec411f86a0a546a2 rows=10/19 selected by the anchors this frame carries
 
 ### Foundation to law
 
@@ -1452,7 +1452,7 @@ premises, in the format of
 [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),
 which also states the standing of the consequences. An actor enters the
 family here, at the choice between direct entry and coordination. The
-family imports seven families under
+family imports eight families under
 [PROFILES §1](../PROFILES.md#1-the-boundary): F1, frames and context
 ([REFERENCE_FRAME §1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit));
 F2, transitions, steps and configuration
@@ -1463,7 +1463,7 @@ state, resumption and reuse
 proportionality and cost
 ([ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality)); F6, claims,
 evidence, assessment and acceptance
-([EVALUATION §1](../EVALUATION.md#1-claims)); and F13, work carriers
+([EVALUATION §1](../EVALUATION.md#1-claims)); F15, product lineage objects ([FOUNDATIONS §2 Product lineage objects](../FOUNDATIONS.md#product-lineage-objects)); and F13, work carriers
 ([TICKETS §5](../TICKETS.md#5-from-carrier-to-execution)), for the
 boundaries of independent review and the closure condition. A row that
 cites an imported family uses that family's consequences as premises; the
@@ -1491,8 +1491,8 @@ not follow from the foundations (P1, P6):
 | P6 (independent), P3 (independent); F2 imported; I2, I3 | Under I2 existing project authority holds every decision grant the configuration applies, and by P6 a label mints none ([FOUNDATIONS §2](../FOUNDATIONS.md#authority-kinds)), so the Executive applies only decision authority already granted and acquires no operation authority from its label; a mutation needs the exact operation grant of the frame that performs it. By P3 an actor and the frame it occupies are distinct identities, so a role transition is a separate fact, known only where recorded. Under I3 a coordinator that changed the subject would dispose of its own construction on its own evidence (P6); that is this profile's reason for the choice in the next column, which the premises do not force | [§6](../EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) The three duties, No mutation while Executive; [§8](../EXECUTIVE_BASELINE.md#8-derived-executive-frame) | the prohibition of every Executive edit, small, test-only or reversible ones included, and recording a role transition in the work carrier before the effect: this profile | 7, 9 |
 | P0 (recovered), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P2 (independent), P3 (independent), P6 (independent); F2, F3, F4 imported; I1 | By P0 the Executive's envelope cannot hold every evaluator's working context, and by P4b the producing step records the facts the outer contract needs, so the Executive holds the frontier and the closed-result ledger and acquires more through its frame inputs or a further bounded evaluation, as F2's rule for a coordinator's bounded view requires. By P3 and P6 a result supports its claim only on the basis it binds, so the bases are revalidated before activation and before disposition, and a failed lock takes the value or move its owner gives (F2, F3). By P2 re-entering the cycle without a decision need has no route to the outcome, so attention waits for decision-relevant input, and by P6 waiting discharges no verification, evidence, assessment or authority duty | [§6](../EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) Attention cycle, Event-driven attention, Drift locks; [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), Coordination | the five locks, and event-driven attention as the default with bounded fallback observation: this profile | 5, 7, 9 |
 | P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F3 imported | By P5 a step's result algebra carries outcomes other than success, and F3 maps each refined value to exactly one core value with its predicate; ACTIVATION §3 Construction availability is that refinement for "a candidate is available", with its values, grounds and map. So a Worker returns one of those values, selected by the cause ACTIVATION §3 states, and this profile states no ground of its own. By P6, as F3 states, availability is neither assessment nor acceptance, so no value is read as either; a refused activation creates no step, so it creates no Worker result | [§5 Work result](../EXECUTIVE_BASELINE.md#work-result); [§9](../EXECUTIVE_BASELINE.md#9-derived-worker-frame); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) steps 2 and 3 | what the Worker reports and what its consumer does with each value: this profile. The values, grounds and core values ([ACTIVATION §3](../ACTIVATION.md#construction-availability)) and the outcomes of `activate` ([REFERENCE_FRAME §5](../REFERENCE_FRAME.md#5-method-functions)) are imported, not chosen here | 3, 5, 9 |
-| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F4 imported; I3 | By P5 a step can stop with an external effect whose completion its evidence cannot decide, as where a response is lost under I3, and F4 requires such an effect to be reconciled before any repetition or dependent action (ACTIVATION §5). The Executive cannot reconcile an effect it is not told of, so a work result names each intended external effect with its value, and the Executive has an effect of uncertain completion reconciled, sufficiently for the next dependent action, before reactivating work or taking that action | [§13](../EXECUTIVE_BASELINE.md#13-handoff-projection), work result; [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) step 4; [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), failure assumptions | the effect field of the work-result projection: this profile. The effect values ([ACTIVATION §3 Effects](../ACTIVATION.md#effects)) and the reconciliation rule ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart)) are imported | 4, 5 |
-| P6 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise); F6 imported; I3 | Under I3 a constructor can be wrong about its candidate, and by P6 its self-review is construction output (F6), so self-review stays Worker evidence, and where independent assessment is required a separately activated Reviewer that is not the author evaluates the exact live subject (F6). By P6 a verdict is evidence for the decision owner, so the Reviewer returns evidence-bound triage and no disposition, priority or next activation. By P1 and P5 a cause or repair risk the evidence cannot support is returned as uncertainty, not given precision | [§10](../EXECUTIVE_BASELINE.md#10-derived-reviewer-frame); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) steps 4 to 6; [§17](../EXECUTIVE_BASELINE.md#17-actor-binding-and-independence) | the triage fields: this profile; the severity scale: the adopting Product. When independent assessment is required ([TICKETS UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007), with the boundaries a governing basis adds) and what counts as independent ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)) are imported | 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); F4 imported; I3 | By P5 a step can stop with an external effect whose completion its evidence cannot decide, as where a response is lost under I3, and F4 requires such an effect to be reconciled before any repetition or dependent action (ACTIVATION §5). By P4b a step-produced fact is not re-acquirable, so the Executive cannot reconcile an effect it is not told of, and a work result names each intended external effect with its value, and the Executive has an effect of uncertain completion reconciled, sufficiently for the next dependent action, before reactivating work or taking that action | [§13](../EXECUTIVE_BASELINE.md#13-handoff-projection), work result; [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) step 4; [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), failure assumptions | the effect field of the work-result projection: this profile. The effect values ([ACTIVATION §3 Effects](../ACTIVATION.md#effects)) and the reconciliation rule ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart)) are imported | 4, 5 |
+| P6 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise); F6, F13 imported; I3 | Under I3 a constructor can be wrong about its candidate, and by P6 its self-review is construction output (F6), so self-review stays Worker evidence, and where independent assessment is required a separately activated Reviewer that is not the author evaluates the exact live subject (F6). By P6 a verdict is evidence for the decision owner, so the Reviewer returns evidence-bound triage and no disposition, priority or next activation. By P1 and P5 a cause or repair risk the evidence cannot support is returned as uncertainty, not given precision | [§10](../EXECUTIVE_BASELINE.md#10-derived-reviewer-frame); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) steps 4 to 6; [§17](../EXECUTIVE_BASELINE.md#17-actor-binding-and-independence) | the triage fields: this profile; the severity scale: the adopting Product. When independent assessment is required ([TICKETS UP-007](../TICKETS.md#execution-and-verification-authority-separation-up-007), with the boundaries a governing basis adds) and what counts as independent ([EVALUATION §3](../EVALUATION.md#3-independent-assessment)) are imported | 9 |
 | P3 (independent), P6 (independent); F4, F6 imported | By P3 a subject's identity holds only as declared, and by P6 a verdict holds only on its basis, so a review evaluates an exact candidate whose identity cannot move under it: F6 requires a freeze before material reference exposure where generic method qualification applies, and elsewhere the subject is stabilised to the exactness the claim needs, the identity that transition evidence (F4) and traceability (F6) name. Neither premise requires a lifecycle state, so none named `frozen` is created | [§5 Exact candidate](../EXECUTIVE_BASELINE.md#exact-candidate); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) step 5B | the stabilisation where no freeze applies, an immutable identity or an equivalent exact-subject relation: this profile; the freeze and when it applies: [EVALUATION §7](../EVALUATION.md#7-qualification-of-frames-and-of-the-method), imported | 2, 9 |
 | P6 (independent), P1 (independent), P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise); F2, F3, F6 imported; I2 | By P6 evidence and decision are distinct, so severity, a grade of a finding's consequence, is evaluation evidence, while priority, the current-boundary effect and the disposition are decisions of the owner I2 names, and by P1 a policy that maps one to another does not make them one value (F6). F6 decides when a finding can block, so the current-boundary effect records the Executive's reading of a finding under that rule and decides nothing itself, and by F3 the decision returns through the core only through the one disposition applied. A hard stop holds whatever the priority (F2). By P2 an observation outside the claim has no route to that claim's outcome, so it opens no review round; by P5 an unsupported assessment is kept `indeterminate` or re-evaluated | [§5 Technical triage, severity, priority and boundary effect](../EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); [§12](../EXECUTIVE_BASELINE.md#12-complete-engagement-transition) step 7 and Promotion constraint projection | the severity and priority scales, the decision cutoff, and which conditions of the outcome are hard stops: the adopting Product's basis ([§19](../EXECUTIVE_BASELINE.md#19-baseline-specific-basis-and-activation-additions)); the three current-boundary effect states and the added row of the projection: this profile. When a finding can block ([EVALUATION §5](../EVALUATION.md#when-a-finding-blocks-promotion)), what a hard stop is ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement)) and the four dispositions ([ACTIVATION §3](../ACTIVATION.md#disposition)) are imported | 5, 9 |
 | P4a (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P3 (independent), P6 (independent); F1, F2, F4 imported | By P4b a step's facts reach a later step only through what it records, and F4 hands work over by closed results without private working context, so every result returns through a declared relation with its closed result and source routes. By P6 and F2 a step begins only through admission and activation, so no handoff, completion, model response, tool output or shared actor activates another frame or authorises continuation. By P3 and P4a results of different candidates, bases or episodes keep their identities, so flattening projections establishes no relation among them; an equality or translation is declared (F1) | [§13](../EXECUTIVE_BASELINE.md#13-handoff-projection); [§6](../EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action) Attention cycle | the eight projections and their minimum content: this profile; their carriers: the existing project records | 5, 6, 7 |
