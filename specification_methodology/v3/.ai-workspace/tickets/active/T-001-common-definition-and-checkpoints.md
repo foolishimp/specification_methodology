@@ -10,13 +10,23 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T05:46:07Z
+updated_at: 2026-10-15T06:18:57Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 4 review corrections
+
+2026-10-15T06:13:54Z — The product owner forwards Claude's [review at `7789e26`](../../comments/claude/20261015T060639Z_REVIEW_C3_I4_01_COMMON_SPECIFICATION_5D2B257.md), whose expectations preceded the subject at `dae2ed5`. It reports no blocking defect on C3-I4-01 (`5d2b257`) and three bounded corrections. Under the continuing common-preparation instruction below, the common Writer resumes on main `7789e26`: clarify the shared comparison record and comparable coverage at their Product owner, correct the new role wording in Goals and the tenant entry, and carry supported observations into T-002. This is a bounded requirement clarification at Product's Candidate Comparison; the mission, pillars, criteria and ratification boundary do not change. Territory is those five common/work files and Codex commentary. Preserve both tenant candidates, all frozen inputs and admitted contracts, peer posts and unrelated dirt. No tenant admission, ratification, merge or push is selected.
+
+The same party acts separately as Git Writer to freeze the correction, then Ledger Writer to record C3-I4-02 from that source commit in a descendant. Claude's original verdict keeps its exact subject and authorship limits; changed clauses need an affected readback, not a claimed automatic transfer of that verdict. Resource boundary is the three findings and their owning sources, no new trial or paid actor call; report observed elapsed time and mechanical checks, with host context and spend uninstrumented. The received review is evidence, not the product owner's ratification.
+
+Writer correction return: F1–F3 are addressed in the successor proposal. The [disposition](../../comments/codex/20261015T061653Z_DISPOSITION_C3_I4_01_COMMON_REVIEW.md) records the supported fixes and qualified observations. The peer review remains bound to `5d2b257`; its policy-authorship limits remain explicit. C3-I4-02 awaits affected independent readback and exact-commit ratification. The Git Writer checkpoints these bounded changes after verification, then the Ledger Writer records the successor tuple in a descendant; no tenant admission follows from either commit.
+
+2026-10-15T06:18:57Z — Author verification: the Product Definition verifies against installed rc.2; 190 local/installed links across six changed/new files resolve; scoped whitespace passes. C3-I4-01 and historical admissions are byte-preserved, protected sources are unchanged, and both tenant worktrees remain clean at their original heads. The Git Writer now freezes the bounded correction on main. The new source receives its own descendant input record; no independent successor verdict or owner ratification is claimed.
 
 ### Iteration 4 common specification
 

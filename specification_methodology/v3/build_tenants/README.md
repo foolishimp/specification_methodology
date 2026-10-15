@@ -10,9 +10,9 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) and [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging):
 
-1. Codex prepares the common revision, Claude reviews its exact freeze, and Jim ratifies it.
+1. Codex prepares the common revision, Claude reviews its exact freeze, and the product owner ratifies it.
 2. Each tenant rebinds to that ratified input and synthesises its own candidate with selected contributions from its peer, under [Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis).
-3. The two frozen candidates receive the shared comparison and Jim selects the next basis.
+3. The two frozen candidates receive the shared comparison and the product owner selects the next basis.
 
 I4 common preparation is active. Tenant I4 construction waits for ratification and each line's admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
 
