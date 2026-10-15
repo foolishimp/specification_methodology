@@ -2087,6 +2087,24 @@ executor, builder, or substrate, it must publish governance truth, not
 imperative strategy law, unless strategy ownership is explicitly part of the
 boundary's ratified responsibility.
 
+For this rule, the bound responsibility and actual operation or decision grant
+are instance premises. [Interpretation](FOUNDATIONS.md#interpretation-and-representation)
+(F2) distinguishes information about state and admissible routes from a
+prescription for the actor. [Typed composition](FOUNDATIONS.md#typed-composition-and-conservation)
+(F4) preserves each actor's responsibility and authority across the governance
+handoff; composing an observation or route helper with another actor does not
+transfer that actor's strategy role. [Judgment and authority](FOUNDATIONS.md#judgment-and-authority)
+(F6) separates evidence from permission, so accurate governance information
+cannot confer the other actor's strategy grant.
+
+Where ratified responsibility explicitly includes strategy ownership, the
+boundary may prescribe strategy within that owned role and its actual grant.
+Explicitly owned assessment retains the assessment-boundary exception below.
+This rule's additional domain policy is the governance/strategy publication
+distinction and the listed lawful and unlawful forms. F2/F4/F6 explain its
+authority boundary; they do not select governance-only responsibility for every
+system or grant strategy or assessment ownership.
+
 Lawful governance publication includes:
 
 - current state

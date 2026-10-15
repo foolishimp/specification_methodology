@@ -1,0 +1,41 @@
+{
+  "activation": "I4-DMM-GOVERNANCE-ARGUMENT",
+  "start_utc": "2026-10-15 12:52:23 UTC",
+  "closed_utc": "2026-10-15 12:59:44 UTC",
+  "elapsed_seconds": 441,
+  "wall_cap_seconds": 900,
+  "selected_source_cap_bytes": 98304,
+  "selected_source_accounted_bytes": 56558,
+  "acquisition_records": [
+    {
+      "label": "Initial current/I3 §11A row, source section and heading inventory",
+      "bytes": 32768,
+      "measurement": "Conservative reserve after initial host counter failure"
+    },
+    {
+      "label": "Selected authority/source batch 0",
+      "bytes": 6679,
+      "measurement": "UTF-8 tool output bytes"
+    },
+    {
+      "label": "Selected authority/source batch 1",
+      "bytes": 9509,
+      "measurement": "UTF-8 tool output bytes"
+    },
+    {
+      "label": "Selected authority/source batch 2",
+      "bytes": 7602,
+      "measurement": "UTF-8 tool output bytes"
+    }
+  ],
+  "measurement_boundary": "Selected source/account/authority output exposed to the author is counted. The first batch uses a conservative 32 KiB reserve because a host TextEncoder counter was unavailable after output; subsequent selected outputs use UTF-8 byte counts. Full local parser and hash reads of source/account blobs are excluded from the selected-context measure and are not claimed as bounded I/O. Authored scripts and author-return metadata are not additional external source acquisition.",
+  "host_context_cost": "unknown",
+  "native_cost": "unknown",
+  "paid_calls": 0,
+  "subagent_activations": 0,
+  "git_mutations": 0,
+  "source_effect": "One insertion in DESIGN_MODULE_METHOD.md §11A; every other source byte preserved.",
+  "account_writes": 0,
+  "generated_artifact_writes": 0,
+  "acceptance": "No independent fidelity, adoption or release claim."
+}

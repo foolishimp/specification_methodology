@@ -1,0 +1,826 @@
+{
+  "standing": "Author structural/routing checks, not independent semantic fidelity.",
+  "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+  "receiving_account_sha256": "b8c43489311b387045de129db459ef1bf29c1334724fcccc36474ea9565fedcd",
+  "source_tables": 6,
+  "source_rows": 42,
+  "affected_determination_ids": 166,
+  "consumer_units": 160,
+  "old_copies_replaced": 66,
+  "old_copy_hashes": [
+    "078a693433a1f1a332d3685017b593fbadead5c8bf14a969b3d407d38371d41c",
+    "0f7537d7cdd19d72695a73674cc8787e86ccfd773a43e3d49c1540019a2e470b",
+    "3b365cd9d53fbaa1c266fd3571211ce404ab32491db44b9a40be16ddffa04d15",
+    "4dab4f13d06f2295eef724980631593bada451227b284bc4023ad7ac1f6f8347",
+    "5072d0268f20e6e421a9d7c71a2ea18ad384862cbffa597939c3983cb2ea239c",
+    "862f83b22d56d379f602aed9f895da386c202a3928390fc774baca69d7540ccd",
+    "9b5f548aaf2fe20539da006c070acc95c0715954846c1c9db0575a00a01a14e4",
+    "a5af31c15c88a4ad5f90e85313da27c19da6096350abbf8e155dba1e4c2fb408",
+    "af58d8df5c93175e801c2ac5a05d20ae93d703da338312de4658317647132857",
+    "c7b0e20fdcecc4419ef55006f5ddbbd30e7d3c49180432b87ab8446b3e4f8ef6"
+  ],
+  "old_affected_units": 58,
+  "stale_core_copies_after_in_memory_application": [],
+  "unresolved_source_bindings": [],
+  "local_arguments_preserved": true,
+  "dependencies_and_result_mappings_preserved": true,
+  "scoped_array_applications_checked": 166,
+  "later_integration_foreign_family_preserved": true,
+  "new_owned_family_exact_semantic_id_values": [],
+  "receiving_account_unchanged": true,
+  "source_members": {
+    "standards/FOUNDATIONS.md": "a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981",
+    "standards/TRANSFORMATION_LIBRARY.md": "c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead",
+    "standards/AXIOMATIC_CALCULUS.md": "3818cd47b94c82b9b3ae27ede7a30cd5812fc484d56d677e2624371149e5acc4",
+    "standards/REFERENCE_FRAME_METHOD.md": "8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4",
+    "standards/SPEC_METHOD.md": "5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798",
+    "standards/IDENTITY_METHOD.md": "61a9125424b9c70106ebb181001a99e85cf21f88e1b3be9b1186b8d95ec8319c",
+    "standards/STDO_REFERENCE_FRAME_BASELINE.md": "0afebe8e00e652fc966634316ed7a4c5ca4246cb700158bd3baf15fcd9a4a742",
+    "standards/TICKET_METHOD.md": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+    "standards/DESIGN_MODULE_METHOD.md": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0",
+    "plugins/spec/skills/stdo-work/SKILL.md": "13902bef25750b8f623a2f2210d2c6df867b474926d0617bc4d517e7e10763e4"
+  },
+  "scope_expansion": [
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 1,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 708,
+        "sha256": "5106b09ff3714372dd23f01fb52e44b83273c4fd05669090c16b84f0a35cc3d0",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Interpretation and representation](#interpretation-and-representation), applied by Faithful projection, AC-017 and RF-017",
+      "named_scope_roots": [
+        "FOUNDATIONS.interpretation-and-representation",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "AXIOMATIC_CALCULUS.ac-017-interpretation-fidelity",
+        "REFERENCE_FRAME_METHOD.rf-017-proportional-compression"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 2,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 709,
+        "sha256": "758a9e6e2e1c9336887e12ad0530b26469e7152fc88abbc84f94235d5a61bbb6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Purpose and interfaces](#purpose-and-interfaces), applied by UP-013 and UP-014",
+      "named_scope_roots": [
+        "FOUNDATIONS.purpose-and-interfaces",
+        "SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+        "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 3,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 710,
+        "sha256": "3f637441ac7dce582e3f5d6f0797dc7b885f0d47d239f727f76e6455021ef1b1",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Identity, state and evidence](#identity-state-and-evidence), applied by Identity Method and result reuse",
+      "named_scope_roots": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "IDENTITY_METHOD.*",
+        "FOUNDATIONS.workspace-and-context"
+      ],
+      "scope_join_evidence": "Identity/state/evidence explicitly routes reuse to Workspace and context; Identity Method is a named whole-member consumer. Its local identity policies remain separate."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 4,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 711,
+        "sha256": "7f4595e2dfb657ebce364ceb74f9e313ff98d22ca4250759ee5b7a9fcf8d86ea",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Typed composition](#typed-composition-and-conservation) and [Orthogonal descriptions](#orthogonal-descriptions), applied by Composition law and AC-016",
+      "named_scope_roots": [
+        "FOUNDATIONS.typed-composition-and-conservation",
+        "FOUNDATIONS.orthogonal-descriptions",
+        "TRANSFORMATION_LIBRARY.composition-law",
+        "AXIOMATIC_CALCULUS.ac-016-typed-composition"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 5,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 712,
+        "sha256": "1dacadad3d1a2a4cd9042b236ad7a7a954abb8c349e64faf5954796805889572",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Result algebra](#result-algebra), applied by RF-012 and Evaluate",
+      "named_scope_roots": [
+        "FOUNDATIONS.result-algebra",
+        "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+        "TRANSFORMATION_LIBRARY.evaluate"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 6,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 713,
+        "sha256": "ca063dc5b1559f8d33c7b0caaa153bf3ffc10b180a35838e16740be98d5d23ee",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "Domain refinement and decision results in [Result algebra](#result-algebra), applied by Work result, RF-012 and Dispose",
+      "named_scope_roots": [
+        "FOUNDATIONS.result-algebra",
+        "STDO_REFERENCE_FRAME_BASELINE.work-result",
+        "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+        "TRANSFORMATION_LIBRARY.dispose"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 7,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 714,
+        "sha256": "f7cfd2a1224a7ce6ccf0b0b0fd71e8bd25ec678e982f5cc945782dc5e0aaaa3e",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Result conjunction](#result-conjunction), applied by Conjoin, frame conjunction and engagement coverage",
+      "named_scope_roots": [
+        "FOUNDATIONS.result-conjunction",
+        "TRANSFORMATION_LIBRARY.conjoin",
+        "REFERENCE_FRAME_METHOD.result-conjunction",
+        "STDO_REFERENCE_FRAME_BASELINE.coverage-application"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 8,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 715,
+        "sha256": "80b65a332eedd719f77129b0b19feaa3683812cbc06751f9d57600538078be80",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Workspace and context](#workspace-and-context), applied by Acquire, Recovery law and ticket resumption",
+      "named_scope_roots": [
+        "FOUNDATIONS.workspace-and-context",
+        "TRANSFORMATION_LIBRARY.acquire",
+        "TRANSFORMATION_LIBRARY.recovery-law",
+        "TICKET_METHOD.work-carrier-to-execution-rule"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 9,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 716,
+        "sha256": "c718b1b8a01999f0d3d829ca07321fc722ed0ea961f7cf153c64c2b2fa66b679",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "Unknown-effect recovery in [Workspace and context](#workspace-and-context), applied by Recovery law and Transform",
+      "named_scope_roots": [
+        "FOUNDATIONS.workspace-and-context",
+        "TRANSFORMATION_LIBRARY.recovery-law",
+        "TRANSFORMATION_LIBRARY.transform"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 10,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 717,
+        "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+      "named_scope_roots": [
+        "FOUNDATIONS.bounded-construction",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "DESIGN_MODULE_METHOD.8-totality-rule"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "FOUNDATIONS.core-contract-derivations",
+      "row": 11,
+      "source_row": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "line": 718,
+        "sha256": "d1ca128b46d808b8b528c69cfcdc6f6aec5cd32c6ce59a6359abd79832d160b6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Configuration](#configuration), applied by RF-009 and an adopted Baseline engagement",
+      "named_scope_roots": [
+        "FOUNDATIONS.configuration",
+        "REFERENCE_FRAME_METHOD.rf-009-no-assumed-hierarchy",
+        "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action"
+      ],
+      "scope_join_evidence": "Configuration explicitly links its optional Executive arrangement to this Executive owner; the binding applies only when that arrangement is adopted and lawfully selected."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "row": 1,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "foundational-contract",
+        "line": 105,
+        "sha256": "79fbd0afad6d6d010f47652a1f07838f78d71b745b265b301c0929f4a452cf89",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Contract application](#contract-application): design admission, Spec enclosing-relation admission and frame activation",
+      "named_scope_roots": [
+        "TRANSFORMATION_LIBRARY.contract-application",
+        "DESIGN_MODULE_METHOD.admission-contract-use",
+        "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+        "REFERENCE_FRAME_METHOD.select-and-activate"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "row": 2,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "foundational-contract",
+        "line": 106,
+        "sha256": "2d44bf43058e19c6fa6fcb9a240fc105f28695520412e90ec3d916267cb268ee",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Faithful projection](#faithful-projection): RF-017, AC-017 and domain publications",
+      "named_scope_roots": [
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "REFERENCE_FRAME_METHOD.rf-017-proportional-compression",
+        "AXIOMATIC_CALCULUS.ac-017-interpretation-fidelity"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "row": 3,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "foundational-contract",
+        "line": 107,
+        "sha256": "012a90d0597702d507d026e4dc63d94f641fb9eef54030d350b9b5692e61bb5e",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Composition law](#composition-law): Design UP-016/017, Spec UP-021, AC-016 and frame joins",
+      "named_scope_roots": [
+        "TRANSFORMATION_LIBRARY.composition-law",
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+        "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+        "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+        "AXIOMATIC_CALCULUS.ac-016-typed-composition",
+        "REFERENCE_FRAME_METHOD.using-frames-in-conjunction"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "row": 4,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "foundational-contract",
+        "line": 108,
+        "sha256": "4de7e99cf6c09d7c9f3519d74305bdccab02c3c9675cc1af5003d441094245da",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Recovery law](#recovery-law): Product continuation, ticket resumption and adopted runtime recovery",
+      "named_scope_roots": [
+        "TRANSFORMATION_LIBRARY.recovery-law",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.computed-classification-and-treatment",
+        "TICKET_METHOD.work-carrier-to-execution-rule"
+      ],
+      "scope_join_evidence": "Recovery law names Spec Product progress/re-entry and Ticket carrier use; UP-020 and Computed Classification supply those concrete Product continuation decisions."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "row": 1,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "workrecovery-specialization",
+        "line": 253,
+        "sha256": "9560e804d4327a09805f954248c7e5f2b8665122eede81b39c077dc23a00a106",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome.",
+      "named_scope_roots": [
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "row": 2,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "workrecovery-specialization",
+        "line": 254,
+        "sha256": "defeeebc40c8d8d709cbe42e7f37f63c77687214e698a138e8a73aa36776078e",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants.",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-003-material-sufficiency",
+        "REFERENCE_FRAME_METHOD.rf-014-capability-fit",
+        "CARRIER.plugins.spec.skills.stdo-work.SKILL.md"
+      ],
+      "scope_join_evidence": "The work/recovery body links the ordinary work-entry skill after the table; its responsibility-frame route is the named work-entry consumer."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "row": 3,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "workrecovery-specialization",
+        "line": 255,
+        "sha256": "1fb9e40995ca12c810cd61065280217b485bd52b377dc854f5da96403dcc047c",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) and [Ticket reuse](TICKET_METHOD.md#work-carrier-to-execution-rule) bind applicability, invalidation and the wider frontier when dependency independence is unproved. Their concrete freshness rules are domain policy.",
+      "named_scope_roots": [
+        "SPEC_METHOD.computed-classification-and-treatment",
+        "TICKET_METHOD.work-carrier-to-execution-rule"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "row": 4,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "workrecovery-specialization",
+        "line": 256,
+        "sha256": "3411d8d9d063146198cb0790275925938ff1a67d01e8e172fc1f05553bafe4e5",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Workspace and context](FOUNDATIONS.md#workspace-and-context) owns the generic unknown-effect rule; [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) binds its Product context. The operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation.",
+      "named_scope_roots": [
+        "FOUNDATIONS.workspace-and-context",
+        "SPEC_METHOD.computed-classification-and-treatment"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "row": 5,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "workrecovery-specialization",
+        "line": 257,
+        "sha256": "fca1bb40da395f24a9e0f0745bf66f8be5345f7a94b6eacbbbc1e19d4cf3ef16",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices.",
+      "named_scope_roots": [
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "FOUNDATIONS.result-conjunction",
+        "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "row": 1,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "transformation-admission-specialization",
+        "line": 280,
+        "sha256": "4547efb7d8e608da69b64100cf691795b1f9a8814d16d13b115d98a3d9a87c80",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law.",
+      "named_scope_roots": [
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+        "DESIGN_MODULE_METHOD.admission-contract-use"
+      ],
+      "scope_join_evidence": "The paragraph following the four-row table binds its complete contract to Design admission-contract-use."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "row": 2,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "transformation-admission-specialization",
+        "line": 281,
+        "sha256": "671a79c2d6d0f26fa0a0be9ce52092d81f19c2388c8517f5e108457d5c7fdcb3",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence.",
+      "named_scope_roots": [
+        "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+        "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+        "DESIGN_MODULE_METHOD.admission-contract-use"
+      ],
+      "scope_join_evidence": "The paragraph following the four-row table binds its complete contract to Design admission-contract-use."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "row": 3,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "transformation-admission-specialization",
+        "line": 282,
+        "sha256": "fdb6fb3b2a32de3b1d3758029899852701c800f45233d3abdffe8d7c216c1792",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics.",
+      "named_scope_roots": [
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+        "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+        "DESIGN_MODULE_METHOD.admission-contract-use"
+      ],
+      "scope_join_evidence": "The paragraph following the four-row table binds its complete contract to Design admission-contract-use."
+    },
+    {
+      "owner": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "row": 4,
+      "source_row": {
+        "path": "standards/TRANSFORMATION_LIBRARY.md",
+        "anchor": "transformation-admission-specialization",
+        "line": 283,
+        "sha256": "fdbcb0c622bd1afb500cfe395863a8c1832d65087b975f14e26f6ac24e22540e",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes.",
+      "named_scope_roots": [
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+        "DESIGN_MODULE_METHOD.admission-contract-use"
+      ],
+      "scope_join_evidence": "The paragraph following the four-row table binds its complete contract to Design admission-contract-use."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 1,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 354,
+        "sha256": "be808f3e2610abfbe822c45d329b68f6b6a131882554564d4ff153b59fd40f8d",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-001](#rf-001-evaluation-relativity), used by Select And Activate and Diagnostic Order",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity",
+        "REFERENCE_FRAME_METHOD.select-and-activate",
+        "REFERENCE_FRAME_METHOD.diagnostic-order"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 2,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 355,
+        "sha256": "24fb48a14552f5c652075317aa838b5a25de49f00ec9e9cb94b50e9536be5b59",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-002–004](#rf-002-finite-attention) and [RF-013–014](#rf-013-reconstructable-activation), used by Select And Activate",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-002-finite-attention",
+        "REFERENCE_FRAME_METHOD.rf-003-material-sufficiency",
+        "REFERENCE_FRAME_METHOD.rf-004-irrelevance-exclusion",
+        "REFERENCE_FRAME_METHOD.rf-013-reconstructable-activation",
+        "REFERENCE_FRAME_METHOD.rf-014-capability-fit",
+        "REFERENCE_FRAME_METHOD.select-and-activate"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 3,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 356,
+        "sha256": "5bc7c0c9f7267c514a50e6bee4efd997430318cdd3c0d5d91f11ec40fe7c5ed4",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-005](#rf-005-exact-basis-and-coordinates) and [RF-011](#rf-011-topology-mutation-and-recharting), used by result reuse and Reconfigure When Necessary",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+        "REFERENCE_FRAME_METHOD.rf-011-topology-mutation-and-recharting",
+        "REFERENCE_FRAME_METHOD.return-a-closed-result",
+        "REFERENCE_FRAME_METHOD.reconfigure-when-necessary"
+      ],
+      "scope_join_evidence": "Return A Closed Result applies currentness to result reuse; Reconfigure When Necessary is expressly named in the table."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 4,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 357,
+        "sha256": "a01a01ea90b0e02718aba5fd26da06c7f57cc975cd5848adbcc82cf62272009d",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-006–008](#rf-006-authority-conservation), used by Evaluate and Evidence Or Coordinate Translation",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-006-authority-conservation",
+        "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation",
+        "REFERENCE_FRAME_METHOD.rf-008-overlap-without-identity-collapse",
+        "REFERENCE_FRAME_METHOD.evaluate",
+        "REFERENCE_FRAME_METHOD.evidence-or-coordinate-translation"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 5,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 358,
+        "sha256": "c267d218cf3e069e2d444c14f85daa3e75bcbf4df1419c3a69bb0ba18ec6bb03",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-009](#rf-009-no-assumed-hierarchy) and [RF-016](#rf-016-implementation-neutrality), used by Human Frame-Set Declaration, Frame-Set Optimization and Agentic Use",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-009-no-assumed-hierarchy",
+        "REFERENCE_FRAME_METHOD.rf-016-implementation-neutrality",
+        "REFERENCE_FRAME_METHOD.human-frame-set-declaration",
+        "REFERENCE_FRAME_METHOD.frame-set-optimization",
+        "REFERENCE_FRAME_METHOD.agentic-use"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 6,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 359,
+        "sha256": "f5047eca894db9926713b3d29c11142b914354a0b7e7160628a70a8cb6a86381",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-010](#rf-010-composition-on-demand), used by Using Frames In Conjunction",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-010-composition-on-demand",
+        "REFERENCE_FRAME_METHOD.using-frames-in-conjunction"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 7,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 360,
+        "sha256": "f60f999a154d19f632aabe0a0c102c56b273334ce2976deb70082639a21e2850",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-012](#rf-012-closed-results) and [RF-015](#rf-015-residual-uncertainty), used by Return A Closed Result and Result Conjunction",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+        "REFERENCE_FRAME_METHOD.rf-015-residual-uncertainty",
+        "REFERENCE_FRAME_METHOD.return-a-closed-result",
+        "REFERENCE_FRAME_METHOD.result-conjunction"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 8,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 361,
+        "sha256": "53b5441e3f114995ff36049e40f482315f3025501f46339fca5d6d6f2dbd3f9c",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[RF-017](#rf-017-proportional-compression), used by acquired frame views",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.rf-017-proportional-compression",
+        "REFERENCE_FRAME_METHOD.select-and-activate"
+      ],
+      "scope_join_evidence": "Select And Activate explicitly applies RF-017 to its acquired packet and current material subject."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 9,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 362,
+        "sha256": "9bf43da50031953a05749e6bc9b033a046b4323a9d3ef86c3879bff6b63e5774",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Applicability And Required Results](#applicability-and-required-results) and [Workspace Coverage](#workspace-coverage), used by engagement and coverage claims",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+        "REFERENCE_FRAME_METHOD.workspace-coverage",
+        "REFERENCE_FRAME_METHOD.engagement"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "row": 10,
+      "source_row": {
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "anchor": "reference-frame-laws",
+        "line": 363,
+        "sha256": "fc7e7a3a04efa5ab2ede995749f9265b7778d6c7e5a0ad5f610759ae2f237ebc",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Discovery And Revision](#discovery-and-revision), Completeness Boundary, Frame Qualification and Method Self-Qualification, used by diagnosis and closure",
+      "named_scope_roots": [
+        "REFERENCE_FRAME_METHOD.discovery-and-revision",
+        "REFERENCE_FRAME_METHOD.completeness-boundary",
+        "REFERENCE_FRAME_METHOD.frame-qualification",
+        "REFERENCE_FRAME_METHOD.method-self-qualification",
+        "REFERENCE_FRAME_METHOD.diagnostic-order",
+        "REFERENCE_FRAME_METHOD.closure"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 1,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 132,
+        "sha256": "3001006b33328b8ebe83e0e4f9c8a8c9eb58857550d4e1a00b72d724e48a49f2",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Engagement Applicability](#engagement-applicability), used at direct entry or coordination selection",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 2,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 133,
+        "sha256": "192131425fd4436b6ad7c6ea4ead2c110ea2a805a67e7c35470d4b67c4c45710",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Executive Attention, Evaluation, And Action](#executive-attention-evaluation-and-action), used to select the next activation",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 3,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 134,
+        "sha256": "1dece9dd4fffcf579125dbe1ecbfd8b8b3fd66a6e94bf9ce18d0c50b4c61dc81",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Product-Chain Basis](#product-chain-basis), Executive Drift Locks and Handoff Projection, used by Worker/Reviewer activation and result consumption",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.product-chain-basis",
+        "STDO_REFERENCE_FRAME_BASELINE.executive-drift-locks",
+        "STDO_REFERENCE_FRAME_BASELINE.handoff-projection",
+        "STDO_REFERENCE_FRAME_BASELINE.2-executive-activates-worker",
+        "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+        "STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review",
+        "STDO_REFERENCE_FRAME_BASELINE.7-executive-disposes-and-checkpoints"
+      ],
+      "scope_join_evidence": "The transition activation/assessment/disposition bodies bind exact candidate/basis and consume returns through Handoff Projection."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 4,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 135,
+        "sha256": "7788d5037392cf4c09759bb1ab36e3342cee69c86220a7c679f087a79c21db3d",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Work result](#work-result) and Complete Engagement Transition steps 3–6, used by Executive evaluation",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.work-result",
+        "STDO_REFERENCE_FRAME_BASELINE.3-worker-returns-to-executive",
+        "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+        "STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review",
+        "STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review",
+        "STDO_REFERENCE_FRAME_BASELINE.6-reviewer-returns-to-executive",
+        "STDO_REFERENCE_FRAME_BASELINE.reviewer-result-and-triage-projection"
+      ],
+      "scope_join_evidence": "Step 6 explicitly routes findings through the triage projection below; that projection retains its own more-specific local argument."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 5,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 136,
+        "sha256": "56588beebf267fac35a17c168836d8edf7c048df0b27e5ee0f7fd7522cf5fcb5",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Coverage Application](#coverage-application), specialist/testing/interface frames and Missing-Frame And Re-Entry Application, used to bind the required engagement evaluations",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+        "STDO_REFERENCE_FRAME_BASELINE.derived-generic-specialist-frame-set",
+        "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+        "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-interface-integration-frame",
+        "STDO_REFERENCE_FRAME_BASELINE.missing-frame-and-re-entry-application"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 6,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 137,
+        "sha256": "2b5cc24ca49ccb3b79f3dd8946a04fd4f22c4b66c99b75492adda63c5ee2a1f4",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Product-Owned Adoption Or Project-Defined Configuration](#product-owned-adoption-or-project-defined-configuration), used before applying profile duties",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.product-owned-adoption-or-project-defined-configuration",
+        "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-project-basis-additions",
+        "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions"
+      ],
+      "scope_join_evidence": "The choice cell names this profile adoption additions; the two additions bodies explicitly restrict themselves to adopted profile basis/activation content."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 7,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 138,
+        "sha256": "746c09acde88095c6ee44e67fd146c262981029a4d1a88ff0e9b620bfda847f1",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "[Profile Qualification](#profile-qualification), used to claim this profile works under selected actor conditions",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.profile-qualification"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    },
+    {
+      "owner": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "row": 8,
+      "source_row": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "status-and-authority-boundary",
+        "line": 139,
+        "sha256": "990af68cb23563b096ef599fbcafe4f8d3b1a6eea34c2a3131b7ca89895163af",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "declared_consumer_scope": "Failure Classification, Anti-Patterns and [Closure](#closure), used at engagement disposition and checkpoint",
+      "named_scope_roots": [
+        "STDO_REFERENCE_FRAME_BASELINE.failure-classification",
+        "STDO_REFERENCE_FRAME_BASELINE.anti-patterns",
+        "STDO_REFERENCE_FRAME_BASELINE.closure"
+      ],
+      "scope_join_evidence": "Explicitly named governing or consuming locus in the row; enclosing headings include their source descendants."
+    }
+  ],
+  "limits": [
+    "Enclosing-heading inheritance is conditional on the stated decision relation, never a derivation of every local policy.",
+    "Identity Method is bound at the documentary source commit before the disjoint Identity selector repair; preserve local authored fields if integration rebases that source.",
+    "Domain publications and adopted runtime recovery are parametric instance scopes, not closed catalogs.",
+    "No generated/native acquisition or independent fidelity result is asserted."
+  ]
+}
