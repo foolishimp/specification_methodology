@@ -10,13 +10,21 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T06:20:38Z
+updated_at: 2026-10-15T09:42:02Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 4 final comparison clarification
+
+2026-10-15T09:42:02Z — The product owner forwards Claude's [C3-I4-02 readback](../../comments/claude/20261015T062734Z_READBACK_C3_I4_02_23AD611.md) at `73ad32e` and asks whether the work is done. The continuing common-preparation grant supplies this bounded Writer activation: apply F4's exact comparison wording in Product, record protocol disclosure timing in T-002, and update current standing and Codex commentary. The readback confirms F1–F3 and reports no blocking defect; its verdict remains on `23ad611`. Preserve all frozen inputs and prior records. No tenant effect or ratification is selected.
+
+The Writer returns C3-I4-03 for an exact-change readback and the product owner's ratification. Separate Git and Ledger Writer acts checkpoint the correction on main, then record its input hashes from that commit in a descendant. Scope is one constitutional sentence and its work records, with no trial or new agent. The [disposition](../../comments/codex/20261015T094202Z_DISPOSITION_C3_I4_02_READBACK.md) records the evaluation; the existing six criteria, integrated checks and admission conditions retain their meaning.
+
+2026-10-15T09:44:30Z — Author checks pass: exact F4-only Product delta, five new links, scoped whitespace, pinned installed Product Definition, preserved historical ticket/snapshot bodies and clean unchanged tenant worktrees. The Git Writer now checkpoints the five returned common/commentary files on main. Independent successor readback and ratification remain pending.
 
 ### Iteration 4 review corrections
 

@@ -8,7 +8,7 @@ GOAL-001: establish one common structure for the new release and review its foun
 
 GOAL-002: each build tenant constructs its own candidate of the product on its own line, with named peer contributions under [Cross-Synthesis](PRODUCT.md#cross-synthesis). The candidate reconstructs the method from its [essential pillars](PRODUCT.md#foundational-reduction), supplies usable constraint surfaces in prose and a_c, demonstrates reduction at deciding consumers, and accounts for every material predecessor claim under STDO-UP-015. The work follows the installed 2.5.1-rc.2 Executive engagement, configured by the [C3 Construction Contract](PRODUCT.md#c3-construction-contract). Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
 
-Current increment: iteration 4, common preparation. The product owner selects: Codex updates the common specification; after ratification both tenants synthesise their own best effort using applicable peer contributions; then both are evaluated for the product owner’s choice of the next v3 basis. [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) records the instruction and common Writer scope. Claude's review at `7789e26` reports no blocking defect on C3-I4-01. C3-I4-02 carries the three bounded corrections and awaits affected readback and the product owner's ratification; it is not an admitted tenant input. C3-I3-CLOSED-01 at `1fce537` retains its historical closure. The [I4 work list](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging) binds the current candidate subjects and dependent work. The iteration number is work history, not a Product version.
+Current increment: iteration 4, common preparation. The product owner selects: Codex updates the common specification; after ratification both tenants synthesise their own best effort using applicable peer contributions; then both are evaluated for the product owner’s choice of the next v3 basis. [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) records the instruction and common Writer scope. Claude's readback at `73ad32e` confirms F1–F3 and reports no blocking defect on C3-I4-02. C3-I4-03 applies its final Low comparison clarification and awaits exact-change readback and the product owner's ratification; it is not an admitted tenant input. C3-I3-CLOSED-01 at `1fce537` retains its historical closure. The [I4 work list](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging) binds the current candidate subjects and dependent work. The iteration number is work history, not a Product version.
 
 | Checkpoint | Current state | Required result |
 |---|---|---|
@@ -24,7 +24,7 @@ Current increment: iteration 4, common preparation. The product owner selects: C
 
 [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) records common checkpoint decisions; this file projects their current standing. The tenant C1 tickets, [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md), retain their own lifecycle and territory.
 
-T-002 preserves the historical shared inputs and admissions. C3-I4-02 is the successor proposal for review on main; its descendant recording names the exact source and hashes. C3-I4-01 and its review retain their original subjects. The product owner's ratification is recorded separately before either tenant's new admission. Neither common preparation nor a tenant return authorises a merge, push, release or adoption.
+T-002 preserves the historical shared inputs and admissions. C3-I4-03 is the successor proposal for exact-change readback on main; its descendant recording names the exact source and hashes. C3-I4-01, C3-I4-02 and their reviews retain their original subjects. The product owner's ratification is recorded separately before either tenant's new admission. Neither common preparation nor a tenant return authorises a merge, push, release or adoption.
 
 ## Open Owner Decisions
 
@@ -37,6 +37,8 @@ The open decisions are listed in [PRODUCT.md](PRODUCT.md#open-owner-decisions). 
 No installed identity or current cohort is changed.
 
 ## Revision Record
+
+2026-10-15, final I4 comparison clarification: the readback at `73ad32e` confirms the prior fixes. F4 makes comparable coverage include the same criteria and discriminators, with the shared protocol governing actual use. T-002 records protocol disclosure after both candidate freezes, or an earlier hash followed by disclosure after those freezes. This successor changes no eligibility criterion and records no ratification or admission.
 
 2026-10-15, I4 review correction: Claude's review of C3-I4-01 reports no blocking defect. F1 binds one shared protocol in common territory to both candidates; F2 defines comparable coverage as the same obligations and material cases under that protocol; F3 uses the product-owner role consistently in the new work routing. The original source, review and input tuple remain historical. The successor requires affected readback and exact-commit ratification; neither has been inferred from the forwarded review.
 

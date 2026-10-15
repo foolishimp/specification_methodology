@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T06:19:53Z
+updated_at: 2026-10-15T09:42:02Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -27,14 +27,14 @@ links:
 
 ## Iteration 4 staging
 
-The owner selects Codex's common I4 update, then both tenants' synthesis after ratification, then comparison for his choice of the next v3 basis. [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) owns this common preparation. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) disposes the staged questions against the current owners. The I4 specification remains proposed. Claude's review at `7789e26` reports no blocking defect on C3-I4-01; C3-I4-02 carries its bounded corrections, pending affected readback and the product owner's ratification. No I4 tenant contract is admitted by this entry.
+The owner selects Codex's common I4 update, then both tenants' synthesis after ratification, then comparison for his choice of the next v3 basis. [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) owns this common preparation. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) disposes the staged questions against the current owners. The I4 specification remains proposed. Claude's readback at `73ad32e` confirms F1–F3 and reports no blocking defect on C3-I4-02. C3-I4-03 applies its Low F4 clarification and records protocol disclosure timing, pending exact-change readback and the product owner's ratification. No I4 tenant contract is admitted by this entry.
 
 | Input | Exact subject |
 |---|---|
 | Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
 | Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
 | Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
-| I4 common proposal | C3-I4-02 at `23ad611ed9c44df214e97d8bc9edaa2ba61b7842`; proposed tuple recorded below. C3-I4-01 remains historical |
+| I4 common proposal | C3-I4-03, prepared for a source checkpoint and descendant input recording. C3-I4-01 and C3-I4-02 remain historical |
 
 The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
 
@@ -52,7 +52,7 @@ The I3 inputs and contracts below are historical, unchanged, and retain their or
 
 The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. Same-family nonauthor assessment of received ports is the proposed independence arrangement; a donor's assessment of its own contribution is supplementary. This arrangement requires ratification with the common revision before it can bear acceptance.
 
-Before actual-use activations, the owner selects resources; a nonauthor specifies the protocol and the common pen records it in one common record named here, with the same immutable version bound by both tenant contracts. The Executive applies its declared envelopes. That shared protocol has not yet been selected. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
+Before actual-use activations, the owner selects resources; a nonauthor specifies the protocol and the common pen records it in one common record named here, with the same immutable version bound by both tenant contracts. Record the shared protocol body only after both candidate freezes; any earlier selection records its hash alone until then, and expected answers remain withheld from task actors. The Executive applies its declared envelopes. That shared protocol has not yet been selected. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
 
 The staged D6 ranking remains the proposal for this comparison within Product's comparable-coverage conditions: among candidates that meet all six criteria and the integrated obligations, prefer fewer non-blocking residuals; if equal, Jim chooses on readability and maintainability with a recorded reason. Required unresolved evidence is not an eligible residual. No qualified candidate means no qualified choice. This is a proposed comparison rule awaiting common ratification, not a selection made by the pen.
 
