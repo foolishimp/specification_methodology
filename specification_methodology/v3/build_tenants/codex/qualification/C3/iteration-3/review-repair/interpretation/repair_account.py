@@ -161,6 +161,31 @@ def add_dependency(row, target, kind='contract_application', required_when=None,
         relations.append(rel)
 
 
+def repair_composition_acquisition(row):
+    """Retain the Composition law's domain conditions at each occurrence.
+
+    A repeated owner is still a relation occurrence. A prose grouping name does
+    not encode an acquisition condition for the compiler.
+    """
+    domains = row['definition']['clauses'][0]['conditional_domain_owners']
+    conditions = {
+        'design_declarations': 'design composition',
+        'complete_transition_admission_and_semantic_commit': 'consequential admission',
+        'frame_relations': 'frame-governed composition',
+        'typed_calculus_paths': 'a_c composition',
+    }
+    if set(domains) != set(conditions):
+        raise ValueError('Composition domain account changed; reconcile with its source')
+    for domain, when in conditions.items():
+        value = domains[domain]
+        if isinstance(value, dict):
+            if value.get('required_when') != when:
+                raise ValueError('Composition domain condition drift: ' + domain)
+            continue
+        domains[domain] = {'required_when': when,
+                           'owners': value if isinstance(value, list) else [value]}
+
+
 def repair_odd_entry_binding(row, source):
     """Keep section 19's recommendation and sufficiency judgments separate."""
     recommendation = ('The cold actor can readily recover the Product source-to-outcome semantic chain; '
@@ -705,6 +730,8 @@ def main():
     # Fresh block coordinates must never be interpreted against the old source.
     repair_odd_entry_binding(rows['ODD_METHOD.19-ramp-up-checklist'], source['standards/ODD_METHOD.md'])
     changed.add('ODD_METHOD.19-ramp-up-checklist')
+    repair_composition_acquisition(rows['TRANSFORMATION_LIBRARY.composition-law'])
+    changed.add('TRANSFORMATION_LIBRARY.composition-law')
     # Every changed meaning needs an authored repair or a named reviewed
     # preservation decision. This guard is completed from the Source return.
     pending = [r['id'] for r in repinned if r['id'] not in changed]

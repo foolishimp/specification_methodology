@@ -510,6 +510,88 @@ def family_mappings(current):
             for family, roots in sorted(groups.items()) if len(roots) > 1]
 
 
+def resolve_pointer(value, pointer):
+    """Resolve an RFC 6901 pointer without accepting ambiguous list indexes."""
+    if not isinstance(pointer, str) or (pointer and not pointer.startswith('/')):
+        raise ValueError('Invalid occurrence pointer: ' + repr(pointer))
+    try:
+        for token in pointer.split('/')[1:]:
+            if re.search(r'~(?![01])', token):
+                raise ValueError('Invalid JSON Pointer escape')
+            key = token.replace('~1', '/').replace('~0', '~')
+            if isinstance(value, list):
+                if not re.fullmatch(r'0|[1-9][0-9]*', key):
+                    raise ValueError('Invalid JSON Pointer array index')
+                value = value[int(key)]
+            else:
+                value = value[key]
+    except (KeyError, IndexError, TypeError, ValueError) as error:
+        raise ValueError('Unresolved occurrence pointer: ' + pointer) from error
+    return value
+
+
+def validate_occurrences(program, contracts):
+    """Check the vocabulary's occurrence bases, pointers and typed targets.
+
+    The native checker intentionally does not interpret this vocabulary. Scopes
+    are clause-local: the sole semantic record, or an explicitly carried contract
+    definition identified before use. Returning from an inline definition never
+    changes another occurrence's base implicitly.
+    """
+    counts = Counter()
+    for clause in program['clauses']:
+        scopes = {}
+        arguments = clause['arguments']
+
+        def occurrence(record, target, relation):
+            if not isinstance(record, dict) or record.get('scope') not in scopes:
+                raise ValueError(clause['uri'] + ': missing or unknown occurrence scope')
+            value = resolve_pointer(scopes[record['scope']], record.get('pointer'))
+            if not isinstance(value, str):
+                raise ValueError(clause['uri'] + ': occurrence does not name a target')
+            expected = contract_id(value) if relation == 'shared-contract' else clause_id(value)
+            if relation == 'foundation-premise-owner' and re.fullmatch(r'F[1-6]', value):
+                expected = clause_id('FOUNDATIONS.foundational-commitments')
+            if target != expected:
+                raise ValueError(clause['uri'] + ': occurrence target mismatch at ' + record['pointer'])
+
+        for index, arg in enumerate(arguments):
+            role = arg['role'].removeprefix(VOCAB)
+            if role == 'semantic-record':
+                if index != 0 or scopes:
+                    raise ValueError(clause['uri'] + ': semantic record must be the sole root base')
+                scopes['semantic-record'] = json.loads(arg['literal'])
+            elif role == 'inlined-contract':
+                record = json.loads(arg['literal'])
+                identity = record['identity']
+                occurrence(record, identity, 'shared-contract')
+                key = identity.removeprefix(NS + 'contract:')
+                pointer = '/semantic_contracts/' + key.replace('~', '~0').replace('/', '~1')
+                if (key not in contracts or record['definition'] != contracts[key]
+                        or record['definition_pointer'] != pointer):
+                    raise ValueError(clause['uri'] + ': inline definition differs from its account identity')
+                if identity in scopes and scopes[identity] != record['definition']:
+                    raise ValueError(clause['uri'] + ': conflicting inline scope')
+                scopes[identity] = record['definition']
+                counts['inlined_contracts'] += 1
+            elif role == 'reference-location':
+                record = json.loads(arg['literal'])
+                if index + 1 == len(arguments) or 'ref' not in arguments[index + 1]:
+                    raise ValueError(clause['uri'] + ': occurrence lacks its adjacent typed target')
+                target_arg = arguments[index + 1]
+                occurrence(record, target_arg['ref'], target_arg['role'].removeprefix(VOCAB))
+                counts['reference_occurrences'] += 1
+            elif role == 'acquisition-route':
+                record = json.loads(arg['literal'])
+                occurrence(record, record['target'], record['relation'])
+                counts['acquisition_routes'] += 1
+            elif 'ref' in arg and (index == 0 or arguments[index - 1]['role'] != VOCAB + 'reference-location'):
+                raise ValueError(clause['uri'] + ': typed target lacks its occurrence')
+        if 'semantic-record' not in scopes:
+            raise ValueError(clause['uri'] + ': missing semantic record')
+    return dict(counts)
+
+
 def build_program(current):
     """Encode authored meanings and typed references without evaluating them."""
     rows = current['determinations']
@@ -527,7 +609,7 @@ def build_program(current):
     mapping, families = [], {}
     frame_sections = ['# Interpretation Acquisition Frames\n\nSelect an index explicitly for the task. The checker closes always-required support; it does not evaluate predicates or supply task inputs. Each conditional route retains its condition and exact target index: establish applicability before dependent action, add an applicable target index, and retain an undecided condition as unresolved. Provenance routes remain discoverable without making their bodies prerequisites. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.\n']
 
-    def arguments(value, row=None, inline_stack=()):
+    def arguments(value, row=None, inline_stack=(), scope='semantic-record'):
         # One exact object literal keeps structure, order and local field refs.
         # Paired pointer/ref arguments expose actual links to native closure.
         args = [literal('semantic-record', value)]
@@ -542,18 +624,19 @@ def build_program(current):
                 if not shared_sources[key]:
                     if key in inline_stack:
                         raise ValueError('Cyclic ownerless shared abbreviation: ' + key)
-                    args.append(literal('inlined-contract', {'pointer': edge['pointer'], 'identity': target,
+                    args.append(literal('inlined-contract', {'scope': scope, 'pointer': edge['pointer'], 'identity': target,
                         'definition_pointer': '/semantic_contracts/' + key.replace('~', '~0').replace('/', '~1'),
                         'definition': contracts[key]}))
                     # References inside an abbreviation keep their real owners.
-                    args.extend(arguments(contracts[key], inline_stack=inline_stack + (key,))[1:])
+                    args.extend(arguments(contracts[key], inline_stack=inline_stack + (key,), scope=target)[1:])
                     continue
             if edge['acquisition'] == 'required':
-                args.extend([literal('reference-location', edge['pointer']), reference(edge['relation'], target)])
+                args.extend([literal('reference-location', {'scope': scope, 'pointer': edge['pointer']}),
+                             reference(edge['relation'], target)])
             else:
                 identifier = target.removeprefix(NS + 'clause:')
                 args.append(literal('acquisition-route', {
-                    'pointer': edge['pointer'], 'relation': edge['relation'], 'target': target,
+                    'scope': scope, 'pointer': edge['pointer'], 'relation': edge['relation'], 'target': target,
                     'acquisition': edge['acquisition'], 'qualification': edge['qualification'],
                     'target_index': NS + 'index:' + identifier,
                     **owner_routes[identifier],
@@ -614,6 +697,7 @@ def build_program(current):
         program[key] = sorted(program[key], key=lambda r: r['uri'])
         if len({r['uri'] for r in program[key]}) != len(program[key]):
             raise ValueError('Duplicate generated ' + key + ' identity')
+    validate_occurrences(program, contracts)
     return program, mapping, '\n'.join(frame_sections)
 
 
@@ -659,12 +743,18 @@ missing or that an actual task has an unknown result.
 
 ## Reference location
 
-This JSON Pointer identifies the occurrence in the preceding semantic record.
-The next argument supplies its typed native target. The pointer/ref pair preserves
-the distinction between an occurrence, its target identity and its relation.
+The literal encodes an object with scope and pointer. Scope is clause-local:
+semantic-record selects the clause's sole semantic record; a contract URI selects
+the exact definition registered by a preceding inlined-contract argument in that
+clause. Pointer is an RFC 6901 JSON Pointer relative to that explicit base.
+The next argument supplies its typed native target. Compilation checks that the
+pointer resolves and names that target. Scope never changes implicitly, including
+when an occurrence returns to the outer record after an inline definition.
+The pointer/ref pair distinguishes an occurrence, its target and its relation.
 
 ## Acquisition route
 
+Scope and pointer select the occurrence by the Reference location rules.
 The record preserves an exact relation occurrence without making its target an
 unconditional acquisition dependency. A provenance route records correspondence,
 example or navigation. A flat dependency enumeration retains its named targets
@@ -680,8 +770,12 @@ resolves during compilation even when its body is not selected.
 ## Inlined contract
 
 This exact shared abbreviation has no independently declared semantic owner.
-Its definition is carried at the source-bound use, with its identity and pointer
-in source-account.json retained. Its real references still acquire their owners.
+Its scope and pointer locate the use by the Reference location rules. Identity
+registers the carried definition as an explicit clause-local pointer base;
+definition_pointer locates that same definition in source-account.json.
+Repeated registrations of one identity must carry the same exact definition.
+Nested definitions declare their parent scope, and each later occurrence names
+its own scope. Its real references still acquire their owners.
 Inlining adds no owner, authority or instance truth. The complete set of users
 does not become a source dependency of every use.
 

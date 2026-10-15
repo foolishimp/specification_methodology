@@ -56,6 +56,7 @@ def package_inventory(document_commit):
 
 
 def assert_compilation(current, program, mapping):
+    build.validate_occurrences(program, current['semantic_contracts'])
     expected, rows, frames = build.build_program(current)
     require(program == expected, 'Program differs from the current semantic account')
     require(mapping['rows'] == rows, 'Source mapping omits or changes an accounted determination')
@@ -126,6 +127,30 @@ def acquisition_checks(bindings):
                     for r in routes(conjunction)), 'DMM route/condition disappeared')
     design_adopted = view('acquisition-design-adopted', ['FOUNDATIONS.result-conjunction', *design])
     require(set(design) <= selected(design_adopted), 'Adopted design composition lost required support')
+    composition = view('acquisition-composition-unselected', ['TRANSFORMATION_LIBRARY.composition-law'])
+    domain_conditions = {
+        **dict.fromkeys(design, 'design composition'),
+        'SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021': 'consequential admission',
+        'REFERENCE_FRAME_METHOD.using-frames-in-conjunction': 'frame-governed composition',
+        'REFERENCE_FRAME_METHOD.material-composition': 'frame-governed composition',
+        'AXIOMATIC_CALCULUS.ac-016-typed-composition': 'a_c composition',
+    }
+    require(not set(domain_conditions) & selected(composition), 'Unselected composition domain entered required closure')
+    require(not any(i.startswith('DESIGN_MODULE_METHOD.') for i in selected(composition)),
+            'Generic composition still acquires Design support')
+    root = next(c for c in composition['clause_relations'] if c['uri'] == build.clause_id('TRANSFORMATION_LIBRARY.composition-law'))
+    root_routes = [json.loads(a['literal']) for a in root['arguments'] if a['role'] == build.VOCAB + 'acquisition-route']
+    for target, when in domain_conditions.items():
+        occurrences = [r for r in root_routes if r['target'] == build.clause_id(target) and r['acquisition'] != 'provenance']
+        require(occurrences and all(r['acquisition'] == 'conditional' and r['qualification']['required_when'] == when
+                and r['unknown_applicability'].startswith('unresolved;') for r in occurrences),
+                'Composition lost a domain condition or treated unknown applicability as false: ' + target)
+    composition_design = view('acquisition-composition-design-applicable', ['TRANSFORMATION_LIBRARY.composition-law', *design])
+    require(set(design) <= selected(composition_design), 'Applicable composition lost selected Design support')
+    ac013 = view('acquisition-ac013-domain-unselected', ['AXIOMATIC_CALCULUS.ac-013-transformation'])
+    require('TRANSFORMATION_LIBRARY.composition-law' in selected(ac013)
+            and not any(i.startswith('DESIGN_MODULE_METHOD.') for i in selected(ac013)),
+            'AC-013 lost Composition or inherited unwanted Design acquisition')
     release_questions = view('acquisition-source-questions', ['RELEASE_METHOD.open-questions'])
     require(len(release_questions['closure']['residuals']) == 2,
             'Source-owned open Release choices were forced green or dropped')
@@ -159,6 +184,9 @@ def acquisition_checks(bindings):
     # real adoption, decide a task or authorize a dependent action.
     cases = [('writing', prose), ('recovery', recovery), ('profile_undecided_or_established_absent', evaluate),
              ('profile_adopted', adopted), ('design_absent', conjunction), ('design_adopted', design_adopted),
+             ('composition_domain_established_inapplicable', composition),
+             ('composition_domain_unresolved_retains_obligation', composition),
+             ('composition_design_applicable_explicitly_selected', composition_design), ('ac013_domain_unselected', ac013),
              ('source_open_questions', release_questions), ('evaluate_conjoin', combined)]
     return [{'case': name, 'selected_clauses': len(result['closure']['clauses']),
              'residuals': len(result['closure']['residuals']), 'routes': len(routes(result)),
@@ -238,6 +266,8 @@ def main():
         views = [projection(OUTPUT / 'program.json', OUTPUT / 'map.json', binding_path, index, mode, EVIDENCE / file)
                  for mode, file in zip(('reference-only', 'materialized'), files)]
         require(all(views[0][key] == views[1][key] for key in parity), 'Projection modes disagree')
+        for view in views:
+            build.validate_occurrences({'clauses': view['clause_relations']}, current['semantic_contracts'])
         projections.append({'index': index, 'clauses': len(views[0]['closure']['clauses']),
             'residuals': len(views[0]['closure']['residuals']), 'files': files,
             'bytes': {name: (EVIDENCE / name).stat().st_size for name in files},
@@ -324,6 +354,7 @@ def main():
         'document_source_input_commit': document_commit, 'complete_package_input_commit': complete_commit,
         'scope': 'documentary construction check' if args.document_only else 'frozen complete-package mechanical check',
         'acquisition_checks': acquisition,
+        'occurrence_checks': build.validate_occurrences(program, current['semantic_contracts']),
         'common_input_commit': build.COMMON_INPUT, 'dependency_verification': dependencies,
         'account_input_commit': generation['account_input_commit'], 'account_sha256': generation['account_input_sha256'], 'semantic_account_sha256': build.sha((OUTPUT / 'source-account.json').read_bytes()),
         'program_sha256': build.sha((OUTPUT / 'program.json').read_bytes()), 'map_sha256': build.sha((OUTPUT / 'map.json').read_bytes()),
