@@ -28,6 +28,10 @@ Source: [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#su
 
 Conservation is about meaning. Similar naming does not prove it, and the absence of an edit carrying a claim does not prove the claim was lost. UP-015 does not by itself require a kept claim to be rewritten in the successor's wording. `reframed` is a note on how a conserved claim was carried, not a disposition.
 
+A conservation judgment compares the decisions permitted and required on the same material case, scope and authority: what must happen, what may happen, what is prohibited, and what follows when a trigger, exception or required premise is absent. The reviewer examines the owning text and necessary consumer bindings, including counterexamples that would expose a changed decision. If the successor changes one of those determinations, the change needs a replacement relation; if the comparison cannot decide, conservation remains unresolved. Shared arguments and cases may cover equivalent claims with their coverage stated; the test does not require a new artifact or execution for every row.
+
+Modal wording is judged by that meaning. Present-tense indicative wording can state a binding law; replacing “must” or “shall” is neither automatic conservation nor automatic supersession. An obligation must remain obligatory, a preference must remain a preference, and every permitted exception and scope condition must survive. A package-wide assertion that its wording is equivalent does not establish those relationships at its deciding consumers.
+
 Each supersession names the affected claim, the replacement determination and its owning successor locus or loci. A shared relation may replace several claims, but each row identifies how its claim is replaced and cites the product owner's recorded acceptance under [Construction Authority](../PRODUCT.md#construction-authority). A changed obligation is not conserved merely because its heading survives. During construction a proposed disposition and replacement remain distinguishable from an accepted one; a refreshed hash supplies neither semantic comparison nor acceptance.
 
 ## Standalone Successor Requirement

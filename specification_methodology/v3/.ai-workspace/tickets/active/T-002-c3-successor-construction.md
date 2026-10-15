@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-14T16:36:35Z
+updated_at: 2026-10-15T11:16:02Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -24,6 +24,138 @@ links:
 ---
 
 # T-002 — v3.0.0 Successor Construction
+
+## Iteration 4 staging
+
+The product owner ratifies C3-I4-03 through “ok i approve i4”, recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-ratification). Both synthesis lines use source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and the 25-member snapshot recorded at `a960032`. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) supplies the classified work below. Each line records a separate admission before tenant effects. The frozen snapshots below retain their historical standing at creation; this later decision supplies ratification.
+
+| Input | Exact subject |
+|---|---|
+| Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
+| Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
+| Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
+| Ratified I4 common input | C3-I4-03 at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; tuple recorded at `a960032`. C3-I4-01 and C3-I4-02 remain historical |
+
+The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is the common decomposition for the separate I4 contracts. It accepts no disposition; each admitted activation selects its own bounded work. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
+
+| Work | Owning requirement | Codex work | Claude work | Observable return |
+|---|---|---|---|---|
+| I4-01 Rebind | Product Cross-Synthesis | Bind the ratified I4 input and current package; retain the completed ODD and native-fidelity repairs where applicable | Rebind from the older I3 input, accounting for both the closed I3 changes and I4 | Exact admitted input and an effect or reasoned no-change disposition for every applicable common decision |
+| I4-02 Foundation and ownership | Requirements, standalone successor relations 1 and 2 | Resolve CX-03's pillar-to-argument binding; make CX-05's owning family argument reachable at each affected determination | Complete source-first assessment of the family arguments and shared-owner/consumer joins, including Executive, Design Module and ODD | Arguments bind applicable pillars, actual rules and consumers; choices have owners; unsupported relations remain explicit |
+| I4-03 Ports | Product Cross-Synthesis and independence | Evaluate X1–X9 from the staged proposal on the named donor | Evaluate C1–C6 on the named donor | Selected contributions, adaptations or reasoned exclusions; single receiving owner; nonauthor review and affected successor readback |
+| I4-04 Conservation | Requirements, successor disposition | Complete semantic accounting and decisions for proposed replacements; counts or row pins alone do not close it | Complete the row re-assessment and modal-force evidence; retain unresolved compression dispositions | The pen consolidates proposed replacements by question for the product owner, retaining each tenant, exact claim, replacement and dependent acceptance; each affected claim has its carrying meaning or recorded replacement/removal decision before dependent acceptance |
+| I4-05 Interpretation | Requirements, constraint surfaces | Check required coverage and fidelity of current account, program and native acquisition after I4 changes; retain supported recent repairs | Complete the required coverage beyond the partial G1–G4 encoding and check changed projections | Independently assessed source fidelity, required coverage and reproducible native acquisition, including permitted, prohibited and unresolved cases |
+| I4-06 Actual use | Product criterion 4 and Limits | Cover remaining material task/frame conditions; support active-context fit rather than only emitted-byte caps | Restore the missing family rows/result maps and resolve the F5 kind label in the frames; obtain actual-use evidence after resources are selected, since desk traces do not substitute | Shared tasks and fixed nonauthor expectations; exact packets, routes and actor conditions; correct use and supported fit, with every uncovered obligation visible |
+| I4-07 Reduction | Requirements, foundational reduction | Establish deciding-path reduction where earlier evidence only measured acquisition | Complete declared material path coverage beyond DP-43 or justify equivalent groupings under independent review | Own preceding-candidate and rc.2 comparisons, plus the matched head-to-head protocol; removed determinations and retained distinctions, costs and tradeoffs |
+| I4-08 Package and routing | Standalone successor and Product open decisions | Resolve CX-06 historical routing, CX-08 provisional version wording and CX-09 independence labeling at the current subject | Resolve stale construction standing after rebind; preserve standalone identity and packaging limits | Current entry routes and honest package identity; historical evidence remains bound to its old subject |
+| I4-09 Review and selection | Product six criteria, Candidate Comparison, conformance integrated checks | Account for all common discriminators, including CX-04; return frozen source and supporting evidence | Reassess all common discriminators and integrated claims on the successor, retaining the limits of the present map | Six-criterion and integrated results for both exact candidates; dependency-aware repair readback; owner choice or no qualified choice |
+
+The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. The ratified common revision assigns nonauthor assessment of received ports to the receiving line; its same-family exception and limits are recorded in the activation. A donor's assessment of its own contribution is supplementary. Exact review activations remain separate from this policy decision.
+
+Before actual-use activations, the owner selects resources; a nonauthor specifies the protocol and the common pen records it in one common record named here, with the same immutable version bound by both tenant contracts. Record the shared protocol body only after both candidate freezes; any earlier selection records its hash alone until then, and expected answers remain withheld from task actors. The Executive applies its declared envelopes. That shared protocol has not yet been selected. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
+
+The staged D6 ranking remains the proposal for this comparison within Product's comparable-coverage conditions: among candidates that meet all six criteria and the integrated obligations, prefer fewer non-blocking residuals; if equal, Jim chooses on readability and maintainability with a recorded reason. Required unresolved evidence is not an eligible residual. No qualified candidate means no qualified choice. This is a proposed comparison rule awaiting common ratification, not a selection made by the pen.
+
+Review observations, evaluated against the owning Product: I4-04 supplies one consolidated decision list by question, with exact per-tenant claim mappings and scope; grouping is not a blanket acceptance. Each unresolved replacement blocks its dependent member acceptance and that candidate's eligibility. Reviews may finish with unresolved decisions, and one ineligible candidate does not itself disqualify an eligible peer. Schedule the relevant owner decisions before dependent acceptance, rather than inventing an additional universal Stage-3 deadline.
+
+Read the proposed D6 finding count with the impacts and coverage Product requires; fewer but materially more consequential findings are not an automatic win. Any unresolved tradeoff remains the product owner's decision. The port lists remain inputs with reasoned exclusions, not mandatory copying.
+
+A subagent is a possible actual-use mechanism under criterion 4, not proof of fresh context or context fit by its label. The selected activation must establish no inherited private or unselected repository context, disclose supplied and acquired inputs, support the active-context bound, and retain independent expectations and assessment. Session-token use remains a resource cost; any external spend depends on the selected mechanism and is not established by this review. D5 and the actual trial remain unselected. No external call or new subagent is activated by this correction.
+
+The Codex synthesis is admitted as [EC-CODEX-I4-01](T-002-CODEX-c3-successor-construction.md#current-iteration-4-contract), with rebind and work mapping as its first bounded activation. The Claude line records its own admission; this common record neither creates nor assesses that peer activation.
+
+## C3-I4-03 proposed input snapshot
+
+Input commit B: `3c4c503d291e7cb19ba21333ba6caf6167be77c9`, on main. Recording R is the descendant commit that first contains this section. All 25 member hashes and byte counts are read from B: fourteen common source/entry members and eleven supporting work/review records. The recording ticket's current bytes are not input members. All prior snapshots below remain byte-identical historical inputs.
+
+Standing: final comparison clarification, NOT_RATIFIED. Claude's readback at `73ad32e` confirms F1–F3 on `23ad611`; that verdict retains its exact subject and declared authorship limits. This successor applies the proposed F4 wording and the ticket timing observation. Its exact-change independent readback and the product owner's ratification remain pending; neither tenant is admitted.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 60572 | `a9e25f0a1232d6d9c68ed33f02de236e7ee224867051c6c1534e75dc2309a010` |
+| `specification/GOALS.md` | 25265 | `1698231fa5ddf58d5969ea4cfa18c3d4dfb1cee6695a6fcf262b8c2e7a137104` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8406 | `7dadf0acb6dd374b0301e446d7a3ce893ed69a8e14daea0b64e407882c756267` |
+| `specification/requirements/README.md` | 32072 | `263b874e2b93538c794edb534d1b2d9fd0361c05d1d33f65b113e51427869c93` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16794 | `3cca632a3e3d58d27f95c75a6e78cf99483753b910d624857ced93bcdb49f2c9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `CLAUDE.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `build_tenants/README.md` | 5546 | `7a61ca24bc6fb72a3a32b786d7409a46a9d14bc0c342a01e180a72a657bd45b7` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 106778 | `f40a1a9f5b3311a1230975281569bd3b1b57d4808099f944872913da576a17d2` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 58172 | `ae0ad7b83c0b210167dd04fa5e8cfec8ad4eb0e76a42d3ae03feb59e5676702a` |
+| `.ai-workspace/comments/codex/20261015T053000Z_EXPECTATIONS_I4_CLAUDE_AND_COMMON_REPRICE.md` | 3555 | `22b9d742ba3e4b634482dd55c5a95fe57eeb8996c774c90750e13410a77d9666` |
+| `.ai-workspace/comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md` | 10488 | `e3dd522f742a898287e339c3650f345ef49547e997c9f938a90971e2c280a33d` |
+| `.ai-workspace/comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md` | 18564 | `2a4b9e9dfe42da5af0ac770505fdc062f6fc867a716e48218872cace21b2c0fc` |
+| `.ai-workspace/comments/claude/20261015T060155Z_EXPECTATIONS_REVIEW_C3_I4_01_5D2B257.md` | 5093 | `4fdfc757789799109033085a089fad6fe9a3f721a1c781f0c31ed25128abd1e0` |
+| `.ai-workspace/comments/claude/20261015T060639Z_REVIEW_C3_I4_01_COMMON_SPECIFICATION_5D2B257.md` | 9090 | `fa862409516eadef34a733c5bea77b4e93dbbb461fb0e6ce9a58a102d23ee324` |
+| `.ai-workspace/comments/codex/20261015T061653Z_DISPOSITION_C3_I4_01_COMMON_REVIEW.md` | 4670 | `376e5dcf6e6e25e2fe37c6d4153b5d6734a2cccdda86e89e2f35655f052cfb71` |
+| `.ai-workspace/comments/claude/20261015T062546Z_EXPECTATIONS_READBACK_C3_I4_02_23AD611.md` | 2156 | `5c64d1ec97f9e256c2bc2edbe2c1b558ce62b77b974010ccb2d76a78b5bfcd0c` |
+| `.ai-workspace/comments/claude/20261015T062734Z_READBACK_C3_I4_02_23AD611.md` | 4257 | `0fe90225b27c4a734a347a445a3179ccf2cccde1dcdf9e89f3dfeb59a41a1838` |
+| `.ai-workspace/comments/codex/20261015T094202Z_DISPOSITION_C3_I4_02_READBACK.md` | 2196 | `1ce627c2a257e51dd97fddb508fd7ef536b7615ac1943a2d20a1ca1285b13880` |
+
+## C3-I4-02 proposed input snapshot
+
+Input commit B: `23ad611ed9c44df214e97d8bc9edaa2ba61b7842`, on main. Recording R is the descendant commit that first contains this section. All 22 member hashes and byte counts are read from B: fourteen common source/entry members and eight supporting work/review records. The recording ticket's current bytes are not members of the input it records. C3-I4-01 and its original tuple below remain immutable historical inputs.
+
+Standing: successor correction, NOT_RATIFIED, with affected independent readback pending. The review at `7789e26` applies to `5d2b257`; unchanged conclusions retain their scope, including the reviewer's declared policy authorship, and no verdict is reassigned to this successor. F1–F3 and the ticket observations have author dispositions in the listed Codex post. The product owner's exact-commit ratification and both tenant admissions remain unrecorded.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 60517 | `1f4dddeee7ec7d24968c790ff2f4c7588a125e7744f9a29f8909d4fa8aad8c88` |
+| `specification/GOALS.md` | 24762 | `04f12e70982fe062ae11cdd67726049fd9bff43eda8850e8698ccad6ce042eb1` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8406 | `7dadf0acb6dd374b0301e446d7a3ce893ed69a8e14daea0b64e407882c756267` |
+| `specification/requirements/README.md` | 32072 | `263b874e2b93538c794edb534d1b2d9fd0361c05d1d33f65b113e51427869c93` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16794 | `3cca632a3e3d58d27f95c75a6e78cf99483753b910d624857ced93bcdb49f2c9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `CLAUDE.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `build_tenants/README.md` | 5546 | `7a61ca24bc6fb72a3a32b786d7409a46a9d14bc0c342a01e180a72a657bd45b7` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 103843 | `4af90b219e126baf1853022a624527b644829eeb8de788b6a91cfe1eb4d3c9c9` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 54042 | `ddf860a4e3b6c939bcf795bd01130b5965f1259d178bea9072c957abbf90ceef` |
+| `.ai-workspace/comments/codex/20261015T053000Z_EXPECTATIONS_I4_CLAUDE_AND_COMMON_REPRICE.md` | 3555 | `22b9d742ba3e4b634482dd55c5a95fe57eeb8996c774c90750e13410a77d9666` |
+| `.ai-workspace/comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md` | 10488 | `e3dd522f742a898287e339c3650f345ef49547e997c9f938a90971e2c280a33d` |
+| `.ai-workspace/comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md` | 18564 | `2a4b9e9dfe42da5af0ac770505fdc062f6fc867a716e48218872cace21b2c0fc` |
+| `.ai-workspace/comments/claude/20261015T060155Z_EXPECTATIONS_REVIEW_C3_I4_01_5D2B257.md` | 5093 | `4fdfc757789799109033085a089fad6fe9a3f721a1c781f0c31ed25128abd1e0` |
+| `.ai-workspace/comments/claude/20261015T060639Z_REVIEW_C3_I4_01_COMMON_SPECIFICATION_5D2B257.md` | 9090 | `fa862409516eadef34a733c5bea77b4e93dbbb461fb0e6ce9a58a102d23ee324` |
+| `.ai-workspace/comments/codex/20261015T061653Z_DISPOSITION_C3_I4_01_COMMON_REVIEW.md` | 4670 | `376e5dcf6e6e25e2fe37c6d4153b5d6734a2cccdda86e89e2f35655f052cfb71` |
+
+## C3-I4-01 proposed input snapshot
+
+Input commit B: `5d2b25739ce07654fb74c92cf0973df899852f76`, on main. This recording R is the descendant commit that first contains this section. Read all members from B; the recording's current ticket bytes are not input members. The first fourteen members are common source and entry material. The final five are supporting work and review records; they grant no additional authority over the common source. Claude's staged post is revision 4 at B, and the latest owner instruction and T-001 define this activation's scope.
+
+Standing: proposed common revision, independently unreviewed, NOT_RATIFIED. This snapshot supplies a review subject, not a tenant admission or acceptance. Any correction receives a successor source commit and recording; this tuple remains historical. Jim's exact-commit ratification is recorded separately after review and before either I4 tenant admission. Neither candidate's current files or old evidence are changed by this freeze.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 60207 | `98b80a3ca61583828eaf2b398a38885c93f685a2b62b370b40bd18b1ee10995e` |
+| `specification/GOALS.md` | 24005 | `bd3639e26a709659c685ae7aced4972819432a9fa4bef4b7a865ec32b6fefd9c` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8406 | `7dadf0acb6dd374b0301e446d7a3ce893ed69a8e14daea0b64e407882c756267` |
+| `specification/requirements/README.md` | 32072 | `263b874e2b93538c794edb534d1b2d9fd0361c05d1d33f65b113e51427869c93` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16794 | `3cca632a3e3d58d27f95c75a6e78cf99483753b910d624857ced93bcdb49f2c9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `CLAUDE.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `build_tenants/README.md` | 5518 | `5927f466a9b3805f1501f79e754cc8fc3f0a30b3d0c514121d6f761632a0da7e` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 99818 | `423665b20273c6219ed8a77cc0e77cddf1ef6444f572d579380bee0c631274fa` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 48094 | `f01760f22d4a8a7fe1dd6e36589e458197700ab4a018d9cd3f3363744213a252` |
+| `.ai-workspace/comments/codex/20261015T053000Z_EXPECTATIONS_I4_CLAUDE_AND_COMMON_REPRICE.md` | 3555 | `22b9d742ba3e4b634482dd55c5a95fe57eeb8996c774c90750e13410a77d9666` |
+| `.ai-workspace/comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md` | 10488 | `e3dd522f742a898287e339c3650f345ef49547e997c9f938a90971e2c280a33d` |
+| `.ai-workspace/comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md` | 18564 | `2a4b9e9dfe42da5af0ac770505fdc062f6fc867a716e48218872cace21b2c0fc` |
 
 ## Closed I3 common basis
 
@@ -60,7 +192,7 @@ Input commit B: `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816`. This descendant reco
 | `.ai-workspace/comments/codex/20261014T155559Z_EVALUATION_CODEX_I3_REVIEW_0517EB2.md` | 7304 | `0787722c3ce11ca0411fdef33b1236b28dcad3f40e1bbbcdea0939378f67a278` |
 | `.ai-workspace/comments/claude/20261014T151055Z_REVIEW_CODEX_V3_I3_CANDIDATE.md` | 15771 | `dd29c0af4a9cab08b23b587856a561a78e071f2ee69dc35042dd1ee89a36a301` |
 
-## Current Iteration
+## Historical I3 Selection
 
 The owner selects closure of the common I3 specification, then the Codex successor fixes: “1. close spec i3, carry through the fixes to v3/build_tenant/codex” and “consolidate the review findings that pass and complete the build once spec lands”. [T-001](T-001-common-definition-and-checkpoints.md#iteration-3-specification-closure) records the common Writer selection and closure authority. The corrected source has a satisfied independent readback and its common closure is recorded. The parent records the exact successor input and Codex admission before tenant effects. The [work appendix](T-002-iteration-3-work.md) traces this order. Common closure does not accept a tenant candidate, member, changed predecessor claim, merge or release.
 
