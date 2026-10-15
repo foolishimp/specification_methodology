@@ -7,7 +7,7 @@ RECEIVING_COMMIT='989ee2278d4a5d9bcfbfc80570570450ee811b24'
 RECEIVING_SHA='b8c43489311b387045de129db459ef1bf29c1334724fcccc36474ea9565fedcd'
 SELECTED=[('delivery-selector','source_repair'),('dmm-governance','source_repair'),
           ('core-routing','account_routing'),('profile-routing','account_routing'),
-          ('delivery-routing','account_routing')]
+          ('delivery-routing','account_routing'),('assessment-exception','account_routing')]
 
 
 def main():

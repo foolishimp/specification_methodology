@@ -38,6 +38,11 @@
       "path": "source/delivery-routing/ACCOUNT_PATCH.json",
       "sha256": "e475ee5ac7c69116fd05dbd92f22849035311d771e5cf1bfcc45043df0e2be98",
       "stage": "account_routing"
+    },
+    {
+      "path": "source/assessment-exception/ACCOUNT_PATCH.json",
+      "sha256": "7df29b82cef48aee109d97aa24b3dc7bfc6fcd200d4c15b36f5439b1a9270841",
+      "stage": "account_routing"
     }
   ],
   "direct_patches": [
@@ -2444,6 +2449,13 @@
         "argument"
       ],
       "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "fields": [
+        "permissions_exceptions"
+      ],
+      "input": "source/assessment-exception/ACCOUNT_PATCH.json"
     }
   ],
   "coarsened_coordinates": [
