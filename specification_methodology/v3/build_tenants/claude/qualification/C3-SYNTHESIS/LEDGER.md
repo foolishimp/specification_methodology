@@ -521,3 +521,21 @@ Next: step 6 as one combined final working review against ORACLE by a non-author
 - I3-8r repaired FR-01, FR-03 to FR-06 and FR-08 to FR-11. It added one proposed supersession, `#proportional-disposition-returning-party`. FR-02 and FR-07, the indicative-for-"must" convention, go to the product owner. The finite result file, stale since I3-3e on its whole-file FOUNDATIONS digest, was regenerated. The checker re-ran `valid` on two byte-identical runs.
 - Re-freeze digests at `2beed8d`: members `7e8349f9…83ec`, standards `4f5c5c1d…1910`, frames `3b5913a2…275a`, `a_c/i3` `b316f78f…7762`, instruments `e79af6ec…7bd6`, plugins `5e73f8e3…4d7f`, frontier `c8cd19a0…17f6`.
 - Handoff: `qualification/C3-ITER3/HANDOFF.md`. Criterion 4 unevidenced; 45 of 46 deciding paths untraced; I3-4a and I3-4b partly evidenced; interpretation partial; the step 7 repairs unreviewed. A cross-family review is still needed. No merge, no push, no acceptance claim.
+
+## Iteration 4
+
+2026-10-15T11:05Z — Owner instruction, recorded verbatim: "ive approved i4, this means that the build tenants may proceed". Read as the product owner's ratification of the I4 common specification at its latest freeze, C3-I4-03 at `3c4c503` (the only I4 freeze with a satisfied readback and no open finding; my readback of it is at `8bd17af` on `main`), and as the start of this line's iteration 4. The common pen's records of the exact-commit ratification (T-001) and of this line's admission (T-002-CLAUDE) were pending when this entry was written; this line binds the owner's words and the exact commit, and will merge the pen's records inward when they land.
+
+Role change to Writer, for the Git step:
+- `main` at `8bd17af` merged inward at `7c60f32`; `specification/`, `AGENTS.md`, `CLAUDE.md`, `build_tenants/README.md` and `stdo_3.json` are byte-identical to `3c4c503`.
+- The C3-I4-03 snapshot: 25 of 25 members reproduce from `3c4c503`; at the merged tree 23 match and the two tickets differ only by the recording `a960032`, which the snapshot excludes from its members.
+- `PREDECESSOR_CLAIMS.md` is unchanged since `355aa86`; the frontier inventory stands.
+
+Role back to Executive.
+
+- Plan: `qualification/C3-ITER4/PLAN.md`. Work list: T-002 "Iteration 4 staging", Claude column, I4-01 to I4-09, in the order I4-01, I4-08, I4-03, I4-04, I4-02, I4-06, I4-07, I4-05, I4-09.
+- Donor: the Codex candidate at `fb855df`, package `d490dd6`; read only through `git show`.
+- Actor facts for this session: Claude family; author of the candidate; not fresh (full I3 context). Same-family nonauthor reviewers will be Sonnet subagents with exact scope, one at a time (D8).
+- Open owner decisions carried: D5 (criterion 4 stays `unresolved` until decided); the proposed replacement relations; the UX replacement; identity and packaging.
+
+2026-10-15T11:19Z — I4-01 returned `candidate_ready`: `qualification/C3-ITER4/REBIND.md` accounts for 24 changed common decisions between `355aa86` and `3c4c503`, each with its effect and task or a no-change reason. Rebound in this commit: the frontier header (input, status, ticket rule), CONSTRUCTION_BINDING §2 (I4 binding; §1's port-review sentence superseded by Cross-Synthesis), design README (I4 pointer). Codex's bounded Stage 1 reading of `2beed8d` reported no implementation defect; its note on stale "state found" counts in REDUCTION.md goes to I4-08.

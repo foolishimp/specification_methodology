@@ -127,10 +127,19 @@ Iteration 3 is bound to:
 - the oracle [C3-ITER3/ORACLE](../qualification/C3-ITER3/ORACLE.md)
   (98 expectations), under the same-family exception in section 1.
 
-The product owner's sign-off on that common specification is still open.
-The ledger carries the open decisions of the round 3 review as known
-gaps: the changes to accepted conditions, the pillar list and the
-replacement relations.
+Iteration 4 is bound to the ratified common input C3-I4-03: the common
+specification at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`, recorded at
+`a960032`, merged inward at `7c60f32` with the 14 common members checked
+byte for byte. The product owner ratified it on 2026-10-15; the common
+pen records that ratification and this line's I4 admission in T-001 and
+T-002-CLAUDE. The iteration 3 binding above is historical. The I4 plan is
+[C3-ITER4/PLAN](../qualification/C3-ITER4/PLAN.md) and the rebind record
+is [C3-ITER4/REBIND](../qualification/C3-ITER4/REBIND.md). Under the
+ratified text the review of a ported contribution is this line's
+same-family nonauthor assessment, so the sentence in section 1 that
+leaves it to an owner decision is superseded by Cross-Synthesis. The
+proposed replacement relations stay proposed until the product owner
+decides them from the pen's consolidated list.
 
 Revision 2 and revision 2b were bound to the earlier snapshot recorded in
 the [ledger basis](../qualification/C3-SYNTHESIS/LEDGER.md#basis) and the
