@@ -119,16 +119,24 @@ The ownership layers are distinct:
 | human and proxy identity | `IDENTITY_METHOD.md` plus project authority | binds the Executive actor and its decision envelope |
 | Product and release acceptance | current Product and `RELEASE_METHOD.md` | retains direct acceptance where those owners require it |
 
-The following families explain this optional profile's additional choices.
-Their premises are the named [Foundations commitments](FOUNDATIONS.md#foundational-commitments);
-their procedures consume the owners above rather than defining parallel law.
+The following arguments explain this optional profile's bindings. The
+[Foundations commitments](FOUNDATIONS.md#foundational-commitments) retain their
+standing and the owners above retain their decisions. The instance premises
+are an adopted project configuration, a selected work boundary and actual
+grants. The coordinated rows additionally assume material work or assurance
+that cannot be covered by a sufficient direct activation. Those conditions,
+not finite capacity alone, select the Executive relation.
 
-| Profile family and consumers | Premises and conditional consequence | Profile choice and decision owner |
-|---|---|---|
-| Outcome, basis and handoff: Product-Chain Basis, Executive Drift Locks and Handoff Projection | F1 fixes the delivery outcome; F2/F3 require exact interpreted subject and current basis; F4 preserves material joins; F5 bounds each actor's view; F6 separates results from grants. A reduced handoff must therefore retain the conditions needed by its next decision, without silently selecting a new outcome or authority. | This profile chooses the Executive/Worker/Reviewer return relation where coordination is selected, the drift locks and compact handoff projection. Existing Product/work authorities supply the actual basis and permitted action. |
-| Coverage and recovery: Coverage Application and Missing-Frame And Re-Entry Application | F2/F4 require evidence for material claims and joins; F5 admits incomplete evaluations; F6 prevents an available capability creating permission. A missing required result cannot be treated as a pass, while an irrelevant available family need not be activated. | This profile binds the Frame Method applicability, coverage and diagnostic owners to the engagement frontier; it chooses no universal frame inventory or recovery algorithm. |
-| Adoption and qualification: Product-Owned Adoption Or Project-Defined Configuration, Profile Qualification, Baseline-Specific Project-Basis Additions and Baseline-Specific Activation Additions | F2/F3 require evidence on the exact configuration; F5 requires a sufficient actor envelope; F6 separates inclusion, selection and acceptance. A packaged profile therefore remains only available until the Product adopts it; a local qualification cannot prove every configuration adequate. | This profile chooses its adoption projection and claim-scoped discriminators. The Product authority selects the configuration, actors and applicable proof; the cited methods retain their laws. |
-| Failure and closure: Failure Classification, Anti-Patterns and Closure | F1 selects the outcome predicate; F2/F3 require its actual evidence and basis; F4 preserves required joins and failure; F6 retains reserved decisions. Neither a work-result label, completed review nor locally green artifact can close a different unsatisfied obligation. | This profile names failure examples and binds existing closure conditions to the selected engagement. Foundations owns result combination; Ticket owns work closure; the actual decision owner determines acceptance or the next permitted action. |
+| Profile family and consuming decision | Premises and pillar contribution | Consequence at the decision | Additional choice and owner |
+|---|---|---|---|
+| [Engagement Applicability](#engagement-applicability), used at direct entry or coordination selection | F4 retains task dependencies; F5 bounds actors; F6 bounds grants. Reference frames distribute sufficient attention; computational execution supplies actual capability and communication conditions. | A sufficient direct Worker activation needs no Executive appointment. Coordination is required only by the material insufficiency or assurance conditions of the selected work; a role name cannot create that need. | Spec construction/assessment/delegation and the Product-owned frame basis govern selection. This profile supplies the optional Executive arrangement; the Product may select another adequate configuration. |
+| [Executive Attention, Evaluation, And Action](#executive-attention-evaluation-and-action), used to select the next activation | F1 supplies the outcome; F4 preserves dependencies; F5 bounds attention; F6 bounds action. Outcome-driven development contributes the continuing frontier; reference frames contribute bounded decisions. | A dependency-ready subset can guide the next decision without loading every candidate body. Excluded obligations remain open, and a closed failing evaluation cannot become completion merely because the attention loop ends. | This profile selects the three duties, drift locks and event-driven attention. The admitted mandate supplies priority, disposition and continuation; it supplies no Executive mutation permission. |
+| [Product-Chain Basis](#product-chain-basis), Executive Drift Locks and Handoff Projection, used by Worker/Reviewer activation and result consumption | F2/F3 bind exact subject and current basis; F4 preserves the next consumer's material relations. Specification/project structure supplies the governing chain; information and identity preserve the meaning and coordinates of the handoff. | A compact return must retain enough evidence, failures, effects and invalidators for the next decision. A summary or renamed checkpoint cannot substitute another outcome, subject or authority. | Faithful projection and shared currentness own adequacy. This profile selects its handoff and lock fields; Product and work owners supply the actual basis and grant. |
+| [Work result](#work-result) and Complete Engagement Transition steps 3–6, used by Executive evaluation | F2/F6 bind evidence to its predicate; F5 admits refusal or interruption. Information preserves original domain outcomes; computational execution preserves performance and effects; evidence/authority separate availability, assessment and acceptance. | `candidate_ready` answers availability. Required fitness and independence remain separate; an absent return cannot fabricate non-performance or an effect-free state. A review recommendation supplies no disposition. | Foundations owns the result algebra; this profile owns the reason-qualified work refinement and triage projection. Spec/Product/release/work owners select required review and the actual decision mandate. |
+| [Coverage Application](#coverage-application), specialist/testing/interface frames and Missing-Frame And Re-Entry Application, used to bind the required engagement evaluations | F1 supplies the claim; F2/F4 require evidence for its material parts and joins; F6 governs exclusions. Functional design supplies composition boundaries, algebraic calculus result conjunction, and evidence/correction the claim-specific counterexample. | A local test cannot establish the authoritative installed or user path. Missing required coverage cannot pass; an irrelevant available family need not run. Diagnosis follows the failed relation, including basis, capability and evidence defects. | Frame Method owns applicability, coverage and diagnosis. This profile selects specialist and test claims and their evidence altitudes; domain owners supply actual paths, populations, operating models and acceptance conditions. |
+| [Product-Owned Adoption Or Project-Defined Configuration](#product-owned-adoption-or-project-defined-configuration), used before applying profile duties | F2/F3 bind the selected configuration; F6 separates presence from authority. Specification/project structure supplies the adoption relation; evidence and authority preserve its standing. | Packaged presence makes this profile available, not adopted. Once its coordinated branch is selected, its role duties and prohibitions apply; selecting the profile does not waive the Executive mutation lock. | Product authority selects the configuration and actors. This profile supplies adoption additions and its own duties; another project configuration is evaluated under its own governing relation. |
+| [Profile Qualification](#profile-qualification), used to claim this profile works under selected actor conditions | F2/F3 bind exact subject and basis; F5 limits the tested envelope. Reference frames contribute reconstructability and sufficient use; evidence/correction contributes adverse cases and invalidators. | A successful local activation cannot qualify every actor, configuration or task. Changed material support reopens the affected qualification; unknown context does not become a fit result. | This profile selects claim-scoped discriminators; the governing authority selects applicable proof and acceptance. Foundations owns reuse and Frame Method owns generic qualification. |
+| Failure Classification, Anti-Patterns and [Closure](#closure), used at engagement disposition and checkpoint | F1 selects the outcome; F4 preserves required claims and failures; F6 reserves decisions. Outcome-driven development contributes completion/stop distinctions; evidence and authority preserve supported closure. | Work occurred, a review finished or a loop stopped does not establish every required predicate. A truthful stop retains unresolved obligations and actual effects. | Foundations owns result combination and Ticket owns work closure. This profile binds them to the engagement; Product/release owners retain reserved acceptance and the mandate determines the next permitted action. |
 
 Every requirement in this profile is either:
 
@@ -156,6 +164,14 @@ Worker (Writer). It needs no Executive activation solely to appoint it.
 Coordination activates when material contexts, authority, capability or
 required independence cannot be covered by that sufficient direct activation.
 A role or frame name alone creates no coordination or review obligation.
+
+Apply [Configuration](FOUNDATIONS.md#configuration) to that choice using the
+actual operations, dependencies, actor capability and assurance requirement.
+The coordination question is whether the direct activation can cover those
+relations lawfully, not whether an Executive or Reviewer is available. Shared
+governing sources do not defeat required independent judgment, while a fresh
+context does not remove an actor's authorship. The selected branch retains
+those conditions in its intake and grants.
 
 The direct route binds the same exact intake, operation territory, applicable
 obligations, evidence, stop conditions and declared result consumer. It uses
@@ -365,6 +381,15 @@ private context. An omitted obligation remains open in the workspace.
 
 Executive continuation applies [Recovery law](TRANSFORMATION_LIBRARY.md#recovery-law)
 to the delivery view and durable frontier above, including after context loss.
+
+Bind `U0` from the applicable obligations and their dependencies under
+[Applicability And Required Results](REFERENCE_FRAME_METHOD.md#applicability-and-required-results),
+not from the returns currently visible to Executive. Select `M` only after
+those dependencies are supported. This is how the configuration preserves the
+outer outcome while bounding attention: a missing result, unknown applicability
+or uncertain material effect remains in the durable frontier even when another
+independent activation can proceed. The latter activation still needs its own
+sufficient grant and evidence.
 
 Severity supplied by Reviewer is evaluation evidence. Priority, current-boundary
 effect, `STDO-UP-020` disposition, and subsequent action are Executive decisions.
@@ -1422,6 +1447,13 @@ contract. Green aggregate status cannot satisfy this step when a required
 user-acceptance, end-to-end, integration, unit, or negative-path result is
 missing, bound to another subject, or contradicted by a material frame result.
 
+Apply [Result conjunction](FOUNDATIONS.md#result-conjunction) to that declared
+required set and its material joins. Availability is one predicate; fitness,
+required assessment and the disposition mandate retain their own conditions.
+The work label supplies none of those missing conditions. An authenticated
+failure remains visible alongside an absent result, and the combined result
+retains actual performance and effect observations before any dependent action.
+
 ### 5A. Candidate Does Not Require Independent Review
 
 In the coordinated branch, when independent review is not required, Executive
@@ -1565,6 +1597,12 @@ or project workspace. They organize finite evaluations over specialist frames.
 
 The Executive derives the complete known evaluation inventory from the selected
 STDO members, project domain, outcome, history, dependencies, and workspace.
+It applies [Applicability And Required Results](REFERENCE_FRAME_METHOD.md#applicability-and-required-results)
+to each material obligation; the table routes those obligations to frames but
+does not replace their applicability predicates. It then applies
+[Workspace Coverage](REFERENCE_FRAME_METHOD.md#workspace-coverage) to the
+declared scope and conjunction to its required results. Frame availability,
+inventory completeness and satisfaction of the outcome are distinct claims.
 Operational full coverage retains every unknown, uncovered, conditional,
 conflicted, or authority-excluded residual required by
 `REFERENCE_FRAME_METHOD.md`.

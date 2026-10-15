@@ -84,6 +84,16 @@ Each deciding family states the corresponding premises, consequences and
 additional choices at its own use contract. A family without that argument
 remains an unsupported specialisation.
 
+An argument distinguishes these adopted commitments from the conditions of
+its instance. A selected predicate, a persistent workspace, a material join
+or a requirement for independent assessment is an instance premise only where
+the bound contract supplies it. The argument identifies the deciding owner,
+the consumer that applies it and the additional choice left to that owner.
+The pillar contributions named in the arguments describe what those premises
+contribute; they are neither extra axioms nor permission to infer purpose,
+identity or authority from finite capacity. An argument explains its linked
+rule and owns no second version of that rule. It requires no extra work record.
+
 ## Interpretation and representation
 
 A representation is an encoding. An interpretation relates that encoding to
@@ -311,6 +321,15 @@ obligations and material effect observations. A reference can carry these when
 its resolution preserves their meaning and availability. This is a semantic
 contract, not a mandatory serialization format or additional work carrier.
 
+F1 selects the question and F2/F6 restrict its answer to supported evidence.
+Because an execution can be interrupted and its effects can outlive its actor
+(F3/F5), evaluation performance, the predicate's truth and effect completion
+are separate questions. The informational contribution is the recoverable
+meaning of each answer; the computational contribution is what was performed
+and observed. The following value choices implement those distinctions.
+RF-012 and every domain refinement bind all three questions before consuming a
+label such as `ready` or `refused`; no label decides the other predicates.
+
 The verdict has exactly these values:
 
 | Value | Meaning for the bound predicate |
@@ -432,6 +451,14 @@ results, their authentication and predicate mapping, known failures and their
 citations, uncovered required coverage, uncertain effects and invalidators.
 The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
+
+The required set comes from the composite's applicability and coverage
+contract, not from the list of returns received. F4's preservation obligation
+therefore makes a missing required return visible even when every available
+return is satisfied. F2/F6 also retain an authenticated counterexample when
+another slot is missing. Frame conjunction and the library's Conjoin operation
+apply this same distinction; their owners supply which predicates and joins
+are required, not another rule for erasing failures or filling gaps.
 
 The aggregate evaluation has performance performed when its combining rule is
 applied; this does not change component performance. The composite declares its
@@ -670,13 +697,25 @@ objective, constraints, comparison scope and evidence.
 
 ## Core contract derivations
 
-| Deciding family | Foundational premises | Conditional consequence | Additional choice and owner |
+The rows group decisions by the consequence they use. Their linked bodies
+supply the decision; the named consumers bind its subject and any additional
+policy. Each row states the instance conditions material to its argument.
+Pillar contributions describe the relationship being preserved, not a claim
+that every domain policy follows from F1–F6.
+
+| Deciding family and consuming decision | Premises and applicable pillar contributions | Conditional consequence | Additional choice and owner |
 |---|---|---|---|
-| Result record | F1 selects the predicate; F2 binds interpreted evidence; F6 separates judgment from authority | A useful handoff must retain which claim was actually decided and cannot infer permission from success | This member chooses five verdicts plus explicit performance and effect coordinates; domain owners supply finer predicates and evidence rules |
-| Result conjunction | F2 authenticates claims; F4 preserves all required relations | A failed required predicate defeats conjunction; missing coverage cannot supply success; failures and uncertainty must remain available | This member chooses the stated aggregation precedence and effect join for interpretable conjunction; other operators retain their declared predicates |
-| Workspace and context | F3 supplies persistent observed state; F2 makes the account revisable; F5 bounds context and attention | Continuity requires sufficient reacquisition, not preservation of a private belief; stale support must be reconsidered | Domain owners choose observation/freshness protocols and any stronger replay duties; the execution binding selects measurement |
-| Bounded construction | F1 supplies Z; F3 identifies changing work; F4 requires preserved outer obligations; F5 bounds an activation | Large work needs supported refinement or an explicit stop; local success alone does not prove the destination | Spec Method owns re-entry and Product progress, Design owns concrete total control domains, and grants bound permitted responses |
-| Configuration | F4 supplies task dependencies; F5 bounds actors; F6 supplies grants; the task supplies fallibility and assurance assumptions | Allocation must conserve dependencies and required checks within capability; no unique hierarchy follows | Operational profiles and tenant designs choose topology, allocation, communication and assurance mechanisms |
+| [Interpretation and representation](#interpretation-and-representation), applied by Faithful projection, AC-017 and RF-017 | F2 interprets an encoding; F4 preserves the consumer's material relations. Information and interpretation, and axiomatic calculus, contribute recoverable meaning where a view stands for source. | Equal syntax or a valid map cannot establish that a consumer recovers the same permission, failure or unresolved condition. Fidelity evaluates that source-to-consumer relation. | The source owns meaning; the projection contract selects exactness or an admitted approximation and its end-to-end bound. No universal encoding or decidability claim follows. |
+| [Purpose and interfaces](#purpose-and-interfaces), applied by UP-013 and UP-014 | F1 supplies a selected outcome; F4 relates a local interface to that outcome. Specification and project structure supply the requiring relation; functional design supplies the bounded interface. | A local successful operation cannot define the Product outcome or justify its own burden. The interface must serve a material relation of the selected outer contract. | The purpose owner selects adequacy; Spec Method owns outcome conservation and proportional burden. Neither a signature nor finite capacity supplies those value choices. |
+| [Identity, state and evidence](#identity-state-and-evidence), applied by Identity Method and result reuse | F3 distinguishes scoped identity and changing state; F2 binds an observation to its subject. World models and identity contribute object boundaries; evidence and correction distinguish current support from historical observation. | A digest proves selected bytes, not shared identity, current state or acceptance. A reused result needs its material subject and support to remain applicable. | Identity Method owns governed coordinates; domain owners choose observation and currentness protocols. This argument establishes no Markov property or universal replay requirement. |
+| [Typed composition](#typed-composition-and-conservation) and [Orthogonal descriptions](#orthogonal-descriptions), applied by Composition law and AC-016 | F4 requires compatible typed joins; F2 separates preserved meaning from a mathematical model. Algebraic calculus and functional design contribute composition; computational execution contributes the effect laws needed by a rewrite. | Local conformance does not establish the composite, and regrouping does not license reordered or parallel effects. A categorical claim additionally needs its declared objects, equality, identities and composition proof. | The composite owner selects the outer predicate and admitted loss; the execution binding supplies any independence equations. The categorical claimant owns the demonstration; matching outputs do not supply it. |
+| [Result algebra](#result-algebra), applied by RF-012 and Evaluate | F1 selects the predicate; F2/F6 bind its evidence; F3/F5 admit interruption and uncertain effects. Information preserves the original claim; computational execution distinguishes performance and effects from truth. | A completed effect can accompany a failed outcome; a performed evaluation can remain undecidable; independent counterevidence can defeat a predicate without inventing performance. | This member selects five verdicts and separate performance/effect coordinates with their evidence conditions. Domain owners select admissible evidence and observation boundaries. |
+| Domain refinement and decision results in [Result algebra](#result-algebra), applied by Work result, RF-012 and Dispose | F2 retains each domain's meaning; F6 separates evidence from decision authority. Information and interpretation preserve the reason-qualified outcome; evidence and authority preserve the mandate. | `candidate_ready` can establish availability only. A refined label without its deciding reason supplies no fitness or acceptance judgment; a lawful disposition is a separate predicate. | The domain owner selects its outcomes, predicates and total reason-sensitive mapping. The mandate owner selects permitted dispositions; the core never supplies missing authority. |
+| [Result conjunction](#result-conjunction), applied by Conjoin, frame conjunction and engagement coverage | F2 authenticates each claim; F4 preserves the declared required predicates and joins; F6 prevents unsupported promotion. Algebraic calculus supplies one combination rule; evidence and correction retain counterexamples and uncovered obligations. | A known required failure survives missing coverage. Received results cannot define away an absent required slot, and a composite cannot report effect absence merely because its combining operation is pure. | This member selects aggregation precedence and the join over normalized effect parts. Applicability owners supply required coverage; another declared operator owns its different predicate and proof obligations. |
+| [Workspace and context](#workspace-and-context), applied by Acquire, Recovery law and ticket resumption | F3 supplies persistent state; F2 makes an actor's account revisable; F5 bounds acquisition. World models and identity supply the continuing subject; reference frames and information supply its task-specific view. | Losing context does not erase work. Absence from a projection proves no absence in the subject; changed material support reopens affected reliance while independent valid progress remains usable. | Domain owners select freshness, concurrency and any stronger replay rules; the execution binding selects measurements. Context fit and actual-use adequacy retain separate evidence. |
+| Unknown-effect recovery in [Workspace and context](#workspace-and-context), applied by Recovery law and Transform | F3 permits effects to persist beyond observation; F2/F6 forbid invented completion or permission. Outcome-driven development contributes continuation from observed state; computational execution contributes actual effect boundaries. | A lost acknowledgment does not justify an effect-free restart. Before a dependent repeat, reconcile enough state or establish the actual operation's granted idempotence. | The operation owner supplies observation, retry and repair permissions; the domain supplies its idempotence law. No universal transaction, reset or retry strategy follows. |
+| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |
+| [Configuration](#configuration), applied by RF-009 and an adopted Baseline engagement | F4 supplies task dependencies; F5 bounds actors; F6 supplies grants; the instance supplies fallibility and assurance conditions. Reference frames allocate information; computational execution supplies actor capability and communication cost. | The allocation must retain dependencies and required independence within capability. Neither one actor, a hierarchy nor an Executive is derived from finite capacity alone. | The adopting Product, operational profile or tenant design selects allocation and reconfiguration. An adopted profile retains its own duties and prohibitions; selection grants no new authority. |
 
 These are conditional arguments in the selected methodology domain. The table
 neither proves completeness for the world nor selects a universal executor.

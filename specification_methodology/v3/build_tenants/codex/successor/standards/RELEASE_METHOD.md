@@ -28,6 +28,23 @@ select released cuts, including the selector/adoption protocol below. It does
 not own the consumer's Product meaning or its decision to adopt a cut; those
 remain with the consumer's governing authority under Spec's Product binding.
 
+The following arguments apply the adopted
+[F1–F6 commitments](FOUNDATIONS.md#foundational-commitments) to the instance
+premises stated in each row. The pillars contribute identity, preserved
+relations, observable execution and justified decisions to distinct release
+questions. The named consumers own the release policies; none follows from
+finite resources alone.
+
+| Deciding consumer | Premises and pillar contribution | Consequence at that consumer | Additional policy and owner |
+|---|---|---|---|
+| [Release Identities](#release-identities), [Project-Subtree Release Identity](#project-subtree-release-identity) and [Product Subject And Repository Carrier](#product-subject-and-repository-carrier) | F2, F3 and F6; a carrier may contain several Products and movable discovery names, while a cut is an exact subject for later review and use. Identity distinguishes the Product member set from its repository; information fidelity preserves the reference to that subject. | A tag over a shared commit does not make every sibling a member. A moving branch or selector cannot reacquire an earlier cut without its exact binding, and equal version text cannot collapse source project, cut, install and consumer into one object. | Release chooses the Git ref profile, namespace/subtree coordinates and immutable RC naming. Product release authority declares the subject, namespace and membership; Spec owns the recursive Product taxonomy. |
+| [Historical Ref And Public-URI Conservation](#historical-ref-and-public-uri-conservation) and [Naming](#naming) | F2–F4; consumers retain references to exact published subjects while repository organisation can change. Identity and faithful interpretation preserve what those existing references denote. | A new namespace cannot make an old authentic reference point to different content or silently substitute a new claim subject. Reorganising the carrier therefore needs a relation that preserves historical resolution. | Release chooses preservation of existing public refs and URIs and the permitted naming forms. The actual namespace and any publication transition remain with Product release authority. |
+| [Immutable RC Publication](#immutable-rc-publication) | F3, F5 and F6; publishing can dispatch effects to a remote whose response is lost or delayed. Computational execution binding locates the actual effect; evidence distinguishes that state from the local command's return. | A failed command after dispatch does not establish absence of publication. The still-authorized continuation needs remote observation before it can decide which relation is missing; it cannot move an already published immutable cut as a retry. | Release chooses the publication sequence, immutable annotated cut and required ref relation, with the stated transport conditions. The operation grant authorizes the remote effect; this argument supplies none. |
+| [Exact-Cut Qualification](#exact-cut-qualification), [Acceptance Criteria](#acceptance-criteria) and [External Qualification Dependencies](#external-qualification-dependencies) | F1–F4 and F6; a Product declares release claims with particular observation boundaries and required decisions. Reference frames select sufficient evidence for each claim; algebraic conjunction preserves all required claims and evidence/authority keeps their assessment separate from acceptance. | Evidence about source behavior cannot alone establish an installed-path claim; a skipped external-service check leaves its dependent claim unestablished. A satisfied qualification result cannot supply the human acceptance decision. Changing qualifying bytes changes the subject of further review. | Release chooses exact-cut review, required operator checks, the listed acceptance conditions and human acceptance of the immutable RC. Product authority declares the claim set and any lawful scope narrowing. |
+| [Monotonic Version-Line Advancement](#monotonic-version-line-advancement) and [Selector And Consumer Adoption](#selector-and-consumer-adoption) | F2, F3 and F6; publication discovery is mutable while a consumer's governing basis is an exact authority binding. Identity distinguishes the discovered cut from the consumer's current selection; evidence and authority distinguish a presented plan from permission to apply it. | Learning that a newer cut exists cannot change the consumer's obligations. A drifted plan no longer describes the transition that was accepted. Explicit retention of an older exact basis remains distinguishable from a latest-channel query. | Release chooses highest-ordinal selectors, monotonic advancement, separate presentation/mutation, digest-bound plans and channel downgrade refusal. The consumer's authority accepts adoption; Spec owns its Product Definition binding. |
+| [Release-Scoped Assets](#release-scoped-assets) and [Coordinated Release-Matched Asset Cohorts](#coordinated-release-matched-asset-cohorts) | F2–F4 and F6; a declared release relation includes assets derived from particular source members or several independently owned Products. Typed composition preserves the declared matching relation; information fidelity relates each derived member to its source. | Matching version labels alone do not establish source congruence. A missing or stale required member defeats the declared completeness claim, while co-publication transfers no Product meaning or acceptance authority between members. | Product authority selects the cohort relation. Release owns its matching, publication, lease and recovery policy, including the specifically declared two-commit transaction. Those mechanics apply to the adopted cohort rather than every unrelated Product sharing a repository. |
+| [Successor Baseline Conservation](#successor-baseline-conservation-stdo-up-015) | F1–F4 and F6; a successor evolves claims of an identified predecessor while their realizations may change. Specification preserves the claim; information fidelity and typed conservation test its successor meaning rather than its spelling or code shape. | Similar names do not prove retention, and an absent patch does not prove loss when a different realization preserves the claim. Evidence for retention cannot authorize changed meaning or removal. An unresolved disposition therefore leaves the affected qualification unresolved. | UP-015 chooses complete material-claim disposition and watched-support-line policy. Product authority owns removal and acceptance of replacement relations; the successor owns its record and comparison mechanism. |
+
 ## Position
 
 Release process is distinct from live project specification.
@@ -257,13 +274,19 @@ coverage and observed-effect coordinates at each selected boundary.
 
 ## Exact-Cut Qualification
 
-Given F1–F4 and F6, evidence for a narrower or different subject cannot establish
-this cut's claim, and a satisfied assessment cannot make an owner decision.
+This family assumes a declared cut, its claim set and the observation boundary
+for each claim. F1 and F2 make the evidence answer that claim rather than a
+nearby predicate; F3 binds the answer to the cut actually observed; F4 preserves
+every required item in the release conjunction. Consequently a source check,
+a package check and an installed-use check can support different predicates
+even when all report success. F6 leaves acceptance to the bound decision owner.
 The shared [result/conjunction contract](FOUNDATIONS.md#result-conjunction)
-supplies those consequences. Release policy separately chooses exact-cut review,
-required operator checks and human acceptance; the Product declares its claim
-set, external dependencies and any lawful narrowing. Supported alternative
-realizations use those same claim conditions, not an assumed preferred build.
+preserves those distinctions and any uncovered item.
+
+Release policy chooses exact-cut review, required operator checks and human
+acceptance. The Product declares its claim set, external dependencies and any
+lawful narrowing. These choices determine what qualification owes; a preferred
+build shape does not exclude another realization satisfying the same claims.
 
 Qualification binds:
 

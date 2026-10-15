@@ -93,6 +93,25 @@ already permitted actions. Bind supplies their current instance coordinates.
 A single function can discharge several responsibilities. Every result uses the [core algebra](FOUNDATIONS.md#result-algebra); domain
 refinements and independent assessment conditions stay with their owners.
 
+The following arguments use the standing in
+[Foundational commitments](FOUNDATIONS.md#foundational-commitments). Their
+instance premises are the selected operation, source-to-consumer relation,
+composite or interrupted work named in the first column. Those instances are
+not entailed by finite capacity. The linked contracts decide the questions;
+the arguments identify what remains for each consumer to bind.
+
+| Deciding contract and consumers | Premises and pillar contribution | Consequence at the decision | Additional choice and owner |
+|---|---|---|---|
+| [Contract application](#contract-application): design admission, Spec enclosing-relation admission and frame activation | F1/F2 bind the intended predicate; F3 binds its subject; F4 preserves material joins; F6 bounds effects. Specification supplies the governing constraints, functional design the typed boundary, and evidence/authority the support and grant. | A shape-correct candidate or satisfied local check is insufficient when a material governing seam or operation grant is missing. Decide admissibility on the bound relation before using it; do not treat admission as outcome success. | The domain owns its predicate, sufficiency boundary, exceptions and commit unit. This contract owns the six shared application conditions, not a new validation stage. |
+| [Faithful projection](#faithful-projection): RF-017, AC-017 and domain publications | F2 requires interpreted meaning and F4 preserves the consumer's distinctions. Information and interpretation supply the source/view relation; axiomatic calculus supplies an explicit constraint representation where selected. | A consumer must recover the permission, prohibition and unresolved condition its decision needs. A structurally valid view that loses any of these cannot discharge that reliance. | The source owns meaning; the binding selects exactness or admitted approximation and required acquisition routes. Domain publication and adoption owners retain their additional conditions. |
+| [Composition law](#composition-law): Design UP-016/017, Spec UP-021, AC-016 and frame joins | F4 requires typed compatibility and preserved outer obligations; F2 separates the claims being composed. Algebraic calculus supplies the composition law, functional design the joins and computational execution any effect equations. | Local validity cannot establish an unsupported material join. Result conjunction does not compose internal executions, and associativity does not establish parallel or reordered effects. | Each composite owner selects its outer predicate, join and supported forms; the execution binding proves any stronger effect equivalence. |
+| [Recovery law](#recovery-law): Product continuation, ticket resumption and adopted runtime recovery | F3 supplies continuing state; F2 requires current support; F5 admits interrupted work; F6 bounds the response. Outcome-driven development supplies continuation, reference frames reacquisition and execution binding the effect observations. | Reacquire enough current state to decide the next action, retain applicable progress and expose uncertain effects. A restart or lost return does not justify replay or deletion. | Domain owners supply freshness and stronger replay rules; the actual operation grant supplies permitted observation and repair. Idempotence is an operation-specific claim. |
+
+Bind and Acquire establish these instance coordinates; Transform performs the
+granted operation; Evaluate and Conjoin return evidence on the declared
+predicates; Dispose uses the existing mandate. Their distinct responsibilities
+can share an implementation without sharing a subject, result or authority.
+
 ## Contract application
 
 A contract bounds an operation by its input and output domains, intended
@@ -153,6 +172,14 @@ condition is retained with its evidence. A supported admissibility result
 permits only the already-granted operation; it predicts neither success nor
 termination. The control contract handles its observed outcome separately.
 
+At design admission the bound instance is the proposed transition and its
+complete enclosing relation. At frame activation it is the declared evaluation,
+subject, basis and actor. Both use these same conditions; the design commit
+predicate and frame capability predicate remain different domain decisions.
+A consumer uses the supported condition once and retains its validity route;
+a boundary crossing alone neither requires a second proof nor permits omission
+of a changed material dependency.
+
 ### Constraint surface
 
 For a current subject and basis, the bound contract describes the work allowed
@@ -206,6 +233,14 @@ checks a different relation. Failure re-enters the first owning defect: source
 ambiguity, interpretation, projection, producer or consumer. It does not license
 changing the source to agree with its view.
 
+The consuming task determines which distinctions the check must preserve.
+For an RF-017 frame view these include the evaluation's failure detections and
+capability conditions; for an AC-017 interpretation they include the represented
+predicates, dependencies and permitted latitude. A representation adequate for
+one of those claims is not evidence for the other without the corresponding
+source-to-consumer binding. This is the informational consequence of F2/F4;
+neither predicate decidability nor a particular serialization follows from it.
+
 ## Work/recovery specialization
 
 This chain specializes the generic contract for interrupted, purposeful work.
@@ -215,11 +250,11 @@ premises; they do not follow from finite capacity alone.
 
 | Premises | Conditional consequence | Particular contract and independent choice |
 |---|---|---|
-| F1, F2; selected outcome and current subject | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
-| F2, F5; coupled material obligations and finite actor | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
-| F3, F4; persistent work and affected dependencies | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) and [Ticket reuse](TICKET_METHOD.md#work-carrier-to-execution-rule) bind applicability, invalidation and the wider frontier when dependency independence is unproved. Their concrete freshness rules are domain policy. |
-| F2, F3, F6; an effect is uncertain and repetition could duplicate it | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | [Workspace and context](FOUNDATIONS.md#workspace-and-context) owns the generic unknown-effect rule; [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) binds its Product context. The operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
-| F1, F4, F6; required results and current mandate | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
+| F1, F2; selected outcome and current subject. Specification supplies the destination; information supplies the interpreted claim. | A current claim needs its actual predicate and support, not a remembered green status. | Spec Method UP-020 binds target truth and checkpoint; RF-005 fixes basis/coordinates. The owner chooses the outcome. |
+| F2, F5; coupled material obligations and finite actor. Reference frames supply sufficient acquisition under the actor's capability. | Acquire sufficient material or return the admitted uncertainty; omitted support cannot become satisfaction. | RF-003/RF-014 bind sufficiency/capability; the work entry locates a responsibility view. Frame selection and configuration authority remain independent grants. |
+| F3, F4; persistent work and affected dependencies. World models and identity supply the continuing subject; outcome-driven development supplies preservation through continuation. | Re-enter on observed current state, retaining applicable progress and reconsidering changed support. | [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) and [Ticket reuse](TICKET_METHOD.md#work-carrier-to-execution-rule) bind applicability, invalidation and the wider frontier when dependency independence is unproved. Their concrete freshness rules are domain policy. |
+| F2, F3, F6; an effect is uncertain and repetition could duplicate it. Computational execution supplies the effect boundary; evidence and authority distinguish observation from permission. | Neither historical intent nor a timeout proves completion or grants a safe repeat. Observe/reconcile, select another permitted action, or return unresolved. | [Workspace and context](FOUNDATIONS.md#workspace-and-context) owns the generic unknown-effect rule; [Computed Classification And Treatment](SPEC_METHOD.md#computed-classification-and-treatment) binds its Product context. The operation grant supplies allowed observation and repair. Idempotence must be established for the actual operation. |
+| F1, F4, F6; required results and current mandate. Algebraic calculus preserves the required conjunction; outcome-driven development relates continuation to the selected destination. | Preserve failures, uncovered obligations and uncertainty; choose only an already-authorized continuation or truthful stop. | UP-020, declared conjunction and any adopted Baseline engagement specialize evaluation/disposition. Independence, decision rule and role adoption are additional owner choices. |
 
 The consequences are arguments about the stated premises, not proofs of every
 source clause. Concrete work-carrier layout, number of actors, numeric budgets,
@@ -242,10 +277,10 @@ commitments do not choose an admission predicate, quorum or supported topology.
 
 | Premises | Conditional consequence | Particular deciding owner and policy |
 |---|---|---|
-| F2, F3; current entity and predecessor are material | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
-| F4; a transition crosses material governing seams | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence. |
-| F6; proposal, judgment and durable admission are distinct | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
-| F2, F5; supported forms or commit effects are unresolved | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
+| F2, F3; current entity and predecessor are material. World models and identity contribute scoped objects and state; interpretation binds the evidence to them. | A candidate or judgment about another identity or superseded basis cannot establish this transition. | UP-016 declares exact basis continuity and enclosing joins; the domain chooses its identity and currentness law. |
+| F4; a transition crosses material governing seams. Algebraic calculus supplies compatible composition; functional design carries inherited invariants across the join. | Local validity cannot establish conservation of an unexamined affected relation; omitted support remains unresolved. | UP-017 determines the affected network and inherited invariants. Domain seam declarations supply design evidence; each UP-021 admission owner still derives and validates its complete enclosing relation and any claimed far-side independence. |
+| F6; proposal, judgment and durable admission are distinct. Evidence and authority supply separate support and operation grants. | A projection or satisfied judgment supplies evidence, not the missing admission grant. | UP-016 declares admitters, cardinality and competing-path disposition; UP-021 alone owns admission and standing-test semantics. |
+| F2, F5; supported forms or commit effects are unresolved. Computational execution supplies the real effect boundary; outcome-driven development retains failure and recovery conditions. | Missing support cannot establish admission or non-applicability. Unknown effects remain explicit before dependent use. | UP-016 declares supported boundaries, partial-failure coverage and reconstruction; the owning admission relation retains its concrete outcomes. |
 
 The [design admission consumer](DESIGN_MODULE_METHOD.md#admission-contract-use)
 binds this contract to its transition relation and uses the consequences to

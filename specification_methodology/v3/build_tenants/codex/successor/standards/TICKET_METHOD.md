@@ -15,16 +15,22 @@ and actual effects. They add no evaluation pass or record to the existing work.
 
 ## Carrier Families
 
-The carrier decisions below apply [F1–F6](FOUNDATIONS.md#foundational-commitments)
-through these scoped arguments. Their obligations come from the named owners;
-this table supplies no additional ticket, evaluation stage or acceptance act.
+These arguments apply the adopted [F1–F6 commitments](FOUNDATIONS.md#foundational-commitments)
+to work whose authority, lifetime and completion conditions are already bound.
+Their pillar contributions explain different carrier decisions; durable
+recording, execution admission and acceptance do not follow from the same
+premise. The linked consumers own the actual policies and their exceptions.
 
-| Family and consumers | Premises and conditional consequence | Additional policy and owner |
-|---|---|---|
-| Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection | F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof. | Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions. |
-| Term binding: Bounded-Context Term Binding | F2 requires interpreted meaning; F3 binds the subject/basis; F6 preserves the owning authority. A material ambiguous work term therefore cannot support admission or closure by familiarity alone. | Spec owns semantic resolution. Ticket chooses the work fields and relation references that carry the exact resolved meaning, and withholds the affected admission/closure until that relation is supplied. |
-| Evaluation and reuse: Evaluation Criteria And Non-Closure Conditions, Condition-Based Closure And Reuse, Test Case Authority | F1 supplies the exact work claim; F2/F3 require applicable current evidence; F4 preserves all required obligations; F6 distinguishes assessment and owner decisions. A passing local test, review event or recorded status cannot establish a different unresolved work claim. | Ticket chooses its closure-bearing carrier fields and admitted test authority. Foundations owns currentness and conjunction; Spec owns requirement/design truth and lawful re-entry. These policies do not add review when the applicable grant and law require none. |
-| Migration and extension: Migration Strategy Requirements, Implementation Migration Category and Future Extensions | F2/F3/F4/F6 require current unambiguous meaning, retained obligation identity and lawful ownership across a change. An implementation handoff cannot make predecessor behavior authoritative or transfer one tenant's closure to another. | Ticket chooses migration declarations, break-to-closure maps and local follow-up. Spec owns the migration law; the owning work authority selects any optional future carrier. |
+| Deciding consumer | Premises and pillar contribution | Consequence at that consumer | Additional policy and owner |
+|---|---|---|---|
+| [Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model) | F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation. | If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. | Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations. |
+| [Execution Contract Admission](#execution-contract-admission) | F2, F3 and F6; a proposed contract cites upstream work authority and an admission mechanism. Specification and project structure bind that authority; evidence distinguishes a checked contract from a record that merely claims admission. | The presence of a ticket, an active lane or an admission label cannot prove that the cited grant covers the exact work. Admission must concern that contract under that basis; successful admission still does not perform the work or renew its outcome authority. | Ticket chooses deterministic admission or an exact human override, required contract fields and admission states. The Product-bound mechanism admits the contract; the Goals/work-wave owner admits or renews its growth basis. |
+| [Authority](#authority), [One-Truth State Projection And Drift Refusal](#one-truth-state-projection-and-drift-refusal-stdo-up-009) and [Milestone And Phase-Scoped Truth](#milestone-and-phase-scoped-truth-stdo-up-006) | F2, F3 and F6; goals, tickets, milestones, boards and comments can describe different claims about apparently the same work. Information fidelity preserves each claim's subject and authority through projection. | A board's green label cannot replace the ticket's state, and a milestone's acceptance establishes only its own bounded claim. Divergent projections require resolution at their owning sources before relying on the affected closure claim. | Ticket chooses the work-wave, ticket and milestone authority split, minimum status sets and default layout. The Product binding permits explicit carrier rebinding; comments retain the standing owned by Posting Guide. |
+| [Sprint Compliance Escrow](#sprint-compliance-escrow) and [Sprint Close Review](#sprint-close-review) | F1, F4–F6; admitted work may defer local proof inside a bounded batch. Concrete execution costs motivate batching; algebraic conservation keeps deferred obligations in the batch's closing claim. | Deferral changes the time at which permitted proof is supplied, not whether it is owed. Closing a sprint therefore cannot erase debt merely because its iterations stopped. Law-changing work still needs its own re-entry rather than a larger escrow. | Ticket chooses manifests, escrow fields, close classifications and durable follow-up. Spec owns the sprint boundary; governing law decides what debt may be deferred or carried beyond close. |
+| [Multi-Build-Tenant Ticket Independence](#multi-build-tenant-ticket-independence) and [Multi-Build-Tenant Review Rule](#multi-build-tenant-review-rule) | F2, F3 and F6; one common WHAT has more than one independently realized HOW. Specification structure distinguishes the realization subjects; identity binds proof to the tenant actually examined. | Proof or acceptance of one tenant's realization establishes no other tenant's lifecycle result. Shared requirements or a shared issue title cannot hide a peer blocker or transfer closure. | Ticket chooses tenant-local records and the source-ticket/build-tenant fields. The Product's tenant registry owns tenant identity; each tenant's governing work authority owns its lifecycle decisions. |
+| [Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity), [Condition-Based Closure And Reuse](#condition-based-closure-and-reuse) and [Test Case Authority](#test-case-authority) | F1–F6; work has declared completion and non-closure conditions, some requiring particular owner decisions, and its support can outlive an actor. Algebraic conjunction preserves every applicable obligation; evidence and authority distinguish an assessment from the required decision. | Closure needs evidence on those exact predicates. A lawful rejection cannot satisfy a predicate requiring acceptance; a completed review cannot replace an absent condition. A recorded judgment remains usable when its support is current, so a new actor alone supplies no reason to repeat it. | Ticket chooses closure-bearing fields, judgment/ruling continuity and test-authority reconciliation. Foundations owns currentness and conjunction. The applicable law selects independent review and reserved acceptance; it does not create an extra review where neither applies. |
+| [Bounded-Context Term Binding](#bounded-context-term-binding) and [Upward Propagation Check](#upward-propagation-check) | F1–F3 and F6; a work description uses terms whose meanings and governing layers may differ from their familiar spelling. Information and interpretation bind the exact meaning; correction follows the layer found insufficient. | An unresolved material term cannot support admission or closure by familiarity. A familiar implementation file cannot determine re-entry when the actual gap lies in a requirement or Product relation. | Spec owns semantic resolution and lawful change classes. Ticket chooses the work fields, relation references and upward propagation check that carry the classification and unresolved scope. |
+| [Implementation Migration Category](#implementation-migration-category), [Migration Strategy Requirements](#migration-strategy-requirements) and [Mixed-State Negative Proof](#mixed-state-negative-proof) | F2–F4 and F6; a migration replaces an authoritative relation across producers, consumers and proofs. Functional design supplies the composed interfaces; identity and conservation preserve the declared affected scope. | A green wrapper or mixed old/new proof cannot establish that the new authority path governs the claimed scope. Closure needs evidence of the required replacement and the disposition of the old path; a downstream result cannot silently supply its missing source-carrier condition. | Ticket chooses migration declarations, strategy values, break-to-closure records and follow-up. Spec owns migration policy and its affected-path limits; the owning work authority selects optional extensions. |
 
 ## Core Model
 
@@ -716,12 +722,21 @@ That means the ticket must record at least:
 
 ### Work-Carrier-To-Execution Rule
 
-This admission/continuation family uses F2, F3 and F6 on the selected work and
-its surviving obligations. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
-requires authentic current support and actual grants. Ticket Method chooses
-the carrier-lifetime partition, deterministic admission or exact human override,
-durable result surface and recorded-J/O continuity. Those choices preserve the
-existing work authority; creating a carrier cannot repair a missing grant.
+Carrier selection answers how long this work's independent state must remain
+recoverable. Given F3 and F5 and an obligation that outlives the local boundary,
+the next actor needs its current state outside the departing actor's private
+context. This establishes the need for a surviving carrier; it does not choose
+a ticket, a file layout or the authority to create either. The ordered policy
+below supplies that choice, including the one-run and sprint-local cases.
+
+Admission answers a different question: whether the exact contract is covered
+by current upstream work authority. F2 and F6 require that interpreted grant,
+which [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+binds with authentic current support. Ticket chooses deterministic admission
+or exact human override, the durable result surface and recorded-J/O continuity.
+Creating a carrier cannot repair a missing grant, and a surviving obligation
+without ticket-state authority remains recorded through the permitted return
+surface below.
 
 Every execution governed by this method uses one run-scoped execution contract.
 The required lifetime of the work or obligation selects the smallest lawful
@@ -1015,6 +1030,14 @@ non-closure condition by itself. It may be deferred only under the
 path-relative authority and explicit disposition rules in `SPEC_METHOD.md`.
 
 ### Condition-Based Closure And Reuse
+
+The closure predicate follows the work's declared outcome and obligations,
+including any required owner decision. F1 distinguishes that outcome from a
+successful local activity; F4 preserves each applicable obligation in their
+conjunction; F6 distinguishes evidence about acceptance from the act of
+accepting. With support bound to an exact subject under F2 and F3, a new actor
+may reuse it while it remains applicable. The actual contract and governing
+law, not the existence of a review event, choose which conditions are owed.
 
 Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to
 reliance on this work claim's closure evidence. Then evaluate `every applicable

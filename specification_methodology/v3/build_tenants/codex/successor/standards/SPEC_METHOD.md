@@ -39,18 +39,22 @@ actual effects; a raw label cannot override independently admissible evidence.
 
 ## Method Families
 
-The following arguments bind the remaining constitutional and procedural
-families to [F1–F6](FOUNDATIONS.md#foundational-commitments). A procedure applies
-the named owner; it does not acquire a second definition of that owner's law.
-The family scope includes the listed consumers and their local subsections.
+These arguments use the adopted [F1–F6 commitments](FOUNDATIONS.md#foundational-commitments)
+and the instance premises stated in each row. The pillar contributions explain
+what work those premises do at the named consumer. The consequences do not
+derive the additional policies, choose an outcome or grant an effect. Each
+linked consumer owns its detailed conditions, exceptions and modal force.
 
-| Family and consumers | Premises and conditional consequence | Additional policy and owner |
-|---|---|---|
-| Constitutional authority: Position, Manifesto, Spec-Drivenness Litmus, Process Constitution and Specification Surface Rule | F1 requires an adequate outcome; F2 requires enough interpreted meaning to distinguish conformant work; F3 and F6 separate current subject, evidence and authority. A conformant realization therefore needs a recoverable governing meaning; observed behavior alone cannot supply it. | Spec chooses the directional constitutional chain, the WHAT/HOW split and one live constitutional surface. Product authority selects the actual obligations and locations. Present-tense law and commentary placement implement that selected surface, not a theorem about all documents. |
-| Delegated work: Probabilistic Work Boundary | F1/F2 require an outcome predicate and an interpretable boundary; F5 admits unknown and incomplete work; F6 bounds effects and decisions. A worker's internal search cannot establish its own permission or erase an unresolved outcome. | Spec places the admissibility contract at the work boundary and leaves the internal solution strategy to the adopting Product and worker. Domain profiles choose their narrower contracts. |
-| Bounded work and closure: Sprint Execution Boundary, Consistency Gate Rule and Universal Intake Triage | F1 fixes the selected outcome; F2/F3 make current governing facts and affected scope material; F4 preserves coupled obligations; F6 separates a work batch from authority. Finishing a batch or matching old tests cannot establish an inconsistent current claim. | Spec chooses the lawful re-entry classes and current-surface consistency gate; Ticket owns carrier admission, escrow and closure mechanics. The actual governing owner selects repricing, and an unchanged sufficient grant remains usable. |
-| Realization and correction: Design Rule, Renewal Path, Reconstruction Litmus, Method and ADR Conventions | F1/F2 require enough meaning to realize the selected outcome; F3 distinguishes the workspace from a prior account; F4 preserves the affected relations; F6 reserves changes to their owners. New observations can defeat a proposed realization or expose missing governing meaning, but do not authorize changing that meaning. | Spec chooses the goals-to-realization sequence, reverse gap-analysis route and traceable design decisions. ADRs and folder layout are declared conventions; the Product binding and adopted design profile determine their applicability. |
-| Current-surface transitions: Transformation Wave Rule, Legacy Classification Rule and Release Version Boundary | F2/F3 require unambiguous current meaning and identity; F4 preserves the affected outer contract; F6 prevents a migration carrier or published selector conferring authority. A transitional path therefore cannot silently become another owner or change a consumer's basis. | Spec chooses its migration and compatibility policy. Release owns immutable publication and the selector/adoption protocol; the consumer's Product authority owns adoption. |
+| Deciding consumer | Premises and pillar contribution | Consequence at that consumer | Additional policy and owner |
+|---|---|---|---|
+| [Constitutional Chain](#constitutional-chain), [Process Constitution](#process-constitution), [Position](#position), [Manifesto](#manifesto), [Spec-Drivenness Litmus](#spec-drivenness-litmus) and [Specification Surface Rule](#specification-surface-rule) | F1, F2 and F6; the instance has a selected outcome, interpreted specification layers and an owner for each layer. Specification and project structure supply the destination and ownership relation; information and interpretation distinguish that relation from its files. | An implementation can be assessed against the selected meaning only while that meaning remains recoverable. Its behavior, a definition overlay and a derived view cannot make themselves the authority for the obligations they claim to satisfy. | Spec chooses the Goals-led chain, WHAT/HOW split, one live constitutional surface and present-tense convention. The Product Definition locates those surfaces; their owning authorities decide their content. |
+| [WHAT, HOW, And Work Carriers](#what-how-and-work-carriers), [Design Rule](#design-rule) and [Reconstruction Litmus](#reconstruction-litmus) | F1, F2 and F4; one requirement set admits independently designed realizations. Functional design supplies operation and invariant bindings; computational calculus and execution binding relate those operations to a human, machine or mixed environment. | A requirement is realized through the operation or invariant that satisfies it and the relations preserved at its interfaces. Changing the executor or notation alone neither defeats nor establishes that relation. A realization route without preservation evidence cannot establish conformance; an unconstrained implementation choice remains with design. | Spec owns the requirement-to-realization binding and reconstruction test. The tenant owns its calculus, environment and material resource measures. The Product binding selects requirement locations and applicable profiles; a folder, software stack or graph runtime is not required by these premises. |
+| [Universal Intake Triage](#universal-intake-triage) and [Counterexample Localization](#counterexample-localization) | F1, F2, F3 and F6; reports concern a changing Product whose specification layers have different owners. Evidence, correction and authority supply causal diagnosis and lawful repair; reference frames supply the material observations needed to distinguish diagnoses. | The affected meaning and evidence determine where a change belongs. A report labelled a bug may expose an inadequate requirement; a failure observed in code need not have its cause there. Repeating a diagnosis under another frame name adds no evidence, and locating a cause grants no repair. | Spec chooses one intake route, six change classes and the assertion of no upstream change for lower re-entry. The affected owner decides changes to its relation; frame configuration supplies the smallest sufficient diagnosis within the existing grant. |
+| [Computed Classification And Treatment](#computed-classification-and-treatment), [Renewal Path](#renewal-path), [Trace Closure And Anti-Drift Rule](#trace-closure-and-anti-drift-rule), [Method](#method) and [ADR Conventions](#adr-conventions) | F2–F4 and F6; a classification or design claim depends on particular observations, requirements and owner decisions that may change independently. Information fidelity preserves those dependencies; typed composition preserves the affected outer obligations. | A retained conclusion is reusable only while its support remains applicable. New behavior can refute a realization or expose a governing gap, but cannot supply the missing owner decision. Correcting a lower surface cannot close an affected upstream gap merely by making tests agree with it. | Spec owns computed classification, the upward re-entry route and downstream trace closure. Its ADR fields and layout are conventions for carrying decisions. Ticket owns continuity of recorded judgments and rulings; each semantic owner decides its own repricing. |
+| [Probabilistic Work Boundary](#probabilistic-work-boundary) and [Agentic Construction Execution](#agentic-construction-execution-stdo-up-020) | F1–F6; an actor is delegated a bounded transition with fallible search, observable effects and a declared decision envelope. Outcome-driven development supplies continuation toward the selected destination; computational binding supplies the actual operations and effect observations. | Producing a candidate, establishing its cone preservation and deciding its disposition answer different predicates. Private search supplies none of the missing authority or evidence. A partial return preserves completed work and unknown effects so that continuation can observe the current state before a dependent repetition. | UP-020 owns cone intake, checkpoint and remedy policy, including direct Writer entry and permitted bounded proxy decisions. The existing grant and applicable profiles select assessment and reserved decisions; worker topology and internal search remain permitted variation. |
+| [Product Outcome Conservation](#product-outcome-conservation-stdo-up-013) and [Consistency Gate Rule](#consistency-gate-rule) | F1, F3, F4 and F6; a work wave selects an outcome instance with an acceptance interval and affected obligations. Outcome-driven development distinguishes movement toward that outcome from readiness; algebraic composition preserves the conjunction needed for closure. | Passing an activity's predicate does not establish Product progress or close another obligation. A satisfied preservation or readiness result remains useful on its own predicate. A review event or a consistent subset cannot erase a known failure, absent required assessment or reserved decision. | UP-013 chooses the outcome-instance, exhaustion and bounded prerequisite/experiment policies. Spec owns the consistency gate; Ticket owns condition-based closure. Product and work-wave authorities retain their distinct outcome and sequencing decisions. |
+| [Sprint Execution Boundary](#sprint-execution-boundary) and [Proportional Method And Delivery](#proportional-method-and-delivery-stdo-up-014) | F1, F4–F6; work can be batched and some proof can be delayed while obligations outlive individual actions. Finite reference frames and concrete execution costs make batching useful; conservation keeps its deferred obligations visible. | Batching may change when permitted proof is paid, but cannot establish that proof or supply authority for additional work. Delivery remains judged against its selected outcome and applicable closure conditions, so a lower local cost cannot silently discard an obligation. | Spec chooses proportional delivery and the sprint's bounded escrow policy. Ticket owns manifests, debt recording and close review. Governing law determines which proof may be deferred and which decisions require immediate re-entry. |
+| [Transformation Wave Rule](#transformation-wave-rule), [Legacy Classification Rule](#legacy-classification-rule) and [Release Version Boundary](#release-version-boundary) | F2–F4 and F6; a current authority path changes while existing consumers retain identities, obligations and selected bases. Identity and information fidelity distinguish a replacement relation from similar naming; typed composition preserves affected consumers. | An intermediate migration state cannot become a competing owner by being executable. A published selector locates a cut but cannot change the consumer's operative basis or prove conservation of its claims. | Spec owns migration strategies, classifications and affected-path closure. Release owns immutable publication and selector/adoption mechanics. The consumer's Product authority owns adoption and any change to its obligations. |
 
 
 ## Canonical Compression
@@ -1415,13 +1419,24 @@ and identify the smallest sufficient lawful scope of repair. The frame that
 exposes a failure need not contain its cause. Repeating the same analysis under
 different frame names supplies no additional causal evidence.
 
+The intake judgment concerns which current relation fails or needs to change,
+not whether the report's label is familiar. F1 and F2 bind that judgment to the
+selected Product outcome and interpreted governing meaning; F3 binds its
+observations to the current subject; F6 leaves any change to the relation's
+owner. Thus a demonstrated implementation defect can support lower re-entry,
+while a report that cannot distinguish implementation failure from missing
+requirement meaning leaves that distinction unresolved. Neither finding grants
+the mutation it suggests.
+
 Intake applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
-to the classification of the exact request against the affected current Product
-state. Its binding selects the report, governing sources, workspace and external
-observations, retained results and actual assessment grant. Currentness decides
-which support can be reused; the diagnosis itself is evaluated under the core
-result contract. [Computed treatment](#computed-classification-and-treatment)
-decides whether the candidate or its governing relation needs correction.
+to that exact classification. Its binding selects the report, governing
+sources, workspace and external observations, retained results and actual
+assessment grant. Currentness decides which support can be reused; the
+diagnosis itself is evaluated under the core result contract.
+[Computed treatment](#computed-classification-and-treatment) owns the decision
+whether the candidate or its governing relation needs correction. The single
+intake route and named re-entry classes below are Spec's policy for carrying
+that distinction, not additional results of the diagnosis.
 
 Select the smallest sufficient applicable configuration under
 [frame applicability and conjunction](REFERENCE_FRAME_METHOD.md#method-functions),
@@ -1789,12 +1804,22 @@ priority relation, not a fixed global execution sequence or scheduling runtime.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
-The [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
-applies F1–F6 to this delegated construction family: current subject and
-sufficient evidence constrain the next step, while findings cannot create a
-grant. UP-020 supplies the particular cone, proxy, checkpoint and remedy policy;
-governing authorities select the outcome, delegation and required independent
-assessment. Worker topology and internal search remain permitted variation.
+This family assumes a selected outcome, a delegated affected cone, a concrete
+execution binding and separately bound assessment and decision authority.
+F1 and F2 make the selected cone-preservation claim distinct from the existence
+of candidate bytes. F3 and F5 require continuation to retain useful work and
+observe current state, including unresolved effects. F4 preserves the affected
+outer relations across the bounded steps; F6 prevents construction or a passing
+assessment from appointing its own acceptance authority. The
+[work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization)
+supplies those shared consequences.
+
+UP-020 chooses the particular cone, proxy, checkpoint and remedy policy below.
+Governing authorities select the outcome, delegation and required independent
+assessment. These choices bind outcome-driven construction to its actual
+executor and observation boundary without selecting a worker topology or
+internal search. A human, machine or mixed binding remains subject to the
+same affected obligations; an optional profile adds duties only where adopted.
 
 When construction is delegated to a probabilistic or agentic worker, the
 method governs the execution relation without prescribing the worker's model,
