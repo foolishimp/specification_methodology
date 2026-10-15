@@ -5,6 +5,7 @@ semantic disposition, owner decision or evidence-reuse assertion.
 """
 import argparse
 import copy
+import json
 from collections import Counter, defaultdict
 from context import HERE, PRIOR, REPO, PACKAGE, INPUTS, git_bytes, library, read, sha, write
 
@@ -22,6 +23,33 @@ def main():
         raise ValueError('Historical map changed')
     expected = cc.coordinates.common_rows(git_bytes(INPUTS['common_input'], cc.COMMON_PATH).decode())
     rows = copy.deepcopy(old['rows'])
+    proposal_path=HERE/'source/selector-conservation/ROW_AMENDMENT.json'
+    proposal=read(proposal_path)
+    if (proposal['common_input_commit']!=INPUTS['common_input'] or
+        proposal['account_preimage']['sha256']!=sha(original) or
+        proposal['owner_decision'].get('status')!='pending' or
+        proposal['owner_decision'].get('record') is not None or
+        proposal['accepted_disposition'] is not None):
+        raise ValueError('Conservation proposal basis or authority changed')
+    matches=[i for i,row in enumerate(rows) if row['id']==proposal['claim_id']]
+    if len(matches)!=1:
+        raise ValueError('Conservation proposal has no unique claim')
+    index=matches[0]
+    canonical=json.dumps(rows[index],sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
+    if (sha(canonical)!=proposal['preconditions']['original_row_canonical_sha256'] or
+        rows[index]!=proposal['original_row']):
+        raise ValueError('Conservation proposal row preimage changed')
+    replacement=proposal['proposed_row']
+    for field in ('id','source_member','source_anchor'):
+        if replacement[field]!=rows[index][field]:
+            raise ValueError('Conservation proposal changed claim identity')
+    coordinate=library('iteration-3/review-repair/interpretation/repair_account.py')
+    for route,pin in proposal['replacement_locus_pins'].items():
+        path,anchor=route.split('#',1)
+        raw=(PACKAGE/path).read_bytes()
+        if sha(raw)!=pin['member_sha256'] or sha(coordinate.heading_units(raw)[anchor]['body'])!=pin['body_sha256']:
+            raise ValueError('Replacement source changed; reassess proposal: '+route)
+    rows[index]=copy.deepcopy(replacement)
     if len({r['id'] for r in rows}) != len(rows) or {r['id'] for r in rows} != set(expected):
         raise ValueError('Common frontier and inherited dispositions differ')
     source_cache, old_cache, loci, member_pins = {}, {}, {}, {}
@@ -61,6 +89,9 @@ def main():
         'source_member_pins':old['source_member_pins'],
         'successor_member_pins':member_pins,'successor_locus_pins':loci,
         'rows':rows,'affected_rows':affected,
+        'proposal_inputs':[{'path':str(proposal_path.relative_to(HERE)),
+                            'sha256':sha(proposal_path.read_bytes()),
+                            'claim':proposal['claim_id'],'standing':proposal['standing']}],
         'standing':'Inherited author dispositions with exact current carrying coordinates; no new owner acceptance or semantic reuse decision.'}
     write(HERE/'CONSERVATION.json',current)
     write(HERE/'FRONTIER.json',{'kind':'stdo.i4.frontier-projection','source_commit':args.source_commit,

@@ -1,0 +1,1301 @@
+{
+  "receiving_account": {
+    "commit": "989ee2278d4a5d9bcfbfc80570570450ee811b24",
+    "sha256": "b8c43489311b387045de129db459ef1bf29c1334724fcccc36474ea9565fedcd",
+    "standing": "intermediate authored account; not a qualified package"
+  },
+  "patches": [
+    {
+      "path": "source/delivery-selector/ACCOUNT_PATCH.json",
+      "sha256": "7bdaf285f4aaba8880e1fe3e612bafdd29d45c75a0d86bae0cadf046bcaf7c5a",
+      "stage": "source_repair"
+    },
+    {
+      "path": "source/dmm-governance/ACCOUNT_PATCH.json",
+      "sha256": "6b2848a2570a8b6996863e65ba93499c42eed330255d7b7a15a714f3bd4a0b23",
+      "stage": "source_repair"
+    },
+    {
+      "path": "source/core-routing/ACCOUNT_PATCH.json",
+      "sha256": "590971200fac5ff64247968403e87b0a5e803d3c4409074ae4b98ec2c7786cf5",
+      "stage": "account_routing",
+      "before_fields": {
+        "AXIOMATIC_CALCULUS.ac-016-typed-composition": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "AXIOMATIC_CALCULUS.ac-017-interpretation-fidelity": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "CARRIER.plugins.spec.skills.stdo-work.SKILL.md": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "DESIGN_MODULE_METHOD.8-totality-rule": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "DESIGN_MODULE_METHOD.admission-contract-use": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.bounded-construction": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.configuration": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.core-contract-derivations": {
+          "definition.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.identity-state-and-evidence": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.interpretation-and-representation": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.orthogonal-descriptions": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.purpose-and-interfaces": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.result-algebra": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.result-conjunction": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.typed-composition-and-conservation": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "FOUNDATIONS.workspace-and-context": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.1-scoped-identity": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.2-uniqueness-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.3-type-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.4-stability-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.consequence-for-implementations": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.defaults-from-a-bound-abg-realization": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.derivation-verification-material": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.derived-domain-overrides": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.domain-owned-identity": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.engine-owned-identity": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.governing-relations": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.human-readable-vs-opaque-identity": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.identity-hierarchy": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.lawful": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.minimum-questions": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.override-publication-surface": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.parsing-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.position": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.release-version-boundary": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "IDENTITY_METHOD.unlawful": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.agentic-use": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.anti-patterns": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.applicability-and-required-results": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.authority-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.closure": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.completeness-boundary": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.coverage-basis": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.coverage-dimensions": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.coverage-ledger": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.diagnostic-order": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.establish-the-evaluation-basis": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.evaluate": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.evaluation-inventory": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.evidence-or-coordinate-translation": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.failure-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.frame-qualification": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.frame-set-optimization": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.high-risk-separately-activated-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.human-frame-set-declaration": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.interaction-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.material-composition": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.method-self-qualification": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.minimal-frame-activation-binding": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.missing-frame-signals": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.operational-full-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "REFERENCE_FRAME_METHOD.reconfigure-when-necessary": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.reference-frame-laws": {
+          "definition.source_family_arguments": "e5d1ec3bba8aad680651c7fb1d85ed977da9cee1a52742ea25f1c8cdef49b4a8"
+        },
+        "REFERENCE_FRAME_METHOD.result-conjunction": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.return-a-closed-result": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.revision-actions": {
+          "argument.source_family_arguments": "27e948bab595f250183c62d33dcd0dfedfaa9fb0a7cb2b716b754bc9204c2f5d",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-002-finite-attention": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-003-material-sufficiency": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-004-irrelevance-exclusion": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-006-authority-conservation": {
+          "argument.source_family_arguments": "1350a2105d8f17a587e7334a89e16fd2963d60843c923780db3a4087947dc902",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation": {
+          "argument.source_family_arguments": "1350a2105d8f17a587e7334a89e16fd2963d60843c923780db3a4087947dc902",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-008-overlap-without-identity-collapse": {
+          "argument.source_family_arguments": "1350a2105d8f17a587e7334a89e16fd2963d60843c923780db3a4087947dc902",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-009-no-assumed-hierarchy": {
+          "argument.source_family_arguments": "f093f1d2d6c543837b2a29b7844ee84c01f26be7257e6656319f149865280431",
+          "argument.premises": "126f57a325541cb8321d74f12a97eae1f9d6dee7389884e54d809fe6c4c2388a",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-010-composition-on-demand": {
+          "argument.source_family_arguments": "f093f1d2d6c543837b2a29b7844ee84c01f26be7257e6656319f149865280431",
+          "argument.premises": "126f57a325541cb8321d74f12a97eae1f9d6dee7389884e54d809fe6c4c2388a",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-011-topology-mutation-and-recharting": {
+          "argument.source_family_arguments": "f093f1d2d6c543837b2a29b7844ee84c01f26be7257e6656319f149865280431",
+          "argument.premises": "126f57a325541cb8321d74f12a97eae1f9d6dee7389884e54d809fe6c4c2388a",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-012-closed-results": {
+          "argument.source_family_arguments": "6691bf6d73b455d34d5ba590505c2f19c05ff0fd66eecd3cb91d44e11eed40ee",
+          "argument.premises": "8c5c8547ffc6f949a80adff845064143a3da81b92db725ed88d623d86fce1521",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-013-reconstructable-activation": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-014-capability-fit": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-015-residual-uncertainty": {
+          "argument.source_family_arguments": "6691bf6d73b455d34d5ba590505c2f19c05ff0fd66eecd3cb91d44e11eed40ee",
+          "argument.premises": "8c5c8547ffc6f949a80adff845064143a3da81b92db725ed88d623d86fce1521",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-016-implementation-neutrality": {
+          "argument.source_family_arguments": "f093f1d2d6c543837b2a29b7844ee84c01f26be7257e6656319f149865280431",
+          "argument.premises": "126f57a325541cb8321d74f12a97eae1f9d6dee7389884e54d809fe6c4c2388a",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.rf-017-proportional-compression": {
+          "argument.source_family_arguments": "cb4a28fcb1d4cade4316f772475e54771913c185efde824cb487c68fb993fbac",
+          "argument.premises": "4a6cd97b7cec7c706f19d71d1198a16aafa645a5817e5761a7ca55cad17bcf6b",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.select-and-activate": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.using-frames-in-conjunction": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.worked-binding-product-chain-drift-evaluation": {
+          "argument.source_family_arguments": "38636bcc532189b34fbb07eedbd12e62129d8459fe70c312747cff5fd29bb468",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "REFERENCE_FRAME_METHOD.workspace-coverage": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.bounded-causal-construction": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.checkpoint-continuation-progress-and-churn": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.computed-classification-and-treatment": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.construction-assessment-and-delegation": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.product-outcome-conservation-stdo-up-013": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.proportional-disposition": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.standing-structural-qualification": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.sufficient-execution-intake": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "SPEC_METHOD.transition-evidence-and-proof-cadence": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.2-executive-activates-worker": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.3-worker-returns-to-executive": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.6-reviewer-returns-to-executive": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.7-executive-disposes-and-checkpoints": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.adopt-this-baseline": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.anti-patterns": {
+          "argument.source_family_arguments": "f02ee6b9331cf7e94e7e3ebcbafded824218966b409cf286f9afa42c7674b915",
+          "argument.premises": "b6200e361f23bf81c072c9556580169f4e380c2cc6a71e3e5e26134279908930",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.baseline-adoption-projection": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-project-basis-additions": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.closure": {
+          "argument.source_family_arguments": "f02ee6b9331cf7e94e7e3ebcbafded824218966b409cf286f9afa42c7674b915",
+          "argument.premises": "b6200e361f23bf81c072c9556580169f4e380c2cc6a71e3e5e26134279908930",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.computational-whole-path-evaluation": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.coverage-application": {
+          "argument.source_family_arguments": "cac344c074ca422cd07e56dc2395f54b72f79f3e829138c5edddf6988685ae8a",
+          "argument.premises": "194f3c5e2f39c1dd10031186bb3e1a9864da21b91b17bc96eb17a57c85dbc82f",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.define-a-project-configuration": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-frame": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-interface-integration-frame": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-generic-specialist-frame-set": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-integration-frame": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-unit-test-frame": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.derived-user-acceptance-frame": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.event-driven-executive-attention": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.exact-candidate": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.executive-drift-locks": {
+          "argument.source_family_arguments": "7bf904a357cb523f24fe1bf9ac2afa162780d9f2492bbcb313599ab94e138e6d",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.existing-authority-selects-the-configuration": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.extension-versus-replacement": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.failure-classification": {
+          "argument.source_family_arguments": "f02ee6b9331cf7e94e7e3ebcbafded824218966b409cf286f9afa42c7674b915",
+          "argument.premises": "b6200e361f23bf81c072c9556580169f4e380c2cc6a71e3e5e26134279908930",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.handoff-projection": {
+          "argument.source_family_arguments": "7bf904a357cb523f24fe1bf9ac2afa162780d9f2492bbcb313599ab94e138e6d",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.interface-integration-claim-boundaries": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.interface-integration-obligations": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.interface-integration-qualification": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.legitimate-path-and-technical-debt-erasure": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.missing-frame-and-re-entry-application": {
+          "argument.source_family_arguments": "cac344c074ca422cd07e56dc2395f54b72f79f3e829138c5edddf6988685ae8a",
+          "argument.premises": "194f3c5e2f39c1dd10031186bb3e1a9864da21b91b17bc96eb17a57c85dbc82f",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.product-chain-basis": {
+          "argument.source_family_arguments": "7bf904a357cb523f24fe1bf9ac2afa162780d9f2492bbcb313599ab94e138e6d",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.profile-qualification": {
+          "argument.source_family_arguments": "b4cb3d5ab33561a67b9b50b385041c36c1799568580ecd31e9bbd521271dbac9",
+          "argument.premises": "75b48214eeaeb0b82aa38d41e73f58adb26e191b1675fd666d83009429785a4c",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.reviewer": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.reviewer-result-and-triage-projection": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary": {
+          "definition.source_family_arguments": "cf143b96c61beb09a1a6dd8ec1254c9de300c69d55f67739d3b8c5ef7088c70e"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.work-result": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "STDO_REFERENCE_FRAME_BASELINE.worker": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TICKET_METHOD.work-carrier-to-execution-rule": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.acquire": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.composition-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.conjoin": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.constraint-surface": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.contract-application": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.dispose": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.evaluate": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.faithful-projection": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.foundational-contract": {
+          "definition.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.recovery-law": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.transform": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.transformation-admission-specialization": {
+          "definition.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "TRANSFORMATION_LIBRARY.workrecovery-specialization": {
+          "definition.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        }
+      }
+    },
+    {
+      "path": "source/profile-routing/ACCOUNT_PATCH.json",
+      "sha256": "de80b0b3f49fba66d4dff286a3fb4d4720a7b993e111a2bb93e1c16466122eaf",
+      "stage": "account_routing",
+      "before_fields": {
+        "DESIGN_MODULE_METHOD.1-authority-seam-closure": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.10-no-semantic-center-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.11-coupling-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.11b-opportunistic-optimization-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.11c-recurrence-extraction-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.11d-post-ticket-design-review-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.12-interface-bleed-prohibition": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.13-proxy-interface-prohibition": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.14-design-review-questions": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.14a-functional-realization-review-checklist": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.2-essential-carrier-consolidation": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.3-core-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.3-enforcement-after-proof": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.3a-odd-alignment-and-escalation-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.3b-boundary-closure-evaluators": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.3b-ingress-collapse-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.4-functional-bias-without-language-mandate": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.4a-python-typing-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.4b-ontology-first-design-rule": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.5-prime-law": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.5a-irreducible-architectural-carrier-set-rule": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.5b-promotion-test": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.5c-boundary-inflation-prohibition": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.5d-reference-derived-module-design-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.5e-ontology-and-three-view-behavioral-design-gate": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.6c-module-lifecycle-confirmation-rule": {
+          "argument.source_family_arguments": "2f2cfb3440123af941efae04b4f3c3c7df8059e0e84860ef5539c1e69b903e85",
+          "argument.premises": "a0a7f6d4221f4803e4b3672a9b93c2577802102a8259225a34f357ee0f60eb6b",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "61558ac8ada0c6684172855cc3009289ae99fe8819e30473ff67085ade2e57ec"
+        },
+        "DESIGN_MODULE_METHOD.7-immutable-carrier-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.8-totality-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.9-effect-edge-rule": {
+          "argument.source_family_arguments": "786a16ccb4b5730ef8e33d3f4283a93b53fc7ac53bd66d0ae07d4a3383c79f34",
+          "argument.premises": "7642fb1d8510e43a9b8f2683353f146edd18b48b4997d5e739040baf0015a16c",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "77b8e2090084d36db3be5b9ea16861328dca07334484a51b0f65bf299cd3712a"
+        },
+        "DESIGN_MODULE_METHOD.admission-contract-use": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.atomic-functions-and-higher-order-composition": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.authority-model": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.boundary-and-governance-cost-stdo-up-005": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017": {
+          "argument.source_family_arguments": "5a366eb4321fc8496f767e840e495d691f74667333e23311a5bec1b80e5d47b9",
+          "argument.premises": "9b819787f621b188b21cf892d8bf1f066365f345fa08d4870a8969e7278cbfda",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "bbc55273b03371b6827b6637e6ad2a9c7e9eb5cfee9625017c3033212a646c1d"
+        },
+        "DESIGN_MODULE_METHOD.capability-and-foundation-selection-stdo-up-023": {
+          "argument.source_family_arguments": "9fcc6178ac9f258c18ea60abd3083be832d5e1c41ccc3e8aeb80d606e0928a0d",
+          "argument.premises": "da940b94a35107282e6b5cf7cca6b7f57b1d8c7fc841033ee4a6db5f6b8e1f3a",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "2bfac90014a6bc4da77d52d5b113133bf71238fe4c6069dd1d4ed123c3d74b7d"
+        },
+        "DESIGN_MODULE_METHOD.computational-realization-projection-stdo-up-019": {
+          "argument.source_family_arguments": "9fcc6178ac9f258c18ea60abd3083be832d5e1c41ccc3e8aeb80d606e0928a0d",
+          "argument.premises": "da940b94a35107282e6b5cf7cca6b7f57b1d8c7fc841033ee4a6db5f6b8e1f3a",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "2bfac90014a6bc4da77d52d5b113133bf71238fe4c6069dd1d4ed123c3d74b7d"
+        },
+        "DESIGN_MODULE_METHOD.cross-view-axiom-evaluation": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.decision-complete-symbolic-design": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.domain-model": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.entity-and-lifecycle-completeness": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.gate-and-retrospective-work": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.governing-relations": {
+          "definition.source_family_arguments": "a9c8ff7e48e2b73c59533bc49ca8f48489d70561abb844c50f249386c0382d22",
+          "definition.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+        },
+        "DESIGN_MODULE_METHOD.iacs-revision-obligation": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018": {
+          "argument.source_family_arguments": "5a366eb4321fc8496f767e840e495d691f74667333e23311a5bec1b80e5d47b9",
+          "argument.premises": "9b819787f621b188b21cf892d8bf1f066365f345fa08d4870a8969e7278cbfda",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "bbc55273b03371b6827b6637e6ad2a9c7e9eb5cfee9625017c3033212a646c1d"
+        },
+        "DESIGN_MODULE_METHOD.native-constructability-before-design-acceptance-stdo-up-002": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.ontology-evidence": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.ontology-projection-law": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.prime-semantic-atoms-and-universal-domain": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.proportional-design-sequencing": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.recursive-prime-and-root-conservation-stdo-up-003": {
+          "argument.source_family_arguments": "194da3082290280e8a230deabaf1a37b5553d98902bef2016e1d50a01d69dca0",
+          "argument.premises": "265ea506b92b6c67e88f15df87ecad564e79ce87665e7134a3153d2e0c390ea7",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "fb114ce16af9016a4772f7181865ad2199093c562f4553440311f2b1bed7f2aa"
+        },
+        "DESIGN_MODULE_METHOD.sequence-model": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.state-model": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "DESIGN_MODULE_METHOD.whole-family-prime-contraction": {
+          "argument.source_family_arguments": "3b7b2b5099164fb333dfc987a94d442ff178ef7f642bc4d1440b8800207518ab",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "19d3179192ba1a451c2dfeb72d8bae386479373b77ec43c5973f6ff4c03756dc"
+        },
+        "ODD_METHOD.111-typed-assets-and-nodes-are-explicit": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.112-graph-functions-are-the-primary-constructive-carrier": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.112a-outcome-first-realization-order": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.113-the-function-catalog-is-published": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.114-the-gtl-module-is-the-operative-publication-surface": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.115-current-state-is-a-projection-over-constructive-history": {
+          "argument.source_family_arguments": "102fa63de2e7abe54c8bbed9f4adf4e2a15e77f1717d362eb776679e77f8b75a",
+          "argument.premises": "e497e752700ce72670ec4d2470f772377e62df2adaf61d32879a40c5fccf2dc9",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "c2688fb821b27f9296672964a0600b678d228ccd62f1f0603d2a8bec01d610de"
+        },
+        "ODD_METHOD.115a-abg-owns-continuation-and-re-entry": {
+          "argument.source_family_arguments": "102fa63de2e7abe54c8bbed9f4adf4e2a15e77f1717d362eb776679e77f8b75a",
+          "argument.premises": "e497e752700ce72670ec4d2470f772377e62df2adaf61d32879a40c5fccf2dc9",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "c2688fb821b27f9296672964a0600b678d228ccd62f1f0603d2a8bec01d610de"
+        },
+        "ODD_METHOD.115b-execution-authority-audit": {
+          "argument.source_family_arguments": "102fa63de2e7abe54c8bbed9f4adf4e2a15e77f1717d362eb776679e77f8b75a",
+          "argument.premises": "e497e752700ce72670ec4d2470f772377e62df2adaf61d32879a40c5fccf2dc9",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "c2688fb821b27f9296672964a0600b678d228ccd62f1f0603d2a8bec01d610de"
+        },
+        "ODD_METHOD.115c-projection-source-coherence": {
+          "argument.source_family_arguments": "102fa63de2e7abe54c8bbed9f4adf4e2a15e77f1717d362eb776679e77f8b75a",
+          "argument.premises": "e497e752700ce72670ec4d2470f772377e62df2adaf61d32879a40c5fccf2dc9",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "c2688fb821b27f9296672964a0600b678d228ccd62f1f0603d2a8bec01d610de"
+        },
+        "ODD_METHOD.115d-constructive-evaluation-and-yield-loop": {
+          "argument.source_family_arguments": "f881b26315f932b01ec793c63b9ea6d0eac2dd6e5adbe377732fdfa9b7570013",
+          "argument.premises": "c0d5675ddbb5547c5fa41bd7c3dc9391ceb1b6bd1a3a4b07bdac56e57c3a34b0",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "d034c888bfed2b34513d38e0b8a5af7bf3613ff65e6f8d14fc65df9d37d9c6e6"
+        },
+        "ODD_METHOD.116-product-specific-semantics-sit-above-the-shared-carrier": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.117-manual-walkthrough-must-still-be-lawful": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.117a-conforming-agentic-development": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.117b-real-authority-path-negative-proof-stdo-up-010": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.118-cumulative-environment-law-is-mandatory": {
+          "argument.source_family_arguments": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "dependency_relations": "6019eeb5be287736536d1b4d1bf0edb3aa20ebf02f6d209367717b4126aca206",
+          "dependencies": "555dbdda8ac6c439d6431dc0ebacddeb45fb84610742526fe0502385cfb526b6",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "result_mapping.bound_predicate": "c9178527635af501292e9e5b3c78f4e93b06ffebbc52357d1314641e0c9d0be4"
+        },
+        "ODD_METHOD.119-global-convergence-must-be-stable-under-zoom": {
+          "argument.source_family_arguments": "9d1acccebf7f98d451ae09cf20d0d2cf22fdd42d27f81324efdd367b090d849a",
+          "argument.premises": "554d011500af46d0183bed11843f8d0c33fe4bfdf1bf673adfd82cde882682b1",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "3d0a2d3603f52f167fde79c01836488f2576811453b8f8809318b7d7203cd2a6"
+        },
+        "ODD_METHOD.12-scenario-rule": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.13-installed-dev-rule": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.14-dogfooding-rule": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.15-release-boundary": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.16-failure-pattern": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.17-invocation-rule": {
+          "argument.source_family_arguments": "d4349d86dbfcb0bb37d29831392de99e9529bbace7b684f9cc6249948768a9da",
+          "argument.premises": "b9035e1f60df782c33567dc1432bade1b5c37880f5c5024a750d35d471f2b9a4",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "1d4114858d006b5d88c651cd02c53db5d8c275e5f83e9f47089ea2297181a08a"
+        },
+        "ODD_METHOD.18-cold-start-reading-order": {
+          "argument.source_family_arguments": "d4349d86dbfcb0bb37d29831392de99e9529bbace7b684f9cc6249948768a9da",
+          "argument.premises": "b9035e1f60df782c33567dc1432bade1b5c37880f5c5024a750d35d471f2b9a4",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "1d4114858d006b5d88c651cd02c53db5d8c275e5f83e9f47089ea2297181a08a"
+        },
+        "ODD_METHOD.19-ramp-up-checklist": {
+          "argument.source_family_arguments": "d4349d86dbfcb0bb37d29831392de99e9529bbace7b684f9cc6249948768a9da",
+          "argument.premises": "b9035e1f60df782c33567dc1432bade1b5c37880f5c5024a750d35d471f2b9a4",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "1d4114858d006b5d88c651cd02c53db5d8c275e5f83e9f47089ea2297181a08a"
+        },
+        "ODD_METHOD.4-method-folder-semantics": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.5-graph-model": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.6-product-boundary": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.7-self-host-boundary-rule": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.8-responsibility-layers-and-local-binding": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.9-method-governance-and-audit": {
+          "argument.source_family_arguments": "10cf8b79699eea4428654a9030279621caa85aa3710c627943281d24758274fc",
+          "argument.premises": "f6890f70318d586088481cd3716051e8fa23eaae8cb2ab1378cf729088a6a181",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "4626a717c2db074203a8394f104303ccff9ddd8a836da6f14834824c79bed548"
+        },
+        "ODD_METHOD.general-odd-product": {
+          "argument.source_family_arguments": "d4349d86dbfcb0bb37d29831392de99e9529bbace7b684f9cc6249948768a9da",
+          "argument.premises": "b9035e1f60df782c33567dc1432bade1b5c37880f5c5024a750d35d471f2b9a4",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "1d4114858d006b5d88c651cd02c53db5d8c275e5f83e9f47089ea2297181a08a"
+        },
+        "ODD_METHOD.governing-relations": {
+          "definition.source_family_arguments": "f5a7b168a8ff34a0fb2a1d9a95e0d1b8e1243ac118dbd2574f64a5cfb5959299",
+          "definition.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+        },
+        "ODD_METHOD.graph-functions": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.nodes": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.probabilistic-compute": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.traversal": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.vectors": {
+          "argument.source_family_arguments": "887cca39a726be43c154ebef98f64fcbd25525863064a0805b3e579d0880e877",
+          "argument.premises": "325d71b1ac1f2a6055cb421d70fc01bf348ee677b72590eb20ba1d21832762ae",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "387f1616b7f481a1df98db4f299c97d3d1b7c6967265405a64dab75aced465a9"
+        },
+        "ODD_METHOD.world-model-product": {
+          "argument.source_family_arguments": "d4349d86dbfcb0bb37d29831392de99e9529bbace7b684f9cc6249948768a9da",
+          "argument.premises": "b9035e1f60df782c33567dc1432bade1b5c37880f5c5024a750d35d471f2b9a4",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.policy_choices": "1d4114858d006b5d88c651cd02c53db5d8c275e5f83e9f47089ea2297181a08a"
+        }
+      },
+      "excluded_items": {
+        "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule": {
+          "reason": "The known local law now has a direct source argument; its prior unresolved table-binding proposal is superseded.",
+          "replacement": "source/dmm-governance/ACCOUNT_PATCH.json"
+        }
+      }
+    },
+    {
+      "path": "source/delivery-routing/ACCOUNT_PATCH.json",
+      "sha256": "e475ee5ac7c69116fd05dbd92f22849035311d771e5cf1bfcc45043df0e2be98",
+      "stage": "account_routing",
+      "before_fields": {
+        "SPEC_METHOD.adr-folder-convention": {
+          "argument.source_family_arguments": "65c2afd965078bb63028fa37dd8b12edb92b7403e25b3101a105e9f952302ad6",
+          "argument.premises": "b6200e361f23bf81c072c9556580169f4e380c2cc6a71e3e5e26134279908930",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "6017a2110916c3d623cb93b566a0dcc3ae1dfe4cb645a1c4adfe9d3da2cddb48"
+        },
+        "TICKET_METHOD.comments": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.default-layout": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions": {
+          "argument.source_family_arguments": "c957389a5cb063e826f2160163512499468dcb88e60fd517487192099c8967ff",
+          "argument.premises": "b6200e361f23bf81c072c9556580169f4e380c2cc6a71e3e5e26134279908930",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "a14a751c85146a2145b768fee28c1b8a01ad856cb0a6d82538a4011ba5b62622"
+        },
+        "TICKET_METHOD.execution-contracts": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.future-extensions": {
+          "argument.source_family_arguments": "68c3b9530167cd271307492a0802d8ef5109ef077bc97dafeccb5f000a0ef6e0",
+          "argument.premises": "e497e752700ce72670ec4d2470f772377e62df2adaf61d32879a40c5fccf2dc9",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "ee54cb3b2cf6e017f8467127cf256374ec41b51c90abbf285e81851e5991a331"
+        },
+        "TICKET_METHOD.goals": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.required-fields": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.sprint-manifest-required-fields": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.sprints": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        },
+        "TICKET_METHOD.tickets": {
+          "argument.source_family_arguments": "c37ab9562559fe1a3c959e3716227fee460abaa8bc30d9eadccb1763b3ed3011",
+          "argument.premises": "a63c29ea71988feb223faba49ee1d6a0e9ea0623eba682960f713ec1ff9f52aa",
+          "argument.source_family_applicability": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+          "argument.conditional_consequence": "8cbfee34c6158a9e36f394c202bb1889fb65d24b77809d25cb546a8ed059de36",
+          "argument.policy_choices": "829d7f18a1b4c08dfc09d1cd17c526864a7a5b8c54e6ff420d2f4c44700b9b73"
+        }
+      }
+    }
+  ],
+  "application": "Original three source patches and delivery dependencies first; source repairs enter at their owners. Scoped routing preserves other owners. Field preimages refuse unexpected overlap."
+}

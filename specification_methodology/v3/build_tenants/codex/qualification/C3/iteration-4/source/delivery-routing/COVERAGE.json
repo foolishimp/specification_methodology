@@ -1,0 +1,585 @@
+{
+  "activation": "I4-DELIVERY-ACCOUNT-ROUTES",
+  "standing": "author route audit; not independent fidelity evidence",
+  "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+  "rows": [
+    {
+      "id": "SPEC_METHOD.adr-folder-convention",
+      "retired_owned_family_rows": [
+        {
+          "family": "Realization and correction",
+          "declared_consumer_scope": "Realization and correction: Design Rule, Renewal Path, Reconstruction Litmus, Method and ADR Conventions",
+          "premises": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F2 require enough meaning to realize the selected outcome; F3 distinguishes the workspace from a prior account; F4 preserves the affected relations; F6 reserves changes to their owners. New observations can defeat a proposed realization or expose missing governing meaning, but do not authorize changing that meaning.",
+          "additional_policy_and_owner": "Spec chooses the goals-to-realization sequence, reverse gap-analysis route and traceable design decisions. ADRs and folder layout are declared conventions; the Product binding and adopted design profile determine their applicability.",
+          "source_row": {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "method-families",
+            "line": 52,
+            "sha256": "a0a44e26481e1db8a99175d2902851f0335dd255adf7cb55d6a89f5618d90fa3"
+          },
+          "source_refs": [
+            "SPEC_METHOD.method-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "ADR Folder Convention is the child of the explicitly named ADR Conventions consumer. Apply the current row to decision ownership, retained decision support and the convention status of ADR layout. The row does not derive a mandatory adrs directory, migration, numeric ID or registry.",
+        "source_refs": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "adr-conventions",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "adr-folder-convention",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.comments",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "Comments is a Core Model child defining the discussion/publication carrier role. Apply the continuation argument only to facts actually required after the local boundary and lawfully recorded there. It neither requires a new comment for every task nor grants task-status authority; Posting Guide retains publication ownership.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "comments",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+        "local_premise_support": {
+          "premise": "F6",
+          "source": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+        }
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.default-layout",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 0,
+      "disposition": "no_family_law_argument_for_this_data_surface",
+      "source_owner_support": {
+        "standing": "no_family_law_argument_for_this_data_surface",
+        "binding_kind": "schema_locator_or_optional_extension_data",
+        "reason": "This unit supplies a starter layout and locator/rebinding data. The current family table names Authority as a deciding consumer, but does not make this layout an independent family-law predicate. The default paths do not follow from F1–F6; the explicit permission to bind other resources and the governing installed-basis obligation remain unchanged.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "default-layout",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+      "retired_owned_family_rows": [
+        {
+          "family": "Evaluation and reuse",
+          "declared_consumer_scope": "Evaluation and reuse: Evaluation Criteria And Non-Closure Conditions, Condition-Based Closure And Reuse, Test Case Authority",
+          "premises": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "conditional_consequence": "F1 supplies the exact work claim; F2/F3 require applicable current evidence; F4 preserves all required obligations; F6 distinguishes assessment and owner decisions. A passing local test, review event or recorded status cannot establish a different unresolved work claim.",
+          "additional_policy_and_owner": "Ticket chooses its closure-bearing carrier fields and admitted test authority. Foundations owns currentness and conjunction; Spec owns requirement/design truth and lawful re-entry. These policies do not add review when the applicable grant and law require none.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 26,
+            "sha256": "8d70be257037ae795baee2764abb56d6c15862aee839a45051b0847f6da08089"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "explicit_consumed_condition_surface",
+        "scope_condition": "The named Condition-Based Closure And Reuse consumer evaluates every applicable declared obligation and absence of active non-closure conditions. This clause supplies those same evaluation_criteria and non_closure_conditions and their migration examples. The binding covers those consumed conditions, not every Ticket Rules sibling or a new acceptance requirement.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "condition-based-closure-and-reuse",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "evaluation-criteria-and-non-closure-conditions",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.execution-contracts",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "Execution Contracts is a Core Model child distinguishing one run from ticket and sprint lifetimes. The family explains selection of a surviving source carrier and recoverable run result. Admission and closure keep their separately owned conditions; contract presence supplies neither.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "execution-contracts",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+        "local_premise_support": {
+          "premise": "F6",
+          "source": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+        }
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.future-extensions",
+      "retired_owned_family_rows": [
+        {
+          "family": "Migration and extension",
+          "declared_consumer_scope": "Migration and extension: Migration Strategy Requirements, Implementation Migration Category and Future Extensions",
+          "premises": [
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "conditional_consequence": "F2/F3/F4/F6 require current unambiguous meaning, retained obligation identity and lawful ownership across a change. An implementation handoff cannot make predecessor behavior authoritative or transfer one tenant's closure to another.",
+          "additional_policy_and_owner": "Ticket chooses migration declarations, break-to-closure maps and local follow-up. Spec owns the migration law; the owning work authority selects any optional future carrier.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 27,
+            "sha256": "5cc8bd04c96b487088cd8bc6a1c900a73923dff5d980a062f6c5171d656b0840"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 0,
+      "disposition": "no_family_law_argument_for_this_data_surface",
+      "source_owner_support": {
+        "standing": "no_family_law_argument_for_this_data_surface",
+        "binding_kind": "schema_locator_or_optional_extension_data",
+        "reason": "This unit lists optional future extensions and preserves the selected local-file model and existing authority/refusal laws. It is not an implementation migration or a new deciding consumer named in the current migration row. Optionality and the obligations on any selected alternative remain unchanged; no migration-family derivation or new adoption duty is assigned here.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "future-extensions",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.goals",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "Goals is a Core Model child defining the epic carrier role. The family is relevant only when assessing which existing carrier retains the selected work-wave facts beyond an activation. It does not turn Goals into durable execution tracking, prescribe a physical filename or create a new goal-admission decision.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "goals",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+        "local_premise_support": {
+          "premise": "F6",
+          "source": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+        }
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.required-fields",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 0,
+      "disposition": "no_family_law_argument_for_this_data_surface",
+      "source_owner_support": {
+        "standing": "no_family_law_argument_for_this_data_surface",
+        "binding_kind": "schema_locator_or_optional_extension_data",
+        "reason": "This unit supplies the ticket/contract field schema, recommendation distinctions and conditional migration fields. The field names are chosen carrier policy, not a new family-law inference. Its required, recommended and conditional requirements remain intact and are consumed by the separately owned carrier/admission/migration decisions. No family argument is asserted for each schema entry.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "required-fields",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.sprint-manifest-required-fields",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 0,
+      "disposition": "no_family_law_argument_for_this_data_surface",
+      "source_owner_support": {
+        "standing": "no_family_law_argument_for_this_data_surface",
+        "binding_kind": "schema_locator_or_optional_extension_data",
+        "reason": "This unit supplies manifest schema data and field meanings, including the explicit paydown link to Sprint Close Review. The current family argues at the named escrow/close consumers; it does not derive these literal keys or create a standalone schema acceptance decision. All required fields and their paydown binding remain unchanged.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "sprint-manifest-required-fields",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.sprints",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "Sprints is a Core Model child defining a bounded batch lifetime. The family explains why surviving obligations need a carrier beyond close. It does not grant escrow, replace sprint-close review, authorize debt retention or supply constitutional authority.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "sprints",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+        "local_premise_support": {
+          "premise": "F6",
+          "source": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+        }
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    },
+    {
+      "id": "TICKET_METHOD.tickets",
+      "retired_owned_family_rows": [
+        {
+          "family": "Identity and authority",
+          "declared_consumer_scope": "Identity and authority: Core Model, Authority, Default Layout, ticket/sprint fields, tenant independence and state projection",
+          "premises": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "conditional_consequence": "F1/F3/F5/F6 with obligations that outlive an activation require recoverable work identity, state and grants. A filename, lifecycle state or another tenant's result cannot supply a missing mandate or proof.",
+          "additional_policy_and_owner": "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions.",
+          "source_row": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "carrier-families",
+            "line": 24,
+            "sha256": "44f55cde14249e659213e80b925ab499c3958374b2c644b888ca654d40cc401a"
+          },
+          "source_refs": [
+            "TICKET_METHOD.carrier-families"
+          ]
+        }
+      ],
+      "incoming_owned_family_rows": 1,
+      "disposition": "scoped_source_match",
+      "source_owner_support": {
+        "standing": "scoped_source_match",
+        "binding_kind": "scoped_heading_descendant",
+        "scope_condition": "Tickets is a Core Model child that gives enduring work identity a recoverable authoritative carrier. The premise applies when work needs independent state beyond the local boundary; a ticket or particular physical file is not required for every execution.",
+        "source_refs": [
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "tickets",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+        "local_premise_support": {
+          "premise": "F6",
+          "source": {
+            "path": "standards/TICKET_METHOD.md",
+            "anchor": "core-model",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          },
+          "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+        }
+      },
+      "local_semantics": "preserved; schema obligations and preferences are not weakened by absence of a family-law derivation"
+    }
+  ]
+}
