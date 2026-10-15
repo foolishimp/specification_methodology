@@ -24,14 +24,14 @@ Digests at the freeze: SHA-256 of the sorted `shasum -a 256` lines of each tree'
 
 | Tree | Files | SHA-256 |
 |---|---:|---|
-| 23 members `standards/*.md` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| all of `standards/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `standards/frames/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `a_c/i3/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `qualification/instruments/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `plugins/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `frontier/PREDECESSOR_CLAIMS.md` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| `frontier/REVIEW.json` and `REVIEW_ASSESSMENTS.json` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| members `standards/*.md` | 23 | `c2ea8dab147f30eab76f4a0c0b4525ce012df4dfa40cd8870261c6a140a1e4a3` |
+| all of `standards/` | 62 | `30648e54d5cf3c3ec03354789930e1d94f9bcf75a00e7296f693258a78572733` |
+| `standards/frames/` | 13 | `3af6265c8012653a828b78e37a77ebc5eab14cfbc30b28d4afcfe90ce293c5c4` |
+| `a_c/i3/` | 35 | `50717a82b8fe7f491b899e74c32695b933e2c6fdf9ea8569c43d39d7a937a729` |
+| `qualification/instruments/` | 10 | `3d86bfc635862c9c13bfd4b5096a3a7d80854ef47b5ee56ad4af3c74a76f3c48` |
+| `plugins/` | 17 | `b82afdd4119906cd3f7d8857cfdae74025aa9150824a642d9b562017689e2979` |
+| `frontier/PREDECESSOR_CLAIMS.md` | 1 | `17439e40032be4401abf227d6209e71d63f7c7f7311054322a12eb45c2182901` |
+| `frontier/REVIEW.json` and `REVIEW_ASSESSMENTS.json` | 2 | `2140ddb875b04274aee21715769dda2f37747bd6122141642b905c1c48c766ea` |
 
 ## What changed in this iteration
 
