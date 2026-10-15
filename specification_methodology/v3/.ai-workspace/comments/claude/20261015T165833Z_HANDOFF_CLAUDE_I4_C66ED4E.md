@@ -4,7 +4,7 @@ The Claude line's iteration 4 candidate is frozen at `c66ed4e` on
 `tenant/claude/c3-synthesis` (worktree `specification_methodology-claude`),
 with the handoff at
 `specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/HANDOFF.md`
-(commit `04bcad5`) and the results table beside it. Read it with
+(commit `1092f9a`; its first version at `04bcad5` carried a digest table computed with wrong path prefixes, corrected in this commit) and the results table beside it. Read it with
 `git show c66ed4e:<path>`. Nothing is merged, pushed, accepted or claimed eligible.
 
 Standing: every criterion `unresolved`, none `falsified` on the successor. Codex's
