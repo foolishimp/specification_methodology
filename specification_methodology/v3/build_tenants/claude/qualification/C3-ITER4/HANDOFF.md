@@ -12,7 +12,7 @@ nothing claims acceptance or eligibility.
 | Coordinate | Value |
 |---|---|
 | Branch | `tenant/claude/c3-synthesis` (worktree `specification_methodology-claude`), not merged, not pushed |
-| Frozen candidate | commit `FREEZE_COMMIT` |
+| Frozen candidate | commit `c66ed4e` |
 | Member text final at | `23b6556`, plus the repair of SPEC_METHOD §2 Constitutional chain after Codex's finding R1 (`4299219`) |
 | Preceding candidate | `2beed8d` (iteration 3), handoff `96ccdcc` |
 | Donor | the Codex candidate at `fb855df`, package `d490dd6`, read only at those commits |
@@ -22,7 +22,16 @@ nothing claims acceptance or eligibility.
 
 Digests at the freeze: SHA-256 of the sorted `shasum -a 256` lines of each tree's files.
 
-DIGEST_TABLE
+| Tree | Files | SHA-256 |
+|---|---:|---|
+| 23 members `standards/*.md` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| all of `standards/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `standards/frames/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `a_c/i3/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `qualification/instruments/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `plugins/` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `frontier/PREDECESSOR_CLAIMS.md` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `frontier/REVIEW.json` and `REVIEW_ASSESSMENTS.json` | 0 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 
 ## What changed in this iteration
 
@@ -32,7 +41,7 @@ DIGEST_TABLE
 - **Conservation** (I4-04): 140 rows read in fresh contexts in eleven activations: 137 `conserved`; 3 clauses split to proposed-replacement child rows (`#work-result` under Q1, `#define-a-project-configuration` under a new Q9, the baseline `#canonical-compression` under Q2). Repairs from the reading at ACTIVATION §7 and §8, DESIGN_MODULE §4 and §11, REFERENCE_FRAME §1. The proposed relations, by question, are posted to the pen (`main` `708dfb9`) with a supplement in `reassess/REPLACEMENTS-SUPPLEMENT.md`.
 - **Frames** (I4-06): every frame carries the rows of the family tables that cite its sections (generator mode `rows: frame-anchors`, tested); capacity 150,000 bytes, the per-frame increase recorded as tradeoff TO1 in REDUCTION §4.3; the F5 `kind` residual closed.
 - **Reduction** (I4-07): subjects rebound (S1 is `2beed8d`); verdict standing in the ratified values; seven sample paths traced ([paths/SUMMARY.md](paths/SUMMARY.md)).
-- **Repairs read back** (I4-09): the I3-8r repairs (R2a: FR-01, -03, -05 repaired; -06, -08, -11 partly, then repaired), the I4 edits, and the three Codex findings that changed text (R1 chain, R3 trial grading, R4 README), with the chain row's readback READBACK_CHAIN.
+- **Repairs read back** (I4-09): the I3-8r repairs (R2a: FR-01, -03, -05 repaired; -06, -08, -11 partly, then repaired), the I4 edits, and the three Codex findings that changed text (R1 chain, R3 trial grading, R4 README), with the chain row's readback read back as `conserved` with modal force preserved (batch 12).
 - **Interpretation** (I4-05): `block-outside-claim` is a prohibition again with its condition; the artifacts regenerated from the pinned checker at the freeze; coverage unchanged at 64 clauses.
 
 ## Working results (same family, fresh contexts, Fable at max unless noted)
@@ -49,7 +58,7 @@ DIGEST_TABLE
 
 ## Gaps the product owner should know
 
-- **Criterion 4 (actual use).** TRIAL_STANDING
+- **Criterion 4 (actual use).** Unevidenced. The trial (`trial/DESIGN.md`) is designed, its card, writer and grader instructions are fixed, and eight of twelve expectation sets are written and hashed by nonauthor writers; no actor has run. The runs are held because the owner's iteration 5 plan changes every frame (each must bind the construction requirement), which would make this trial's results historical on arrival. If the owner orders the trial on this candidate, TT-08's expectations are rewritten first (its frame carries the repaired chain section) and the remaining four sets are written; then 44 actor runs and 12 gradings follow. Under the ratified text criterion 4 is `unresolved`, which leaves this candidate ineligible for a qualified choice and does not qualify its peer.
 - **Conservation.** 505 of the 611 `conserved` rows carry the author's disposition only (30 verified at I3); 140 are read. Every proposed relation is pending the owner.
 - **Interpretation coverage.** 64 clauses over the shared-owner determinations of G1 to G4; 15 sections `encoded-in-part`, 181 `not-encoded-i3`, G5 to G13 not encoded. Consumer semantics beyond citation unread. This blocks C3 closure for interpretation coverage.
 - **Reduction.** 38 of 46 paths untraced; the entry README's growth (2,330 to 28,087 bytes) is an undeclared tradeoff that leaves six traced paths `indeterminate`; no frame-entry trace; DP-19 named two residual rivals (EXECUTIVE_BASELINE §16 and §19 field lists; the "binding" homonym of PROFILES §1).
