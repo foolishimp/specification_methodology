@@ -371,7 +371,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md`
 | Minimal Frame Declaration | `#minimal-frame-declaration` |  | 1,086 | conserved | `REFERENCE_FRAME.md#minimal-frame-declaration` |
 | Minimal Frame-Set Declaration | `#minimal-frame-set-declaration` |  | 814 | conserved | `REFERENCE_FRAME.md#minimal-frame-set-declaration` |
 | Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | conserved; the out_of_frame residual field is new | `REFERENCE_FRAME.md#minimal-evaluation-result` |
-| Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure` |
+| Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure`; `EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set` (condition 22, the twelve families) |
 
 ## RELEASE_METHOD.md
 
