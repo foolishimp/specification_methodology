@@ -63,6 +63,22 @@ Apply each case to the member's owned determinations and affected consumer bindi
 | A functor or categorical join is claimed | Before the claim, objects, arrows, arrow equality, identity and composition are given and the functor laws are shown. Otherwise the claim is a hypothesis ([standard](../requirements/README.md#categorical-demonstration-standard)). |
 | A rewrite or refinement step is applied | The law that permits it is declared for the subject. An exact step preserves meaning. An approximate step states its adequacy relation and an end-to-end bound. |
 
+## Universal Construction Discriminators
+
+These cases test the candidate's deciding rules under the [construction requirement](../requirements/README.md#universal-construction-requirement). They apply to member criterion 5 within the member's declared responsibility; the integrated checks below evaluate their composition and actual use.
+
+| Discriminator | Expected distinction |
+|---|---|
+| Internal tasks pass while a required end-to-end feature fails | Keep the outer failure and diagnose the affected join; local completion does not establish Z. |
+| Every selected operation is lawful but the result fails the chosen outcome constraints | Preserve the distinction between admissible construction and delivered outcome. The specification supplies Z; a calculus or lawful execution supplies no automatic satisfaction or acceptance. |
+| A report called a bug could concern implementation, requirements or missing observations | Apply one intake and causal diagnosis. Correct the supported affected relation, or acquire evidence and retain unresolved alternatives. The label supplies no repair class or permission. |
+| A requirement is weakened until the current realisation passes | A change to Z needs its owning decision and downstream re-entry. It neither proves the former Z nor erases the original counterexample. |
+| A predictive model agrees with observations while the required outcome is absent, or predicts incorrectly while the outcome holds | Prediction accuracy and satisfaction of the normative specification are different claims. Diagnose each against its own predicate and support; neither conclusion determines the other. |
+| A strategy is selected solely by its name, or a cheaper plan loses required assurance | Select within the outcome constraints, using material resource, risk and feedback tradeoffs. Cost savings supply no waiver. Preserve incomparable alternatives and unsupported estimates explicitly. |
+| Every recursive step preserves an invariant but the process does not deliver | Preservation alone proves no progress or termination. State the actual support for continuing or the unresolved stop; no generic termination proof is required merely to perform bounded work. |
+| A limit is exhausted, an observation exposes more work, or an ongoing maintenance loop continues | Distinguish attempt termination, useful discovery, continuing maintenance and delivered outcome. Neither elapsed work nor a changed count supplies the conclusion by itself. |
+| A restart or later disturbance contradicts a cached successful result | Reacquire the bound current subject, reopen affected claims and preserve independently applicable work. Resolve uncertain effects sufficiently before a dependent action. |
+
 ## Construction And Integrated Closure
 
 These checks evaluate the recorded construction decisions and integrated candidate under the installed builder. They do not add candidate-text predicates to member criterion 5. The Executive applies the acceptance checks; the integrated Reviewer evaluates the whole-candidate obligations before C3 closure. Head-to-head evaluation follows [Candidate Comparison](../PRODUCT.md#candidate-comparison), with the same tasks, independently specified expectations and acquisition conditions. An unassessed candidate is not evidence that its peer qualifies.
@@ -72,6 +88,7 @@ These checks evaluate the recorded construction decisions and integrated candida
 | Each member passes its local checks while two members still decide the same shared question differently | C3 closure requires the integrated reduction assessment. Separate satisfied member results cannot erase the cross-member contradiction. |
 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | Review may support the proposal; dependent member acceptance waits for the exact replacement decision recorded in the ticket. A construction grant does not supply that acceptance. |
 | Five member criteria are satisfied and the sixth is missing, stale or falsified | The installed conjunction withholds member acceptance and preserves all component results. A general favourable verdict cannot replace missing or adverse evidence. Supported inapplicability of a conditional obligation is recorded separately; it does not waive any of the six criteria. |
+| Separate members explain construction, triage and recovery but their consumers cannot carry one feature through the composition | Integrated assessment checks the shared owners and actual deciding path from the selected outcome through bounded work, observation, diagnosis and lawful continuation or closure. Criterion 4 evidence exercises the applicable path under independently specified expectations; prose alone does not establish use. Existing applicable evidence can support several cases; no separate run per table row is imposed. |
 
 Logical review is a reviewer's reasoned reading. It finds counterexamples and contradictions without running anything. Actual-use cases do real construction, observe genuine defects, keep the uncertainty of effects, and re-enter the method at the right stage.
 

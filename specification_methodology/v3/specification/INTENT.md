@@ -2,9 +2,11 @@
 
 ## Executive Summary
 
-The Specification Methodology defines how to turn a required outcome into software or a process, and establish that the result is acceptable. It reconstructs accumulated practice around [shared principles and laws](PRODUCT.md#foundational-reduction). The aim is less independent interpretation and reconciliation, with necessary distinctions preserved. Shared laws govern actual decisions and replace repeated determinations.
+The Specification Methodology governs construction from current reality A to an acceptable outcome Z under finite resources. It defines the required conditions, selects and revises a strategy, and establishes what the resulting work satisfies. Its [universal construction model](PRODUCT.md#universal-construction-model) applies to software, human processes and mixed realisations. It reconstructs accumulated practice around [shared principles and laws](PRODUCT.md#foundational-reduction), reducing independent interpretation and reconciliation while preserving necessary distinctions.
 
-Work begins at a described current state A and seeks a destination Z defined by constraints. Bounded transitions carry work toward that outcome while preserving applicable obligations. Evidence and authority determine whether to continue, repair, recover or stop. The workspace persists; an actor's account of it can be discarded and rebuilt. Resumption starts from the current state and retains valid progress.
+Z is a set of constraints on acceptable outcomes. The specification supplies the internal reference model of what must hold; the workspace and material external observations supply evidence of what does hold. A path from A to Z may need to be discovered through bounded construction and evaluation. Feedback compares observed conditions with the model, diagnoses discrepancies and directs authorised correction. Bugs and new features enter the same work process. The workspace persists while an actor's account of it can be discarded and rebuilt.
+
+Strategies such as steel thread, phased delivery and repeated refinement arrange the work and its assurance differently. Their selection considers resources, time to useful feedback, risks and expected rework. Preservation through repeated steps, progress and eventual completion are separate claims. Evidence and authority determine whether to continue, revise, repair, recover or stop with an explicit unresolved outcome.
 
 Finite context and attention require task-specific reference frames: sufficient relevant material, governing rules and authority for a task. Roles and coordination structures follow from the work, actor capabilities and required assurance. Each realisation justifies its arrangement.
 
@@ -14,9 +16,9 @@ The method relates what an algorithm does, what its information means and how wo
 
 ## Mission
 
-To define a precise method for constructing software and processes from a coherent core of principles, expressed as constraints within which people and computational actors can work. The method uses categorical relationships and an axiomatic representation to make its logic explicit, check its constructions and apply the method to itself.
+To define a precise method for choosing and carrying out lawful construction from A to Z under finite resources, using a coherent core of principles expressed as constraints within which people and computational actors can work. The method uses categorical relationships and an axiomatic representation to make its logic explicit, check its constructions and apply the method to itself.
 
-The method defines the current state A, the constraints on an acceptable destination Z, and the transitions that can carry work between them. People and computational actors make those transitions within finite resources. Intent, Product and Specification refine the destination; construction and evaluation establish whether it has been reached. The method separates what must be achieved from the choices made to realise it.
+The method defines the current state A, the constraints on an acceptable destination Z, and the transitions that can carry work between them. Intent, Product and Specification refine the destination; construction and evaluation establish whether it has been reached. Strategy allocates finite resources among understanding, planning, realisation, observation and assurance. The method separates what must be achieved from the choices made to realise it. Universal scope supplies a common construction account across domains; reachability, optimality and correctness remain claims requiring their own support.
 
 ## What The Product Is
 

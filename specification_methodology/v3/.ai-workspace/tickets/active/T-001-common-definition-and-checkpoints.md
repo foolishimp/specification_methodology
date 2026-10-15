@@ -10,13 +10,27 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T11:21:30Z
+updated_at: 2026-10-15T15:28:12Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 universal construction
+
+2026-10-15T15:28:12Z — The product owner directs: “given my current v3 principles i4 -> i want to add this universal construction model”, then clarifies that this synthesises the accumulated work into lawful principles and authorises research. The common pen prepares the I5 source from main `3800be50936048f2eb1f5a6455fb6d573f81e0f8`, retaining ratified C3-I4-03 as the preceding construction input.
+
+Intake: `requirement_reprice` at the common requirements, with Intent and Product alignment within the existing purpose of constructing software and processes. Scope is the relationship among A, Z, finite resources, strategy, composition, feedback, proof, recursive progress and recovery. The existing principles and pillars supply its premises; no new runtime, fixed actor arrangement, universal strategy or universal reachability claim is selected. Research supplies arguments with explicit assumptions, not substitute authority.
+
+The common Writer is admitted for the affected Intent, Product, principles, requirements, capabilities, conformance and frame basis; Goals, v3 AGENTS/CLAUDE, the shared tenant entry, T-001/T-002 and Codex commentary carry routing and the return. The same party enters separate Ledger and Git Writer acts for those records and checkpoint commits on main. It preserves unrelated work, tenant candidates, the installed builder and every historical snapshot/admission. A source checkpoint is followed by a descendant input record read from that commit. This grant prepares reviewable common source; I5 tenant admission and exact-source ratification remain separate.
+
+The bounded working review is assigned to a fresh nonauthor Codex activation, with expectations fixed from the preceding common source before candidate inspection. It reviews a named successor and material dependents, writes only its review in common Codex comments and performs no repair or Git effects. This same-family working check is available within the current session; it is not a Claude review, a cross-family acceptance or the owner's decision. Review and research limits are disclosed in their returns; no paid external actor call is selected. Primary-source research is read-only. Construction and assurance costs are included in the account; complete host context and native token spend are uninstrumented.
+
+I5 standing: common authorship selected; successor review and ratification pending. The [work map](T-002-c3-successor-construction.md#iteration-5-common-preparation) identifies affected owners and proof. Prior I4 ratification, admissions and evidence retain their exact subjects.
+
+2026-10-15T15:40:22Z — The common Writer returns the construction model, its P1–P6 synthesis, shared requirement, nine member discriminators and integrated-use check. The [research record](../../comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md) separates formal results, assumptions and local choices. The Product Definition verifies; 356 local/installed links and scoped whitespace pass. P1–P6 bodies, prior I4 ticket sections and unrelated root edits are byte-preserved. The Git Writer checkpoints these exact common/commentary files for nonauthor readback, then the Ledger Writer records their input from that commit in a descendant. This is a source return, not ratification or tenant acceptance.
 
 ### Iteration 4 ratification
 

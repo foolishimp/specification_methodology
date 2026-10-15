@@ -53,9 +53,9 @@ The [reduction requirement](requirements/README.md#foundational-reduction-requir
 
 ## Construction And Context Management
 
-The method describes a current state A and a destination Z defined by constraints. Several realised states may satisfy Z. A distinguishes material workspace state from each actor's account of it. The workspace is the continuing truth surface for construction; context is acquired from it under the [current-state and basis rule](requirements/README.md#bounded-transitions-and-reference-frames). Unknowns remain explicit. Intent, Product and Specification progressively define the destination. Construction, observation and evaluation change the current state and what is known about it.
+Context management applies the [universal construction model](#universal-construction-model) to the material and responsibilities needed for each bounded action. A distinguishes material workspace state from each actor's account of it. The workspace is the continuing truth surface for construction; material external state is observed through its owning interfaces. Context is acquired under the [current-state and basis rule](requirements/README.md#bounded-transitions-and-reference-frames). Unknowns remain explicit.
 
-When the work exceeds one activation's capacity, it proceeds through bounded transitions A → B → C → … . Each transition retains the applicable outer obligations. Composition depends on compatible contracts and discharged preservation obligations. Discovery may add obligations or invalidate a claim. An authorised change may revise the destination; it does not establish that the previous destination was reached. Progress is judged against the selected outcome and evidence, rather than the number of remaining items alone.
+When work exceeds one activation's capacity, decomposition bounds the selected actions and their material joins under the [construction requirement](requirements/README.md#universal-construction-requirement). A sequence A → B → C → … describes successive states; Z remains the constraints on an acceptable outcome. Independent actions may proceed concurrently where their dependencies, effects and authority permit.
 
 Finite context and finite attention drive context management. Context bounds what an activation can hold; attention bounds what it can use effectively for its selected task. A reference frame selects sufficient relevant material and the task contract within those limits. Time, spend and other resources constrain the selected execution binding as applicable. The [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames) owns these obligations.
 
@@ -63,14 +63,30 @@ Roles and coordination structures emerge from allocating required operations and
 
 A realisation may use a hierarchy, peer coordination or an arrangement that adapts as actors allocate work within their contracts. Its design relates that choice to the task, actor capabilities, communication costs and required assurance. Several configurations may be adequate; an optimality claim is relative to stated objectives, constraints and comparison scope. Operational profiles and build tenants own these choices. The [construction binding](#construction-authority) selects one configuration for building this release.
 
+## Universal Construction Model
+
+The method organises construction around the problem of reaching an acceptable outcome from current reality under finite resources and incomplete knowledge. A describes the material state and justified knowledge of it. Z defines the constraints on acceptable outcomes; several realised states may satisfy them. Intent, Product and Specification refine Z. A selected construction may need to discover its path while performing and evaluating work.
+
+The calculus states which transformations and compositions are lawful under their declared conditions. The specification supplies the chosen outcome constraints; the calculus does not select them. Strategy chooses work within the laws, execution produces a result, and evidence establishes what that result satisfies. A lawful construction can remain incomplete or fail to achieve its selected outcome. Conditional proofs about that outcome retain their premises and scope.
+
+The specification is the internal reference model of required conditions. Observations describe reality. Causal or predictive models explain how an intervention may change it. These accounts have different purposes and can be incomplete or wrong in different ways. A discrepancy can concern the realisation, the governing model or the observations available to decide between them.
+
+Construction combines admissible transformations under compatible contracts, preserving the applicable outer obligations. Strategy selects their decomposition, order, concurrency and assurance within those constraints. Steel thread, waterfall and iterative delivery are possible strategies. Each can have different resource costs, feedback delays, integration risks and rework. Their selection belongs to the realisation and its work authority; a claim of superiority states the objectives, comparison and assumptions on which it depends.
+
+Feedback connects observation, comparison, causal diagnosis, action selection, execution and renewed observation. This homeostatic process supports reaching the required conditions and maintaining them as circumstances change. A bug is a category of feature or change work, using the same intake and delivery mechanism. Diagnosis determines whether to repair the realisation, acquire evidence or revise the governing model through its owner.
+
+Recursive construction, repeated correction and ongoing operation distinguish preservation, progress and completion. A correct local step does not establish a successful composition or eventual arrival. Proof, testing and observed use support their declared claims; an unavailable proof remains an explicit assurance obligation where that proof is required. A resource limit can end an attempt with an unresolved outcome. It cannot establish either achievement or impossibility.
+
+This model connects the existing [principles](requirements/PRINCIPLES.md#universal-construction-synthesis) and [pillars](#foundational-reduction). Foundations own its shared state, composition, resource, evidence and control relationships; the Spec Method applies them to delivery and correction; profiles and build tenants supply their domain policies and execution bindings. The [universal construction requirement](requirements/README.md#universal-construction-requirement) owns its acceptance obligations. Universal scope establishes no general solver, fixed organisational structure, guaranteed convergence or theorem of categorical universality.
+
 ## Method Structure
 
 The method has three tiers of method law. The [C3 responsibility table](#c3-construction-contract) identifies their obligations and predecessor coverage inputs. Guides and packaging have supporting responsibilities; the conventions and formats they own bind work within their declared scope.
 
 | Tier | Responsibility |
 |---|---|
-| Foundations | Shared commitments and contracts for interpretation, purpose, identity, composition, finite context and attention, evidence, authority, results and reference frames. |
-| Spec Method | Product definition, requirements, construction, assurance, change, re-entry and release, using the foundational contracts. |
+| Foundations | Shared commitments and contracts for interpretation, purpose, identity, composition, finite context and attention, evidence, authority, results and reference frames, connected by the universal construction model. |
+| Spec Method | Product definition, requirements, construction, assurance, change, re-entry and release, applying the foundational contracts through the same delivery and correction process. |
 | Profiles | Domain or operational specialisations that import the shared contracts and own their additional bindings. |
 
 The Spec Method develops a product through four descriptions:

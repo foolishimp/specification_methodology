@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T11:16:02Z
+updated_at: 2026-10-15T15:40:22Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -24,6 +24,22 @@ links:
 ---
 
 # T-002 — v3.0.0 Successor Construction
+
+## Iteration 5 common preparation
+
+The product owner selects the universal construction synthesis on the existing principles under [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-universal-construction). Codex prepares the common WHAT and its frozen review subject. Common source is proposed until its exact revision is reviewed and ratified. Existing I4 contracts retain source `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; this preparation neither rewrites their admitted bytes nor admits either tenant to I5.
+
+The direction separates lawful construction from the chosen constrained outcome. The calculus governs transformations; the specification supplies Z; strategy selects work; execution produces results; evidence and authority determine satisfaction, continuation and acceptance. Research supports the synthesis only within each source's assumptions.
+
+| Work | Owning surface | Required return |
+|---|---|---|
+| I5-00 Common source | Intent, Product, requirements and principles | One coherent construction model connecting P1–P6 and the existing pillars; exact source for independent review and owner ratification. |
+| I5-01 Shared owner and consumers | Universal Construction Requirement; standalone successor and reduction requirements | After admission, each tenant binds the model at its shared owner and contracts the affected deciding paths. Strategy and concrete mechanisms remain tenant choices. |
+| I5-02 Correction and recursion | Construction requirement; bounded frames and result algebra | Candidate decisions distinguish outcome failure, model inadequacy, prediction error, observation uncertainty, lawful repetition, progress and completion; recovery retains applicable work. |
+| I5-03 Interpretation and conservation | Constraint surfaces and successor disposition | The affected prose, a_c and entry projections agree. Changed determinations have exact replacement proposals and decisions; unchanged evidence is reused only with supported applicability. |
+| I5-04 Use and integrated proof | Universal Construction Discriminators; Construction And Integrated Closure | Existing or new evidence demonstrates the affected end-to-end composition, with independent expectations, exact subjects and disclosed resource/tradeoff limits. A separate execution per discriminator is not required. |
+
+Only I5-00 is active. I5-01–04 describe dependent tenant work for later admissions. They do not select a donor, spend, shared comparison protocol, categorical trial or release. The exact I4 construction returns remain inputs on their own subjects; no complete I4 acceptance or qualification is inferred. Reviewable source and its input hashes are checkpointed separately under the existing snapshot rule.
 
 ## Iteration 4 staging
 
