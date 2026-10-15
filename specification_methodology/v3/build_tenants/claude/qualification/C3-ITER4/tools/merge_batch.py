@@ -5,9 +5,12 @@ Then regenerate frontier/REVIEW.json with frontier_review.py.
 import json, os, sys
 from collections import Counter
 n, label = sys.argv[1], sys.argv[2]
+replace = '--replace' in sys.argv
 b = json.load(open(f'qualification/C3-ITER4/reassess/batch-{n}.json'))
 path = 'frontier/REVIEW_ASSESSMENTS.json'
 A = json.load(open(path)) if os.path.exists(path) else {'kind': 'claude-frontier-review-assessments', 'assessments': []}
+ids = {r['id'] for r in b['rows']}
+if replace: A['assessments'] = [a for a in A['assessments'] if a['id'] not in ids]
 have = {a['id'] for a in A['assessments']}
 added = 0
 for r in b['rows']:
