@@ -172,6 +172,7 @@ def repair_odd_entry_binding(row, source):
                   'and lawful agentic traversal with deterministic artifact admission for this ODD entry.')
     recommended_result = copy.deepcopy(row['result_mapping'])
     recommended_result['bound_predicate'] = recommendation
+    recommended_result['satisfied'] = 'A performed evaluation with admissible evidence establishes the stated recommended recoverability; this is not an entry-sufficiency result.'
     recommended_result['falsified'] = 'Admissible counterevidence defeats the stated recoverability predicate; this does not by itself falsify entry sufficiency.'
     recommended_result['indeterminate'] = 'Whether the actor can recover the named distinctions is unresolved without deciding counterevidence or a supported scope/basis diagnosis; this is not an entry-sufficiency result.'
     recommended_result['normative_force'] = ('This evaluates attainment of the source recommendation only when that question is selected. '
@@ -192,7 +193,7 @@ def repair_odd_entry_binding(row, source):
                                             'without an established unanswered relation, other deciding counterevidence or a supported scope/basis diagnosis.')
     row['contract_bindings'] = [
         {'name': 'ramp_up_recommendation', 'modality': 'should',
-         'applicability': 'A cold actor enters a concrete ODD Product under the declared cold-start route.',
+         'applicability': 'A cold actor enters a concrete ODD Product under the declared cold-start route, whether or not entry sufficiency is claimed.',
          'predicate': recommendation, 'source_clause_ids': ['ramp_up_recommendation'],
          'assessment_when': 'The selected question assesses attainment of the recommended recoverability, separately from entry sufficiency.',
          'result_mapping': recommended_result},

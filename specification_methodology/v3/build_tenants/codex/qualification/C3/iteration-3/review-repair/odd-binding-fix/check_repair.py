@@ -28,7 +28,7 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def check_binding(row):
+def check_binding(row, source_owner=None):
     require(row['result_mapping']['bound_predicate'] == row['predicate'], 'entry predicate and result differ')
     bindings = {b['name']: b for b in row['contract_bindings']}
     recommendation, entry = bindings['ramp_up_recommendation'], bindings['entry_sufficiency']
@@ -41,7 +41,7 @@ def check_binding(row):
     for mapping in (row['result_mapping'], recommendation['result_mapping']):
         require(RESULTS <= mapping.keys(), 'a required core result is missing')
         require(mapping['kind'] == 'predicate_bound_five_result', 'parallel result mapping introduced')
-    source = (PACKAGE / row['owner']['path']).read_bytes()
+    source = (PACKAGE / (source_owner or row['owner'])['path']).read_bytes()
     blocks = {b['id']: b for b in row['source_clauses']}
     for binding in (recommendation, entry):
         for identifier in binding['source_clause_ids']:
@@ -106,10 +106,12 @@ def main():
                 cwd=TENANT, capture_output=True, text=True)
             require(invocation.returncode == 0, invocation.stderr + invocation.stdout)
             projection = json.loads(target.read_bytes())
-            clauses = projection['clauses'].values() if isinstance(projection['clauses'], dict) else projection['clauses']
-            native = semantic_record(next(c for c in clauses if c['uri'] == CLAUSE))
-            check_binding(native)
-            require(native == row, 'native view changes the source-bound record')
+            native = semantic_record(next(c for c in projection['clause_relations'] if c['uri'] == CLAUSE))
+            check_binding(native, row['owner'])
+            # Owner and supporting-source coordinates travel as native source
+            # routes; the family is a grouping label outside the semantic record.
+            expected = {k: v for k, v in row.items() if k not in {'owner', 'supporting_sources', 'family'}}
+            require(native == expected, 'native view changes the source-bound record')
             projections.append({'mode': mode, 'bytes': target.stat().st_size, 'sha256': sha(target.read_bytes()),
                                 'closure_clauses': len(projection['closure']['clauses']), 'both_bindings_preserved': True})
     result = {'valid': True, 'counterexample_preimage': PREIMAGE,
