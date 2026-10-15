@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T05:41:12Z
+updated_at: 2026-10-15T05:43:13Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -34,7 +34,7 @@ The owner selects Codex's common I4 update, then both tenants' synthesis after r
 | Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
 | Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
 | Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
-| I4 common proposal | C3-I4-01; source commit and descendant hash recording follow below |
+| I4 common proposal | C3-I4-01 at `5d2b25739ce07654fb74c92cf0973df899852f76`; proposed tuple recorded below |
 
 The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
 
@@ -53,6 +53,36 @@ The I3 inputs and contracts below are historical, unchanged, and retain their or
 The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. Same-family nonauthor assessment of received ports is the proposed independence arrangement; a donor's assessment of its own contribution is supplementary. This arrangement requires ratification with the common revision before it can bear acceptance.
 
 Before actual-use activations, the owner selects the resources and the Executive records the shared protocol and envelopes. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
+
+The staged D6 ranking remains the proposal for this comparison within Product's comparable-coverage conditions: among candidates that meet all six criteria and the integrated obligations, prefer fewer non-blocking residuals; if equal, Jim chooses on readability and maintainability with a recorded reason. Required unresolved evidence is not an eligible residual. No qualified candidate means no qualified choice. This is a proposed comparison rule awaiting common ratification, not a selection made by the pen.
+
+## C3-I4-01 proposed input snapshot
+
+Input commit B: `5d2b25739ce07654fb74c92cf0973df899852f76`, on main. This recording R is the descendant commit that first contains this section. Read all members from B; the recording's current ticket bytes are not input members. The first fourteen members are common source and entry material. The final five are supporting work and review records; they grant no additional authority over the common source. Claude's staged post is revision 4 at B, and the latest owner instruction and T-001 define this activation's scope.
+
+Standing: proposed common revision, independently unreviewed, NOT_RATIFIED. This snapshot supplies a review subject, not a tenant admission or acceptance. Any correction receives a successor source commit and recording; this tuple remains historical. Jim's exact-commit ratification is recorded separately after review and before either I4 tenant admission. Neither candidate's current files or old evidence are changed by this freeze.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 8709 | `a65bb477ba111e2ec597f8c34eaa62373c4c2dc6e3563a0c0281b22a0a466799` |
+| `specification/PRODUCT.md` | 60207 | `98b80a3ca61583828eaf2b398a38885c93f685a2b62b370b40bd18b1ee10995e` |
+| `specification/GOALS.md` | 24005 | `bd3639e26a709659c685ae7aced4972819432a9fa4bef4b7a865ec32b6fefd9c` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8406 | `7dadf0acb6dd374b0301e446d7a3ce893ed69a8e14daea0b64e407882c756267` |
+| `specification/requirements/README.md` | 32072 | `263b874e2b93538c794edb534d1b2d9fd0361c05d1d33f65b113e51427869c93` |
+| `specification/requirements/PRINCIPLES.md` | 12942 | `009fca60d81e71586d9b3faf3f5cd932f902125fdfe8816c3d3b00cf15552fc7` |
+| `specification/requirements/CAPABILITIES.md` | 3960 | `26e2990fce28993f1a32abe7c10cff3b868f1bfd2cfd75bf2f23dfbfae7bbe8f` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 16794 | `3cca632a3e3d58d27f95c75a6e78cf99483753b910d624857ced93bcdb49f2c9` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `CLAUDE.md` | 4076 | `43e64b7d21b6f6bc3ecaaa0d7fdb084f49efdcf8cd267747c9a2e67304d710ef` |
+| `build_tenants/README.md` | 5518 | `5927f466a9b3805f1501f79e754cc8fc3f0a30b3d0c514121d6f761632a0da7e` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 99818 | `423665b20273c6219ed8a77cc0e77cddf1ef6444f572d579380bee0c631274fa` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 48094 | `f01760f22d4a8a7fe1dd6e36589e458197700ab4a018d9cd3f3363744213a252` |
+| `.ai-workspace/comments/codex/20261015T053000Z_EXPECTATIONS_I4_CLAUDE_AND_COMMON_REPRICE.md` | 3555 | `22b9d742ba3e4b634482dd55c5a95fe57eeb8996c774c90750e13410a77d9666` |
+| `.ai-workspace/comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md` | 10488 | `e3dd522f742a898287e339c3650f345ef49547e997c9f938a90971e2c280a33d` |
+| `.ai-workspace/comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md` | 18564 | `2a4b9e9dfe42da5af0ac770505fdc062f6fc867a716e48218872cace21b2c0fc` |
 
 ## Closed I3 common basis
 
