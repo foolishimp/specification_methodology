@@ -4,10 +4,28 @@ qualification/C3-ITER3/reassess/rows.md), the predecessor section text at rc.2 a
 successor locus text at the current tree. Batches are at most LIMIT bytes, grouped by member.
 Run from the tenant root with python3 -I.
 """
-import json, os, re
+import json, os, re, sys
 RC2 = '/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards'
 LIMIT = 90_000
 exec(open('qualification/C3-ITER4/tools/frontier_review.py').read().split('assess = {}')[0])
+def sections_whole(path):
+    """anchor -> text under the heading through its subsections, to the next heading of equal or higher level"""
+    out, seen, stack, code = {}, {}, [], False
+    lines = open(path, encoding='utf-8').read().split('\n')
+    heads = []
+    for i, line in enumerate(lines):
+        if line.startswith('```'): code = not code
+        m = None if code else re.match(r'^(#{1,6})\s+(.*)', line)
+        if m:
+            sl = slug(m.group(2)); n = seen.get(sl, 0); seen[sl] = n + 1
+            heads.append((i, len(m.group(1)), sl if n == 0 else f'{sl}-{n}'))
+    for k, (i, lvl, a) in enumerate(heads):
+        end = len(lines)
+        for j, l2, _ in heads[k+1:]:
+            if l2 <= lvl: end = j; break
+        out[a] = '\n'.join(lines[i+1:end])
+    return out
+WHOLE = '--whole' in sys.argv
 rev = json.load(open('frontier/REVIEW.json')); byid = {r['id']: r for r in rev['rows']}
 want = {r['id']: 'modal' for r in rev['rows'] if r['modal_conversion']}
 # WC-2 rows marked D: anchors in rows whose first cell ends with ' D'
@@ -32,7 +50,8 @@ cache = {}
 def text(member_file, anchor, root):
     k = (root, member_file)
     if k not in cache:
-        p = os.path.join(root, member_file); cache[k] = sections(p) if os.path.exists(p) else {}
+        p = os.path.join(root, member_file)
+        cache[k] = ((sections_whole(p) if (WHOLE and root == 'standards') else sections(p)) if os.path.exists(p) else {})
     return cache[k].get(anchor)
 items = []
 for i, why in want.items():
