@@ -239,6 +239,125 @@ selected complete method cut and its cited existing project authorities. It
 need not claim conformance to this optional profile (P6).
 ```
 
+Successor, `EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set` (with its subsections):
+
+```text
+The profile declares the following generic families for Product work. Each
+row is an evaluation archetype, not a complete frame declaration
+(REFERENCE_FRAME §13). An adopting project binds, for every activated
+instance, the exact subject, basis, material manifold, coordinates,
+invariants, authority, evidence, exclusions, result algebra, capability
+envelope, dependencies and invalidation conditions (P2, P6; rc.2
+#derived-generic-specialist-frame-set).
+
+The family labels resolve inside
+`urn:stdo:bounded-context:reference-frame-evaluation`, owned by
+REFERENCE_FRAME, under the selected basis. Under bounded-context semantic
+resolution (PRODUCT_DEFINITION §5), `Product`, `Owner`, `Entity`,
+`Operator`, `Install` and the other labels do not become equal to
+same-spelled Product, authority, domain or runtime concepts; every material
+cross-context seam needs an explicit relation (P1, P3).
+
+| Family | Evaluation family and exact subject | Governing authority and permitted output | Immediate falsifier |
+|---|---|---|---|
+| Product | Does one exact current Product claim, outcome, boundary and lifecycle govern the claimed Product subject without downstream reinterpretation? The basis is the current Intent, Product, requirements, acceptance meaning and exact Product coordinates. | Product and requirement authority keep meaning and acceptance. The frame returns only a bounded evaluation result and evidence. | Design, code, tests, a predecessor's behaviour or a local convention changes Product meaning or substitutes another Product subject. |
+| Product Composition | Does one exact directed relation between Products preserve the source and target roles, the Product Definition, Release Cut, Product and Install identities, each Development Product role binding, the governing contracts, authority, lifecycle, evidence boundary and invalidation law? A chain is evaluated through bounded edge activations and a declared conjunction. | Each Product keeps its own meaning. The authority and contracts the composition relation cites own the edge. The frame returns evaluation evidence only. | Directory nesting, shared implementation, a common actor, a source import, tool reachability, matching output or builder convenience creates or changes a composition relation; a Development Product is confused with the Product being authored; or one node silently redefines another. |
+| Design | Does the accepted structural HOW satisfy the material constitutional WHAT, close the required design relations and keep their owners across the affected topology? | Accepted design under its governing Product and requirements owns structural decisions. The frame may identify satisfaction, contradiction or a design re-entry gap; it cannot invent Product truth. | Implementation precedent resolves an open material design decision, design creates Product meaning, or a material relation or competing structure stays undeclared. |
+| Design Component | Does one bounded design component, with its direct causal dependency cone, preserve its parent contract, internal relations, sibling seams and required outputs? | The accepted design boundary owns only its bounded composition decision. Parent, sibling, Product, requirement and runtime owners keep their relations. | The component omits a material far-side seam, absorbs a sibling or parent decision, or reports local closure while its direct composition is unresolved. |
+| Public Boundary | Does one supported public entry or exit perform exactly its assigned validation, selection, transport, refusal and projection relations while preserving the selected interior owners? | Product, interface, identity, security and accepted-design authority define the boundary. The frame evaluates the boundary result or refusal and returns only its closed evaluation; it does not recreate interior semantics. | The public surface interprets owner meaning, sequences hidden domain decisions, exposes an interior carrier as Product truth, or admits an unsupported path. |
+| Entity | Is one semantic, artifact or runtime entity bound to its exact identity, kind, lifecycle, owner, representation and applicable effect regime? | Product, domain, identity, requirement and accepted-design authority define the entity. The frame returns an identity- and lifecycle-bound evaluation. | A filename, wrapper, ticket, object shape, cache or process instance stands in for stable entity identity, or distinct lifecycle coordinates are collapsed. |
+| Operator | Is one material operation an irreducible declared relation over its admitted domain, inputs, outputs, refusals, algebra, effects and lawful compositions? | Product, requirements, the accepted ontology and design, and the named operation owner define the relation. The frame evaluates it without creating another executable plan. | An endpoint, function, class, command or file label is asserted to be the semantic atom; orchestration hides the real operator; or generic mechanics are rebuilt as domain law. |
+| Owner | Does one semantic or authority-bearing relation preserve its owner, role kind, subject, scope, basis, lifecycle, refusal invariants and permitted delegation? | The existing Product, requirement, identity, accepted-design, release or other named authority owns the relation. The frame may evaluate authority congruence only. | Another surface recreates the judgment, source authorship is treated as authority transfer, or a proxy, foundation, frame or actor widens the grant. |
+| Effect | Does one action obey its declared pure, observational, artifact or runtime effect regime, including commit, failure, retry, recovery, compensation, admission and projection law where material? | The applicable Product, requirement, design, artifact, runtime and admission owners keep their decisions. The frame returns an effect-bound result and evidence. | Distinct effect regimes are collapsed, a mutation bypasses its admitted owner, compensation is treated as semantic rollback, or a read becomes rival writable truth. |
+| Reuse/Foundation | Has one material generic capability or dependency been normalised and compared against credible lawful foundations, with any irreducible local remainder and authority-bearing role preserved? | The design profile's capability-and-foundation selection law and the existing trade-off owner govern selection. The frame cannot move semantic authority to a foundation. | Incumbent or local code wins without a bounded comparison, a richer lawful foundation is reproduced, unknowns are scored favourably, or reuse acquires owner authority. |
+| Install | Is the exact selected Product, release, artifact, dependency set, configuration and callable entry resolved and exercised through its admitted installed coordinate, independently of mutable source convenience? | Product, identity, release, dependency, packaging and accepted-design authority define the installed subject. The frame returns installed identity, reachability and refusal evidence. | Source-tree imports, ambient resolution, process registries, fixture bindings, rebuilt artifacts or a moving workspace stand in for the claimed installed subject. |
+| Proof | Does one exact claim have a congruent subject, basis, path, population, oracle, evidence, falsifier, residual boundary and invalidation law? | The claim owner defines meaning; the applicable testing, assurance, review, Product and release owners define evaluation and acceptance. The frame returns evidence and a closed evaluation result, not Product meaning or disposition. | A harness recreates owner meaning, evidence targets another subject or path, a count or aggregate green stands in for the claim, or proof tooling mutates the subject undetectably. |
+
+The families are non-hierarchical and may overlap (RF-008, RF-009).
+Product does not outrank Design by frame topology; Product authority
+already governs constitutional meaning. Owner gains no authority over
+Entity or Operator by being a broader frame. Proof does not become Reviewer,
+acceptance or disposition authority. The existing authority graph stays in
+control (P6).
+
+### Family dispositions
+
+For each governed outcome the known evaluation inventory (REFERENCE_FRAME
+§8) disposes every family as one of (P2, P6, P5):
+
+- instantiated by one or more exact frame declarations or authoritative
+  acquisition paths, because the family is material;
+- evidenced as non-material to the exact outcome by the authority capable
+  of that determination; or
+- kept as an explicit uncovered, conditional, conflicted or `out_of_frame`
+  residual.
+
+The absence of a named file, component, runtime object or actor is no
+evidence that a family is non-material. Conversely, adopting this profile
+does not require a project to create twelve components or to activate
+twelve frames for every task (P2, P1).
+
+### Refinement and conjunction
+
+When a generic frame is recursively refined, each child declaration records
+its parent contract, purpose, material entities, identity and lifecycle
+relations, semantic owners, direct sibling seams, applicable invariants and
+prohibited competing paths. Refinement opens only for a material
+distinction needed to close the parent evaluation. It is a frame dependency
+relation, not an organisational or runtime hierarchy (P2, P4a; ACTIVATION
+§4).
+
+Coverage records the union of admissible observations the activated frames
+contribute. A composite claim takes the value of its declared conjunction
+under
+[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Reported value. This profile's declared rule makes each material
+cross-frame seam a mandatory result or required coverage: the seam
+preserves, or lawfully translates, exact identity, coordinate and basis,
+carried value or evidence, lifecycle scope, authority and provenance
+([REFERENCE_FRAME §6](REFERENCE_FRAME.md#evidence-or-coordinate-translation)
+for translation). Each case of a seam enters the conjunction as that
+section states (P4a, P5):
+
+| Seam case | Input of the conjunction and value |
+|---|---|
+| no closed result applicable to the composite: not evaluated, or its only result is stale or bound to another subject or basis | a planned assessment without a closed result, a gap with no value of its own (FOUNDATIONS §4, the second input and Stale results) |
+| a material seam that no planned assessment addresses | uncovered coverage, a gap with no value of its own (the third input) |
+| evaluated and found not to preserve or lawfully translate what the rule requires | the seam's own result: `falsified`, or the outcome and core value that [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) gives a refused translation by its cause |
+| evaluated, with evidence that cannot decide it | `indeterminate` |
+| its evaluation needs a translation or relation that no frame declares | `out_of_frame` |
+| evaluated on a stale, advanced, ambiguous or mismatched basis | `invalid_basis` for its own predicate ([RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)), held as a returned result |
+
+A composite with any of these cases is never `satisfied`; it reports the
+non-satisfied value that FOUNDATIONS §4, Reported value, gives, with each
+gap recorded by kind. Which non-satisfied value it reports where several
+are returned is the conjunction rule the adopting project declares (§19
+Project-basis additions). This profile's own declared choice is that no
+frame is selected as dominant.
+
+The set imports no consumer-specific frame, runtime role, architectural
+topology or renamed local substitute. A consumer may declare such frames
+under its own Product or accepted-design authority when they are material;
+they are not part of this baseline (P2, P6).
+
+### Relation to the testing and interface frames
+
+Where this set is adopted, the product testing frames of ASSURANCE §7 supply
+claim-congruent evidence to one or more Proof evaluations. Proof is not a
+testing hierarchy or an aggregate-green frame: user-acceptance, end-to-end,
+integration and unit results keep their distinct claims and coordinates (P6,
+P4a; rc.2 #derived-product-testing-frame-set).
+
+The end-to-end interface integration frame (ASSURANCE §13) relates the
+Public Boundary, Design, Operator, Owner and Proof families to the
+integration, end-to-end and user-acceptance frames. Its computational
+whole-path evaluation composes the selected interface claims with Operator,
+Owner, Reuse/Foundation and Proof. Neither adds a thirteenth family, a fifth
+testing type, a role or a universal activation gate (P2; rc.2
+#derived-end-to-end-interface-integration-frame,
+#computational-whole-path-evaluation).
+```
+
 Extra, `standards/TICKETS.md#7-authority-judgment-closure-and-state` (with its subsections):
 
 ```text

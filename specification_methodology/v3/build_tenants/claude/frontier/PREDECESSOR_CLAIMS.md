@@ -371,7 +371,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md`
 | Minimal Frame Declaration | `#minimal-frame-declaration` |  | 1,086 | conserved | `REFERENCE_FRAME.md#minimal-frame-declaration` |
 | Minimal Frame-Set Declaration | `#minimal-frame-set-declaration` |  | 814 | conserved | `REFERENCE_FRAME.md#minimal-frame-set-declaration` |
 | Minimal Evaluation Result | `#minimal-evaluation-result` |  | 417 | conserved; the out_of_frame residual field is new | `REFERENCE_FRAME.md#minimal-evaluation-result` |
-| Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure`; `EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set` (condition 22, the twelve families) |
+| Closure | `#closure` |  | 918 | conserved | `REFERENCE_FRAME.md#14-closure` |
 
 ## RELEASE_METHOD.md
 
@@ -572,7 +572,7 @@ Base route: `stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE
 | Baseline-Specific Activation Additions | `#baseline-specific-activation-additions` |  | 887 | conserved | `EXECUTIVE_BASELINE.md#activation-additions` |
 | Failure Classification | `#failure-classification` |  | 4,272 | conserved; all twenty-eight rows; the row on a compression, summary, generated map or prior result refers to ACTIVATION §5 The workspace and an actor's account, which states its rule for tier 1 | `EXECUTIVE_BASELINE.md#20-failure-classification` |
 | Anti-Patterns | `#anti-patterns` |  | 3,945 | conserved; all thirty-two | `EXECUTIVE_BASELINE.md#21-anti-patterns` |
-| Closure | `#closure` |  | 5,131 | conserved, save the clause of condition 4 split to the child row below; all twenty-four conditions, condition 4's distinction of activation refusal from Worker results and its return to the declared consumer included | `EXECUTIVE_BASELINE.md#22-closure` |
+| Closure | `#closure` |  | 5,131 | conserved, save the clause of condition 4 split to the child row below; all twenty-four conditions, condition 4's distinction of activation refusal from Worker results and its return to the declared consumer included | `EXECUTIVE_BASELINE.md#22-closure`; `EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set` (condition 22, the twelve families) |
 | &nbsp;&nbsp;Closure: condition 4 mapping | `#closure-condition-4-mapping` |  | 82 | superseded, proposed and pending the product owner's acceptance, by ACTIVATION §3 Construction availability, which applies the common single result algebra requirement, item 3, as at `#work-result-disjointness-and-incomplete-pairing`. The rc.2 clause "every Worker result maps exclusively from one closed Reference Frame Method result" holds only while each closed core result selects one variant. `refused` and `incomplete` now share `falsified`, so condition 4 reads that every Worker result is one work-result value selected by its cause, which maps to exactly one core value as ACTIVATION §3 states. Child row of `#closure`, its anchor synthetic | `EXECUTIVE_BASELINE.md#22-closure`; `ACTIVATION.md#construction-availability` |
 
 ## TICKET_METHOD.md
