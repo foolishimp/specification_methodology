@@ -94,12 +94,44 @@ per-tenant relations; it supplies no blanket acceptance.
 
 ## Coverage, reuse and authorship boundaries
 
-The predecessor census contains 691 claims from 71 source members. The frozen
-I5 documentary inventory binds all 72 package members outside interpretation/,
-including documents whose membership does not imply independent assessment.
+The predecessor census contains 691 claims from 71 source members. The account's
+`successor_member_pins` identify 72 claim-carrying members. The separate frozen
+SOURCE_INVENTORY.json lists all 81 documentary members outside interpretation/;
+the full package contains 90 members, including nine interpretation members.
+Membership in either inventory does not imply independent assessment.
 The account records 747 carrying-locus pins and identifies 406 rows with changed
 direct carrying coordinates. Those are mechanical populations, not counts of
 changed meanings or a complete dependency-impact model.
+
+The metadata correction under main `0f12b2e7aeba3804f50ffd9813fc3b2885cf7372`
+succeeds the return frozen at `b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5`
+(SHA-256 `069432fe3d63cd099b03cc228e7111697ae77978214815494eb8daa74c7d85bc`).
+That historical return conflated carrying-member pins with the complete
+documentary inventory. Its frozen bytes remain available; this successor
+corrects only that description and records the count/path evidence below.
+
+At that exact frozen subject,
+[SOURCE_INVENTORY.json](../../../successor/interpretation/SOURCE_INVENTORY.json)
+(SHA-256 `b6b40e1c580a87b8f1e85961714bf8cac896f9edc6611348e30bd24c4cadcf5b`)
+contains 81 distinct `document_members` paths, exactly matching the frozen
+package tree after excluding interpretation/. The package tree contains 90
+members; nine are under interpretation/. The 72 `successor_member_pins` keys
+are a subset of those 81 documentary paths. The exact nine-path difference is:
+
+- `README.md`
+- `standards/frames/CONSTITUTIONAL_DERIVATION.md`
+- `standards/frames/DOMAIN_BINDING.md`
+- `standards/frames/EVALUATION_CONJUNCTION.md`
+- `standards/frames/MEMBER_CONSTRUCTION_ASSESSMENT.md`
+- `standards/frames/RELEASE_ADOPTION.md`
+- `standards/frames/TRIAGE_CARRIER.md`
+- `standards/frames/WORK_RECOVERY.md`
+- `standards/verification_material/DERIVATION_SOURCES.json`
+
+These paths explain the inventory-boundary difference; it is not missing
+proposal evidence. Scoped count/set, unchanged-artifact and link checks support
+`satisfied` for this metadata correction. Account, proposal and historical
+artifact bytes are unchanged; no new semantic evaluation or acceptance follows.
 
 The author comparison has the bounded 20-claim/37-changed-unit scope above.
 Independent current semantic assessment is still not performed by this Writer.
