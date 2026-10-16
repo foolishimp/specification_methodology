@@ -136,7 +136,9 @@ conditions once at the responsible consumer:
    does not establish that independence. The domain selects its completeness
    and sufficiency criteria; the actor does not silently narrow them.
 3. **Preservation.** Show that required input, output and cross-boundary
-   relations hold under the declared compatibility or translation. Retain
+   relations hold under the declared compatibility or translation, applying
+   [Preservation obligations](FOUNDATIONS.md#preservation-obligations) to the
+   claimed step or composition. Retain
    identity, meaning, lifecycle, producer/evidence coordinates, constraints,
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
@@ -146,8 +148,10 @@ conditions once at the responsible consumer:
    disposition distinct. Shared code, a source reference or a satisfied
    judgment supplies no missing grant. Required independent assessment retains
    its owning conditions.
-5. **Currentness.** Apply [workspace and context](FOUNDATIONS.md#workspace-and-context)
-   to evidence reuse, observations, concurrency and uncertain effects. A
+5. **Currentness.** Acquire observations, concurrency conditions and uncertain
+   effects under [Workspace and context](FOUNDATIONS.md#workspace-and-context),
+   and apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+   to reliance on existing evidence. A
    supported changed dependency reopens the affected determination; an
    unsupported currentness claim stays unresolved. A previously satisfied
    check can be reused on supported unchanged premises; this law does not
@@ -326,6 +330,17 @@ rule. Evaluation supplies no new operation or decision grant. A function may
 exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](STDO_REFERENCE_FRAME_BASELINE.md) retains the
 grant defined by that profile.
 
+Bind [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
+to the source obligation, its interpreted required predicate, the assertion's
+actual target and the observation/checker basis. Establish the implication
+needed by this consumer before using a local pass or failure for the broader
+claim. Bind actual observation acquisition as well as the ideal checker model;
+an authenticated source or execution record supplies neither missing relation.
+Use [Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+to retain the assertion's derivation and the actual execution's provenance in
+the existing evidence. The result remains on its original predicate, with
+unresolved fidelity, unavailable observation and non-performance distinguished.
+
 For an UP-020 assessment, the original assessor classification is a
 reason-qualified outcome on the exact cone-preservation predicate. The
 [Spec disposition consumer](SPEC_METHOD.md#proportional-disposition) owns its
@@ -341,6 +356,14 @@ Known failure and required uncovered coverage both survive the aggregate. A
 planned but absent judgment is not confused with uncovered coverage outside an
 authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
+
+When comparison or repeated evidence is used for mutual assurance, apply
+[Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the material shared causes and dependencies, and
+[Risk and assurance selection](FOUNDATIONS.md#risk-and-assurance-selection)
+to any quantitative confidence claim. This evidence binding supplies no new
+logical conjunction rule. One execution supporting several predicates is not
+several independent observations.
 
 ## Dispose
 
@@ -375,6 +398,15 @@ which outputs satisfy which preconditions, what each step may effect, and the
 relations the composite must preserve. Local correctness is insufficient when
 the join is unsupported. Distinct bases may compose under an admitted coherent
 topology; distinct authorities remain distinct.
+
+Apply [Preservation obligations](FOUNDATIONS.md#preservation-obligations) to
+the instance's boundary properties, governing assumptions, transition relations
+and outer outcome. Bind the initial support, step evidence, material joins and
+final implication used by this particular composition; separately support the
+actual execution's conformance and any claimed branch, concurrent or external
+effect law. An unresolved outer argument retains its supported local results.
+Refinement and approximate composition use that same owner's declared
+preservation and end-to-end adequacy conditions.
 
 [Design UP-016](DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)
 and [UP-017](DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017)
@@ -411,8 +443,20 @@ their additional recovery duties. Retry applies the causal-change condition in
 [Bounded construction](FOUNDATIONS.md#bounded-construction). A process restart by itself is an acquisition event, not proof that a
 construction restart or workspace deletion is required.
 
-Select a proof adequate to falsify the affected relation and satisfying its
-required independence. Its cost selection follows [UP-014](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014).
+Bind [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to the observed change, assertion justification and material execution/evidence
+dependencies. Use its retention relation before relying on historical support;
+keep the old subject and the new applicability relation. Unknown impact, newly
+required cases and mandatory gates remain part of the recovery assessment.
+Selection supplies no new execution result, and recovery preserves known failures
+and unresolved coverage alongside valid work.
+
+Select assurance for the affected relation from applicable retained evidence
+and required new assessment. A selected proof must be adequate to falsify that
+relation and satisfy its required independence. Its cost selection follows
+[UP-014](SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014) within
+[Risk and assurance selection](FOUNDATIONS.md#risk-and-assurance-selection),
+including the relevant acquisition, impact-analysis and assessment costs.
 For a claim of continuity independent of private actor state, exclude that state
 and compare the reconstructed decision with current material reality. A
 same-context exercise cannot establish that claim.

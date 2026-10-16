@@ -949,6 +949,12 @@ them. Every result remains bound to its own claim. A label such as `UAT`, `E2E`,
 `integration`, or `unit` has no assurance value without the corresponding frame
 declaration.
 
+Apply [Construction assurance](FOUNDATIONS.md#construction-assurance) to each
+selected testing claim. The frame binds its requirement or refinement source,
+asserted predicate, observation basis and required assurance through the
+application below. These bindings add no test archetype or mandatory actor;
+this profile's adoption, ordinary-path and exact-subject conditions still apply.
+
 ### Derived User-Acceptance Frame
 
 | Frame element | Derived application |
@@ -1097,6 +1103,8 @@ preconditions, postconditions, authority, state, configuration, failure, and
 recovery with every other traversed boundary. The evidence value comes from
 the interactions actually discriminated, not from merely touching many
 interfaces on one sunny path.
+This describes interaction coverage, not a probability or statistical
+independence claim.
 
 Material Product factors commonly include:
 
@@ -1120,6 +1128,15 @@ relations normally require explicit higher-strength combinations.
 Source, line, branch, and function coverage may diagnose whether code was
 visited. They do not establish semantic combination coverage, authoritative
 path selection, user-outcome coverage, or the absence of a rival path.
+
+The admitted work authority selects the needed testing assurance under
+[Risk and assurance selection](FOUNDATIONS.md#risk-and-assurance-selection).
+Bind material failure consequences, coverage, uncertainty and action/acceptance
+conditions when comparing candidate testing strategies. Include acquisition,
+impact analysis, execution and assessment in the relevant cost boundary;
+retain estimates separately from measurements. A numeric confidence claim
+uses that owner's probability, dependence and calibration conditions, not
+the testing-value index or test count as a substitute.
 
 ### Legitimate-Path And Technical-Debt Erasure
 
@@ -1193,6 +1210,15 @@ claim. When the Product claim requires all of them, a conflict or missing result
 remains visible to Executive disposition and cannot be hidden by aggregate
 green status.
 
+Apply [Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+when these results supply mutual assurance. Bind each expected predicate to
+its own justified requirement/refinement path and each result to its actual
+execution. Shared fixtures, tools, observations, interpretations and received
+contributions remain material to dependence; overlapping claims from one run
+do not create independent observations. Combine their logical results through
+the existing conjunction owner, preserving the original failed and missing
+claims. Required independent assessment retains its separate authorship rules.
+
 ### Assurance Subject Acquisition And Evaluation
 
 Bind [Acquire](TRANSFORMATION_LIBRARY.md#acquire) and
@@ -1215,6 +1241,49 @@ admission meaning, or supply a runtime fallback. A missing owner projection is
 an assurance or design gap. The independent oracle judges the acquired subject;
 the implementation under test need not be trusted as that oracle.
 
+Apply [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
+to this oracle and acquired subject. State the assertion's actual predicate,
+its scope and the justified relation to the requirement or refinement being
+claimed. A narrower assertion supplies only its supported conclusion; select
+the required acceptable relation rather than assuming all valid outputs must
+be equal. Support the actual observation acquisition and checker conformance,
+including observations needed to distinguish material cases. Missing support
+stays explicit in the core result on the original predicate; a reported test
+pass or failure alone does not establish the broader obligation.
+
+The existing source, test and evidence bindings carry assertion provenance
+separately from execution provenance under
+[Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance).
+A common derivation may serve a declared test family. An implementation-derived
+check can support its regression or local-property claim but cannot supply the
+independently derived upstream oracle required by this profile merely by
+repeating the implementation's answer.
+
+### Testing Reassessment And Evidence Reuse
+
+Apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to the selected testing claim, changed subject/basis and material dependencies.
+Bind source-to-assertion justification separately from implementation,
+fixture/data, instrument, tool, environment and other evidence-validity
+dependencies. Use the owner's conservative impact and exclusion conditions to
+select reassessment. Unknown influence cannot justify dropping a test; new
+obligations and uncovered cases require assessment even when no existing test
+is selected. Applicable mandatory gates remain required.
+
+Retain each old execution's subject and establish the applicability relation
+needed to use its evidence on the new claim. Add actual reassessment results,
+preserving failed, indeterminate and unperformed conditions. Selection itself
+is no execution evidence. A changed requirement revisits dependent expected
+answers through its owner; an implementation or environment correction revisits
+the affected execution and integration under the applicable obligations.
+
+Choose the assessment strategy under the governing assurance and risk policy,
+including total relevant selection and execution costs. Supported unaffected
+evidence need not be re-executed solely because another dependency changed;
+broader testing remains available where the impact or policy requires it.
+Retain residual combinations and known counterexamples in the existing evidence
+account. This application introduces no fixed full-suite cadence or test ledger.
+
 ### Counterexample Localization
 
 Apply [Spec's Counterexample Localization](SPEC_METHOD.md#counterexample-localization)
@@ -1225,6 +1294,13 @@ profile application. Preserve the original testing result alongside the
 localization result and use the supported frontier for the existing re-entry
 relation. This application supplies neither repair authority nor an additional
 always-required evaluation stage.
+
+Before using an observed test failure as a counterexample to a broader
+obligation, establish that relation through
+[Evaluate](TRANSFORMATION_LIBRARY.md#evaluate). Otherwise retain the actual
+bounded result and unresolved assertion or observation support. Diagnostic
+work still follows Spec's owning relation; a test label supplies no repair
+class, cause or authority.
 
 ---
 
