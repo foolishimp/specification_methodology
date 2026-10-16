@@ -1,8 +1,10 @@
 # Common Conformance Questions
 
-A discriminator is a case that separates a correct candidate from a defective one. The member-conformance table supplies acceptance criterion 5 of the [C3 Construction Contract](../PRODUCT.md#c3-construction-contract). Construction and integrated-closure checks have their own section and are evaluated at those decisions.
+A discriminator is a case that separates a correct candidate from a defective one. The [member-conformance](#member-conformance), [universal-construction](#universal-construction-discriminators) and [assurance](#assurance-discriminators) tables supply acceptance criterion 5 of the [C3 Construction Contract](../PRODUCT.md#c3-construction-contract), within the member's applicable scope. Construction and integrated-closure checks have their own section and are evaluated at those decisions.
 
 Both tenants are evaluated against the same independently specified expectations. The reviewer takes in these expectations and the actual source before inspecting the candidate, states applicable obligations and reports uncovered scope. No passing result is recorded here. Evidence binding follows the [frame requirement](../requirements/README.md#bounded-transitions-and-reference-frames); reduction and interpretation coverage follow their common requirement owners.
+
+The candidate's admitted common input fixes its discriminator set under [Candidate Comparison](../PRODUCT.md#candidate-comparison). A later revision does not change an earlier assessment's basis. Unmatched scope remains explicit until the candidates bind the same ratified comparison input.
 
 ## Member Conformance
 
@@ -11,7 +13,7 @@ Apply each case to the member's owned determinations and affected consumer bindi
 | Discriminator | Expected distinction |
 |---|---|
 | A derivation or independence argument is claimed | Each claimed derivation shows its premises. Claimed independence is argued, not assumed. |
-| A family argument accounts for edited rules but omits inherited deciding rules | Coverage includes the material rules in the declared family. Coarser grouping or a whole-member preamble cannot supply a missing premise, consequence or owned policy choice. |
+| A family argument accounts for edited rules but omits inherited deciding rules or their consumers | Coverage includes the material rules and actual consumers in the declared family, or a supported account that no separate consumer applies. A blank field, generic referral, coarser grouping or whole-member preamble cannot supply a missing relation. |
 | A new foundations introduction accompanies unchanged rival rules in the consumers | Correspondence alone does not establish reduction. The deciding consumers must use one shared determination or a justified refinement. |
 | A candidate is shorter but ordinary entry still requires the same independent reconciliations | Compare the actual deciding paths and acquisition against the exact predecessor and preceding tenant candidate. A smaller body alone is not a positive reduction witness. |
 | A candidate unifies a recurring rule and retains a necessary domain exception | Establish actual shared-law use, preserved outcomes and the exception's owner. Reduction can hold without a universal percentage or word-count decrease. |
@@ -28,7 +30,7 @@ Apply each case to the member's owned determinations and affected consumer bindi
 | A compressed constraint surface treats an unresolved premise as unrestricted freedom | Preserve the unresolved dependency and apply the relevant stop, acquisition or refinement rule. Unknown permission is not a grant. |
 | A task has several solutions inside the same constraint surface | Permit the alternatives that satisfy its contract. The method constrains admissibility without absorbing the worker's internal solution strategy. |
 | A projection changes “not required” into “prohibited”, or preference into obligation | The changed permitted work is a fidelity defect unless an authorised successor relation establishes the change. Matching digests or valid schema do not repair it. |
-| Ordinary entry points to an earlier formal interpretation marked current | Bind the current source, signature, program, maps and evidence boundary. Earlier models retain historical standing and cannot qualify the successor by selection error. |
+| Ordinary entry points to an earlier return or interpretation marked current, or an internal check passes while its published acquisition route fails | Bind the current source, signature, program, maps, instructions and evidence boundary; reproduce the offered route. Earlier artifacts retain historical standing. Refusing stale inputs contains the failure but does not establish a usable current publication or semantic coverage. |
 | Information and its representation differ | Agreement in structure cannot establish identical meaning or semantic fidelity. |
 | Identity is unchanged while content changes | The current state, and whether an earlier observation still applies, are considered separately. |
 | Typed producers and consumers disagree | The incompatible domain or precondition is made explicit. Fields of the same shape do not make a valid join. |
@@ -51,7 +53,7 @@ Apply each case to the member's owned determinations and affected consumer bindi
 | An interruption leaves work partly written | Recovery uses the current workspace and the applicable work state. It does not erase progress or invent a completed assessment. |
 | A parse or map succeeds | The claim stays mechanical until independently sufficient semantic and practical evidence exists. |
 | A change to work carriers or process is proposed as new law | The claimed obligation is justified by its purpose and material relation, or identified as unsupported overhead. |
-| The same requirements are realised by software, a human team or a mixed process | Each tenant supplies its computational calculus, concrete execution binding and conformance evidence. Common requirements decide fitness; the kind of executor alone neither rejects nor accepts the realisation ([binding requirement](../requirements/README.md#build-tenant-binding-requirement)). |
+| The same requirements are realised by software, a human team or a mixed process | Each tenant supplies its computational calculus, concrete execution binding and conformance evidence. Common requirements decide fitness; the kind of executor alone neither rejects nor accepts the realisation. Generic procedures preserve those permitted choices, including an adequate human process using current records and direct observation without code or complete event-history replay ([binding requirement](../requirements/README.md#build-tenant-binding-requirement)). |
 | A faster execution plan merges two required independent assessments or substitutes an automated result for a required human decision | Matching outputs or lower cost cannot discharge the lost independence or authority obligation. The binding fails conformance. |
 | Two environments use one computational calculus, or one actor performs different kinds of operation | Each binding must satisfy the calculus's laws. Different stacks do not force duplicate calculi; actor identity does not determine operation kind or grant authority. |
 | An a_c model of a human process passes structural validation | The representation neither selects an automated executor nor establishes that the human process meets its requirements. Execution conformance needs its own applicable evidence. |
@@ -63,7 +65,44 @@ Apply each case to the member's owned determinations and affected consumer bindi
 | A functor or categorical join is claimed | Before the claim, objects, arrows, arrow equality, identity and composition are given and the functor laws are shown. Otherwise the claim is a hypothesis ([standard](../requirements/README.md#categorical-demonstration-standard)). |
 | A rewrite or refinement step is applied | The law that permits it is declared for the subject. An exact step preserves meaning. An approximate step states its adequacy relation and an end-to-end bound. |
 
+## Universal Construction Discriminators
+
+These cases test the candidate's deciding rules under the [construction requirement](../requirements/README.md#universal-construction-requirement). They apply to member criterion 5 within the member's declared responsibility; the integrated checks below evaluate their composition and actual use.
+
+| Discriminator | Expected distinction |
+|---|---|
+| Internal tasks pass while a required end-to-end feature fails | Keep the outer failure and diagnose the affected join; local completion does not establish Z. |
+| Every selected operation is lawful but the result fails the chosen outcome constraints | Preserve the distinction between admissible construction and delivered outcome. The specification supplies Z; a calculus or lawful execution supplies no automatic satisfaction or acceptance. |
+| A report called a bug could concern implementation, requirements or missing observations | Apply one intake and causal diagnosis. Correct the supported affected relation, or acquire evidence and retain unresolved alternatives. The label supplies no repair class or permission. |
+| A requirement is weakened until the current realisation passes | A change to Z needs its owning decision and downstream re-entry. It neither proves the former Z nor erases the original counterexample. |
+| A predictive model agrees with observations while the required outcome is absent, or predicts incorrectly while the outcome holds | Prediction accuracy and satisfaction of the normative specification are different claims. Diagnose each against its own predicate and support; neither conclusion determines the other. |
+| A strategy is selected solely by its name, or a cheaper plan loses required assurance | Select within the outcome constraints, using material resource, risk and feedback tradeoffs. Cost savings supply no waiver. Preserve incomparable alternatives and unsupported estimates explicitly. |
+| Every recursive step preserves an invariant but the process does not deliver | Preservation alone proves no progress or termination. State the actual support for continuing or the unresolved stop; no generic termination proof is required merely to perform bounded work. |
+| A limit is exhausted, an observation exposes more work, or an ongoing maintenance loop continues | Distinguish attempt termination, useful discovery, continuing maintenance and delivered outcome. Neither elapsed work nor a changed count supplies the conclusion by itself. |
+| A restart or later disturbance contradicts a cached successful result | Reacquire the bound current subject, reopen affected claims and preserve independently applicable work. Resolve uncertain effects sufficiently before a dependent action. |
+
+## Assurance Discriminators
+
+These cases assess the member text under criterion 5 and the [assurance requirement](../requirements/ASSURANCE.md). Actual operation of the affected paths is assessed at the integrated boundary below. One bounded demonstration may cover several cases; table rows impose no separate-run quota.
+
+| Counterexample or adequate case | Required distinction |
+|---|---|
+| Every local check passes, but a postcondition does not establish the next precondition or the final property does not imply Z | The member requires the missing preservation or coverage argument and withholds the unsupported end-to-end conclusion. It retains supported local results. |
+| A histogram has the right keys but incorrect counts; a key-only test passes | The check establishes only its target predicate. Assertion provenance identifies whether that predicate is a necessary condition or is sufficient for the claimed requirement. A faithful count assertion detects the count defect within its scope. |
+| Two admissible states have identical acquired observations but opposite truth values for the asserted obligation | The checker cannot claim a sound complete decision from those observations. It acquires distinguishing evidence, justifies a narrower scope or returns an indeterminate judgment. Unavailable observation and not-performed evaluation retain their distinct meanings. |
+| A test copies its expected answer from the implementation and cites the requirement's digest | Execution provenance and text identity do not establish assertion fidelity or an independent upstream derivation. A supported local regression claim remains usable. |
+| A human or probabilistic checker can soundly return satisfied or indeterminate on the same observations | The model admits both outcomes. A universal soundness claim covers every admitted conclusion; a selected deterministic model retains its scope, and a probability claim needs its own distribution and evidence. |
+| Two implementations or reviewers agree through the same wrong interpretation, fixture or received contribution | Agreement is not counted as independent evidence merely because actors differ. Shared causes and port authorship remain visible; validation of the common expectation uses its separate purpose and evidence. |
+| Miss rates are multiplied without conditional independence, or an injected-defect score is reported as whole-product correctness probability | The numerical claim requires its model, justified dependence and calibration scope. Unsupported quantification stays unresolved while bounded observations retain their standing. |
+| Finite successful examples or a schema-valid formula are called a proof of a universal preservation law | The formal obligation, its discharged argument, structural checking and bounded execution evidence retain distinct scopes. Bounded work can proceed where its governing conditions permit it. |
+| A governing requirement changes but expected answers and acceptance evidence are silently retained | Affected assertions and applicability are reassessed through the owning change authority. The original evidence and counterexample retain their subjects. |
+| An implementation or environment dependency changes but the only selection relation is requirement-to-test provenance | Impact includes material execution and validity dependencies. Missing influence information cannot justify exclusion; new uncovered obligations generate work and mandatory gates remain applicable. |
+| A local repair has supported isolation from an unchanged obligation and its evidence conditions | The applicable unchanged evidence may be retained alongside reassessment of affected claims. The method does not demand full re-execution solely because the subject has changed. |
+| Selection is cheap but omits a material obligation, or selection overhead exceeds the saved execution | The plan accounts for required assurance, residual uncertainty and total relevant cost. Broader execution is available; cheap selection or a fixed full-suite habit is not evidence of adequacy or efficiency. |
+
 ## Construction And Integrated Closure
+
+Applicable integrated evidence follows [Assurance of Construction](../requirements/ASSURANCE.md): the expected conclusions have assertion provenance, the runs have execution provenance, and retained evidence has supported applicability. These conditions use the existing criteria and carriers.
 
 These checks evaluate the recorded construction decisions and integrated candidate under the installed builder. They do not add candidate-text predicates to member criterion 5. The Executive applies the acceptance checks; the integrated Reviewer evaluates the whole-candidate obligations before C3 closure. Head-to-head evaluation follows [Candidate Comparison](../PRODUCT.md#candidate-comparison), with the same tasks, independently specified expectations and acquisition conditions. An unassessed candidate is not evidence that its peer qualifies.
 
@@ -72,6 +111,10 @@ These checks evaluate the recorded construction decisions and integrated candida
 | Each member passes its local checks while two members still decide the same shared question differently | C3 closure requires the integrated reduction assessment. Separate satisfied member results cannot erase the cross-member contradiction. |
 | A member reviewer agrees that a proposed replacement is clear, but no owner decision accepts its changed meaning | Review may support the proposal; dependent member acceptance waits for the exact replacement decision recorded in the ticket. A construction grant does not supply that acceptance. |
 | Five member criteria are satisfied and the sixth is missing, stale or falsified | The installed conjunction withholds member acceptance and preserves all component results. A general favourable verdict cannot replace missing or adverse evidence. Supported inapplicability of a conditional obligation is recorded separately; it does not waive any of the six criteria. |
+| A control actor answers correctly while the candidate's frame causes an incorrect answer | Preserve the applicable required task judgment under criterion 4. Control success neither proves that the fixture supplied the answer nor removes the frame-use failure. Attribution of benefit is a separate claim; an applicability correction needs its own governing reason. |
+| Separate members explain construction, triage and recovery but their consumers cannot carry one feature through the composition | Integrated assessment checks the shared owners and actual deciding path from the selected outcome through bounded work, observation, diagnosis and lawful continuation or closure. Criterion 4 evidence exercises the applicable path under independently specified expectations; prose alone does not establish use. Existing applicable evidence can support several cases; no separate run per table row is imposed. |
+| Assertion provenance, formal interpretation and execution records exist separately but do not join on the claimed obligation | The affected demonstration follows the source obligation through its interpreted predicate and observed subject to the supported conclusion. It exposes a weak assertion, an insufficient observation and a shared-error case, retaining each claim's bounded standing. |
+| A repair invalidates some claims while other evidence remains applicable | The affected actual-use demonstration selects reassessment from supported impact, preserves known failures and unknown coverage, and combines new results with justified reuse. It exercises both valid retention and a missed-dependency or changed-oracle case; complete fresh execution is not required where the governing assurance is already established. |
 
 Logical review is a reviewer's reasoned reading. It finds counterexamples and contradictions without running anything. Actual-use cases do real construction, observe genuine defects, keep the uncertainty of effects, and re-enter the method at the right stage.
 

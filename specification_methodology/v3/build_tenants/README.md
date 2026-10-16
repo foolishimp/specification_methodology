@@ -8,13 +8,15 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 ## Current Task
 
+The product owner ratifies [C3-I5-06](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-5-ratification) at `4c340f7`. Codex begins its successor under [EC-CODEX-I5-01](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md#current-iteration-5-contract); Claude retains its separate admission boundary. Each tenant keeps its own preceding implementation and design, repairs supported findings, and evaluates useful peer contributions within the shared [work map](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-5-consolidated-work). Construction and [assurance](../specification/requirements/ASSURANCE.md) obligations are realized at each candidate's own owners and consumers. A common requirement alone repairs no implementation or accepts a member. Historical inputs and evidence retain their original subjects.
+
 I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) and [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging):
 
 1. Codex prepares the common revision, Claude reviews its exact freeze, and the product owner ratifies it.
 2. Each tenant rebinds to that ratified input and synthesises its own candidate with selected contributions from its peer, under [Cross-Synthesis](../specification/PRODUCT.md#cross-synthesis).
 3. The two frozen candidates receive the shared comparison and the product owner selects the next basis.
 
-I4 common preparation is active. Tenant I4 construction waits for ratification and each line's admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
+I4 common input C3-I4-03 at `3c4c503` is ratified, as recorded in T-001. Each tenant proceeds under its separate admitted contract. The closed I3 input and historical contracts remain evidence for their own subjects. The current candidate and donor coordinates, supported repairs and unresolved decisions are in T-002; no live working-tree read substitutes for a named peer commit.
 
 The tenant tickets are [Claude](../.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md) and [Codex](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md). Each new contract names the common input, own preceding candidate, donor, tasks, actors and resource envelopes. A draft contract starts no work. Common ratification and construction admission accept no tenant candidate or predecessor replacement.
 

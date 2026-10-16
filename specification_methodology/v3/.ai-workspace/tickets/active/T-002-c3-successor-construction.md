@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-15T09:46:38Z
+updated_at: 2026-10-16T15:11:14Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -25,18 +25,320 @@ links:
 
 # T-002 — v3.0.0 Successor Construction
 
+## Iteration 5 common preparation
+
+The product owner selects the I5 construction model together with the evaluated findings from both I4 reviews as one common input for two successor builds. [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-review-consolidation) admits the common pen's consolidation. The [disposition](../../comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md) binds the exact reviews, corrections to stale findings and the common source changes.
+
+The direction separates lawful construction from the chosen constrained outcome. The calculus governs transformations; the specification supplies Z; strategy selects work; execution produces results; evidence and authority determine satisfaction, continuation and acceptance. Both tenants retain their own preceding implementation and design. The shared revision becomes their governing input only after exact-source ratification and separate admission.
+
+Only common preparation is active here. Existing I4 contracts retain source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and their admitted bytes. Neither a new draft nor either review silently repairs or rebinds those candidates. C3-I5-01 remains the immutable historical proposal; the consolidated successor receives its own source commit and descendant input record.
+
+Current result: C3-I5-06 at `4c340f7adec9f3c893e3e267b23e4cadeb357854` is ratified by the product owner's “ocntinue”, as recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-ratification). The 47-member source snapshot remains unchanged. Both Codex working readbacks and Claude's cross-family readback support the bounded common close-out; the latter's two Low record findings are explicitly disposed in T-001. I5-00 is complete. [Codex's admitted EC-CODEX-I5-01](T-002-CODEX-c3-successor-construction.md#current-iteration-5-contract) begins its successor construction; this record does not activate Claude's line. The work map and assurance duties below remain the selected common input.
+
+## Iteration 5 consolidated work
+
+This map replaces the earlier planning decomposition for future I5 admissions. It carries all I4 review findings and remaining applicable I4 work into the current common requirements. Each row is a work responsibility, not a new law or automatic activation. Issue IDs below are qualified by their review: F = Claude's I5 review; R = Codex's Claude I4 review; CY = Claude's Codex I4 review. Each issue has one primary row; dependent checks follow the affected owners without creating a second closure owner.
+
+| Work | Common owner and primary issues | Work for each successor | Observable exit evidence |
+|---|---|---|---|
+| I5-00 Common input | Universal construction; Candidate Comparison; F1–F4 | Common pen integrates the model and supported clarifications, preserving the owner's bug-as-feature/change-work account and independent tenant designs. | Checked exact source, review dispositions, independent readback and owner ratification before dependent admission. |
+| I5-01 Rebind and construction relation | Universal Construction Requirement; bounded transitions | Bind the ratified input, own preceding candidate and exact donor. Implement the shared construction relation at its owner and affected consumers; distinguish required Z, prediction and observation, and lawful work, progress and completion. | Source-to-consumer argument and successful, failed and unresolved composition cases; recovery retains applicable work. |
+| I5-02 Deciding laws and generic bindings | Standalone successor; single ownership; build-tenant binding; R1, CY-05 | Retain Claude's supported human/mixed chain repair at `c66ed4e` and check its I5 dependents. Codex resolves argument/consumer coverage questions. Both account for inherited and new material rules, actual consumers or supported absence, optional profiles and human/mixed bindings. | Source-first assessment of affected laws, premises, policies and consumers; generic paths preserve permitted implementations; missing coverage remains explicit. |
+| I5-03 Conservation and owner decisions | Successor Disposition; criteria 1–3; CY-01 | Complete nonauthor semantic conservation over all required claims, reusing supported bounded evidence. Reassess changed determinations and propose exact replacement relations, including I5 consequences. | Each row has its supported disposition and carrying loci; replacements/removals cite the owner's ticket decision before dependent acceptance. One consolidated decision list groups equivalent questions while preserving per-tenant relations. |
+| I5-04 Received contributions | Cross-Synthesis; CY-06 | Evaluate useful peer contributions within the receiving design. Record adaptation or reasoned exclusion and obtain the receiving-line nonauthor assessment of selected ports. | Each accepted contribution binds donor, receiving owner/consumers, affected claims, assessment and successor applicability; the donor's own reading is supplementary. |
+| I5-05 Interpretation and acquisition | Constraint Surfaces; a_c dependency; R2 | Retain Claude's supported publication repair at `c66ed4e` and complete uncovered material scope. Codex completes required fidelity/coverage assessment. Both align source, program, maps, bindings, instructions and selected projections after I5 changes; unchanged evidence is reused on supported applicability. | Reproducible offered-entry acquisition and applicable adverse controls, complete required coverage and independent fidelity; generation success alone closes neither publication nor semantics. |
+| I5-06 Frame use and grading | Criterion 4, Limits, Candidate Comparison; R3 | Retain Claude's repaired grading rule and align its stale A0 description at `c66ed4e`. Preserve every applicable task judgment; keep correctness distinct from control-based benefit attribution. Select the shared protocol and resources through their owners; test selected material task/frame conditions, ordinary discovery and supplied-frame use on their actual subjects. | Fixed nonauthor expectations, exact inputs and routes, correct use with supported active-context fit, separate cost boundaries and all failures/unassessed obligations retained. |
+| I5-07 Reduction and costs | Foundational Reduction; CY-02 | Trace actual deciding paths against rc.2 and each line's own preceding candidate. Account for removed determinations/reconciliations, necessary distinctions, serialization and acquisition costs; assess declared tradeoffs and uncovered material paths. | Comparable path evidence and source-first judgments, including adverse changes and unresolved cases. Neither lower byte counts nor larger machine coverage establish a winner. |
+| I5-08 Entry and package standing | Standalone successor; ordinary acquisition; R4, CY-03, CY-04 | Retain both lines' supported entry repairs and distinguish historical records from current evidence. Move Claude's new chain-repair provenance outside constitutional text under the existing Specification Surface Rule. Check package entry separates target version from released status. | Current-entry readback follows offered source/interpretation/qualification routes to consistent exact subjects; historical records and unreleased standing are clear, and constitutional text states current law. |
+| I5-09 Integrated review and comparison | All six criteria; member and integrated conformance | Carry forward every unclosed material I4 obligation; assess the I5 discriminators and actual construction/feedback joins. Conjoin applicable reviews and supported reuse on each exact successor, then compare on the shared input and conditions. | Complete criterion/coverage account, dependency-aware readbacks, unresolved owner decisions and truthful eligibility; owner choice or no qualified choice. |
+
+### Assurance work and proof
+
+The [assurance requirement](../../../specification/requirements/ASSURANCE.md) adds the following duties under the existing responsibilities. Each has one primary work item; dependency checks are consumers, not additional closure owners. The 14 review findings above retain their primary rows.
+
+| Duty | Primary work | Required exit evidence and affected consumers |
+|---|---|---|
+| I5-A1 Formal construction preservation | I5-01 | State the step, join and end-to-end obligations with their actual proof/evidence standing, including failure and unresolved cases. Bind algorithmic, informational and computational accounts without an unproved universal solver claim. Consumers: I5-02, I5-05, I5-09. |
+| I5-A2 Assertions, observations and provenance | I5-02 | One shared owner distinguishes full obligations from necessary conditions, assertion from execution provenance, and sufficient from ambiguous observations. Testing and assurance consumers apply it; supported local regression claims remain usable. Consumers: I5-05, I5-06. |
+| I5-A3 Formal interpretation fidelity | I5-05 | Source-linked a_c represents the material new obligations and dependencies, separating formula, structural check, discharged argument, external predicate and bounded observation. Positive, negative and unresolved fidelity checks cover the affected material. Consumers: I5-06, I5-09. |
+| I5-A4 Mutual assurance and actual use | I5-06 | Fixed expectations and exact subjects support the source-to-assertion-to-observation join. Shared errors, ports and actor conditions remain visible. Demonstrate weak-assertion and ambiguous-observation cases through affected ordinary entry; no assumed statistical independence or revision of withheld expectations to fit the candidate. Consumers: I5-04, I5-09. |
+| I5-A5 Risk and resource selection | I5-07 | Assess selected assurance against stated obligations, failure consequences, uncertainty and total analysis/acquisition/execution/assessment cost. Quantified claims bind justified probability/dependence/calibration assumptions; unknown estimates stay unknown. Qualitative evidence is permitted within the governing policy. Consumer: I5-09. |
+| I5-A6 Change impact and reuse | I5-01 | Implement validity dependencies distinct from justification links. Demonstrate changes to obligations, refinements, implementation or assumptions selecting affected reassessment and retaining justified evidence. New obligations, unknown impact, known failures and mandatory gates remain accounted for. Consumers: I5-02, I5-05, I5-06, I5-09. |
+| I5-A7 Complete assurance account | I5-09 | The exact candidate's required claims join applicable retained and new evidence, disclose unresolved coverage and satisfy all existing acceptance conditions. Independent review covers affected owners/consumers and the two added integrated checks; no full-suite waiver or new seventh criterion follows. |
+
+This map does not require a new ledger, per-test paperwork, separate execution for every discriminator or a fixed probability threshold. Existing evidence may satisfy multiple duties when its subject, independence, scope and validity remain applicable. Acceptance and source replacement retain their owners.
+
+Current evidence boundaries: Codex's review subject is branch `62318d3`, package `903f119`; Claude's reviewed snapshot is `8a0ea22`, with the source-preserving advance through `ededad1` checked by that review. Claude's review of Codex names return `9a93c5a` but sampled some earlier package records. Its concurrent [handoff](../../comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md) names candidate `c66ed4e`, corrected handoff `1092f9a`, and reports the four repairs with qualification unresolved. The consolidation's bounded successor check corroborates those repairs and records narrower residuals; it does not repeat the whole review. Before admission, each finding is rechecked on the chosen preceding candidate, retaining supported closures or naming remaining repairs. The map selects no donor and gives no whole-candidate verdict. The supplement's Q2 and Q9 replacement proposals remain owner decisions under I5-03.
+
+The unchanged I4-01–09 obligations below remain historical planning inputs. Their remaining duties map as follows: I4-01 → I5-01; I4-02 → I5-02; I4-03 → I5-04; I4-04 → I5-03; I4-05–09 → I5-05–09 respectively. No open duty disappears because its work label changes.
+
+The common pen records one shared comparison protocol in common territory, with identical immutable inputs for both lines, under Product's Candidate Comparison. Preserve the existing disclosure boundary: record the body after both candidate freezes, or record its hash first and disclose the body after the freezes; expected answers remain withheld from task actors. Any task or grading change retains its own subject and applicability account. Prior unmatched trials can supply only their supported local evidence.
+
+Outstanding owner decisions retain their owning conditions: exact common ratification; each admission and its resources; per-tenant predecessor replacements/removals; acceptance-bearing reviewer assignments; identity/packaging and UX replacement choices; the separately selected categorical thread; eventual candidate selection and release. Preparing this map decides none of them. Closure of the common consolidation means every supported issue is resolved in the contract or assigned a verifiable tenant/owner obligation; it does not mean those implementations and evidence gaps are already closed.
+
+## C3-I5-06 proposed input snapshot
+
+Input commit B: `4c340f7adec9f3c893e3e267b23e4cadeb357854`, on main. Recording R is the descendant commit that first contains this section. All 47 member hashes and byte counts are read from B: the forty C3-I5-05 paths, the work-entry page, the two full-consistency reports with Claude's attached independent reading and Codex's evaluation, and the two fresh review expectations. The source tree also holds the supporting assets of the recorded reports. The two new successor readbacks and recording checks belong to R, name B exactly and are not falsely claimed as B members.
+
+Standing: PROPOSED consistency successor, ready for exact-source ratification. Existing construction and assurance meanings are clarified at their owners and scoped consumers; criterion 5 reaches all three already-applicable member tables, and work entry identifies the active tickets and pending I5 standing. The [semantic](../../comments/codex/20261016T123054Z_REVIEW_I5_CONSISTENCY_SEMANTICS.md) and [binding](../../comments/codex/20261016T123054Z_REVIEW_I5_CONSISTENCY_BINDINGS.md) readbacks are satisfied within their declared same-family nonauthor working scopes. Formulas, conformance cases, P1–P6, the Product Definition, prior input/history bodies, existing tenant admissions and both tenant trees are preserved. Ratification, dependent admission, tenant implementation and qualification remain separate and pending. The current work-state projections in R record this result without replacing B's governing source.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 10378 | `fb5529c530d48cf45fc8f60ba97fe4885726680fbec9ff2641a26a4a4ca151fb` |
+| `specification/PRODUCT.md` | 67479 | `4d6a43c25c58e76ea1283b1e2cacae5d40e3fba939681f188d99378bfadcc1d5` |
+| `specification/GOALS.md` | 29904 | `22d17299d8cca2f5b3f3be1f10958b05f7db887c08404d1d222c1a0fdb5c343a` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 9109 | `f18f73ebea127b8933e71765485a070813ad0d50eadea7734918d8d741308f4a` |
+| `specification/requirements/README.md` | 40116 | `ad0b7eca928ed184d845e45781344cbc47934f73a4293411c2f0a25ed72b532d` |
+| `specification/requirements/PRINCIPLES.md` | 14917 | `9004a5f109552bebde017396040ee645f39dfeae71a1901632e3b479173bb5cc` |
+| `specification/requirements/CAPABILITIES.md` | 5162 | `8a1b327624f9f449e5855bc122d3e526d35b5779a7e6d3c4dc8b4b6d05e00347` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8317 | `74f871daa019ce3f12f7cbee2ce9b69c4fb4f9d58f510c83b8101c884afc12cc` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 26573 | `e7a6a65936eed85b4734c9aa26599fd616ee3a968d1b227bd9a54cbfcb95783c` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4309 | `ae27a32e2350fabc4cbaf85bf054c0251e602245adf6b78660fcfcc5fd2c8983` |
+| `CLAUDE.md` | 4309 | `ae27a32e2350fabc4cbaf85bf054c0251e602245adf6b78660fcfcc5fd2c8983` |
+| `build_tenants/README.md` | 6714 | `6c8c45b8360ea4841f5982e4bcf42d5cc9d0b5459e8f6535864f9365ae76e6d8` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 147714 | `668b9a20c67ac1d344eaad8192533fe5ba4ea36eb63738399140f9bc593dfc5c` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 102304 | `a3823d8a281647198a21676d522d31dce578dccecca2c3997c66f43b2db0922b` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10831 | `194dbaaf7a78e1640243e30cb04cf61b303e5fba69c6834b9f334a10af798236` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9799 | `749ac0c3bf05c1c6761e2cc076a1ae1488367f2d2fa107b311e913682c09e829` |
+| `.ai-workspace/comments/claude/20261015T155826Z_REVIEW_C3_I5_01_UNIVERSAL_CONSTRUCTION_455CE5D.md` | 7163 | `e9dd4a34c27f0b56f2dcadd0a4c6deeede270c2ea8a61e9976ea1cd20ff85b28` |
+| `.ai-workspace/comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md` | 10891 | `2dcbd523927e0ae5000d1e0291f4e8f3fe6841c11be69b0bb72b3677b8145f9c` |
+| `.ai-workspace/comments/claude/20261015T161011Z_REVIEW_CODEX_I4_9A93C5A.md` | 7148 | `852f47ea1cdc7b0a2d606df6aa253b18ba3282ed6ce6eec2d7e1de3de56794bb` |
+| `.ai-workspace/comments/claude/20261015T161011Z_COMPARISON_I4_CANDIDATES_STAGE4_INPUT.md` | 6136 | `d3ef7215abec68976f5a6afcb7a41e1e7f963a3ef7f745732eb3f4a8f840205c` |
+| `.ai-workspace/comments/codex/20261015T160637Z_EXPECTATIONS_CLAUDE_I4_AND_CODEX_COMPARISON.md` | 6109 | `7ca8bde262a5b5e939c041b7867c8b532092d23ab49b1a478d4d1dc06a0f3509` |
+| `.ai-workspace/comments/codex/20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` | 15957 | `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00` |
+| `.ai-workspace/comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md` | 13111 | `29aaac105385d2052f14181e05bd4a7ceb71dc7403421268b7a13fef3255f059` |
+| `.ai-workspace/comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md` | 13932 | `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051` |
+| `.ai-workspace/comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md` | 2396 | `e4b74d608b418a8f67867f675a5516b7b95e8c0011f68f98e914d1e8c29ba852` |
+| `.ai-workspace/comments/claude/20261015T230124Z_REVIEW_C3_I5_02_CONSOLIDATED_COMMON_C0F16EE.md` | 8361 | `1e1aa2ec0d66319139682a6a01050fb08a3c2cf1d3f84273359d5e1a4a89a268` |
+| `specification/requirements/ASSURANCE.md` | 17842 | `ef6dbee500c42289cf710fae81bc6c79af67f3c6b9f94a11b48be48ccf643ef5` |
+| `.ai-workspace/comments/codex/20261015T232222Z_REVIEW_I5_LOW_FINDING_SUCCESSOR.md` | 7815 | `80789105f5d6ed6e6de3d53c0fe1d50c68feda88b8c65171d0d1f8d5e673da43` |
+| `.ai-workspace/comments/codex/20261016T000430Z_RETURN_I5_FORMAL_ASSURANCE.md` | 7877 | `c0a4d4e96c7f0159d2156585cc0f0b181b890f245b2344e62a344a952b1dacd2` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_MATH.md` | 9644 | `0e990fb6c3265485d4b69c20278de4bb5eef9f11a961f97e1d8ada0f2c313cfd` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_CONTRACT.md` | 10815 | `023d0d5c175a7a00846644154d5e217a2af577a104046b430c76ba2500119304` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/check_examples.py` | 6290 | `242a5d4bf25e47a4565adb10aef6c2e5276b3ff1b40587a0da1aae2bc811f8eb` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/results.json` | 987 | `47f6b3e93ecbfea6d94c02bd16124d0ae4d388325bbe7cddd8353194c46c8cd6` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_MATH.md` | 11107 | `f455d9893da5a5744677ff0337d528be419dd0db4b7afc88354ada2a0a24bd9e` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_CONTRACT.md` | 12722 | `ccb1ce36cefaefb9bc6143112c75b4064d722224856a601170603b8ed0d51e96` |
+| `.ai-workspace/comments/claude/20261016T041542Z_REVIEW_C3_I5_04_FORMAL_ASSURANCE_B8E3242.md` | 9137 | `fcbb0d3a041bfd1edb25f1f738b19c1a0a001c397b4e9df14d9f710636c7d85d` |
+| `.ai-workspace/comments/codex/20261016T055238Z_DISPOSITION_I5_ASSURANCE_WORDING_REVIEW.md` | 5232 | `5f7d31eb00b3c85208b5e52011bb31e5bfe1b4ab7c2dba7c4ec6ba73dc16d9dd` |
+| `.ai-workspace/comments/codex/20261016T055238Z_EXPECTATIONS_I5_WORDING_SUCCESSOR.md` | 8506 | `bbc864052d6bd2d7c803455e9e4d05fa86e4ba8d30bc1a05d28f9a55a1539b59` |
+| `.ai-workspace/README.md` | 1500 | `e2e799dba85af0b20ce5e28c6a559783c7ebb8ceda13d33ff41511a61a103096` |
+| `.ai-workspace/comments/claude/20261016T094350Z_REVIEW_V3_CONSISTENCY_FIVE_ITERATIONS_B8E3242.md` | 32733 | `b68666d3f7d442d356d3b9dcccc759e1c112b57b990f47144ed4a809cd7a33e1` |
+| `.ai-workspace/comments/claude/assets/20261016T094350Z_INDEPENDENT_READING_V3_CONSISTENCY_B8E3242.md` | 30752 | `097cf59268cd5795758e202725791caa8b91ed898b20a675c1c600db15459918` |
+| `.ai-workspace/comments/codex/20261016T091908Z_REVIEW_V3_COMMON_FULL_CONSISTENCY.md` | 19920 | `792c19cb05a080105fe202379d79c88dd22e95c87e4db2f2fc63724bb746bc9a` |
+| `.ai-workspace/comments/codex/20261016T103941Z_REVIEW_CLAUDE_V3_CONSISTENCY_FINDINGS.md` | 19281 | `b008400f0ada39c350188ad02be637f650999cd656c985205c4f6ea29c93b0f5` |
+| `.ai-workspace/comments/codex/20261016T123054Z_EXPECTATIONS_I5_CONSISTENCY_SEMANTICS.md` | 14092 | `8b87bca552997eae7871d94dc020b1e082176abce39fff529561ac08df2b7408` |
+| `.ai-workspace/comments/codex/20261016T123054Z_EXPECTATIONS_I5_CONSISTENCY_BINDINGS.md` | 13475 | `3005b8d72ca39b8c2d5c2ce24043f1384cb063d9cea2282bb1aac2ee314d998d` |
+
+## C3-I5-05 proposed input snapshot
+
+Input commit B: `bc8662a90323d38166164afac03468942667cf7a`, on main. Recording R is the descendant commit that first contains this section. All 40 member hashes and byte counts are read from B: the 37 C3-I5-04 paths, Claude's review of that input, and this successor's disposition and expectations. Linked supporting material is acquired from the same B tree at its named subject. The [closed wording readback](../../comments/codex/20261016T055238Z_REVIEW_I5_WORDING_SUCCESSOR.md) is recorded with R and names B exactly; it is not claimed to exist in B.
+
+Standing: PROPOSED wording and form successor, ready for exact-source ratification. L1–L4 are resolved with a satisfied fresh nonauthor working readback. The formulas retain their meaning under symbol renaming; the existing core judgment, Source, purpose and current task routing are explicit. The common-model validation clause, six criteria, original work assignments, witness assets, historical inputs and both tenant implementations are preserved. Earlier cross-family review evidence retains its original subject and only its supported unchanged scope is reused. Exact-source ratification and both I5 admissions remain pending.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 10199 | `8bf8f448b027ad8925b22619e145efa4634c594171b23cac0df14129d042a498` |
+| `specification/PRODUCT.md` | 66579 | `71f963c36705e5491e050e213dd361affc64a5274a9db2769bf2d81759062059` |
+| `specification/GOALS.md` | 28815 | `bb9019b821800b41dd6b0725226a847d8f905af33028a978afe4fe896a97a589` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 9109 | `f18f73ebea127b8933e71765485a070813ad0d50eadea7734918d8d741308f4a` |
+| `specification/requirements/README.md` | 39787 | `ecb7db6b86f69cde8ac71b0926277a7504e08a3aad59bdc2df3ca461ae42c3c0` |
+| `specification/requirements/PRINCIPLES.md` | 14917 | `9004a5f109552bebde017396040ee645f39dfeae71a1901632e3b479173bb5cc` |
+| `specification/requirements/CAPABILITIES.md` | 5299 | `024affc0ed27ff886f8171f545217d58b6d0cae18643e0e2732506f1e20e528c` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 26404 | `c1cced11624037060fa85ce749c0fb9fbb9865b87d32b6fa945124bfd5e53d4b` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4251 | `9d6e222c4b5212e3a0f20d13cd3c8c6bd4ade3014cfe1ba7888135d65d9a5729` |
+| `CLAUDE.md` | 4251 | `9d6e222c4b5212e3a0f20d13cd3c8c6bd4ade3014cfe1ba7888135d65d9a5729` |
+| `build_tenants/README.md` | 6729 | `aa95372bb6d76c3e9409681930760f02e4c6453c0b7c1853ce8112e8d04be09a` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 141313 | `27858885819a59a36b0e9965a0503f60c615d58b1dac22d560107813cf6ecd46` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 95205 | `f0ca92b19730075ef66d3f6b3e69196e3baa99a531aa3818d376b910feb6d697` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10831 | `194dbaaf7a78e1640243e30cb04cf61b303e5fba69c6834b9f334a10af798236` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9799 | `749ac0c3bf05c1c6761e2cc076a1ae1488367f2d2fa107b311e913682c09e829` |
+| `.ai-workspace/comments/claude/20261015T155826Z_REVIEW_C3_I5_01_UNIVERSAL_CONSTRUCTION_455CE5D.md` | 7163 | `e9dd4a34c27f0b56f2dcadd0a4c6deeede270c2ea8a61e9976ea1cd20ff85b28` |
+| `.ai-workspace/comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md` | 10891 | `2dcbd523927e0ae5000d1e0291f4e8f3fe6841c11be69b0bb72b3677b8145f9c` |
+| `.ai-workspace/comments/claude/20261015T161011Z_REVIEW_CODEX_I4_9A93C5A.md` | 7148 | `852f47ea1cdc7b0a2d606df6aa253b18ba3282ed6ce6eec2d7e1de3de56794bb` |
+| `.ai-workspace/comments/claude/20261015T161011Z_COMPARISON_I4_CANDIDATES_STAGE4_INPUT.md` | 6136 | `d3ef7215abec68976f5a6afcb7a41e1e7f963a3ef7f745732eb3f4a8f840205c` |
+| `.ai-workspace/comments/codex/20261015T160637Z_EXPECTATIONS_CLAUDE_I4_AND_CODEX_COMPARISON.md` | 6109 | `7ca8bde262a5b5e939c041b7867c8b532092d23ab49b1a478d4d1dc06a0f3509` |
+| `.ai-workspace/comments/codex/20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` | 15957 | `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00` |
+| `.ai-workspace/comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md` | 13111 | `29aaac105385d2052f14181e05bd4a7ceb71dc7403421268b7a13fef3255f059` |
+| `.ai-workspace/comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md` | 13932 | `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051` |
+| `.ai-workspace/comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md` | 2396 | `e4b74d608b418a8f67867f675a5516b7b95e8c0011f68f98e914d1e8c29ba852` |
+| `.ai-workspace/comments/claude/20261015T230124Z_REVIEW_C3_I5_02_CONSOLIDATED_COMMON_C0F16EE.md` | 8361 | `1e1aa2ec0d66319139682a6a01050fb08a3c2cf1d3f84273359d5e1a4a89a268` |
+| `specification/requirements/ASSURANCE.md` | 17584 | `38f1a3e8bb5207e16156e349f1fbd5ae5caa19bf120c450cc3cff01d3149cd14` |
+| `.ai-workspace/comments/codex/20261015T232222Z_REVIEW_I5_LOW_FINDING_SUCCESSOR.md` | 7815 | `80789105f5d6ed6e6de3d53c0fe1d50c68feda88b8c65171d0d1f8d5e673da43` |
+| `.ai-workspace/comments/codex/20261016T000430Z_RETURN_I5_FORMAL_ASSURANCE.md` | 7877 | `c0a4d4e96c7f0159d2156585cc0f0b181b890f245b2344e62a344a952b1dacd2` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_MATH.md` | 9644 | `0e990fb6c3265485d4b69c20278de4bb5eef9f11a961f97e1d8ada0f2c313cfd` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_CONTRACT.md` | 10815 | `023d0d5c175a7a00846644154d5e217a2af577a104046b430c76ba2500119304` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/check_examples.py` | 6290 | `242a5d4bf25e47a4565adb10aef6c2e5276b3ff1b40587a0da1aae2bc811f8eb` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/results.json` | 987 | `47f6b3e93ecbfea6d94c02bd16124d0ae4d388325bbe7cddd8353194c46c8cd6` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_MATH.md` | 11107 | `f455d9893da5a5744677ff0337d528be419dd0db4b7afc88354ada2a0a24bd9e` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_CONTRACT.md` | 12722 | `ccb1ce36cefaefb9bc6143112c75b4064d722224856a601170603b8ed0d51e96` |
+| `.ai-workspace/comments/claude/20261016T041542Z_REVIEW_C3_I5_04_FORMAL_ASSURANCE_B8E3242.md` | 9137 | `fcbb0d3a041bfd1edb25f1f738b19c1a0a001c397b4e9df14d9f710636c7d85d` |
+| `.ai-workspace/comments/codex/20261016T055238Z_DISPOSITION_I5_ASSURANCE_WORDING_REVIEW.md` | 5232 | `5f7d31eb00b3c85208b5e52011bb31e5bfe1b4ab7c2dba7c4ec6ba73dc16d9dd` |
+| `.ai-workspace/comments/codex/20261016T055238Z_EXPECTATIONS_I5_WORDING_SUCCESSOR.md` | 8506 | `bbc864052d6bd2d7c803455e9e4d05fa86e4ba8d30bc1a05d28f9a55a1539b59` |
+
+## C3-I5-04 proposed input snapshot
+
+Input commit B: `b8e324211b1e4e134d4de061071d76df97fe8d80`, on main. Recording R is the descendant commit that first contains this section. All 37 member hashes and byte counts are read from B: the 28 C3-I5-03 paths, the new assurance owner, the prior low-finding readback, and the current assurance return, expectations, finite witnesses and initial reviews. The two successor readbacks are recorded with R, name B exactly and retain their independent subjects; they are not falsely claimed to exist in B.
+
+Standing: PROPOSED formal-assurance successor. It strengthens construction preservation, assertion and observation fidelity, mutual assurance with explicit dependence, and targeted reassessment with justified reuse. It amends the existing criterion-4 and criterion-5 consumers and adds their conformance/work coverage. Both bounded same-family nonauthor successor readbacks are satisfied; exact-source ratification and both tenant admissions remain pending. P1–P6 bodies, the Product Definition, prior inputs, existing admissions and tenant implementations retain their original standing.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 10199 | `8bf8f448b027ad8925b22619e145efa4634c594171b23cac0df14129d042a498` |
+| `specification/PRODUCT.md` | 66579 | `71f963c36705e5491e050e213dd361affc64a5274a9db2769bf2d81759062059` |
+| `specification/GOALS.md` | 28336 | `bd441e3b2a4cbfcd3622c45024dc875e66235a8fa7243dca4fdc64294602f23a` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 9109 | `f18f73ebea127b8933e71765485a070813ad0d50eadea7734918d8d741308f4a` |
+| `specification/requirements/README.md` | 39787 | `ecb7db6b86f69cde8ac71b0926277a7504e08a3aad59bdc2df3ca461ae42c3c0` |
+| `specification/requirements/PRINCIPLES.md` | 14917 | `9004a5f109552bebde017396040ee645f39dfeae71a1901632e3b479173bb5cc` |
+| `specification/requirements/CAPABILITIES.md` | 5299 | `024affc0ed27ff886f8171f545217d58b6d0cae18643e0e2732506f1e20e528c` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 26401 | `92d55ecfade5d68647998c30e8586b29388f153cc40e03170eb49b65697806bd` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4251 | `9d6e222c4b5212e3a0f20d13cd3c8c6bd4ade3014cfe1ba7888135d65d9a5729` |
+| `CLAUDE.md` | 4251 | `9d6e222c4b5212e3a0f20d13cd3c8c6bd4ade3014cfe1ba7888135d65d9a5729` |
+| `build_tenants/README.md` | 6536 | `aad2d8f0b66c077411e1727646a7df85944cb7d60ea2ba13eefade3207ebaa71` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 135221 | `dcddc33ee4629e2d446cca3aa4fd9dbd62566e0abca67a8e93a077e63f998ada` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 88388 | `e7815669d77c0ae0bc87da30466576a6f05b9b6d78920389ca959d44bd504da0` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10831 | `194dbaaf7a78e1640243e30cb04cf61b303e5fba69c6834b9f334a10af798236` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9799 | `749ac0c3bf05c1c6761e2cc076a1ae1488367f2d2fa107b311e913682c09e829` |
+| `.ai-workspace/comments/claude/20261015T155826Z_REVIEW_C3_I5_01_UNIVERSAL_CONSTRUCTION_455CE5D.md` | 7163 | `e9dd4a34c27f0b56f2dcadd0a4c6deeede270c2ea8a61e9976ea1cd20ff85b28` |
+| `.ai-workspace/comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md` | 10891 | `2dcbd523927e0ae5000d1e0291f4e8f3fe6841c11be69b0bb72b3677b8145f9c` |
+| `.ai-workspace/comments/claude/20261015T161011Z_REVIEW_CODEX_I4_9A93C5A.md` | 7148 | `852f47ea1cdc7b0a2d606df6aa253b18ba3282ed6ce6eec2d7e1de3de56794bb` |
+| `.ai-workspace/comments/claude/20261015T161011Z_COMPARISON_I4_CANDIDATES_STAGE4_INPUT.md` | 6136 | `d3ef7215abec68976f5a6afcb7a41e1e7f963a3ef7f745732eb3f4a8f840205c` |
+| `.ai-workspace/comments/codex/20261015T160637Z_EXPECTATIONS_CLAUDE_I4_AND_CODEX_COMPARISON.md` | 6109 | `7ca8bde262a5b5e939c041b7867c8b532092d23ab49b1a478d4d1dc06a0f3509` |
+| `.ai-workspace/comments/codex/20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` | 15957 | `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00` |
+| `.ai-workspace/comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md` | 13111 | `29aaac105385d2052f14181e05bd4a7ceb71dc7403421268b7a13fef3255f059` |
+| `.ai-workspace/comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md` | 13932 | `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051` |
+| `.ai-workspace/comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md` | 2396 | `e4b74d608b418a8f67867f675a5516b7b95e8c0011f68f98e914d1e8c29ba852` |
+| `.ai-workspace/comments/claude/20261015T230124Z_REVIEW_C3_I5_02_CONSOLIDATED_COMMON_C0F16EE.md` | 8361 | `1e1aa2ec0d66319139682a6a01050fb08a3c2cf1d3f84273359d5e1a4a89a268` |
+| `specification/requirements/ASSURANCE.md` | 16476 | `2be89bd818df101d4415ca25625bdc98aac4767f46ce22b03311bebf19cdbcb6` |
+| `.ai-workspace/comments/codex/20261015T232222Z_REVIEW_I5_LOW_FINDING_SUCCESSOR.md` | 7815 | `80789105f5d6ed6e6de3d53c0fe1d50c68feda88b8c65171d0d1f8d5e673da43` |
+| `.ai-workspace/comments/codex/20261016T000430Z_RETURN_I5_FORMAL_ASSURANCE.md` | 7877 | `c0a4d4e96c7f0159d2156585cc0f0b181b890f245b2344e62a344a952b1dacd2` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_MATH.md` | 9644 | `0e990fb6c3265485d4b69c20278de4bb5eef9f11a961f97e1d8ada0f2c313cfd` |
+| `.ai-workspace/comments/codex/20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_CONTRACT.md` | 10815 | `023d0d5c175a7a00846644154d5e217a2af577a104046b430c76ba2500119304` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/check_examples.py` | 6290 | `242a5d4bf25e47a4565adb10aef6c2e5276b3ff1b40587a0da1aae2bc811f8eb` |
+| `.ai-workspace/comments/codex/20261016T000430Z_I5_ASSURANCE_ASSETS/results.json` | 987 | `47f6b3e93ecbfea6d94c02bd16124d0ae4d388325bbe7cddd8353194c46c8cd6` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_MATH.md` | 11107 | `f455d9893da5a5744677ff0337d528be419dd0db4b7afc88354ada2a0a24bd9e` |
+| `.ai-workspace/comments/codex/20261016T000430Z_REVIEW_I5_ASSURANCE_CONTRACT.md` | 12722 | `ccb1ce36cefaefb9bc6143112c75b4064d722224856a601170603b8ed0d51e96` |
+
+## C3-I5-03 proposed input snapshot
+
+Input commit B: `48158cea2adb9f6571d39a984dfff39d2fc8c2b0`, on main. Recording R is the descendant commit that first contains this section. All 28 hashes and byte counts are read from B: the 27 C3-I5-02 member paths plus Claude's review of that input. Linked expectations and supporting assets are read from the same B tree at their named subjects.
+
+Standing: PROPOSED bounded successor correcting L1–L3. Product, the six criteria themselves and the 14-finding work map are unchanged. The binding definition, human/mixed discriminator and Goals' amendment record carry the corrections. Prior snapshots and reviews retain their exact subjects. This record supplies no ratification or tenant admission; later work-state updates do not replace the source pinned here.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 9657 | `ea81598d30c59c5d7189a62b011ea50f9998462b5f3aa209c6c4a4406aa2971e` |
+| `specification/PRODUCT.md` | 65072 | `fc44413b0fc414794259791b25aefa54e31035c022f1cb5d36217f09d9c6cfda` |
+| `specification/GOALS.md` | 27386 | `798bc92b255e2de420ecf185d22dcf9a442862cec946b72fbf0a7f1a36b5fd05` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8606 | `b76a946109c33ab93d2d7767d42ac3b8c5cdcf3e260d8560d6ac7aec79c7bc99` |
+| `specification/requirements/README.md` | 39021 | `0947da8b9895021ce6fbcf15fcc72cfc0ea0d9cc32dd72ab291129038ad1dfdc` |
+| `specification/requirements/PRINCIPLES.md` | 14539 | `b6d9885d13e7aa319db3cef0db54bc5185dc884970581e7f5ca1b09da4eace3e` |
+| `specification/requirements/CAPABILITIES.md` | 4790 | `5636ade98ba1c664601ff8f905c864bfdd575a28b781093f1363651bc32f46c9` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 21187 | `70c694dcb4e9161843594d2f3443d40665ea009fa71d8a5f3116c3b1cd417ef5` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4194 | `23751e53febc92e71f6eb29561849b4ac0bf88c82d8bd9551da20976166d634c` |
+| `CLAUDE.md` | 4194 | `23751e53febc92e71f6eb29561849b4ac0bf88c82d8bd9551da20976166d634c` |
+| `build_tenants/README.md` | 6247 | `519eaf9513394aae24f2b1dbec6cc54c038d1d267ecf324ee4a546095d2e2d64` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 127380 | `7eaff90c5c11a3e6ec14460ab7a56d56183a1057b152d827d9632673db80f96b` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 80744 | `bea054e7ca75ca5627db1a383300023c62985c1cac034dae233262f822e26217` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10831 | `194dbaaf7a78e1640243e30cb04cf61b303e5fba69c6834b9f334a10af798236` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9799 | `749ac0c3bf05c1c6761e2cc076a1ae1488367f2d2fa107b311e913682c09e829` |
+| `.ai-workspace/comments/claude/20261015T155826Z_REVIEW_C3_I5_01_UNIVERSAL_CONSTRUCTION_455CE5D.md` | 7163 | `e9dd4a34c27f0b56f2dcadd0a4c6deeede270c2ea8a61e9976ea1cd20ff85b28` |
+| `.ai-workspace/comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md` | 10891 | `2dcbd523927e0ae5000d1e0291f4e8f3fe6841c11be69b0bb72b3677b8145f9c` |
+| `.ai-workspace/comments/claude/20261015T161011Z_REVIEW_CODEX_I4_9A93C5A.md` | 7148 | `852f47ea1cdc7b0a2d606df6aa253b18ba3282ed6ce6eec2d7e1de3de56794bb` |
+| `.ai-workspace/comments/claude/20261015T161011Z_COMPARISON_I4_CANDIDATES_STAGE4_INPUT.md` | 6136 | `d3ef7215abec68976f5a6afcb7a41e1e7f963a3ef7f745732eb3f4a8f840205c` |
+| `.ai-workspace/comments/codex/20261015T160637Z_EXPECTATIONS_CLAUDE_I4_AND_CODEX_COMPARISON.md` | 6109 | `7ca8bde262a5b5e939c041b7867c8b532092d23ab49b1a478d4d1dc06a0f3509` |
+| `.ai-workspace/comments/codex/20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` | 15957 | `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00` |
+| `.ai-workspace/comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md` | 13111 | `29aaac105385d2052f14181e05bd4a7ceb71dc7403421268b7a13fef3255f059` |
+| `.ai-workspace/comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md` | 13932 | `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051` |
+| `.ai-workspace/comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md` | 2396 | `e4b74d608b418a8f67867f675a5516b7b95e8c0011f68f98e914d1e8c29ba852` |
+| `.ai-workspace/comments/claude/20261015T230124Z_REVIEW_C3_I5_02_CONSOLIDATED_COMMON_C0F16EE.md` | 8361 | `1e1aa2ec0d66319139682a6a01050fb08a3c2cf1d3f84273359d5e1a4a89a268` |
+
+## C3-I5-02 proposed input snapshot
+
+Input commit B: `c0f16eeaabca530421e09c4240007baec3c65726`, on main. Recording R is the descendant commit that first contains this section. All 27 hashes and byte counts are read from B: fourteen common source/entry members, two work records and eleven supporting research/review/disposition inputs. Linked review assets are acquired from the same B tree and retain their named original subjects. No moving worktree substitutes for these inputs.
+
+Standing: PROPOSED consolidated common source. The owner authorised preparation from I5 and both reviews; independent successor readback and exact-source ratification remain separate. This record admits no tenant work. C3-I5-01 and earlier inputs/admissions remain byte-identical historical records. Later work-state projections, including Goals and ticket updates, do not revise the source bytes pinned here; any governing change requires a new input before dependent admission.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 9657 | `ea81598d30c59c5d7189a62b011ea50f9998462b5f3aa209c6c4a4406aa2971e` |
+| `specification/PRODUCT.md` | 65072 | `fc44413b0fc414794259791b25aefa54e31035c022f1cb5d36217f09d9c6cfda` |
+| `specification/GOALS.md` | 26911 | `33f19f021091c7c63c702d0202e22692f8ef5936b699f22d2cb51ff71e124bdf` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8606 | `b76a946109c33ab93d2d7767d42ac3b8c5cdcf3e260d8560d6ac7aec79c7bc99` |
+| `specification/requirements/README.md` | 38928 | `666d10e560db9c5ac6a7051f0ecc21a38965875beb42c3ac3a9bb9b7ec2ce1d7` |
+| `specification/requirements/PRINCIPLES.md` | 14539 | `b6d9885d13e7aa319db3cef0db54bc5185dc884970581e7f5ca1b09da4eace3e` |
+| `specification/requirements/CAPABILITIES.md` | 4790 | `5636ade98ba1c664601ff8f905c864bfdd575a28b781093f1363651bc32f46c9` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 21079 | `60c44799a1b770b75de45cb72407a6a1ce0d41105dd464ed938fe004d9066f4b` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4194 | `23751e53febc92e71f6eb29561849b4ac0bf88c82d8bd9551da20976166d634c` |
+| `CLAUDE.md` | 4194 | `23751e53febc92e71f6eb29561849b4ac0bf88c82d8bd9551da20976166d634c` |
+| `build_tenants/README.md` | 6247 | `519eaf9513394aae24f2b1dbec6cc54c038d1d267ecf324ee4a546095d2e2d64` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 122278 | `a11226e92333327a0ea45150c7100d990e750952441ae6f90fe3049fd29fd7fe` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 75075 | `67b7781778c20f36e206d8e9573d4aa2fb1585fdd2836b6fed49090c8a41a248` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10831 | `194dbaaf7a78e1640243e30cb04cf61b303e5fba69c6834b9f334a10af798236` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9799 | `749ac0c3bf05c1c6761e2cc076a1ae1488367f2d2fa107b311e913682c09e829` |
+| `.ai-workspace/comments/claude/20261015T155826Z_REVIEW_C3_I5_01_UNIVERSAL_CONSTRUCTION_455CE5D.md` | 7163 | `e9dd4a34c27f0b56f2dcadd0a4c6deeede270c2ea8a61e9976ea1cd20ff85b28` |
+| `.ai-workspace/comments/codex/20261015T154000Z_REVIEW_I5_COMMON_CONSTRUCTION_455CE5D.md` | 10891 | `2dcbd523927e0ae5000d1e0291f4e8f3fe6841c11be69b0bb72b3677b8145f9c` |
+| `.ai-workspace/comments/claude/20261015T161011Z_REVIEW_CODEX_I4_9A93C5A.md` | 7148 | `852f47ea1cdc7b0a2d606df6aa253b18ba3282ed6ce6eec2d7e1de3de56794bb` |
+| `.ai-workspace/comments/claude/20261015T161011Z_COMPARISON_I4_CANDIDATES_STAGE4_INPUT.md` | 6136 | `d3ef7215abec68976f5a6afcb7a41e1e7f963a3ef7f745732eb3f4a8f840205c` |
+| `.ai-workspace/comments/codex/20261015T160637Z_EXPECTATIONS_CLAUDE_I4_AND_CODEX_COMPARISON.md` | 6109 | `7ca8bde262a5b5e939c041b7867c8b532092d23ab49b1a478d4d1dc06a0f3509` |
+| `.ai-workspace/comments/codex/20261015T160637Z_REVIEW_CLAUDE_I4_AND_LATEST_CODEX.md` | 15957 | `f35688f1e61f3a0964fd557f9334f14d796d3dcbc4995da5b67f5877875c8e00` |
+| `.ai-workspace/comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md` | 13111 | `29aaac105385d2052f14181e05bd4a7ceb71dc7403421268b7a13fef3255f059` |
+| `.ai-workspace/comments/codex/20261015T165424Z_EXPECTATIONS_I5_CONSOLIDATED_COMMON.md` | 13932 | `b5d9d09184f29111b41ce94489f9b19581101024bfe2769c81e8a5f89a63d051` |
+| `.ai-workspace/comments/claude/20261015T165833Z_HANDOFF_CLAUDE_I4_C66ED4E.md` | 2396 | `e4b74d608b418a8f67867f675a5516b7b95e8c0011f68f98e914d1e8c29ba852` |
+
+## C3-I5-01 proposed input snapshot
+
+Input commit B: `455ce5d32bc3dfb31ba5882d51311a549612de90`, on main. Recording R is the descendant commit that first contains this section. All 18 member hashes and byte counts are read from B: fourteen common source/entry members, two work records and two supporting commentary inputs. The recording ticket's current bytes are not input members.
+
+Standing: PROPOSED common source. The owner selected preparation of the construction synthesis; independent successor readback and exact-source ratification remain pending. I4 inputs and admissions retain their historical bytes and authority. This snapshot admits no tenant work.
+
+| Member relative to v3 | UTF-8 bytes | SHA-256 |
+|---|---:|---|
+| `specification/INTENT.md` | 9657 | `ea81598d30c59c5d7189a62b011ea50f9998462b5f3aa209c6c4a4406aa2971e` |
+| `specification/PRODUCT.md` | 63949 | `830dfae64b3a7b67a4f15a76bf9a2d21e0e12f1b59d940388c9c656c37537550` |
+| `specification/GOALS.md` | 25924 | `2861e8f8e372a57326e4594087f240262c5fc6a25e09d622efbd93b336631653` |
+| `specification/REFERENCE_FRAME_BASIS.md` | 8606 | `b76a946109c33ab93d2d7767d42ac3b8c5cdcf3e260d8560d6ac7aec79c7bc99` |
+| `specification/requirements/README.md` | 37847 | `0b51b607ed3b99c47045a54c0bdff5fdffb958d72f0e37faf8e3370f306ef09e` |
+| `specification/requirements/PRINCIPLES.md` | 14539 | `b6d9885d13e7aa319db3cef0db54bc5185dc884970581e7f5ca1b09da4eace3e` |
+| `specification/requirements/CAPABILITIES.md` | 4790 | `5636ade98ba1c664601ff8f905c864bfdd575a28b781093f1363651bc32f46c9` |
+| `specification/requirements/A_C_DEPENDENCY.md` | 8074 | `1095e3c5e63c25b12736de05121ae84cbee3095776cf924f90e4768d8d65c8b8` |
+| `specification/requirements/PREDECESSOR_CLAIMS.md` | 195384 | `2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a` |
+| `specification/conformance/README.md` | 20065 | `ed5610cf75938b070c8a566dedd2d2960a0676ef67c52522b2b65c44b29aba5b` |
+| `stdo_3.json` | 5020 | `e1ce90985492717d4784a0ca5e2426fb50f5f168547ec88ef72e58100836cb12` |
+| `AGENTS.md` | 4122 | `d62c8f1d302e021fa87cbbe43dfb73dcaab5bd0392977fe89325ec8956034549` |
+| `CLAUDE.md` | 4122 | `d62c8f1d302e021fa87cbbe43dfb73dcaab5bd0392977fe89325ec8956034549` |
+| `build_tenants/README.md` | 6049 | `bb775f0493f5e42a9d5fb23d76d72b9f4019e816460d86d0be8af8190d596f55` |
+| `.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md` | 114689 | `b8251531f1f54e8509fbd3b56aa49694a4559eb62b68b359c6cebc97e1a2a9ce` |
+| `.ai-workspace/tickets/active/T-002-c3-successor-construction.md` | 65411 | `93ef3580aa68536b9be1b608b56c6a650ff396c649b674bc3c9c3a305775ade4` |
+| `.ai-workspace/comments/codex/20261015T151552Z_STRATEGY_I5_RESOURCE_BOUNDED_CONSTRUCTION.md` | 10832 | `31fd487fc42e95fe63923abb29dc0d76b0e404c035c5b91426c6ed7ac27f464b` |
+| `.ai-workspace/comments/codex/20261015T153706Z_STRATEGY_I5_PRINCIPLES_RESEARCH_AND_DECISIONS.md` | 9800 | `8587937705d7e8e8394c676121808c21952920acd711563e92d2c1c22b61932a` |
+
 ## Iteration 4 staging
 
-The owner selects Codex's common I4 update, then both tenants' synthesis after ratification, then comparison for his choice of the next v3 basis. [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) owns this common preparation. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) disposes the staged questions against the current owners. The I4 specification remains proposed. Claude's readback at `73ad32e` confirms F1–F3 and reports no blocking defect on C3-I4-02. C3-I4-03 applies its Low F4 clarification and records protocol disclosure timing, pending exact-change readback and the product owner's ratification. No I4 tenant contract is admitted by this entry.
+The product owner ratifies C3-I4-03 through “ok i approve i4”, recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-4-ratification). Both synthesis lines use source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and the 25-member snapshot recorded at `a960032`. The [classification and bounded source review](../../comments/codex/20261015T054112Z_REVIEW_I4_DIVERGENCES_AND_TENANT_WORK.md) supplies the classified work below. Each line records a separate admission before tenant effects. The frozen snapshots below retain their historical standing at creation; this later decision supplies ratification.
 
 | Input | Exact subject |
 |---|---|
 | Closed common I3 input | `1fce537bc0bd7f47a1b66b34d8c053ef3dad2816` |
 | Codex preceding candidate and donor to Claude | handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2` |
 | Claude preceding candidate and donor to Codex | candidate `2beed8d`, handoff `96ccdcc`; its original common input was `355aa86` |
-| I4 common proposal | C3-I4-03 at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; proposed tuple recorded below. C3-I4-01 and C3-I4-02 remain historical |
+| Ratified I4 common input | C3-I4-03 at `3c4c503d291e7cb19ba21333ba6caf6167be77c9`; tuple recorded at `a960032`. C3-I4-01 and C3-I4-02 remain historical |
 
-The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is a proposed decomposition for both I4 contracts after ratification. It starts no tenant work and accepts no disposition. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
+The I3 inputs and contracts below are historical, unchanged, and retain their original standing. The following work list is the common decomposition for the separate I4 contracts. It accepts no disposition; each admitted activation selects its own bounded work. Each line records applicability and evidence at its own subject; an old review finding is checked against that subject before repair.
 
 | Work | Owning requirement | Codex work | Claude work | Observable return |
 |---|---|---|---|---|
@@ -50,7 +352,7 @@ The I3 inputs and contracts below are historical, unchanged, and retain their or
 | I4-08 Package and routing | Standalone successor and Product open decisions | Resolve CX-06 historical routing, CX-08 provisional version wording and CX-09 independence labeling at the current subject | Resolve stale construction standing after rebind; preserve standalone identity and packaging limits | Current entry routes and honest package identity; historical evidence remains bound to its old subject |
 | I4-09 Review and selection | Product six criteria, Candidate Comparison, conformance integrated checks | Account for all common discriminators, including CX-04; return frozen source and supporting evidence | Reassess all common discriminators and integrated claims on the successor, retaining the limits of the present map | Six-criterion and integrated results for both exact candidates; dependency-aware repair readback; owner choice or no qualified choice |
 
-The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. Same-family nonauthor assessment of received ports is the proposed independence arrangement; a donor's assessment of its own contribution is supplementary. This arrangement requires ratification with the common revision before it can bear acceptance.
+The proposed port lists are located in the [staged plan](../../comments/claude/20261015T042323Z_PROMPT_I4_STAGED_PLAN.md); they are assessed under the common contract, not copied mechanically. The ratified common revision assigns nonauthor assessment of received ports to the receiving line; its same-family exception and limits are recorded in the activation. A donor's assessment of its own contribution is supplementary. Exact review activations remain separate from this policy decision.
 
 Before actual-use activations, the owner selects resources; a nonauthor specifies the protocol and the common pen records it in one common record named here, with the same immutable version bound by both tenant contracts. Record the shared protocol body only after both candidate freezes; any earlier selection records its hash alone until then, and expected answers remain withheld from task actors. The Executive applies its declared envelopes. That shared protocol has not yet been selected. D5's no-trial option leaves the affected candidate ineligible for a qualified comparison result and does not qualify its peer. The common source sets no arbitrary universal numeric cap. Predecessor replacements, packaging/identity, the UX compliance conflict, the separately selected categorical thread and release decisions keep their existing owners. Ratifying I4 does not decide those individual replacements.
 
@@ -61,6 +363,8 @@ Review observations, evaluated against the owning Product: I4-04 supplies one co
 Read the proposed D6 finding count with the impacts and coverage Product requires; fewer but materially more consequential findings are not an automatic win. Any unresolved tradeoff remains the product owner's decision. The port lists remain inputs with reasoned exclusions, not mandatory copying.
 
 A subagent is a possible actual-use mechanism under criterion 4, not proof of fresh context or context fit by its label. The selected activation must establish no inherited private or unselected repository context, disclose supplied and acquired inputs, support the active-context bound, and retain independent expectations and assessment. Session-token use remains a resource cost; any external spend depends on the selected mechanism and is not established by this review. D5 and the actual trial remain unselected. No external call or new subagent is activated by this correction.
+
+The Codex synthesis is admitted as [EC-CODEX-I4-01](T-002-CODEX-c3-successor-construction.md#current-iteration-4-contract), with rebind and work mapping as its first bounded activation. The Claude line records its own admission; this common record neither creates nor assesses that peer activation.
 
 ## C3-I4-03 proposed input snapshot
 

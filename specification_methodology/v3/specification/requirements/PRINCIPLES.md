@@ -76,7 +76,24 @@ These six commitments organise the independent deep attempts. The current [pilla
 
 **Review question/falsifier.** Does a successful parse, valid map or historical judgment acquire unsupported semantic acceptance or authority? Can an unchanged judgment rename its subject?
 
+## Universal Construction Synthesis
+
+The [universal construction model](../PRODUCT.md#universal-construction-model) combines these commitments to govern movement from observed A to acceptable Z under finite resources. It is a synthesis of their relations, not an additional independent axiom.
+
+| Commitment | Contribution to construction |
+|---|---|
+| P1 interpretation | Distinguish the required conditions, observed state and predictions about the effects of an action. Preserve the meaning needed to compare them. |
+| P2 purpose | Select Z and the criteria by which a strategy and realised outcome are adequate. |
+| P3 identity and state | Bind the persistent subject, current observations and dependencies from which work continues. |
+| P4 composition | Carry outer obligations through bounded steps, refinement and the joins between them. |
+| P5 finite capacity and total handling | Bound acquisition and work; account for resource tradeoffs, recursive progress, recovery and truthful stops. |
+| P6 evidence and authority | Establish what the results support and who can change the model, act or accept delivery. |
+
+The [construction requirement](README.md#universal-construction-requirement) states the obligations this synthesis places on the method. Finite resources motivate bounded work; purpose, meaning, identity, compatibility, evidence and authority retain their own premises. Strategy selection and domain controls are choices within those obligations. Feedback, a useful model and locally valid steps do not by themselves prove reachability, stability, optimality or termination.
+
 ## Proposed Formalisation And Open Claims
+
+[Assurance of Construction](ASSURANCE.md) makes the synthesis's interpretation, composition and evidence relationships explicit as formal obligations. It connects assertions to their source meaning and observations, and binds reuse to validity after change. These relationships apply P1–P6; they do not turn agreement into truth or introduce an additional independent axiom.
 
 Retain U (purpose), O (object), Σ (common WHAT), 𝒜 (algorithmic descriptions), ℐ (informational interpretations) and 𝒞_H (computational realisations over a declared execution architecture H). H may comprise people, machines or a combination, with their resources and interactions, under the [build-tenant binding requirement](README.md#build-tenant-binding-requirement).
 

@@ -1,0 +1,57 @@
+{
+  "kind": "stdo.i4.review.package-observations",
+  "subjects": {
+    "common": "3c4c503d291e7cb19ba21333ba6caf6167be77c9",
+    "claude": "8a0ea226e8662695f8c0a79e56be7416a21549b0",
+    "codex": "62318d3b0be35985a0397aa39daee0ec8836eabc",
+    "codex_package": "903f1198ac038b05c941c0cbc2abeceb9b3978fd"
+  },
+  "boundary": "Frozen Git archive extracts; raw UTF-8 root Markdown standards only for size comparison. Hashes authenticate bytes, not meaning or actual use.",
+  "checks": {
+    "claude_frame_files": 12,
+    "claude_frame_pin_failures": 0,
+    "claude_frame_owner_references": 195,
+    "claude_owner_pin_failures": 0,
+    "codex_package_members": 90,
+    "codex_package_pin_failures": 0
+  },
+  "source_sizes": {
+    "claude": {
+      "glob": "standards/*.md",
+      "files": 23,
+      "bytes": 1807433,
+      "standards_readme_bytes": 28087
+    },
+    "codex": {
+      "glob": "successor/standards/*.md",
+      "files": 18,
+      "bytes": 1151887,
+      "standards_readme_bytes": 8367
+    }
+  },
+  "claude_additional_carriers": {
+    "a_c_i3": {
+      "files": 35,
+      "bytes": 835214
+    },
+    "standards_frames": {
+      "files": 13,
+      "bytes": 1289750
+    }
+  },
+  "reproduction": "Read FRAME_INPUTS.json from the Claude commit, compare each frame byte count/SHA256 and each routes[].owner_sha256 with its named Git blob. Read Codex CANDIDATE.json, compare members[].bytes/sha256 with the named successor blob. Source sizes sum raw Git blobs directly below the respective standards directory with .md suffix; no frames, compressions or templates are included.",
+  "limits": [
+    "Different document boundaries and coverage make size an observation, not a semantic-reduction or usability score.",
+    "Frame body pins and owner pins were checked; this parent check does not independently prove verbatim section assembly.",
+    "No runtime, paid model or actual-use trial was run for this artifact."
+  ],
+  "concurrent_successor": {
+    "claude": "ededad1f2626560a48dc88caa07906004ba5b02d",
+    "changes": [
+      "qualification/C3-ITER4/trial/expectations/TT-03.md",
+      "qualification/C3-ITER4/trial/expectations/TT-04.md",
+      "qualification/C3-SYNTHESIS/LEDGER.md"
+    ],
+    "applicability": "The inspected source, interpretation and trial-design bytes remain unchanged. Review subject remains 8a0ea22."
+  }
+}
