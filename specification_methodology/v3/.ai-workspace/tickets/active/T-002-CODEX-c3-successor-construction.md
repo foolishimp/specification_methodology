@@ -51,6 +51,8 @@ Admission — 2026-10-16T15:11:14Z: `admitted`. Exact contract from its heading 
 
 All three intake evaluations use the contract's 192 KiB presented-source envelope and 20-minute progress checkpoint, no external spend or further delegation. Report measured acquisition/time boundaries, unknown active context and a concise closed return with exact paths and suggested implementation territories. These evaluations decide construction work, not candidate acceptance. The Executive consumes their returns; subsequent Writers receive recorded disjoint grants. Historical I4 and earlier contracts below remain byte-identical.
 
+2026-10-16T15:12:41Z — I5-GIT-01 returns `satisfied`: new tenant branch `tenant/codex/c3-iteration-5` at `11163991fd8525c98bdd94a36c71a2cfeb15a403` descends from main admission `2ec695f6e4e53a4a2f1f34dba4a66360271dbabb` and receives the original I4 branch. The own tenant tree remains `d9ff05e371176399dd46bf300d39fd3c6c98cbbd`, common source/work records equal the admission checkpoint, sparse cones are unchanged and the worktree is clean. No candidate text changed. The Executive consumes this result and activates the three already-admitted read-only intake evaluations on the exact own preimage with common B `4c340f7`; they return before any candidate Writer begins.
+
 ## Current Iteration 4 Contract
 
 The product owner ratifies C3-I4-03 through “ok i approve i4”, continuing the selected three-stage work. This contract binds the Codex synthesis line; it grants no effect in Claude's ticket or worktree. The preceding return is handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, with package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2`. Historical I3 admissions below remain byte-identical.
