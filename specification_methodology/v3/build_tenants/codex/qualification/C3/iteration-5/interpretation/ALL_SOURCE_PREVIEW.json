@@ -1,0 +1,83 @@
+{
+  "kind": "stdo.i5.account-preview",
+  "valid": true,
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "source_preimage": "11163991fd8525c98bdd94a36c71a2cfeb15a403",
+  "prior_account_sha256": "52dc3162a54bb588bebae98b777ae9b5885d86c396104a0012e0ed33e1b68453",
+  "patches": [
+    {
+      "path": "source/core/ACCOUNT_PATCH.json",
+      "sha256": "68cca2fee6d1727a8d026a05b5134058adb4540796aa74a843d0470bd3c59d76"
+    },
+    {
+      "path": "source/delivery/ACCOUNT_PATCH.json",
+      "sha256": "3c626648c7731effa6e0c1f3de317f01c28be85ee52a44d76e85d35aa7c95a8c"
+    },
+    {
+      "path": "source/transform/ACCOUNT_PATCH.json",
+      "sha256": "837f67a4c4f15ffb3889f937098e5ad99f2dd943cc3b4b8e8779c5a103aec97e"
+    }
+  ],
+  "selected_source_sha256": {
+    "standards/FOUNDATIONS.md": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+    "standards/DESIGN_MODULE_METHOD.md": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321",
+    "standards/REFERENCE_FRAME_METHOD.md": "ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d",
+    "standards/RELEASE_METHOD.md": "be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de",
+    "standards/SPEC_METHOD.md": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+    "standards/TICKET_METHOD.md": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
+    "standards/WORLD_MODEL_METHOD.md": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f",
+    "standards/TRANSFORMATION_LIBRARY.md": "5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10",
+    "standards/STDO_REFERENCE_FRAME_BASELINE.md": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067"
+  },
+  "tool_sha256": {
+    "preview_account.py": "798958eae05469e669bdb49000ae1ebb7c97a0a7784042557baea96c3d0537e1",
+    "reconcile_account.py": "14498359d1de6c73e0afdb32e93c646258c79ccd87d9f41cf11c7c90d718570f",
+    "account_protocol.py": "3bdb1c01107c952a4970bcc6452448b86cc4e5052771d14b8b10ca1c8317cf12",
+    "build_interpretation.py": "a35bcb325fa683600e7c82d72746a3b17e5ffd51a398342c51f6ffd98cf458fe",
+    "context.py": "fbaec25851863483f5d0441f552a561195420b98c79d7cc3f4381980366df270"
+  },
+  "rows": 708,
+  "new_rows": [
+    "FOUNDATIONS.assertions-and-observations",
+    "FOUNDATIONS.change-impact-and-evidence-retention",
+    "FOUNDATIONS.construction-assurance",
+    "FOUNDATIONS.parallel-assurance-and-provenance",
+    "FOUNDATIONS.preservation-obligations",
+    "FOUNDATIONS.risk-and-assurance-selection",
+    "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse"
+  ],
+  "updated_rows": [
+    "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+    "FOUNDATIONS.bounded-construction",
+    "FOUNDATIONS.core-contract-derivations",
+    "FOUNDATIONS.identity-state-and-evidence",
+    "FOUNDATIONS.judgment-and-authority",
+    "FOUNDATIONS.orthogonal-descriptions",
+    "FOUNDATIONS.stdo-foundations",
+    "FOUNDATIONS.typed-composition-and-conservation",
+    "FOUNDATIONS.workspace-and-context",
+    "REFERENCE_FRAME_METHOD.evidence",
+    "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation",
+    "RELEASE_METHOD.qualification-and-recovery",
+    "SPEC_METHOD.evidence-rules",
+    "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001",
+    "SPEC_METHOD.testing-strategy-taxonomy",
+    "SPEC_METHOD.transition-evidence-and-proof-cadence",
+    "SPEC_METHOD.universal-intake-triage",
+    "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation",
+    "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index",
+    "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization",
+    "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+    "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+    "TICKET_METHOD.condition-based-closure-and-reuse",
+    "TICKET_METHOD.test-case-authority",
+    "TRANSFORMATION_LIBRARY.composition-law",
+    "TRANSFORMATION_LIBRARY.conjoin",
+    "TRANSFORMATION_LIBRARY.contract-application",
+    "TRANSFORMATION_LIBRARY.evaluate",
+    "TRANSFORMATION_LIBRARY.recovery-law",
+    "WORLD_MODEL_METHOD.4-assure"
+  ],
+  "changed_support_requiring_assessment": [],
+  "standing": "Authored protocol, source-pin and reference compatibility only; no semantic fidelity or current publication."
+}
