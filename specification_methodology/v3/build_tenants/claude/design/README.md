@@ -47,5 +47,17 @@ Iteration 4 runs on the ratified common input C3-I4-03 (common
 specification at `3c4c503`, merged inward at `7c60f32`), with the Codex
 candidate at `fb855df` (package `d490dd6`) as donor. Its record is in
 [qualification/C3-ITER4/](../qualification/C3-ITER4/PLAN.md): the plan,
-the [rebind](../qualification/C3-ITER4/REBIND.md) and the returns. The
-iteration 3 records above are historical.
+the [rebind](../qualification/C3-ITER4/REBIND.md) and the returns.
+
+Iteration 5 runs on the ratified common input C3-I5-06 (common
+specification at `4c340f7`, merged inward at `0a05106`), with the frozen
+Codex iteration 4 candidate (return `9a93c5a`, package `903f119`) as
+donor and this line's frozen iteration 4 candidate `c66ed4e` as the
+preceding candidate. Its record is in
+[qualification/C3-ITER5/](../qualification/C3-ITER5/PLAN.md): the plan,
+the [rebind](../qualification/C3-ITER5/REBIND.md) and the returns. Owner
+placement decided at I5-01: the construction relation is stated at
+ACTIVATION §1, the construction synthesis of the commitments at
+FOUNDATIONS §3, and the assurance relations at FOUNDATIONS §4; the
+consumers are listed in the rebind. The iteration 3 and 4 records above
+are historical.

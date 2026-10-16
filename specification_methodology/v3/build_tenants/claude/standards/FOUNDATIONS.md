@@ -525,6 +525,36 @@ UP-004 ([IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up
 [RF-006](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation),
 [RF-007](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#rf-007-semantic-evidence-and-verdict-separation).
 
+### Construction synthesis
+
+The commitments together govern movement from an observed current state
+to an acceptable destination under finite resources. This is a synthesis
+of their relations, stated once so that every consumer of the construction
+relation ([ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation))
+can see which commitment grounds each part. It is derived, not a further
+commitment, and has the standing of a consequence under Foundation to law
+below (P6). It is law carried from the common requirements' synthesis of
+their principles.
+
+| Commitment | Contribution to construction |
+|---|---|
+| P0 Bounded construction | the outer contract is realised through steps whose contexts fit the actors' envelopes; the actor's internal path within a step is its own |
+| P1 Interpretation | the required conditions, the observed state and the predictions about an action's effects are different accounts; the meaning needed to compare them is preserved |
+| P2 Purpose | Z is selected with the criteria by which a strategy and a realised outcome are adequate; work with no route to Z is unjustified |
+| P3 Identity and state | the persistent subject, its current observations and its dependencies, from which work continues, stay distinct from any account of them |
+| P4a Typed composition | outer obligations are carried through bounded steps, refinement and the composition boundaries between them |
+| P4b Conservation of step-produced facts | what a step produced and cannot re-acquire is conserved through the loop of observation, correction and reuse |
+| P5 Totality | acquisition and work are bounded; resource tradeoffs, recursive progress, recovery and truthful stops are accounted for, and an undecided outcome is reported as undecided |
+| P6 Justification and authority | what the results support, and who may change the model, act or accept delivery, are established and not minted |
+
+The construction relation states the obligations this synthesis places on
+construction. Finite capacity motivates bounded work; purpose, meaning,
+identity, compatibility, evidence and authority retain their own
+premises. Strategy selection and domain controls are added choices within
+those obligations, each with its owner. Feedback, a useful model and
+locally valid steps do not by themselves prove reachability, stability,
+optimality or termination (P5, P6).
+
 ### Foundation to law
 
 A family of deciding rules is a group of related rules that decide
@@ -599,7 +629,7 @@ table (P1, P6).
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
 | F1 | Frames and context | [REFERENCE_FRAME §1](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | REFERENCE_FRAME; ACTIVATION §2; FOUNDATIONS §2 Frame objects, Authority kinds, Disjointness and independence, The frame tuple | 1–9 |
-| F2 | Transitions, steps and configuration | [ACTIVATION §1](ACTIVATION.md#1-the-step) | ACTIVATION §1, §4; SPEC_METHOD §8 except delivery priority | 1, 3, 4, 5, 6, 7, 9 |
+| F2 | Transitions, steps and configuration | [ACTIVATION §1](ACTIVATION.md#1-the-step) | ACTIVATION §1 including the construction relation, §4; SPEC_METHOD §8 except delivery priority | 1, 3, 4, 5, 6, 7, 8, 9 |
 | F3 | Results and their combination | [FOUNDATIONS §4 Results](#results) | FOUNDATIONS §4, and the result grounds of §2 Imports between members; ACTIVATION §3; RF-012; AC-007; EVALUATION §4 | 3, 4, 6, 7, 9 |
 | F4 | Work state, resumption and reuse | [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) | ACTIVATION §5, §7 | 2, 4, 5, 6, 7, 9 |
 | F5 | Proportionality and cost | [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) | ACTIVATION §6; SPEC_METHOD §8 delivery priority | 1, 4, 5, 6, 7, 8, 9 |
@@ -619,13 +649,16 @@ table (P1, P6).
 | F19 | Traversal occurrence | [TRAVERSAL_OCCURRENCE, Position](TRAVERSAL_OCCURRENCE.md#position) | TRAVERSAL_OCCURRENCE | 1, 2, 3, 4, 6, 7, 8, 9, 10 |
 | F20 | UX | [UX §1](UX.md#1-position) | UX | 1–9 |
 | F21 | World model | [WORLD_MODEL §1](WORLD_MODEL.md#1-position) | WORLD_MODEL | 1, 2, 3, 5, 6, 8, 9, 10 |
+| F22 | Assurance relations | [FOUNDATIONS §4 Assurance relations](#assurance-relations) | FOUNDATIONS §4 Preservation through construction, Assertions and observation, Parallel derivation and mutual assurance, Quantified assurance, Change impact and evidence reuse | 2, 3, 4, 6, 7, 9 |
 
 Members and sections with no family table, each with its reason:
 
 - FOUNDATIONS §1, the ontology table of §2, and §3: they state the
   vocabulary of standing, the objects the commitments are about, and the
   commitments themselves with this format, which every family table cites
-  as its premises. §2 Work boundary is the object that P0's boundary
+  as its premises. §3 Construction synthesis relates the commitments to the
+  construction relation that ACTIVATION §1 states and decides no outcome of
+  its own. §2 Work boundary is the object that P0's boundary
   commitment states. §2 Accounts of a construction states a distinction
   and decides no outcome of its own; family F10 traces its use at
   SPEC_METHOD §11. FOUNDATIONS §5: its hypotheses are not law and decide
@@ -702,9 +735,10 @@ requires, as far as each part applies to it:
   [AC-020](AXIOMATIC_CALCULUS.md#ac-020-layer-and-release-separation)'s,
   and what a structural check of the representation establishes is
   [EVALUATION §2](EVALUATION.md#2-separation)'s;
-- it names its evidence class, the kind of support it rests on: mechanically
-  checked, established by mathematical argument, tested against an
-  independently specified oracle, or unresolved.
+- it names its supporting evidence and its scope, distinguishing mechanical
+  checks, mathematical arguments and tests against independently specified
+  oracles; what that evidence leaves unresolved is recorded separately, not
+  as a fourth kind of support.
 
 Whether a claim asserts conformance, an equivalence or a map's preservation
 of structure, and how those claims differ, is the equivalence ladder of
@@ -718,15 +752,15 @@ conserves
 which requires a model claiming functor laws to define its source and
 target categories and prove identity and composition preservation, and
 asserts no categorical functor itself. Purpose and material relation of
-arrow equality, associativity, the representation in a_c and the evidence
-class: a categorical statement is useful only where its constructions
+arrow equality, associativity, the representation in a_c and the supporting
+evidence: a categorical statement is useful only where its constructions
 preserve meaning, and these are what preservation must show (P1, P6).
 
 Formal fragment, hypothesis H1, categorical structure: with 𝒜 the free category on typed primitives, ℐ the selected
 carrier sets with total functions and 𝒞_H pairs of functions with additive
 costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H would be
-functors, S neither faithful nor an equivalence. Its evidence class is
-unresolved: no rc.2 clause and no argument in this corpus establishes it,
+functors, S neither faithful nor an equivalence. It has no supporting
+evidence and the whole claim is unresolved: no rc.2 clause and no argument in this corpus establishes it,
 S and R_H are not defined on arrows, and no preservation of identities or
 composition is proved. Until its objects, arrows, arrow equality,
 identities and composition are written and preservation is proved, the
@@ -1048,6 +1082,348 @@ Refinement).
 Provenance: rc.2 RF #result-conjunction and
 #applicability-and-required-results, and the combination rule of
 conservation accounting.
+
+### Assurance relations
+
+The relations below connect construction to the assertions, observations
+and evidence that support claims about it. They are the shared owner for
+the preservation, assertion, provenance, quantified-assurance and reuse
+obligations in this corpus; ACTIVATION §4 and §7, EVALUATION §1 and §3,
+ASSURANCE §3, §10, §11 and §14, RELEASE §8 and §9 and the a_c
+interpretation apply them and state no second relation (P6). They are law
+carried from the common assurance requirement. The notation states proof
+obligations; writing an implication does not discharge it.
+
+Foundation to law. This family, assurance relations, covers the five
+subsections that follow. Its instance premises are: (a) a construction
+with its basis Γ, the governing basis and material assumptions bound under
+ACTIVATION §1; (b) a declared domain Ω of cases, each with the inputs,
+behaviour and environment material to an obligation; (c) a checker with
+declared observations and an admitted evaluation relation. They are
+conditions of the situations the family governs, not commitments.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P4a (independent), P1 (independent), P6 (independent); instance premise a | By P4a a composite exists only where each boundary is compatible, by P1 a relation written down is not thereby discharged, and by P6 a preservation claim is a claim on evidence, so each claimed step states its domains, relation and property, the implication is a proof obligation, and a relation covering completion alone says nothing about refusal, failure, interruption or unknown effects | [Preservation through construction](#preservation-through-construction) | the adequacy relation and bound of an approximate step: the owner of the step's law | 3, 4, 9 |
+| P4a (independent), P2 (independent), P6 (independent); instance premise a | By P4a the composite's property follows only through compatible boundaries, by P2 the final property matters only through its connection to Z, and by P6 that connection is argued, not assumed, so an end-to-end argument establishes the initial condition, each step's premises, compatibility at each boundary and the connection to Z, and preservation is distinct from progress and termination | [Preservation through construction](#preservation-through-construction) | the composition law for concurrency, branches and external effects: the owner of the construction's design | 3, 4, 7 |
+| P1 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premises a, b | By P1 an assertion's predicate is distinct from the obligation it is derived from, by P6 passing a necessary condition establishes no more than that condition, and by P5 a conjunction's coverage is a claim of its own, so each assertion states whether its predicate is the obligation, a necessary condition or part of a sufficient conjunction, conditional on Γ and Ω | [Assertions and observation](#assertions-and-observation) | the declared domain Ω and the interpretation: the owner of the obligation and the assessor's activation | 6, 9 |
+| P3 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P3 two admissible cases can differ while their observations agree, by P1 agreement of observations is not agreement of meaning, by P5 an undecidable case is `indeterminate` and never `satisfied`, and by P6 soundness covers every admitted conclusion, so a checker is sound only where its observation separates the cases, and otherwise acquires evidence, narrows its scope or returns `indeterminate` | [Assertions and observation](#assertions-and-observation), Observation sufficiency | the checker's admitted relation T and its observation π: the owner of the assessment frame | 6, 7, 9 |
+| P6 (independent), P1 (independent), P4a (independent); instance premises a, c | By P6 an expected answer is justified by its derivation from the obligation and an execution by its record, by P1 a copied answer carries no independent interpretation, and by P4a shared dependencies compose into shared causes of error, so assertion provenance and execution provenance are both required, agreement among paths with shared causes is not independent evidence, and disagreement requires diagnosis | [Parallel derivation and mutual assurance](#parallel-derivation-and-mutual-assurance) | which paths are run and compared: the strategy's owner; the authorship of ported material: EVALUATION §3 and the Cross-Synthesis rule of the owning Product | 6, 9 |
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P1 (independent); instance premise c | By P6 a number is a claim on its model and evidence, by P5 an unsupported estimate stays unknown, and by P1 a probability over outcomes is distinct from the truth of the predicate, so a quantified assurance claim states its population, priors, likelihoods, shared causes and calibration limits, and no threshold is imposed by this member | [Quantified assurance](#quantified-assurance) | the risk policy and any threshold: the actor exercising the admitted work authority, under the adopting Product | 9 |
+| P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P3 a changed dependency changes what an earlier observation applies to, by P4b retained evidence is conserved with its subject, by P5 unknown impact leaves the dependent assurance undecided, and by P6 retention is justified and not assumed, so validity dependencies are kept apart from justification links, affected checks are selected conservatively, and evidence is retained only under its validity conditions while mandatory gates stay applicable | [Change impact and evidence reuse](#change-impact-and-evidence-reuse); [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), outside this member | the representation of dependencies and the selection model: the realisation; mandatory gates: RELEASE §8 and the adopting Product | 2, 9 |
+
+### Preservation through construction
+
+A construction binds its starting state A and required outcome Z under
+[ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation),
+with its governing basis and material assumptions, written Γ. The
+predicate for Z includes required effects and trace properties where
+these matter.
+
+For a sequence of transformations, let `X_i` be the state or trace domain
+at boundary i, `F_i ⊆ X_i × X_(i+1)` the declared transition relation, and
+`P_i` the property to retain or establish there. A claimed preservation
+step has the form:
+
+```text
+For all x, x':  P_i(x) and F_i(x, x')  implies  P_(i+1)(x').
+```
+
+The relation accounts for the outcomes, effects and assumptions material
+to the claim. A relation covering successful completion alone supplies no
+claim about refusal, failure, interruption or unknown effects; those
+cases follow Results above and the result, authority and recovery
+contracts of ACTIVATION §3 and §5. The real execution's conformance to
+the relation is a separate obligation (P4a, P1, P6).
+
+An end-to-end argument establishes the initial condition, each step's
+applicable premises, compatibility at each composition boundary, and the
+connection from the final property to Z. The preceding postcondition
+establishes the next precondition, or the missing condition is acquired
+and justified. Concurrency, alternative branches and external effects
+require their applicable composition law; a sequential drawing does not
+establish one. Local success alone establishes neither composition
+compatibility nor Z. Preservation is distinct from progress, termination
+and the availability of a suitable next step (P4a, P2, P6).
+
+Exact transformations preserve the declared meaning. Approximate
+transformations state their adequacy relation and an established bound
+for the complete composition; local tolerances cannot be assumed to add or
+to remain unchanged (the demonstration above, preservation per layer). A
+change to the governing outcome or meaning follows its owner and the
+successor rules of SPEC_METHOD §4 and RELEASE §9 (P1, P6).
+
+The algorithmic account states the required operation, the informational
+account the meaning and distinctions retained, and the computational
+binding how work and observations are realised
+([§2 Accounts of a construction](#accounts-of-a-construction)). A claim
+across these accounts identifies its maps and preservation obligations;
+execution by a person, a machine or a mixed arrangement does not
+discharge them by itself. A commuting diagram, functor or equivalence
+claim requires the categorical demonstration above (P1, P6).
+
+### Assertions and observation
+
+For a selected source obligation r, let `Q_r = interpret(r, Γ, Ω)` be its
+required predicate over the declared domain Ω of cases. The interpretation
+retains the obligation's scope, conditions, exceptions and permitted
+alternatives. A source identifier or digest authenticates the selected
+text; it does not prove the interpretation faithful (P1, P3).
+
+An assertion targets a predicate `q_t` and states whether that predicate
+is the full obligation or a narrower claim. The directions differ:
+
+```text
+Q_r implies q_t                   : q_t is a necessary condition of Q_r.
+q_t implies Q_r                   : establishing q_t is sufficient for Q_r.
+(q_1 and ... and q_n) implies Q_r : the stated conjunction is sufficient.
+```
+
+These implications are conditional on Γ and Ω. Passing a check of a
+necessary condition does not establish the full obligation. A conjunction
+requires its own coverage and compatibility argument; a collection of
+passing tests does not supply it by its count (P1, P6, P5).
+
+Let `π: Ω → O` describe the observations available to a checker and
+`T ⊆ O × R` its admitted evaluation relation, where R is the core result
+algebra of Results above. A deterministic checker is a functional special
+case. A human or probabilistic checker can admit different conclusions on
+the same observations; a universal soundness claim covers all admitted
+conclusions, not a favourable selected run. `indeterminate` is the core
+judgment whose admissible evidence cannot decide the predicate (Results).
+It is distinct from an evaluation that was not performed, and from work
+or coverage that remains unresolved, which is a state of the work
+([ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition),
+[§5](ACTIVATION.md#5-work-state-and-restart)) and not a judgment value.
+Writing `sat` and `fal` for the satisfied and falsified judgments about
+`q_t`:
+
+```text
+For every s in Ω:
+  (π(s), sat) in T  implies  q_t(s).
+  (π(s), fal) in T  implies  not q_t(s).
+```
+
+The candidate identifies what supports each claimed direction and where
+it is unresolved. A relation admitting both a sound satisfied judgment
+and an indeterminate judgment need not always decide the case. A
+restricted deterministic model retains its scope, and an actual checker
+requires its own conformance account. An observed test pass remains an
+observation while the oracle's fidelity is unestablished; it does not
+become established satisfaction of the source obligation, and a reported
+failure is treated the same way. The observation binding itself needs
+support: an idealised π does not establish that the instrument, actor or
+execution acquired the required facts correctly. A probabilistic claim
+uses its declared distribution over outcomes under Quantified assurance
+below; the relation alone supplies no probabilities (P6, P5, P1).
+
+Observation sufficiency. A checker that always decides `q_t` correctly
+from π alone requires:
+
+```text
+For all s, s' in Ω:
+  π(s) = π(s')  implies  q_t(s) = q_t(s').
+```
+
+If two admissible cases have the same observation but opposite truth
+values, that observation cannot support a sound complete decision between
+them; further evidence, a justified narrower scope or an indeterminate
+judgment is required. In a classical set model this condition permits a
+predicate on the image of π; it establishes neither an executable decision
+procedure nor its cost. Unknown effects and unavailable observations
+retain their distinctions from falsehood and from an evaluation that was
+not performed (Results) (P3, P1, P5, P6).
+
+### Parallel derivation and mutual assurance
+
+Construction and assurance can follow different paths from a common
+obligation. For `requirement → refinement → realisation`, assertions
+derived from the requirement check its applicable conditions in the
+realisation; assertions derived from the refinement check its more
+detailed obligations there. Acceptance tests and build-level tests can
+instantiate these paths
+([ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route)); the
+roles identify the selected sources and subject in this example and
+prescribe no stage names or test classes (P1, P6).
+
+An expected result or acceptance predicate has assertion provenance: the
+owning obligation, its interpretation, assumptions, derivation and shared
+dependencies, which give it meaning. An execution has execution
+provenance: the actual checker, exact subject, applicable environment,
+inputs, observations and result. Both are needed for the claims they
+support; execution records alone cannot establish that the expected
+answer follows from the requirement. Authentication of a returned
+assessment, which binds a result to its producer, subject, basis and
+evidence ([EVALUATION §3](EVALUATION.md#3-independent-assessment)), is a
+third thing and establishes neither provenance (P6, P3).
+
+An implementation-derived test can be useful for regression or a stated
+local property. Repeating the implementation's decision supplies no
+independent justification of its fidelity to an upstream obligation. A
+shorter assertion path can be easier to inspect and execute than
+construction; that is a supported design claim for the selected path, not
+a guarantee of correctness, coverage or independence. Valid distinct
+implementations can produce different outputs within the same acceptable
+relation; equality of outputs is not always the oracle (P1, P6).
+
+Mutual assurance compares independently justified constructions or
+assertions within their stated scope. Agreement is compatible with both
+being correct and with a shared error; disagreement requires diagnosis
+([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation))
+and does not identify the faulty party by itself. Assurance accounts for
+shared specifications, interpretations, tools, fixtures, observations,
+copied material and other material failure causes. Different actors,
+model families or codebases do not establish statistical independence.
+Porting retains authorship and common dependencies (EVALUATION §3 and the
+Cross-Synthesis rule of the Product that owns this corpus). Repeating
+evidence does not create a new independent observation. Agreement with
+an incorrect common model cannot validate that model against the desired
+real-world outcome; validation of the governing expectations uses its
+declared purpose and external observations through their owners, and
+proposed corrections preserve counterexamples and follow the applicable
+change authority ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management))
+(P4a, P6, P1).
+
+These relationships are recoverable from the existing sources, bindings
+and evidence carriers. Shared derivations can be recorded once and applied
+to a declared family. No new per-test document, parallel ledger, fixed
+number of reviewers or prescribed provenance format is required (P6).
+
+### Quantified assurance
+
+The actor exercising the admitted work authority selects the required
+assurance for the stated risk, obligations and resource limits. That
+selection identifies material failure consequences, coverage and
+uncertainty, and the conditions for action or acceptance. Additional
+evidence strengthens a claim only within its applicability and dependence
+account; neither a test count nor an assumed preference for more checks
+substitutes for that account (P6, P5).
+
+Where quantified assurance is claimed, its model states the population or
+uncertainty being modelled, prior information, likelihoods, shared causes
+and calibration limits. For a specified violation event V and evidence
+event E:
+
+```text
+P(V | E, Γ) =
+  P(E | V, Γ) P(V | Γ)
+  / [P(E | V, Γ) P(V | Γ) + P(E | not V, Γ) P(not V | Γ)].
+```
+
+The denominator is nonzero. E can include agreement, disagreement or other
+observations; its likelihood under both faulty and non-faulty conditions
+matters. The formula supplies no missing likelihood or prior, and a
+numerical posterior is no stronger than its model and evidence.
+
+Let `M_i` mean that check i misses V under the specified evaluation
+conditions. The joint miss probability factors exactly by conditional
+probabilities:
+
+```text
+P(M_1 and ... and M_n | V, Γ)
+  = product over i of P(M_i | V, Γ, M_1, ..., M_(i-1)).
+```
+
+Conditional terms require defined conditioning events; zero-probability
+prefixes are handled without inventing a conditional value. Replacing
+those terms with `P(M_i | V, Γ)` requires conditional independence under
+the declared model. One minus the joint miss probability is the chance of
+at least one detection under those same conditions; it is not the
+probability that the whole product is correct. Agreement does not
+necessarily increase confidence when shared causes or new information
+change the model (P6, P1).
+
+Calibration from sampled cases or injected defects supports only its
+justified relationship to operational failures. Unsupported numeric
+confidence remains unresolved; qualitative evidence and stated limits
+remain usable within the governing policy. No universal probability
+threshold is imposed and no probability estimate is required for every
+test. Required safety, authority and acceptance conditions cannot be
+waived by a cheaper assurance plan (P5, P6).
+
+### Change impact and evidence reuse
+
+Assertion justification and evidence validity are related but distinct
+dependency relations. The former explains why a check expresses an
+obligation. The latter identifies what can affect the check's behaviour,
+conclusion or applicability: implementation, shared libraries, data,
+instruments, environments and governing assumptions. A
+requirements-to-test link alone is not a complete impact model (P3, P6).
+
+Let Δ be a change to material facts or dependencies, including a newly
+discovered invalid assumption. Let `I(Δ)` conservatively cover the changed
+facts and their affected dependents. For each check t, let `D*(t)` cover
+the transitive dependencies material to its assertion, execution and use
+of evidence. A candidate selection is:
+
+```text
+S_Δ = { t : D*(t) intersects I(Δ) }.
+```
+
+The representation of these dependencies is the realisation's choice; no
+exhaustive graph database is required. Excluding a check requires
+supported coverage of its material dependencies and a reason the change
+cannot invalidate the intended reused claim; an absent edge is not
+evidence of non-influence. Unknown impact widens reassessment or leaves
+the dependent assurance unresolved. New obligations or cases create
+assessment work even when no existing check covers them. A mandatory
+gate, an assessment that the governing policy requires irrespective of
+selection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable
+(P5, P6).
+
+For a new subject and basis, let `E_old` be the existing evidence records,
+`E_reassessed` the evidence newly produced by reassessment, and `E_new`
+the resulting account. Reassessment includes the checks selected in
+`S_Δ`, the assessment of new obligations and the applicable mandatory
+gates. Selection alone produces no execution evidence; failed and
+indeterminate results retain their standing:
+
+```text
+E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
+```
+
+Retention establishes the material validity conditions on the new
+subject: the claim and its scope still apply, its assertion and
+observation basis remain justified, and the affected dependencies are
+unchanged or covered by an established preservation relation. The
+original evidence keeps its original subject; a new applicability
+relation permits its use. A changed hash alone establishes neither
+invalidity nor equivalence. Known failures, unresolved coverage and their
+citations remain visible until a supported repair, a reassessment or an
+authorised change of obligation disposes of them (P3, P4b, P6).
+
+If a governing requirement changes, dependent expectations may need
+authorised revision as well as new execution. A correction in a
+refinement revisits the affected obligations and their links to both the
+requirement and the realisation. A correction in the realisation
+reassesses the affected implementation and integration under the
+still-applicable obligations. These are semantic dependency boundaries,
+not file or directory boundaries. Recovery reacquires current reality and
+invalidates affected claims; it need not erase valid work or rerun every
+check ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)) (P3, P6).
+
+The governing assurance can be established from applicable retained
+evidence together with new evidence; the completeness of that account is
+distinct from the freshness of every execution. Selection considers
+impact-analysis, acquisition, execution and assessment costs together,
+with anticipated costs distinguished from measurements
+([ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality)). Broad or
+uncertain impact, a change to the selection model, an applicable release
+rule or evidence that selection missed a dependency can justify wider
+testing; full-suite execution remains available and may itself have
+coverage gaps. No universal full-suite cadence follows, and no
+optimisation removes a separately required gate. Failures enter diagnosis
+and an authorised response
+([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation));
+the next selected action may acquire evidence before any repair is
+justified. [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse)
+applies this relation to closed results and handoffs, with its three
+invalidators as instances of `I(Δ)` (P5, P6).
+
+Purpose and material relation of the assurance relations: they connect
+construction results to the obligations they support, expose shared
+errors, and direct reassessment to affected claims while retaining
+evidence whose applicability is established (P6, P2).
 
 ## 5. Hypotheses
 

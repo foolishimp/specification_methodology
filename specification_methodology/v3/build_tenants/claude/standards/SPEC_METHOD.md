@@ -1583,6 +1583,12 @@ self-review, independent live-surface assessment where required, one of
 accept, local repair, re-enter or reject, the exact accepted checkpoint,
 and the next already-authorised bounded action (ACTIVATION §1, §3, §5 and
 §7; provenance rc.2 #agentic-construction-execution-stdo-up-020). The
+construction relation that the step serves, from the bound current state
+to the destination through a selected strategy, feedback and the distinct
+claims of preservation, progress and completion, is
+[ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation);
+this member applies it to delivery and correction (§4, §9) and states no
+second relation (P6). The
 step states its results in the core of
 [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) through the refinements
 of [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition): that a
