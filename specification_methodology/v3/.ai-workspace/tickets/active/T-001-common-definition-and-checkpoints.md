@@ -10,13 +10,29 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-15T23:29:36Z
+updated_at: 2026-10-16T00:04:30Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 formal assurance
+
+2026-10-16T00:04:30Z — The product owner instructs: “i want all this added to V3 i5 - it also means we can strengthen our entire A -> Z, transformation / computation model around this level of rigor”. The preceding discussion selects tests as parallel derivations from shared obligations, mutual assurance under risk, assertion provenance, explicit mathematical obligations, and targeted reassessment after changes with justified evidence reuse. Intake is `requirement_reprice` at the common construction and assurance owners. This selects preparation; no future source commit is ratified by the instruction.
+
+Execution contract `EC-COMMON-I5-04`: from main preimage `5f839a769bdaee06f3f27a3e9f52904480f7a4d9`, prepare one common I5 successor that states formal preservation and observation obligations, distinguishes assertion from execution provenance, accounts for correlated error, and makes incremental assurance traceable to affected validity dependencies. Installed builder: STDO 2.5.1-rc.2, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`, verified. C3-I5-03 remains a historical proposed input and C3-I4-03 remains the last ratified tenant input.
+
+The common Writer may edit affected common specification, v3 routing and shared tenant entry, with supporting Codex commentary and bounded replayable counterexamples. The Ledger Writer records this contract, the existing work map, review results and a descendant input snapshot in T-001/T-002 and Goals. The Git Writer makes scoped checkpoint commits on main. Preserve historical admissions and snapshots, principle bodies P1–P6, both tenant trees, peer commentary, installed releases, sibling products and unrelated work. No tenant implementation, admission, acceptance, push or release is selected. The common requirement constrains supported claims; it selects no tenant notation, runtime, new ledger, numerical risk threshold or universal proof prerequisite.
+
+Two fresh nonauthor working Reviewers fix expectations from the preimage before successor acquisition. One checks mathematical and assurance adequacy; the other checks impact, reuse, contract propagation and boundaries. They read an exact frozen source and material dependents, write only their own commentary, and do not repair. These same-family reviews are declared bounded working checks, not cross-family acceptance or the owner's ratification. Bounded executable counterexamples support their stated finite domains and do not activate the separately selected categorical steel thread or qualify a tenant.
+
+Admission and role transition: the Ledger Writer records this contract under the owner's common-pen instruction; the common Writer now performs its effects. Progress is reviewed at 60 minutes; external paid calls and tenant trials are excluded. Full host context and native spend are uninstrumented, so no context-fit or efficiency claim follows. Material contradictions, missing authority or concurrent governing changes return for triage. Exit: coherent common source, traceable work, checked counterexamples and affected independent readback, recorded as an exact proposed input for ratification.
+
+Writer return: one assurance owner now states preservation and join obligations, assertion/observation relations, provenance, correlated assurance and targeted reassessment. Product and criteria 4/5 consume it; eleven member discriminators, two integrated checks and seven duties under existing I5 work owners make the changes assessable. The bounded witnesses reproduce: 121 histogram cases, 105 wrong outputs rejected by the count predicate while all weak checks pass, observation aliasing, a correlation counterexample and targeted repair with valid retention. These are author witnesses, not tenant qualification or universal proof.
+
+Author verification: the Product Definition remains valid on the selected builder; all 403 local/installed links across the checked 19 Markdown files resolve; scoped whitespace and example replay pass. P1–P6 bodies, Product Definition, a_c dependency, predecessor inventory, bootstrap spans, previous ticket/snapshot tails, all original I5 work rows and unrelated root edits are preserved. Both tenant trees are untouched. The two Reviewers have fixed expectations from the preimage. The separate Git Writer now freezes the 19 scoped source, work and commentary paths for exact-source readback; its result and the descendant input record follow.
 
 ### Iteration 5 low-finding successor
 

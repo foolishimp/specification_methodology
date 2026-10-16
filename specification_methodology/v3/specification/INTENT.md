@@ -8,6 +8,8 @@ Z is a set of constraints on acceptable outcomes. The specification supplies the
 
 Strategies such as steel thread, phased delivery and repeated refinement arrange the work and its assurance differently. Their selection considers resources, time to useful feedback, risks and expected rework. Preservation through repeated steps, progress and eventual completion are separate claims. Evidence and authority determine whether to continue, revise, repair, recover or stop with an explicit unresolved outcome.
 
+Construction and tests are parallel derivations from shared obligations. Their [mutual assurance](requirements/ASSURANCE.md) depends on what each assertion means, how its observations support a conclusion and which errors the paths can share. Formal preservation obligations connect local checks to the outcome; agreement alone proves neither. After a change, the method reassesses affected claims and retains evidence whose applicability is established. Required assurance governs this selection within the chosen risk and resource limits.
+
 Finite context and attention require task-specific reference frames: sufficient relevant material, governing rules and authority for a task. Roles and coordination structures follow from the work, actor capabilities and required assurance. Each realisation justifies its arrangement.
 
 The product consists of method documents and their interpretation in the axiomatic calculus, a_c. [Foundations](PRODUCT.md#method-structure) own shared laws; the Spec Method applies them to defining, constructing, evaluating and releasing products; profiles add domain-specific rules. Shared meaning has one owner. Evaluations use one result algebra that preserves failures, uncertainty and domain distinctions.

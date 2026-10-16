@@ -14,6 +14,8 @@ Which capabilities follow from the accepted principles, and with which assumptio
 - Correction: do bugs and new features use the same work mechanism while diagnosis distinguishes inadequate realisation, governing model and observations, then carries the affected obligations through repair and renewed evaluation?
 - Bounded work: can an actor get enough context, refine its work, combine results, and stop truthfully with an unknown when it must?
 - Evidence and authority: can real claims be evaluated, material failures kept on record, and owner decisions reused without widening their scope?
+- Mutual assurance: can [parallel construction and assertion paths](ASSURANCE.md#parallel-derivation-and-mutual-assurance) establish their meaning, observation sufficiency and supported conclusions while exposing shared errors and preserving unresolved claims?
+- Targeted reassessment: can a change to a requirement, refinement, implementation or validity assumption select affected checks and retain applicable evidence, with a complete assurance account under the governing risk policy and mandatory gates?
 - Progress and recovery: can interruption, changed dependencies, persistent work state and effects of unknown completion be handled without discarding valid progress? Does recursive work distinguish preservation, useful discovery and eventual completion, with explicit unresolved stops?
 - Method usability: can a fresh actor apply the method given only one reference frame and a subject? It must do so without private knowledge of the validator or the author's memory.
 - Optional profiles: can a domain add the meaning it needs while generic rules and test subjects stay separate?

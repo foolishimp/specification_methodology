@@ -4,6 +4,7 @@ The common requirements bind both build tenants' candidates. This file holds the
 
 - [PRINCIPLES](PRINCIPLES.md): the working foundations, the candidate first principles both tenants built from at C1, and their review questions.
 - [CAPABILITIES](CAPABILITIES.md): the capabilities required by the reconstruction and the questions that test their adequacy. Each trial binds its own subject and acceptance scope.
+- [ASSURANCE](ASSURANCE.md): preservation, assertion and observation obligations, mutual assurance, provenance, risk and targeted reassessment through construction and change.
 - [A_C_DEPENDENCY](A_C_DEPENDENCY.md): the exact a_c theory and checker used for construction and checking, and the limits of what the checker proves. The released encoding basis follows its separate owner decision.
 - [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the common claim inventory under STDO-UP-015. Each tenant's frontier names its proposed dispositions and required carrying loci; its ticket supplies acceptance standing.
 
@@ -113,6 +114,8 @@ Source: this Product's [Universal Construction Model](../PRODUCT.md#universal-co
 8. Each candidate states this relation at its shared owner and makes its material consumers apply it under the [single ownership](#single-ownership-requirement) and [reduction](#foundational-reduction-requirement) requirements. Domain strategy, actor configuration, execution mechanisms and additional assurance policies retain their owners. Existing work and evidence carriers hold the necessary state; the model adds no independent ledger, required role sequence or orchestration runtime.
 
 Purpose and material relation: bounded activity can consume resources without delivering the intended outcome, and isolated checks can conceal a failed composition. The construction model connects purpose, action, observation and correction so that both features and defects remain governed by their end-to-end obligations.
+
+[Assurance of Construction](ASSURANCE.md) owns the formal obligations and evidence relationships used by this construction requirement. Its preservation account applies at composition; its assertion and observation contracts apply at evaluation; its dependency and applicability conditions apply at change, recovery and closure. The required a_c interpretation and acquired views preserve these relationships under the constraint-surface requirement. Domain consumers bind their tests and other assessments to those owners rather than introducing separate meanings for assurance or reuse.
 
 ## Build-Tenant Binding Requirement
 

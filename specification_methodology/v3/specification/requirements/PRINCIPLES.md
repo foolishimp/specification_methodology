@@ -93,6 +93,8 @@ The [construction requirement](README.md#universal-construction-requirement) sta
 
 ## Proposed Formalisation And Open Claims
 
+[Assurance of Construction](ASSURANCE.md) makes the synthesis's interpretation, composition and evidence relationships explicit as formal obligations. It connects assertions to their source meaning and observations, and binds reuse to validity after change. These relationships apply P1–P6; they do not turn agreement into truth or introduce an additional independent axiom.
+
 Retain U (purpose), O (object), Σ (common WHAT), 𝒜 (algorithmic descriptions), ℐ (informational interpretations) and 𝒞_H (computational realisations over a declared execution architecture H). H may comprise people, machines or a combination, with their resources and interactions, under the [build-tenant binding requirement](README.md#build-tenant-binding-requirement).
 
 Proposed maps are S:𝒜→ℐ and R_H:𝒜→𝒞_H. A tenant realisation a_j conforms when its interpreted behaviour satisfies Σ. Conformance, semantic equivalence and computational equivalence are different claims; costs depend on input, state and architecture.

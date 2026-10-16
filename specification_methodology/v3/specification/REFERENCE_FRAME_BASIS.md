@@ -48,6 +48,8 @@ For reconstruction work, the frame includes the applicable [pillar contributions
 
 ## Conservation And Stops
 
+An assurance or reassessment frame binds the applicable [assurance contract](requirements/ASSURANCE.md), source obligation, claimed predicate and scope, observation basis, subject and material dependencies. A reuse decision acquires the change and evidence-validity conditions needed to support applicability. A comparison acquires shared failure causes and the limits of any quantified assurance. These are task-specific bindings of the existing frames; no new actor role or separate carrier follows.
+
 The following are kept distinct:
 
 - the common specification (WHAT);
