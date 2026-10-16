@@ -34,15 +34,15 @@ q_t implies Q_r                : establishing q_t is sufficient for Q_r.
 
 These implications are conditional on Γ and Ω. Passing a check of a necessary condition does not establish the full obligation. A conjunction requires its own coverage and compatibility argument; a collection of passing tests does not supply that argument by its count.
 
-Let `π: Ω → O` describe the observations available to a checker and `t: O → R` its evaluation, where R uses the method's [single result algebra](README.md#single-result-algebra-requirement). In the following obligations, `sat` and `fal` denote the satisfied and falsified judgments about `q_t`, not new execution states:
+Let `π: Ω → O` describe the observations available to a checker and `T ⊆ O × R` its admitted evaluation relation, where R uses the method's [single result algebra](README.md#single-result-algebra-requirement). A deterministic checker is a functional special case. A human or probabilistic checker can admit different conclusions on the same observations; a universal soundness claim covers all admitted conclusions, not a favourable selected run. In the following obligations, `sat` and `fal` denote the satisfied and falsified judgments about `q_t`, not new execution states:
 
 ```text
 For every s in Ω:
-  t(π(s)) = sat  implies  q_t(s).
-  t(π(s)) = fal  implies  not q_t(s).
+  (π(s), sat) in T  implies  q_t(s).
+  (π(s), fal) in T  implies  not q_t(s).
 ```
 
-The candidate identifies what supports each claimed direction and where it is unresolved. An observed test pass remains an observation when the oracle's fidelity is unestablished; it does not become established satisfaction of the source obligation. The same distinction applies to a reported failure. The observation binding itself needs support: an idealised π does not establish that the instrument, actor or execution acquired the required facts correctly.
+The candidate identifies what supports each claimed direction and where it is unresolved. A relation admitting both a sound satisfied judgment and an indeterminate judgment need not always decide the case. A restricted deterministic model retains its scope and an actual checker requires its own conformance account. An observed test pass remains an observation when the oracle's fidelity is unestablished; it does not become established satisfaction of the source obligation. The same distinction applies to a reported failure. The observation binding itself needs support: an idealised π does not establish that the instrument, actor or execution acquired the required facts correctly. A probabilistic claim uses its declared distribution over outcomes and the risk contract below; the relation alone supplies no probabilities.
 
 A checker that always decides `q_t` correctly using only π requires:
 

@@ -10,7 +10,7 @@ Mutual assurance exposes common failure causes and distinguishes source fidelity
 
 Targeted reassessment distinguishes why an assertion is justified from what can invalidate its execution or use. Changes to requirements, refinements, code, observations, environments and assumptions can affect evidence. Supported unchanged claims remain reusable, while unknown impact, new obligations, known failures and mandatory gates remain in the assurance account. Selection includes its own analysis and assessment cost. No fixed cadence, probability threshold, new runtime or per-test ledger is introduced.
 
-Intent explains the purpose. Product, requirements, principles synthesis, capabilities and frame bindings consume the new owner. C3 criteria 4 and 5 are amended in their existing roles; there is no seventh criterion. Eleven member discriminators and two integrated checks cover the new obligations. The [work map](../../tickets/active/T-002-c3-successor-construction.md#assurance-work-and-proof) assigns seven additional duties to existing I5 owners while preserving all fourteen review-finding assignments. No tenant source is changed.
+Intent explains the purpose. Product, requirements, principles synthesis, capabilities and frame bindings consume the new owner. C3 criteria 4 and 5 are amended in their existing roles; there is no seventh criterion. Twelve member discriminators and two integrated checks cover the new obligations. The [work map](../../tickets/active/T-002-c3-successor-construction.md#assurance-work-and-proof) assigns seven additional duties to existing I5 owners while preserving all fourteen review-finding assignments. No tenant source is changed.
 
 ## Bounded Executable Evidence
 
@@ -28,6 +28,7 @@ These are author-produced witnesses for the common specification. They neither a
 | Key-only observations alias correct and wrong counts | The same input and observed keys admit opposite count-obligation truth values. | One decisive counterexample to complete decision from this observation. |
 | Local postcondition and final target are too weak or incompatible | An established nonnegative output does not establish either a strictly-greater-than-one next precondition or the selected final value. | A finite witness; no real workflow is qualified. |
 | Two checks share an error cause | In the declared two-world model, joint miss is 1/2; multiplying marginals gives the unsupported 1/4. | An assumed model demonstrating correlation, not an operational estimate. |
+| A checker admits several conclusions on the same observation | Satisfied and indeterminate are both admitted sound outcomes for the fixed true predicate; adding falsified violates the universal soundness condition. | One finite relation; no empirical model of human or agent error rates is inferred. |
 | A histogram repair has a declared bounded dependency footprint | Histogram and integration are reassessed; the independently unaffected sum evidence is retained. Requirement, oracle, shared-runtime, unknown-impact and mandatory-gate variations expand selection as expected. Original failure evidence remains unchanged. | The toy dependency model and one repaired input only; no discovery of dependencies in arbitrary programs is claimed. |
 
 ## Mathematical Basis And Limits
@@ -39,6 +40,8 @@ The risk account uses prior information and likelihoods to update a specified pr
 The a_c work remains a tenant implementation duty: represent the relationships, expose residual predicates and establish fidelity. Formulae in the common WHAT are not a verified proof system. Full-domain mathematical arguments, mechanical validation, finite examples, independent semantic assessment and actual use support different claims. An unproved universal claim need not stop lawful bounded work unless its governing gate requires it.
 
 ## Review And Work Standing
+
+The first frozen review at `f1bef74` identifies two Low corrections. The successor updates the stale current Goals row and models checker evaluation as a relation admitting all permitted outcomes, including a human or probabilistic checker that can return satisfied or indeterminate on the same observation. Universal soundness covers every admitted conclusion; a selected deterministic abstraction or probabilistic model retains its own scope. The mathematical Reviewer confirms the author's question as a coverage gap before the Writer chooses this repair. A twelfth member discriminator and a finite witness exercise that distinction. Both Reviewers perform affected readback on the successor; their original findings remain recorded.
 
 Two fresh same-family nonauthor working reviews have expectations fixed before successor acquisition: [mathematical assurance](20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_MATH.md) and [contract propagation](20261016T000430Z_EXPECTATIONS_I5_ASSURANCE_CONTRACT.md). They receive an exact source freeze. Their reviews cannot supply cross-family acceptance or the owner's decision. The ticket records their results and the descendant input snapshot after readback.
 

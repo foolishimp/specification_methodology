@@ -67,6 +67,23 @@ def correlation_case():
     return {"joint_miss": str(joint), "unsupported_independent_product": str(marginal * marginal)}
 
 
+def nondeterministic_checker_case():
+    # The obligation holds; both conclusions are admitted by this bounded checker.
+    truth = True
+    permitted = {("observation", "satisfied"), ("observation", "indeterminate")}
+
+    def sound(relation):
+        return all((result != "satisfied" or truth)
+                   and (result != "falsified" or not truth)
+                   for _, result in relation)
+
+    assert sound(permitted)
+    assert not sound(permitted | {("observation", "falsified")})
+    assert len({result for observation, result in permitted if observation == "observation"}) == 2
+    return {"admitted_sound_outcomes": ["indeterminate", "satisfied"],
+            "unsound_additional_outcome_rejected": True}
+
+
 def targeted_change_case():
     # Explicit toy validity model. These names are facts, not filenames.
     dependencies = {
@@ -117,4 +134,5 @@ if __name__ == "__main__":
                       "weak_assertion": weak_assertion_case(),
                       "composition": composition_case(),
                       "correlation": correlation_case(),
+                      "nondeterministic_checker": nondeterministic_checker_case(),
                       "targeted_change": targeted_change_case()}, indent=2, sort_keys=True))
