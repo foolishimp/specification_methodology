@@ -674,7 +674,7 @@ class Bindings(unittest.TestCase):
             self.assertEqual(tree.run(), 0)
             data = (tree.root / 'standards/frames/f.md').read_text()
             owner = sha256((tree.root / 'standards/M.md').read_bytes())
-            self.assertIn('Binds:\n\n- binds the relation (M.md#b sha256=' + owner + ')\n- plain bind\n', data)
+            self.assertIn('Binds:\n\n- binds the relation (../M.md#b; member sha256=' + owner + '; section sha256=' + sha256(b'## B\n\nbeta\n') + ')\n- plain bind\n', data)
             self.assertNotIn('\nbeta\n', data.split('Routes, in order:')[0])
             entry = json.loads(tree.inputs.read_text())['frames'][0]
             self.assertEqual(list(entry), ['id', 'path', 'task', 'bytes', 'sha256', 'scope', 'binds', 'routes'])

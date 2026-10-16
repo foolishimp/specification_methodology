@@ -6,12 +6,13 @@ Purpose: The owning sections for review results and triage, acceptance and when 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment (../ACTIVATION.md#construction-relation; member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea; section sha256=76fac9e93d9c7724b635de13d0a75a5ae4c6895804d356a0aa78f8a4da1ae745)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
-the owning section and the digest of its member where it names one; the item
-copies no section and owns no determination. A changed owner changes the digest.
+the owning section, the digest of its member and the digest of that section where
+it names one; the item copies no section and owns no determination, and where no
+route of this frame carries the section the item is a paraphrase of it.
 
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
@@ -44,7 +45,7 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 60764 bytes.
+Size of this frame: 61100 bytes.
 
 Source: EVALUATION.md#4-review-results sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3
 

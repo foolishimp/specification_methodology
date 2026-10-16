@@ -521,11 +521,13 @@ def binds_block(frame: dict) -> str:
     for b in binds:
         line = f'- {b["text"]}'
         if b.get('owner'):
-            line += f' ({Path(b["owner"]).name}#{b["anchor"]} sha256={b["owner_sha256"]})'
+            line += (f' (../{Path(b["owner"]).name}#{b["anchor"]}; member sha256={b["owner_sha256"]};'
+                     f' section sha256={b["section_sha256"]})')
         lines.append(line)
     lines += ['', 'A `Binds:` item names an obligation the activation of this frame binds, with',
-              'the owning section and the digest of its member where it names one; the item',
-              'copies no section and owns no determination. A changed owner changes the digest.', '']
+              'the owning section, the digest of its member and the digest of that section where',
+              'it names one; the item copies no section and owns no determination, and where no',
+              'route of this frame carries the section the item is a paraphrase of it.', '']
     return '\n'.join(lines) + '\n'
 
 
