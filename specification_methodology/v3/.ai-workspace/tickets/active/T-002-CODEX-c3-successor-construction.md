@@ -70,6 +70,8 @@ All activations below are admitted under EC-CODEX-I5-01 before their effects. Ca
 
 The separately declared tenant Git Writer may checkpoint completed returned territories only, at exact reviewed preimages, without including concurrently unfinished work. The common Ledger Writer records returns and next activations on main. A source-dependent step waits for its producer's exact frozen return. Fresh nonauthor working reviewers are assigned only after the relevant freeze, with expectations before candidate acquisition and authorship limits; no member acceptance is selected.
 
+2026-10-16T15:29:01Z — Writer access clarification: the named I5 Writers may read exact Git objects and execute read-only Git verification within their declared subjects, including the selected donor and frozen source/account readback. The preceding exclusion of Git operations excludes mutations, index, branch, checkout and commit effects; it does not forbid the Git-object acquisition already required by their grants. Only the separately activated Git Writer may change Git state. This clarification changes no source territory or acceptance authority.
+
 ## Current Iteration 4 Contract
 
 The product owner ratifies C3-I4-03 through “ok i approve i4”, continuing the selected three-stage work. This contract binds the Codex synthesis line; it grants no effect in Claude's ticket or worktree. The preceding return is handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, with package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2`. Historical I3 admissions below remain byte-identical.
