@@ -84,6 +84,11 @@ Under EC-CODEX-I5-01 the Executive selects two dependent consumer Writers, with 
 
 The earlier integration Writer retains design, coverage, proof and derived-view territory. The Git Writer checkpoints only completed returned files and patches, leaving active Writers' work unstaged. Account and conservation generation wait for the complete documentary-source and authored-patch coordinates.
 
+
+### I5 core working review
+
+2026-10-16T15:41:54Z — The Executive activates `I5-REVIEW-CORE`, a fresh same-family nonauthor source Reviewer, against core source `c5cde0999a7c81595681aac68049678e969d5dcb` and common input `4c340f7adec9f3c893e3e267b23e4cadeb357854`. Before candidate acquisition it records expectations from the common construction/assurance obligations, preserving the single result contract, necessary/sufficient and observation distinctions, dependence/risk, current-reality recovery and singular ownership. Then it assesses the frozen Foundations body, its material existing binding dependencies and actual source changes. Author returns and account patches are excluded from this source review. This is working defect evidence, not member, cross-family, actual-use or release acceptance. Candidate and common law are read-only; the assigned Writer effects are two posts under common `.ai-workspace/comments/codex/`, prefixed `20261016T154154Z_I5_CORE_`, for expectations and review. No Git effects, paid calls or delegation. Envelope: 256 KiB newly presented source, 30-minute progress checkpoint; record acquisition, time and unknown active context/native costs. A later consumer readback requires its exact frozen source and a recorded follow-up scope.
+
 ## Current Iteration 4 Contract
 
 The product owner ratifies C3-I4-03 through “ok i approve i4”, continuing the selected three-stage work. This contract binds the Codex synthesis line; it grants no effect in Claude's ticket or worktree. The preceding return is handoff `fb855df1aac377c45ea9f4e614933d48827fd844`, with package `d490dd62d8c1a99e57eec5d1f9caca477f02edd2`. Historical I3 admissions below remain byte-identical.
