@@ -106,6 +106,23 @@ Purpose and material relation: a reading of the text can show that the
 corpus states these distinctions, but only use shows that an actor
 applying the corpus keeps them while it works (P6, P0).
 
+The assurance relations require the candidate to demonstrate here the
+applicable positive, negative and unresolved cases of a weak assertion, an
+insufficient observation, shared error, and change selection that retains
+valid evidence or invalidates affected evidence
+([FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)).
+The four cases below carry them; a case here is named AR (assurance
+relation). The first three are exercised by the actual-use trial of
+criterion 4 and are not run until the product owner selects it; the fourth
+was performed once by the candidate's author.
+
+| Case | Subject | Mechanism | Expected distinction | Status |
+|---|---|---|---|---|
+| AR-01 Weak assertion | in each expectation set of the actual-use trial, one item that states a necessary condition of the task's required outcome which a return making the wrong decision can still satisfy | [FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation), the three directions and the check of a necessary condition | a `satisfied` on the item establishes only the condition it checks and supports no claim that the frame was used correctly; the attribution of benefit excludes it; a `falsified` on it stays a failed condition of the run | not run |
+| AR-02 Insufficient observation | one item per set that observes a point at which two admissible returns, one correct and one not, read the same, both returns recorded with the item | [FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation), Observation sufficiency | the grade is `indeterminate` with the reason that the observation does not separate the admissible answers, never `satisfied` or `falsified`; a return that reads as neither recorded return is listed for diagnosis, because the item or the return, not the method, may be at fault | not run |
+| AR-03 Shared error | an expectation writer, task actors and a grader of one model family, the writer and the actors reading the same owning sections | [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance) | agreement between a return and the expected answer is not counted as independent evidence; a disagreement is diagnosed among the four causes of [ACTIVATION §1](ACTIVATION.md#construction-relation), the expectation item itself among them; no statistical independence is assumed from the families or codebases involved; ported material is named with its donor and common dependencies | not run |
+| AR-04 Change selection | a change to two owning sections and the addition of nine, against the curated frames, the hashed expectation sets, the interpretation and the conservation readings that depend on them | [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse), `S_Δ` and `retain_applicable`; [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) | dependents whose validity dependencies meet the impact cover are reassessed (the frames regenerated, the tests rerun) or stand invalidated until rebuilt (the interpretation, uncovered for the added sections); an expectation set whose deciding sentences are unchanged is retained with its validity conditions stated; a changed hash alone decides nothing | performed once by the author; the retention claims are the author's and await nonauthor readback |
+
 ## 5. Coverage of the common discriminators
 
 A logical-review check is a reviewer's reasoned reading: the reviewer

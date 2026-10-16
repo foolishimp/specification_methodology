@@ -8,6 +8,6 @@ One row per heading section of `standards/CONFORMANCE.md` at the source-settleme
 | `#1-counterexamples-from-the-builders-own-history` | 38-58 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#2-trials-from-the-comparative-baseline` | 59-79 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#3-recoverability` | 80-86 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#4-cases-from-the-common-discriminators` | 87-108 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#5-coverage-of-the-common-discriminators` | 109-224 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#6-source-dispositions` | 225-234 | no determination | records where predecessor claims are carried; decides nothing |
+| `#4-cases-from-the-common-discriminators` | 87-125 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
+| `#5-coverage-of-the-common-discriminators` | 126-241 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
+| `#6-source-dispositions` | 242-251 | no determination | records where predecessor claims are carried; decides nothing |

@@ -70,6 +70,14 @@ class PreCheck(unittest.TestCase):
         with self.assertRaisesRegex(A.Refusal, 'support-kind'):
             run(two)
 
+    def test_assurance_clause_needs_support_kind(self):
+        bare = clause('urn:t:c:ar', 'premise', [{'role': R + 'force', 'literal': 'must'}])
+        bare['source_refs'] = [A.SOURCE + 'FOUNDATIONS.md#assertions-and-observation']
+        with self.assertRaisesRegex(A.Refusal, 'exactly one support-kind'):
+            run(bare)
+        kinded = dict(bare, uri='urn:t:c:ar2', arguments=bare['arguments'] + [{'role': R + 'support-kind', 'literal': 'stated-formula'}])
+        run(kinded)
+
     def test_residual_dependent_clause_without_blocked_by_rejected(self):
         open_clause = clause('urn:t:c:open', 'unresolved', [])
         with self.assertRaisesRegex(A.Refusal, 'without blocked-by'):

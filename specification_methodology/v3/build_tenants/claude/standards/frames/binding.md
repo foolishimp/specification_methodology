@@ -7,7 +7,7 @@ Purpose: The owning sections for build-tenant binding, ambiguity governance with
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment (../ACTIVATION.md#construction-relation; member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea; section sha256=76fac9e93d9c7724b635de13d0a75a5ae4c6895804d356a0aa78f8a4da1ae745)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=90c2c8a45c0220d10cf5debc1b46012c4b287e1bafb0f6b27cccad06b15f2d4f)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 the owning section, the digest of its member and the digest of that section where
@@ -319,7 +319,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
+Source: FOUNDATIONS.md#2-ontology sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 
 ## 2. Ontology
 
@@ -765,7 +765,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=01a3d67d23be04fa8dd6a1c7de8704e1e33569870ef332cbcc0b7f083611cc9c
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a
 
 ### AC-018 Structural and semantic separation
 
@@ -780,7 +780,7 @@ materiality (P1, P6; rc.2
 #ac-018-structural-and-semantic-separation).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=01a3d67d23be04fa8dd6a1c7de8704e1e33569870ef332cbcc0b7f083611cc9c
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a
 
 ### AC-019 Valid model
 
@@ -856,7 +856,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1040,7 +1040,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
+Source: FOUNDATIONS.md#conjunction-of-results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 
 ### Conjunction of results
 
@@ -1166,7 +1166,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=01a3d67d23be04fa8dd6a1c7de8704e1e33569870ef332cbcc0b7f083611cc9c rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

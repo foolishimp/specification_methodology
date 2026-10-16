@@ -140,6 +140,21 @@
       ]
     },
     {
+      "uri": "urn:stdo-3:claude:i3:clause:p4a",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        }
+      ],
+      "statement": "P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
       "uri": "urn:stdo-3:claude:i3:clause:p4b",
       "clause_type": "constraint",
       "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",

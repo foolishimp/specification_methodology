@@ -23,6 +23,10 @@ CORE_VALUES = {CORE + v for v in ('satisfied', 'falsified', 'indeterminate', 'ou
 SOURCE = 'stdo-3://build_tenants/claude/standards/'
 SUPPORT_KINDS = ('stated-formula', 'discharged-argument', 'mechanically-checked-structure',
                  'externally-assessed-predicate', 'execution-evidence')
+ASSURANCE_SECTIONS = ('construction-relation', 'construction-synthesis', 'assurance-relations',
+                      'preservation-through-construction', 'assertions-and-observation',
+                      'parallel-derivation-and-mutual-assurance', 'quantified-assurance',
+                      'change-impact-and-evidence-reuse', 'formal-representation')  # FOUNDATIONS §4 Formal representation (I5)
 DISPOSITIONS = ('encoded', 'encoded-in-part', 'uses owner', 'refines owner', 'residual', 'no determination', 'not-encoded-i3')
 
 
@@ -92,6 +96,9 @@ def check_clause(clause, uris, residuals):
     support_kind = args(clause, 'support-kind')
     if len(support_kind) > 1 or any(a.get('literal') not in SUPPORT_KINDS for a in support_kind):
         errors.append(f'{u}: support-kind must be one literal among the five kinds of support')
+    section = clause['source_refs'][0].rsplit('#', 1)[-1] if clause.get('source_refs') else ''
+    if section in ASSURANCE_SECTIONS and len(support_kind) != 1:
+        errors.append(f'{u}: a clause of the construction or assurance relations carries exactly one support-kind')
     return errors
 
 

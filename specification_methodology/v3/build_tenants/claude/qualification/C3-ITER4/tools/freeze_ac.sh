@@ -20,5 +20,5 @@ new=re.sub(r'(\| File \| SHA-256 \|\n\|---\|---\|\n)(?:\| `[^`]+` \| `[0-9a-f]{6
 assert new!=s, 'artifact table not found'
 open(p,'w').write(new); print('README artifact table refreshed:', len(files), 'files')
 PY
-python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" | tail -8
+python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
 python3 -I qualification/C3-ITER4/tools/consumers.py

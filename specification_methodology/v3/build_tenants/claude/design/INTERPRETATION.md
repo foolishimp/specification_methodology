@@ -86,6 +86,21 @@ A hollow argument, in which a whole rule is filed as a policy choice to
 avoid stating its premises, is a fidelity defect under this design. A
 policy choice names what was chosen and among what.
 
+Kind of support (iteration 5). Standing says how a clause stands in the
+derivation; the kind of support says which evidence would establish its
+statement, one of the five that
+[FOUNDATIONS §4 Formal representation](../standards/FOUNDATIONS.md#formal-representation)
+distinguishes: `stated-formula`, `discharged-argument`,
+`mechanically-checked-structure`, `externally-assessed-predicate` and
+`execution-evidence` (the signature's "Kinds of support" table). A clause
+may carry one `support-kind` argument; a clause whose owning section is
+the construction relation, the construction synthesis or one of the
+assurance relations carries exactly one, and `assemble.py` refuses one
+that does not. A kind confers no standing and no truth: a formula is not
+discharged by being written, and an external predicate is not assessed by
+being labelled. The projected constraint surface keeps the kind with the
+standing (AXIOMATIC_CALCULUS Constraint surfaces, condition 1).
+
 ### Conditions, force and exceptions
 
 Conservation includes scope, modal force, triggers and exceptions
@@ -233,6 +248,14 @@ set and review through the product owner. C3 closure needs fidelity
 assessed over the complete interpretation by a reviewer the owner
 assigns; the sampled review supports only its stated scope.
 
+Iteration 5 adds group G14, the construction and assurance relations (89
+clauses over nine sections of ACTIVATION §1 and FOUNDATIONS §3 and §4)
+and the premise P4a. Their cases and review follow the three parts above,
+with one addition: the case writer records, for each case, which kind of
+support the source gives the determination, so that the review can check
+that the encoded kind matches. Until those cases and the review are
+written, the fidelity of G14 is unassessed and the set's README says so.
+
 The model is exact, not approximate: each clause states its source's
 determination. A projection that omits clauses is a selection, declared
 as such, never a weaker restatement. If a later view compresses clauses,
@@ -284,6 +307,7 @@ still changing is stale on arrival.
 | G11 | TRAVERSAL_OCCURRENCE | about 102 KB |
 | G12 | WORLD_MODEL, UX | about 146 KB |
 | G13 | README, GLOSSARY, WRITING_GUIDE, POSTING_GUIDE, templates, schemas, plugin | about 90 KB of Markdown plus packaging files; mostly `uses owner` and convention rows |
+| G14 | ACTIVATION §1 Construction relation; FOUNDATIONS §3 Construction synthesis; FOUNDATIONS §4 Assurance relations and its six subsections (a cross-member group added at iteration 5) | about 40 KB of source, 89 clauses |
 
 The PLAN schedules a signature activation first (signature, standing
 symbols, shared premises, core result values, `assemble.py`), then the

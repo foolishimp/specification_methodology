@@ -1,6 +1,6 @@
 """Port C5, adapted: positive checker run with adverse controls.
 Usage, from the tenant root: python3 -I qualification/C3-ITER4/tools/ac_controls.py <scratch dir>
-Writes qualification/C3-ITER4/returns/ac_controls.json. Every control states what it expects and what happened.
+Writes the record to the path given as the second argument (I5: qualification/C3-ITER5/returns/ac_controls.json; the iteration 4 record at qualification/C3-ITER4/returns/ac_controls.json is immutable). Every control states what it expects and what happened.
 """
 import hashlib, json, os, shutil, subprocess, sys, time
 SP = sys.argv[1]; os.makedirs(SP, exist_ok=True)
@@ -57,7 +57,7 @@ for fi in prog['frame_indexes']:
         o = os.path.join(SP, 'proj', f'projection-{ix}-{mode}.json')
         rc, so, se = run(['project', '--program', PROG, '--map', mp, '--bindings', BIND, '--frame-index', fi['uri'], '--mode', mode, '--output', o])  # the fresh map of the positive validate
         f = f'a_c/i3/projections/projection-{ix}-{mode}.json'; same.append((ix, mode, rc, os.path.exists(o) and os.path.exists(f) and sha(o) == sha(f), se[-120:] if rc else ''))
-ctl('project-positive', 'all 8 projections from the fresh map exit 0 and are byte-identical to a_c/i3/projections', all(rc == 0 and s for _, _, rc, s, _ in same), same)
+ctl('project-positive', f'all {len(same)} projections from the fresh map exit 0 and are byte-identical to a_c/i3/projections', all(rc == 0 and s for _, _, rc, s, _ in same), same)
 m3 = json.loads(json.dumps(prog)); fi0 = m3['frame_indexes'][0]; dropped = fi0['clause_refs'].pop(); p3 = os.path.join(SP, 'prog-dropped.json'); json.dump(m3, open(p3, 'w'), indent=1)
 rc3, st3, diag3, rep3, mp3, se3 = validate(p3, 'dropped')
 o3 = os.path.join(SP, 'proj', 'dropped.json'); rc, so, se = run(['project', '--program', p3, '--map', mp3 if os.path.exists(mp3) else 'a_c/i3/logical-constraint-map.json', '--bindings', BIND, '--frame-index', fi0['uri'], '--mode', 'materialized', '--output', o3])
@@ -65,6 +65,6 @@ ix0 = fi0['uri'].rsplit(':', 1)[-1]; f0 = f'a_c/i3/projections/projection-{ix0}-
 base = os.path.join(SP, 'proj', f'projection-{ix0}-materialized.json')  # the fresh positive projection of the same index
 ctl('project-adverse-dropped-clause', 'a program with one clause dropped from a frame index validates, and its projection differs from the fresh positive projection of that index (the passing baseline), and from the frozen one', st3 == 'valid' and os.path.exists(o3) and os.path.exists(base) and sha(o3) != sha(base) and sha(o3) != sha(f0), {'dropped': dropped, 'exit': rc, 'validate_status': st3, 'baseline_exists': os.path.exists(base), 'differs_from_fresh': os.path.exists(o3) and os.path.exists(base) and sha(o3) != sha(base), 'stderr': se[-160:]})
 rec['elapsed_seconds'] = round(time.time() - t0, 1); rec['holds_all'] = all(c['holds'] for c in rec['controls'])
-json.dump(rec, open('qualification/C3-ITER4/returns/ac_controls.json', 'w'), indent=1)
+json.dump(rec, open(sys.argv[2] if len(sys.argv) > 2 else 'qualification/C3-ITER5/returns/ac_controls.json', 'w'), indent=1)
 for c in rec['controls']: print(('HOLDS ' if c['holds'] else 'FAILS '), c['control'], json.dumps(c['detail'])[:200])
 print('all hold:', rec['holds_all'], 'elapsed', rec['elapsed_seconds'])

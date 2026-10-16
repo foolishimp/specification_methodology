@@ -644,9 +644,7 @@ and traces none of their rules. A Pillar cell marked pending names no
 pillar: the family's table does not yet carry the Pillar column, and the
 cell is filled from that table's rows when it does. The index decides
 nothing: each rule is in its owning section, and each trace is in its
-table (P1, P6). Every family table in this corpus has its consumers paragraph. One row
-records that no consumer applies yet: F22 row 8, formal representation,
-whose interpretation and conformance cases are not written.
+table (P1, P6). Every family table in this corpus has its consumers paragraph.
 
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
@@ -1171,7 +1169,7 @@ locus:
 - Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route); the Cross-Synthesis rule of the Product that owns this corpus.
 - Row 6, quantified assurance: [EXECUTIVE_BASELINE Technical triage](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), whose causal assessment records a confidence; [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), where a probability informs priority; [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value), where a project may define a testing-value scalar. At each, an unsupported numeric confidence remains unresolved.
 - Row 7, change impact and reuse: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), through which [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) and [EVALUATION §3](EVALUATION.md#3-independent-assessment) reach it; [RELEASE §8](RELEASE.md#8-acceptance) and [§9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015); [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), whose determination of the surfaces and evidence to re-derive is the selection `S_Δ`.
-- Row 8, formal representation: no separate consumer applies yet. [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces) and [CONFORMANCE](CONFORMANCE.md#4-cases-from-the-common-discriminators) carry neither the five kinds of support nor the demonstration cases this owner requires; the obligation is open until the interpretation and its cases are written.
+- Row 8, formal representation: [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces), whose first condition of use keeps each element's kind of support; [CONFORMANCE §4](CONFORMANCE.md#4-cases-from-the-common-discriminators), cases AR-01 to AR-04, which carry the demonstration cases this owner requires. The interpretation that records the kinds is a derived view under AXIOMATIC_CALCULUS, not a consumer of the rule.
 
 Each consumer applies the rule and decides nothing this section does not
 (P2, P6).

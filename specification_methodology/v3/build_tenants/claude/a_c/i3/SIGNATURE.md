@@ -85,6 +85,16 @@ A support kind confers no standing and no truth: a `stated-formula` is
 not proved, an `externally-assessed-predicate` is not assessed by being
 labelled. The kind says which evidence would establish the statement.
 
+Every clause whose owning section is one of the construction or assurance
+relations (ACTIVATION §1 Construction relation; FOUNDATIONS §3
+Construction synthesis; FOUNDATIONS §4 Assurance relations and its six
+subsections) carries exactly one kind, and the pre-check refuses one that
+does not. At I5-05 these are the 89 clauses of group G14: 80
+`discharged-argument` and 9 `stated-formula`. The other three kinds do not
+occur in the group: no statement of those sections is supported in the
+source by checked structure, an external assessment or a recorded
+execution.
+
 ## Section dispositions
 
 Each heading section of an encoded member has exactly one disposition in

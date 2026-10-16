@@ -1330,7 +1330,13 @@ Conditions on its use:
 1. **Standing kept.** Each element keeps the standing the interpretation
    records for it: premise, derived consequence, policy choice,
    observation or unresolved claim. A policy choice keeps its owner, and a
-   preference is never read as an obligation.
+   preference is never read as an obligation. An element of the
+   construction or assurance relations also keeps the kind of support
+   the interpretation records for it, one of the five that
+   [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)
+   distinguishes: a stated formula is not read as discharged, and an
+   externally assessed predicate keeps the source, scope and evidence
+   that establish it.
 2. **Unresolved blocks.** A residual, a `hold`, a `gap` or an external
    predicate not yet established keeps its source and its required
    acquisition, and it blocks every operation and result that depends on

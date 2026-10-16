@@ -1556,6 +1556,11 @@ return distinction, after the readback R-I5-06. M4a after I5-06b:
 75,027; all twelve 1,174,187 (+7,225 against I5-02). TO1's acceptance
 condition stays `unresolved` until the frame-entry traces (I5-07).
 
+After I5-05 the twelve frames total 1,174,047 bytes (-140): the sentence
+of the Foundation to law rule that recorded F22 row 8 as the one row
+without a consumer was removed when its consumers were wired; no frame
+grew.
+
 ### 4.4 Selected paths
 
 Task kinds are the six of the

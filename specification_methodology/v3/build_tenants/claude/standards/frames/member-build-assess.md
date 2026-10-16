@@ -7,7 +7,7 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment (../ACTIVATION.md#construction-relation; member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea; section sha256=76fac9e93d9c7724b635de13d0a75a5ae4c6895804d356a0aa78f8a4da1ae745)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=90c2c8a45c0220d10cf5debc1b46012c4b287e1bafb0f6b27cccad06b15f2d4f)
 - As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation (../EVALUATION.md#6-conformance-of-realisations; member sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3; section sha256=08dc9943911bcb3aca6caa9d39a35d0a8bea622314b065325cbe9fc07a488715)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
@@ -45,9 +45,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 75027 bytes.
+Size of this frame: 74887 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
+Source: FOUNDATIONS.md#authority-kinds sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 
 ### Authority kinds
 
@@ -114,7 +114,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
+Source: FOUNDATIONS.md#imports-between-members sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 
 ### Imports between members
 
@@ -174,7 +174,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
+Source: FOUNDATIONS.md#foundation-to-law sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 
 ### Foundation to law
 
@@ -255,9 +255,7 @@ and traces none of their rules. A Pillar cell marked pending names no
 pillar: the family's table does not yet carry the Pillar column, and the
 cell is filled from that table's rows when it does. The index decides
 nothing: each rule is in its owning section, and each trace is in its
-table (P1, P6). Every family table in this corpus has its consumers paragraph. One row
-records that no consumer applies yet: F22 row 8, formal representation,
-whose interpretation and conformance cases are not written.
+table (P1, P6). Every family table in this corpus has its consumers paragraph.
 
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
@@ -318,7 +316,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0 rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -704,7 +702,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=dd145e4bf5db40126c6d4dfa137189db4e9ac86229e6509fb4b56e5a7ae47a9b
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=e10e730864a25c3047eb638edbd8c53d047ade689551ab9a7c51a15eb20cb8e3
 
 ## 5. Coverage of the common discriminators
 
