@@ -19,7 +19,8 @@ and a locator creates no deciding rule. A reference-only or materialized view
 preserves authored references without evaluating their truth or granting work.
 
 The native closure contains always-required support. Read each acquisition-route
-record in the selected result. Conditional support retains the exact condition
+record in the selected result. Resolve qualification_ref within its declared
+clause-local scope and verify its digest and required_when before use. Conditional support retains the exact condition
 and target index: establish applicability, add an applicable target index with
 another --frame-index argument, or retain the unresolved obligation and withhold
 dependent action. Established non-applicability needs its reason. Provenance and

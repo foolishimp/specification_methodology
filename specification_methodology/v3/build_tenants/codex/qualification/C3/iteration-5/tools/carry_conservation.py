@@ -1,6 +1,7 @@
 """Carry the frozen I4 claims without inventing I5 review or owner decisions.
 
---prepare preserves every historical row and groups the 69 proposed replacements.
+--prepare preserves historical claims and applies explicit authored proposals.
+--apply-proposals advances the exact admitted preparation without accepting it.
 --refresh binds their existing carrying coordinates to an exact source/account
 freeze. It does not prove complete carrying relations, conservation, or reuse.
 Historical helpers are imported for pure parsing only; their mains never run.
@@ -9,6 +10,7 @@ import argparse
 import copy
 import json
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 from context import (HERE, PRIOR, PACKAGE, REPO, INPUTS, sha, read, write,
@@ -21,6 +23,8 @@ COMMON_PATH = Path('specification_methodology/v3/specification/requirements/PRED
 COMMON_SHA = '2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a'
 PRIOR_SHA = '92ef2fd3a399ede2b28c1a421b4f81cbe6460363d1056a9aad189b36e8f41fdd'
 FILES = ('CONSERVATION.json', 'FRONTIER.json', 'REPLACEMENT_QUESTIONS.json')
+PREPARATION = '352e5e29a45f1362605bfa06d97387f544626d84'
+PROPOSAL_PATH = HERE / 'source/account/PROPOSALS.json'
 
 # A question groups decisions with a common substantive issue, not a source
 # family. Each exact relation remains a separate proposed decision beneath it.
@@ -130,15 +134,99 @@ def inherited():
     return old, expected
 
 
-def validate_rows(rows, expected):
+def validate_rows(rows, expected, dispositions=None):
     ids = [row['id'] for row in rows]
     require(len(ids) == 691 and len(set(ids)) == 691 and set(ids) == set(expected),
             'Omitted, extra or duplicate predecessor claim')
     for row in rows:
         require(row['source_member'] == expected[row['id']], 'Predecessor member changed')
-    require(Counter(r['disposition'] for r in rows) ==
-            {'conserved': 621, 'superseded': 69, 'not applicable': 1},
-            'A new disposition requires a separately authored proposal and assessment')
+    if dispositions is not None:
+        require(Counter(r['disposition'] for r in rows) == dispositions,
+                'Disposition population differs from the explicit author proposals')
+
+
+@lru_cache(maxsize=1)
+def proposal_data():
+    if not PROPOSAL_PATH.exists():
+        return None
+    data = read(PROPOSAL_PATH)
+    require(data['kind'] == 'stdo.i5.explicit-conservation-proposals' and
+            data['common_input'] == COMMON and data['base_commit'] == START and
+            data['base_conservation_sha256'] == PRIOR_SHA and
+            data['preparation_commit'] == PREPARATION, 'Proposal basis changed')
+    evidence_path = HERE / data['evidence']['path']
+    require(evidence_path == HERE / 'source/account/SOURCE_COMPARISON.json' and
+            sha(evidence_path.read_bytes()) == data['evidence']['sha256'],
+            'Author source-comparison evidence differs')
+    evidence = read(evidence_path)
+    require(evidence['common_input'] == COMMON and
+            evidence['raw_source'] == data['raw_source_commit'], 'Comparison subject changed')
+    cc = parser_library()
+    cache = {}
+    for amendment in data['amendments']:
+        for pin in amendment['source_locus_pins']:
+            require(pin['source_commit'] == data['raw_source_commit'], 'Mixed proposal source')
+            path, _, anchor = pin['route'].partition('#')
+            require(not Path(path).is_absolute() and '..' not in Path(path).parts, 'Unsafe proposal path')
+            if path not in cache:
+                cache[path] = git_bytes(data['raw_source_commit'], (PACKAGE / path).relative_to(REPO))
+            raw = cache[path]
+            unit = cc.section_body(raw.decode(), anchor).encode()
+            require(sha(raw) == pin['member_sha256'] and sha(unit) == pin['body_sha256'] and
+                    len(unit) == pin['bytes'], 'Proposal source locus differs: ' + pin['route'])
+    return data
+
+
+def authored_rows(old, proposal=None):
+    data = proposal_data() if proposal is None else proposal
+    rows = copy.deepcopy(old['rows'])
+    if data is None:
+        return rows
+    evidence = read(HERE / data['evidence']['path'])
+    required = {x['claim'] for x in evidence['comparisons'] if x['author_result'] == 'proposed_supersession'}
+    amendments = data['amendments']
+    ids = [x['claim_id'] for x in amendments]
+    require(len(ids) == len(set(ids)) and set(ids) == required,
+            'Omitted, duplicate or unsupported author proposal')
+    positions = {row['id']: i for i, row in enumerate(rows)}
+    for amendment in amendments:
+        claim = amendment['claim_id']
+        require(claim in positions, 'Proposal changes predecessor identity')
+        row = rows[positions[claim]]
+        require(sha(canonical(row)) == amendment['original_row_sha256'] and
+                row['disposition'] == amendment['prior_disposition'] and
+                row.get('successor_relation', {}).get('id') == amendment['supersedes_proposal_id'],
+                'Proposal row preimage changed: ' + claim)
+        relation = amendment['replacement_relation']
+        require(relation['predecessor_claim_id'] == claim and relation['replacement_loci'] and
+                relation['owner_decision'] is None and relation['standing'] == 'proposed_pending_owner_decision',
+                'Invalid relation or invented owner acceptance')
+        require(row['disposition'] in ('conserved', 'superseded'), 'Unsupported disposition transition')
+        row['i5_author_history'] = {'source_commit': old['candidate_source_commit'],
+            'original_row_sha256': amendment['original_row_sha256'],
+            'disposition': row['disposition'], 'successor_loci': copy.deepcopy(row['successor_loci']),
+            'acceptance': row.get('acceptance'),
+            'successor_relation': copy.deepcopy(row.get('successor_relation')),
+            'replacement_owner_dependencies': copy.deepcopy(row.get('replacement_owner_dependencies', []))}
+        row['disposition'] = 'superseded'
+        row['acceptance'] = 'owner_decision_and_current_independent_review_pending'
+        row['successor_relation'] = copy.deepcopy(relation)
+        row['successor_loci'] = copy.deepcopy(amendment['successor_loci'])
+        row['replacement_owner_dependencies'] = list(row.get('replacement_owner_dependencies', [])) + copy.deepcopy(amendment['owner_dependencies'])
+        row['i5_author_comparison'] = {'source_commit': data['raw_source_commit'],
+            'proposal': 'source/account/PROPOSALS.json', 'claim_id': claim,
+            'evidence': data['evidence'], 'same_case_argument': amendment['same_case_argument'],
+            'standing': 'author_proposal; independent assessment and owner decision remain open'}
+    return rows
+
+
+def proposal_inputs():
+    data = proposal_data()
+    if data is None:
+        return []
+    return [{'path': str(PROPOSAL_PATH.relative_to(HERE)), 'sha256': sha(PROPOSAL_PATH.read_bytes()),
+             'raw_source_commit': data['raw_source_commit'], 'evidence': data['evidence'],
+             'standing': 'explicit author proposals; no owner acceptance'}]
 
 
 def replacement_questions(rows, source_commit=None, account_commit=None):
@@ -154,12 +242,23 @@ def replacement_questions(rows, source_commit=None, account_commit=None):
                 'Replacement relation lacks its exact claim or carrying loci')
         relations[rel['id']] = {'claim': row['id'], 'original_comparison_group': row['comparison_group'],
             'relation': copy.deepcopy(rel), 'dependencies': copy.deepcopy(row.get('shared_replacement_dependencies', [])),
-            'owner_dependencies': copy.deepcopy(row.get('replacement_owner_dependencies', []))}
-    selected = [rid for _, _, _, ids, _ in QUESTIONS for rid in ids]
-    require(len(selected) == len(set(selected)) == 69 and set(selected) == set(relations),
+            'owner_dependencies': copy.deepcopy(row.get('replacement_owner_dependencies', [])),
+            'proposal_history': copy.deepcopy(row.get('i5_author_history')),
+            'author_comparison': copy.deepcopy(row.get('i5_author_comparison'))}
+    data = proposal_data()
+    successors = {a['supersedes_proposal_id']: a['replacement_relation']['id']
+                  for a in data['amendments'] if a['supersedes_proposal_id']} if data else {}
+    definitions = [(qid, title, question, [successors.get(r, r) for r in ids], consequence)
+                   for qid, title, question, ids, consequence in QUESTIONS]
+    if data:
+        definitions += [(q['id'], q['title'], q['question'], q['relation_ids'], q['i5_consequences_to_assess'])
+                        for q in data['additional_questions']]
+    require(len({q[0] for q in definitions}) == len(definitions), 'Duplicate substantive question')
+    selected = [rid for _, _, _, ids, _ in definitions for rid in ids]
+    require(len(selected) == len(set(selected)) == len(relations) and set(selected) == set(relations),
             'Substantive questions omit or overlap a replacement')
     questions = []
-    for qid, title, question, ids, consequences in QUESTIONS:
+    for qid, title, question, ids, consequences in definitions:
         questions.append({'id': qid, 'title': title, 'question': question,
             'decision': {'status': 'pending', 'record': None},
             'i5_consequences_to_assess': consequences,
@@ -168,8 +267,8 @@ def replacement_questions(rows, source_commit=None, account_commit=None):
         'common_input': COMMON, 'source_commit': source_commit, 'account_commit': account_commit,
         'inherited_subject': {'handoff': HANDOFF, 'source_commit': '01b01274b244ae6e5de10bf6bacb60087462cbb5',
             'conservation_sha256': PRIOR_SHA},
-        'questions': questions,
-        'standing': 'Substantive grouping of 69 inherited author proposals. Each exact relation and dependency remains. No owner decision or semantic acceptance; I5 consequences await current source assessment.',
+        'questions': questions, 'proposal_successors': successors, 'proposal_inputs': proposal_inputs(),
+        'standing': 'Substantive grouping of inherited and explicit I5 author proposals. Superseded proposal history and exact dependencies remain. Coordinate fields identify the frozen subject when bound. Independent semantic assessment and owner decisions remain open.',
         'decision_rule': 'The common pen consolidates equivalent questions across tenants while retaining per-claim and per-tenant relations. A group is not blanket acceptance; the owner ticket decision must identify accepted changed meanings before dependent acceptance.'}
 
 
@@ -184,8 +283,8 @@ def prepared(old):
             'successor_member_pins': copy.deepcopy(old['successor_member_pins']),
             'successor_locus_pins': copy.deepcopy(old['successor_locus_pins'])},
         'successor_member_pins': {}, 'successor_locus_pins': {},
-        'rows': copy.deepcopy(old['rows']), 'affected_rows': [],
-        'standing': 'Preparation only. Rows, their current_review records and carrying coordinates retain their exact I4 subjects. No I5 source binding, semantic assessment, evidence-reuse decision or owner acceptance.',
+        'rows': authored_rows(old), 'affected_rows': [], 'proposal_inputs': proposal_inputs(),
+        'standing': 'Historical evidence and review records retain their I4 subjects. Explicit author proposals bind their declared raw source only. No final I5 documentary/account binding, independent semantic assessment, evidence-reuse decision or owner acceptance.',
         'remaining_work': ['Bind the exact frozen I5 documentary source and authored account.',
             'Assess new/changed owners and necessary consumers; author explicit replacement proposals where I5 changes predecessor meaning.',
             'Complete nonauthor semantic conservation through supported retained and new evidence.',
@@ -204,6 +303,19 @@ def refresh(old, source_commit, account_commit):
     require(account['source_members'] == inventory, 'Account documentary inventory differs')
     current = prepared(old)
     cc = parser_library()
+    # These are the Accounting Writer's separately produced, content-pinned
+    # inputs. Their returned checkpoint is not the semantic-account producer's
+    # commit; conflating those producer coordinates would reject lawful order.
+    data = proposal_data()
+    if data:
+        checked = {}
+        for amendment in data['amendments']:
+            for pin in amendment['source_locus_pins']:
+                path, _, anchor = pin['route'].partition('#')
+                if path not in checked:
+                    checked[path] = git_bytes(source_commit, (PACKAGE/path).relative_to(REPO)).decode()
+                require(sha(cc.section_body(checked[path], anchor).encode()) == pin['body_sha256'],
+                        'Reassess author proposal after source change: '+pin['route'])
     members, loci, affected, cache = {}, {}, [], {}
     for row in current['rows']:
         changed = []
@@ -223,7 +335,9 @@ def refresh(old, source_commit, account_commit):
                 members[path] = {'sha256': sha(body), 'bytes': len(body)}
             body, prior = cache[path]
             unit = cc.section_body(body.decode(), anchor).encode()
-            previous = cc.section_body(prior.decode(), anchor).encode()
+            prior_text = prior.decode()
+            previous = cc.section_body(prior_text, anchor).encode() if not anchor or route in old['successor_locus_pins'] or any(
+                h['anchor'] == anchor for h in cc.heading_rows(prior_text)) else None
             loci[route] = {'sha256': sha(unit), 'bytes': len(unit), 'member_sha256': sha(body)}
             if unit != previous:
                 changed.append(route)
@@ -239,7 +353,12 @@ def refresh(old, source_commit, account_commit):
     current.update(candidate_source_commit=source_commit, candidate_account_commit=account_commit,
         account_sha256=sha(account_bytes), binding_state='coordinates_bound_assessment_pending',
         successor_member_pins=members, successor_locus_pins=loci, affected_rows=affected,
-        standing='Exact I5 coordinates for inherited author dispositions and replacement relations. All original evidence and owner-decision gaps remain. Current carrying completeness, semantic conservation, dependency sufficiency and reuse are unassessed.')
+        standing='Exact I5 coordinates for inherited dispositions and explicit I5 author proposals. Bounded source comparisons support the declared author consequences. All original evidence and owner-decision gaps remain. Independent current semantic assessment, complete dependency impact and evidence reuse remain open.',
+        remaining_work=[
+            'Complete nonauthor semantic assessment through supported retained and new evidence, including the explicit I5 proposals and their necessary consumers.',
+            'Establish complete carrying and validity-dependency coverage; the bounded author comparison and direct coordinate changes are not complete impact analysis.',
+            'Assess retained evidence applicability and receiving-line donor adaptations on the current subject.',
+            'Record exact owner decisions before dependent acceptance; no missing assessment is a pass.'])
     return current
 
 
@@ -263,13 +382,14 @@ def artifacts(account):
 
 def validate_artifacts(values, old, expected):
     account = values['CONSERVATION.json']
-    validate_rows(account['rows'], expected)
+    intended = authored_rows(old)
+    validate_rows(account['rows'], expected, Counter(r['disposition'] for r in intended))
     require(account['input_commit'] == COMMON and account['preimage'] == prepared(old)['preimage'],
             'Account preimage or common input changed')
     require(account['source_member_pins'] == old['source_member_pins'], 'Predecessor pins changed')
     require(account['inherited_coordinates'] == prepared(old)['inherited_coordinates'],
             'Historical carrying coordinates changed')
-    frozen = {r['id']: r for r in old['rows']}
+    frozen = {r['id']: r for r in intended}
     for row in account['rows']:
         previous = frozen[row['id']]
         allowed = {'successor_sha256', 'current_review', 'inherited_current_review'}
@@ -317,6 +437,22 @@ def self_check(values, old, expected):
             controls.append(name)
         else:
             raise ValueError('Adverse control was accepted: ' + name)
+    data = proposal_data()
+    if data:
+        proposal_mutations = {
+            'proposal_preimage_drift': lambda d: d['amendments'][0].update(original_row_sha256='0'*64),
+            'omitted_required_proposal': lambda d: d['amendments'].pop(),
+            'duplicate_proposal_claim': lambda d: d['amendments'].append(copy.deepcopy(d['amendments'][0])),
+            'proposal_owner_approval': lambda d: d['amendments'][0]['replacement_relation'].update(owner_decision='invented'),
+        }
+        for name, mutate in proposal_mutations.items():
+            bad = copy.deepcopy(data); mutate(bad)
+            try:
+                authored_rows(old, bad)
+            except (ValueError, KeyError, TypeError):
+                controls.append(name)
+            else:
+                raise ValueError('Adverse proposal was accepted: '+name)
     return controls
 
 
@@ -324,6 +460,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     mode = p.add_mutually_exclusive_group(required=True)
     mode.add_argument('--prepare', action='store_true')
+    mode.add_argument('--apply-proposals', action='store_true')
     mode.add_argument('--refresh', action='store_true')
     mode.add_argument('--check', action='store_true')
     mode.add_argument('--self-check', action='store_true')
@@ -345,19 +482,23 @@ def main():
         values = artifacts(account)
     validate_artifacts(values, old, expected)
     controls = self_check(values, old, expected) if args.self_check else []
-    if args.prepare or args.refresh:
+    if args.prepare or args.apply_proposals or args.refresh:
         for name in FILES:
             path = HERE / name
             require(not path.is_symlink(), 'Refusing symlink output')
             if path.exists():
                 prior = read(path)
                 # Never silently overwrite an independently modified account.
-                require(prior == values[name] or (args.refresh and prior == artifacts(prepared(old))[name]),
+                admitted_preimage = json.loads(git_bytes(PREPARATION, (HERE/name).relative_to(REPO))) if args.apply_proposals else None
+                require(prior == values[name] or (args.refresh and prior == artifacts(prepared(old))[name]) or
+                        (args.apply_proposals and prior == admitted_preimage),
                         'Output differs from the exact prepared preimage: ' + name)
         for name, value in values.items():
             write(HERE / name, value)
     print(json.dumps({'rows': len(values['CONSERVATION.json']['rows']),
-        'questions': len(QUESTIONS), 'replacements': 69,
+        'questions': len(values['REPLACEMENT_QUESTIONS.json']['questions']),
+        'replacements': sum(r['disposition']=='superseded' for r in values['CONSERVATION.json']['rows']),
+        'dispositions': dict(Counter(r['disposition'] for r in values['CONSERVATION.json']['rows'])),
         'binding_state': values['CONSERVATION.json']['binding_state'],
         'adverse_controls_rejected': controls,
         'standing': 'Author structural checks only; semantic review, reuse and owner decisions remain open.'}))

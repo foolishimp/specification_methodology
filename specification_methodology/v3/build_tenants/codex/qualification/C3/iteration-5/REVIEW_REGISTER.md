@@ -1,8 +1,10 @@
 # I5 evidence and review account
 
 This authored register preserves bounded evidence and directs required review.
-It is not a nonauthor assessment. Current I5 source and account binding awaits
-the producer freezes recorded in [CONSERVATION.json](CONSERVATION.json).
+It is not a nonauthor assessment. [CONSERVATION.json](CONSERVATION.json) binds
+documentary source `1e4bed65fe2216b288903ea553391c45ff90e9c1` and semantic
+account `57f711d964cd4eac8ed8523460cecc68bcaa63fb`; their exact acquisition
+does not make the historical reviews current or accept the proposed meanings.
 
 ## Retained historical evidence
 
@@ -27,13 +29,34 @@ must agree after I5 changes; historical generation success is not source fidelit
 
 ## Complete conservation and receiving-line assessment
 
-All 691 predecessor rows remain in the account: 621 proposed conserved,
-69 proposed superseded and one bounded inapplicability. The original 691
-indeterminate semantic-review records remain. That population does not imply
-there was no bounded nonauthor semantic evidence; nor do the reports above
-establish whole-population coverage. The 69 exact relations, all still lacking
-owner decisions, are grouped into 18 substantive questions in
-[REPLACEMENT_QUESTIONS.json](REPLACEMENT_QUESTIONS.json).
+All 691 predecessor identities remain. I4 proposed 621 conserved, 69 superseded
+and one bounded inapplicability. The I5 author comparison proposes 12 additional
+supersessions and revises one existing proposal: the current account therefore
+contains 609 proposed conserved, 81 proposed superseded and one bounded
+inapplicability. The original 691 indeterminate semantic-review records and
+every historical relation remain, with amended row preimages retained explicitly.
+That population does not imply there was no bounded nonauthor semantic evidence;
+nor do the reports above establish whole-population coverage. All 81 current
+replacement relations still lack owner decisions and occur exactly once across
+23 substantive questions in [REPLACEMENT_QUESTIONS.json](REPLACEMENT_QUESTIONS.json).
+
+The [authored source comparison](source/account/SOURCE_COMPARISON.json) records
+the nine changed standards and 37 changed heading units between the I4 source
+and raw I5 source `d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3`. It makes 20
+explicit predecessor/I4/I5 comparisons: 12 new replacement proposals, one revised
+proposal and seven retained conservation arguments. [PROPOSALS.json](source/account/PROPOSALS.json)
+preserves exact original row digests, source loci, changed meanings and owner
+dependencies. The final documentary freeze retains every proposal's raw source
+locus body. Shared-owner consequences are considered even when a consumer's
+local text is unchanged. This is a bounded author analysis, not independent
+assessment of all 691 claims or a complete validity-dependency impact model.
+
+New questions Q19–Q23 cover assertion/observation support and provenance,
+shared-cause mutual assurance, impact/risk/cost-based proof selection,
+model-purpose assurance, and construction strategy/resource/feedback support.
+Q05 retains the exact successor relation of I3-R2-R020 while adding the I5
+diagnosis distinction. Owner ratification of the common input does not decide
+these receiving-line predecessor replacement proposals.
 
 An eligible review binds the exact predecessor claim, frozen successor owner
 and necessary consumers. On the same material case, scope and authority it

@@ -10,17 +10,21 @@ questions remain scoped residuals. Mandatory support is acquired through native
 references; conditional support and provenance retain exact discoverable routes.
 An unresolved condition cannot authorize a dependent action.
 
-The [I4 interpretation generation record](../qualification/C3/iteration-4/interpretation/GENERATION.json)
-binds the current source and native checks. The [iteration-4 return](../qualification/C3/iteration-4/RETURN.md)
+The [I5 interpretation generation record](../qualification/C3/iteration-5/interpretation/GENERATION.json)
+binds the current source and native checks. The [iteration-5 return](../qualification/C3/iteration-5/RETURN.md)
 owns the candidate's evidence and qualification limits. Its
-[source-pair tool](../qualification/C3/iteration-4/tools/source_pair.py) exposes one
+[source-pair tool](../qualification/C3/iteration-5/tools/source_pair.py) exposes one
 authenticated source body beside its interpretation for review without copying
-all bodies into native values. Current [native checks](../qualification/C3/iteration-4/interpretation/NATIVE_CHECK.json)
-exercise three selectors in both projection modes, cold binding and source-drift
-refusal. [Serialized cost](../qualification/C3/iteration-4/SERIALIZED_COST.json)
-records the increased interpretation size; it supplies no practical efficiency
-claim. The [I3 repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)
-retains its historical checks, measurements and subject.
+all bodies into native values. Current [native checks](../qualification/C3/iteration-5/interpretation/NATIVE_CHECK.json)
+exercise the selected transformation, writing, recovery and assurance routes in
+both projection modes, cold binding and source-drift refusal.
+[Serialized cost](../qualification/C3/iteration-5/SERIALIZED_COST.json) separates
+current artifact sizes from qualification-reference factoring on identical
+semantic input; neither measure supplies a practical-efficiency claim.
+
+The [I4 return](../qualification/C3/iteration-4/RETURN.md) and
+[I3 repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)
+retain their historical checks, measurements and subjects.
 
 ## Historical I3 Conversion Evidence
 

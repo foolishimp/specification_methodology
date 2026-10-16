@@ -1,0 +1,991 @@
+{
+  "kind": "stdo.i5.explicit-conservation-proposals",
+  "schema_version": 1,
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "base_conservation_sha256": "92ef2fd3a399ede2b28c1a421b4f81cbe6460363d1056a9aad189b36e8f41fdd",
+  "base_commit": "11163991fd8525c98bdd94a36c71a2cfeb15a403",
+  "preparation_commit": "352e5e29a45f1362605bfa06d97387f544626d84",
+  "raw_source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+  "evidence": {
+    "path": "source/account/SOURCE_COMPARISON.json",
+    "sha256": "ef7b8099b86bbeb61a74800159434e8d87233f41526db81bf74b292baa9856f8"
+  },
+  "amendments": [
+    {
+      "claim_id": "DESIGN_MODULE_METHOD.md#6b-module-derived-unit-test-rule",
+      "original_row_sha256": "56f32bd38150fccde1e0804c88c9e746f4313a731aff474de41476191cc54113",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R001",
+        "predecessor_claim_id": "DESIGN_MODULE_METHOD.md#6b-module-derived-unit-test-rule",
+        "changed_meaning": "Adds explicit assertion interpretation/observation support and separate assertion/execution provenance to the existing module-owned proof lane; implementation-discovered tests must be re-expressed and justified against module obligations before module closure.",
+        "replacement_loci": [
+          "standards/DESIGN_MODULE_METHOD.md#6b-module-derived-unit-test-rule",
+          "standards/DESIGN_MODULE_METHOD.md#governing-relations",
+          "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+          "standards/TRANSFORMATION_LIBRARY.md#constraint-surface",
+          "standards/FOUNDATIONS.md#foundational-commitments",
+          "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/DESIGN_MODULE_METHOD.md#6b-module-derived-unit-test-rule",
+        "standards/DESIGN_MODULE_METHOD.md#governing-relations",
+        "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+        "standards/TRANSFORMATION_LIBRARY.md#constraint-surface",
+        "standards/FOUNDATIONS.md#foundational-commitments",
+        "standards/FOUNDATIONS.md#assertions-and-observations",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/DESIGN_MODULE_METHOD.md#6b-module-derived-unit-test-rule",
+          "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321",
+          "body_sha256": "7f8c015bb19f2429fb76cadfb8f5ec78903b28792fa93eace97e92d2704783f3",
+          "bytes": 2378
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        }
+      ],
+      "same_case_argument": "A module-owned test has the original ownership trace and actually tests its module property, but its evidence does not separately bind the assertion derivation and actual executed subject/observations. The new clause expressly requires those two support relations; this proposal records the added duty, not permission for an invalid oracle under the predecessor."
+    },
+    {
+      "claim_id": "REFERENCE_FRAME_METHOD.md#evidence",
+      "original_row_sha256": "d26d98467dfc993da1682a6dd41cc79842a8cf3db02db742d0ba8633d5248201",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R002",
+        "predecessor_claim_id": "REFERENCE_FRAME_METHOD.md#evidence",
+        "changed_meaning": "Extends the evidence declaration with an explicit reliance contract binding the frame predicate, assertion justification, observations and actual execution provenance through Construction assurance.",
+        "replacement_loci": [
+          "standards/REFERENCE_FRAME_METHOD.md#evidence",
+          "standards/REFERENCE_FRAME_METHOD.md#position",
+          "standards/FOUNDATIONS.md#bounded-construction",
+          "standards/FOUNDATIONS.md#result-algebra",
+          "standards/FOUNDATIONS.md#result-conjunction",
+          "standards/FOUNDATIONS.md#workspace-and-context",
+          "standards/FOUNDATIONS.md#construction-assurance",
+          "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/REFERENCE_FRAME_METHOD.md#evidence",
+        "standards/REFERENCE_FRAME_METHOD.md#position",
+        "standards/FOUNDATIONS.md#bounded-construction",
+        "standards/FOUNDATIONS.md#result-algebra",
+        "standards/FOUNDATIONS.md#result-conjunction",
+        "standards/FOUNDATIONS.md#workspace-and-context",
+        "standards/FOUNDATIONS.md#construction-assurance",
+        "standards/FOUNDATIONS.md#assertions-and-observations",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#construction-assurance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/REFERENCE_FRAME_METHOD.md#evidence",
+          "member_sha256": "ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d",
+          "body_sha256": "a025ad26a996af4f5064854c4ddb013065ad36889711a52850f1f5a12ca78ec4",
+          "bytes": 680
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#construction-assurance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "253cd8b96aa2dae389bcb3425d38f1a136b1b1eef4b9b0352590ea0b861d7825",
+          "bytes": 701
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        }
+      ],
+      "same_case_argument": "An admitted artifact records provenance, subject, basis and scope as the predecessor Evidence declaration requires, but its expected predicate has no separately justified derivation. Availability still grants no truth or authority in either source; I5 additionally requires the stated assertion/observation reliance bindings."
+    },
+    {
+      "claim_id": "REFERENCE_FRAME_METHOD.md#independently-activated-co-evaluation",
+      "original_row_sha256": "8fefa2ef58fc33758c9904ea4691ce2ecb5e3d891fdf3fa8faa4dde5b2b0f8df",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q20",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R003",
+        "predecessor_claim_id": "REFERENCE_FRAME_METHOD.md#independently-activated-co-evaluation",
+        "changed_meaning": "Retains non-interference between unclosed frame evaluations and adds explicit shared-cause/path justification for a mutual-assurance claim; separate activations and authorship conditions do not establish statistical independence or validate a shared expectation.",
+        "replacement_loci": [
+          "standards/REFERENCE_FRAME_METHOD.md#independently-activated-co-evaluation",
+          "standards/REFERENCE_FRAME_METHOD.md#position",
+          "standards/FOUNDATIONS.md#bounded-construction",
+          "standards/FOUNDATIONS.md#result-algebra",
+          "standards/FOUNDATIONS.md#result-conjunction",
+          "standards/FOUNDATIONS.md#workspace-and-context",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standards/FOUNDATIONS.md#risk-and-assurance-selection"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/REFERENCE_FRAME_METHOD.md#independently-activated-co-evaluation",
+        "standards/REFERENCE_FRAME_METHOD.md#position",
+        "standards/FOUNDATIONS.md#bounded-construction",
+        "standards/FOUNDATIONS.md#result-algebra",
+        "standards/FOUNDATIONS.md#result-conjunction",
+        "standards/FOUNDATIONS.md#workspace-and-context",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+        "standards/FOUNDATIONS.md#risk-and-assurance-selection"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/REFERENCE_FRAME_METHOD.md#independently-activated-co-evaluation",
+          "member_sha256": "ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d",
+          "body_sha256": "a86b96713f1f801d4bc7ba2690bcfdcc2b1fe020f01397bbe936466acc05e46c",
+          "bytes": 741
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "83de6757d9c5336cc0c20337349dfbba40f867cdd288878ddfc500bd825a5e03",
+          "bytes": 2342
+        }
+      ],
+      "same_case_argument": "Two non-interfering activations use the same erroneous fixture. They still satisfy the predecessor activation-separation condition; I5 requires their common cause to remain in the mutual-assurance account before a stronger confidence claim. This does not assert that the predecessor promised statistical independence."
+    },
+    {
+      "claim_id": "SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+      "original_row_sha256": "c022899f92bdd5c908e81bc876ee6651dfdc3d0a1225f104e9ddd0391ff518e6",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q23",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R013",
+        "predecessor_claim_id": "SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+        "changed_meaning": "Preserves the bounded delegated-execution/assessment/disposition relation and adds its material construction-owner duties: distinguish required Z, acquired state/observations and prediction; justify the selected strategy/resource/feedback tradeoffs and supported purpose of continued work; apply preservation, feedback diagnosis and retained-evidence assurance without a prescribed runtime, role sequence, universal solver or termination guarantee.",
+        "replacement_loci": [
+          "standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+          "standards/TRANSFORMATION_LIBRARY.md#workrecovery-specialization",
+          "standards/FOUNDATIONS.md#bounded-construction",
+          "standards/FOUNDATIONS.md#preservation-obligations",
+          "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standards/FOUNDATIONS.md#change-impact-and-evidence-retention"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+        "standards/TRANSFORMATION_LIBRARY.md#workrecovery-specialization",
+        "standards/FOUNDATIONS.md#bounded-construction",
+        "standards/FOUNDATIONS.md#preservation-obligations",
+        "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+        "standards/FOUNDATIONS.md#change-impact-and-evidence-retention"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#bounded-construction",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#preservation-obligations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+          "member_sha256": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+          "body_sha256": "91149d68491756845f6f978c31a0903898587bc6ce1591f67e23d58ef6b33225",
+          "bytes": 1806
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#bounded-construction",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "4e51eb86e4f5972dc94e99296a1149a509d28f35bb238e63c4a1924a00e68f9c",
+          "bytes": 6086
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#preservation-obligations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "4c089775a0d8c8a47972120ab48d3881c9f4710e372ae76b5b008b2570906e37",
+          "bytes": 2376
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "83de6757d9c5336cc0c20337349dfbba40f867cdd288878ddfc500bd825a5e03",
+          "bytes": 2342
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "55afd56f1f457819be3c160994bc4195bf03246637b3671a5f767de3d4eeddf3",
+          "bytes": 3381
+        }
+      ],
+      "same_case_argument": "A delegated construction follows the original normative sequence, but its strategy treats prediction success as required-outcome evidence and supplies no material resource/feedback rationale. I5 explicitly binds these separate accounts and strategy duties through Bounded construction. The added duties are proposed, without claiming the predecessor permitted unsupported acceptance or that every strategy needs an exhaustive optimization."
+    },
+    {
+      "claim_id": "SPEC_METHOD.md#testing-strategy-taxonomy",
+      "original_row_sha256": "9ee449b797c08bd6b06c826b299df975102d0520347586a0162e4f17f4d81c81",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R005",
+        "predecessor_claim_id": "SPEC_METHOD.md#testing-strategy-taxonomy",
+        "changed_meaning": "Retains the two test-authority classes, sandbox/live distinctions and applicable gates, adding separately justified assertion provenance and actual execution provenance, shared-dependency accounting and bounded standing for implementation-derived regression claims.",
+        "replacement_loci": [
+          "standards/SPEC_METHOD.md#testing-strategy-taxonomy",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standards/FOUNDATIONS.md#assertions-and-observations"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/SPEC_METHOD.md#testing-strategy-taxonomy",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+        "standards/FOUNDATIONS.md#assertions-and-observations"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/SPEC_METHOD.md#testing-strategy-taxonomy",
+          "member_sha256": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+          "body_sha256": "ec86b62234d44950751bf4e1f3e9d8a58c8b5b066e01f44d333b1b5810c7d14c",
+          "bytes": 5138
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        }
+      ],
+      "same_case_argument": "A lane declares its admitted requirement/design source and correct breadth label, but records only execution provenance. The added relation requires the expected predicate and derivation as well; matching lane labels alone cannot discharge it. The predecessor already prohibited current implementation from authoring the expected result."
+    },
+    {
+      "claim_id": "SPEC_METHOD.md#transition-evidence-and-proof-cadence",
+      "original_row_sha256": "3baf8b699d517a37441fe7c3c3d08081bc323af48a41ff58a1e03e8d965cf630",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q21",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R004",
+        "predecessor_claim_id": "SPEC_METHOD.md#transition-evidence-and-proof-cadence",
+        "changed_meaning": "Replaces cheapest focused falsification alone as the stated selection rule with risk/impact-qualified assurance selection, supported exclusions, new obligations and mandatory gates, total selection/reassessment cost and exact evidence-retention applicability. Whole-candidate qualification retains its declared boundary and required earlier triggers.",
+        "replacement_loci": [
+          "standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence",
+          "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standards/FOUNDATIONS.md#assertions-and-observations"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence",
+        "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+        "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+        "standards/FOUNDATIONS.md#assertions-and-observations"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence",
+          "member_sha256": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+          "body_sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff",
+          "bytes": 1561
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "55afd56f1f457819be3c160994bc4195bf03246637b3671a5f767de3d4eeddf3",
+          "bytes": 3381
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "83de6757d9c5336cc0c20337349dfbba40f867cdd288878ddfc500bd825a5e03",
+          "bytes": 2342
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        }
+      ],
+      "same_case_argument": "A cheap local falsifier exists but its impact analysis cannot exclude a changed fixture dependency. The old stated cadence names cheapest focused falsification and affected risk; the new selection contract expressly requires handling unknown impact and mandatory/new coverage and compares selection plus reassessment cost. Weak-property proof remains insufficient under both sources."
+    },
+    {
+      "claim_id": "SPEC_METHOD.md#universal-intake-triage",
+      "original_row_sha256": "b0adcca5b564a51ec2b32586bd0a5e307947332a4be7b4b3c972d54cfb11bc28",
+      "prior_disposition": "superseded",
+      "supersedes_proposal_id": "I3-R2-R020",
+      "question": "Q05",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R012",
+        "predecessor_claim_id": "SPEC_METHOD.md#universal-intake-triage",
+        "changed_meaning": "Retains the earlier current-workspace/core-result replacement and extends its changed meaning with the common feedback diagnosis: distinguish defective realization, inadequate requirement/design, inaccurate prediction and insufficient observation; retain uncertain alternatives and allow evidence acquisition before repair. Severity, priority and a bug-list projection grant no new repair class or authority.",
+        "replacement_loci": [
+          "standards/SPEC_METHOD.md#universal-intake-triage",
+          "standards/FOUNDATIONS.md#workspace-and-context",
+          "standards/FOUNDATIONS.md#result-algebra",
+          "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+          "standards/SPEC_METHOD.md#computed-classification-and-treatment",
+          "standards/REFERENCE_FRAME_METHOD.md#method-functions",
+          "standards/SPEC_METHOD.md#counterexample-localization",
+          "standards/FOUNDATIONS.md#bounded-construction",
+          "standards/FOUNDATIONS.md#change-impact-and-evidence-retention"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/SPEC_METHOD.md#universal-intake-triage",
+        "standards/FOUNDATIONS.md#workspace-and-context",
+        "standards/FOUNDATIONS.md#result-algebra",
+        "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+        "standards/SPEC_METHOD.md#computed-classification-and-treatment",
+        "standards/REFERENCE_FRAME_METHOD.md#method-functions",
+        "standards/SPEC_METHOD.md#counterexample-localization",
+        "standards/FOUNDATIONS.md#bounded-construction",
+        "standards/FOUNDATIONS.md#change-impact-and-evidence-retention"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#bounded-construction",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/SPEC_METHOD.md#universal-intake-triage",
+          "member_sha256": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+          "body_sha256": "8634138a51a54417ef0c147a2673c72ceb406744da59a693b52bace9f51a5c81",
+          "bytes": 5188
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#bounded-construction",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "4e51eb86e4f5972dc94e99296a1149a509d28f35bb238e63c4a1924a00e68f9c",
+          "bytes": 6086
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#change-impact-and-evidence-retention",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "55afd56f1f457819be3c160994bc4195bf03246637b3671a5f767de3d4eeddf3",
+          "bytes": 3381
+        }
+      ],
+      "same_case_argument": "The same anomaly can be explained by a faulty realization, a mistaken prediction or missing observation. The predecessor already requires supported causal localization and lawful re-entry; the I5 source adds this explicit four-way model/observation distinction and response binding. The inherited I3-R2-R020 description alone does not describe that added duty."
+    },
+    {
+      "claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation",
+      "original_row_sha256": "59770d7639299dd16f699c55600a23c74c698e4b336b1ec34be374cd90583b1f",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R009",
+        "predecessor_claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation",
+        "changed_meaning": "Retains exact owner-issued subject acquisition and independently derived oracle requirements, adding explicit assertion scope/implication, actual observation/checker-conformance support, acceptable-relation rather than default equality, and separate assertion/execution provenance.",
+        "replacement_loci": [
+          "standards/STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation",
+          "standards/TRANSFORMATION_LIBRARY.md#acquire",
+          "standards/TRANSFORMATION_LIBRARY.md#evaluate",
+          "standards/TRANSFORMATION_LIBRARY.md#faithful-projection",
+          "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation",
+        "standards/TRANSFORMATION_LIBRARY.md#acquire",
+        "standards/TRANSFORMATION_LIBRARY.md#evaluate",
+        "standards/TRANSFORMATION_LIBRARY.md#faithful-projection",
+        "standards/FOUNDATIONS.md#assertions-and-observations",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation",
+          "member_sha256": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067",
+          "body_sha256": "1b75a795f1598f438758c29835fc8ba80683f9d06388b22a752f7c7f24fc9e9c",
+          "bytes": 2507
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        }
+      ],
+      "same_case_argument": "The correct owner-issued subject and upstream oracle source are acquired, but the check observes only a necessary condition and does not support the implication to the claimed obligation. The old source already forbids rival owner semantics; I5 expressly adds these oracle-fidelity and observation support bindings, without claiming that an unsound broader pass was previously lawful."
+    },
+    {
+      "claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#combinatorial-coverage-and-testing-value-index",
+      "original_row_sha256": "d9626ede6e30babfb028868f2340dcb8a5f9dd3edc975d439d0c03b1eeb24946",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q21",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R007",
+        "predecessor_claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#combinatorial-coverage-and-testing-value-index",
+        "changed_meaning": "Retains interaction coverage and its eight dimensions while adding risk-qualified testing selection, material consequence/uncertainty and action conditions, total analysis/acquisition/execution/assessment cost, and justified probability/dependence/calibration for quantitative confidence claims.",
+        "replacement_loci": [
+          "standards/STDO_REFERENCE_FRAME_BASELINE.md#combinatorial-coverage-and-testing-value-index",
+          "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/STDO_REFERENCE_FRAME_BASELINE.md#combinatorial-coverage-and-testing-value-index",
+        "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/STDO_REFERENCE_FRAME_BASELINE.md#combinatorial-coverage-and-testing-value-index",
+          "member_sha256": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067",
+          "body_sha256": "417e7ef7766f6736fd0174743ea7f284fe69fef41c7fca38b99c4a85bab9cb1f",
+          "bytes": 3589
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#risk-and-assurance-selection",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "83de6757d9c5336cc0c20337349dfbba40f867cdd288878ddfc500bd825a5e03",
+          "bytes": 2342
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        }
+      ],
+      "same_case_argument": "A project supplies the predecessor interaction coordinates and a locally authorized scalar but claims operational confidence without a calibrated probability/dependence model. I5 explicitly requires that model for the confidence claim and separates it from interaction value; it does not retrospectively turn the old multiplicative interaction description into a probability theorem."
+    },
+    {
+      "claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#derived-product-testing-frame-set",
+      "original_row_sha256": "328ab35060c5cdcc9e9211063b15611741195137909874080c097bc7c129945a",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R006",
+        "predecessor_claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#derived-product-testing-frame-set",
+        "changed_meaning": "Adds an explicit Construction-assurance binding for each selected testing claim, including requirement/refinement source, asserted predicate, observation basis and required assurance, while retaining profile adoption, ordinary paths, exact subjects and the four-frame configuration.",
+        "replacement_loci": [
+          "standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-product-testing-frame-set",
+          "standards/FOUNDATIONS.md#construction-assurance",
+          "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-product-testing-frame-set",
+        "standards/FOUNDATIONS.md#construction-assurance",
+        "standards/FOUNDATIONS.md#assertions-and-observations",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#construction-assurance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/STDO_REFERENCE_FRAME_BASELINE.md#derived-product-testing-frame-set",
+          "member_sha256": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067",
+          "body_sha256": "6b69d4d6c732ca9a5488ef6d6801e07d8bcb7e2f31f6f999d8d5b56beb2f6d07",
+          "bytes": 2357
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#construction-assurance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "253cd8b96aa2dae389bcb3425d38f1a136b1b1eef4b9b0352590ea0b861d7825",
+          "bytes": 701
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        }
+      ],
+      "same_case_argument": "A selected testing frame declares the old claim/subject/path/population/oracle/falsification tuple but does not bind assertion derivation and observation justification at its consuming decision. I5 makes those assurance relations explicit duties without requiring an extra frame or actor."
+    },
+    {
+      "claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#testing-evidence-composition",
+      "original_row_sha256": "af0bbf107e10dbd35a4ccd0124df2b53c0502e1334eefeea2ce7b31dee052a20",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q20",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R008",
+        "predecessor_claim_id": "STDO_REFERENCE_FRAME_BASELINE.md#testing-evidence-composition",
+        "changed_meaning": "Adds justified requirement/refinement assertion paths, actual execution provenance and shared-failure-cause accounting when composed testing results supply mutual assurance; repeated views of one execution do not become independent observations. Existing logical conjunction, failed/missing claims and authorship rules remain.",
+        "replacement_loci": [
+          "standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-evidence-composition",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standards/TRANSFORMATION_LIBRARY.md#conjoin"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-evidence-composition",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+        "standards/TRANSFORMATION_LIBRARY.md#conjoin"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/TRANSFORMATION_LIBRARY.md#conjoin",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-evidence-composition",
+          "member_sha256": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067",
+          "body_sha256": "7d45243ffafafb575934d2b02f354ebdf2e3ef595093a076bce6dfcb4f20e42e",
+          "bytes": 1819
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/TRANSFORMATION_LIBRARY.md#conjoin",
+          "member_sha256": "5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10",
+          "body_sha256": "927054c222b1c3a65482decfc040107563bd4bdcf8c84e42aef15e9c0c1a84bf",
+          "bytes": 1027
+        }
+      ],
+      "same_case_argument": "One scenario produces UAT, end-to-end and integration results from the same run and fixture. The old rule already keeps their claims distinct and prevents substitution; I5 additionally binds their shared causes and separate assertion/execution paths before a mutual-assurance conclusion."
+    },
+    {
+      "claim_id": "TICKET_METHOD.md#test-case-authority",
+      "original_row_sha256": "d2a9c6547f3d9f688c48f6fd233d92bac28b288667df38dc9c32adf78bdd4745",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q19",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R010",
+        "predecessor_claim_id": "TICKET_METHOD.md#test-case-authority",
+        "changed_meaning": "Adds distinct assertion-derivation and actual execution provenance to the existing admitted-work authority chain, including justified predicate and actual checker/environment/observations, while preserving re-entry, governing-threat scope and prohibition on implementation-authored expectation.",
+        "replacement_loci": [
+          "standards/TICKET_METHOD.md#test-case-authority",
+          "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standards/FOUNDATIONS.md#assertions-and-observations"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/TICKET_METHOD.md#test-case-authority",
+        "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+        "standards/FOUNDATIONS.md#assertions-and-observations"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/TICKET_METHOD.md#test-case-authority",
+          "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
+          "body_sha256": "497eb958a1fcacc435ad589fa548d52eeda2296e720cbc7d5a570c403bba7948",
+          "bytes": 2757
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#parallel-assurance-and-provenance",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "5507ec750ee5793c47a6fa7978c99c4aabab5c0820bc199a3dc83541cfe56990",
+          "bytes": 2244
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        }
+      ],
+      "same_case_argument": "A passing test is traceable to its admitted ticket and governing source, but the record contains no separate derivation of its predicate or actual checker/environment observations. I5 now expressly requires both provenance relations in the existing carrier; no per-test ticket or new ledger is required."
+    },
+    {
+      "claim_id": "WORLD_MODEL_METHOD.md#4-assure",
+      "original_row_sha256": "98b6b3b7d94fea03b4f170a3bcbb980197a942a9761b3ecc1e4187881ae27bf4",
+      "prior_disposition": "conserved",
+      "supersedes_proposal_id": null,
+      "question": "Q22",
+      "replacement_relation": {
+        "id": "I5-ACCOUNT-R011",
+        "predecessor_claim_id": "WORLD_MODEL_METHOD.md#4-assure",
+        "changed_meaning": "Adds a mandatory assertion/observation binding for the model claim and its declared purpose, and distinguishes predictive adequacy from required construction outcome satisfaction. The original advisory assurance list keeps its should-strength.",
+        "replacement_loci": [
+          "standards/WORLD_MODEL_METHOD.md#4-assure",
+          "standards/WORLD_MODEL_METHOD.md#governing-relations",
+          "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+          "standards/FOUNDATIONS.md#foundational-commitments",
+          "standards/FOUNDATIONS.md#result-algebra",
+          "standards/FOUNDATIONS.md#result-conjunction",
+          "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standards/FOUNDATIONS.md#bounded-construction"
+        ],
+        "standing": "proposed_pending_owner_decision",
+        "owner_decision": null,
+        "remaining_condition": "Author proposal at raw source d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3; final documentary binding, nonauthor semantic adequacy and owner acceptance remain open."
+      },
+      "successor_loci": [
+        "standards/WORLD_MODEL_METHOD.md#4-assure",
+        "standards/WORLD_MODEL_METHOD.md#governing-relations",
+        "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+        "standards/FOUNDATIONS.md#foundational-commitments",
+        "standards/FOUNDATIONS.md#result-algebra",
+        "standards/FOUNDATIONS.md#result-conjunction",
+        "standards/FOUNDATIONS.md#assertions-and-observations",
+        "standards/FOUNDATIONS.md#bounded-construction"
+      ],
+      "owner_dependencies": [
+        {
+          "locus": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        },
+        {
+          "locus": "standards/FOUNDATIONS.md#bounded-construction",
+          "standing": "I5 shared owner; author proposal requires current nonauthor assessment",
+          "acquire_when": "evaluating this replacement or its applicability"
+        }
+      ],
+      "source_locus_pins": [
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/WORLD_MODEL_METHOD.md#4-assure",
+          "member_sha256": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f",
+          "body_sha256": "743458bca2f6a8710b0bc0c20f5fe2d0d035d118f0df49b4362cd8738f9e15fb",
+          "bytes": 1605
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#assertions-and-observations",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "8991b445c7a5c37d85bc5099c9fe8486c948c3b37caf1d69f9467294fbf529b4",
+          "bytes": 3195
+        },
+        {
+          "source_commit": "d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3",
+          "route": "standards/FOUNDATIONS.md#bounded-construction",
+          "member_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+          "body_sha256": "4e51eb86e4f5972dc94e99296a1149a509d28f35bb238e63c4a1924a00e68f9c",
+          "bytes": 6086
+        }
+      ],
+      "same_case_argument": "A predictive model claim has traced source observations and the original advisory disclosures but lacks a justified assertion/observation relation for its declared purpose. I5 requires that binding. Prediction error alone still cannot decide whether an external required outcome failed; the old should list is not silently rewritten as must."
+    }
+  ],
+  "additional_questions": [
+    {
+      "id": "Q19",
+      "title": "Explicit assertion and execution support",
+      "question": "Accept the additional assertion-interpretation, observation/checker and separate assertion/execution provenance duties at these exact proof consumers, preserving their existing authority, scope and lane restrictions?",
+      "i5_consequences_to_assess": "Source-first comparison and receiving-line review must cover each actual proof consumer. A correct source identifier or executed test is not by itself the additional support.",
+      "relation_ids": [
+        "I5-ACCOUNT-R001",
+        "I5-ACCOUNT-R002",
+        "I5-ACCOUNT-R005",
+        "I5-ACCOUNT-R006",
+        "I5-ACCOUNT-R009",
+        "I5-ACCOUNT-R010"
+      ]
+    },
+    {
+      "id": "Q20",
+      "title": "Mutual assurance and shared failure causes",
+      "question": "Accept the explicit shared-cause and provenance conditions on mutual-assurance claims while retaining frame separation, logical conjunction and required authorship independence?",
+      "i5_consequences_to_assess": "Inspect shared fixtures, interpretations, observations and received contributions. Agreement and different actors do not establish statistical independence.",
+      "relation_ids": [
+        "I5-ACCOUNT-R003",
+        "I5-ACCOUNT-R008"
+      ]
+    },
+    {
+      "id": "Q21",
+      "title": "Risk-qualified assurance selection",
+      "question": "Accept the extended impact/risk/total-cost selection duties, required new coverage and mandatory gates, and the model/dependence/calibration conditions on quantitative assurance?",
+      "i5_consequences_to_assess": "Assess actual selection and unsupported exclusions; retain qualitative evidence and unknown numeric estimates. No universal probability threshold or automatic full-suite cadence follows.",
+      "relation_ids": [
+        "I5-ACCOUNT-R004",
+        "I5-ACCOUNT-R007"
+      ]
+    },
+    {
+      "id": "Q22",
+      "title": "Predictive claims and required outcomes",
+      "question": "Accept the added mandatory assertion/observation binding for world-model assurance and the distinction between predictive adequacy and construction outcome satisfaction, retaining the original advisory list strength?",
+      "i5_consequences_to_assess": "Review the model-purpose and observation binding and the material construction consumer; do not equate prediction error with an outcome failure.",
+      "relation_ids": [
+        "I5-ACCOUNT-R011"
+      ]
+    },
+    {
+      "id": "Q23",
+      "title": "Construction strategy and feedback obligations",
+      "question": "Accept the added required-state/prediction/observation, strategy/resource and feedback/preservation duties at the delegated construction consumer while retaining the old lawful execution and authority boundaries?",
+      "i5_consequences_to_assess": "Assess the current construction and recovery joins, supported continuation and resource rationale; preserve optional strategies and unresolved universal proofs.",
+      "relation_ids": [
+        "I5-ACCOUNT-R013"
+      ]
+    }
+  ],
+  "standing": "Twelve proposed conserved-to-superseded changes and one revision of a pending proposal. Historical evidence and all owner decisions remain unchanged and open."
+}

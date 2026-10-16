@@ -64,6 +64,15 @@ undecided, retain the unresolved obligation and withhold dependent action.
 Route presence establishes neither applicability nor satisfaction. Every target
 resolves during compilation even when its body is not selected.
 
+A qualification_ref carries scope, an RFC 6901 pointer and the SHA-256 of the
+canonical JSON object at that pointer. It selects the complete qualification
+already carried in the same clause's semantic record or registered inline
+definition. The separate required_when field exactly reproduces that object's
+condition, including null when absent. Resolve the reference before applying
+the route. A missing, changed or ambiguous qualification refuses acquisition;
+it cannot become unconditional permission. Literal qualification remains valid
+when null. Pointer storage preserves the complete object, not an approximation.
+
 ## Inlined contract
 
 This exact shared abbreviation has no independently declared semantic owner.

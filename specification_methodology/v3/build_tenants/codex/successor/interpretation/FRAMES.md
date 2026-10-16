@@ -830,6 +830,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:DESIGN_MODULE_METHOD.whole-family-p
 
 - [standards/DESIGN_MODULE_METHOD.md#whole-family-prime-contraction](../standards/DESIGN_MODULE_METHOD.md#whole-family-prime-contraction)
 
+## Unit foundationsassertions-and-observations 6e46214177ab
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.assertions-and-observations`.
+
+- [standards/FOUNDATIONS.md#assertions-and-observations](../standards/FOUNDATIONS.md#assertions-and-observations)
+
 ## Unit foundationsbounded-construction b77901e93971
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.bounded-construction`.
@@ -842,6 +848,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.canonical-transformatio
 
 - [standards/FOUNDATIONS.md#canonical-transformations](../standards/FOUNDATIONS.md#canonical-transformations)
 
+## Unit foundationschange-impact-and-evidence-retention 34fef124d37b
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention`.
+
+- [standards/FOUNDATIONS.md#change-impact-and-evidence-retention](../standards/FOUNDATIONS.md#change-impact-and-evidence-retention)
+
 ## Unit foundationsconfiguration b8dd242beb9d
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.configuration`.
@@ -853,6 +865,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.configuration`.
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.construction-and-use`.
 
 - [standards/FOUNDATIONS.md#construction-and-use](../standards/FOUNDATIONS.md#construction-and-use)
+
+## Unit foundationsconstruction-assurance 2efaa9e2d8b9
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.construction-assurance`.
+
+- [standards/FOUNDATIONS.md#construction-assurance](../standards/FOUNDATIONS.md#construction-assurance)
 
 ## Unit foundationscore-contract-derivations 379c4909d031
 
@@ -896,11 +914,23 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.orthogonal-descriptions
 
 - [standards/FOUNDATIONS.md#orthogonal-descriptions](../standards/FOUNDATIONS.md#orthogonal-descriptions)
 
+## Unit foundationsparallel-assurance-and-provenance d5f7bd5d8fd8
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.parallel-assurance-and-provenance`.
+
+- [standards/FOUNDATIONS.md#parallel-assurance-and-provenance](../standards/FOUNDATIONS.md#parallel-assurance-and-provenance)
+
 ## Unit foundationspremises-and-standing e81c6a54906b
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.premises-and-standing`.
 
 - [standards/FOUNDATIONS.md#premises-and-standing](../standards/FOUNDATIONS.md#premises-and-standing)
+
+## Unit foundationspreservation-obligations 14e59728e3df
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.preservation-obligations`.
+
+- [standards/FOUNDATIONS.md#preservation-obligations](../standards/FOUNDATIONS.md#preservation-obligations)
 
 ## Unit foundationspurpose-and-interfaces bd08e751f1b3
 
@@ -925,6 +955,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.result-algebra`.
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.result-conjunction`.
 
 - [standards/FOUNDATIONS.md#result-conjunction](../standards/FOUNDATIONS.md#result-conjunction)
+
+## Unit foundationsrisk-and-assurance-selection 2fd87187fe56
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.risk-and-assurance-selection`.
+
+- [standards/FOUNDATIONS.md#risk-and-assurance-selection](../standards/FOUNDATIONS.md#risk-and-assurance-selection)
 
 ## Unit foundationsstdo-foundations d0f8d01958f0
 
@@ -2929,6 +2965,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.testi
 Index: `urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.testing-frame`.
 
 - [standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-frame](../standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-frame)
+
+## Unit stdo_reference_frame_baselinetesting-reassessment-and-evidence-reuse 824d811f24c8
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse`.
+
+- [standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-reassessment-and-evidence-reuse](../standards/STDO_REFERENCE_FRAME_BASELINE.md#testing-reassessment-and-evidence-reuse)
 
 ## Unit stdo_reference_frame_baselinework-result 77325a168d12
 

@@ -1,168 +1,192 @@
-# I5 accounting preparation return
+# I5 author accounting return
 
-The bounded preparation is complete. The work result is `incomplete` for the
-full accounting activation because current source/account binding awaits the
-producer freezes. These prepared artifacts grant no semantic conservation,
-independent review, owner acceptance or candidate eligibility.
+The admitted author-accounting work is complete and ready for review on the
+exact frozen dependencies below. The bounded installed evaluation is
+`satisfied` for authored source consequences, preserved historical evidence,
+explicit replacement proposals and reproducible coordinate binding. It grants
+no independent semantic judgment, owner replacement decision, candidate
+acceptance or actual-use result.
 
-## Basis and exact artifacts
+## Basis and returned artifacts
 
-Activation: I5-WRITE-ACCOUNT under EC-CODEX-I5-01, recorded on main
-`d360b66b3b5b01c962a15b33f60f228b50cdb6b0`. Main `dc11630` clarifies that
-read-only exact Git acquisition is permitted; Git effects remain ungranted.
-The common input is `4c340f7adec9f3c893e3e267b23e4cadeb357854`; own
-preimage is `11163991fd8525c98bdd94a36c71a2cfeb15a403`, retaining I4 handoff
-`62318d3b0be35985a0397aa39daee0ec8836eabc` and package
-`903f1198ac038b05c941c0cbc2abeceb9b3978fd`. Installed builder:
-STDO 2.5.1-rc.2, manifest
-`3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+Activation: I5-WRITE-ACCOUNT under EC-CODEX-I5-01, resumed by main
+`5c186b65a5370a7e0010f617a6b80a0a88f4ef18`. Read-only exact Git acquisition
+is permitted by the recorded `dc11630` clarification; this Writer made no Git
+mutation. Common basis: `4c340f7adec9f3c893e3e267b23e4cadeb357854`.
+Own starting subject: `11163991fd8525c98bdd94a36c71a2cfeb15a403`, preserving
+I4 handoff `62318d3b0be35985a0397aa39daee0ec8836eabc` and package
+`903f1198ac038b05c941c0cbc2abeceb9b3978fd`. Installed builder: STDO 2.5.1-rc.2,
+manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
 
-All files below are newly created within the admitted territory, relative to
-this directory. The returned pins exclude this return's own self-reference.
+The historical preparation is frozen at
+`352e5e29a45f1362605bfa06d97387f544626d84`; its completed preparation and
+then-missing dependencies are historical facts. This return advances that
+work with explicit author consequences and completed current binding.
+
+| Dependency | Exact coordinate |
+|---|---|
+| I4 documentary comparison source | `01b01274b244ae6e5de10bf6bacb60087462cbb5` |
+| I5 raw source used by authored comparisons | `d7e6876c4a2294a18fce8db08a4bcfabc1fa5eb3` |
+| Final documentary source | `1e4bed65fe2216b288903ea553391c45ff90e9c1` |
+| Frozen authored semantic account | `57f711d964cd4eac8ed8523460cecc68bcaa63fb` |
+| Frozen DETERMINATIONS.json SHA-256 | `e3e55368350ef378c313e973de073df4639769e1dbc81ed6c0c3852ee1f2f96a` |
+
+The proposal inputs below are this Accounting Writer's separate, content-pinned
+product. They are not represented as already present in the semantic-account
+producer freeze. Their durable Git coordinate is the subsequent Writer return
+checkpoint. The shared context and interpretation compiler remain owned by
+the Interpretation Writer and were not edited here.
+
+Paths are relative to this directory; the table excludes this return's own
+self-reference. The Executive/Git Writer can freeze these exact bytes.
 
 | Artifact | Bytes | SHA-256 |
 |---|---:|---|
-| [CONSERVATION.json](CONSERVATION.json) | 2171054 | `729a7b120d67b9011d3eeafd2b323eae3c73b18e76db9372d0d322c7adc4698f` |
-| [FRONTIER.json](FRONTIER.json) | 215969 | `4bbb6e378c72255d95220a0a91ca9bedf599ea131d0a64549d19aa27a351a474` |
-| [REPLACEMENT_QUESTIONS.json](REPLACEMENT_QUESTIONS.json) | 134287 | `b19cb437ec3cae27775881261a0e94b11c080796da2b33c41de829357215b5d1` |
+| [CONSERVATION.json](CONSERVATION.json) | 2913975 | `86386131ec3b429d0fbfe1efddd4e83415fb16c1c03545fb4e439f9939ba01d6` |
+| [FRONTIER.json](FRONTIER.json) | 216467 | `77053f340a0292536595505867370a8b1fdc94e57c238b37f9dc4440d60cdd70` |
+| [REPLACEMENT_QUESTIONS.json](REPLACEMENT_QUESTIONS.json) | 192106 | `1243d6b208c2438198ffb169a9a5998c63bc5740146e3d850f424ec7b48e593e` |
 | [PORT_ACCOUNT.md](PORT_ACCOUNT.md) | 4743 | `e36696bb4c0ea32f679f00aa0bb4ff416567fe3f4b51f37ad67ac1a6790d8732` |
-| [REVIEW_REGISTER.md](REVIEW_REGISTER.md) | 6699 | `334a3d575b0bbec91b0adb2cc3ab130678f00fcdfaf2bd6c61fd88b5c005d6e9` |
-| [tools/carry_conservation.py](tools/carry_conservation.py) | 25658 | `09cc06f805ec9849c9b3f24c0d4de1c94cc9fb13834eef08bb8821afdac20bb7` |
+| [REVIEW_REGISTER.md](REVIEW_REGISTER.md) | 8388 | `a6b51e35b2f398cdf643f6e595b65001a56b243663ef1b23a2587fec7822a05e` |
+| [tools/carry_conservation.py](tools/carry_conservation.py) | 34871 | `70fff7c2cf5e595b0a96ba8b3543f73e8e1d290e6a045ad531b27f6744dd2e19` |
+| [source/account/PROPOSALS.json](source/account/PROPOSALS.json) | 59442 | `f23e3f29c1727cc8d070bd0094c4d8adf053f2882502a973d096babc15f62386` |
+| [source/account/SOURCE_COMPARISON.json](source/account/SOURCE_COMPARISON.json) | 351113 | `ef7b8099b86bbeb61a74800159434e8d87233f41526db81bf74b292baa9856f8` |
+| [source/account/build_proposals.py](source/account/build_proposals.py) | 26429 | `c6eb0ef8cf945173c63e5b0bf6c274145a5876d42eccfc29d6f35d73bfeb26aa` |
 
-The exact I4 conservation input is 2,313,003 bytes, SHA-256
-`92ef2fd3a399ede2b28c1a421b4f81cbe6460363d1056a9aad189b36e8f41fdd`.
-The common 691-claim census is bound to its ratified Git object and SHA-256
-`2b8e80c9623e746250b3c338d8afa08b6d17e033e658e4dc922965fa0b7f606a`.
-The helper verifies the selected object bytes and local historical copies.
-All tracked I4 artifacts remain unchanged from own preimage `1116399`.
+## Author disposition consequences
 
-## Construction result
+The exact comparison identifies nine changed standards, including Foundations
+and eight consumers, with 37 changed heading units. The evidence records exact
+old/new bodies and member digests. Result algebra, result conjunction and
+foundational commitments remain byte-identical across the compared sources.
 
-All 691 historical rows are preserved exactly, including every disposition,
-source identity, replacement relation, owner dependency, evidence record and
-indeterminate semantic-review record. The counts remain 621 proposed
-conserved, 69 proposed superseded and one bounded not-applicable claim.
-Historical carrying pins remain explicitly historical. I5 source/account
-coordinates are null and binding state is
-`awaiting_source_and_account_freeze`; the current frontier assessments are
-`not_performed`, not invented indeterminate judgments or passes.
+Twenty explicit predecessor/I4/I5 comparisons support 12 new proposals from
+conserved to superseded, one revision of a pending proposal, and seven retained
+conservation arguments. Every predecessor source identity and every historical
+evidence record remains. Each amended row preserves its original digest,
+disposition, relation, carrying loci, acceptance field and owner dependencies.
+The prior I4 621/69/1 dispositions remain recoverable; current proposed
+counts are 609 conserved, 81 superseded and one not applicable, totaling 691.
+All original 691 indeterminate semantic-review records are preserved.
 
-The 69 exact replacement relations are grouped into 18 substantive questions,
-each preserving its changed meaning, replacement loci, original comparison
-family, shared replacement dependencies and distinct owner dependencies.
-The Identity selector's Release-policy dependencies remain explicit.
-Every owner decision remains null/pending.
-
-| Questions | Substantive decision |
+| Exact proposed relation(s) | Changed obligation and owner question |
 |---|---|
-| Q01–Q04 | Shared ownership/policy; result signatures; joins/conjunction; interpretation/translation obligations |
-| Q05–Q08 | Activation/currentness; bounded Executive context; optional baseline policy; work results/closure |
-| Q09–Q12 | Cross-view assessment; human/mixed realization; scoped diagnosis; observed effects |
-| Q13–Q16 | Assessment versus owner disposition; traversal admission; UX outcome/replay; Identity selector |
-| Q17–Q18 | Compression dispositions/acquisition; current distribution and ordinary entry |
+| I5-ACCOUNT-R001, R002, R005, R006, R009, R010 | Q19: explicit assertion/observation support, assertion derivation and execution provenance at DMM, Reference Frame, Spec, Baseline and Ticket consumers |
+| I5-ACCOUNT-R003, R008 | Q20: shared-cause and dependence support for mutual assurance; distinct activation alone grants no statistical independence |
+| I5-ACCOUNT-R004, R007 | Q21: impact/risk/cost-based proof selection, coverage/exclusion and quantitative-model support while retaining mandatory gates |
+| I5-ACCOUNT-R011 | Q22: model-purpose assertion/observation support and required outcome versus predicted outcome distinction, preserving the predecessor advisory list's modal strength |
+| I5-ACCOUNT-R012 | Q05: successor to I3-R2-R020; retains its prior pending proposal and adds realization, requirement/design, prediction/model and observation diagnosis distinctions |
+| I5-ACCOUNT-R013 | Q23: shared construction-owner changes affect the unchanged local UP-020 consumer; required predicate, strategy/resource/feedback support and preservation/assurance duties need a proposal |
 
-Grouping is a proposal for owner consideration, not blanket acceptance.
-The common pen can combine equivalent questions across tenants only while
-retaining their exact per-claim/per-tenant relations and decisions.
-I5 consequences are named for each question; they are not asserted discharged.
+The seven retained arguments concern Release qualification/recovery; Spec
+evidence rules, proof-target adequacy, proportional delivery and complete
+relation admission; Baseline counterexample localization; and Ticket
+condition-based closure/reuse. Their same-case explanations are in
+[SOURCE_COMPARISON.json](source/account/SOURCE_COMPARISON.json). They do not
+claim a new complete semantic assessment of the remaining census. In
+particular, unchanged local text is not used to dismiss changed shared owners.
 
-The port account preserves X1–X9 at their historical donor
-`2beed8d9a043cfa572bd240793e5020134300410`. Three selected contributions
-from the permitted I5 donor `c66ed4e0e97ca91ebc26894eaf283ebc6c3a2e20`
-inform semantic comparison, coverage/assessment separation and preservation
-of narrow evidence with decision dependencies. Their exact members, excerpts,
-digests, adaptations, exclusions and authorship limits are recorded.
-No donor architecture, result system, numerical reduction rule or trial
-outcome is imported. Receiving-line nonauthor assessment remains open.
+All 81 current exact relations occur once across 23 substantive owner-question
+groups. Q01–Q18 retain inherited meaning and dependency gaps; Q19–Q23 make the
+new consequences explicit. Every owner decision remains null/pending. Common
+input ratification does not accept receiving-line replacement proposals. Grouping
+questions permits coordinated decisions while preserving exact per-claim and
+per-tenant relations; it supplies no blanket acceptance.
 
-The review register carries bounded I4 evidence without rebinding it to I5.
-The source/permission readbacks, finite conjunction model, integration
-mechanics, selector-conflict witness and package receipts keep their original
-subjects and limits. New nonauthor conservation coverage, receiving-line
-assessment and changed dependency applicability remain explicit.
+## Coverage, reuse and authorship boundaries
 
-## Verification and limits
+The predecessor census contains 691 claims from 71 source members. The frozen
+I5 documentary inventory binds all 72 package members outside interpretation/,
+including documents whose membership does not imply independent assessment.
+The account records 747 carrying-locus pins and identifies 406 rows with changed
+direct carrying coordinates. Those are mechanical populations, not counts of
+changed meanings or a complete dependency-impact model.
 
-Executed from the Codex tenant directory:
+The author comparison has the bounded 20-claim/37-changed-unit scope above.
+Independent current semantic assessment is still not performed by this Writer.
+Necessary consumers, indirect dependencies, retained evidence applicability,
+new obligations and mandatory gates require supported coverage; unknown impact
+must widen reassessment or remain unresolved. The [review register](REVIEW_REGISTER.md)
+retains exact historical subjects and identifies these duties. I4 source
+readbacks, finite conjunction reproduction, integration mechanics, selector
+witness and package receipts keep their original scope and result.
+
+The [port account](PORT_ACCOUNT.md) preserves X1–X9 at historical donor
+`2beed8d9a043cfa572bd240793e5020134300410`. Its selected I5-D1–D3 contributions
+from donor `c66ed4e0e97ca91ebc26894eaf283ebc6c3a2e20` retain exact excerpt
+digests, adaptations, exclusions and attribution. This resumed phase adds no
+new donor acquisition. Receiving-line nonauthor assessment remains required;
+the authors of these accounts cannot supply it. No donor result dialect,
+numerical rule, architecture or actual-use outcome is imported.
+
+## Verification and tool protocol
+
+Executed on the exact dependencies above: explicit proposal application,
+source/account refresh, frozen-object check and self-check. The self-check
+reconstructs the bound outputs from their frozen source/account objects before
+checking all rows and relations. All 11 adverse controls were rejected:
+omitted/duplicated claims, fabricated owner acceptance, lost exact relations,
+weakened changed meaning, fabricated semantic pass, predecessor-pin drift,
+proposal-preimage drift, omitted required proposal, duplicate proposal claim,
+and fabricated proposal owner approval. These are author structural results.
+
+Proposal and comparison inputs rebuild byte for byte. Missing freeze arguments
+and regression from bound output to preparation are rejected with all three
+account output hashes unchanged. A read-only diff confirms that tracked I4
+artifacts are unchanged from `1116399`. Final metadata descriptions distinguish
+completed coordinate binding from the remaining semantic and owner work.
+
+Current replay from the Codex tenant directory:
 
 ```sh
-python3 qualification/C3/iteration-5/tools/carry_conservation.py --prepare
+python3 qualification/C3/iteration-5/source/account/build_proposals.py
+python3 qualification/C3/iteration-5/tools/carry_conservation.py --check
 python3 qualification/C3/iteration-5/tools/carry_conservation.py --self-check
 ```
 
-Preparation is idempotent. All 691 rows and immutable predecessor pins match
-the exact preimage; all 69 relations occur exactly once across the 18 groups.
-Seven in-memory adverse controls are rejected: omitted claim, duplicate claim,
-invented owner approval, lost exact relation, weakened changed meaning,
-fabricated semantic pass and predecessor-pin drift. A refresh without both
-freeze coordinates fails before changing output bytes. Local Markdown links
-resolve. These are author structural checks, not independent semantic review.
-
-The source-bound refresh path is prepared but has not been exercised on an
-I5 freeze. It requires exact documentary membership and bytes, an exact
-authored account whose source and common basis match, and its documentary
-inventory. It records changed direct carrying coordinates and preserves
-historical review subjects. It deliberately leaves current semantic
-assessment and complete validity-dependency impact unassessed.
-
-The new phase's conservatively counted captured tool-output boundary is
-144,647 UTF-8 bytes at this return checkpoint, within the 262,144-byte
-allowance. It includes routing/measurement output and output discarded by
-outer display truncation, so it is an upper bound on newly presented source.
-Large machine files were parsed locally and presented selectively; their
-complete bodies were not placed in context. The phase elapsed 826 seconds
-from the first timed acquisition to this return checkpoint, below the
-60-minute checkpoint. External paid calls and spend are zero. Active context
-including host material and native charges remain uninstrumented; no
-context-fit or efficiency claim follows.
-
-The prior intake's uncertified source-acquisition accounting remains a
-recorded limitation. This separately measured phase does not repair or
-reclassify that historical result.
-
-## Dependency and next operation
-
-The parent supplies the completed producer documentary-source commit and
-authored-account commit. Then, in the same admitted accounting territory:
+The check modes read coordinates from the bound account; they do not take
+freeze arguments. To advance the exact historical prepared account, first
+rebuild the explicit author inputs and use `--apply-proposals`, then:
 
 ```sh
 python3 qualification/C3/iteration-5/tools/carry_conservation.py --refresh \
-  --source-commit "$I5_SOURCE_COMMIT" --account-commit "$I5_ACCOUNT_COMMIT"
-python3 qualification/C3/iteration-5/tools/carry_conservation.py --self-check
+  --source-commit 1e4bed65fe2216b288903ea553391c45ff90e9c1 \
+  --account-commit 57f711d964cd4eac8ed8523460cecc68bcaa63fb
 ```
 
-The Interpretation Writer owns shared `tools/context.py`, `INPUTS.json`
-and the account/compiler. This Writer consumes that API and did not edit it.
-The current exact coordinates and direct changes can then be refreshed; any
-new or changed semantic carrying relation requires explicit authored work,
-assessment and, where meaning changes, an owner replacement decision.
-The helper rejects unannounced disposition or inherited-meaning changes.
+The helper rejects changed row preimages, unsupported owner decisions,
+missing proposal coverage, divergent documentary inventory/account subjects,
+and changed source bodies at the proposal loci. It never reruns historical
+mains. A fresh future source change requires a new explicit comparison and
+proposal decision, not silent coordinate substitution.
 
-After binding, complete nonauthor assessment of required claims through
-applicable retained and new evidence, including new I5 obligations, unknown
-impact and mandatory gates. Preserve known failures until supported
-disposition. The common owner still selects acceptance reviews, shared
-actual-use protocol/resources, UX compliance replacement, steel thread,
-identity/packaging/compression decisions, candidate cut and cohort.
-No candidate-author oracle or acceptance is produced here.
+## Closed installed evaluation and limits
 
-## Closed installed evaluation
+Evaluated predicate: this admitted author accounting activation acquires its
+exact dependencies, compares the actual source changes within its declared
+scope, records needed proposals without accepting them, preserves historical
+claims/evidence and returns reproducible bound accounts in its territory.
+Result: `satisfied` within that scope. The author work is complete and ready
+for review; independent semantic conservation, evidence reuse and owner
+acceptance remain explicit obligations rather than passed predicates.
 
-Evaluated predicate: the admitted accounting preparation preserves its exact
-historical population and evidence standing, supplies substantive owner
-questions and attributed selected ports, and prepares a fail-closed current
-binding operation within its territory. Overall result: `satisfied` for
-that bounded preparation.
+The conservatively counted captured-tool-output checkpoint for this resumed
+phase is 181625 UTF-8 bytes at 1585 elapsed seconds,
+within the 196,608-byte source allowance and before the 30-minute checkpoint.
+The measure includes routing/verification output and any captured text discarded
+by outer display truncation; it is an upper bound on newly presented source at
+that checkpoint. Large machine files were parsed selectively. Active context
+including host material and native charges remain unknown. External paid calls
+and spend are zero; no context-fit or efficiency claim is made.
 
-Scoped results: historical population/relations, question coverage,
-attribution, resource boundary and structural controls are `satisfied`
-within the observed boundaries above. Current I5 source/account binding and
-semantic/reuse assessment are not performed, awaiting their declared
-dependencies; they are not passed. Owner decisions and independent
-acceptance remain outside this Writer's authority.
+The earlier intake's uncertified source-acquisition accounting remains a
+limitation. The separately measured preparation return at `352e5e2` and this
+resumed phase do not repair or reclassify that historical result. All writes
+remain in this Writer's admitted accounting territory; no peer/common file,
+historical I4 artifact, Git state, acceptance record or actual-use oracle was
+changed.
 
-Work-result variant: `incomplete` for I5-WRITE-ACCOUNT pending the producer
-freezes and subsequent binding. Valid prepared work remains available; no
-common or peer file, historical artifact, Git state, actual-use oracle or
-acceptance record was changed.
-
+The owner still decides exact replacement acceptance and acceptance-review
+allocation, shared actual-use protocol/resources, UX compliance replacement,
+steel thread, identity/packaging/compression decisions, candidate cut and
+cohort. This return neither resolves those decisions nor creates an
+independent expected-outcome oracle.
