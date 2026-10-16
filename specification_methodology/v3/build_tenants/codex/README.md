@@ -6,13 +6,13 @@ This tenant realizes the shared [Intent](../../specification/INTENT.md) and
 [Product](../../specification/PRODUCT.md). The current method package is
 [successor/](successor/README.md); it contains one [standards library](successor/standards/README.md).
 [Design](design/README.md) owns the document HOW.
-[Qualification](qualification/C3/iteration-4/RETURN.md) records the exact subjects, evidence,
+[Qualification](qualification/C3/iteration-5/RETURN.md) records the exact subjects, evidence,
 limits and remaining acceptance work.
 
-The [I4 work plan](qualification/C3/iteration-4/PLAN.md) binds the ratified
-common input and successor construction. The I4 package is frozen at
-`903f1198ac038b05c941c0cbc2abeceb9b3978fd`. Its return separates completed
-construction checks from open assessment, comparison and acceptance.
+The [I5 work plan](qualification/C3/iteration-5/PLAN.md) binds the ratified
+common input and successor construction. I5 construction continues the I4 package
+`903f1198ac038b05c941c0cbc2abeceb9b3978fd`. Its current return separates
+work in progress from completed checks and open assessment or acceptance.
 
 The common pen owns requirements and tickets. Tenant implementation writes stay
 here. Codex reviews and construction commentary are posted under

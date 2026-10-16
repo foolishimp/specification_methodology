@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6
+source_digest: 4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -29,6 +29,14 @@ Lawful closure with permitted durable debt does not establish repayment or
 item compliance. Missing assessment remains missing coverage.
 
 ## Carrier-Binding Compression
+
+Closure and reuse bind Foundations' change-impact and evidence-retention
+relation to the exact work claim. Combine applicable historical evidence with
+actual reassessment; selection is not execution. Preserve original subjects,
+known failures, unknown impact, newly uncovered obligations and mandatory gates.
+Test expectations need justified source interpretation separately from actual
+checker, subject, environment, observations and result. Shared derivations use
+existing carriers, without per-test tickets or duplicate ledgers.
 
 - The applicable `stdo_<label>.json` Product Definition Overlay locates
   `ticketing.goals`, the ticket root and backlog/active/completed lanes, the

@@ -21,8 +21,9 @@ a route alone does not discharge that judgment.
 - [DESIGN_MODULE_METHOD.md — Governing Relations](../DESIGN_MODULE_METHOD.md#governing-relations).
 - [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
 - [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result algebra
 
@@ -156,7 +157,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result conjunction
 
@@ -287,18 +288,29 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Bounded construction
 
-A describes current material state and what is justified about it. Z is the
-selected set of constraints and acceptance conditions; many states may satisfy
-it. Intent, Product and Specification refine Z under their owning authority.
+A is the current material state bound for construction. Its acquired account
+describes material workspace state, relevant authoritative external observations,
+justified knowledge and explicit unknowns; that account can be incomplete or
+stale. Z is the selected set of required outcome and acceptance conditions;
+many states may satisfy it. Intent, Product and Specification refine Z under
+their owning authority. Applicable declared calculi constrain lawful
+transformations but do not choose Z or establish its satisfaction.
 Write material intermediate states as S0 → S1 → …, reserving Z for the
 destination constraint set and naming a satisfying endpoint separately. A
 transition binds its preconditions, permitted effects, result predicate and
 outer obligations. Where finite context or attention prevents one adequate
 activation, refine the task into supported transitions over those states.
+
+The governing specification models required conditions. Observations describe
+what holds in the bound reality. A causal or predictive model explains how an
+intervention may affect it. Judge their adequacy on their distinct purposes:
+prediction accuracy proves no required outcome, and a prediction error alone
+does not establish that the outcome failed. A selected path may need discovery
+through construction and evaluation rather than being known in advance.
 
 Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
 identity identifies the work; compatibility and assurance determine which
@@ -306,6 +318,40 @@ transitions compose. These are additional premises, not consequences of a
 resource bound. Decomposition preserves all material outer obligations and
 the joins between parts. Local success establishes the outer outcome only
 when the required coverage and preservation argument hold.
+
+A strategy arranges admissible construction and assurance within Z and the
+selected resource envelope. Its material rationale accounts for context,
+attention, time, effort, computation, communication and other relevant costs,
+feedback delay, uncertainty, integration exposure and expected rework. Planning,
+checking and coordination consume resources too. Measures used to justify the
+choice state their units, boundaries and composition; distinguish estimates,
+assumptions and observations. Multiple objectives may leave alternatives
+incomparable, with tradeoffs decided by the owning criteria. Strategy names
+such as steel thread, phased or iterative delivery supply no superiority proof.
+The selected design or work record carries the rationale; no exhaustive
+optimisation, scalar cost, numerical quota or preferred strategy is imposed.
+[Risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection) constrains the
+assurance chosen within that strategy.
+
+Feedback observes the current subject, compares it with required conditions,
+diagnoses a material discrepancy, selects an authorised response, acts and
+observes the result. Distinguish a defective realisation, inadequate requirement
+or design, inaccurate predictive model and insufficient observation. Preserve
+unresolved alternatives; the next useful action may acquire evidence rather
+than repair. Route a supported correction to the affected owner, preserving
+the counterexample and the unaffected work. Changing a governing model supplies
+no automatic repair of the realisation or evidence that former Z was reached.
+Homeostasis names this correction toward required conditions; it guarantees
+neither convergence nor adequacy of those conditions.
+
+For work management, a bug is a category of feature/change work in that same
+process. Its intake label supplies neither cause, repair class nor grant.
+[Spec intake](../SPEC_METHOD.md#universal-intake-triage) binds the common process to
+the Product chain and its lawful re-entry points; a bug list projects existing
+work state rather than creating another delivery mechanism. Severity states
+consequence; priority selects response order under the outcome, dependencies,
+resources and authority. [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+retains their distinction from the semantic result and authorised disposition.
 
 A total control contract supplies a response for every admitted control state,
 including unavailable input, unknown world conditions, failed preconditions,
@@ -316,15 +362,27 @@ promise to solve every problem or make an external process terminate.
 Deterministic, probabilistic and human operations retain their selected outcome
 models; their enclosing control handles the observed result truthfully.
 
-Progress is supported movement toward the selected destination. Useful discovery
-can enlarge the known frontier; counts alone are no distance metric. Stopping
+Progress is supported movement toward the selected destination. Preservation,
+progress, termination and outcome satisfaction are distinct claims. An induction
+or termination claim needs its premises and argument; no universal termination
+proof is required merely to begin admitted bounded work. Continuing work has a
+supported purpose under the strategy, which can be a bounded hypothesis or
+reduction of uncertainty. Useful discovery can enlarge the known frontier;
+counts alone are no distance metric. Stopping
 can be lawful without completion. Completion needs the required evidence and
 acceptance conditions on the current candidate. Changing Z follows its owner
 and cannot establish that the old destination was reached. Repeating a failed
 relation needs a supported causal change; elapsed activity is no repair.
+Exhausting a limit proves neither completion nor impossibility. Ongoing
+maintenance can continue under its mandate; delivery needs its completion
+condition. New observations reopen affected claims under
+[Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention),
+and recovery applies [Workspace and context](../FOUNDATIONS.md#workspace-and-context) before the
+next dependent action. These relations use the existing work and evidence
+carriers; they prescribe no role sequence or orchestration runtime.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Transformation-admission specialization](../TRANSFORMATION_LIBRARY.md#transformation-admission-specialization); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Transformation-admission specialization
 
@@ -349,7 +407,7 @@ validation pass. [Contract application](../TRANSFORMATION_LIBRARY.md#contract-ap
 shared decision; the design consumer binds its domain admission obligations.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e`.
+Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321`.
 
 #### Admission contract use
 
@@ -381,7 +439,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e`.
+Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321`.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 
@@ -487,7 +545,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -617,7 +675,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -708,7 +766,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 ## Test Authority Rule
 
@@ -724,7 +782,7 @@ operator confidence, ambient habit, or an unlabeled test corpus.
 ---
 
 
-Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e`.
+Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321`.
 
 ### 1. Authority Seam Closure
 
@@ -746,7 +804,7 @@ unless an explicit migration design admits the difference. Negative proof
 covers structural drift as well as missing source truth.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e`.
+Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321`.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
@@ -795,7 +853,7 @@ constitutional functionality
 ```
 
 
-Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e`.
+Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321`.
 
 ## 8. Totality Rule
 
@@ -823,7 +881,7 @@ Closed handling does not promise external-computation termination.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-003 Material Sufficiency
 
@@ -835,7 +893,7 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -845,7 +903,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-006 Authority Conservation
 
@@ -855,7 +913,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-014 Capability Fit
 
@@ -865,7 +923,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Bind
 
@@ -874,7 +932,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Acquire
 
@@ -887,7 +945,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Transform](../TRANSFORMATION_LIBRARY.md#transform); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Transform
 
@@ -899,7 +957,7 @@ retains that owner's outcomes. These are original domain outcomes mapped under t
 the outer outcome or effect grant.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-012 Closed Results
 
@@ -939,7 +997,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ## Minimal Evaluation Result
 
@@ -965,7 +1023,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Contract application
 
@@ -991,7 +1049,9 @@ conditions once at the responsible consumer:
    does not establish that independence. The domain selects its completeness
    and sufficiency criteria; the actor does not silently narrow them.
 3. **Preservation.** Show that required input, output and cross-boundary
-   relations hold under the declared compatibility or translation. Retain
+   relations hold under the declared compatibility or translation, applying
+   [Preservation obligations](../FOUNDATIONS.md#preservation-obligations) to the
+   claimed step or composition. Retain
    identity, meaning, lifecycle, producer/evidence coordinates, constraints,
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
@@ -1001,8 +1061,10 @@ conditions once at the responsible consumer:
    disposition distinct. Shared code, a source reference or a satisfied
    judgment supplies no missing grant. Required independent assessment retains
    its owning conditions.
-5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
-   to evidence reuse, observations, concurrency and uncertain effects. A
+5. **Currentness.** Acquire observations, concurrency conditions and uncertain
+   effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
+   and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+   to reliance on existing evidence. A
    supported changed dependency reopens the affected determination; an
    unsupported currentness claim stays unresolved. A previously satisfied
    check can be reused on supported unchanged premises; this law does not
@@ -1097,7 +1159,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -1162,3 +1224,47 @@ manifests. These bindings may resolve to directories, repository resources,
 tracker collections, API endpoints, or product-scoped queries. Goals own the
 bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
+
+
+Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+
+### Preservation obligations
+
+For a selected construction from A toward Z, bind governing assumptions Gamma,
+state or trace domains X_i, transition relations F_i contained in
+X_i × X_(i+1), and properties P_i to retain or establish at each boundary.
+Required effects and trace properties belong to the outcome predicate where
+material. The obligation for a claimed step is:
+
+```text
+For every x and x':
+  P_i(x) and F_i(x, x') implies P_(i+1)(x').
+```
+
+Establish the initial condition, each step's applicable premises and the
+composition boundaries before using the steps as an end-to-end argument. A
+preceding postcondition must establish the next precondition; otherwise acquire
+and justify the missing condition. Establish that the final property implies
+Z. Supported local claims remain usable when a required join or final implication
+is unresolved, but they do not establish that outer claim. For an invariant,
+induction requires its initial case and preservation on every admitted step;
+neither an invariant nor repeated execution proves progress or termination.
+
+The relation covers every outcome, effect and assumption material to the claim.
+A successful-completion relation alone says nothing about refusal, failure,
+interruption or unknown effects. Their handling retains the result and recovery
+contracts. The actual execution's conformance to the relation is a separate
+claim. Concurrency, alternative branches and external effects require their
+applicable composition law; a sequential argument supplies none automatically.
+The library's [Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) binds
+these obligations to the selected operation and its material joins.
+
+Exact transformations preserve the declared meaning. An approximation declares
+its adequacy relation and establishes a bound for the whole composition; local
+tolerances do not establish that bound by themselves. Across algorithmic,
+informational and computational accounts, identify the maps and what they
+preserve under [Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions). A formula
+states an obligation; a mathematical argument, structural check, finite model,
+sampled test and observed execution retain their distinct subjects and reach.
+Unproved universal claims remain unresolved. They stop only work that requires
+that proof; otherwise admitted bounded construction can continue.

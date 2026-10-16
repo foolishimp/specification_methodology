@@ -27,22 +27,22 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981
-  TRANSFORMATION_LIBRARY.md: c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead
+  FOUNDATIONS.md: a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336
+  TRANSFORMATION_LIBRARY.md: 5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10
   AXIOMATIC_CALCULUS.md: 3818cd47b94c82b9b3ae27ede7a30cd5812fc484d56d677e2624371149e5acc4
   TRAVERSAL_OCCURRENCE_PROFILE.md: 2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf
-  REFERENCE_FRAME_METHOD.md: 8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4
-  STDO_REFERENCE_FRAME_BASELINE.md: 0afebe8e00e652fc966634316ed7a4c5ca4246cb700158bd3baf15fcd9a4a742
-  SPEC_METHOD.md: 5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798
+  REFERENCE_FRAME_METHOD.md: ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d
+  STDO_REFERENCE_FRAME_BASELINE.md: c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067
+  SPEC_METHOD.md: a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e
+  DESIGN_MODULE_METHOD.md: f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321
   ODD_METHOD.md: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
-  WORLD_MODEL_METHOD.md: 657f728d47306e477feaa296f43d9581922ca8cce7f3c1cc55267fe3943c048b
-  TICKET_METHOD.md: e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6
+  WORLD_MODEL_METHOD.md: fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f
+  TICKET_METHOD.md: 4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552
   UX_METHOD.md: 6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d
   IDENTITY_METHOD.md: 30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c
-  RELEASE_METHOD.md: 3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7
+  RELEASE_METHOD.md: be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de
   POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
   GLOSSARY_GUIDE.md: 9332a68e51caaeeb089e21de98d52279f05cbbe1c0cf12659f74a59d8e9709ab
@@ -58,6 +58,45 @@ combination. Domain labels below are refinements on their exact predicates,
 retaining original outcomes, performance and effect observations.
 [Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
 governs context reconstruction and conditional reuse.
+
+## Construction And Assurance
+
+[Bounded construction](../FOUNDATIONS.md#bounded-construction) binds current
+reality A, required outcome Z including acceptance conditions, lawful bounded
+transitions and strategy under finite resources. Requirements describe what
+is required, observations what holds, and predictive models what an intervention
+may cause. Diagnose discrepancies on those distinct accounts; a lawful step,
+accurate prediction, invariant or expired limit does not establish delivery.
+Changing Z follows its owner and does not prove the old outcome was reached.
+
+[Construction assurance](../FOUNDATIONS.md#construction-assurance) owns the
+support that a construction consumer must bind:
+
+- Preservation needs initial support, applicable step premises, compatible
+  joins and the final implication to Z, separately from actual execution
+  conformance. Approximation needs an end-to-end bound; local tolerances alone
+  do not compose.
+- An assertion's supported necessary, sufficient or conjunctive relationship
+  bounds its conclusion. Observation must distinguish material cases, and
+  actual acquisition/checker conformance remains separate from its ideal model.
+  A necessary-condition pass cannot close the full obligation; insufficient
+  evidence and a check not performed remain distinct.
+- Assertion provenance justifies the expectation; execution provenance binds
+  actual checker, subject, environment, observations and result. Agreement can
+  share error; separate actors and repeated results establish no statistical
+  independence. The source owner governs corrections to shared expectations.
+- Assurance selection follows obligations, risk and total relevant costs.
+  Quantified confidence needs a supported probability/dependence model; test
+  counts or defect-injection scores are not whole-product correctness.
+- Change impact includes assertion, execution and evidence-validity dependencies.
+  Supported retained evidence keeps its original subject and gains an explicit
+  applicability relation. Unknown influence cannot justify exclusion; new
+  obligations, failures and mandatory gates remain. Selection is no execution,
+  and a changed hash establishes neither invalidity nor equivalence.
+
+These bindings use existing methods and evidence carriers. Acquire the exact
+owner for the selected claim; this projection supplies no universal proof,
+probability threshold, full-suite cadence, new role or acceptance authority.
 
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)

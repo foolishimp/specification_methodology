@@ -10,12 +10,12 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981
-  TRANSFORMATION_LIBRARY.md: c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead
-  SPEC_METHOD.md: 5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798
-  REFERENCE_FRAME_METHOD.md: 8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4
-  STDO_REFERENCE_FRAME_BASELINE.md: 0afebe8e00e652fc966634316ed7a4c5ca4246cb700158bd3baf15fcd9a4a742
-  RELEASE_METHOD.md: 3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7
+  FOUNDATIONS.md: a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336
+  TRANSFORMATION_LIBRARY.md: 5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10
+  SPEC_METHOD.md: a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87
+  REFERENCE_FRAME_METHOD.md: ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d
+  STDO_REFERENCE_FRAME_BASELINE.md: c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067
+  RELEASE_METHOD.md: be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
@@ -31,6 +31,14 @@ combination. Domain labels below are refinements on their exact predicates,
 retaining original outcomes, performance and effect observations.
 [Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
 governs context reconstruction and conditional reuse.
+
+[Bounded construction](../FOUNDATIONS.md#bounded-construction) binds current
+reality, required outcome and lawful feedback; lawful steps alone do not prove
+arrival. When relying on tests, observations or prior results, acquire the
+applicable [construction-assurance relation](../FOUNDATIONS.md#construction-assurance):
+preservation at joins, assertion/observation justification, provenance and
+shared causes, risk, or change impact and evidence retention. Source identity,
+a pass label and a selected test list supply none of those missing arguments.
 
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)

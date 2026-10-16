@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e
+source_digest: f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -67,6 +67,13 @@ Inside the SPEC-declared product-assurance bounded context, DMM owns the
 module-derived `Unit Test` concept and proof relation. Unit proof derives from
 module ownership and the accepted Ontology/design basis; it does not acquire
 Product-level UAT or acceptance authority.
+
+That proof applies Foundations' assertion/observation and parallel-provenance
+relations to the accepted module obligations and the actual executed module.
+An ownership trace alone proves neither assertion fidelity nor observation
+adequacy. An implementation-discovered test needs justified re-expression
+against the module obligation before it supplies module closure; the existing
+carriers and adoption conditions remain.
 
 The Ontology realization profile applies to the named boundary where the
 project adopts it. A material semantic boundary changes identity, authority, lifecycle,

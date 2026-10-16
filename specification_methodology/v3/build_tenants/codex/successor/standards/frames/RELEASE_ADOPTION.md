@@ -20,8 +20,9 @@ a route alone does not discharge that judgment.
 - [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
 - [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result algebra
 
@@ -155,7 +156,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result conjunction
 
@@ -286,7 +287,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de`.
 
 ## Release Identities
 
@@ -321,7 +322,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de`.
 
 ## Immutable RC Publication
 
@@ -374,7 +375,7 @@ prove `not_started` after possible dispatch. Preserve the core performance,
 coverage and observed-effect coordinates at each selected boundary.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de`.
 
 ## Exact-Cut Qualification
 
@@ -433,7 +434,7 @@ published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de`.
 
 ## Selector And Consumer Adoption
 
@@ -489,7 +490,7 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
@@ -553,7 +554,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 #### Explicit Complete Consumer Update
 
@@ -613,7 +614,7 @@ required observation of every begun part. Keep staged-install and consumer
 effects on their actual boundaries, including `partial` or `unknown` effects.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -623,7 +624,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-006 Authority Conservation
 
@@ -633,7 +634,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-012 Closed Results
 
@@ -673,7 +674,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Contract application
 
@@ -699,7 +700,9 @@ conditions once at the responsible consumer:
    does not establish that independence. The domain selects its completeness
    and sufficiency criteria; the actor does not silently narrow them.
 3. **Preservation.** Show that required input, output and cross-boundary
-   relations hold under the declared compatibility or translation. Retain
+   relations hold under the declared compatibility or translation, applying
+   [Preservation obligations](../FOUNDATIONS.md#preservation-obligations) to the
+   claimed step or composition. Retain
    identity, meaning, lifecycle, producer/evidence coordinates, constraints,
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
@@ -709,8 +712,10 @@ conditions once at the responsible consumer:
    disposition distinct. Shared code, a source reference or a satisfied
    judgment supplies no missing grant. Required independent assessment retains
    its owning conditions.
-5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
-   to evidence reuse, observations, concurrency and uncertain effects. A
+5. **Currentness.** Acquire observations, concurrency conditions and uncertain
+   effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
+   and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+   to reliance on existing evidence. A
    supported changed dependency reopens the affected determination; an
    unsupported currentness claim stays unresolved. A previously satisfied
    check can be reused on supported unchanged premises; this law does not
@@ -805,7 +810,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Judgment and authority
 
@@ -832,3 +837,71 @@ disposition, selected action and promotion effect remain distinct; their
 assignment follows the applicable mandate. The semantic result remains separate
 from the authoritative construction disposition, whose domain conditions belong
 to [Spec's proportional disposition](../SPEC_METHOD.md#proportional-disposition).
+
+[Construction assurance](../FOUNDATIONS.md#construction-assurance) governs what an assertion,
+observation or combination of evidence can establish. The evaluating consumer
+binds those relations before relying on a reported pass or failure for a broader
+claim. A supported judgment still supplies no operation or decision mandate.
+
+
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+
+### Change impact and evidence retention
+
+Assertion justification explains why a check expresses an obligation. Evidence
+validity additionally depends on what can affect its behaviour, conclusion or
+applicability: implementation, libraries, data, instruments, environments and
+governing assumptions. A requirements-to-test relation alone cannot establish
+complete change impact.
+
+Let Delta change material facts or dependencies, including discovery of an
+invalid assumption. Let I(Delta) conservatively cover those facts and affected
+dependents, and D*(t) cover the transitive dependencies material to assertion,
+execution and reliance on check t. A candidate reassessment selection is:
+
+```text
+S_Delta = { t : D*(t) intersects I(Delta) }.
+```
+
+Excluding a check requires supported dependency coverage and a reason the change
+cannot invalidate the reused claim. An absent edge proves no non-influence.
+Unknown impact widens assessment or leaves the dependent assurance unresolved.
+New obligations and uncovered cases create assessment work even when no existing
+check covers them; mandatory gates remain applicable. Selection itself produces
+no execution evidence. The representation need not be an exhaustive graph or a
+separate ledger.
+
+For the new subject and basis, the evidence account combines applicable retained
+records with actual reassessment, including new obligations and mandatory gates:
+
+```text
+E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
+```
+
+Retention establishes that claim and scope still apply, assertion and observation
+bases remain justified, required independence holds, and material dependencies
+are unchanged or covered by an established preservation relation. The original
+record keeps its original subject; an applicability relation permits its use
+for the new claim. A changed digest proves neither invalidity nor equivalence.
+Changed support reopens affected reliance, not the historical observation.
+Keep known failures, unresolved coverage and their citations visible until
+supported repair, reassessment or authorised change of obligation disposes them.
+
+A changed requirement revisits dependent expectations under its change authority.
+A changed refinement revisits its links to the requirement and realisation; a
+changed realisation revisits affected implementation and integration under the
+still-applicable obligations. These are semantic dependencies, not fixed file
+boundaries. Recovery acquires current reality and invalidates affected reliance
+without erasing valid work or requiring every check to run again. A role,
+conversation, component or resumption boundary alone is no invalidator.
+
+The account's completeness differs from the freshness of every execution.
+Selection considers impact analysis, acquisition, execution and assessment
+costs together, separating estimates from measurements. Required assurance,
+risk policy and mandatory gates constrain that choice; cheap selection cannot
+leave a required obligation uncovered. Broad or uncertain impact, a changed
+selection model, a release rule or a missed dependency can justify wider testing.
+Full-suite execution is available and can still have coverage gaps; no universal
+cadence or exemption from required gates follows. Failures enter the existing
+diagnosis and authorised-response relation; obtaining evidence may precede a
+justified repair.

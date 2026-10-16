@@ -20,8 +20,9 @@ a route alone does not discharge that judgment.
 - [ODD_METHOD.md — Governing Relations](../ODD_METHOD.md#governing-relations).
 - [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result algebra
 
@@ -155,7 +156,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result conjunction
 
@@ -286,7 +287,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Configuration
 
@@ -431,7 +432,7 @@ the no-effect predicate only when that is the declared interaction contract.
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `657f728d47306e477feaa296f43d9581922ca8cce7f3c1cc55267fe3943c048b`.
+Source: [WORLD_MODEL_METHOD.md — Theoretical Underpinnings Of The Markov Object](../WORLD_MODEL_METHOD.md#theoretical-underpinnings-of-the-markov-object); SHA256 `fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f`.
 
 ## Theoretical Underpinnings Of The Markov Object
 
@@ -604,7 +605,7 @@ for all design work. The relation runs the other way:
 ---
 
 
-Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `657f728d47306e477feaa296f43d9581922ca8cce7f3c1cc55267fe3943c048b`.
+Source: [WORLD_MODEL_METHOD.md — Markov Object](../WORLD_MODEL_METHOD.md#markov-object); SHA256 `fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f`.
 
 ### Markov Object
 
@@ -632,7 +633,7 @@ Object*. Discovery obligations in *Entity Cut Construction Law*.
 Representation-substrate obligations in *Markov Object Construction Law*.
 
 
-Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `657f728d47306e477feaa296f43d9581922ca8cce7f3c1cc55267fe3943c048b`.
+Source: [WORLD_MODEL_METHOD.md — Proof Law](../WORLD_MODEL_METHOD.md#proof-law); SHA256 `fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f`.
 
 ## Proof Law
 
@@ -699,7 +700,7 @@ An absent or incomplete adoption means the profile is available but inactive
 for that Product.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-003 Material Sufficiency
 
@@ -711,7 +712,7 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -721,7 +722,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-006 Authority Conservation
 
@@ -731,7 +732,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### RF-012 Closed Results
 
@@ -771,7 +772,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Contract application
 
@@ -797,7 +798,9 @@ conditions once at the responsible consumer:
    does not establish that independence. The domain selects its completeness
    and sufficiency criteria; the actor does not silently narrow them.
 3. **Preservation.** Show that required input, output and cross-boundary
-   relations hold under the declared compatibility or translation. Retain
+   relations hold under the declared compatibility or translation, applying
+   [Preservation obligations](../FOUNDATIONS.md#preservation-obligations) to the
+   claimed step or composition. Retain
    identity, meaning, lifecycle, producer/evidence coordinates, constraints,
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
@@ -807,8 +810,10 @@ conditions once at the responsible consumer:
    disposition distinct. Shared code, a source reference or a satisfied
    judgment supplies no missing grant. Required independent assessment retains
    its owning conditions.
-5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
-   to evidence reuse, observations, concurrency and uncertain effects. A
+5. **Currentness.** Acquire observations, concurrency conditions and uncertain
+   effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
+   and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+   to reliance on existing evidence. A
    supported changed dependency reopens the affected determination; an
    unsupported currentness claim stays unresolved. A previously satisfied
    check can be reused on supported unchanged premises; this law does not
@@ -903,7 +908,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Orthogonal descriptions
 
@@ -926,9 +931,8 @@ and computational equivalence remain different claims. Categorical
 equivalence additionally requires the appropriate quasi-inverse and natural
 isomorphisms on a stated domain; an analogy or matching result is insufficient.
 
-Each claimed refinement states and discharges what it preserves. Exact
-rewriting preserves meaning; approximation declares its adequacy relation and
-an end-to-end bound, since local tolerances alone do not compose. Each step uses
+Each claimed refinement applies [Preservation obligations](../FOUNDATIONS.md#preservation-obligations)
+to its declared meaning and any admitted approximation. Each step uses
 laws valid for its declared subject; without additional laws only universally
 valid steps are licensed. Laws, records and maps claimed for the method are
 represented in a_c with premises, consequences and declared choices distinct.
@@ -991,7 +995,7 @@ graph, ledger and four-function architecture remains this profile's choice.
 <!-- STDO3_PROFILE_BINDING_END -->
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -1056,3 +1060,47 @@ manifests. These bindings may resolve to directories, repository resources,
 tracker collections, API endpoints, or product-scoped queries. Goals own the
 bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
+
+
+Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+
+### Preservation obligations
+
+For a selected construction from A toward Z, bind governing assumptions Gamma,
+state or trace domains X_i, transition relations F_i contained in
+X_i × X_(i+1), and properties P_i to retain or establish at each boundary.
+Required effects and trace properties belong to the outcome predicate where
+material. The obligation for a claimed step is:
+
+```text
+For every x and x':
+  P_i(x) and F_i(x, x') implies P_(i+1)(x').
+```
+
+Establish the initial condition, each step's applicable premises and the
+composition boundaries before using the steps as an end-to-end argument. A
+preceding postcondition must establish the next precondition; otherwise acquire
+and justify the missing condition. Establish that the final property implies
+Z. Supported local claims remain usable when a required join or final implication
+is unresolved, but they do not establish that outer claim. For an invariant,
+induction requires its initial case and preservation on every admitted step;
+neither an invariant nor repeated execution proves progress or termination.
+
+The relation covers every outcome, effect and assumption material to the claim.
+A successful-completion relation alone says nothing about refusal, failure,
+interruption or unknown effects. Their handling retains the result and recovery
+contracts. The actual execution's conformance to the relation is a separate
+claim. Concurrency, alternative branches and external effects require their
+applicable composition law; a sequential argument supplies none automatically.
+The library's [Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) binds
+these obligations to the selected operation and its material joins.
+
+Exact transformations preserve the declared meaning. An approximation declares
+its adequacy relation and establishes a bound for the whole composition; local
+tolerances do not establish that bound by themselves. Across algorithmic,
+informational and computational accounts, identify the maps and what they
+preserve under [Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions). A formula
+states an obligation; a mathematical argument, structural check, finite model,
+sampled test and observed execution retain their distinct subjects and reach.
+Unproved universal claims remain unresolved. They stop only work that requires
+that proof; otherwise admitted bounded construction can continue.

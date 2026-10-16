@@ -1,0 +1,11 @@
+# Iteration 5 reduction and cost protocol
+
+The comparison subjects are installed rc.2 at manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`, own I4 handoff `62318d3` / package `903f119`, and the later exact I5 documentary/package freezes. The twelve deciding paths declared in I4 remain the baseline selection: conjunction, recovery, triage/carrier, WHAT/HOW, intake, delegated construction, projection fidelity, acceptance, identity/release, vocabulary resolution, Markov claims and interpretation fidelity. Additional assurance paths are identified as new obligations, not quietly substituted for old comparison subjects.
+
+For each path, identify the governing owner, material consumer conditions, remaining independently interpreted choices, source acquisition routes and declared exceptions. A new shared paragraph or smaller serialized file alone does not establish contraction of deciding work. Retain adverse changes and unassessed dependencies; unsupported complete-path or practical-efficiency claims remain unresolved.
+
+Measures distinguish raw current source, selected owner sections, curated views, ordinary entry, emitted native projections, serialized account/program/map bytes, processing time and actual actor observations. They do not convert file size into retained context, runtime memory, attention or productivity. The rc.2 comparison includes its offered compressed acquisition route. Source re-entry and missing same-name routes remain visible.
+
+Qualification-reference factoring is measured separately on identical frozen semantic input. Resolve every new reference and compare its exact qualification body, applicability and required/conditional/provenance meaning with the unfactored form. Measure compact and actually serialized bytes per publication component. Program/map duplication remains the pinned checker format. I5-versus-I4 package totals also include newly represented obligations and cannot isolate the optimization's benefit.
+
+Local finite witnesses and mechanical reproduction retain their scope. The shared two-line actual-use protocol, independent expectations, resources and disclosure after candidate freezes remain a separate common selection. No construction author supplies that oracle or infers practical superiority from these measurements.

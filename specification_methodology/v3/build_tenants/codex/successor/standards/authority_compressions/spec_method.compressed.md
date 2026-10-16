@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: 5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798
+source_digest: a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -40,6 +40,13 @@ people and mixed processes are permitted bindings. Actor identity does not
 choose operation kind. Requirement-to-operation routes require their actual
 preservation evidence; an a_c structural check cannot supply it.
 
+Proof targets and test lanes apply Foundations' construction-assurance owner.
+Bind the expectation's source, interpreted predicate and necessary/sufficient
+relationship separately from the actual checker, subject, environment and
+observations. Test-class labels establish no independent failure causes;
+implementation-derived regression retains its local claim. Existing carriers
+may record shared derivations for a family of tests.
+
 ## Intake Triage Compression
 
 - Intake triage triangulates candidate diagnoses through the smallest sufficient
@@ -48,6 +55,11 @@ preservation evidence; an a_c structural check cannot supply it.
   repair scope; duplicated analysis adds no evidence. Preserve uncertainty and
   required independence. Diagnosis neither grants effects nor requires changing
   sufficient law. See `SPEC_METHOD.md#universal-intake-triage`.
+- Bind current reality, required outcome, observations and prediction to
+  Foundations' bounded-construction diagnosis. Distinguish realisation,
+  requirement/design, prediction and observation gaps; unresolved alternatives
+  may need observation before repair. Severity and priority supply neither
+  cause nor mutation authority. A bug list projects the same work route.
 
 ## Recursive Product Taxonomy Compression
 
@@ -380,9 +392,13 @@ preservation evidence; an a_c structural check cannot supply it.
   state machine.
 - Transition evidence binds the exact candidate, affected relations, changed
   paths, authority-path disposition, focused and required integration proof,
-  remaining seams, non-changes, and assessor disposition. Use the cheapest proof
-  that can falsify the active relation and reserve whole-candidate qualification
-  for declared candidate boundaries unless risk requires it sooner.
+  remaining seams, non-changes, and assessor disposition. Select focused proof
+  under Foundations' change-impact and assurance-risk relations: bind material
+  assertion/execution dependencies, justified exclusions, new cases and gates.
+  A weaker cheap falsifier cannot close a stronger claim. Combine applicable
+  retained evidence with actual reassessment; include selection costs.
+  Whole-candidate qualification remains at its declared boundary or where
+  risk, unknown impact or a mandatory gate requires it.
 - A materially durable or reconstructable authority claim is not proven by a
   same-process test when incidental process state is a plausible authority.
   Destroy or exclude that state and compare reconstructed semantic outcomes.

@@ -106,6 +106,44 @@ remain unknown. Sequential preservation does not establish reordered or
 parallel-effect equivalence. Source observations and independent assessment,
 not the tool or actor's name, supply the claimed conformance evidence.
 
+## Construction and assurance realization
+
+Foundations owns the shared construction and assurance relations. Its bounded
+construction contract distinguishes required conditions, predictive models and
+observations. Its construction-assurance contract owns preservation,
+assertion and observation adequacy, shared failure causes, risk-qualified
+assurance and evidence retention. The Transformation Library binds those
+relations to operations; Spec, Ticket and the testing frames apply them to
+actual decisions while retaining their additional domain conditions.
+
+The construction state includes current document/workspace bytes, authoritative
+external observations, justified knowledge and explicit unknowns. Each bounded
+action declares the property it retains or establishes and the conditions that
+connect it to its successor. A declared relation is interpreted by a concrete
+human, deterministic or probabilistic operation; a mathematical obligation,
+actual execution and an authorized decision remain different claims.
+
+Testing derives expected predicates from selected source obligations and
+records their assumptions and material shared causes. Execution identifies the
+actual checker, subject, environment and observations. The test interpretation
+states whether a passing predicate is necessary, sufficient or part of a
+justified conjunction. Neither a matching digest nor a successful checker
+execution supplies a missing interpretation or observation argument.
+
+Change selection uses evidence-validity dependencies, not only requirement
+citations. The existing source-account and binding records represent these
+relations where needed; no parallel test ledger is introduced. Unknown impact,
+new obligations and applicable gates remain assessment work. Retained evidence
+keeps its original subject and receives only a supported applicability relation.
+The feedback loop can select diagnostic observation before a repair is justified.
+
+The interpretation keeps one source-owned semantic record per determination.
+Acquisition edges carry exact references to conditions in that record with the
+required applicability and occurrence distinctions. Expansion checks establish
+that the referenced condition is recovered without loss; the pinned checker
+continues to own the published program/map format. A smaller serialization is
+an observed cost change, separate from source fidelity or actor effectiveness.
+
 ## Contract reductions
 
 | Shared decision | Consumer changes | Conditions retained at domain owners |
@@ -127,18 +165,18 @@ dispositions; no obligation is removed to achieve a text-size target.
 ## Qualification design
 
 The current construction and evidence boundary is
-`qualification/C3/iteration-4/`, bound to common input C3-I4-03 at
-`3c4c503d291e7cb19ba21333ba6caf6167be77c9`. Historical C3, synthesis and
-iteration 3 artifacts retain their original subjects. Current entry points
+`qualification/C3/iteration-5/`, bound to common input C3-I5-06 at
+`4c340f7adec9f3c893e3e267b23e4cadeb357854`. Historical C3, synthesis,
+iteration 3 and iteration 4 artifacts retain their original subjects. Current entry points
 select the current inventory and interpretation explicitly.
 
 The current determination account binds source owners, arguments, consumers
 and unrepresented clauses in
-[the current account](../qualification/C3/iteration-4/DETERMINATIONS.json).
+[the current account](../qualification/C3/iteration-5/DETERMINATIONS.json).
 Its preceding account is preserved at
-[`iteration-3/DETERMINATIONS.json`](../qualification/C3/iteration-3/DETERMINATIONS.json);
-the [current work plan](../qualification/C3/iteration-4/PLAN.md) records the
-successor's completion and freeze. These are construction evidence, not
+[`iteration-4/DETERMINATIONS.json`](../qualification/C3/iteration-4/DETERMINATIONS.json);
+the [current work plan](../qualification/C3/iteration-5/PLAN.md) records the
+successor's construction, dependencies and freeze. These are construction evidence, not
 additional law or acceptance. The account
 distinguishes predicates, definitions or domain data, consumer bindings and
 non-deciding locators. Available source whose conditions have not yet been
@@ -155,7 +193,7 @@ completeness or authenticate its own premises. Model/source disagreements are
 retained and repaired at their owning layer.
 
 Compare deciding operations with this line's preceding candidate at
-`fb855df1aac377c45ea9f4e614933d48827fd844` (package `d490dd6`) and the
+`62318d3b0be35985a0397aa39daee0ec8836eabc` (package `903f119`) and the
 applicable installed rc.2 source:
 which independently interpreted rules remain, which have become one owner,
 which domain choices survive, and what a cold actor actually acquires. Report
@@ -170,12 +208,13 @@ separate until their conditions are met.
 
 ## Source contributions
 
-This line continues its own preceding candidate at `fb855df`, whose complete
-package is `d490dd6`. Current synthesis evaluates the Claude donor at
-`2beed8d9a043cfa572bd240793e5020134300410`, with handoff `96ccdcc`. The
-[port proposals](../qualification/C3/iteration-4/PLAN.md#peer-contributions-to-evaluate)
-are evaluated individually against the receiving responsibility. Exclusion
-requires a reason; a named proposal is not automatically imported.
+This line continues its own preceding candidate at `62318d3`, whose complete
+package is `903f119`. Current synthesis evaluates the Claude donor at
+`c66ed4e0e97ca91ebc26894eaf283ebc6c3a2e20`, with handoff `1092f9a`.
+The [port account](../qualification/C3/iteration-5/PORT_ACCOUNT.md) records
+selected contributions and reasoned exclusions against receiving responsibilities.
+Historical I4 ports retain their donor `2beed8d`; the new donor does not rewrite
+those contributions or their evidence subjects.
 
 The earlier contributions below retain their historical donor at
 `31f28f90c4a9b15243d84630fc4799024a9cd7ac`. Later donor coordinates do not

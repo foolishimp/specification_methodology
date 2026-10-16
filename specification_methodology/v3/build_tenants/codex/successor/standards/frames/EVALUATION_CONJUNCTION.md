@@ -19,8 +19,9 @@ a route alone does not discharge that judgment.
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 - [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result algebra
 
@@ -154,7 +155,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
 
 ## Result conjunction
 
@@ -285,7 +286,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ## Reference Frame Laws
 
@@ -508,7 +509,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ### Applicability And Required Results
 
@@ -529,7 +530,7 @@ wrong-subject required results, and a sufficient positive result within a finite
 declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ## Using Frames In Conjunction
 
@@ -542,6 +543,12 @@ return closed results. They may overlap in subject, manifold, or evidence
 sources, but neither evaluation consumes or influences the other's unclosed
 working result. This is useful for assurance independence, different evidence
 altitudes, or distinct failure perspectives.
+
+For a mutual-assurance claim, apply
+[Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the selected paths and their material shared causes. Separate activations
+satisfying the declared authorship conditions do not by themselves establish
+statistical independence or validate a shared governing expectation.
 
 ### Result Conjunction
 
@@ -595,7 +602,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
 
 ## Minimal Evaluation Result
 
@@ -621,7 +628,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Bind
 
@@ -630,7 +637,7 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Acquire
 
@@ -643,7 +650,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Evaluate
 
@@ -656,6 +663,17 @@ rule. Evaluation supplies no new operation or decision grant. A function may
 exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](../STDO_REFERENCE_FRAME_BASELINE.md) retains the
 grant defined by that profile.
 
+Bind [Assertions and observations](../FOUNDATIONS.md#assertions-and-observations)
+to the source obligation, its interpreted required predicate, the assertion's
+actual target and the observation/checker basis. Establish the implication
+needed by this consumer before using a local pass or failure for the broader
+claim. Bind actual observation acquisition as well as the ideal checker model;
+an authenticated source or execution record supplies neither missing relation.
+Use [Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance)
+to retain the assertion's derivation and the actual execution's provenance in
+the existing evidence. The result remains on its original predicate, with
+unresolved fidelity, unavailable observation and non-performance distinguished.
+
 For an UP-020 assessment, the original assessor classification is a
 reason-qualified outcome on the exact cone-preservation predicate. The
 [Spec disposition consumer](../SPEC_METHOD.md#proportional-disposition) owns its
@@ -663,7 +681,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Conjoin
 
@@ -675,8 +693,16 @@ planned but absent judgment is not confused with uncovered coverage outside an
 authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
 
+When comparison or repeated evidence is used for mutual assurance, apply
+[Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the material shared causes and dependencies, and
+[Risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection)
+to any quantitative confidence claim. This evidence binding supplies no new
+logical conjunction rule. One execution supporting several predicates is not
+several independent observations.
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
 
 ## Contract application
 
@@ -702,7 +728,9 @@ conditions once at the responsible consumer:
    does not establish that independence. The domain selects its completeness
    and sufficiency criteria; the actor does not silently narrow them.
 3. **Preservation.** Show that required input, output and cross-boundary
-   relations hold under the declared compatibility or translation. Retain
+   relations hold under the declared compatibility or translation, applying
+   [Preservation obligations](../FOUNDATIONS.md#preservation-obligations) to the
+   claimed step or composition. Retain
    identity, meaning, lifecycle, producer/evidence coordinates, constraints,
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
@@ -712,8 +740,10 @@ conditions once at the responsible consumer:
    disposition distinct. Shared code, a source reference or a satisfied
    judgment supplies no missing grant. Required independent assessment retains
    its owning conditions.
-5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
-   to evidence reuse, observations, concurrency and uncertain effects. A
+5. **Currentness.** Acquire observations, concurrency conditions and uncertain
+   effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
+   and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+   to reliance on existing evidence. A
    supported changed dependency reopens the affected determination; an
    unsupported currentness claim stays unresolved. A previously satisfied
    check can be reused on supported unchanged premises; this law does not
@@ -806,3 +836,110 @@ predicates, dependencies and permitted latitude. A representation adequate for
 one of those claims is not evidence for the other without the corresponding
 source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
+
+
+Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+
+### Assertions and observations
+
+For an owning obligation r, let Q_r = interpret(r, Gamma, Omega) be its required
+predicate over a declared case domain Omega. A case includes material inputs,
+behaviour and environment. Justify this interpretation with its conditions,
+exceptions and permitted alternatives. A source identifier or digest establishes
+which text was selected, not that Q_r expresses it faithfully.
+
+An assertion targets q_t. State whether it checks Q_r or a narrower condition,
+and support the implication used by the consuming decision:
+
+```text
+Q_r implies q_t                     q_t is necessary for Q_r.
+q_t implies Q_r                     q_t is sufficient for Q_r.
+(q_1 and ... and q_n) implies Q_r    The stated conjunction is sufficient.
+```
+
+These are conditional on Gamma and Omega. A pass on a necessary condition
+cannot establish Q_r. A collection of assertions needs its own coverage and
+compatibility argument before its conjunction establishes Q_r. Valid different
+realisations may satisfy Q_r with different outputs; equality is an oracle only
+where the obligation requires it.
+
+Let pi: Omega → O model the observations available to a checker,
+and T contained in O × R be the checker's admitted evaluation relation, with R
+the [core result records](../FOUNDATIONS.md#result-algebra). The following sat and fal abbreviate
+their satisfied and falsified verdicts about q_t; they add no execution states:
+
+```text
+For every s in Omega:
+  (pi(s), sat) in T implies q_t(s).
+  (pi(s), fal) in T implies not q_t(s).
+```
+
+Identify the support and unresolved premises for each claimed direction.
+Deterministic checking is a functional special case. Human or probabilistic
+checking may admit different conclusions on the same observations; universal
+soundness covers every admitted conclusion, not a favourable selected run.
+A relation may soundly admit both satisfied and indeterminate without always
+deciding. Its shape supplies no probability distribution. A restricted checker
+model retains its declared scope; the actual checker and observation acquisition
+need their own conformance support. An idealised pi does not prove that an
+instrument or actor acquired the material facts correctly.
+
+A reported pass or failure is an observation until the applicable oracle and
+observation justification support the claimed conclusion. Assess it on the
+original predicate through the core, retaining actual performance and effects.
+Insufficient evidence is not a failure of the predicate; an unperformed check
+is not a performed but undecidable one, and unknown effects stay unknown.
+
+A checker claiming always to decide q_t correctly from pi alone requires:
+
+```text
+For all s and s' in Omega:
+  pi(s) = pi(s') implies q_t(s) = q_t(s').
+```
+
+If equally observed admissible cases disagree on q_t, acquire distinguishing
+evidence, justify a narrower scope, or return indeterminate on that attempted
+decision. In a classical set model the condition permits a predicate on the
+image of pi; it provides neither an executable decision procedure nor a cost
+bound. Additional independently admissible evidence retains its normal core
+standing; the limited observation is not permission to erase it.
+
+
+Source: [FOUNDATIONS.md — Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+
+### Parallel assurance and provenance
+
+Construction and assertion paths can derive from a common obligation through
+different refinements. Their assurance depends on each path's justification,
+not its length or label. Requirement-derived assertions assess the requirement's
+applicable conditions; refinement-derived assertions assess their more detailed
+conditions. Neither path automatically covers the other.
+
+Assertion provenance identifies the owning obligation, interpretation,
+assumptions, derivation and shared dependencies that justify the expected
+predicate. Execution provenance identifies the actual checker, exact subject,
+applicable environment, inputs, acquired observations and result. Preserve both
+relations in existing bindings and evidence; execution logs cannot justify an
+expected answer's derivation. A shared derivation can serve a declared family
+without a separate document for every test.
+
+An implementation-derived assertion can support regression or a stated local
+property. Repeating that implementation's decision supplies no independent
+upstream justification. A shorter assertion path can reduce acquisition or
+execution cost when demonstrated for that path, but it supplies no automatic
+correctness, coverage or independence.
+
+Mutual assurance compares justified constructions or assertions on their stated
+scope. Agreement admits shared error as well as correctness; disagreement
+requires diagnosis and does not identify the faulty party by itself. Account for
+material shared specifications, interpretations, tools, fixtures, observations,
+copied contributions and other failure causes. Different actors, families or
+codebases do not establish statistical independence. Repeating an observation
+does not make it new independent evidence; required authorship independence
+retains its own conditions.
+
+Agreement within an incorrect common model cannot validate that model against
+the desired outcome. Validation uses the model's declared purpose and material
+external observations through their owners. Preserve counterexamples and route
+supported corrections under [Bounded construction](../FOUNDATIONS.md#bounded-construction).
+The dependence account constrains [risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection).
