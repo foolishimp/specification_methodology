@@ -69,10 +69,10 @@ standing of the consequences below is stated in
 | P4a (independent), P1 (independent), P6 (independent); instance premise b | By P4a a step composes only under declared laws, by P1 structural success does not establish meaning, and by P6 preservation needs evidence, so a refinement or rewrite step is admissible only under a law declared for its subject, and each layer discharges what it preserves; a refinement is faithful only when its steps are exact and each output meets the next step's declared domain; a composite with an approximate step is adequate only within its stated adequacy relation and end-to-end bound | [Refinement](#refinement) | the laws declared for a subject: the subject's owner | 3, 4 |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P3 (independent), P6 (independent); instance premise d | By P4b a partial commit would leave facts that later steps cannot reconcile, by P3 the relation binds one basis identity, and by P6 admission is the owner's act, so admission of a material transition derives and validates the complete enclosing relation on one basis identity and commits all of it or none; qualification covers every admission owner and supported boundary | [Complete enclosing-relation admission](#complete-enclosing-relation-admission); [Standing structural qualification](#standing-structural-qualification) | the supported boundaries and the operating or threat model: the accepted design | 4, 9 |
 | P2 (independent), P3 (independent), P1 (independent), P6 (independent); instance premise a | By P2 the destination is a set of required conditions that several realised states may satisfy, by P3 the current state is the bound subject with its observations and dependencies, by P1 the required conditions, the observations and any predictive model are different accounts, and by P6 lawfulness confers no delivery or acceptance, so construction binds A and Z explicitly, works under the declared calculi, and keeps the three accounts apart | [Construction relation](#construction-relation), Binding A and Z, Three accounts | the governing specification that supplies Z: the owning authority of the selected outcome; the declared calculi: SPEC_METHOD §11 for a build tenant | 1, 5, 6, 8 |
-| P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P2 work is arranged to serve the destination, by P5 the resources that planning, checking and construction consume are finite and their exhaustion leaves the outcome undecided, and by P6 a claim that one arrangement is better states its grounds, so a strategy is selected within the resource envelope with its material rationale recorded, and no strategy is imposed by this member | [Construction relation](#construction-relation), Strategy | the strategy itself: the realisation and the actor exercising the admitted work authority; for this corpus's Executive, EXECUTIVE_BASELINE | 5, 7, 9 |
-| P4a (independent), P1 (independent), P6 (independent); instance premise b | By P4a steps compose only through compatible preconditions, effects, results and authority, by P1 a locally successful step says nothing about the composite's meaning, and by P6 end-to-end success is a claim on evidence, so each composition boundary preserves the applicable outer obligations, and local success establishes the outcome only with coverage, compatibility and outcome evidence | [Construction relation](#construction-relation), Composition boundaries; [FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction), outside this member | the decomposition, order and concurrency: the strategy's owner | 3, 4, 7 |
-| P1 (independent), P2 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P1 a discrepancy between an observation and the required conditions has four candidate causes that are not conflated, by P2 the response serves the destination, by P6 each repair goes to the owner of its cause, and by P5 an undecided cause stays undecided, so feedback compares observations with the governing conditions, diagnoses among the four causes, preserves unresolved alternatives and routes each supported response to its owner; a bug is one intake category of change work | [Construction relation](#construction-relation), Feedback and diagnosis; [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), outside this member | severity and priority policies: the adopting Product's work carriers ([TICKETS](TICKETS.md)) | 5, 9 |
-| P5 (derived from P0 and P6, with P0's open-world premise), P2 (independent), P6 (independent); instance premises a, b | By P5 a step reports only what its context decides, by P2 continuing work needs a route to the destination, and by P6 completion is a claim on evidence against the destination, so preservation, progress, termination and outcome satisfaction are distinct claims, each with its own support, and an exhausted limit or an unresolved attempt proves neither completion nor impossibility | [Construction relation](#construction-relation), Preservation, progress and completion, and Evaluation and completion; §3; §6 | the completion condition of ongoing work: the owner of its mandate | 5, 7, 9 |
+| P0 (recovered), P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P0 the resources that planning, checking and construction consume are finite, by P2 work is arranged to serve the destination, by P5 exhaustion of those resources leaves the outcome undecided, and by P6 a claim that one arrangement is better states its grounds, so a strategy is selected within the resource envelope with its material rationale recorded, and no strategy is imposed by this relation or its consumers | [Construction relation](#construction-relation), Strategy | the strategy itself: the realisation and the actor exercising the admitted work authority; for this corpus's Executive, EXECUTIVE_BASELINE | 5, 7, 9 |
+| P4a (independent), P1 (independent), P6 (independent); instance premise b | By P4a steps compose only through compatible preconditions, effects, results and authority, by P1 a locally successful step says nothing about the composite's meaning, and by P6 end-to-end success is a claim on evidence, so each composition boundary preserves the applicable outer obligations, and local success establishes the outcome only with coverage, compatibility and outcome evidence, the chain obligations being those of FOUNDATIONS §4 Preservation through construction | [Construction relation](#construction-relation), Composition boundaries | the decomposition, order and concurrency: the strategy's owner | 3, 4, 7 |
+| P1 (independent), P2 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P1 a discrepancy between an observation and the required conditions has four candidate causes that are not conflated, by P2 the response serves the destination, by P6 each repair goes to the owner of its cause, and by P5 an undecided cause stays undecided, so feedback compares observations with the governing conditions, diagnoses among the four causes, preserves unresolved alternatives and routes each supported response to its owner; a bug is one intake category of change work, which SPEC_METHOD §4 applies at intake | [Construction relation](#construction-relation), Feedback and diagnosis | severity and priority policies: the adopting Product's work carriers ([TICKETS](TICKETS.md)) | 5, 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P2 (independent), P6 (independent); instance premises a, b | By P5 a step reports only what its context decides, by P2 continuing work needs a route to the destination, and by P6 completion is a claim on evidence against the destination, so preservation, progress, termination and outcome satisfaction are distinct claims, each with its own support, and an exhausted limit or an unresolved attempt proves neither completion nor impossibility | [Construction relation](#construction-relation), Preservation, progress and completion, and Evaluation and completion; [§3](#3-step-results-and-disposition); [§6](#6-cost-and-proportionality) | the completion condition of ongoing work: the owner of its mandate | 5, 7, 9 |
 
 [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method),
 outside this member, binds the step to that member's terms and applies
@@ -82,7 +82,9 @@ the selected outcome to the product outcome, and of the owning relations
 and re-entry conditions to the chain's layers and change classes, applies
 the first and sixth rows; and its rule that the configuration sets the
 frames for construction, assessment and disposition, the consumer of a
-step's return and any coordinator applies the fourth row. Two of its
+step's return and any coordinator applies the fourth row; and its binding
+of the step to the construction relation applies the tenth to fourteenth
+rows. Two of its
 statements apply other sections: the step's results in the core apply
 §3, which family F3 traces, and the computational relations, actors and
 resource limits of the tenant's binding apply SPEC_METHOD §11, which
@@ -138,146 +140,6 @@ change follows its owning authority and re-enters at the owning relation
 destination was reached, and a candidate that satisfies the revised
 destination is no evidence that it satisfies the previous one (P2, P6).
 
-### Construction relation
-
-This subsection states the construction relation for this corpus: how a
-selected construction binds its current state and destination, chooses
-its work, composes its steps, corrects itself and claims completion. It
-is law carried from the common construction requirement and the universal
-construction model of the Product that owns this corpus, restated here at
-its owner. ACTIVATION §4, §5 and §7, EVALUATION §1, SPEC_METHOD §4, §8
-and §9, EXECUTIVE_BASELINE, ODD and the other consumers named in the
-design apply it; none restates it (P6).
-
-Binding A and Z. A construction binds A, the current state of Transitions
-above with its account, and Z, the destination as a predicate over
-realised states that includes the acceptance conditions of the selected
-outcome. The account of A describes the material workspace state, the
-relevant external observations acquired through the interfaces that own
-them, what is justifiably known and the explicit unknowns; an actor's
-acquired account can be incomplete or stale, and the workspace, not the
-account, is the subject (§5). Several realised states may satisfy Z. The
-governing specification, the selected WHAT of the Product that owns the
-work, supplies Z. The declared calculi of the tenant's binding
-([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)) govern which
-transformations and compositions are lawful; they select no outcome. A
-lawful construction can remain incomplete or fail to reach Z, and
-lawfulness establishes neither delivery nor optimality. A proof about the
-outcome that rests on premises retains those premises and its scope. A
-selected construction may need to discover its path while performing and
-evaluating work (P2, P3, P6).
-
-Three accounts. The specification is the internal reference model of the
-required conditions. Observations describe what does hold. A causal or
-predictive model explains how an action may change the state. These
-accounts have different purposes and can be incomplete or wrong in
-different ways; a claim about one is never taken for a claim about
-another, and the applicability and adequacy of a predictive model are
-claims of their own (P1).
-
-Strategy. A strategy arranges admissible construction and assurance to
-serve Z within the selected resource envelope. Its material choices
-account for context, attention, time, effort, computation, communication
-and the other relevant resources, together with feedback delay,
-uncertainty, integration exposure and rework; planning, checking and
-coordination consume resources too. Measures that justify a choice state
-their units, boundaries and composition rules, and keep estimates,
-assumptions and observations distinguishable. Several objectives can
-leave alternatives incomparable; the owning criteria decide the tradeoff.
-Steel thread, phased delivery and repeated refinement are strategies,
-each with its own costs, feedback delays, integration risks and rework.
-The selection belongs to the realisation and to the actor exercising the
-admitted work authority; its material rationale is stated in existing
-design or work records, and a claim that one strategy is superior states
-the objectives, comparison and assumptions it depends on. This member
-imposes no exhaustive optimisation, universal numerical budget, scalar
-cost measure or preferred strategy (P2, P5, P6).
-
-Composition boundaries. A composition boundary is the boundary between
-successive steps, where one step's output becomes the next step's
-starting state. It is distinct from a categorical join, which is a map
-between categories ([FOUNDATIONS §4](FOUNDATIONS.md#4-algebra)). Steps
-compose through compatible preconditions, effects, results and authority,
-and each boundary preserves the applicable outer obligations. Refinement
-adds detail and construction changes state within the permitted variation
-(§4). Decomposition, delegation, concurrent work and recursive
-application retain the affected obligations; independent actions may
-proceed concurrently where their dependencies, effects and authority
-permit. Local success supplies end-to-end success only when the required
-coverage, composition compatibility and outcome evidence hold; the
-obligations a chain of steps must discharge are
-[FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction).
-A categorical claim about a construction meets the demonstration of
-FOUNDATIONS §4 (P4a, P1, P6).
-
-Feedback and diagnosis. Feedback observes the current subject, compares
-it with the governing conditions, diagnoses a material discrepancy,
-selects an authorised response, acts and observes the result. Homeostasis
-means correction towards the required conditions as disturbances and new
-observations arise; it guarantees neither convergence nor the adequacy of
-those conditions. For work management a bug is a category of
-feature/change work: an observed or suspected discrepancy handled through
-the same intake and delivery mechanism
-([SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage)).
-Diagnosis distinguishes four causes: a defective realisation, an
-inadequate governing requirement or design, an inaccurate predictive
-model, and insufficient observation. A prediction error alone does not
-decide whether the required outcome holds. Diagnosis preserves unresolved
-alternatives and routes each supported repair to the owner of its cause;
-the intake label supplies no repair class and no permission. Severity
-describes consequence; priority orders the response under the selected
-outcome, dependencies, resources and authority. A bug list projects
-existing work state and creates no separate delivery or authority
-mechanism (P1, P2, P5, P6).
-
-Preservation, progress and completion. Recursive and repeated work
-distinguish four claims: preservation, that an invariant or obligation is
-kept through the steps; progress, that the work moves towards Z on
-evidence; termination; and outcome satisfaction. A formal induction or
-termination claim supplies its premises and argument; no universal
-termination proof is required before bounded work can begin, and where
-such a proof is absent the claim stays within the available evidence.
-Continuing work has a supported purpose under the selected strategy,
-which can include reducing uncertainty or testing a bounded hypothesis.
-Discovery may enlarge the known work (Transitions above), and repeated
-activity alone establishes no progress. Control handles failure,
-unavailable information, uncertain effects and exhausted resources
-through the continuation, repair, recovery, re-entry, yield or stop that
-§3, §5 and §6 name. Ongoing maintenance continues under its mandate; a
-delivery claim needs its completion condition. A resource limit can end
-an attempt with an unresolved outcome; it establishes neither achievement
-nor impossibility (P5, P2, P6).
-
-Evaluation and completion. Evaluation uses the core result algebra
-([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)), preserving failure,
-missing coverage and uncertainty. Formal proof, mechanical checking,
-testing and observed use establish their respective claims on their
-stated subjects, assumptions and boundaries; an unavailable proof remains
-an explicit obligation where the governing conditions require that proof.
-Producing a candidate, proving a property and accepting delivery remain
-distinct acts ([EVALUATION §5](EVALUATION.md#5-acceptance)). Completion
-requires sufficient evidence against Z, including its acceptance
-conditions; exhaustion or an unresolved attempt proves neither completion
-nor impossibility (P5, P6).
-
-Ownership and limits. This subsection is the one owner of the
-construction relation in this corpus. Its consumers apply it where an
-actor enters construction, triage, recovery, assurance and release, and
-state no second relation. Domain strategy, actor configuration, execution
-mechanisms and additional assurance policies retain their owners:
-EXECUTIVE_BASELINE for this corpus's Executive, PROFILES for the
-profiles, SPEC_METHOD §11 for the tenant's binding. The existing work and
-evidence carriers hold the necessary state ([TICKETS](TICKETS.md); the
-closed results of §7); the relation adds no independent ledger, required
-role sequence or orchestration runtime. It establishes no general solver,
-no fixed organisational structure, no guaranteed convergence and no
-theorem of categorical universality (P6, P2). Purpose and material
-relation: bounded activity can consume resources without delivering the
-intended outcome, and isolated checks can conceal a failed composition;
-the relation connects purpose, action, observation and correction so that
-features and defects alike remain governed by their end-to-end
-obligations (P2, P5, P6).
-
 Completion. Work is complete only when sufficient evidence shows that the
 current state satisfies the applicable destination and its acceptance
 conditions; accepting that claim is the decision owner's disposition
@@ -310,6 +172,153 @@ a revised destination from standing in for evidence that the applicable
 destination is satisfied (P2, P6). The state, the destination and the
 obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
+
+### Construction relation
+
+This subsection states the construction relation for this corpus: how a
+selected construction binds its current state and destination, chooses
+its work, composes its steps, corrects itself and claims completion. It
+is law carried from the common construction requirement and the universal
+construction model of the Product that owns this corpus, restated here at
+its owner. ACTIVATION §2 to §7, EVALUATION §1, SPEC_METHOD §4, §8 and §9,
+EXECUTIVE_BASELINE, ODD and the other consumers named in the design
+apply it; none restates it (P6).
+
+Binding A and Z. A construction binds A, the current state of Transitions
+above with its account, and Z, the destination as a predicate over
+realised states that includes the acceptance conditions of the selected
+outcome. The account of A describes the material workspace state, the
+relevant external observations acquired through the interfaces that own
+them, what is justifiably known and the explicit unknowns; an actor's
+acquired account can be incomplete or stale, and the workspace, not the
+account, is the subject (§5). Several realised states may satisfy Z. The
+governing specification, the selected WHAT across the Intent, Product and
+Specification of the Product that owns the work, supplies Z; its
+descriptions refine Z. The applicable declared requirements and the declared calculi of the
+tenant's binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding))
+govern which transformations and compositions are lawful; the calculi
+select no outcome. A
+lawful construction can remain incomplete or fail to reach Z, and
+lawfulness establishes neither delivery nor optimality. A proof about the
+outcome that rests on premises retains those premises and its scope. A
+selected construction may need to discover its path while performing and
+evaluating work (P2, P3, P6).
+
+Three accounts. The specification is the internal reference model of the
+required conditions. Observations describe what does hold. A causal or
+predictive model explains how an action may change the state. These
+accounts have different purposes and can be incomplete or wrong in
+different ways; a claim about one is never taken for a claim about
+another, and the applicability and adequacy of a predictive model are
+claims of their own (P1).
+
+Strategy. A strategy arranges admissible construction and assurance to
+serve Z within the selected resource envelope. Its material choices
+account for context, attention, time, effort, computation, communication
+and the other relevant resources, together with feedback delay,
+uncertainty, integration exposure and rework; planning, checking and
+coordination consume resources too. Measures that justify a choice state
+their units, boundaries and composition rules, and keep estimates,
+assumptions and observations distinguishable. Several objectives can
+leave alternatives incomparable; the owning criteria decide the tradeoff.
+Steel thread, phased (waterfall) delivery and iterative delivery are
+possible strategies, each with its own costs, feedback delays, integration risks and rework.
+The selection belongs to the realisation and to the actor exercising the
+admitted work authority; its material rationale is stated in existing
+design or work records, and a claim that one strategy is superior states
+the objectives, comparison and assumptions it depends on. No exhaustive
+optimisation, universal numerical budget, scalar cost measure or preferred
+strategy is imposed by this relation or its consumers (P2, P5, P6).
+
+Composition boundaries. A composition boundary is the boundary between
+successive steps, where one step's output becomes the next step's
+starting state. It is distinct from a categorical join, which is a map
+between categories ([FOUNDATIONS §4](FOUNDATIONS.md#4-algebra)). Steps
+compose through compatible preconditions, effects, results and authority,
+and each boundary preserves the applicable outer obligations. Refinement
+may add detail and construction may change state within the permitted
+variation (§4). Decomposition, delegation, concurrent work and recursive
+application retain the affected obligations; independent actions may
+proceed concurrently where their dependencies, effects and authority
+permit. Local success supplies end-to-end success only when the required
+coverage, composition compatibility and outcome evidence hold; the
+obligations a chain of steps must discharge are
+[FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction).
+A categorical claim about a construction meets the demonstration of
+FOUNDATIONS §4 (P4a, P1, P6).
+
+Feedback and diagnosis. Feedback observes the current subject, compares
+it with the governing conditions, diagnoses a material discrepancy,
+selects an authorised response, acts and observes the result. Homeostasis
+means correction towards the required conditions as disturbances and new
+observations arise; it guarantees neither convergence nor the adequacy of
+those conditions. For work management a bug is a category of
+feature/change work: an observed or suspected discrepancy handled through
+the same intake and delivery mechanism
+([SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage)).
+Diagnosis distinguishes four causes: a defective realisation, an
+inadequate governing requirement or design, an inaccurate predictive
+model, and insufficient observation. A prediction error alone does not
+decide whether the required outcome holds. A revised model does not erase
+the counterexample or by itself repair the realisation. Diagnosis preserves unresolved
+alternatives and routes each supported repair to the owner of its cause;
+the intake label supplies no repair class and no permission. Severity
+describes consequence; priority orders the response under the selected
+outcome, dependencies, resources and authority. A bug list projects
+existing work state and creates no separate delivery or authority
+mechanism (P1, P2, P5, P6).
+
+Preservation, progress and completion. Recursive and repeated work
+distinguish four claims: preservation, that an invariant or obligation is
+kept through the steps; progress, that the work moves towards Z on
+evidence; termination; and outcome satisfaction. A formal induction or
+termination claim supplies its premises and argument; no universal
+termination proof is required before bounded work can begin, and where
+such a proof is absent the claim stays within the available evidence.
+Continuing work has a supported purpose under the selected strategy,
+which can include reducing uncertainty or testing a bounded hypothesis.
+Discovery may enlarge the known work (Transitions above), and repeated
+activity alone establishes no progress. Control handles failure,
+unavailable information, uncertain effects and exhausted resources
+through the continuation, repair, recovery, re-entry, yield or stop that
+§3, §5 and §6 name. Resumption reacquires current reality and retains
+valid progress; unknown effects are resolved sufficiently before the next
+dependent action (§5). Ongoing maintenance may continue under its mandate; a
+delivery claim needs its completion condition. A resource limit can end
+an attempt with an unresolved outcome; it establishes neither achievement
+nor impossibility (P5, P2, P6).
+
+Evaluation and completion. Evaluation uses the core result algebra
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)), preserving failure,
+missing coverage and uncertainty. Formal proof, mechanical checking,
+testing and observed use establish their respective claims on their
+stated subjects, assumptions and boundaries
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation));
+an unavailable proof remains
+an explicit obligation where the governing conditions require that proof.
+Producing a candidate, proving a property and accepting delivery remain
+distinct acts ([EVALUATION §5](EVALUATION.md#5-acceptance)). Completion
+requires sufficient evidence against Z, including its acceptance
+conditions; exhaustion or an unresolved attempt proves neither completion
+nor impossibility (P5, P6).
+
+Ownership and limits. This subsection is the one owner of the
+construction relation in this corpus. Its consumers apply it where an
+actor enters construction, triage, recovery, assurance and release, and
+state no second relation. Domain strategy, actor configuration, execution
+mechanisms and additional assurance policies retain their owners:
+EXECUTIVE_BASELINE for this corpus's Executive, PROFILES for the
+profiles, SPEC_METHOD §11 for the tenant's binding. The existing work and
+evidence carriers hold the necessary state ([TICKETS](TICKETS.md); the
+closed results of §7); the relation adds no independent ledger, required
+role sequence or orchestration runtime. It establishes no general solver,
+no fixed organisational structure, no guaranteed convergence and no
+theorem of categorical universality (P6, P2). Purpose and material
+relation: bounded activity can consume resources without delivering the
+intended outcome, and isolated checks can conceal a failed composition;
+the relation connects purpose, action, observation and correction so that
+features and defects alike remain governed by their end-to-end
+obligations (P2, P5, P6).
 
 ### Intake
 
@@ -1240,8 +1249,12 @@ Purpose and material relation: a decomposition or rewrite that changes
 meaning, or approximations whose deviations accumulate, would let a
 composite whose every step passed violate the outer contract (P4a, P1,
 P6). The material relation is whether the composite still meets the outer
-obligations. Preservation per layer, licensing laws and approximate steps
-are new in this corpus.
+obligations. Preservation per layer, licensing laws and the per-step
+adequacy relation are new in this corpus; the end-to-end obligations of a
+composition, and the bound an approximate composition states for the
+whole, are
+[FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction),
+which this section applies to refinement steps.
 
 ### Complete enclosing-relation admission
 
@@ -1630,7 +1643,7 @@ The selection of affected results after a change and the conditions for
 retaining evidence on a new subject are
 [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse);
 this section applies them to closed results and handoffs, and its three
-invalidators are instances of that relation's impact cover (P3, P6).
+invalidators are instances of that relation's impact cover `I(Δ)` (P3, P6).
 
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
@@ -1649,6 +1662,12 @@ results. The invalidators are three:
   binds (FOUNDATIONS §2, Basis);
 - a declared revising observation: an observation that the result or
   judgment itself names as one that would revise it, once it occurs.
+
+A changed source, task or actor condition is a changed basis where the
+basis binds it, and otherwise a material input change; a role change that
+alters a required actor condition is such a change, while a role,
+conversation or resumption change that alters none of these invalidates
+nothing (P3, P6).
 
 Judgment continuity names the basis and the evidence; Return A Closed
 Result names inputs and the observation. A member, profile or project
