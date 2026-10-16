@@ -38,3 +38,13 @@ Acquisition began at 2026-10-16T16:23:43Z. Envelope: 256 KiB newly presented sou
 
 These expectations must be hashed and reported to the Executive before tenant acquisition.
 
+## Scoped continuation and pre-donor expectations
+
+Main grant `95b0badf0c8854c5cec74a2c59e51ed3bd9915d7` adds receiving-account contributions I5-D1–D3. Continuation `9f72dd5cfdd134d038f5f9c99280e34760bbf781` preserves the initial acquisition uncertainty and admits an additional measured 128 KiB and 20-minute checkpoint for remaining thirteen-plus-seven checks and the D1–D3 dependencies only. This is no initial-envelope compliance or full context-fit claim.
+
+These additional expectations precede donor acquisition. Common B Product Cross-Synthesis, lines 299–309, requires a declared contribution cone, exact frozen donor, receiving owner, adaptations, affected predecessor claims/dependencies, renewed evidence and retained authorship. The donor's reading of its own contribution cannot supply independent acceptance evidence. The receiving same-family nonauthor assessment is the declared working-review exception, with owner-selected acceptance assignments reserved.
+
+For donor `c66ed4e0e97ca91ebc26894eaf283ebc6c3a2e20`, acquire only the excerpts selected by frozen `PORT_ACCOUNT.md`. Compare them with the receiving PORT_ACCOUNT, REVIEW_REGISTER and question/coverage distinctions at `b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5`. The predicate is that I5-D1–D3's reported adaptation and exclusion faithfully describe the selected donor and receiving source, preserve one owner and exact claim/question distinctions, and retain donor authorship without importing a donor result or acceptance. Unread material dependencies remain explicit. No live peer working tree is acquired.
+
+The original pre-account expectations SHA-256 was `672c7aa3893f15d334d79d34444181abac0b23610651949b5e22616221f12b16`; it was sent before tenant acquisition. This appended successor is separately hashed before donor acquisition. All subsequent tool-return output is byte-counted conservatively, including metadata and computation summaries as well as selected source.
+
