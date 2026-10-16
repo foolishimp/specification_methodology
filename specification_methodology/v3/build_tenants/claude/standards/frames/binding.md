@@ -4,6 +4,14 @@ Task: State the build-tenant binding of a software tenant and a human-process te
 
 Purpose: The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -38,9 +46,9 @@ Routes, in order:
 14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 102944 bytes.
+Size of this frame: 103625 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff
 
 ## 11. Build-tenant binding
 
@@ -230,7 +238,7 @@ behave identically outside the contract, which is new in that member.
 The rest of this section is new in this corpus.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -301,7 +309,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#2-ontology sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ## 2. Ontology
 
@@ -776,7 +784,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#effects sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Effects
 
@@ -829,7 +837,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -1025,7 +1033,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Conjunction of results
 
@@ -1247,7 +1255,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9 rows=3/13 selected by the anchors this frame carries
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff rows=3/13 selected by the anchors this frame carries
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
@@ -1283,7 +1291,7 @@ step's results and its use of the tenant's binding. §12 records
 dispositions and decides nothing.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9 rows=1/10 selected by the anchors this frame carries
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff rows=1/10 selected by the anchors this frame carries
 
 ### Foundation to law: change management and ambiguity
 

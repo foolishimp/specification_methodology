@@ -4,6 +4,14 @@ Task: Propose and justify a configuration for remaining multi-part work across a
 
 Purpose: The owning sections for transitions, intake, configuration with its optimality rule, roles and delegation, context construction with the size measurement, fit test and acquisition, the activation packet, closed results and reuse, construction availability and effects as the step result mappings, finite attention, capability fit and no assumed hierarchy, authority kinds and the kinds of independence, independent assessment and adequate attention, the executive configuration as one example, and the core result algebra with its conjunction.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -47,9 +55,9 @@ Routes, in order:
 23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 149039 bytes.
+Size of this frame: 150742 bytes.
 
-Source: ACTIVATION.md#transitions sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#transitions sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Transitions
 
@@ -135,7 +143,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#intake sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Intake
 
@@ -179,7 +187,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#configuration sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Configuration
 
@@ -305,7 +313,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#roles-and-delegation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Roles and delegation
 
@@ -383,7 +391,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 2. Context construction under an envelope
 
@@ -621,7 +629,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 7. Closed result and reuse
 
@@ -636,12 +644,23 @@ mechanical evidence under the declared independence conditions of
 [EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
 permission (P4b, P0; rc.2 RF #return-a-closed-result).
 
+The selection of affected results after a change and the conditions for
+retaining evidence on a new subject are
+[FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse);
+this section applies them to closed results and handoffs, and the three
+invalidators below are kinds of change Δ, and a closed result is affected
+when its dependencies `D*(t)` meet the impact cover `I(Δ)` (P3, P6).
+
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
 nothing. An invalidator invalidates the affected result before reliance,
 even where the subject's own bytes are unchanged, preserving its
 predecessor/successor relation and any demonstrably independent surviving
-results. The invalidators are three:
+results. Invalidation withdraws the result from direct reliance; whether
+its evidence is retained on the new basis is decided by `retain_applicable`
+of FOUNDATIONS §4 Change impact and evidence reuse, and the changed
+coordinate alone establishes neither that the claim fails nor that it
+holds. The invalidators are three:
 
 - a material input change: a change to the result's subject or to an
   input it rests on, including the admissible evidence that bears on its
@@ -653,6 +672,12 @@ results. The invalidators are three:
   binds (FOUNDATIONS §2, Basis);
 - a declared revising observation: an observation that the result or
   judgment itself names as one that would revise it, once it occurs.
+
+A changed source, task or actor condition is a changed basis where the
+basis binds it, and otherwise a material input change; a role change that
+alters a required actor condition is such a change, while a role,
+conversation or resumption change that alters none of these invalidates
+nothing (P3, P6).
 
 Judgment continuity names the basis and the evidence; Return A Closed
 Result names inputs and the observation. A member, profile or project
@@ -697,7 +722,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#construction-availability sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Construction availability
 
@@ -748,7 +773,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#effects sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Effects
 
@@ -1151,7 +1176,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#authority-kinds sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Authority kinds
 
@@ -1218,7 +1243,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#disjointness-and-independence sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#disjointness-and-independence sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Disjointness and independence
 
@@ -1237,7 +1262,7 @@ be disjoint; and the unqualified word "independent" establishes none of
 the three.
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -1433,7 +1458,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Conjunction of results
 

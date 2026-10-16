@@ -4,6 +4,15 @@ Task: Decide whether an assessed candidate or an exact release cut is accepted: 
 
 Purpose: The owning sections for review results and triage, acceptance and when a finding blocks promotion, the four dispositions, the core result algebra and its conjunction, condition-based closure, release acceptance criteria, and successor baseline conservation.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -35,7 +44,7 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 64468 bytes.
+Size of this frame: 65523 bytes.
 
 Source: EVALUATION.md#4-review-results sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
 
@@ -187,7 +196,7 @@ keep a bounded review from blocking on observations outside its claim
 while a non-waivable hard stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#disposition sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Disposition
 
@@ -229,7 +238,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -425,7 +434,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Conjunction of results
 

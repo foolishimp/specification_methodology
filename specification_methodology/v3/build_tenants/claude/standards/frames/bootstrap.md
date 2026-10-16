@@ -4,6 +4,14 @@ Task: Enter this method for a task not yet specified: say what the method is, bi
 
 Purpose: The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, the frame tuple and the activation packet; the step's intake and admission; context construction with the size measurement, acquisition, activation and evaluation; and the core result algebra.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -38,9 +46,9 @@ Routes, in order:
 14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 95702 bytes.
+Size of this frame: 96383 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9
+Source: SPEC_METHOD.md#canonical-statement sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff
 
 ### Canonical statement
 
@@ -85,7 +93,7 @@ cost and forcing close review; they are not authority layers and cannot hide
 drift (§4).
 
 
-Source: FOUNDATIONS.md#product-lineage-objects sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#product-lineage-objects sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Product lineage objects
 
@@ -327,7 +335,7 @@ source may author a future cut; it must not silently govern a consumer
 (P6, P3).
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#authority-kinds sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Authority kinds
 
@@ -394,7 +402,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#the-frame-tuple sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#the-frame-tuple sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### The frame tuple
 
@@ -493,7 +501,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#intake sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Intake
 
@@ -537,7 +545,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#admission sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Admission
 
@@ -581,7 +589,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 2. Context construction under an envelope
 
@@ -819,7 +827,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -1114,7 +1122,7 @@ global context, universal completeness or domain authority inferred from
 adopting the member. §15 records dispositions and decides nothing.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9 rows=1/13 selected by the anchors this frame carries
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff rows=1/13 selected by the anchors this frame carries
 
 ### Foundation to law: chain, outcome and build-tenant binding
 

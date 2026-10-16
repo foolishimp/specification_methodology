@@ -4,6 +4,15 @@ Task: Resume interrupted work as a new session from a retained summary that disa
 
 Purpose: The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions (FOUNDATIONS.md#change-impact-and-evidence-reuse sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -36,9 +45,9 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 88849 bytes.
+Size of this frame: 90893 bytes.
 
-Source: ACTIVATION.md#transitions sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#transitions sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Transitions
 
@@ -124,7 +133,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 2. Context construction under an envelope
 
@@ -362,7 +371,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#construction-availability sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Construction availability
 
@@ -413,7 +422,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#effects sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Effects
 
@@ -466,7 +475,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#5-work-state-and-restart sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 5. Work state and restart
 
@@ -603,7 +612,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ## 7. Closed result and reuse
 
@@ -618,12 +627,23 @@ mechanical evidence under the declared independence conditions of
 [EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
 permission (P4b, P0; rc.2 RF #return-a-closed-result).
 
+The selection of affected results after a change and the conditions for
+retaining evidence on a new subject are
+[FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse);
+this section applies them to closed results and handoffs, and the three
+invalidators below are kinds of change Δ, and a closed result is affected
+when its dependencies `D*(t)` meet the impact cover `I(Δ)` (P3, P6).
+
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
 nothing. An invalidator invalidates the affected result before reliance,
 even where the subject's own bytes are unchanged, preserving its
 predecessor/successor relation and any demonstrably independent surviving
-results. The invalidators are three:
+results. Invalidation withdraws the result from direct reliance; whether
+its evidence is retained on the new basis is decided by `retain_applicable`
+of FOUNDATIONS §4 Change impact and evidence reuse, and the changed
+coordinate alone establishes neither that the claim fails nor that it
+holds. The invalidators are three:
 
 - a material input change: a change to the result's subject or to an
   input it rests on, including the admissible evidence that bears on its
@@ -635,6 +655,12 @@ results. The invalidators are three:
   binds (FOUNDATIONS §2, Basis);
 - a declared revising observation: an observation that the result or
   judgment itself names as one that would revise it, once it occurs.
+
+A changed source, task or actor condition is a changed basis where the
+basis binds it, and otherwise a material input change; a role change that
+alters a required actor condition is such a change, while a role,
+conversation or resumption change that alters none of these invalidates
+nothing (P3, P6).
 
 Judgment continuity names the basis and the evidence; Return A Closed
 Result names inputs and the observation. A member, profile or project
@@ -873,7 +899,7 @@ evidence remains history and cannot be projected as current acceptance
 (P6, P4b).
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -1069,7 +1095,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Conjunction of results
 

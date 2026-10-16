@@ -4,6 +4,15 @@ Task: For a refactor inside an accepted boundary and a new boundary, decide deci
 
 Purpose: The owning sections for ontology-first design, proportional design sequencing and decision completeness, native constructability, the authority model, Prime atoms with whole-family and recursive contraction and root conservation, the Ontology and three-view design gate with its axiom verdicts and the design verdict as a disposition, the change classes, and the core result algebra with its conjunction.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions (FOUNDATIONS.md#change-impact-and-evidence-reuse sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -31,7 +40,7 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 105371 bytes.
+Size of this frame: 106393 bytes.
 
 Source: DESIGN_MODULE.md#5-ontology-first-design sha256=7006ef69713e5add3a93d5dac7616c9aa1d8af8da0d1d61ffac2190ad85c2ca9
 
@@ -1097,7 +1106,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=7a05a089e7ceb334acab74e477a8946e53cc28de10d877cc23f1797c96092ccd
+Source: ACTIVATION.md#disposition sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
 
 ### Disposition
 
@@ -1139,7 +1148,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9
+Source: SPEC_METHOD.md#change-classes sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff
 
 ### Change classes
 
@@ -1177,7 +1186,7 @@ evaluation result, so a change classed `realization_refactor` cannot stand
 in for a `satisfied` result that no upstream drift occurred (P5, P1).
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
@@ -1373,7 +1382,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Conjunction of results
 
@@ -1569,7 +1578,7 @@ are choices this profile, the adopting Product or another owner makes, so
 no profile choice is presented as following from the foundations (P6, P2).
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=92f0afa5986a6f7397bc10247c144bd13ae514971d3a597679ce606198281ae9 rows=1/10 selected by the anchors this frame carries
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=a55952ea0ee837915af9208e44bda280bc7f0f4956ea7849b9450d528d2ce6ff rows=1/10 selected by the anchors this frame carries
 
 ### Foundation to law: change management and ambiguity
 

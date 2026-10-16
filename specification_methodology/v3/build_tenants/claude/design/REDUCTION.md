@@ -1500,6 +1500,36 @@ made, so TO1's acceptance condition is `unresolved`.
 | `acceptance-release` | 47,192 | 63,299 | +16,107 | 9 of 52 |
 | `member-build-assess` | 62,993 | 78,077 | +15,084 | 10 of 41 |
 
+Iteration 5 (E2E-01). Two further increases, declared here before the
+frame-entry traces that would decide TO1: ACTIVATION §7 gained two
+paragraphs that five frames carry, and every frame gained a `Binds:` list
+naming the construction relation and, for evaluation and reuse tasks, the
+assurance relations, by owner section and digest without copying the
+section (`design/CROSS_SYNTHESIS.md` part 5, requirements 7 and 8). The
+declared frame capacity rose from 150,000 to 160,000 bytes because the
+`configuration` frame would otherwise have been refused at 150,061 bytes
+before any binding line; the fresh-actor whole-input cap of
+`CONSTRUCTION_BINDING.md`, 120,000 bytes, had already been exceeded by the
+iteration 4 trial design's declared 300,000 and is aligned to 300,000.
+Adverse on M4a, disclosed against both baselines; TO1's acceptance
+condition stays `unresolved`.
+
+| Frame | M4a at `c66ed4e` | M4a after E2E-01 | Increase | Binds |
+|---|---:|---:|---:|---:|
+| `rf-task-a` | 119,684 | 121,761 | +2,077 | 2 |
+| `rf-task-b` | 102,942 | 105,019 | +2,077 | 2 |
+| `ac-task-a` | 74,170 | 74,851 | +681 | 1 |
+| `traversal-task-f` | 109,852 | 110,907 | +1,055 | 2 |
+| `eb-task-d` | 117,579 | 119,623 | +2,044 | 2 |
+| `dm-task-d` | 105,371 | 106,393 | +1,022 | 2 |
+| `configuration` | 149,039 | 150,742 | +1,703 | 1 |
+| `binding` | 102,944 | 103,625 | +681 | 1 |
+| `stale-summary` | 88,849 | 90,893 | +2,044 | 2 |
+| `bootstrap` | 95,702 | 96,383 | +681 | 1 |
+| `acceptance-release` | 64,468 | 65,523 | +1,055 | 2 |
+| `member-build-assess` | 79,918 | 81,491 | +1,573 | 2 |
+| all twelve | 1,210,518 | 1,227,211 | +16,693 | |
+
 ### 4.4 Selected paths
 
 Task kinds are the six of the

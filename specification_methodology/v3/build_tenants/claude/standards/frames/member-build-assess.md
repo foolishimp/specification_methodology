@@ -4,6 +4,15 @@ Task: Build or assess one member of this corpus: state its family table in the r
 
 Purpose: The owning sections for the foundation-to-law table format and family index, authority kinds, imports between members, the core result algebra, independent assessment and review results, successor dispositions, and the coverage of the common conformance discriminators.
 
+Binds:
+
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+
+A `Binds:` item names an obligation the activation of this frame binds, with
+the owning section and the digest of its member where it names one; the item
+copies no section and owns no determination. A changed owner changes the digest.
+
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
 each relative link destination is rebased
@@ -34,9 +43,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 79918 bytes.
+Size of this frame: 81491 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#authority-kinds sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Authority kinds
 
@@ -103,7 +112,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#imports-between-members sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Imports between members
 
@@ -163,7 +172,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#foundation-to-law sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Foundation to law
 
@@ -239,7 +248,7 @@ table (P1, P6).
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
 | F1 | Frames and context | [REFERENCE_FRAME §1](../REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | REFERENCE_FRAME; ACTIVATION §2; FOUNDATIONS §2 Frame objects, Authority kinds, Disjointness and independence, The frame tuple | 1–9 |
-| F2 | Transitions, steps and configuration | [ACTIVATION §1](../ACTIVATION.md#1-the-step) | ACTIVATION §1, §4; SPEC_METHOD §8 except delivery priority | 1, 3, 4, 5, 6, 7, 9 |
+| F2 | Transitions, steps and configuration | [ACTIVATION §1](../ACTIVATION.md#1-the-step) | ACTIVATION §1 including the construction relation, §4; SPEC_METHOD §8 except delivery priority | 1, 3, 4, 5, 6, 7, 8, 9 |
 | F3 | Results and their combination | [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results) | FOUNDATIONS §4, and the result grounds of §2 Imports between members; ACTIVATION §3; RF-012; AC-007; EVALUATION §4 | 3, 4, 6, 7, 9 |
 | F4 | Work state, resumption and reuse | [ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart) | ACTIVATION §5, §7 | 2, 4, 5, 6, 7, 9 |
 | F5 | Proportionality and cost | [ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality) | ACTIVATION §6; SPEC_METHOD §8 delivery priority | 1, 4, 5, 6, 7, 8, 9 |
@@ -259,13 +268,16 @@ table (P1, P6).
 | F19 | Traversal occurrence | [TRAVERSAL_OCCURRENCE, Position](../TRAVERSAL_OCCURRENCE.md#position) | TRAVERSAL_OCCURRENCE | 1, 2, 3, 4, 6, 7, 8, 9, 10 |
 | F20 | UX | [UX §1](../UX.md#1-position) | UX | 1–9 |
 | F21 | World model | [WORLD_MODEL §1](../WORLD_MODEL.md#1-position) | WORLD_MODEL | 1, 2, 3, 5, 6, 8, 9, 10 |
+| F22 | Assurance relations | [FOUNDATIONS §4 Assurance relations](../FOUNDATIONS.md#assurance-relations) | FOUNDATIONS §4 Preservation through construction, Assertions and observation, Parallel derivation and mutual assurance, Quantified assurance, Change impact and evidence reuse, Formal representation | 2, 3, 4, 6, 7, 9, 10 |
 
 Members and sections with no family table, each with its reason:
 
 - FOUNDATIONS §1, the ontology table of §2, and §3: they state the
   vocabulary of standing, the objects the commitments are about, and the
   commitments themselves with this format, which every family table cites
-  as its premises. §2 Work boundary is the object that P0's boundary
+  as its premises. §3 Construction synthesis relates the commitments to the
+  construction relation that ACTIVATION §1 states and decides no outcome of
+  its own. §2 Work boundary is the object that P0's boundary
   commitment states. §2 Accounts of a construction states a distinction
   and decides no outcome of its own; family F10 traces its use at
   SPEC_METHOD §11. FOUNDATIONS §5: its hypotheses are not law and decide
@@ -292,7 +304,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=4c9592f1e476d31c3d8ef8d1b6738ae0d0aea696433ff505402634db96e42ad2
+Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
 
 ### Results
 
