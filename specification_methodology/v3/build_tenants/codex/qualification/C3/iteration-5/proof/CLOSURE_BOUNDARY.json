@@ -1,0 +1,26 @@
+{
+  "kind": "stdo.i5.construction-return-boundary",
+  "observed_at": "2026-10-16T16:51:12.896928+00:00",
+  "tenant_pre_return": "0b35955cddbbe5d2adbf91a770921a07d598e227",
+  "main_review_recording": "dde79bf67ed593b991e035425201e1e0a21ac831",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "package": "b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5",
+  "checks": {
+    "tenant_branch": true,
+    "clean_before_return": true,
+    "only_own_territory": true,
+    "historical_qualification_unchanged": true,
+    "package_unchanged_since_freeze": true,
+    "tenant_governing_common_unchanged": true,
+    "tenant_admitted_contract_unchanged": true,
+    "main_governing_common_unchanged": true,
+    "main_admitted_contract_unchanged": true,
+    "unrelated_main_root_work_preserved": true,
+    "complete_package_inventory": true
+  },
+  "limits": [
+    "Boundary and artifact integrity only; no member or release acceptance.",
+    "The later return checkpoint changes evidence and tenant entry only.",
+    "Initial caller checks used the wrong inventory root and enclosing heading boundary; they failed before any write or conclusion. Correct checks use successor-relative inventory paths and the exact EC-CODEX-I5-01 heading."
+  ]
+}
