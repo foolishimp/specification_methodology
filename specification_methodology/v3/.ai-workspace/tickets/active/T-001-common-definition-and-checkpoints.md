@@ -10,13 +10,27 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-16T00:28:10Z
+updated_at: 2026-10-16T05:52:38Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 assurance wording successor
+
+2026-10-16T05:52:38Z — The owner forwards Claude's [C3-I5-04 review](../../comments/claude/20261016T041542Z_REVIEW_C3_I5_04_FORMAL_ASSURANCE_B8E3242.md), committed at `de1b53f` after expectations at `ff43c6f`. It finds source `b8e3242` ready to ratify with four Low wording/form findings. The existing common-pen instruction selects their bounded correction; the forwarded review is not ratification. Intake: clarification at the owning assurance requirement and its conformance consumer, plus current-entry correction.
+
+Execution contract `EC-COMMON-I5-05`: from main preimage `de1b53fe557d95da40accdbf97270e0d4a760eb9`, remove overloaded notation and define the reassessed evidence set; bind the evidence-cannot-decide judgment to the existing core meaning; add the requirement's Source and purpose statements; and bring the shared tenant entry to the current assurance handoff. Installed builder: STDO 2.5.1-rc.2, verified manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`. The mathematical obligations and premises, six criteria, work map, witness assets, prior admissions and all historical snapshots retain their scope. Source and framing corrections confer no ratification or tenant admission.
+
+Role transition and territory: the common Ledger Writer records this contract; the common Writer may edit `specification/requirements/ASSURANCE.md`, its one affected conformance row, and `build_tenants/README.md`, with a bounded Codex disposition post. The Ledger Writer updates T-001/T-002 and Goals' current standing and records a descendant input snapshot. The Git Writer makes scoped checkpoint commits on main. Preserve peer commentary, both tenant trees, unrelated root work and all historical ticket sections. No tenant implementation, shared trial, external paid call, push or release is selected. Review progress at 20 minutes; host context and native spend are uninstrumented, with no context-fit claim.
+
+A fresh nonauthor working Reviewer fixes expectations from the exact preimage before successor acquisition and reads the frozen correction and material dependents. Its Codex commentary is its only write territory. The same-family exception supplies bounded working readback, not replacement of Claude's cross-family review or the owner's exact-source decision. The broader review observation is evaluated separately: trial observations can inform common-model fitness when their tasks and judgments are grounded in intended outcomes; shared expectations can also carry errors into a trial. The source supplies no exclusive validation route, automatic model validation, or new trial admission. Prior bounded reviews retain their consistency and conformance evidence. Exit: supported Low corrections and a checked exact successor for ratification.
+
+Writer return: L1 replaces stage letters with roles, distinguishes violation event V and selected set S_Δ, and defines the evidence records without treating selection as execution. L2 binds indeterminate to the existing evidence-cannot-decide core meaning and aligns its conformance consumer, retaining unresolved work and not-performed as distinct concepts. L3 adds the owning Source and material purpose. L4 routes the shared entry to the current reviewed-input preparation. The [disposition](../../comments/codex/20261016T055238Z_DISPOSITION_I5_ASSURANCE_WORDING_REVIEW.md) qualifies the common-model observation without changing the governing clause or admitting a trial.
+
+Author checks: all eight mathematical blocks are identical under the declared symbol renaming; the witness program and results, core owners, existing work rows, historical tails, tenant trees and unrelated root edits are preserved. All 37 C3-I5-04 pins reproduce and 260 local/installed links across fourteen affected or dependent Markdown files resolve. Scoped whitespace passes. The Reviewer has fixed expectations from the preimage before successor acquisition. The separate Git Writer freezes the eight scoped source, work and commentary files for independent readback; the exact successor input is recorded only after that result.
 
 ### Iteration 5 formal assurance
 

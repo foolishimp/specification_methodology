@@ -1,5 +1,7 @@
 # Assurance Of Construction
 
+Source: this Product's [Universal Construction Model](../PRODUCT.md#universal-construction-model).
+
 This requirement owns the relationship between construction, assertions, observations and the claims they support. It applies the [universal construction requirement](README.md#universal-construction-requirement) to assurance under finite resources. Foundations own the shared relationships; the Spec Method and profiles bind them to their operations. A tenant chooses their representation and execution within these obligations.
 
 ## Preservation Through Construction
@@ -34,7 +36,7 @@ q_t implies Q_r                : establishing q_t is sufficient for Q_r.
 
 These implications are conditional on Γ and Ω. Passing a check of a necessary condition does not establish the full obligation. A conjunction requires its own coverage and compatibility argument; a collection of passing tests does not supply that argument by its count.
 
-Let `π: Ω → O` describe the observations available to a checker and `T ⊆ O × R` its admitted evaluation relation, where R uses the method's [single result algebra](README.md#single-result-algebra-requirement). A deterministic checker is a functional special case. A human or probabilistic checker can admit different conclusions on the same observations; a universal soundness claim covers all admitted conclusions, not a favourable selected run. In the following obligations, `sat` and `fal` denote the satisfied and falsified judgments about `q_t`, not new execution states:
+Let `π: Ω → O` describe the observations available to a checker and `T ⊆ O × R` its admitted evaluation relation, where R uses the method's [single result algebra](README.md#single-result-algebra-requirement). A deterministic checker is a functional special case. A human or probabilistic checker can admit different conclusions on the same observations; a universal soundness claim covers all admitted conclusions, not a favourable selected run. Here, `indeterminate` names the core judgment whose admissible evidence cannot decide the evaluated predicate; it remains distinct from an evaluation that was not performed. A claim or work item can remain unresolved for either reason; unresolved work is not an additional judgment value. In the following obligations, `sat` and `fal` denote the satisfied and falsified judgments about `q_t`, not new execution states:
 
 ```text
 For every s in Ω:
@@ -51,11 +53,11 @@ For all s, s' in Ω:
   π(s) = π(s')  implies  q_t(s) = q_t(s').
 ```
 
-This states observation sufficiency. If two admissible cases have the same observation but opposite truth values, that observation cannot support a sound complete decision between them. Further evidence, a justified narrower scope or an unresolved judgment is required. In a classical set model this condition permits a predicate on the image of π; it establishes neither an executable decision procedure nor its cost. Unknown effects and unavailable observations retain their required distinctions from falsehood and from an evaluation that was not performed.
+This states observation sufficiency. If two admissible cases have the same observation but opposite truth values, that observation cannot support a sound complete decision between them. Further evidence, a justified narrower scope or an indeterminate judgment is required. In a classical set model this condition permits a predicate on the image of π; it establishes neither an executable decision procedure nor its cost. Unknown effects and unavailable observations retain their required distinctions from falsehood and from an evaluation that was not performed.
 
 ## Parallel Derivation And Mutual Assurance
 
-Construction and assurance can follow different paths from a common obligation. For `A → B → C`, assertions derived from A check the applicable A-level conditions in C; assertions derived from B check its refinements there. User-acceptance and build-level tests can instantiate these paths. A and B identify the selected sources in this example, not a requirement that every construction has these stage names or test classes.
+Construction and assurance can follow different paths from a common obligation. For `requirement → refinement → realisation`, assertions derived from the requirement check its applicable conditions in the realisation; assertions derived from the refinement check its more detailed obligations there. User-acceptance and build-level tests can instantiate these paths. The roles identify the selected sources and subject in this example; they prescribe no stage names or test classes.
 
 The expected result or acceptance predicate has assertion provenance: the owning obligation, interpretation, assumptions, derivation and shared dependencies that give it meaning. Execution provenance identifies the actual checker, exact subject and applicable environment, inputs, observations and result. Both are needed for the claims they support. Execution logs alone cannot establish that the expected answer follows from the requirement.
 
@@ -71,24 +73,24 @@ These relationships are recoverable from the existing sources, bindings and evid
 
 The work authority selects the required assurance for the stated risk, obligations and resource limits. It identifies material failure consequences, coverage and uncertainty, and the conditions for action or acceptance. Additional evidence can strengthen a claim only within its applicability and dependence account. Neither a test count nor an assumed preference for more checks substitutes for that account.
 
-Where quantified assurance is claimed, its model states the population or uncertainty being modelled, prior information, likelihoods, shared causes and calibration limits. For a specified violation F and evidence E, Bayes' rule is:
+Where quantified assurance is claimed, its model states the population or uncertainty being modelled, prior information, likelihoods, shared causes and calibration limits. For a specified violation event V and evidence event E, Bayes' rule is:
 
 ```text
-P(F | E, Γ) =
-  P(E | F, Γ) P(F | Γ)
-  / [P(E | F, Γ) P(F | Γ) + P(E | not F, Γ) P(not F | Γ)].
+P(V | E, Γ) =
+  P(E | V, Γ) P(V | Γ)
+  / [P(E | V, Γ) P(V | Γ) + P(E | not V, Γ) P(not V | Γ)].
 ```
 
 The denominator must be nonzero. E can include agreement, disagreement or other observations; its likelihood under both faulty and non-faulty conditions matters. The formula supplies no missing likelihood or prior. A numerical posterior is no stronger than its model and supporting evidence.
 
-Let `M_i` mean check i misses F under the specified evaluation conditions. The exact joint miss probability factors by conditional probabilities:
+Let `M_i` mean check i misses V under the specified evaluation conditions. The exact joint miss probability factors by conditional probabilities:
 
 ```text
-P(M_1 and ... and M_n | F, Γ)
-  = product over i of P(M_i | F, Γ, M_1, ..., M_(i-1)).
+P(M_1 and ... and M_n | V, Γ)
+  = product over i of P(M_i | V, Γ, M_1, ..., M_(i-1)).
 ```
 
-Conditional terms require defined conditioning events; zero-probability prefixes are handled without inventing a conditional value. Replacing those terms with `P(M_i | F, Γ)` requires conditional independence under the declared model. The chance of at least one detection is one minus the joint miss probability under those same conditions. It is not the probability that the whole product is correct. Agreement does not necessarily increase confidence when shared causes or newly learned information change the model.
+Conditional terms require defined conditioning events; zero-probability prefixes are handled without inventing a conditional value. Replacing those terms with `P(M_i | V, Γ)` requires conditional independence under the declared model. The chance of at least one detection is one minus the joint miss probability under those same conditions. It is not the probability that the whole product is correct. Agreement does not necessarily increase confidence when shared causes or newly learned information change the model.
 
 Calibration from sampled cases or injected defects supports only its justified relationship to operational failures. Unsupported numeric confidence remains unresolved; qualitative evidence and stated limits remain usable within the governing policy. The method imposes no universal probability threshold and does not require a probability estimate for every test. Required safety, authority and acceptance conditions cannot be waived by a cheaper assurance plan.
 
@@ -99,12 +101,12 @@ Assertion justification and evidence validity are related but distinct dependenc
 Let Δ be a change to material facts or dependencies, including a newly discovered invalid assumption. Let `I(Δ)` conservatively cover the changed facts and their affected dependents. For each check t, let `D*(t)` cover the transitive dependencies material to its assertion, execution and use of evidence. A candidate selection is:
 
 ```text
-T_Δ = { t : D*(t) intersects I(Δ) }.
+S_Δ = { t : D*(t) intersects I(Δ) }.
 ```
 
 The representation is a tenant choice; no exhaustive graph database is required. Excluding a check requires supported coverage of its material dependencies and a reason the change cannot invalidate the intended reused claim. An absent edge is not evidence of non-influence. Unknown impact widens reassessment or leaves the dependent assurance unresolved. New obligations or cases create assessment work even when no existing check covers them. Mandatory gates remain applicable irrespective of this selection.
 
-For a new subject and basis, the evidence account is:
+For a new subject and basis, let `E_old` be the existing evidence records, `E_reassessed` the newly produced evidence from reassessment, and `E_new` the resulting evidence account. Reassessment includes checks selected in `S_Δ`, assessment of new obligations and applicable mandatory gates. Selection alone produces no execution evidence; failed and indeterminate results retain their standing. The account is:
 
 ```text
 E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
@@ -112,7 +114,7 @@ E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
 
 Retention establishes the material validity conditions on the new subject: the claim and scope still apply, its assertion and observation basis remain justified, and affected dependencies are unchanged or covered by an established preservation relation. The original evidence keeps its original subject; a new applicability relation permits its use. A changed hash alone establishes neither invalidity nor equivalence. Known failures, unresolved coverage and their citations remain visible until supported repair, reassessment or an authorised change of obligation disposes them.
 
-If A's governing obligation changes, dependent expectations may need authorised revision as well as new execution. A correction in B revisits the affected refinement and its links to both A and C. A correction in C reassesses the affected implementation and integration under the still-applicable obligations. These are semantic dependency boundaries, not fixed file or directory boundaries. Recovery reacquires current reality and invalidates affected claims; it need not erase valid work or rerun every check.
+If a governing requirement changes, dependent expectations may need authorised revision as well as new execution. A correction in its refinement revisits the affected obligations and their links to both the requirement and the realisation. A correction in the realisation reassesses the affected implementation and integration under the still-applicable obligations. These are semantic dependency boundaries, not fixed file or directory boundaries. Recovery reacquires current reality and invalidates affected claims; it need not erase valid work or rerun every check.
 
 The governing assurance can be established from applicable retained evidence together with new evidence. The completeness of that account is distinct from the freshness of every execution. Selection considers impact-analysis, acquisition, execution and assessment costs together, with anticipated costs distinguished from measurements. The required assurance, risk policy and mandatory gates constrain that optimisation; a cheap selection that leaves a required obligation uncovered is insufficient.
 
@@ -125,3 +127,5 @@ The candidate's a_c interpretation represents the material obligations and depen
 The candidate demonstrates the applicable positive, negative and unresolved cases in [conformance](../conformance/README.md#assurance-discriminators), including weak assertions, insufficient observations, shared error, and change selection that either retains valid evidence or invalidates affected evidence. Mathematical proof, exhaustive checks of a finite model, sampled tests and observed use retain their distinct scopes. Finite examples do not prove the universal implications above. An unproved universal claim can remain unresolved while bounded construction and assurance proceed where their governing conditions permit them.
 
 Existing member and integrated criteria assess these owners and their consumers. Source semantics, formal fidelity and actual use retain their separate evidence; the common mathematical obligations do not create a seventh criterion or make each test a theorem-proving exercise.
+
+Purpose and material relation: assurance connects construction results to the obligations they support, exposes shared errors, and directs reassessment to affected claims while retaining evidence whose applicability is established.

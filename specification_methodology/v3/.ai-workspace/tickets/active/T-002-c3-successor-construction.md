@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-16T00:28:10Z
+updated_at: 2026-10-16T05:52:38Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -33,7 +33,7 @@ The direction separates lawful construction from the chosen constrained outcome.
 
 Only common preparation is active here. Existing I4 contracts retain source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and their admitted bytes. Neither a new draft nor either review silently repairs or rebinds those candidates. C3-I5-01 remains the immutable historical proposal; the consolidated successor receives its own source commit and descendant input record.
 
-Current result: the formal-assurance successor `b8e324211b1e4e134d4de061071d76df97fe8d80` has satisfied [mathematical](../../comments/codex/20261016T000430Z_READBACK_I5_ASSURANCE_MATH.md) and [contract](../../comments/codex/20261016T000430Z_READBACK_I5_ASSURANCE_CONTRACT.md) readbacks. Both initial Low findings are resolved on that exact subject; their original reports remain unchanged. [C3-I5-04](#c3-i5-04-proposed-input-snapshot) records the reviewed successor for ratification. The original fourteen finding assignments and the seven assurance duties below remain implementation work for the future tenant admissions. Prior inputs retain their subjects; this common result repairs no tenant candidate and admits neither I5 build.
+Current result: the formal-assurance source `b8e324211b1e4e134d4de061071d76df97fe8d80`, recorded as C3-I5-04, has satisfied mathematical and contract readbacks and Claude's [cross-family review](../../comments/claude/20261016T041542Z_REVIEW_C3_I5_04_FORMAL_ASSURANCE_B8E3242.md). That review finds four Low wording/form corrections, handled as I5-00 common work under the [bounded successor](T-001-common-definition-and-checkpoints.md#iteration-5-assurance-wording-successor). The correction preserves the mathematical obligations, original fourteen finding assignments and seven assurance duties. Its exact source and affected readback precede a new input for ratification. Prior inputs and reviews retain their subjects; no tenant candidate is repaired or I5 build admitted by this common preparation.
 
 ## Iteration 5 consolidated work
 
