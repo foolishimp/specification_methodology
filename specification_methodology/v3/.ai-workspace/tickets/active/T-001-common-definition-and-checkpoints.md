@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-16T00:04:30Z
+updated_at: 2026-10-16T00:28:10Z
 dependencies: []
 ---
 
@@ -39,6 +39,10 @@ Review intake on source `f1bef746bdae976e87f5a16a6a291469ff2f5d65`: the contract
 The mathematical Reviewer confirms a second Low gap: a functional checker model does not explicitly admit several lawful conclusions on identical observations. The common Writer generalises the evaluation account to a relation over the existing result algebra, covering every admitted conclusion under a universal soundness claim, and adds its discriminator and bounded witness. Deterministic restrictions and probability models retain their own scope. This repairs the generic execution account without introducing a result variant, a checker implementation or a probability policy. The source successor requires both affected readbacks; original findings and the first freeze retain their subjects.
 
 The Executive consumes the two initial frozen reviews: mathematical adequacy is `falsified` only by Low AM-L1, and the contract review is `satisfied` for its assurance-law scope with Low F1 in work-state projection. The known mathematical failure is retained; the combined successor cannot be declared ready until affected readback closes it. The separate Git Writer freezes the repairs and the unchanged initial reports. Each Reviewer is assigned a separate `20261016T000430Z_READBACK_I5_ASSURANCE_<MATH|CONTRACT>.md` in its existing Codex commentary territory; it checks the successor and material dependents, records reuse applicability and preserves the initial report unchanged. These are extensions of the bounded review grant, with no repair or Git authority.
+
+2026-10-16T00:28:10Z — The Executive consumes both successor readbacks on `b8e324211b1e4e134d4de061071d76df97fe8d80`: [mathematical assurance](../../comments/codex/20261016T000430Z_READBACK_I5_ASSURANCE_MATH.md), SHA-256 `b83b3c0a04711453fb4d98af115938bd410331311e2424b95ec43cd6b43f0ee6`, and [contract propagation](../../comments/codex/20261016T000430Z_READBACK_I5_ASSURANCE_CONTRACT.md), SHA-256 `2c28fbc1af901a6a4d1e0ad0f9c852a980d9edf82cf1dbd938952fc7b035a0a8`. Both are `satisfied` within their scopes. AM-L1 and F1 are resolved on that successor, with no new material finding; the initial reports retain their subjects and results. Each readback establishes applicability of unchanged evidence and reassesses the changed owner and its dependents. The mathematical and contract readback phases report 153 and 127 seconds respectively; context fit remains indeterminate and native spend uninstrumented.
+
+The Ledger Writer records [C3-I5-04](T-002-c3-successor-construction.md#c3-i5-04-proposed-input-snapshot), 37 members read from that exact source, and updates the current work projection. EC-COMMON-I5-04 returns `candidate_ready` for exact-source ratification. Common source now carries twelve assurance discriminators, two integrated checks and seven duties under existing work owners. Author replay and scoped whitespace pass; 405 local/installed links across 21 checked Markdown files resolve, and 73 historical I5 pins reproduce against their original commits. The reviewers independently confirm the relevant unchanged tails, sources and tenant trees. No paid external actor calls or tenant trials occurred. Both same-family nonauthor reviews supply bounded working assurance; ratification, dependent tenant admissions and later acceptance remain their owners' decisions. The separate Git Writer checkpoints only the two readbacks, this return, the input record and Goals' work state. Unrelated root work remains preserved.
 
 ### Iteration 5 low-finding successor
 
