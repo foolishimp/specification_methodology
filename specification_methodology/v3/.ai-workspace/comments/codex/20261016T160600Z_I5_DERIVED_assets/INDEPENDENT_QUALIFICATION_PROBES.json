@@ -1,0 +1,86 @@
+{
+  "source": "fd450061c39a5fbb10625c99b64a52b518d1d00e",
+  "selection": {
+    "clause": "urn:codex-stdo3:iteration-3-r2:clause:AXIOMATIC_CALCULUS.ac-007-constraint-and-refusal",
+    "scope": "semantic-record",
+    "pointer": "/dependency_relations/0/id",
+    "qualification_ref": {
+      "pointer": "/dependency_relations/0",
+      "scope": "semantic-record",
+      "sha256": "743b0d9cd19253a27eeade59edf1bc2420bec89993d82fd9f94c163f514ff40d"
+    }
+  },
+  "controls": [
+    {
+      "case": "positive exact object expansion",
+      "observed": "equal",
+      "expected": "equal"
+    },
+    {
+      "case": "missing reference scope",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Ambiguous or unavailable qualification scope"
+    },
+    {
+      "case": "cross-scope substitution",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Ambiguous or unavailable qualification scope"
+    },
+    {
+      "case": "missing pointer target",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Unresolved occurrence pointer: /missing"
+    },
+    {
+      "case": "invalid RFC 6901 escape",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Unresolved occurrence pointer: /~2"
+    },
+    {
+      "case": "reference digest drift",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Qualification reference differs from its carried source"
+    },
+    {
+      "case": "required condition changed",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Qualification condition differs from its carried source"
+    },
+    {
+      "case": "required condition missing",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Qualification condition differs from its carried source"
+    },
+    {
+      "case": "ambiguous inline and referenced qualification",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Ambiguous or unavailable qualification scope"
+    },
+    {
+      "case": "unclassified reference field",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Ambiguous or unavailable qualification scope"
+    },
+    {
+      "case": "material qualification object changed",
+      "observed": "refused",
+      "expected": "refused",
+      "reason": "Qualification reference differs from its carried source"
+    },
+    {
+      "case": "permitted literal null qualification",
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "limits": "Local transformation/refusal observations only; no actor-use, semantic acceptance or universal adversarial completeness."
+}

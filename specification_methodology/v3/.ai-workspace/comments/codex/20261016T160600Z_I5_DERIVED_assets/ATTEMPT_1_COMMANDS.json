@@ -1,0 +1,20 @@
+[
+  {
+    "name": "generate",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/I5_DERIVED_review_nqhcezys/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/generate_interpretation.py",
+      "--source-commit",
+      "1e4bed65fe2216b288903ea553391c45ff90e9c1",
+      "--account-commit",
+      "57f711d964cd4eac8ed8523460cecc68bcaa63fb",
+      "--theory-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/I5_DERIVED_review_nqhcezys/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/generate_interpretation.py\", line 92, in <module>\n    main()\n    ~~~~^^\n  File \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/I5_DERIVED_review_nqhcezys/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/generate_interpretation.py\", line 31, in main\n    dependencies = build.verify_dependencies(args.theory_root)\n  File \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/I5_DERIVED_review_nqhcezys/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/build_interpretation.py\", line 169, in verify_dependencies\n    raise ValueError(\"Installed checker member differs: \" + member[\"path\"])\nValueError: Installed checker member differs: .agents/skills/axiomatize-corpus\n",
+    "elapsed_seconds": 19.765189500059932
+  }
+]

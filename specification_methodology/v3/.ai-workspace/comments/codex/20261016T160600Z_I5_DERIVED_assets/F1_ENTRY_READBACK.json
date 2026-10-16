@@ -1,0 +1,30 @@
+{
+  "finding": "I5-DERIVED-01",
+  "severity": "medium",
+  "records": [
+    {
+      "commit": "1e4bed65fe2216b288903ea553391c45ff90e9c1",
+      "path": "specification_methodology/v3/build_tenants/codex/a_c/README.md",
+      "member_sha256": "3aaffac9ee268cd2fcc994387f40e9de67876b7c7348ee1dad71a9fc70a8906c",
+      "lines": [
+        13,
+        23
+      ],
+      "excerpt": "The [I4 interpretation generation record](../qualification/C3/iteration-4/interpretation/GENERATION.json)\nbinds the current source and native checks. The [iteration-4 return](../qualification/C3/iteration-4/RETURN.md)\nowns the candidate's evidence and qualification limits. Its\n[source-pair tool](../qualification/C3/iteration-4/tools/source_pair.py) exposes one\nauthenticated source body beside its interpretation for review without copying\nall bodies into native values. Current [native checks](../qualification/C3/iteration-4/interpretation/NATIVE_CHECK.json)\nexercise three selectors in both projection modes, cold binding and source-drift\nrefusal. [Serialized cost](../qualification/C3/iteration-4/SERIALIZED_COST.json)\nrecords the increased interpretation size; it supplies no practical efficiency\nclaim. The [I3 repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)\nretains its historical checks, measurements and subject.\n",
+      "standing": "falsified current-evidence route"
+    },
+    {
+      "commit": "b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5",
+      "path": "specification_methodology/v3/build_tenants/codex/a_c/README.md",
+      "member_sha256": "1c850971faabcc065917d86febe96d632d1d2982f5937b7cbb5427829f099f2d",
+      "lines": [
+        13,
+        27
+      ],
+      "excerpt": "The [I5 interpretation generation record](../qualification/C3/iteration-5/interpretation/GENERATION.json)\nbinds the current source and native checks. The [iteration-5 return](../qualification/C3/iteration-5/RETURN.md)\nowns the candidate's evidence and qualification limits. Its\n[source-pair tool](../qualification/C3/iteration-5/tools/source_pair.py) exposes one\nauthenticated source body beside its interpretation for review without copying\nall bodies into native values. Current [native checks](../qualification/C3/iteration-5/interpretation/NATIVE_CHECK.json)\nexercise the selected transformation, writing, recovery and assurance routes in\nboth projection modes, cold binding and source-drift refusal.\n[Serialized cost](../qualification/C3/iteration-5/SERIALIZED_COST.json) separates\ncurrent artifact sizes from qualification-reference factoring on identical\nsemantic input; neither measure supplies a practical-efficiency claim.\n\nThe [I4 return](../qualification/C3/iteration-4/RETURN.md) and\n[I3 repair record](../qualification/C3/iteration-3/review-repair/interpretation/RETURN.md)\nretain their historical checks, measurements and subjects.\n",
+      "standing": "satisfied affected route readback"
+    }
+  ],
+  "material_case": "An actor follows the current a_c entry to the generation/check/qualification record for the selected I5 interpretation. The original route selects I4; the repaired route selects I5.",
+  "decision_boundary": "Working review finding and affected source readback only; Executive retains disposition and owner acceptance."
+}
