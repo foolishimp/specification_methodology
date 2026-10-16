@@ -562,6 +562,13 @@ set, and every fetched remote expected object ID or required absence to that
 unchanged content result. Post-publication qualification
 verifies the same relation from remote refs and refuses a partial cohort.
 
+Apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to any reused qualification on those exact subjects. These required release
+gates remain applicable regardless of a narrower test selection; retained
+evidence needs the supported claim, dependency and observation conditions.
+An unchanged content result does not establish the separately observed remote
+publication relation.
+
 On resumption, apply Contract application's Currentness condition to the exact
 local and remote ref relations above and their frozen-subject evidence. The
 complete remote relation, not a prior assumption of atomicity, determines the

@@ -1,0 +1,1651 @@
+{
+  "schema_version": "stdo.i5.authored-account-patch/v1",
+  "producer": "I5-WRITE-DELIVERY",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "source_preimage": "11163991fd8525c98bdd94a36c71a2cfeb15a403",
+  "owner_paths": [
+    "standards/DESIGN_MODULE_METHOD.md",
+    "standards/REFERENCE_FRAME_METHOD.md",
+    "standards/RELEASE_METHOD.md",
+    "standards/SPEC_METHOD.md",
+    "standards/TICKET_METHOD.md",
+    "standards/WORLD_MODEL_METHOD.md"
+  ],
+  "updates": [
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "preimage_body_sha256": "641e07fb28763f68617fd8f0f9383d03b5a90a06d900ca8bf98c8a36e4f9708e",
+      "candidate_body_sha256": "8634138a51a54417ef0c147a2673c72ceb406744da59a693b52bace9f51a5c81",
+      "semantic_fields": {
+        "obligations": [
+          "Do not jump to code/tests/release; combine applicable frames on same subject/basis with material variables/evidence, preserving alternatives and smallest sufficient repair scope.",
+          "Failure-exposing frame need not contain cause; renamed repetition adds no evidence.",
+          "Choose smallest sufficient frame configuration with existing independence/repair authority, not fixed reviewer count/new round.",
+          "Class mapping: goal_reprice -> Goals and affected downstream; intent_reprice -> Intent onward; product_reprice -> Product onward with Intent stable; requirement_reprice -> Requirements onward with direction stable; design_reframe -> Design onward with Intent/requirements stable; realization_refactor -> realization only with no upstream drift.",
+          "Below-Goals change explicitly asserts unchanged upstream constitution; missing class is drift.",
+          "Bind current subject, required outcome, observations and predictive model to the shared feedback/diagnosis relation; distinguish realisation, requirement/design, prediction and observation causes. Preserve unresolved alternatives and acquire evidence before unjustified repair. Severity and priority do not change verdict or authority; a bug list projects existing work."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "SPEC_METHOD.computed-classification-and-treatment",
+          "SPEC_METHOD.counterexample-localization",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.bounded-construction"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.counterexample-localization",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.computed-classification-and-treatment",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.method-functions",
+            "kind": "source_reference"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.bounded-construction",
+            "kind": "contract_application",
+            "binding": "Bind current subject, required outcome, observations and predictive model to the shared feedback/diagnosis relation; distinguish realisation, requirement/design, prediction and observation causes. Preserve unresolved alternatives and acquire evidence before unjustified repair. Severity and priority do not change verdict or authority; a bug list projects existing work."
+          }
+        ],
+        "source_references": [
+          "REFERENCE_FRAME_METHOD.method-functions",
+          "SPEC_METHOD.computed-classification-and-treatment",
+          "SPEC_METHOD.counterexample-localization",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.bounded-construction"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "d6b73b64e315618a07343774173003627bdeea87574fcc257cdd07047fd7eee8",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83310,
+            "byte_end": 83358
+          },
+          {
+            "id": "c2",
+            "sha256": "2fcaa24614d600f52784e1da87fbf240ac9e6d6a6b5d5115c95e0dc22514ebe7",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83360,
+            "byte_end": 83414
+          },
+          {
+            "id": "c3",
+            "sha256": "bdc61817ce6db9ce43febb3a875436179bb928c4a8f3f595ac27adfbef052630",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83416,
+            "byte_end": 83438
+          },
+          {
+            "id": "c4",
+            "sha256": "56f9216d8946c95799b223c34ef9e1b56f48ddf4a1f68bb51a44a159b9373694",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83440,
+            "byte_end": 83540
+          },
+          {
+            "id": "c5",
+            "sha256": "5ef2e6ed039ca769177a3e579c00f606cd403966d5daf42f60cbe4162689f4cd",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83542,
+            "byte_end": 83591
+          },
+          {
+            "id": "c6",
+            "sha256": "bb7b30153ede17ebb011e075d265d1dc32185d7b703c1f147b543a0b1ff18d5e",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 83593,
+            "byte_end": 83622
+          },
+          {
+            "id": "c7",
+            "sha256": "e2203851f5ab444f587866f4a6c6c00a7f53ec218fd1519423baf58d13744920",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 83624,
+            "byte_end": 84023
+          },
+          {
+            "id": "c8",
+            "sha256": "ede4efd03b3ebf6b53ed95e7d2507be73d373f2c09fc392190210b3a7b8a9b55",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 84025,
+            "byte_end": 84142
+          },
+          {
+            "id": "c9",
+            "sha256": "f7cb717b236a8889da849fa0ee00dbe682b0a2a2ff86e33c2124c413ce38c3d2",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 84144,
+            "byte_end": 84320
+          },
+          {
+            "id": "c10",
+            "sha256": "02150fac45954d296e57f983bf920e992d8a7be8f4e936a4580eb50ad641c528",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 85021,
+            "byte_end": 85553
+          },
+          {
+            "id": "c12",
+            "sha256": "47d5d704ebbe09eeaf6059cc521f1936662ffa830a0117c27bd10d05869bc422",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 86778,
+            "byte_end": 87135
+          },
+          {
+            "id": "c13",
+            "sha256": "385ae4f67137707f1a6a3feebc292bbd573ec103137da5588260304125563f8d",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 87137,
+            "byte_end": 87175
+          },
+          {
+            "id": "c14",
+            "sha256": "9bd55ffb6464028dea755ee12f44ce5631aed18133a76e6ddbcc37f324bda105",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 87177,
+            "byte_end": 88284
+          },
+          {
+            "id": "c15",
+            "sha256": "06f918e7a3a4d4154b9b91024a783189d0818941c180376df6277490c67f9b2f",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 88286,
+            "byte_end": 88410
+          },
+          {
+            "id": "c16",
+            "sha256": "cff0720002d008121c4159ebd794ab41faf0cb2eaf0535512279e15ef58f8538",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 88412,
+            "byte_end": 88468
+          },
+          {
+            "id": "body",
+            "sha256": "8634138a51a54417ef0c147a2673c72ceb406744da59a693b52bace9f51a5c81",
+            "byte_start": 83282,
+            "byte_end": 88470,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.universal-intake-triage#c1",
+          "SPEC_METHOD.universal-intake-triage#c2",
+          "SPEC_METHOD.universal-intake-triage#c3",
+          "SPEC_METHOD.universal-intake-triage#c4",
+          "SPEC_METHOD.universal-intake-triage#c5",
+          "SPEC_METHOD.universal-intake-triage#c6",
+          "SPEC_METHOD.universal-intake-triage#c7",
+          "SPEC_METHOD.universal-intake-triage#c8",
+          "SPEC_METHOD.universal-intake-triage#c9",
+          "SPEC_METHOD.universal-intake-triage#c10",
+          "SPEC_METHOD.universal-intake-triage#c12",
+          "SPEC_METHOD.universal-intake-triage#c13",
+          "SPEC_METHOD.universal-intake-triage#c14",
+          "SPEC_METHOD.universal-intake-triage#c15",
+          "SPEC_METHOD.universal-intake-triage#c16",
+          "SPEC_METHOD.universal-intake-triage#body"
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+      "preimage_body_sha256": "fa42e27225b48ce4702743c229af70522b54b1bab625de17d6c6a0006b8a1220",
+      "candidate_body_sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff",
+      "semantic_fields": {
+        "obligations": [
+          "For materially durable/reconstructable authority, destroy/exclude incidental process state and compare reconstructed semantic outcomes; same-process success alone is insufficient.",
+          "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.risk-and-assurance-selection",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          },
+          {
+            "id": "FOUNDATIONS.risk-and-assurance-selection",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.risk-and-assurance-selection",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "5c1233e15f497fb045f2ee034658c30ef8ea6281e5780999f1c1565b5f332b5c",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 117983,
+            "byte_end": 118384
+          },
+          {
+            "id": "c2",
+            "sha256": "685404977ec291f84d67df9d87a58d6d45d0dfcb78e334e6bdd9ca4aaac10e62",
+            "roles": [
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 118386,
+            "byte_end": 119236
+          },
+          {
+            "id": "c3",
+            "sha256": "7dea38171b18a1c0ea51de1c3ba07fe0b7b5a29e3b2d4774df0d0c12250d0295",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 119238,
+            "byte_end": 119500
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 117941,
+            "byte_end": 119502,
+            "sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.transition-evidence-and-proof-cadence#c1",
+          "SPEC_METHOD.transition-evidence-and-proof-cadence#c2",
+          "SPEC_METHOD.transition-evidence-and-proof-cadence#c3",
+          "SPEC_METHOD.transition-evidence-and-proof-cadence#i5-binding"
+        ],
+        "permissions_exceptions": [
+          "Consumer chooses representation; whole-candidate qualification is at its declared boundary or where affected risk, uncertain impact or a mandatory gate requires it."
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.evidence-rules",
+      "preimage_body_sha256": "c138a3b65b7b0f06487baff7f7ed84fdbcbe4cab7e27abc9f0e8c305b7763092",
+      "candidate_body_sha256": "3fd4dc3d53d3ec955331322459657ead1bc74fbd6f8126625a00f5ef5d46bf4d",
+      "semantic_fields": {
+        "obligations": [
+          "Apply proof-target exclusion, semantic/evidence/view separation and assurance/fresh-construction conditions at their specific triggers.",
+          "Construction assurance owns obligation/assertion/observation/conclusion relations; Contract application binds the operation and Faithful projection its views. Existing proof-target, separation and exposure policies retain their triggers."
+        ],
+        "dependencies": [
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001",
+          "SPEC_METHOD.semantic-evidence-and-projection-separation-stdo-up-008",
+          "FOUNDATIONS.construction-assurance"
+        ],
+        "dependency_relations": [
+          {
+            "id": "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.semantic-evidence-and-projection-separation-stdo-up-008",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "source_reference"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+            "kind": "source_reference"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.construction-assurance",
+            "kind": "contract_application",
+            "binding": "Construction assurance owns obligation/assertion/observation/conclusion relations; Contract application binds the operation and Faithful projection its views. Existing proof-target, separation and exposure policies retain their triggers."
+          }
+        ],
+        "source_references": [
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "TRANSFORMATION_LIBRARY.faithful-projection",
+          "FOUNDATIONS.construction-assurance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "341fa5602ef1c10f53801c592a7b947cb44023d73871c5a91fbb5b594cc8ec22",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 145121,
+            "byte_end": 145198
+          },
+          {
+            "id": "c2",
+            "sha256": "f97a2e7cea4cd7f11cd7a3c35c3fa273cf764cfc61650c51459557e15b141ede",
+            "roles": [
+              "obligation",
+              "scope",
+              "argument"
+            ],
+            "byte_start": 145200,
+            "byte_end": 146073
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 145103,
+            "byte_end": 146075,
+            "sha256": "3fd4dc3d53d3ec955331322459657ead1bc74fbd6f8126625a00f5ef5d46bf4d",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.evidence-rules#c1",
+          "SPEC_METHOD.evidence-rules#c2",
+          "SPEC_METHOD.evidence-rules#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001",
+      "preimage_body_sha256": "d317e4139df4655d11c891eeb523a3db31b3c73c95ace39791b7b754dff11cbb",
+      "candidate_body_sha256": "460083b50d542aea8cf4e6671578f39eb72d02d7997e69e8697ffbb43c4bfdf9",
+      "semantic_fields": {
+        "obligations": [
+          "Packaging/syntax/compile/presence/invocation/local behavior cannot substitute for semantic/authority/installed/release/end-to-end claim because easier to measure.",
+          "Bind supported necessary/sufficient or conjunctive assertion relations and distinguishing observations to the intended proof target; interpretive fidelity and actual checker behaviour remain separate obligations."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "contract_application",
+            "binding": "Bind supported necessary/sufficient or conjunctive assertion relations and distinguishing observations to the intended proof target; interpretive fidelity and actual checker behaviour remain separate obligations."
+          }
+        ],
+        "source_references": [
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "5f0b2a4d78db7dc700d1688d3e84c7a05a8f3693db50f2090448d60d55928f3f",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 146130,
+            "byte_end": 146531
+          },
+          {
+            "id": "c2",
+            "sha256": "13eab78d80c5672247ccfd2dc949c6e04b422e5b0c2e251c4b30e47cd771432b",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 146899,
+            "byte_end": 147125
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 146075,
+            "byte_end": 147127,
+            "sha256": "460083b50d542aea8cf4e6671578f39eb72d02d7997e69e8697ffbb43c4bfdf9",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001#c1",
+          "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001#c2",
+          "SPEC_METHOD.proof-target-identity-and-adequacy-stdo-up-001#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.testing-strategy-taxonomy",
+      "preimage_body_sha256": "7e551bba2196f893cea22974ae07ff2a5a9434e994ef531f25d8b66c072446b2",
+      "candidate_body_sha256": "ec86b62234d44950751bf4e1f3e9d8a58c8b5b066e01f44d333b1b5810c7d14c",
+      "semantic_fields": {
+        "obligations": [
+          "Declare lane authority; ticketed proof follows admitted ticket/triage/cited law, never code precedent.",
+          "Only sandbox or explicitly equivalent isolated composed-product lane is UAT; unit/helper/module integration alone cannot close user acceptance.",
+          "Claim depending on live compute requires live proof beyond semantic/unit/module/harnessed green.",
+          "Map local labels to taxonomy before closure: integration is breadth, unit is design scope, sandbox composed acceptance, live actual external execution, not a live-named view.",
+          "Bind each lane expectation to owning source and justified interpretation, separately from actual subject/checker/environment/observations. Labels alone establish neither fidelity nor independent failure causes. Implementation-derived regression stays local unless upstream justification is established; shared derivations may serve test families in existing carriers."
+        ],
+        "dependencies": [
+          "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+            "kind": "conditional_contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "contract_application",
+            "binding": "Bind each lane expectation to owning source and justified interpretation, separately from actual subject/checker/environment/observations. Labels alone establish neither fidelity nor independent failure causes. Implementation-derived regression stays local unless upstream justification is established; shared derivations may serve test families in existing carriers."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "6f9cd5cc5be1480f38b37f29d548a2d06d2e61bfedab320f7f03611f25910fc9",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 154846,
+            "byte_end": 155189
+          },
+          {
+            "id": "c2",
+            "sha256": "4abcf11f5ec3b191455cba8f6b45892ae4ff6f258bf57d18f5f8c095ce0c6d90",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 155191,
+            "byte_end": 155256
+          },
+          {
+            "id": "c3",
+            "sha256": "8641c770350237c531bf940f19d9b66a94b9472f9f408acc6dfbdc012c5da377",
+            "roles": [
+              "scope",
+              "argument"
+            ],
+            "byte_start": 155258,
+            "byte_end": 155759
+          },
+          {
+            "id": "c4",
+            "sha256": "4c0e1fc113d69170855ccb100a4deb4e3ff51722cd867c7f10cf15ccffac2968",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 155761,
+            "byte_end": 156051
+          },
+          {
+            "id": "c5",
+            "sha256": "fc9fd742f57e857721d745a1d9583d4f7385a60bb7973c73c1b5d0afc2475434",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 156673,
+            "byte_end": 156858
+          },
+          {
+            "id": "c6",
+            "sha256": "b98f908940bdc4bdb556662fccff88f4d0cbebcb735fee87bf6dd2396499fdd9",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 156860,
+            "byte_end": 156928
+          },
+          {
+            "id": "c7",
+            "sha256": "12f461eb9fa00acd213b643db6f252bfa5a5f5fe956e288570eaa40b9c370e46",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 156930,
+            "byte_end": 156996
+          },
+          {
+            "id": "c8",
+            "sha256": "76e221e79ae77907687454a6cb9992b1765997e4cb396e46b818c48c20aba18a",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 156998,
+            "byte_end": 157150
+          },
+          {
+            "id": "c9",
+            "sha256": "b1ae44c93507dd69a68a7f6cfd29e7ce58cd6b9922750568f9cea9ccc4fa0db4",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157152,
+            "byte_end": 157164
+          },
+          {
+            "id": "c10",
+            "sha256": "d3a1241a3d9f568020302661b4a5e444c1040f4c6558e5bdc2dba0c4fba8b0e5",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157166,
+            "byte_end": 157239
+          },
+          {
+            "id": "c11",
+            "sha256": "ee8be6e26f139c1f7c88c5521589e52977ce79502faaf42b9c187445c25d4242",
+            "roles": [
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 157241,
+            "byte_end": 157479
+          },
+          {
+            "id": "c12",
+            "sha256": "8f716e19af2a62b3ab61679ba10f20f39b09a47b574b2c265ac6175b0465d739",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157481,
+            "byte_end": 157557
+          },
+          {
+            "id": "c13",
+            "sha256": "2a7eebc17ff43c223cba4cad083b6451a761a49339e72ef69ca092c5f6de0afd",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157559,
+            "byte_end": 157677
+          },
+          {
+            "id": "c14",
+            "sha256": "b1ae44c93507dd69a68a7f6cfd29e7ce58cd6b9922750568f9cea9ccc4fa0db4",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157679,
+            "byte_end": 157691
+          },
+          {
+            "id": "c15",
+            "sha256": "c218a2ac6d2e6a19cd0a84298276d4aedeb8d056dbe3608cc379494e8ddb25c2",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 157693,
+            "byte_end": 157765
+          },
+          {
+            "id": "c16",
+            "sha256": "062bbfd9f22ce3f21de871c88873244a80e420d0a2fea21bd59568910820e23c",
+            "roles": [
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 157767,
+            "byte_end": 157907
+          },
+          {
+            "id": "c17",
+            "sha256": "e434049f97d04c26c4c2c14eab135a70d8ec79ae19b357a945d6d0678bad27ed",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 157909,
+            "byte_end": 158304
+          },
+          {
+            "id": "c18",
+            "sha256": "11a864c8ff5a4d8903865a61263c15eadf35a05732721f83ded598436388e6ae",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 158306,
+            "byte_end": 158349
+          },
+          {
+            "id": "c19",
+            "sha256": "24d21cb6fa029de682bd3b902d04dc216ad2186340e717d4f29c26c14af974c5",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 158351,
+            "byte_end": 158708
+          },
+          {
+            "id": "c20",
+            "sha256": "424b0f31217bf19af30d0f2ef37b05a67d534332139f0a2007e421116b7ce6aa",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 158710,
+            "byte_end": 158921
+          },
+          {
+            "id": "c21",
+            "sha256": "96c3fbbe07abe1986b9e9efc5defd0e3fee46075b8dc649ca943325a9e9f7e10",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 158923,
+            "byte_end": 159326
+          },
+          {
+            "id": "c22",
+            "sha256": "3d882fd4d59e823b25f8915ee86869c38f57d4dae81ed801cef850a96782e209",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 159328,
+            "byte_end": 159346
+          },
+          {
+            "id": "c23",
+            "sha256": "19d068834e258a637cdb527fe7ef13ced02880e7d89bb7785906c1868ec1f3b8",
+            "roles": [
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 159348,
+            "byte_end": 159784
+          },
+          {
+            "id": "c24",
+            "sha256": "e584f87f3596a8f664e7f1e7aa39e8480ebadd3322c3793bac58f2b678c1c902",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 159786,
+            "byte_end": 159953
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 154817,
+            "byte_end": 159955,
+            "sha256": "ec86b62234d44950751bf4e1f3e9d8a58c8b5b066e01f44d333b1b5810c7d14c",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.testing-strategy-taxonomy#c1",
+          "SPEC_METHOD.testing-strategy-taxonomy#c2",
+          "SPEC_METHOD.testing-strategy-taxonomy#c3",
+          "SPEC_METHOD.testing-strategy-taxonomy#c4",
+          "SPEC_METHOD.testing-strategy-taxonomy#c5",
+          "SPEC_METHOD.testing-strategy-taxonomy#c6",
+          "SPEC_METHOD.testing-strategy-taxonomy#c7",
+          "SPEC_METHOD.testing-strategy-taxonomy#c8",
+          "SPEC_METHOD.testing-strategy-taxonomy#c9",
+          "SPEC_METHOD.testing-strategy-taxonomy#c10",
+          "SPEC_METHOD.testing-strategy-taxonomy#c11",
+          "SPEC_METHOD.testing-strategy-taxonomy#c12",
+          "SPEC_METHOD.testing-strategy-taxonomy#c13",
+          "SPEC_METHOD.testing-strategy-taxonomy#c14",
+          "SPEC_METHOD.testing-strategy-taxonomy#c15",
+          "SPEC_METHOD.testing-strategy-taxonomy#c16",
+          "SPEC_METHOD.testing-strategy-taxonomy#c17",
+          "SPEC_METHOD.testing-strategy-taxonomy#c18",
+          "SPEC_METHOD.testing-strategy-taxonomy#c19",
+          "SPEC_METHOD.testing-strategy-taxonomy#c20",
+          "SPEC_METHOD.testing-strategy-taxonomy#c21",
+          "SPEC_METHOD.testing-strategy-taxonomy#c22",
+          "SPEC_METHOD.testing-strategy-taxonomy#c23",
+          "SPEC_METHOD.testing-strategy-taxonomy#c24",
+          "SPEC_METHOD.testing-strategy-taxonomy#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "preimage_body_sha256": "b123190c253c1a41678712a699b239875d4f22e4fda126c7cec29c12633d0bb8",
+      "candidate_body_sha256": "77dadef12f3580e0559e8dcf348516a4de2a1fedf334b6ee4f73cdba9eec7937",
+      "semantic_fields": {
+        "obligations": [
+          "Use authenticated current closure evidence and core conjunction; preserve original closure and separate owner decision results.",
+          "Record scope, satisfied conditions, evidence and residuals in the existing carrier.",
+          "Reuse only under supported currentness and recorded J/O continuity; unrelated observations stay bounded repricing input.",
+          "Closure combines applicable retained evidence with actual reassessment under current material assertion, execution and validity dependencies. Selection is not performance; preserve original subjects, failures, unknown impact, new obligations and mandatory gates, without imposing ticket/file boundaries on impact."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "TICKET_METHOD.core-model",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "binding": "Closure combines applicable retained evidence with actual reassessment under current material assertion, execution and validity dependencies. Selection is not performance; preserve original subjects, failures, unknown impact, new obligations and mandatory gates, without imposing ticket/file boundaries on impact."
+          }
+        ],
+        "source_references": [
+          "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "37788e8867749de5f00b19d12304dd5697d08e23aeb6863234b0e1d9c94fdbd4",
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "byte_start": 51051,
+            "byte_end": 51731
+          },
+          {
+            "id": "c2",
+            "sha256": "a8f1e3763c57abb1485bc446b06f096710e451ba96af5178c3c1950098031673",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result"
+            ],
+            "byte_start": 51733,
+            "byte_end": 52178
+          },
+          {
+            "id": "c3",
+            "sha256": "ac50d1256a9527f2f0ab0476c07f0196b73f67896c3beca77aa546d7db5d4b67",
+            "roles": [
+              "scope",
+              "result"
+            ],
+            "byte_start": 52180,
+            "byte_end": 53025
+          },
+          {
+            "id": "body",
+            "sha256": "77dadef12f3580e0559e8dcf348516a4de2a1fedf334b6ee4f73cdba9eec7937",
+            "byte_start": 50482,
+            "byte_end": 53027,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "TICKET_METHOD.condition-based-closure-and-reuse#c1",
+          "TICKET_METHOD.condition-based-closure-and-reuse#c2",
+          "TICKET_METHOD.condition-based-closure-and-reuse#c3",
+          "TICKET_METHOD.condition-based-closure-and-reuse#body"
+        ]
+      }
+    },
+    {
+      "id": "TICKET_METHOD.test-case-authority",
+      "preimage_body_sha256": "a4a80627aafa16423fea8a582ef574a4ec30d8e17fb154f45f84c43133c6ac60",
+      "candidate_body_sha256": "497eb958a1fcacc435ad589fa548d52eeda2296e720cbc7d5a570c403bba7948",
+      "semantic_fields": {
+        "obligations": [
+          "Resolve mismatch in order: ticket intent/class/re-entry/target/superseded truth/closure/criteria/non-closure, triage, governing source, test expectation, implementation.",
+          "Audit predicates after responsibility change; retire unsupported expectations under their owner without inventing guards for excluded threats.",
+          "Name lawful ticket repricing and authority change before updating/removing a stale expectation.",
+          "Stale/ambiguous/unauthorized ticket re-enters triage before either code or test is presumed correct; live-authority conflict needs re-entry, not test-only waiver.",
+          "Passing tests support closure only with trace to admitted authority.",
+          "The expectation authority path needs a justified interpreted predicate and derivation; separate execution provenance binds checker, actual subject, environment, observations and result. Existing carriers and shared derivations suffice without per-test tickets or duplicate ledgers."
+        ],
+        "dependencies": [
+          "SPEC_METHOD.test-authority-rule",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "dependency_relations": [
+          {
+            "id": "SPEC_METHOD.test-authority-rule",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "TICKET_METHOD.core-model",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "contract_application",
+            "binding": "The expectation authority path needs a justified interpreted predicate and derivation; separate execution provenance binds checker, actual subject, environment, observations and result. Existing carriers and shared derivations suffice without per-test tickets or duplicate ledgers."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "e191cf3cdc32f79f25ae7aa12ce81b8af4003e670b481b7bb1188d7fa8f5a6ab",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 53051,
+            "byte_end": 53109
+          },
+          {
+            "id": "c2",
+            "sha256": "5f4049756aa1611b4e3dd5627cc3021b5dd58ab4d70aa05e340b208f8c9e7dcf",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 53111,
+            "byte_end": 53158
+          },
+          {
+            "id": "c3",
+            "sha256": "468fd98f69612a0a09c66984c0738b68f2cee81bcc0873b547c981d56c48f35d",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 53160,
+            "byte_end": 53317
+          },
+          {
+            "id": "c4",
+            "sha256": "e0789d064d85759eb4fc0530815157cc35b77410a2d61b7e5137f9aec12de914",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 53319,
+            "byte_end": 53381
+          },
+          {
+            "id": "c5",
+            "sha256": "f2606b666e4ac328997fd52a959d0c00c96dc24b0340a1f16b5ed9525da85dbc",
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "byte_start": 53924,
+            "byte_end": 54387
+          },
+          {
+            "id": "c6",
+            "sha256": "80edc4f9b7ded1bd85f1f1f0c323d9870d9039debe51394b11b11df4d4484b06",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 54389,
+            "byte_end": 54500
+          },
+          {
+            "id": "c7",
+            "sha256": "0d97e571d79b742fafb264dbd9c03828ad7350e39b3a8fba5de651e510ea20f8",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 54502,
+            "byte_end": 54651
+          },
+          {
+            "id": "c8",
+            "sha256": "a728259407582a510b4535bf027e3e37bfa64587b84828fab4ee9da0908b7c8c",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 54653,
+            "byte_end": 55043
+          },
+          {
+            "id": "c9",
+            "sha256": "9addc0f9b6fd119644717721db3ee3ff0f46e8ed613317886a6643fdfa33a4c2",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 55045,
+            "byte_end": 55186
+          },
+          {
+            "id": "c10",
+            "sha256": "3568aa234b71bf86f74a458ab509a6b6318efd269e2e02ba52e17ab8214e04ae",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 55188,
+            "byte_end": 55280
+          },
+          {
+            "id": "c11",
+            "sha256": "ff7ee4da82305d30de236a370815ddbf9e75e14db3342319a16dcd2f4106bdc6",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 55282,
+            "byte_end": 55454
+          },
+          {
+            "id": "c12",
+            "sha256": "cb02ec19f8fcf0917b0b9ccc2c62e86057ef4dc65b9a8e6c502618706f916191",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 55456,
+            "byte_end": 55638
+          },
+          {
+            "id": "c13",
+            "sha256": "c30847eb9556740da0206da10b9e6532369a7dde79c4159cb23e08c212a8e960",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 55640,
+            "byte_end": 55782
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 53027,
+            "byte_end": 55784,
+            "sha256": "497eb958a1fcacc435ad589fa548d52eeda2296e720cbc7d5a570c403bba7948",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "TICKET_METHOD.test-case-authority#c1",
+          "TICKET_METHOD.test-case-authority#c2",
+          "TICKET_METHOD.test-case-authority#c3",
+          "TICKET_METHOD.test-case-authority#c4",
+          "TICKET_METHOD.test-case-authority#c5",
+          "TICKET_METHOD.test-case-authority#c6",
+          "TICKET_METHOD.test-case-authority#c7",
+          "TICKET_METHOD.test-case-authority#c8",
+          "TICKET_METHOD.test-case-authority#c9",
+          "TICKET_METHOD.test-case-authority#c10",
+          "TICKET_METHOD.test-case-authority#c11",
+          "TICKET_METHOD.test-case-authority#c12",
+          "TICKET_METHOD.test-case-authority#c13",
+          "TICKET_METHOD.test-case-authority#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.evidence",
+      "preimage_body_sha256": "32c66ed9f43642995a9b386ffb8179a906e1fac84d0885d011cf6bfeedd945ab",
+      "candidate_body_sha256": "a025ad26a996af4f5064854c4ddb013065ad36889711a52850f1f5a12ca78ec4",
+      "semantic_fields": {
+        "obligations": [
+          "Availability inside a frame does not turn evidence into semantic truth or decision authority.",
+          "Bind shared construction assurance to the frame predicate, acquired observations and consuming decision. Assertion and execution provenance remain separate; small context or authenticated observation alone supplies no sound complete decision."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.construction-assurance"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.construction-assurance",
+            "kind": "contract_application",
+            "binding": "Bind shared construction assurance to the frame predicate, acquired observations and consuming decision. Assertion and execution provenance remain separate; small context or authenticated observation alone supplies no sound complete decision."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.construction-assurance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "82d033c8352b112530aa232228a9dae103c700feb88d42e018b1c94ecd805f73",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 8817,
+            "byte_end": 9069
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 8804,
+            "byte_end": 9484,
+            "sha256": "a025ad26a996af4f5064854c4ddb013065ad36889711a52850f1f5a12ca78ec4",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.evidence#c1",
+          "REFERENCE_FRAME_METHOD.evidence#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation",
+      "preimage_body_sha256": "86a1ed36a9d08b46c294cc5b530c9e291ac94ccfd89dffb63fa3b232d4f3fce2",
+      "candidate_body_sha256": "a86b96713f1f801d4bc7ba2690bcfdcc2b1fe020f01397bbe936466acc05e46c",
+      "semantic_fields": {
+        "obligations": [
+          "A mutual-assurance claim accounts for material shared causes under the shared provenance relation. Separate activations and authorship independence alone neither establish statistical independence nor validate a shared expectation."
+        ],
+        "dependencies": [
+          "REFERENCE_FRAME_METHOD.disjointness-and-independence",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "dependency_relations": [
+          {
+            "id": "REFERENCE_FRAME_METHOD.disjointness-and-independence",
+            "kind": "contract_application",
+            "binding": "Apply procedural evaluation independence without equating it to structural disjointness or assurance independence."
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "contract_application",
+            "binding": "A mutual-assurance claim accounts for material shared causes under the shared provenance relation. Separate activations and authorship independence alone neither establish statistical independence nor validate a shared expectation."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "d61af0273d0f8a6e5e6a1479d7d23e907c8ea67ea29e68c63242f80beff2c5ca",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 40839,
+            "byte_end": 41190
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 40797,
+            "byte_end": 41538,
+            "sha256": "a86b96713f1f801d4bc7ba2690bcfdcc2b1fe020f01397bbe936466acc05e46c",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation#c1",
+          "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+      "preimage_body_sha256": "7b2295a802ce2c439d118d77d9f3d3637b73b7e031e5772035ee86ecc304e5bd",
+      "candidate_body_sha256": "7f8c015bb19f2429fb76cadfb8f5ec78903b28792fa93eace97e92d2704783f3",
+      "semantic_fields": {
+        "obligations": [
+          "Helper/private-method/branch/mock convenience cannot be the canonical proof surface.",
+          "Integration/scenario/sandbox and transitional slice gates do not replace module unit proof.",
+          "Code without a module-derived unit lane is not closure-ready.",
+          "Bind assertion sources to accepted module obligations and execution to the actual module realisation. Ownership trace does not establish predicate or observation adequacy; implementation-discovered tests need justified re-expression against the module obligation before module closure. Preserve existing proof carriers and optional profile conditions."
+        ],
+        "dependencies": [
+          "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.parallel-assurance-and-provenance",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "dependency_relations": [
+          {
+            "id": "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+            "kind": "derivation"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "contract_application",
+            "binding": "Bind assertion sources to accepted module obligations and execution to the actual module realisation. Ownership trace does not establish predicate or observation adequacy; implementation-discovered tests need justified re-expression against the module obligation before module closure. Preserve existing proof carriers and optional profile conditions."
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "contract_application",
+            "binding": "Bind assertion sources to accepted module obligations and execution to the actual module realisation. Ownership trace does not establish predicate or observation adequacy; implementation-discovered tests need justified re-expression against the module obligation before module closure. Preserve existing proof carriers and optional profile conditions."
+          }
+        ],
+        "source_references": [
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+          "FOUNDATIONS.parallel-assurance-and-provenance",
+          "FOUNDATIONS.assertions-and-observations"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "07666f3f888edc97cc057fb0ef81aa509e509f03de96330e99475c699cfd913d",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 94785,
+            "byte_end": 95126
+          },
+          {
+            "id": "c2",
+            "sha256": "9f33302362661e884954260d7f3399d649efb1b2db22abeb67bd79cbc4f08452",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 95128,
+            "byte_end": 95186
+          },
+          {
+            "id": "c3",
+            "sha256": "e8f5a4876687a8a4854a6338c392e78e9263b19575e5c9a36c3dd97aa01ac1d8",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 95188,
+            "byte_end": 95263
+          },
+          {
+            "id": "c4",
+            "sha256": "3c85700c75eed16573e53eceecdf792eaa39c4b1ddbd9d34905645dcaa1e1f13",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 95883,
+            "byte_end": 95929
+          },
+          {
+            "id": "c5",
+            "sha256": "7d86072e722b18f89620337f773f68e31bdb5eb2729c3d9d056ef7e2a8d06c0b",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 95931,
+            "byte_end": 96221
+          },
+          {
+            "id": "c6",
+            "sha256": "16b546b80cf06fa9408b253636ee3f07dd5811229571741774be04e77f0b08e8",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 96223,
+            "byte_end": 96270
+          },
+          {
+            "id": "c7",
+            "sha256": "c67734cd96d6e28ce81255f406686650ad720f21575b3c3198d56d6be4c15b6e",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 96272,
+            "byte_end": 96450
+          },
+          {
+            "id": "c8",
+            "sha256": "fa39c4364e4046f00b00cc99bececf7215469791837737982ddb6959467bf612",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 96452,
+            "byte_end": 96481
+          },
+          {
+            "id": "c9",
+            "sha256": "6ad0627968cf5f2b3b8bdc5c896d17feddb34989a79841772bba2b95f72dc3f4",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 96483,
+            "byte_end": 96516
+          },
+          {
+            "id": "c10",
+            "sha256": "ef4af07e9114cc125176ae488ede48907e6fbf11d6127ecf3cd78774aefea49c",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 96518,
+            "byte_end": 96524
+          },
+          {
+            "id": "c11",
+            "sha256": "503316bbca4ff2c4c259dc321864c8e06e40ea7351f6320e38c1392bbb4961d1",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 96526,
+            "byte_end": 96600
+          },
+          {
+            "id": "c12",
+            "sha256": "9843bcfeae65951536c1f1b755d08c44262df9d8107f92ecd45d807fe6b40020",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 96602,
+            "byte_end": 96644
+          },
+          {
+            "id": "c13",
+            "sha256": "4a22506db9a2b682b90bee329d79a1d314996ecf1e710fe0e17bb82f10fc2132",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 96646,
+            "byte_end": 96746
+          },
+          {
+            "id": "c14",
+            "sha256": "98a89f04fc98902ada418359f33561f02c76a7362253ec55c37f66d8aa8b4bf3",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 96748,
+            "byte_end": 96763
+          },
+          {
+            "id": "c15",
+            "sha256": "e47568285b8dff430e77264a606d4bd2b57264840f74c88bcfff99f7d013f30e",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 96765,
+            "byte_end": 97008
+          },
+          {
+            "id": "c16",
+            "sha256": "c9ed582e1de0049afae3018111ee0f8bc61a190f7f12227213cd991f2a94d7b5",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 97010,
+            "byte_end": 97119
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 94748,
+            "byte_end": 97126,
+            "sha256": "7f8c015bb19f2429fb76cadfb8f5ec78903b28792fa93eace97e92d2704783f3",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c1",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c2",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c3",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c4",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c5",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c6",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c7",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c8",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c9",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c10",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c11",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c12",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c13",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c14",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c15",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#c16",
+          "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "RELEASE_METHOD.qualification-and-recovery",
+      "preimage_body_sha256": "7a9367467f431fa8fe517f10a4411f834015a23f142119f63af836fa1f1ab9b1",
+      "candidate_body_sha256": "7687670221b91fa376ff611693b177ddb94de5e2a58645c51cb2681ea7cdd3a6",
+      "semantic_fields": {
+        "obligations": [
+          "Resumption observes actual local/remote state; assumed atomicity does not prove completed publication.",
+          "Recovery effects require an existing authorized recovery relation; context acquisition grants no ref/repository reset.",
+          "New cohort law changes qualifying bytes and governs a higher RC only.",
+          "Reused exact-subject qualification needs supported claim/dependency/observation applicability. Required release gates survive narrower selection, and unchanged content qualification does not establish the separately observed remote publication relation."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "RELEASE_METHOD.release-identities",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "binding": "Reused exact-subject qualification needs supported claim/dependency/observation applicability. Required release gates survive narrower selection, and unchanged content qualification does not establish the separately observed remote publication relation."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "42d9d3ef15ece4ba14080b756d0dbd60e0e8165063a4a52eae542e2f6860a817",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 34702,
+            "byte_end": 35375
+          },
+          {
+            "id": "c2",
+            "sha256": "5b3f3dfa0739edfe67d96026a55ffa77c7324efcc1d7cea7cbb2972ca05fe6ac",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 35801,
+            "byte_end": 36192
+          },
+          {
+            "id": "c3",
+            "sha256": "3773ea6edb2717cd5a22d7761c0e6df90ac3ae847294934114657c84e49dc7a3",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 36194,
+            "byte_end": 36689
+          },
+          {
+            "id": "c4",
+            "sha256": "c6a2fea328afe96a7537754e3c0693f095b97f7b7b4571c29da331f2e791a818",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 36691,
+            "byte_end": 36897
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 34671,
+            "byte_end": 36899,
+            "sha256": "7687670221b91fa376ff611693b177ddb94de5e2a58645c51cb2681ea7cdd3a6",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "RELEASE_METHOD.qualification-and-recovery#c1",
+          "RELEASE_METHOD.qualification-and-recovery#c2",
+          "RELEASE_METHOD.qualification-and-recovery#c3",
+          "RELEASE_METHOD.qualification-and-recovery#c4",
+          "RELEASE_METHOD.qualification-and-recovery#i5-binding"
+        ]
+      }
+    },
+    {
+      "id": "WORLD_MODEL_METHOD.4-assure",
+      "preimage_body_sha256": "8704830afc8265a7647ca956142a6a90c19b766907bc906aacd9e0f335388943",
+      "candidate_body_sha256": "743458bca2f6a8710b0bc0c20f5fe2d0d035d118f0df49b4362cd8738f9e15fb",
+      "semantic_fields": {
+        "obligations": [
+          "Name exact claim, provenance kind, supporting source, authoritative aspect and ambiguity/missingness.",
+          "Return supported claim, observed counterexample, absent decisive evidence or basis/scope diagnosis through core result without assuming performance.",
+          "Bind the interpreted model-claim predicate and actual observations to its declared purpose. Prediction accuracy does not establish a required construction outcome, and prediction error alone does not establish outcome failure; correction respects the distinct accounts."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "WORLD_MODEL_METHOD.governing-relations",
+          "FOUNDATIONS.assertions-and-observations",
+          "FOUNDATIONS.bounded-construction"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "source_reference"
+          },
+          {
+            "id": "WORLD_MODEL_METHOD.governing-relations",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "result_contract"
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "contract_application",
+            "binding": "Bind the interpreted model-claim predicate and actual observations to its declared purpose. Prediction accuracy does not establish a required construction outcome, and prediction error alone does not establish outcome failure; correction respects the distinct accounts."
+          },
+          {
+            "id": "FOUNDATIONS.bounded-construction",
+            "kind": "contract_application",
+            "binding": "Bind the interpreted model-claim predicate and actual observations to its declared purpose. Prediction accuracy does not establish a required construction outcome, and prediction error alone does not establish outcome failure; correction respects the distinct accounts."
+          }
+        ],
+        "source_references": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.assertions-and-observations",
+          "FOUNDATIONS.bounded-construction"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "91084a0fbed9ea697d66ea4d18b9721c1b2f4a1a334bb8fefa731f146e4aaf6c",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 35724,
+            "byte_end": 35784
+          },
+          {
+            "id": "c2",
+            "sha256": "4a39ab7bc634e581ae55f9ba7f7a3ad7fe69adc334b41105259b7de3ed45e000",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 36261,
+            "byte_end": 36292
+          },
+          {
+            "id": "c3",
+            "sha256": "ac38d8075cfcab6c819cd0d6d5e9d0bd4fa5457018d81c5abbc7f224c7eddd86",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 36294,
+            "byte_end": 36521
+          },
+          {
+            "id": "c4",
+            "sha256": "20764a6f5e83dce0fafc6862718e50c14db755af7fe74d9b9b983fb76e0ca52c",
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "byte_start": 36523,
+            "byte_end": 37313
+          },
+          {
+            "id": "i5-binding",
+            "byte_start": 35710,
+            "byte_end": 37315,
+            "sha256": "743458bca2f6a8710b0bc0c20f5fe2d0d035d118f0df49b4362cd8738f9e15fb",
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "WORLD_MODEL_METHOD.4-assure#c1",
+          "WORLD_MODEL_METHOD.4-assure#c2",
+          "WORLD_MODEL_METHOD.4-assure#c3",
+          "WORLD_MODEL_METHOD.4-assure#c4",
+          "WORLD_MODEL_METHOD.4-assure#i5-binding"
+        ]
+      }
+    }
+  ],
+  "new_rows": []
+}

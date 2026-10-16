@@ -1411,6 +1411,17 @@ The purpose of triage is not to create a separate tracking bureaucracy. It is
 to classify impact correctly so the change enters the method at the right
 constitutional boundary.
 
+Apply the feedback and diagnosis relation in
+[Bounded construction](FOUNDATIONS.md#bounded-construction) to the report's
+current subject, required outcome, observations and any predictive model.
+The classification distinguishes a defective realisation, inadequate
+requirement or design, inaccurate prediction and insufficient observation.
+Bind the supported cause to the change classes below; unresolved alternatives
+can select further observation before a repair is justified. Severity records
+consequence and priority selects response order within the existing mandate;
+neither changes the diagnostic result or grants a repair. A bug list is a view
+of this work, not a second construction route.
+
 Triage triangulates a failure across applicable reference frames over the same
 subject and basis. Each frame tests candidate diagnoses against its material
 workspace variables, governing relations and evidence. Their combined results
@@ -1967,10 +1978,18 @@ the assessor disposition. Consumers choose the representation. Transition
 evidence is a read model and does not become specification, design, or
 admission authority.
 
-Construction uses the cheapest focused proof capable of falsifying the active
-relation. Expensive whole-candidate qualification occurs at a declared
-candidate boundary rather than after every local edit, unless the affected
-risk makes whole-candidate proof necessary.
+Select focused proof using
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+and [Risk and assurance selection](FOUNDATIONS.md#risk-and-assurance-selection).
+Bind the affected source obligations, assertion and execution dependencies,
+supported exclusions, newly uncovered cases and applicable mandatory gates.
+The selected proof must support the intended claim under
+[Assertions and observations](FOUNDATIONS.md#assertions-and-observations);
+cheap falsification of a weaker condition cannot close the stronger claim.
+Retain applicable evidence on its original subject with the required new
+applicability relation. Compare selection and reassessment cost together.
+Whole-candidate qualification remains at its declared boundary or earlier
+where affected risk, uncertain impact or a mandatory gate requires it.
 
 A durable or reconstructable authority claim is not established solely by a
 same-process proof when loss of incidental process state is a material
@@ -2446,9 +2465,12 @@ The following rules govern how constitutional claims are proved in practice.
 
 This evidence family assumes F1–F4 and F6: a witness establishes only its bound
 property, and changed evidence does not author changed meaning or permission.
-[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and
-[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) supply
-those consequences. UP-001 chooses explicit proof-target and weaker-property
+[Construction assurance](FOUNDATIONS.md#construction-assurance) owns the
+relationship from obligation through assertion and observation to supported
+conclusion. [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+binds the selected operation, and
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) binds its
+derived views. UP-001 chooses explicit proof-target and weaker-property
 exclusion; UP-008 chooses separate semantic, evidence and projection bindings.
 UP-022 additionally chooses assurance-boundary, fresh-constructor and exposure
 conditions. The claim owner supplies the property and required scope; the
@@ -2462,6 +2484,12 @@ on its witness for the exact subject, intended property and governing basis.
 Before selecting that witness, bind its relation to the claim, the nearest
 weaker excluded property and the falsification condition. Missing these
 relations leaves evidence discovery, not closure-grade proof.
+
+Apply [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
+to that binding: state the supported necessary or sufficient relationship,
+including any required conjunction, and the observation that can distinguish
+the claimed property. Interpretive fidelity and observed checker behaviour
+remain separate obligations on the intended proof target.
 
 Packaging, syntax, compilation, file presence, invocation, or local behavior
 must not substitute for semantic, authority-bearing, installed, release, or
@@ -2613,6 +2641,16 @@ For ticketed work, the immediate proof authority is the admitted ticket and its
 triage path. Tests derive from the ticket's lawful re-entry point and the
 governing constitutional or realization-law surfaces it cites; they do not
 derive expected results from current implementation behavior.
+
+For each claimed lane, apply
+[Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance).
+Bind its expectation to the owning source and justified interpretation, and
+its execution to the actual subject, checker, environment and observations.
+The two authority classes below supply different upstream sources; their
+labels establish neither assertion fidelity nor independent failure causes.
+An implementation-derived regression check retains its supported local scope
+without being promoted to upstream acceptance. Shared derivations can serve
+declared test families in the existing carriers.
 
 Authority source is not the same thing as execution breadth. A test may be
 small or broad, fast or slow, deterministic or live, but it still derives from

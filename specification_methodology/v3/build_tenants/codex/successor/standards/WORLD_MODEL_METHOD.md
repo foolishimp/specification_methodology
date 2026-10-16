@@ -805,6 +805,13 @@ They are the auditable path toward it.
 
 Qualify traced observations into lawful world-model claims.
 
+Bind [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
+to the model claim's declared purpose, interpreted predicate and actual source
+observations. A predictive claim is assessed for predictive adequacy; its
+accuracy does not establish a required construction outcome, and prediction
+error alone does not establish that outcome's failure. The distinct accounts
+and their correction follow [Bounded construction](FOUNDATIONS.md#bounded-construction).
+
 Assurance should make explicit:
 
 - what is being claimed

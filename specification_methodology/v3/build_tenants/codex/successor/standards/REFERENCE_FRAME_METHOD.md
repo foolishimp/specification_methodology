@@ -202,6 +202,13 @@ Evidence carries provenance, subject identity, basis, and scope. Evidence does
 not become semantic truth or decision authority merely because it is available
 inside a frame.
 
+For reliance on that evidence, bind
+[Construction assurance](FOUNDATIONS.md#construction-assurance) to the frame's
+predicate, observations and consuming decision. Assertion provenance justifies
+the expected predicate; execution provenance identifies the acquired subject
+and result. A sufficiently small frame or an authenticated observation alone
+does not establish a sound, complete decision on its predicate.
+
 ### Authority
 
 The method distinguishes:
@@ -761,6 +768,12 @@ return closed results. They may overlap in subject, manifold, or evidence
 sources, but neither evaluation consumes or influences the other's unclosed
 working result. This is useful for assurance independence, different evidence
 altitudes, or distinct failure perspectives.
+
+For a mutual-assurance claim, apply
+[Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the selected paths and their material shared causes. Separate activations
+satisfying the declared authorship conditions do not by themselves establish
+statistical independence or validate a shared governing expectation.
 
 ### Result Conjunction
 

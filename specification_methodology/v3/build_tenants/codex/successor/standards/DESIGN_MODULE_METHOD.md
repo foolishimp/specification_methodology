@@ -1870,6 +1870,15 @@ Unit tests under this method are module-owned proof lanes.
 
 They must derive from module ownership evidence, not from code shape alone.
 
+Apply [Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+with the accepted module obligations as assertion sources and the actual
+module realisation as the executed subject. The ownership trace justifies the
+source selection; [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
+governs the predicate it can establish and the observations needed. A test
+discovered from implementation is re-expressed and justified against that
+module obligation before it supplies module closure. Shared derivations and
+execution records remain in the existing proof carriers.
+
 That means a unit test should be traceable to:
 
 - the accepted Ontology and applicable entity, lifecycle, authority, function,

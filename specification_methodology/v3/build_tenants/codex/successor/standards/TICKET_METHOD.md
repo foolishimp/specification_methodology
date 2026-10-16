@@ -1056,8 +1056,14 @@ carrier without adding a ticket, Executive appointment, review or design-view
 recreation solely to mark completion. This does not waive a condition that
 actually applies, including sprint-close or design-method law.
 
-Reuse applies Contract application's Currentness condition with
-[Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity).
+Reuse binds Contract application's Currentness condition to
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention),
+with [Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity).
+Closure combines applicable retained evidence and actual reassessment for the
+current claim; selection alone is not performance. New obligations, material
+unknown impact and mandatory gates remain visible. Assertion, execution and
+evidence-validity dependencies govern that selection, not ticket or file
+boundaries. Preserve original subjects, failures and uncovered conditions.
 An unrelated observation remains bounded repricing input rather than reopening
 the claim or expanding work. Record the exact evaluated scope, satisfied
 conditions, evidence and residuals in the existing carrier.
@@ -1074,6 +1080,14 @@ design, module, graph, carrier, or closure surface -> test expectation
 ```
 
 Tests do not derive authority from the current implementation.
+
+Apply [Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the expectation path above and to the separate executed check. The source
+link identifies its authority; the interpreted predicate and derivation
+justify what the assertion can establish. Execution provenance identifies the
+actual subject, checker, environment, observations and result. Preserve these
+relations in the existing ticket or evidence carrier, including shared
+derivations; no per-test ticket or duplicate provenance ledger follows.
 
 An acceptance predicate also needs an applicable supported entry or state and
 an obligation under the governing operating/threat model. Existing test presence
