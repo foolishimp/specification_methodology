@@ -9,6 +9,17 @@ and the plugin in commit A of the cut
 The note for this successor is therefore written at its RC cut, not during
 construction.
 
+Target version and standing. The successor this candidate constructs
+targets version `3.0.0` of the release line, the version the common
+Product names for this construction. The target is a fact about intent:
+no member carries a version label, the plugin manifests carry
+`REPLACE_AT_RC_CUT`, and the label is applied at the RC cut. The candidate
+is unreleased: no RC has been published, no acceptance is recorded and no
+selector has advanced. A version label alone would establish no released
+status; released standing comes from the acceptance record of
+[RELEASE section 8](../standards/RELEASE.md#8-acceptance) and the common
+tickets, and this record distinguishes the two.
+
 The predecessor's `release/release-note.md` (SHA-256
 `2593a003a5cddccc225bfdd450f71be627453bc48dd80fbad55e298f5fbc34fe`)
 records the facts of the cut `v2.5.1-rc.2`: its identity and refs, its
