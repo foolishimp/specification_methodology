@@ -628,7 +628,7 @@ class RowSelection(unittest.TestCase):
     def test_keeps_header_prose_and_cited_rows_only(self):
         m = member(self.TEXT, 'standards/M.md')
         start, end, _ = m.section('foundation-to-law')
-        idx, total, kept = gf.select_rows(m, start, end, 'standards/M.md', {'M.md': {'entry'}, 'Y.md': set()})
+        idx, total, kept, _ = gf.select_rows(m, start, end, 'standards/M.md', {'M.md': {'entry'}, 'Y.md': set()})
         text = b''.join(m.lines[i] for i in idx).decode()
         self.assertEqual((total, kept), (4, 2))
         self.assertIn('| I1 | adopted |', text)            # non-family table kept whole
@@ -641,7 +641,7 @@ class RowSelection(unittest.TestCase):
     def test_cross_member_link_counts_when_that_owner_route_is_carried(self):
         m = member(self.TEXT, 'standards/M.md')
         start, end, _ = m.section('foundation-to-law')
-        idx, total, kept = gf.select_rows(m, start, end, 'standards/M.md', {'Y.md': {'yy'}})
+        idx, total, kept, _ = gf.select_rows(m, start, end, 'standards/M.md', {'Y.md': {'yy'}})
         self.assertEqual((total, kept), (4, 1))
 
     def test_build_records_rows_and_marks_source_line(self):
@@ -730,6 +730,45 @@ class Bindings(unittest.TestCase):
         for fr in manifest['frames']:
             owners = {(b.get('owner'), b.get('anchor')) for b in fr.get('binds') or []}
             self.assertIn(('standards/ACTIVATION.md', 'construction-relation'), owners, fr['id'])
+
+
+class ConsumerItems(unittest.TestCase):
+    """I5-02: in a rows-mode excerpt the consumers paragraph keeps only the items of the kept rows."""
+
+    TEXT = ("## Foundation to law\n\npreamble\n\n"
+            "| Premises, with standing | Consequence that follows | Rule in this member that states it | Added choice | Pillar |\n"
+            "|---|---|---|---|---|\n"
+            "| P1 | by P1 so a | [entry](#entry) | none | 1 |\n"
+            "| P2 | by P2 so b | [other](#other) | none | 1 |\n"
+            "| P3 | by P3 so c | [entry](#entry) | none | 1 |\n"
+            "| P4 | by P4 so d | [yy](Y.md#yy) | none | 1 |\n\n"
+            "Consumers of these rows, one list per row:\n\n"
+            "- Row 1, a: [X](#entry).\n- Row 2, b: [X](#other).\n- Row 3, c: no separate consumer applies.\n- Row 4, d: [Y](Y.md#yy).\n\n"
+            "Each consumer applies the rule (P2, P6).\n\n## Entry\n\ntext\n\n## Other\n\ntext\n")
+
+    def test_consumers_paragraph_omitted(self):
+        m = member(self.TEXT, 'standards/M.md')
+        start, end, _ = m.section('foundation-to-law')
+        idx, total, kept, omitted = gf.select_rows(m, start, end, 'standards/M.md', {'M.md': {'entry'}})
+        text = b''.join(m.lines[i] for i in idx).decode()
+        self.assertEqual((total, kept, omitted), (4, 2, 4))
+        self.assertNotIn('- Row ', text)
+        self.assertNotIn('Consumers of these rows', text); self.assertNotIn('Each consumer applies', text)
+        self.assertIn('| P1 | by P1 so a', text); self.assertIn('preamble', text)
+
+    def test_build_records_consumer_items(self):
+        fr = frame('f', ('M.md', 'foundation-to-law'), ('M.md', 'entry'))
+        fr['routes'][0]['rows'] = {'mode': 'frame-anchors'}
+        tree = TempTree({'M.md': self.TEXT}, [fr])
+        try:
+            self.assertEqual(tree.run(), 0)
+            data = (tree.root / 'standards/frames/f.md').read_text()
+            self.assertIn('rows=2/4 selected by the anchors this frame carries; the consumers paragraph of 4 items is omitted', data)
+            self.assertNotIn('- Row 1, a', data)
+            rows = json.loads(tree.inputs.read_text())['frames'][0]['routes'][0]['rows']
+            self.assertEqual(rows['consumers_omitted'], 4)
+        finally:
+            tree.close()
 
 
 if __name__ == '__main__':

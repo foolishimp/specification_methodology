@@ -244,7 +244,11 @@ must meet these requirements:
    every row of a table whose header has no `Consequence` column, and
    the family-table rows whose link destinations name an anchor the
    frame carries in that member; the route records `selected`, `total`
-   and the excerpt digest. It has a test.
+   and the excerpt digest. It has a test. The consumers paragraph that
+   follows a family table (I5-02) is a review trace that the owning section
+   carries; a frame omits it under ACTIVATION §2's relevance rule, the
+   `Source:` line says so with the item count and the manifest records
+   `consumers_omitted`. It has a test.
 7. Bindings (I5, E2E-01). Each frame carries a `binds` list: items with
    a text and, where the item names an obligation's owner, an owner and
    anchor. The header renders the list under `Binds:` with the member's

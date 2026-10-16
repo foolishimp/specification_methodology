@@ -6,8 +6,8 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 the owning section and the digest of its member where it names one; the item
@@ -43,9 +43,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 81491 bytes.
+Size of this frame: 74360 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#authority-kinds sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ### Authority kinds
 
@@ -112,7 +112,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#imports-between-members sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ### Imports between members
 
@@ -172,7 +172,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#foundation-to-law sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ### Foundation to law
 
@@ -218,6 +218,16 @@ consequence, in five columns:
   a premise, adds no standing to the row, owns no choice, and does not
   claim that a pillar is an axiom or follows from finite capacity.
 
+Consumers. After the table, a paragraph names, for each row, the sections
+in this or other members that apply the rule where an actor enters it,
+each linked to the consumer's own locus, or states that no separate
+consumer applies and
+the scope of that absence. A blank field or a generic referral establishes
+neither coverage nor non-applicability. The paragraph is a trace like the
+table: a consumer named in it applies the rule and decides nothing the
+owning section does not (P2, P6; law carried from the common standalone
+successor requirement).
+
 A family table is a trace. Its consequence and choice columns state no
 determination that the rule it names does not state, and the table owns
 none of the rules or choices it lists (P1, P6).
@@ -243,7 +253,9 @@ and traces none of their rules. A Pillar cell marked pending names no
 pillar: the family's table does not yet carry the Pillar column, and the
 cell is filled from that table's rows when it does. The index decides
 nothing: each rule is in its owning section, and each trace is in its
-table (P1, P6).
+table (P1, P6). Every family table in this corpus has its consumers paragraph. One row
+records that no consumer applies yet: F22 row 8, formal representation,
+whose interpretation and conformance cases are not written.
 
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
@@ -304,7 +316,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -471,24 +483,7 @@ core.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
-| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section | 3, 9 |
-| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |
-| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it | 6, 3 |
-| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section | 9 |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it | 3, 6 |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names | 9 |
-| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability | 7, 9 |
 | P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none | 6 |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |
-| P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |
-| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
-| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
-| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |
-| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | 3 |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none | 6, 7 |
-| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it | 3 |
-| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the accepted design of the realisation that would share it, which [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) refines for software design where that profile is selected | 4 |
-| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim | 3 |
 
 RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),
 AC-007 in
@@ -500,7 +495,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
+Source: EVALUATION.md#3-independent-assessment sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3
 
 ## 3. Independent assessment
 
@@ -526,7 +521,16 @@ reads the subject at that identity or relation, never a mutable working
 tree; it makes no repair; it does not assess its
 own authorship. Reusing the constructor's judgment does not satisfy
 independence; shared mechanical evidence may be reused, judgment may not
-(ACTIVATION §7). Any post-exposure revision is a declared intervention: it
+(ACTIVATION §7). Binding a returned assessment to its producer, subject,
+basis and evidence authenticates the result; it establishes neither the
+assertion provenance of its expected answer nor the execution provenance
+of its run, which
+[FOUNDATIONS §4 Parallel derivation and mutual assurance](../FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)
+requires separately (P6, P3). Membership in a plan authenticates nothing,
+an unauthenticated result satisfies no required assessment, and a result
+bound to another subject satisfies no planned assessment
+([FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results));
+no cryptographic or transport protocol is prescribed for the binding (P6). Any post-exposure revision is a declared intervention: it
 is either a method constituent with its own qualification boundary or a new
 qualification subject, and it cannot retroactively make the original
 frozen construction pass. This law prescribes no actor type or count,
@@ -558,7 +562,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395
+Source: EVALUATION.md#4-review-results sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3
 
 ## 4. Review results
 
@@ -629,7 +633,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -643,6 +647,12 @@ rc.2 #successor-baseline-conservation-stdo-up-015):
 - superseded: an accepted successor relation replaces it;
 - intentionally removed: current Product authority removes it; or
 - not applicable: it has no successor effect, with a bounded reason.
+
+Evidence for a disposition is retained or reassessed under
+[FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse):
+a `conserved` reading made on an earlier successor text applies to a later
+one only where the owning text and the consumer bindings that carry it
+are unchanged, or the change is shown not to affect the claim (P3, P6).
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
@@ -692,7 +702,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=e8a3f3faa270a26515a39b4e3bbc8ece946f6ec48b11eadea682426966496f09
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=dd145e4bf5db40126c6d4dfa137189db4e9ac86229e6509fb4b56e5a7ae47a9b
 
 ## 5. Coverage of the common discriminators
 
@@ -811,7 +821,7 @@ run and assessed is never counted as passed, and no mapping exempts a
 member from logical review (P6, P2).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=7/17 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3 rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -848,7 +858,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=509f52ea65403e506336d826e2ee328c41faa85c21833a232d2588ec9804f395 rows=1/12 selected by the anchors this frame carries
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=566b88098f4cec315cfd3bae9fa49884f276487d6a870a1e5b54fd248cbaeda3 rows=0/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -871,7 +881,6 @@ below is stated in
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
-| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | By P6 a pass is an assessor's verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](../CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history | 3, 9 |
 
 §8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
 cases, which are the choices named in the last two rows, its §5 maps the
@@ -879,7 +888,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=6901b148a0cca05ae85bab6439e9f0178f1a1fa904b49383d83445af57e6f93b rows=2/12 selected by the anchors this frame carries
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 

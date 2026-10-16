@@ -1530,6 +1530,20 @@ condition stays `unresolved`.
 | `member-build-assess` | 79,918 | 81,491 | +1,573 | 2 |
 | all twelve | 1,210,518 | 1,227,211 | +16,693 | |
 
+After I5-02 the frames shrink: the route to FOUNDATIONS §4 Results, whose
+section holds the family table of results, uses row selection like every
+other family-table route, and the consumers paragraphs that now follow
+every family table (318 items) are omitted from frames as review traces
+the owning sections carry, under ACTIVATION §2's relevance rule. M4a after
+I5-02: `rf-task-a` 115,747; `rf-task-b` 99,935; `ac-task-a` 70,117;
+`traversal-task-f` 105,871; `eb-task-d` 115,359; `dm-task-d` 101,358;
+`configuration` 143,930; `binding` 98,970; `stale-summary` 94,722;
+`bootstrap` 85,829; `acceptance-release` 60,764; `member-build-assess`
+74,360; all twelve 1,166,962 (-60,249 against the E2E-01 figures, -43,556
+against `c66ed4e`). The first regeneration attempts after the consumers
+paragraphs were written were refused at 177,697 and 175,236 bytes; the
+refusals, not a further capacity increase, led to this design.
+
 ### 4.4 Selected paths
 
 Task kinds are the six of the

@@ -6,8 +6,8 @@ Purpose: The owning sections for transitions, context construction with acquisit
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions (FOUNDATIONS.md#change-impact-and-evidence-reuse sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions (FOUNDATIONS.md#change-impact-and-evidence-reuse sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 the owning section and the digest of its member where it names one; the item
@@ -45,9 +45,9 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 90893 bytes.
+Size of this frame: 94722 bytes.
 
-Source: ACTIVATION.md#transitions sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#transitions sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ### Transitions
 
@@ -133,7 +133,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ## 2. Context construction under an envelope
 
@@ -371,7 +371,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#construction-availability sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#construction-availability sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ### Construction availability
 
@@ -422,7 +422,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#effects sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ### Effects
 
@@ -475,7 +475,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#5-work-state-and-restart sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ## 5. Work state and restart
 
@@ -483,7 +483,10 @@ Work state is the tuple of: the current persistent workspace; the governing
 basis; the applicable closed results and judgments with their invalidators;
 the residuals; and the known uncertainty over external effects. It is an
 object (P3); its carrier (files, an event stream, another admitted owner) is
-a profile or realisation choice.
+a profile or realisation choice. Resumption, checkpointing and the
+progress account of this section are generic procedures
+([SPEC_METHOD §11](../SPEC_METHOD.md#11-build-tenant-binding)): they require
+no particular carrier (P1, P6).
 
 Resumption is re-entry of the same method over the current work state,
 starting from the current material state, by a possibly different actor.
@@ -550,6 +553,20 @@ the consequences below is stated in
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P0 (recovered), P6 (independent); instance premise c | By P4b and P0 private working context does not survive the actor, and by P6 a reused judgment is not a new independent one, so handoff is by closed results without private working context; reuse checks exact applicability and three invalidators, a material input change (newly acquired material evidence included), a changed basis and a declared revising observation, and a domain trigger is an instance of one of them; a reused judgment does not satisfy a required independent judgment | [§7](../ACTIVATION.md#7-closed-result-and-reuse) | the revising observation a result declares, and its other invalidation conditions: the producer of that result | 7, 9 |
 | P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise c | By P5 a transition's outcome is undecided without its evidence, and by P6 a proof establishes only the authority it was produced under, so a reviewable transition names its exact candidate, changes, proof and disposition; a same-process proof does not establish a reconstructable authority claim where the loss of process state is a counterexample | [Transition evidence](../ACTIVATION.md#transition-evidence) | the representation of transition evidence: its consumer | 9 |
 
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, work state as an object: [§1 Transitions](../ACTIVATION.md#transitions), where the current state is the work state this section records; [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Not performed, and [Assertions and observation](../FOUNDATIONS.md#assertions-and-observation), where unresolved work and an unexercised capability are a state of the work, carried as a residual and not a result; [WORLD_MODEL §14](../WORLD_MODEL.md#14-results-of-this-profile), where a step's work state carries an unrun verification as a residual; [REFERENCE_FRAME §10 Revision actions](../REFERENCE_FRAME.md#revision-actions), where results reopened without a material revision are recorded in the work state; [UX §8 Msg-replay proof](../UX.md#msg-replay-proof), whose Msg log is the surface's recorded work state, and the [UX family table](../UX.md#foundation-to-law), whose row for continuation and replay imports F4; the [ODD family table](../ODD.md#foundation-to-law), whose rows for the immutable ledger and for yield import F4 for a replay-visible work state.
+- Row 2, the workspace and an actor's account: [§1 Transitions](../ACTIVATION.md#transitions), where an actor's context is an account of the current state and not the state itself; [EXECUTIVE_BASELINE §20](../EXECUTIVE_BASELINE.md#20-failure-classification), where a compression, summary or prior result that replaces current source authority is evidence substitution and a retained account never overrules current evidence; [UX §8 Msg-replay proof](../UX.md#msg-replay-proof), where replay is resumption from the recorded work state; [CONFORMANCE §4](../CONFORMANCE.md#4-cases-from-the-common-discriminators), case CD-03, and [§5](../CONFORMANCE.md#5-coverage-of-the-common-discriminators), discriminators 38 and 39.
+- Row 3, resumption and effects of uncertain completion: [§1 Construction relation](../ACTIVATION.md#construction-relation), Control, where resumption reacquires current reality and unknown effects are resolved before the next dependent action; [EXECUTIVE_BASELINE §12 step 4](../EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result), [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), failure assumptions, and [§13 Handoff projection](../EXECUTIVE_BASELINE.md#13-handoff-projection), whose work result names each intended effect with its value, and the [EXECUTIVE_BASELINE family table](../EXECUTIVE_BASELINE.md#foundation-to-law), whose row for the effect field imports F4 for the reconciliation; [PRODUCT_DEFINITION §4 Explicit complete consumer update](../PRODUCT_DEFINITION.md#explicit-complete-consumer-update), where an update of uncertain completion is reconciled from the presented preimages before any repetition; [SPEC_METHOD §4 Computed classification and treatment](../SPEC_METHOD.md#computed-classification-and-treatment), where a retry waits on that reconciliation; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](../TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) and [Mutable-subject effect relation](../TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation), where an effect whose end is not established is reconciled before any repetition; [FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse), where recovery reacquires current reality and need not erase valid work; [CONFORMANCE §4](../CONFORMANCE.md#4-cases-from-the-common-discriminators), case CD-03, and [§5](../CONFORMANCE.md#5-coverage-of-the-common-discriminators), discriminators 38 and 39.
+- Row 4, checkpoint and progress: [SPEC_METHOD §3](../SPEC_METHOD.md#3-outcome-conservation), whose four kinds of evidence refine the progress categories for a product outcome, and [§8](../SPEC_METHOD.md#8-bounded-execution-in-this-method), where construction ends at the exact accepted checkpoint and the next already-authorised bounded action; [EXECUTIVE_BASELINE §14](../EXECUTIVE_BASELINE.md#14-coverage-application), where checkpoint and continuation are the Executive's under existing authority; [CONFORMANCE §1](../CONFORMANCE.md#1-counterexamples-from-the-builders-own-history), case C-03, where a restart proposal states why repair of retained work is insufficient.
+- Row 5, closed result and reuse: [§6](../ACTIVATION.md#6-cost-and-proportionality), the method's own execution, where reuse stays subject to exact applicability and invalidation; [REFERENCE_FRAME §5 Method functions](../REFERENCE_FRAME.md#5-method-functions), [§8 Coverage basis](../REFERENCE_FRAME.md#coverage-basis) and [§10 Revision actions](../REFERENCE_FRAME.md#revision-actions), where whether a closed result or a coverage result stays valid is decided by the reuse rule; [EVALUATION §2](../EVALUATION.md#2-separation), [§3](../EVALUATION.md#3-independent-assessment), where shared mechanical evidence may be reused and judgment may not, and [§6](../EVALUATION.md#6-conformance-of-realisations), where an accepted relation is reused after checking applicability and invalidation; [SPEC_METHOD §4 Computed classification and treatment](../SPEC_METHOD.md#computed-classification-and-treatment), which applies the rule to computed classification, and [Consistency gate](../SPEC_METHOD.md#consistency-gate); [TICKETS §7 Recorded judgment and owner-ruling continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity) and [Condition-based closure and reuse](../TICKETS.md#condition-based-closure-and-reuse); [EXECUTIVE_BASELINE §3](../EXECUTIVE_BASELINE.md#3-engagement-applicability), [§5 Work result](../EXECUTIVE_BASELINE.md#work-result), [§6 Attention cycle](../EXECUTIVE_BASELINE.md#attention-cycle) and [§13 Handoff projection](../EXECUTIVE_BASELINE.md#13-handoff-projection), specialist result, and the [EXECUTIVE_BASELINE family table](../EXECUTIVE_BASELINE.md#foundation-to-law), whose row for the Product chain imports F4 for the repair that invalidates affected results; [DESIGN_MODULE §5](../DESIGN_MODULE.md#5-ontology-first-design), [Capability and foundation selection (UP-023)](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023), [§7 Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work) and [§10 Post-ticket design review](../DESIGN_MODULE.md#post-ticket-design-review), and the [DESIGN_MODULE family table](../DESIGN_MODULE.md#foundation-to-law), whose row for that review imports F4; [ASSURANCE §7 The set](../ASSURANCE.md#the-set), whose invalidation rows name instances of this rule's invalidators, and [§13 Obligations](../ASSURANCE.md#obligations), item 4; [WORLD_MODEL §2 Builder Project specialisation](../WORLD_MODEL.md#builder-project-specialisation), whose invalidation conditions are instances of them; [CONFORMANCE §1](../CONFORMANCE.md#1-counterexamples-from-the-builders-own-history), case C-04, and [§5](../CONFORMANCE.md#5-coverage-of-the-common-discriminators), discriminators 21 and 36.
+- Row 6, transition evidence: [TICKETS §7 Execution and verification authority separation (UP-007)](../TICKETS.md#execution-and-verification-authority-separation-up-007), where the reviewable transition is carried by an existing surface and no new ceremony is required; [EXECUTIVE_BASELINE §5 Exact candidate](../EXECUTIVE_BASELINE.md#exact-candidate), [§8 Steel-thread delivery](../EXECUTIVE_BASELINE.md#steel-thread-delivery), for the proof cadence, [§9](../EXECUTIVE_BASELINE.md#9-derived-worker-frame), where `candidate_ready` binds the exact candidate and the transition evidence, [§12 step 5B](../EXECUTIVE_BASELINE.md#5b-candidate-requires-independent-review), [§13 Handoff projection](../EXECUTIVE_BASELINE.md#13-handoff-projection), work result, and [§14](../EXECUTIVE_BASELINE.md#14-coverage-application), where candidate and transition evidence are the Worker's.
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
+
 ### The workspace and an actor's account
 
 The workspace and its authoritative inputs persist across activations and
@@ -612,7 +629,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ## 7. Closed result and reuse
 
@@ -705,7 +722,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6
+Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
 
 ### Execution and verification authority separation (UP-007)
 
@@ -769,7 +786,7 @@ traceability; ACTIVATION §1 and SPEC_METHOD §8 own the execution semantics
 (P2, P6).
 
 
-Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6
+Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
 
 ### Recorded judgment and owner-ruling continuity
 
@@ -843,7 +860,7 @@ result, so a retained obligation is never read as satisfied, and a
 superseded, deferred or withdrawn one never as discharged (P5, P1, P6).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
 
 ### Condition-based closure and reuse
 
@@ -882,7 +899,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6
+Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
 
 ### One-truth state projection and drift refusal (UP-009)
 
@@ -899,7 +916,7 @@ evidence remains history and cannot be projected as current acceptance
 (P6, P4b).
 
 
-Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1066,24 +1083,13 @@ core.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
-| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section | 3, 9 |
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |
-| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it | 6, 3 |
-| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section | 9 |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it | 3, 6 |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names | 9 |
 | P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability | 7, 9 |
-| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none | 6 |
 | P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |
 | P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |
 | P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
 | P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
 | P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |
-| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | 3 |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none | 6, 7 |
-| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it | 3 |
-| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the accepted design of the realisation that would share it, which [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) refines for software design where that profile is selected | 4 |
-| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim | 3 |
 
 RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),
 AC-007 in
@@ -1095,7 +1101,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#conjunction-of-results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ### Conjunction of results
 
@@ -1221,7 +1227,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=e0826d41752ecc7b2db59ece97042218e91a1d32ef1f861ec6819d94e7ae6ea6 rows=3/11 selected by the anchors this frame carries
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453 rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 

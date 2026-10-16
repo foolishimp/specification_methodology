@@ -50,8 +50,11 @@ name an anchor that another route of the same frame carries in that
 member. Such an excerpt is not a byte copy of its section: its `Source:`
 line says `rows=k/n`, the manifest records `selected`, `total` and the
 excerpt digest beside the section digest, and the omitted rows stay in
-the owning member. `select_rows` below is the one implementation and has
-a test.
+the owning member. The consumers paragraph after a family table (one item
+per row, `- Row N, ...`) is a review trace that the owning section carries;
+such an excerpt omits it, the `Source:` line says so with the item count,
+and the manifest records `consumers_omitted`. `select_rows` below is the one
+implementation and has a test.
 
 Bindings (I5, E2E-01). A frame may carry `"binds"`: a list of items, each
 with `text` and optionally an `owner` and `anchor`. The header renders them
@@ -403,6 +406,9 @@ def rebase(member: Member, start: int, end: int) -> bytes:
 
 
 LINK_DESTINATION = re.compile(r'\]\(([^)\s]+)\)')
+CONSUMER_ITEM = re.compile(r'^- Row (\d+),')
+CONSUMERS_START = 'Consumers of these rows'
+CONSUMERS_END = 'Each consumer applies the rule'
 
 
 def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_owner: dict):
@@ -414,17 +420,35 @@ def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_own
     link destinations is `#anchor` (this member) or `MEMBER.md#anchor` and that anchor is a
     route of this frame in that member. Returns (indices, family rows total, rows kept)."""
     indices, total, kept = [], 0, 0
+    kept_rows, row_number, after_family = set(), 0, False
+    items_omitted, skipping, closing_seen = 0, False, False
     state = None  # None: outside a table; 'header', 'separator', then ('family', bool)
     for i in range(start, end):
         raw = bare(member.lines[i]).lstrip(' ')
         is_row = (not member.fenced[i]) and raw.startswith('|')
         if not is_row:
+            if state is not None and state[0] == 'rows' and state[1]:
+                after_family = True
             state = None
+            if skipping:
+                # the consumers paragraph: a review trace, omitted from the frame
+                if CONSUMER_ITEM.match(raw):
+                    items_omitted += 1
+                if raw.startswith(CONSUMERS_END):
+                    closing_seen = True
+                if closing_seen and raw.strip() == '':
+                    skipping, closing_seen = False, False
+                continue
+            if after_family and not member.fenced[i] and raw.startswith(CONSUMERS_START):
+                skipping = True
+                continue
             indices.append(i)
             continue
         text = member.lines[i].decode('utf-8')
         if state is None:
             state = ('header', 'Consequence' in text)
+            if state[1]:
+                kept_rows, row_number, after_family = set(), 0, False
             indices.append(i)
             continue
         if state[0] == 'header':
@@ -435,6 +459,7 @@ def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_own
             indices.append(i)
             continue
         total += 1
+        row_number += 1
         keep = False
         for destination in LINK_DESTINATION.findall(re.sub(r'`[^`]*`', '', text)):
             path, _, anchor = destination.partition('#')
@@ -447,7 +472,8 @@ def select_rows(member: Member, start: int, end: int, owner: str, anchors_by_own
         if keep:
             indices.append(i)
             kept += 1
-    return indices, total, kept
+            kept_rows.add(row_number)
+    return indices, total, kept, items_omitted
 
 
 def rebase_lines(member: Member, indices) -> bytes:
@@ -592,9 +618,11 @@ def build(root: Path, inputs_path: Path):
             spans.setdefault(owner, []).append((start, end, anchor))
             mode = (route.get('rows') or {}).get('mode')
             if mode == 'frame-anchors':
-                indices, total, kept = select_rows(member, start, end, owner, anchors_by_owner)
+                indices, total, kept, items = select_rows(member, start, end, owner, anchors_by_owner)
                 block = rebase_lines(member, indices)
                 note = f' rows={kept}/{total} selected by the anchors this frame carries'
+                if items:
+                    note += f'; the consumers paragraph of {items} items is omitted'
             elif mode:
                 raise Refusal(str(inputs_path), None, f'frame "{fid}": unknown rows mode "{mode}"')
             else:
@@ -608,6 +636,8 @@ def build(root: Path, inputs_path: Path):
             }
             if mode:
                 entry['rows'] = {'mode': mode, 'selected': kept, 'total': total, 'excerpt_sha256': digest(block)}
+                if items:
+                    entry['rows']['consumers_omitted'] = items
             routes_out.append(entry)
         binds_out = None
         if 'binds' in frame:

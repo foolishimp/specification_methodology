@@ -6,8 +6,8 @@ Purpose: The owning sections for workspace coverage and its statuses, frame-set 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide (ACTIVATION.md#construction-relation sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (FOUNDATIONS.md#assurance-relations sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 the owning section and the digest of its member where it names one; the item
@@ -49,9 +49,9 @@ Routes, in order:
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 17. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 105019 bytes.
+Size of this frame: 99935 bytes.
 
-Source: FOUNDATIONS.md#2-ontology sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#2-ontology sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ## 2. Ontology
 
@@ -381,7 +381,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-001 Evaluation relativity
 
@@ -390,7 +390,7 @@ declared evaluation family has no testable sufficiency boundary (P2; rc.2
 #rf-001-evaluation-relativity).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-005 Exact basis and coordinates
 
@@ -401,7 +401,7 @@ substitutes for declared coordinate equality (P3, P1; rc.2
 #rf-005-exact-basis-and-coordinates).
 
 
-Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-008 Overlap without identity collapse
 
@@ -412,7 +412,7 @@ evaluation uses is declared where it is used (P1, P3; rc.2
 #rf-008-overlap-without-identity-collapse).
 
 
-Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-010-composition-on-demand sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-010 Composition on demand
 
@@ -425,7 +425,7 @@ conjunction or decision rule (P4a; §6; rc.2
 #rf-010-composition-on-demand).
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-011 Topology mutation and recharting
 
@@ -438,7 +438,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 #rf-011-topology-mutation-and-recharting).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-012 Closed results
 
@@ -457,7 +457,7 @@ applies them to every frame and defines none of them (P5; rc.2
 #rf-012-closed-results).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ### RF-015 Residual uncertainty
 
@@ -468,7 +468,7 @@ universal completeness (P4b, P6; open-world premise; rc.2
 #rf-015-residual-uncertainty).
 
 
-Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#4-frame-set-declaration sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ## 4. Frame-set declaration
 
@@ -522,7 +522,7 @@ cannot waive another applicable semantic, authority, evidence or
 independence constraint (P2, P6).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#5-method-functions sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ## 5. Method functions
 
@@ -611,7 +611,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#6-frames-in-conjunction sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ## 6. Frames in conjunction
 
@@ -662,7 +662,7 @@ future interaction does not require a general composition law in every
 frame (P4a, P6, P2; rc.2 #material-composition).
 
 
-Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#8-workspace-coverage sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ## 8. Workspace coverage
 
@@ -821,7 +821,7 @@ Operational full coverage is relative to its tuple. It is not a claim that
 no undiscovered evaluation exists (P6; P0 with the open-world premise).
 
 
-Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8
+Source: REFERENCE_FRAME.md#10-discovery-and-revision sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551
 
 ## 10. Discovery and revision
 
@@ -928,7 +928,7 @@ reuse still requires the consumer's exact applicability check (P3, P6;
 rc.2 #return-a-closed-result).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=53bfd10350317b6f39c99879b98d9edf4b3639b4a999c8521b63d97020c1017e
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
 
 ## 7. Closed result and reuse
 
@@ -1021,7 +1021,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: FOUNDATIONS.md#results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1188,24 +1188,12 @@ core.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
-| P5 (derived from P0 and P6), P6 (independent); (i), (ii) | every performed evaluation returns one closed value of one algebra shared by every member, with a value for a claim that holds, one that fails, one the evidence cannot decide, one that needs a relation or capability the frame lacks, and one whose basis cannot support it | [Results](../FOUNDATIONS.md#results), the value table | the value names, and the division of P5's outcomes other than success into `indeterminate`, `out_of_frame` and `invalid_basis`, conserved from RF-012; owner: this section | 3, 9 |
 | P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result's standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |
-| P1 (independent), P6 (independent); (iii) | a core value alone does not carry a refined value's domain meaning, so a result records its predicate and domain outcome, and the definer of a refined value keeps its meaning | [Results](../FOUNDATIONS.md#results), Recording | each refined value and its domain meaning; owner: the member, profile or adopting Product that defines it | 6, 3 |
-| P6 (independent) | an evaluation that was not performed supports no claim, so it has no closed result and is never read as undecided | [Results](../FOUNDATIONS.md#results), Not performed, and the third item of the rule that nothing raises standing | recording non-performance as the absence of a closed result, not as a core value; owner: this section | 9 |
-| P5 (derived from P0 and P6), P1 (independent); (ii), (iii) | results from different members combine only if every refined value reads as exactly one core value and `indeterminate`, `out_of_frame` and `invalid_basis` stay explicit | [Results](../FOUNDATIONS.md#results), Refinements | each refinement's question, predicate and values; owner: [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) for admission, activation and steps, otherwise the member, profile, project or adopting Product that defines it | 3, 6 |
-| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated) | that a candidate exists, that it meets its criteria and that its owner accepts it are three claims with three predicates, and producing a candidate establishes neither of the others | [Results](../FOUNDATIONS.md#results), availability, assessment and acceptance | the acceptance boundary and who accepts there; owner: the decision authority that [EVALUATION §5](../EVALUATION.md#5-acceptance) names | 9 |
-| P5 (derived from P0 and P6), P0 (recovered), P6 (independent) | a claim that needs a relation or capability the frame does not declare cannot be decided in that frame; one the admissible evidence cannot decide is a different case; and a declared capability left unexercised leaves its part without a result, while a counterexample already found stands | [Results](../FOUNDATIONS.md#results), Out of frame or indeterminate | the stop state that carries an unexercised capability; owner: [ACTIVATION §3](../ACTIVATION.md#construction-availability), construction availability | 7, 9 |
-| P1 (independent), P3 (independent), P5 (derived from P0 and P6) | for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation | [Imports between members](../FOUNDATIONS.md#imports-between-members), the grounds of `out_of_frame` and `invalid_basis` | none | 6 |
 | P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |
 | P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |
 | P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
 | P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor's semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |
 | P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |
-| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record's fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | 3 |
-| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P0 (recovered) | a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member | [§4](../FOUNDATIONS.md#4-algebra) Reference versus body | none | 6, 7 |
-| P1 (independent), P6 (independent) | two values differ lawfully only through a declared relation; preference, probabilistic choice and human presence supply none | [§4](../FOUNDATIONS.md#4-algebra) Latitude | each latitude or transformation relation; owner: the owner of the contract that declares it | 3 |
-| P3 (independent), P6 (independent) | similar computation proposes shared machinery and never decides identity or authority; each instance keeps its responsibility and binding | [§4](../FOUNDATIONS.md#4-algebra) Shared machinery | whether one implementation serves several instances; owner: the accepted design of the realisation that would share it, which [DESIGN_MODULE §5](../DESIGN_MODULE.md#capability-and-foundation-selection-up-023) refines for software design where that profile is selected | 4 |
-| P6 (independent), P1 (independent) | a categorical claim is established only with its demonstration, and without it is a hypothesis | [§4](../FOUNDATIONS.md#4-algebra) Formal fragment | which categorical claims are made; owner: the member, profile or adopting Product that makes the claim | 3 |
 
 RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),
 AC-007 in
@@ -1217,7 +1205,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7f2c74584606617409e00702f74940c601148a9f926489eab093ffdaaecccdcf
+Source: FOUNDATIONS.md#conjunction-of-results sha256=755b39196cf7cfc9596a11b0bd8cc4792c10af98d94b847fcc909dc8afc895ea
 
 ### Conjunction of results
 
@@ -1343,7 +1331,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=acc5f06839a5863b6adfd7f37ec321912b75bde7109b4b6b3ebc79d435c25ac8 rows=10/36 selected by the anchors this frame carries
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551 rows=10/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted
 
 ### Foundation to law
 
