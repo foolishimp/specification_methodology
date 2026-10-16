@@ -1544,6 +1544,18 @@ against `c66ed4e`). The first regeneration attempts after the consumers
 paragraphs were written were refused at 177,697 and 175,236 bytes; the
 refusals, not a further capacity increase, led to this design.
 
+After I5-06b the frames grow a little: each `Binds:` item carries the
+rebased path, the member digest and the section digest; eleven frames
+bind the assurance relations (six more than at E2E-01), four bind Change
+impact and evidence reuse, and `member-build-assess` binds EVALUATION §6's
+return distinction, after the readback R-I5-06. M4a after I5-06b:
+`rf-task-a` 116,083; `rf-task-b` 100,705; `ac-task-a` 70,827;
+`traversal-task-f` 106,207; `eb-task-d` 116,161; `dm-task-d` 102,160;
+`configuration` 144,640; `binding` 99,680; `stale-summary` 95,524;
+`bootstrap` 86,073; `acceptance-release` 61,100; `member-build-assess`
+75,027; all twelve 1,174,187 (+7,225 against I5-02). TO1's acceptance
+condition stays `unresolved` until the frame-entry traces (I5-07).
+
 ### 4.4 Selected paths
 
 Task kinds are the six of the

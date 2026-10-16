@@ -101,8 +101,8 @@ are disclosed, not denied:
 Fit is supported, never asserted, by a recorded upper bound per run:
 supplied bytes (card, frame, task, fixture, measured) plus the 15,345
 bytes above plus the actor's reported acquisition (A3, A5), under the
-declared context capacity of 160,000 bytes for a frame (150,000 until
-I5, E2E-01) and 300,000 bytes of whole input. The harness system prompt is an unmeasured component; a
+declared context capacity of 150,000 bytes for a frame and 300,000 bytes
+of whole input. The harness system prompt is an unmeasured component; a
 run's fit judgment is therefore `indeterminate` in the strict sense of
 ACTIVATION §2 step 3 unless the actor reports a measured excess
 (`falsified`) or the harness discloses its prompt size. This limit is
@@ -110,7 +110,7 @@ stated in the results.
 
 ## 6. Limits per run
 
-Context: at most 300,000 bytes of whole input, 160,000 for the frame; a
+Context: at most 300,000 bytes of whole input, 150,000 for the frame; a
 run whose supplied bytes exceed the cap is refused before it starts,
 never truncated. Wall time: 20 minutes. Spend: tokens of this session's
 allowance; no external spend. Each run records its supplied bytes and,
