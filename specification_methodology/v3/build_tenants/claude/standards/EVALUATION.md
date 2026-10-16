@@ -19,6 +19,18 @@ semantic, authority-bearing, installed, release or end-to-end claim because
 the weaker property is easier to measure (P6; conserves
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001)).
 
+A claim about a construction is one of the four kinds the construction
+relation keeps apart: preservation, progress, termination and outcome
+satisfaction ([ACTIVATION §1](ACTIVATION.md#construction-relation)). Its
+witness is an assertion whose predicate is the full obligation, a
+necessary condition of it or part of a sufficient conjunction, and the
+claim states which. Its expected result has assertion provenance and its
+execution has execution provenance, as
+[FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation)
+and [Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)
+define them; a passing check of a necessary condition establishes that
+condition and no more (P1, P6).
+
 Boundary congruence. A checker, validator, harness, reviewer or other
 assurance surface supporting promotion or closure binds the exact claimed
 subject and its authoritative composition relation. Evidence over one file
@@ -161,7 +173,12 @@ reads the subject at that identity or relation, never a mutable working
 tree; it makes no repair; it does not assess its
 own authorship. Reusing the constructor's judgment does not satisfy
 independence; shared mechanical evidence may be reused, judgment may not
-(ACTIVATION §7). Any post-exposure revision is a declared intervention: it
+(ACTIVATION §7). Binding a returned assessment to its producer, subject,
+basis and evidence authenticates the result; it establishes neither the
+assertion provenance of its expected answer nor the execution provenance
+of its run, which
+[FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)
+requires separately (P6, P3). Any post-exposure revision is a declared intervention: it
 is either a method constituent with its own qualification boundary or a new
 qualification subject, and it cannot retroactively make the original
 frozen construction pass. This law prescribes no actor type or count,

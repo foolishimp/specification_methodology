@@ -793,6 +793,20 @@ straight to code, tests or release handling. The purpose is not a separate
 tracking bureaucracy; it is to classify impact correctly so the change
 enters the method at the right constitutional boundary.
 
+Diagnosis distinguishes the four causes the construction relation names
+([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)):
+a defective realisation, an inadequate governing requirement or design, an
+inaccurate predictive model, and insufficient observation. A prediction
+error alone does not decide whether the required outcome holds; unresolved
+alternatives are preserved, and each supported repair is routed to the
+owner of its cause, never inferred from the intake label. Severity
+describes the consequence of a discrepancy; priority orders the response
+under the selected outcome, dependencies, resources and authority, as the
+work carriers of [TICKETS](TICKETS.md) record them. A bug list projects
+existing work state and creates no separate delivery or authority
+mechanism (P1, P2, P6; law carried from the common construction
+requirement).
+
 Triage triangulates a failure across the applicable reference frames over
 the same subject and basis. Each frame tests candidate diagnoses against
 its material workspace variables, governing relations and evidence; their
@@ -1746,6 +1760,14 @@ Terms used in this section:
   execution binding, from that computational calculus to its execution
   environment. A tenant's registry entry locates the tenant; it is not the
   binding.
+- A generic procedure is a method procedure whose scope is independent of
+  the selected execution environment. It and its projections preserve the
+  permitted bindings: code, an event stream or reconstruction from a
+  complete history is required only where the governing obligations or
+  the selected execution binding require it, and an adequate human
+  process using current records and direct observation satisfies a
+  generic procedure that requires neither (P1, P6; law carried from the
+  common binding requirement).
 - Author identity and actor identity are as
   [EVALUATION §3](EVALUATION.md#3-independent-assessment) defines them:
   authorship is one condition of an assessment's independence there, and

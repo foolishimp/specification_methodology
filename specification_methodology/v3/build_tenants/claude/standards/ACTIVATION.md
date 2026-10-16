@@ -90,6 +90,41 @@ statements apply other sections: the step's results in the core apply
 resource limits of the tenant's binding apply SPEC_METHOD §11, which
 family F10 traces. SPEC_METHOD §8 keeps its owner.
 
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers): rows 1 and 6, transitions, completion and
+stops: §2, §4, §6 Resource limits and SPEC_METHOD §8. Row 2, intake,
+admission and output: [TICKETS §5](TICKETS.md#5-from-carrier-to-execution)
+and its family table, EXECUTIVE_BASELINE §3 Engagement applicability,
+Attention cycle, Drift locks and Work result, REFERENCE_FRAME §1 family
+table, AXIOMATIC_CALCULUS AC-007, PRODUCT_DEFINITION Explicit complete
+consumer update, DESIGN_MODULE UP-018 and
+[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion).
+Row 3, applicability: DESIGN_MODULE Cross-view axiom evaluation and its
+family table. Row 4, configuration and delegation:
+[EXECUTIVE_BASELINE §16](EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration),
+§17, The executive configuration and No mutation while Executive, PROFILES
+§6, REFERENCE_FRAME RF-009, SPEC_METHOD §8 and §11, EVALUATION §1 family
+table, TICKETS §7 Condition-based closure and reuse, and ODD. Row 5,
+recording a result without review: TICKETS as the carrier; no other
+separate consumer applies, because the rule binds only the grant holder's
+record in an existing result surface. Row 7, totality and hard stops:
+EVALUATION §5 When a finding blocks promotion, EXECUTIVE_BASELINE Technical
+triage, severity, priority and bounded repair, SPEC_METHOD §5,
+DESIGN_MODULE Post-ticket design review, ODD Graph functions and
+WORLD_MODEL. Row 8, refinement: FOUNDATIONS §4 Preservation through
+construction, REFERENCE_FRAME Evidence or coordinate translation,
+SPEC_METHOD §11 and WORLD_MODEL §5. Row 9, complete enclosing-relation
+admission: DESIGN_MODULE's family table and ODD §11.5B Execution authority
+audit; standing structural qualification has no separate consumer, because
+the admission owner performs it, as the row says. Rows 10 to 14, the
+construction relation:
+[SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage)
+and §8, EVALUATION §1, EXECUTIVE_BASELINE Steel-thread delivery, ODD
+§11.5D, FOUNDATIONS §3 Construction synthesis and §4 Preservation through
+construction, Parallel derivation and mutual assurance and Change impact
+and evidence reuse. Each consumer applies the rule and decides nothing the
+owning section does not (P2, P6).
+
 ### Transitions
 
 Construction moves work from a current state towards a destination
@@ -1351,7 +1386,12 @@ Work state is the tuple of: the current persistent workspace; the governing
 basis; the applicable closed results and judgments with their invalidators;
 the residuals; and the known uncertainty over external effects. It is an
 object (P3); its carrier (files, an event stream, another admitted owner) is
-a profile or realisation choice.
+a profile or realisation choice. The procedures of this section are
+generic: they require no particular carrier, and an adequate human process
+using current records and direct observation satisfies them where no
+governing obligation or selected binding requires code or a complete
+event history ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding),
+generic procedures) (P1, P6).
 
 Resumption is re-entry of the same method over the current work state,
 starting from the current material state, by a possibly different actor.

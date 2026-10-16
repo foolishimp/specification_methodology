@@ -849,6 +849,12 @@ bounded increments; where it already exists, the affected thread is extended
 or revalidated. Increments are chosen for consequential uncertainty,
 dependency and interface reach, and failure impact (P2; rc.2
 #steel-thread-delivery; the generic sequencing heuristic is SPEC_METHOD §8).
+The steel thread is this profile's selected strategy under the
+construction relation ([ACTIVATION §1 Strategy](ACTIVATION.md#construction-relation)):
+its rationale is early feedback on the end-to-end composition at the cost
+of later widening; other strategies remain lawful for other
+configurations, and no superiority is claimed beyond that rationale
+(P2, P6).
 
 Early end-to-end and integration evidence prunes incompatible construction
 choices before they spread; it settles the exercised interfaces, keeps

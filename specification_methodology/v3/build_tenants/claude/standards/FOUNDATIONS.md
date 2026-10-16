@@ -39,6 +39,16 @@ disposition a successor gives a predecessor claim
 ([RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015))
 (P1, P6). Every clause names the principle (P0 to P6, §3) that requires it.
 
+Four uses of "join" in this corpus are distinct, and each is named where
+it is used: a categorical join is a map between categories (§4 Formal
+fragment); a composition boundary is the join between successive steps
+([ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation));
+the join of results is the combination of closed results under one
+decision rule (§4 Conjunction of results); and a relation join is the
+equality join of participants in an enclosing relation
+([ACTIVATION §4](ACTIVATION.md#complete-enclosing-relation-admission)). An
+unqualified "join" in a result context means the join of results (P1).
+
 ## 2. Ontology
 
 | Term | Definition | Requires |
@@ -599,6 +609,15 @@ consequence, in five columns:
   a premise, adds no standing to the row, owns no choice, and does not
   claim that a pillar is an axiom or follows from finite capacity.
 
+Consumers. After the table, a paragraph names, for each row, the sections
+in this or other members that apply the rule where an actor enters it,
+linked at its own locus, or states that no separate consumer applies and
+the scope of that absence. A blank field or a generic referral establishes
+neither coverage nor non-applicability. The paragraph is a trace like the
+table: a consumer named in it applies the rule and decides nothing the
+owning section does not (P2, P6; law carried from the common standalone
+successor requirement).
+
 A family table is a trace. Its consequence and choice columns state no
 determination that the rule it names does not state, and the table owns
 none of the rules or choices it lists (P1, P6).
@@ -624,7 +643,9 @@ and traces none of their rules. A Pillar cell marked pending names no
 pillar: the family's table does not yet carry the Pillar column, and the
 cell is filled from that table's rows when it does. The index decides
 nothing: each rule is in its owning section, and each trace is in its
-table (P1, P6).
+table (P1, P6). The consumers paragraph is written for F2 and F22; for
+the other families it is pending, and until it is written those tables
+trace their rules' consumers no further than their rows' citations.
 
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
@@ -1113,6 +1134,21 @@ conditions of the situations the family governs, not commitments.
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P1 (independent); instance premise c | By P6 a number is a claim on its model and evidence, by P5 an unsupported estimate stays unknown, and by P1 a probability over outcomes is distinct from the truth of the predicate, so a quantified assurance claim states its population, priors, likelihoods, shared causes and calibration limits, and no threshold is imposed by this member | [Quantified assurance](#quantified-assurance) | the risk policy and any threshold: the actor exercising the admitted work authority, under the adopting Product | 9 |
 | P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P3 a changed dependency changes what an earlier observation applies to, by P4b retained evidence is conserved with its subject, by P5 unknown impact leaves the dependent assurance undecided, and by P6 retention is justified and not assumed, so validity dependencies are kept apart from justification links, affected checks are selected conservatively, and evidence is retained only under its validity conditions while mandatory gates stay applicable, which ACTIVATION §7 applies to closed results and handoffs | [Change impact and evidence reuse](#change-impact-and-evidence-reuse) | the representation of dependencies and the selection model: the realisation; mandatory gates: RELEASE §8 and the adopting Product | 2, 9 |
 | P1 (independent), P6 (independent); instance premise a | By P1 a representation is distinct from the meaning it carries, and by P6 a label is not evidence, so the formal interpretation distinguishes a stated formula, a discharged argument, checked structure, an external predicate and execution evidence, and finite examples prove no universal implication | [Formal representation](#formal-representation) | the carrier, checker and projections: the tenant's a_c design under AXIOMATIC_CALCULUS | 6, 10 |
+
+Consumers of these rows: rows 1 and 2, preservation: ACTIVATION §1
+Composition boundaries and §4 Refinement. Rows 3 and 4, assertions and
+observation sufficiency: EVALUATION §1 and §3, ASSURANCE §3, §10 and §11,
+ACTIVATION §1 Evaluation and completion. Row 5, provenance and mutual
+assurance: EVALUATION §1 and §3, ASSURANCE §3 and §14, and the
+Cross-Synthesis rule of the Product that owns this corpus. Row 6,
+quantified assurance: no separate consumer applies yet; the only
+quantified claims in this corpus are the reduction measures of its
+design, which claim no probability, and a profile or adopting Product that
+claims quantified assurance binds this row. Row 7, change impact and
+reuse: ACTIVATION §5 and §7, RELEASE §8 and §9, SPEC_METHOD §4 and
+EVALUATION §3. Row 8, formal representation: AXIOMATIC_CALCULUS, the a_c
+interpretation of this corpus and CONFORMANCE. Each consumer applies the
+rule and decides nothing this section does not (P2, P6).
 
 ### Preservation through construction
 

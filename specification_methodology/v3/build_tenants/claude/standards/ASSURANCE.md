@@ -215,7 +215,14 @@ Every live requirement has written test-case authority (P6; rc.2
 #test-authority-rule). That authority may include scenario bundles,
 ordered test-case sequences, negative or control cases and other explicit
 evidence cases appropriate to the kind of truth being proved; it exists in
-written form and is traceable. No live requirement is fully proved on
+written form and is traceable. Written authority includes the assertion
+provenance of each expected result: the owning obligation, its
+interpretation, assumptions, derivation and shared dependencies, and
+whether the asserted predicate is the obligation, a necessary condition of
+it or part of a sufficient conjunction
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
+[Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance))
+(P6). No live requirement is fully proved on
 informal operator confidence, ambient habit or an unlabelled test corpus
 (P6; EVALUATION §5, green labels are not acceptance). The derivation of
 each test case from admitted work authority is
@@ -613,7 +620,11 @@ combine only through the declared relations of REFERENCE_FRAME §6, whose
 result conjunction is
 [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)
 (P4a, P6;
-provenance #testing-evidence-composition).
+provenance #testing-evidence-composition). Each bound result states which
+predicate it establishes; a result over a necessary condition does not
+establish the obligation, and the sufficiency of a conjunction is a claim
+of its own ([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation))
+(P6).
 
 The default proof responsibilities are (P6, P2):
 
@@ -643,7 +654,13 @@ reconstruction relation. A harness, fixture, expected-value builder, proof
 script, assurance evaluator or assessor does not reconstruct a parallel
 owner state from raw payloads, events, logs, filenames, labels or
 implementation fragments and then evaluate that self-authored state as if
-it were the Product subject.
+it were the Product subject. The observation binding needs its own
+support: an idealised observation does not establish that the instrument,
+actor or execution acquired the required facts, and two admissible
+subjects with the same acquired observation but different truth of the
+asserted obligation leave the checker unable to decide between them
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
+Observation sufficiency) (P1, P6).
 
 After lawful acquisition, an independently derived oracle may evaluate the
 governing claim. Generic assurance mechanics may compute bytes, digests,
@@ -909,7 +926,13 @@ implementation and module-derived unit tests
 ```
 
 The first chain is semantic derivation. The second is evidence feedback
-and cannot select or accept the affected semantic answer (P6). When the
+and cannot select or accept the affected semantic answer (P6). The two
+chains are this member's instance of parallel derivation: expected results
+carry assertion provenance from the first chain and executions carry
+execution provenance from the second; agreement between them is
+compatible with a shared error, and disagreement requires diagnosis
+([FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance))
+(P6, P1). When the
 design's co-evolution condition holds, the two chains may proceed together
 without making implementation semantic authority; design still owns the
 structural HOW. Where the design is not decision-complete, the relation is
