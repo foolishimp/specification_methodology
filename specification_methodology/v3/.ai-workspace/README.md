@@ -6,7 +6,7 @@
 - [T-001-CODEX](tickets/active/T-001-CODEX-principles.md): activated independent Codex principles attempt; current state is owned by that ticket.
 - [T-001-CLAUDE](tickets/backlog/T-001-CLAUDE-principles.md): independent Claude principles attempt; consult its owning ticket for state.
 - [T-002](tickets/active/T-002-c3-successor-construction.md): upstream authority for the v3.0.0 successor construction under the installed Executive engagement; it records the common inputs, work and admission boundaries.
-- [T-002-CLAUDE](tickets/active/T-002-CLAUDE-c3-successor-construction.md) and [T-002-CODEX](tickets/active/T-002-CODEX-c3-successor-construction.md): tenant execution lines; their tickets own actor assignments, admitted contracts and returned work. Existing I4 admissions retain their exact basis. I5 ratification and new admissions remain pending.
+- [T-002-CLAUDE](tickets/active/T-002-CLAUDE-c3-successor-construction.md) and [T-002-CODEX](tickets/active/T-002-CODEX-c3-successor-construction.md): tenant execution lines; their tickets own actor assignments, admitted contracts and returned work. Existing I4 admissions retain their historical basis. I5 input C3-I5-06 is ratified; Codex is admitted under EC-CODEX-I5-01, while Claude retains its separate admission boundary.
 
 Active, backlog and completed lanes, comments, decisions and sprints are scoped here. Use the smallest existing carrier required by work lifetime. This construction's tickets do not make ticket-first a universal method requirement.
 

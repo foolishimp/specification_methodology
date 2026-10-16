@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-16T12:50:08Z
+updated_at: 2026-10-16T15:11:14Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -33,7 +33,7 @@ The direction separates lawful construction from the chosen constrained outcome.
 
 Only common preparation is active here. Existing I4 contracts retain source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and their admitted bytes. Neither a new draft nor either review silently repairs or rebinds those candidates. C3-I5-01 remains the immutable historical proposal; the consolidated successor receives its own source commit and descendant input record.
 
-Current result: [C3-I5-06](#c3-i5-06-proposed-input-snapshot) is ready for exact-source ratification at `4c340f7adec9f3c893e3e267b23e4cadeb357854`. [EC-COMMON-I5-06](T-001-common-definition-and-checkpoints.md#iteration-5-consistency-close-out) returns checked source and two satisfied fresh nonauthor working readbacks, with no remaining findings in their scopes. The supported owner, vocabulary, criterion-routing and entry corrections are complete. The existing I5-00 work item owns this prepared result; all fourteen original finding assignments, seven assurance duties and historical inputs are preserved. Both I5 tenant admissions remain pending the product owner's ratification of this exact source.
+Current result: C3-I5-06 at `4c340f7adec9f3c893e3e267b23e4cadeb357854` is ratified by the product owner's “ocntinue”, as recorded in [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-ratification). The 47-member source snapshot remains unchanged. Both Codex working readbacks and Claude's cross-family readback support the bounded common close-out; the latter's two Low record findings are explicitly disposed in T-001. I5-00 is complete. [Codex's admitted EC-CODEX-I5-01](T-002-CODEX-c3-successor-construction.md#current-iteration-5-contract) begins its successor construction; this record does not activate Claude's line. The work map and assurance duties below remain the selected common input.
 
 ## Iteration 5 consolidated work
 

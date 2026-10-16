@@ -10,13 +10,25 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-16T12:50:08Z
+updated_at: 2026-10-16T15:11:14Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 ratification
+
+2026-10-16T15:11:14Z — The product owner answers “ocntinue” to the pen's explicit request to ratify source `4c340f7adec9f3c893e3e267b23e4cadeb357854` as C3-I5-06 and begin the Codex tenant build. This ratifies that exact common source, with its 47-member input recorded at `3ff9dfdb28d4d7cf449067a72281d79a68494348`. The two fresh Codex working readbacks are satisfied; Claude's subsequent [cross-family readback](../../comments/claude/20261016T130200Z_REVIEW_C3_I5_06_CONSISTENCY_CLOSEOUT_4C340F7.md), committed at `1eb66d1`, also finds it ready with no outcome change or blocking defect. Ratification selects the common WHAT, not a tenant candidate, predecessor replacement, publication or release.
+
+Common Ledger Writer activation: this session records the owner decision, updates only current work/routing projections and admits the dependency-ready Codex construction contract below. The separate common Git Writer checkpoints those exact returned paths on main. Governing source remains `4c340f7adec9f3c893e3e267b23e4cadeb357854`; all historical snapshots and admitted contract bodies remain byte-identical. Claude's ticket and worktree receive no effects. The tenant's later Git Writer receives this recording through its own isolated branch.
+
+Claude L1 is resolved in the record as five declined further wording changes: local senses of independence retain their already distinct authentication, authorship, expectation and statistical contracts; mandatory gates and fixtures retain their task-scoped meanings without a new global definition; comparison/control actor denotes the comparison arm under the existing criterion and conformance obligations; “construction binding” already reaches its owning frame requirement; remaining ordinary uses of “join” retain their composition meaning under the explicit categorical/composition distinction. The protected conformance and principle bodies are preserved. The earlier evaluation's suggested wording is not all applied; this entry supplies the missing disposition, without asserting it was applied. None of these changes is needed to decide the permitted cases under the ratified source.
+
+Claude L2 remains a disclosed Low broken relative link inside the immutable peer-review attachment. Its intended target is [Product checkpoints](../../../specification/PRODUCT.md#checkpoints). The original attachment and pin are preserved. The earlier 447-link check covered its declared twenty-member set, not every supporting pin. No link-clean claim is made for the entire historical input. The review's assertion that actual-use trials are the only external validation route is not adopted: independently grounded observations may also support common-model validation, under ASSURANCE's actual scope and limits.
+
+The exact-source decision permits dependent Codex admission under [T-002-CODEX](T-002-CODEX-c3-successor-construction.md#current-iteration-5-contract). The common I5-00 preparation and ratification obligation is complete. Both lines retain the shared input and work duties; this instruction activates Codex only. All later member, comparison, replacement, merge and release decisions retain their owners.
 
 ### Iteration 5 consistency close-out
 
