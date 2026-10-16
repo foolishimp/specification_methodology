@@ -253,8 +253,13 @@ clauses over nine sections of ACTIVATION §1 and FOUNDATIONS §3 and §4)
 and the premise P4a. Their cases and review follow the three parts above,
 with one addition: the case writer records, for each case, which kind of
 support the source gives the determination, so that the review can check
-that the encoded kind matches. Until those cases and the review are
-written, the fidelity of G14 is unassessed and the set's README says so.
+that the encoded kind matches. The cases and the review for G14 and P4a
+were written at I5-05 (`a_c/i3/fidelity/cases-i5.md`, 22 cases;
+`review-i5.md`: agree 14, disagree 7, cannot answer 1); the
+disagreements, seven force hardenings of non-requirements and
+non-entailments among them, were repaired as encoding decisions, and
+the re-reading of the repaired clauses waits for the I5-09 readback.
+Same-family working evidence, as the files say.
 
 The model is exact, not approximate: each clause states its source's
 determination. A projection that omits clauses is a selection, declared

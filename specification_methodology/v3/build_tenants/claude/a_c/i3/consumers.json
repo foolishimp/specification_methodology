@@ -1155,7 +1155,7 @@
   },
   {
    "clause": "urn:stdo-3:claude:i3:clause:ao-indeterminate-vs-unresolved",
-   "statement": "It is distinct from an evaluation that was not performed, and from work or coverage that remains unresolved, which is a state of the work ([ACTIVATION \u00a73](ACTIV",
+   "statement": "`indeterminate` is the core judgment whose admissible evidence cannot decide the predicate (Results). It is distinct from an evaluation that was not performed, ",
    "owners": [
     {
      "locus": "FOUNDATIONS.md#assertions-and-observation",
@@ -1624,7 +1624,7 @@
   },
   {
    "clause": "urn:stdo-3:claude:i3:clause:ao-sufficiency",
-   "statement": "For all s, s' in \u03a9: \u03c0(s) = \u03c0(s') implies q_t(s) = q_t(s').",
+   "statement": "A checker that always decides `q_t` correctly from \u03c0 alone requires: ```text For all s, s' in \u03a9: \u03c0(s) = \u03c0(s') implies q_t(s) = q_t(s').",
    "owners": [
     {
      "locus": "FOUNDATIONS.md#assertions-and-observation",
@@ -12602,6 +12602,61 @@
    ]
   },
   {
+   "clause": "urn:stdo-3:claude:i3:clause:p4a-retention",
+   "statement": "Yet the steps compose although the first's result type need not meet the second's declared domain, and the first step's other intermediate results and stop stat",
+   "owners": [
+    {
+     "locus": "FOUNDATIONS.md#3-commitments",
+     "sha256": "e213f4db8022d2444103be1401503ec4956a1237f3abe423912f05526ee8bb5c",
+     "resolves": true
+    }
+   ],
+   "consumers": [
+    {
+     "locus": "IDENTITY.md#boundaries-and-sufficiency-claims",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "GLOSSARY.md#16-concepts-of-members-without-a-declared-context",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "DESIGN_MODULE.md#foundation-to-law",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "DESIGN_MODULE.md#totality",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "ODD.md#foundation-to-law",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "EXECUTIVE_BASELINE.md#foundation-to-law",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    },
+    {
+     "locus": "TRAVERSAL_OCCURRENCE.md#foundation-to-law",
+     "owner": "FOUNDATIONS.md#3-commitments",
+     "support": "cites",
+     "basis": "link-derived; semantics unresolved"
+    }
+   ]
+  },
+  {
    "clause": "urn:stdo-3:claude:i3:clause:p4b",
    "statement": "P4b Conservation of step-produced facts. Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produ",
    "owners": [
@@ -13729,7 +13784,7 @@
   },
   {
    "clause": "urn:stdo-3:claude:i3:clause:pd-incorrect-model",
-   "statement": "Agreement with an incorrect common model cannot validate that model against the desired real-world outcome;",
+   "statement": "Agreement with an incorrect common model cannot validate that model against the desired real-world outcome; validation of the governing expectations uses its de",
    "owners": [
     {
      "locus": "FOUNDATIONS.md#parallel-derivation-and-mutual-assurance",
@@ -16496,9 +16551,9 @@
   }
  ],
  "counts": {
-  "clauses": 154,
+  "clauses": 155,
   "owners_unresolved": 0,
-  "consumer_bindings": 2415,
+  "consumer_bindings": 2422,
   "clauses_without_consumer": 0,
   "read_support": 0
  }

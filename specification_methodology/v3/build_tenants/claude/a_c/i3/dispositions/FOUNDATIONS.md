@@ -15,7 +15,7 @@ One row per heading section of `standards/FOUNDATIONS.md` at the source-settleme
 | `#work-boundary` | 282-297 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#accounts-of-a-construction` | 298-321 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#imports-between-members` | 322-378 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
-| `#3-commitments` | 379-537 | encoded-in-part | clause:p0, clause:p1, clause:p2, clause:p3, clause:p4a, clause:p4b, clause:p5, clause:p6; the rest of the section is not encoded |
+| `#3-commitments` | 379-537 | encoded-in-part | clause:p0, clause:p1, clause:p2, clause:p3, clause:p4a, clause:p4a-retention, clause:p4b, clause:p5, clause:p6; the rest of the section is not encoded |
 | `#construction-synthesis` | 538-567 | encoded-in-part | clause:cs-synthesis-derived, clause:cs-no-proof-of-reachability; the rest of the section is not encoded |
 | `#foundation-to-law` | 568-706 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |
 | `#4-algebra` | 707-789 | not-encoded-i3 | outside the iteration 3 encoding scope (ledger variance, step 4) |

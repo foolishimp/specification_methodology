@@ -147,9 +147,36 @@
         {
           "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
           "ref": "urn:stdo-3:claude:i3:standing:premise"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "only when the first's result type and judgment satisfy the second's exact declared domain and preconditions"
         }
       ],
       "statement": "P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p4a-retention",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4a"
+        }
+      ],
+      "statement": "Yet the steps compose although the first's result type need not meet the second's declared domain, and the first step's other intermediate results and stop state are lost; P4a forbids both.",
       "source_refs": [
         "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
       ]

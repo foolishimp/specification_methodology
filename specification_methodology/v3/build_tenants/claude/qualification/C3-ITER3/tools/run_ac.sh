@@ -1,5 +1,5 @@
 #!/bin/bash
-AC=$1; OUT=$2; cd /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+AC=$1; OUT=$2; cd "$(cd "$(dirname "$0")/../../.." && pwd)"  # the tenant root that holds this script, so a clean archive runs it unchanged (I5-05)
 mkdir -p "$OUT/projections"; LOG=$OUT/commands.log; : > $LOG
 run(){ echo "$(date -u +%FT%TZ) $*" >> $LOG; python3 -I "$AC" "$@"; echo "exit=$?" >> $LOG; }
 run validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output "$OUT/validation-report.json" --emit-map "$OUT/logical-constraint-map.json"

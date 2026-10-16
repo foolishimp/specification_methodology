@@ -69,7 +69,8 @@ G1 = [
     prem('p1', 'P1 Interpretation.', 'through a declared contract.'),
     prem('p2', 'P2 Purpose.', 'the transformation they serve.'),
     prem('p3', 'P3 Identity.', 'a claim with a proof obligation.'),
-    prem('p4a', 'P4a Typed composition.', "satisfy the second's exact declared domain and preconditions."),
+    dict(prem('p4a', 'P4a Typed composition.', "satisfy the second's exact declared domain and preconditions."), condition="only when the first's result type and judgment satisfy the second's exact declared domain and preconditions"),
+    {'id': 'p4a-retention', 'at': CMT, 'find': 'Yet the steps compose although', 'until': 'P4a forbids both.', 'standing': 'consequence', 'support': ['p4a'], 'op': 'forbids', 'force': 'must-not'},  # what P4a forbids: composition without type fit, and the loss of intermediate results and stop state (review-i5 FC5-2)
     prem('p4b', 'P4b Conservation of step-produced facts.', 'recorded by the step that produced them.', std='consequence', support=['p0', 'p2']),
     prem('p5', 'P5 Totality.', 'it cannot report success on one (P6).', std='consequence', support=['p0', 'p6']),
     prem('p6', 'P6 Justification and authority.', 'authority permits or disposes within scope.'),
@@ -249,6 +250,9 @@ CONCEPTS.update({
 
 
 def c(id_, at, find, until=None, support=(), op='states', force=None, subjects=(), kind='discharged-argument', **kw):
+    # Encoding decision (I5-05): the kind of support defaults to `discharged-argument` because every consequence of
+    # these sections is derived in its family-table row from named premises; a display formula is `stated-formula`
+    # (nine clauses). No clause of the group is checked structure, an external assessment or a recorded execution.
     d = {'id': id_, 'at': at, 'find': find, 'standing': 'consequence', 'support': list(support), 'op': op,
          'subjects': list(subjects), 'support-kind': kind}
     if until:
@@ -262,15 +266,15 @@ def c(id_, at, find, until=None, support=(), op='states', force=None, subjects=(
 G14 = [
     # ACTIVATION §1 Construction relation
     c('cr-binds-a-z', CR, 'A construction binds A, the current state of Transitions', 'the acceptance conditions of the selected outcome.', ['p2', 'p3'], subjects=['construction']),
-    c('cr-account-of-a', CR, 'The account of A describes the material workspace state', 'is the subject (§5).', ['p3', 'p0'], subjects=['construction']),
+    c('cr-account-of-a', CR, 'The account of A describes the material workspace state', 'is the subject (§5).', ['p3'], subjects=['construction']),
     c('cr-several-states', CR, 'Several realised states may satisfy Z.', None, ['p2'], op='permits', force='may', subjects=['construction']),
     c('cr-governing-spec-supplies-z', CR, 'The governing specification, the selected WHAT across', 'descriptions refine Z.', ['p2', 'p6'], subjects=['construction']),
-    c('cr-calculi-lawful', CR, 'The applicable declared requirements and the declared calculi', 'the calculi select no outcome.', ['p6', 'p4a'], subjects=['construction']),
-    c('cr-lawful-not-delivery', CR, 'A lawful construction can remain incomplete or fail to reach Z', 'neither delivery nor optimality.', ['p6', 'p5'], subjects=['construction']),
+    c('cr-calculi-lawful', CR, 'The applicable declared requirements and the declared calculi', 'the calculi select no outcome.', ['p6', 'p2'], subjects=['construction']),  # the paragraph cites (P2, P3, P6); P4a is the encoder's reading and is not cited
+    c('cr-lawful-not-delivery', CR, 'A lawful construction can remain incomplete or fail to reach Z', 'neither delivery nor optimality.', ['p2', 'p3', 'p6'], subjects=['construction']),  # the paragraph cites (P2, P3, P6)
     c('cr-three-accounts-distinct', CR, 'These accounts have different purposes and can be incomplete or wrong', 'claims of their own (P1).', ['p1'], op='forbids', force='must-not', subjects=['construction']),
-    c('cr-strategy-serves-z', CR, 'A strategy arranges admissible construction and assurance to serve Z within the selected resource envelope.', None, ['p2', 'p5'], op='requires', force='must', subjects=['strategy']),
+    c('cr-strategy-serves-z', CR, 'A strategy arranges admissible construction and assurance to serve Z within the selected resource envelope.', None, ['p2', 'p5'], subjects=['strategy']),  # a description, not a requirement (review-i5 FC5-4, Low)
     c('cr-strategy-selection-owner', CR, 'The selection belongs to the realisation and to the actor exercising the', 'assumptions it depends on.', ['p6', 'p2'], subjects=['strategy']),
-    c('cr-no-preferred-strategy', CR, 'No exhaustive optimisation, universal numerical budget, scalar cost measure or preferred', 'consumers (P2, P5, P6).', ['p2', 'p5', 'p6'], op='forbids', force='must-not', subjects=['strategy']),
+    c('cr-no-preferred-strategy', CR, 'No exhaustive optimisation, universal numerical budget, scalar cost measure or preferred', 'consumers (P2, P5, P6).', ['p2', 'p5', 'p6'], subjects=['strategy']),  # a non-requirement: states, never must-not (review-i5 FC5-4)
     c('cr-composition-boundary', CR, 'A composition boundary is the boundary between successive steps', 'starting state.', ['p4a'], subjects=['composition-boundary']),
     c('cr-steps-compose', CR, 'Steps compose through compatible preconditions, effects, results and authority, and each boundary preserves the applicable outer obligations.', None, ['p4a', 'p6'], op='requires', force='must', subjects=['composition-boundary']),
     c('cr-local-success', CR, 'Local success supplies end-to-end success only when the required', 'FOUNDATIONS.md#preservation-through-construction).', ['p4a', 'p1', 'p6'], subjects=['composition-boundary'], condition='only when the required coverage, composition compatibility and outcome evidence hold'),
@@ -278,24 +282,24 @@ G14 = [
     c('cr-homeostasis', CR, 'Homeostasis means correction towards the required conditions', 'adequacy of those conditions.', ['p2', 'p5'], subjects=['feedback']),
     c('cr-bug-change-work', CR, 'For work management a bug is a category of feature/change work', 'SPEC_METHOD.md#universal-intake-triage)).', ['p2'], subjects=['feedback']),
     c('cr-four-causes', CR, 'Diagnosis distinguishes four causes', 'and insufficient observation.', ['p1'], op='requires', force='must', subjects=['diagnosis-cause']),
-    c('cr-prediction-error', CR, 'A prediction error alone does not decide whether the required outcome holds.', None, ['p1', 'p6'], op='forbids', force='must-not', subjects=['diagnosis-cause']),
-    c('cr-revised-model', CR, 'A revised model does not erase the counterexample or by itself repair the realisation.', None, ['p6'], op='forbids', force='must-not', subjects=['diagnosis-cause']),
+    c('cr-prediction-error', CR, 'A prediction error alone does not decide whether the required outcome holds.', None, ['p1', 'p6'], subjects=['diagnosis-cause']),  # non-entailment: states (review-i5 FC5-6)
+    c('cr-revised-model', CR, 'A revised model does not erase the counterexample or by itself repair the realisation.', None, ['p6'], subjects=['diagnosis-cause']),  # non-entailment: states (review-i5 FC5-6)
     c('cr-route-to-owner', CR, 'Diagnosis preserves unresolved alternatives and routes each supported repair', 'no repair class and no permission.', ['p5', 'p6'], op='requires', force='must', subjects=['diagnosis-cause']),
     c('cr-severity-priority', CR, 'Severity describes consequence; priority orders the response', 'resources and authority.', ['p6', 'p2'], subjects=['feedback']),
     c('cr-four-claims', CR, 'Recursive and repeated work distinguish four claims', 'and outcome satisfaction.', ['p5', 'p2'], subjects=['construction']),
-    c('cr-no-universal-termination', CR, 'A formal induction or termination claim supplies its premises and argument', 'available evidence.', ['p5', 'p6'], subjects=['construction']),
+    c('cr-no-universal-termination', CR, 'A formal induction or termination claim supplies its premises and argument', 'available evidence.', ['p5', 'p6'], subjects=['construction'], condition='where such a proof is absent, the claim stays within the available evidence'),
     c('cr-repeated-activity', CR, 'Discovery may enlarge the known work (Transitions above), and repeated activity alone establishes no progress.', None, ['p5'], subjects=['construction']),
     c('cr-resource-limit', CR, 'A resource limit can end an attempt with an unresolved outcome', 'nor impossibility (P5, P2, P6).', ['p5', 'p6'], subjects=['construction']),
     c('cr-completion-evidence', CR, 'Completion requires sufficient evidence against Z, including its acceptance', 'nor impossibility (P5, P6).', ['p6', 'p5'], op='requires', force='must', subjects=['construction']),
     c('cr-one-owner', CR, 'This subsection is the one owner of the construction relation in this corpus.', None, ['p6'], subjects=['construction']),
-    c('cr-no-runtime', CR, 'The existing work and evidence carriers hold the necessary state', 'orchestration runtime.', ['p6'], op='forbids', force='must-not', subjects=['construction']),
+    c('cr-no-runtime', CR, 'The existing work and evidence carriers hold the necessary state', 'orchestration runtime.', ['p6'], subjects=['construction']),  # adds no runtime: a non-requirement (review-i5 FC5-4)
     c('cr-no-solver', CR, 'It establishes no general solver, no fixed organisational structure', 'categorical universality (P6, P2).', ['p6'], subjects=['construction']),
     # FOUNDATIONS §3 Construction synthesis
     c('cs-synthesis-derived', CS, 'This is a synthesis of their relations', 'grounds each part.', ['p6'], subjects=['construction']),
-    c('cs-no-proof-of-reachability', CS, 'Feedback, a useful model and locally valid steps do not by themselves prove reachability', 'termination (P5, P6).', ['p5', 'p6'], op='forbids', force='must-not', subjects=['construction']),
+    c('cs-no-proof-of-reachability', CS, 'Feedback, a useful model and locally valid steps do not by themselves prove reachability', 'termination (P5, P6).', ['p5', 'p6'], subjects=['construction']),  # non-entailment: states (review-i5 FC5-8)
     # FOUNDATIONS §4 Assurance relations
     c('ar-shared-owner', AR, 'They are the shared owner for the preservation', 'state no second relation (P6).', ['p6'], subjects=['assertion']),
-    c('ar-notation-obligations', AR, 'The notation states proof obligations; writing an implication does not discharge it.', None, ['p6', 'p1'], subjects=['preservation-step']),
+    c('ar-notation-obligations', AR, 'The notation states proof obligations; writing an implication does not discharge it.', None, ['p6', 'p1'], subjects=['assertion']),
     # Preservation through construction
     c('pr-step-form', PR, "For all x, x':", "P_(i+1)(x').", ['p4a'], subjects=['preservation-step'], kind='stated-formula'),
     c('pr-completion-only', PR, 'A relation covering successful completion alone supplies no claim', 'separate obligation (P4a, P1, P6).', ['p4a', 'p1', 'p6'], subjects=['preservation-step']),
@@ -307,14 +311,14 @@ G14 = [
     # Assertions and observation
     c('ao-qr', AO, 'For a selected source obligation r, let', 'declared domain Ω of cases.', ['p1'], subjects=['assertion'], kind='stated-formula'),
     c('ao-digest-not-fidelity', AO, 'A source identifier or digest authenticates the selected text; it does not prove the interpretation faithful (P1, P3).', None, ['p1', 'p3'], subjects=['assertion']),
-    c('ao-directions', AO, 'Q_r implies q_t', 'the stated conjunction is sufficient.', ['p1', 'p6'], subjects=['assertion'], kind='stated-formula'),
-    c('ao-necessary-not-full', AO, 'Passing a check of a necessary condition does not establish the full obligation.', None, ['p6'], op='forbids', force='must-not', subjects=['assertion']),
+    c('ao-directions', AO, 'Q_r implies q_t', 'conditional on Γ and Ω.', ['p1', 'p6'], subjects=['assertion'], kind='stated-formula', condition='conditional on Γ and Ω'),
+    c('ao-necessary-not-full', AO, 'Passing a check of a necessary condition does not establish the full obligation.', None, ['p6'], subjects=['assertion']),  # non-entailment: states (review-i5 FC5-12)
     c('ao-conjunction-coverage', AO, 'A conjunction requires its own coverage and compatibility argument', 'by its count (P1, P6, P5).', ['p5', 'p6'], op='requires', force='must', subjects=['assertion']),
-    c('ao-indeterminate-vs-unresolved', AO, 'It is distinct from an evaluation that was not performed, and from work', 'not a judgment value.', ['p5'], subjects=['observation']),
+    c('ao-indeterminate-vs-unresolved', AO, '`indeterminate` is the core judgment whose admissible evidence cannot decide the predicate', 'not a judgment value.', ['p5'], subjects=['observation']),  # with its antecedent (review-i5)
     c('ao-soundness', AO, 'For every s in Ω:', 'implies not q_t(s).', ['p6'], subjects=['assertion', 'observation'], kind='stated-formula'),
-    c('ao-pass-is-observation', AO, "An observed test pass remains an observation while the oracle's fidelity is unestablished", 'treated the same way.', ['p6'], subjects=['observation']),
-    c('ao-observation-binding', AO, 'The observation binding itself needs support', 'acquired the required facts correctly.', ['p3', 'p6'], op='requires', force='must', subjects=['observation']),
-    c('ao-sufficiency', AO, "For all s, s' in Ω:", "q_t(s) = q_t(s').", ['p3', 'p1'], subjects=['observation'], kind='stated-formula'),
+    c('ao-pass-is-observation', AO, "An observed test pass remains an observation while the oracle's fidelity is unestablished", 'treated the same way.', ['p6'], subjects=['observation'], condition="while the oracle's fidelity is unestablished"),
+    c('ao-observation-binding', AO, 'The observation binding itself needs support', 'acquired the required facts correctly.', ['p6', 'p5', 'p1'], op='requires', force='must', subjects=['observation']),  # the paragraph cites (P6, P5, P1)
+    c('ao-sufficiency', AO, 'A checker that always decides `q_t` correctly from π alone requires:', "q_t(s) = q_t(s').", ['p3', 'p1'], subjects=['observation'], kind='stated-formula', condition='for a checker that always decides q_t correctly from π alone'),
     c('ao-insufficient-response', AO, 'If two admissible cases have the same observation but opposite truth values', 'indeterminate judgment is required.', ['p3', 'p5', 'p6'], op='requires', force='must', subjects=['observation']),
     # Parallel derivation and mutual assurance
     c('pd-assertion-provenance', PD, 'An expected result or acceptance predicate has assertion provenance', 'which give it meaning.', ['p6'], subjects=['assertion-provenance']),
@@ -323,8 +327,8 @@ G14 = [
     c('pd-authentication-third', PD, 'Authentication of a returned assessment, which binds', 'establishes neither provenance (P6, P3).', ['p6', 'p3'], subjects=['assertion-provenance']),
     c('pd-implementation-derived', PD, "Repeating the implementation's decision supplies no independent justification", 'upstream obligation.', ['p1', 'p6'], subjects=['mutual-assurance']),
     c('pd-agreement-shared-error', PD, 'Agreement is compatible with both being correct and with a shared error', 'faulty party by itself.', ['p4a', 'p6'], subjects=['mutual-assurance']),
-    c('pd-no-statistical-independence', PD, 'Different actors, model families or codebases do not establish statistical independence.', None, ['p6'], op='forbids', force='must-not', subjects=['mutual-assurance']),
-    c('pd-incorrect-model', PD, 'Agreement with an incorrect common model cannot validate that model', 'real-world outcome;', ['p4a', 'p6'], subjects=['mutual-assurance']),
+    c('pd-no-statistical-independence', PD, 'Different actors, model families or codebases do not establish statistical independence.', None, ['p6'], subjects=['mutual-assurance']),  # non-entailment: states (review-i5 FC5-15)
+    c('pd-incorrect-model', PD, 'Agreement with an incorrect common model cannot validate that model', '(SPEC_METHOD.md#4-change-management)) (P4a, P6, P1).', ['p4a', 'p6', 'p1'], subjects=['mutual-assurance']),  # the whole sentence, to its citation
     c('pd-no-per-test-document', PD, 'No new per-test document, parallel ledger, fixed number of reviewers or prescribed provenance format is required (P6).', None, ['p6'], op='permits', force='may', subjects=['assertion-provenance']),
     # Quantified assurance
     c('qa-actor-selects', QA, 'The actor exercising the admitted work authority selects the required', 'resource limits.', ['p6'], subjects=['quantified-claim']),
@@ -347,20 +351,20 @@ G14 = [
     c('ci-e-new', CI, 'E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.', None, ['p4b', 'p3'], subjects=['retention'], kind='stated-formula'),
     c('ci-retention-conditions', CI, 'Retention establishes the material validity conditions on the new', 'established preservation relation.', ['p3', 'p4b', 'p6'], op='requires', force='must', subjects=['retention']),
     c('ci-hash-alone', CI, 'A changed hash alone establishes neither invalidity nor equivalence.', None, ['p3', 'p6'], subjects=['retention']),
-    c('ci-failures-visible', CI, 'Known failures, unresolved coverage and their citations remain visible', 'disposes of them (P3, P4b, P6).', ['p5', 'p6'], op='requires', force='must', subjects=['retention']),
+    c('ci-failures-visible', CI, 'Known failures, unresolved coverage and their citations remain visible', 'disposes of them (P3, P4b, P6).', ['p3', 'p4b', 'p6'], op='requires', force='must', subjects=['retention']),
     c('ci-cheap-insufficient', CI, 'The required assurance, risk policy and mandatory gates constrain that optimisation', 'uncovered is insufficient.', ['p6', 'p5'], subjects=['mandatory-gate']),
     c('ci-no-cadence', CI, 'No universal full-suite cadence follows, and no optimisation removes a separately required gate.', None, ['p6'], subjects=['mandatory-gate']),
     # the consumer relation: ACTIVATION §7 applies change impact
     {'id': 'ci-used-by-activation-7', 'at': (A, '7-closed-result-and-reuse'),
      'find': 'The selection of affected results after a change and the conditions for', 'until': 'impact cover `I(Δ)` (P3, P6).',
-     'standing': 'consequence', 'support': ['ci-selection'], 'op': 'uses', 'consumer': 'ACTIVATION §7 Closed result and reuse',
+     'standing': 'consequence', 'support': ['ci-selection', 'ci-retention-conditions'], 'op': 'uses', 'consumer': 'ACTIVATION §7 Closed result and reuse',
      'subjects': ['impact-cover'], 'support-kind': 'discharged-argument'},
     # Formal representation
     c('fr-five-kinds', FR, 'It distinguishes five kinds of support for a statement', 'evidence from execution.', ['p1', 'p6'], op='requires', force='must', subjects=['support-kind']),
     c('fr-external-predicate', FR, 'An external predicate retains the source, scope and evidence required to establish it', 'discharge the obligation.', ['p6'], op='requires', force='must', subjects=['support-kind']),
     c('fr-no-tooling', FR, 'No particular proof assistant, probability library or execution engine is selected (P1, P6).', None, ['p6'], op='permits', force='may', subjects=['support-kind']),
     c('fr-finite-examples', FR, 'Finite examples do not prove the universal implications above.', None, ['p6'], subjects=['support-kind']),
-    c('fr-unresolved-universal', FR, 'An unproved universal claim can remain unresolved while bounded construction and assurance proceed', 'permit them (P5, P6).', ['p5', 'p6'], op='permits', force='may', subjects=['support-kind']),
+    c('fr-unresolved-universal', FR, 'An unproved universal claim can remain unresolved while bounded construction and assurance proceed', 'permit them (P5, P6).', ['p5', 'p6'], op='permits', force='may', subjects=['support-kind'], condition='where their governing conditions permit them'),
     c('fr-no-seventh', FR, 'Source semantics, formal fidelity and actual use retain their separate evidence', 'theorem-proving exercise (P6).', ['p6'], subjects=['support-kind']),
 ]
 
