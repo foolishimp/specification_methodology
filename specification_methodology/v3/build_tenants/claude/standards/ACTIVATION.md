@@ -91,39 +91,26 @@ resource limits of the tenant's binding apply SPEC_METHOD §11, which
 family F10 traces. SPEC_METHOD §8 keeps its owner.
 
 Consumers of these rows, where an actor enters them (FOUNDATIONS §3
-Foundation to law, Consumers): rows 1 and 6, transitions, completion and
-stops: §2, §4, §6 Resource limits and SPEC_METHOD §8. Row 2, intake,
-admission and output: [TICKETS §5](TICKETS.md#5-from-carrier-to-execution)
-and its family table, EXECUTIVE_BASELINE §3 Engagement applicability,
-Attention cycle, Drift locks and Work result, REFERENCE_FRAME §1 family
-table, AXIOMATIC_CALCULUS AC-007, PRODUCT_DEFINITION Explicit complete
-consumer update, DESIGN_MODULE UP-018 and
-[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion).
-Row 3, applicability: DESIGN_MODULE Cross-view axiom evaluation and its
-family table. Row 4, configuration and delegation:
-[EXECUTIVE_BASELINE §16](EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration),
-§17, The executive configuration and No mutation while Executive, PROFILES
-§6, REFERENCE_FRAME RF-009, SPEC_METHOD §8 and §11, EVALUATION §1 family
-table, TICKETS §7 Condition-based closure and reuse, and ODD. Row 5,
-recording a result without review: TICKETS as the carrier; no other
-separate consumer applies, because the rule binds only the grant holder's
-record in an existing result surface. Row 7, totality and hard stops:
-EVALUATION §5 When a finding blocks promotion, EXECUTIVE_BASELINE Technical
-triage, severity, priority and bounded repair, SPEC_METHOD §5,
-DESIGN_MODULE Post-ticket design review, ODD Graph functions and
-WORLD_MODEL. Row 8, refinement: FOUNDATIONS §4 Preservation through
-construction, REFERENCE_FRAME Evidence or coordinate translation,
-SPEC_METHOD §11 and WORLD_MODEL §5. Row 9, complete enclosing-relation
-admission: DESIGN_MODULE's family table and ODD §11.5B Execution authority
-audit; standing structural qualification has no separate consumer, because
-the admission owner performs it, as the row says. Rows 10 to 14, the
-construction relation:
-[SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage)
-and §8, EVALUATION §1, EXECUTIVE_BASELINE Steel-thread delivery, ODD
-§11.5D, FOUNDATIONS §3 Construction synthesis and §4 Preservation through
-construction, Parallel derivation and mutual assurance and Change impact
-and evidence reuse. Each consumer applies the rule and decides nothing the
-owning section does not (P2, P6).
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, transitions: [§2](#2-context-construction-under-an-envelope), [§4](#4-totality-and-refinement), [§6 Resource limits](#resource-limits), [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method).
+- Row 2, intake, admission and output: [TICKETS §5](TICKETS.md#5-from-carrier-to-execution) and its [family table](TICKETS.md#foundation-to-law-work-carriers); [EXECUTIVE_BASELINE §3](EXECUTIVE_BASELINE.md#3-engagement-applicability), [Attention cycle](EXECUTIVE_BASELINE.md#attention-cycle), [Drift locks](EXECUTIVE_BASELINE.md#drift-locks) and [Work result](EXECUTIVE_BASELINE.md#work-result); the [REFERENCE_FRAME family table](REFERENCE_FRAME.md#foundation-to-law); [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [PRODUCT_DEFINITION Explicit complete consumer update](PRODUCT_DEFINITION.md#explicit-complete-consumer-update); [DESIGN_MODULE UP-018](DESIGN_MODULE.md#invariant-reconstruction-sufficiency-up-018); [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion).
+- Row 3, applicability: [DESIGN_MODULE Cross-view axiom evaluation](DESIGN_MODULE.md#cross-view-axiom-evaluation) and its [family table](DESIGN_MODULE.md#foundation-to-law).
+- Row 4, configuration and delegation: [EXECUTIVE_BASELINE §16](EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration), [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence), [The executive configuration](EXECUTIVE_BASELINE.md#the-executive-configuration) and [No mutation while Executive](EXECUTIVE_BASELINE.md#no-mutation-while-executive); [PROFILES §6](PROFILES.md#6-engagement-baseline); [REFERENCE_FRAME RF-009](REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy); [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method) and [§11](SPEC_METHOD.md#11-build-tenant-binding); the [EVALUATION family table](EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance); [TICKETS Condition-based closure and reuse](TICKETS.md#condition-based-closure-and-reuse); [ODD §1](ODD.md#1-position) and [§11.7A](ODD.md#117a-conforming-agentic-development).
+- Row 5, recording a result without review: [EXECUTIVE_BASELINE §3](EXECUTIVE_BASELINE.md#3-engagement-applicability), which applies it and adds two bindings; the carrier is [TICKETS Condition-based closure and reuse](TICKETS.md#condition-based-closure-and-reuse).
+- Row 6, completion, destination change and stops: [§6 Resource limits](#resource-limits); [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method).
+- Row 7, totality and hard stops: [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion); [EXECUTIVE_BASELINE Technical triage](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); [SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); [DESIGN_MODULE Post-ticket design review](DESIGN_MODULE.md#post-ticket-design-review); the [WORLD_MODEL family table](WORLD_MODEL.md#foundation-to-law).
+- Row 8, refinement: [FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction); [REFERENCE_FRAME Evidence or coordinate translation](REFERENCE_FRAME.md#evidence-or-coordinate-translation); [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding); [WORLD_MODEL §5](WORLD_MODEL.md#5-core-claims); [ODD Graph functions](ODD.md#graph-functions).
+- Row 9, complete enclosing-relation admission: the [DESIGN_MODULE family table](DESIGN_MODULE.md#foundation-to-law); [ODD §11.5B](ODD.md#115b-execution-authority-audit). Standing structural qualification has no separate consumer, because the admission owner performs it, as the row says.
+- Row 10, binding A and Z and the three accounts: [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method); [FOUNDATIONS §3 Construction synthesis](FOUNDATIONS.md#construction-synthesis); [FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction).
+- Row 11, strategy: [EXECUTIVE_BASELINE Steel-thread delivery](EXECUTIVE_BASELINE.md#steel-thread-delivery); [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method).
+- Row 12, composition boundaries: [FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction); [§4 Refinement](#refinement).
+- Row 13, feedback and diagnosis: [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage); [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop); [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance) and [Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse).
+- Row 14, preservation, progress and completion, and evaluation and completion: [EVALUATION §1](EVALUATION.md#1-claims); [§3](#3-step-results-and-disposition); [§6](#6-cost-and-proportionality); [FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation).
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
 
 ### Transitions
 
@@ -215,7 +202,7 @@ selected construction binds its current state and destination, chooses
 its work, composes its steps, corrects itself and claims completion. It
 is law carried from the common construction requirement and the universal
 construction model of the Product that owns this corpus, restated here at
-its owner. ACTIVATION §2 to §7, EVALUATION §1, SPEC_METHOD §4, §8 and §9,
+its owner. ACTIVATION §2 to §7, EVALUATION §1, SPEC_METHOD §4 and §8,
 EXECUTIVE_BASELINE, ODD and the other consumers named in the design
 apply it; none restates it (P6).
 
@@ -1386,12 +1373,10 @@ Work state is the tuple of: the current persistent workspace; the governing
 basis; the applicable closed results and judgments with their invalidators;
 the residuals; and the known uncertainty over external effects. It is an
 object (P3); its carrier (files, an event stream, another admitted owner) is
-a profile or realisation choice. The procedures of this section are
-generic: they require no particular carrier, and an adequate human process
-using current records and direct observation satisfies them where no
-governing obligation or selected binding requires code or a complete
-event history ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding),
-generic procedures) (P1, P6).
+a profile or realisation choice. Resumption, checkpointing and the
+progress account of this section are generic procedures
+([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)): they require
+no particular carrier (P1, P6).
 
 Resumption is re-entry of the same method over the current work state,
 starting from the current material state, by a possibly different actor.

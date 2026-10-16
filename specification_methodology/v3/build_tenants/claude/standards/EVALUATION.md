@@ -19,10 +19,11 @@ semantic, authority-bearing, installed, release or end-to-end claim because
 the weaker property is easier to measure (P6; conserves
 [UP-001](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#proof-target-identity-and-adequacy-stdo-up-001)).
 
-A claim about a construction is one of the four kinds the construction
-relation keeps apart: preservation, progress, termination and outcome
-satisfaction ([ACTIVATION §1](ACTIVATION.md#construction-relation)). Its
-witness is an assertion whose predicate is the full obligation, a
+Where a claim about a construction concerns its recursive or repeated
+work, it is one of the four kinds the construction relation keeps apart,
+preservation, progress, termination and outcome satisfaction
+([ACTIVATION §1](ACTIVATION.md#construction-relation)), and states which.
+Its witness is an assertion whose predicate is the full obligation, a
 necessary condition of it or part of a sufficient conjunction, and the
 claim states which. Its expected result has assertion provenance and its
 execution has execution provenance, as
@@ -178,7 +179,10 @@ basis and evidence authenticates the result; it establishes neither the
 assertion provenance of its expected answer nor the execution provenance
 of its run, which
 [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)
-requires separately (P6, P3). Any post-exposure revision is a declared intervention: it
+requires separately (P6, P3). Membership in a plan authenticates nothing,
+and a result bound to another subject satisfies no planned assessment
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results));
+no cryptographic or transport protocol is prescribed for the binding (P6). Any post-exposure revision is a declared intervention: it
 is either a method constituent with its own qualification boundary or a new
 qualification subject, and it cannot retroactively make the original
 frozen construction pass. This law prescribes no actor type or count,

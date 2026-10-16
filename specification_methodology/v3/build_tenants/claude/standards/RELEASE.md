@@ -617,11 +617,11 @@ An RC may be accepted when (P6, P3; rc.2 #acceptance-criteria):
   are closed or the claimed scope is explicitly narrowed; and
 - the human Product authority accepted the exact immutable RC identity.
 
-Each criterion is a mandatory gate: an assessment the governing policy
-requires irrespective of any selection of checks after a change
-([FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse)).
-Retained evidence satisfies a criterion only under the validity conditions
-stated there (P6).
+Each criterion is a mandatory gate in the sense of
+[FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):
+it applies irrespective of any selection of checks after a change, and
+retained evidence satisfies it only under the validity conditions stated
+there (P6).
 
 Acceptance attaches to that immutable RC identity. It neither advances
 nor rolls back the version-line selector. Consumer adoption separately
@@ -660,8 +660,8 @@ rc.2 #successor-baseline-conservation-stdo-up-015):
 Evidence for a disposition is retained or reassessed under
 [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):
 a `conserved` reading made on an earlier successor text applies to a later
-one only where the carrying sections are unchanged or the change is shown
-not to affect the claim (P3, P6).
+one only where the owning text and the consumer bindings that carry it
+are unchanged, or the change is shown not to affect the claim (P3, P6).
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a

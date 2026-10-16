@@ -611,7 +611,8 @@ consequence, in five columns:
 
 Consumers. After the table, a paragraph names, for each row, the sections
 in this or other members that apply the rule where an actor enters it,
-linked at its own locus, or states that no separate consumer applies and
+each linked to the consumer's own locus, or states that no separate
+consumer applies and
 the scope of that absence. A blank field or a generic referral establishes
 neither coverage nor non-applicability. The paragraph is a trace like the
 table: a consumer named in it applies the rule and decides nothing the
@@ -1135,20 +1136,20 @@ conditions of the situations the family governs, not commitments.
 | P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P3 a changed dependency changes what an earlier observation applies to, by P4b retained evidence is conserved with its subject, by P5 unknown impact leaves the dependent assurance undecided, and by P6 retention is justified and not assumed, so validity dependencies are kept apart from justification links, affected checks are selected conservatively, and evidence is retained only under its validity conditions while mandatory gates stay applicable, which ACTIVATION §7 applies to closed results and handoffs | [Change impact and evidence reuse](#change-impact-and-evidence-reuse) | the representation of dependencies and the selection model: the realisation; mandatory gates: RELEASE §8 and the adopting Product | 2, 9 |
 | P1 (independent), P6 (independent); instance premise a | By P1 a representation is distinct from the meaning it carries, and by P6 a label is not evidence, so the formal interpretation distinguishes a stated formula, a discharged argument, checked structure, an external predicate and execution evidence, and finite examples prove no universal implication | [Formal representation](#formal-representation) | the carrier, checker and projections: the tenant's a_c design under AXIOMATIC_CALCULUS | 6, 10 |
 
-Consumers of these rows: rows 1 and 2, preservation: ACTIVATION §1
-Composition boundaries and §4 Refinement. Rows 3 and 4, assertions and
-observation sufficiency: EVALUATION §1 and §3, ASSURANCE §3, §10 and §11,
-ACTIVATION §1 Evaluation and completion. Row 5, provenance and mutual
-assurance: EVALUATION §1 and §3, ASSURANCE §3 and §14, and the
-Cross-Synthesis rule of the Product that owns this corpus. Row 6,
-quantified assurance: no separate consumer applies yet; the only
-quantified claims in this corpus are the reduction measures of its
-design, which claim no probability, and a profile or adopting Product that
-claims quantified assurance binds this row. Row 7, change impact and
-reuse: ACTIVATION §5 and §7, RELEASE §8 and §9, SPEC_METHOD §4 and
-EVALUATION §3. Row 8, formal representation: AXIOMATIC_CALCULUS, the a_c
-interpretation of this corpus and CONFORMANCE. Each consumer applies the
-rule and decides nothing this section does not (P2, P6).
+Consumers of these rows, one list per row, each consumer linked to its own
+locus:
+
+- Row 1, the step obligation: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation); [ACTIVATION §4 Refinement](ACTIVATION.md#refinement).
+- Row 2, the end-to-end argument: the same two sections.
+- Row 3, assertion directions: [EVALUATION §1](EVALUATION.md#1-claims); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §10](ASSURANCE.md#10-testing-evidence-composition).
+- Row 4, observation sufficiency: [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation).
+- Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route); the Cross-Synthesis rule of the Product that owns this corpus.
+- Row 6, quantified assurance: [EXECUTIVE_BASELINE Technical triage](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), whose causal assessment records a confidence; [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), where a probability informs priority; [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value), where a project may define a testing-value scalar. At each, an unsupported numeric confidence remains unresolved.
+- Row 7, change impact and reuse: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), through which [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) and [EVALUATION §3](EVALUATION.md#3-independent-assessment) reach it; [RELEASE §8](RELEASE.md#8-acceptance) and [§9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015); [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), whose determination of the surfaces and evidence to re-derive is the selection `S_Δ`.
+- Row 8, formal representation: no separate consumer applies yet. [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces) and [CONFORMANCE](CONFORMANCE.md#4-cases-from-the-common-discriminators) carry neither the five kinds of support nor the demonstration cases this owner requires; the obligation is open until the interpretation and its cases are written.
+
+Each consumer applies the rule and decides nothing this section does not
+(P2, P6).
 
 ### Preservation through construction
 

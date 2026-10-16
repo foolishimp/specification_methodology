@@ -786,26 +786,24 @@ Intake triage determines six things: whether the report represents a
 substantive change at all; the affected product boundary and intended
 scope; the lawful change class; the lawful re-entry point into the
 constitutional chain; the downstream surfaces and evidence that must be
-repriced, re-derived or re-proved; and whether the work remains within the
+repriced, re-derived or re-proved, a determination that is the selection
+`S_Δ` of [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse);
+and whether the work remains within the
 currently declared release scope or requires repricing of that release
 plan. No bug, feature, issue or other intake bypasses this triage by going
 straight to code, tests or release handling. The purpose is not a separate
 tracking bureaucracy; it is to classify impact correctly so the change
 enters the method at the right constitutional boundary.
 
-Diagnosis distinguishes the four causes the construction relation names
-([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)):
+Triage diagnoses among the four causes of
+[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation),
 a defective realisation, an inadequate governing requirement or design, an
-inaccurate predictive model, and insufficient observation. A prediction
-error alone does not decide whether the required outcome holds; unresolved
-alternatives are preserved, and each supported repair is routed to the
-owner of its cause, never inferred from the intake label. Severity
-describes the consequence of a discrepancy; priority orders the response
-under the selected outcome, dependencies, resources and authority, as the
-work carriers of [TICKETS](TICKETS.md) record them. A bug list projects
-existing work state and creates no separate delivery or authority
-mechanism (P1, P2, P6; law carried from the common construction
-requirement).
+inaccurate predictive model, and insufficient observation, and routes each
+supported repair to the owner of its cause rather than inferring it from
+the intake label; severity and priority follow the policies that
+[TICKETS](TICKETS.md) owns; a bug list projects existing work state. This
+paragraph applies ACTIVATION §1 Feedback and diagnosis and states no
+second relation (P2, P6).
 
 Triage triangulates a failure across the applicable reference frames over
 the same subject and basis. Each frame tests candidate diagnoses against
@@ -1601,7 +1599,7 @@ construction relation that the step serves, from the bound current state
 to the destination through a selected strategy, feedback and the distinct
 claims of preservation, progress and completion, is
 [ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation);
-this member applies it to delivery and correction (§4, §9) and states no
+this member applies it to delivery and correction (§4) and states no
 second relation (P6). The
 step states its results in the core of
 [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) through the refinements
@@ -1626,7 +1624,9 @@ Delivery priority applies the proportionality relation to the current
 product outcome, likelihood, impact, reversibility, dependency and the cost
 of delayed product feedback. Probability informs lawful priority; it does
 not waive authority, integrity, safety, retained release claims or another
-hard stop. The default priority is work that exposes or advances the
+hard stop. A probability stated for priority is a quantified claim under
+[FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance);
+unsupported numeric confidence stays unresolved (P6). The default priority is work that exposes or advances the
 smallest supported product path and its highest-value likely failures.
 Defensive or prerequisite work that displaces that path identifies the
 affected claim, evidence basis, bounded effort, return condition and
@@ -1762,12 +1762,12 @@ Terms used in this section:
   binding.
 - A generic procedure is a method procedure whose scope is independent of
   the selected execution environment. It and its projections preserve the
-  permitted bindings: code, an event stream or reconstruction from a
+  bindings Rule 2 permits: code, an event stream or reconstruction from a
   complete history is required only where the governing obligations or
   the selected execution binding require it, and an adequate human
-  process using current records and direct observation satisfies a
-  generic procedure that requires neither (P1, P6; law carried from the
-  common binding requirement).
+  process using current records and direct observation is a permitted
+  execution binding of a generic procedure that requires none of them
+  (P1, P6; law carried from the common binding requirement).
 - Author identity and actor identity are as
   [EVALUATION §3](EVALUATION.md#3-independent-assessment) defines them:
   authorship is one condition of an assessment's independence there, and

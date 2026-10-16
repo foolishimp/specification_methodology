@@ -519,7 +519,9 @@ testing-value index considers at least:
 No universal scalar is required. A project may define one only through
 Product, requirement or accepted-design authority, and keeps the
 underlying coverage coordinates rather than flattening them into a score
-(P1, P6).
+(P1, P6). A project-defined scalar is a quantified claim under
+[FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance)
+and keeps its model and limits explicit (P6).
 
 At unit altitude the relevant dimensions are module-bounded. Unit-testing
 value normally rises with the internal combinatorial complexity of an
@@ -658,8 +660,9 @@ it were the Product subject. The observation binding needs its own
 support: an idealised observation does not establish that the instrument,
 actor or execution acquired the required facts, and two admissible
 subjects with the same acquired observation but different truth of the
-asserted obligation leave the checker unable to decide between them
-([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
+asserted obligation leave the checker unable to decide between them; the
+result is then further evidence, a justified narrower scope or
+`indeterminate` ([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
 Observation sufficiency) (P1, P6).
 
 After lawful acquisition, an independently derived oracle may evaluate the

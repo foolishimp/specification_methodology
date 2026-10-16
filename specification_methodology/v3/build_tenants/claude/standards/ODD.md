@@ -756,8 +756,8 @@ loop running from intent lineage and model synthesis through observation
 to the next lawful action. This is the profile's homeostasis loop, and
 its constitutional surface names the operative functions directly:
 `synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action`
-(P2, P5, P6). The loop is this profile's binding of the feedback relation
-of [ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation):
+(P2, P5, P6). The loop is this profile's binding of
+[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation):
 it corrects towards the required conditions as observations arrive,
 guarantees neither convergence nor the adequacy of those conditions, and
 its diagnoses distinguish the four causes named there (P2, P6).

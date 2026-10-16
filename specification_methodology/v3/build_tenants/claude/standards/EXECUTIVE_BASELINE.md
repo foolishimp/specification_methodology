@@ -388,7 +388,8 @@ capability envelope support it, the triage records (P6, P5; rc.2
 
 - the affected claim and the observed failure;
 - severity on the Product-selected severity scale;
-- causal assessment and confidence;
+- causal assessment and confidence, the confidence being a quantified
+  claim under [FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance);
 - blast radius and the affected users, paths or relations;
 - an available workaround or containment;
 - repair complexity, regression risk and material dependencies; and
@@ -853,8 +854,8 @@ The steel thread is this profile's selected strategy under the
 construction relation ([ACTIVATION §1 Strategy](ACTIVATION.md#construction-relation)):
 its rationale is early feedback on the end-to-end composition at the cost
 of later widening; other strategies remain lawful for other
-configurations, and no superiority is claimed beyond that rationale
-(P2, P6).
+configurations; no superiority over them is claimed, and the rationale
+states the objective the selection serves and its cost (P2, P6).
 
 Early end-to-end and integration evidence prunes incompatible construction
 choices before they spread; it settles the exercised interfaces, keeps
