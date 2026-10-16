@@ -863,7 +863,9 @@ commonisation surface, or extending that surface before the local
 implementation lands; `library_usage` records which (P2, P4a; rc.2
 #recurring-realization-and-library-declaration).
 
-The recurrence rule: the second credible recurrence forces an explicit
+The recurrence rule, whose owner is
+[DESIGN_MODULE §10 Recurrence extraction](DESIGN_MODULE.md#recurrence-extraction):
+the second credible recurrence forces an explicit
 library or commonisation review; the third local rebuild is not acceptable
 by default. If review shows the same realisation pattern already exists in
 two module boundaries or tickets, a third local rebuild blocks

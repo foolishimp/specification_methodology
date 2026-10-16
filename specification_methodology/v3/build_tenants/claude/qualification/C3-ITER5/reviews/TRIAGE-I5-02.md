@@ -37,3 +37,29 @@ sections, before the item closes.
 Successor readback R-I5-02b: after the Writer activations, one reviewer
 reads the repaired passages of this round and a sample of the new
 consumers paragraphs across the 23 family tables.
+
+## Triage of R-I5-02b
+
+Successor readback of `6e97c29` ([report](R-I5-02b.md)): the 13 repaired
+passages apply their owners with no meaning or modal-force change; all 22
+populated family tables have one paragraph with one item per row (318);
+46 rows sampled, 4 with defects. No High finding. Dispositions, repairs in
+the I5-02j commit:
+
+| # | Severity | Disposition | Where |
+|---|---|---|---|
+| 1 | Medium | repaired: row 9 names DESIGN_MODULE Transformation admission completeness, ODD §11.5B and SPEC_METHOD §8, which binds both the admission and standing structural qualification; the family-table link and the "no separate consumer" sentence removed | ACTIVATION §1 consumers |
+| 2 | Medium | repaired: EVALUATION §6 Conformance of realisations named in place of the family table | FOUNDATIONS Results consumers, row 16 |
+| 3 | Medium | repaired: ODD §13 cites ASSURANCE §5 as the owner it binds; row 6 names ODD §13 as the consumer | ODD §13; ASSURANCE consumers |
+| 4 | Medium | repaired: the index sentence says that F22 row 8, formal representation, records no consumer yet because its interpretation and conformance cases are not written (I5-05 with I5-A3) | FOUNDATIONS §3 index |
+| 5 | Low | repaired: "none of them applies this section, and SPEC_METHOD §8 names it only to defer to it" | EXECUTIVE_BASELINE consumers, row 9 |
+| 6 | Low | repaired: "applies these sections, and PROFILES names them in its inventory without applying them" | WORLD_MODEL consumers, row 10 |
+| 7 | Low | not repaired now: "CONFORMANCE §5 discriminator N" entries are read as "exercised by the logical-review check the row indexes"; whether to reword them across the paragraphs is for the I5-09 integrated readback, which reads all 318 rows | several consumers paragraphs |
+| 8 | Low | repaired: TICKETS §6 names DESIGN_MODULE §10 Recurrence extraction as the owner of the recurrence rule | TICKETS §6 |
+| 9 | Low | repaired: "an unauthenticated result satisfies no required assessment" | EVALUATION §3 |
+| 10 | Low | repaired: "a determination whose evidence part is the selection `S_Δ` over the impact cover `I(Δ)` of the affected surfaces" | SPEC_METHOD §4 |
+| 11 | Low | repaired: the §11 sentence cut to the application and the citation | ASSURANCE §11 |
+
+Carried to I5-09: finding 7 across all paragraphs; the 272 unsampled rows
+of the consumers paragraphs, which the integrated readback covers by
+reading each table against its citing sections.

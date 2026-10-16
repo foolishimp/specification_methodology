@@ -1590,7 +1590,9 @@ runs against that installed development form in an isolated environment.
 For a graph-native ODD product the proving lane should exercise install,
 project bootstrap, graph traversal, evidence collection and
 target-relative closure. Direct source checks stay useful and do not
-replace installed-dev proof (P6, P3).
+replace installed-dev proof (P6, P3). This rule is the profile's binding of
+[ASSURANCE §5 Installed dev proof](ASSURANCE.md#5-installed-dev-proof), which
+owns it.
 
 ## 14. Dogfooding rule
 

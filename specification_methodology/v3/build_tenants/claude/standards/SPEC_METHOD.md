@@ -823,8 +823,9 @@ Intake triage determines six things: whether the report represents a
 substantive change at all; the affected product boundary and intended
 scope; the lawful change class; the lawful re-entry point into the
 constitutional chain; the downstream surfaces and evidence that must be
-repriced, re-derived or re-proved, a determination that is the selection
-`S_Δ` of [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse);
+repriced, re-derived or re-proved, a determination whose evidence part is
+the selection `S_Δ` over the impact cover `I(Δ)` of the affected surfaces
+([FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse));
 and whether the work remains within the
 currently declared release scope or requires repricing of that release
 plan. No bug, feature, issue or other intake bypasses this triage by going

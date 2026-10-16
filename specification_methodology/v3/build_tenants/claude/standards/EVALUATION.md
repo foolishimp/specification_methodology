@@ -205,7 +205,8 @@ assertion provenance of its expected answer nor the execution provenance
 of its run, which
 [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)
 requires separately (P6, P3). Membership in a plan authenticates nothing,
-and a result bound to another subject satisfies no planned assessment
+an unauthenticated result satisfies no required assessment, and a result
+bound to another subject satisfies no planned assessment
 ([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results));
 no cryptographic or transport protocol is prescribed for the binding (P6). Any post-exposure revision is a declared intervention: it
 is either a method constituent with its own qualification boundary or a new
