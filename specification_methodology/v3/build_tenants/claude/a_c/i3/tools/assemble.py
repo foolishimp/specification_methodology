@@ -21,6 +21,8 @@ STANDING = 'urn:stdo-3:claude:i3:standing:'
 CORE = 'urn:stdo-3:claude:i3:core:'
 CORE_VALUES = {CORE + v for v in ('satisfied', 'falsified', 'indeterminate', 'out_of_frame', 'invalid_basis')}
 SOURCE = 'stdo-3://build_tenants/claude/standards/'
+SUPPORT_KINDS = ('stated-formula', 'discharged-argument', 'mechanically-checked-structure',
+                 'externally-assessed-predicate', 'execution-evidence')
 DISPOSITIONS = ('encoded', 'encoded-in-part', 'uses owner', 'refines owner', 'residual', 'no determination', 'not-encoded-i3')
 
 
@@ -87,6 +89,9 @@ def check_clause(clause, uris, residuals):
     for a in args(clause, 'force'):
         if a.get('literal') not in ('must', 'must-not', 'should', 'should-not', 'may'):
             errors.append(f'{u}: force literal outside the five')
+    support_kind = args(clause, 'support-kind')
+    if len(support_kind) > 1 or any(a.get('literal') not in SUPPORT_KINDS for a in support_kind):
+        errors.append(f'{u}: support-kind must be one literal among the five kinds of support')
     return errors
 
 

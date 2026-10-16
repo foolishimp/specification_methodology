@@ -15,6 +15,8 @@ rec['checker'] = {'ids': out.stdout.strip().splitlines()[0], 'ac_py_sha256': sha
 # expected digests are read from the common dependency contract, not from a constant
 DEP = '../../specification/requirements/A_C_DEPENDENCY.md'
 import re as _re
+if not os.path.exists(DEP):
+    sys.exit(f'refusal: the common dependency contract {DEP} is not present; the controls read the expected checker digests from it, so the route needs the v3 common specification at the same commit beside the tenant')
 dep = open(DEP, encoding='utf-8').read()
 expected = {k: _re.search(rf'\| {k} SHA256 \| ([0-9a-f]{{64}}) \|', dep).group(1) for k in ('Executable', 'Schema', 'Output-contract')}
 files = {'Executable': AC, 'Schema': os.path.join(AI, 'skills/axiomatize-corpus/references/program.schema.json'), 'Output-contract': os.path.join(AI, 'skills/axiomatize-corpus/references/output-contract.md')}

@@ -87,7 +87,7 @@ def build_clause(group, c):
     args = [arg('standing', ref=A.STANDING + c['standing'])]
     args += [arg('subject', ref=P + 'concept:' + s) for s in c.get('subjects', [])]
     for role in ('force', 'condition', 'exception', 'qualification', 'owner', 'choice', 'among', 'consumer',
-                 'refined-value', 'predicate'):
+                 'refined-value', 'predicate', 'support-kind'):
         if role in c:
             args.append(arg(role, literal=c[role]))
     args += [arg('support', ref=P + 'clause:' + s) for s in c.get('support', [])]

@@ -64,6 +64,26 @@ that was not performed has no core value and has no symbol.
 | `v:role:consumer` | literal: the consumer section of a `uses` relation |
 | `v:role:refined-value`, `v:role:predicate`, `v:role:core-value` | the three parts of a `maps-to` relation; exactly one `core-value` |
 | `v:role:blocked-by` | a residual the clause depends on |
+| `v:role:support-kind` | literal: the kind of support the statement has, one of the five below (I5) |
+
+## Kinds of support (I5)
+
+A clause may carry one `v:role:support-kind` literal naming what supports
+its statement, as FOUNDATIONS §4 Formal representation requires the
+interpretation to distinguish. A clause encoding one of the construction
+or assurance relations carries one; other clauses may.
+
+| Literal | Meaning |
+|---|---|
+| `stated-formula` | the statement writes a formal obligation whose implication is not discharged here |
+| `discharged-argument` | the statement is supported by a written mathematical or deductive argument in the source |
+| `mechanically-checked-structure` | the statement's structure is what the pinned checker validates; nothing beyond structure is established |
+| `externally-assessed-predicate` | the statement's truth about a subject is assessed outside this program, by a review or a trial, with its own evidence |
+| `execution-evidence` | the statement records what an execution observed, with its execution provenance |
+
+A support kind confers no standing and no truth: a `stated-formula` is
+not proved, an `externally-assessed-predicate` is not assessed by being
+labelled. The kind says which evidence would establish the statement.
 
 ## Section dispositions
 

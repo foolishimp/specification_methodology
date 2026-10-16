@@ -59,6 +59,17 @@ class PreCheck(unittest.TestCase):
         with self.assertRaisesRegex(A.Refusal, 'exactly one core value'):
             run(two)
 
+    def test_support_kind_literal_checked(self):
+        good = clause('urn:t:c:sk', 'premise', [{'role': R + 'support-kind', 'literal': 'stated-formula'}])
+        run(good)
+        bad = clause('urn:t:c:sk2', 'premise', [{'role': R + 'support-kind', 'literal': 'proved'}])
+        with self.assertRaisesRegex(A.Refusal, 'support-kind'):
+            run(bad)
+        two = clause('urn:t:c:sk3', 'premise', [{'role': R + 'support-kind', 'literal': 'stated-formula'},
+                                                 {'role': R + 'support-kind', 'literal': 'execution-evidence'}])
+        with self.assertRaisesRegex(A.Refusal, 'support-kind'):
+            run(two)
+
     def test_residual_dependent_clause_without_blocked_by_rejected(self):
         open_clause = clause('urn:t:c:open', 'unresolved', [])
         with self.assertRaisesRegex(A.Refusal, 'without blocked-by'):

@@ -94,7 +94,11 @@ any of the frames in `standards/frames/`.
 
 ## Reproduce
 
-From the tenant root: `python3 -I a_c/i3/tools/build_fragments.py --dispositions`,
+The route needs the v3 common specification at the same commit beside the
+tenant (`../../specification/`): the adverse controls read the expected
+checker digests from `requirements/A_C_DEPENDENCY.md` and refuse without
+it. A tenant-only archive runs the fragments, the assembly and the checker
+but not the controls. From the tenant root: `python3 -I a_c/i3/tools/build_fragments.py --dispositions`,
 then `python3 -I a_c/i3/tools/assemble.py`, then the checker commands of
 `checker-commands.log` against a verified copy of the checker.
 
