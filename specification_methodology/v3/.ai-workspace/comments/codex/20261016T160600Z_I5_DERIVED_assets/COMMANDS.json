@@ -1,0 +1,52 @@
+[
+  {
+    "name": "generate",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/I5_DERIVED_review_ocwavu8b/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/generate_interpretation.py",
+      "--source-commit",
+      "1e4bed65fe2216b288903ea553391c45ff90e9c1",
+      "--account-commit",
+      "57f711d964cd4eac8ed8523460cecc68bcaa63fb",
+      "--theory-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+    ],
+    "exit_code": 0,
+    "stdout": "{'determinations': 708, 'clauses': 712, 'indexes': 732, 'residuals': 2, 'native_validation': 'passed'}\n",
+    "stderr": "",
+    "elapsed_seconds": 123.53376795793884
+  },
+  {
+    "name": "views",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/I5_DERIVED_review_ocwavu8b/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/prepare_views.py",
+      "--reconciliation",
+      "/tmp/I5_DERIVED_review_ocwavu8b/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/COMPRESSION_RECONCILIATION.json",
+      "--routes",
+      "/tmp/I5_DERIVED_review_ocwavu8b/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/FRAME_ADDITIONS.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{'frames': 7, 'rendered_members': 16}\n",
+    "stderr": "",
+    "elapsed_seconds": 1.948589374893345
+  },
+  {
+    "name": "source_route_costs",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/I5_DERIVED_review_ocwavu8b/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/measure_reduction.py",
+      "--source-commit",
+      "1e4bed65fe2216b288903ea553391c45ff90e9c1",
+      "--theory-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+    ],
+    "exit_code": 0,
+    "stdout": "{'paths': 12, 'raw_member_bytes': {'current': 1189917, 'preceding': 1151887, 'rc2': 848544}}\n",
+    "stderr": "",
+    "elapsed_seconds": 13.376492833020166
+  }
+]

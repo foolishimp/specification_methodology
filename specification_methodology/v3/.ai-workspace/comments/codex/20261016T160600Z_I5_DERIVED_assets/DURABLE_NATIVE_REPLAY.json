@@ -1,0 +1,54 @@
+{
+  "script_sha256": "56add4ea8edd6a93cbf8039dec3f6ba5e7253d5320248bd809cba491644672ed",
+  "archive_sha256": "c67f18ba04454325fad77a92e55f97a8cf9d67f6448e767f5ed5e93b76da8525",
+  "cases": [
+    {
+      "case": "construction-assurance-materialized.json",
+      "sha256": "00bfc78f74f75e8c6d28ab6ae3073ea507321f2901ae34e05cbee9b36eee0bd6",
+      "counts": {
+        "reference_occurrences": 57,
+        "acquisition_routes": 57,
+        "inlined_contracts": 4
+      }
+    },
+    {
+      "case": "evaluate-conjoin-materialized.json",
+      "sha256": "27a9536e066a461521572666445f6f64ae40565209f1c13f696d18b4f0f99dbe",
+      "counts": {
+        "reference_occurrences": 79,
+        "acquisition_routes": 76,
+        "inlined_contracts": 4
+      }
+    },
+    {
+      "case": "good-prose-materialized.json",
+      "sha256": "9a360be8bffe0a1a87ab8267912a677d1baaf45973705ba5b258e7b8bb0424ad",
+      "counts": {
+        "reference_occurrences": 106,
+        "acquisition_routes": 89,
+        "inlined_contracts": 4
+      }
+    },
+    {
+      "case": "preservation-obligations-materialized.json",
+      "sha256": "f17d6bcfd3af939348299870980c12fe7bb1758f031356e188699363c4514ca1",
+      "counts": {
+        "reference_occurrences": 195,
+        "acquisition_routes": 144,
+        "inlined_contracts": 5
+      }
+    },
+    {
+      "case": "work-recovery-materialized.json",
+      "sha256": "15b0e0244980ce20f2b308e9d2d024892c92aef95d2681d7e14b1b1a9e946a61",
+      "counts": {
+        "reference_occurrences": 323,
+        "acquisition_routes": 259,
+        "inlined_contracts": 7
+      }
+    }
+  ],
+  "all_valid": true,
+  "scope": "All retained native bodies are replayed from the durable archive without relying on their former temporary output paths.",
+  "latest_replay": "Final bounded harness run, preserving the successful generation observation and replaying archive checks, qualification controls, views, source costs and publication equality."
+}
