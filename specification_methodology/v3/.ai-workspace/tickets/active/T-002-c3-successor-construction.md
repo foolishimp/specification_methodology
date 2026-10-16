@@ -25,6 +25,12 @@ links:
 
 # T-002 — v3.0.0 Successor Construction
 
+## Iteration 5 reciprocal comparison
+
+2026-10-16T20:04:05Z — The owner requests “review each other decide which is better”. The Executive selects comparative review EC-I5-COMP-01 on Codex `99f932cfece1a7c9ba6f85c44c47d2403a486aa7` and Claude `5da6bdec6ca383b4a9c91fe5b45a293aa03d8ff2`, common C3-I5-06 `4c340f7`. The [activation](../../comments/codex/20261016T200405Z_I5_COMPARISON/ACTIVATION.md) binds the outcome, source-first expectations, independent actors, disjoint review territory, limits and no-effect boundaries. The common pen acts only as Review/Ledger Writer for this record and comparative commentary; a separate Git Writer checkpoints their returned exact paths. Neither candidate is changed or accepted.
+
+Separate admission: `admitted` to the owner's requested review. Activation SHA-256 `2842562c7a4e5cf2b51833041f556a4880aac34e4478533109dcfc302bf8ed26`; shared expectations SHA-256 `817986591a38d62cc0806e67f1e9b57ab13b802d2256efc25f89df222fe91605`. Exact subjects and installed basis are verified, and the review writes remain in Codex commentary. The three native review cones and one bounded fresh Claude cross-family check are dependency-ready after this checkpoint. The later synthesis distinguishes better-current-basis advice from the Product's qualified-selection predicate; unfinished Claude publication and all remaining acceptance obligations keep their standing.
+
 ## Iteration 5 common preparation
 
 The product owner selects the I5 construction model together with the evaluated findings from both I4 reviews as one common input for two successor builds. [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-review-consolidation) admits the common pen's consolidation. The [disposition](../../comments/codex/20261015T165424Z_DISPOSITION_I5_REVIEW_CONSOLIDATION.md) binds the exact reviews, corrections to stale findings and the common source changes.
