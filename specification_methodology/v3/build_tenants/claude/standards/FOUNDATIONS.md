@@ -644,9 +644,7 @@ and traces none of their rules. A Pillar cell marked pending names no
 pillar: the family's table does not yet carry the Pillar column, and the
 cell is filled from that table's rows when it does. The index decides
 nothing: each rule is in its owning section, and each trace is in its
-table (P1, P6). The consumers paragraph is written for F2 and F22; for
-the other families it is pending, and until it is written those tables
-trace their rules' consumers no further than their rows' citations.
+table (P1, P6). Every family table in this corpus has its consumers paragraph.
 
 | ID | Family | Table | Accounts for | Pillar |
 |---|---|---|---|---|
