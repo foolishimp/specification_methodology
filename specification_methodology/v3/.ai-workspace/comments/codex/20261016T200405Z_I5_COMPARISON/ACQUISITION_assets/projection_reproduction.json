@@ -1,0 +1,491 @@
+{
+  "candidate": "99f932cfece1a7c9ba6f85c44c47d2403a486aa7",
+  "checker_commit": "9a9c479776ffd974fbcafcf48341980918209aef",
+  "checker_members": [
+    {
+      "path": ".agents/skills/axiomatize-corpus",
+      "expected": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "actual": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "matches": true
+    },
+    {
+      "path": ".claude/skills/axiomatize-corpus",
+      "expected": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "actual": "94f7720145baa135bb3d88ec352b4fe32e9841fcfc9a23dbf00ea54ab0fa7c40",
+      "matches": true
+    },
+    {
+      "path": "build_tenants/core/code/ac.py",
+      "expected": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "actual": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "matches": true
+    },
+    {
+      "path": "skills/axiomatize-corpus/SKILL.md",
+      "expected": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d",
+      "actual": "0b9443403d8d8ee56aad5ec1059d288dc2666c247191bb92b18258bc2758894d",
+      "matches": true
+    },
+    {
+      "path": "skills/axiomatize-corpus/agents/openai.yaml",
+      "expected": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990",
+      "actual": "409721119552f3e1ffded2a2aed5f81a92b40389c81f77c0792f305e507be990",
+      "matches": true
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/output-contract.md",
+      "expected": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b",
+      "actual": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b",
+      "matches": true
+    },
+    {
+      "path": "skills/axiomatize-corpus/references/program.schema.json",
+      "expected": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+      "actual": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+      "matches": true
+    }
+  ],
+  "theory_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+  "theory_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+  "bindings_verification_exit": 0,
+  "bindings_sha256": "7468d1984d5c93f36016e4f076664f491bd0545cee9c15231b0eb90655b1a6ba",
+  "scratch_output_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj",
+  "projections": [
+    {
+      "id": "FOUNDATIONS.workspace-and-context",
+      "frame_index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.workspace-and-context",
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.workspace-and-context\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:7e02241e4e94d6939e4ad55773a603eafbb42f70dd12eaf739c266d34fe39088\",\"program_uri\":\"urn:codex-stdo3:iteration-3-r2:program:method-determinations\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": "",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/bindings.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.workspace-and-context",
+        "--mode",
+        "materialized",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/FOUNDATIONS.workspace-and-context.json"
+      ],
+      "output_sha256": "a43d9aee3361595093d59029964a34b3be679a49d17b0cd7447dcbb54fce0558",
+      "output_bytes": 400589,
+      "output_shape": {
+        "calculus_ref": {
+          "type": "str",
+          "length": 59
+        },
+        "clause_relations": {
+          "type": "list",
+          "length": 8
+        },
+        "clauses": {
+          "type": "list",
+          "length": 8
+        },
+        "closure": {
+          "type": "dict",
+          "length": 3
+        },
+        "frame_indexes": {
+          "type": "list",
+          "length": 1
+        },
+        "frame_refs": {
+          "type": "list",
+          "length": 1
+        },
+        "kind": {
+          "type": "str",
+          "length": 30
+        },
+        "map_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "mode": {
+          "type": "str",
+          "length": 12
+        },
+        "program_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "program_uri": {
+          "type": "str",
+          "length": 60
+        },
+        "projection_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "residual_routes": {
+          "type": "list",
+          "length": 0
+        },
+        "residuals": {
+          "type": "list",
+          "length": 0
+        },
+        "resolved_sources": {
+          "type": "list",
+          "length": 9
+        },
+        "schema_version": {
+          "type": "int",
+          "length": null
+        },
+        "source_basis": {
+          "type": "str",
+          "length": 26
+        },
+        "source_routes": {
+          "type": "dict",
+          "length": 9
+        },
+        "symbols": {
+          "type": "list",
+          "length": 0
+        },
+        "vocabulary_refs": {
+          "type": "list",
+          "length": 13
+        }
+      }
+    },
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "frame_index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.universal-intake-triage",
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.universal-intake-triage\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:7e02241e4e94d6939e4ad55773a603eafbb42f70dd12eaf739c266d34fe39088\",\"program_uri\":\"urn:codex-stdo3:iteration-3-r2:program:method-determinations\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": "",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/bindings.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.universal-intake-triage",
+        "--mode",
+        "materialized",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/SPEC_METHOD.universal-intake-triage.json"
+      ],
+      "output_sha256": "1cbff6e4240cc36698da505dc2352839341bb2f8ecd0b22871164d83baf765e4",
+      "output_bytes": 1007516,
+      "output_shape": {
+        "calculus_ref": {
+          "type": "str",
+          "length": 59
+        },
+        "clause_relations": {
+          "type": "list",
+          "length": 19
+        },
+        "clauses": {
+          "type": "list",
+          "length": 19
+        },
+        "closure": {
+          "type": "dict",
+          "length": 3
+        },
+        "frame_indexes": {
+          "type": "list",
+          "length": 1
+        },
+        "frame_refs": {
+          "type": "list",
+          "length": 1
+        },
+        "kind": {
+          "type": "str",
+          "length": 30
+        },
+        "map_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "mode": {
+          "type": "str",
+          "length": 12
+        },
+        "program_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "program_uri": {
+          "type": "str",
+          "length": 60
+        },
+        "projection_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "residual_routes": {
+          "type": "list",
+          "length": 0
+        },
+        "residuals": {
+          "type": "list",
+          "length": 0
+        },
+        "resolved_sources": {
+          "type": "list",
+          "length": 20
+        },
+        "schema_version": {
+          "type": "int",
+          "length": null
+        },
+        "source_basis": {
+          "type": "str",
+          "length": 26
+        },
+        "source_routes": {
+          "type": "dict",
+          "length": 20
+        },
+        "symbols": {
+          "type": "list",
+          "length": 0
+        },
+        "vocabulary_refs": {
+          "type": "list",
+          "length": 13
+        }
+      }
+    },
+    {
+      "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+      "frame_index": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention",
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:7e02241e4e94d6939e4ad55773a603eafbb42f70dd12eaf739c266d34fe39088\",\"program_uri\":\"urn:codex-stdo3:iteration-3-r2:program:method-determinations\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": "",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/bindings.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention",
+        "--mode",
+        "materialized",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/FOUNDATIONS.change-impact-and-evidence-retention.json"
+      ],
+      "output_sha256": "806471dec96b3e184dc548f8cbf399fa08a77677e021e08bcb1b8f19a63b66da",
+      "output_bytes": 366126,
+      "output_shape": {
+        "calculus_ref": {
+          "type": "str",
+          "length": 59
+        },
+        "clause_relations": {
+          "type": "list",
+          "length": 7
+        },
+        "clauses": {
+          "type": "list",
+          "length": 7
+        },
+        "closure": {
+          "type": "dict",
+          "length": 3
+        },
+        "frame_indexes": {
+          "type": "list",
+          "length": 1
+        },
+        "frame_refs": {
+          "type": "list",
+          "length": 1
+        },
+        "kind": {
+          "type": "str",
+          "length": 30
+        },
+        "map_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "mode": {
+          "type": "str",
+          "length": 12
+        },
+        "program_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "program_uri": {
+          "type": "str",
+          "length": 60
+        },
+        "projection_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "residual_routes": {
+          "type": "list",
+          "length": 0
+        },
+        "residuals": {
+          "type": "list",
+          "length": 0
+        },
+        "resolved_sources": {
+          "type": "list",
+          "length": 8
+        },
+        "schema_version": {
+          "type": "int",
+          "length": null
+        },
+        "source_basis": {
+          "type": "str",
+          "length": 26
+        },
+        "source_routes": {
+          "type": "dict",
+          "length": 8
+        },
+        "symbols": {
+          "type": "list",
+          "length": 0
+        },
+        "vocabulary_refs": {
+          "type": "list",
+          "length": 12
+        }
+      }
+    },
+    {
+      "id": "SPEC_METHOD.what-how-and-work-carriers",
+      "frame_index": "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.what-how-and-work-carriers",
+      "exit_code": 0,
+      "stdout": "{\"diagnostics\":[],\"frame_index_refs\":[\"urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.what-how-and-work-carriers\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:7e02241e4e94d6939e4ad55773a603eafbb42f70dd12eaf739c266d34fe39088\",\"program_uri\":\"urn:codex-stdo3:iteration-3-r2:program:method-determinations\",\"schema_version\":1,\"status\":\"valid\"}\n",
+      "stderr": "",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-codex-uf9x_wqr/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/bindings.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:SPEC_METHOD.what-how-and-work-carriers",
+        "--mode",
+        "materialized",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/i5-acquisition-checker-0yaf_7dj/SPEC_METHOD.what-how-and-work-carriers.json"
+      ],
+      "output_sha256": "d5b5d4c89d1b7162eda69eeda6886c12d3641d82a02686488d0ef50d39171fef",
+      "output_bytes": 589244,
+      "output_shape": {
+        "calculus_ref": {
+          "type": "str",
+          "length": 59
+        },
+        "clause_relations": {
+          "type": "list",
+          "length": 12
+        },
+        "clauses": {
+          "type": "list",
+          "length": 12
+        },
+        "closure": {
+          "type": "dict",
+          "length": 3
+        },
+        "frame_indexes": {
+          "type": "list",
+          "length": 1
+        },
+        "frame_refs": {
+          "type": "list",
+          "length": 1
+        },
+        "kind": {
+          "type": "str",
+          "length": 30
+        },
+        "map_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "mode": {
+          "type": "str",
+          "length": 12
+        },
+        "program_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "program_uri": {
+          "type": "str",
+          "length": 60
+        },
+        "projection_sha256": {
+          "type": "str",
+          "length": 71
+        },
+        "residual_routes": {
+          "type": "list",
+          "length": 0
+        },
+        "residuals": {
+          "type": "list",
+          "length": 0
+        },
+        "resolved_sources": {
+          "type": "list",
+          "length": 13
+        },
+        "schema_version": {
+          "type": "int",
+          "length": null
+        },
+        "source_basis": {
+          "type": "str",
+          "length": 26
+        },
+        "source_routes": {
+          "type": "dict",
+          "length": 13
+        },
+        "symbols": {
+          "type": "list",
+          "length": 0
+        },
+        "vocabulary_refs": {
+          "type": "list",
+          "length": 13
+        }
+      }
+    }
+  ]
+}
