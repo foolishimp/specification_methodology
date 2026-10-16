@@ -25,7 +25,7 @@ The product owner selects and accepts this dependency's use within this product.
 
 A tag being available does not make it installed. No installed copy or evaluation is selected here.
 
-The following invalidate the affected use or reuse:
+This dependency binds [change impact and evidence applicability](ASSURANCE.md#change-impact-and-targeted-reassessment) to its selected subject and checking contract. The following invalidate the affected use or reuse:
 
 - a change to the Axiom Indexer's Product Definition or identity;
 - drift in its release or members;
@@ -83,7 +83,7 @@ a_c is derived from the method's own principles. Running independent procedures 
 
 A later test may use a neutral, finite token-transfer example, in which tokens move between holders and which belongs to no project. It would test a selected part of the calculus against independently specified expectations about ownership, conservation and permission, including successful, refused and uncertain cases. It would not establish the whole calculus or qualify this product.
 
-When results disagree, the cause is located by testing four candidates:
+When results disagree, [causal diagnosis](README.md#universal-construction-requirement) within this dependency tests four candidate cause locations:
 
 - the method's meaning;
 - the interpretation and signature;

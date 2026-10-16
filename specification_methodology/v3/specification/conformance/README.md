@@ -1,6 +1,6 @@
 # Common Conformance Questions
 
-A discriminator is a case that separates a correct candidate from a defective one. The member-conformance table supplies acceptance criterion 5 of the [C3 Construction Contract](../PRODUCT.md#c3-construction-contract). Construction and integrated-closure checks have their own section and are evaluated at those decisions.
+A discriminator is a case that separates a correct candidate from a defective one. The [member-conformance](#member-conformance), [universal-construction](#universal-construction-discriminators) and [assurance](#assurance-discriminators) tables supply acceptance criterion 5 of the [C3 Construction Contract](../PRODUCT.md#c3-construction-contract), within the member's applicable scope. Construction and integrated-closure checks have their own section and are evaluated at those decisions.
 
 Both tenants are evaluated against the same independently specified expectations. The reviewer takes in these expectations and the actual source before inspecting the candidate, states applicable obligations and reports uncovered scope. No passing result is recorded here. Evidence binding follows the [frame requirement](../requirements/README.md#bounded-transitions-and-reference-frames); reduction and interpretation coverage follow their common requirement owners.
 

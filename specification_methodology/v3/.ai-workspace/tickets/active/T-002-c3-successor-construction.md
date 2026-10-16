@@ -10,7 +10,7 @@ change_class: goal_reprice
 re_entry_point: specification_methodology/v3/specification/GOALS.md
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-16T06:07:30Z
+updated_at: 2026-10-16T12:30:54Z
 priority: high
 intake_source: Jim, 2026-10-12, "ok i approve this work, but i want it done under stdo 2.5.1 executive process"
 affected_boundary: specification_methodology/v3/build_tenants/<tenant>/ (standards, a_c, qualification) and the disposition columns of specification/requirements/PREDECESSOR_CLAIMS.md
@@ -33,7 +33,7 @@ The direction separates lawful construction from the chosen constrained outcome.
 
 Only common preparation is active here. Existing I4 contracts retain source `3c4c503d291e7cb19ba21333ba6caf6167be77c9` and their admitted bytes. Neither a new draft nor either review silently repairs or rebinds those candidates. C3-I5-01 remains the immutable historical proposal; the consolidated successor receives its own source commit and descendant input record.
 
-Current result: the bounded assurance wording successor `bc8662a90323d38166164afac03468942667cf7a`, recorded as [C3-I5-05](#c3-i5-05-proposed-input-snapshot), is ready for exact-source ratification. The [fresh nonauthor readback](../../comments/codex/20261016T055238Z_REVIEW_I5_WORDING_SUCCESSOR.md) returns `satisfied` on all four Low corrections with no new material finding. Claude's [cross-family review](../../comments/claude/20261016T041542Z_REVIEW_C3_I5_04_FORMAL_ASSURANCE_B8E3242.md) retains source `b8e3242`; its supported unchanged mathematical and contract scope remains applicable as recorded by the readback. The mathematical obligations, original fourteen finding assignments and seven assurance duties are preserved. The [bounded successor record](T-001-common-definition-and-checkpoints.md#iteration-5-assurance-wording-successor) separates common preparation from ratification and admission. No tenant candidate is repaired or I5 build admitted by this result.
+Current result: C3-I5-05 remains the reviewed historical proposal at `bc8662a90323d38166164afac03468942667cf7a`. The owner's instruction to start selects [EC-COMMON-I5-06 consistency close-out](T-001-common-definition-and-checkpoints.md#iteration-5-consistency-close-out) before the dependent tenant build. The pen applies the supported source and entry clarifications from the [evaluated feedback](../../comments/codex/20261016T103941Z_REVIEW_CLAUDE_V3_CONSISTENCY_FINDINGS.md), preserving the original fourteen finding assignments, seven assurance duties and all prior inputs. The existing I5-00 work item owns this closure; affected independent readback and a successor input precede exact-source ratification. No tenant is repaired or admitted by this preparation.
 
 ## Iteration 5 consolidated work
 

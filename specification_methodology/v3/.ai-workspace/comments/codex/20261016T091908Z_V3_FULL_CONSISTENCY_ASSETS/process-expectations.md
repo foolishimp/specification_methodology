@@ -1,0 +1,14 @@
+# Process and recovery consistency expectations
+
+This is a fresh nonauthor, same-family review of common STDO v3 WHAT at frozen commit `a3c43335e6d50bb7d6dd247c90de99e7404e1d1a` (I5 source checkpoint `bc8662a`). Expectations were fixed before acquiring the subject specification bodies. Prior current-review outputs are excluded. Installed builder law governs the review operation; proposed v3 source is the subject, not its own acceptance authority.
+
+The bounded review expects:
+
+1. Current workspace/reality, retained knowledge, presented context, bounded state, and continuation sufficiency remain distinct. Projection, compression, and previous observations cannot silently replace current reality or confer authority. Every decision-relevant omitted dependency has a lawful invalidation or reacquisition route.
+2. Reference frames and emergent configurations admit exact applicability, owners, subject/basis, transitions, results, effects, and composition. Later formal preservation and assurance additions must constrain materially affected earlier process consumers, without creating a second authority or result algebra.
+3. Effect admission, observation, uncertainty, interruption, recovery, retry, and re-entry conserve the actual effect boundary. Re-entry cannot reconstruct a clean state by assumption, repeat an uncertain effect, or treat continuation as permission. Human, software, and mixed carriers obey the same common obligations while their HOW may differ.
+4. One semantic result algebra is consumed consistently through component evaluation, conjunction, Reviewer triage, Executive disposition, bugs, strategy, promotion, and termination. Unknown applicability or invalid basis cannot become satisfaction, and failure, uncertainty, non-applicability, priority, and disposition do not become synonyms.
+5. Defect, repair, escalation, strategy/repricing, termination, and successor paths identify the exact owning obligation and smallest lawful re-entry. New assertion provenance, mutual assurance, and reassessment rules reach existing process boundaries where they can change the decision.
+6. Build-tenant and process binding constraints permit declared human, software, and mixed realization without losing independent assessment, authority, or proof obligations. Common consistency is assessed separately from missing tenant implementation evidence and prior candidate acceptance.
+
+A finding requires exact frozen line references, a concrete discriminatory counterexample, severity and consequence, the owning common repair, and materially affected consumers. Stronger current global constraints may lawfully constrain shorter older descriptions; silence alone is not contradiction. What holds, actual defects, and unresolved evidence will be reported separately. No external paid calls, trials, source repairs, or further delegation are authorized by this review.

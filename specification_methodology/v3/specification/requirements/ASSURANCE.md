@@ -6,7 +6,7 @@ This requirement owns the relationship between construction, assertions, observa
 
 ## Preservation Through Construction
 
-A construction declares its starting state A, required outcome Z, governing basis and material assumptions, written Γ. Z is a predicate on acceptable outcomes, including required effects and trace properties where these matter. The following notation states proof obligations; writing an implication does not discharge it.
+A construction binds its starting state A and required outcome Z under the [universal construction model](../PRODUCT.md#universal-construction-model), with its governing basis and material assumptions, written Γ. The predicate for Z includes required effects and trace properties where these matter. The following notation states proof obligations; writing an implication does not discharge it.
 
 For a sequence of transformations, let `X_i` be the state or trace domain at boundary i, `F_i ⊆ X_i × X_(i+1)` the declared transition relation, and `P_i` the property to retain or establish there. A claimed preservation step has the form:
 
@@ -16,7 +16,7 @@ For all x, x':  P_i(x) and F_i(x, x')  implies  P_(i+1)(x').
 
 The relation accounts for the outcomes, effects and assumptions material to the claim. A relation covering successful completion alone supplies no claim about refusal, failure, interruption or unknown effects. Handling those cases follows the existing result, authority and recovery contracts. The real execution's conformance to the relation is a separate obligation.
 
-An end-to-end preservation argument establishes the initial condition, each step's applicable premises, compatibility at each join, and the connection from the final property to Z. In particular, the preceding postcondition must establish the next precondition or the missing condition must be acquired and justified. Concurrency, alternative branches and external effects require their applicable composition law; a sequential drawing does not establish one. Local success alone establishes neither the joins nor Z. Preservation is distinct from progress, termination and the availability of a suitable next step.
+An end-to-end preservation argument establishes the initial condition, each step's applicable premises, compatibility at each composition boundary, and the connection from the final property to Z. In particular, the preceding postcondition must establish the next precondition or the missing condition must be acquired and justified. Concurrency, alternative branches and external effects require their applicable composition law; a sequential drawing does not establish one. Local success alone establishes neither composition compatibility nor Z. Preservation is distinct from progress, termination and the availability of a suitable next step.
 
 Exact transformations preserve the declared meaning. Approximate transformations state their adequacy relation and an established bound for the complete composition; local tolerances cannot be assumed to add or remain unchanged. Changes to the governing outcome or meaning follow its owner and successor rules.
 
@@ -71,7 +71,7 @@ These relationships are recoverable from the existing sources, bindings and evid
 
 ## Assurance Within A Risk Model
 
-The work authority selects the required assurance for the stated risk, obligations and resource limits. It identifies material failure consequences, coverage and uncertainty, and the conditions for action or acceptance. Additional evidence can strengthen a claim only within its applicability and dependence account. Neither a test count nor an assumed preference for more checks substitutes for that account.
+The actor exercising the admitted work authority selects the required assurance for the stated risk, obligations and resource limits. That selection identifies material failure consequences, coverage and uncertainty, and the conditions for action or acceptance. Additional evidence can strengthen a claim only within its applicability and dependence account. Neither a test count nor an assumed preference for more checks substitutes for that account.
 
 Where quantified assurance is claimed, its model states the population or uncertainty being modelled, prior information, likelihoods, shared causes and calibration limits. For a specified violation event V and evidence event E, Bayes' rule is:
 
@@ -118,7 +118,7 @@ If a governing requirement changes, dependent expectations may need authorised r
 
 The governing assurance can be established from applicable retained evidence together with new evidence. The completeness of that account is distinct from the freshness of every execution. Selection considers impact-analysis, acquisition, execution and assessment costs together, with anticipated costs distinguished from measurements. The required assurance, risk policy and mandatory gates constrain that optimisation; a cheap selection that leaves a required obligation uncovered is insufficient.
 
-Broad or uncertain impact, a change to the selection model, an applicable release rule or evidence that selection missed a dependency can justify wider testing. Full-suite execution remains an available strategy and may itself have coverage gaps. No universal full-suite cadence follows, and no optimisation removes a separately required gate. Failures feed causal diagnosis and repair before another selected run.
+Broad or uncertain impact, a change to the selection model, an applicable release rule or evidence that selection missed a dependency can justify wider testing. Full-suite execution remains an available strategy and may itself have coverage gaps. No universal full-suite cadence follows, and no optimisation removes a separately required gate. Failures enter [causal diagnosis and authorised response](README.md#universal-construction-requirement); the next selected action may acquire evidence before any repair is justified.
 
 ## Formal Representation And Demonstration
 

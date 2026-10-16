@@ -10,13 +10,29 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-16T06:07:30Z
+updated_at: 2026-10-16T12:30:54Z
 dependencies: []
 ---
 
 # T-001 — Common Definition And Checkpoints
 
 ## Owner Instruction
+
+### Iteration 5 consistency close-out
+
+2026-10-16T12:30:54Z — The product owner instructs “start” after the plan to close the common I5 input, bind a ratified input to Codex, and implement the successor. This activates common close-out first. The [evaluation of Claude's findings](../../comments/codex/20261016T103941Z_REVIEW_CLAUDE_V3_CONSISTENCY_FINDINGS.md) and [full consistency review](../../comments/codex/20261016T091908Z_REVIEW_V3_COMMON_FULL_CONSISTENCY.md) supply the supported correction boundary. Intake is a bounded clarification at the existing common requirement owners, with no intended change to permitted outcomes. The instruction does not ratify a future unseen source or admit either I5 tenant.
+
+Execution contract `EC-COMMON-I5-06`: from main preimage `a4773833d4ebf28acc605ee4cc3d8a901f3e36a9`, clarify A, Z, governing specification, declared calculi and categorical/composition terminology; strengthen scoped assurance and diagnosis references; repair criterion 5's omitted construction-table route and the evidence-kind/standing sentence; align affected capability and entry summaries; and preserve diagnostic continuation before a justified repair. Existing formulas, result distinctions, six criteria, permitted refinements, four diagnosis distinctions and owner decisions retain their meaning. No global taxonomy, new core enum, retry policy, per-test carrier or execution gate is introduced.
+
+The installed builder is verified STDO 2.5.1-rc.2, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`. The common Ledger Writer records this contract before effects. The common Writer's territory is affected v3 common specification, work-entry and routing files, plus Codex commentary; the Ledger Writer owns T-001/T-002 and current Goals standing. The separate Git Writer checkpoints only returned task paths on main, with a source commit and descendant input record. Preserve prior ticket sections, snapshots, review reports, P1–P6, predecessor inventory, Product Definition, installed bootstrap spans, both tenant trees, sibling products and unrelated root work. No push, release or tenant effect is selected.
+
+Two fresh nonauthor working Reviewers fix expectations from the preimage before successor acquisition. One assesses construction/assurance meanings and their permitted cases; the other assesses entry, criteria, scoped bindings and protected boundaries. They read the exact frozen successor and relevant dependents and write only their assigned Codex commentary. Same-family review is a declared working-check exception, not cross-family acceptance or owner ratification. Progress is reviewed at 30 minutes; external paid calls and actual-use trials are excluded. Context fit and native spend remain uninstrumented. A material meaning change or concurrent governing edit returns for triage.
+
+Admission and role transition: the parent, as common Ledger Writer, records this dependency-ready contract under the owner's common-pen instruction. The common Writer now prepares its bounded return. Exit is checked source, affected nonauthor readback, review dispositions and a new exact input ready for ratification. Codex's tenant remains on its existing I4 admission until the owner ratifies that concrete source and the dependent execution contract is admitted.
+
+Writer return for frozen review: the common source makes A and Z explicit at the construction owner, retains acceptance conditions within Z, distinguishes declared calculi and composition boundaries, and routes the four diagnostic distinctions through their owner. M7's evidence/standing ambiguity and M11's criterion-5 route are repaired; scoped reuse, authentication, dependency and capability bindings retain their additional meaning. The supported Low entry, provenance and modal-wording corrections are applied. Historical Goals wording is clarified in the new revision entry without rewriting its old record. The stale work-entry page now reaches the active Codex ticket and distinguishes admitted I4 work from pending I5. Unsupported review proposals introduce no new enum, action inventory or gate.
+
+Author checks: all mathematical blocks and conformance cases are byte-identical; P1–P6, predecessor inventory, Product Definition, bootstrap spans, historical ticket/snapshot tails, original I5 work rows and both tenant trees are preserved. Scoped whitespace passes; 427 local/installed links across sixteen affected or dependent Markdown files resolve. Two nonauthor Reviewers have fixed preimage expectations before successor acquisition. The separate Git Writer now freezes the fourteen affected source/work paths, the previously uncommitted review inputs with their supporting assets, and those expectations. The frozen review results and exact successor input are recorded afterward; no tenant work is admitted.
 
 ### Iteration 5 assurance wording successor
 
