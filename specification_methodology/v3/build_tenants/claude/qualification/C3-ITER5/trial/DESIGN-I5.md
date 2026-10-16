@@ -22,19 +22,28 @@ this iteration are cited below: the end-to-end delivery-and-correction
 return ([`../returns/E2E-01.md`](../returns/E2E-01.md)), which reassessed
 the expectation sets after the frames changed at I5-01, and the I5-02
 return ([`../returns/I5-02.md`](../returns/I5-02.md)), which did so after
-the consumers paragraphs were written.
+the consumers paragraphs were written. Four other names: TO1 is the
+declared tradeoff of REDUCTION §4.3, that frames carry family-table rows,
+which raises M4a, the byte size of a frame; R-I5-01b is the successor
+readback of the owner texts of I5-01 ([`../reviews/R-I5-01b.md`](../reviews/R-I5-01b.md));
+I5-07 (reduction) and I5-09 (integrated review) are rows of the common
+work map T-002; the tasks TT-01 to TT-12 and the arms A0, A1, A3 and A5
+are those of the iteration 4 design §2 and §3.
 
 ## 1. Subject, frames and what reaches the actor
 
 The subject is the iteration 5 candidate at its freeze. Its twelve frames
 are regenerated from the current members; each carries a `Binds:` list
-that names, by owner section, member digest and section digest, the
+that names, by owner section, member digest and section digest (for the
+assurance relations, the digest of the family span from the owner
+paragraph through Formal representation), the
 construction relation of ACTIVATION §1 and, where the task applies them,
 the assurance relations of FOUNDATIONS §4 (every task that returns an
 evaluation or a result value at any level of its return: all but TT-10),
 Change impact and evidence reuse (TT-02, TT-05, TT-06 and TT-09, the
 tasks that decide a reuse or what a revision reopens) and the return
-distinction of EVALUATION §6 (TT-12, the reconstruction task). The rule
+distinction of EVALUATION §6 Return of a reconstruction (TT-12, the
+reconstruction task). The rule
 is item 4 of the `limits` list in `standards/frames/FRAME_INPUTS.json`;
 the requirement it applies is the frame-binding paragraph of
 REFERENCE_FRAME_BASIS. A `Binds:` item copies no section and owns no
@@ -47,18 +56,20 @@ What carries a bound section to the actor differs by arm:
   actor only where a route of the frame excerpts it; otherwise the actor
   has the `Binds:` item alone, which is a paraphrase and a derived view
   under the constraint-surface fidelity requirement, and the frame's own
-  header says so. At I5-06b no route of any frame excerpts a bound
+  header says so. At I5-06d no route of any frame excerpts a bound
   section, so in A1 every bound obligation reaches the actor as the
   paraphrase. Excerpting the construction relation (9,387 bytes) and the
-  assurance relations (9,334 bytes) in every frame is a tradeoff not taken
-  at this iteration and is declared under TO1 (REDUCTION §4.3): the
-  `configuration` frame at 144,640 bytes leaves 15,360 bytes under the
-  declared capacity. An `M` item on a bound obligation in A1 therefore
+  assurance relations family (27,998 bytes, owner paragraph through Formal
+  representation) in every frame is a tradeoff not taken at this iteration
+  and is declared under TO1 (REDUCTION §4.3): the `configuration` frame at
+  144,806 bytes leaves 15,194 bytes under the declared capacity, so
+  the excerpts would not fit it without a further capacity increase. An `M` item on a bound obligation in A1 therefore
   measures the paraphrase; whether the paraphrase suffices or an excerpt
   is needed is decided by the run and by the frame-entry traces of I5-07.
 - A3 receives the frame and the isolated `standards/` copy and follows
-  the frame's `Source:` lines and links; the `Binds:` item's rebased path
-  is such a link, so every bound section is acquirable.
+  the frame's `Source:` lines and links; each `Binds:` item renders its
+  destination as a link, which that instruction admits, so every bound
+  section is acquirable.
 - A5 receives the isolated copy entered at its `README.md`; bound
   sections are reachable by ordinary discovery, and nothing names them.
 
@@ -67,9 +78,10 @@ arm from the run record.
 
 ## 2. Reuse of the iteration 4 expectation sets
 
-Frame bytes differ from the iteration 4 frames. The eight sets written at
-iteration 4 (TT-01 to TT-08) are reused under the validity conditions of
-FOUNDATIONS §4 Change impact and evidence reuse. A set's expected answers
+Frame bytes differ from the iteration 4 frames. Seven of the eight sets
+written at iteration 4 (TT-01 to TT-07) are reused under the validity
+conditions of FOUNDATIONS §4 Change impact and evidence reuse; TT-08's
+is rewritten, as stated below. A set's expected answers
 depend on four things: the owning sections its items name in their
 `decides` fields; the task sentence, which is the item's subject; the
 fixture the writer wrote; and the list of sections the frame routed when
@@ -89,6 +101,8 @@ E2E-01 §4 and the I5-02 return §3; for ACTIVATION §7 it rests on the
 nonauthor readback R-I5-01b, and for every other deciding section it is
 the author's claim, labelled as such here and reserved for the I5-09
 integrated readback and for the comparison protocol's own conditions.
+Until a nonauthor performs that check, the reuse applicability of the
+seven sets is unresolved, and a run on them is reported as such.
 TT-08's set is rewritten before the run, as the iteration 4 handoff
 requires, because its frame carries the constitutional chain section of
 SPEC_METHOD §2, repaired at iteration 4 after Codex's finding R1. TT-09
@@ -124,14 +138,16 @@ Assertions and observation, the three directions).
 Result account. A run's criterion-4 account lists, per item, `satisfied`,
 `falsified` or `indeterminate` with the grader's quoted evidence or
 reason, and separately the obligations no set covers. A run meets the set
-only when every `M` and `F` item is `satisfied`; a `falsified` item is a
+only when every `M`, `F` and `W` item is `satisfied`; a `falsified` item is a
 failed condition the account keeps with its standing; an `indeterminate`
 `M` or `F` item is reported with its reason (the return neither meets nor
-contradicts the item, or is silent) and stays open, never counted as met.
+contradicts the item, or is silent) and remains an unestablished
+condition, never counted as met.
 An `A` item's `indeterminate` is the demonstration the item exists for,
 not an unassessed task outcome, and is reported in its own line (§4).
 Meeting the set is a necessary condition of correct use, not a sufficient
-one; criterion 4 stays `unresolved` until the shared protocol's run.
+one; criterion 4 stays unresolved, as work, until the shared protocol's
+run.
 
 ## 4. Weak-assertion and ambiguous-observation cases
 
@@ -153,8 +169,10 @@ instructions ([`WRITER-INSTRUCTIONS-I5.md`](WRITER-INSTRUCTIONS-I5.md)):
   does not separate them. The item records the point and both returns in
   an `admissible` field, each return in at most 40 words, marking which
   is correct; the field is part of the hashed set. The grader reads the
-  whole return and grades the item at the recorded point under the
-  addendum to its instructions
+  whole return, first checks that the two recorded returns do read the
+  same at the recorded point and lists the item as "pair separable" for
+  diagnosis (§5) when they do not, then grades the item at that point
+  under the addendum to its instructions
   ([`GRADER-INSTRUCTIONS-I5.md`](GRADER-INSTRUCTIONS-I5.md)): where the
   return reads as either recorded return at that point, `indeterminate`
   with the reason "the observation does not separate the admissible
@@ -165,10 +183,11 @@ instructions ([`WRITER-INSTRUCTIONS-I5.md`](WRITER-INSTRUCTIONS-I5.md)):
   observation does separate the answers, which is an expectation defect,
   or the return may have taken a third course. `satisfied` and `falsified`
   are never returned on an `A` item: at the recorded point the observation
-  supports neither. The purpose is to show observation sufficiency
-  (FOUNDATIONS §4 Assertions and observation, Observation sufficiency) in
-  the trial's own instrument; the demonstration is the recorded pair of
-  returns and the grade at that point, not the tag.
+  supports neither. The purpose is to exhibit the observation-sufficiency
+  condition (FOUNDATIONS §4 Assertions and observation, Observation
+  sufficiency) in the trial's own instrument by a case that fails it; the
+  demonstration is the recorded pair of returns and the grade at that
+  point, not the tag.
 
 Both items are written before the set is hashed and are part of the set.
 Their presence is disclosed to no task actor; the grader is told the tags
@@ -195,8 +214,9 @@ with its donor and the dependencies it shares with the donor's own
 evidence, because porting retains authorship and common dependencies
 (FOUNDATIONS §4 Parallel derivation and mutual assurance).
 
-Diagnosis. A disagreement, an `M` or `W` item graded `falsified` or an `A`
-item graded "outside the described ambiguity", is diagnosed after grading
+Diagnosis. A disagreement, an `M` or `W` item graded `falsified`, an `A`
+item graded "outside the described ambiguity" or an `A` item listed as
+"pair separable", is diagnosed after grading
 by triangulation among the four causes of ACTIVATION §1 Feedback and
 diagnosis, mapped to the trial as follows: the realisation (the frame's
 content, its routing and the task wording, and the actor's application of
@@ -209,7 +229,8 @@ grader's reading of the return). The iteration 4 design's attribution of a
 failure to frame content, owner text, task wording or actor application
 is kept: frame content, task wording and actor application are the
 realisation, owner text is the governing text; the third and fourth
-causes are added. An item found wrong by this diagnosis keeps its original
+causes are added. A "pair separable" item is an expectation defect by
+construction and is recorded as one. An item found wrong by this diagnosis keeps its original
 grade in the record and is listed as an expectation defect; it is not
 re-tagged or removed (iteration 4 design §7, as corrected after Codex's
 finding R3).
@@ -220,8 +241,11 @@ No earlier run is reused (iteration 4 design §7). Expectation sets are
 reused only under §2 of this file; the record of each run names the set
 hash and the frame digest it used, and for A3 and A5 the acquired bytes.
 Control-arm (A0) outcomes are attribution evidence only; every applicable
-item stays a criterion-4 item (iteration 4 design §3 and §7; the A0 arm
-row was aligned with §7 at E2E-01, as T-002 row I5-06 requires).
+item stays a criterion-4 item (iteration 4 design §3 and §7). The A0 arm
+row of the iteration 4 design was corrected in place at E2E-01 because
+T-002 row I5-06 asks for exactly that alignment of the stale description;
+the capacity amendment, which no common row asks for, is carried in §7 of
+this delta instead.
 
 ## 7. Limits and costs
 
@@ -231,9 +255,13 @@ design §5 and §6, which declare 150,000 bytes for a frame: the capacity
 is 160,000 from E2E-01, raised because the `configuration` frame would
 otherwise have been refused at 150,061 bytes (REDUCTION §4.3, TO1); the
 whole-input cap is unchanged. The iteration 4 design keeps its iteration 4
-figures. The largest frame is 144,640 bytes at I5-06b; all twelve
-1,174,187. The disclosure of the harness's instruction files (iteration 4
-design §5) is remeasured at the run. Before the arms run: five writer
+figures. The largest frame is 144,806 bytes at I5-06d; all twelve
+1,177,665. The disclosure of the harness's instruction files (iteration 4
+design §5) is remeasured at the run. While the harness does not disclose
+its prompt size, a run's fit judgment is `indeterminate` (iteration 4
+design §5), so the proof item "correct use with supported active-context
+fit" of T-002 row I5-06 is not reachable by this design alone; it depends
+on the disclosure the product owner's protocol selection supplies. Before the arms run: five writer
 activations (TT-08 rewritten, TT-09 to TT-12 new) and seven augmenting
 writer activations (TT-01 to TT-07) that receive the existing set and its
 owning sections and return the new set of §2; all twelve hashes recorded

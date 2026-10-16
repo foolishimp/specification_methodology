@@ -6,14 +6,15 @@ Purpose: The owning sections for workspace coverage and its statuses, frame-set 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment (../ACTIVATION.md#construction-relation; member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established (../FOUNDATIONS.md#assurance-relations; member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=90c2c8a45c0220d10cf5debc1b46012c4b287e1bafb0f6b27cccad06b15f2d4f)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions (../FOUNDATIONS.md#change-impact-and-evidence-reuse; member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=fb4fb777c0e7697250a341cfa85442774aca193ff0874b850e6f120a26ceedb7)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=bc0ebe0e4702d1593552df86bd4df5619acdb89825940bdfd7023568349b9fac spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=fb4fb777c0e7697250a341cfa85442774aca193ff0874b850e6f120a26ceedb7)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
-the owning section, the digest of its member and the digest of that section where
-it names one; the item copies no section and owns no determination, and where no
-route of this frame carries the section the item is a paraphrase of it.
+a link to the owning section, the digest of its member and the digest of that
+section, or of the span of sections it names, where it names one; the item
+copies no section and owns no determination, and where no route of this frame
+carries the section the item is a paraphrase of it.
 
 Each excerpt below copies one owning section of a member of this method
 byte for byte, except a `rows=k/n` excerpt (see below) and except that
@@ -51,7 +52,7 @@ Routes, in order:
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 17. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 100705 bytes.
+Size of this frame: 100925 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
 

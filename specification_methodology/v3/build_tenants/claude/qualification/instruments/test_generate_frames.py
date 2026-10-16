@@ -674,7 +674,7 @@ class Bindings(unittest.TestCase):
             self.assertEqual(tree.run(), 0)
             data = (tree.root / 'standards/frames/f.md').read_text()
             owner = sha256((tree.root / 'standards/M.md').read_bytes())
-            self.assertIn('Binds:\n\n- binds the relation (../M.md#b; member sha256=' + owner + '; section sha256=' + sha256(b'## B\n\nbeta\n') + ')\n- plain bind\n', data)
+            self.assertIn('Binds:\n\n- binds the relation ([../M.md#b](../M.md#b); member sha256=' + owner + '; section sha256=' + sha256(b'## B\n\nbeta\n') + ')\n- plain bind\n', data)
             self.assertNotIn('\nbeta\n', data.split('Routes, in order:')[0])
             entry = json.loads(tree.inputs.read_text())['frames'][0]
             self.assertEqual(list(entry), ['id', 'path', 'task', 'bytes', 'sha256', 'scope', 'binds', 'routes'])
@@ -682,6 +682,25 @@ class Bindings(unittest.TestCase):
             self.assertEqual(entry['binds'][0]['section_sha256'], sha256(b'## B\n\nbeta\n'))
             self.assertEqual(entry['binds'][1], {'text': 'plain bind'})
             self.assertEqual(tree.run('--check'), 0)
+        finally:
+            tree.close()
+
+    def test_bind_span_digests_the_family(self):
+        fr = frame('f', ('M.md', 'a'))
+        fr['binds'] = [{'text': 'binds the family', 'owner': 'standards/M.md', 'anchor': 'b', 'span_until': 'c'}]
+        tree = TempTree({'M.md': '## A\n\nalpha\n\n## B\n\nbeta\n\n## C\n\ngamma\n\n## D\n\ndelta\n'}, [fr])
+        try:
+            self.assertEqual(tree.run(), 0)
+            data = (tree.root / 'standards/frames/f.md').read_text()
+            span = sha256(b'## B\n\nbeta\n\n## C\n\ngamma\n\n')  # a section's extent runs to the next heading, blank lines included
+            self.assertIn('section sha256=' + span + ' spanning to #c)', data)
+            entry = json.loads(tree.inputs.read_text())['frames'][0]
+            self.assertEqual(entry['binds'][0]['section_sha256'], span)
+            self.assertEqual(entry['binds'][0]['span_until'], 'c')
+            self.assertEqual(tree.run('--check'), 0)
+            fr['binds'] = [{'text': 'x', 'owner': 'standards/M.md', 'anchor': 'c', 'span_until': 'b'}]
+            tree.inputs.write_text(json.dumps({'kind': 'frames', 'frames': [fr]}))
+            self.assertEqual(tree.run(), 2)
         finally:
             tree.close()
 

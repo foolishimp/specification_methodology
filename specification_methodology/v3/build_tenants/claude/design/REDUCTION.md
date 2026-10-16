@@ -1559,7 +1559,13 @@ condition stays `unresolved` until the frame-entry traces (I5-07).
 After I5-05 the twelve frames total 1,174,047 bytes (-140): the sentence
 of the Foundation to law rule that recorded F22 row 8 as the one row
 without a consumer was removed when its consumers were wired; no frame
-grew.
+grew. After I5-06d they total 1,177,665 (+3,618; largest `configuration`
+144,806): each `Binds:` destination is rendered as a link and the eleven
+assurance binds name their family span, after the successor readback
+R-I5-06b. Excerpting the bound sections themselves (the construction
+relation, 9,387 bytes; the assurance relations family, 27,998 bytes) in
+every frame is declared here as a tradeoff not taken: the `configuration`
+frame would exceed the capacity by 22,191 bytes.
 
 ### 4.4 Selected paths
 

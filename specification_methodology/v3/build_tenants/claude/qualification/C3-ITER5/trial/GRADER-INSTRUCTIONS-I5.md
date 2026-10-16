@@ -7,7 +7,11 @@ with these additions. Two tags are new: `W` and `A`.
    differently; their purpose is decided after grading, not by you.
 2. **`A` items** carry an `admissible` field naming one point of the
    return and two returns, one marked correct, that read the same at that
-   point. Read the whole return, then grade the item at the named point
+   point. First check the pair itself: if the two recorded returns do
+   not read the same at the named point, add the item's id to the
+   run's `diagnose` list with the reason "pair separable"; the item is
+   then not ambiguous as written, and you still grade it by the rules
+   below. Read the whole return, then grade the item at the named point
    only:
    - the return reads as either of the two recorded returns at that
      point: `indeterminate`, reason "the observation does not separate the
@@ -21,8 +25,9 @@ with these additions. Two tags are new: `W` and `A`.
    Never return `satisfied` or `falsified` on an `A` item: at the recorded
    point the observation supports neither.
 3. **Record.** Beside each value record the item's `tag`, and for every
-   `indeterminate` a `reason`; a run's record carries its `diagnose` list,
-   empty when nothing is listed:
+   `indeterminate` a `reason`; a run's record carries its `diagnose` list
+   of item ids with their reasons ("pair separable" or "outside the
+   described ambiguity"), empty when nothing is listed:
 
 ```json
 {"E15": {"value": "indeterminate", "tag": "A", "reason": "the observation does not separate the admissible answers", "evidence": "..."}}

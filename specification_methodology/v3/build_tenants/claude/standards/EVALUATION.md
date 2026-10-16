@@ -461,6 +461,26 @@ conserves
 [UP-022](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022)'s
 comparison rule).
 
+### Return of a reconstruction
+
+A reconstruction return is the return of a task that builds or assesses
+one member of a successor against its predecessor. It states under three
+separate heads what it claims and the evidence for each, and claims none of
+them by a byte or size measure. Semantic conservation: a disposed claim of
+the predecessor keeps its meaning in the successor text, judged by reading
+both texts against the disposition
+([RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+owns the dispositions and their conservation reading). Demonstrated
+reduction: a deciding path of the successor costs less than the same path
+in the predecessor on a declared measure, shown by the trace of both paths
+with the declared tradeoffs. Mere relocation: text moved from one owner or
+carrier to another without a change in meaning and without a traced
+change in any deciding path. Relocation reported as reduction, or
+conservation claimed from unchanged bytes, misreports the claim (§1, P1,
+P6). The three heads stay separate in the return as the rungs of the
+ladder do above; a frame for a reconstruction task binds this
+distinction.
+
 ### Foundation to law: conformance, equivalence and qualification
 
 This family, conformance, equivalence and qualification (F7 in the index of
@@ -494,6 +514,7 @@ below is stated in
 | P0 (recovered, with its actor-change premise), P6 (independent); instance premise b | By P0's actor-change premise a document set must work for an actor without prior memory, and by P6 fidelity is judged on evidence, so for a selected activation, a fresh actor given only the published documents recovers the governing relations with fidelity judged independently, at a measured reconstruction cost. The fidelity judgment is actual-use evidence, and the size measured is not evidence of it. A document set that requires private validator knowledge, whole-corpus loading or a prior actor's memory fails, whatever its content | [Method self-qualification](#method-self-qualification), Recoverability benchmark | the rc.2 corpus as baseline, and the matrix criteria the benchmark reports for: this section; the activation measured: the qualification that runs it; time and spend measurement: the selected execution binding | 6, 7, 9 |
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise c | By P6 a pass is an assessor's verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history | 3, 9 |
 | P0 (recovered), P6 (independent); instance premise c | By P0 an actor's context is bounded, and by P6 acceptance criteria must not come from the constructing actor, so a trial of bounded construction declares its per-actor context cap and total-work budget before each run, counts the context transferred across every delegated actor, and keeps its acceptance criteria independent of the constructing actor | [CONFORMANCE §2](CONFORMANCE.md#2-trials-from-the-comparative-baseline), the paragraph after the trial table, outside this member | a required basis larger than the cap, and repetition of probabilistic trials with varied task order: CONFORMANCE §2; each cap and budget: the trial's declaration; a policy of CONFORMANCE §2: that a trial declares its cap and budget before each run and counts context across every delegated actor | 8, 9 |
+| P1 (independent), P6 (independent); instance premise b | By P1 moved text is not changed meaning and unchanged bytes are not conserved meaning, and by P6 each claim needs its own evidence, so a reconstruction return states semantic conservation, demonstrated reduction and mere relocation as separate claims with separate evidence, and no byte or size measure establishes any of them | [Return of a reconstruction](#return-of-a-reconstruction) | the dispositions and the conservation reading: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F19); the reduction measure, its baselines and the traced paths: the candidate's design, declared before the trace | 1, 6, 9 |
 
 §8 records dispositions and decides nothing. CONFORMANCE §1 to §4 list the
 cases, which are the choices named in the last two rows, its §5 maps the
@@ -516,6 +537,7 @@ its own locus:
 - Row 10, the recoverability benchmark: [CONFORMANCE §3 Recoverability](CONFORMANCE.md#3-recoverability), whose cases R-01 and R-02 run it against the rc.2 corpus as baseline; the matrix criteria it reports for are this section's, as the choice column states.
 - Row 11, the conformance case rule: [CONFORMANCE §1](CONFORMANCE.md#1-counterexamples-from-the-builders-own-history), [§2](CONFORMANCE.md#2-trials-from-the-comparative-baseline), [§3](CONFORMANCE.md#3-recoverability) and [§4](CONFORMANCE.md#4-cases-from-the-common-discriminators), whose cases name their subject, mechanism, expected distinction and status under it, and [§5](CONFORMANCE.md#5-coverage-of-the-common-discriminators), Coverage, which records no pass for a case not run and assessed on this revision; [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation), whose demonstration cases are CONFORMANCE's.
 - Row 12, trial declarations: no separate consumer applies. The paragraph governs the eight trials of [CONFORMANCE §2](CONFORMANCE.md#2-trials-from-the-comparative-baseline), declared under it in the qualification cases its status column links; the cap and budget it requires are measured under [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) and [§6 Resource limits](ACTIVATION.md#resource-limits), which own their law, and no section of another member declares a trial.
+- Row 13, the return of a reconstruction: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015), whose conservation reading supplies the first head's evidence; [Method self-qualification](#method-self-qualification), where a candidate's claims against its predecessor are qualified on evidence of the kind each head names; the frame for the reconstruction task binds the distinction under the frame-binding requirement of the common frame basis.
 
 Each consumer applies the rule and decides nothing the owning section does
 not (P2, P6).

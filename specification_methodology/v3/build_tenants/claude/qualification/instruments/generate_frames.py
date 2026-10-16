@@ -60,7 +60,9 @@ Bindings (I5, E2E-01). A frame may carry `"binds"`: a list of items, each
 with `text` and optionally an `owner` and `anchor`. The header renders them
 under `Binds:`; an item that names an owner section is rendered with the
 member's SHA-256 and recorded in the manifest with `owner_sha256` and
-`section_sha256`, like a route, but the section is not copied. A bind names
+`section_sha256`, like a route, but the section is not copied; a bind with
+`span_until` names a family of sibling sections and its `section_sha256` is
+the digest of the span from its anchor through the end of `span_until`. A bind names
 an obligation the activation of the frame binds (the construction relation
 of ACTIVATION §1; the assurance relations of FOUNDATIONS §4) and owns no
 determination. `--check` reports, for each frame that would change, whether
@@ -521,13 +523,16 @@ def binds_block(frame: dict) -> str:
     for b in binds:
         line = f'- {b["text"]}'
         if b.get('owner'):
-            line += (f' (../{Path(b["owner"]).name}#{b["anchor"]}; member sha256={b["owner_sha256"]};'
-                     f' section sha256={b["section_sha256"]})')
+            dest = f'../{Path(b["owner"]).name}#{b["anchor"]}'
+            span = f' spanning to #{b["span_until"]}' if b.get('span_until') else ''
+            line += (f' ([{dest}]({dest}); member sha256={b["owner_sha256"]};'
+                     f' section sha256={b["section_sha256"]}{span})')
         lines.append(line)
     lines += ['', 'A `Binds:` item names an obligation the activation of this frame binds, with',
-              'the owning section, the digest of its member and the digest of that section where',
-              'it names one; the item copies no section and owns no determination, and where no',
-              'route of this frame carries the section the item is a paraphrase of it.', '']
+              'a link to the owning section, the digest of its member and the digest of that',
+              'section, or of the span of sections it names, where it names one; the item',
+              'copies no section and owns no determination, and where no route of this frame',
+              'carries the section the item is a paraphrase of it.', '']
     return '\n'.join(lines) + '\n'
 
 
@@ -658,9 +663,19 @@ def build(root: Path, inputs_path: Path):
                     if owner not in members:
                         members[owner] = load_member(root, owner)
                     member = members[owner]
-                    _, _, extent = member.section(anchor)
+                    start, end, extent = member.section(anchor)
+                    if b.get('span_until'):
+                        # the bound obligation is a family of sibling sections: digest the span from the
+                        # named section through the end of `span_until` (I5-06d, R-I5-06b finding 5)
+                        span_start, span_end, _ = member.section(b['span_until'])
+                        if span_start < start:
+                            raise Refusal(owner, span_start + 1,
+                                          f'frame "{fid}": bind span_until "{b["span_until"]}" precedes "{anchor}"')
+                        _, _, extent = member.extent(start, span_end)
                     item.update({'owner': owner, 'owner_sha256': member.sha256,
                                  'anchor': anchor, 'section_sha256': digest(extent)})
+                    if b.get('span_until'):
+                        item['span_until'] = b['span_until']
                 binds_out.append(item)
         record = {
             'id': fid,
