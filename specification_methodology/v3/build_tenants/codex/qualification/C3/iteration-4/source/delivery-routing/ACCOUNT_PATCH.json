@@ -1,0 +1,1587 @@
+{
+  "schema_version": "stdo.authored-semantic-fields-patch.v1",
+  "activation": "I4-DELIVERY-ACCOUNT-ROUTES",
+  "standing": "Authored account integration input; no source, account, generated artifact or independent fidelity judgment is changed by this patch.",
+  "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+  "receiving_account": {
+    "path": "qualification/C3/iteration-4/DETERMINATIONS.json",
+    "sha256": "b8c43489311b387045de129db459ef1bf29c1334724fcccc36474ea9565fedcd",
+    "standing": "Parent-held provisional integration shape, not an accepted account."
+  },
+  "direct_delivery_patch": {
+    "path": "qualification/C3/iteration-4/source/delivery/ACCOUNT_PATCH.json",
+    "sha256": "84a52481f50710a06da4c77dcba1a6248b082c0485698c1fd809a46e5042fc1d",
+    "relationship": "Completes exactly the eleven named empty dependent_argument_refresh proposals; the closed direct patch remains unchanged."
+  },
+  "integration": "Apply dotted set fields to the existing determination. scoped_replacements is normative for family arrays and preserves all current foreign families. Generated summaries are guarded by generated_summary_preimages; preserve later local/foreign contributions, reporting a conflict instead of blindly overwriting. Do not replace whole argument or definition objects.",
+  "acquisition": "source_refs, audit_consumer_loci, source_row, consumer_scope_bindings and applicability support are provenance. required_when limits family acquisition to the exact argument/applicability/fidelity assessment. No operational dependency or deciding predicate is added.",
+  "patches": [
+    {
+      "id": "SPEC_METHOD.adr-folder-convention",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Computed Classification And Treatment](#computed-classification-and-treatment), [Renewal Path](#renewal-path), [Trace Closure And Anti-Drift Rule](#trace-closure-and-anti-drift-rule), [Method](#method) and [ADR Conventions](#adr-conventions)",
+            "declared_consumer_scope": "[Computed Classification And Treatment](#computed-classification-and-treatment), [Renewal Path](#renewal-path), [Trace Closure And Anti-Drift Rule](#trace-closure-and-anti-drift-rule), [Method](#method) and [ADR Conventions](#adr-conventions)",
+            "premises": [
+              "F2",
+              "F3",
+              "F4",
+              "F6"
+            ],
+            "premise_and_pillar_argument": "F2–F4 and F6; a classification or design claim depends on particular observations, requirements and owner decisions that may change independently. Information fidelity preserves those dependencies; typed composition preserves the affected outer obligations.",
+            "conditional_consequence": "A retained conclusion is reusable only while its support remains applicable. New behavior can refute a realization or expose a governing gap, but cannot supply the missing owner decision. Correcting a lower surface cannot close an affected upstream gap merely by making tests agree with it.",
+            "additional_policy_and_owner": "Spec owns computed classification, the upward re-entry route and downstream trace closure. Its ADR fields and layout are conventions for carrying decisions. Ticket owns continuity of recorded judgments and rulings; each semantic owner decides its own repricing.",
+            "source_row": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families",
+              "line": 53,
+              "sha256": "9e80b0c4fd724fd1e7e4cdf9ec561e4a6ac2a5b612b215bc3b791efd3257f199",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/SPEC_METHOD.md",
+                "anchor": "method-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/SPEC_METHOD.md",
+                "anchor": "adr-folder-convention",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/SPEC_METHOD.md",
+                  "anchor": "adr-conventions",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "ADR Folder Convention is the child of the explicitly named ADR Conventions consumer. Apply the current row to decision ownership, retained decision support and the convention status of ADR layout. The row does not derive a mandatory adrs directory, migration, numeric ID or registry.",
+                "source_evidence": "Current source table explicitly names adr-conventions; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "ADR Folder Convention is the child of the explicitly named ADR Conventions consumer. Apply the current row to decision ownership, retained decision support and the convention status of ADR layout. The row does not derive a mandatory adrs directory, migration, numeric ID or registry.",
+          "source_refs": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "adr-conventions",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "adr-folder-convention",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates."
+        },
+        "argument.premises": [
+          "F2",
+          "F3",
+          "F4",
+          "F6"
+        ],
+        "argument.conditional_consequence": "A retained conclusion is reusable only while its support remains applicable. New behavior can refute a realization or expose a governing gap, but cannot supply the missing owner decision. Correcting a lower surface cannot close an affected upstream gap merely by making tests agree with it. Scope for this unit: ADR Folder Convention is the child of the explicitly named ADR Conventions consumer. Apply the current row to decision ownership, retained decision support and the convention status of ADR layout. The row does not derive a mandatory adrs directory, migration, numeric ID or registry.",
+        "argument.policy_choices": [
+          "Spec chooses ADR location and filename conventions at the owning design surface. Product bindings govern actual locations; alternative tenant paths remain conformant and the registry remains optional."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "2d6233b1bfdad755870148bc2fb0846124ce3108cb5dca46405780228ccbf9c7",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Spec chooses the goals-to-realization sequence, reverse gap-analysis route and traceable design decisions. ADRs and folder layout are declared conventions; the Product binding and adopted design profile determine their applicability."
+          ],
+          "held_preimage_canonical_sha256": "14c092bf6a70f4799f6f000b87310a1b9be67e5a44fa3ad5e9c64181b846bcb3",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "adr-folder-convention",
+        "whole_heading_inclusive_body_sha256": "51dcb5c7dca2b3a8ca6aab0cfadfb0ebc0785d33deebc8b71b64a90ef19218f0",
+        "body_bytes": 1692,
+        "start_line": 3390
+      },
+      "direct_refresh_preimage": {
+        "id": "SPEC_METHOD.adr-folder-convention",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.comments",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "declared_consumer_scope": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "premises": [
+              "F1",
+              "F3",
+              "F5"
+            ],
+            "premise_and_pillar_argument": "F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation.",
+            "conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives.",
+            "additional_policy_and_owner": "Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 26,
+              "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "comments",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "core-model",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "Comments is a Core Model child defining the discussion/publication carrier role. Apply the continuation argument only to facts actually required after the local boundary and lawfully recorded there. It neither requires a new comment for every task nor grants task-status authority; Posting Guide retains publication ownership.",
+                "source_evidence": "Current source table explicitly names core-model; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "Comments is a Core Model child defining the discussion/publication carrier role. Apply the continuation argument only to facts actually required after the local boundary and lawfully recorded there. It neither requires a new comment for every task nor grants task-status authority; Posting Guide retains publication ownership.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "comments",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+          "local_premise_support": {
+            "premise": "F6",
+            "source": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+          }
+        },
+        "argument.premises": [
+          "F1",
+          "F3",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. Scope for this unit: Comments is a Core Model child defining the discussion/publication carrier role. Apply the continuation argument only to facts actually required after the local boundary and lawfully recorded there. It neither requires a new comment for every task nor grants task-status authority; Posting Guide retains publication ownership.",
+        "argument.policy_choices": [
+          "Ticket assigns comments to discussion and publication, not task-status authority. The Product Definition locates the carrier and Posting Guide owns its publication rules."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "comments",
+        "whole_heading_inclusive_body_sha256": "18899019b8206205eb4742a73a0c32e77276285682b864d9e446bb12ff5d1518",
+        "body_bytes": 381,
+        "start_line": 102
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.comments",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.default-layout",
+      "set": {
+        "argument.source_family_arguments": [],
+        "argument.source_family_applicability": {
+          "standing": "no_family_law_argument_for_this_data_surface",
+          "binding_kind": "schema_locator_or_optional_extension_data",
+          "reason": "This unit supplies a starter layout and locator/rebinding data. The current family table names Authority as a deciding consumer, but does not make this layout an independent family-law predicate. The default paths do not follow from F1–F6; the explicit permission to bind other resources and the governing installed-basis obligation remain unchanged.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "default-layout",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+        },
+        "argument.premises": [],
+        "argument.conditional_consequence": "This unit supplies a starter layout and locator/rebinding data. The current family table names Authority as a deciding consumer, but does not make this layout an independent family-law predicate. The default paths do not follow from F1–F6; the explicit permission to bind other resources and the governing installed-basis obligation remain unchanged.",
+        "argument.policy_choices": []
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "default-layout",
+        "whole_heading_inclusive_body_sha256": "a7405ba4c0d8bb80e1f7925617c6dae9ecead47fa9a660896ff20de05a316c4d",
+        "body_bytes": 748,
+        "start_line": 169
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.default-layout",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity), [Condition-Based Closure And Reuse](#condition-based-closure-and-reuse) and [Test Case Authority](#test-case-authority)",
+            "declared_consumer_scope": "[Recorded Judgment And Owner-Ruling Continuity](#recorded-judgment-and-owner-ruling-continuity), [Condition-Based Closure And Reuse](#condition-based-closure-and-reuse) and [Test Case Authority](#test-case-authority)",
+            "premises": [
+              "F1",
+              "F2",
+              "F3",
+              "F4",
+              "F5",
+              "F6"
+            ],
+            "premise_and_pillar_argument": "F1–F6; work has declared completion and non-closure conditions, some requiring particular owner decisions, and its support can outlive an actor. Algebraic conjunction preserves every applicable obligation; evidence and authority distinguish an assessment from the required decision.",
+            "conditional_consequence": "Closure needs evidence on those exact predicates. A lawful rejection cannot satisfy a predicate requiring acceptance; a completed review cannot replace an absent condition. A recorded judgment remains usable when its support is current, so a new actor alone supplies no reason to repeat it.",
+            "additional_policy_and_owner": "Ticket chooses closure-bearing fields, judgment/ruling continuity and test-authority reconciliation. Foundations owns currentness and conjunction. The applicable law selects independent review and reserved acceptance; it does not create an extra review where neither applies.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 31,
+              "sha256": "ab29fdab70fc787f98e122e66b0b96641155d2a4ec67cf2d245351311e62ee2f",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "evaluation-criteria-and-non-closure-conditions",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "condition-based-closure-and-reuse",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "explicit_consumed_condition_surface",
+                "scope_condition": "The named Condition-Based Closure And Reuse consumer evaluates every applicable declared obligation and absence of active non-closure conditions. This clause supplies those same evaluation_criteria and non_closure_conditions and their migration examples. The binding covers those consumed conditions, not every Ticket Rules sibling or a new acceptance requirement.",
+                "source_evidence": "Current source table explicitly names condition-based-closure-and-reuse; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "explicit_consumed_condition_surface",
+          "scope_condition": "The named Condition-Based Closure And Reuse consumer evaluates every applicable declared obligation and absence of active non-closure conditions. This clause supplies those same evaluation_criteria and non_closure_conditions and their migration examples. The binding covers those consumed conditions, not every Ticket Rules sibling or a new acceptance requirement.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "condition-based-closure-and-reuse",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "evaluation-criteria-and-non-closure-conditions",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates."
+        },
+        "argument.premises": [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "Closure needs evidence on those exact predicates. A lawful rejection cannot satisfy a predicate requiring acceptance; a completed review cannot replace an absent condition. A recorded judgment remains usable when its support is current, so a new actor alone supplies no reason to repeat it. Scope for this unit: The named Condition-Based Closure And Reuse consumer evaluates every applicable declared obligation and absence of active non-closure conditions. This clause supplies those same evaluation_criteria and non_closure_conditions and their migration examples. The binding covers those consumed conditions, not every Ticket Rules sibling or a new acceptance requirement.",
+        "argument.policy_choices": [
+          "Ticket chooses visible evaluation criteria and non-closure conditions for the admitted contract. Spec owns path-relative residual-debt authority; debt outside the claimed acceptance path is not by itself a non-closure condition."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "2d6233b1bfdad755870148bc2fb0846124ce3108cb5dca46405780228ccbf9c7",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its closure-bearing carrier fields and admitted test authority. Foundations owns currentness and conjunction; Spec owns requirement/design truth and lawful re-entry. These policies do not add review when the applicable grant and law require none."
+          ],
+          "held_preimage_canonical_sha256": "e86d82aa02dbff5ee833455cf11868e8d90444c16200cc2f82fb440e21f5c733",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "evaluation-criteria-and-non-closure-conditions",
+        "whole_heading_inclusive_body_sha256": "1f60125a4272dc0833bfc09c1a0090f349b62794a854af53ecd8016b79c80bff",
+        "body_bytes": 1133,
+        "start_line": 1001
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.execution-contracts",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "declared_consumer_scope": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "premises": [
+              "F1",
+              "F3",
+              "F5"
+            ],
+            "premise_and_pillar_argument": "F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation.",
+            "conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives.",
+            "additional_policy_and_owner": "Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 26,
+              "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "execution-contracts",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "core-model",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "Execution Contracts is a Core Model child distinguishing one run from ticket and sprint lifetimes. The family explains selection of a surviving source carrier and recoverable run result. Admission and closure keep their separately owned conditions; contract presence supplies neither.",
+                "source_evidence": "Current source table explicitly names core-model; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "Execution Contracts is a Core Model child distinguishing one run from ticket and sprint lifetimes. The family explains selection of a surviving source carrier and recoverable run result. Admission and closure keep their separately owned conditions; contract presence supplies neither.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "execution-contracts",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+          "local_premise_support": {
+            "premise": "F6",
+            "source": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+          }
+        },
+        "argument.premises": [
+          "F1",
+          "F3",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. Scope for this unit: Execution Contracts is a Core Model child distinguishing one run from ticket and sprint lifetimes. The family explains selection of a surviving source carrier and recoverable run result. Admission and closure keep their separately owned conditions; contract presence supplies neither.",
+        "argument.policy_choices": [
+          "Ticket chooses one run-scoped admitted contract derived from the smallest lawful source carrier. Draft, admit and execute may share one invocation; a run contract does not become a rival backlog or planning surface."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "execution-contracts",
+        "whole_heading_inclusive_body_sha256": "3e3419b7396014a3ea96271453b0ea3046b1ef6858d50a9fb0a8574ca5a01db4",
+        "body_bytes": 1404,
+        "start_line": 120
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.execution-contracts",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.future-extensions",
+      "set": {
+        "argument.source_family_arguments": [],
+        "argument.source_family_applicability": {
+          "standing": "no_family_law_argument_for_this_data_surface",
+          "binding_kind": "schema_locator_or_optional_extension_data",
+          "reason": "This unit lists optional future extensions and preserves the selected local-file model and existing authority/refusal laws. It is not an implementation migration or a new deciding consumer named in the current migration row. Optionality and the obligations on any selected alternative remain unchanged; no migration-family derivation or new adoption duty is assigned here.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "future-extensions",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+        },
+        "argument.premises": [],
+        "argument.conditional_consequence": "This unit lists optional future extensions and preserves the selected local-file model and existing authority/refusal laws. It is not an implementation migration or a new deciding consumer named in the current migration row. Optionality and the obligations on any selected alternative remain unchanged; no migration-family derivation or new adoption duty is assigned here.",
+        "argument.policy_choices": []
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F2",
+            "F3",
+            "F4",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "cb705548848c2f7a0313f94d1fd1226fc09b4502b028703fd764ed2d479be383",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses migration declarations, break-to-closure maps and local follow-up. Spec owns the migration law; the owning work authority selects any optional future carrier."
+          ],
+          "held_preimage_canonical_sha256": "c90cd2414d4de799a3bf0e92a3802765c0954b6ff8391c8a9abf5d92ed230d59",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "future-extensions",
+        "whole_heading_inclusive_body_sha256": "d1bccedf34a4bdba65e5ee2a290705c7095ef4ef7d0077283872ae66e0fc0bdf",
+        "body_bytes": 508,
+        "start_line": 1707
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.future-extensions",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.goals",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "declared_consumer_scope": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "premises": [
+              "F1",
+              "F3",
+              "F5"
+            ],
+            "premise_and_pillar_argument": "F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation.",
+            "conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives.",
+            "additional_policy_and_owner": "Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 26,
+              "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "goals",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "core-model",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "Goals is a Core Model child defining the epic carrier role. The family is relevant only when assessing which existing carrier retains the selected work-wave facts beyond an activation. It does not turn Goals into durable execution tracking, prescribe a physical filename or create a new goal-admission decision.",
+                "source_evidence": "Current source table explicitly names core-model; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "Goals is a Core Model child defining the epic carrier role. The family is relevant only when assessing which existing carrier retains the selected work-wave facts beyond an activation. It does not turn Goals into durable execution tracking, prescribe a physical filename or create a new goal-admission decision.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "goals",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+          "local_premise_support": {
+            "premise": "F6",
+            "source": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+          }
+        },
+        "argument.premises": [
+          "F1",
+          "F3",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. Scope for this unit: Goals is a Core Model child defining the epic carrier role. The family is relevant only when assessing which existing carrier retains the selected work-wave facts beyond an activation. It does not turn Goals into durable execution tracking, prescribe a physical filename or create a new goal-admission decision.",
+        "argument.policy_choices": [
+          "Ticket distinguishes the current Goals epic layer from durable execution tracking; the Product Definition locates it and GOALS.md is the default."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "goals",
+        "whole_heading_inclusive_body_sha256": "e6ceb58c92860b53920ece84686a8c8381296ea69b768ced4e745da5fc821f55",
+        "body_bytes": 337,
+        "start_line": 47
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.goals",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.required-fields",
+      "set": {
+        "argument.source_family_arguments": [],
+        "argument.source_family_applicability": {
+          "standing": "no_family_law_argument_for_this_data_surface",
+          "binding_kind": "schema_locator_or_optional_extension_data",
+          "reason": "This unit supplies the ticket/contract field schema, recommendation distinctions and conditional migration fields. The field names are chosen carrier policy, not a new family-law inference. Its required, recommended and conditional requirements remain intact and are consumed by the separately owned carrier/admission/migration decisions. No family argument is asserted for each schema entry.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "required-fields",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+        },
+        "argument.premises": [],
+        "argument.conditional_consequence": "This unit supplies the ticket/contract field schema, recommendation distinctions and conditional migration fields. The field names are chosen carrier policy, not a new family-law inference. Its required, recommended and conditional requirements remain intact and are consumed by the separately owned carrier/admission/migration decisions. No family argument is asserted for each schema entry.",
+        "argument.policy_choices": []
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "required-fields",
+        "whole_heading_inclusive_body_sha256": "08ea8993848cab0a678608ada30eb7dd556d476a4035ec2721fc0cd4cca8a04c",
+        "body_bytes": 1202,
+        "start_line": 531
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.required-fields",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.sprint-manifest-required-fields",
+      "set": {
+        "argument.source_family_arguments": [],
+        "argument.source_family_applicability": {
+          "standing": "no_family_law_argument_for_this_data_surface",
+          "binding_kind": "schema_locator_or_optional_extension_data",
+          "reason": "This unit supplies manifest schema data and field meanings, including the explicit paydown link to Sprint Close Review. The current family argues at the named escrow/close consumers; it does not derive these literal keys or create a standalone schema acceptance decision. All required fields and their paydown binding remain unchanged.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "sprint-manifest-required-fields",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No decision, requirement, recommendation, permission, refusal law or consumer dependency is added or removed."
+        },
+        "argument.premises": [],
+        "argument.conditional_consequence": "This unit supplies manifest schema data and field meanings, including the explicit paydown link to Sprint Close Review. The current family argues at the named escrow/close consumers; it does not derive these literal keys or create a standalone schema acceptance decision. All required fields and their paydown binding remain unchanged.",
+        "argument.policy_choices": []
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "sprint-manifest-required-fields",
+        "whole_heading_inclusive_body_sha256": "c2a8ebd213ca0c2fe56da14c1dc42ee41d9937c44887c56cae091eb454e7161f",
+        "body_bytes": 1059,
+        "start_line": 246
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.sprint-manifest-required-fields",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.sprints",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "declared_consumer_scope": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "premises": [
+              "F1",
+              "F3",
+              "F5"
+            ],
+            "premise_and_pillar_argument": "F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation.",
+            "conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives.",
+            "additional_policy_and_owner": "Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 26,
+              "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "sprints",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "core-model",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "Sprints is a Core Model child defining a bounded batch lifetime. The family explains why surviving obligations need a carrier beyond close. It does not grant escrow, replace sprint-close review, authorize debt retention or supply constitutional authority.",
+                "source_evidence": "Current source table explicitly names core-model; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "Sprints is a Core Model child defining a bounded batch lifetime. The family explains why surviving obligations need a carrier beyond close. It does not grant escrow, replace sprint-close review, authorize debt retention or supply constitutional authority.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "sprints",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+          "local_premise_support": {
+            "premise": "F6",
+            "source": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+          }
+        },
+        "argument.premises": [
+          "F1",
+          "F3",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. Scope for this unit: Sprints is a Core Model child defining a bounded batch lifetime. The family explains why surviving obligations need a carrier beyond close. It does not grant escrow, replace sprint-close review, authorize debt retention or supply constitutional authority.",
+        "argument.policy_choices": [
+          "Ticket chooses a bounded manifest and explicit close review. A sprint may contain durable tickets, local entries or both; independently surviving debt requires the lawful durable follow-up already specified."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "sprints",
+        "whole_heading_inclusive_body_sha256": "c5ef431da788be78fec7f633e38aaf3f787d61f501f37292ada34200d9f475e5",
+        "body_bytes": 950,
+        "start_line": 78
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.sprints",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    },
+    {
+      "id": "TICKET_METHOD.tickets",
+      "set": {
+        "argument.source_family_arguments": [
+          {
+            "family": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "declared_consumer_scope": "[Work-Carrier-To-Execution Rule](#work-carrier-to-execution-rule) and [Core Model](#core-model)",
+            "premises": [
+              "F1",
+              "F3",
+              "F5"
+            ],
+            "premise_and_pillar_argument": "F1, F3 and F5; work or an obligation may survive its current actor, run or batch. Reference frames bound private context; persistent identity and state let a later actor resume the same obligation.",
+            "conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives.",
+            "additional_policy_and_owner": "Ticket chooses one run-scoped contract, the ordered ticket/sprint/run selection table and the durable result surface. The Product Definition locates carriers; ticket-state authority decides permitted durable-ticket mutations.",
+            "source_row": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families",
+              "line": 26,
+              "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+              "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+              "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+              "hash_boundary": "Exact Markdown row including terminal newline."
+            },
+            "source_refs": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "carrier-families",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+            "audit_consumer_loci": [
+              {
+                "path": "standards/TICKET_METHOD.md",
+                "anchor": "tickets",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ],
+            "consumer_scope_bindings": [
+              {
+                "declared_root": {
+                  "path": "standards/TICKET_METHOD.md",
+                  "anchor": "core-model",
+                  "role": "provenance",
+                  "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+                },
+                "binding_kind": "scoped_heading_descendant",
+                "scope_condition": "Tickets is a Core Model child that gives enduring work identity a recoverable authoritative carrier. The premise applies when work needs independent state beyond the local boundary; a ticket or particular physical file is not required for every execution.",
+                "source_evidence": "Current source table explicitly names core-model; the exact consumer body and the owning body establish the limited relation described here.",
+                "role": "provenance",
+                "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+              }
+            ]
+          }
+        ],
+        "argument.source_family_applicability": {
+          "standing": "scoped_source_match",
+          "binding_kind": "scoped_heading_descendant",
+          "scope_condition": "Tickets is a Core Model child that gives enduring work identity a recoverable authoritative carrier. The premise applies when work needs independent state beyond the local boundary; a ticket or particular physical file is not required for every execution.",
+          "source_refs": [
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "tickets",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            }
+          ],
+          "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+          "operational_dependency_effect": "No change to local applicability, dependencies, admission, closure, permissions or result predicates.",
+          "local_premise_support": {
+            "premise": "F6",
+            "source": {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "core-model",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "reason": "The unchanged Core Model preamble explicitly adopts F1, F3, F5 and F6 and preserves Product/ticket-state authority. This local premise is retained separately from the table row."
+          }
+        },
+        "argument.premises": [
+          "F1",
+          "F3",
+          "F5",
+          "F6"
+        ],
+        "argument.conditional_consequence": "If continuation needs a fact or open obligation after the local boundary, private memory cannot be its only carrier. The carrier must preserve the state needed for that continuation. This premise does not require a durable ticket when no independent state survives. Scope for this unit: Tickets is a Core Model child that gives enduring work identity a recoverable authoritative carrier. The premise applies when work needs independent state beyond the local boundary; a ticket or particular physical file is not required for every execution.",
+        "argument.policy_choices": [
+          "Ticket chooses one enduring source of truth for the work identity. A Markdown file is the default carrier; other lawfully bound carriers remain permitted."
+        ]
+      },
+      "scoped_replacements": {
+        "argument.source_family_arguments": {
+          "mode": "replace_owned_source_rows_preserving_current_other_entries",
+          "owned_source_rows": [
+            {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "method-families"
+            },
+            {
+              "path": "standards/TICKET_METHOD.md",
+              "anchor": "carrier-families"
+            }
+          ],
+          "legacy_source_refs": [
+            "SPEC_METHOD.method-families",
+            "TICKET_METHOD.carrier-families"
+          ],
+          "incoming_entries": "Use only entries in this dotted set value whose source_row path/anchor matches an owned source row. The unowned entries in the set value document the held-preimage result only.",
+          "application": "At application time, retain every current array entry outside the owned source rows (including entries added by earlier integration patches), then append the incoming owned entries in supplied order. Legacy exact source_refs naming an owned table also identify an owned entry. Do not blindly replace this array after another patch adds unowned families.",
+          "preserve_unowned_entries": true
+        }
+      },
+      "generated_summary_preimages": {
+        "argument.premises": {
+          "held_preimage": [
+            "F1",
+            "F3",
+            "F5",
+            "F6"
+          ],
+          "held_preimage_canonical_sha256": "4c75106d407fb1e0554700529d2c16fc7dc437182ea34f84f22f65fa0a17f616",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.conditional_consequence": {
+          "held_preimage": "Apply the exact source-family argument(s) below only in their declared consumer scope. Their consequence does not imply their additional chosen policies.",
+          "held_preimage_canonical_sha256": "13ae81ced2b971d09500563cb7ece7f90aec81def56d3e42ca28b60e6be6dc3d",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        },
+        "argument.policy_choices": {
+          "held_preimage": [
+            "Ticket chooses its carrier forms, smallest-carrier rule, stable work identity, tenant-local state and milestone semantics. Product and ticket-state authorities bind the actual locations and transitions."
+          ],
+          "held_preimage_canonical_sha256": "ec142d61c3dbdf123dc1df9e58ce86c3788adcbad20696567c255feb96f41dc0",
+          "integration_rule": "This is a stale family-derived wrapper, not a replacement for a more-specific local argument. Apply the supplied value only when the current field equals this held preimage and no foreign family contribution would be lost. Preserve any later local argument. If foreign families exist, retain their premise/policy contributions and merge the owned replacement by origin; if provenance is insufficient, retain the current field and return an explicit conflict for author review."
+        }
+      },
+      "changed_nested_fields": [
+        "argument.source_family_arguments",
+        "argument.source_family_applicability",
+        "argument.premises",
+        "argument.conditional_consequence",
+        "argument.policy_choices"
+      ],
+      "preserve": "All unmentioned semantic fields, local definitions, predicates, obligations, permissions/exceptions, dependencies, source applicability, result/effect mappings, consumers and proof standing remain byte-equivalent JSON values. Only the exact obsolete family-derived summary wrapper may change under its guard.",
+      "source_binding": {
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "tickets",
+        "whole_heading_inclusive_body_sha256": "55c04a2023213df4dda2733f311ff267c098343b9de4da8cacd82c7ca00e579e",
+        "body_bytes": 368,
+        "start_line": 60
+      },
+      "direct_refresh_preimage": {
+        "id": "TICKET_METHOD.tickets",
+        "new_direct_family_arguments": [],
+        "old_family_argument_count": 1,
+        "action": "Refresh only the scoped family argument references; preserve the unit's predicate, result mapping and more specific local argument. An empty direct list requires owner/subsection applicability assessment, not silent deletion.",
+        "standing": "dependent_integration_required"
+      }
+    }
+  ],
+  "unresolved_source_bindings": [],
+  "source_members": [
+    {
+      "path": "standards/SPEC_METHOD.md",
+      "sha256": "5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798"
+    },
+    {
+      "path": "standards/TICKET_METHOD.md",
+      "sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6"
+    }
+  ],
+  "scope_counts": {
+    "existing_determinations": 11,
+    "scoped_current_family_bindings": 7,
+    "explicit_no_family_law_data_surfaces": 4,
+    "current_family_rows_used": 3
+  }
+}

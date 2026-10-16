@@ -1,0 +1,34 @@
+# I4-PROFILE-ACCOUNT-ROUTES return
+
+Standing: writer-authored semantic amendment ready for parent integration and independent receiving review. This return does not qualify an integrated account or claim complete argument coverage. The only written territory is `qualification/C3/iteration-4/source/profile-routing/`; the six standards, original closed profile return, generated account and Git state are not edited.
+
+Frozen source is `cd19955505a0350b5d9b0f19d00c89e6d1810aa6`, byte-identical for all six profile owners to `0044d45f7ac4a49e204a8abebfe3a0b07551d62f` and the current worktree. Exact member hashes are in [ACCOUNT_PATCH.json](ACCOUNT_PATCH.json) and [VALIDATION.json](VALIDATION.json). Held provisional account is `b8c43489311b387045de129db459ef1bf29c1334724fcccc36474ea9565fedcd`. The historical copy inventory is pinned to `199c6d29bc02590a8b7f252043fc43223c09808d`; it supplies coverage coordinates, not current source authority.
+
+[ACCOUNT_PATCH.json](ACCOUNT_PATCH.json) contains 95 determination amendments. It addresses every inherited copy location: 56 Design consumer arguments, 37 ODD consumer arguments, and the two governing-owner definitions. The 111 old row copies become 115 current scoped copies, with one explicit empty/unresolved applicability. All 45 current source rows are verified; the already-correct six owner arguments remain unchanged. [COVERAGE.json](COVERAGE.json) lists every exact determination, field, row ordinal, route, retired hash and residual. Retired hashes are historical audit metadata only and do not appear as current replacement-row provenance.
+
+The routing dispositions are 29 exact consumer links, 17 enclosing-heading descendant scopes, 46 explicit source-policy bindings, two complete owner tables and one unresolved family applicability. These bindings retain the consumer's adoption and local conditions. A more-specific linked owner takes precedence over its enclosing family for routing; no row is claimed to derive all subordinate policy choices.
+
+ODD `118-cumulative-environment-law-is-mandatory` explicitly rebinds `result_mapping.bound_predicate` to the corrected cumulative-environment predicate. The prior mapping incorrectly made every `requires/provides/carries` declaration mandatory. Required material bindings must remain available at consumption; declaration remains the source's recommendation. The patch adds the conditional typed `TRANSFORMATION_LIBRARY.composition-law` relation for actual consumption within an adopted ODD scope, including compatible type/basis, current support and the actual operation grant. Its dependency ID was already present, so dependency ID sets do not grow. The five verdicts, performance, coverage, domain/effect separation and specific local cumulative-environment argument remain unchanged.
+
+Integration must apply the `family_array_scopes` operation, not unconditionally replace arrays after other writers add core families. Every family-array update replaces only rows originating at the six named profile table owners, recognized by exact source-row owner or owning-table `source_refs`; it preserves other current families. `generated_summary_preimages` supplies the held summary values and requires preserving foreign-family contributions and more-specific local arguments. Plain dotted assignment was checked only against the held provisional account. The parent's integrated normalizer and receiving review must verify merge behavior on its actual successor.
+
+Family `source_refs`, exact row pins and `audit_consumer_loci` are provenance for the task assessing argument applicability or fidelity. They do not add blanket operational acquisition. The sole typed relation amendment is ODD's conditional Composition relation. Unmentioned source-local predicates, definitions, obligations, exceptions and dependency sets remain intact.
+
+The remaining scope is exact:
+
+- **Design §11A:** The governing/observing/routing/auditing boundary rule and its ratified strategy-ownership exception are known and preserved. The old generic family ranged over §§7–13; the new functional row neither names §11A nor explains that role/strategy distinction. The patch removes that stale support claim and records unresolved family-table applicability. It does not turn the operative rule into an unknown obligation. A separate source-owned clarification is required before claiming complete family-argument support for this clause; the parent owns that follow-on.
+- **Design §14:** This source is a nine-family owner-selection table, explicitly not a duplicate definition of the selected decisions. The current proof/lifecycle row supports evidence and assessment/acceptance separation. It does not derive every selected owner's policy. Its question routes, required-answer rule and result semantics remain intact. `scoped_with_residual` records this non-universal explanatory scope, not missing operational law.
+- **ODD Probabilistic Compute:** The current control row supports operation/actor/control separation. The local source already supplies the complete directional F_P/F_H specialization conditions: preservation, narrowing, graph context, no inverse, exact basis and invalidation, together with worker-internal HOW latitude. Those conditions remain in the frozen source and the account's existing obligations/compute definitions. The family match does not claim independently to derive that entire local argument. `scoped_with_residual` records this limited table contribution, not an unknown specialization obligation.
+
+[VALIDATION.json](VALIDATION.json) records the in-memory preservation check against all 701 determinations. All predicates, obligations, exceptions and owner coordinates are unchanged; all result mappings are unchanged except the explicit ODD bound-predicate correction. All 115 replacement copies have current exact source-row hashes, all six source members match both freezes, and the provisional account remains byte-identical. The check also preserves ODD §11.8's more-specific premises and explanation. These are writer static checks, not independent entailment or trial evidence.
+
+Resource use: 159,872 / 262,144 selected-source bytes; 1374 / 1800 elapsed seconds at closure. [ACQUISITION.json](ACQUISITION.json) carries the charged reads and exact timestamps. No paid calls were made. `build_patch.py` reproduces the authored patch only while the pinned provisional input is unchanged; `validate_patch.py` writes validation only and never writes an integrated account.
+
+Stable artifact SHA-256:
+
+| Artifact | SHA-256 |
+|---|---|
+| ACCOUNT_PATCH.json | `de80b0b3f49fba66d4dff286a3fb4d4720a7b993e111a2bb93e1c16466122eaf` |
+| COVERAGE.json | `70132d4287c70a3a76ef113d3d0d6e9c1f5c7f1d7efa7aa75ccd067f1e43236e` |
+| VALIDATION.json | `bbcf404c8cd7d5f1d264df2642e4d74ae7803680d4d229f31b56d7f528431240` |
+| ACQUISITION.json | `87b5397864e5ef92cdb07668e7f4bad19709ae950ef3f117df5df7cd4453331b` |

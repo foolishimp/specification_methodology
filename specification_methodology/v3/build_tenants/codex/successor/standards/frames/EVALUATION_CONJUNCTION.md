@@ -9,7 +9,18 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+## Governing argument routes
+
+These source families state the premises, shared consequences and
+additional choices behind the selected clauses. Acquire the relevant
+argument when its derivation or applicability is material to this task;
+a route alone does not discharge that judgment.
+
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
+- [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+- [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result algebra
 
@@ -19,6 +30,15 @@ original qualified domain outcome, supporting evidence and citations, unresolved
 obligations and material effect observations. A reference can carry these when
 its resolution preserves their meaning and availability. This is a semantic
 contract, not a mandatory serialization format or additional work carrier.
+
+F1 selects the question and F2/F6 restrict its answer to supported evidence.
+Because an execution can be interrupted and its effects can outlive its actor
+(F3/F5), evaluation performance, the predicate's truth and effect completion
+are separate questions. The informational contribution is the recoverable
+meaning of each answer; the computational contribution is what was performed
+and observed. The following value choices implement those distinctions.
+RF-012 and every domain refinement bind all three questions before consuming a
+label such as `ready` or `refused`; no label decides the other predicates.
 
 The verdict has exactly these values:
 
@@ -85,7 +105,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -134,7 +154,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result conjunction
 
@@ -144,6 +164,14 @@ results, their authentication and predicate mapping, known failures and their
 citations, uncovered required coverage, uncertain effects and invalidators.
 The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
+
+The required set comes from the composite's applicability and coverage
+contract, not from the list of returns received. F4's preservation obligation
+therefore makes a missing required return visible even when every available
+return is satisfied. F2/F6 also retain an authenticated counterexample when
+another slot is missing. Frame conjunction and the library's Conjoin operation
+apply this same distinction; their owners supply which predicates and joins
+are required, not another rule for erasing failures or filling gaps.
 
 The aggregate evaluation has performance performed when its combining rule is
 applied; this does not change component performance. The composite declares its
@@ -230,7 +258,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -251,14 +285,39 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ## Reference Frame Laws
+
+The [F1–F6 commitments](../FOUNDATIONS.md#foundational-commitments) have their
+standing at their owner. Each row assumes a declared evaluation and the
+material relations named in it; neither the evaluation nor its authority is
+derived from a resource limit. The linked rules decide the questions. Their
+arguments distinguish the pillar contribution from the additional frame policy.
+
+| Deciding family and consumer | Premises and pillar contribution | Conditional consequence | Additional choice and owner |
+|---|---|---|---|
+| [RF-001](../REFERENCE_FRAME_METHOD.md#rf-001-evaluation-relativity), used by Select And Activate and Diagnostic Order | F1 selects a question; F2 requires its interpreted subject. Specification supplies the intended decision and reference frames its bounded evaluation family. | A frame's presence in a set cannot establish that it can decide this question. Activation binds the actual evaluation to the declared family before relying on its sufficiency. | The frame owner declares the family and its tuple; the task owner selects the actual question. Similar names do not establish inclusion. |
+| [RF-002–004](../REFERENCE_FRAME_METHOD.md#rf-002-finite-attention) and [RF-013–014](../REFERENCE_FRAME_METHOD.md#rf-013-reconstructable-activation), used by Select And Activate | F2/F3 distinguish current material state from its view; F5 bounds the actor. Reference frames contribute sufficient acquisition; world models and identity supply the bound subject. | A missing material relation cannot be replaced by ambient memory or an irrelevant easier question. If sufficient acquisition does not fit, the dependent evaluation needs a granted response or an explicit unresolved result. | This member selects family-relative sufficiency and reconstructability; frame-set authority selects the actor and partition. The execution binding selects its resource envelope, not a universal byte cap. |
+| [RF-005](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates) and [RF-011](../REFERENCE_FRAME_METHOD.md#rf-011-topology-mutation-and-recharting), used by result reuse and Reconfigure When Necessary | F3 supplies scoped identity and changing topology; F2 restricts reliance to supported interpretation. Identity and evidence/correction contribute exact basis and invalidation. | Equal coordinates on a changed basis cannot preserve a judgment without its equality and applicability relation. A material topology change reopens the dependent claim before reuse. | Subject owners supply coordinate equality; the frame declares its invalidators. Foundations owns shared currentness; the domain selects recharting and observation mechanisms. |
+| [RF-006–008](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation), used by Evaluate and Evidence Or Coordinate Translation | F2/F4 preserve interpreted distinctions across a relation; F6 separates evidence and grants. Information and interpretation preserve meaning; evidence and authority preserve the permitted evaluator, effect and disposition. | Shared evidence or overlapping coordinates neither equate two meanings nor grant a new effect. An evaluation needs the actual relation and mandate it uses. | This member names frame authority kinds. Their existing owners supply the grants; a translation owner supplies its declared mapping and loss. |
+| [RF-009](../REFERENCE_FRAME_METHOD.md#rf-009-no-assumed-hierarchy) and [RF-016](../REFERENCE_FRAME_METHOD.md#rf-016-implementation-neutrality), used by Human Frame-Set Declaration, Frame-Set Optimization and Agentic Use | F4 supplies dependencies; F5 bounds capability; F6 bounds allocation authority. Reference frames distribute attention; computational execution supplies actor capability and communication conditions. | Functional decomposition, communication and authority do not become one hierarchy. One adequate frame or several may satisfy the same task while preserving required independence. | The frame-set owner selects its topology, representation and actor allocation under Foundations Configuration. No runtime, fixed role inventory or unique optimum follows. |
+| [RF-010](../REFERENCE_FRAME_METHOD.md#rf-010-composition-on-demand), used by Using Frames In Conjunction | F4 requires preservation of the relation actually combined. Algebraic calculus contributes compatible joins; functional design separates internal execution from result consumption. | Closed results can be conjoined without merging internal manifolds. Transporting coordinates or combining execution requires the corresponding material composition contract. | This member selects composition on demand; the declared join owner supplies translation or execution law. Foundations owns result conjunction. |
+| [RF-012](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results) and [RF-015](../REFERENCE_FRAME_METHOD.md#rf-015-residual-uncertainty), used by Return A Closed Result and Result Conjunction | F2/F6 bind evidence to its predicate; F5 admits incomplete work. Information preserves the claim; computational execution distinguishes performance and effects; evidence/correction retains failures and gaps. | Admission refusal cannot fabricate a downstream evaluation or erase independently supported counterevidence. A lost return leaves performance and effects at their supported standing. | Foundations owns verdicts, performance, effects and combination. This member binds activation and downstream predicates separately; a frame owns finer outcomes and the decision owner owns disposition. |
+| [RF-017](../REFERENCE_FRAME_METHOD.md#rf-017-proportional-compression), used by acquired frame views | F2 preserves meaning; F4 preserves failure detection; F5 bounds usable context. Information/interpretation and axiomatic calculus supply faithful task views; reference frames supply the actual consumer. | A smaller view fails when it drops a material permission, failure or uncertainty. Useful overlap remains when it supports independent assessment or a different capability envelope. | Faithful projection owns the shared fidelity decision; this member adds family-wide failure detection and fit. The frame owner selects compression and justified overlap. |
+| [Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results) and [Workspace Coverage](../REFERENCE_FRAME_METHOD.md#workspace-coverage), used by engagement and coverage claims | F1 selects the governed outcome; F4 retains required predicates and joins; F2/F6 require support for exclusion. Specification supplies applicable obligations; algebraic calculus combines their results; evidence preserves uncovered scope. | An available family is not automatically required, while unknown applicability cannot exclude it. Received returns cannot determine the required set or prove complete coverage. | Owning predicates select obligations. This member chooses the coverage tuple, ledger and operational-full-coverage criteria; frame-set authority selects the declared inventory and justified exclusions. |
+| [Discovery And Revision](../REFERENCE_FRAME_METHOD.md#discovery-and-revision), Completeness Boundary, Frame Qualification and Method Self-Qualification, used by diagnosis and closure | F2/F3 bind evidence to the actual subject; F4 preserves dependent claims; F5 limits the inspected population. Evidence/correction supplies counterexamples; reference frames supply bounded qualification and reconstruction. | A historical failure remains a diagnostic input, and one successful activation cannot qualify every family, actor or changed frame. Diagnose the failed relation before adding a frame. | This member selects diagnostic order and claim-scoped qualification tests. The adopting owner selects configuration and acceptance; unknown coverage remains open. |
 
 ### RF-001 Evaluation Relativity
 
 Every frame declares the evaluation family it supports. A frame with no
 declared evaluation family has no testable sufficiency boundary.
+
+An activation uses that declaration to establish that its actual question is
+in the family. Membership of the frame in an available frame set, or a similar
+task name, does not establish that relation. A question outside the declared
+family needs a suitable frame or the applicable scoped result; renaming the
+question does not preserve the original obligation.
 
 ### RF-002 Finite Attention
 
@@ -269,19 +328,19 @@ not reconstructable for that actor.
 
 ### RF-003 Material Sufficiency
 
-Every known relation whose lawful change can alter the evaluation result,
-basis validity, evidence sufficiency, operation authority, or decision
-authority appears in the frame or enters through a declared authoritative
-input.
-
-Omitting a material relation makes the frame insufficient. The method does not
-require proving that no undiscovered material relation exists.
+Apply [Contract application: Support](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the evaluation family `Q`: its known material relations, as defined by
+[Material relation](../REFERENCE_FRAME_METHOD.md#material-relation), enter `M` or a declared authoritative
+input. An omitted material relation makes the activation insufficient. This
+known-relation boundary does not require proving that no undiscovered relation
+exists.
 
 ### RF-004 Irrelevance Exclusion
 
-Relations that cannot affect the declared evaluation remain outside active
-attention unless they are required to establish irrelevance. A frame does not
-expand merely because adjacent workspace material exists.
+Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to `Q`'s
+attention surface: exclude relations established irrelevant to that evaluation,
+retaining any material needed to establish irrelevance. A frame does not expand
+merely because adjacent workspace material exists.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -336,6 +395,13 @@ operations as one material execution relation.
 
 Independently activated evaluations may instead return closed results to one
 declared conjunction or decision rule.
+
+Use [Result conjunction](../FOUNDATIONS.md#result-conjunction) for the result
+relation. When the evaluation transports evidence or coordinates, or combines
+operations into one execution, apply
+[Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) to that material
+join as well. The latter obligation comes from the relation the consumer
+actually uses, not from the mere count of contributing frames.
 
 ### RF-011 Topology Mutation And Recharting
 
@@ -410,9 +476,13 @@ framework.
 
 ### RF-017 Proportional Compression
 
-A frame compresses accumulated practice when its declaration preserves the
-material distinctions and failure detections required by its evaluation family
-while fitting its capability envelope.
+A frame declaration compresses accumulated practice lawfully only when it
+preserves the material distinctions and failure detections required by its
+whole declared evaluation family, with adequate capability fit under RF-014.
+A frame view applies [Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection)
+from the owning declaration and material subject to the actor's evaluation
+`Q`. Its required distinctions include `Q`'s failure detections; its adequacy
+includes the capability fit in RF-014.
 
 Compression does not require a unique smallest frame. Intentional overlap is
 retained where it supplies independently activated evaluation, different
@@ -438,7 +508,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### Applicability And Required Results
 
@@ -451,18 +521,15 @@ false. A frame name, available tool or listed family is no activation trigger
 by itself. Where applicability needs residual semantic judgment, retain that
 judgment and its evidence rather than representing it as a computed fact.
 
-A required result that is absent, stale, bound to another subject/basis or
-incapable of establishing its claim cannot satisfy a dependent conjunction.
-Unresolved applicability withholds the dependent claim until sufficient
-evidence or the owning decision resolves it. Other applicable constraints
-remain in force even if only one evaluation detects them. Qualification of an
-applicability rule must distinguish true, false and unknown premises, required
-missing or wrong-subject results, and a sufficient positive result under a
-finite declared fixture; always skipping or always activating cannot satisfy
-those different expected outcomes.
+Use that applicability determination to bind the required set in
+[Result conjunction](../REFERENCE_FRAME_METHOD.md#result-conjunction), including unresolved applicability.
+Other applicable constraints remain in force even if only one evaluation detects
+them. Qualification distinguishes true, false and unknown premises, missing or
+wrong-subject required results, and a sufficient positive result within a finite
+declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ## Using Frames In Conjunction
 
@@ -488,26 +555,39 @@ binding states:
 - what decision authority owns the conjunction; and
 - whether any result may veto or defer the decision.
 
-The verdict is the core conjunction result; conflict annotates retained
-contradictory contributions and cannot downgrade an authenticated applicable
-falsification. Conjunction does not transfer the semantic authority of a contributing frame.
-The core rule retains both a known falsification and any uncovered required
-coverage. This consumer binds the mandatory claim set before aggregation and
-returns its coverage and residuals with the verdict. Counting agreeing frames
-cannot discharge another frame's applicable constraint.
+These parameters bind the mandatory claims and material joins before the core
+rule is applied. Its result carries coverage, conflicts and residuals; the
+decision rule cannot replace a required constraint with a count of agreeing
+frames or acquire a contributing frame's semantic authority.
 
 ### Evidence Or Coordinate Translation
 
-One frame supplies evidence or a value consumed inside another frame. The
-translation declares source and target coordinates, preserved meaning,
-accepted loss, provenance, equality law, and refusal conditions.
+Apply [Faithful projection](../TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the producing frame's value or evidence as source and the receiving
+frame's evaluation as consumer. Bind both `C` coordinate/equality laws and the
+translation's refusal conditions alongside the shared preservation, loss and
+provenance requirements.
+
+The returned `translated_value`, `declared_loss` or `refusal` is retained with
+its cause. Evaluate “this translation meets the bound target-use contract on
+these source/target coordinates”: supported preservation, including expressly
+admitted loss, maps to `satisfied`; an established forbidden loss, equality,
+identity, basis-compatibility or authority violation maps to `falsified`;
+undecided preservation or loss permission maps to `indeterminate`. If that
+evaluation itself lacks material scope/capability or a usable basis, the map is
+`out_of_frame` or `invalid_basis`, respectively. Missing causes use RF-012's
+missing-reason rule. A coordinate mismatch established by a valid check is a
+failed translation condition, not necessarily an invalid basis for the check.
+All cases preserve actual performance and effects; refusal does not establish
+the target predicate the untranslated evidence was intended to support.
 
 ### Material Composition
 
-Several frame-governed operations form one material execution or reasoning
-relation. The owning application declares the composition, shared invariants,
-effect or decision order where material, closure, failure, and semantic,
-operation, and decision-authority conservation.
+Apply [Composition law](../TRANSFORMATION_LIBRARY.md#composition-law) to the
+frame-governed operations and the declared outer execution or reasoning
+predicate. The application binds shared invariants, material effect or decision
+order, closure and failure conditions, using each frame's `A`, `C` and `D`
+relations for authority, coordinates and joins.
 
 Composition is introduced only when the evaluation requires it. A possible
 future interaction does not require a general composition law in every frame.
@@ -515,7 +595,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ## Minimal Evaluation Result
 
@@ -541,7 +621,7 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
 
 ## Bind
 
@@ -550,20 +630,20 @@ authority, state and required relations. Conflicting, missing or stale bindings
 are explicit results. A name, path, cached result or available tool is no grant.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
 
 ## Acquire
 
 Apply [Workspace and context](../FOUNDATIONS.md#workspace-and-context) to the
 selected task. Bind the current subject, requirements, grant and destination;
 resolve sufficient authentic material and material dependencies; reconcile stale
-summaries with observations. Measure context where the execution binding selects
-it, and assess actual adequacy separately. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
+summaries with observations. That owner distinguishes context fit from attention
+adequacy and states their evidence boundaries. For capacity misfit, apply [the admitted response rule](../FOUNDATIONS.md#finite-capacity-and-total-handling);
 the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
 
 ## Evaluate
 
@@ -583,7 +663,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
 
 ## Conjoin
 
@@ -594,3 +674,135 @@ Known failure and required uncovered coverage both survive the aggregate. A
 planned but absent judgment is not confused with uncovered coverage outside an
 authenticated plan. Another declared logical operator uses the same core result
 record on its own predicate; it cannot silently weaken conjunction.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+
+## Contract application
+
+A contract bounds an operation by its input and output domains, intended
+predicate, governing constraints, material relations, evidence rule and actual
+grants. Its binding names their owners and current basis. These are semantic
+coordinates, not a required record format. An existing design, frame, function
+or work carrier can supply them; this law requires no additional carrier or
+validation stage.
+
+The application predicate is: **this proposed operation or reliance is
+admissible under this bound contract**. It differs from the predicate that the
+operation achieves its intended outcome. Application uses the following
+conditions once at the responsible consumer:
+
+1. **Binding.** Identify the actual subject, intended predicate, governing
+   interpretation, applicable policy and source/current-state coordinates.
+   Names or equal bytes alone do not supply identity, standing or applicability.
+2. **Support.** Account for the conditions and material dependencies capable
+   of changing this determination. Inspect through an affected seam until its
+   governing obligations are covered or evidence establishes independence of
+   the far side. A task boundary, partial listing or absence of observed failure
+   does not establish that independence. The domain selects its completeness
+   and sufficiency criteria; the actor does not silently narrow them.
+3. **Preservation.** Show that required input, output and cross-boundary
+   relations hold under the declared compatibility or translation. Retain
+   identity, meaning, lifecycle, producer/evidence coordinates, constraints,
+   authority and effect distinctions where material. A difference may be
+   lawful; it needs the instance's admitted relation. Neither universal field
+   equality nor an invented translation decides compatibility.
+4. **Authority.** Establish the actual operation or decision grant for the
+   selected effect. Keep the owners of meaning, evidence, operation and
+   disposition distinct. Shared code, a source reference or a satisfied
+   judgment supplies no missing grant. Required independent assessment retains
+   its owning conditions.
+5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
+   to evidence reuse, observations, concurrency and uncertain effects. A
+   supported changed dependency reopens the affected determination; an
+   unsupported currentness claim stays unresolved. A previously satisfied
+   check can be reused on supported unchanged premises; this law does not
+   require rechecking fixed graphs or every unchanged relation on every event.
+6. **Result.** Apply the [core result and conjunction law](../FOUNDATIONS.md#result-algebra)
+   on the actual predicates. Retain known failures, absent required coverage,
+   scope/basis diagnoses, original domain outcomes, performance and effects.
+   Unknown applicability is not non-applicability. A supported failure does
+   not disappear because another required condition is undecided.
+
+A consumer binds these conditions to its decision and domain exceptions rather
+than copying the generic conditions into a second rule. Its dependency and
+authority arguments are part of the existing decision evidence. Conditional
+exceptions must be named at their owning policy; a generic application cannot
+invent one. A library helper can implement several consumers, but their
+subjects, required evidence and powers remain separate.
+
+These conditions constrain what counts as admissible; they do not give a
+universal algorithm for deciding arbitrary predicates. Insufficient support
+returns the applicable core uncertainty or scope/basis result. A known violated
+condition is retained with its evidence. A supported admissibility result
+permits only the already-granted operation; it predicts neither success nor
+termination. The control contract handles its observed outcome separately.
+
+At design admission the bound instance is the proposed transition and its
+complete enclosing relation. At frame activation it is the declared evaluation,
+subject, basis and actor. Both use these same conditions; the design commit
+predicate and frame capability predicate remain different domain decisions.
+A consumer uses the supported condition once and retains its validity route;
+a boundary crossing alone neither requires a second proof nor permits omission
+of a changed material dependency.
+
+### Constraint surface
+
+For a current subject and basis, the bound contract describes the work allowed
+by its constraints and grants. It also exposes obligations still unresolved.
+This is the task's constraint surface. It distinguishes the permitted choices
+inside the contract from the choices reserved to an owner. A missing condition
+is not freedom; a condition proved irrelevant to this task need not be loaded
+again while that proof remains applicable.
+
+The surface can be represented as prose, typed relations, predicates, a_c or a
+faithful task view. Dependencies can form a graph; they need not form a tree or
+prescribe one execution order. A model must retain the distinction between
+established facts, assumed premises, discretionary choices and unknowns. Its
+constraint satisfaction result does not authenticate its observations or
+appoint an actor. [a_c interpretation](../AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+binds the source-to-model relation and its independent evidence.
+
+Two different implementations may both lie within this surface. Selection
+between them follows the declared outcome, cost and owner criteria, not a
+hidden requirement for the author's preferred implementation. A worker acquires
+the sufficient constraints **and the actual material subject**; the abstract
+surface alone is not a complete activation.
+
+### Faithful projection
+
+A projection or interpretation applies Contract application to a declared
+source-to-consumer relation. Its binding states the authoritative source and
+selector, target interpretation, consumer task, required distinctions, admitted
+loss or approximation, and invalidation conditions. Source and target retain
+their own identities. The domain owns additional publication and adoption
+conditions.
+
+For an exact projection, a consumer must recover the same material
+determinations from the view and the owning source. Approximation requires a
+declared adequacy relation and evidence of its end-to-end bound; local
+tolerances alone do not compose. Lost authority, a weakened condition or an
+unknown promoted to permission is a fidelity defect, not compression.
+
+The binding determines whether a full reproduction, a narrower sufficient view
+or an available authentic reference is required. Omitted task-irrelevant
+material can remain at its owner. Material omissions, stale sources or
+unavailable references prevent the corresponding reliance; they do not require
+copying every source body into every event. A view has no independent power to
+change its source meaning. Its currentness is established from the selected
+source and dependency state, not from its label or generation timestamp alone.
+
+Check fidelity against independently specified source decisions: at least the
+material permissible, prohibited and unresolved distinctions for the selected
+claim. A self-consistent model, matching schema, checksum or generated diff
+checks a different relation. Failure re-enters the first owning defect: source
+ambiguity, interpretation, projection, producer or consumer. It does not license
+changing the source to agree with its view.
+
+The consuming task determines which distinctions the check must preserve.
+For an RF-017 frame view these include the evaluation's failure detections and
+capability conditions; for an AC-017 interpretation they include the represented
+predicates, dependencies and permitted latitude. A representation adequate for
+one of those claims is not evidence for the other without the corresponding
+source-to-consumer binding. This is the informational consequence of F2/F4;
+neither predicate decidability nor a particular serialization follows from it.

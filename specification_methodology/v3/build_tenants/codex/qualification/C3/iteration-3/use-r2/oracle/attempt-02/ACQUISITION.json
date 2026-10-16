@@ -1,0 +1,348 @@
+{
+  "schema": "stdo.matched-native-use.acquisition.v1",
+  "activation_id": "I3-R2-ORACLE-01",
+  "attempt": "attempt-02",
+  "began_utc": "2026-10-14T10:38:43Z",
+  "recorded_utc": "2026-10-14T10:49:35.655496+00:00",
+  "scope": "This Author only; not a native comparison actor measurement.",
+  "sources": [
+    {
+      "id": "AGENTS-workspace",
+      "locator": "/Users/jim/src/apps/AGENTS.md",
+      "kind": "filesystem",
+      "full_source_bytes": 8133,
+      "full_source_sha256": "abd68d0b412858965e007e44e30a432fa0e388f46a2978226a55ff93f05857f2",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "AGENTS-repo",
+      "locator": "/Users/jim/src/apps/specification_methodology-codex/AGENTS.md",
+      "kind": "filesystem",
+      "full_source_bytes": 2669,
+      "full_source_sha256": "d2cf79832c2d9abf4c41a36c856c7eb2078b1449c15eb7ff5b896ec7e20018f9",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "AGENTS-v3",
+      "locator": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/AGENTS.md",
+      "kind": "filesystem",
+      "full_source_bytes": 3969,
+      "full_source_sha256": "5badb756b5fb463e52717261e0917d2ae860292a45d08ef56a10ae01236fedf5",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "INTENT",
+      "locator": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/INTENT.md",
+      "kind": "git-show",
+      "full_source_bytes": 8652,
+      "full_source_sha256": "d668a54ddebd96ae22992b645cd720d993776450dfe2dfd58aa120aabc10329a",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "REQ",
+      "locator": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/requirements/README.md",
+      "kind": "git-show",
+      "full_source_bytes": 30553,
+      "full_source_sha256": "b04dad3be3fd6f4f2b9600a9ec2767681c8edd21cb6546bac34951229ab79fc8",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "CONF",
+      "locator": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/conformance/README.md",
+      "kind": "git-show",
+      "full_source_bytes": 16142,
+      "full_source_sha256": "f835e7b500101ee0b3d5ccc7a03a5f2bc03e861caa7f25a5498a14311ea79d7f",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "PRODUCT",
+      "locator": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/PRODUCT.md",
+      "kind": "git-show",
+      "full_source_bytes": 55832,
+      "full_source_sha256": "e859dfb6d84f3353ca7631e21bf3640b6e69e14848daba0e474c4a8e4c5cf9f1",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    },
+    {
+      "id": "BUILDER-ENTRY",
+      "locator": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/README.md",
+      "kind": "filesystem",
+      "full_source_bytes": 2330,
+      "full_source_sha256": "7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model.",
+      "selected_member_matches_manifest": true
+    },
+    {
+      "id": "BUILDER-RF",
+      "locator": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md",
+      "kind": "filesystem",
+      "full_source_bytes": 55118,
+      "full_source_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model.",
+      "selected_member_matches_manifest": true
+    },
+    {
+      "id": "BUILDER-BASELINE",
+      "locator": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "kind": "filesystem",
+      "full_source_bytes": 133684,
+      "full_source_sha256": "29ac1367a77bf686e621a3e1b88bb39a0ba8e6c44b40e2b29904a7eb5606571d",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model.",
+      "selected_member_matches_manifest": true
+    },
+    {
+      "id": "BUILDER-SPEC",
+      "locator": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+      "kind": "filesystem",
+      "full_source_bytes": 157952,
+      "full_source_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model.",
+      "selected_member_matches_manifest": true
+    },
+    {
+      "id": "BUILDER-MANIFEST",
+      "locator": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/manifest.json",
+      "kind": "filesystem",
+      "full_source_bytes": 12434,
+      "full_source_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "measurement_read": "Full bytes read here to calculate integrity; this does not assert every byte was retained by the model."
+    }
+  ],
+  "semantic_read_events": [
+    {
+      "event_id": "read-01",
+      "source_ids": [
+        "AGENTS-workspace"
+      ],
+      "selector": "cat complete file",
+      "requested_output_bytes": 8133,
+      "requested_output_sha256": "abd68d0b412858965e007e44e30a432fa0e388f46a2978226a55ff93f05857f2",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-02",
+      "source_ids": [
+        "AGENTS-repo"
+      ],
+      "selector": "cat complete file",
+      "requested_output_bytes": 2669,
+      "requested_output_sha256": "d2cf79832c2d9abf4c41a36c856c7eb2078b1449c15eb7ff5b896ec7e20018f9",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-03",
+      "source_ids": [
+        "AGENTS-v3"
+      ],
+      "selector": "cat complete file",
+      "requested_output_bytes": 3969,
+      "requested_output_sha256": "5badb756b5fb463e52717261e0917d2ae860292a45d08ef56a10ae01236fedf5",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-04",
+      "source_ids": [
+        "BUILDER-ENTRY"
+      ],
+      "selector": "cat complete file",
+      "requested_output_bytes": 2330,
+      "requested_output_sha256": "7eb1ab99072963acf373af422cf698f1623dbd0628e7aff7a3ec5af4e72f8659",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-05",
+      "source_ids": [
+        "BUILDER-RF",
+        "BUILDER-BASELINE"
+      ],
+      "selector": "rg -n headings and Author/author/Writer/writer/independen/oracle",
+      "requested_output_bytes": 117042,
+      "requested_output_sha256": "86acabe33c15f7be1fbb681c894a274368c4900464a9dbd6eebf40ec9f0977a6",
+      "model_visibility": "Tool inner output and outer batch output truncated. Exact model-visible subset is uninstrumented; this hash measures the full requested match output."
+    },
+    {
+      "event_id": "read-06",
+      "source_ids": [
+        "INTENT"
+      ],
+      "selector": "git show complete file at B",
+      "requested_output_bytes": 8652,
+      "requested_output_sha256": "d668a54ddebd96ae22992b645cd720d993776450dfe2dfd58aa120aabc10329a",
+      "model_visibility": "Outer batch output was truncated; INTENT and CONF were visible, REQ was partially omitted. Exact retained bytes are uninstrumented."
+    },
+    {
+      "event_id": "read-07",
+      "source_ids": [
+        "REQ"
+      ],
+      "selector": "git show complete file at B",
+      "requested_output_bytes": 30553,
+      "requested_output_sha256": "b04dad3be3fd6f4f2b9600a9ec2767681c8edd21cb6546bac34951229ab79fc8",
+      "model_visibility": "Outer batch output was truncated; INTENT and CONF were visible, REQ was partially omitted. Exact retained bytes are uninstrumented."
+    },
+    {
+      "event_id": "read-08",
+      "source_ids": [
+        "CONF"
+      ],
+      "selector": "git show complete file at B",
+      "requested_output_bytes": 16142,
+      "requested_output_sha256": "f835e7b500101ee0b3d5ccc7a03a5f2bc03e861caa7f25a5498a14311ea79d7f",
+      "model_visibility": "Outer batch output was truncated; INTENT and CONF were visible, REQ was partially omitted. Exact retained bytes are uninstrumented."
+    },
+    {
+      "event_id": "read-09",
+      "source_ids": [
+        "PRODUCT"
+      ],
+      "selector": "git show at B | rg -n headings",
+      "requested_output_bytes": 480,
+      "requested_output_sha256": "923d80be0b05cf6ad89279f86443b77986b9b4edaca79807a1903b54cb750da7",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-10",
+      "source_ids": [
+        "BUILDER-BASELINE"
+      ],
+      "selector": "rg -n headings",
+      "requested_output_bytes": 2692,
+      "requested_output_sha256": "f1516ecd25990a8ca57143d581bd3f3f1d2924d605385a1f4c8159829a887548",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-11",
+      "source_ids": [
+        "REQ"
+      ],
+      "selector": "git show at B | sed -n 65,220p",
+      "requested_output_bytes": 19766,
+      "requested_output_sha256": "5514f65e42efd28ea3bb1637de4bc306290a9efe3e0d965cc818ba01a868c660",
+      "model_visibility": "Returned in an outer batch with truncation; most selected content was visible. Exact retained bytes uninstrumented."
+    },
+    {
+      "event_id": "read-12",
+      "source_ids": [
+        "PRODUCT"
+      ],
+      "selector": "git show at B | sed -n 1,210p",
+      "requested_output_bytes": 30445,
+      "requested_output_sha256": "ff84ab929f2cbcb8cb43339ad1e5d7af65b9531997a18769d681de322eacf817",
+      "model_visibility": "Returned in an outer batch with truncation; later sections visible, opening content omitted. Reacquired narrower relevant sections below."
+    },
+    {
+      "event_id": "read-13",
+      "source_ids": [
+        "BUILDER-BASELINE"
+      ],
+      "selector": "sed -n 410,426p;625,657p;1053,1078p;1613,1631p;1750,1767p",
+      "requested_output_bytes": 7007,
+      "requested_output_sha256": "456416cdbe2b05645d6c6771397056ef8f7289bb1a52773e8f816c1a0b50ea64",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-14",
+      "source_ids": [
+        "PRODUCT"
+      ],
+      "selector": "git show at B | sed -n 1,121p;314,406p",
+      "requested_output_bytes": 32668,
+      "requested_output_sha256": "06390c9928358c6908e6faba4c5f37da8dc8d4a912aca9e8f121be8461e5be56",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-15",
+      "source_ids": [
+        "BUILDER-SPEC"
+      ],
+      "selector": "rg -n selected execution and qualification headings",
+      "requested_output_bytes": 352,
+      "requested_output_sha256": "7ab00c2b9a475635f3de4a93b41ffa9b96279680f38bcaf6b7ba7de4e2a1ceec",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-16",
+      "source_ids": [
+        "BUILDER-RF"
+      ],
+      "selector": "rg -n selected activation and result headings",
+      "requested_output_bytes": 394,
+      "requested_output_sha256": "d71bcacdeaec63d63c17a201fb7fa1d55934915bef6789555bfa61307a21525c",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-17",
+      "source_ids": [
+        "BUILDER-SPEC"
+      ],
+      "selector": "sed -n 1503,1578p;2088,2195p",
+      "requested_output_bytes": 10552,
+      "requested_output_sha256": "6296097042536b50ce84f2e474b587c5f83c416a3cb69728bcac637c96731ef2",
+      "model_visibility": "returned without known inner truncation"
+    },
+    {
+      "event_id": "read-18",
+      "source_ids": [
+        "BUILDER-RF"
+      ],
+      "selector": "sed -n 985,1047p",
+      "requested_output_bytes": 2206,
+      "requested_output_sha256": "3d8b06381b9d9fd9247a5461806b686bc5da1b43a8e3c3cdb002f89d148ded93",
+      "model_visibility": "returned without known inner truncation"
+    }
+  ],
+  "nonsemantic_routing": [
+    {
+      "operation": "rg --files installed builder, filtered to selected routing/author-law filenames",
+      "scope": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+      "acquired": "File names only; no tenant paths or content were listed."
+    },
+    {
+      "operation": "Read installed manifest to report SHA-256, byte size and JSON field/entry shapes",
+      "repetitions": 2,
+      "scope": "BUILDER-MANIFEST",
+      "raw_source_bytes_each": 12434,
+      "model_visible": "digest, keys and entry shapes only; no whole manifest body"
+    },
+    {
+      "operation": "Read each listed source once for integrity measurement and selected-member verification",
+      "raw_bytes_total": 487468,
+      "scope": "Only sources listed above; content not re-emitted to model"
+    }
+  ],
+  "basis_lookup_failures": {
+    "invalid_41_character_spellings": 5,
+    "source_content_returned": false,
+    "correction": "Parent confirmed B is the basis label. Exact immutable common content then read at 355aa8655cca9c6ba6cf5c414f9bea3032ae89fd."
+  },
+  "measurement_boundaries": {
+    "unique_declared_source_bytes": 487468,
+    "cumulative_requested_semantic_view_bytes_including_repeated_reads": 296052,
+    "actual_tool_delivered_text_bytes": null,
+    "reason_delivered_unknown": "Some tools and outer batched outputs truncated the requested text. JSON wrappers, tool descriptions, system/developer instructions, memory summary, messages and retained model context are not byte-instrumented.",
+    "active_retained_context_bytes_or_upper_bound": null,
+    "context_fit_established": false,
+    "supplied_activation_artifact_bytes": 4729,
+    "activation_artifact_is_host_context_measure": false,
+    "spend": null,
+    "spend_reason": "Host model/tool spend was not instrumented. No external paid calls were made.",
+    "elapsed_definition": "UTC wall time from first clock observation before source reads to final freeze timestamp; scheduling/tool latency included, pre-activation scheduling excluded."
+  },
+  "integrity_scope": {
+    "manifest_digest_matches_supplied": true,
+    "selected_acquired_builder_members_match_manifest": true,
+    "entire_release_inventory_verified": false
+  },
+  "source_exclusions_observed": [
+    "No ticket opened",
+    "No prior attempt opened",
+    "No candidate implementation/design/qualification read",
+    "No sibling output listed",
+    "No competing tenant read",
+    "No prior actor answer or review post read",
+    "No memory file read",
+    "No subdelegation",
+    "No Git mutation",
+    "No external paid call"
+  ],
+  "limits": "Hashing establishes identity only. This record does not establish actor context fit, package sufficiency, exact ordinary-entry coverage for comparison arms, independence by model family, acceptance or release."
+}

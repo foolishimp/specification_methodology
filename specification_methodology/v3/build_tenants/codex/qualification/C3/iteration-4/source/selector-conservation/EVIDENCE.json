@@ -1,0 +1,79 @@
+{
+  "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+  "common_input_commit": "3c4c503d291e7cb19ba21333ba6caf6167be77c9",
+  "frozen_common_claim": {
+    "path": "specification_methodology/v3/specification/requirements/PREDECESSOR_CLAIMS.md",
+    "row": "| Release Version Boundary | `#release-version-boundary` |  | 639 | Claude tenant: superseded; the \"latest-accepted\" selector is replaced by the release law the clause cites (RELEASE §1 selector paragraph, §3 Exact-cut qualification, §8 Acceptance criteria: highest-ordinal published, never moved by acceptance); the row's other determinations are restated unchanged in IDENTITY §9 | build_tenants/claude/standards/`IDENTITY.md#9-release-version-boundary`; build_tenants/claude/standards/`RELEASE.md#1-context-and-position`; build_tenants/claude/standards/`RELEASE.md#exact-cut-qualification`; build_tenants/claude/standards/`RELEASE.md#acceptance-criteria` |",
+    "standing": "historical Claude tenant report only; supplies neither Codex disposition nor acceptance"
+  },
+  "predecessor": {
+    "release": "v2.5.1-rc.2",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "member": "standards/IDENTITY_METHOD.md",
+    "member_sha256": "e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
+    "body_sha256": "fb43da187d10d07b00f100b906762057e90977ab65858359bf642c6d8e8a8bce",
+    "bytes": 640
+  },
+  "counterexample": {
+    "kind": "hypothetical author comparison case, not observed publication or independent test",
+    "fixed_case": {
+      "project": "same project",
+      "version_line": "same version line",
+      "rc1": "published and accepted",
+      "rc2": "published with higher ordinal; not accepted",
+      "consumer_basis": "exact rc.1"
+    },
+    "predecessor_local_identity_projection": "v<version> selects rc.1",
+    "predecessor_canonical_release_owner": "v<version> selects rc.2",
+    "corrected_identity_and_release": "v<version> selects rc.2",
+    "consumer_basis_after_selector_movement": "exact rc.1 until explicit adoption",
+    "conclusion": "Local Identity determination changes on the same case; unqualified conservation is not established. Proposed supersession resolves the contradiction without changing canonical Release law."
+  },
+  "replacement_locus_pins": {
+    "standards/IDENTITY_METHOD.md#release-version-boundary": {
+      "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+      "member_sha256": "30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c",
+      "body_sha256": "10a881e60c38299128fad514d07e91a9ef9d2d87fb2d06b339dcf8d98eb5498e",
+      "bytes": 1086,
+      "hash_scope": "whole heading inclusive through the byte before the next heading of any level",
+      "start_line": 430,
+      "end_line": 460
+    },
+    "standards/IDENTITY_METHOD.md#governing-relations": {
+      "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+      "member_sha256": "30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c",
+      "body_sha256": "9e22093f58c0ad0cd092662f3ac972573403545fa0d3834084c27c57b575475f",
+      "bytes": 7744,
+      "hash_scope": "whole heading inclusive through the byte before the next heading of any level",
+      "start_line": 3,
+      "end_line": 47
+    },
+    "standards/FOUNDATIONS.md#identity-state-and-evidence": {
+      "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+      "member_sha256": "a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981",
+      "body_sha256": "180cf1153b4addda0296796000d186c49dabd0a64498ec29579c734a84dce590",
+      "bytes": 803,
+      "hash_scope": "whole heading inclusive through the byte before the next heading of any level",
+      "start_line": 131,
+      "end_line": 145
+    },
+    "standards/RELEASE_METHOD.md#release-identities": {
+      "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+      "member_sha256": "3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7",
+      "body_sha256": "22dcda4c970fd6afd3eb0fc3b6fb8cd3ec5e1a16e13bcefed3df33ca8240bb19",
+      "bytes": 1728,
+      "hash_scope": "whole heading inclusive through the byte before the next heading of any level",
+      "start_line": 84,
+      "end_line": 115
+    },
+    "standards/RELEASE_METHOD.md#selector-and-consumer-adoption": {
+      "source_commit": "0db93e415060dbc7beac9857edbb49c44b7ab04f",
+      "member_sha256": "3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7",
+      "body_sha256": "82c43034b2c12e6fcbc76ad6ca7c97b9abee74519b514014821d98463e444694",
+      "bytes": 2828,
+      "hash_scope": "whole heading inclusive through the byte before the next heading of any level",
+      "start_line": 358,
+      "end_line": 410
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "stdo.i4.finite-conjunction-check",
+  "common_input": "3c4c503d291e7cb19ba21333ba6caf6167be77c9",
+  "source": {
+    "path": "standards/FOUNDATIONS.md",
+    "sha256": "a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981",
+    "sections": {
+      "result-algebra": "f8b3700f10edc65cbc059a5563d65affa1697571fef6a033cb24e9ee39f2514b",
+      "result-conjunction": "cd4737ec1d29d7bd32b27de31e8d600c2a54d30039bd669393ed2d15c0793018"
+    }
+  },
+  "script_sha256": "bc481f17d9b8c9084d4a08aafd12144026572d3ec7c92f13cd5c512ad797bf32",
+  "enumerated_cases": 42336,
+  "effect_associativity_triples": 216,
+  "mutant_counterexamples": {
+    "missing_erases_failure": [
+      "failure plus absent assessment: wrong verdict",
+      "independent counterevidence without performance: wrong verdict"
+    ],
+    "missing_becomes_child": [
+      "failure plus absent assessment: changed component predicate/performance",
+      "missing child: changed component predicate/performance",
+      "independent counterevidence without performance: changed component predicate/performance"
+    ],
+    "drop_citations": [
+      "failure plus absent assessment: lost citations",
+      "failure plus uncovered coverage: lost citations",
+      "failure plus invalid child: lost citations",
+      "uninterpretable composite retains failure: lost citations",
+      "independent counterevidence without performance: lost citations"
+    ],
+    "scope_before_basis": [
+      "invalid basis before scope: wrong verdict"
+    ],
+    "unknown_effect_is_absent": [
+      "uncertain effect and declared dependency",
+      "uncertain effect and declared dependency"
+    ],
+    "false_join_is_undecidable": [
+      "false required join: wrong verdict"
+    ],
+    "unauthenticated_satisfies": [
+      "unauthenticated success: wrong verdict"
+    ],
+    "invent_performance": [
+      "independent counterevidence without performance: changed component predicate/performance"
+    ]
+  },
+  "valid": true,
+  "standing": "Author finite encoding and property checks; independent source fidelity review pending.",
+  "limits": [
+    "Already normalized disjoint effect parts; no real effect observation or authorization.",
+    "Exactly two declared mandatory component slots with a fixed interpretable conjunction rule.",
+    "No evidence of whole-method completeness, actual use or member acceptance."
+  ]
+}

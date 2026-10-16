@@ -1,0 +1,403 @@
+{
+  "standing": "bounded reproducible author check; no independent fidelity, acceptance or runtime claim",
+  "bindings_sha256": "cbde50dcff2a417de07ef955880ae929983b5b2cdf0421e12dad786a9b3a5bc0",
+  "account_sha256": "ae5169eea86204a0d5d27915c6935604bb09d8d9a4feeb6cc403706a0ac42b12",
+  "source_commit": "f2cb3e593757d094d008102551925e871a0204ff",
+  "source_members": [
+    {
+      "path": "standards/DESIGN_MODULE_METHOD.md",
+      "sha256": "721c3d212a0ea7bebda93b6f14b77b94f365d89622cb7920c6c5acd981f6cc24",
+      "bytes": 120657
+    },
+    {
+      "path": "standards/ODD_METHOD.md",
+      "sha256": "2e427c1a7c2fdffe0a3a79d81d424f0b73795cda37930189a133f54746236268",
+      "bytes": 86589
+    },
+    {
+      "path": "standards/TRAVERSAL_OCCURRENCE_PROFILE.md",
+      "sha256": "94028abaa169bfe043e4bd047a19485bac60037ca4a22b9fc36ef26a1f793d7a",
+      "bytes": 80238
+    }
+  ],
+  "coverage": {
+    "assigned": 141,
+    "represented": 141,
+    "unfinished": [],
+    "previous_standing": {
+      "bounded_semantic_binding": 19,
+      "source_available_construction_pending": 121,
+      "non_deciding_source_locator": 1
+    }
+  },
+  "installed_builder": {
+    "cut": "v2.5.1-rc.2",
+    "valid": true,
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "behavioral_cases": [
+    {
+      "id": "design-coevolution-positive",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "actual": {
+        "verdict": "satisfied",
+        "co_evolution_permitted": true
+      },
+      "passed": true
+    },
+    {
+      "id": "design-divergent-networks",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "actual": {
+        "verdict": "falsified",
+        "co_evolution_permitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "design-equivalence-unknown",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "actual": {
+        "verdict": "indeterminate",
+        "co_evolution_permitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "reconstructed-violation-is-two-results",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "actual": {
+        "reconstruction": "satisfied",
+        "lawfulness": "falsified"
+      },
+      "passed": true
+    },
+    {
+      "id": "accepted-change-lawful",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "actual": {
+        "reconstruction": "satisfied",
+        "lawfulness": "satisfied"
+      },
+      "passed": true
+    },
+    {
+      "id": "pending-change-is-not-acceptance",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "actual": {
+        "reconstruction": "satisfied",
+        "lawfulness": "indeterminate"
+      },
+      "passed": true
+    },
+    {
+      "id": "indistinguishable-required-case",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "actual": {
+        "reconstruction": "falsified",
+        "lawfulness": "satisfied"
+      },
+      "passed": true
+    },
+    {
+      "id": "complete-cut-positive",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "satisfied",
+        "downstream_admitted": true
+      },
+      "passed": true
+    },
+    {
+      "id": "missing-companion-support",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "indeterminate",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "known-failure-survives-missing-companion",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "known-stale-frontier-is-false",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "unknown-frontier-is-unknown",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "indeterminate",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "cut-output-is-not-own-input",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "satisfied",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "incomplete-seven-member-cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "invalid-composite-basis",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "invalid_basis",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "required-capability-out-of-frame",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "actual": {
+        "verdict": "out_of_frame",
+        "downstream_admitted": false
+      },
+      "passed": true
+    },
+    {
+      "id": "lawful-published-next",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "actual": {
+        "verdict": "satisfied",
+        "selected": true
+      },
+      "passed": true
+    },
+    {
+      "id": "next-cannot-admit-intent",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "actual": {
+        "verdict": "falsified",
+        "selected": false
+      },
+      "passed": true
+    },
+    {
+      "id": "post-reprice-awaits-new-basis",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "actual": {
+        "verdict": "satisfied",
+        "selected": false
+      },
+      "passed": true
+    },
+    {
+      "id": "unknown-target-binding",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "actual": {
+        "verdict": "indeterminate",
+        "selected": false
+      },
+      "passed": true
+    },
+    {
+      "id": "candidate-available-fitness-false",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "actual": {
+        "verdict": "satisfied",
+        "fitness": "falsified",
+        "acceptance": "unassessed"
+      },
+      "passed": true
+    },
+    {
+      "id": "deterministic-label-without-evidence",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "actual": {
+        "verdict": "indeterminate",
+        "fitness": "unassessed",
+        "acceptance": "unassessed"
+      },
+      "passed": true
+    },
+    {
+      "id": "human-decision-mandate-unknown",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "actual": {
+        "verdict": "indeterminate",
+        "fitness": "unassessed",
+        "acceptance": "unassessed"
+      },
+      "passed": true
+    },
+    {
+      "id": "effect-complete-positive",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "satisfied",
+        "effect": "completed"
+      },
+      "passed": true
+    },
+    {
+      "id": "lost-dispatch-ack-is-unknown",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "id": "unauthorized-mutation-still-effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "falsified",
+        "effect": "completed"
+      },
+      "passed": true
+    },
+    {
+      "id": "local-rollback-does-not-hide-message",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "satisfied",
+        "effect": "partial"
+      },
+      "passed": true
+    },
+    {
+      "id": "unknown-remainder-beats-partial",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "id": "authenticated-pre-dispatch-refusal",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "falsified",
+        "effect": "not_started"
+      },
+      "passed": true
+    },
+    {
+      "id": "absence-of-request-is-not-no-effect-proof",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "id": "stale-pre-observation-no-dispatch",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "actual": {
+        "readiness": "falsified",
+        "effect": "not_started"
+      },
+      "passed": true
+    },
+    {
+      "id": "typed-causal-dags-positive",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "actual": {
+        "verdict": "satisfied"
+      },
+      "passed": true
+    },
+    {
+      "id": "causal-cycle-refused",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "actual": {
+        "verdict": "falsified"
+      },
+      "passed": true
+    },
+    {
+      "id": "support-correction-opposition-lawful",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "actual": {
+        "verdict": "satisfied"
+      },
+      "passed": true
+    },
+    {
+      "id": "stable-subject-binding-fields",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts",
+      "actual": {
+        "verdict": "satisfied"
+      },
+      "passed": true
+    },
+    {
+      "id": "mutable-digest-cannot-enter-stable-binding",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts",
+      "actual": {
+        "verdict": "falsified"
+      },
+      "passed": true
+    },
+    {
+      "id": "event-scope-compatible",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "actual": {
+        "verdict": "satisfied",
+        "decision": "admitted"
+      },
+      "passed": true
+    },
+    {
+      "id": "event-out-of-scope-is-falsification",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "actual": {
+        "verdict": "falsified",
+        "decision": "out_of_scope"
+      },
+      "passed": true
+    },
+    {
+      "id": "event-unknown-scope-is-hold",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "actual": {
+        "verdict": "indeterminate",
+        "decision": "hold"
+      },
+      "passed": true
+    },
+    {
+      "id": "event-capability-out-of-frame",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "actual": {
+        "verdict": "out_of_frame",
+        "decision": "hold"
+      },
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Finite authored case models, not live adopting runtime execution.",
+    "Pins and population checks do not prove all-row semantic fidelity.",
+    "No independent assessor, external grant, current world truth or release acceptance is established."
+  ]
+}

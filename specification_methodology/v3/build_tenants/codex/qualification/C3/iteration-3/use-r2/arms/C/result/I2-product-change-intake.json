@@ -1,0 +1,86 @@
+{
+  "case_id": "I2",
+  "artifact": "I2-product-change-intake.json",
+  "request": "Make batches of 2000 records admissible.",
+  "outcome": "Proposed Product maximum becomes at least 2000 so the requested batch is admitted.",
+  "classification": "product_reprice",
+  "earliest_governing_description_needing_change": "I.product.maximum_export_records, currently 1000.",
+  "upstream_determination": "The requested outcome changes Product admissibility. The existing label defect and label-only work-17 cannot grant that change; no Intent change is specified.",
+  "authority_traversal": [
+    "I2 -> I.product maximum/reserved_decisions -> priya via Product decision record",
+    "I2.selected_work=work-17 -> I.work.carrier_w17 label-only scope excludes export-admissibility change"
+  ],
+  "complete_relevant_delta": {
+    "proposed_member": "maximum_export_records",
+    "before": 1000,
+    "requested_after": 2000,
+    "status": "proposal only; no admitted implementation candidate",
+    "dependent_relations": [
+      "Batch admissibility boundary and reject-above-maximum rule",
+      "Displayed Product maximum",
+      "Derived requirements, design, realization and evidence"
+    ]
+  },
+  "accepted_design_coverage": {
+    "standing": "outside current label-only work scope; current accepted maximum is 1000",
+    "reason": "Design's display rule cannot author a new Product limit."
+  },
+  "carrier": {
+    "action": "Retain a bounded Product-change intake proposal in this authorized trial result; keep work-17's admitted label-only scope intact.",
+    "additional_carrier_required": false,
+    "reason": "No applicable work authority for the new scope. A new ticket cannot substitute for priya's ruling or admit itself. Independent durable-ticket lifetime and ticket-state authority are not supplied."
+  },
+  "execution_contract": {
+    "source": "work-17 considered and found inapplicable to the proposed effect",
+    "admission_result": "rejected for proposed Product change",
+    "verdict": "falsified",
+    "performance": "performed",
+    "reason": "The supplied exact grant permits label changes only; no additional Product-owner decision is supplied.",
+    "effect": "not_started for requested fixture Product change"
+  },
+  "proposal": {
+    "status": "unadmitted",
+    "owner_route": "priya via Product decision record",
+    "decision_requested": {
+      "owner": "priya",
+      "subject": "I.product.maximum_export_records",
+      "from": 1000,
+      "to": 2000
+    },
+    "subsequent_admission": "If priya approves the Product change, re-derive affected requirement/design/realization/evidence and admit corresponding work under actual work authority."
+  },
+  "result": {
+    "maximum_export_records": 1000,
+    "batch_of_2000": "rejected under current Product",
+    "live_product_modified": false
+  },
+  "required_process": [
+    "Re-enter Product for the reserved ruling.",
+    "Reprice downstream obligations and admit exact implementation work only after lawful upstream change."
+  ],
+  "optional_organization": "A ticket or larger actor hierarchy is not a prerequisite supplied by this fixture; it is not an alternative to the missing owner decision.",
+  "reentry_destination": "Product owner priya, then affected Requirements -> Design -> Realisation -> Evidence.",
+  "dependencies": [
+    "Exact priya Product decision",
+    "Admitted work authority for the changed admissibility relation and affected surfaces"
+  ],
+  "unresolved": [
+    "priya's decision to change maximum_export_records is absent.",
+    "No admitted execution scope for changing admissibility and its derived surfaces."
+  ],
+  "fixture_citations": [
+    "I.product",
+    "I.design",
+    "I.work",
+    "I.observations",
+    "I2"
+  ],
+  "method_citations": [
+    "M.triage",
+    "M.treatment",
+    "M.carrier",
+    "M.admission",
+    "M.authority"
+  ]
+}
+

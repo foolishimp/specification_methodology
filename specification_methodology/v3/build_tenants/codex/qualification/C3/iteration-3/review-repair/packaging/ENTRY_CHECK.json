@@ -1,0 +1,109 @@
+{
+  "kind": "stdo.i3.plugin-basis-entry-check",
+  "source_commit": "2476713d315c00ac61d336a3281d67e4a384d4ce",
+  "plugin_sha256": "13902bef25750b8f623a2f2210d2c6df867b474926d0617bc4d517e7e10763e4",
+  "basis_procedure_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc",
+  "checks": {
+    "no_source_relative_member_links": true,
+    "declared_member_routes_present": true,
+    "plugin_local_reference_resolves": true,
+    "installed_manifest_is_selected": true,
+    "installed_owner_matches_membership": true,
+    "plugin_location_and_decoy_do_not_select_basis": true,
+    "selected_section_exists": true,
+    "fragment_is_not_misrouted_to_resolver": true,
+    "missing_member_does_not_fall_back": true,
+    "changed_member_cannot_match_selected_pin": true,
+    "all_declared_candidate_member_routes_resolve": true
+  },
+  "candidate_routes": [
+    {
+      "route": "interpretation/README.md",
+      "bytes": 2907,
+      "sha256": "f28a35c24d13f4846ab31a1eb4e8f15a3a273b36e7bf3e9678d31293a506c2e8"
+    },
+    {
+      "route": "standards/README.md",
+      "bytes": 8010,
+      "sha256": "d3e25c6e6d0b1c7ce4ab4655047f298b6d35e406483578e8aa23259d08c1d647"
+    },
+    {
+      "route": "standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+      "bytes": 189426,
+      "sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9"
+    },
+    {
+      "route": "standards/SPEC_METHOD.md#computed-classification-and-treatment",
+      "bytes": 189426,
+      "sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9"
+    },
+    {
+      "route": "standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014",
+      "bytes": 189426,
+      "sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9"
+    },
+    {
+      "route": "standards/SPEC_METHOD.md#universal-intake-triage",
+      "bytes": 189426,
+      "sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9"
+    },
+    {
+      "route": "standards/TICKET_METHOD.md#execution-contract-admission",
+      "bytes": 73940,
+      "sha256": "ba43eff81ab87e2cb2007a41e773239ea20d299ecae8afa11b9017946708678d"
+    },
+    {
+      "route": "standards/TICKET_METHOD.md#work-carrier-to-execution-rule",
+      "bytes": 73940,
+      "sha256": "ba43eff81ab87e2cb2007a41e773239ea20d299ecae8afa11b9017946708678d"
+    },
+    {
+      "route": "standards/TRANSFORMATION_LIBRARY.md#contract-application",
+      "bytes": 28064,
+      "sha256": "958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a"
+    }
+  ],
+  "observations": [
+    {
+      "command": [
+        "stdo",
+        "resolve",
+        "stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md"
+      ],
+      "exit": 0,
+      "result": {
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/SPEC_METHOD.md",
+        "uri": "stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md"
+      }
+    },
+    {
+      "command": [
+        "stdo",
+        "resolve",
+        "stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#universal-intake-triage"
+      ],
+      "exit": 2,
+      "result": {
+        "error": "STDO installation URI cannot contain query or fragment: 'stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#universal-intake-triage'"
+      }
+    },
+    {
+      "command": [
+        "stdo",
+        "resolve",
+        "stdo://releases/v2.5.1-rc.2/standards/TRANSFORMATION_LIBRARY.md"
+      ],
+      "exit": 2,
+      "result": {
+        "error": "STDO URI does not resolve to an installed path: 'stdo://releases/v2.5.1-rc.2/standards/TRANSFORMATION_LIBRARY.md'"
+      }
+    }
+  ],
+  "valid": true,
+  "elapsed_seconds": 0.3169319579610601,
+  "limits": [
+    "Author routing experiment; not a native host skill activation.",
+    "Existing installed rc.2 and frozen candidate assessment package are distinct.",
+    "No v3 publication, identity issuance, installation or adoption is established."
+  ]
+}

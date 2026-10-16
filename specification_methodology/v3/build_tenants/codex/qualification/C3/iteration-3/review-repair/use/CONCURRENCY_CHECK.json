@@ -1,0 +1,37 @@
+{
+  "valid": true,
+  "checks": {
+    "unlocked_counterexample_exceeds_shared_envelope": true,
+    "locked_entry_admits_only_one_competing_read": true,
+    "locked_entry_retains_exact_cumulative_count": true,
+    "refusal_names_shared_allowance": true
+  },
+  "unlocked_control": {
+    "operation": "acquire_locked",
+    "exit_codes": [
+      0,
+      0
+    ],
+    "emitted_stdout_bytes": 1024,
+    "event_sum_bytes": 1024,
+    "maximum_bytes": 768,
+    "cumulative_rows_consistent": false,
+    "refusals": []
+  },
+  "fixed_control": {
+    "operation": "acquire",
+    "exit_codes": [
+      0,
+      7
+    ],
+    "emitted_stdout_bytes": 512,
+    "event_sum_bytes": 512,
+    "maximum_bytes": 768,
+    "cumulative_rows_consistent": true,
+    "refusals": [
+      "Admitted acquisition allowance exceeded; return current result"
+    ]
+  },
+  "reader_sha256": "3e9ce1f9e2a1ac032144d6456065a86bbe16e1594d48dcf20e7b991ec9371ebd",
+  "scope": "POSIX local reader processes; not host/model context or prior-attempt requalification."
+}

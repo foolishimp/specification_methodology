@@ -5,8 +5,9 @@ released STDO cut. They are prompt-construction inputs, not replacement
 constitutional authority and not independently selectable method versions.
 
 The watched source account, method, profile and schema members follow. Each
-retains its declared standing: Foundations and the library are non-deciding
-explanations; the detailed owners retain deciding law.
+retains its declared ownership: Foundations and the library own shared deciding
+contracts; domain methods bind them and own their additional policies. Views
+project those owners and acquire no independent deciding authority.
 
 - `../FOUNDATIONS.md`
 - `../TRANSFORMATION_LIBRARY.md`
@@ -35,10 +36,11 @@ of the application-neutral Traversal Occurrence Profile. It cannot supply
 consumer adoption, subject interpretation, runtime semantics, or operation
 authority.
 
-`../GLOSSARY_GUIDE.md` is a non-deciding semantic locator index. The aggregate
+`../GLOSSARY_GUIDE.md` contains a semantic locator index and its route-resolution
+contract. Located methods retain their own semantic definitions. The aggregate
 compression watches it through separate `index_refs` and `index_digests` fields
 so locator drift makes the aggregate stale without promoting the index to an
-owner of meaning.
+owner of the meanings it locates.
 
 Each compression file carries the watched source path and digest it was
 derived from. The aggregate also carries watched index paths and digests. If a
@@ -56,5 +58,5 @@ the exact installed basis and raw owners. It is digest-bound to Foundations, the
 Method, Reference Frame Method, the optional STDO Reference Frame Baseline,
 Release Method, and the Product Definition schema. The exact header lists all
 watched sources; the bootstrap cannot select or replace them. Foundations and
-the library organise explanations; detailed deciding law remains at its named
-owner.
+the library supply their shared law; particular method policies remain at their
+named owners.

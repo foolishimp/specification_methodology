@@ -1,0 +1,57 @@
+{
+  "schema": "stdo.matched-native-use.freeze.v1",
+  "suite_id": "I3-R2-ORACLE-01-attempt-02-r2",
+  "frozen_utc": "2026-10-14T10:51:58.025135+00:00",
+  "began_utc": "2026-10-14T10:38:43Z",
+  "elapsed_wall_seconds": 795.025,
+  "files": [
+    {
+      "file": "ACTIVATION.json",
+      "bytes": 4729,
+      "sha256": "e37c7f56ae993eef8e49029e6b475eb287f5602aeaa8c0f7b8f85af61be3d77e"
+    },
+    {
+      "file": "ACQUISITION.json",
+      "bytes": 15560,
+      "sha256": "a5d16442d320cc4d6317ff57346d26128436f705f64d758dc77156934139e113"
+    },
+    {
+      "file": "ACTOR_TASKS.json",
+      "bytes": 35410,
+      "sha256": "d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559"
+    },
+    {
+      "file": "ORACLE.json",
+      "bytes": 55246,
+      "sha256": "088aa6f69ff2c243a530deea11b23ab4d4901fd98cba254c78a8cca47526a461"
+    },
+    {
+      "file": "SELF_CHECK.json",
+      "bytes": 1566,
+      "sha256": "cad5d1a449416691992eedc2a60dbed4c4b6a06df7e08b46cc94c88e64969f73"
+    }
+  ],
+  "actor_delivery": [
+    "ACTOR_TASKS.json"
+  ],
+  "withheld_before_actor_freeze": [
+    "ORACLE.json",
+    "ACTIVATION.json",
+    "ACQUISITION.json",
+    "SELF_CHECK.json",
+    "superseded-pre-delivery-r1/"
+  ],
+  "host_context_bytes": null,
+  "active_context_upper_bound_bytes": null,
+  "host_spend": null,
+  "measurement_limits": "Host context, retained-context size and spend were not instrumented. Requested source-view bytes are recorded separately from unknown actual delivered/retained bytes. No context-fit or zero-cost claim.",
+  "next_boundary": "Executive may arrange later independently bound actors. This Author does not activate them, assess any candidate or confer member acceptance.",
+  "post_freeze_rule": "Do not edit this suite after actor exposure. Any material correction requires a distinct suite subject and declared fresh trial.",
+  "supersedes": {
+    "suite_id": "I3-R2-ORACLE-01-attempt-02",
+    "frozen_manifest_path": "superseded-pre-delivery-r1/FREEZE.json",
+    "frozen_manifest_sha256": "ae7d887b108b2ab8c434633ee569db2e54239e7f7d01b1a99fdadf634b3ffea1",
+    "use_for_actors": false,
+    "reason": "Explicit case-local observation scope added before final delivery."
+  }
+}

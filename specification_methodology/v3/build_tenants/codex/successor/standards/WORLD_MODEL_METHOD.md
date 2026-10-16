@@ -17,47 +17,47 @@ shape and traversal law while this member retains world-model meaning.
 Availability of either method leaves its adoption and operation authority with
 the declared owners.
 
-The premises are authoritative source systems, a stated comprehension purpose,
-bounded evidence and distinguishable semantic claims. From
-[workspace and context](FOUNDATIONS.md#workspace-and-context), acquired
-understanding remains a revisable account of current reality. From identity
-and compatible composition, combining claims must preserve their subjects,
-authority, interpretation and declared loss.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to each claim-assurance, entity-cut admission and publication use with its exact
+source authority, qualified subject, current evidence, treatment/basis and grant.
+Acquisition traces the strongest available source surfaces; code availability
+is not a prerequisite. A materialized cut, authorized candidate-class
+publication and established statistical claim retain different predicates.
 
-This method additionally chooses qualified attribute ledgers, immutable entity
-cuts, explicit treatments and the publication/composition disciplines below.
-The choice of those carriers, and the optional geometric representation, does
-not follow from finite context alone. Source systems retain operational
-sovereignty; qualified claims enter an attribute
-ledger; immutable entity cuts publish bounded semantic understanding; treatments,
-covariance, adjoint interpretation, uncertainty and declared loss remain
-recoverable. Builder Project remains the directional specialization declared
-below, with no inverse or equivalence to every Source Project. Query,
-probabilistic overlays and compiled execution remain downstream under their own
-roles and authority.
+These arguments use [F1–F6](FOUNDATIONS.md#foundational-commitments)
+where a Product adopts world-model construction. Source systems enact domain
+function and retain operational sovereignty; their records provide evidence
+whose meaning must be recovered. Some builders additionally use a metric
+representation in which identity is a geometric direction. That additional
+premise activates the overlay construction law, not ordinary entity recovery.
 
-| Shared operation | World-model deciding consumer |
-|---|---|
-| Bind | Establish the selected world-model scope, source authority, fully qualified concepts, recursive Product identities, Builder-Project specialization and publication/adoption basis. Identity, representation and current content retain separate meanings. |
-| Acquire | Observe the strongest available source evidence, trace concrete source surfaces, qualify claims under assurance and retain the attribute-ledger support, evidence limits and residual ambiguity required by the entity claim. Code availability is not a prerequisite. |
-| Transform | Construct bounded entity cuts, explicit treatments and immutable published artifacts from the qualified ledger; derive projections and compile accepted semantics where delivery requires execution. The semantic layer and source operational truth retain their separate owners. |
-| Evaluate | Apply the eight-surface entity-cut admissibility test and proportionate discrimination. In a declared representation space, verify an optional identity direction under held-out treatment and null-peer discrimination. Overlay-publication verification and the unclosed statistical promotion gate remain different predicates. |
-| Conjoin | Compose published domain artifacts without erasing local identity, basis, bounded-context authority, treatment meaning, declared loss or ambiguity. Geometric directions computed in different representation spaces do not compose. A changed space supersedes the prior overlay; generic translation vocabulary does not waive that rule. |
-| Dispose | Competent owners publish, supersede or retain unresolved claims under the declared assurance and publication law. Refit evidence or a changed representation space produces a new overlay; prior accepted ledger facts and published cuts retain their immutable history. |
+| Determination and consuming law | Conditional argument | Additional world-model policy and owner |
+|---|---|---|
+| Source meaning and identity: [source sovereignty](#source-systems-remain-sovereign), [qualified naming](#fully-qualified-naming-is-mandatory), [Builder-Project specialization](#builder-project-specialization-relation) | World modelling requires a bounded object and source authority (F1/F3/F6); information and interpretation distinguish records from domain meaning (F2). A local semantic account therefore cannot replace operational truth, and equal names cannot establish identical objects or lineage concepts. | This member chooses qualified concepts, the semantic truth surface and directional Builder-Project specialization. Source systems keep their operational authority; the specialization supplies no inverse or equivalence to every Source Project. |
+| Entity-cut admission: [admissibility](#admissibility), [discrimination](#discrimination) | A boundary is a supported claim about how the operating model treats the entity (F2/F3/F6), and composition retains each required property (F4). Consequently the admission predicate needs the eight surfaces and their support, while stronger boundary claims need stronger discrimination. Absence of a comparison population does not itself defeat this predicate. | This member chooses the eight-surface test and proportional evidence altitude. Stated absence and reasoned non-applicability may satisfy explicitness; sparse publication retains ambiguity. The builder chooses discrimination techniques, none mandatory individually; failed requirements remain failed. |
+| Assurance, ledger and immutable publication: [attribute ledger](#attribute-ledger-law), [materialization](#materialization-law), [publication](#publication-law) | Evidence and correction need an authentic path from an accepted claim to what supported it (F2/F6), and identity binds a particular cut (F3). A later account must therefore retain the basis of the earlier claim rather than treating current bytes as its historical evidence. | This member chooses append-only attribute ledgers and publication/supersession rules with the scopes and modal force stated below. Their concrete carriers and storage remain realization choices. Shared currentness governs whether old evidence still supports present reliance. |
+| Treatment and composition: [mappings](#mappings-are-semantic-treatments), [composition](#composition-law), [projection](#projection-law) | Information and algebraic composition preserve declared meaning, identity and admitted loss across the actual use relation (F2/F4/F6). Matching fields alone cannot show that a cross-domain treatment preserves the source's identity or authority. | This member chooses treatment, covariance, adjoint-interpretation surfaces and composition by reference. The consuming relation supplies its exact preservation and ambiguity; the terminology alone proves no category-theoretic adjunction or equivalence. |
+| Geometric overlay verification: [overlay construction](#markov-object-construction-law), [held-out treatment](#3-verification-by-treatment), [overlay publication](#6-overlay-publication) | Under the additional geometric-space premise, identity direction is meaningful only in its declared space (F2/F3). Evidence establishes preservation under the actual held-out treatment, not under every possible treatment (F6). Thus ordinary entity admission cannot substitute for direction verification, and different spaces supply incompatible direction coordinates. | This member chooses paired evidence, direction extraction, verification and null-peer conditions, and the published overlay fields. The builder selects an admissible verification; a changed representation space supersedes the overlay, with no generic translation exception. |
+| Statistical promotion: [epistemic status](#epistemic-status-of-the-construct) | The world-model/Markov contribution requires evidence for the boundary claim being made; evidence and authority do not strengthen that claim by renaming a publication (F2/F6). A verified direction can satisfy its publication predicate while the separate conditional-independence test remains unmet. | This member retains candidate-class overlays and the direction-native statistical promotion gate at its stated predicate. Ordinary entity cuts use their own admission test. The pinned empirical companion supplies bounded research evidence and no method authority. |
+| Query, probabilistic proposal and compilation: [epistemic overlay](#probability-belongs-in-the-epistemic-overlay), [control/data planes](#control-plane-and-data-plane), [proof](#proof-law) | Computational execution binding distinguishes a proposed correspondence, accepted understanding and its execution (F2/F4/F6). Finite delivery resources make repeat judgment material (F5), but a compiled artifact or query result cannot acquire source-meaning or publication authority by being executable. | This member chooses separate semantic control, probabilistic overlay and deterministic data-plane roles, with its stated optional compilation/query stages and proof wedge. The Product binds its actual realization and authority; these roles do not mandate a graph-native carrier. |
 
-Markov-object and geometric-overlay claims retain the epistemic standing,
-empirical limits and promotion predicate stated in this method. An ordinary
-entity cut uses its own admissibility test. Held-out treatment verification and
-formal conditional-independence closure remain separate judgments with separate
-evidence. The pinned empirical companion supplies research evidence under its
-declared limits; the method's owning authority controls amendment.
+For publication or supersession, assess eligibility under the applicable cut
+or overlay predicate, then separately assess the core decision predicate on the
+exact candidate, basis, disposition and competent mandate. Established
+eligibility and a lawful decision may each be satisfied; a demonstrated failed
+requirement or exceeded mandate falsifies its own predicate. Missing decisive
+support is indeterminate; invalid interpretation/basis or an established
+scope/capability shortfall uses the corresponding core diagnosis. Retaining a
+claim unresolved is a treatment, not evidence that it is true: preserve its
+actual assessed standing, including known failure. None of these actions
+establishes formal statistical closure by publishing the same bytes.
 
 Assurance and publication use the shared
 [result algebra](FOUNDATIONS.md#result-algebra); required checks compose through
-[result conjunction](FOUNDATIONS.md#result-conjunction). A materialized cut,
-a lawful candidate-class publication and an established statistical claim are
-different predicates with different evidence. None inherits the standing of
-another merely because the same bytes support it.
+[result conjunction](FOUNDATIONS.md#result-conjunction). Additional field
+values, evidence classes, candidate/accepted lifecycle states and treatment
+names are data whose asserted claims require these evaluations; they are not
+automatic verdict aliases.
 
 <!-- STDO3_PROFILE_BINDING_END -->
 
@@ -815,8 +815,11 @@ Assurance should make explicit:
 
 Return that exact claim through the shared
 [result record](FOUNDATIONS.md#result-algebra), retaining its original
-assurance outcome, evidence class and residual ambiguity. An observed
-counterexample is `falsified`; missing decisive support is `indeterminate`.
+assurance outcome, evidence class and residual ambiguity. The predicate is
+"claim C is supported on its declared subject/basis under its stated assurance
+rule." Admissible evidence establishing that claim at the required evidence
+altitude satisfies it, with tolerated ambiguity explicitly retained.
+An observed counterexample is `falsified`; missing decisive support is `indeterminate`.
 An unusable basis is `invalid_basis`, and an out-of-domain request is
 `out_of_frame`. A proposed claim or an assessment not performed is never
 `satisfied` by default. `observed`, `derived`, `interpreted` and `composed`
@@ -1215,6 +1218,16 @@ accepted overlay. Publishing an unverified direction is a violation of
 the Representation Law. The underlying entity cut remains lawful and
 publishable without the overlay.
 
+The verification assessment binds "direction d in representation space R
+preserves the declared identity under the selected held-out treatment and
+required observation rule." Supported preservation satisfies it; an observed
+identity counterexample falsifies it. An unrun or inconclusive treatment leaves
+it indeterminate with actual performance retained; an unusable representation,
+fixture or interpretation is invalid_basis, and an established assessment
+scope/capability shortfall is out_of_frame. The recorded candidate/accepted
+overlay status follows this assessment and the other publication obligations;
+it is not itself a verdict and does not decide the stronger statistical claim.
+
 The empirical program that motivates these treatments reports that the
 strongest of them — direction-native conditional independence — has been
 tested and does not close. Passing this battery establishes that a
@@ -1251,6 +1264,17 @@ incidental attribute cluster by null-peer comparison:
 Failure on the uniqueness and transfer tests means the cluster is
 not yet a lawful Markov object, even if its invariants are
 internally consistent.
+
+Assess uniqueness and transfer as separate predicates on the declared candidate,
+null peers, contexts and representation, using the selected comparison and
+observation rules. Evidence meeting each rule is satisfied for that predicate;
+a demonstrated failure is falsified; an unrun or inconclusive comparison is
+indeterminate with actual performance retained. Invalid basis and established
+scope/capability shortfall retain their core diagnoses. Core size alone supplies
+neither failure nor success. Conjoin the required null-peer and treatment
+results for overlay-publication eligibility, retaining failed comparisons and
+missing coverage. That eligibility is distinct from ordinary entity-cut
+admissibility and from formal conditional-independence closure.
 
 ### 6. Overlay Publication
 
@@ -1320,64 +1344,44 @@ does not.
 
 Do not build one central monolith first.
 
-Build local published domain artifacts and their entity cuts, then
-stitch them.
+Compose local published domain artifacts and their entity cuts through the
+library's [composition contract](TRANSFORMATION_LIBRARY.md#composition-law).
+The binding is the participating cuts and exact bases, treatment predicates,
+fragment authorities, bounded-context meanings, declared loss and ambiguity.
+Required checks use the core conjunction on those actual claims. Higher-order
+publication retains the local artifacts and their identities.
 
-Composition must preserve:
+A candidate geometric claim cannot acquire established standing through
+composition or averaging. Directions in different representation spaces do not
+compose; changing that space supersedes the prior overlay. This domain policy
+admits no generic translation exception. Claims of adjunction or equivalence
+require the evidence in [Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
 
-- fragment authority
-- bounded-context meaning
-- treatment semantics
-- declared loss
-- ambiguity
-
-Before composing, bind the participating cuts, exact bases, treatment predicates
-and applicability of their evidence. Required claim checks use the shared
-conjunction; it retains falsified claims, missing coverage and each source's
-limits. A composed publication cannot promote a candidate geometric claim into
-an established one or erase loss by averaging successful checks. A mathematical
-claim of adjunction or equivalence follows
-[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions); the method's
-vocabulary alone does not prove it.
-
-Higher-order models are composed from published domain artifacts. They do not
-erase them.
-
-The preferred end-state is a federated world-model mesh rather than a single
-flattened enterprise model.
-
-Detailed mesh topology may remain product-local while the line is still being
-developed. Method-level mesh law should be ratified only once the reusable node
-and edge model is stable.
+Prefer a federated world-model mesh to a flattened central model. Detailed
+mesh topology may remain product-local while the line is developed.
+Method-level mesh law should be ratified only once the reusable node and edge
+model is stable; stability alone supplies no ratification authority.
 
 ---
 
 ## Projection Law
 
-Projection is downstream convenience, not semantic authority.
+The semantic kernel remains primary. All world-model projections should remain
+traceable to their governing objects, evidence, treatments, covariance edges,
+adjoint mappings and applicable temporal reference artifacts. Projection is
+downstream convenience, not semantic authority.
 
-The semantic kernel remains primary.
+Reliance on a projection for a declared source-to-consumer claim applies
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) with that
+kernel as source. Bind the material source relations, exact selectors and
+declared loss required by that use. Publication alone establishes neither that
+fidelity claim nor new semantic authority.
 
-All projections should remain traceable back to:
-
-- governing objects
-- evidence
-- treatments
-- covariance edges
-- adjoint mappings
-- temporal reference artifacts where applicable
-
-Tables, schemas, APIs, mapping documents, and covariant transforms are all
-publication forms over the same semantic kernel.
-
-Because an API usually carries more business semantics than a bare schema, the
-preferred structural order is:
-
-`world model -> API contract -> schema contract`
-
-Query and traversal are also downstream-facing conveniences in this sense. They
-may be a first-class delivery pillar without becoming the constitutional core
-of the method.
+Tables, schemas, APIs, mapping documents and covariant transforms are forms
+over that kernel. Prefer `world model -> API contract -> schema contract`
+because the API commonly carries more domain meaning than a bare schema.
+Query and traversal are downstream delivery capabilities. Their delivery
+importance does not transfer ownership of the semantic kernel.
 
 ---
 

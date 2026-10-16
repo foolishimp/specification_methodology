@@ -27,25 +27,25 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b
-  TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
-  AXIOMATIC_CALCULUS.md: 8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09
-  TRAVERSAL_OCCURRENCE_PROFILE.md: afd43348a3a9d10bbd1e0452b0efcfb2f93aa19fc6257a046673679096f2308d
-  REFERENCE_FRAME_METHOD.md: 7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213
-  STDO_REFERENCE_FRAME_BASELINE.md: 3e42ef02d525f9dbc9c9d45b51490a7c7de335128aa6bc327338b716f90df4ca
-  SPEC_METHOD.md: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
+  FOUNDATIONS.md: a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981
+  TRANSFORMATION_LIBRARY.md: c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead
+  AXIOMATIC_CALCULUS.md: 3818cd47b94c82b9b3ae27ede7a30cd5812fc484d56d677e2624371149e5acc4
+  TRAVERSAL_OCCURRENCE_PROFILE.md: 2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf
+  REFERENCE_FRAME_METHOD.md: 8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4
+  STDO_REFERENCE_FRAME_BASELINE.md: 0afebe8e00e652fc966634316ed7a4c5ca4246cb700158bd3baf15fcd9a4a742
+  SPEC_METHOD.md: 5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018
-  ODD_METHOD.md: 616a43eff236c7d71e5884372b9440c5ef60dc0bbe61b5acc1dbae1cbebadd70
-  WORLD_MODEL_METHOD.md: 6e19e429fa7003c0885844fbc642cf1d6b6b4dbc6a7341bfcce555b791defba1
-  TICKET_METHOD.md: a91012c780f94c8cc0df85dd6912116ef1ad4c47a4bc070526fd39de2fbb1094
-  UX_METHOD.md: 37d3859c7b6e8ee0d293c9aae2421d379e2cbb10243afbed9a60174a5188a07f
-  IDENTITY_METHOD.md: 0b4158d98d7f0be980218865fa75e767042007a3ad49326b86252d67074e5a6d
-  RELEASE_METHOD.md: 6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede
+  DESIGN_MODULE_METHOD.md: 2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e
+  ODD_METHOD.md: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
+  WORLD_MODEL_METHOD.md: 657f728d47306e477feaa296f43d9581922ca8cce7f3c1cc55267fe3943c048b
+  TICKET_METHOD.md: e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6
+  UX_METHOD.md: 6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d
+  IDENTITY_METHOD.md: 30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c
+  RELEASE_METHOD.md: 3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7
   POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
-  GLOSSARY_GUIDE.md: d433155845187b39e504b34fbb079690fefcab141d213e1179e535b7027b88f3
+  GLOSSARY_GUIDE.md: 9332a68e51caaeeb089e21de98d52279f05cbbe1c0cf12659f74a59d8e9709ab
 stale_if_source_digest_changes: true
 stale_if_index_digest_changes: true
 ---
@@ -61,7 +61,8 @@ governs context reconstruction and conditional reuse.
 
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
-organise shared premises and transformation families. Detailed owners retain
+own the shared result, context, configuration and conditional transformation
+contracts. Detailed owners retain
 their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.
@@ -272,7 +273,14 @@ refuse cross-law closure.
 
 Use the smallest current authority surface that can decide the question:
 
-`Goals -> Intent -> Product Definition -> Requirements -> Design -> Code -> Events -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
+`Goals -> Intent -> Product Definition -> Requirements -> Design -> Realisation -> Observations -> Projection -> Delta -> Scenarios -> Gap Analysis -> Repricing`
+
+The common WHAT constrains admissible outcomes and evidence. A build tenant
+binds those requirements to its concrete operations, actors, effects and
+observations. Software, hardware, people and mixed processes are permitted
+bindings; a human executor is not thereby a human adjudicator. Generic
+outcome-driven construction does not require adopting the graph-native ODD
+profile. Preservation across these bindings needs its own evidence.
 
 When a lower layer needs a change in meaning, re-enter at the smallest upstream
 layer that owns the missing truth.
@@ -376,7 +384,9 @@ layer that owns the missing truth.
   identity. Absence of a durable ticket neither requires nor authorizes creating
   one. Create or update a ticket only when work or an obligation outlives the
   local carrier boundary: the admitted sprint when inside one, otherwise the
-  current run, and only under ticket-state authority.
+  current run, and only under ticket-state authority. An explicit instruction
+  from ticket-state authority may also select a durable record. That instruction
+  neither admits an execution contract nor widens upstream work authority.
 - Drafting and admission remain distinct relations; execution may occur in one
   invocation. Ticket existence, lane placement, `active` status, a generic
   work request, or the model's own draft cannot supply admission. Drafted or

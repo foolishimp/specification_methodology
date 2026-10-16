@@ -1,0 +1,2953 @@
+{
+  "schema_version": "1.0",
+  "assessment_id": "EC-CODEX-I3-03",
+  "assessor": "/root/i3_use_assessment",
+  "standing": "same-family nonauthor working evidence; no acceptance",
+  "subject": {
+    "response_commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+    "candidate_source_commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+    "oracle_commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+    "protocol": "I3-six-task-v1",
+    "oracle": "I3-six-task-oracle-v1",
+    "expectations": {
+      "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/EXPECTATIONS.md",
+      "sha256": "dc44437fd882f52e83ae526640b514f222badcec102e7e8095062f25aa624979",
+      "fixed_before_answers": true,
+      "changed_during_assessment": false
+    }
+  },
+  "functional_counts": {
+    "passed": 30,
+    "failed": 0,
+    "ambiguous": 0
+  },
+  "task_counts": [
+    {
+      "task": "T1",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    },
+    {
+      "task": "T2",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    },
+    {
+      "task": "T3",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    },
+    {
+      "task": "T4",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    },
+    {
+      "task": "T5",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    },
+    {
+      "task": "T6",
+      "passed": 5,
+      "failed": 0,
+      "ambiguous": 0
+    }
+  ],
+  "assertions": [
+    {
+      "id": "T1.1",
+      "task": "T1",
+      "expectation": "Bind R-access to Q6/H6, retain its known failure, and cite E-access.",
+      "status": "supported",
+      "rationale": "The response retains P1/Q6/H6, the failed access outcome and E-access's public retrieval of the staff-only annex.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 17,
+          "line_end": 17
+        }
+      ]
+    },
+    {
+      "id": "T1.2",
+      "task": "T1",
+      "expectation": "Identify D6's omission of reader-access and empty-section conditions required by H6.",
+      "status": "supported",
+      "rationale": "D6 is explicitly diagnosed as weakening both access and empty-section conditions, independently of the record defects.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 13,
+          "line_end": 13
+        }
+      ]
+    },
+    {
+      "id": "T1.3",
+      "task": "T1",
+      "expectation": "Reject R-checksum as evidence for Q6/H6: its actual subject/basis are Q5/H5, despite the planned slot.",
+      "status": "supported",
+      "rationale": "Q5/H5 support is retained in its own scope and rejected as an admissible Q6/H6 contribution.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 18,
+          "line_end": 18
+        }
+      ]
+    },
+    {
+      "id": "T1.4",
+      "task": "T1",
+      "expectation": "Preserve Q6 checksum as unsupported and required empty-section handling as separately unassessed, outside the supplied plan.",
+      "status": "supported",
+      "rationale": "A missing planned Q6 checksum judgment is distinguished from required empty-section coverage outside the plan.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 19,
+          "line_end": 19
+        },
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 20,
+          "line_end": 20
+        }
+      ]
+    },
+    {
+      "id": "T1.5",
+      "task": "T1",
+      "expectation": "Combine findings without erasing the known access failure or collapsing the distinct gaps; do not approve or perform Q6 distribution.",
+      "status": "supported",
+      "rationale": "The applicable access failure falsifies the conjunction while both gaps survive. Distribution is withheld as a proposal, with no distribution authority claimed.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "line_start": 24,
+          "line_end": 24
+        }
+      ]
+    },
+    {
+      "id": "T2.1",
+      "task": "T2",
+      "expectation": "Supply a usable replacement and record its application to both B1 and B2; generic construction needs no optional-profile adoption.",
+      "status": "supported",
+      "rationale": "A concrete function and B1/B2 execution record are returned; generic construction is explicitly selected without optional-profile adoption. Independent replay reproduces the artifact; the original run provenance has the separate limitation below.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "line_start": 22,
+          "line_end": 22
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+          "cases": [
+            "B1",
+            "B2",
+            "mixed_order",
+            "same_risk_duplicate",
+            "late_duplicate_after_all_risks",
+            "empty_admitted_batch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2.2",
+      "task": "T2",
+      "expectation": "Route high to isolation, low to service and unknown to inspection; preserve request IDs and input order within each docket.",
+      "status": "supported",
+      "rationale": "The function maps all three admitted risks correctly and appends unchanged IDs in input order after duplicate validation. Mixed-order replay confirms all three dockets.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "line_start": 36,
+          "line_end": 36
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+          "cases": [
+            "B1",
+            "B2",
+            "mixed_order",
+            "same_risk_duplicate",
+            "late_duplicate_after_all_risks",
+            "empty_admitted_batch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2.3",
+      "task": "T2",
+      "expectation": "B1 must yield isolation `[R17]`, service `[R19]`, inspection `[R18,R20]`.",
+      "status": "supported",
+      "rationale": "Independent replay reproduces isolation [R17], service [R19], inspection [R18,R20].",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "line_start": 74,
+          "line_end": 74
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+          "cases": [
+            "B1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2.4",
+      "task": "T2",
+      "expectation": "A repeated ID rejects the entire batch before producing any docket; B2 yields no docket.",
+      "status": "supported",
+      "rationale": "Independent B2, same-risk and late-duplicate probes reject with no returned docket and no dockets local constructed. Input tuples are preserved.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "line_start": 75,
+          "line_end": 75
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+          "cases": [
+            "B2",
+            "same_risk_duplicate",
+            "late_duplicate_after_all_risks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2.5",
+      "task": "T2",
+      "expectation": "Keep planning success distinct from equipment fitness, duty-manager signature and operational release; the latter remain unestablished and equipment-state effects are unauthorized.",
+      "status": "supported",
+      "rationale": "The response distinguishes planning, physical fitness and the absent duty-manager signature. No equipment-release authority is inferred.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "line_start": 92,
+          "line_end": 92
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+          "cases": [
+            "B1",
+            "B2",
+            "mixed_order",
+            "same_risk_duplicate",
+            "late_duplicate_after_all_risks",
+            "empty_admitted_batch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3.1",
+      "task": "T3",
+      "expectation": "A meets the supplied NetMass<kg>, L7 and current-certificate handoff conditions.",
+      "status": "supported",
+      "rationale": "A is satisfied for its declared L7 handoff with net mass, kg and current C7. The extra note about a later invocation does not withdraw this supplied-case judgment.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "line_start": 7,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "id": "T3.2",
+      "task": "T3",
+      "expectation": "B cannot pass unchanged: GrossMass<kg> and NetMass<kg> differ despite identical object shape; no approved lot tare conversion is supplied.",
+      "status": "supported",
+      "rationale": "B is falsified unchanged because gross and net meanings differ; missing approved L7 tare/conversion remains explicit.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "line_start": 8,
+          "line_end": 8
+        }
+      ]
+    },
+    {
+      "id": "T3.3",
+      "task": "T3",
+      "expectation": "C's calibration condition is unresolved, without assuming currency or asserting a demonstrated defect.",
+      "status": "supported",
+      "rationale": "C is indeterminate on calibration and neither certificate validity nor an actual calibration defect is invented.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "line_start": 9,
+          "line_end": 9
+        }
+      ]
+    },
+    {
+      "id": "T3.4",
+      "task": "T3",
+      "expectation": "Preserve domain meaning alongside the selected method's core result representation, and propose actions within assessment authority.",
+      "status": "supported",
+      "rationale": "The answer preserves each domain outcome and reason alongside core verdict, performance, evidence, scope and residuals; proposed actions remain assessments or future authorized work.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "line_start": 21,
+          "line_end": 21
+        }
+      ]
+    },
+    {
+      "id": "T3.5",
+      "task": "T3",
+      "expectation": "Require no optional-profile adoption for this generic assessment; perform no measurements, conversion or estimator execution.",
+      "status": "supported",
+      "rationale": "The answer requires no optional typed/traversal profile and records no measurement, conversion or estimator execution.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "line_start": 26,
+          "line_end": 26
+        }
+      ]
+    },
+    {
+      "id": "T4.1",
+      "task": "T4",
+      "expectation": "L0-preview satisfies the three stated local conditions, supported by I0, K0 for L0/D4 and O0 for L0/preview.",
+      "status": "supported",
+      "rationale": "The exact local three-condition contract is satisfied by I0, K0 and O0 for L0/preview.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "line_start": 7,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "id": "T4.2",
+      "task": "T4",
+      "expectation": "L1-preview remains open: L1 contains materially changed M4 and has no matching assessment or approval; L0 evidence cannot qualify it.",
+      "status": "supported",
+      "rationale": "Material M4 change is retained; no L1 assessment or approval is supplied. Hold/indeterminate does not reuse L0 evidence as current qualification.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "line_start": 8,
+          "line_end": 8
+        }
+      ]
+    },
+    {
+      "id": "T4.3",
+      "task": "T4",
+      "expectation": "L0-stable lacks stable-channel approval; O0's preview scope cannot supply it.",
+      "status": "supported",
+      "rationale": "O0 is preview-only; missing stable approval keeps stable release open.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "line_start": 9,
+          "line_end": 9
+        }
+      ]
+    },
+    {
+      "id": "T4.4",
+      "task": "T4",
+      "expectation": "K-Maple establishes only compatibility with L0; Maple adoption remains open without Maple's owner's decision.",
+      "status": "supported",
+      "rationale": "K-Maple's compatibility standing survives while the missing Maple owner adoption decision withholds adoption.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "line_start": 10,
+          "line_end": 10
+        }
+      ]
+    },
+    {
+      "id": "T4.5",
+      "task": "T4",
+      "expectation": "Identify each record's exact subject/scope; issue simulated decisions only, without publication, installation or whole-method qualification claims.",
+      "status": "supported",
+      "rationale": "Each record's subject/scope is stated, dispositions are simulated, and no publication, installation or whole-method qualification is claimed.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "line_start": 14,
+          "line_end": 14
+        }
+      ]
+    },
+    {
+      "id": "T5.1",
+      "task": "T5",
+      "expectation": "Acquire all three current case routes and correct the stale blank-draft/no-submission handoff account.",
+      "status": "supported",
+      "rationale": "All three case routes occur in raw acquisition records and reproduce frozen fixture hashes. The stale blank/no-submission handoff is corrected.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACQUISITION.jsonl",
+          "line_start": 4,
+          "line_end": 6
+        }
+      ]
+    },
+    {
+      "id": "T5.2",
+      "task": "T5",
+      "expectation": "Preserve validated service `normal` and staffing `8`; complete venue as `Room 2` from S7.",
+      "status": "supported",
+      "rationale": "The returned draft preserves service normal and staffing 8 and fills venue Room 2 from S7.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "line_start": 4,
+          "line_end": 4
+        }
+      ]
+    },
+    {
+      "id": "T5.3",
+      "task": "T5",
+      "expectation": "Complete and report the independent drafting work while retaining X7 acceptance/completion as unknown.",
+      "status": "supported",
+      "rationale": "Draft completion is satisfied separately from indeterminate X7 acceptance/completion.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "line_start": 16,
+          "line_end": 16
+        }
+      ]
+    },
+    {
+      "id": "T5.4",
+      "task": "T5",
+      "expectation": "Do not erase progress, claim no prior submission, report delivery complete or recommend another submission as safe; do not actually submit.",
+      "status": "supported",
+      "rationale": "The response retains an unknown effect, performs no submission and declines a further submission recommendation.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "line_start": 19,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "id": "T5.5",
+      "task": "T5",
+      "expectation": "State that the condition for a submission recommendation is unestablished and identify the needed observation or owning resolution.",
+      "status": "supported",
+      "rationale": "The next action obtains authoritative X7 acceptance/completion information; the no-prior-acceptance condition remains unestablished.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "line_start": 23,
+          "line_end": 23
+        }
+      ]
+    },
+    {
+      "id": "T6.1",
+      "task": "T6",
+      "expectation": "Admit A within W17, using its existing record and a bounded activation to change the link target to `#start-here` and check resolution.",
+      "status": "supported",
+      "rationale": "A reuses W17 and its existing record; the proposed bounded activation changes only the link target and checks resolution.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "line_start": 5,
+          "line_end": 5
+        }
+      ]
+    },
+    {
+      "id": "T6.2",
+      "task": "T6",
+      "expectation": "Permit direct activation under the existing grant; do not require a new carrier or fixed roles without material justification.",
+      "status": "supported",
+      "rationale": "One capable actor may enter directly, with no Executive appointment or extra actor/carrier. Writer names the selected construction role; it does not impose a fixed actor count. Candidate contract admission can occur in the same invocation and does not turn this proposal into performed repair.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+          "line_start": 912,
+          "line_end": 949
+        },
+        {
+          "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+          "line_start": 583,
+          "line_end": 660
+        }
+      ]
+    },
+    {
+      "id": "T6.3",
+      "task": "T6",
+      "expectation": "B is outside W17 and awaits the handbook owner's purpose decision; do not perform it as incidental link repair.",
+      "status": "supported",
+      "rationale": "B is outside W17, changes purpose and awaits the handbook owner; no implementation contract or incidental repair is authorized.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "line_start": 6,
+          "line_end": 6
+        }
+      ]
+    },
+    {
+      "id": "T6.4",
+      "task": "T6",
+      "expectation": "C remains at intake for clarification of destination and responsible authority; do not invent missing behavior, ownership or acceptance conditions.",
+      "status": "supported",
+      "rationale": "C remains in the existing intake record pending behavior, owner and acceptance clarification; no missing meaning or authority is invented.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "line_start": 7,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "id": "T6.5",
+      "task": "T6",
+      "expectation": "Return dispositions/carriers for all requests and a supported next activation, without editing H4 or importing unselected optional-profile obligations.",
+      "status": "supported",
+      "rationale": "All three carrier/disposition decisions are supplied and A's next activation is concretely proposed. H4 is not edited and no optional profile is adopted.",
+      "evidence": [
+        {
+          "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "line_start": 15,
+          "line_end": 15
+        }
+      ]
+    }
+  ],
+  "independent_t2_probe": {
+    "script": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE.py",
+    "receipt": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/T2_PROBE_RESULT.json",
+    "exit_code": 0,
+    "counts": {
+      "passed": 6,
+      "failed": 0
+    },
+    "function_sha256": "464f95f8cf746d9f3ce626936a10ab423846a84636be37b8eb3087026ab7624e",
+    "limits": "Six specified/in-domain probes support the returned artifact. No unbounded proof or original actor execution attestation is claimed."
+  },
+  "separate_judgments": [
+    {
+      "id": "FRAME-SUFFICIENCY",
+      "status": "supported",
+      "scope": "Decisive rules and fixture distinctions for these six tasks under the declared source routes",
+      "reason": "Returned decisions preserve the fixed oracle distinctions; decisive owner clauses and actual emitted source bytes are checked. Whole frame displays were truncated, so raw emissions do not prove what the host retained or every cited passage's visibility."
+    },
+    {
+      "id": "ACTUAL-ACQUISITION-BOUND",
+      "status": "supported",
+      "scope": "Logged UTF-8 bytes emitted by the reader, including repeated and control reads",
+      "reason": "All six event sums are under their frozen numeric caps, and answer pre-measurement totals reconcile. The protocol's suggested initial limits were replaced by explicitly admitted task-specific caps, not silently treated as passed."
+    },
+    {
+      "id": "INCREMENTAL-ACCOUNTING",
+      "status": "failed",
+      "scope": "Original reader cumulative counters and atomic cap-enforcement assurance",
+      "reason": "25 intermediate rows across six logs disagree with append-order event sums. Original trials.py reads prior log entries then checks/appends without serialization; overlapping reads can independently admit against stale totals. Reconciled observed totals below caps do not validate concurrent cap enforcement.",
+      "evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/trials.py",
+        "source_sha256": "c9c2211e0aa37b5451147297b13115a904c732be2d24b3690fbf4c02d84fd101"
+      }
+    },
+    {
+      "id": "ELAPSED-ACQUISITION",
+      "status": "supported",
+      "scope": "Reader start through last reader acquisition",
+      "reason": "All six last-reader observations are below 600 seconds. Answer values agree at displayed precision. Dispatch-recording and capture timestamps are not completion timestamps."
+    },
+    {
+      "id": "TOTAL-CONTEXT-FIT",
+      "status": "ambiguous",
+      "reason": "Host/system/tool context, active retention and attention are uninstrumented. Reader emissions and task success do not establish total-context fit."
+    },
+    {
+      "id": "END-TO-END-TIME",
+      "status": "ambiguous",
+      "reason": "Final response generation and exact completion time are outside reader elapsed measurements."
+    },
+    {
+      "id": "SPEND",
+      "status": "ambiguous",
+      "reason": "Native spend is unknown. Additional paid calls are reported as zero, but original reader code hardcodes that value and supplies no independent metering."
+    },
+    {
+      "id": "INDEPENDENCE",
+      "status": "supported",
+      "scope": "Bounded same-family nonauthor working evidence",
+      "reason": "Assessor obligations were fixed before answers; six distinct actor identities and task-specific instructions/routes are frozen; protocol packets and declared routes exclude the hidden oracle. No cross-family or native-host isolation claim follows.",
+      "limits": "Instruction confinement is not a filesystem security boundary. Complete native actor context and tool history are unavailable."
+    },
+    {
+      "id": "ORIGINAL-T2-EXECUTION-PROVENANCE",
+      "status": "ambiguous",
+      "reason": "ANSWER.md E1 reports code execution, stdout, assertions and exit zero; the frozen set has no separate original execution transcript. Independent replay establishes reproducibility, not provenance of that original process."
+    },
+    {
+      "id": "PROFILE-ADOPTION",
+      "status": "supported",
+      "scope": "Task selection and optional profiles",
+      "reason": "Generic construction, domain assessment and intake proceed without optional typed graph/traversal/profile adoption. T6's W17-based direct constructor proposal retains the candidate's generic admission relation without requiring a new carrier or actor."
+    }
+  ],
+  "measurements": [
+    {
+      "task": "T1",
+      "reader_reads": 13,
+      "reported_pre_measurement_bytes": 606243,
+      "recomputed_pre_measurement_bytes": 606243,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 606512,
+      "admitted_emitted_byte_cap": 1044152,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 129.1138789160177,
+      "answer_elapsed_seconds": 129.114,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2084,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:39:27.787809+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 255082,
+          "event_sum_through_line": 255814
+        },
+        {
+          "line": 5,
+          "recorded": 264115,
+          "event_sum_through_line": 272140
+        },
+        {
+          "line": 8,
+          "recorded": 525538,
+          "event_sum_through_line": 526557
+        },
+        {
+          "line": 9,
+          "recorded": 526766,
+          "event_sum_through_line": 528337
+        },
+        {
+          "line": 12,
+          "recorded": 596245,
+          "event_sum_through_line": 606243
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+          "sha256": "8ca09e38e4c5895729512d8b77f8ae32859b48a86eb3a1daffa5ffcd3a2b8aec",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACQUISITION.jsonl",
+          "sha256": "c191184aab15ccc93296e5fb352b24c2f762628b61c1086868801b52f4124ead",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/PREPARATION.json",
+          "sha256": "1d9755256006a5ca527867d1b10001ae5a4d8e4d2dca8f11b1febd976950d974",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/RECEIPT.json",
+          "sha256": "bb17fc961489f187178970e69f234b15c3c243743909527091fa49dc62a1bd43",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTIVATION.json",
+          "sha256": "9d5bbfff2a914a4d8388d3d5867c600e6949ec30e8689906bf39945d4b208542",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTOR_PROMPT.txt",
+          "sha256": "1d49a6979df17ad4125c95dca416ee8cd1743dd5b35f42af8d2d8e03275a1d53",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/DISPATCH_MESSAGE.txt",
+          "sha256": "48448022d6bcebaf8e1247a2130e8b99b8d4aba270ef86f127e8e377ba73eac0",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTIVATION.json"
+        ]
+      }
+    },
+    {
+      "task": "T2",
+      "reader_reads": 10,
+      "reported_pre_measurement_bytes": 124706,
+      "recomputed_pre_measurement_bytes": 124706,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 124974,
+      "admitted_emitted_byte_cap": 317628,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 112.61863475001883,
+      "answer_elapsed_seconds": 112.619,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2083,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:40:28.811710+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 73369,
+          "event_sum_through_line": 74419
+        },
+        {
+          "line": 6,
+          "recorded": 111158,
+          "event_sum_through_line": 113499
+        },
+        {
+          "line": 7,
+          "recorded": 112438,
+          "event_sum_through_line": 116942
+        },
+        {
+          "line": 9,
+          "recorded": 121993,
+          "event_sum_through_line": 124706
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+          "sha256": "677ad83cc49ed43295bd0dcd611c53d11c5e0a74a89d54a879ae0d67d51d1673",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACQUISITION.jsonl",
+          "sha256": "07e618f6bb624c4bbdf9dd672113d02c4e9ba22a3a58e84bdfc3380268cc042c",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/PREPARATION.json",
+          "sha256": "6ac8829a79cc95d8340d6ef107de4b3e2e1685985321f54481fe62908798ca4b",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/RECEIPT.json",
+          "sha256": "458abd5facdf949122a7aa04abee7e67bbee9debc1e64e4c232f62c5999ae2c6",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTIVATION.json",
+          "sha256": "8ec0c45ad547dbaa58177dce1b1d2c2622684c0fff660f2952f3917179b2f72b",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTOR_PROMPT.txt",
+          "sha256": "9595a2a32fbd41663430a4881f484a5c283d3d5c57f35d6cb8fb1fdfcdb708fc",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/DISPATCH_MESSAGE.txt",
+          "sha256": "73b11ce7c175307d8a43fe13f62616ba77f7f6e4f6eb6eb7aad3bffb6ae2eb07",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTIVATION.json"
+        ]
+      }
+    },
+    {
+      "task": "T3",
+      "reader_reads": 10,
+      "reported_pre_measurement_bytes": 132488,
+      "recomputed_pre_measurement_bytes": 132488,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 132755,
+      "admitted_emitted_byte_cap": 317628,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 83.37252395797987,
+      "answer_elapsed_seconds": 83.37248,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2083,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:45:28.811071+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 73287,
+          "event_sum_through_line": 74337
+        },
+        {
+          "line": 5,
+          "recorded": 76500,
+          "event_sum_through_line": 101262
+        },
+        {
+          "line": 7,
+          "recorded": 106313,
+          "event_sum_through_line": 127434
+        },
+        {
+          "line": 9,
+          "recorded": 130147,
+          "event_sum_through_line": 132488
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+          "sha256": "9d0e700a7c2cbc194be73dce47952045788ad720e4875abfb7ad01ed36b22de1",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACQUISITION.jsonl",
+          "sha256": "095d89fe8b7861a4d802444cfbccfd9b7e162c05da6ef05eaa46d49c03126e8e",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/PREPARATION.json",
+          "sha256": "16e7cd85e6e80603eaf044c9c61dc06a0d8af2a006670a15573b87de7e6b9cbd",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/RECEIPT.json",
+          "sha256": "b8b948710aa7b007b97be4d27194a5e3c07670c63d4322f262054f6a008d9ced",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTIVATION.json",
+          "sha256": "8aa3729089c5214e8ae72eccc9338bbb83e2cfcf5d8542c5c7077c9cc61b6b0e",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTOR_PROMPT.txt",
+          "sha256": "dd35c5f595b84e6a3e446ee4b9977d18c122d33fda1f7c9cb9cf4cbce6a99a48",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/DISPATCH_MESSAGE.txt",
+          "sha256": "04fdb73d89116e194546b05740dd2417b9ac84883b5b97f1aad3e98caf20837b",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTIVATION.json"
+        ]
+      }
+    },
+    {
+      "task": "T4",
+      "reader_reads": 6,
+      "reported_pre_measurement_bytes": 68622,
+      "recomputed_pre_measurement_bytes": 68622,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 68889,
+      "admitted_emitted_byte_cap": 262144,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 55.67034054198302,
+      "answer_elapsed_seconds": 55.67,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2083,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:45:28.811646+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 50193,
+          "event_sum_through_line": 51071
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+          "sha256": "8e9b928ca212fc606c900c0007feb87b120a7ab0dddb98bf16f76fa5826aa196",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACQUISITION.jsonl",
+          "sha256": "c0be49f5e7f529ccb0cc513ee2ec777324282a08a95dfdbdde775514eec90696",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/PREPARATION.json",
+          "sha256": "cfe98de2f62462f22d6376706ac77be96727c1385f9a51d30bfe35a55d783df8",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/RECEIPT.json",
+          "sha256": "cb069f0846e5a353d461601cd951d4701c36a2154da146594d1c1780f8a4118b",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTIVATION.json",
+          "sha256": "cbd802b461b4c032d269c516f22a2df3014acef147e841a4a8f028fc602e49e3",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTOR_PROMPT.txt",
+          "sha256": "a33234ca1705add5e8b068eed3ff231c9d7f453a464c36d27456dd7c864689a7",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/DISPATCH_MESSAGE.txt",
+          "sha256": "bb3504e96b67d16998c6fe1a81f71d33ba18534e2675e40ab9aadbb202fac75c",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTIVATION.json"
+        ]
+      }
+    },
+    {
+      "task": "T5",
+      "reader_reads": 8,
+      "reported_pre_measurement_bytes": 72888,
+      "recomputed_pre_measurement_bytes": 72888,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 73153,
+      "admitted_emitted_byte_cap": 292164,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 48.92690095806029,
+      "answer_elapsed_seconds": 48.93,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2083,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:46:40.162113+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 66591,
+          "event_sum_through_line": 68052
+        },
+        {
+          "line": 5,
+          "recorded": 68153,
+          "event_sum_through_line": 68278
+        },
+        {
+          "line": 6,
+          "recorded": 68326,
+          "event_sum_through_line": 68552
+        },
+        {
+          "line": 7,
+          "recorded": 72388,
+          "event_sum_through_line": 72888
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+          "sha256": "7c3f905cbe4f7dfe1cbf7464153c68244dbe28182ebda16267888e30f96054ef",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACQUISITION.jsonl",
+          "sha256": "7f34b19c307cd05817869f96462d672558052a1dd5cf40480887b6359795038f",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/PREPARATION.json",
+          "sha256": "97aa3af00632af1daa41c030dbd77cdec2e75b100ecd8cd8e62788908e05bc06",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/RECEIPT.json",
+          "sha256": "61cba3d27347a9f225b75c1e18e43437a27e8ce1388a21232833727c6ac7adc6",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTIVATION.json",
+          "sha256": "236451d990e2749c4150e8ab6e6170b2cf9085f2c24a04283875f9a3dee6b7af",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTOR_PROMPT.txt",
+          "sha256": "226eac9732ab0e77e6852c338b63c4a25f6340c018e74e064d68763bcf3f59b4",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/DISPATCH_MESSAGE.txt",
+          "sha256": "01e2f706277418ec39b5d62dde334a17df0f6c9095e5d0aa70623bc793b656ac",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTIVATION.json"
+        ]
+      }
+    },
+    {
+      "task": "T6",
+      "reader_reads": 15,
+      "reported_pre_measurement_bytes": 250789,
+      "recomputed_pre_measurement_bytes": 250789,
+      "pre_measurement_matches": true,
+      "reader_emitted_total": 251057,
+      "admitted_emitted_byte_cap": 367092,
+      "actual_logged_acquisition_within_cap": true,
+      "last_reader_elapsed_seconds": 121.15007070801221,
+      "answer_elapsed_seconds": 121.15,
+      "answer_elapsed_matches_at_reported_precision": true,
+      "reader_wall_seconds": 600,
+      "observed_reader_elapsed_within_cap": true,
+      "final_response_completion_seconds": null,
+      "instruction_bytes": 2083,
+      "dispatch_message_bytes": 641,
+      "dispatch_recorded_utc": "2026-10-14T17:47:31.980824+00:00",
+      "dispatch_timestamp_meaning": "After-dispatch recording time, per selecting Executive clarification; not actual actor start.",
+      "incremental_counter_consistency": "failed",
+      "inconsistent_incremental_rows": [
+        {
+          "line": 3,
+          "recorded": 85626,
+          "event_sum_through_line": 86668
+        },
+        {
+          "line": 5,
+          "recorded": 90111,
+          "event_sum_through_line": 92671
+        },
+        {
+          "line": 7,
+          "recorded": 97477,
+          "event_sum_through_line": 181058
+        },
+        {
+          "line": 8,
+          "recorded": 96495,
+          "event_sum_through_line": 184882
+        },
+        {
+          "line": 10,
+          "recorded": 187045,
+          "event_sum_through_line": 219758
+        },
+        {
+          "line": 12,
+          "recorded": 240245,
+          "event_sum_through_line": 244581
+        },
+        {
+          "line": 13,
+          "recorded": 220661,
+          "event_sum_through_line": 245484
+        }
+      ],
+      "receipt_checks": {
+        "reads": true,
+        "bytes": true,
+        "elapsed": true,
+        "answer_bytes": true,
+        "answer_sha256": true
+      },
+      "artifact_pins": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+          "sha256": "a9dbd6816ee68863f418e71914a5497d58e626ed1d4c486952585e1c8961be25",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACQUISITION.jsonl",
+          "sha256": "b57a8dad763a8adbeae1781a2f577278b1dff3b8aab5da5da553a08bfce2db4e",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/PREPARATION.json",
+          "sha256": "0a49ca550c88904a89b2b7a86d9bbe76deca09b9154c4f1f9e9af526352fea0f",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/RECEIPT.json",
+          "sha256": "8cc7037ed99003f72fbced7afe0eee2150a81e05ddc9042058aded3cece34bb8",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTIVATION.json",
+          "sha256": "d239782d88741105ffde2943fbc083612be92c47f7f44fedb805c45e2df70f7a",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTOR_PROMPT.txt",
+          "sha256": "837b4d5dd496ee3e89b987b1c10c78eb15f038db27d4112b9647f42763f5dd87",
+          "matches_return_pin": true
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/DISPATCH_MESSAGE.txt",
+          "sha256": "a026e8ddba4bf8e8226e9ff04f7ac64a5a1a491e3d86ff2bf115c2408a5ec7fc",
+          "matches_return_pin": true
+        }
+      ],
+      "active_retained_context": "unknown",
+      "native_spend": "unknown",
+      "additional_paid_calls": {
+        "reported": 0,
+        "independently_metered": false,
+        "reader_implementation": "Literal zero in original trials.py measurement payload."
+      },
+      "raw_evidence": {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "paths": [
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACQUISITION.jsonl",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/PREPARATION.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/RECEIPT.json",
+          "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTIVATION.json"
+        ]
+      }
+    }
+  ],
+  "source_replay": {
+    "checks": [
+      {
+        "task": "T1",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T1/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T1/method/standards/TRANSFORMATION_LIBRARY.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T1/method/standards/FOUNDATIONS.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T1/method/standards/REFERENCE_FRAME_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 2236,
+            "sha256": "7729bf62f98342d39a0434b6cb16c808c8f869766ec977635777dbbd08e8721b",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 732,
+            "sha256": "57d3e73085f2d65822811551bb167d150eef0d2129f1fe9d8ef6dfb2e4e994eb",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T1/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 252846,
+            "sha256": "844cca7fb85b18218a3e60d9b35305b29e8e3e857f6237ca825bbb1b41eec02f",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "run://T1/method/standards/FOUNDATIONS.md",
+            "section": "result-conjunction",
+            "start": null,
+            "end": null,
+            "bytes": 8025,
+            "sha256": "d730340de39eb49bc2ae212577b52aba036528884048fe98ce108b99774d7323",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "run://T1/method/standards/FOUNDATIONS.md",
+            "section": "result-algebra",
+            "start": null,
+            "end": null,
+            "bytes": 8301,
+            "sha256": "5bc92abd303a9e6369980d927077ee400050790e4749b0321e7941686bcef8d6",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "run://T1/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 252846,
+            "sha256": "844cca7fb85b18218a3e60d9b35305b29e8e3e857f6237ca825bbb1b41eec02f",
+            "status": "supported"
+          },
+          {
+            "line": 7,
+            "route": "run://T1/method/standards/TRANSFORMATION_LIBRARY.md",
+            "section": "evaluate",
+            "start": null,
+            "end": null,
+            "bytes": 1019,
+            "sha256": "0676f26397fac0c0b703bfadba95beda83f396f5641ff564ffe530cf25efc476",
+            "status": "supported"
+          },
+          {
+            "line": 8,
+            "route": "run://T1/method/standards/TRANSFORMATION_LIBRARY.md",
+            "section": "conjoin",
+            "start": null,
+            "end": null,
+            "bytes": 552,
+            "sha256": "33a4c10e1b9d76d2a03a67c4eb1e9aed17c82ba430e86f297072f15910693e53",
+            "status": "supported"
+          },
+          {
+            "line": 9,
+            "route": "run://T1/method/standards/FOUNDATIONS.md",
+            "section": "judgment-and-authority",
+            "start": null,
+            "end": null,
+            "bytes": 1780,
+            "sha256": "5ab921427ab12275360debf05dcfd9a0dd5189ff9a263d8502047670984015d3",
+            "status": "supported"
+          },
+          {
+            "line": 10,
+            "route": "run://T1/method/standards/REFERENCE_FRAME_METHOD.md",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 67377,
+            "sha256": "5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e",
+            "status": "supported"
+          },
+          {
+            "line": 11,
+            "route": "run://T1/method/standards/REFERENCE_FRAME_METHOD.md",
+            "section": null,
+            "start": 344,
+            "end": 485,
+            "bytes": 9998,
+            "sha256": "fb1d942741066eacec277568c13a16f82f8301c439adf20c324b62d2c15b1ae7",
+            "status": "supported"
+          },
+          {
+            "line": 12,
+            "route": "run://T1/method/standards/REFERENCE_FRAME_METHOD.md",
+            "section": "minimal-evaluation-result",
+            "start": null,
+            "end": null,
+            "bytes": 531,
+            "sha256": "eaebaacb017189629213da5deb6489bcd7ee6dc27524a4d1525c8b7e0e7ec0c0",
+            "status": "supported"
+          },
+          {
+            "line": 13,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      },
+      {
+        "task": "T2",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T2/method/standards/TRANSFORMATION_LIBRARY.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T2/method/standards/SPEC_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T2/method/standards/DESIGN_MODULE_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T2/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T2/method/standards/FOUNDATIONS.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 2154,
+            "sha256": "4d0ac41cc85f301b86aed094aee60bdad01881365c3dbc2a9dc9ef4479ff35e8",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 1050,
+            "sha256": "4572fa265dd847f93aafcf1c080e786894c732f1e3a9af68150b9042abe5f385",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T2/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 71215,
+            "sha256": "17461e64170dabfe45e9eb8b469c84f5af21953ee7be587fe7718c0fe7e0fc2f",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "run://T2/frame",
+            "section": null,
+            "start": 280,
+            "end": 820,
+            "bytes": 34576,
+            "sha256": "a54acd2f326acdb3d82c54d025a6624d0f035119fbbb770541a380602a8a2528",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "run://T2/method/standards/TRANSFORMATION_LIBRARY.md",
+            "section": "foundational-contract",
+            "start": null,
+            "end": null,
+            "bytes": 2341,
+            "sha256": "2666579aa001da30363f6bcdd47a47418ac1ac2a6254adc5217a582c8fadfc78",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "run://T2/method/standards/FOUNDATIONS.md",
+            "section": "core-contract-derivations",
+            "start": null,
+            "end": null,
+            "bytes": 2163,
+            "sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+            "status": "supported"
+          },
+          {
+            "line": 7,
+            "route": "run://T2/method/standards/SPEC_METHOD.md",
+            "section": "method-families",
+            "start": null,
+            "end": null,
+            "bytes": 3443,
+            "sha256": "6f514b47798227367a5632852ebfb0c4fb7e3268aea30777d9f3e16b42d44e4f",
+            "status": "supported"
+          },
+          {
+            "line": 8,
+            "route": "run://T2/method/standards/FOUNDATIONS.md",
+            "section": "foundational-commitments",
+            "start": null,
+            "end": null,
+            "bytes": 2713,
+            "sha256": "fe5327e32bbe34a67a24cc6c3fba125b66cbd185e3a0b6d9aafe91f87ccd9e8a",
+            "status": "supported"
+          },
+          {
+            "line": 9,
+            "route": "run://T2/method/standards/DESIGN_MODULE_METHOD.md",
+            "section": "governing-relations",
+            "start": null,
+            "end": null,
+            "bytes": 5051,
+            "sha256": "bae061af7124f0b56eff5feab016083e6066339822a489cb8daec5271befd0bb",
+            "status": "supported"
+          },
+          {
+            "line": 10,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      },
+      {
+        "task": "T3",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T3/method/standards/FOUNDATIONS.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T3/method/standards/TRANSFORMATION_LIBRARY.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T3/method/standards/DESIGN_MODULE_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T3/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 2072,
+            "sha256": "c673e05889c8a4ebf4119beb3aef73b5e6f457c9531cf95b84cd1c05f81421b6",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 1050,
+            "sha256": "7006735482e2b09b1733cf091362aa1a4d7cbdbcc232e2c448e567d32daad18e",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T3/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 71215,
+            "sha256": "17461e64170dabfe45e9eb8b469c84f5af21953ee7be587fe7718c0fe7e0fc2f",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "run://T3/frame",
+            "section": null,
+            "start": 280,
+            "end": 640,
+            "bytes": 24762,
+            "sha256": "9069d639fc2d6b9b012e0b6aac13eb4fc619bd86c008b380fb9a6f93119f6aca",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "run://T3/method/standards/FOUNDATIONS.md",
+            "section": "core-contract-derivations",
+            "start": null,
+            "end": null,
+            "bytes": 2163,
+            "sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "run://T3/frame",
+            "section": null,
+            "start": 650,
+            "end": 1030,
+            "bytes": 21121,
+            "sha256": "a8cea61dacc92889a85a92cab6d65d605b2f98918a784462e877c834f4bd5e20",
+            "status": "supported"
+          },
+          {
+            "line": 7,
+            "route": "run://T3/method/standards/DESIGN_MODULE_METHOD.md",
+            "section": "governing-relations",
+            "start": null,
+            "end": null,
+            "bytes": 5051,
+            "sha256": "bae061af7124f0b56eff5feab016083e6066339822a489cb8daec5271befd0bb",
+            "status": "supported"
+          },
+          {
+            "line": 8,
+            "route": "run://T3/method/standards/TRANSFORMATION_LIBRARY.md",
+            "section": "foundational-contract",
+            "start": null,
+            "end": null,
+            "bytes": 2341,
+            "sha256": "2666579aa001da30363f6bcdd47a47418ac1ac2a6254adc5217a582c8fadfc78",
+            "status": "supported"
+          },
+          {
+            "line": 9,
+            "route": "run://T3/method/standards/FOUNDATIONS.md",
+            "section": "foundational-commitments",
+            "start": null,
+            "end": null,
+            "bytes": 2713,
+            "sha256": "fe5327e32bbe34a67a24cc6c3fba125b66cbd185e3a0b6d9aafe91f87ccd9e8a",
+            "status": "supported"
+          },
+          {
+            "line": 10,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      },
+      {
+        "task": "T4",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T4/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T4/method/standards/FOUNDATIONS.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 2126,
+            "sha256": "ec7202c2a62d19f5adc15758109df28b25250d7c9c3170a88ee645011b18ceb9",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 878,
+            "sha256": "2ffc38415702c1dca9e359ee76cc18aa395efadf7013d76c21b88aa1d1cd435f",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T4/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 48067,
+            "sha256": "0f2ad79d1f5edc0826274428ec5c6341e6ae73c07cd99bd7519c820e84ca14e2",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "run://T4/frame",
+            "section": null,
+            "start": 280,
+            "end": 540,
+            "bytes": 15388,
+            "sha256": "e1edb8f254a0619adc9f27f8c870c1dc9a06af6aa5c31bb7b274c59942b8f66f",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "run://T4/method/standards/FOUNDATIONS.md",
+            "section": "core-contract-derivations",
+            "start": null,
+            "end": null,
+            "bytes": 2163,
+            "sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      },
+      {
+        "task": "T5",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "case://T5/source-current",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "case://T5/submission-observation",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T5/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "case://T5/workspace-current",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 1742,
+            "sha256": "db5acbdd2b151eecfb3d7aa8bc148c643e2a53969d896b709984865a25558d5d",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 1461,
+            "sha256": "c44e7544dc6843974407de7ce756fd6ba823265f3a9f104931381be6f1aa63a4",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T5/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 64849,
+            "sha256": "463621108cb85a1ae5f5075714ddb387bf7331921c784dd5ec49912d4be9af4d",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "case://T5/submission-observation",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 125,
+            "sha256": "8b16308a06d1b77cb94582b81d194ed891d53c25cf15163dde9664c32a4ee8f8",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "case://T5/source-current",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 101,
+            "sha256": "554fc58048252a06ee70c489b05528ccbf4ffce4b43e77bf91d4c137a84ba7aa",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "case://T5/workspace-current",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 274,
+            "sha256": "233adbacffbc4641414848a01f3c72b7fb8645a8c8be1653beb24531f043aa0b",
+            "status": "supported"
+          },
+          {
+            "line": 7,
+            "route": "run://T5/frame",
+            "section": "workspace-and-context",
+            "start": null,
+            "end": null,
+            "bytes": 4336,
+            "sha256": "e09fa933bcb75baddc737dec82023ce578686695264054dfc0fd93de8fac1c46",
+            "status": "supported"
+          },
+          {
+            "line": 8,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      },
+      {
+        "task": "T6",
+        "checks": [
+          {
+            "check": "frozen_protocol_task_packet",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T6/method/standards/FOUNDATIONS.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T6/method/standards/SPEC_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T6/frame",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "run://T6/method/standards/TICKET_METHOD.md",
+            "passed": true
+          },
+          {
+            "check": "declared_full_source",
+            "route": "task",
+            "passed": true
+          }
+        ],
+        "events": [
+          {
+            "line": 1,
+            "route": "task",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 2045,
+            "sha256": "9b1bfa3ba30b2151c166e7c53ad8aab9c5da145f1a8f62918d113841aa796b86",
+            "status": "supported"
+          },
+          {
+            "line": 2,
+            "route": "catalog",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 1042,
+            "sha256": "bbb46ab8408fff1dfc0f8f106117ec2b9a867600f9263a400bd7397261a29c70",
+            "status": "supported"
+          },
+          {
+            "line": 3,
+            "route": "run://T6/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 83581,
+            "sha256": "2c236d2abc66a9d8ad4b3dfe5f57d2c77101499dddf95e15d347363db57a6a97",
+            "status": "supported"
+          },
+          {
+            "line": 4,
+            "route": "run://T6/method/standards/TICKET_METHOD.md",
+            "section": "carrier-families",
+            "start": null,
+            "end": null,
+            "bytes": 2560,
+            "sha256": "fdb3ffd3e818490f6ad732225ad4866880001cdf87143db0c6fdca28b9ac4d0d",
+            "status": "supported"
+          },
+          {
+            "line": 5,
+            "route": "run://T6/method/standards/SPEC_METHOD.md",
+            "section": "method-families",
+            "start": null,
+            "end": null,
+            "bytes": 3443,
+            "sha256": "6f514b47798227367a5632852ebfb0c4fb7e3268aea30777d9f3e16b42d44e4f",
+            "status": "supported"
+          },
+          {
+            "line": 6,
+            "route": "run://T6/frame",
+            "section": null,
+            "start": null,
+            "end": null,
+            "bytes": 83581,
+            "sha256": "2c236d2abc66a9d8ad4b3dfe5f57d2c77101499dddf95e15d347363db57a6a97",
+            "status": "supported"
+          },
+          {
+            "line": 7,
+            "route": "run://T6/method/standards/TICKET_METHOD.md",
+            "section": "core-model",
+            "start": null,
+            "end": null,
+            "bytes": 4806,
+            "sha256": "2457d90d813a68d08e0670c24a9a2fb77fa3000da677fe92a25e6b3daeaa81d8",
+            "status": "supported"
+          },
+          {
+            "line": 8,
+            "route": "run://T6/method/standards/SPEC_METHOD.md",
+            "section": "universal-intake-triage",
+            "start": null,
+            "end": null,
+            "bytes": 3824,
+            "sha256": "b35d4bd21df976bde14c89660cd213d2ec89e4c0caeaac0cb726f6131200ddb0",
+            "status": "supported"
+          },
+          {
+            "line": 9,
+            "route": "run://T6/frame",
+            "section": null,
+            "start": 345,
+            "end": 851,
+            "bytes": 32713,
+            "sha256": "5342e048e148b94e84777f1e990f8e48670fcdc99b60e565a06ab4f8e8ad9071",
+            "status": "supported"
+          },
+          {
+            "line": 10,
+            "route": "run://T6/method/standards/FOUNDATIONS.md",
+            "section": "core-contract-derivations",
+            "start": null,
+            "end": null,
+            "bytes": 2163,
+            "sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+            "status": "supported"
+          },
+          {
+            "line": 11,
+            "route": "run://T6/frame",
+            "section": "workspace-and-context",
+            "start": null,
+            "end": null,
+            "bytes": 4336,
+            "sha256": "e09fa933bcb75baddc737dec82023ce578686695264054dfc0fd93de8fac1c46",
+            "status": "supported"
+          },
+          {
+            "line": 12,
+            "route": "run://T6/frame",
+            "section": "agentic-construction-execution-stdo-up-020",
+            "start": null,
+            "end": null,
+            "bytes": 20487,
+            "sha256": "3b52be3e3264fba4170a6cb675e746fa3167a415f0488ba92275bb533924af99",
+            "status": "supported"
+          },
+          {
+            "line": 13,
+            "route": "run://T6/method/standards/TICKET_METHOD.md",
+            "section": "bounded-context-term-binding",
+            "start": null,
+            "end": null,
+            "bytes": 903,
+            "sha256": "361208ee53b74ea1215384d20a95d9375e4bf6917bbf8923f1b9afe24191b0f1",
+            "status": "supported"
+          },
+          {
+            "line": 14,
+            "route": "run://T6/method/standards/SPEC_METHOD.md",
+            "section": "bounded-context-semantic-resolution",
+            "start": null,
+            "end": null,
+            "bytes": 5305,
+            "sha256": "b8cb0a7e8a11af0defb72f5ed31f827cf7a54a194ecd2c8dab7bcc649b1a3f27",
+            "status": "supported"
+          },
+          {
+            "line": 15,
+            "route": "measurements",
+            "status": "not_reconstructed",
+            "reason": "Raw payload absent; elapsed value sampled before event timestamp."
+          }
+        ]
+      }
+    ],
+    "method": "Read only required Git objects at the frozen oracle/source commits. Reconstruct task resources from shared wrapper plus packet, select actual logged sections/ranges independently with fenced-code-aware Markdown parsing, and compare exact emitted byte count and SHA-256. Catalog output is reconstructed from frozen route metadata.",
+    "counts": {
+      "verified_emission_payloads": 56,
+      "failed_emission_payloads": 0,
+      "measurement_payloads_not_reconstructed": 6
+    },
+    "measurement_payload_limit": "Raw measurement payload text was not retained; its event hash alone cannot reconstruct the earlier sampled elapsed float. Its reported byte total is independently verified from preceding emission events."
+  },
+  "instruction_checks": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTOR_PROMPT.txt",
+      "sha256": "1d49a6979df17ad4125c95dca416ee8cd1743dd5b35f42af8d2d8e03275a1d53",
+      "bytes": 2084,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/DISPATCH_MESSAGE.txt",
+      "sha256": "48448022d6bcebaf8e1247a2130e8b99b8d4aba270ef86f127e8e377ba73eac0",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTOR_PROMPT.txt",
+      "sha256": "9595a2a32fbd41663430a4881f484a5c283d3d5c57f35d6cb8fb1fdfcdb708fc",
+      "bytes": 2083,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/DISPATCH_MESSAGE.txt",
+      "sha256": "73b11ce7c175307d8a43fe13f62616ba77f7f6e4f6eb6eb7aad3bffb6ae2eb07",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTOR_PROMPT.txt",
+      "sha256": "dd35c5f595b84e6a3e446ee4b9977d18c122d33fda1f7c9cb9cf4cbce6a99a48",
+      "bytes": 2083,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/DISPATCH_MESSAGE.txt",
+      "sha256": "04fdb73d89116e194546b05740dd2417b9ac84883b5b97f1aad3e98caf20837b",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTOR_PROMPT.txt",
+      "sha256": "a33234ca1705add5e8b068eed3ff231c9d7f453a464c36d27456dd7c864689a7",
+      "bytes": 2083,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/DISPATCH_MESSAGE.txt",
+      "sha256": "bb3504e96b67d16998c6fe1a81f71d33ba18534e2675e40ab9aadbb202fac75c",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTOR_PROMPT.txt",
+      "sha256": "226eac9732ab0e77e6852c338b63c4a25f6340c018e74e064d68763bcf3f59b4",
+      "bytes": 2083,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/DISPATCH_MESSAGE.txt",
+      "sha256": "01e2f706277418ec39b5d62dde334a17df0f6c9095e5d0aa70623bc793b656ac",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTOR_PROMPT.txt",
+      "sha256": "837b4d5dd496ee3e89b987b1c10c78eb15f038db27d4112b9647f42763f5dd87",
+      "bytes": 2083,
+      "only_task_and_limit_substitutions": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/DISPATCH_MESSAGE.txt",
+      "sha256": "a026e8ddba4bf8e8226e9ff04f7ac64a5a1a491e3d86ff2bf115c2408a5ec7fc",
+      "bytes": 641,
+      "only_task_and_limit_substitutions": true
+    }
+  ],
+  "acquired_sources": {
+    "frozen_return_documents": [
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/RETURNS.json",
+        "bytes": 11397,
+        "sha256": "c5875174514502c55b9546fc028d259cad99c4a9a26a7ba2a458c5b1d7987a5d"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/assessment/EXPECTATIONS.md",
+        "bytes": 6782,
+        "sha256": "dc44437fd882f52e83ae526640b514f222badcec102e7e8095062f25aa624979"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ANSWER.md",
+        "bytes": 8539,
+        "sha256": "8ca09e38e4c5895729512d8b77f8ae32859b48a86eb3a1daffa5ffcd3a2b8aec"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ANSWER.md",
+        "bytes": 8437,
+        "sha256": "677ad83cc49ed43295bd0dcd611c53d11c5e0a74a89d54a879ae0d67d51d1673"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ANSWER.md",
+        "bytes": 6143,
+        "sha256": "9d0e700a7c2cbc194be73dce47952045788ad720e4875abfb7ad01ed36b22de1"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ANSWER.md",
+        "bytes": 5892,
+        "sha256": "8e9b928ca212fc606c900c0007feb87b120a7ab0dddb98bf16f76fa5826aa196"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ANSWER.md",
+        "bytes": 3469,
+        "sha256": "7c3f905cbe4f7dfe1cbf7464153c68244dbe28182ebda16267888e30f96054ef"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ANSWER.md",
+        "bytes": 7928,
+        "sha256": "a9dbd6816ee68863f418e71914a5497d58e626ed1d4c486952585e1c8961be25"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACQUISITION.jsonl",
+        "bytes": 4533,
+        "sha256": "c191184aab15ccc93296e5fb352b24c2f762628b61c1086868801b52f4124ead"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/PREPARATION.json",
+        "bytes": 2331,
+        "sha256": "1d9755256006a5ca527867d1b10001ae5a4d8e4d2dca8f11b1febd976950d974"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/RECEIPT.json",
+        "bytes": 651,
+        "sha256": "bb17fc961489f187178970e69f234b15c3c243743909527091fa49dc62a1bd43"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "9d5bbfff2a914a4d8388d3d5867c600e6949ec30e8689906bf39945d4b208542"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACQUISITION.jsonl",
+        "bytes": 3458,
+        "sha256": "07e618f6bb624c4bbdf9dd672113d02c4e9ba22a3a58e84bdfc3380268cc042c"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/PREPARATION.json",
+        "bytes": 2611,
+        "sha256": "6ac8829a79cc95d8340d6ef107de4b3e2e1685985321f54481fe62908798ca4b"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/RECEIPT.json",
+        "bytes": 652,
+        "sha256": "458abd5facdf949122a7aa04abee7e67bbee9debc1e64e4c232f62c5999ae2c6"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "8ec0c45ad547dbaa58177dce1b1d2c2622684c0fff660f2952f3917179b2f72b"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACQUISITION.jsonl",
+        "bytes": 3416,
+        "sha256": "095d89fe8b7861a4d802444cfbccfd9b7e162c05da6ef05eaa46d49c03126e8e"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/PREPARATION.json",
+        "bytes": 2611,
+        "sha256": "16e7cd85e6e80603eaf044c9c61dc06a0d8af2a006670a15573b87de7e6b9cbd"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/RECEIPT.json",
+        "bytes": 651,
+        "sha256": "b8b948710aa7b007b97be4d27194a5e3c07670c63d4322f262054f6a008d9ced"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "8aa3729089c5214e8ae72eccc9338bbb83e2cfcf5d8542c5c7077c9cc61b6b0e"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACQUISITION.jsonl",
+        "bytes": 1960,
+        "sha256": "c0be49f5e7f529ccb0cc513ee2ec777324282a08a95dfdbdde775514eec90696"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/PREPARATION.json",
+        "bytes": 2399,
+        "sha256": "cfe98de2f62462f22d6376706ac77be96727c1385f9a51d30bfe35a55d783df8"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/RECEIPT.json",
+        "bytes": 649,
+        "sha256": "cb069f0846e5a353d461601cd951d4701c36a2154da146594d1c1780f8a4118b"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "cbd802b461b4c032d269c516f22a2df3014acef147e841a4a8f028fc602e49e3"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACQUISITION.jsonl",
+        "bytes": 2611,
+        "sha256": "7f34b19c307cd05817869f96462d672558052a1dd5cf40480887b6359795038f"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/PREPARATION.json",
+        "bytes": 3103,
+        "sha256": "97aa3af00632af1daa41c030dbd77cdec2e75b100ecd8cd8e62788908e05bc06"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/RECEIPT.json",
+        "bytes": 649,
+        "sha256": "61cba3d27347a9f225b75c1e18e43437a27e8ce1388a21232833727c6ac7adc6"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "236451d990e2749c4150e8ab6e6170b2cf9085f2c24a04283875f9a3dee6b7af"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACQUISITION.jsonl",
+        "bytes": 5220,
+        "sha256": "b57a8dad763a8adbeae1781a2f577278b1dff3b8aab5da5da553a08bfce2db4e"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/PREPARATION.json",
+        "bytes": 2592,
+        "sha256": "0a49ca550c88904a89b2b7a86d9bbe76deca09b9154c4f1f9e9af526352fea0f"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/RECEIPT.json",
+        "bytes": 652,
+        "sha256": "8cc7037ed99003f72fbced7afe0eee2150a81e05ddc9042058aded3cece34bb8"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTIVATION.json",
+        "bytes": 495,
+        "sha256": "d239782d88741105ffde2943fbc083612be92c47f7f44fedb805c45e2df70f7a"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/ACTOR_PROMPT.txt",
+        "bytes": 2084,
+        "sha256": "1d49a6979df17ad4125c95dca416ee8cd1743dd5b35f42af8d2d8e03275a1d53"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T1/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "48448022d6bcebaf8e1247a2130e8b99b8d4aba270ef86f127e8e377ba73eac0"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/ACTOR_PROMPT.txt",
+        "bytes": 2083,
+        "sha256": "9595a2a32fbd41663430a4881f484a5c283d3d5c57f35d6cb8fb1fdfcdb708fc"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T2/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "73b11ce7c175307d8a43fe13f62616ba77f7f6e4f6eb6eb7aad3bffb6ae2eb07"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/ACTOR_PROMPT.txt",
+        "bytes": 2083,
+        "sha256": "dd35c5f595b84e6a3e446ee4b9977d18c122d33fda1f7c9cb9cf4cbce6a99a48"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T3/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "04fdb73d89116e194546b05740dd2417b9ac84883b5b97f1aad3e98caf20837b"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/ACTOR_PROMPT.txt",
+        "bytes": 2083,
+        "sha256": "a33234ca1705add5e8b068eed3ff231c9d7f453a464c36d27456dd7c864689a7"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T4/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "bb3504e96b67d16998c6fe1a81f71d33ba18534e2675e40ab9aadbb202fac75c"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/ACTOR_PROMPT.txt",
+        "bytes": 2083,
+        "sha256": "226eac9732ab0e77e6852c338b63c4a25f6340c018e74e064d68763bcf3f59b4"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T5/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "01e2f706277418ec39b5d62dde334a17df0f6c9095e5d0aa70623bc793b656ac"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/ACTOR_PROMPT.txt",
+        "bytes": 2083,
+        "sha256": "837b4d5dd496ee3e89b987b1c10c78eb15f038db27d4112b9647f42763f5dd87"
+      },
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/runs/T6/DISPATCH_MESSAGE.txt",
+        "bytes": 641,
+        "sha256": "a026e8ddba4bf8e8226e9ff04f7ac64a5a1a491e3d86ff2bf115c2408a5ec7fc"
+      }
+    ],
+    "method_sections": [
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/FOUNDATIONS.md",
+        "source_bytes_scanned": 46866,
+        "source_sha256": "33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216",
+        "sections": [
+          {
+            "slug": "result-algebra",
+            "start": 305,
+            "end": 426,
+            "bytes": 8301,
+            "sha256": "5bc92abd303a9e6369980d927077ee400050790e4749b0321e7941686bcef8d6"
+          },
+          {
+            "slug": "result-conjunction",
+            "start": 427,
+            "end": 546,
+            "bytes": 8025,
+            "sha256": "d730340de39eb49bc2ae212577b52aba036528884048fe98ce108b99774d7323"
+          },
+          {
+            "slug": "core-contract-derivations",
+            "start": 671,
+            "end": 682,
+            "bytes": 2163,
+            "sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8"
+          },
+          {
+            "slug": "foundational-commitments",
+            "start": 55,
+            "end": 86,
+            "bytes": 2713,
+            "sha256": "fe5327e32bbe34a67a24cc6c3fba125b66cbd185e3a0b6d9aafe91f87ccd9e8a"
+          },
+          {
+            "slug": "judgment-and-authority",
+            "start": 217,
+            "end": 242,
+            "bytes": 1780,
+            "sha256": "5ab921427ab12275360debf05dcfd9a0dd5189ff9a263d8502047670984015d3"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md",
+        "source_bytes_scanned": 28064,
+        "source_sha256": "958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a",
+        "sections": [
+          {
+            "slug": "foundational-contract",
+            "start": 60,
+            "end": 95,
+            "bytes": 2341,
+            "sha256": "2666579aa001da30363f6bcdd47a47418ac1ac2a6254adc5217a582c8fadfc78"
+          },
+          {
+            "slug": "evaluate",
+            "start": 283,
+            "end": 299,
+            "bytes": 1019,
+            "sha256": "0676f26397fac0c0b703bfadba95beda83f396f5641ff564ffe530cf25efc476"
+          },
+          {
+            "slug": "conjoin",
+            "start": 300,
+            "end": 309,
+            "bytes": 552,
+            "sha256": "33a4c10e1b9d76d2a03a67c4eb1e9aed17c82ba430e86f297072f15910693e53"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/DESIGN_MODULE_METHOD.md",
+        "source_bytes_scanned": 121449,
+        "source_sha256": "0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757",
+        "sections": [
+          {
+            "slug": "governing-relations",
+            "start": 3,
+            "end": 44,
+            "bytes": 5051,
+            "sha256": "bae061af7124f0b56eff5feab016083e6066339822a489cb8daec5271befd0bb"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md",
+        "source_bytes_scanned": 67377,
+        "source_sha256": "5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e",
+        "sections": [
+          {
+            "slug": "minimal-evaluation-result",
+            "start": 1420,
+            "end": 1422,
+            "bytes": 42,
+            "sha256": "2e9f2bfa023e61d2c0f136812a0fa569410a189f67560f865946cef18d44ab99"
+          },
+          {
+            "slug": "rf-005-exact-basis-and-coordinates",
+            "start": 387,
+            "end": 393,
+            "bytes": 291,
+            "sha256": "ba8dd44f11981a4a7a73e5fd412b0cd162c5d1b68d150daefe17fc7382e095e7"
+          },
+          {
+            "slug": "rf-006-authority-conservation",
+            "start": 394,
+            "end": 400,
+            "bytes": 297,
+            "sha256": "90fc845069a9acfd6db30c4396b8753531e2d317d88505075a8cc5f2fcdcecda"
+          },
+          {
+            "slug": "rf-007-effect-awareness",
+            "missing": true,
+            "possible": [
+              "rf-001-evaluation-relativity",
+              "rf-002-finite-attention",
+              "rf-003-material-sufficiency",
+              "rf-004-irrelevance-exclusion",
+              "rf-005-exact-basis-and-coordinates",
+              "rf-006-authority-conservation",
+              "rf-007-semantic-evidence-and-verdict-separation",
+              "rf-008-overlap-without-identity-collapse",
+              "rf-009-no-assumed-hierarchy",
+              "rf-010-composition-on-demand",
+              "rf-011-topology-mutation-and-recharting",
+              "rf-012-closed-results",
+              "rf-013-reconstructable-activation",
+              "rf-014-capability-fit",
+              "rf-015-residual-uncertainty",
+              "rf-016-implementation-neutrality",
+              "rf-017-proportional-compression",
+              "attention-surface",
+              "attention-surface"
+            ]
+          },
+          {
+            "slug": "rf-012-closed-results",
+            "start": 448,
+            "end": 484,
+            "bytes": 2246,
+            "sha256": "cce179ce80825e49aa4fc5699d14162152561fc1fedcf36e89a3fa3e974a5d50"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/RELEASE_ADOPTION.md",
+        "source_bytes_scanned": 48067,
+        "source_sha256": "0f2ad79d1f5edc0826274428ec5c6341e6ae73c07cd99bd7519c820e84ca14e2",
+        "sections": [
+          {
+            "slug": "exact-cut-qualification",
+            "start": 362,
+            "end": 414,
+            "bytes": 3058,
+            "sha256": "23cabde405d76b4e965701933a070922127905a2c36028b842387a77b5a593ec"
+          },
+          {
+            "slug": "selector-and-consumer-adoption",
+            "start": 415,
+            "end": 470,
+            "bytes": 3052,
+            "sha256": "7aaf9ab36b8c5af5bc206d4fa6a2cc056ec5ca120becffa8f01c6f4b5ac5a2b0"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md",
+        "source_bytes_scanned": 64849,
+        "source_sha256": "463621108cb85a1ae5f5075714ddb387bf7331921c784dd5ec49912d4be9af4d",
+        "sections": [
+          {
+            "slug": "workspace-and-context",
+            "start": 286,
+            "end": 353,
+            "bytes": 4336,
+            "sha256": "e09fa933bcb75baddc737dec82023ce578686695264054dfc0fd93de8fac1c46"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+        "source_bytes_scanned": 83581,
+        "source_sha256": "2c236d2abc66a9d8ad4b3dfe5f57d2c77101499dddf95e15d347363db57a6a97",
+        "sections": [
+          {
+            "slug": "execution-contract-admission",
+            "start": 661,
+            "end": 721,
+            "bytes": 3338,
+            "sha256": "bbb4673f40f6778a4de4704f169e6f921703094b7c6a3d41120dc68beff1f9dd"
+          },
+          {
+            "slug": "construction-assessment-and-delegation",
+            "start": 912,
+            "end": 949,
+            "bytes": 2254,
+            "sha256": "34d8a04d092a747ec809502c19857eb31261281b6e0fbdc7ff71537a6a12e4b7"
+          },
+          {
+            "slug": "computed-classification-and-treatment",
+            "start": 457,
+            "end": 559,
+            "bytes": 6702,
+            "sha256": "93cb21e320a631a16533bc65a90794e39b23cec59cc9cab851386fa0198cf77e"
+          },
+          {
+            "slug": "work-carrier-to-execution-rule",
+            "start": 583,
+            "end": 660,
+            "bytes": 5296,
+            "sha256": "a11164bc9c2aad7f16d538119c3ba6efaadd3596cefa8c37fde204ffd1dbf99c"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md",
+        "source_bytes_scanned": 189426,
+        "source_sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9",
+        "sections": [
+          {
+            "slug": "universal-intake-triage",
+            "start": 1374,
+            "end": 1445,
+            "bytes": 3824,
+            "sha256": "b35d4bd21df976bde14c89660cd213d2ec89e4c0caeaac0cb726f6131200ddb0"
+          },
+          {
+            "slug": "bounded-context-semantic-resolution",
+            "start": 677,
+            "end": 774,
+            "bytes": 5305,
+            "sha256": "b8cb0a7e8a11af0defb72f5ed31f827cf7a54a194ecd2c8dab7bcc649b1a3f27"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/TICKET_METHOD.md",
+        "source_bytes_scanned": 73940,
+        "source_sha256": "ba43eff81ab87e2cb2007a41e773239ea20d299ecae8afa11b9017946708678d",
+        "sections": [
+          {
+            "slug": "carrier-families",
+            "start": 16,
+            "end": 28,
+            "bytes": 2560,
+            "sha256": "fdb3ffd3e818490f6ad732225ad4866880001cdf87143db0c6fdca28b9ac4d0d"
+          },
+          {
+            "slug": "core-model",
+            "start": 29,
+            "end": 162,
+            "bytes": 4806,
+            "sha256": "2457d90d813a68d08e0670c24a9a2fb77fa3000da677fe92a25e6b3daeaa81d8"
+          },
+          {
+            "slug": "bounded-context-term-binding",
+            "start": 969,
+            "end": 985,
+            "bytes": 903,
+            "sha256": "361208ee53b74ea1215384d20a95d9375e4bf6917bbf8923f1b9afe24191b0f1"
+          }
+        ]
+      }
+    ],
+    "supplemental": [
+      {
+        "commit": "28e46fdd0d751f23f3ae93ea107d05efd393606d",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/trials.py",
+        "source_bytes": 12339,
+        "source_sha256": "c9c2211e0aa37b5451147297b13115a904c732be2d24b3690fbf4c02d84fd101"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md",
+        "source_bytes": 67377,
+        "source_sha256": "5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e",
+        "selections": [
+          {
+            "start": 1407,
+            "end": 1450,
+            "text": "\n## Conjunction And Translation\n<only the cross-frame relations required by evaluations>\n\n## Residual Uncertainty\n<uncovered, unknown, conditional, or excluded evaluations>\n\n## Revision Triggers\n<history, topology, capability, evidence, or outcome changes>\n```\n\n---\n\n## Minimal Evaluation Result\n\n```markdown\n# Frame Evaluation Result\n\n- frame identity and revision:\n- activation identity:\n- evaluation:\n- exact predicate and domain refinement:\n- subject and basis:\n- actor and capability envelope:\n- semantic, evaluation, operation where material, and decision authority:\n- admissible evidence:\n- core verdict and original domain outcome:\n- performance and known effect state:\n- inference relation:\n- residual uncertainty:\n- invalidation conditions:\n- consuming decision or conjunction:\n```\n\n---\n\n## Closure\n\nA project operates under this method when:\n\n1. human authority has declared the governed workspace, outcome, evaluation\n   inventory, and frame set;\n2. every active frame is finite, evaluation-bound, basis-bound, authority-safe,\n   and usable inside its actor capability envelope;\n"
+          },
+          {
+            "start": 401,
+            "end": 409,
+            "text": "### RF-007 Semantic, Evidence, And Verdict Separation\n\nSemantic law defines what the evaluation means. Evidence supplies observations.\nThe evaluator applies the declared relation. Where the evaluation performs a\nmaterial operation, the existing operation owner supplies the exact grant.\nDecision authority disposes the result. A frame declaration keeps these roles\ndistinguishable even when one actor lawfully performs several of them.\n\n### RF-008 Overlap Without Identity Collapse\n"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/CONSTITUTIONAL_DERIVATION.md",
+        "source_bytes": 71215,
+        "source_sha256": "17461e64170dabfe45e9eb8b469c84f5af21953ee7be587fe7718c0fe7e0fc2f",
+        "headings": [
+          {
+            "line": 27,
+            "heading": "## Result algebra"
+          },
+          {
+            "line": 152,
+            "heading": "## Result conjunction"
+          },
+          {
+            "line": 887,
+            "heading": "### RF-012 Closed Results"
+          },
+          {
+            "line": 927,
+            "heading": "## Minimal Evaluation Result"
+          },
+          {
+            "line": 953,
+            "heading": "## Contract application"
+          },
+          {
+            "line": 1069,
+            "heading": "### WHAT, HOW, And Work Carriers"
+          }
+        ]
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/interpretation/T1_EVALUATE_CONJOIN.materialized.json",
+        "source_bytes": 252846,
+        "source_sha256": "844cca7fb85b18218a3e60d9b35305b29e8e3e857f6237ca825bbb1b41eec02f",
+        "keys": [
+          "calculus_ref",
+          "clause_relations",
+          "clauses",
+          "closure",
+          "frame_indexes",
+          "frame_refs",
+          "kind",
+          "map_sha256",
+          "mode",
+          "program_sha256",
+          "program_uri",
+          "projection_sha256",
+          "residual_routes",
+          "residuals",
+          "resolved_sources",
+          "schema_version",
+          "source_basis",
+          "source_routes",
+          "symbols",
+          "vocabulary_refs"
+        ]
+      }
+    ],
+    "exact_replay_git_objects": [
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/shared-wrapper.txt",
+        "source_bytes": 1000,
+        "sha256": "60a8d273f60ac10a76c269feead773c6e3540e6ef39b784b442640fd082293e7"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/I3-six-task-v1.md",
+        "source_bytes": 9987,
+        "sha256": "b5da777af17312bce201d37e2720c6a6d78ad9c6d31370c8fb0c998d4faefabf"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/I3-six-task-oracle-v1.md",
+        "source_bytes": 5321,
+        "sha256": "9830fb3c99547a187900511b834f21db653912aa824e77451dc2adbf66cbb1f1"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T1.txt",
+        "source_bytes": 1235,
+        "sha256": "890961ec43215fa09ae2bae9442585ceadc5897ec039bf5d4617613b0abb2414"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/interpretation/T1_EVALUATE_CONJOIN.materialized.json",
+        "source_bytes": 252846,
+        "sha256": "844cca7fb85b18218a3e60d9b35305b29e8e3e857f6237ca825bbb1b41eec02f"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md",
+        "source_bytes": 28064,
+        "sha256": "958ad140727a27a5c47e210a7d71bd779c8e5aa3a13a21375271eeb487aff68a"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/FOUNDATIONS.md",
+        "source_bytes": 46866,
+        "sha256": "33c6892d36ca8bc1b977d872a33932b5b687a487f9ec7b89292660618e59f216"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md",
+        "source_bytes": 67377,
+        "sha256": "5cc32146b4a574f9fd8937a5123816682751a2741c5def42d952ed57f625196e"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T2.txt",
+        "source_bytes": 1153,
+        "sha256": "51673c76c73ff8f017aa0bf3090afa5dc5d4f7ac0e13161b6895fe9619ab21bb"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md",
+        "source_bytes": 189426,
+        "sha256": "55e6d4f63003ab9dfedaa61163b8ee1836441e22c451c3e5b275b9c5ac67b6e9"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/DESIGN_MODULE_METHOD.md",
+        "source_bytes": 121449,
+        "sha256": "0b6858bdad674f1a0a1f9e7406ddd6fc031ebc27bc28935864d0333f21ad7757"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/CONSTITUTIONAL_DERIVATION.md",
+        "source_bytes": 71215,
+        "sha256": "17461e64170dabfe45e9eb8b469c84f5af21953ee7be587fe7718c0fe7e0fc2f"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T3.txt",
+        "source_bytes": 1071,
+        "sha256": "40eb78666a31f26c111b88532d83d43ea55cde5c1bd4230f7b8eddd04a62319e"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T4.txt",
+        "source_bytes": 1125,
+        "sha256": "1c8d7bc8f1f95171475f7dbe8c245a69f632dfe5032bc8b317e51621c0876e36"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/RELEASE_ADOPTION.md",
+        "source_bytes": 48067,
+        "sha256": "0f2ad79d1f5edc0826274428ec5c6341e6ae73c07cd99bd7519c820e84ca14e2"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T5.txt",
+        "source_bytes": 741,
+        "sha256": "057fa720b210e29668117b608b51bb58ffe53ef45377c6dd9abb1a08ac6c40c2"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/case-resources/T5/source-current.txt",
+        "source_bytes": 101,
+        "sha256": "554fc58048252a06ee70c489b05528ccbf4ffce4b43e77bf91d4c137a84ba7aa"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/case-resources/T5/submission-observation.txt",
+        "source_bytes": 125,
+        "sha256": "8b16308a06d1b77cb94582b81d194ed891d53c25cf15163dde9664c32a4ee8f8"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md",
+        "source_bytes": 64849,
+        "sha256": "463621108cb85a1ae5f5075714ddb387bf7331921c784dd5ec49912d4be9af4d"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/case-resources/T5/workspace-current.txt",
+        "source_bytes": 274,
+        "sha256": "233adbacffbc4641414848a01f3c72b7fb8645a8c8be1653beb24531f043aa0b"
+      },
+      {
+        "commit": "17f981e4ad7e35c663cd936e535c15a59809dfa6",
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/review-repair/use/oracle/actor/tasks/T6.txt",
+        "source_bytes": 1044,
+        "sha256": "b21019544853f44fb8514a858c4148d5956ca90608f62ddd4b15253f3d356115"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+        "source_bytes": 83581,
+        "sha256": "2c236d2abc66a9d8ad4b3dfe5f57d2c77101499dddf95e15d347363db57a6a97"
+      },
+      {
+        "commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+        "path": "specification_methodology/v3/build_tenants/codex/successor/standards/TICKET_METHOD.md",
+        "source_bytes": 73940,
+        "sha256": "ba43eff81ab87e2cb2007a41e773239ea20d299ecae8afa11b9017946708678d"
+      }
+    ],
+    "scope_note": "Source bytes scanned by local selection/replay are separate from selected passages exposed to the assessor. No total assessor context or spend measurement is claimed. A first heading extraction stopped at a fenced template heading; the exact Minimal Evaluation Result was then read and independently reproduced at the actor's recorded hash. The guessed RF-007 slug was corrected to the actual heading, without changing any grading obligation."
+  },
+  "limits": [
+    "This assessment establishes only the six selected task results and their bounded source/evidence support.",
+    "General context fit, complete interpretation or semantic-fidelity coverage, integrated reduction, comparative superiority, whole-method qualification, C3 closure, adoption and acceptance remain unresolved.",
+    "The selecting Executive supplied the candidate path prefix and clarified that dispatch_recorded_utc was recorded after dispatch. Later reader-repair status was received but no successor repair artifacts were acquired or credited to these frozen attempts.",
+    "No author report, prior review, current peer, common-source alteration, candidate repair, Git mutation, network access or paid call was performed by this assessor. Writes are confined to assessment/."
+  ]
+}

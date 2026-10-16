@@ -1,0 +1,389 @@
+{
+  "task_id": "T1",
+  "actor": "arm-A fresh bounded-use actor",
+  "method_basis": "stdo://releases/v2.5.1-rc.2/",
+  "required_set": [
+    "checksum",
+    "retention",
+    "access"
+  ],
+  "planned_set": [
+    "checksum",
+    "access"
+  ],
+  "decision_authority": "Fixture Product owner; actor evaluates and recommends only",
+  "case_independence": "Catalogue entries exist as observations only when cited by the current independent case.",
+  "cases": [
+    {
+      "case_id": "E1",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "case_source": "task T1 / initial_fixture_state.cases[E1]",
+      "method_sources": [
+        "M.results",
+        "M.applicability",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "checksum": [
+          "E.contract",
+          "E1.returned_assessments",
+          "E1.other_assessments"
+        ],
+        "retention": [
+          "E.contract",
+          "E1.returned_assessments",
+          "E1.other_assessments"
+        ],
+        "access": [
+          "E.contract",
+          "E1.returned_assessments",
+          "E1.other_assessments"
+        ]
+      },
+      "unresolved": [
+        {
+          "check": "checksum",
+          "standing": "applicable authenticated failure",
+          "required_input": "Applicable successful checksum assessment from checker-a for urn:fixture:bundle:17 on urn:fixture:requirements:4. No repair is authorized."
+        },
+        {
+          "check": "retention",
+          "standing": "required result missing",
+          "required_input": "Applicable successful retention assessment from checker-b for urn:fixture:bundle:17 on urn:fixture:requirements:4. No repair is authorized."
+        },
+        {
+          "check": "access",
+          "standing": "supplied result inapplicable",
+          "required_input": "Applicable successful access assessment from checker-c for urn:fixture:bundle:17 on urn:fixture:requirements:4. No repair is authorized."
+        }
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "subject": "urn:fixture:bundle:17",
+      "basis": "urn:fixture:requirements:4",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "predicate": "checksum has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-a",
+          "result": "falsified",
+          "standing": "applicable authenticated failure",
+          "supporting_records": [
+            {
+              "check": "checksum",
+              "producer": "checker-a",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "failed",
+              "evidence": "obs-41",
+              "observation": "For subject 17, checksum expected aa11 but observed bb22.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The current checksum observation is a material counterexample; it remains constraining regardless of the other checks."
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "predicate": "retention has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-b",
+          "result": "indeterminate",
+          "standing": "required result missing",
+          "supporting_records": [],
+          "explanation": "No assessment for this required check is supplied in this case; being unplanned does not remove the obligation."
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "predicate": "access has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-c",
+          "result": "invalid_basis",
+          "standing": "supplied result inapplicable",
+          "supporting_records": [
+            {
+              "check": "access",
+              "producer": "checker-c",
+              "subject": "urn:fixture:bundle:16",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-42",
+              "observation": "For subject 16, access restriction was met.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": false,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authentic access result is for bundle 16, while the contract requires bundle 17. Current bundle-17 access is unresolved."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "result": "falsified",
+        "supports_approval_recommendation": false,
+        "decision": "withhold approval recommendation",
+        "owner_approval_performed": false,
+        "permitted_action": "Construct this recommendation only; owner approval and repairs remain outside the grant.",
+        "inference": "All mandatory components must be satisfied on the exact coordinates. E1/E2 each have a decisive checksum failure; E1 also retains missing and wrong-subject results."
+      },
+      "change_explanation": "Initial independent case: checksum fails, retention is absent, and access success belongs to bundle 16."
+    },
+    {
+      "case_id": "E2",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "case_source": "task T1 / initial_fixture_state.cases[E2]",
+      "method_sources": [
+        "M.results",
+        "M.applicability",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "checksum": [
+          "E.contract",
+          "E2.returned_assessments",
+          "E2.other_assessments"
+        ],
+        "retention": [
+          "E.contract",
+          "E2.returned_assessments",
+          "E2.other_assessments"
+        ],
+        "access": [
+          "E.contract",
+          "E2.returned_assessments",
+          "E2.other_assessments"
+        ]
+      },
+      "unresolved": [
+        {
+          "check": "checksum",
+          "standing": "applicable authenticated failure",
+          "required_input": "Applicable successful checksum assessment from checker-a for urn:fixture:bundle:17 on urn:fixture:requirements:4. No repair is authorized."
+        }
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "subject": "urn:fixture:bundle:17",
+      "basis": "urn:fixture:requirements:4",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "predicate": "checksum has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-a",
+          "result": "falsified",
+          "standing": "applicable authenticated failure",
+          "supporting_records": [
+            {
+              "check": "checksum",
+              "producer": "checker-a",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "failed",
+              "evidence": "obs-41",
+              "observation": "For subject 17, checksum expected aa11 but observed bb22.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The current checksum observation is a material counterexample; it remains constraining regardless of the other checks."
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "predicate": "retention has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-b",
+          "result": "satisfied",
+          "standing": "applicable authenticated success",
+          "supporting_records": [
+            {
+              "check": "retention",
+              "producer": "checker-b",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-44",
+              "observation": "For subject 17, retention duration is 30 days as required.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authorized producer assessed this exact subject on this exact basis successfully."
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "predicate": "access has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-c",
+          "result": "satisfied",
+          "standing": "applicable authenticated success",
+          "supporting_records": [
+            {
+              "check": "access",
+              "producer": "checker-c",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-43",
+              "observation": "For subject 17, access restriction is met.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authorized producer assessed this exact subject on this exact basis successfully."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "result": "falsified",
+        "supports_approval_recommendation": false,
+        "decision": "withhold approval recommendation",
+        "owner_approval_performed": false,
+        "permitted_action": "Construct this recommendation only; owner approval and repairs remain outside the grant.",
+        "inference": "All mandatory components must be satisfied on the exact coordinates. E1/E2 each have a decisive checksum failure; E1 also retains missing and wrong-subject results."
+      },
+      "change_explanation": "Compared for explanation with E1: access now matches bundle 17 and retention is supplied outside the planned set; checksum still fails. No observation is carried between cases."
+    },
+    {
+      "case_id": "E3",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "case_source": "task T1 / initial_fixture_state.cases[E3]",
+      "method_sources": [
+        "M.results",
+        "M.applicability",
+        "M.conjunction"
+      ],
+      "dependencies": {
+        "checksum": [
+          "E.contract",
+          "E3.returned_assessments",
+          "E3.other_assessments"
+        ],
+        "retention": [
+          "E.contract",
+          "E3.returned_assessments",
+          "E3.other_assessments"
+        ],
+        "access": [
+          "E.contract",
+          "E3.returned_assessments",
+          "E3.other_assessments"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "subject": "urn:fixture:bundle:17",
+      "basis": "urn:fixture:requirements:4",
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "predicate": "checksum has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-a",
+          "result": "satisfied",
+          "standing": "applicable authenticated success",
+          "supporting_records": [
+            {
+              "check": "checksum",
+              "producer": "checker-a",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-45",
+              "observation": "For subject 17 in a case that cites obs-45, checksum expected aa11 and observed aa11.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authorized producer assessed this exact subject on this exact basis successfully."
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "predicate": "retention has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-b",
+          "result": "satisfied",
+          "standing": "applicable authenticated success",
+          "supporting_records": [
+            {
+              "check": "retention",
+              "producer": "checker-b",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-44",
+              "observation": "For subject 17, retention duration is 30 days as required.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authorized producer assessed this exact subject on this exact basis successfully."
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "predicate": "access has an applicable authenticated successful assessment for bundle 17 on requirements 4",
+          "required_producer": "checker-c",
+          "result": "satisfied",
+          "standing": "applicable authenticated success",
+          "supporting_records": [
+            {
+              "check": "access",
+              "producer": "checker-c",
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "judgement": "successful",
+              "evidence": "obs-43",
+              "observation": "For subject 17, access restriction is met.",
+              "authenticated": true,
+              "producer_authorized_for_check": true,
+              "subject_matches": true,
+              "basis_matches": true
+            }
+          ],
+          "explanation": "The authorized producer assessed this exact subject on this exact basis successfully."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+        "result": "satisfied",
+        "supports_approval_recommendation": true,
+        "decision": "recommend approval to owner",
+        "owner_approval_performed": false,
+        "permitted_action": "Construct this recommendation only; owner approval and repairs remain outside the grant.",
+        "inference": "All mandatory components must be satisfied on the exact coordinates. E1/E2 each have a decisive checksum failure; E1 also retains missing and wrong-subject results."
+      },
+      "change_explanation": "Compared for explanation with E2: this case cites obs-45, a matching checksum success. All three checks now succeed. obs-41 is not an observation of E3."
+    }
+  ]
+}

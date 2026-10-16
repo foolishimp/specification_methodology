@@ -17,9 +17,14 @@ It owns the [single result algebra](FOUNDATIONS.md#result-algebra),
 [result conjunction](FOUNDATIONS.md#result-conjunction),
 [workspace-derived context](FOUNDATIONS.md#workspace-and-context) and
 [configuration contract](FOUNDATIONS.md#configuration).
-[Transformation Library](TRANSFORMATION_LIBRARY.md) supplies Bind, Acquire,
-Transform, Evaluate, Conjoin and Dispose as logical families. Instances bind
-material contracts and owners; these are not compulsory phases or a runtime API.
+[Transformation Library](TRANSFORMATION_LIBRARY.md) owns shared
+[contract application](TRANSFORMATION_LIBRARY.md#contract-application),
+[constraint surfaces](TRANSFORMATION_LIBRARY.md#constraint-surface),
+[faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) and
+[composition](TRANSFORMATION_LIBRARY.md#composition-law). Bind, Acquire,
+Transform, Evaluate, Conjoin and Dispose organise these responsibilities. Domain
+instances bind their predicates, policies and grants; they do not copy a rival
+generic law or acquire a new runtime API.
 Responsibility views project selected material clauses:
 [work/recovery](frames/WORK_RECOVERY.md),
 [evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md),
@@ -27,6 +32,12 @@ Responsibility views project selected material clauses:
 [domain binding](frames/DOMAIN_BINDING.md), and
 [release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
 no view is sufficient for every task.
+
+For construction or assessment of one member, the
+[member construction/assessment view](frames/MEMBER_CONSTRUCTION_ASSESSMENT.md)
+supplies generic method rules. Bind it to the actual Product requirements,
+member subject, authority and required evidence. Product-specific acceptance
+criteria remain at their owner; selecting this view grants no acceptance.
 
 For intake triage, lawful re-entry, work-carrier selection or execution-contract
 admission, acquire the [triage/carrier frame](frames/TRIAGE_CARRIER.md).
@@ -43,7 +54,7 @@ the existing sufficiency law; a prepared frame grants no work or admission.
 | Responsibility | Owning or locating member |
 |---|---|
 | Formal carrier-neutral calculus | [Axiomatic Calculus](AXIOMATIC_CALCULUS.md) |
-| Frame declaration, evaluation and composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md); [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution) owns bounded-context term resolution |
+| Generic frame law: declaration, evaluation and composition | [Reference Frame Method](REFERENCE_FRAME_METHOD.md); [Spec semantic resolution](SPEC_METHOD.md#bounded-context-semantic-resolution) owns bounded-context term resolution |
 | Operational/specialist and Executive configurations | [Reference Frame Baseline](STDO_REFERENCE_FRAME_BASELINE.md) |
 | Constitutional WHAT and lawful construction | [Spec Method](SPEC_METHOD.md) |
 | Structural HOW, transformation admission and realization | [Design Module Method](DESIGN_MODULE_METHOD.md) |
@@ -53,18 +64,20 @@ the existing sufficiency law; a prepared frame grants no work or admission.
 | State, treatment and world-model claims | [World Model Method](WORLD_MODEL_METHOD.md) |
 | UX surface realization | [UX Method](UX_METHOD.md) |
 | Work-carrier governance and operating law | [Ticket Method](TICKET_METHOD.md) |
-| Exact cuts, successor conservation and publication | [Release Method](RELEASE_METHOD.md); [Spec Method](SPEC_METHOD.md) owns Product-definition routing and consumer adoption |
+| Exact cuts, successor conservation, publication and adoption protocol | [Release Method](RELEASE_METHOD.md); [Spec Method](SPEC_METHOD.md) owns Product-definition routing; each consumer's authority decides its adoption |
 | Commentary and writing practice | [Posting Guide](POSTING_GUIDE.md), [Writing Guide](WRITING_GUIDE.md) |
-| Non-deciding semantic discovery | [Glossary Guide](GLOSSARY_GUIDE.md) |
+| Semantic discovery and locator resolution | [Glossary Guide](GLOSSARY_GUIDE.md) |
 
 Each member's declared applicability and scope remain at that owner; this table
 does not reclassify a constitutional method as a guide or profile. The calculus
 and optional Traversal profile retain their own signatures; the Baseline
-retains its adoption boundary; the Glossary is a non-deciding locator.
+retains its adoption boundary. Reference Frame Method supplies generic frame
+law; particular actor configurations remain scoped profiles. The Glossary
+owns resolution of its locators, while each located method owns its meaning.
 Foundations and the library
 declare the premise layer and shared conditional contracts under the Methodology
-Product authority. Particular methods retain their concrete decisions and
-grants.
+Product authority. Particular methods apply those shared decisions and retain their additional
+policies and grants.
 
 A derived profile retains its owning determinations under the
 [Baseline authority boundary](STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary). The calculus is distinct from
@@ -103,3 +116,12 @@ this entry creates no alternative continuation owner. The projected frames are
 declared members of the complete
 constitutional member set. Their source owners, exact bytes and fidelity remain
 required; a frame is not an independently selectable method version.
+
+The [method interpretation](../interpretation/README.md) supplies the encoded
+determinations, source routes and unresolved conditions for symbolic acquisition.
+Its document-source inventory is distinct from the complete package inventory.
+Use its declared projection and re-entry contract when an interpretation is
+material to the task. The underlying owners decide meaning, while the encoded
+relation and its checker supply only their declared evidence. Reading this
+source package for assessment neither changes an operative Product basis nor
+establishes an installed release.

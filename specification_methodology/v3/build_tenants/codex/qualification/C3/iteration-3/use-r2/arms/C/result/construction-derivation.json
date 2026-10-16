@@ -1,0 +1,319 @@
+{
+  "task_id": "T2",
+  "artifact": "construction-derivation.json",
+  "implementation": "total_cents.py",
+  "selected_plan": "r",
+  "choices": [
+    {
+      "choice": "Sequential accumulator r using Python integer arithmetic, with a JSON CLI and no external effects.",
+      "source": "Actor implementation choice permitted by K.product; M.what-how, M.bounded and M.configuration. One actor is sufficient for this bounded realization."
+    },
+    {
+      "choice": "Use prose plus mathematical induction and a partition conservation argument; no categorical model, functor or equivalence is asserted.",
+      "source": "M.compose and M.orthogonal."
+    }
+  ],
+  "trace": [
+    {
+      "stage": "Intent",
+      "owner": "K.intent",
+      "meaning": "Return the exact total signed amount of every submitted record, retaining repeated equal amounts as separate contributions."
+    },
+    {
+      "stage": "Product",
+      "owner": "K.product",
+      "meaning": "Finite record list with unique record_id, signed integer cents -> one exact integer total_cents. Identity is record_id; cents equality does not merge identities."
+    },
+    {
+      "stage": "Specification",
+      "owner": "K.spec",
+      "meaning": "Each occurrence once; empty -> 0; negatives subtract; exact mathematical integers; partition IDs cover the input exactly once."
+    },
+    {
+      "stage": "Realisation",
+      "owner": "Actor construction under task T2",
+      "artifact": "total_cents.py",
+      "meaning": "Validate represented integer cents, initialize total=0, traverse the original list, add each record's cents once, return total_cents."
+    }
+  ],
+  "algorithmic_account": "r is a left fold of integer addition starting at zero. p groups the same records into a partition and folds each group then folds the partial sums. q incorrectly replaces record multiplicity with distinct cents within each group.",
+  "informational_account": "Each record's signed contribution survives. Equal cents are allowed and remain two contributions when their record IDs differ. Exact integer total is the only returned Product value; output need not retain the full list because the Product requires only its total.",
+  "computational_account": {
+    "binding": "Python 3 integer arithmetic over finite in-memory JSON records; record_id is carried without selecting cents as identity. The realized r operation ignores record ID representation when summing.",
+    "ingress": "The admitted Product domain is a finite list of records with unique record IDs and true integer cents. Code checks record shape and integer cents. Unique identity remains the declared input precondition; no deduplication occurs.",
+    "effects": "Local computation and output only. No submission, release, concurrency or external actor.",
+    "limits": "Mathematical argument concerns admitted finite input with available computational resources. Allocation, input parsing or resource failure is a refusal/error, never an approximate successful integer. No universal finite-machine resource or termination claim is made."
+  },
+  "partition_precondition": "For p and q, every partition member is an input record ID; the concatenated partition IDs form exactly the input ID multiset, each ID once, with no duplicate, omission or invented ID. Empty partitions are allowed. Reordering uses commutativity; regrouping uses associativity; empty groups use zero identity. No side effects are reordered.",
+  "cases": [
+    {
+      "case_id": "K1",
+      "partition_valid": true,
+      "outputs": {
+        "p": 5,
+        "q": 1,
+        "r": 5
+      },
+      "required_total_cents": 5,
+      "partial_sums": {
+        "p": [
+          8,
+          -3
+        ],
+        "q": [
+          4,
+          -3
+        ]
+      },
+      "plan_verdicts": {
+        "p": "satisfied",
+        "q": "falsified",
+        "r": "satisfied"
+      },
+      "decision": "p and r meet this case; reject q on the witnessed multiplicity loss.",
+      "fixture_citations": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans",
+        "K1"
+      ],
+      "method_citations": [
+        "M.compose",
+        "M.typed",
+        "M.result",
+        "M.test"
+      ],
+      "dependencies": [
+        "Given exact partition by record_id; mathematical integer addition."
+      ],
+      "unresolved": []
+    },
+    {
+      "case_id": "K2",
+      "partition_valid": true,
+      "outputs": {
+        "p": 0,
+        "q": 0,
+        "r": 0
+      },
+      "required_total_cents": 0,
+      "partial_sums": {
+        "p": [
+          0,
+          0
+        ],
+        "q": [
+          0,
+          0
+        ]
+      },
+      "plan_verdicts": {
+        "p": "satisfied",
+        "q": "satisfied",
+        "r": "satisfied"
+      },
+      "decision": "All plans return zero on this empty case; q's local success supplies no general contract preservation.",
+      "fixture_citations": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans",
+        "K2"
+      ],
+      "method_citations": [
+        "M.compose",
+        "M.result",
+        "M.test"
+      ],
+      "dependencies": [
+        "Zero additive identity; empty partitions allowed."
+      ],
+      "unresolved": []
+    },
+    {
+      "case_id": "K3",
+      "partition_valid": true,
+      "outputs": {
+        "p": 5,
+        "q": 5,
+        "r": 5
+      },
+      "required_total_cents": 5,
+      "partial_sums": {
+        "p": [
+          8,
+          -3
+        ],
+        "q": [
+          8,
+          -3
+        ]
+      },
+      "plan_verdicts": {
+        "p": "satisfied",
+        "q": "satisfied",
+        "r": "satisfied"
+      },
+      "decision": "All plans meet this case, which contains no repeated cents within a partition; q remains invalid on the complete admitted domain.",
+      "fixture_citations": [
+        "K.intent",
+        "K.product",
+        "K.spec",
+        "K.plans",
+        "K3"
+      ],
+      "method_citations": [
+        "M.compose",
+        "M.result",
+        "M.test"
+      ],
+      "dependencies": [
+        "Signed exact integer addition and valid partition."
+      ],
+      "unresolved": []
+    }
+  ],
+  "plan_assessments": [
+    {
+      "plan": "p",
+      "predicate": "Preserve K.spec on every admitted input and valid partition.",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "original_domain_outcome": "contract_preserving_under_explicit_partition_precondition",
+      "preservation": "Let R be the input IDs and P_j the partition subsets. Exact disjoint coverage gives sum_j sum_{i in P_j} cents(i) = sum_{i in R} cents(i). Associativity permits regrouping; commutativity permits the partition ordering; zero handles empty groups. Unique input IDs establish each occurrence's single contribution.",
+      "counterexample": null,
+      "subject": "K.plans.plan_p",
+      "basis": [
+        "K.intent",
+        "K.product",
+        "K.spec"
+      ],
+      "evidence": [
+        "K.plans",
+        "K1",
+        "K2",
+        "K3",
+        "preservation or counterexample argument in this record"
+      ],
+      "effects": {
+        "boundary": "effect-free plan assessment and local synthetic computation",
+        "state": "not_requested"
+      },
+      "unresolved": []
+    },
+    {
+      "plan": "q",
+      "predicate": "Preserve K.spec on every admitted input and valid partition.",
+      "verdict": "falsified",
+      "performance": "performed",
+      "original_domain_outcome": "multiplicity_destroyed",
+      "counterexample": {
+        "case_id": "K1",
+        "input": [
+          {
+            "record_id": "r1",
+            "cents": 4
+          },
+          {
+            "record_id": "r2",
+            "cents": 4
+          },
+          {
+            "record_id": "r3",
+            "cents": -3
+          }
+        ],
+        "partitions": [
+          [
+            "r1",
+            "r2"
+          ],
+          [
+            "r3"
+          ]
+        ],
+        "required": 5,
+        "actual": 1,
+        "violated_requirement": "Every input occurrence contributes exactly once. r2's 4 cents is removed solely because it equals r1's amount."
+      },
+      "preservation": "A set of amount values is not a partition of records. q's failures do not alter K.intent, K.product or K.spec.",
+      "subject": "K.plans.plan_q",
+      "basis": [
+        "K.intent",
+        "K.product",
+        "K.spec"
+      ],
+      "evidence": [
+        "K.plans",
+        "K1",
+        "K2",
+        "K3",
+        "preservation or counterexample argument in this record"
+      ],
+      "effects": {
+        "boundary": "effect-free plan assessment and local synthetic computation",
+        "state": "not_requested"
+      },
+      "unresolved": []
+    },
+    {
+      "plan": "r",
+      "predicate": "Preserve K.spec on every admitted finite input.",
+      "verdict": "satisfied",
+      "performance": "performed",
+      "original_domain_outcome": "contract_preserving",
+      "preservation": "Induction: after k iterations acc equals the sum of the first k record amounts. Base k=0 gives 0. The next iteration adds exactly the next signed integer amount, preserving the invariant. At finite list end all n occurrences have contributed once. Python int uses exact integer addition; no floating-point coercion or deduplication appears.",
+      "counterexample": null,
+      "subject": "K.plans.plan_r",
+      "basis": [
+        "K.intent",
+        "K.product",
+        "K.spec"
+      ],
+      "evidence": [
+        "K.plans",
+        "K1",
+        "K2",
+        "K3",
+        "induction argument in this record"
+      ],
+      "effects": {
+        "boundary": "effect-free plan assessment and local synthetic computation",
+        "state": "not_requested"
+      },
+      "unresolved": []
+    }
+  ],
+  "evidence_classification": {
+    "preservation": "mathematically argued",
+    "fixture_outputs": "to be locally executed and recorded in artifact-checks.json",
+    "categorical_proof": "not claimed"
+  },
+  "reentry": "If record coverage, integer semantics, computational effects or requirements change, reassess the affected join; a failing plan does not change the constitutional outcome.",
+  "fixture_citations": [
+    "K.intent",
+    "K.product",
+    "K.spec",
+    "K.plans"
+  ],
+  "method_citations": [
+    "M.bounded",
+    "M.what-how",
+    "M.typed",
+    "M.compose",
+    "M.orthogonal",
+    "M.totality",
+    "M.test",
+    "M.execution"
+  ],
+  "dependencies": [
+    "Fixture K.intent -> K.product -> K.spec; exact input and partition cases; Python integer execution for the supplied realization."
+  ],
+  "unresolved": [],
+  "artifacts": [
+    "total_cents.py",
+    "construction-derivation.json"
+  ]
+}
+

@@ -9,7 +9,19 @@ the named owners; those owners retain authority. Section text is retained, with
 relative links relocated to the same targets. A source digest binds the entire
 owner, not proof that this selection suffices for another task.
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+## Governing argument routes
+
+These source families state the premises, shared consequences and
+additional choices behind the selected clauses. Acquire the relevant
+argument when its derivation or applicability is material to this task;
+a route alone does not discharge that judgment.
+
+- [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
+- [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
+- [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws).
+- [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
+
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result algebra
 
@@ -19,6 +31,15 @@ original qualified domain outcome, supporting evidence and citations, unresolved
 obligations and material effect observations. A reference can carry these when
 its resolution preserves their meaning and availability. This is a semantic
 contract, not a mandatory serialization format or additional work carrier.
+
+F1 selects the question and F2/F6 restrict its answer to supported evidence.
+Because an execution can be interrupted and its effects can outlive its actor
+(F3/F5), evaluation performance, the predicate's truth and effect completion
+are separate questions. The informational contribution is the recoverable
+meaning of each answer; the computational contribution is what was performed
+and observed. The following value choices implement those distinctions.
+RF-012 and every domain refinement bind all three questions before consuming a
+label such as `ready` or `refused`; no label decides the other predicates.
 
 The verdict has exactly these values:
 
@@ -85,7 +106,7 @@ the operation may have affected under its supported operating model and any
 observed departure, whether requested or unintended. Irreversible messages or
 other material external effects cannot be omitted to improve a result.
 `partial` means an observed
-completed part and an observed unexecuted or reverted remainder.
+completed part and an observed requested but unexecuted, or reverted, remainder.
 If any material remainder has unknown completion, the state is `unknown`,
 retaining the completed parts as evidence. An effect can be completed while
 the intended product outcome is falsified.
@@ -134,7 +155,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
 
 ## Result conjunction
 
@@ -144,6 +165,14 @@ results, their authentication and predicate mapping, known failures and their
 citations, uncovered required coverage, uncertain effects and invalidators.
 The aggregate is another result in the same algebra, with those components
 available through sufficient references. Its summary never replaces them.
+
+The required set comes from the composite's applicability and coverage
+contract, not from the list of returns received. F4's preservation obligation
+therefore makes a missing required return visible even when every available
+return is satisfied. F2/F6 also retain an authenticated counterexample when
+another slot is missing. Frame conjunction and the library's Conjoin operation
+apply this same distinction; their owners supply which predicates and joins
+are required, not another rule for erasing failures or filling gaps.
 
 The aggregate evaluation has performance performed when its combining rule is
 applied; this does not change component performance. The composite declares its
@@ -230,7 +259,13 @@ slot, retaining its observed performance, extent and missing conclusion. A lawfu
 leaf predicates, joins, normalized effect parts and authentication, with no intermediate basis failure
 hidden by the grouping. On that fixed domain, retained component sets combine
 by union, the conjunction precedence is associative, and the effect join over
-normalized disjoint parts is associative. This grants no associativity to an
+normalized disjoint parts is associative. The argument is mathematical: union
+retains the same authenticated leaves under either grouping; selecting the
+highest applicable diagnostic in the declared precedence over those leaves
+has the same result. Normalized disjoint effect observations likewise retain
+the same parts, so the stated unknown and completion conditions decide the same
+aggregate. An intermediate result must retain those leaves and parts; a bare
+verdict cannot establish this equivalence. This grants no associativity to an
 arbitrary declared operator; regrouping it requires preservation of the same
 outer predicate and its own demonstrated associativity law. An invalid
 intermediate join is a failed premise of that rewrite, not evidence that every
@@ -251,9 +286,17 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede`.
+Source: [RELEASE_METHOD.md — Release Identities](../RELEASE_METHOD.md#release-identities); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Release Identities
+
+This identity/publication family assumes [F2–F4 and F6](../FOUNDATIONS.md#foundational-commitments)
+with separately governed Products and observable release carriers. A claim
+then needs its exact subject, compatible member/ref relations and actual grant
+under [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application).
+This member chooses immutable annotated cuts, qualified namespaces, subtree
+identity, historical conservation and monotonic selectors. Product release
+authorities assign namespaces and subjects; co-location cannot choose them.
 
 The release-publication context distinguishes:
 
@@ -278,7 +321,7 @@ Equal version text does not collapse these identities. Branches and the
 version-line selector may move. An immutable RC tag never moves.
 
 
-Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede`.
+Source: [RELEASE_METHOD.md — Immutable RC Publication](../RELEASE_METHOD.md#immutable-rc-publication); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Immutable RC Publication
 
@@ -309,19 +352,45 @@ published higher RC without matching selector advancement is an invalid,
 fail-closed release state; it never authorizes resolution of the older cut as
 the version-line latest.
 
-Publication returns a core result for the exact predicate `the declared cut
-and required public ref relation exist at the selected remote`. A local tag or
-successful command alone cannot satisfy that predicate. A transport failure
-after dispatch leaves effects `unknown` until the owning remote is observed;
-it does not establish that publication never occurred. Apply
-[workspace and context](../FOUNDATIONS.md#workspace-and-context) before retry,
-then complete or repair only the still-authorised missing relation without
-moving an immutable published cut.
+Publication applies [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application)
+to the granted remote operation, and evaluates `the declared cut and required
+public ref relation exist at the selected remote` from that remote's state.
+Its Currentness and Result conditions govern transport failure after dispatch:
+local command success or failure cannot decide the remote effect. After
+observation, complete or repair only the still-authorised missing relation;
+never move an immutable published cut.
+
+The publication, advancement, selector-resolution and cohort gates below each
+bind their stated conditions as their exact predicate. `Refused`, `fails closed`
+and `stops` preserve the domain reason: a demonstrated missing/incorrect ref,
+nonmonotonic target, stale accepted plan, defeated lease or unsupported required
+atomic transport falsifies that gate's admissibility predicate; unavailable
+remote or deciding evidence leaves it `indeterminate`. An uninterpretable
+governing subject/basis gives `invalid_basis`; evaluation outside its declared
+scope/capability gives `out_of_frame`; established fulfillment of all conditions
+gives `satisfied`. Missing reasons cannot justify satisfaction. A gate result
+does not establish actual publication/adoption, and a refused call does not
+prove `not_started` after possible dispatch. Preserve the core performance,
+coverage and observed-effect coordinates at each selected boundary.
 
 
-Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede`.
+Source: [RELEASE_METHOD.md — Exact-Cut Qualification](../RELEASE_METHOD.md#exact-cut-qualification); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Exact-Cut Qualification
+
+This family assumes a declared cut, its claim set and the observation boundary
+for each claim. F1 and F2 make the evidence answer that claim rather than a
+nearby predicate; F3 binds the answer to the cut actually observed; F4 preserves
+every required item in the release conjunction. Consequently a source check,
+a package check and an installed-use check can support different predicates
+even when all report success. F6 leaves acceptance to the bound decision owner.
+The shared [result/conjunction contract](../FOUNDATIONS.md#result-conjunction)
+preserves those distinctions and any uncovered item.
+
+Release policy chooses exact-cut review, required operator checks and human
+acceptance. The Product declares its claim set, external dependencies and any
+lawful narrowing. These choices determine what qualification owes; a preferred
+build shape does not exclude another realization satisfying the same claims.
 
 Qualification binds:
 
@@ -331,39 +400,48 @@ Qualification binds:
 - the exact release-scoped claim bytes;
 - the governing Product and release basis;
 - each claimed property and its observation boundary;
-- evidence subjects, owner verdicts, and unresolved gaps; and
+- evidence subjects, assessment results, owner decisions and unresolved gaps; and
 - the complete successor relation to the declared predecessor.
 
 Evidence matches the claim. Source success does not prove packaged or installed
 behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
-Each qualification item records its exact predicate and core result. A passed
-item maps to `satisfied` only with established performance and all required
-coverage and evidence on the exact cut; skipped work or a cached green label
-does not establish those conditions. Otherwise determine the item's verdict
-through the [core result law](../FOUNDATIONS.md#result-algebra), retaining any
-independently admissible counterevidence or basis/scope diagnosis. Without
-admissible deciding support it is `indeterminate`; the passed label cannot
-raise its standing. Preserve the finer diagnostic or original outcome and
-performance (`performed`, `not_performed` or `unconfirmed`) under the core legal
-pairs. A missing required judgment remains an absent slot with the known
-performance fact or uncertainty, not an invented assessment. Conjoin the
-declared required claim set using the shared rule. A valid known failure and a
-skipped required item both remain visible; neither can be flattened into a
-green release summary.
+Each qualification item applies
+[Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its witness under the exact cut, claimed property and observation boundary
+above. Evaluate that property using the shared Result condition, preserving the
+item's original outcome and finer diagnostic. The release's declared required
+claim set supplies the conjunction; its core result, performance and coverage
+determine standing rather than a passed label or cached release summary.
+
+For the item's claimed property, `passed` maps to `satisfied` only with
+established performance and every required coverage/evidence condition on the
+exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
+`cached green` or any other raw label without deciding support is
+`indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
+diagnosis and separately authenticated counterevidence under the core legal
+pairs. Missing reasons, absent judgments, performance and effect observations
+apply the [core result and conjunction law](../FOUNDATIONS.md#result-conjunction);
+the release labels supply no alternative rule for them.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
-requires any qualifying-byte change, the verdict remains attached to the old
+requires any qualifying-byte change, the review result remains attached to the old
 RC and a higher RC is published. The selector already advertises the highest
 published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
 
 
-Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede`.
+Source: [RELEASE_METHOD.md — Selector And Consumer Adoption](../RELEASE_METHOD.md#selector-and-consumer-adoption); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Selector And Consumer Adoption
+
+F2, F3 and F6 imply that discovery of current publication is neither an exact
+consumer basis nor permission to change one. This family chooses separate
+presentation and mutation, digest-bound plans and same-line downgrade refusal.
+The actual consumer authority accepts the selected plan; supported retention of
+an older immutable cut remains lawful through the exact-basis route below.
 
 The version-line selector answers only:
 
@@ -411,9 +489,17 @@ retains reproducible exact-cut authority and changes only through explicit
 adoption.
 
 
-Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede`.
+Source: [RELEASE_METHOD.md — Successor Baseline Conservation (`STDO-UP-015`)](../RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015); SHA256 `3f1c6137532fda541dfad7a00e28bd921a978001b75ce9745d70d145b18c7fa7`.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
+
+This family assumes F1–F4 and F6 and a successor whose claims derive from an
+identified predecessor. Naming, code similarity or patch absence cannot then
+establish semantic preservation, and evidence cannot authorize removal. The
+shared [preservation contract](../TRANSFORMATION_LIBRARY.md#contract-application)
+supplies those constraints. UP-015 chooses complete predecessor disposition and
+watched-support-line policy. Product authority owns removal and acceptance of
+changed meaning; the consumer chooses its comparison and durable record.
 
 A successor identifies the exact predecessor immutable RC whose semantic claims
 it evolves. That origin remains immutable for the candidate. Every predecessor
@@ -423,6 +509,37 @@ claim capable of affecting the successor receives one semantic disposition:
 - **superseded** — an accepted successor relation replaces it;
 - **intentionally removed** — current Product authority removes it; or
 - **not applicable** — it has no successor effect, with a bounded reason.
+
+These are row dispositions, not interchangeable verdicts on retention. Bind
+each semantic assessment to the predicate for its exact predecessor claim and
+successor relation:
+
+| Row disposition | Semantic predicate assessed | Required decision relation |
+|---|---|---|
+| `conserved` | the successor retains this predecessor claim's meaning | recording the conservation disposition under the bound mandate |
+| `superseded` | the named successor relation replaces this predecessor claim | actual acceptance of that successor relation by its governing authority, plus the bound disposition |
+| `intentionally removed` | this predecessor claim is excluded from the successor's governing claim set | actual removal by current Product authority; omission alone supplies no decision |
+| `not applicable` | this predecessor claim has no effect on the declared successor scope | supported applicability determination and the bound disposition; scope cannot be silently narrowed |
+
+On each named semantic predicate, established fulfillment maps to `satisfied`,
+an admissible counterexample to `falsified`, and insufficient evidence or a
+missing reason to `indeterminate`. An uninterpretable subject/governing basis
+is `invalid_basis`; assessment outside scope/capability is `out_of_frame`.
+Preserve the original row and cause, actual performance and absent coverage
+under the [core result contract](../FOUNDATIONS.md#result-algebra). Satisfaction
+of removal or non-applicability is not a claim that predecessor meaning was
+retained. Retention and replacement may be shown by any supported realization,
+not only a familiar structure or byte-identical implementation.
+
+For a row's claimed authorized disposition, the separate decision predicate is
+`this disposition D on the exact claim and basis was made under its bound
+mandate`. A supported lawful decision is
+`satisfied`; a demonstrated absent/unauthorized decision is `falsified`;
+unconfirmed authority, reason or decision is `indeterminate`, retaining core
+basis/scope diagnoses. The table's required acceptance or removal decision is
+an actual additional obligation where named, not a decision manufactured by
+recording a row. Neither predicate overwrites the other, any known semantic
+failure, or observed and uncertain effects.
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a
@@ -436,7 +553,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798`.
 
 #### Explicit Complete Consumer Update
 
@@ -487,8 +604,16 @@ It does not claim a crash-atomic transaction across independent filesystem
 paths: abrupt process/host loss or unavailable rollback storage requires
 recovery from the presented preimages before claiming the complete relation.
 
+`Complete update` evaluates `every selected resulting binding and companion
+satisfies the accepted plan`. A witnessed mismatch falsifies that predicate;
+unobserved completion leaves it indeterminate. A refusal before consumer
+mutation needs observed `not_started` at that boundary. `Restore` or `recovery`
+is an operation, not proof of reversal: report `reverted` only from the core's
+required observation of every begun part. Keep staged-install and consumer
+effects on their actual boundaries, including `partial` or `unknown` effects.
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-005 Exact Basis And Coordinates
 
@@ -498,7 +623,7 @@ requires reactivation. Apparent equality does not substitute for declared
 coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-006 Authority Conservation
 
@@ -508,7 +633,7 @@ from actor identity, available capability, evidence shape, implementation
 reachability, or frame selection.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `8f559b3f9199b851afc7727d8049b4f23e5acf44e36c4eba18423976c1cac7d4`.
 
 ### RF-012 Closed Results
 
@@ -546,3 +671,164 @@ state. An absent return is not evidence that an invoked operation did not run.
 A domain may refine these cases but cannot erase a failure, unknown, refusal,
 non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `c2d25abc31ca3a469db896deacd4bfc7c9e4c0ebc1abd4b28ae10f07a0dceead`.
+
+## Contract application
+
+A contract bounds an operation by its input and output domains, intended
+predicate, governing constraints, material relations, evidence rule and actual
+grants. Its binding names their owners and current basis. These are semantic
+coordinates, not a required record format. An existing design, frame, function
+or work carrier can supply them; this law requires no additional carrier or
+validation stage.
+
+The application predicate is: **this proposed operation or reliance is
+admissible under this bound contract**. It differs from the predicate that the
+operation achieves its intended outcome. Application uses the following
+conditions once at the responsible consumer:
+
+1. **Binding.** Identify the actual subject, intended predicate, governing
+   interpretation, applicable policy and source/current-state coordinates.
+   Names or equal bytes alone do not supply identity, standing or applicability.
+2. **Support.** Account for the conditions and material dependencies capable
+   of changing this determination. Inspect through an affected seam until its
+   governing obligations are covered or evidence establishes independence of
+   the far side. A task boundary, partial listing or absence of observed failure
+   does not establish that independence. The domain selects its completeness
+   and sufficiency criteria; the actor does not silently narrow them.
+3. **Preservation.** Show that required input, output and cross-boundary
+   relations hold under the declared compatibility or translation. Retain
+   identity, meaning, lifecycle, producer/evidence coordinates, constraints,
+   authority and effect distinctions where material. A difference may be
+   lawful; it needs the instance's admitted relation. Neither universal field
+   equality nor an invented translation decides compatibility.
+4. **Authority.** Establish the actual operation or decision grant for the
+   selected effect. Keep the owners of meaning, evidence, operation and
+   disposition distinct. Shared code, a source reference or a satisfied
+   judgment supplies no missing grant. Required independent assessment retains
+   its owning conditions.
+5. **Currentness.** Apply [workspace and context](../FOUNDATIONS.md#workspace-and-context)
+   to evidence reuse, observations, concurrency and uncertain effects. A
+   supported changed dependency reopens the affected determination; an
+   unsupported currentness claim stays unresolved. A previously satisfied
+   check can be reused on supported unchanged premises; this law does not
+   require rechecking fixed graphs or every unchanged relation on every event.
+6. **Result.** Apply the [core result and conjunction law](../FOUNDATIONS.md#result-algebra)
+   on the actual predicates. Retain known failures, absent required coverage,
+   scope/basis diagnoses, original domain outcomes, performance and effects.
+   Unknown applicability is not non-applicability. A supported failure does
+   not disappear because another required condition is undecided.
+
+A consumer binds these conditions to its decision and domain exceptions rather
+than copying the generic conditions into a second rule. Its dependency and
+authority arguments are part of the existing decision evidence. Conditional
+exceptions must be named at their owning policy; a generic application cannot
+invent one. A library helper can implement several consumers, but their
+subjects, required evidence and powers remain separate.
+
+These conditions constrain what counts as admissible; they do not give a
+universal algorithm for deciding arbitrary predicates. Insufficient support
+returns the applicable core uncertainty or scope/basis result. A known violated
+condition is retained with its evidence. A supported admissibility result
+permits only the already-granted operation; it predicts neither success nor
+termination. The control contract handles its observed outcome separately.
+
+At design admission the bound instance is the proposed transition and its
+complete enclosing relation. At frame activation it is the declared evaluation,
+subject, basis and actor. Both use these same conditions; the design commit
+predicate and frame capability predicate remain different domain decisions.
+A consumer uses the supported condition once and retains its validity route;
+a boundary crossing alone neither requires a second proof nor permits omission
+of a changed material dependency.
+
+### Constraint surface
+
+For a current subject and basis, the bound contract describes the work allowed
+by its constraints and grants. It also exposes obligations still unresolved.
+This is the task's constraint surface. It distinguishes the permitted choices
+inside the contract from the choices reserved to an owner. A missing condition
+is not freedom; a condition proved irrelevant to this task need not be loaded
+again while that proof remains applicable.
+
+The surface can be represented as prose, typed relations, predicates, a_c or a
+faithful task view. Dependencies can form a graph; they need not form a tree or
+prescribe one execution order. A model must retain the distinction between
+established facts, assumed premises, discretionary choices and unknowns. Its
+constraint satisfaction result does not authenticate its observations or
+appoint an actor. [a_c interpretation](../AXIOMATIC_CALCULUS.md#ac-017-interpretation-fidelity)
+binds the source-to-model relation and its independent evidence.
+
+Two different implementations may both lie within this surface. Selection
+between them follows the declared outcome, cost and owner criteria, not a
+hidden requirement for the author's preferred implementation. A worker acquires
+the sufficient constraints **and the actual material subject**; the abstract
+surface alone is not a complete activation.
+
+### Faithful projection
+
+A projection or interpretation applies Contract application to a declared
+source-to-consumer relation. Its binding states the authoritative source and
+selector, target interpretation, consumer task, required distinctions, admitted
+loss or approximation, and invalidation conditions. Source and target retain
+their own identities. The domain owns additional publication and adoption
+conditions.
+
+For an exact projection, a consumer must recover the same material
+determinations from the view and the owning source. Approximation requires a
+declared adequacy relation and evidence of its end-to-end bound; local
+tolerances alone do not compose. Lost authority, a weakened condition or an
+unknown promoted to permission is a fidelity defect, not compression.
+
+The binding determines whether a full reproduction, a narrower sufficient view
+or an available authentic reference is required. Omitted task-irrelevant
+material can remain at its owner. Material omissions, stale sources or
+unavailable references prevent the corresponding reliance; they do not require
+copying every source body into every event. A view has no independent power to
+change its source meaning. Its currentness is established from the selected
+source and dependency state, not from its label or generation timestamp alone.
+
+Check fidelity against independently specified source decisions: at least the
+material permissible, prohibited and unresolved distinctions for the selected
+claim. A self-consistent model, matching schema, checksum or generated diff
+checks a different relation. Failure re-enters the first owning defect: source
+ambiguity, interpretation, projection, producer or consumer. It does not license
+changing the source to agree with its view.
+
+The consuming task determines which distinctions the check must preserve.
+For an RF-017 frame view these include the evaluation's failure detections and
+capability conditions; for an AC-017 interpretation they include the represented
+predicates, dependencies and permitted latitude. A representation adequate for
+one of those claims is not evidence for the other without the corresponding
+source-to-consumer binding. This is the informational consequence of F2/F4;
+neither predicate decidability nor a particular serialization follows from it.
+
+
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3a009cd5a613370101a3bb7c3acd621f4801eca7ac10d2b875568d6a3a4d981`.
+
+## Judgment and authority
+
+The [frame authority law](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+owns authority conservation for frame evaluation. Within a_c,
+[AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
+judgment separation. Where a consumer has adopted the construction engagement
+profile and lawfully activated the applicable engagement,
+[the Baseline](../STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
+owns its exact Reviewer/Executive application of the detailed laws. Other
+domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
+have distinct standing. A judgment binds a predicate, exact subject, basis,
+evidence, assessor and any required independence. An operation grant permits
+specified effects; decision authority retains its separately bound mandate.
+Neither evidence shape nor actor capability
+mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
+Reviewer and Executive retain their exact roles from that profile. This account
+assigns neither role or its authority. Domain control such as ODD next-action
+selection remains with its own named function; the explanation appoints none.
+
+Unknown applicability, missing context, incompatible basis and failed predicates
+remain observable. Severity grades the supported consequence if a finding manifests. Priority,
+disposition, selected action and promotion effect remain distinct; their
+assignment follows the applicable mandate. The semantic result remains separate
+from the authoritative construction disposition, whose domain conditions belong
+to [Spec's proportional disposition](../SPEC_METHOD.md#proportional-disposition).

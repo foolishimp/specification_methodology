@@ -2,18 +2,22 @@
 
 ## Governing Relations
 
-The premises are a subject to distinguish, an owning authority, a declared kind
-and a lifecycle across which references must remain usable. The identity and
-evidence commitments in [Foundations](FOUNDATIONS.md#identity-state-and-evidence)
-then require consumers to distinguish the subject from its representation and
-to preserve admitted authority through composition. The scoped identity minimum is
-authority, kind and value. Governing basis and lifecycle qualify authority or
-applicability where their owning contract requires them; they are not universal
-object-identity fields. Equal representation
-alone supplies neither identity equality nor permission; continuing identity
-alone supplies no claim that content or evidence is current. The choice of
-readable or opaque names, encoding, the concrete scoping hierarchy and optional coordinates remains
-with the adopting owner; those formats do not follow from finite context.
+The instance has subjects to distinguish, owners and kinds that may differ,
+representations read by people or machines, and lifecycles across which
+references must remain usable. The adopted F2 interpretation, F3 identity and
+current state, F4 composition and F6 evidence and authority commitments in
+[Foundations](FOUNDATIONS.md#foundational-commitments) require consumers to
+preserve those distinctions through their admitted relations. Identity Method
+chooses authority, kind and value as the scoped identity minimum. Governing
+basis and lifecycle qualify authority or applicability where their owning
+contract requires them; they are not universal object-identity fields.
+
+Equal representation alone supplies neither identity equality nor permission;
+continuing identity alone supplies no claim that content or evidence is current.
+Readable or opaque names, encoding, concrete hierarchy and optional coordinates
+remain choices of the adopting owner. The arguments below explain how the
+identity, information, composition and authority pillars constrain the actual
+readers and transitions without deriving one universal serialization.
 
 At the identity-reading boundary, Bind and Acquire recover the identity
 coordinates and their authentic owner under the
@@ -30,6 +34,16 @@ owners. Bound ABG defaults are a conditional realization convenience; they do
 not define generic identity law. Release distinctions remain owned by release
 law; carrying release coordinates does not turn release identity into object
 identity.
+
+| Deciding consumer | Premises and pillar contribution | Consequence at that consumer | Additional policy and owner |
+|---|---|---|---|
+| [Scoped Identity](#1-scoped-identity), [Uniqueness Law](#2-uniqueness-law) and [Type Law](#3-type-law) | F2 and F3; different authorities and kinds can use the same literal value. The identity pillar distinguishes the subjects; interpretation determines which subject a serialized value denotes. | A bare token cannot establish equality when its owner or kind differs. A family and a concrete member remain distinct even where their readable forms share a prefix. A reader needs the scope and kind required to distinguish the intended objects. | Identity Method owns the authority/kind/value minimum and uniqueness within lawful scope. The object's owning authority chooses its kinds, optional coordinates and grammar. |
+| [Stability Law](#4-stability-law) and the reuse boundary in [Parsing Law](#parsing-law) | F3 and F4; references and dependent evidence persist while content, grants or coordinates may change. Identity and typed conservation preserve continuity through a declared transition rather than through string equality. | An unchanged identity cannot make a revoked grant or stale observation current. A changed coordinate alone proves neither a new object nor continuity with the old one; the owning transition supplies that relation. | Identity Method chooses stability adequate to the governed lifecycle and an explicit relation when identity changes. Foundations owns evidence currentness; the identity owner decides its actual transitions. |
+| [Human-Readable vs Opaque Identity](#human-readable-vs-opaque-identity), [Identity Hierarchy](#identity-hierarchy) and [Parsing Law](#parsing-law) | F2 and F3; a reader encounters serialized forms that can look meaningful without carrying their full semantic coordinates. Information and interpretation separate recognizing a pattern from identifying its subject. | A regex match establishes only what its parsing contract says. It cannot turn a grouping label into an executable requirement, a subordinate criterion into its parent, or a readable name into authority. An opaque representation remains lawful when the required identity distinctions are preserved. | Identity Method owns the parsing and non-aliasing conditions and offers a hierarchy model. The owning domain chooses readable, opaque or hybrid forms and whether family identities exist. |
+| [Authority Split](#authority-split) and [Default Formats And Overrides](#default-formats-and-overrides) | F2, F3 and F6; runtime and domain owners govern different kinds while a runtime may transport both. Specification structure and identity locate those owners; authority bounds what either may decide. | A runtime's ability to carry or normalize a domain identity does not let it invent the domain's semantic grammar. A default format cannot override a published domain decision merely because its helper is available. | Identity Method permits bound runtime defaults and domain overrides subject to its published preservation conditions. Runtime owners choose their generators; domain owners publish their kinds, grammar and overrides. ABG-specific defaults apply only to a bound ABG realization. |
+| [Authority Identity And Conservation](#authority-identity-and-conservation-stdo-up-004) | F3, F4 and F6; a grant can pass through delegates, adapters and projections while the acting identity differs from the grantor. Identity names the authority relation; composition preserves its admitted extent; evidence distinguishes that relation from capability. | Carrying a grant cannot enlarge its subject, scope, role or decision rights. Recording a ruling does not widen it, and proxy actor identity cannot become human-authority identity or make the implementer's review independent. | UP-004 owns the required grant coordinates and explicit authority transitions. The grantor decides any elevation, transfer, delegation or retirement within its mandate; an adopted profile owns its projection vocabulary. |
+| [Derivation Verification Material](#derivation-verification-material) | F2–F4 and F6; a later publication carries evidence for an exact historical manifest, member or fragment. Information fidelity preserves the historical byte predicate; identity keeps the historical subject distinct from the current evidence carrier. | Authentic reconstruction can establish the declared member, digest, fragment and unique-membership checks without making the predecessor operative. It cannot establish semantic derivation, historical acceptance or current successor authority. A source change invalidates the affected reconstruction binding until refreshed. | Identity Method owns exact evidence/reconstruction, membership and refusal conditions. The publication manifest binds the evidence members. Semantic derivation, acceptance and publication retain their existing decision owners. |
+| [Release Version Boundary](#release-version-boundary) | F2, F3 and F6; a release coordinate identifies a published cut while domain objects and mutable selectors have their own subjects. The identity pillar separates those coordinates; authority distinguishes discovery from adoption. | Assigning a release version to a package cannot make that version the identity of each requirement or runtime object. A selector may locate a cut without becoming either its immutable identity or the consumer's operative basis. | Release Method owns exact release identities and selector/adoption mechanics. Identity Method retains the distinction at object readers; each domain owns its object identities. |
 
 ## Derivation Verification Material
 
@@ -69,13 +83,13 @@ reconstruction establishes content and reference checks only. Acceptance of
 the historical cut, semantic derivation, successor admission and publication
 remain separate judgments at their existing owners.
 
-Verification returns the shared [result record](FOUNDATIONS.md#result-algebra)
-for the exact historical-coordinate and byte-reconstruction predicates. Conjoin
-required member, digest, fragment and unique-membership checks with
-[result conjunction](FOUNDATIONS.md#result-conjunction), preserving failed and
-unresolved checks separately. A successful byte check is `satisfied` only for
-that content predicate. It cannot be remapped to semantic derivation,
-acceptance or current authority by changing the predicate after evaluation.
+Verification applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the exact historical-coordinate and byte-reconstruction predicates. Its
+required checks are member, digest, fragment and unique membership; the
+verification material above supplies their evidence and source identity. The
+core result and conjunction preserve each check and its residuals. This is a
+content-verification binding, not semantic derivation, acceptance or current
+authority. Their predicates remain separate.
 
 
 ## Position
@@ -417,12 +431,13 @@ continuity across it requires the owning transition relation above.
 
 Release version is not the same thing as object identity.
 
-Per `RELEASE_METHOD.md` and `SPEC_METHOD.md`:
+Under [Release Identities](RELEASE_METHOD.md#release-identities) and
+[Selector And Consumer Adoption](RELEASE_METHOD.md#selector-and-consumer-adoption):
 
 - an immutable `v<version>-rc.<n>` cut tag is the only exact operative release
   identifier
-- the mutable `v<version>` tag is only the latest-accepted version-line
-  selector
+- the mutable `v<version>` tag is a version-line discovery selector naming the
+  highest-ordinal published immutable RC cut for that project and version line
 - release version is a release-process fact
 - release version is not the live constitutional identity of every object in
   the project
@@ -435,6 +450,11 @@ So the method must distinguish:
 - mutable discovery selectors
 
 These may relate, but they are not interchangeable.
+
+The selector's target is determined by publication, independently of the cut's
+acceptance. Moving it does not change a consumer's operative basis; consumer
+adoption remains the explicit transition owned by the consumer's governing
+authority under Release Method.
 
 ---
 

@@ -1,0 +1,33 @@
+{
+  "kind": "stdo.i4.source-fidelity-repair",
+  "activation": "I4-DMM-ASSESSMENT-EXCEPTION",
+  "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+  "reviewed_account": "cbe4e368865e1e99fd8884fba7486e1f76679379",
+  "cause": "An inherited permission joined strategy and assessment under one ratification qualifier, although the source gives them different conditions.",
+  "patches": [
+    {
+      "id": "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "set": {
+        "permissions_exceptions": [
+          "Strategy ownership explicitly included in the boundary's ratified responsibility permits strategy within that owned role and the actual grant.",
+          "An explicitly owned assessment boundary may publish assessment scores and laws within that responsibility and the actual grant; this exception adds no separate ratification requirement for assessment ownership."
+        ]
+      },
+      "preserve": [
+        "predicate",
+        "obligations",
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "result_mapping",
+        "source_clauses"
+      ],
+      "same_cases": {
+        "strategy": "A governance-only observer gains no strategy authority. Explicitly ratified strategy ownership retains its exception within the actual grant.",
+        "assessment": "An explicitly assigned assessment boundary with its actual grant is not refused for lacking a separate strategy-style ratification.",
+        "no_grant": "Neither ownership nor evidence creates an absent operation grant."
+      }
+    }
+  ],
+  "standing": "Author source-fidelity correction; frozen independent readback follows. No source law, acceptance criterion or owner decision changes."
+}

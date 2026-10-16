@@ -1,0 +1,97 @@
+{
+  "case_id": "I1",
+  "artifact": "I1-work-17-amendment.json",
+  "request": "Make the displayed maximum match the Product.",
+  "outcome": "Displayed label equals Product maximum 1000.",
+  "classification": "realization_refactor",
+  "earliest_governing_description_needing_change": "Realisation: the displayed label.",
+  "upstream_determination": "I.product maximum 1000 and I.design rule that label displays that maximum are sufficient and unchanged.",
+  "authority_traversal": [
+    "I1.selected_work -> I.work.carrier_w17/work-17",
+    "label -> I.design.ui_text -> I.product.maximum_export_records=1000"
+  ],
+  "complete_relevant_delta": {
+    "member": "displayed_label",
+    "before": "Maximum 100 records",
+    "after": "Maximum 1000 records",
+    "added_members": [],
+    "removed_members": [],
+    "other_changed_values": [],
+    "universe_source": "I.design and exact label-only I.work grant; fixture is the complete worksite declaration."
+  },
+  "accepted_design_coverage": {
+    "standing": "covered",
+    "source": "I.design.ui_text",
+    "reason": "Changing the label to the Product maximum implements the existing accepted rule."
+  },
+  "carrier": {
+    "action": "reuse existing admitted work-17; record this evidence amendment",
+    "additional_carrier_required": false,
+    "reason": "Existing work record covers the exact label-only outcome and evidence. Headings/file extensions add no authority."
+  },
+  "execution_contract": {
+    "identity": "fixture:work-17:case-I1:label-only",
+    "source": "I.work.carrier_w17",
+    "admission_mechanism": "Existing owner-issued admitted work record; exact requested effect and outcome match its grant.",
+    "admission_authority": "Fixture work authority",
+    "admission_result": "admitted existing grant applies",
+    "evidence": [
+      "I.work.carrier_w17",
+      "I1"
+    ],
+    "scope": [
+      "displayed_label"
+    ],
+    "permitted_effect": "Construct simulated corrected label and record evidence.",
+    "durable_result_surface": "I1-work-17-amendment.json in authorized arm-C result territory; simulation of work-17 evidence amendment."
+  },
+  "result": {
+    "displayed_label": "Maximum 1000 records",
+    "artifact": "I1-label.txt",
+    "actual_local_construction": true,
+    "live_product_modified": false
+  },
+  "assessment": {
+    "predicate": "Displayed maximum matches I.product under I.design without upstream change.",
+    "verdict": "satisfied",
+    "performance": "performed",
+    "qualified_domain_outcome": "bounded realization corrected",
+    "evidence": "Exact generated label contains 1000, equal to I.product.maximum_export_records; label-only delta.",
+    "effects": {
+      "boundary": "Local synthetic label artifact",
+      "state": "completed"
+    }
+  },
+  "required_process": [
+    "Triage and trace to Product/design.",
+    "Bind exact existing admitted work contract and result surface.",
+    "Construct label and check exact displayed value.",
+    "Record bounded result/evidence in existing work carrier projection."
+  ],
+  "optional_organization": "Additional ticket, coordinator or independent assessment is not required by this fixture and would supply no additional authority.",
+  "reentry_destination": "Realisation/evidence under work-17; no upstream re-entry is needed for the authorized outcome.",
+  "dependencies": [
+    "I.product.maximum_export_records",
+    "I.design.ui_text",
+    "I.work.carrier_w17",
+    "I.observations.displayed_label"
+  ],
+  "unresolved": [],
+  "fixture_citations": [
+    "I.product",
+    "I.design",
+    "I.work",
+    "I.observations",
+    "I1"
+  ],
+  "method_citations": [
+    "M.triage",
+    "M.treatment",
+    "M.carrier",
+    "M.admission",
+    "M.execution",
+    "M.configuration",
+    "M.closure"
+  ]
+}
+

@@ -1,0 +1,408 @@
+{
+  "schema": "arm-C.artifact-checks.v1",
+  "started_at_utc": "2026-10-14T13:16:15.456958+00:00",
+  "ended_at_utc": "2026-10-14T13:16:15.501826+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "retained_fixture_source_hashes",
+      "status": "passed",
+      "detail": {
+        "fixture_sources_verified": [
+          "E.contract",
+          "E.evidence",
+          "K.intent",
+          "K.product",
+          "K.spec",
+          "K.plans",
+          "D.archive",
+          "D.admission",
+          "D.dispatch",
+          "D.consumer",
+          "L.product",
+          "L.consumer",
+          "L.evidence",
+          "W.outcome",
+          "W.workspace",
+          "W.cached_handoff",
+          "W.recovery",
+          "I.product",
+          "I.design",
+          "I.work",
+          "I.observations"
+        ],
+        "scope": "Canonical retained fixture payloads only; not semantic proof or installed-method verification."
+      }
+    },
+    {
+      "name": "all_six_tasks_and_21_cases_with_sources",
+      "status": "passed",
+      "detail": {
+        "T1": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "T2": [
+          "K1",
+          "K2",
+          "K3"
+        ],
+        "T3": [
+          "D1",
+          "D2",
+          "D3",
+          "D4"
+        ],
+        "T4": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "T5": [
+          "W1",
+          "W2",
+          "W3"
+        ],
+        "T6": [
+          "I1",
+          "I2",
+          "I3",
+          "I4"
+        ]
+      }
+    },
+    {
+      "name": "all_supplied_plan_outputs",
+      "status": "passed",
+      "detail": [
+        {
+          "case_id": "K1",
+          "actual": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "required_total_cents": 5
+        },
+        {
+          "case_id": "K2",
+          "actual": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "required_total_cents": 0
+        },
+        {
+          "case_id": "K3",
+          "actual": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "required_total_cents": 5
+        }
+      ]
+    },
+    {
+      "name": "exact_integer_and_identity_sensitive_edges",
+      "status": "passed",
+      "detail": {
+        "large_equal_amounts_total": 2535301200456458802993406410751,
+        "empty": 0,
+        "negative": -7,
+        "claim": "Exact tested integers exceed fixed 64-bit range; no floating-point conversion."
+      }
+    },
+    {
+      "name": "invalid_partition_preconditions_refused",
+      "status": "passed",
+      "detail": {
+        "duplicate": "partition contains a duplicate record ID",
+        "omitted": "partition omits a record ID",
+        "unknown": "partition contains an unknown or ambiguous record ID"
+      }
+    },
+    {
+      "name": "usable_cli_success",
+      "status": "passed",
+      "detail": {
+        "exit_code": 0,
+        "stdout": {
+          "status": "successful",
+          "total_cents": 5
+        }
+      }
+    },
+    {
+      "name": "usable_cli_inexact_input_refusal",
+      "status": "passed",
+      "detail": {
+        "exit_code": 2,
+        "stdout": {
+          "status": "refused",
+          "reason": "ValueError: cents must be an exact integer, not bool or float"
+        },
+        "standing": "Expected refusal retained; no approximate successful total."
+      }
+    },
+    {
+      "name": "current_index_and_independent_style_reuse",
+      "status": "passed",
+      "detail": [
+        {
+          "case_id": "W1",
+          "index": [
+            "a",
+            "b",
+            "c"
+          ],
+          "retained_style_evidence": "style-check-19"
+        },
+        {
+          "case_id": "W2",
+          "index": [
+            "a",
+            "b",
+            "c"
+          ],
+          "retained_style_evidence": "style-check-19"
+        },
+        {
+          "case_id": "W3",
+          "index": [
+            "a",
+            "b",
+            "c"
+          ],
+          "retained_style_evidence": "style-check-19"
+        }
+      ]
+    },
+    {
+      "name": "authorized_local_intake_artifacts",
+      "status": "passed",
+      "detail": {
+        "label": "Maximum 1000 records",
+        "configuration": {
+          "worker_count": 2
+        },
+        "unadmitted_cases": "I2 retains current Product maximum; I4 invents no configuration."
+      }
+    },
+    {
+      "name": "component_and_case_evidence_preservation",
+      "status": "passed",
+      "detail": {
+        "component_rows": 9,
+        "scope": "Independent-case observations retained without catalogue leakage."
+      }
+    },
+    {
+      "name": "core_result_legal_pairs",
+      "status": "passed",
+      "detail": {
+        "result_pairs_checked": 33,
+        "scope": "Structural legal-pair check; not semantic proof."
+      }
+    },
+    {
+      "name": "artifact_references_and_json_parse",
+      "status": "passed",
+      "detail": {
+        "artifact_files_checked": 26,
+        "task_artifacts": [
+          "I1-label.txt",
+          "I1-work-17-amendment.json",
+          "I2-product-change-intake.json",
+          "I3-config.json",
+          "I3-work-18-amendment.json",
+          "I4-unresolved-intake.json",
+          "assessment-ledger.json",
+          "construction-derivation.json",
+          "current-index-W1.json",
+          "current-index-W2.json",
+          "current-index-W3.json",
+          "domain-results.json",
+          "intake-decisions.json",
+          "recovery-handoff-W1.json",
+          "recovery-handoff-W2.json",
+          "recovery-handoff-W3.json",
+          "recovery-handoffs.json",
+          "release-adoption-decisions.json",
+          "release-adoption-table.md",
+          "total_cents.py"
+        ]
+      }
+    }
+  ],
+  "plan_outputs": [
+    {
+      "case_id": "K1",
+      "actual": {
+        "p": 5,
+        "q": 1,
+        "r": 5
+      },
+      "required_total_cents": 5
+    },
+    {
+      "case_id": "K2",
+      "actual": {
+        "p": 0,
+        "q": 0,
+        "r": 0
+      },
+      "required_total_cents": 0
+    },
+    {
+      "case_id": "K3",
+      "actual": {
+        "p": 5,
+        "q": 5,
+        "r": 5
+      },
+      "required_total_cents": 5
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "I1-label.txt",
+      "bytes": 22,
+      "sha256": "fea2a84d10cf14793b93338b5efdb8eb25d6c4ca2da0d1cafcffcc51a2b95c5b"
+    },
+    {
+      "path": "I1-work-17-amendment.json",
+      "bytes": 3745,
+      "sha256": "bf4da97a84b66a87f5552aeca2a75366a6989c8d15a89da9c31cb6ef40d02b83"
+    },
+    {
+      "path": "I2-product-change-intake.json",
+      "bytes": 3842,
+      "sha256": "b5a410fbb272054e66dc75b8550316e3aea6fc62289c45ce8525899d0d4540c5"
+    },
+    {
+      "path": "I3-config.json",
+      "bytes": 25,
+      "sha256": "71d270dcc454e42c56ce4292e644e65c68c722a7abe22c7c6d06bdd5e4e9b46a"
+    },
+    {
+      "path": "I3-work-18-amendment.json",
+      "bytes": 3532,
+      "sha256": "4639616c7cebb9109babb31e7fa614953d7b5f33dddd9bd2e3724f9384d0c594"
+    },
+    {
+      "path": "I4-unresolved-intake.json",
+      "bytes": 3556,
+      "sha256": "c209d487233c663ebb9cbb3920dd999091d81cd86f243904d2398be2bc07c9f0"
+    },
+    {
+      "path": "acquisition-records.json",
+      "bytes": 32468,
+      "sha256": "a4d1a89f874eae0bb15cb4b4dc3652a7d584a13c261142395ea2c5d2ccab4284"
+    },
+    {
+      "path": "answers.json",
+      "bytes": 152657,
+      "sha256": "74d97984db72cad8fb60db35bc03d9c967fe2758f8a0456b4c6b9a7bd0278b62"
+    },
+    {
+      "path": "assessment-ledger.json",
+      "bytes": 24317,
+      "sha256": "bfeb933bffc0ef76b8662b5dfb35bde53316dd3876957b8a77d40d1aa8d51ad2"
+    },
+    {
+      "path": "authoring-observations.json",
+      "bytes": 934,
+      "sha256": "ad8c383c27133ef1062d84acb4a9ce36afc1305037489370cc11ae02de9336eb"
+    },
+    {
+      "path": "check_artifacts.py",
+      "bytes": 12286,
+      "sha256": "d9746de2c505990668af59ce3bcf76ac095116bab9cc18794dc0c39f1361296a"
+    },
+    {
+      "path": "construction-derivation.json",
+      "bytes": 10667,
+      "sha256": "7370481c20193b6d60cb55608a30932ff743c47f13f140dffffa537df1b90078"
+    },
+    {
+      "path": "current-index-W1.json",
+      "bytes": 210,
+      "sha256": "6f64b44e3195740fd80c5bf07b4a8fd04bf33fd8b0304fc5775be1094b7ad257"
+    },
+    {
+      "path": "current-index-W2.json",
+      "bytes": 210,
+      "sha256": "14c5a4e8ca2d94b841e595669736299ff30e66d9e762e5096809393a87070530"
+    },
+    {
+      "path": "current-index-W3.json",
+      "bytes": 210,
+      "sha256": "9e702f63c7e681d7efa93c854395f3c4da8e9579b6955ad2e5b6522232830ccf"
+    },
+    {
+      "path": "domain-results.json",
+      "bytes": 13384,
+      "sha256": "5a31d37cb7353705ba6789a86d4e0ff7f4d69a1bd2c6996a69b0312f7fafe96f"
+    },
+    {
+      "path": "fixtures.json",
+      "bytes": 35411,
+      "sha256": "0699c2a71e4ee16e5280bb960c36f9a0882743e8d3379a188f6f019e836ae80a"
+    },
+    {
+      "path": "intake-decisions.json",
+      "bytes": 17154,
+      "sha256": "8c5f66454275dfd600d9ea2bd6f40d017eb6f43500bd66c0cdc8528a715e5ad8"
+    },
+    {
+      "path": "recovery-handoff-W1.json",
+      "bytes": 8284,
+      "sha256": "7f0cca9ffa0ab1feb6c6ee165d28138fc53365db8e1e4df39b64d4bcca1cf28b"
+    },
+    {
+      "path": "recovery-handoff-W2.json",
+      "bytes": 8918,
+      "sha256": "380dd460a0f42f9e2f7dbf1a34e3bc274393d3dceedc23fb012f833865edf0ad"
+    },
+    {
+      "path": "recovery-handoff-W3.json",
+      "bytes": 9391,
+      "sha256": "07bb8c29a270edb3c199638834ed1c91141b9e08e3b676b9847122c2924b6f25"
+    },
+    {
+      "path": "recovery-handoffs.json",
+      "bytes": 31142,
+      "sha256": "e380d1d2a9158a9397b07fee93c69ae6bf7ca657c36427f092470d0f00be8190"
+    },
+    {
+      "path": "release-adoption-decisions.json",
+      "bytes": 14044,
+      "sha256": "84f6c814963953eb49727cd23984c3584828f66e0fcae5b71285f42decae6bbf"
+    },
+    {
+      "path": "release-adoption-table.md",
+      "bytes": 1544,
+      "sha256": "539adee751d6d4fd6507b64ec59c9f1f805cecea97c29d014b2a356f1766bd6a"
+    },
+    {
+      "path": "source-citations.json",
+      "bytes": 24666,
+      "sha256": "f8b1068878dd8ced7308dc9ac3557bf4c81f1e2ff391a7e1e25515820658dbe0"
+    },
+    {
+      "path": "total_cents.py",
+      "bytes": 3655,
+      "sha256": "0e3a420403ead30d059cc34e3953cd3d364608da82c8430f404789a8bd887cf9"
+    }
+  ],
+  "measurement_class": "Administrative artifact checking and hashing, separate from ordinary acquisition.",
+  "limits": [
+    "Self-checks of this finite synthetic return; no independent review or acceptance.",
+    "Mathematical preservation arguments are in construction-derivation.json.",
+    "No categorical construction qualification, installed/native-host proof, spend, token, attention or universal capacity measurement."
+  ]
+}

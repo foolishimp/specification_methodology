@@ -1,0 +1,4951 @@
+{
+  "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+  "input_sha256": "cb85385c6c074f4f47623bf29d5009bfe639bef109b2788e8846aa80f80f1b84",
+  "patch_inputs": [
+    {
+      "path": "source/core/ACCOUNT_PATCH.json",
+      "sha256": "3d3582b66894b99c92976b1d56707b00ae1ab2387b5fe778003dc2c00a0f228f"
+    },
+    {
+      "path": "source/delivery/ACCOUNT_PATCH.json",
+      "sha256": "84a52481f50710a06da4c77dcba1a6248b082c0485698c1fd809a46e5042fc1d"
+    },
+    {
+      "path": "source/profiles/ACCOUNT_PATCH.json",
+      "sha256": "73a5bd332187db6fe3499e10e252d58c37035c614418733ddd3abe40aecb3259"
+    },
+    {
+      "path": "source/delivery-selector/ACCOUNT_PATCH.json",
+      "sha256": "7bdaf285f4aaba8880e1fe3e612bafdd29d45c75a0d86bae0cadf046bcaf7c5a",
+      "stage": "source_repair"
+    },
+    {
+      "path": "source/dmm-governance/ACCOUNT_PATCH.json",
+      "sha256": "6b2848a2570a8b6996863e65ba93499c42eed330255d7b7a15a714f3bd4a0b23",
+      "stage": "source_repair"
+    },
+    {
+      "path": "source/core-routing/ACCOUNT_PATCH.json",
+      "sha256": "590971200fac5ff64247968403e87b0a5e803d3c4409074ae4b98ec2c7786cf5",
+      "stage": "account_routing"
+    },
+    {
+      "path": "source/profile-routing/ACCOUNT_PATCH.json",
+      "sha256": "de80b0b3f49fba66d4dff286a3fb4d4720a7b993e111a2bb93e1c16466122eaf",
+      "stage": "account_routing"
+    },
+    {
+      "path": "source/delivery-routing/ACCOUNT_PATCH.json",
+      "sha256": "e475ee5ac7c69116fd05dbd92f22849035311d771e5cf1bfcc45043df0e2be98",
+      "stage": "account_routing"
+    },
+    {
+      "path": "source/assessment-exception/ACCOUNT_PATCH.json",
+      "sha256": "7df29b82cef48aee109d97aa24b3dc7bfc6fcd200d4c15b36f5439b1a9270841",
+      "stage": "account_routing"
+    }
+  ],
+  "direct_patches": [
+    {
+      "id": "AXIOMATIC_CALCULUS.fundamental-laws",
+      "before_body_sha256": "1d9f2be74edcf0e6a7860ba7e40ab294b468d826d8309933e1090d16583b7495",
+      "body_sha256": "640a6fe4d997b0d7df5425bcee3e9c22dd43a7414f05374e2954fe7ad63940e1",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "before_body_sha256": "2a126e4083db7cfc3969e0e1267fa2900a2715e5eb4b7230bc653b654f33414e",
+      "body_sha256": "6bcb17060dc9c5dcb69ec3352eaabfcb5e0e2b7f20b593462656513fd38e01dd",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before_body_sha256": "bae061af7124f0b56eff5feab016083e6066339822a489cb8daec5271befd0bb",
+      "body_sha256": "706325a2b36f3beb3a634c85dbd0072ff8256282bdf7a39937a03ca08371003b",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "before_body_sha256": "cf56a4589f9b0ff27df8c47d2b7e35582d5861fccfab32a97c5dd87de66269a8",
+      "body_sha256": "fbe901154d6facaabc0357a8b23fdd367efb44aa5e7b70783eca66f0d3da55b5",
+      "fields": [
+        "argument",
+        "definition",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.foundational-commitments",
+      "before_body_sha256": "fe5327e32bbe34a67a24cc6c3fba125b66cbd185e3a0b6d9aafe91f87ccd9e8a",
+      "body_sha256": "e63d38cbbad66411ce0762c790a360c6affb91612fecf1a8f4d9ffcf7965e947",
+      "fields": [
+        "argument",
+        "obligations",
+        "permissions_exceptions"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.result-algebra",
+      "before_body_sha256": "5bc92abd303a9e6369980d927077ee400050790e4749b0321e7941686bcef8d6",
+      "body_sha256": "011ede48f05af806c251fa60d803af4819491b70e6e4c5ecbe0e89b00aea423f",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "FOUNDATIONS.result-conjunction",
+      "before_body_sha256": "d730340de39eb49bc2ae212577b52aba036528884048fe98ce108b99774d7323",
+      "body_sha256": "e2fc7bc28a6ff223f77a951d85f20fa32f8e187b0ec1d28dd07bab3a95cea7f6",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "before_body_sha256": "585b6382c064592460181077ac18c2be8e0c45d429885ab1359c51dbdb4fe332",
+      "body_sha256": "9e22093f58c0ad0cd092662f3ac972573403545fa0d3834084c27c57b575475f",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "IDENTITY_METHOD.release-version-boundary",
+      "before_body_sha256": "fb43da187d10d07b00f100b906762057e90977ab65858359bf642c6d8e8a8bce",
+      "body_sha256": "10a881e60c38299128fad514d07e91a9ef9d2d87fb2d06b339dcf8d98eb5498e",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations",
+        "predicate"
+      ],
+      "predicate_or_result_change": true,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+      "before_body_sha256": "e8fc7640c1dbac0caf80acaf4b91f283a61c70b7ef15317f5cdbfb18055d0e67",
+      "body_sha256": "84b80e726ea08ea686e9450a54cc45f38da2fc8e496936f29af448c1fdde02f0",
+      "fields": [
+        "argument",
+        "dependencies",
+        "obligations",
+        "predicate"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before_body_sha256": "df12089a450d2df54373d894865eb1dc25ecce866baf33c023ea1584b3ec62ef",
+      "body_sha256": "ba3f55d7d734b8fd0834dd7b9ffdc929afc11ccef9f1bcae35d331e2052c7c9b",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.frame-qualification",
+      "before_body_sha256": "e5ece8b91610eff8d68faf016636c43fddd13b84a55a36f0e882ac706c675251",
+      "body_sha256": "d5b0100975c42a358320a1f34f584429a568d8e8d1665df2617ad87b8cf93d9b",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "before_body_sha256": "d824645b30304c362094a86713729d117bd1540658196140333746cb2337fdde",
+      "body_sha256": "53dfbcecde17253e1c340de6fb2598b629df953374a40ee470ae2422501d29fc",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity",
+      "before_body_sha256": "24c2bbc487f301cd2e66b8390715504e2a9ca26612e2c904e7f3dc0afcbbc2aa",
+      "body_sha256": "b26a9a2df8962801c1e42c2d9de41ab64aa53a6b57ed5bc9105ca3f34c2e7553",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-010-composition-on-demand",
+      "before_body_sha256": "2e010e042239632e793e938a99a02dc75c069cdb370c3e1a5c43c51da8f4a58c",
+      "body_sha256": "e4e61e21d90a05c3a95567aa93a267702617a74d5af41952471999452abc19b9",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.select-and-activate",
+      "before_body_sha256": "0680b9b439eec530316500a54d970024dd5b0488f6d223922f3e79bed99cb6b8",
+      "body_sha256": "6a51e1109781f6636d256f3ecaa88935d58b5e6f162178125bc5fac9c541f3ad",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.workspace-coverage",
+      "before_body_sha256": "ab65447074ba3bdba7d725e657172d2f0e537934234ac209ccfb66cf36586d5f",
+      "body_sha256": "6507663275ca10bf7f68983e39ae51be8c5dfb596f838801ec71f991eb60bda2",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "RELEASE_METHOD.exact-cut-qualification",
+      "before_body_sha256": "df0b0a767d37a0922d1ed56cb50ef3bdb4f8b6e5db5790ea1ff8b3cdba88016c",
+      "body_sha256": "f31ec2bda6c1f2be2c67227714109286c98db235cfba2fdc47f5864fd5a6d1e0",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "RELEASE_METHOD.release-publication-context",
+      "before_body_sha256": "2389f0cee390825d5fdbb15c5dfc797f23897bb4d7afe90f4b1ccfd19daa30f4",
+      "body_sha256": "0a29a71a46251f51d6ad3c03805f67e72bbebf4aee6127e1a49f3bb4c20dd77b",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "before_body_sha256": "e8724cd5e85bd822e16a3482a3973c344b84e4c6dd314c83c95785a1ec54d437",
+      "body_sha256": "91149d68491756845f6f978c31a0903898587bc6ce1591f67e23d58ef6b33225",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.method-families",
+      "before_body_sha256": "6f514b47798227367a5632852ebfb0c4fb7e3268aea30777d9f3e16b42d44e4f",
+      "body_sha256": "abe196f3e38fe45d59cc5a9bf8ecf37925bdf93c33861627400dd32f75dda612",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "before_body_sha256": "b35d4bd21df976bde14c89660cd213d2ec89e4c0caeaac0cb726f6131200ddb0",
+      "body_sha256": "641e07fb28763f68617fd8f0f9383d03b5a90a06d900ca8bf98c8a36e4f9708e",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+      "before_body_sha256": "cb8238f1776802e24aa64bb25f5f615cabb1c2ae7d0eec4aa5e51d3f202b26d7",
+      "body_sha256": "2a0aecc8ceb3acfde41aec3b5f5139d4e56af8c9452e91c3c6f039e9edd01409",
+      "fields": [
+        "argument",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "before_body_sha256": "43f1c1b6b41466eb4b08ba622de6bb0cca3da166b120f325007e45879bd0c574",
+      "body_sha256": "19af527a3ed8c0371973fb12f95920548407fe800859500314969fea399c177e",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+      "before_body_sha256": "ad7d4fc3966b473dc12718e278b0657f339491d262b3276b1ec338867861ed3f",
+      "body_sha256": "903b38b82bca3edda0040327c42ef064eeee0b9da9bd3e335c6fe3a1f130be58",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+      "before_body_sha256": "faf233e53549ba80f9bd5db47de9351b18cfdf305e0fd628b201d8c3a0b40545",
+      "body_sha256": "0a2ad3b1f367dc22e007bf508e629bbfbbbbbb77fbecf3b1e457640535c36670",
+      "fields": [
+        "argument",
+        "dependencies",
+        "dependency_relations",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "before_body_sha256": "257929f9044f9b24a118d27e8fe519173351b3069af44c4c095a678d48c09e76",
+      "body_sha256": "e7d271b4729f433e4298c3b4f5f1592d6384ac981b6f81dbf90ef1f03a18ea01",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.carrier-families",
+      "before_body_sha256": "fdb3ffd3e818490f6ad732225ad4866880001cdf87143db0c6fdca28b9ac4d0d",
+      "body_sha256": "fc23199c564813ed9214270f53c95dd56b126ba55ec0d76c7e5d11c0558e5d8e",
+      "fields": [
+        "argument",
+        "definition"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.condition-based-closure-and-reuse",
+      "before_body_sha256": "ca0f94ee2514f43d44e27df300839a39f5a498c0f2d1258e4d783326c65af16e",
+      "body_sha256": "b123190c253c1a41678712a699b239875d4f22e4fda126c7cec29c12633d0bb8",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "before_body_sha256": "7cf2667f167011ccf47c1de1be6aae4ed5f32f3385e8aab841b35573bb8cfbad",
+      "body_sha256": "dc8a139b13a8dec37e0c6cdc8b39f4580d7757706de8127b2b8d11f2cb8f40ac",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": false,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.contract-application",
+      "before_body_sha256": "c70d788cdeea693e2e05b32e337e2179cb181c6ccb5cf81785435d44963de536",
+      "body_sha256": "59a48d959ca599d2da1edbe7c2b745aa2b9c09acaecf83420b762d5ba6fb19f4",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+      "before_body_sha256": "fbe6152d82b1114820901c7ecb1fa999745d93fd6ce561b5674ca02abe6986bd",
+      "body_sha256": "b0233b44f370b986613d2cbce25538296cc19767135213064d88341a03bcf783",
+      "fields": [
+        "argument",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "before_body_sha256": "2666579aa001da30363f6bcdd47a47418ac1ac2a6254adc5217a582c8fadfc78",
+      "body_sha256": "3b827c84f938e10c3668a233708153a6cdccb994b0ce34cfe295e6469e0f59ad",
+      "fields": [
+        "argument",
+        "definition",
+        "obligations"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "before_body_sha256": "15eb947a9b023ecf1ff22aac814ca9b6d3948f84ad91b2229c96790aabf5f5f6",
+      "body_sha256": "10df2044232536136ce0b86c15afb39389ed0fb2228cfcd8d0174ca67d700774",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "before_body_sha256": "a7e2727c5f0c52badd0c35eedb49e3e5badf70d83052f2cdefd5516d9593be6c",
+      "body_sha256": "a265a7c8a47033958f7d887d8c02826a736ea536299343cefbe80a3f2c22e188",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "TRAVERSAL_OCCURRENCE_PROFILE.governing-relations",
+      "before_body_sha256": "19d65d301b5f2e3ae3367cf84f17201017f01cc93bd3b19724fbdb01c4dc1a2e",
+      "body_sha256": "bbfb80615c250480401ad7ccb2ff44dd7577c0869c26afbe908bb1d0aaedf58f",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "UX_METHOD.governing-relations",
+      "before_body_sha256": "5d7ffbb2c24c8222d9c6d4a7128b17cef6fad932077ef0bd28108c6bf7fdc93e",
+      "body_sha256": "f805e2af1100010de2c61517ff68cffc96292295f3a61f549a0dc128075a3dd0",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    },
+    {
+      "id": "WORLD_MODEL_METHOD.governing-relations",
+      "before_body_sha256": "0cd76c90afefdf5621b2ba8071ac36d8e798109c189c6b1b4a84e1b996bfd39f",
+      "body_sha256": "74483e8c6f1e83bf4174c0103fd612b2377972a9a1bd8488d5ef18cb13c34c75",
+      "fields": [
+        "argument"
+      ],
+      "predicate_or_result_change": null,
+      "standing": "authored semantic change; independent fidelity remains separate"
+    }
+  ],
+  "dependent_patches": [
+    "IDENTITY_METHOD.1-scoped-identity",
+    "IDENTITY_METHOD.2-uniqueness-law",
+    "IDENTITY_METHOD.3-type-law",
+    "IDENTITY_METHOD.4-stability-law",
+    "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+    "IDENTITY_METHOD.defaults-from-a-bound-abg-realization",
+    "IDENTITY_METHOD.derivation-verification-material",
+    "IDENTITY_METHOD.derived-domain-overrides",
+    "IDENTITY_METHOD.domain-owned-identity",
+    "IDENTITY_METHOD.engine-owned-identity",
+    "IDENTITY_METHOD.human-readable-vs-opaque-identity",
+    "IDENTITY_METHOD.identity-hierarchy",
+    "IDENTITY_METHOD.override-publication-surface",
+    "IDENTITY_METHOD.parsing-law",
+    "IDENTITY_METHOD.release-version-boundary",
+    "RELEASE_METHOD.acceptance-criteria",
+    "RELEASE_METHOD.coordinated-release-matched-asset-cohorts",
+    "RELEASE_METHOD.external-qualification-dependencies",
+    "RELEASE_METHOD.historical-ref-and-public-uri-conservation",
+    "RELEASE_METHOD.immutable-rc-publication",
+    "RELEASE_METHOD.monotonic-version-line-advancement",
+    "RELEASE_METHOD.naming",
+    "RELEASE_METHOD.product-subject-and-repository-carrier",
+    "RELEASE_METHOD.project-subtree-release-identity",
+    "RELEASE_METHOD.release-identities",
+    "RELEASE_METHOD.release-scoped-assets",
+    "RELEASE_METHOD.selector-and-consumer-adoption",
+    "RELEASE_METHOD.successor-baseline-conservation-stdo-up-015",
+    "SPEC_METHOD.adr-conventions",
+    "SPEC_METHOD.computed-classification-and-treatment",
+    "SPEC_METHOD.consistency-gate-rule",
+    "SPEC_METHOD.constitutional-chain",
+    "SPEC_METHOD.counterexample-localization",
+    "SPEC_METHOD.design-rule",
+    "SPEC_METHOD.legacy-classification-rule",
+    "SPEC_METHOD.manifesto",
+    "SPEC_METHOD.method",
+    "SPEC_METHOD.position",
+    "SPEC_METHOD.probabilistic-work-boundary",
+    "SPEC_METHOD.process-constitution",
+    "SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+    "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+    "SPEC_METHOD.reconstruction-litmus",
+    "SPEC_METHOD.release-version-boundary",
+    "SPEC_METHOD.renewal-path",
+    "SPEC_METHOD.spec-drivenness-litmus",
+    "SPEC_METHOD.specification-surface-rule",
+    "SPEC_METHOD.sprint-execution-boundary",
+    "SPEC_METHOD.trace-closure-and-anti-drift-rule",
+    "SPEC_METHOD.transformation-wave-rule",
+    "SPEC_METHOD.what-how-and-work-carriers",
+    "TICKET_METHOD.authority",
+    "TICKET_METHOD.bounded-context-term-binding",
+    "TICKET_METHOD.core-model",
+    "TICKET_METHOD.execution-contract-admission",
+    "TICKET_METHOD.implementation-migration-category",
+    "TICKET_METHOD.migration-strategy-requirements",
+    "TICKET_METHOD.milestone-and-phase-scoped-truth-stdo-up-006",
+    "TICKET_METHOD.mixed-state-negative-proof",
+    "TICKET_METHOD.multi-build-tenant-review-rule",
+    "TICKET_METHOD.multi-build-tenant-ticket-independence",
+    "TICKET_METHOD.one-truth-state-projection-and-drift-refusal-stdo-up-009",
+    "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity",
+    "TICKET_METHOD.sprint-close-review",
+    "TICKET_METHOD.sprint-compliance-escrow",
+    "TICKET_METHOD.test-case-authority",
+    "TICKET_METHOD.upward-propagation-check"
+  ],
+  "routing_patches": [
+    {
+      "id": "AXIOMATIC_CALCULUS.ac-016-typed-composition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "AXIOMATIC_CALCULUS.ac-017-interpretation-fidelity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "CARRIER.plugins.spec.skills.stdo-work.SKILL.md",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.8-totality-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.admission-contract-use",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.bounded-construction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.configuration",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.identity-state-and-evidence",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.interpretation-and-representation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.orthogonal-descriptions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.purpose-and-interfaces",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.result-algebra",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.result-conjunction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.typed-composition-and-conservation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "FOUNDATIONS.workspace-and-context",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.1-scoped-identity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.2-uniqueness-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.3-type-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.4-stability-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.consequence-for-implementations",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.defaults-from-a-bound-abg-realization",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.derivation-verification-material",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.derived-domain-overrides",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.domain-owned-identity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.engine-owned-identity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.human-readable-vs-opaque-identity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.identity-hierarchy",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.lawful",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.minimum-questions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.override-publication-surface",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.parsing-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.position",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.release-version-boundary",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "IDENTITY_METHOD.unlawful",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.agentic-use",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.anti-patterns",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.authority-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.closure",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.completeness-boundary",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.coverage-basis",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.coverage-dimensions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.coverage-ledger",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.diagnostic-order",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.establish-the-evaluation-basis",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.evaluate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.evaluation-inventory",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.evidence-or-coordinate-translation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.failure-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.frame-qualification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.frame-set-optimization",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.high-risk-separately-activated-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.human-frame-set-declaration",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.independently-activated-co-evaluation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.interaction-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.material-composition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.method-self-qualification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.minimal-frame-activation-binding",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.missing-frame-signals",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.operational-full-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reconfigure-when-necessary",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.result-conjunction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.return-a-closed-result",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.revision-actions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-001-evaluation-relativity",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-002-finite-attention",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-003-material-sufficiency",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-004-irrelevance-exclusion",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-006-authority-conservation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-008-overlap-without-identity-collapse",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-009-no-assumed-hierarchy",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-010-composition-on-demand",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-011-topology-mutation-and-recharting",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-013-reconstructable-activation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-014-capability-fit",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-015-residual-uncertainty",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-016-implementation-neutrality",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-017-proportional-compression",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.select-and-activate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.using-frames-in-conjunction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.worked-binding-product-chain-drift-evaluation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.workspace-coverage",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.bounded-causal-construction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.checkpoint-continuation-progress-and-churn",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.computed-classification-and-treatment",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.construction-assessment-and-delegation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.proportional-disposition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.standing-structural-qualification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.sufficient-execution-intake",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.2-executive-activates-worker",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.3-worker-returns-to-executive",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.6-reviewer-returns-to-executive",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.7-executive-disposes-and-checkpoints",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.adopt-this-baseline",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.anti-patterns",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.baseline-adoption-projection",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-project-basis-additions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.closure",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.computational-whole-path-evaluation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.define-a-project-configuration",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-frame",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-interface-integration-frame",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-generic-specialist-frame-set",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-integration-frame",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-unit-test-frame",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-user-acceptance-frame",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.event-driven-executive-attention",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.exact-candidate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.executive-drift-locks",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.existing-authority-selects-the-configuration",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.extension-versus-replacement",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.failure-classification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.handoff-projection",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.interface-integration-claim-boundaries",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.interface-integration-obligations",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.interface-integration-qualification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.legitimate-path-and-technical-debt-erasure",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.missing-frame-and-re-entry-application",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.product-chain-basis",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.profile-qualification",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.reviewer",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.reviewer-result-and-triage-projection",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.work-result",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.worker",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.acquire",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.composition-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.conjoin",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.constraint-surface",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.contract-application",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.dispose",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.evaluate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.recovery-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transform",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/core-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.1-authority-seam-closure",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.10-no-semantic-center-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11-coupling-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "input": "source/profile-routing/ACCOUNT_PATCH.json",
+      "not_applied": {
+        "reason": "The known local law now has a direct source argument; its prior unresolved table-binding proposal is superseded.",
+        "replacement": "source/dmm-governance/ACCOUNT_PATCH.json"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11b-opportunistic-optimization-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11c-recurrence-extraction-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11d-post-ticket-design-review-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.12-interface-bleed-prohibition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.13-proxy-interface-prohibition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.14-design-review-questions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.14a-functional-realization-review-checklist",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.2-essential-carrier-consolidation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3-core-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3-enforcement-after-proof",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3a-odd-alignment-and-escalation-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3b-boundary-closure-evaluators",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3b-ingress-collapse-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4-functional-bias-without-language-mandate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4a-python-typing-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4b-ontology-first-design-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5-prime-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5a-irreducible-architectural-carrier-set-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5b-promotion-test",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5c-boundary-inflation-prohibition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5d-reference-derived-module-design-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5e-ontology-and-three-view-behavioral-design-gate",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6c-module-lifecycle-confirmation-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.7-immutable-carrier-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.8-totality-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.9-effect-edge-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.admission-contract-use",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.atomic-functions-and-higher-order-composition",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.authority-model",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.boundary-and-governance-cost-stdo-up-005",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.capability-and-foundation-selection-stdo-up-023",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.computational-realization-projection-stdo-up-019",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.cross-view-axiom-evaluation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.decision-complete-symbolic-design",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.domain-model",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.entity-and-lifecycle-completeness",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.gate-and-retrospective-work",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.iacs-revision-obligation",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.native-constructability-before-design-acceptance-stdo-up-002",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.ontology-evidence",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.ontology-projection-law",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.prime-semantic-atoms-and-universal-domain",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.recursive-prime-and-root-conservation-stdo-up-003",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.sequence-model",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.state-model",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.whole-family-prime-contraction",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.111-typed-assets-and-nodes-are-explicit",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.112-graph-functions-are-the-primary-constructive-carrier",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.112a-outcome-first-realization-order",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.113-the-function-catalog-is-published",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.114-the-gtl-module-is-the-operative-publication-surface",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.115-current-state-is-a-projection-over-constructive-history",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.115a-abg-owns-continuation-and-re-entry",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.115b-execution-authority-audit",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.115c-projection-source-coherence",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.116-product-specific-semantics-sit-above-the-shared-carrier",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.117-manual-walkthrough-must-still-be-lawful",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.117a-conforming-agentic-development",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.117b-real-authority-path-negative-proof-stdo-up-010",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+      "fields": [
+        "argument",
+        "dependency_relations",
+        "result_mapping"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.119-global-convergence-must-be-stable-under-zoom",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.12-scenario-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.13-installed-dev-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.14-dogfooding-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.15-release-boundary",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.16-failure-pattern",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.17-invocation-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.18-cold-start-reading-order",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.19-ramp-up-checklist",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.4-method-folder-semantics",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.5-graph-model",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.6-product-boundary",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.7-self-host-boundary-rule",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.8-responsibility-layers-and-local-binding",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.9-method-governance-and-audit",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.general-odd-product",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "fields": [
+        "definition"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.graph-functions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.nodes",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.probabilistic-compute",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.traversal",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.vectors",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "ODD_METHOD.world-model-product",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/profile-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "SPEC_METHOD.adr-folder-convention",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.comments",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.default-layout",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.execution-contracts",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.future-extensions",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.goals",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.required-fields",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.sprint-manifest-required-fields",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.sprints",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "TICKET_METHOD.tickets",
+      "fields": [
+        "argument"
+      ],
+      "input": "source/delivery-routing/ACCOUNT_PATCH.json"
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11a-governancestrategy-separation-rule",
+      "fields": [
+        "permissions_exceptions"
+      ],
+      "input": "source/assessment-exception/ACCOUNT_PATCH.json"
+    }
+  ],
+  "coarsened_coordinates": [
+    {
+      "id": "AXIOMATIC_CALCULUS.fundamental-laws",
+      "coarsened_blocks": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "FOUNDATIONS.result-conjunction",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "IDENTITY_METHOD.release-version-boundary",
+      "coarsened_blocks": [
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "body",
+        "c4"
+      ]
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.reference-frame-laws",
+      "coarsened_blocks": [
+        "body",
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.select-and-activate",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "RELEASE_METHOD.exact-cut-qualification",
+      "coarsened_blocks": [
+        "body",
+        "c1"
+      ]
+    },
+    {
+      "id": "RELEASE_METHOD.release-publication-context",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.method-families",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.universal-intake-triage",
+      "coarsened_blocks": [
+        "c11"
+      ]
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.coverage-application",
+      "coarsened_blocks": [
+        "c3"
+      ]
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "TICKET_METHOD.carrier-families",
+      "coarsened_blocks": [
+        "body"
+      ]
+    },
+    {
+      "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+      "coarsened_blocks": [
+        "c1"
+      ]
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.transformation-admission-specialization",
+      "coarsened_blocks": [
+        "c2"
+      ]
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "coarsened_blocks": [
+        "c2"
+      ]
+    },
+    {
+      "id": "TRAVERSAL_OCCURRENCE_PROFILE.governing-relations",
+      "coarsened_blocks": [
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "id": "UX_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "c3",
+        "c4",
+        "c5"
+      ]
+    },
+    {
+      "id": "WORLD_MODEL_METHOD.governing-relations",
+      "coarsened_blocks": [
+        "c3",
+        "c4"
+      ]
+    }
+  ],
+  "argument_row_coordinate_changes": [
+    {
+      "id": "DESIGN_MODULE_METHOD.1-authority-seam-closure",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.10-no-semantic-center-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11-coupling-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11b-opportunistic-optimization-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11c-recurrence-extraction-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.11d-post-ticket-design-review-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.12-interface-bleed-prohibition",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.13-proxy-interface-prohibition",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.14-design-review-questions",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.14a-functional-realization-review-checklist",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.14a-functional-realization-review-checklist",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.2-essential-carrier-consolidation",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3-core-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3-enforcement-after-proof",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3a-odd-alignment-and-escalation-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3a-odd-alignment-and-escalation-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3b-boundary-closure-evaluators",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.3b-ingress-collapse-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4-functional-bias-without-language-mandate",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4a-python-typing-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.4b-ontology-first-design-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5-prime-law",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5a-irreducible-architectural-carrier-set-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5b-promotion-test",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5c-boundary-inflation-prohibition",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5d-reference-derived-module-design-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.5e-ontology-and-three-view-behavioral-design-gate",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6a-design-to-module-to-implementation-unit-tests-evidence-route",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6b-module-derived-unit-test-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.6c-module-lifecycle-confirmation-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.7-immutable-carrier-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.8-totality-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.9-effect-edge-rule",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.admission-contract-use",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.atomic-functions-and-higher-order-composition",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.authority-model",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.boundary-and-governance-cost-stdo-up-005",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.capability-and-foundation-selection-stdo-up-023",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.computational-realization-projection-stdo-up-019",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 45,
+        "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 45,
+        "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.cross-view-axiom-evaluation",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.decision-complete-symbolic-design",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.domain-model",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.entity-and-lifecycle-completeness",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.gate-and-retrospective-work",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 45,
+        "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 45,
+        "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 46,
+        "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.governing-relations",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.iacs-revision-obligation",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 44,
+        "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.native-constructability-before-design-acceptance-stdo-up-002",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.ontology-evidence",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.ontology-projection-law",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.prime-semantic-atoms-and-universal-domain",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.recursive-prime-and-root-conservation-stdo-up-003",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.sequence-model",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.state-model",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 47,
+        "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.whole-family-prime-contraction",
+      "before": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "0cd7e6b9809d03e47b3de52a44fad00db1f102cc679a4b8ce8ce3929560f19a0"
+      },
+      "after": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "2d8d3a2ad5ba4eb94904126dd285a1484d72523f65240f25d617c78f7e20cc8e"
+      }
+    },
+    {
+      "id": "ODD_METHOD.111-typed-assets-and-nodes-are-explicit",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.112-graph-functions-are-the-primary-constructive-carrier",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.112a-outcome-first-realization-order",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.113-the-function-catalog-is-published",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.114-the-gtl-module-is-the-operative-publication-surface",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115-current-state-is-a-projection-over-constructive-history",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115a-abg-owns-continuation-and-re-entry",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115b-execution-authority-audit",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115c-projection-source-coherence",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.116-product-specific-semantics-sit-above-the-shared-carrier",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.117-manual-walkthrough-must-still-be-lawful",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.117a-conforming-agentic-development",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.117b-real-authority-path-negative-proof-stdo-up-010",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.118-cumulative-environment-law-is-mandatory",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.119-global-convergence-must-be-stable-under-zoom",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.12-scenario-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.13-installed-dev-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.14-dogfooding-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.15-release-boundary",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.16-failure-pattern",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.17-invocation-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.18-cold-start-reading-order",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.19-ramp-up-checklist",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.4-method-folder-semantics",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.5-graph-model",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.6-product-boundary",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.7-self-host-boundary-rule",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.8-responsibility-layers-and-local-binding",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.9-method-governance-and-audit",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.general-odd-product",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 39,
+        "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 40,
+        "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 41,
+        "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 42,
+        "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.governing-relations",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.graph-functions",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.nodes",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.probabilistic-compute",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 37,
+        "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.traversal",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.traversal",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 38,
+        "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.vectors",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 36,
+        "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "ODD_METHOD.world-model-product",
+      "before": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      },
+      "after": {
+        "path": "standards/ODD_METHOD.md",
+        "anchor": "governing-relations",
+        "line": 43,
+        "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+      }
+    },
+    {
+      "id": "SPEC_METHOD.adr-folder-convention",
+      "before": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "method-families",
+        "line": 53,
+        "sha256": "9e80b0c4fd724fd1e7e4cdf9ec561e4a6ac2a5b612b215bc3b791efd3257f199",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "method-families",
+        "line": 53,
+        "sha256": "9e80b0c4fd724fd1e7e4cdf9ec561e4a6ac2a5b612b215bc3b791efd3257f199",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.comments",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.evaluation-criteria-and-non-closure-conditions",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 31,
+        "sha256": "ab29fdab70fc787f98e122e66b0b96641155d2a4ec67cf2d245351311e62ee2f",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 31,
+        "sha256": "ab29fdab70fc787f98e122e66b0b96641155d2a4ec67cf2d245351311e62ee2f",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.execution-contracts",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.goals",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.sprints",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    },
+    {
+      "id": "TICKET_METHOD.tickets",
+      "before": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "feac24710c843ff3bece10004b6bc5499cc84f6e",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      },
+      "after": {
+        "path": "standards/TICKET_METHOD.md",
+        "anchor": "carrier-families",
+        "line": 26,
+        "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
+        "source_commit": "01b01274b244ae6e5de10bf6bacb60087462cbb5",
+        "member_sha256": "e5002066752e5ecb9c6d255e877757b475b5615cb9046cf047b193dd2e68fbf6",
+        "hash_boundary": "Exact Markdown row including terminal newline."
+      }
+    }
+  ],
+  "rows": 701,
+  "validation": "source pins, semantic reference closure and pointer resolution passed",
+  "limits": [
+    "Coordinate and reference checks do not establish source fidelity.",
+    "I3 source/account and evidence files are unchanged."
+  ]
+}

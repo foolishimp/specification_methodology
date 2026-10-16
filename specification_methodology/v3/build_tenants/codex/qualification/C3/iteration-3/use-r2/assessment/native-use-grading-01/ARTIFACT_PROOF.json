@@ -1,0 +1,388 @@
+{
+  "kind": "independent-required-artifact-proof",
+  "basis": "6627800d30b14cfb862d82709bf8ec5c86ca0401",
+  "task_packet_sha256": "d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559",
+  "probe_script_sha256": "ca3c05474737ca3feb745c3f8ffee32dbb2fb333f44574fb40454f05eb42c523",
+  "probe_inputs_sha256": "3edd22d315fdf0f2508fafeb2482e9089376ab3525f3851abff9435b7c5b499d",
+  "started_utc": "2026-10-14T13:26:01.103625+00:00",
+  "arms": [
+    {
+      "arm": "A",
+      "source_sha256": "f1720f9951e754b01a9610133292f68880d73eccc5557be6ca4a85a7fe95cd91",
+      "required_cases": [
+        {
+          "case_id": "K1",
+          "observed": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K2",
+          "observed": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "expected": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 0}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K3",
+          "observed": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        }
+      ],
+      "supplemental": {
+        "admitted_datasets": 121,
+        "valid_partitions": 910,
+        "failures": [],
+        "large_signed_multiplicity": {
+          "observed": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "expected": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "matches": true
+        }
+      },
+      "concrete_artifacts": [
+        {
+          "file": "current-index.json",
+          "sha256": "a648f1fec39630ae79944d74253af2bbc6a80d47ad62cfc95db3194d8b0e0f9d",
+          "value": {
+            "dataset_revision": "data-2",
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "complete": true
+          },
+          "matches": true
+        },
+        {
+          "file": "label-I1.txt",
+          "sha256": "0fdd827c061115871906118a9ebc3454d04ceb3bf9d50652eae07588e0fba325",
+          "observed": "Maximum 1000 records",
+          "matches": true
+        },
+        {
+          "file": "worker-config-I3.json",
+          "sha256": "72926c453ca178611aaef8ee8a578d7df4b0120f3b62103b56792a8849626525",
+          "value": {
+            "worker_count": 2
+          },
+          "matches": true
+        }
+      ],
+      "required_artifact_observations_match": true
+    },
+    {
+      "arm": "B",
+      "source_sha256": "2d70bae40accca3f4c007627c82c6ea4fc8450fecc098129ea70a6eaddc76c75",
+      "required_cases": [
+        {
+          "case_id": "K1",
+          "observed": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K2",
+          "observed": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "expected": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 0}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K3",
+          "observed": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        }
+      ],
+      "supplemental": {
+        "admitted_datasets": 121,
+        "valid_partitions": 910,
+        "failures": [],
+        "large_signed_multiplicity": {
+          "observed": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "expected": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "matches": true
+        }
+      },
+      "concrete_artifacts": [
+        {
+          "file": "current-index.json",
+          "sha256": "a648f1fec39630ae79944d74253af2bbc6a80d47ad62cfc95db3194d8b0e0f9d",
+          "value": {
+            "dataset_revision": "data-2",
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "complete": true
+          },
+          "matches": true
+        },
+        {
+          "file": "I1-label.json",
+          "sha256": "3dbf5229807cc946fb848495099a9815dad032b6cc5f7ce91e841a7195cd8112",
+          "observed": "Maximum 1000 records",
+          "matches": true
+        },
+        {
+          "file": "I3-config.json",
+          "sha256": "72926c453ca178611aaef8ee8a578d7df4b0120f3b62103b56792a8849626525",
+          "value": {
+            "worker_count": 2
+          },
+          "matches": true
+        }
+      ],
+      "required_artifact_observations_match": true
+    },
+    {
+      "arm": "C",
+      "source_sha256": "0e3a420403ead30d059cc34e3953cd3d364608da82c8430f404789a8bd887cf9",
+      "required_cases": [
+        {
+          "case_id": "K1",
+          "observed": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 1,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"status\": \"successful\", \"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K2",
+          "observed": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "expected": {
+            "p": 0,
+            "q": 0,
+            "r": 0
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"status\": \"successful\", \"total_cents\": 0}\n",
+            "stderr": "",
+            "matches": true
+          }
+        },
+        {
+          "case_id": "K3",
+          "observed": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "expected": {
+            "p": 5,
+            "q": 5,
+            "r": 5
+          },
+          "matches": true,
+          "cli": {
+            "exit_code": 0,
+            "stdout": "{\"status\": \"successful\", \"total_cents\": 5}\n",
+            "stderr": "",
+            "matches": true
+          }
+        }
+      ],
+      "supplemental": {
+        "admitted_datasets": 121,
+        "valid_partitions": 910,
+        "failures": [],
+        "large_signed_multiplicity": {
+          "observed": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "expected": 99999999999999999999999999999999999999999999999999999999999999999999999999999993,
+          "matches": true
+        }
+      },
+      "concrete_artifacts": [
+        {
+          "file": "current-index-W1.json",
+          "sha256": "6f64b44e3195740fd80c5bf07b4a8fd04bf33fd8b0304fc5775be1094b7ad257",
+          "value": {
+            "case_id": "W1",
+            "dataset_revision": "data-2",
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "complete": true,
+            "fixture_citations": [
+              "W.outcome",
+              "W.workspace",
+              "W.recovery",
+              "W1"
+            ]
+          },
+          "matches": true
+        },
+        {
+          "file": "current-index-W2.json",
+          "sha256": "14c5a4e8ca2d94b841e595669736299ff30e66d9e762e5096809393a87070530",
+          "value": {
+            "case_id": "W2",
+            "dataset_revision": "data-2",
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "complete": true,
+            "fixture_citations": [
+              "W.outcome",
+              "W.workspace",
+              "W.recovery",
+              "W2"
+            ]
+          },
+          "matches": true
+        },
+        {
+          "file": "current-index-W3.json",
+          "sha256": "9e702f63c7e681d7efa93c854395f3c4da8e9579b6955ad2e5b6522232830ccf",
+          "value": {
+            "case_id": "W3",
+            "dataset_revision": "data-2",
+            "ids": [
+              "a",
+              "b",
+              "c"
+            ],
+            "complete": true,
+            "fixture_citations": [
+              "W.outcome",
+              "W.workspace",
+              "W.recovery",
+              "W3"
+            ]
+          },
+          "matches": true
+        },
+        {
+          "file": "I1-label.txt",
+          "sha256": "fea2a84d10cf14793b93338b5efdb8eb25d6c4ca2da0d1cafcffcc51a2b95c5b",
+          "observed": "Maximum 1000 records",
+          "matches": true
+        },
+        {
+          "file": "I3-config.json",
+          "sha256": "71d270dcc454e42c56ce4292e644e65c68c722a7abe22c7c6d06bdd5e4e9b46a",
+          "value": {
+            "worker_count": 2
+          },
+          "matches": true
+        }
+      ],
+      "required_artifact_observations_match": true
+    }
+  ],
+  "limits": [
+    "Semantic assertion grades are separate; actor self-check totals are unused.",
+    "Supplemental arithmetic checks exercise the same admitted exact-integer contract; they are not extra acceptance criteria.",
+    "No requirement to reject duplicate input identities is added: unique identities are an explicit Product input precondition.",
+    "No categorical, universal capacity, general method or external-effect qualification follows from these finite probes."
+  ],
+  "finished_utc": "2026-10-14T13:26:01.274875+00:00",
+  "elapsed_seconds": 0.17126
+}

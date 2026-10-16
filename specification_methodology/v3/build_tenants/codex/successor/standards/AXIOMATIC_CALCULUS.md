@@ -6,12 +6,15 @@ The **STDO Axiomatic Calculus for Governed Symbolic Systems**, written `a_c`,
 is STDO's domain-specific, carrier-neutral constitutional calculus for
 representing and relating governed symbolic systems.
 
-The [foundations](FOUNDATIONS.md) supply interpretation, identity, composition,
-finite-capacity and authority premises. Given an explicit interpretation and
+The [foundational commitments](FOUNDATIONS.md#foundational-commitments) supply
+purpose (F1), interpretation (F2), identity (F3), composition (F4),
+finite-capacity (F5) and authority (F6) premises. Given an explicit interpretation and
 typed subject, AC-003, AC-004 and AC-006 require resolved, compatible references
 on one exact basis before a model's judgment can be consumed. The signature,
 record kinds, closure operator and functor-kind classification below are the
-calculus's additional choices; finite capacity alone does not derive them.
+calculus's additional choices, owned by this standard's semantic authority;
+finite capacity alone does not derive them. The family arguments below separate
+these choices from their conditional consequences.
 
 AC-007 and AC-014 consume the shared
 [result algebra](FOUNDATIONS.md#result-algebra); AC-016 consumes its
@@ -32,7 +35,7 @@ This standard owns that concept in bounded context:
 urn:stdo:bounded-context:axiomatic-calculus
 ```
 
-`a_c` is a separately identifiable calculus derived from STDO principles. It
+`a_c` is a separately identifiable specialization of STDO principles. It
 defines sorts, typed objects, relations, constraints, latitude, residual
 uncertainty, traversals, functor kinds, judgments, closure, projections,
 transformations, models, and validity laws. Those definitions do not depend on
@@ -44,12 +47,14 @@ consistency, decidability, soundness, or category-theoretic status except where
 an exact, separately identified proof establishes that claim for a declared
 fragment, model, or relation.
 
-STDO principles are the derivation provenance of the calculus. Application of
-the calculus to any exact subject is a separately owned downstream relation.
-Those relations are distinct:
+The predecessor STDO clauses record the calculus's historical derivation
+provenance. The selected cut's F1–F6 commitments and shared laws are its operative
+premises; this member owns its additional definitions. Neither source uniquely
+forces the chosen signature or classification. Application to an exact subject
+is a separately owned downstream relation. Those relations are distinct:
 
 ```text
-exact predecessor STDO principles ──derive──> a_c
+exact predecessor STDO principles ──provenance──> a_c
 a_c + exact subject X              ──interpret──> a_c.X
 a_c.X + exact accepted semantic judgment J_X
       + exact carrier C            ──encode─────> a_c.X.C
@@ -63,7 +68,7 @@ calculus.
 
 ## Derivation Provenance
 
-The calculus contracts recurring principles already established by STDO:
+The following clause families document the design provenance of the calculus:
 
 - scoped identity and authority conservation from
   [`IDENTITY_METHOD.md#core-law`](IDENTITY_METHOD.md#core-law) and
@@ -103,16 +108,18 @@ interpret the calculus.
 
 This standard introduces the generic calculus identities `F_D`, `F_P`, and
 `F_H`. It does not import those identities from an equal-spelled graph,
-runtime, ODD, or application shorthand. The predecessor clauses establish the
+runtime, ODD, or application shorthand. The predecessor clauses motivated the
 substrate-neutral evaluation, probabilistic-processing, human-adjudication,
-authority, evidence, and refusal principles from which the generic definitions
-below are derived. Nominal equality with a predecessor or downstream shorthand
+authority, evidence, and refusal distinctions. This member selects the three
+generic kinds below; their inventory is a calculus policy, not a theorem forced
+by those predecessor clauses. Nominal equality with a predecessor or downstream shorthand
 creates no concept-identity, import, or equivalence relation.
 
 The relative links above identify derivation clause families in this authoring
 source. Issuance of an exact `AxiomaticCalculusBasis` resolves and records their
 absolute predecessor-cut semantic addresses under
-`derivation_basis.release_uri`. The mutable authoring links are not themselves
+`derivation_basis.principle_refs`, resolved within `derivation_basis.release_uri`.
+The mutable authoring links are not themselves
 the digest-bound derivation references.
 
 The derivation direction is one-way. A model of STDO under `a_c`, an encoded
@@ -382,6 +389,26 @@ An undeclared residual kind or value refuses structural admission.
 
 ## Fundamental Laws
 
+These arguments apply [F1–F6](FOUNDATIONS.md#foundational-commitments)
+to a governed symbolic model under a declared signature and interpretation.
+The model's records represent a separately identified subject; some predicates
+admit mechanical decision and others require semantic judgment. These are the
+calculus's instance conditions. Its finite signature and record choices do not
+follow from an actor's finite capacity. Selection authority remains bound by
+[Interpretation And Models](#interpretation-and-models).
+
+| Determination and consuming law | Conditional argument | Additional choice and owner |
+|---|---|---|
+| Record admission: [AC-001](#ac-001-closed-signature), [AC-003](#ac-003-reference-closure), [AC-004](#ac-004-relation-typing) | Information and interpretation require the referent of a claim to be recoverable (F2/F3); algebraic composition requires the declared endpoint sorts and qualifiers (F4). Under the selected closed signature, an ambiguous or mistyped reference cannot support admission. | This calculus chooses the record families, total population function and structural refusal rules. The signature owner supplies the concrete sorts, cardinalities and reference domains; closed syntax does not establish their semantic adequacy. |
+| Identity, authority and basis: [AC-002](#ac-002-scoped-identity), [AC-005](#ac-005-authority-conservation), [AC-006](#ac-006-basis-coherence) | Identity distinguishes a scoped object from its encoding (F2/F3). Evidence and authority distinguish a supported claim from an operation grant (F6). Consequently equal bytes, copied records or individually valid bases supply neither semantic identity, transferred authority nor a compatible composite basis. | The context owner defines identity and any composite-basis relation. The calculus chooses exact basis binding; each referenced owner retains its meaning and grants. |
+| Constraint and judgment: [AC-007](#ac-007-constraint-and-refusal), [AC-014](#ac-014-judgment-separation) | A constraint supplies its own predicate; evidence supports that predicate on an unchanged subject (F2/F3/F6), while finite evaluation admits missing support and non-performance (F5). The axiomatic representation must therefore retain the predicate, cause, performance and effects. A refused operation does not determine the unevaluated constraint's truth. | Foundations owns the result algebra. This calculus owns the judgment record and cause-sensitive mappings; the interpretation binds each domain predicate. Admission and acceptance additionally require their own competent decision mandate. |
+| Latitude and residuals: [AC-008](#ac-008-explicit-latitude), [AC-009](#ac-009-residual-conservation) | Information-preserving interpretation must distinguish permitted variation from unresolved meaning (F2/F4); uncertainty creates no permission or disposition authority (F5/F6). Removing a residual from a view therefore cannot resolve it, and an implementation preference cannot supply latitude. | The calculus chooses explicit `L` and `X` records. Subject and interpretation authorities determine the allowed variation, material residuals and authorized successor dispositions. |
+| Task closure and projection: [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection) | A reference frame needs the dependencies material to its question within finite capacity (F1/F2/F5); algebraic conservation keeps those dependencies and their external seams intact (F4). A selected view can support that question only through its exact `Z`, `R`, closure and boundary. Capacity does not authorize dropping a required member. | The calculus chooses least-fixed-point closure and `Boundary_Z`. The applying interpretation selects seeds and required-edge semantics; finiteness and uniqueness remain conditions to establish, not consequences of F5 or claims of minimum acquisition cost. |
+| Overlay and transformation: [AC-012](#ac-012-overlay), [AC-013](#ac-013-transformation) | Algebraic and functional composition preserve declared relations across exact source and target identities (F3/F4). Authority belongs to the bound operation, not to the resulting bytes (F6). Consequently an overlay cannot mutate its basis, and producing a successor does not admit it. | This calculus chooses typed overlays and total local/external delta accounting. The transformation owner binds the equality witnesses, authorized loss and operation grant; these choices do not establish categorical functor laws. |
+| Traversal classification and composition: [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | Computational execution binding distinguishes an operation from its actor and mechanism. Typed composition preserves each traversal's preconditions, judgments, stops and material effects (F4/F6); a shared executor cannot turn a proposal into assessment or adjudication. | This calculus chooses `F_D`, `F_P`, `F_H` and bracketed traversal identity. The application selects the lawful topology and outer predicate; no universal kind sequence or category-theoretic status follows. |
+| Interpretation and model validity: [AC-017](#ac-017-interpretation-fidelity), [AC-018](#ac-018-structural-and-semantic-separation), [AC-019](#ac-019-valid-model) | Information and interpretation distinguish encoded structure from the subject's meaning (F2), and evidence supports only its tested claim (F6). Thus a structurally valid model may still omit a governing premise, narrow latitude or conceal a residual; those defects remain fidelity failures under the declared use. | The interpretation authority selects material subject declarations and admitted loss. This calculus chooses source-linked treatment dispositions and requires each applicable validity relation; the shared projection and conjunction laws decide preservation and combination. |
+| Layer and release separation: [AC-020](#ac-020-layer-and-release-separation) | Specification ownership, identity and authority keep calculus, interpreted model and encoded carrier distinct (F3/F6). Evidence about one layer cannot accept another or confer Product standing. | This calculus chooses separately bound layer identities and judgments. Downstream Product authorities select applications, carriers, acceptance and release. |
+
 ### AC-001 Closed Signature
 
 Every admitted object, relation, constraint, latitude, residual, traversal,
@@ -426,33 +453,37 @@ coordinates do not create a coherent composite basis by proximity.
 
 ### AC-007 Constraint And Refusal
 
-Each constraint names its governed subject, predicate, judgment kind,
-latitude, and refusal. Its evaluation produces the
-[core result](FOUNDATIONS.md#result-algebra). Its finer constraint outcome
-maps exactly once on that same subject, basis and predicate:
+Each `Constraint` binds its `applies_to`, `predicate`, `basis`, `judgment_kind`,
+`latitude_ref` and `refusal` to [Evaluate](TRANSFORMATION_LIBRARY.md#evaluate).
+The [core result](FOUNDATIONS.md#result-algebra) owns all five verdict meanings,
+legal performance pairs, effects and missing-reason handling; AC-014 carries
+that record. The constraint's declared predicate on `applies_to` is the evaluated
+claim. Its reason domain and mapping are:
 
-| Constraint outcome | Core verdict |
+| Supported constraint-evaluation case | Core verdict |
 |---|---|
-| admissible evidence establishes the predicate | `satisfied` |
-| an admissible counterexample defeats the predicate | `falsified` |
-| admissible evidence does not decide the predicate | `indeterminate` |
-| a necessary material relation or capability lies outside the frame | `out_of_frame` |
-| the exact subject or basis cannot support this evaluation | `invalid_basis` |
+| the exact predicate is established under its governing latitude | `satisfied` |
+| an admissible counterexample defeats that predicate | `falsified` |
+| evidence cannot decide that predicate, including a missing required reason | `indeterminate` |
+| deciding the predicate needs material scope or capability outside the evaluation contract | `out_of_frame` |
+| its subject or governing basis cannot support interpretation of the predicate | `invalid_basis` |
 
-The result retains the original outcome, performance and known effect state.
-Non-performance alone establishes neither a negative domain finding nor a
-positive proof. Separately admissible counterevidence retains its deciding
-force under the shared legal pairs without inventing execution. A finer refusal
-names its cause and map; no refusal is
-coerced to success. Missing mandatory evaluations remain explicit coverage
-residuals when judgments are conjoined.
+The core diagnosis and missing-reason rules retain independent counterevidence;
+multiple required predicates use core conjunction, not an arbitrary row choice.
 
 The outcome shorthands used by projection, transformation, interpretation and
-admission below are refinements under the same rule. Returning a projection,
-proposed successor or model candidate establishes only its declared production
-predicate. `accepted` and `admitted` establish the exact authorised decision
-predicate and preserve the actual decision evidence. They do not establish
-another model's semantic truth.
+admission below retain their original meaning and bind the predicate actually
+claimed. A returned projection, proposed successor or model candidate maps to
+`satisfied` only when its declared production predicate is established; absence
+of a required output defeats that predicate only when supported by its contract
+and evidence. `accepted` and `admitted` use the core decision predicate over the
+exact unchanged subject, mandate and bound authority. A supported lawful
+decision maps to `satisfied`; an established violation of that decision contract
+maps to `falsified`; an undecided decision or grant maps to `indeterminate`.
+Scope/capability and unusable-basis diagnoses map to `out_of_frame` and
+`invalid_basis` on the evaluation that lacks them. Missing causes use the core
+missing-reason rule. None of these outcomes establishes another model's
+semantic truth or upgrades its own actual performance or effects.
 
 `hold`, `gap`, `refusal` and `refuse` always carry a declared cause: an undecided
 predicate maps to `indeterminate`; missing material frame scope or capability
@@ -499,16 +530,18 @@ tokens, cost, or cognitive effort.
 
 ### AC-011 Projection
 
-A projection selects a view of a model without changing selected meaning:
+A projection selects an exact view without changing selected meaning. Apply
+[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) from model
+`M` to that view for the declared consumer task:
 
 ```text
 project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal
 ```
 
-`M_Z` contains the material closure of `Z`. `Boundary_Z` records excluded,
-external, unresolved, translated, and invalidation-sensitive seams. A
-projection is not a new semantic owner and cannot silently trim a required
-member to satisfy a carrier or capability budget.
+`M_Z` contains AC-010's material closure of `Z` under `R`. `Boundary_Z` records
+excluded, external, unresolved, translated and invalidation-sensitive seams.
+Those coordinates bind the shared contract's support and loss boundary; a
+carrier or capability budget supplies no permission to trim required members.
 
 ### AC-012 Overlay
 
@@ -692,6 +725,12 @@ proposed successor does not accept or admit itself.
 
 ### AC-014 Judgment Separation
 
+Under F2, F3 and F6, evidence about an exact subject and an authorized decision
+about it cannot acquire the identity or authority of a changed subject.
+Consequently a judgment retains its predicate and unchanged subject. This
+calculus chooses the record fields below; Foundations owns their result
+semantics, and the interpretation owner binds domain decisions before use.
+
 A judgment points to an unchanged subject:
 
 ```text
@@ -728,11 +767,8 @@ interpreted-domain outcome; it is not another verdict enum. The exact
 interpretation declares its map before the judgment is used. A carrier may
 encode these relations through resolved records rather than repeated bodies.
 Each field is required by this semantic contract. The selected signature closes
-its value domain and cardinality as well as its identity-bearing reference
-domains. Performance uses the shared legal pairs and retains the observed
-extent: an interrupted evaluation already undertaken is `performed`, not an
-unperformed evaluation. An absent effect observation cannot default a requested
-operation to `not_requested`.
+its value domain, cardinality and identity-bearing reference domains. The core
+result contract determines performance, observed extent and effect state.
 
 `predicate` resolves the adopted predicate contract; identity-bearing
 `residuals` resolve the calculus's existing residual records. `effects` records
@@ -749,6 +785,15 @@ It does not silently upgrade an older judgment record to this successor
 contract, or establish semantic acceptance of an `a_c.X` interpretation.
 
 ## Traversals And Functor Kinds
+
+F2 and F6 distinguish evidence, proposals and authorized decisions; F4 requires
+typed composition preserving each constituent claim; F5 requires explicit
+handling of undecidable work. Given those premises, AC-015–016 require exact
+traversal contracts and preserved stops and joins. This calculus additionally
+chooses the three `F_D`, `F_P`, `F_H` kinds and bracketed identity syntax. Each
+application owner chooses its traversal topology and operator under
+[Composition law](TRANSFORMATION_LIBRARY.md#composition-law); neither that law
+nor the three-kind classification proves categorical functor laws.
 
 A traversal is a typed contract:
 
@@ -828,40 +873,39 @@ incomplete.
 
 ### AC-016 Typed Composition
 
-Two traversals compose only when the first result type and judgment satisfy the
-second traversal's exact domain and preconditions:
+Apply [Composition law](TRANSFORMATION_LIBRARY.md#composition-law) to the two
+exact traversal contracts:
 
 ```text
 F_K2[w] compose F_K1[v]
 ```
 
-Composition retains both traversal identities, intermediate results,
-judgments, evidence, authority, provenance, and stop states. It cannot flatten
-probabilistic proposal, deterministic evaluation, and human decision into one
-undifferentiated operation. `a_c` prescribes no universal `F_P -> F_D -> F_H`
-sequence; each application owns its lawful topology.
+The typed join requires `v`'s result type and judgment to satisfy `w`'s domain
+and preconditions. Bind the outer predicate to the required leaf predicates,
+intermediate results and material joins, retaining both traversal identities,
+judgments, evidence, authority, provenance and stop states. Its result uses the
+core conjunction or declared-operator rule selected by that predicate; its
+effect boundary includes the traversals' material effects under the shared
+currentness law.
 
-When the composition claims that several constraints hold, it uses
-[core conjunction](FOUNDATIONS.md#result-conjunction) over their exact
-predicates and coverage. A stop at one traversal cannot erase a valid
-counterexample from another; a successful traversal does not satisfy an
-unperformed dependent traversal. Otherwise the application declares the outer
-predicate, exact leaf predicates, material joins, and disjoint, exhaustive truth
-and falsity conditions on its fully decided admitted domain. Its result uses
-the declared-operator rule in
-[result conjunction](FOUNDATIONS.md#result-conjunction), with only the
-dependencies needed to decide that predicate. A fallback may establish its
-declared outer predicate while retaining an earlier failed leaf; it cannot
-report that every stage succeeded. An absent dependent return remains an absent
-slot, with its known performance or uncertainty. An uninterpretable operator
-declaration supplies no guessed success. This clause owns typed traversal
-composition; the core owns result evaluation for the declared outer operator.
-
-Effect-sensitive composition also binds
-the current-state and uncertainty rules in
-[workspace and context](FOUNDATIONS.md#workspace-and-context).
+The kinds retain their distinct proposal, evaluation and human-decision
+contracts. `a_c` prescribes no universal `F_P -> F_D -> F_H` sequence. An
+application chooses its lawful topology and outer operator without changing
+the constituent predicates or AC-007 refinements. Categorical claims additionally
+meet the complete demonstration standard in
+[Orthogonal descriptions](FOUNDATIONS.md#orthogonal-descriptions).
 
 ## Interpretation And Models
+
+F1 selects a use, F2 requires meaning supported by an exact subject, F3 keeps
+that subject distinct from a representation, F4 preserves material dependencies,
+F5 retains what cannot be decided, and F6 separates structural evidence from
+semantic authority. If AC-017–019 claim a faithful valid model for that use,
+source meaning and unresolved conditions must survive the declared relation.
+This calculus selects the provenance, constraint-surface and validity conditions
+below. The interpretation owner separately chooses the subject, signature,
+material selection and admitted loss; competent source and acceptance owners
+retain those decisions. No generic checker supplies that semantic selection.
 
 An interpretation applies `a_c` to an exact subject:
 
@@ -894,11 +938,57 @@ a separately recorded authority judgment.
 
 ### AC-017 Interpretation Fidelity
 
-Every admitted model record maps to exact subject provenance or is explicitly
+Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the exact subject declarations as source, the selected signature and
+interpretation contract as target meaning, and the declared use of `M_subject`
+as consumer. Every admitted record maps to exact subject provenance or is
 identified as model-local content under competent authority. Every evaluated
-subject declaration has a retained, omitted, residual, inapplicable, or refused
-disposition. Interpretation cannot treat absence as immateriality without a
-recorded basis and authority.
+declaration has a retained, omitted, residual, inapplicable or refused
+disposition; omission or inapplicability needs its recorded basis and authority.
+
+Those five dispositions are declaration-treatment data, not five verdicts.
+For each claimed treatment, evaluate “this treatment preserves the declaration's
+material meaning for the declared use under the interpretation contract”.
+Established preservation, including authorized omission or admitted loss, maps
+to `satisfied`; an admissible fidelity counterexample maps to `falsified`;
+undecided preservation, authority or materiality maps to `indeterminate`.
+Missing evaluation scope/capability maps to `out_of_frame`; an unusable subject
+or interpretation basis maps to `invalid_basis`; a missing reason uses AC-007's
+core missing-reason rule. The overall fidelity claim conjoins its required
+declaration and dependency predicates under core conjunction. Faithfully
+representing a source uncertainty can satisfy fidelity while the source claim
+remains unresolved. A refused treatment's permission result is separately
+bound; it does not determine the source predicate's truth.
+
+The interpretation preserves source logic through the existing populations:
+`O` identifies the subject objects and meanings; `E` carries typed dependency
+and preservation relations; `C` binds predicates and consequences; `L` states
+permitted and forbidden variation; `X` retains unresolved conditions and their
+consequences; and `V`, `T` and `J` bind operations, transformations and judgments.
+Signature-defined sorts, qualifiers and predicates distinguish premises,
+derived consequences, policy choices, observations and unresolved claims.
+This adds no record family or fixed dependency-tree shape.
+
+A task consumes that model through AC-011, selecting `Z` for its question and
+`R` for the material dependency closure. The resulting view and `Boundary_Z`
+instantiate the library's [Constraint surface](TRANSFORMATION_LIBRARY.md#constraint-surface):
+the source-owned obligations, permitted choices, required evidence and open
+conditions remain recoverable. The consumer separately acquires the actual
+material subject and authoritative inputs under its applicable acquisition
+owner; an activated reference-frame consumer uses the Frame Method. Model facts
+are claims with source/currentness support, not the world state or an effect
+grant. Changing observations reopens affected reliance under the shared
+currentness rule; unchanged independent support remains reusable.
+
+Fidelity evidence compares source and model on independently specified
+permissible, prohibited and unresolved decisions for the claimed scope. The
+model retains latitude material to that use unless the interpretation contract
+records admitted loss with basis and authority. A model or task projection that
+omits a required premise, turns an unknown into permission, or narrows source
+latitude to the author's preferred implementation without that admitted loss
+fails that relation even if its structure validates. The selected source,
+interpretation, projection and admitted approximation bounds identify the
+scope of this evidence.
 
 ### AC-018 Structural And Semantic Separation
 
@@ -931,6 +1021,14 @@ semantic or authority subset unless the model supplies an exact lawful decision
 contract for it.
 
 ## Subject And Carrier Boundaries
+
+F2 and F3 distinguish interpreted meaning from its carriers and content identity;
+F4 requires declared preservation across their joins; F6 keeps acceptance with
+the granted owner. Consequently evidence for one layer cannot ratify another.
+AC-020 and [Exact Calculus Identity](#exact-calculus-identity) add this member's
+three-layer split, exact equality and canonical identity policies. The external
+Product/release owner separately chooses whether to accept or release any
+layer; the encoding owner chooses a lawful carrier under that basis.
 
 The three governed layers are:
 

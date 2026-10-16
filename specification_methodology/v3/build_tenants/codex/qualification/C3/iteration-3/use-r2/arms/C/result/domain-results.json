@@ -1,0 +1,353 @@
+{
+  "task_id": "T3",
+  "artifact": "domain-results.json",
+  "actor_grant": "D.consumer: construct normalized results and decide input admissibility; no deployment.",
+  "mapping_rule": "Resolve the predicate by its domain, owner and fixture basis; retain the original label and conditions. Never map a bare ready/sent label directly to universal success.",
+  "cases": [
+    {
+      "case_id": "D1",
+      "observations": {
+        "case_id": "D1",
+        "domain": "Archive",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "structural_validation": "passed",
+        "conformance": "not performed",
+        "certificate": null
+      },
+      "original_predicate": "Archive.ready: payload exists and structural validation passed.",
+      "normalized_result": {
+        "predicate": "Archive payload exists and structural validation passed.",
+        "subject": "sha256:payload-a",
+        "basis": "D.archive",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+        "qualified_domain_outcome": {
+          "domain": "Archive",
+          "label": "ready",
+          "conditions": "Payload exists; structural validation passed; no semantic conformance or acceptance performed."
+        },
+        "evidence": [
+          "D1",
+          "D.archive"
+        ],
+        "unresolved": [],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "separate_results": [
+        {
+          "predicate": "Payload semantically conforms.",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission and D.consumer",
+          "verdict": "indeterminate",
+          "performance": "not_performed",
+          "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+          "qualified_domain_outcome": {
+            "domain": "conformance",
+            "outcome": "not performed"
+          },
+          "evidence": [
+            "D1"
+          ],
+          "unresolved": [
+            "Successful conformance assessment required."
+          ],
+          "effects": {
+            "boundary": "Fixture external effects excluded from this artifact-only assessment",
+            "state": "not_requested"
+          }
+        },
+        {
+          "predicate": "The supplied record meets every D.consumer AcceptedBundle input condition.",
+          "subject": "sha256:payload-a",
+          "basis": "D.consumer",
+          "verdict": "falsified",
+          "performance": "performed",
+          "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+          "qualified_domain_outcome": {
+            "domain": "consumer admission",
+            "outcome": "withheld",
+            "reason": "Required successful conformance and exact dana acceptance certificate are absent."
+          },
+          "evidence": [
+            "D1",
+            "D.consumer"
+          ],
+          "unresolved": [
+            "Obtain successful conformance and dana's accept certificate for payload-a before dependent use."
+          ],
+          "effects": {
+            "boundary": "Fixture external effects excluded from this artifact-only assessment",
+            "state": "not_requested"
+          }
+        }
+      ],
+      "input_admissible": false,
+      "decision": "Retain CandidateBundle availability. Withhold AcceptedBundle consumer use.",
+      "dependencies": [
+        "D.archive supplies Archive.ready; D.consumer independently requires successful conformance and an exact dana certificate."
+      ],
+      "unresolved": [
+        "Fitness is unassessed; exact human acceptance evidence is absent."
+      ],
+      "fixture_citations": [
+        "D.archive",
+        "D.admission",
+        "D.consumer",
+        "D1"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.semantic",
+        "M.typed",
+        "M.application",
+        "M.authority"
+      ]
+    },
+    {
+      "case_id": "D2",
+      "observations": {
+        "case_id": "D2",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-a",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "original_predicate": "Admission.ready: payload exists, conforms, and dana has accepted this exact payload digest.",
+      "normalized_result": {
+        "predicate": "Admission.ready conditions and D.consumer input conditions all hold.",
+        "subject": "sha256:payload-a",
+        "basis": "D.admission and D.consumer",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+        "qualified_domain_outcome": {
+          "domain": "Admission",
+          "label": "ready",
+          "conditions": "Conformance successful; certificate dana/accept/sha256:payload-a matches payload-a."
+        },
+        "evidence": [
+          "D2",
+          "D.admission",
+          "D.consumer"
+        ],
+        "unresolved": [],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "input_admissible": true,
+      "decision": "Admit the supplied AcceptedBundle as a valid input under D.consumer; deployment remains outside this actor's grant.",
+      "dependencies": [
+        "Certificate issuer dana, decision accept, and exact subject_digest equality with payload_digest; successful conformance."
+      ],
+      "unresolved": [],
+      "fixture_citations": [
+        "D.admission",
+        "D.consumer",
+        "D2"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.semantic",
+        "M.typed",
+        "M.authority"
+      ]
+    },
+    {
+      "case_id": "D3",
+      "observations": {
+        "case_id": "D3",
+        "domain": "Dispatch",
+        "label": "sent",
+        "request_id": "dispatch-9",
+        "request_recorded": true,
+        "response": "timeout",
+        "owner_receipt": null
+      },
+      "original_predicate": "Dispatch.sent: a request was issued; completion requires an owner receipt.",
+      "normalized_result": {
+        "predicate": "dispatch-9 request was issued.",
+        "subject": "dispatch-9",
+        "basis": "D.dispatch",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+        "qualified_domain_outcome": {
+          "domain": "Dispatch",
+          "label": "sent",
+          "conditions": "request_recorded=true; response timeout; no owner_receipt."
+        },
+        "evidence": [
+          "D3",
+          "D.dispatch"
+        ],
+        "unresolved": [
+          "Completion remains unknown."
+        ],
+        "effects": {
+          "boundary": "Fixture operation at its owner boundary",
+          "state": "unknown"
+        }
+      },
+      "completion_result": {
+        "predicate": "dispatch-9 completed at the operation owner's effect boundary.",
+        "subject": "dispatch-9",
+        "basis": "D.dispatch",
+        "verdict": "indeterminate",
+        "performance": "performed",
+        "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+        "qualified_domain_outcome": {
+          "domain": "Dispatch completion",
+          "outcome": "unknown",
+          "reason": "Timeout and absent receipt supply no completion or no-effect observation."
+        },
+        "evidence": [
+          "D3",
+          "D.dispatch"
+        ],
+        "unresolved": [
+          "Current authenticated owner receipt tied to dispatch-9 and its actual effect is required for completion; authoritative no-effect observation is required to claim absence."
+        ],
+        "effects": {
+          "boundary": "Fixture operation at its owner boundary",
+          "state": "unknown"
+        }
+      },
+      "input_admissible": null,
+      "decision": "Retain issued request and unknown effect. Seek the declared owner's completion evidence; do not infer completed, failed-with-no-effect, or safe retry from timeout.",
+      "dependencies": [
+        "D.dispatch owner receipt/no-effect rule and exact request_id dispatch-9."
+      ],
+      "unresolved": [
+        "Whether the effect occurred or completed; no owner receipt or authoritative no-effect observation is supplied."
+      ],
+      "fixture_citations": [
+        "D.dispatch",
+        "D3"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.workspace",
+        "M.application"
+      ]
+    },
+    {
+      "case_id": "D4",
+      "observations": {
+        "case_id": "D4",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-b",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "original_predicate": "Admission.ready: payload exists, conforms, and dana accepted this exact payload digest.",
+      "normalized_result": {
+        "predicate": "Admission.ready conditions and D.consumer input conditions all hold.",
+        "subject": "sha256:payload-a",
+        "basis": "D.admission and D.consumer",
+        "verdict": "falsified",
+        "performance": "performed",
+        "performance_scope": "Performance concerns the named predicate's evaluation. Local normalization does not establish that an original domain conformance or effect operation ran.",
+        "qualified_domain_outcome": {
+          "domain": "Admission",
+          "label": "ready",
+          "conditions": "Conformance successful, but supplied dana certificate accepts payload-b while payload is payload-a."
+        },
+        "evidence": [
+          "D4",
+          "D.admission",
+          "D.consumer"
+        ],
+        "unresolved": [
+          "Exact dana/accept certificate for payload-a is required."
+        ],
+        "effects": {
+          "boundary": "Fixture external effects excluded from this artifact-only assessment",
+          "state": "not_requested"
+        }
+      },
+      "input_admissible": false,
+      "decision": "Withhold consumer use. Preserve successful conformance and the authentic certificate's actual subject; the failed digest join is a counterexample on an interpretable contract, not a reason to discard the basis.",
+      "dependencies": [
+        "The material join payload_digest == certificate.subject_digest."
+      ],
+      "unresolved": [
+        "A valid acceptance decision for payload-a is not supplied."
+      ],
+      "fixture_citations": [
+        "D.admission",
+        "D.consumer",
+        "D4"
+      ],
+      "method_citations": [
+        "M.result",
+        "M.conjunction",
+        "M.semantic",
+        "M.typed",
+        "M.application"
+      ]
+    }
+  ],
+  "adapter_assessment": {
+    "predicate": "Renaming CandidateBundle to AcceptedBundle, without changing or adding evidence, preserves the D.consumer contract on all source instances.",
+    "verdict": "falsified",
+    "performance": "performed",
+    "decision": "Reject the proposed name-only adapter.",
+    "counterexample": {
+      "source_case": "D1",
+      "source_type": "CandidateBundle",
+      "same_shape_fields": {
+        "payload_digest": "sha256:payload-a",
+        "conformance": "not performed",
+        "certificate": null
+      },
+      "adapter_output_type": "AcceptedBundle",
+      "retained_fields": "identical",
+      "violations": [
+        "No successful semantic conformance",
+        "No dana accept certificate for payload-a"
+      ],
+      "why": "Equal field shape and a type-name change add neither conformance nor exact owner acceptance."
+    },
+    "lawful_reentry": "A validating consumer boundary must establish conformance and authenticate exact digest-bound acceptance under the named owners, or refuse. The adapter cannot make dana's decision or change Archive.ready semantics.",
+    "fixture_citations": [
+      "D.archive",
+      "D.admission",
+      "D.consumer",
+      "D1"
+    ],
+    "method_citations": [
+      "M.semantic",
+      "M.typed",
+      "M.application",
+      "M.projection",
+      "M.authority"
+    ]
+  },
+  "artifacts": [
+    "domain-results.json"
+  ],
+  "dependencies": [
+    "Domain-specific owner declarations, all case conditions, exact payload/receipt coordinates."
+  ],
+  "unresolved": [
+    "D1 fitness and acceptance missing; D3 completion/no-effect evidence missing; D4 exact-payload acceptance missing."
+  ]
+}
+

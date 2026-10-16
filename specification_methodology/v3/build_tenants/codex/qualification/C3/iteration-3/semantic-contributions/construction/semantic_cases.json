@@ -1,0 +1,754 @@
+{
+  "standing": "Author-owned finite semantic discriminators selected from pinned source before the check run; not independent fidelity or live runtime qualification.",
+  "cases": [
+    {
+      "id": "design-coevolution-positive",
+      "kind": "co_evolution",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "input": {
+        "unresolved_material_relations_empty": true,
+        "jointly_satisfiable": true,
+        "all_admitted_networks_semantically_equivalent": true
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "co_evolution_permitted": true
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.proportional-design-sequencing; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "design-divergent-networks",
+      "kind": "co_evolution",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "input": {
+        "unresolved_material_relations_empty": true,
+        "jointly_satisfiable": true,
+        "all_admitted_networks_semantically_equivalent": false
+      },
+      "expected": {
+        "verdict": "falsified",
+        "co_evolution_permitted": false
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.proportional-design-sequencing; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "design-equivalence-unknown",
+      "kind": "co_evolution",
+      "binding": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+      "input": {
+        "unresolved_material_relations_empty": true,
+        "jointly_satisfiable": true,
+        "all_admitted_networks_semantically_equivalent": null
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "co_evolution_permitted": false
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.proportional-design-sequencing; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "reconstructed-violation-is-two-results",
+      "kind": "reconstruction",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "input": {
+        "all_material_relations_recovered": true,
+        "required_classifications_distinguishable": true,
+        "action": "violates"
+      },
+      "expected": {
+        "reconstruction": "satisfied",
+        "lawfulness": "falsified"
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "accepted-change-lawful",
+      "kind": "reconstruction",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "input": {
+        "all_material_relations_recovered": true,
+        "required_classifications_distinguishable": true,
+        "action": "changes",
+        "accepted_reentry": true
+      },
+      "expected": {
+        "reconstruction": "satisfied",
+        "lawfulness": "satisfied"
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "pending-change-is-not-acceptance",
+      "kind": "reconstruction",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "input": {
+        "all_material_relations_recovered": true,
+        "required_classifications_distinguishable": true,
+        "action": "changes",
+        "accepted_reentry": null
+      },
+      "expected": {
+        "reconstruction": "satisfied",
+        "lawfulness": "indeterminate"
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "indistinguishable-required-case",
+      "kind": "reconstruction",
+      "binding": "DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018",
+      "input": {
+        "all_material_relations_recovered": true,
+        "required_classifications_distinguishable": false,
+        "action": "preserves"
+      },
+      "expected": {
+        "reconstruction": "falsified",
+        "lawfulness": "satisfied"
+      },
+      "expectation_basis": "Pinned source owner DESIGN_MODULE_METHOD.invariant-reconstruction-sufficiency-stdo-up-018; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "complete-cut-positive",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "downstream_admitted": true
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "missing-companion-support",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": null,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "known-failure-survives-missing-companion",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": null,
+        "joins_equal": false,
+        "frontier_current": true,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "known-stale-frontier-is-false",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": false,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "unknown-frontier-is-unknown",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": null,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "cut-output-is-not-own-input",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": null
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "incomplete-seven-member-cut",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": true
+      },
+      "expected": {
+        "verdict": "falsified",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "invalid-composite-basis",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": true,
+        "basis_interpretable": false
+      },
+      "expected": {
+        "verdict": "invalid_basis",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "required-capability-out-of-frame",
+      "kind": "cut",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation",
+      "input": {
+        "members": [
+          "claim",
+          "claim_judgment",
+          "event",
+          "event_judgment",
+          "materialized_relation",
+          "source_frontier",
+          "successor_frontier"
+        ],
+        "claim_admitted": true,
+        "event_admitted": true,
+        "joins_equal": true,
+        "frontier_current": true,
+        "cut_judgment_admitted": true,
+        "capable": false
+      },
+      "expected": {
+        "verdict": "out_of_frame",
+        "downstream_admitted": false
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.candidate-judgment-event-and-relation-separation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "lawful-published-next",
+      "kind": "next_function",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "input": {
+        "function": "evaluate_next",
+        "operation": "select",
+        "published": true,
+        "target_bound": true,
+        "authority": true
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "selected": true
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.115d-constructive-evaluation-and-yield-loop; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "next-cannot-admit-intent",
+      "kind": "next_function",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "input": {
+        "function": "evaluate_next",
+        "operation": "admit intent",
+        "published": true,
+        "target_bound": true,
+        "authority": true
+      },
+      "expected": {
+        "verdict": "falsified",
+        "selected": false
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.115d-constructive-evaluation-and-yield-loop; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "post-reprice-awaits-new-basis",
+      "kind": "next_function",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "input": {
+        "function": "evaluate_next",
+        "operation": "select",
+        "published": true,
+        "target_bound": true,
+        "authority": true,
+        "post_reprice": true,
+        "new_basis_admitted": false
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "selected": false
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.115d-constructive-evaluation-and-yield-loop; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "unknown-target-binding",
+      "kind": "next_function",
+      "binding": "ODD_METHOD.115d-constructive-evaluation-and-yield-loop",
+      "input": {
+        "function": "evaluate_next",
+        "operation": "select",
+        "published": true,
+        "target_bound": null,
+        "authority": true
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "selected": false
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.115d-constructive-evaluation-and-yield-loop; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "candidate-available-fitness-false",
+      "kind": "compute",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "input": {
+        "means": "F_P",
+        "authenticated_produced_candidate": true,
+        "fitness": "falsified"
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "fitness": "falsified",
+        "acceptance": "unassessed"
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.probabilistic-compute; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "deterministic-label-without-evidence",
+      "kind": "compute",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "input": {
+        "means": "F_D",
+        "deciding_property_evidence": null
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "fitness": "unassessed",
+        "acceptance": "unassessed"
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.probabilistic-compute; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "human-decision-mandate-unknown",
+      "kind": "compute",
+      "binding": "ODD_METHOD.probabilistic-compute",
+      "input": {
+        "means": "F_H",
+        "exact_mandate": null,
+        "authenticated_decision": true
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "fitness": "unassessed",
+        "acceptance": "unassessed"
+      },
+      "expectation_basis": "Pinned source owner ODD_METHOD.probabilistic-compute; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "effect-complete-positive",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": true,
+        "observed_parts": [
+          "completed"
+        ]
+      },
+      "expected": {
+        "readiness": "satisfied",
+        "effect": "completed"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "lost-dispatch-ack-is-unknown",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": true
+      },
+      "expected": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "unauthorized-mutation-still-effect",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": false,
+        "pre_observation_current": true,
+        "observed_parts": [
+          "completed"
+        ]
+      },
+      "expected": {
+        "readiness": "falsified",
+        "effect": "completed"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "local-rollback-does-not-hide-message",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": true,
+        "observed_parts": [
+          "reverted",
+          "completed"
+        ]
+      },
+      "expected": {
+        "readiness": "satisfied",
+        "effect": "partial"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "unknown-remainder-beats-partial",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": true,
+        "observed_parts": [
+          "completed",
+          "unknown"
+        ]
+      },
+      "expected": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "authenticated-pre-dispatch-refusal",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": false,
+        "pre_observation_current": true,
+        "authenticated_no_start": true
+      },
+      "expected": {
+        "readiness": "falsified",
+        "effect": "not_started"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "absence-of-request-is-not-no-effect-proof",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": true,
+        "requested": false
+      },
+      "expected": {
+        "readiness": "satisfied",
+        "effect": "unknown"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "stale-pre-observation-no-dispatch",
+      "kind": "effect",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation",
+      "input": {
+        "grant_matches": true,
+        "pre_observation_current": false,
+        "authenticated_no_start": true
+      },
+      "expected": {
+        "readiness": "falsified",
+        "effect": "not_started"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.mutable-subject-effect-relation; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "typed-causal-dags-positive",
+      "kind": "typed_causality",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "input": {
+        "identity": [
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "occurrence_cause": [
+          [
+            "o1",
+            "o2"
+          ]
+        ],
+        "event_cause": [
+          [
+            "e1",
+            "e2"
+          ]
+        ]
+      },
+      "expected": {
+        "verdict": "satisfied"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "causal-cycle-refused",
+      "kind": "typed_causality",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "input": {
+        "event_cause": [
+          [
+            "e1",
+            "e2"
+          ],
+          [
+            "e2",
+            "e1"
+          ]
+        ]
+      },
+      "expected": {
+        "verdict": "falsified"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "support-correction-opposition-lawful",
+      "kind": "typed_causality",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage",
+      "input": {
+        "support": [
+          [
+            "e1",
+            "e2"
+          ]
+        ],
+        "correction": [
+          [
+            "e2",
+            "e1"
+          ]
+        ]
+      },
+      "expected": {
+        "verdict": "satisfied"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.causality-and-typed-lineage; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "stable-subject-binding-fields",
+      "kind": "schema",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts",
+      "input": {
+        "sort": "SubjectBinding",
+        "fields": [
+          "subject_ref",
+          "authority_ref",
+          "invalidation_ref"
+        ]
+      },
+      "expected": {
+        "verdict": "satisfied"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "mutable-digest-cannot-enter-stable-binding",
+      "kind": "schema",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts",
+      "input": {
+        "sort": "SubjectBinding",
+        "fields": [
+          "subject_ref",
+          "authority_ref",
+          "invalidation_ref",
+          "content_sha256"
+        ]
+      },
+      "expected": {
+        "verdict": "falsified"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-semantic-object-sorts; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "event-scope-compatible",
+      "kind": "event_scope",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "input": {
+        "scope_supported": true
+      },
+      "expected": {
+        "verdict": "satisfied",
+        "decision": "admitted"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "event-out-of-scope-is-falsification",
+      "kind": "event_scope",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "input": {
+        "scope_supported": false
+      },
+      "expected": {
+        "verdict": "falsified",
+        "decision": "out_of_scope"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "event-unknown-scope-is-hold",
+      "kind": "event_scope",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "input": {
+        "scope_supported": null
+      },
+      "expected": {
+        "verdict": "indeterminate",
+        "decision": "hold"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds; author-specified finite discriminator, not independent assessment."
+    },
+    {
+      "id": "event-capability-out-of-frame",
+      "kind": "event_scope",
+      "binding": "TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds",
+      "input": {
+        "scope_supported": true,
+        "capable": false
+      },
+      "expected": {
+        "verdict": "out_of_frame",
+        "decision": "hold"
+      },
+      "expectation_basis": "Pinned source owner TRAVERSAL_OCCURRENCE_PROFILE.closed-constraint-judgment-residual-and-stop-kinds; author-specified finite discriminator, not independent assessment."
+    }
+  ]
+}

@@ -92,8 +92,9 @@ frames only where every authority and independence condition remains valid.
 Reviewer grades severity and returns evidence, affected claims, causal
 assessment where supportable, blast radius, workaround, repair complexity,
 regression risk, confidence, and residual uncertainty. Executive assigns
-priority and determines promotion-boundary effect against the complete Product
-view and current mandate. Severity, priority, frame result, boundary effect,
+priority and determines promotion-boundary effect against a sufficient bounded
+Product view and current mandate, acquiring material dependencies as needed.
+Severity, priority, frame result, boundary effect,
 and `STDO-UP-020` disposition remain distinct.
 
 This template imposes no universal numeric scale. A project may bind `S0..Sn`

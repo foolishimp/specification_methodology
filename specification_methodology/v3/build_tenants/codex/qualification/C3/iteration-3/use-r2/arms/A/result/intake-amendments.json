@@ -1,0 +1,329 @@
+{
+  "task_id": "T6",
+  "case_independence": "I1's label change and I3's worker setting do not carry into I2 or I4.",
+  "cases": [
+    {
+      "case_id": "I1",
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "case_source": "task T6 / initial_fixture_state.cases[I1]",
+      "method_sources": [
+        "M.triage",
+        "M.proportional",
+        "M.construction",
+        "M.carrier",
+        "M.continuity"
+      ],
+      "dependencies": {
+        "meaning": [
+          "I.product"
+        ],
+        "realization_choices": [
+          "I.design"
+        ],
+        "work_authority": [
+          "I.work"
+        ],
+        "current_values": [
+          "I.observations"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "request": "Make the displayed maximum match the Product.",
+      "selected_work": "work-17",
+      "observed_initial_values": {
+        "displayed_label": "Maximum 100 records",
+        "worker_count": 1,
+        "performance_measurements": "No latency target or observed latency was supplied.",
+        "owner_routes": {
+          "Product change": "priya via Product decision record",
+          "missing outcome or work scope": "work owner via the request intake record"
+        }
+      },
+      "required_process": "Classify exact outcome and first changed governing layer, bind the existing exact grant or missing authority, construct only authorized effects, and record focused evidence in the smallest lawful carrier.",
+      "optional_organization": "A new durable ticket, Executive appointment, separate Reviewer or extra design document is not required solely because this is STDO work. Select coordination only for a material authority, context or independence boundary; this fixture selects none for the local cases.",
+      "actual_scope": "Only synthetic label/configuration and work-record artifacts in arm A's result directory; no Product workspace mutation.",
+      "outcome": "Correct the displayed maximum to match the Product.",
+      "change_intent": "Correct the label's realized displayed value to the current Product maximum.",
+      "change_class": "realization_refactor",
+      "earliest_changed_layer": "realized label only",
+      "upstream_relation": "Product maximum remains 1000; I.design already requires the label to display it. Goals/Intent/Product/requirements/accepted design do not need change.",
+      "authority_and_carrier": {
+        "id": "work-17",
+        "kind": "existing admitted work record",
+        "grant_verbatim": "Writer may change the label only and record its evidence in work-17.",
+        "admission_evidence": "I.work.carrier_w17 plus I.work.carrier_policy: these existing records admit the exact actions stated",
+        "admission_use": "Consume the supplied exact admission; no new admission or approval is invented.",
+        "durable_result_projection": "intake-amendments.json#I1"
+      },
+      "scope": [
+        "displayed_label",
+        "work-17 evidence"
+      ],
+      "public_delta": {
+        "member": "displayed_label",
+        "before": "Maximum 100 records",
+        "after": "Maximum 1000 records",
+        "membership_change": "none"
+      },
+      "concrete_result": {
+        "displayed_label": "Maximum 1000 records",
+        "artifact": "label-I1.txt"
+      },
+      "evaluation_criteria": "Displayed value equals I.product.maximum_export_records under I.design.ui_text.",
+      "non_closure_conditions": [
+        "The displayed maximum differs from 1000",
+        "Another Product or configuration setting changes outside the label grant"
+      ],
+      "evidence": {
+        "expected": 1000,
+        "produced_label": "Maximum 1000 records",
+        "source": "I.product.maximum_export_records and I.design.ui_text"
+      },
+      "result": "satisfied",
+      "decision": "Record the completed bounded label correction in work-17's simulated amendment.",
+      "additional_carrier": "None. Existing admitted work-17 already covers the exact local change and its evidence.",
+      "reentry_destination": "None for this completed local case; any request to change the maximum itself returns to priya through the Product decision record."
+    },
+    {
+      "case_id": "I2",
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "case_source": "task T6 / initial_fixture_state.cases[I2]",
+      "method_sources": [
+        "M.triage",
+        "M.proportional",
+        "M.construction",
+        "M.carrier",
+        "M.continuity"
+      ],
+      "dependencies": {
+        "meaning": [
+          "I.product"
+        ],
+        "realization_choices": [
+          "I.design"
+        ],
+        "work_authority": [
+          "I.work"
+        ],
+        "current_values": [
+          "I.observations"
+        ]
+      },
+      "unresolved": [
+        "Priya's Product decision authorizing the exact successor maximum/admission behavior is absent.",
+        "An admitted work contract/grant covering the changed behavior and its downstream derivation is absent."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "request": "Make batches of 2000 records admissible.",
+      "selected_work": "work-17",
+      "observed_initial_values": {
+        "displayed_label": "Maximum 100 records",
+        "worker_count": 1,
+        "performance_measurements": "No latency target or observed latency was supplied.",
+        "owner_routes": {
+          "Product change": "priya via Product decision record",
+          "missing outcome or work scope": "work owner via the request intake record"
+        }
+      },
+      "required_process": "Classify exact outcome and first changed governing layer, bind the existing exact grant or missing authority, construct only authorized effects, and record focused evidence in the smallest lawful carrier.",
+      "optional_organization": "A new durable ticket, Executive appointment, separate Reviewer or extra design document is not required solely because this is STDO work. Select coordination only for a material authority, context or independence boundary; this fixture selects none for the local cases.",
+      "actual_scope": "Only synthetic label/configuration and work-record artifacts in arm A's result directory; no Product workspace mutation.",
+      "outcome": "Make batches of 2000 records admissible.",
+      "change_intent": "Propose changing the Product's admission maximum and deriving its downstream consequences.",
+      "change_class": "product_reprice",
+      "earliest_changed_layer": "Product",
+      "authority_and_carrier": {
+        "existing_selected_record": "work-17",
+        "applicability": "does not authorize this outcome: it permits label correction only",
+        "reserved_owner": "priya",
+        "required_record": "Product decision record",
+        "owner_decision_present": false,
+        "constructed_carrier": "Unadmitted request-intake draft retained in intake-amendments.json#I2"
+      },
+      "scope": "Proposed Product admission behavior, dependent requirement maximum, design/validation/label and proof; execution scope is not admitted.",
+      "observed_conflict": "Current maximum is 1000, and required behavior rejects a batch above that maximum. A 2000-record batch is currently inadmissible.",
+      "proposed_public_delta": {
+        "member": "maximum_export_records",
+        "before": 1000,
+        "requested_candidate": 2000,
+        "status": "unadmitted proposal; exact successor law remains for priya to decide"
+      },
+      "decision": "Re-enter Product; do not implement the requested maximum or broaden work-17.",
+      "result": "blocked on exact owner decision and corresponding work authority",
+      "concrete_result": "Current Product maximum remains 1000; this independent case performs no label correction or configuration change.",
+      "reentry_destination": "priya via Product decision record, then downstream requirements/design/realization/evidence and exact work admission.",
+      "additional_carrier": "A distinct intake proposal is justified by the changed outcome and authority boundary. A new durable ticket is neither admitted nor justified merely by work-17 being inadequate; choose its carrier after authority and required lifetime are known, under ticket-state authority if durable state is needed."
+    },
+    {
+      "case_id": "I3",
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "case_source": "task T6 / initial_fixture_state.cases[I3]",
+      "method_sources": [
+        "M.triage",
+        "M.proportional",
+        "M.construction",
+        "M.carrier",
+        "M.continuity"
+      ],
+      "dependencies": {
+        "meaning": [
+          "I.product"
+        ],
+        "realization_choices": [
+          "I.design"
+        ],
+        "work_authority": [
+          "I.work"
+        ],
+        "current_values": [
+          "I.observations"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "request": "Set worker_count to 2.",
+      "selected_work": "work-18",
+      "observed_initial_values": {
+        "displayed_label": "Maximum 100 records",
+        "worker_count": 1,
+        "performance_measurements": "No latency target or observed latency was supplied.",
+        "owner_routes": {
+          "Product change": "priya via Product decision record",
+          "missing outcome or work scope": "work owner via the request intake record"
+        }
+      },
+      "required_process": "Classify exact outcome and first changed governing layer, bind the existing exact grant or missing authority, construct only authorized effects, and record focused evidence in the smallest lawful carrier.",
+      "optional_organization": "A new durable ticket, Executive appointment, separate Reviewer or extra design document is not required solely because this is STDO work. Select coordination only for a material authority, context or independence boundary; this fixture selects none for the local cases.",
+      "actual_scope": "Only synthetic label/configuration and work-record artifacts in arm A's result directory; no Product workspace mutation.",
+      "outcome": "Run the admitted worker configuration at 2.",
+      "change_intent": "Select the already-admitted worker configuration value 2.",
+      "change_class": "realization_refactor",
+      "earliest_changed_layer": "realized configuration only",
+      "upstream_relation": "The integer value 2 is inside the Product range [1,4]; I.design expressly permits this configuration choice without changing Product or design obligations.",
+      "authority_and_carrier": {
+        "id": "work-18",
+        "kind": "existing admitted work record",
+        "grant_verbatim": "Writer may set worker_count to 2 and record evidence in work-18.",
+        "admission_evidence": "I.work.carrier_w18 plus I.work.carrier_policy: these existing records admit the exact actions stated",
+        "admission_use": "Consume existing exact admission; do not request the same grant again.",
+        "durable_result_projection": "intake-amendments.json#I3"
+      },
+      "scope": [
+        "worker_count",
+        "work-18 evidence"
+      ],
+      "public_delta": {
+        "member": "worker_count",
+        "before": 1,
+        "after": 2,
+        "membership_change": "none"
+      },
+      "concrete_result": {
+        "worker_count": 2,
+        "artifact": "worker-config-I3.json"
+      },
+      "evaluation_criteria": "worker_count equals 2 and remains an integer in the accepted range [1,4].",
+      "non_closure_conditions": [
+        "Configured count is not 2",
+        "Count is outside the admitted integer range",
+        "Any additional Product/design change is assumed"
+      ],
+      "evidence": {
+        "value": 2,
+        "admitted_range": [
+          1,
+          4
+        ],
+        "within_range": true,
+        "design_permission": "A configurable integer from 1 through 4; selecting a value inside that range changes no Product or accepted design obligation."
+      },
+      "result": "satisfied",
+      "decision": "Record the completed bounded configuration selection in work-18's simulated amendment.",
+      "additional_carrier": "None. Reuse exact admitted work-18 and its evidence surface.",
+      "reentry_destination": "None for this local change. No claim about latency improvement follows from selecting 2 workers."
+    },
+    {
+      "case_id": "I4",
+      "fixture_sources": [
+        "I.product",
+        "I.design",
+        "I.work",
+        "I.observations"
+      ],
+      "case_source": "task T6 / initial_fixture_state.cases[I4]",
+      "method_sources": [
+        "M.triage",
+        "M.proportional",
+        "M.construction",
+        "M.carrier",
+        "M.continuity"
+      ],
+      "dependencies": {
+        "meaning": [
+          "I.product"
+        ],
+        "realization_choices": [
+          "I.design"
+        ],
+        "work_authority": [
+          "I.work"
+        ],
+        "current_values": [
+          "I.observations"
+        ]
+      },
+      "unresolved": [
+        "Exact performance metric, workload and acceptable threshold are absent.",
+        "Observed latency/current failure evidence is absent.",
+        "An authorized effect scope, work lifetime and execution grant are absent.",
+        "Without these facts, the first constitutional layer needing change cannot be determined."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "request": "Make it fast enough.",
+      "selected_work": null,
+      "observed_initial_values": {
+        "displayed_label": "Maximum 100 records",
+        "worker_count": 1,
+        "performance_measurements": "No latency target or observed latency was supplied.",
+        "owner_routes": {
+          "Product change": "priya via Product decision record",
+          "missing outcome or work scope": "work owner via the request intake record"
+        }
+      },
+      "required_process": "Classify exact outcome and first changed governing layer, bind the existing exact grant or missing authority, construct only authorized effects, and record focused evidence in the smallest lawful carrier.",
+      "optional_organization": "A new durable ticket, Executive appointment, separate Reviewer or extra design document is not required solely because this is STDO work. Select coordination only for a material authority, context or independence boundary; this fixture selects none for the local cases.",
+      "actual_scope": "Only synthetic label/configuration and work-record artifacts in arm A's result directory; no Product workspace mutation.",
+      "outcome": "Unresolved: 'fast enough' supplies no testable destination.",
+      "change_intent": "Clarify requested performance outcome and effect scope before selecting a change.",
+      "change_class": "unresolved",
+      "earliest_changed_layer": "undetermined; the work outcome must first be specified at intake",
+      "authority_and_carrier": {
+        "selected_work": null,
+        "target_or_effect_grant": null,
+        "constructed_carrier": "Unadmitted request-intake clarification record in intake-amendments.json#I4"
+      },
+      "scope": "Intake clarification only; no tuning, worker change, benchmark execution or Product requirement mutation is authorized by this case.",
+      "decision": "Return the missing outcome and scope to the work owner. Do not infer a performance target or reuse I3's configuration grant.",
+      "result": "indeterminate intake with no admitted execution contract",
+      "concrete_result": "No label or configuration change in this independent case.",
+      "reentry_destination": "Work owner via the request intake record, as declared by I.observations.owner_routes.",
+      "additional_carrier": "Use this intake draft for the missing information. A durable ticket or expanded role hierarchy cannot supply the missing outcome or authority; no additional durable carrier is presently necessary or authorized."
+    }
+  ]
+}

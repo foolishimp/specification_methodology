@@ -15,13 +15,35 @@ Conjoin and Dispose responsibilities. Candidate preservation, acceptance,
 publication and consumer adoption remain distinct decisions. Its version/ref
 examples illustrate the declared release identities; each actual cut requires
 its own authorised exact binding.
+Result bindings below preserve core legal performance pairs, diagnostic
+precedence, absent coverage and actual effects. They describe the existing
+checks and decisions without adding an evaluation stage or evidence carrier.
 
 ## Release-Publication Context
 
 `RELEASE_METHOD.md` owns the release-publication bounded context
 `urn:stdo:bounded-context:release-publication` under the selected complete STDO
 basis. It owns the identities and transitions used to qualify, publish, and
-select released cuts. It does not own Product meaning or consumer adoption.
+select released cuts, including the selector/adoption protocol below. It does
+not own the consumer's Product meaning or its decision to adopt a cut; those
+remain with the consumer's governing authority under Spec's Product binding.
+
+The following arguments apply the adopted
+[F1–F6 commitments](FOUNDATIONS.md#foundational-commitments) to the instance
+premises stated in each row. The pillars contribute identity, preserved
+relations, observable execution and justified decisions to distinct release
+questions. The named consumers own the release policies; none follows from
+finite resources alone.
+
+| Deciding consumer | Premises and pillar contribution | Consequence at that consumer | Additional policy and owner |
+|---|---|---|---|
+| [Release Identities](#release-identities), [Project-Subtree Release Identity](#project-subtree-release-identity) and [Product Subject And Repository Carrier](#product-subject-and-repository-carrier) | F2, F3 and F6; a carrier may contain several Products and movable discovery names, while a cut is an exact subject for later review and use. Identity distinguishes the Product member set from its repository; information fidelity preserves the reference to that subject. | A tag over a shared commit does not make every sibling a member. A moving branch or selector cannot reacquire an earlier cut without its exact binding, and equal version text cannot collapse source project, cut, install and consumer into one object. | Release chooses the Git ref profile, namespace/subtree coordinates and immutable RC naming. Product release authority declares the subject, namespace and membership; Spec owns the recursive Product taxonomy. |
+| [Historical Ref And Public-URI Conservation](#historical-ref-and-public-uri-conservation) and [Naming](#naming) | F2–F4; consumers retain references to exact published subjects while repository organisation can change. Identity and faithful interpretation preserve what those existing references denote. | A new namespace cannot make an old authentic reference point to different content or silently substitute a new claim subject. Reorganising the carrier therefore needs a relation that preserves historical resolution. | Release chooses preservation of existing public refs and URIs and the permitted naming forms. The actual namespace and any publication transition remain with Product release authority. |
+| [Immutable RC Publication](#immutable-rc-publication) | F3, F5 and F6; publishing can dispatch effects to a remote whose response is lost or delayed. Computational execution binding locates the actual effect; evidence distinguishes that state from the local command's return. | A failed command after dispatch does not establish absence of publication. The still-authorized continuation needs remote observation before it can decide which relation is missing; it cannot move an already published immutable cut as a retry. | Release chooses the publication sequence, immutable annotated cut and required ref relation, with the stated transport conditions. The operation grant authorizes the remote effect; this argument supplies none. |
+| [Exact-Cut Qualification](#exact-cut-qualification), [Acceptance Criteria](#acceptance-criteria) and [External Qualification Dependencies](#external-qualification-dependencies) | F1–F4 and F6; a Product declares release claims with particular observation boundaries and required decisions. Reference frames select sufficient evidence for each claim; algebraic conjunction preserves all required claims and evidence/authority keeps their assessment separate from acceptance. | Evidence about source behavior cannot alone establish an installed-path claim; a skipped external-service check leaves its dependent claim unestablished. A satisfied qualification result cannot supply the human acceptance decision. Changing qualifying bytes changes the subject of further review. | Release chooses exact-cut review, required operator checks, the listed acceptance conditions and human acceptance of the immutable RC. Product authority declares the claim set and any lawful scope narrowing. |
+| [Monotonic Version-Line Advancement](#monotonic-version-line-advancement) and [Selector And Consumer Adoption](#selector-and-consumer-adoption) | F2, F3 and F6; publication discovery is mutable while a consumer's governing basis is an exact authority binding. Identity distinguishes the discovered cut from the consumer's current selection; evidence and authority distinguish a presented plan from permission to apply it. | Learning that a newer cut exists cannot change the consumer's obligations. A drifted plan no longer describes the transition that was accepted. Explicit retention of an older exact basis remains distinguishable from a latest-channel query. | Release chooses highest-ordinal selectors, monotonic advancement, separate presentation/mutation, digest-bound plans and channel downgrade refusal. The consumer's authority accepts adoption; Spec owns its Product Definition binding. |
+| [Release-Scoped Assets](#release-scoped-assets) and [Coordinated Release-Matched Asset Cohorts](#coordinated-release-matched-asset-cohorts) | F2–F4 and F6; a declared release relation includes assets derived from particular source members or several independently owned Products. Typed composition preserves the declared matching relation; information fidelity relates each derived member to its source. | Matching version labels alone do not establish source congruence. A missing or stale required member defeats the declared completeness claim, while co-publication transfers no Product meaning or acceptance authority between members. | Product authority selects the cohort relation. Release owns its matching, publication, lease and recovery policy, including the specifically declared two-commit transaction. Those mechanics apply to the adopted cohort rather than every unrelated Product sharing a repository. |
+| [Successor Baseline Conservation](#successor-baseline-conservation-stdo-up-015) | F1–F4 and F6; a successor evolves claims of an identified predecessor while their realizations may change. Specification preserves the claim; information fidelity and typed conservation test its successor meaning rather than its spelling or code shape. | Similar names do not prove retention, and an absent patch does not prove loss when a different realization preserves the claim. Evidence for retention cannot authorize changed meaning or removal. An unresolved disposition therefore leaves the affected qualification unresolved. | UP-015 chooses complete material-claim disposition and watched-support-line policy. Product authority owns removal and acceptance of replacement relations; the successor owns its record and comparison mechanism. |
 
 ## Position
 
@@ -60,6 +82,14 @@ affected scope, downstream proof obligations, and version-line disposition.
 The existence of an RC window does not authorize untriaged mutation.
 
 ## Release Identities
+
+This identity/publication family assumes [F2–F4 and F6](FOUNDATIONS.md#foundational-commitments)
+with separately governed Products and observable release carriers. A claim
+then needs its exact subject, compatible member/ref relations and actual grant
+under [Contract application](TRANSFORMATION_LIBRARY.md#contract-application).
+This member chooses immutable annotated cuts, qualified namespaces, subtree
+identity, historical conservation and monotonic selectors. Product release
+authorities assign namespaces and subjects; co-location cannot choose them.
 
 The release-publication context distinguishes:
 
@@ -174,7 +204,7 @@ The release process has three phases:
 
 There is no second final cut after an accepted RC. Publication immediately
 makes the new highest ordinal discoverable through the version-line selector;
-acceptance remains a verdict over the exact immutable RC rather than a second
+acceptance remains a decision over the exact immutable RC rather than a second
 carrier. If any byte capable of affecting the Product or a release-scoped claim
 changes, the project publishes and reviews a higher immutable RC cut instead.
 
@@ -221,16 +251,42 @@ published higher RC without matching selector advancement is an invalid,
 fail-closed release state; it never authorizes resolution of the older cut as
 the version-line latest.
 
-Publication returns a core result for the exact predicate `the declared cut
-and required public ref relation exist at the selected remote`. A local tag or
-successful command alone cannot satisfy that predicate. A transport failure
-after dispatch leaves effects `unknown` until the owning remote is observed;
-it does not establish that publication never occurred. Apply
-[workspace and context](FOUNDATIONS.md#workspace-and-context) before retry,
-then complete or repair only the still-authorised missing relation without
-moving an immutable published cut.
+Publication applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the granted remote operation, and evaluates `the declared cut and required
+public ref relation exist at the selected remote` from that remote's state.
+Its Currentness and Result conditions govern transport failure after dispatch:
+local command success or failure cannot decide the remote effect. After
+observation, complete or repair only the still-authorised missing relation;
+never move an immutable published cut.
+
+The publication, advancement, selector-resolution and cohort gates below each
+bind their stated conditions as their exact predicate. `Refused`, `fails closed`
+and `stops` preserve the domain reason: a demonstrated missing/incorrect ref,
+nonmonotonic target, stale accepted plan, defeated lease or unsupported required
+atomic transport falsifies that gate's admissibility predicate; unavailable
+remote or deciding evidence leaves it `indeterminate`. An uninterpretable
+governing subject/basis gives `invalid_basis`; evaluation outside its declared
+scope/capability gives `out_of_frame`; established fulfillment of all conditions
+gives `satisfied`. Missing reasons cannot justify satisfaction. A gate result
+does not establish actual publication/adoption, and a refused call does not
+prove `not_started` after possible dispatch. Preserve the core performance,
+coverage and observed-effect coordinates at each selected boundary.
 
 ## Exact-Cut Qualification
+
+This family assumes a declared cut, its claim set and the observation boundary
+for each claim. F1 and F2 make the evidence answer that claim rather than a
+nearby predicate; F3 binds the answer to the cut actually observed; F4 preserves
+every required item in the release conjunction. Consequently a source check,
+a package check and an installed-use check can support different predicates
+even when all report success. F6 leaves acceptance to the bound decision owner.
+The shared [result/conjunction contract](FOUNDATIONS.md#result-conjunction)
+preserves those distinctions and any uncovered item.
+
+Release policy chooses exact-cut review, required operator checks and human
+acceptance. The Product declares its claim set, external dependencies and any
+lawful narrowing. These choices determine what qualification owes; a preferred
+build shape does not exclude another realization satisfying the same claims.
 
 Qualification binds:
 
@@ -240,31 +296,34 @@ Qualification binds:
 - the exact release-scoped claim bytes;
 - the governing Product and release basis;
 - each claimed property and its observation boundary;
-- evidence subjects, owner verdicts, and unresolved gaps; and
+- evidence subjects, assessment results, owner decisions and unresolved gaps; and
 - the complete successor relation to the declared predecessor.
 
 Evidence matches the claim. Source success does not prove packaged or installed
 behavior; packaging equivalence does not prove semantic behavior; artifact
 presence does not prove usability unless presence is the exact claim.
 
-Each qualification item records its exact predicate and core result. A passed
-item maps to `satisfied` only with established performance and all required
-coverage and evidence on the exact cut; skipped work or a cached green label
-does not establish those conditions. Otherwise determine the item's verdict
-through the [core result law](FOUNDATIONS.md#result-algebra), retaining any
-independently admissible counterevidence or basis/scope diagnosis. Without
-admissible deciding support it is `indeterminate`; the passed label cannot
-raise its standing. Preserve the finer diagnostic or original outcome and
-performance (`performed`, `not_performed` or `unconfirmed`) under the core legal
-pairs. A missing required judgment remains an absent slot with the known
-performance fact or uncertainty, not an invented assessment. Conjoin the
-declared required claim set using the shared rule. A valid known failure and a
-skipped required item both remain visible; neither can be flattened into a
-green release summary.
+Each qualification item applies
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) to reliance
+on its witness under the exact cut, claimed property and observation boundary
+above. Evaluate that property using the shared Result condition, preserving the
+item's original outcome and finer diagnostic. The release's declared required
+claim set supplies the conjunction; its core result, performance and coverage
+determine standing rather than a passed label or cached release summary.
+
+For the item's claimed property, `passed` maps to `satisfied` only with
+established performance and every required coverage/evidence condition on the
+exact cut. `Failed` with admissible counterevidence is `falsified`; `skipped`,
+`cached green` or any other raw label without deciding support is
+`indeterminate`. Retain an established `invalid_basis` or `out_of_frame`
+diagnosis and separately authenticated counterevidence under the core legal
+pairs. Missing reasons, absent judgments, performance and effect observations
+apply the [core result and conjunction law](FOUNDATIONS.md#result-conjunction);
+the release labels supply no alternative rule for them.
 
 An RC is accepted only when the required exact-cut review and operator checks
 are complete and the human authority accepts that exact subject. If review
-requires any qualifying-byte change, the verdict remains attached to the old
+requires any qualifying-byte change, the review result remains attached to the old
 RC and a higher RC is published. The selector already advertises the highest
 published RC; acceptance does not move it, rewrite it, or create another final
 carrier.
@@ -297,6 +356,12 @@ the selector backward. The selector is therefore equivalent to
 `v<version>-rc.latest`, while every concrete RC tag remains addressable.
 
 ## Selector And Consumer Adoption
+
+F2, F3 and F6 imply that discovery of current publication is neither an exact
+consumer basis nor permission to change one. This family chooses separate
+presentation and mutation, digest-bound plans and same-line downgrade refusal.
+The actual consumer authority accepts the selected plan; supported retention of
+an older immutable cut remains lawful through the exact-basis route below.
 
 The version-line selector answers only:
 
@@ -388,6 +453,15 @@ belong in release-scoped carriers and consumer basis bindings.
 
 ## Coordinated Release-Matched Asset Cohorts
 
+Given F3, F4 and F6 and an explicitly declared cross-Product cohort, local member
+success cannot establish the material joins of the cohort or merge its owners.
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and core
+conjunction supply that consequence. This family additionally chooses exact
+version matching, the two-commit construction, atomic publication and ref leases.
+The declaring authorities select the cohort; separately authorized recovery
+owns any historical-backfill exception. Those policies are not universal
+atomicity requirements for unrelated operations.
+
 A Product authority may declare an explicit cross-Product **Release-Matched
 Asset Cohort** when one source corpus and its required distributed or derived
 assets must remain usable as one versioned set. The declaring relation names
@@ -422,6 +496,14 @@ index is regenerated, mechanically validated, independently qualified where
 required, and released under the same new cut name. A stale index may remain
 immutable history; it cannot accompany the changed source as the current
 cohort.
+
+`Complete`/`incomplete` describes the declared cohort relation. Evaluation of
+`every required cohort member and release/source relation holds` is `satisfied`
+only with established complete coverage; an observed missing or incongruent
+required member is `falsified`, and unobserved or unavailable closure evidence
+is `indeterminate`, retaining core basis/scope diagnoses. An unknown required
+set cannot become a proved empty cohort. This assessment and the later
+remote-publication observation remain different predicates.
 
 ### Two-Commit Construction And One Publication Transaction
 
@@ -480,13 +562,11 @@ set, and every fetched remote expected object ID or required absence to that
 unchanged content result. Post-publication qualification
 verifies the same relation from remote refs and refuses a partial cohort.
 
-On resumption, inspect the actual local and remote state relevant to these
-relations and reacquire a sufficient frame. The process may discard its former
-private context; it cannot discard observed effects or assume an uncertain
-publication was atomic. Retain valid frozen-subject evidence, invalidate only
-affected claims, and use the existing authorised recovery relation for any
-remaining effect. The core workspace/context contract governs this reset of
-belief; it does not authorise resetting repositories or remote refs.
+On resumption, apply Contract application's Currentness condition to the exact
+local and remote ref relations above and their frozen-subject evidence. The
+complete remote relation, not a prior assumption of atomicity, determines the
+publication effect. Remaining effects require the existing authorised recovery
+relation; reacquiring context supplies no repository or remote-ref reset grant.
 
 A historically published source cut may be the basis of a later same-version
 backfill only when separately authorized recovery law names that exception.
@@ -535,12 +615,10 @@ rolls back the version-line selector. Consumer adoption separately evaluates
 the exact latest target presented by the channel and mutates only after its
 digest-bound plan is accepted.
 
-Qualification and the owner decision are different predicates. A satisfied
-qualification conjunction establishes the named evidence obligations only.
-The result for `the authorised owner accepted this exact cut` requires the
-actual decision and its authority. An unperformed decision remains
-`not_performed`; its absence cannot be inferred away from a green test result.
-Similarly, acceptance is not evidence that a consumer adopted the cut.
+Apply Contract application to reliance on qualification evidence and the actual
+owner decision required above. Qualification, `the authorised owner accepted
+this exact cut` and consumer adoption are three distinct predicates; their core
+results retain their respective evidence, authority and actual performance.
 
 ## External Qualification Dependencies
 
@@ -556,6 +634,14 @@ before acceptance.
 
 ## Successor Baseline Conservation (`STDO-UP-015`)
 
+This family assumes F1–F4 and F6 and a successor whose claims derive from an
+identified predecessor. Naming, code similarity or patch absence cannot then
+establish semantic preservation, and evidence cannot authorize removal. The
+shared [preservation contract](TRANSFORMATION_LIBRARY.md#contract-application)
+supplies those constraints. UP-015 chooses complete predecessor disposition and
+watched-support-line policy. Product authority owns removal and acceptance of
+changed meaning; the consumer chooses its comparison and durable record.
+
 A successor identifies the exact predecessor immutable RC whose semantic claims
 it evolves. That origin remains immutable for the candidate. Every predecessor
 claim capable of affecting the successor receives one semantic disposition:
@@ -564,6 +650,37 @@ claim capable of affecting the successor receives one semantic disposition:
 - **superseded** — an accepted successor relation replaces it;
 - **intentionally removed** — current Product authority removes it; or
 - **not applicable** — it has no successor effect, with a bounded reason.
+
+These are row dispositions, not interchangeable verdicts on retention. Bind
+each semantic assessment to the predicate for its exact predecessor claim and
+successor relation:
+
+| Row disposition | Semantic predicate assessed | Required decision relation |
+|---|---|---|
+| `conserved` | the successor retains this predecessor claim's meaning | recording the conservation disposition under the bound mandate |
+| `superseded` | the named successor relation replaces this predecessor claim | actual acceptance of that successor relation by its governing authority, plus the bound disposition |
+| `intentionally removed` | this predecessor claim is excluded from the successor's governing claim set | actual removal by current Product authority; omission alone supplies no decision |
+| `not applicable` | this predecessor claim has no effect on the declared successor scope | supported applicability determination and the bound disposition; scope cannot be silently narrowed |
+
+On each named semantic predicate, established fulfillment maps to `satisfied`,
+an admissible counterexample to `falsified`, and insufficient evidence or a
+missing reason to `indeterminate`. An uninterpretable subject/governing basis
+is `invalid_basis`; assessment outside scope/capability is `out_of_frame`.
+Preserve the original row and cause, actual performance and absent coverage
+under the [core result contract](FOUNDATIONS.md#result-algebra). Satisfaction
+of removal or non-applicability is not a claim that predecessor meaning was
+retained. Retention and replacement may be shown by any supported realization,
+not only a familiar structure or byte-identical implementation.
+
+For a row's claimed authorized disposition, the separate decision predicate is
+`this disposition D on the exact claim and basis was made under its bound
+mandate`. A supported lawful decision is
+`satisfied`; a demonstrated absent/unauthorized decision is `falsified`;
+unconfirmed authority, reason or decision is `indeterminate`, retaining core
+basis/scope diagnoses. The table's required acceptance or removal decision is
+an actual additional obligation where named, not a decision manufactured by
+recording a row. Neither predicate overwrites the other, any known semantic
+failure, or observed and uncertain effects.
 
 An unresolved disposition blocks qualification of the affected claim.
 Conservation is semantic: patch absence does not prove loss when a

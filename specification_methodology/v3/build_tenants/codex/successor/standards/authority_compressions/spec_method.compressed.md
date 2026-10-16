@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
+source_digest: 5ad3b406d5a1612bcac33ee0aadba2aa95f712b0cc8894ba50edd72a10365798
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -27,10 +27,18 @@ select a downstream repository, package, vendor, Product, or concrete
 implementation. Constitutional examples therefore demonstrate enabled
 capabilities through neutral identities rather than consumer precedent.
 
-This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
-decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
-For that decision, route to the digest-current DMM source or compression, or to
-the aggregate STDO compression.
+This asset projects `SPEC_METHOD.md`. Its decisions consume the shared result,
+context and contract owners cited by that method. Acquire those owners whenever
+their conditions are material; this summary cannot replace them. DMM-owned IACS
+revision additionally requires the digest-current DMM source or sufficient
+projection.
+
+Common WHAT bounds admissible states, outcomes, constraints and evidence. Each
+build tenant binds those requirements to concrete operations, actors, effects,
+operational assumptions and observation through its design. Software, hardware,
+people and mixed processes are permitted bindings. Actor identity does not
+choose operation kind. Requirement-to-operation routes require their actual
+preservation evidence; an a_c structural check cannot supply it.
 
 ## Intake Triage Compression
 
@@ -347,8 +355,10 @@ the aggregate STDO compression.
   state and effect boundaries retain their checks; scope changes need their
   owner and cannot be inferred from a test.
 - For probabilistic or agentic construction, execute one bounded causal cone
-  from a reconstruction-sufficient governing basis supplied by `STDO-UP-016`
-  through `STDO-UP-019`. Identify the affected relations, selected computational
+  from a reconstruction-sufficient governing basis. Where the Design Module
+  Method applies, `STDO-UP-016` through `STDO-UP-019` supply its construction
+  inputs. Otherwise use the selected generic intake, work and construction
+  contracts. Identify the affected relations, selected computational
   dispositions, delegated construction and assessment authority, and upstream
   re-entry conditions. Do not rely on dialogue, commentary, worker memory, or
   folklore as that basis.
