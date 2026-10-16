@@ -53,6 +53,18 @@ excerpt digest beside the section digest, and the omitted rows stay in
 the owning member. `select_rows` below is the one implementation and has
 a test.
 
+Bindings (I5, E2E-01). A frame may carry `"binds"`: a list of items, each
+with `text` and optionally an `owner` and `anchor`. The header renders them
+under `Binds:`; an item that names an owner section is rendered with the
+member's SHA-256 and recorded in the manifest with `owner_sha256` and
+`section_sha256`, like a route, but the section is not copied. A bind names
+an obligation the activation of the frame binds (the construction relation
+of ACTIVATION §1; the assurance relations of FOUNDATIONS §4) and owns no
+determination. `--check` reports, for each frame that would change, whether
+an owning or bound section changed (`section-drift`) or only a member's
+digest changed while every carried section is byte-identical
+(`owner-drift-only`); the exit status is 1 in both cases.
+
 Refusal, never truncation: on any refusal no file is written, the refusal is
 printed as `refusal: <member>:<line>: <reason>` and the exit status is 2.
 
@@ -74,7 +86,7 @@ import unicodedata
 TENANT_ROOT = Path(__file__).resolve().parents[2]
 INPUTS_RELATIVE = Path('standards') / 'frames' / 'FRAME_INPUTS.json'
 FRAMES_RELATIVE = Path('standards') / 'frames'
-MAX_FRAME_BYTES = 150_000
+MAX_FRAME_BYTES = 160_000
 FRAME_ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
 
 # Ported verbatim from Codex qualification/C3/refresh_views.py:12-18 at 31f28f9.
@@ -475,6 +487,22 @@ def source_line(owner: str, anchor: str, owner_sha256: str, note: str = '') -> b
     return f'Source: {Path(owner).name}#{anchor} sha256={owner_sha256}{note}'.encode('utf-8')
 
 
+def binds_block(frame: dict) -> str:
+    binds = frame.get('binds') or []
+    if not binds:
+        return ''
+    lines = ['Binds:', '']
+    for b in binds:
+        line = f'- {b["text"]}'
+        if b.get('owner'):
+            line += f' ({Path(b["owner"]).name}#{b["anchor"]} sha256={b["owner_sha256"]})'
+        lines.append(line)
+    lines += ['', 'A `Binds:` item names an obligation the activation of this frame binds, with',
+              'the owning section and the digest of its member where it names one; the item',
+              'copies no section and owns no determination. A changed owner changes the digest.', '']
+    return '\n'.join(lines) + '\n'
+
+
 def header(frame: dict, size: int) -> bytes:
     routes = '\n'.join(
         f'{n}. [{Path(r["owner"]).name}#{r["anchor"]}](../{Path(r["owner"]).name}#{r["anchor"]})'
@@ -486,6 +514,7 @@ def header(frame: dict, size: int) -> bytes:
         '\n'
         f'Purpose: {frame["scope"]}\n'
         '\n'
+        + binds_block(frame) +
         'Each excerpt below copies one owning section of a member of this method\n'
         'byte for byte, except a `rows=k/n` excerpt (see below) and except that\n'
         'each relative link destination is rebased\n'
@@ -580,6 +609,27 @@ def build(root: Path, inputs_path: Path):
             if mode:
                 entry['rows'] = {'mode': mode, 'selected': kept, 'total': total, 'excerpt_sha256': digest(block)}
             routes_out.append(entry)
+        binds_out = None
+        if 'binds' in frame:
+            binds_in = frame['binds']
+            if (not isinstance(binds_in, list) or not binds_in
+                    or not all(isinstance(b, dict) and isinstance(b.get('text'), str) and b['text'].strip()
+                               for b in binds_in)):
+                raise Refusal(str(inputs_path), None, f'frame "{fid}": binds must be a non-empty list of items with text')
+            binds_out = []
+            for b in binds_in:
+                item = {'text': b['text']}
+                if b.get('owner') or b.get('anchor'):
+                    owner, anchor = b.get('owner'), b.get('anchor')
+                    if not owner or not anchor:
+                        raise Refusal(str(inputs_path), None, f'frame "{fid}": a bind names both owner and anchor or neither')
+                    if owner not in members:
+                        members[owner] = load_member(root, owner)
+                    member = members[owner]
+                    _, _, extent = member.section(anchor)
+                    item.update({'owner': owner, 'owner_sha256': member.sha256,
+                                 'anchor': anchor, 'section_sha256': digest(extent)})
+                binds_out.append(item)
         record = {
             'id': fid,
             'path': str(FRAMES_RELATIVE / f'{fid}.md'),
@@ -587,21 +637,26 @@ def build(root: Path, inputs_path: Path):
             'scope': frame['scope'],
             'routes': routes_out,
         }
+        if binds_out is not None:
+            record['binds'] = binds_out
         data = render(record, blocks)
         if len(data) > MAX_FRAME_BYTES:
             raise Refusal(record['path'], None,
                           f'frame would be {len(data)} bytes, over the limit of {MAX_FRAME_BYTES}; '
                           'no excerpt is truncated')
         outputs[root / record['path']] = data
-        frames_out.append({
+        entry_out = {
             'id': fid,
             'path': record['path'],
             'task': record['task'],
             'bytes': len(data),
             'sha256': digest(data),
             'scope': record['scope'],
-            'routes': routes_out,
-        })
+        }
+        if binds_out is not None:
+            entry_out['binds'] = binds_out
+        entry_out['routes'] = routes_out
+        frames_out.append(entry_out)
     manifest = {
         'kind': index.get('kind'),
         'limits': index.get('limits', []),
@@ -609,6 +664,31 @@ def build(root: Path, inputs_path: Path):
     }
     outputs[inputs_path] = (json.dumps(manifest, indent=2) + '\n').encode('utf-8')
     return outputs
+
+
+def report_section_drift(root: Path, inputs_path: Path, outputs: dict):
+    """For each frame that would change, say whether a carried section changed or only a member digest."""
+    try:
+        before = json.loads(inputs_path.read_bytes().decode('utf-8'))
+        after = json.loads(outputs[inputs_path].decode('utf-8'))
+    except (OSError, ValueError, KeyError):
+        return
+    old = {f.get('id'): f for f in before.get('frames', [])}
+    for frame in after.get('frames', []):
+        prior = old.get(frame['id'])
+        if not prior or frame.get('sha256') == prior.get('sha256'):
+            continue
+        old_routes = {(r['owner'], r['anchor']): r.get('section_sha256') for r in prior.get('routes', [])}
+        old_binds = {(b.get('owner'), b.get('anchor')): b.get('section_sha256') for b in prior.get('binds') or []}
+        changed = [f'{Path(r["owner"]).name}#{r["anchor"]}' for r in frame['routes']
+                   if old_routes.get((r['owner'], r['anchor'])) != r.get('section_sha256')]
+        changed += [f'bind {Path(b["owner"]).name}#{b["anchor"]}' for b in frame.get('binds') or [] if b.get('owner')
+                    if old_binds.get((b['owner'], b['anchor'])) != b.get('section_sha256')]
+        if changed:
+            for c in changed:
+                print(f'section-drift: {frame["id"]} {c}')
+        else:
+            print(f'owner-drift-only: {frame["id"]}')
 
 
 def list_member(root: Path, owner: str):
@@ -645,6 +725,8 @@ def main(argv=None):
                  if not p.is_file() or sha(p) != digest(data)]
         for p in drift:
             print(f'drift: {p.relative_to(root)}')
+        if drift:
+            report_section_drift(root, inputs_path, outputs)
         return 1 if drift else 0
     for path, data in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)

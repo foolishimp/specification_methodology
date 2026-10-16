@@ -49,7 +49,7 @@ expectation writer of §4, not by the candidate's author.
 
 | Arm | The actor receives | Purpose | Runs |
 |---|---|---|---|
-| A0 control | the neutral card, the task and the fixture; no method text | calibrates the `M` items: an item any control run passes is decided by the fixture, not the method | 12 × 1 |
+| A0 control | the neutral card, the task and the fixture; no method text | calibrates the `M` items: a control pass informs the attribution of benefit under §7 and removes no applicable item from criterion 4 | 12 × 1 |
 | A1 frame | the neutral card, the frame's bytes, the task and the fixture; no tools | criterion-4 evidence for curated-frame use | 12 × 2 |
 | A3 routes | as A1, plus read-only access to an isolated copy of the frozen `standards/` directory, with the instruction to follow only the frame's `Source:` lines and the links in it | the declared acquisition routes in use; supplied, cumulative and active bytes | 4 × 1 (TT-01, TT-05, TT-09, TT-11) |
 | A5 discovery | the neutral card, the task, the fixture, and read-only access to the same isolated copy entered only at its `README.md` | ordinary discovery, reported separately from curated use, never standing in for it | 4 × 1 (the same four) |
@@ -101,8 +101,8 @@ are disclosed, not denied:
 Fit is supported, never asserted, by a recorded upper bound per run:
 supplied bytes (card, frame, task, fixture, measured) plus the 15,345
 bytes above plus the actor's reported acquisition (A3, A5), under the
-declared context capacity of 150,000 bytes for a frame and 300,000 bytes
-of whole input. The harness system prompt is an unmeasured component; a
+declared context capacity of 160,000 bytes for a frame (150,000 until
+I5, E2E-01) and 300,000 bytes of whole input. The harness system prompt is an unmeasured component; a
 run's fit judgment is therefore `indeterminate` in the strict sense of
 ACTIVATION §2 step 3 unless the actor reports a measured excess
 (`falsified`) or the harness discloses its prompt size. This limit is
@@ -110,7 +110,7 @@ stated in the results.
 
 ## 6. Limits per run
 
-Context: at most 300,000 bytes of whole input, 150,000 for the frame; a
+Context: at most 300,000 bytes of whole input, 160,000 for the frame; a
 run whose supplied bytes exceed the cap is refused before it starts,
 never truncated. Wall time: 20 minutes. Spend: tokens of this session's
 allowance; no external spend. Each run records its supplied bytes and,

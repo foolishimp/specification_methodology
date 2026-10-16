@@ -661,5 +661,76 @@ class RowSelection(unittest.TestCase):
             tree.close()
 
 
+class Bindings(unittest.TestCase):
+    """I5, E2E-01: a frame binds obligations by owner section and digest without copying it;
+    --check tells section drift from owner-digest-only drift."""
+
+    def test_binds_rendered_and_recorded(self):
+        fr = frame('f', ('M.md', 'a'))
+        fr['binds'] = [{'text': 'binds the relation', 'owner': 'standards/M.md', 'anchor': 'b'},
+                       {'text': 'plain bind'}]
+        tree = TempTree({'M.md': '## A\n\nalpha\n\n## B\n\nbeta\n'}, [fr])
+        try:
+            self.assertEqual(tree.run(), 0)
+            data = (tree.root / 'standards/frames/f.md').read_text()
+            owner = sha256((tree.root / 'standards/M.md').read_bytes())
+            self.assertIn('Binds:\n\n- binds the relation (M.md#b sha256=' + owner + ')\n- plain bind\n', data)
+            self.assertNotIn('\nbeta\n', data.split('Routes, in order:')[0])
+            entry = json.loads(tree.inputs.read_text())['frames'][0]
+            self.assertEqual(list(entry), ['id', 'path', 'task', 'bytes', 'sha256', 'scope', 'binds', 'routes'])
+            self.assertEqual(entry['binds'][0]['owner_sha256'], owner)
+            self.assertEqual(entry['binds'][0]['section_sha256'], sha256(b'## B\n\nbeta\n'))
+            self.assertEqual(entry['binds'][1], {'text': 'plain bind'})
+            self.assertEqual(tree.run('--check'), 0)
+        finally:
+            tree.close()
+
+    def test_malformed_binds_refused(self):
+        for bad in ('text', [], [{'owner': 'standards/M.md', 'anchor': 'a'}], [{'text': 'x', 'owner': 'standards/M.md'}],
+                    [{'text': 'x', 'owner': 'standards/M.md', 'anchor': 'absent'}]):
+            fr = frame('f', ('M.md', 'a'))
+            fr['binds'] = bad
+            tree = TempTree({'M.md': '## A\n'}, [fr])
+            try:
+                before = tree.files()
+                self.assertEqual(tree.run(), 2, bad)
+                self.assertEqual(tree.files(), before)
+            finally:
+                tree.close()
+
+    def test_check_distinguishes_section_drift_from_owner_drift(self):
+        import contextlib, io
+        fr = frame('f', ('M.md', 'a'))
+        fr['binds'] = [{'text': 'bind', 'owner': 'standards/M.md', 'anchor': 'c'}]
+        tree = TempTree({'M.md': '## A\n\nalpha\n\n## B\n\nbeta\n\n## C\n\ngamma\n'}, [fr])
+        try:
+            self.assertEqual(tree.run(), 0)
+            member = tree.root / 'standards/M.md'
+            member.write_text(member.read_text().replace('beta', 'beta more'))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(tree.run('--check'), 1)
+            self.assertIn('owner-drift-only: f', out.getvalue())
+            self.assertNotIn('section-drift', out.getvalue())
+            member.write_text(member.read_text().replace('gamma', 'gamma more'))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(tree.run('--check'), 1)
+            self.assertIn('section-drift: f bind M.md#c', out.getvalue())
+            member.write_text(member.read_text().replace('alpha', 'alpha more'))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(tree.run('--check'), 1)
+            self.assertIn('section-drift: f M.md#a', out.getvalue())
+        finally:
+            tree.close()
+
+    def test_tenant_frames_all_bind_the_construction_relation(self):
+        manifest = json.loads((TENANT / 'standards/frames/FRAME_INPUTS.json').read_text())
+        for fr in manifest['frames']:
+            owners = {(b.get('owner'), b.get('anchor')) for b in fr.get('binds') or []}
+            self.assertIn(('standards/ACTIVATION.md', 'construction-relation'), owners, fr['id'])
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

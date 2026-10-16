@@ -245,6 +245,23 @@ must meet these requirements:
    the family-table rows whose link destinations name an anchor the
    frame carries in that member; the route records `selected`, `total`
    and the excerpt digest. It has a test.
+7. Bindings (I5, E2E-01). Each frame carries a `binds` list: items with
+   a text and, where the item names an obligation's owner, an owner and
+   anchor. The header renders the list under `Binds:` with the member's
+   digest; the manifest records `owner_sha256` and `section_sha256` for a
+   named owner, as for a route, but the section is not copied. Every
+   frame of this tenant binds the construction relation of ACTIVATION
+   §1; a frame whose task returns an evaluation or decides a reuse also
+   binds the applicable assurance relations of FOUNDATIONS §4
+   (REFERENCE_FRAME_BASIS, reconstruction and conservation paragraphs).
+   A malformed list is refused. It has tests, including one over this
+   tenant's manifest.
+8. Section-level drift (I5, E2E-01). `--check` reports, for each frame
+   that would change, the carried or bound sections whose digest changed
+   (`section-drift`) or that only a member's digest changed
+   (`owner-drift-only`). The section digest, not the member digest, is
+   the material dependency of a frame's evidence (FOUNDATIONS §4 Change
+   impact and evidence reuse). It has a test.
 
 **Part 6.** The pattern taken is: enumerate a declared finite domain
 exhaustively (Codex 34–56); derive the expected cardinalities

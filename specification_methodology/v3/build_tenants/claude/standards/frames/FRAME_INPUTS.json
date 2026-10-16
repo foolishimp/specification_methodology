@@ -3,7 +3,8 @@
   "limits": [
     "No whole-corpus sufficiency inference",
     "No authority minted by projection",
-    "Each frame is at most 150000 bytes, the frame capacity this tenant declares under ACTIVATION \u00a72 step 3 within the limits of design/CONSTRUCTION_BINDING.md; a larger frame is refused, never truncated; raised from 100000 bytes at iteration 4 when the family-table rows (tradeoff TO1) were added, the increase per frame being recorded in the ledger"
+    "Each frame is at most 160000 bytes, the frame capacity this tenant declares under ACTIVATION \u00a72 step 3 within the limits of design/CONSTRUCTION_BINDING.md; a larger frame is refused, never truncated; raised from 100000 bytes at iteration 4 when the family-table rows (tradeoff TO1) were added, and from 150000 at iteration 5 (E2E-01) when ACTIVATION \u00a77 grew and the Binds list was added, each increase per frame being recorded in design/REDUCTION.md \u00a74.3",
+    "Each frame binds the construction relation of ACTIVATION \u00a71 and, where its task returns an evaluation or decides a reuse, the applicable assurance relations of FOUNDATIONS \u00a74, by owner section and digest (Binds); the binding copies no section and owns no determination"
   ],
   "frames": [
     {
@@ -13,6 +14,18 @@
       "bytes": 119684,
       "sha256": "dc350270c394d2bdd68635513274e0dc074d2c15bdf62a6f79065503bfc82260",
       "scope": "The owning sections for the frame declaration, its activation on an exact subject and basis, the minimal evaluation result with one core result value, and the disposition of a claim that consumes the result.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "assurance-relations"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/FOUNDATIONS.md",
@@ -203,6 +216,18 @@
       "bytes": 102942,
       "sha256": "284ff2d863dc990d3d915150715d1177c8e903b28ccc98baa259f693afebc513",
       "scope": "The owning sections for workspace coverage and its statuses, frame-set declaration and selection, frames in conjunction, discovery and revision, the reuse of closed results, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "assurance-relations"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/FOUNDATIONS.md",
@@ -321,6 +346,13 @@
       "bytes": 74170,
       "sha256": "a05d94c71ece219ed22d7a80ab61d83090f486097a30b3197fd5fc57043a6746",
       "scope": "The owning sections for the model signature and typed records, the laws a transformation and its application obey with their outcomes, judgment separation and promotion, traversals, authority kinds, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/FOUNDATIONS.md",
@@ -433,6 +465,18 @@
       "bytes": 109852,
       "sha256": "53048817c8065de0e03c4f6ff4d13071e45fa7f520c04b778928e70d916f14dd",
       "scope": "The owning sections for occurrence events, relation families, constraint, judgment, residual and stop kinds with their core mapping, occurrence identity, admission and correction, causality and precedence, effects, frontiers, authority, the calculus laws they import, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "assurance-relations"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/AXIOMATIC_CALCULUS.md",
@@ -557,6 +601,18 @@
       "bytes": 117579,
       "sha256": "8d02f40cca2eed6ba31673d456d5186c144e782fddfd45a691d63876bcfc0c54",
       "scope": "The owning sections for the Executive and Reviewer frames, technical triage, the work-result values, Executive attention with its no-mutation rule and drift locks, the executive configuration, the complete engagement transition with its promotion constraints, actor binding and independence, construction availability and disposition, closed-result reuse and invalidation, independent assessment and review results with their triage projection, testing evidence composition, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "change-impact-and-evidence-reuse"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/EXECUTIVE_BASELINE.md",
@@ -711,6 +767,18 @@
       "bytes": 105371,
       "sha256": "346fe70a917aedac59af086e381d4f5c18dcb259a0226a74830a9019f6f3f4f2",
       "scope": "The owning sections for ontology-first design, proportional design sequencing and decision completeness, native constructability, the authority model, Prime atoms with whole-family and recursive contraction and root conservation, the Ontology and three-view design gate with its axiom verdicts and the design verdict as a disposition, the change classes, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "change-impact-and-evidence-reuse"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/DESIGN_MODULE.md",
@@ -781,6 +849,13 @@
       "bytes": 149039,
       "sha256": "896f6db84476f1d3a23800ab7c94dde98461f14f8a0a7709f5b483112b69025a",
       "scope": "The owning sections for transitions, intake, configuration with its optimality rule, roles and delegation, context construction with the size measurement, fit test and acquisition, the activation packet, closed results and reuse, construction availability and effects as the step result mappings, finite attention, capability fit and no assumed hierarchy, authority kinds and the kinds of independence, independent assessment and adequate attention, the executive configuration as one example, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/ACTIVATION.md",
@@ -959,6 +1034,13 @@
       "bytes": 102944,
       "sha256": "208b353b23de0cbe97909dea9d8b066c231dc8b521a39b610123c4da83866a7e",
       "scope": "The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/SPEC_METHOD.md",
@@ -1089,6 +1171,18 @@
       "bytes": 88849,
       "sha256": "8f60b69c370861875289790811bea89fd098d8bf9bd065b6e461039cc24e105a",
       "scope": "The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "change-impact-and-evidence-reuse"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/ACTIVATION.md",
@@ -1183,6 +1277,13 @@
       "bytes": 95702,
       "sha256": "f03da26a9a2a1cf6a5f490bf5990f37efd37f6a2de0a15cb35667f59c4302db3",
       "scope": "The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, the frame tuple and the activation packet; the step's intake and admission; context construction with the size measurement, acquisition, activation and evaluation; and the core result algebra.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/SPEC_METHOD.md",
@@ -1301,6 +1402,18 @@
       "bytes": 64468,
       "sha256": "4eaf8e352d8f3e9fc333d27c1b9f755acc3b34f0525678c9c2bb3276910253d4",
       "scope": "The owning sections for review results and triage, acceptance and when a finding blocks promotion, the four dispositions, the core result algebra and its conjunction, condition-based closure, release acceptance criteria, and successor baseline conservation.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "assurance-relations"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/EVALUATION.md",
@@ -1407,6 +1520,18 @@
       "bytes": 79918,
       "sha256": "4ac737973fc2a6a560de77ed324e30b816f4d5003d8bf00abdff93774a3ec59e",
       "scope": "The owning sections for the foundation-to-law table format and family index, authority kinds, imports between members, the core result algebra, independent assessment and review results, successor dispositions, and the coverage of the common conformance discriminators.",
+      "binds": [
+        {
+          "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct, returning `unresolved` for what its evidence cannot decide",
+          "owner": "standards/ACTIVATION.md",
+          "anchor": "construction-relation"
+        },
+        {
+          "text": "An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established",
+          "owner": "standards/FOUNDATIONS.md",
+          "anchor": "assurance-relations"
+        }
+      ],
       "routes": [
         {
           "owner": "standards/FOUNDATIONS.md",
