@@ -10,7 +10,7 @@ change_class: product_reprice
 re_entry_point: specification_methodology/v3/specification/PRODUCT.md
 triaged_at: 2026-10-14T03:00:21Z
 created_at: 2026-10-11T04:13:29Z
-updated_at: 2026-10-16T05:52:38Z
+updated_at: 2026-10-16T06:07:30Z
 dependencies: []
 ---
 
@@ -31,6 +31,10 @@ A fresh nonauthor working Reviewer fixes expectations from the exact preimage be
 Writer return: L1 replaces stage letters with roles, distinguishes violation event V and selected set S_Δ, and defines the evidence records without treating selection as execution. L2 binds indeterminate to the existing evidence-cannot-decide core meaning and aligns its conformance consumer, retaining unresolved work and not-performed as distinct concepts. L3 adds the owning Source and material purpose. L4 routes the shared entry to the current reviewed-input preparation. The [disposition](../../comments/codex/20261016T055238Z_DISPOSITION_I5_ASSURANCE_WORDING_REVIEW.md) qualifies the common-model observation without changing the governing clause or admitting a trial.
 
 Author checks: all eight mathematical blocks are identical under the declared symbol renaming; the witness program and results, core owners, existing work rows, historical tails, tenant trees and unrelated root edits are preserved. All 37 C3-I5-04 pins reproduce and 260 local/installed links across fourteen affected or dependent Markdown files resolve. Scoped whitespace passes. The Reviewer has fixed expectations from the preimage before successor acquisition. The separate Git Writer freezes the eight scoped source, work and commentary files for independent readback; the exact successor input is recorded only after that result.
+
+Ledger return 2026-10-16T06:07:30Z: the source is frozen at `bc8662a90323d38166164afac03468942667cf7a`. The fresh nonauthor [wording readback](../../comments/codex/20261016T055238Z_REVIEW_I5_WORDING_SUCCESSOR.md) returns `satisfied`: L1–L4 are resolved and no new material finding was found. It independently checks the eight formula blocks under alpha-renaming, all 37 historical input pins, affected links, protected owners, witness assets, tenant trees and historical work. Its frozen-source review took 257 seconds; total elapsed from the contract anchor was 740 seconds. Context fit and native spend remain uninstrumented. This is the declared same-family working readback; Claude's earlier cross-family judgments retain their exact source and supported unchanged scope.
+
+Executive disposition: `candidate_ready` for exact-source ratification. The [C3-I5-05 input](T-002-c3-successor-construction.md#c3-i5-05-proposed-input-snapshot) records forty members from the source commit; the readback is recorded in the descendant recording commit. No material correction remains in this bounded scope. Common-model fitness remains a separate evidence question: purpose-grounded actual use can contribute, without automatic validation or an exclusive validation route. I5 ratification, tenant admissions, implementation, qualification and owner acceptance remain pending. The separate Git Writer records this result, snapshot and current Goals standing after checking the pins, links and preservation boundaries; it has no push or release grant.
 
 ### Iteration 5 formal assurance
 
