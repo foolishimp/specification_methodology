@@ -47,7 +47,12 @@ Iteration 4 runs on the ratified common input C3-I4-03 (common
 specification at `3c4c503`, merged inward at `7c60f32`), with the Codex
 candidate at `fb855df` (package `d490dd6`) as donor. Its record is in
 [qualification/C3-ITER4/](../qualification/C3-ITER4/PLAN.md): the plan,
-the [rebind](../qualification/C3-ITER4/REBIND.md) and the returns.
+the [rebind](../qualification/C3-ITER4/REBIND.md) and the returns. The
+constitutional chain of SPEC_METHOD §2 was corrected at iteration 4 after
+Codex's cross-family finding R1 that the chain, as then written,
+contradicted the human and mixed realisations that §11 permits; the
+provenance of that correction is recorded here and not in the member,
+under the Specification Surface Rule.
 
 Iteration 5 runs on the ratified common input C3-I5-06 (common
 specification at `4c340f7`, merged inward at `0a05106`), with the frozen
