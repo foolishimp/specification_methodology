@@ -69,9 +69,9 @@ standing of the consequences below is stated in
 | P4a (independent), P1 (independent), P6 (independent); instance premise b | By P4a a step composes only under declared laws, by P1 structural success does not establish meaning, and by P6 preservation needs evidence, so a refinement or rewrite step is admissible only under a law declared for its subject, and each layer discharges what it preserves; a refinement is faithful only when its steps are exact and each output meets the next step's declared domain; a composite with an approximate step is adequate only within its stated adequacy relation and end-to-end bound | [Refinement](#refinement) | the laws declared for a subject: the subject's owner | 3, 4 |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P3 (independent), P6 (independent); instance premise d | By P4b a partial commit would leave facts that later steps cannot reconcile, by P3 the relation binds one basis identity, and by P6 admission is the owner's act, so admission of a material transition derives and validates the complete enclosing relation on one basis identity and commits all of it or none; qualification covers every admission owner and supported boundary | [Complete enclosing-relation admission](#complete-enclosing-relation-admission); [Standing structural qualification](#standing-structural-qualification) | the supported boundaries and the operating or threat model: the accepted design | 4, 9 |
 | P2 (independent), P3 (independent), P1 (independent), P6 (independent); instance premise a | By P2 the destination is a set of required conditions that several realised states may satisfy, by P3 the current state is the bound subject with its observations and dependencies, by P1 the required conditions, the observations and any predictive model are different accounts, and by P6 lawfulness confers no delivery or acceptance, so construction binds A and Z explicitly, works under the declared calculi, and keeps the three accounts apart | [Construction relation](#construction-relation), Binding A and Z, Three accounts | the governing specification that supplies Z: the owning authority of the selected outcome; the declared calculi: SPEC_METHOD §11 for a build tenant | 1, 5, 6, 8 |
-| P0 (recovered), P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P0 the resources that planning, checking and construction consume are finite, by P2 work is arranged to serve the destination, by P5 exhaustion of those resources leaves the outcome undecided, and by P6 a claim that one arrangement is better states its grounds, so a strategy is selected within the resource envelope with its material rationale recorded, and no strategy is imposed by this relation or its consumers | [Construction relation](#construction-relation), Strategy | the strategy itself: the realisation and the actor exercising the admitted work authority; for this corpus's Executive, EXECUTIVE_BASELINE | 5, 7, 9 |
+| P0 (recovered), P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P0 context and attention are finite, and the time, spend and other resources of the selected execution binding are finite (SPEC_METHOD §11), by P2 work is arranged to serve the destination, by P5 exhaustion of those resources leaves the outcome undecided, and by P6 a claim that one arrangement is better states its grounds, so a strategy is selected within the resource envelope with its material rationale recorded, and no preferred strategy is imposed by this relation or its consumers | [Construction relation](#construction-relation), Strategy | the strategy itself: the realisation and the actor exercising the admitted work authority; for this corpus's Executive, EXECUTIVE_BASELINE | 5, 7, 9 |
 | P4a (independent), P1 (independent), P6 (independent); instance premise b | By P4a steps compose only through compatible preconditions, effects, results and authority, by P1 a locally successful step says nothing about the composite's meaning, and by P6 end-to-end success is a claim on evidence, so each composition boundary preserves the applicable outer obligations, and local success establishes the outcome only with coverage, compatibility and outcome evidence, the chain obligations being those of FOUNDATIONS §4 Preservation through construction | [Construction relation](#construction-relation), Composition boundaries | the decomposition, order and concurrency: the strategy's owner | 3, 4, 7 |
-| P1 (independent), P2 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P1 a discrepancy between an observation and the required conditions has four candidate causes that are not conflated, by P2 the response serves the destination, by P6 each repair goes to the owner of its cause, and by P5 an undecided cause stays undecided, so feedback compares observations with the governing conditions, diagnoses among the four causes, preserves unresolved alternatives and routes each supported response to its owner; a bug is one intake category of change work, which SPEC_METHOD §4 applies at intake | [Construction relation](#construction-relation), Feedback and diagnosis | severity and priority policies: the adopting Product's work carriers ([TICKETS](TICKETS.md)) | 5, 9 |
+| P1 (independent), P2 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premise a | By P1 a discrepancy between an observation and the required conditions has candidate causes of different kinds that are not conflated, of which the relation names four, by P2 the response serves the destination, by P6 each repair goes to the owner of its cause, and by P5 an undecided cause stays undecided, so feedback compares observations with the governing conditions, diagnoses among the four causes, preserves unresolved alternatives and routes each supported response to its owner; a bug is one intake category of change work, which SPEC_METHOD §4 applies at intake | [Construction relation](#construction-relation), Feedback and diagnosis | severity and priority policies: the adopting Product's work carriers ([TICKETS](TICKETS.md)) | 5, 9 |
 | P5 (derived from P0 and P6, with P0's open-world premise), P2 (independent), P6 (independent); instance premises a, b | By P5 a step reports only what its context decides, by P2 continuing work needs a route to the destination, and by P6 completion is a claim on evidence against the destination, so preservation, progress, termination and outcome satisfaction are distinct claims, each with its own support, and an exhausted limit or an unresolved attempt proves neither completion nor impossibility | [Construction relation](#construction-relation), Preservation, progress and completion, and Evaluation and completion; [§3](#3-step-results-and-disposition); [§6](#6-cost-and-proportionality) | the completion condition of ongoing work: the owner of its mandate | 5, 7, 9 |
 
 [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method),
@@ -204,8 +204,10 @@ outcome that rests on premises retains those premises and its scope. A
 selected construction may need to discover its path while performing and
 evaluating work (P2, P3, P6).
 
-Three accounts. The specification is the internal reference model of the
-required conditions. Observations describe what does hold. A causal or
+Three accounts of the subject, distinct from the accounts of a
+construction ([FOUNDATIONS §2](FOUNDATIONS.md#accounts-of-a-construction)).
+The specification is the internal reference model of the required
+conditions. Observations describe what does hold. A causal or
 predictive model explains how an action may change the state. These
 accounts have different purposes and can be incomplete or wrong in
 different ways; a claim about one is never taken for a claim about
@@ -236,7 +238,7 @@ starting state. It is distinct from a categorical join, which is a map
 between categories ([FOUNDATIONS §4](FOUNDATIONS.md#4-algebra)). Steps
 compose through compatible preconditions, effects, results and authority,
 and each boundary preserves the applicable outer obligations. Refinement
-may add detail and construction may change state within the permitted
+can add detail and construction can change state within the permitted
 variation (§4). Decomposition, delegation, concurrent work and recursive
 application retain the affected obligations; independent actions may
 proceed concurrently where their dependencies, effects and authority
@@ -283,7 +285,7 @@ unavailable information, uncertain effects and exhausted resources
 through the continuation, repair, recovery, re-entry, yield or stop that
 §3, §5 and §6 name. Resumption reacquires current reality and retains
 valid progress; unknown effects are resolved sufficiently before the next
-dependent action (§5). Ongoing maintenance may continue under its mandate; a
+dependent action (§5). Ongoing maintenance can continue under its mandate; a
 delivery claim needs its completion condition. A resource limit can end
 an attempt with an unresolved outcome; it establishes neither achievement
 nor impossibility (P5, P2, P6).
@@ -1229,8 +1231,8 @@ refinement or rewrite that relies on it (P4a, P1).
 Exact and approximate steps. An exact step preserves meaning: under the
 subject's declared interpretation, its output means what the material it
 replaces means, and an exact refinement step carries Pᵢ to Pᵢ₊₁ without
-approximation (P1). Faithful refinement, defined above, is refinement by
-exact steps. An approximate step does not preserve meaning exactly. It
+approximation (P1). Faithful refinement, defined above, requires exact
+steps. An approximate step does not preserve meaning exactly. It
 states its adequacy relation, which says how close its output must be to
 the exact result to be close enough for the outer contract, and the
 composite that contains it states an end-to-end bound, which limits how
@@ -1249,10 +1251,11 @@ Purpose and material relation: a decomposition or rewrite that changes
 meaning, or approximations whose deviations accumulate, would let a
 composite whose every step passed violate the outer contract (P4a, P1,
 P6). The material relation is whether the composite still meets the outer
-obligations. Preservation per layer, licensing laws and the per-step
-adequacy relation are new in this corpus; the end-to-end obligations of a
-composition, and the bound an approximate composition states for the
-whole, are
+obligations. Preservation per layer, licensing laws and the per-step law
+for exact and approximate steps, including the inadmissibility of a step
+that is neither, are new in this corpus; the obligation to state an
+adequacy relation and a composition bound, and the end-to-end obligations
+of a composition, are
 [FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction),
 which this section applies to refinement steps.
 
@@ -1642,15 +1645,20 @@ permission (P4b, P0; rc.2 RF #return-a-closed-result).
 The selection of affected results after a change and the conditions for
 retaining evidence on a new subject are
 [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse);
-this section applies them to closed results and handoffs, and its three
-invalidators are instances of that relation's impact cover `I(Δ)` (P3, P6).
+this section applies them to closed results and handoffs, and the three
+invalidators below are kinds of change Δ, and a closed result is affected
+when its dependencies `D*(t)` meet the impact cover `I(Δ)` (P3, P6).
 
 A closed result is reused by an unchanged consumer that checks exact
 applicability; a role, conversation or resumption change alone invalidates
 nothing. An invalidator invalidates the affected result before reliance,
 even where the subject's own bytes are unchanged, preserving its
 predecessor/successor relation and any demonstrably independent surviving
-results. The invalidators are three:
+results. Invalidation withdraws the result from direct reliance; whether
+its evidence is retained on the new basis is decided by `retain_applicable`
+of FOUNDATIONS §4 Change impact and evidence reuse, and the changed
+coordinate alone establishes neither that the claim fails nor that it
+holds. The invalidators are three:
 
 - a material input change: a change to the result's subject or to an
   input it rests on, including the admissible evidence that bears on its

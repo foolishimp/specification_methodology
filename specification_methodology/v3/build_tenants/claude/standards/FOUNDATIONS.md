@@ -1088,9 +1088,9 @@ conservation accounting.
 The relations below connect construction to the assertions, observations
 and evidence that support claims about it. They are the shared owner for
 the preservation, assertion, provenance, quantified-assurance, reuse and
-formal-representation obligations in this corpus; ACTIVATION §4 and §7, EVALUATION §1 and §3,
-ASSURANCE §3, §10, §11 and §14, RELEASE §8 and §9 and the a_c
-interpretation apply them and state no second relation (P6). They are law
+formal-representation obligations in this corpus; ACTIVATION §1, §4, §5 and §7, EVALUATION §1 and §3,
+ASSURANCE §3, §10, §11 and §14, RELEASE §8 and §9, SPEC_METHOD §4 and
+the a_c interpretation apply them and state no second relation (P6). They are law
 carried from the common assurance requirement. A tenant chooses its
 representation and execution within these obligations. The notation
 states proof obligations; writing an implication does not discharge it.
@@ -1300,8 +1300,8 @@ Risk model. The actor exercising the admitted work authority selects the require
 assurance for the stated risk, obligations and resource limits. That
 selection identifies material failure consequences, coverage and
 uncertainty, and the conditions for action or acceptance. Additional
-evidence strengthens a claim only within its applicability and dependence
-account; neither a test count nor an assumed preference for more checks
+evidence can strengthen a claim only within its applicability and
+dependence account; neither a test count nor an assumed preference for more checks
 substitutes for that account (P6, P5).
 
 Where quantified assurance is claimed, its model states the population or
@@ -1425,8 +1425,9 @@ and an authorised response
 ([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation));
 the next selected action may acquire evidence before any repair is
 justified. [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse)
-applies this relation to closed results and handoffs, with its three
-invalidators as instances of `I(Δ)` (P5, P6).
+applies this relation to closed results and handoffs; its three
+invalidators are kinds of change Δ, and a closed result is affected when
+its `D*(t)` meets `I(Δ)` (P5, P6).
 
 ### Formal representation
 
@@ -1434,7 +1435,7 @@ The candidate's a_c interpretation represents the material obligations
 and dependency relationships of these subsections under the
 constraint-surface fidelity rule of the Product that owns this corpus,
 through [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) and the acquired
-views that project it. It distinguishes five standings of a statement: a
+views that project it. It distinguishes five kinds of support for a statement: a
 stated formula, a discharged mathematical argument, mechanically checked
 structure, an externally assessed predicate, and evidence from execution.
 An external predicate retains the source, scope and evidence required to

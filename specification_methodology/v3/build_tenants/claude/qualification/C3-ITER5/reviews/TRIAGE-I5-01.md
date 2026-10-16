@@ -45,3 +45,33 @@ at ACTIVATION §7 (`REFERENCE_FRAME_METHOD.md#return-a-closed-result`,
 `DESIGN_MODULE_METHOD.md#4b-ontology-first-design-rule`,
 `DESIGN_MODULE_METHOD.md#11d-post-ticket-design-review-rule`) read against
 their rc.2 sources, because §7 gained two paragraphs.
+
+## Triage of R-I5-01b
+
+Successor readback of `9e92e79` ([report](R-I5-01b.md)). No obligation
+absent or changed. Conserved rows: `#return-a-closed-result` conserved;
+`#4b-ontology-first-design-rule` and `#11d-post-ticket-design-review-rule`
+compatible with the two new §7 paragraphs, full judgment resting on their
+other, unchanged loci. Twelve findings, dispositions below, repairs in the
+I5-01d commit. No third readback: the repaired sentences go to the
+integrated readback of I5-09.
+
+| # | Severity | Disposition | Where |
+|---|---|---|---|
+| 1 | Medium | repaired: "the three invalidators below are kinds of change Δ, and a closed result is affected when its dependencies `D*(t)` meet the impact cover `I(Δ)`"; the FOUNDATIONS sentence says the same | ACTIVATION §7; FOUNDATIONS §4 Change impact |
+| 2 | Medium | repaired: "Invalidation withdraws the result from direct reliance; whether its evidence is retained on the new basis is decided by `retain_applicable` of FOUNDATIONS §4 Change impact and evidence reuse, and the changed coordinate alone establishes neither that the claim fails nor that it holds." | ACTIVATION §7 |
+| 3 | Medium | repaired differently: P0's contribution restricted to context and attention; the finiteness of time, spend and other resources attributed to the selected execution binding (SPEC_METHOD §11) in the consequence, rather than a new instance premise | ACTIVATION §1 row 11 |
+| 4 | Low | repaired: "no preferred strategy is imposed" | ACTIVATION §1 row 11 |
+| 5 | Low | repaired: the per-step law for exact and approximate steps, including inadmissibility of a step that is neither, is new; the adequacy-relation and composition-bound obligations are FOUNDATIONS §4 | ACTIVATION §4 |
+| 6 | Low | repaired: "Faithful refinement, defined above, requires exact steps." | ACTIVATION §4 |
+| 7 | Low | repaired: ACTIVATION §1 and §5 and SPEC_METHOD §4 added to the consumer list | FOUNDATIONS §4 header |
+| 8 | Low | repaired with finding 1: "the three invalidators below" | ACTIVATION §7 |
+| 9 | Low | repaired: "Three accounts of the subject, distinct from the accounts of a construction (FOUNDATIONS §2)" | ACTIVATION §1 |
+| 10 | Low | repaired: "five kinds of support for a statement" | FOUNDATIONS §4 Formal representation |
+| 11 | Low | repaired: "candidate causes of different kinds that are not conflated, of which the relation names four" | ACTIVATION §1 row 13 |
+| 12 | Low | repaired in part: "can add", "can change", "can continue" and "can strengthen" restored where the common text uses "can"; "phased (waterfall) delivery" kept, since "phased" defines the term for a reader who does not know "waterfall"; "places on construction" kept, since the synthesis's obligations fall on construction done with the method and the common sentence's "the method" denotes the same obligations | ACTIVATION §1; FOUNDATIONS §3, §4 |
+
+Sentences for the I5-09 integrated readback: ACTIVATION §7 paragraphs 2
+and 3 as repaired; ACTIVATION §1 rows 11 and 13; ACTIVATION §4 Refinement's
+closing provenance sentence; FOUNDATIONS §4 header consumer list and the
+Change impact closing paragraph.
