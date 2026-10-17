@@ -1,3 +1,20 @@
+# Iteration 5 Handoff, Claude Line: candidate 2
+
+Current candidate: candidate 2, `3.0.0-rc.2`, commit A `ba882bc71a259fbe027fb2004d62d566b1ee2799`, local tag
+`specification_methodology-claude/v3.0.0-rc.2` (object `fd37a5f3621e393d945057a451fc76c1db2ee43e`, not pushed),
+commit B the commit that adds `release/manifest.json` for it. It repairs the
+seven findings of the independent content review of candidate 1; the
+[review package](REVIEW-PACKAGE-RC2.md) states the changed clauses, the
+six counterexamples, the closure and bootstrap check and the readback
+scope. The [results table](RESULTS.md) and the [decision list](DECISIONS.md)
+(Q1 to Q18) are current. Every count in the record comes from
+`tools/counts.py`. Nothing is accepted.
+
+The record of candidate 1 follows unchanged below; its counts "26 members"
+and "505" were wrong (23 and 471), as the ledger records.
+
+---
+
 # Iteration 5 Handoff and RC1 Candidate, Claude Line
 
 The closing record of the Claude line's iteration 5 on the ratified common

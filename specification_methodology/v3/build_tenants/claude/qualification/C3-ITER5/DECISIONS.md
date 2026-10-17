@@ -32,4 +32,5 @@ Decisions new at iteration 5, also the owner's:
 - Q14 the entry tradeoff TO4: an entry README that routes by task, declared before the iteration 5 traces (REDUCTION §4.3).
 - Q15 the independent fidelity assessment of the interpretation and the cross-family conservation reading, which same-family evidence cannot supply (a_c/i3 README, Known gaps; `returns/I5-03.md`).
 - Q17 ownership of the result algebra and the testing-frame mappings (raised by the blind read test 2b, candidate 2): the rc.2 executive profile table gives the result algebra to REFERENCE_FRAME_METHOD and the testing mappings to the profile; the successor gives them to FOUNDATIONS §4 and ASSURANCE; proposed child row `#status-and-authority-boundary-ownership`.
+- Q18 the recurrence rule's standing (raised by review finding R4 of candidate 1): candidate 2 keeps it as generic ticket law at TICKETS §6, as rc.2's TICKET_METHOD stated it, with DESIGN_MODULE §10 refining it; making it policy of the optional design profile only would be a replacement relation that needs this decision.
 - Q16 the RC1 cut: tag, publication, selector (RELEASE §3, §7), which this line prepares and does not perform.

@@ -1,0 +1,85 @@
+{
+ "kind": "claude-install-closure-and-bootstrap-check",
+ "commit": "ba882bc71a259fbe027fb2004d62d566b1ee2799",
+ "installed_files": 82,
+ "links_outside_package": [
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/T-01/CASE-2.md"
+  ],
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/T-03-04/CASE.md"
+  ],
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/T-03-04/CASE.md"
+  ],
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/T-05/CASE.md"
+  ],
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/R-01/CASE.md"
+  ],
+  [
+   "standards/CONFORMANCE.md",
+   "../qualification/cases/R-01/CASE.md"
+  ],
+  [
+   "standards/README.md",
+   "../design/DOCUMENT_STRUCTURE.md"
+  ],
+  [
+   "standards/README.md",
+   "../a_c/i3/README.md"
+  ],
+  [
+   "standards/README.md",
+   "../frontier/PREDECESSOR_CLAIMS.md"
+  ],
+  [
+   "standards/README.md",
+   "../a_c/i3/README.md"
+  ],
+  [
+   "standards/README.md",
+   "../a_c/README.md"
+  ],
+  [
+   "standards/RELEASE.md",
+   "../frontier/PREDECESSOR_CLAIMS.md"
+  ],
+  [
+   "standards/EVALUATION.md",
+   "../frontier/PREDECESSOR_CLAIMS.md"
+  ],
+  [
+   "standards/AXIOMATIC_CALCULUS.md",
+   "X_v"
+  ],
+  [
+   "standards/frames/ac-task-a.md",
+   "X_v"
+  ]
+ ],
+ "links_with_missing_anchor": [],
+ "bootstrap_inputs": {
+  "standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+   "present": true,
+   "parses": true
+  },
+  "standards/schemas/product-definition.schema.json": {
+   "present": true,
+   "parses": true
+  },
+  "schema_is_valid_json_schema": true,
+  "template_against_schema": "2 errors as it stands (a fill-in template with placeholders; not a filled definition)",
+  "template_first_errors": [
+   "['constitution', 'stdo', 'basis', 'uri']: 'stdo://releases/REPLACE_WITH_IMMUTABLE_CUT/' does not match '^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\\\.[1-9][0",
+   "['constitution', 'stdo', 'basis', 'manifest_sha256']: 'REPLACE_WITH_64_LOWERCASE_HEX_SHA256' does not match '^[0-9a-f]{64}$'"
+  ]
+ },
+ "limits": "Built from git at the commit, with only the manifest-admitted files; no installer, toolchain manager or network was used; template validation is reported as found, not claimed."
+}

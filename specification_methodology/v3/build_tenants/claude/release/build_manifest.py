@@ -9,7 +9,7 @@ T = 'specification_methodology/v3/build_tenants/claude'
 git = lambda *a: subprocess.check_output(['git', *a], text=True).strip()
 blob = lambda path: subprocess.check_output(['git', 'show', f'{commit}:{T}/{path}'])
 def files(root):
-    out = git('ls-tree', '-r', '--name-only', commit, f'{T}/{root}').split('\n')
+    out = git('ls-tree', '-r', '--name-only', '--full-tree', commit, f'{T}/{root}').split('\n')
     return sorted(p[len(T) + len(root) + 2:] for p in out if p)
 sha = lambda b: hashlib.sha256(b).hexdigest()
 std = [{'path': p, 'sha256': sha(blob('standards/' + p))} for p in files('standards')]
@@ -32,5 +32,6 @@ V = getattr(jsonschema, 'Draft202012Validator', jsonschema.Draft7Validator)
 errs = list(V(schema).iter_errors(m))
 for e in errs: print('SCHEMA:', list(e.path), e.message[:160])
 if errs: raise SystemExit('refusal: manifest does not validate')
+if not std or not plug: raise SystemExit('refusal: empty member set')
 json.dump(m, open('release/manifest.json', 'w'), indent=1); open('release/manifest.json', 'a').write('\n')
 print(f'manifest: {len(std)} standards files, {len(plug)} plugin files; validates against the schema')
