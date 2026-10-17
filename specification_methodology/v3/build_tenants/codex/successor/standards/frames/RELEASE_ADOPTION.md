@@ -554,7 +554,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 #### Explicit Complete Consumer Update
 

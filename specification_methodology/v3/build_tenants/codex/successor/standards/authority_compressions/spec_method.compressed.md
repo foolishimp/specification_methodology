@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87
+source_digest: d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -375,8 +375,9 @@ may record shared derivations for a family of tests.
   re-entry conditions. Do not rely on dialogue, commentary, worker memory, or
   folklore as that basis.
 - The constructor owns bounded implementation and self-review. Where
-  independent assessment supports promotion, the assessor verifies the exact
-  live code, authority paths, proof, and installed subject. A constructor
+  independent assessment supports promotion, the assessor evaluates the exact
+  live realisation under the selected computational binding, its authority
+  paths, proof, and installed subject. A constructor
   summary is not independent evidence. This separates roles without prescribing
   actor count, model, prompt, tool, process topology, or orchestration runtime.
 - A bounded proxy may accept preservation, require local repair, reject a

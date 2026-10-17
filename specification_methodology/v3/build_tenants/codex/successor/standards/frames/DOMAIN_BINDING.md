@@ -995,7 +995,7 @@ graph, ledger and four-function architecture remains this profile's choice.
 <!-- STDO3_PROFILE_BINDING_END -->
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 ### WHAT, HOW, And Work Carriers
 

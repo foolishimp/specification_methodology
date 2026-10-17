@@ -546,7 +546,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -613,17 +613,17 @@ bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
 
 
-Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 ### Construction, Assessment, And Delegation
 
 The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live code,
-authority paths, proof, and installed subject rather than treating the
-constructor's summary as sufficient evidence. This preserves the independent-
-review relation; it does not prescribe an actor count. One actor may occupy
-different roles across different claims when independence for the assessed
-claim is preserved.
+assessment supports promotion, the assessor evaluates the exact live realisation
+under the selected computational binding, its authority paths, proof, and
+installed subject rather than treating the constructor's summary as sufficient
+evidence. This preserves the independent-review relation; it does not prescribe
+an actor count. One actor may occupy different roles across different claims
+when independence for the assessed claim is preserved.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local

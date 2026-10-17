@@ -488,7 +488,7 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -563,12 +563,12 @@ does not block the bounded claim.
 ### Construction, Assessment, And Delegation
 
 The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live code,
-authority paths, proof, and installed subject rather than treating the
-constructor's summary as sufficient evidence. This preserves the independent-
-review relation; it does not prescribe an actor count. One actor may occupy
-different roles across different claims when independence for the assessed
-claim is preserved.
+assessment supports promotion, the assessor evaluates the exact live realisation
+under the selected computational binding, its authority paths, proof, and
+installed subject rather than treating the constructor's summary as sufficient
+evidence. This preserves the independent-review relation; it does not prescribe
+an actor count. One actor may occupy different roles across different claims
+when independence for the assessed claim is preserved.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local
@@ -713,7 +713,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
 
 ### Computed Classification And Treatment
 
