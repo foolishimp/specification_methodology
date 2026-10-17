@@ -35,3 +35,5 @@ such:
 Every count in the candidate 2 record is generated from the record. This
 corrects three hand-typed counts in candidate 1's record: 26 members
 (23), 505 unread rows (471) and 182 uncovered sections (183).
+
+Update: the author found five defects in the repairs after the freeze (a wrong section number, one clause that overstates its owner, one release-note claim, an unchanged function table row, and a missing family-table argument at the new owner of the recurrence rule). They are disclosed with intended fixes in the review package at `37c5b9b4`, section "Found by the author after the freeze"; commit A is unchanged.
