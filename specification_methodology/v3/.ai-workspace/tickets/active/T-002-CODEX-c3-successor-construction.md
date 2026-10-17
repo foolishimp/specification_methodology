@@ -23,6 +23,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## RC1 continuation
 
+RC1-SOURCE returns the bounded source repair at `5fd3b789ef6e0039f722676cdd0126113c745a11`. [RC1-INTEGRATION](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/BUILD.md) carries its affected publication cone to one complete package before consolidated review.
+
 The owner directs larger construction increments and consolidated review at the candidate freeze; only changed contracts and affected consumers are checked during construction. [Execution cadence](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/PACING.md) records this continuation of EC-CODEX-RC1-01. Existing evidence is reused where applicable.
 
 2026-10-17T02:38:53+00:00 — Owner instruction: “ok i'm going to let you both continue to the RC1”. The common pen records continuation toward v3.0.0 RC1 on the ratified I5 input; both lines retain their own execution and territory. Codex's [EC-CODEX-RC1-01 activation](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/ACTIVATION.md) binds preimage `99f932cfece1a7c9ba6f85c44c47d2403a486aa7`, existing criteria, independent source/evidence assessment and staged release preparation. Separate admission: `admitted`, contract SHA-256 `6fa40e8aba8bcdea21d49c2bd39c376fd75b1805d3b870f507f97c0bc5fcc1e9`. RC1-SOURCE, RC1-QUALIFICATION and RC1-RELEASE are the initial dependency-ready activations after inward reception. Scope is continuation, not acceptance of a specific replacement, candidate or release. The common Ledger Writer records this entry; Git Writer checkpoints the record and receives its exact commit into the clean Codex branch with an unchanged tenant tree.
