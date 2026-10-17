@@ -1,0 +1,163 @@
+{
+  "scope": "DOMAIN",
+  "candidate": "ea27616b93c80b13ee15a9931cd9114275e5de13",
+  "command": [
+    "claude",
+    "--restricted",
+    "--print",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--no-session-persistence",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowed-tools",
+    "Read,Glob,Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--max-budget-usd",
+    "6"
+  ],
+  "cwd": "/tmp/stdo-rc1-end-review-ea27616b93",
+  "prompt_sha256": "9ff41ce825b529ca68c4a31aee34d9228f17ef462d45d1e4d8be32d409d90da4",
+  "started_at": "2026-10-17T03:23:44.564002+00:00",
+  "elapsed_seconds": 388.623,
+  "exit_code": 0,
+  "timed_out": false,
+  "max_budget_usd": 6,
+  "model": "claude-opus-5-5",
+  "tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "result": {
+    "duration_api_ms": 386024,
+    "stop_reason": "end_turn",
+    "session_id": "d5836637-1630-46fa-84a9-5714ee77118c",
+    "total_cost_usd": 3.614972799999999,
+    "usage": {
+      "input_tokens": 92,
+      "cache_creation_input_tokens": 215147,
+      "cache_read_input_tokens": 6868044,
+      "output_tokens": 25991,
+      "output_tokens_details": {
+        "thinking_tokens": 10438
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 215147,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 6655,
+          "cache_read_input_tokens": 217024,
+          "cache_creation_input_tokens": 1346,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1346
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-opus-5-5": {
+        "inputTokens": 92,
+        "outputTokens": 25991,
+        "cacheReadInputTokens": 6868044,
+        "cacheCreationInputTokens": 215147,
+        "webSearchRequests": 0,
+        "costUSD": 3.614972799999999,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 10438,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "safety_stops": 0,
+    "is_error": false,
+    "num_turns": 74,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "## FINAL REVIEW: Codex STDO v3 candidate `ea27616b`, source/domain partition\n\n**Bottom line:** the members in this partition are **not ready for acceptance**. I found two confirmed defects, both medium. Several required judgments are also still pending, and the shared actual-use trial was not run, so criterion 4 can't be satisfied. Nothing here amounts to acceptance, release, a winner or proof for the whole candidate.\n\n**Ordering:** I read basis/INTENT, PRODUCT, requirements/README and conformance/README first, then the predecessor sources, and posted EXPECTATIONS (E1\u2013E10) before opening any candidate, account, conservation, evidence or prior-review file.\n\n### Confirmed defects\n\n**D1 (medium): three UX compliance tests disagree, and the open owner decision is not recorded anywhere in the candidate.**\n- **Where:** `candidate/standards/UX_METHOD.md:172` and `:186` (\u00a74A: a realisation is compliant if it preserves \u00a74\u2013\u00a78). `:416` (\u00a712: \u00a74\u2013\u00a710 hold and the \u00a714 failure patterns are absent). `:623` (\u00a718: \u00a74\u2013\u00a710 plus \u00a714). `:537` and `:300` (closure also requires the \u00a78A replay proof and \u00a711 accessibility).\n- **What's missing:** the Governing Relations table (`:31\u201339`) never mentions the conflict. The account marks the 4A, 12 and 18 rows `conserved` (conservation-by-source/UX L321, L942, L1396) and never cites `basis/PRODUCT.md:433`, which says the replacement for these tests is still an open owner decision. A grep found no candidate or account text acknowledging the conflict.\n- **Trigger:** a surface that preserves \u00a74\u2013\u00a78 but skips runtime validation at an untrusted seam. \u00a74A calls it compliant; \u00a712 and \u00a714 item 14 call it a violation. A second case: a surface where \u00a74\u2013\u00a710 hold but there is no \u00a78A replay proof. \u00a712 calls it compliant; \u00a713B (`:537`) withholds closure.\n- **Consequence:** three places in one candidate decide \"method-compliant\" differently, which is a counterexample under single-ownership req. 7 and discriminator L60. Copying the predecessor text word for word, with the \u00a71A fail-closed rule still in force, is lawful conservation. What is missing is any record of the conflict. Without that, consumers and a_c projections can pick one test without anyone noticing.\n- **Smallest repair (UX owner):** add one clause to UX Governing Relations. It should name the three tests and the pending PRODUCT decision, and state that \u00a71A fail-closed governs until a replacement is accepted. Carry that clause as an interpretation residual, and cite the decision in the 4A, 12 and 18 rows.\n\n**D2 (medium): `POSTING_GUIDE#boundary` is labelled `conserved`, but its required work changed.**\n- **Where:** `candidate/standards/POSTING_GUIDE.md:21\u201327` adds a duty before publishing any review or handoff: apply Workspace and context, and report any judgment as a complete core result record (predicate, subject, basis, verdict, performance, outcome, evidence, unresolved items and effects).\n- **Account:** the row (conservation-by-source/POSTING L3\u201315) is `conserved` and lists only `POSTING_GUIDE.md#boundary`. It omits `FOUNDATIONS#result-algebra` and `#workspace-and-context`, so the criterion 1 locus list is incomplete.\n- **Trigger:** a REVIEW post whose analysis says, in prose, that a design is unsafe. That conforms to the predecessor and does not conform to the successor.\n- **Consequence:** under the disposition requirement, a changed obligation needs a named replacement relation and an owner decision. A general common requirement does not accept specific changed meanings (PRODUCT L224).\n- **Smallest repair (choose one):** limit the clause to judgments a post offers as assessment results. Or mark the row `superseded`, pending, tied to the shared result-algebra replacement, and add the two Foundations loci.\n- **Same pattern, low severity:** `WRITING_GUIDE.md:106\u2013108`, where a writing review must use the core result.\n\n### Disputed (not counted as defects)\n- **Glossary wording tension:** `GLOSSARY_GUIDE.md:7\u20138` says the file declares no \"disambiguation\", but `:44\u201370` is a table separating the senses of one label. Its own text says it adds no definition or precedence, so this is low severity.\n- **Writing qualifier:** `WRITING_GUIDE.md:116,127` adds \"within the owning authority\" to the delete/supersede instruction. I read this as making explicit an authority that already applied, which is conservation, so I didn't count it.\n- **Common-inventory gap (for the common pen, not a candidate defect):** PREDECESSOR_CLAIMS has no row for the POSTING_GUIDE H1 body (predecessor L3\u201315). The candidate does carry that text word for word (`:5\u201315`).\n\n### Supported within what I read\n- **TOP stays optional:** an absent adoption leaves it inactive (`TRAVERSAL_OCCURRENCE_PROFILE.md:6,36,63\u201371`).\n- **Generic outcome-driven law sits in Foundations, not ODD:** `FOUNDATIONS.md:907\u2013996`, plus the optional Executive at `:1016`. This holds for discriminators L20 and L24.\n- **Changed generic assessment is executor-neutral, with direct Writer entry kept:** `SPEC_METHOD.md:1886\u20131922` (L45, L56). The author's case set includes a human procedure.\n- **Domain outcomes map into the core with reasons, and none raises standing:** BASELINE work result (`:555\u2013596`) and boundary effect (`:544\u2013553`), ODD A8/A9 (`:1197\u20131235`), UX \u00a78A replay (`:324\u2013339`), WM eligibility versus decision (`:44\u201360`), TOP judgments (`:754\u2013806`).\n- **Foundations result algebra and conjunction:** read in full (`:322\u2013579`); consistent with the requirement.\n- **UX \u00a75, \u00a76 and \u00a78A replacements:** honestly recorded as `proposed_pending_owner_decision` with `owner_decision: null`.\n\n### Changed scope and the eleven unmatched relations\n- I sampled one of the eleven unmatched positives: FOUNDATIONS.construction-assurance listing BASELINE.assurance-subject-acquisition-and-evaluation as a consumer. The BASELINE source (`:1244`, `:1256`) does cite the subsections `#assertions-and-observations` and `#parallel-assurance-and-provenance`. So the relation is real at subsection level, not stale; the reciprocal just belongs at the subsection rows. It stays open for the owner.\n- I did not assess the other ten, the 100 inverse projections or the five carrier calls.\n\n### Coverage\n- **Read in full, both sides:** UX, POSTING, standards README; predecessor WRITING and GLOSSARY.\n- **Partly read:**\n  - WRITING candidate: 60\u2013146 only (rows Core Rule through Good Prose unassessed).\n  - GLOSSARY candidate: 1\u201380, plus an anchor check.\n  - TOP: 1\u201380 and 752\u2013806.\n  - ODD: 1\u2013110 and 1180\u20131250.\n  - WM: 1\u201364.\n  - BASELINE: 1\u201380, 500\u2013600, 790\u2013860 and 1222\u20131262.\n  - FOUNDATIONS: 322\u2013579 and 907\u20131022.\n  - SPEC: 1886\u20131960.\n- **Templates and schemas:** grep only. That supports E7 for the frame-basis template, which keeps its optional Executive. Nothing else there was assessed.\n- **Predecessor rows actually assessed:**\n  - UX: all 24 by text comparison, but dispositions checked for only 4A, 5, 6, 8A, 12 and 18. Note: 13B moves classification to Ticket; I didn't check that row's disposition.\n  - POSTING: all 9. Eight are word-for-word and supported; one has D2.\n  - WRITING: 5 of 9.\n  - README: 1.\n  - GLOSSARY: 2 of 14.\n- **Unassessed:** every other ODD, WM, TOP and BASELINE row, every template and schema row, and the `TICKET#sprint-close-review` binding.\n- **Reuse:** none. The prior closed reviews don't cover these rows. The BASELINE amendments they judge (R007, R009) were neither checked nor relied on here.\n\n### Six criteria (this partition only)\n\n| # | Criterion | Judgment and why |\n|---|---|---|\n| 1 | Disposition completeness | Rows I checked each have one disposition. The POSTING#boundary locus list is incomplete (D2). |\n| 2 | Conservation | Supported for 8 POSTING rows and the word-for-word UX rows. D2 is a counterexample. |\n| 3 | Accepted replacements | Not satisfied: UX \u00a75, \u00a76 and \u00a78A are still pending owner decisions. |\n| 4 | Actual use / context fit | Indeterminate: no trial was run and context fit was not measured. |\n| 5 | Fidelity / conformance | D1 is a counterexample for UX. The other discriminators I checked are supported within my reading. |\n| 6 | Governing reduction | Not established: no deciding-path comparison was done, and D1 is a counterexample for UX. |\n\n### Resources\n- **Spend:** about $3.5 of the $6 allowance, by the running meter.\n- **Elapsed time and context:** not available to me; the parent has the measured values.\n- **Stopped early:** I stopped short of full coverage to stay within budget. Everything listed as unassessed above remains open; I have not marked any of it satisfied.",
+    "ttft_ms": 2350,
+    "type": "result",
+    "duration_ms": 387370,
+    "uuid": "0df432d0-c57a-410f-bb96-c8bf00c0fc81",
+    "ttft_stream_ms": 2157,
+    "time_to_request_ms": 391,
+    "first_content_frame_ms": 2157,
+    "queued_turn_count": 0,
+    "result_index": 0
+  },
+  "context_account": {
+    "unique_requests": 46,
+    "request_input_sums": {
+      "input_tokens": 92,
+      "cache_creation_input_tokens": 215147,
+      "cache_read_input_tokens": 6868044
+    },
+    "provider_input_sums": {
+      "input_tokens": 92,
+      "cache_creation_input_tokens": 215147,
+      "cache_read_input_tokens": 6868044
+    },
+    "reconciled": true,
+    "maximum_request_input": 218372,
+    "aggregate_output_tokens": 25991,
+    "conservative_peak_token_upper_bound": 244363,
+    "reported_context_windows": [
+      1000000
+    ],
+    "basis": "Includes input, cache creation and cache read; adds the entire call output as a conservative request-output bound. Only observed provider requests are covered."
+  },
+  "expectations_order": {
+    "expectations_stream_line": 82,
+    "first_detected_subject_acquisition_line": 85,
+    "precedes": true,
+    "limit": "Path-based detection is supported by retained ordered tool arguments; manual readback still owns the interpretation."
+  }
+}

@@ -52,3 +52,5 @@ shows; any acceptance standing.
 ## Results
 
 Posted separately when the reads close, with the A/B key.
+
+Update: test 3 was stopped while running and is cancelled at the product owner's instruction ("dont look at codex you dont have tokens to waste"); tests 1 and 2 are posted with their keys; no further reading of the Codex candidate by this line.
