@@ -109,7 +109,8 @@ def conservation(args, context, build):
                 body = parser.section_body(raw.decode(), anchor).encode() if anchor else raw
                 member_pins[path] = {'sha256': rc1.sha(raw), 'bytes': len(raw)}
                 locus_pins[route] = {'sha256': rc1.sha(body), 'bytes': len(body), 'member_sha256': rc1.sha(raw)}
-        row['successor_sha256'] = locus_pins[row['successor_locus']]['sha256']
+        if row.get('successor_locus'):
+            row['successor_sha256'] = locus_pins[row['successor_locus']]['sha256']
         row['current_review'] = {'source_commit': args.source_commit, 'account_commit': args.account_commit,
             'standing': 'current_affected_readback_pending' if row['id'] in changes['affected_claims'] else 'historical_scope_only_no_new_assessment',
             'reuse': 'Exact current loci are bound. Earlier evidence retains its subject and limits; no owner acceptance or unassessed fidelity is inferred.'}
@@ -205,6 +206,22 @@ def verify(args, context, build):
         raise ValueError('Frozen package membership differs')
     for member in members:
         rc1.authenticate(args.package_commit, PACKAGE / member['path'])
+    entry = json.loads(rc1.authenticate(args.source_commit, HERE.parent / 'entry/RETURN.json'))
+    if rc1.sha((HERE.parent / 'entry/RETURN.json').read_bytes()) != INPUTS['entry_return_sha256']:
+        raise ValueError('Different closed ENTRY return')
+    for change in entry['changes']:
+        if rc1.sha((REPO / change['path']).read_bytes()) != change['candidate_sha256']:
+            raise ValueError('Closed ENTRY carrier changed')
+    for name in ['spec_method.compressed.md', 'stdo_compressed.md']:
+        text = (PACKAGE / 'standards/authority_compressions' / name).read_text()
+        expected = ['Return evidence, a core verdict', 'and a proposed disposition: `accept` maps to `satisfied`',
+                    '`falsified` for a demonstrated defect or `indeterminate` for inadequate',
+                    '`re_enter` maps to `falsified` for a defeated candidate',
+                    '`invalid_basis` for an unusable governing basis',
+                    '`reject` maps to `falsified` for a governing-relation violation',
+                    'its separate decision result never overwrites the assessment']
+        if any(fragment not in text for fragment in expected):
+            raise ValueError('Reason-sensitive owner mapping lost in ' + name)
     check = context.library('synthesis/check_artifacts.py').Check()
     check.links_and_surface(); check.compressions(); check.ownership_signals()
     if check.failures:
@@ -247,6 +264,18 @@ def verify(args, context, build):
     for r in mapping['rows']:
         if r['disposition'] == 'superseded' and (r['successor_relation']['owner_decision'] is not None or r['successor_relation']['standing'] != 'proposed_pending_owner_decision'):
             raise ValueError('Proposal acquired unsupported acceptance')
+    allowed = [str(HERE.relative_to(REPO)) + '/', str((HERE.parent / 'entry').relative_to(REPO)) + '/',
+               prefix + 'interpretation/', prefix + 'standards/authority_compressions/',
+               prefix + 'standards/frames/', prefix + 'standards/verification_material/']
+    exact_paths = {prefix + 'README.md', *(c['path'] for c in entry['changes'])}
+    changed_paths = set()
+    for checkpoint in {args.source_commit, args.account_commit, args.package_commit}:
+        paths = subprocess.check_output(['git', 'diff-tree', '--no-commit-id', '--name-only', '-r', checkpoint], cwd=REPO, text=True).splitlines()
+        if any(p not in exact_paths and not any(p.startswith(a) for a in allowed) for p in paths):
+            raise ValueError('Checkpoint escaped exact granted territory')
+        changed_paths.update(paths)
+    subprocess.run(['git', 'diff', '--exit-code', INPUTS['starting_tenant'], args.package_commit, '--',
+                    str(rc1.I5.relative_to(REPO)), str(PRIOR.relative_to(REPO))], cwd=REPO, check=True, stdout=subprocess.PIPE)
     projections(args, build)
     rc1.write(HERE / 'CANDIDATE.json', {'kind': 'stdo.rc1.end-repair-candidate', 'common_input': INPUTS['common_input'],
         'source_commit': args.source_commit, 'account_commit': args.account_commit,
@@ -255,6 +284,7 @@ def verify(args, context, build):
         'source_commit': args.source_commit, 'account_commit': args.account_commit, 'package_commit': args.package_commit,
         'members': len(members), 'account_rows': len(rows), 'conservation_counts': counts, 'proposal_count': len(proposals),
         'exact_inverse': True, 'historical_unmatched_observations': 11, 'native_projection_cases': 2,
+        'changed_paths': sorted(changed_paths), 'historical_I5_and_RC1_preserved': True,
         'unchanged_raw_standards_frames_identity': unchanged, 'reused_identity_receipt_sha256': rc1.sha(prior_identity),
         'artifact_checks': check.counts, 'limits': ['Writer checks, not independent fidelity or actual-use qualification.',
             'Conservation proposals, the separate UX compliance decision and material consumer coverage remain open.']})

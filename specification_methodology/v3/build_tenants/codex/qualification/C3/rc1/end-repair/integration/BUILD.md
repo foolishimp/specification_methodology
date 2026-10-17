@@ -9,3 +9,7 @@ The adapter imports the byte-pinned existing RC1 adapter, account integrator, co
 One source/account/package construction sequence and changed-scope checks are selected. Two native projections cover ordinary procedure acquisition plus UX residual retention, and manual refresh acquisition. Unchanged standards, frames and identity proof are reused by exact bytes. No historical full suite or eighteen-projection sweep is selected. Progress at 30 minutes; return at 60; local native tools only, zero paid calls/subagents. Acquisition and elapsed measurement are reported separately from context qualification.
 
 RC1-INTEGRATION explicitly transitions Writer to Git Writer for the source checkpoint: its changed candidate paths, this integration directory, and the closed ENTRY paths only. It resumes Writer for the frozen account and package build afterward.
+
+Source checkpoint: `2e0c77b909a97648f8edd70981b9a426662df9cc`. The authenticated integrator applied 12 explicit updates (including the unchanged repeated-block coordinate witness), retaining 708 rows. The exact inverse normalization affects 29 field values, including order normalization and the removal of eleven unmatched positive pairs into their retained historical observation account. It is not a claim of semantic source absence or complete coverage.
+
+RC1-INTEGRATION transitions Writer to Git Writer for the account checkpoint in this integration directory only, then resumes Writer for generation and the one completed-package check.
