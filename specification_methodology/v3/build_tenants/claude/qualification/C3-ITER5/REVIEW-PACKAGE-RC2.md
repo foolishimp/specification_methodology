@@ -104,3 +104,20 @@ retained on its stated conditions; the counts in the record come from
   other four are mapped only in the results table.
 - The entry README routes to the interpretation and the frontier, which
   the package does not admit (Q11).
+
+## Found by the author after the freeze
+
+Five checks after commit A was tagged found these in the changed clauses.
+Commit A is not edited; each is disclosed here for the readback, with the
+fix intended for the next candidate.
+
+| # | Where at commit A | What is wrong | Intended fix |
+|---|---|---|---|
+| P1 | DESIGN_MODULE §4, Functional bias, the R3 repair: "under §7 [Immutable carriers](#immutable-carriers)"; the release note and this package repeat "§7" | Immutable carriers sits under "## 10. Realisation rules"; §7 is the predecessor's numbering. The link resolves; the number is wrong | "§10 Immutable carriers" in the member, the note and the package |
+| P2 | ASSURANCE §11, lines 682-685, the R2 repair: "an observation that cannot separate subjects on which the predicate agrees decides it" | says more than the owner: FOUNDATIONS §4 makes the condition necessary for a sound complete decision, states that it establishes no executable decision procedure, and keeps the support of the observation binding a separate requirement. The finding needed only the qualifier "on which the assessed predicate takes opposite truth values" | delete the added clause |
+| P3 | release note, R6 line: "with correct counts and no link out of the package" | `release/INSTALL_CHECK.json` lists six CONFORMANCE links to `../qualification/cases/…` outside the package; the repair removed only the link to the construction specification | "and no link to the construction specification" |
+| P4 | ODD §11.5D function table, row `evaluate_next`, output `PriorityProjection + NextActionProjection + selected_action` | does not show the core result that a typed no-action with no preceding closure decision now returns (A4, the R5 repair) | add "and, for such a typed no-action, its core result (A4)" to the output cell |
+| P5 | TICKETS Foundation to law, migration row: its consequence derives migration closure; its rule cell lists Recurring realisation and library declaration | after R4 TICKETS owns the recurrence rule, but the rule's premises and consequence (each further local rebuild adds cost with no new route to the outcome, P2; similar code is not one identity, P3) remain only in DESIGN_MODULE's row, the refinement | add the recurrence consequence to TICKETS' family table and make DESIGN_MODULE's row cite it as the refinement |
+
+TICKETS is a tier 2 member, not a profile, so "ticket law … whichever
+profiles the Product adopts" holds as written.
