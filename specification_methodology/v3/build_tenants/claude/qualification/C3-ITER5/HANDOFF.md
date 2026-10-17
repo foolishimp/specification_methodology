@@ -1,17 +1,17 @@
-# Iteration 5 Handoff, Claude Line: candidate 3
+# Iteration 5 Handoff, Claude Line: candidate 4
 
-Current candidate: candidate 3, `3.0.0-rc.3`, commit A `9e901690e9f9b66917cafd917fff9ad755efa2a6`, local tag
-`specification_methodology-claude/v3.0.0-rc.3` (object `abc1d3424dcb408bb09b1e8cad7ab22af7f17106`, not pushed),
-commit B the commit that adds `release/manifest.json` for it. It carries
-candidate 2's repairs of the seven findings of the independent content
-review of candidate 1, with the eight clean-ups the author found after
-the candidate 2 freeze. The [review package](REVIEW-PACKAGE-RC3.md) is
-written for Codex's affected readback and gives the rerun commands with
-their arguments. The [results table](RESULTS.md) and the
-[decision list](DECISIONS.md) (Q1 to Q18) are current. The unrun
-conservation batches 05, 06 and 13 hold text of sections the repairs
-changed; batches are rebuilt from the candidate when the reading is
-scheduled. Nothing is accepted.
+Current candidate: candidate 4, `3.0.0-rc.4`, commit A `7c6497820dfcf0fb9e35ee4b3cc60dd547c004a8`, local tag
+`specification_methodology-claude/v3.0.0-rc.4` (object `dd1b664f99a895e5db90b281445522e953e67d1a`, not pushed),
+commit B the commit that adds `release/manifest.json` for it. It repairs
+the four findings of Codex's affected readback of candidate 3 and, at the
+owner's choice, the intake re-entry that this line's root-cause review of
+the Codex RC1 repair found (Q19). The [review package](REVIEW-PACKAGE-RC4.md)
+is written for Codex's affected readback, with the adverse cases and the
+rerun commands. The [results table](RESULTS.md) and the
+[decision list](DECISIONS.md) (Q1 to Q19) are current. Candidate 3,
+`9e90169`, is superseded. The unrun conservation batches 05, 06 and 13
+hold text of sections the repairs changed; batches are rebuilt from the
+candidate when the reading is scheduled. Nothing is accepted.
 
 The record of candidate 2 follows unchanged below.
 
