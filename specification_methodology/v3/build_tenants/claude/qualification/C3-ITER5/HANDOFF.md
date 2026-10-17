@@ -65,6 +65,10 @@ Digests at commit A: SHA-256 of the sorted `shasum -a 256` lines of each tree's 
 - **Reviews owed, bundled into one pass after this cut at the owner's instruction:** the conservation reading, the traces, the receiving-line assessment of the ports, the integrated readback of the iteration 5 repairs, and tests 2 and 3 of the blind read. Their findings may lead to candidate 2 on the same version line.
 - **Manifest conventions.** `standards.source_root` and the release note's `source_path` carry the values the manifest schema fixes for a published cut (`specification/standards`, `releases/v3.0.0.md`); at this candidate the standards live under the project subtree root named in the manifest, and the note at `release/release-note.md`. The pen relocates them at publication.
 
+## Corrections after the freeze
+
+- The release note, `RESULTS.md` and the I5-03 return say 505 `conserved` rows are unread; the exact count by `frontier/REVIEW.json` is 471 (REFERENCE_FRAME_METHOD 70, WORLD_MODEL_METHOD 69, STDO_REFERENCE_FRAME_BASELINE 53, ODD_METHOD 48, SPEC_METHOD 46, AXIOMATIC_CALCULUS 37, TICKET_METHOD 25, TRAVERSAL_OCCURRENCE_PROFILE 24, DESIGN_MODULE_METHOD 21, RELEASE_METHOD 19, UX_METHOD 18, GLOSSARY_GUIDE 14, IDENTITY_METHOD 9, POSTING_GUIDE 9, WRITING_GUIDE 8, README 1). The I5-03 return's per-member list counts all 611 `conserved` rows. Commit A is not edited; candidate 2 carries the corrected figures (ledger, record correction).
+
 ## Open decisions for the product owner
 
 [DECISIONS.md](DECISIONS.md), Q1 to Q16.
