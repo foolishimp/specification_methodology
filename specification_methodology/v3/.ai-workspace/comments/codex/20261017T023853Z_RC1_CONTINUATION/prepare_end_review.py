@@ -8,6 +8,7 @@ from pathlib import Path
 
 p = argparse.ArgumentParser()
 p.add_argument('--package', required=True)
+p.add_argument('--evidence', required=True)
 a = p.parse_args()
 s = json.loads(Path('/tmp/stdo_rc1_current.json').read_text())
 repo, out = Path(s['root']), Path(s['out'])
@@ -28,7 +29,7 @@ def export(revision, prefix, dest):
 export(s['common'], 'specification_methodology/v3/specification/', base / 'basis')
 export(a.package, prefix + 'successor/', base / 'candidate')
 for part in ('iteration-5', 'rc1'):
-    export(a.package, prefix + 'qualification/C3/' + part + '/', base / 'evidence' / part)
+    export(a.evidence, prefix + 'qualification/C3/' + part + '/', base / 'evidence' / part)
 installed = Path('/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2')
 for path in sorted((installed / 'standards').rglob('*')):
     if path.is_file():
@@ -82,7 +83,7 @@ Return FINAL REVIEW: scoped candidate-readiness judgment; confirmed defects with
 Local allowances: USD6, 45 minutes. Relevant source is available; report acquisition actually performed. Provider context capacity and per-request input/cache plus whole-call output are captured by the parent. Do not claim unmeasured context fit. On exhaustion return retained work and remainder, without a restart. Elapsed/usage fields unavailable to you should say unavailable; parent joins measured values. Be detailed enough to make findings actionable.
 '''
     (base / (name + '_PROMPT.txt')).write_text(prompt)
-receipt = {'candidate_commit': a.package, 'common_commit': s['common'], 'predecessor_manifest_sha256': '3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782', 'scratch': str(base), 'scopes': scopes, 'inputs': inputs}
+receipt = {'candidate_commit': a.package, 'evidence_commit': a.evidence, 'common_commit': s['common'], 'predecessor_manifest_sha256': '3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782', 'scratch': str(base), 'scopes': scopes, 'inputs': inputs}
 (out / 'END_REVIEW_INPUTS.json').write_text(json.dumps(receipt, indent=2) + '\n')
 s['review_scratch'], s['review_package_commit'] = str(base), a.package
 Path('/tmp/stdo_rc1_current.json').write_text(json.dumps(s, indent=2) + '\n')
