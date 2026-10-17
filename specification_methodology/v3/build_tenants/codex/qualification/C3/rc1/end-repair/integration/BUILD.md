@@ -13,3 +13,7 @@ RC1-INTEGRATION explicitly transitions Writer to Git Writer for the source check
 Source checkpoint: `2e0c77b909a97648f8edd70981b9a426662df9cc`. The authenticated integrator applied 12 explicit updates (including the unchanged repeated-block coordinate witness), retaining 708 rows. The exact inverse normalization affects 29 field values, including order normalization and the removal of eleven unmatched positive pairs into their retained historical observation account. It is not a claim of semantic source absence or complete coverage.
 
 RC1-INTEGRATION transitions Writer to Git Writer for the account checkpoint in this integration directory only, then resumes Writer for generation and the one completed-package check.
+
+Account checkpoint: `0c1ffdb49097c630f9b33a50099e3afb0850d755`. Native generation validated once: 708 determinations, 712 clauses, 732 indexes and five source residuals (the two retained release questions plus the known UX ambiguity carried at three compliance loci). The current conservation account contains the three proposed supersessions, expanded R025 and the separately reserved UX decision; no owner decision is inferred.
+
+RC1-INTEGRATION transitions Writer to Git Writer for the package checkpoint, staging generated interpretation and this integration directory only. It resumes Writer for the consolidated changed-scope check and the two selected native route projections.

@@ -5913,7 +5913,7 @@
       },
       "family": "Conditional host workflow",
       "representation_kind": "consumer_binding",
-      "applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+      "applicability": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled.",
       "predicate": "The workflow performs only its selected source-owned responsibility under its exact basis and effect boundary.",
       "definition": null,
       "obligations": [
@@ -5938,47 +5938,53 @@
         {
           "id": "FOUNDATIONS.identity-state-and-evidence",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "FOUNDATIONS.judgment-and-authority",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "FOUNDATIONS.result-algebra",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "TICKET_METHOD.execution-contract-admission",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "TICKET_METHOD.work-carrier-to-execution-rule",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         },
         {
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
-          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
+        },
+        {
+          "id": "CARRIER.plugins.spec.references.REFRESH.md",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
+          "when": "The user explicitly invokes the manual /spec:refresh adapter; automatic model invocation is disabled."
         }
       ],
       "result_mapping": {
@@ -6039,7 +6045,7 @@
         "path": "plugins/spec/references/GETTING_STARTED.md",
         "anchor": "",
         "unit_scope": "whole_member",
-        "body_sha256": "adff97ad2ad7544d99f87eed79819b98bb7a53a4c13495a873b1652e36d50804"
+        "body_sha256": "5bf7cc2a0980c5817c6f033b0e6201a309027172a273a994b8f0e85761ec03ab"
       },
       "family": "Basis and acquisition procedure",
       "representation_kind": "consumer_binding",
@@ -6053,7 +6059,7 @@
         "Bootstrap modifies only declared marker-owned regions. Host plugin success is not identity proof: verify installed member digests against the selected cohort and qualified host route.",
         "Classify at the first changed authority layer; bind current computed facts and material judgments; reuse supported judgments without repeating them solely for a new role.",
         "Select the smallest authorized carrier and admit the exact run contract before effect; preserve durable residuals at its result surface. Follow the owner for the explicit durability exception.",
-        "Derive tests from requirements/design/closure law, with live external or installed proof only where the claim needs that boundary. Separate construction, required independent assessment, Product disposition, publication and adoption.",
+        "Derive tests from requirements/design/closure law and apply SPEC_METHOD transition-evidence-and-proof-cadence with its material owner dependencies. Live external or installed proof is required only where the claim needs that boundary. Separate construction, required independent assessment, Product disposition, publication and adoption.",
         "Monitoring is read-only. Report actual baseline-relative movement, evidence, uncertainty, effect state and authorized next action; counts are not completion. Unknown effects need observation before dependent repetition."
       ],
       "permissions_exceptions": [
@@ -6069,7 +6075,8 @@
         "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
         "TICKET_METHOD.execution-contract-admission",
         "TICKET_METHOD.work-carrier-to-execution-rule",
-        "TRANSFORMATION_LIBRARY.faithful-projection"
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "SPEC_METHOD.transition-evidence-and-proof-cadence"
       ],
       "dependency_relations": [
         {
@@ -6116,6 +6123,12 @@
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
           "when": "This exact procedure is selected for Product entry, setup or explicit refresh."
+        },
+        {
+          "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
+          "when": "This exact procedure is selected for Product entry, setup or explicit refresh."
         }
       ],
       "result_mapping": {
@@ -6161,9 +6174,9 @@
       "source_clauses": [
         {
           "id": "body",
-          "sha256": "adff97ad2ad7544d99f87eed79819b98bb7a53a4c13495a873b1652e36d50804",
+          "sha256": "5bf7cc2a0980c5817c6f033b0e6201a309027172a273a994b8f0e85761ec03ab",
           "byte_start": 0,
-          "byte_end": 27422,
+          "byte_end": 27460,
           "roles": [
             "source_owned_body"
           ]
@@ -6316,7 +6329,7 @@
         "path": "plugins/spec/references/REFRESH.md",
         "anchor": "",
         "unit_scope": "whole_member",
-        "body_sha256": "2b158034fdd0098640f335cf5557d308a6d9e0838350f56e1f3f2a532124f84a"
+        "body_sha256": "90b9cbad8dbe62df02994de325a3a435ec737080e606a03c1ab440e33badf86e"
       },
       "family": "Basis and acquisition procedure",
       "representation_kind": "consumer_binding",
@@ -6433,9 +6446,9 @@
       "source_clauses": [
         {
           "id": "body",
-          "sha256": "2b158034fdd0098640f335cf5557d308a6d9e0838350f56e1f3f2a532124f84a",
+          "sha256": "90b9cbad8dbe62df02994de325a3a435ec737080e606a03c1ab440e33badf86e",
           "byte_start": 0,
-          "byte_end": 2920,
+          "byte_end": 3063,
           "roles": [
             "source_owned_body"
           ]
@@ -6520,6 +6533,12 @@
         {
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
+          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+        },
+        {
+          "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
           "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
         }
       ],
@@ -6659,6 +6678,12 @@
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
           "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+        },
+        {
+          "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
+          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
         }
       ],
       "result_mapping": {
@@ -6792,6 +6817,12 @@
         {
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
+          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+        },
+        {
+          "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
           "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
         }
       ],
@@ -6928,6 +6959,12 @@
           "id": "TRANSFORMATION_LIBRARY.faithful-projection",
           "kind": "source_contract_binding",
           "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
+        },
+        {
+          "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
+          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
         }
       ],
       "result_mapping": {
@@ -6988,7 +7025,7 @@
         "path": "plugins/spec/skills/stdo-work/SKILL.md",
         "anchor": "",
         "unit_scope": "whole_member",
-        "body_sha256": "13902bef25750b8f623a2f2210d2c6df867b474926d0617bc4d517e7e10763e4"
+        "body_sha256": "7d8b0cd7c5bd70999ad16810aaf782abb1ec7119343963f920f01df690a68abd"
       },
       "family": "Conditional host workflow",
       "representation_kind": "consumer_binding",
@@ -7002,7 +7039,7 @@
         "Compute intake/classification from exact relevant public/authority/design facts; decide only residual meaning questions and keep failed candidates distinct from changes to governing outcome.",
         "Choose the owner carrier and admitted contract with exact authority, result surface and evidence. Reuse sufficient existing authorization; do not self-admit or automatically create tickets.",
         "Construct only in the causal cone and write territory. Direct Writer is allowed where sufficient; coordination and independence apply when required. Executive changes to a granted Writer before effects.",
-        "Use adequate focused proof, preserve failures and incomplete evidence, refresh affected bindings, and return at delegated boundary with exact candidate, proof, residuals and closed/withheld outcome. Publication and adoption remain separate.",
+        "Apply SPEC_METHOD transition-evidence-and-proof-cadence and its material owner dependencies for the exact bounded candidate; preserve failures, missing evidence, conditional proof and qualification gates, and return at the delegated boundary. Publication and adoption remain separate.",
         "Use Product Basis Selection Acquire A Member From The Selected Basis for every member/section route; the verified basis root is independent of plugin/current-directory layout.",
         "Select the responsibility route from the verified standards index and accepted frame basis: work/recovery, triage/carrier, constitutional derivation or relevant exact owners. Missing curated views permit only available exact owners on that same selected basis.",
         "An interpretation projection requires its exact document-source inventory and encoding/checker basis; unresolved conditions re-enter named owners. Structural validity is neither permission nor fidelity, and an assessment source package remains distinct from the installed governing method."
@@ -7020,7 +7057,8 @@
         "TICKET_METHOD.execution-contract-admission",
         "TICKET_METHOD.work-carrier-to-execution-rule",
         "TRANSFORMATION_LIBRARY.faithful-projection",
-        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md"
+        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+        "SPEC_METHOD.transition-evidence-and-proof-cadence"
       ],
       "dependency_relations": [
         {
@@ -7071,6 +7109,12 @@
         {
           "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
           "kind": "contract_application"
+        },
+        {
+          "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability",
+          "when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies."
         }
       ],
       "result_mapping": {
@@ -7168,9 +7212,9 @@
       "source_clauses": [
         {
           "id": "body",
-          "sha256": "13902bef25750b8f623a2f2210d2c6df867b474926d0617bc4d517e7e10763e4",
+          "sha256": "7d8b0cd7c5bd70999ad16810aaf782abb1ec7119343963f920f01df690a68abd",
           "byte_start": 0,
-          "byte_end": 8428,
+          "byte_end": 8314,
           "roles": [
             "source_owned_body"
           ]
@@ -11073,7 +11117,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -11523,7 +11567,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -11694,7 +11738,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -12144,7 +12188,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -12416,7 +12460,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -12726,7 +12770,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -12993,7 +13037,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -13166,7 +13210,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -13379,7 +13423,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -13601,7 +13645,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -13660,7 +13704,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -14320,7 +14364,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -14693,7 +14737,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -14882,7 +14926,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -15106,7 +15150,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -15151,7 +15195,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -15380,7 +15424,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -15578,7 +15622,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -15818,7 +15862,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -16012,7 +16056,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -16287,7 +16331,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -16502,7 +16546,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -16808,7 +16852,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -17085,7 +17129,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -17328,7 +17372,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -17576,7 +17620,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -17831,7 +17875,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -18367,7 +18411,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -18669,7 +18713,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -19006,7 +19050,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -19250,7 +19294,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -19536,7 +19580,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -19711,7 +19755,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -20308,7 +20352,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -20472,7 +20516,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -20698,7 +20742,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -20927,7 +20971,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -21211,7 +21255,7 @@
               "anchor": "governing-relations",
               "line": 44,
               "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -21448,7 +21492,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -21764,7 +21808,7 @@
               "anchor": "governing-relations",
               "line": 45,
               "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -22058,7 +22102,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -22297,7 +22341,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -22509,7 +22553,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -22741,7 +22785,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -22977,7 +23021,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23559,7 +23603,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23611,7 +23655,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23652,7 +23696,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23700,7 +23744,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23759,7 +23803,7 @@
               "anchor": "governing-relations",
               "line": 44,
               "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23805,7 +23849,7 @@
               "anchor": "governing-relations",
               "line": 45,
               "sha256": "c3acf61e4b6202145f5ad085d035dfcb7eb07c3681e6aa4138b0cb9bbc039318",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23847,7 +23891,7 @@
               "anchor": "governing-relations",
               "line": 46,
               "sha256": "f718bc8d0ed73553e5ebd3bf35bfab26f7033a10fcba8a976b3c8c4fa4296054",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -23906,7 +23950,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24023,7 +24067,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24240,7 +24284,7 @@
               "anchor": "governing-relations",
               "line": 44,
               "sha256": "06ef34c564fcaa1ae36a997d9002f8b3749c8f448672183737a852d3fb0f018d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24465,7 +24509,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "40d51ce4fe505d2c6f04796696af54c15d8d84fbbe8bac8bf85fc7771c3775c4",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24632,7 +24676,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24813,7 +24857,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -24989,7 +25033,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -25195,7 +25239,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "b6cc14b275663a72996d9e06a666ceae8ca406d998ecc9347148a1f27b444e75",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -25480,7 +25524,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -25663,7 +25707,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -25853,7 +25897,7 @@
               "anchor": "governing-relations",
               "line": 47,
               "sha256": "769ddf6764b67b854e6fa534fa57cbd2059dca4b35049162e77b66ba8f05b607",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -26233,7 +26277,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "839345823137391b211b9c8d77930bd53b4de0969cfadde17e4385259781bbd7",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -26493,7 +26537,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "6bf905e04051a708f7204f873f060ff8b4480a75bdda9058f41a971d58125f8d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321"
             },
             "source_refs": [
@@ -39631,7 +39675,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -39820,7 +39864,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -40003,7 +40047,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -40247,7 +40291,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -40429,7 +40473,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -40624,7 +40668,7 @@
               "anchor": "governing-relations",
               "line": 39,
               "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -40824,7 +40868,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41036,7 +41080,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41269,7 +41313,7 @@
               "anchor": "governing-relations",
               "line": 39,
               "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41497,7 +41541,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41537,7 +41581,7 @@
               "anchor": "governing-relations",
               "line": 38,
               "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41579,7 +41623,7 @@
               "anchor": "governing-relations",
               "line": 39,
               "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41625,7 +41669,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -41665,7 +41709,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -43017,7 +43061,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -43213,7 +43257,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -43451,7 +43495,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -43753,7 +43797,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -43951,7 +43995,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -44170,7 +44214,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -44382,7 +44426,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -44580,7 +44624,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -44761,7 +44805,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -44953,7 +44997,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -45147,7 +45191,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -45336,7 +45380,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -45549,7 +45593,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -45712,7 +45756,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -46394,7 +46438,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -46623,7 +46667,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -46791,7 +46835,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -47030,7 +47074,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -47255,7 +47299,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -47525,7 +47569,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -47900,7 +47944,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48386,7 +48430,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48431,7 +48475,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48471,7 +48515,7 @@
               "anchor": "governing-relations",
               "line": 38,
               "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48513,7 +48557,7 @@
               "anchor": "governing-relations",
               "line": 39,
               "sha256": "3ce256daab8104e68b95eba9deb5787581178e25c6d266d64ba15701ad449711",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48559,7 +48603,7 @@
               "anchor": "governing-relations",
               "line": 40,
               "sha256": "09b86dc80ed996517a57203403b30fa17a405794e79d05a9158aa48ba3f404f0",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48599,7 +48643,7 @@
               "anchor": "governing-relations",
               "line": 41,
               "sha256": "5c2f47582395a12fde4ca0bc06ce120224900bf017fa1e5987297cdc89d1b51d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48645,7 +48689,7 @@
               "anchor": "governing-relations",
               "line": 42,
               "sha256": "de79a5e7653689bd926b2d1f1be55ab250420cc5d9573b504db4904a6138e49d",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48693,7 +48737,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48808,7 +48852,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -48994,7 +49038,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -49393,7 +49437,7 @@
               "anchor": "governing-relations",
               "line": 37,
               "sha256": "159612c7dee80ee000aaf30807d7e55fa48452d23d6af5ea9ac3276418d47c33",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -50087,7 +50131,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -50133,7 +50177,7 @@
               "anchor": "governing-relations",
               "line": 38,
               "sha256": "5e05c26855267cd11ca01c441fb4de4cd116874634355e9fee1595176f4d1189",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -50303,7 +50347,7 @@
               "anchor": "governing-relations",
               "line": 36,
               "sha256": "dea86b5f2a54c7a1f31302a4878cb11b187f14e60b3e14ba06601dd13cef8e9b",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -50492,7 +50536,7 @@
               "anchor": "governing-relations",
               "line": 43,
               "sha256": "02a8cd677cd740edabc1e47d0395e9c358110eee0350a712292803b823b6172f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
             },
             "source_refs": [
@@ -68224,7 +68268,7 @@
               "anchor": "method-families",
               "line": 53,
               "sha256": "9e80b0c4fd724fd1e7e4cdf9ec561e4a6ac2a5b612b215bc3b791efd3257f199",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -101019,7 +101063,7 @@
               "anchor": "carrier-families",
               "line": 26,
               "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -101667,7 +101711,7 @@
               "anchor": "carrier-families",
               "line": 31,
               "sha256": "ab29fdab70fc787f98e122e66b0b96641155d2a4ec67cf2d245351311e62ee2f",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -102353,7 +102397,7 @@
               "anchor": "carrier-families",
               "line": 26,
               "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -102717,7 +102761,7 @@
               "anchor": "carrier-families",
               "line": 26,
               "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -107439,7 +107483,7 @@
               "anchor": "carrier-families",
               "line": 26,
               "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -108365,7 +108409,7 @@
               "anchor": "carrier-families",
               "line": 26,
               "sha256": "06df4765137fac7abb2ea2e319d698ec49091eb5bacc90f611c4d553d361a863",
-              "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+              "source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
               "member_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
               "hash_boundary": "Exact Markdown row including terminal newline."
             },
@@ -121417,7 +121461,8 @@
         "UX_METHOD.10-type-sharing-rule",
         "UX_METHOD.14-failure-pattern",
         "UX_METHOD.4a-process-model-without-language-or-framework-mandate",
-        "UX_METHOD.governing-relations"
+        "UX_METHOD.governing-relations",
+        "UX_METHOD.1a-constitutional-authority-rule"
       ],
       "result_mapping": {
         "contract_ref": "model.shared_result_contracts.core_result",
@@ -121507,6 +121552,11 @@
         {
           "id": "FOUNDATIONS.result-algebra",
           "kind": "result_contract"
+        },
+        {
+          "id": "UX_METHOD.1a-constitutional-authority-rule",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability"
         }
       ],
       "source_references": [],
@@ -121528,6 +121578,37 @@
         {
           "input_ref": "model.external_input_catalog.untrusted",
           "required_when": "Choosing or assessing the UX realization stack."
+        }
+      ],
+      "supporting_sources": [
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "4a-process-model-without-language-or-framework-mandate",
+          "start_line": 163,
+          "end_line": 189,
+          "body_sha256": "e1a6d5d32cc33ebc20a1f801da1dd472752b8f698d608d0fbcba0ea3c7c35ac2"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "18-canonical-compression",
+          "start_line": 621,
+          "end_line": 632,
+          "body_sha256": "57431b20399bbc97392b85974b7e7a66c76ac51127fe51852e24261b1912c863"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "1a-constitutional-authority-rule",
+          "start_line": 65,
+          "end_line": 82,
+          "body_sha256": "8cb971ed93ca5c902816d3e3167f018845644db17d0d8bb7e6378eddd73e3bb1"
+        }
+      ],
+      "source_residuals": [
+        {
+          "id": "known-compliance-test-ambiguity",
+          "kind": "ambiguity",
+          "detail": "The preserved UX_METHOD.md compliance loci #4a-process-model-without-language-or-framework-mandate, #12-realization-discretion and #18-canonical-compression state different compliance tests. This is the previously reserved UX compliance owner question, separate from I5 Q15 outcome/replay proposals. No one test is selected or replaced. UX_METHOD.md#1a-constitutional-authority-rule remains the source-owned fail-closed rule.",
+          "dependent_claim": "A claim that one of the three preserved tests alone settles method compliance must retain this ambiguity and apply the existing 1A rule before implementation: satisfy the stricter interpretation, reprice through the governing constitutional method, or record a scoped design-module exemption. The separate compliance replacement decision and conformance coverage remain pending."
         }
       ]
     },
@@ -122616,7 +122697,8 @@
       "dependencies": [
         "UX_METHOD.13b-ux-sprint-compliance-escrow",
         "UX_METHOD.8a-msg-replay-proof-requirement",
-        "UX_METHOD.governing-relations"
+        "UX_METHOD.governing-relations",
+        "UX_METHOD.1a-constitutional-authority-rule"
       ],
       "result_mapping": {
         "kind": "none_for_locator",
@@ -122673,6 +122755,11 @@
         {
           "id": "UX_METHOD.8a-msg-replay-proof-requirement",
           "kind": "summary_owner"
+        },
+        {
+          "id": "UX_METHOD.1a-constitutional-authority-rule",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability"
         }
       ],
       "source_references": [],
@@ -122683,7 +122770,38 @@
         "unknown": "Unresolved applicability remains explicit."
       },
       "locator_meaning": "Compact route to TEA ownership, typed carriers, validation, scoped exemptions and escrow; its closure wording is read with §§8A, 11 and 13B, not as a new zero-debt sprint-close rule.",
-      "inputs": []
+      "inputs": [],
+      "supporting_sources": [
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "4a-process-model-without-language-or-framework-mandate",
+          "start_line": 163,
+          "end_line": 189,
+          "body_sha256": "e1a6d5d32cc33ebc20a1f801da1dd472752b8f698d608d0fbcba0ea3c7c35ac2"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "12-realization-discretion",
+          "start_line": 401,
+          "end_line": 419,
+          "body_sha256": "e66490de086a827e31d9ead67dad3b1129f572e783f1c86d5bdff2f99410b78c"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "1a-constitutional-authority-rule",
+          "start_line": 65,
+          "end_line": 82,
+          "body_sha256": "8cb971ed93ca5c902816d3e3167f018845644db17d0d8bb7e6378eddd73e3bb1"
+        }
+      ],
+      "source_residuals": [
+        {
+          "id": "known-compliance-test-ambiguity",
+          "kind": "ambiguity",
+          "detail": "The preserved UX_METHOD.md compliance loci #4a-process-model-without-language-or-framework-mandate, #12-realization-discretion and #18-canonical-compression state different compliance tests. This is the previously reserved UX compliance owner question, separate from I5 Q15 outcome/replay proposals. No one test is selected or replaced. UX_METHOD.md#1a-constitutional-authority-rule remains the source-owned fail-closed rule.",
+          "dependent_claim": "A claim that one of the three preserved tests alone settles method compliance must retain this ambiguity and apply the existing 1A rule before implementation: satisfy the stricter interpretation, reprice through the governing constitutional method, or record a scoped design-module exemption. The separate compliance replacement decision and conformance coverage remain pending."
+        }
+      ]
     },
     {
       "id": "UX_METHOD.1a-constitutional-authority-rule",
@@ -123327,7 +123445,8 @@
         "UX_METHOD.5-state-transition-law",
         "UX_METHOD.6-effect-membrane-rule",
         "UX_METHOD.8-ux-twin-of-odd-115a--view-does-not-own-continuation",
-        "UX_METHOD.governing-relations"
+        "UX_METHOD.governing-relations",
+        "UX_METHOD.1a-constitutional-authority-rule"
       ],
       "result_mapping": {
         "kind": "definition_data",
@@ -123436,6 +123555,11 @@
         {
           "id": "UX_METHOD.8-ux-twin-of-odd-115a--view-does-not-own-continuation",
           "kind": "local_semantic_dependency"
+        },
+        {
+          "id": "UX_METHOD.1a-constitutional-authority-rule",
+          "kind": "contract_application",
+          "required_when": "within the declared applicability"
         }
       ],
       "source_references": [],
@@ -123460,6 +123584,37 @@
         {
           "input_ref": "model.external_input_catalog.effects",
           "required_when": "Choosing or reviewing a UX implementation stack."
+        }
+      ],
+      "supporting_sources": [
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "12-realization-discretion",
+          "start_line": 401,
+          "end_line": 419,
+          "body_sha256": "e66490de086a827e31d9ead67dad3b1129f572e783f1c86d5bdff2f99410b78c"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "18-canonical-compression",
+          "start_line": 621,
+          "end_line": 632,
+          "body_sha256": "57431b20399bbc97392b85974b7e7a66c76ac51127fe51852e24261b1912c863"
+        },
+        {
+          "path": "standards/UX_METHOD.md",
+          "anchor": "1a-constitutional-authority-rule",
+          "start_line": 65,
+          "end_line": 82,
+          "body_sha256": "8cb971ed93ca5c902816d3e3167f018845644db17d0d8bb7e6378eddd73e3bb1"
+        }
+      ],
+      "source_residuals": [
+        {
+          "id": "known-compliance-test-ambiguity",
+          "kind": "ambiguity",
+          "detail": "The preserved UX_METHOD.md compliance loci #4a-process-model-without-language-or-framework-mandate, #12-realization-discretion and #18-canonical-compression state different compliance tests. This is the previously reserved UX compliance owner question, separate from I5 Q15 outcome/replay proposals. No one test is selected or replaced. UX_METHOD.md#1a-constitutional-authority-rule remains the source-owned fail-closed rule.",
+          "dependent_claim": "A claim that one of the three preserved tests alone settles method compliance must retain this ambiguity and apply the existing 1A rule before implementation: satisfy the stricter interpretation, reprice through the governing constitutional method, or record a scoped design-module exemption. The separate compliance replacement decision and conformance coverage remain pending."
         }
       ]
     },

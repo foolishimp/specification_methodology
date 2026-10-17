@@ -1,0 +1,13 @@
+# Current qualification entry
+
+This end-repair successor carries the exact common WHAT at `4c340f7adec9f3c893e3e267b23e4cadeb357854`. `COORDINATES.json` binds current source/account/package; `CANDIDATE.json` enumerates every package member. This is author construction pending the one affected independent readback.
+
+Current author records are `DETERMINATIONS.json`, `CONSERVATION.json`, `FRONTIER.json` and `REPLACEMENT_QUESTIONS.json`. The conservation population remains 691: 606 conserved author dispositions, 84 proposed supersessions and one not-applicable row. None of the 84 proposals has an owner decision. The three new proposals cover generic-realisation assessment, Posting boundary and Writing practical checks; R025 now includes selected-carrier and frame-assembly latitude. Preserved UX compliance text carries its separately reserved question and existing §1A fail-closed rule, not a selected replacement.
+
+The exact-inverse consumers field is not a material coverage claim. `CONSUMER_OBSERVATIONS.json` retains all eleven historical unmatched positives and their unresolved meaning. The five selected calls now use the existing typed acquisition contract within their workflow boundaries; manual refresh remains manual-only and no registry item becomes a universal required read.
+
+The completed source/representation/domain reviews at common-ledger `2b5c47b0d9be739486a24a36ea1e7e407931a23e` inspect the earlier package `ea27616b93c80b13ee15a9931cd9114275e5de13`. Their scoped observations, disagreements and unread coverage remain attributable. Their source and representation findings motivate the present defects; the domain assertion that no UX question was recorded anywhere was overbroad because I5 Q15's consequence already preserves that separate owner decision.
+
+Reuse is exact and bounded: raw standards, all seven frame bytes and identity verification material remain equal to the earlier package, so its frame-reproduction and cold-identity controls retain their applicable subjects. The new compression paragraphs, entry carriers, residual/account bindings and native route classes receive changed-scope checks. Historical I5, earlier RC1 receipts, foundation judgments and 18 native projections are not rerun or relabeled current.
+
+Still open: affected independent fidelity/conservation readback, material consumer and complete-member coverage, every reserved owner decision, actual-use/context qualification, candidate selection/acceptance/adoption and publication. Release-loader and cohort-boundary questions in release preparation are unchanged. The build or native checker does not settle them.

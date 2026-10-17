@@ -121,6 +121,10 @@ def conservation(args, context, build):
         successor_member_pins=member_pins, successor_locus_pins=locus_pins,
         account_sha256=rc1.sha((HERE / 'DETERMINATIONS.json').read_bytes()), affected_rows=changes['affected_claims'],
         standing='Current authored successor conservation account; supersession proposals and reserved decisions remain unaccepted.')
+    proposal_input = {'path': str((HERE / 'CONSERVATION_CHANGES.json').relative_to(TENANT)),
+        'sha256': rc1.sha(rc1.authenticate(args.source_commit, HERE / 'CONSERVATION_CHANGES.json')),
+        'raw_source_commit': args.source_commit, 'standing': 'Explicit end-review author proposals; no owner acceptance.'}
+    result['proposal_inputs'] = [*result['proposal_inputs'], proposal_input]
     result['semantic_sha256'] = parser.semantic_sha(result)
     rc1.write(HERE / 'CONSERVATION.json', result)
     rc1.write(HERE / 'FRONTIER.json', parser.frontier_for(result))
@@ -137,6 +141,7 @@ def conservation(args, context, build):
             'question': item['changed_meaning'], 'decision': {'status': 'pending', 'record': None},
             'rows': [{'claim': item['claim'], 'relation': copy.deepcopy(rows[item['claim']]['successor_relation'])}]})
     questions['reserved_compliance_question'] = changes['ux_reserved_question']
+    questions['proposal_inputs'] = [*questions['proposal_inputs'], proposal_input]
     questions['standing'] = 'Current proposal questions; no owner decision inferred from construction or review.'
     rc1.write(HERE / 'REPLACEMENT_QUESTIONS.json', questions)
     return result, questions
@@ -191,8 +196,11 @@ def projections(args, build):
 
 def verify(args, context, build):
     account = rc1.bind_account(args, build)
+    rc1.authenticate(args.source_commit, HERE / 'INPUTS.json')
     for path in [Path(__file__), HERE / 'interpretation/GENERATION.json', HERE / 'CONSERVATION.json', HERE / 'REPLACEMENT_QUESTIONS.json']:
         rc1.authenticate(args.package_commit, path)
+    for name in ['validation.json', 'DEPENDENCY_VERIFICATION.json', 'QUALIFICATION_EQUIVALENCE.json']:
+        rc1.authenticate(args.package_commit, HERE / 'interpretation' / name)
     generation = rc1.read(HERE / 'interpretation/GENERATION.json')
     if generation['document_source_input_commit'] != args.source_commit or generation['account_input_commit'] != args.account_commit or generation['native_validation'] != 'passed':
         raise ValueError('Generation does not bind the current frozen inputs')
