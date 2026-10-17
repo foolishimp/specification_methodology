@@ -23,6 +23,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## RC1 continuation
 
+The closed qualification inventory selects [RC1-CONSUMERS](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/CONSUMER_WORK.md) to distinguish actual material coverage gaps from empty extracted fields and complete the existing account within the package increment.
+
 RC1-SOURCE returns the bounded source repair at `5fd3b789ef6e0039f722676cdd0126113c745a11`. [RC1-INTEGRATION](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/BUILD.md) carries its affected publication cone to one complete package before consolidated review.
 
 The owner directs larger construction increments and consolidated review at the candidate freeze; only changed contracts and affected consumers are checked during construction. [Execution cadence](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/PACING.md) records this continuation of EC-CODEX-RC1-01. Existing evidence is reused where applicable.

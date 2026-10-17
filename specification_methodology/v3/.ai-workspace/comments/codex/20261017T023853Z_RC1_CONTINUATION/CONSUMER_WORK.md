@@ -1,0 +1,9 @@
+# RC1 consumer-account completion
+
+The closed RC1-QUALIFICATION return distinguishes 389 unpopulated consumer fields from actual missing consumer coverage. RC1-CONSUMERS is a bounded Codex author-account Writer activation under the unchanged I5-02 obligation. Its subject is the authored I5 account at 57f711d964cd4eac8ed8523460cecc68bcaa63fb and the current source at 5fd3b789ef6e0039f722676cdd0126113c745a11; the generic assessment owner is being repaired separately by RC1-INTEGRATION.
+
+Complete the reviewable consumer/absence account for the material rules, grouping common reasoning where justified. Classify non-deciding units correctly. Reuse declared owner/consumer and dependency evidence; seek source-supported omitted consumers. A missing extracted field is not a source defect and a failed search is not proof of absence. Keep unknown relations explicit. Write only `qualification/C3/rc1/consumer-account/`, with exact source/row pointers, reasoning and a minimal proposed account patch where justified. No source, generated package, historical account, Git or peer edits. RC1-INTEGRATION owns applying any supported patch to the one current account; it must not create another owner of rule meaning.
+
+Return a complete classification of the queried population, the material coverage actually established, any unsupported remainder and the smallest integration input. This is author completion, not independent acceptance. Do not invent consumer links to make a count green. No new model, test suite or per-row activation is required. Independent assessment follows the whole package freeze.
+
+Envelope: 512 KiB newly presented source with repeats separate, 25-minute progress and 50-minute bounded return; native/local tools only, no paid calls or subdelegation. Preserve limits rather than fabricating fit.
