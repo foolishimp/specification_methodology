@@ -55,9 +55,7 @@
     }
   ],
   "account_patches": [
-    "qualification/C3/rc1/content-repair/core/ACCOUNT_PATCH.json",
-    "qualification/C3/rc1/content-repair/consumers/ACCOUNT_PATCH.json",
-    "qualification/C3/rc1/content-repair/integration/ACCOUNT_COORDINATE_PATCH.json"
+    "qualification/C3/rc1/content-repair/integration/ACCOUNT_MERGED_PATCH.json"
   ],
   "standing": "Closed source returns selected; dependent operations await parent authored-input checkpoint.",
   "source_members": [
@@ -96,6 +94,26 @@
     {
       "path": "standards/IDENTITY_METHOD.md",
       "sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e"
+    }
+  ],
+  "account_patch_provenance": [
+    {
+      "commit": "2dfb60adca4369908379f3f3d1c6689b704365a3",
+      "path": "qualification/C3/rc1/content-repair/core/ACCOUNT_PATCH.json",
+      "sha256": "99f47445f832fee24797767fc6d6385de768fd350194dcfcf762d9319c1ed650",
+      "producer": "RC1-CONTENT-REPAIR-CORE"
+    },
+    {
+      "commit": "2dfb60adca4369908379f3f3d1c6689b704365a3",
+      "path": "qualification/C3/rc1/content-repair/consumers/ACCOUNT_PATCH.json",
+      "sha256": "4536b998c1a4cd4b981ef801eb61440fb9b807cda34c1ddfeb0d7820cd446e98",
+      "producer": "RC1-CONTENT-REPAIR-CONSUMERS"
+    },
+    {
+      "commit": "2dfb60adca4369908379f3f3d1c6689b704365a3",
+      "path": "qualification/C3/rc1/content-repair/integration/ACCOUNT_COORDINATE_PATCH.json",
+      "sha256": "b42c04f416ce50f92dc7c7950275c69363e4d74ae0a9a35346948608a6cdb8dc",
+      "producer": "RC1-CONTENT-REPAIR-INTEGRATION-COORDINATES"
     }
   ]
 }
