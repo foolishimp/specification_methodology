@@ -16,13 +16,15 @@ evidence of meaning. Reader reports, verbatim: [changed text](assets/20261017T11
 
 **No: the repair fixes what our review named, except intake, and does not
 reach the cause.** The construction owner now matches the common
-specification. Reuse, authority, disposition, result values and a failure
-after a changed requirement are each decided by one owner that the rewritten
-consumers apply. Intake is not: the predecessor's rule that a constitutional
-gap writes new Goals or Intent stood in four places in SPEC_METHOD beside the
-change-class owner, and the repair changed one. The repair also rewrote the
-predecessor's authorship rule for independent review, while its account
-records that rule as conserved.
+specification. Reuse, authority, independence, result values and
+combination each have one owner that the rewritten consumers apply;
+disposition and stops are divided among parts that agree. Intake is not
+repaired: the predecessor's rule that a constitutional gap writes new Goals
+or Intent stood in four places in SPEC_METHOD beside the change-class owner,
+and the repair changed one. The repair also rewrote the predecessor's
+authorship rule for independent review, while its account records that rule
+as conserved. The foundation-to-law finding stands; Codex disputes it, and
+its rebuttal partly holds.
 
 ## Root cause
 
@@ -35,9 +37,17 @@ Goals or Intent. Codex kept both. Our review found one restatement by
 keyword search, the repair changed that one, and its readback covered "the
 current review findings and changed direct owner/consumer paths", so the
 other restatements were never in view. Exact copies are checked mechanically
-and all are current; two restatements in other words of rules the repair
-changed were missed. The cause lies in how repairs are scoped: each follows
+and all are current; one restatement in other words of a rule the repair
+changed was missed, and one older clause now conflicts with a rule the
+repair added. The cause lies in how repairs are scoped: each follows
 a named site, while this defect is one rule held in several places.
+
+## The plan's hypothesis
+
+Held, narrowly. Untouched text holds rival rules on one of the eight
+questions, intake. It holds ambiguous clauses on reuse, independence and
+result values. On authority, disposition, stops and combination no rival
+was found in the sections read.
 
 ## What the repair fixed, read from source
 
@@ -59,8 +69,8 @@ a named site, while this defect is one rule held in several places.
   evaluation frame now carries both deciding clauses it lacked.
 
 In the untouched procedural text, Reader 2 found no rival rule on
-authority, disposition, stops or combination: about 98 clauses defer to
-their owners and 552 restate them compatibly.
+authority, disposition, stops or combination: on those four questions about
+35 clauses defer to their owners and 321 restate them compatibly.
 
 ## What remains, most material first
 
@@ -89,15 +99,17 @@ their owners and 552 restate them compatibly.
    predecessor left open. It adds a disclosure duty that the common text
    states only for this release's construction (PRODUCT, C3 Independence),
    and names no purpose for it. The account row for UP-007 says
-   `conserved`, with the same generic reason as other rows and a meaning
-   comparison made at `2476713`, before this rewrite.
-3. **Restatements left behind by the repair.** REFERENCE_FRAME_METHOD
-   "Worked Binding" still says "invalid_basis on stale or substituted
-   basis", the old RF-005 rule, in an example written to be copied.
-   STDO_REFERENCE_FRAME_BASELINE Anti-Patterns item 10, "Reviewer edits or
-   directs repair while retaining independent-review status", can withdraw
-   independence from a reviewer whom the new recheck rule permits to
-   recheck.
+   `conserved`, as an author proposal pending independent review, with the
+   same generic reason as other rows; its author comparison was made at
+   `2476713`, before this rewrite.
+3. **Text left behind by the repair.** REFERENCE_FRAME_METHOD "Worked
+   Binding" still says "invalid_basis on stale or substituted basis", the
+   old RF-005 rule, in an example written to be copied. In
+   STDO_REFERENCE_FRAME_BASELINE, Anti-Patterns item 10, "Reviewer edits or
+   directs repair while retaining independent-review status", is older text
+   that now conflicts with the recheck rule the repair added: it can
+   withdraw independence from a reviewer whom that rule permits to recheck.
+   Both are ambiguous rather than rival.
 4. **Low.**
    - The generic one-actor-several-roles permission now survives only in
      the optional Baseline.
