@@ -46,7 +46,7 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 81663 bytes.
+Size of this frame: 81857 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
@@ -703,7 +703,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=16eddc49fd1b2cf109e67c3faafeb9414d3bbc4504023e61f6cb9bc46ae619eb
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=f16fabea2f110773bf3e1fde22defbc3e911219e707826421061c5490a357335
 
 ## 5. Coverage of the common discriminators
 
@@ -728,8 +728,10 @@ the discriminator's number. Whatever its mapping, every discriminator is
 read by logical review against every member; a case adds actual use and
 replaces no part of that reading (P6). Check L-50 also reads each frame
 whose task returns a result. Each discriminator's expected distinction is
-the one the [common conformance table](../../../../specification/conformance/README.md#member-conformance)
-states; this member does not restate it.
+the one the common conformance table of the construction specification
+states (`specification/conformance/README.md`, Member Conformance, in the
+source project, outside this package); this member does not restate it,
+and a reviewer acquires it with the table below.
 
 | No. | Discriminator | Member sections | Exercised by |
 |---|---|---|---|
@@ -817,9 +819,10 @@ assessment without a closed result until a review records it
 
 ### Universal-construction and assurance discriminators
 
-The governing specification adds, beside the member discriminators above,
-nine universal-construction discriminators and twelve assurance
-discriminators, assessed under criterion 5 within a member's declared
+The construction specification adds, beside the member discriminators
+above, nine universal-construction discriminators and twelve assurance
+discriminators, with their expected distinctions in the same file and not
+restated here, assessed under criterion 5 within a member's declared
 responsibility. Each is numbered UC-n or AS-n in the order the governing
 specification lists it. A logical-review check L-UCn or L-ASn is a planned
 assessment without a closed result until a review records it; a case is

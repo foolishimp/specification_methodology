@@ -127,7 +127,7 @@ Each commitment in the premise column carries its standing from
 | P4b (derived from P0 and P2), P3 (independent); I2; F4 (imported) | By P4b every closure-relevant callout is a step-produced fact the outer contract needs, so it is admitted to the immutable ledger and event log; by P3 a correction keeps the identity of what it corrects, so it appends or supersedes and never rewrites; under F4 and I2 every closure decision and next-action selection is reproducible by replay from carriers that each reference their causal predecessors | A1a, A13 and A13a in [§11.5D](#115d-constructive-evaluation-and-yield-loop); [§11.5](#115-current-state-is-a-projection-over-constructive-history) | the replay inputs listed in A13 and the predecessor chain of A13a: this member | 5, 2, 9 |
 | P5 (derived from P0 and P6), P0 (recovered); F4 (imported) | By P5 work that is still lawful but not yet decided has no failure to classify, and by P0 the next actor holds only what is recorded, so such work returns control without failure classification, keeping the same edge and a replay-visible resume basis (F4) | A9, and A4 on `post_yield_resume`, in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | `yield` as the lawful iteration boundary, distinct from retry, block and timeout: this member | 5 |
 | P2 (independent), P6 (independent); I1; F10 (imported), F11 (imported) | By P2 only work with a route to the selected outcome is justified, so the selected outcome bounds the loop: every action binds the current gap to exact target assets and obligations before invocation, and only published lawful actions are ranked; by P6 no further material work is selected without another admitted basis once a terminal condition of the loop is reached, and a reprice requests constitutional re-entry (F10, F11) and selects nothing; by P6 edge closure is evidence toward Product acceptance, not acceptance | the selected-outcome paragraphs, the intent-lineage paragraph, A2, A3, A4 on `post_reprice` and A16 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | which outcome is selected and accepted: its owner under [SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation); the re-entry a reprice requests: its owning relation under SPEC_METHOD §4 | 5, 1 |
-| P5 (derived from P0 and P6), P6 (independent); F3 (imported) | By F3 every result is stated in the core or in a refinement mapped into it, so the closure decision is a closed sum type, `evaluate_next` is total, and each closure decision and each audit outcome maps to exactly one core value for a named predicate, its cause being part of the value where the cause decides it (P5); by P6 a closure decision answers the edge predicate and is not a disposition of ACTIVATION §3, which answers the acceptance predicate, so neither counts toward the other; a selection decides no predicate, so it maps to no core value | A4, A8 and its mapping in [§11.5D](#115d-constructive-evaluation-and-yield-loop); the audit mapping in [§9](#9-method-governance-and-audit) | the seven closure decisions, their causes and the default of graph following in A4: this member; the priority policy: the product (A15) | 5, 3, 9 |
+| P5 (derived from P0 and P6), P6 (independent); F3 (imported) | By F3 every result is stated in the core or in a refinement mapped into it, so the closure decision is a closed sum type, `evaluate_next` is total, and each closure decision and each audit outcome maps to exactly one core value for a named predicate, its cause being part of the value where the cause decides it (P5); by P6 a closure decision answers the edge predicate and is not a disposition of ACTIVATION §3, which answers the acceptance predicate, so neither counts toward the other; selection data decides no predicate, so it maps to no core value, while a typed no-action that no closure decision precedes decides that no published lawful action can be selected and maps by its cause | A4, A8 and its mapping in [§11.5D](#115d-constructive-evaluation-and-yield-loop); the audit mapping in [§9](#9-method-governance-and-audit) | the seven closure decisions, their causes, the two causes of a typed no-action and the default of graph following in A4: this member; the priority policy: the product (A15) | 5, 3, 9 |
 | P6 (independent), P1 (independent), P3 (independent); F12 (imported) | By P6 each part of an ODD product has one owner: one WHAT surface, one HOW relation, runtime truth with the traversal authority and domain meaning with the product; by P1 and P3 the split binds by authority and not by directory names, and a runtime frame's name does not enrol it among the evaluation frames (F12), while an evaluation frame may take a runtime frame as its subject or coordinate without collapsing the two | [§10](#10-what-an-odd-product-is), with [Product specification](#product-specification-software-development-topology) and [Product realisation](#product-realisation-software-development-topology) | the ten-part application boundary and `specification/` and `build_tenants/` as the default software-development locations: this member; the actual locations: the product's definition under PRODUCT_DEFINITION | 5, 1, 7 |
 | P1 (independent), P2 (independent), P6 (independent); F10 (imported) | By P6 this profile decides only what it owns, graph-native structure and product shape, and neither a product's domain semantics nor its current line; by P2 domain-correct work also needs the constitutional chain (F10), the domain method's semantic law and the product's local authority surfaces; by P1 where a product also adopts a domain profile, each governs its own questions and the two compose | [§2](#2-method-role); [§3](#3-method-composition) | the split between graph-native structure and product shape, owned here, and world-model semantics, publication and composition law, owned by [WORLD_MODEL](WORLD_MODEL.md#1-position); which domain method and local surfaces apply: the product | 5, 1, 2 |
 | P0 (recovered), P2 (independent); F1 (imported) | an actor building an ODD product acquires the general method, the product's domain method where one exists, and its local authority surfaces before it acts, then identifies and declares the graph carrier and loop, and implements code last, because it holds only the declared sources it acquires and the selected outcome sets which obligations matter | [§17](#17-invocation-rule); [§18](#18-cold-start-reading-order) | the fourteen-step sequence and the two reading orders, with "usually" for the effect of skipping the order: this member | 5, 1, 7 |
@@ -1016,13 +1016,30 @@ Product outcome or bounded basis and supplies it through a new
 ordinary, but it is still an `evaluate_next` decision and not hidden
 sequential control (P5, P2, P6).
 
-Selection is not a result of the core. `evaluate_next`'s selection, a
-typed no-action disposition included, selects what is invoked next and is
-not a value of the core result algebra of
-[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it maps to no core
-value. The closure decision it follows, where there is one, carries the
-core value, as mapped under A8 below, and selection stays invocational
-(A11) (P5, P6).
+Selection and its results. `evaluate_next`'s selection of what is
+invoked next is invocational data (A11) and is not itself a value of the
+core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). A typed no-action
+disposition, however, records a material determination: that no
+published lawful action can be selected. Where it follows a closure
+decision (`post_retry`, `post_repair`, `post_reenter`, `post_block`,
+`post_reprice`), that closure decision carries the core value as mapped
+under A8 below, and the no-action adds none. Where no closure decision
+precedes it, as on `initial_selection`, the no-action returns its own
+result for the predicate "a published lawful action can be selected for
+the current gap on the exact basis", refined by cause as A8 refines
+`block` (P5, P6):
+
+| Typed no-action | Core value | Ground |
+|---|---|---|
+| `no_action(undeclared)` | out_of_frame | the gap needs an action that the admitted catalogue does not publish, or a relation, capability or authority that no admitted basis declares (A3); the value names what is missing and its owner, as for `block(undeclared)` |
+| `no_action(basis)` | invalid_basis | no published action is lawful on the current bound outcome, catalogue and policy, which cannot support the gap, as for `block(basis)` |
+
+The typed no-action stays beside its core value as the domain outcome,
+and producing the next-action projection establishes availability only
+([ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)).
+Where the graph is complete and no action follows a closed edge, nothing
+is refused: `close` carries the core value under A8.
 
 A4a Evaluation function separation. `synthesize_model`, `eval_gap`,
 `evaluate_next` and `evaluate_action` are separate authority functions.

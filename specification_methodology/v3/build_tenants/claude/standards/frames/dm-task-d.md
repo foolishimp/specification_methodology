@@ -43,9 +43,9 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 102380 bytes.
+Size of this frame: 102383 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=cbe1f91e698725e1a3347d7aee097f9a25c89ba519b7e6b1e02eea2e1f580d6b
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=48b352bf92bc88faa2ce202561bd774eec498cfd4ce3a0ce0427e27fd5a1d2fc
 
 ## 5. Ontology-first design
 
@@ -702,7 +702,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=cbe1f91e698725e1a3347d7aee097f9a25c89ba519b7e6b1e02eea2e1f580d6b
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=48b352bf92bc88faa2ce202561bd774eec498cfd4ce3a0ce0427e27fd5a1d2fc
 
 ## 7. Ontology and three-view design gate
 
@@ -1499,7 +1499,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: DESIGN_MODULE.md#foundation-to-law sha256=cbe1f91e698725e1a3347d7aee097f9a25c89ba519b7e6b1e02eea2e1f580d6b rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
+Source: DESIGN_MODULE.md#foundation-to-law sha256=48b352bf92bc88faa2ce202561bd774eec498cfd4ce3a0ce0427e27fd5a1d2fc rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
 
 ### Foundation to law
 
@@ -1553,8 +1553,8 @@ Consumers outside this member that apply these rows, each keeping its
 owner: [ASSURANCE §14 to §16](../ASSURANCE.md#14-design-to-module-evidence-route)
 apply the module-taxonomy row through the binding at the head;
 [UX](../UX.md#1-position) refines the §4 and §10 rows for modules that
-realise a UX surface ([PROFILES §4](../PROFILES.md#4-ux)); TICKETS §6
-records the recurrence row at ticket level;
+realise a UX surface ([PROFILES §4](../PROFILES.md#4-ux)); the recurrence row
+refines the ticket rule of TICKETS §6;
 [FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra) Shared machinery is refined for
 software design by the capability-selection row; and
 [ACTIVATION §1 Intake](../ACTIVATION.md#intake) uses the design evidence of

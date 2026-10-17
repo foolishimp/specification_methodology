@@ -551,7 +551,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c
 
 ### Condition-based closure and reuse
 
@@ -807,7 +807,7 @@ objects. §10 records open questions and decides nothing; §11 records
 dispositions and decides nothing.
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 

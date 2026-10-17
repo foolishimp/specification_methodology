@@ -725,7 +725,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
+Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c
 
 ### Execution and verification authority separation (UP-007)
 
@@ -789,7 +789,7 @@ traceability; ACTIVATION §1 and SPEC_METHOD §8 own the execution semantics
 (P2, P6).
 
 
-Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
+Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c
 
 ### Recorded judgment and owner-ruling continuity
 
@@ -863,7 +863,7 @@ result, so a retained obligation is never read as satisfied, and a
 superseded, deferred or withdrawn one never as discharged (P5, P1, P6).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c
 
 ### Condition-based closure and reuse
 
@@ -902,7 +902,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453
+Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c
 
 ### One-truth state projection and drift refusal (UP-009)
 
@@ -1230,7 +1230,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=d858ac526b3956432e75c0dee32e5672a4679badab19b7f26ca5de613c4cd453 rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=b8708b3cb41daf8ac66e2c9cd3bad6a5ce950da03cfc882a19254bd5cbe0c95c rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 

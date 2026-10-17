@@ -1,14 +1,18 @@
 # CONFORMANCE
 
 Tier 2. Owns the cases this corpus must pass before it is qualified (§1 to
-§4) and the coverage of the common discriminators by those cases and by
-logical-review checks (§5). A discriminator is a situation whose expected
-distinction separates a conforming corpus from a defective one. The common
-discriminators are the 31 that the specification governing this corpus's
-construction states for every candidate corpus; §5 states each of them in
-this member's own text, and nothing here relies on that specification,
-which is named only as provenance (`specification/conformance/README.md`
-of the source project that constructs this corpus).
+§4) and a qualification map (§5) of the common discriminators onto this
+corpus's sections, cases and logical-review checks. A discriminator is a
+situation whose expected distinction separates a conforming corpus from a
+defective one. The common discriminators and their expected distinctions
+are owned by the specification that governs this corpus's construction,
+`specification/conformance/README.md` of the source project that
+constructs it, which is not part of this package. §5 names each
+discriminator's situation and the sections and checks that exercise it; it
+does not restate the expected distinctions. §5 is therefore a
+qualification surface: a reviewer who qualifies this corpus acquires that
+specification beside it, and no rule an adopting Product applies depends
+on §5 (P6, P2).
 
 A case names its subject, the mechanism under test, the independently
 specified expected distinction, and its status. A status names what
@@ -146,8 +150,10 @@ the discriminator's number. Whatever its mapping, every discriminator is
 read by logical review against every member; a case adds actual use and
 replaces no part of that reading (P6). Check L-50 also reads each frame
 whose task returns a result. Each discriminator's expected distinction is
-the one the [common conformance table](../../../specification/conformance/README.md#member-conformance)
-states; this member does not restate it.
+the one the common conformance table of the construction specification
+states (`specification/conformance/README.md`, Member Conformance, in the
+source project, outside this package); this member does not restate it,
+and a reviewer acquires it with the table below.
 
 | No. | Discriminator | Member sections | Exercised by |
 |---|---|---|---|
@@ -235,9 +241,10 @@ assessment without a closed result until a review records it
 
 ### Universal-construction and assurance discriminators
 
-The governing specification adds, beside the member discriminators above,
-nine universal-construction discriminators and twelve assurance
-discriminators, assessed under criterion 5 within a member's declared
+The construction specification adds, beside the member discriminators
+above, nine universal-construction discriminators and twelve assurance
+discriminators, with their expected distinctions in the same file and not
+restated here, assessed under criterion 5 within a member's declared
 responsibility. Each is numbered UC-n or AS-n in the order the governing
 specification lists it. A logical-review check L-UCn or L-ASn is a planned
 assessment without a closed result until a review records it; a case is
@@ -287,7 +294,10 @@ This section records dispositions and decides nothing. The comparative
 baseline's eight trials are conserved as §2. The builder-history
 counterexamples are new, derived from the common inputs; their primary
 sources are reacquired when a case is designed for execution. The
-statement of the 31 common discriminators in §5 restates the
-specification named in the header, as provenance; their mapping, the
-logical-review checks and the cases of §4 are new. This member carries no
+situations of the common discriminators in §5 (52 member discriminators,
+three of the seven integrated-closure discriminators, J53 to J55, and the
+21 universal-construction and assurance discriminators) are named from
+the construction specification in the header, whose expected distinctions
+§5 does not restate; their mapping, the logical-review checks and the
+cases of §4 are new. This member carries no
 predecessor claim.

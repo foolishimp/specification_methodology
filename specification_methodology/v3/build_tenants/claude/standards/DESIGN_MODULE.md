@@ -214,7 +214,7 @@ It also imports F18, graph-native construction ([ODD §1](ODD.md#1-position)), f
 | P6 (independent), P1 (independent); I2 | code can decide one meaning in several places (I2), and each further place is a possible rival authority (P6) whose reading has no declared contract (P1), so effects should be explicit and isolated at the edge, no controller should be the hidden semantic centre, and coupling should be reduced by dependency shape, so fewer places can invent meaning | [Effect edge](#effect-edge), [No semantic centre](#no-semantic-centre), [Coupling](#coupling) | the typical edges, the preferred sequence and the dependency direction, at "should" force: this profile | 4, 9 |
 | P0 (recovered, with its boundary commitment), P6 (independent) | the method governs a step's boundary and not an actor's internal path (P0's boundary commitment), and authority acts only within its scope (P6), so a boundary that governs, observes or evaluates another actor publishes state, boundary and admissible routes, not strategy, unless strategy is part of its ratified responsibility | [Governance and strategy separation](#governance-and-strategy-separation) | the seven lawful publications and the four drifts: this profile | 9, 4 |
 | P2 (independent), P6 (independent) | a change is justified by the claim it serves (P2), and a change outside that claim acts beyond the authority admitted for it (P6), so clean-up is lawful only when boundary-local and neutral in behaviour, authority, visibility and effect, and a cross-boundary opportunity is repricing input for its owner | [Opportunistic optimisation](#opportunistic-optimisation) | that clean-up should leave an opened boundary better, at "should" force, with its conditions and examples: this profile; admission of follow-up work: the owning authority at the smallest re-entry point ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)) | 1, 9 |
-| P2 (independent), P3 (independent); I4 | similar computation recurs (I4), and each further local rebuild adds cost with no new route to the outcome (P2), while similar code does not establish one identity (P3), so a credible recurrence yields a commonisation review, never an automatic merge | [Recurrence extraction](#recurrence-extraction) | the rule of two, the third-rebuild threshold and the commonisation order: this profile; ticket-level recording: [TICKETS §6](TICKETS.md#recurring-realisation-and-library-declaration); whether one implementation serves several instances: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery | 4 |
+| P2 (independent), P3 (independent); I4 | similar computation recurs (I4), and each further local rebuild adds cost with no new route to the outcome (P2), while similar code does not establish one identity (P3), so a credible recurrence yields a commonisation review, never an automatic merge | [Recurrence extraction](#recurrence-extraction) | the rule of two, the third-rebuild threshold and the commonisation order: [TICKETS §6](TICKETS.md#recurring-realisation-and-library-declaration), the generic owner; their refinement as design-method conformance: this profile; whether one implementation serves several instances: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery | 4 |
 | P6 (independent), P2 (independent); F3, F4, F6 imported | a closure claim needs evidence for the exact claim, and implementation status is not that evidence (P6, F6), so a bounded check reconstructs the function of the exact claim before the claim is made, reusing accepted evidence only under the reuse law (F4); a falsified claim is never `satisfied` (F3), so an issue that falsifies the claim or an applicable hard stop blocks the design-method closure claim; a discovery outside the claim has no route to that claim (P2), so it is repricing input, not scope | [Post-ticket design review](#post-ticket-design-review) | the check's five determinations as domain triggers and the absorption conditions for boundary-local clean-up: this profile; when a finding blocks current promotion: [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion); reuse and its invalidators: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); ticket status and closure mechanics: [TICKETS](TICKETS.md) | 9, 1 |
 | P6 (independent), P1 (independent), P3 (independent) | a meaning has one owner, declared and one (P3), with no rival authority (P6), and is read through a declared contract (P1), so each interface family has one authoritative source truth that downstream interfaces consume, and a proxy that keeps an old authority path behind a new surface leaves two owners for one meaning, which is bridge debt | [Interface bleed prohibition](#interface-bleed-prohibition); [Proxy interface prohibition](#proxy-interface-prohibition) | retained compatibility with its own authority and proof: the project's design; the bridge prohibition: [SPEC_METHOD §7](SPEC_METHOD.md#bridge-prohibition) | 9, 6 |
 | P6 (independent), P1 (independent), P2 (independent) | a design claim needs evidence (P6), so review checks the rules above for the boundary; a question that the carriers and transforms cannot answer shows meaning held outside a declared contract (P1), a realisation too coupled or too imperative; a prompt clause that enforces design law is justified only by its route to the behaviour it governs (P2), so it needs provenance and proof that it still causes or prevents that behaviour | [§11](#11-review) | the 56 questions, the 43 checks and the 14 hard-gate checks: this profile; prompt construction: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) | 9, 4 |
@@ -225,8 +225,8 @@ Consumers outside this member that apply these rows, each keeping its
 owner: [ASSURANCE §14 to §16](ASSURANCE.md#14-design-to-module-evidence-route)
 apply the module-taxonomy row through the binding at the head;
 [UX](UX.md#1-position) refines the §4 and §10 rows for modules that
-realise a UX surface ([PROFILES §4](PROFILES.md#4-ux)); TICKETS §6
-records the recurrence row at ticket level;
+realise a UX surface ([PROFILES §4](PROFILES.md#4-ux)); the recurrence row
+refines the ticket rule of TICKETS §6;
 [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery is refined for
 software design by the capability-selection row; and
 [ACTIVATION §1 Intake](ACTIVATION.md#intake) uses the design evidence of
@@ -256,7 +256,7 @@ its own locus:
 - Row 18, effect edge, no semantic centre and coupling: [UX §6](UX.md#6-effect-membrane), which refines Effect edge into the effect membrane; [UX §2](UX.md#2-role-and-composition); [Design review questions](#design-review-questions) 1 to 3; the [Functional realisation checklist](#functional-realisation-checklist), effect-edge and coupling checks.
 - Row 19, governance and strategy separation: [Design review questions](#design-review-questions) 20; the [Functional realisation checklist](#functional-realisation-checklist), governance and observability check. No section of another member applies it; the rule binds a realisation boundary that governs another actor, which only this profile designs.
 - Row 20, opportunistic optimisation: [Design review questions](#design-review-questions) 24 and 25; the [Functional realisation checklist](#functional-realisation-checklist), clean-up and cross-boundary checks. No section of another member applies it; a cross-boundary opportunity re-enters as repricing input through SPEC_METHOD §4, which owns that re-entry and not this rule.
-- Row 21, recurrence extraction: [TICKETS §6 Recurring realisation and library declaration](TICKETS.md#recurring-realisation-and-library-declaration), which records and enforces the decision at ticket level; [ASSURANCE §13 Computational whole-path evaluation](ASSURANCE.md#computational-whole-path-evaluation), for recurrence work; [Capability and foundation selection (UP-023)](#capability-and-foundation-selection-up-023), [Whole-family Prime contraction](#whole-family-prime-contraction) and [§9 Module taxonomy](#9-module-taxonomy), which bound what recurrence review may do; [Design review questions](#design-review-questions) 26 and 27.
+- Row 21, recurrence extraction (a refinement of the rule [TICKETS §6 Recurring realisation and library declaration](TICKETS.md#recurring-realisation-and-library-declaration) owns): [ASSURANCE §13 Computational whole-path evaluation](ASSURANCE.md#computational-whole-path-evaluation), for recurrence work; [Capability and foundation selection (UP-023)](#capability-and-foundation-selection-up-023), [Whole-family Prime contraction](#whole-family-prime-contraction) and [§9 Module taxonomy](#9-module-taxonomy), which bound what recurrence review may do; [Design review questions](#design-review-questions) 26 and 27.
 - Row 22, post-ticket design review: [Design review questions](#design-review-questions) 28; the [Functional realisation checklist](#functional-realisation-checklist), closure-claim check. No section of another member applies it; the hard stops and the finding law are ACTIVATION §4's and EVALUATION §5's, which this rule applies and which apply nothing of it.
 - Row 23, interface bleed and proxy interfaces: [Design review questions](#design-review-questions) 8 and 11; the [Functional realisation checklist](#functional-realisation-checklist), one-owner check. No section of another member applies them; the migration-time proxy and bridge rules are SPEC_METHOD §7's, which this rule cites and which apply nothing of it.
 - Row 24, review: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), which names §11 as the design specialisation of prompt construction; [Adoption](#adoption), which uses the questions as review criteria for implementation-migration tickets.
@@ -396,9 +396,14 @@ path (P6, P4a; §10).
 Both lists bind. A project that adopts this profile prefers the first
 and avoids the second as an obligation of the profile, not as a
 description of practice: a realisation that takes an avoided shape, or
-forgoes a preferred one, does not conform (P6, P2; the predecessor's
-"must prefer" and "must avoid", which admit no exception beyond the one
-item that says "where practical").
+forgoes a preferred one, does not conform unless a rule of this profile
+permits that departure and the realisation records the justification the
+rule requires. The permitted departures are those the owning rules state:
+mutable carrier state where it is materially necessary, under §7
+[Immutable carriers](#immutable-carriers), and the failure-carrier
+preference only where practical. Convenience permits no departure (P6,
+P2; the predecessor's "must prefer" and "must avoid", read with the
+necessity exception of its immutable carrier rule).
 
 ### Python typing
 
@@ -1930,23 +1935,21 @@ nested contract or policy carriers; proof-helper or fixture shaping;
 effect-edge request or plan shaping; and constructor or materialisation
 helpers that do not own semantic law.
 
-The rule of two: the second credible recurrence forces a library or
-commonisation review; the third local rebuild is not acceptable by
-default. A third local rebuild is not design-method conformant unless the
-active boundary consumes an existing reusable library or commonisation
-surface, extends that surface before the local implementation lands, or
-review records an explicit do-not-commonise decision and why the pattern
-is still boundary-specific (P2). For ticketed implementation work,
-[TICKETS §6](TICKETS.md#recurring-realisation-and-library-declaration)
-owns the ticket-level recording and enforcement of that decision through
-fields such as `library_usage`, `governing_library` and
-`library_rationale`; this section
-defines the design review obligation, not a rival ticket lifecycle (P6).
+The rule of two, its third-rebuild threshold and the commonisation order
+are owned by
+[TICKETS §6 Recurring realisation and library declaration](TICKETS.md#recurring-realisation-and-library-declaration),
+which applies them to every implementation migration ticket together with
+the fields `library_usage`, `governing_library` and `library_rationale`.
+This profile refines that rule for design review: a third local rebuild
+is not design-method conformant unless the active boundary consumes an
+existing reusable library or commonisation surface, extends that surface
+before the local implementation lands, or review records an explicit
+do-not-commonise decision and why the pattern is still boundary-specific
+(P2). This section defines the design review obligation, not a rival
+ticket rule or lifecycle (P6).
 
-The preferred commonisation order is (1) boundary-local clean-up, (2) a
-tenant-local reusable library, (3) shared or common propagation only
-through separate design re-entry. If a reusable pattern remains
-tenant-local and authority-neutral, it should be extracted into a reusable
+Under the commonisation order that TICKETS §6 owns, if a reusable
+pattern remains tenant-local and authority-neutral, it should be extracted into a reusable
 library or common realisation surface rather than recreated inside each
 module. If commonisation would change ownership, public carriers, module
 boundaries or shared common law, it is no longer recurrence extraction; it
@@ -2573,7 +2576,7 @@ pointed to, not repeated.
 | #11-coupling-rule | conserved; "should be reduced", the preferred and rejected directions, the four coupling signs, fewer places to invent meaning | §10 Coupling |
 | #11a-governancestrategy-separation-rule | conserved; governance not strategy, the seven lawful publications, the four drifts, the distinction, no replacement decision engine | §10 Governance and strategy separation |
 | #11b-opportunistic-optimization-rule | conserved; "should be left better", subordination, the five conditions, the four lawful and four non-lawful examples, repricing input, scope rule versus TICKETS, the test, the closing contrast | §10 Opportunistic optimisation |
-| #11c-recurrence-extraction-rule | conserved; commonisation candidate, the four "usually" properties, the five typical candidates, the rule of two, the three conformance exceptions, TICKETS §6 recording, the three-step "preferred" order, "should be extracted", separate decision, closure by consumption and retirement | §10 Recurrence extraction |
+| #11c-recurrence-extraction-rule | conserved; commonisation candidate, the four "usually" properties, the five typical candidates, the rule of two, which TICKETS §6 owns as ticket law and this section refines as design-method conformance, the three conformance exceptions, the three-step "preferred" order (now stated once, at TICKETS §6), "should be extracted", separate decision, closure by consumption and retirement | §10 Recurrence extraction |
 | #11d-post-ticket-design-review-rule | conserved; "should not rest", the check, no separate artifact, TICKETS authority, the five determinations, complete reconstruction, what hashes, headings and green tests establish, causal closure and reuse, the five consequences, the closing rule with "should not claim"; reuse and its invalidators are ACTIVATION §7's, with a changed relation or new counterexample named as an instance of its material input change; whether a finding blocks current promotion is EVALUATION §5 When a finding blocks promotion, the five determinations being this profile's domain triggers for its four conditions, while a falsified closure claim stays blocked as a `falsified` result; "a ticket adopts" is written "a ticket applies this profile to its boundary" | §10 Post-ticket design review; ACTIVATION §7; EVALUATION §5 |
 | #12-interface-bleed-prohibition | conserved; "should bleed", the five bleed conditions, the three-part shape, non-bleed | §10 Interface bleed prohibition |
 | #13-proxy-interface-prohibition | conserved; the prohibition, the four proxy marks, bridge debt, explicit compatibility or removal | §10 Proxy interface prohibition |

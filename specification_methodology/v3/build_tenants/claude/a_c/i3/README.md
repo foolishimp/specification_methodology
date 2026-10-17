@@ -9,7 +9,7 @@ assurance relations (group G14). It is a partial encoding: read
 
 | Coordinate | Value |
 |---|---|
-| Method subject | the members under `standards/` at the RC1 freeze commit the handoff names (refrozen at every member change since I5-05); statements are quoted from those bytes by the build tool, which refuses a quote that does not occur exactly once in its section. This set's source references name heading slugs under `stdo-3://build_tenants/claude/standards/` |
+| Method subject | the members under `standards/` at the current candidate's freeze commit, which the handoff names (refrozen at every member change since I5-05); statements are quoted from those bytes by the build tool, which refuses a quote that does not occur exactly once in its section. This set's source references name heading slugs under `stdo-3://build_tenants/claude/standards/` |
 | Calculus basis | `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md` (`calculus_ref`) |
 | Signature | [SIGNATURE.md](SIGNATURE.md): vocabulary under `urn:stdo-3:claude:i3:vocabulary:` |
 
@@ -37,7 +37,7 @@ Dispositions (`dispositions/`): every heading section of the eight
 members of groups G1 to G4 (FOUNDATIONS, IDENTITY, PROFILES, ACTIVATION,
 CONFORMANCE, EVALUATION, AXIOMATIC_CALCULUS, REFERENCE_FRAME) has exactly
 one. Totals: 24 `encoded-in-part`, 8 `no determination` (source-disposition
-sections), 182 `not-encoded-i3`; no section is fully `encoded`. Groups G5
+sections), 183 `not-encoded-i3`; no section is fully `encoded`. Groups G5
 to G13 (the other 15 members) are not encoded and have no disposition
 files.
 
@@ -95,7 +95,7 @@ any of the frames in `standards/frames/`.
 
 ## Known gaps
 
-- Coverage as above: the unencoded parts of 24 sections, 182 further
+- Coverage as above: the unencoded parts of 24 sections, 183 further
   sections of G1 to G4, and all of G5 to G13.
 - Fidelity of group G14 and of the premise P4a:
   [fidelity/cases-i5.md](fidelity/cases-i5.md) (22 cases, written before
