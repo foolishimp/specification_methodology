@@ -872,10 +872,10 @@ to its assessment, operation and acceptance grants. UP-007 supplies the
 applicable boundaries, durable trace and promotion-blocking policy below;
 the governing owner selects required review and any reserved decision.
 
-For UP-007's required independent reviews, nonauthor assessment is a required
-authorship condition under that shared owner. The review carrier identifies the
-exact subject, basis, scope, exclusions, evidence, verdict and unresolved
-findings, with the assessor's authorship and evidence conditions bound.
+For UP-007's required independent reviews, apply that owner's nonauthor
+condition to the exact reviewed subject. The review carrier identifies the
+subject, basis, scope, exclusions, evidence, verdict and unresolved findings,
+with the assessor's authorship and evidence conditions bound.
 
 Independent review is required at Product,
 qualification, release, and explicitly risk-bearing boundaries that claim it,

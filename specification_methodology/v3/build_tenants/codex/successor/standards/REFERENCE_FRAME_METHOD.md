@@ -1277,13 +1277,17 @@ universal Product profile and selects no implementation or representation.
   one closed result to urn:example:conjunction:product-change:7
 
 ## Stop And Change
-- invalidation:
+- affected reliance:
   any material subject, checkpoint, Product, dependency, contract, actor,
-  capability, evidence, authority, or topology change
+  capability, evidence, authority, or topology change reopens affected reliance;
+  the historical result retains its original subject and basis; reuse for a
+  new claim requires established applicability under RF-005
 - stop and re-entry:
-  invalid_basis on stale or substituted basis;
+  invalid_basis when the governing basis cannot interpret the bound predicate;
   out_of_frame on missing material scope;
-  indeterminate on unresolved evidence;
+  indeterminate when stale or unresolved supporting evidence leaves the
+  predicate undecidable under an interpretable governing basis, unless other
+  admissible evidence decides it;
   re-enter the owning Product or contract authority when meaning must change
 ```
 

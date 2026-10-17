@@ -15,7 +15,8 @@ not consequences of finite capacity alone. The
 [bounded-construction relation](FOUNDATIONS.md#bounded-construction) governs
 how sufficient steps preserve the declared A-to-Z contract; the
 [workspace/context relation](FOUNDATIONS.md#workspace-and-context) governs
-intake and re-entry. UP-020 consumes the shared
+the current state and acquired context. [Universal Intake Triage](#universal-intake-triage)
+owns change classification and re-entry. UP-020 consumes the shared
 [result algebra](FOUNDATIONS.md#result-algebra) for construction, assessment
 and disposition without merging their predicates or authority. Neither a
 foundation argument nor a shared helper supplies permission.
@@ -50,7 +51,7 @@ linked consumer owns its detailed conditions, exceptions and modal force.
 | [Constitutional Chain](#constitutional-chain), [Process Constitution](#process-constitution), [Position](#position), [Manifesto](#manifesto), [Spec-Drivenness Litmus](#spec-drivenness-litmus) and [Specification Surface Rule](#specification-surface-rule) | F1, F2 and F6; the instance has a selected outcome, interpreted specification layers and an owner for each layer. Specification and project structure supply the destination and ownership relation; information and interpretation distinguish that relation from its files. | An implementation can be assessed against the selected meaning only while that meaning remains recoverable. Its behavior, a definition overlay and a derived view cannot make themselves the authority for the obligations they claim to satisfy. | Spec chooses the Goals-led chain, WHAT/HOW split, one live constitutional surface and present-tense convention. The Product Definition locates those surfaces; their owning authorities decide their content. |
 | [WHAT, HOW, And Work Carriers](#what-how-and-work-carriers), [Design Rule](#design-rule) and [Reconstruction Litmus](#reconstruction-litmus) | F1, F2 and F4; one requirement set admits independently designed realizations. Functional design supplies operation and invariant bindings; computational calculus and execution binding relate those operations to a human, machine or mixed environment. | A requirement is realized through the operation or invariant that satisfies it and the relations preserved at its interfaces. Changing the executor or notation alone neither defeats nor establishes that relation. A realization route without preservation evidence cannot establish conformance; an unconstrained implementation choice remains with design. | Spec owns the requirement-to-realization binding and reconstruction test. The tenant owns its calculus, environment and material resource measures. The Product binding selects requirement locations and applicable profiles; a folder, software stack or graph runtime is not required by these premises. |
 | [Universal Intake Triage](#universal-intake-triage) and [Counterexample Localization](#counterexample-localization) | F1, F2, F3 and F6; reports concern a changing Product whose specification layers have different owners. Evidence, correction and authority supply causal diagnosis and lawful repair; reference frames supply the material observations needed to distinguish diagnoses. | The affected meaning and evidence determine where a change belongs. A report labelled a bug may expose an inadequate requirement; a failure observed in code need not have its cause there. Repeating a diagnosis under another frame name adds no evidence, and locating a cause grants no repair. | Spec chooses one intake route, six change classes and the assertion of no upstream change for lower re-entry. The affected owner decides changes to its relation; frame configuration supplies the smallest sufficient diagnosis within the existing grant. |
-| [Computed Classification And Treatment](#computed-classification-and-treatment), [Renewal Path](#renewal-path), [Trace Closure And Anti-Drift Rule](#trace-closure-and-anti-drift-rule), [Method](#method) and [ADR Conventions](#adr-conventions) | F2–F4 and F6; a classification or design claim depends on particular observations, requirements and owner decisions that may change independently. Information fidelity preserves those dependencies; typed composition preserves the affected outer obligations. | A retained conclusion is reusable only while its support remains applicable. New behavior can refute a realization or expose a governing gap, but cannot supply the missing owner decision. Correcting a lower surface cannot close an affected upstream gap merely by making tests agree with it. | Spec owns computed classification, the upward re-entry route and downstream trace closure. Its ADR fields and layout are conventions for carrying decisions. Ticket owns continuity of recorded judgments and rulings; each semantic owner decides its own repricing. |
+| [Computed Classification And Treatment](#computed-classification-and-treatment), [Renewal Path](#renewal-path), [Trace Closure And Anti-Drift Rule](#trace-closure-and-anti-drift-rule), [Method](#method) and [ADR Conventions](#adr-conventions) | F2–F4 and F6; a classification or design claim depends on particular observations, requirements and owner decisions that may change independently. Information fidelity preserves those dependencies; typed composition preserves the affected outer obligations. | A retained conclusion is reusable only while its support remains applicable. New behavior can refute a realization or expose a governing gap, but cannot supply the missing owner decision. Correcting a lower surface cannot close an affected upstream gap merely by making tests agree with it. | Computed treatment owns whether the candidate or governing relation needs correction; Universal Intake Triage owns the resulting change class and re-entry. Renewal and trace closure consume those decisions. ADR fields and layout carry decisions; Ticket owns continuity of judgments and rulings, and each semantic owner decides its own repricing. |
 | [Probabilistic Work Boundary](#probabilistic-work-boundary) and [Agentic Construction Execution](#agentic-construction-execution-stdo-up-020) | F1–F6; an actor is delegated a bounded transition with fallible search, observable effects and a declared decision envelope. Outcome-driven development supplies continuation toward the selected destination; computational binding supplies the actual operations and effect observations. | Producing a candidate, establishing its cone preservation and deciding its disposition answer different predicates. Private search supplies none of the missing authority or evidence. A partial return preserves completed work and unknown effects so that continuation can observe the current state before a dependent repetition. | UP-020 owns cone intake, checkpoint and remedy policy, including direct Writer entry and permitted bounded proxy decisions. The existing grant and applicable profiles select assessment and reserved decisions; worker topology and internal search remain permitted variation. |
 | [Product Outcome Conservation](#product-outcome-conservation-stdo-up-013) and [Consistency Gate Rule](#consistency-gate-rule) | F1, F3, F4 and F6; a work wave selects an outcome instance with an acceptance interval and affected obligations. Outcome-driven development distinguishes movement toward that outcome from readiness; algebraic composition preserves the conjunction needed for closure. | Passing an activity's predicate does not establish Product progress or close another obligation. A satisfied preservation or readiness result remains useful on its own predicate. A review event or a consistent subset cannot erase a known failure, absent required assessment or reserved decision. | UP-013 chooses the outcome-instance, exhaustion and bounded prerequisite/experiment policies. Spec owns the consistency gate; Ticket owns condition-based closure. Product and work-wave authorities retain their distinct outcome and sequencing decisions. |
 | [Sprint Execution Boundary](#sprint-execution-boundary) and [Proportional Method And Delivery](#proportional-method-and-delivery-stdo-up-014) | F1, F4–F6; work can be batched and some proof can be delayed while obligations outlive individual actions. Finite reference frames and concrete execution costs make batching useful; conservation keeps its deferred obligations visible. | Batching may change when permitted proof is paid, but cannot establish that proof or supply authority for additional work. Delivery remains judged against its selected outcome and applicable closure conditions, so a lower local cost cannot silently discard an obligation. | Spec chooses proportional delivery and the sprint's bounded escrow policy. Ticket owns manifests, debt recording and close review. Governing law determines which proof may be deferred and which decisions require immediate re-entry. |
@@ -299,7 +300,10 @@ The work is not genuinely spec-driven if any of these fail:
 8. Realized behavior exists without requirement and design authority.
 9. A live domain artifact is rewritten in place after becoming part of the live constitutional surface.
 10. A capability claim has no operational evidence.
-11. Drift is discovered, but the constitutional source is not repriced.
+11. Drift is discovered, but its supported correction is not pursued through
+    [Universal Intake Triage](#universal-intake-triage). A governing source is
+    repriced when its meaning needs to change; a realization defect under
+    sufficient law does not itself require that repricing.
 12. A major ambiguity at a constitutional or realization boundary is neither recorded nor explicitly governed.
 13. A material product, module, function, application, runtime surface, or
     capability has no declared operational lifecycle signal and no recorded
@@ -1101,7 +1105,7 @@ Goals → Intent → Product Definition → Requirements → Design → Realisat
                                                                                        ↓
                                                                                 Gap Analysis
                                                                                        ↓
-                                                                    Repricing / New Goals / Intent
+                                                                  Intake-selected re-entry or observation
 ```
 
 - **Goals** define the current overriding concerns for the active body of work.
@@ -1120,7 +1124,11 @@ Goals → Intent → Product Definition → Requirements → Design → Realisat
 - **Delta** reveals drift between intended truth and realized state.
 - **Scenarios** test operational meaning — can the system actually do the thing the words describe?
 - **Gap analysis** identifies where real use cases hit the current model and reveal insufficiency.
-- **Repricing** updates goals, intent, product, requirements, design, or realisation when the system no longer harmonizes. When gap analysis reveals constitutional insufficiency, it generates new **Goals** and/or **Intent**.
+- **Repricing** follows the change class and owning layer selected by
+  [Universal Intake Triage](#universal-intake-triage). A constitutional gap
+  changes the meaning at that layer and its affected downstream span; it does
+  not by itself require new Goals or Intent. An unresolved cause remains
+  unresolved and may require further observation before a repair is selected.
 
 This is the homeostatic loop. Every link in the chain is load-bearing. A break at any link — goals with no downstream repricing path, an unowned requirement, an ungrounded design record, realisation without a design decision — creates accidental law.
 
@@ -2623,7 +2631,14 @@ Each layer in the chain preserves a distinct kind of truth:
 
 Without scenarios, important capabilities can appear "covered" because the words exist in requirements and design. Scenarios force the sharper question: can the product *really* do the thing? A requirement can say "compositional graphs" and a design ADR can describe Fragment types, but only a scenario asks "can I model a reusable discovery workflow and apply it twice?"
 
-Scenarios are the product-owner layer. They are concrete, end-to-end use cases that validate the chain from intent to realized behavior. When a scenario cannot be written, the capability is not yet real. When a scenario fails, the gap is between the system's actual behavior and its claimed capability — not between the spec's words and the spec's other words.
+Scenarios are the product-owner layer. They are concrete, end-to-end use cases
+that test the chain from intent to realized behavior. Without an adequate
+scenario, that layer has not demonstrated the capability. A failed scenario
+supplies a discrepancy to [Universal Intake Triage](#universal-intake-triage);
+the failure alone does not distinguish a realization defect, inadequate
+governing meaning, inaccurate prediction or an inadequate scenario, oracle or
+observation. The scenario must expose operational behavior rather than merely
+compare the specification's words with other words.
 
 Scenarios do not replace requirement categories. They primarily validate capability claims and other behavior with concrete operational meaning. Constraints, governance rules, and verification-infrastructure requirements may require different evidence in addition to, or instead of, end-to-end scenarios.
 
@@ -2932,20 +2947,29 @@ If filenames and placement are hardcoded in requirements without constitutional 
 
 ## Renewal Path
 
-Intent is not only top-down. The full homeostatic cycle includes a reverse path where real use cases generate new intent:
+Real use supplies feedback to the constitutional chain. Its renewal route uses
+the classification and re-entry owned by
+[Universal Intake Triage](#universal-intake-triage):
 
 ```
-Current spec → real-world use case → gap analysis → new goals / intent
+Current spec → real-world use case → gap analysis → intake-selected re-entry or observation
 ```
 
-This is how the system stays alive instead of becoming a frozen constitution. The generative rule:
+1. A real use case supplies observations against the current model and required
+   outcome.
+2. Gap analysis applies the intake diagnosis to locate the supported cause and
+   retain unresolved alternatives.
+3. A justified change re-enters at the selected owning layer. The affected
+   downstream span is reconciled without repricing sufficient upstream meaning.
+4. If the cause or necessary change is unresolved, dependent repair remains
+   unjustified; further observation may proceed under its existing grant.
 
-1. A real use case (scenario, deployment, external review) hits the current model
-2. Gap analysis identifies what the constitution cannot express
-3. If the gap is constitutional (not just a missing implementation), new goals and/or intent are written
-4. The repriced surface then flows forward through the chain: product → requirements → design → realisation
-
-New intents emerge from repeated, real use-case pressure against the current model — not from abstract speculation. The gap must be concrete before it becomes intent. Ad hoc coding pressure does not generate intent; explicit gap analysis does.
+New Goals or Intent follow when the selected intake class establishes their
+work-wave, direction or scope change. A concrete gap and the owning decision
+justify that change; implementation pressure alone does not. A requirement
+gap with stable direction and Product meaning can instead re-enter at
+Requirements, and an implementation defect under sufficient law can be
+repaired at its realized surface.
 
 This flow is not a one-pass waterfall computation. It is a cumulative iteration:
 
@@ -3004,8 +3028,10 @@ meaning choices; the labels and default scaffold do not determine a verdict.
   design authority, they are ungoverned product surface.
 - If tests validate implementation habit rather than requirement truth, they
   lock in drift.
-- If events and projection reveal persistent delta, either code is wrong or the
-  requirement/design stack is stale.
+- If observations and projection reveal persistent delta, apply
+  [Universal Intake Triage](#universal-intake-triage) to establish its cause;
+  persistence alone does not decide which relation is wrong or whether the
+  observation is sufficient.
 - If a capability has requirements and design but no scenario, its operational
   meaning is unverified.
 - If a requirement is treated as a product feature when it is actually a
@@ -3013,8 +3039,9 @@ meaning choices; the labels and default scaffold do not determine a verdict.
   surface has been misclassified.
 - If a live constitutional artifact is corrected by in-place mutation rather
   than supersession or withdrawal, constitutional history has been corrupted.
-- If a real use case reveals a gap not expressible in current requirements, a
-  new intent is needed, not a code hack.
+- If a real use case reveals a gap not expressible in current requirements,
+  intake selects the owning layer whose meaning must change. Missing
+  requirement meaning does not establish a direction or scope change.
 
 Trace closure is stricter than documentation completeness. It is the rule that
 closes the constitution over realized behavior.
@@ -3403,16 +3430,22 @@ When bootstrapping a project or repricing a requirement surface:
 
 When a real use case reveals a gap:
 
-1. Run intake triage first and classify the report as a lawful change.
+1. Enter [Universal Intake Triage](#universal-intake-triage) first; preserve an
+   unresolved classification until the evidence supports a lawful change.
 2. Then write the **Scenario** as the first substantive project artifact for the
    gap so the pressure becomes concrete and testable.
-3. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
+3. Run **Gap Analysis** using the intake diagnosis and its evidence. Identify
+   the supported cause or the observation needed to distinguish the remaining
+   alternatives; a failed scenario does not decide the cause by itself.
 4. If constitutional: apply the change class selected by
    [Universal Intake Triage](#universal-intake-triage), re-enter at that owning
    layer and reconcile its affected downstream span. Reprice Goals or Intent
    only when their respective work-wave, direction or scope conditions change;
    a requirement-level gap with stable direction re-enters at Requirements.
-5. If implementation: write requirements/design as needed, then implement.
+5. If the governing requirements and design are sufficient, repair the
+   implementation within its grant and recheck the affected obligations. A
+   newly discovered need to change governing meaning returns to intake for
+   classification and owning-layer re-entry before that change is made.
 
 The intake source does not change this rule.
 

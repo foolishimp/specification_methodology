@@ -480,9 +480,14 @@ exposes previously hidden architectural ambiguity, the boundary switches to
 design-gated sequencing at the smallest causally closed affected decision set
 rather than retroactively invalidating unrelated work. Serial implementation
 repairs do not establish design acceptance. Repeated or cross-cutting material
-surprises are evidence that the affected design cut is underconstrained and
-require one bounded `design_reframe`; retained code remains provisional
-evidence until that reframe is accepted.
+surprises enter [Universal Intake Triage](SPEC_METHOD.md#universal-intake-triage).
+When its diagnosis establishes that the affected design cut is underconstrained
+while governing requirements remain sufficient, one bounded `design_reframe`
+is required; retained code in that affected cut remains provisional evidence
+until the reframe is accepted. A surprise alone does not establish a design
+cause. Intake retains unresolved alternatives and selects any required
+upstream change or further observation before this design-specific gate can
+be treated as sufficient.
 
 This applies the governing proportionality law: a prior design gate is
 warranted when it removes material semantic ambiguity whose alternatives would

@@ -108,7 +108,7 @@ The ownership layers are distinct:
 | frame declaration, activation, frame-specific result refinement, translation, coverage, and revision | `REFERENCE_FRAME_METHOD.md` | defines each engagement frame and the active configuration |
 | bounded-frame conservation and execution intake | `DESIGN_MODULE_METHOD.md` `STDO-UP-017..019`; `SPEC_METHOD.md` `STDO-UP-020` | supplies the Worker activation basis |
 | construction, self-review, assessment, disposition, checkpoint, and continuation | `SPEC_METHOD.md` `STDO-UP-020` | supplies the complete execution transition relation |
-| author/implementer and independent-review separation | `TICKET_METHOD.md` `STDO-UP-007` | supplies Reviewer independence and exact-verdict traceability |
+| author/implementer and independent-review separation | [Independent assessment](FOUNDATIONS.md#independent-assessment); `TICKET_METHOD.md` `STDO-UP-007` | supplies the shared independence contract, with UP-007 owning required boundaries, exact-verdict trace and promotion policy |
 | exact assurance subject, evidence population, and generic-method freeze | `SPEC_METHOD.md` `STDO-UP-022` | supplies review-boundary and qualification constraints |
 | module-derived unit proof | `DESIGN_MODULE_METHOD.md` Design-to-Module evidence route and Module-Derived Unit Test Rule | supplies the unit frame's module ownership basis while this profile limits its claim and evidence altitude |
 | capability and foundation selection before material generic construction | `DESIGN_MODULE_METHOD.md` `STDO-UP-023` | supplies the Worker's proportional reuse comparison without treating reuse itself as authority transfer; any assigned foundation role preserves its declared relation and owner |
@@ -1968,7 +1968,7 @@ boundary policy, conjunction rule, and exact disposition grant.
 
 | Observation | First diagnosis |
 |---|---|
-| implementation produces a coherent capability that is not the selected Product | Product-frame falsification and Product re-entry |
+| implementation produces a coherent capability that is not the selected Product | Product-frame evaluation of the delivered capability; apply [Universal Intake Triage](SPEC_METHOD.md#universal-intake-triage) to its supported cause before selecting repair or re-entry |
 | a Development Product's structure becomes the authored Product's meaning | Product-role or composition-basis drift |
 | an authorized mutable Source Project is treated as one immutable review subject throughout construction | Source Project and candidate-checkpoint lifecycle collapse |
 | one actor receives every specialist concern as one global context and repeatedly misses known violations | attention-surface or capability mismatch; refine and independently activate frames |
@@ -1997,7 +1997,13 @@ boundary policy, conjunction rule, and exact disposition grant.
 | repeated local repair creates another authority path | incomplete affected cone or missing owner/capability frame |
 | long effort resets after local success | coverage, frame altitude, topology, evidence, or capability diagnosis required |
 
-The table routes evaluation. It does not predetermine a verdict.
+The table routes evaluation. It does not predetermine a verdict or reprice its
+subject. If the applicable Product, requirements and design are adequate and
+the realisation fails them, repair the realisation under that existing contract.
+A supported gap in governing meaning re-enters the layer selected by Universal
+Intake Triage. Insufficient
+observation or unresolved causal alternatives remain unresolved; a failed
+Product outcome alone does not locate the defect in Product meaning.
 
 ---
 
@@ -2020,8 +2026,13 @@ This profile is misapplied when:
    subject;
 9. Reviewer trusts tests without reviewing their semantics where they can
    change the proof;
-10. Reviewer edits or directs repair while retaining independent-review status;
-11. changed candidate or basis reuses the predecessor verdict;
+10. Reviewer authors the subject or repair while claiming required nonauthor
+    assessment of that contribution, or uses review authority to decide or
+    direct repair; reporting defects and rechecking them follows
+    [Independent assessment](FOUNDATIONS.md#independent-assessment);
+11. a changed candidate or basis inherits the predecessor verdict without
+    established applicability under
+    [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention);
 12. results from different coordinates are flattened into one relation;
 13. a local axioms file is treated as authority without an owning
     Goals/Product/requirement/design decision;
