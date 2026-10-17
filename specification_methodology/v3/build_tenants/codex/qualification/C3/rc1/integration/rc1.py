@@ -185,13 +185,37 @@ def account(args, context, build):
     current = {p: (PACKAGE / p).read_bytes() for p in paths}
     integrate = importlib.import_module('reconcile_account')
     integrate.INPUTS = INPUTS
+    # Two repeated fence blocks in this unchanged section are not unique text
+    # matches. Authenticate their preserved local coordinates through the
+    # identical complete owner body; retain the integrator's explicit-span check.
+    repeated = next(r for r in prior['determinations'] if r['id'] == 'SPEC_METHOD.testing-strategy-taxonomy')
+    path = repeated['owner']['path']
+    before, old_start, old_end = integrate.body(repeated['owner'], old[path])
+    after, new_start, new_end = integrate.body(repeated['owner'], current[path])
+    if before != after:
+        raise ValueError('Repeated-block owner changed; coordinate preservation is unsupported')
+    blocks = copy.deepcopy(repeated['source_clauses'])
+    for block in blocks:
+        if not old_start <= block['byte_start'] <= block['byte_end'] <= old_end:
+            raise ValueError('Repeated block escapes its authenticated owner')
+        block['byte_start'] += new_start - old_start
+        block['byte_end'] += new_start - old_start
+        if sha(current[path][block['byte_start']:block['byte_end']]) != block['sha256']:
+            raise ValueError('Repeated block changed at its preserved owner coordinate')
+    relocation = {'id': repeated['id'], 'preimage_body_sha256': sha(before),
+                  'candidate_body_sha256': sha(after), 'semantic_fields': {'source_clauses': blocks}}
+    patch['updates'].append(relocation)
+    write(HERE / 'COORDINATE_RELOCATION.json', {'source_commit': commit,
+          'prior_source_commit': prior['subject']['source_commit'], 'update': relocation,
+          'reason': 'Identical complete owner body authenticates repeated fence blocks c9/c14 at their preserved local coordinates; no semantic change.'})
     result, report = integrate.integrate(prior, old, current, [patch], commit)
     result['source_members'] = inventory
     result['subject'].update(activation='EC-CODEX-RC1-01/RC1-INTEGRATION',
                              source_repair_commit=INPUTS['source_repair_commit'])
     result['standing'] = 'Current RC1 authored construction account; no independent fidelity or acceptance judgment.'
     report.update(common_input=INPUTS['common_input'], prior_account_commit=INPUTS['prior_account_commit'],
-                  prior_account_sha256=sha(prior_raw), patch_commit=commit, patch_sha256=sha(patch_raw))
+                  prior_account_sha256=sha(prior_raw), patch_commit=commit, patch_sha256=sha(patch_raw),
+                  coordinate_only_updates=[repeated['id']])
     write(HERE / 'DETERMINATIONS.json', result)
     write(HERE / 'ACCOUNT_INTEGRATION.json', report)
     print(json.dumps({'rows': len(result['determinations']), 'direct_patches': len(report['direct_patches']),
@@ -209,6 +233,88 @@ def bind_account(args, build):
     return account
 
 
+def consumers(args):
+    """Apply only the explicitly admitted closed author patch groups."""
+    commit = exact(args.consumer_commit)
+    directory = HERE.parent / 'consumer-account'
+    account_path = HERE / 'DETERMINATIONS.json'
+    account = read(account_path)
+    rows = {row['id']: row for row in account['determinations']}
+    before = sha(account_path.read_bytes())
+    selected, changes, source_cache = [], [], {}
+
+    def source_pin(pin):
+        path = (REPO / pin['path']).resolve()
+        path.relative_to(PACKAGE.resolve())
+        if pin['commit'] != INPUTS['source_repair_commit']:
+            raise ValueError('Consumer evidence names a different source commit')
+        if path not in source_cache:
+            source_cache[path] = authenticate(pin['commit'], path)
+        raw = source_cache[path]
+        if sha(raw[pin['byte_start']:pin['byte_end']]) != pin['body_sha256']:
+            raise ValueError('Consumer evidence source body differs')
+        return raw
+
+    def evidence_pins(value):
+        if isinstance(value, list):
+            for child in value:
+                evidence_pins(child)
+        elif isinstance(value, dict):
+            if {'commit', 'path', 'byte_start', 'byte_end', 'body_sha256'} <= set(value):
+                source_pin(value)
+            if 'quote_sha256' in value:
+                raw = source_pin(value['source'])
+                quote = raw[value['quote_byte_start']:value['quote_byte_end']]
+                if sha(quote) != value['quote_sha256'] or quote.decode() != value['quote']:
+                    raise ValueError('Consumer source quote differs')
+            for child in value.values():
+                evidence_pins(child)
+
+    for name in args.consumer_patch:
+        if name not in {'INVERSE_PROJECTION_PATCH.json', 'RECIPROCAL_CALL_PATCH.json'}:
+            raise ValueError('Unselected consumer patch filename')
+        raw = authenticate(commit, directory / name)
+        patch = json.loads(raw)
+        required = patch.get('required_patch')
+        if required and not any(Path(p['path']).name == required['filename'] and
+                                p['sha256'] == required['sha256'] for p in selected):
+            raise ValueError('Consumer patch prerequisite is not selected at its exact digest')
+        if (patch['source_commit'] != INPUTS['source_repair_commit'] or
+                patch['account_commit'] != INPUTS['prior_account_commit']):
+            raise ValueError('Consumer source/account basis differs')
+        evidence_pins(patch['updates'])
+        for update in patch['updates']:
+            identifier, field = update['id'], update['field']
+            if identifier == TARGET or field not in {'consumers', 'dependencies'}:
+                raise ValueError('Consumer patch escapes its admitted fields or generic owner boundary')
+            row = rows[identifier]
+            if ((field in row) != update['preimage_present'] or
+                    row.get(field, []) != update['preimage']):
+                raise ValueError('Consumer patch preimage differs: ' + identifier + '/' + field)
+            replacement = update['replacement']
+            if (not isinstance(replacement, list) or len(set(replacement)) != len(replacement) or
+                    not set(row.get(field, [])) <= set(replacement) or
+                    any(target not in rows for target in replacement) or not update['evidence']):
+                raise ValueError('Consumer patch loses a positive, names an absent row or lacks evidence')
+            row[field] = replacement
+            changes.append(copy.deepcopy(update))
+        selected.append({'path': str((directory / name).relative_to(TENANT)),
+                         'commit': commit, 'sha256': sha(raw)})
+    account['coverage']['consumer_completion'] = {
+        'producer_commit': commit, 'patch_inputs': selected,
+        'updated_rows': sorted({u['id'] for u in changes}),
+        'standing': 'Source-supported author completion only; retained positives and unknown absence keep their reported limits.'}
+    write(account_path, account)
+    write(HERE / 'CONSUMER_INTEGRATION.json', {
+        'kind': 'stdo.rc1.consumer-account-integration', 'schema_version': 1,
+        'producer_commit': commit, 'patch_inputs': selected,
+        'before_account_sha256': before, 'account_sha256': sha(account_path.read_bytes()),
+        'updates': changes,
+        'semantic_dependency_updates': sorted({u['id'] for u in changes if u['field'] == 'dependencies'}),
+        'standing': 'Admitted closed author patch groups applied; no independent fidelity or complete consumer-absence judgment.'})
+    print(json.dumps({'consumer_patch_groups': len(selected), 'explicit_field_updates': len(changes)}))
+
+
 def applicability(args, context, build, account):
     prior_raw = authenticate(INPUTS['helper_commit'], I5 / 'CONSERVATION.json')
     prior = json.loads(prior_raw)
@@ -220,7 +326,9 @@ def applicability(args, context, build, account):
             target = edge['target'].removeprefix(build.NS + 'clause:')
             if target in reverse and edge['acquisition'] in {'required', 'conditional'}:
                 reverse[target].add(identifier)
-    affected = {TARGET}
+    consumer_report = read(HERE / 'CONSUMER_INTEGRATION.json') if (HERE / 'CONSUMER_INTEGRATION.json').exists() else {}
+    seeds = {TARGET, *consumer_report.get('semantic_dependency_updates', [])}
+    affected = set(seeds)
     while True:
         expanded = affected | set().union(*(reverse[item] for item in affected))
         if expanded == affected:
@@ -262,7 +370,10 @@ def applicability(args, context, build, account):
              'prior_record': {'commit': INPUTS['helper_commit'],
                               'path': str((I5 / 'CONSERVATION.json').relative_to(TENANT)),
                               'sha256': sha(prior_raw), 'source_commit': prior['candidate_source_commit']},
-             'changed_owner': TARGET, 'declared_dependency_cone': sorted(affected), 'rows': result,
+             'changed_owner': TARGET, 'changed_semantic_determinations': sorted(seeds),
+             'changed_consumer_projection_rows': sorted({u['id'] for u in consumer_report.get('updates', [])
+                                                        if u['field'] == 'consumers'}),
+             'declared_dependency_cone': sorted(affected), 'rows': result,
              'limits': ['No predecessor disposition or acceptance is changed.',
                         'Unchanged local bytes retain only their prior supported scope; missing independent qualification stays missing.',
                         'Declared required and conditional account edges bound this impact projection. Complete material dependency coverage remains an independent assessment obligation.',
@@ -278,6 +389,19 @@ def applicability(args, context, build, account):
 
 def verify(args, context, build):
     account = bind_account(args, build)
+    authenticate(args.source_commit, HERE / 'FRAME_INPUTS.json')
+    authenticate(args.source_commit, HERE / 'ACCOUNT_PATCH.json')
+    authenticate(args.package_commit, Path(__file__))
+    generation_path = HERE / 'interpretation/GENERATION.json'
+    generation = json.loads(authenticate(args.package_commit, generation_path))
+    for name in ['validation.json', 'DEPENDENCY_VERIFICATION.json', 'QUALIFICATION_EQUIVALENCE.json']:
+        authenticate(args.package_commit, HERE / 'interpretation' / name)
+    if (generation['document_source_input_commit'] != args.source_commit or
+            generation['account_input_commit'] != args.account_commit or
+            generation['common_input_commit'] != INPUTS['common_input']):
+        raise ValueError('Current native generation receipt has a different frozen subject')
+    if (HERE / 'CONSUMER_INTEGRATION.json').exists():
+        authenticate(args.package_commit, HERE / 'CONSUMER_INTEGRATION.json')
     current, _ = build.semantic_projection(account)
     if current != read(PACKAGE / 'interpretation/source-account.json'):
         raise ValueError('Packaged account differs from the frozen authored account')
@@ -289,8 +413,6 @@ def verify(args, context, build):
         raise ValueError('Generic assessment repair lost in semantic projection')
     section = target['owner']
     raw = (PACKAGE / section['path']).read_bytes()
-    if account['determinations'][367]['id'] != TARGET:
-        raise ValueError('Unexpected determination identity ordering')
     c1 = next(b for b in target['source_clauses'] if b['id'] == 'c1')
     if raw[c1['byte_start']:c1['byte_end']].decode() != expected['source_excerpt']:
         raise ValueError('Current assessment excerpt lost its exact source block')
@@ -302,19 +424,42 @@ def verify(args, context, build):
     baseline_ids = ['STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition',
                     'STDO_REFERENCE_FRAME_BASELINE.engagement-applicability']
     prior_account = read(I5 / 'DETERMINATIONS.json')
+    def consumer_relations(value):
+        declared = {(owner, row['id']) for row in value['determinations'] for owner in row.get('dependencies', [])}
+        projected = {(row['id'], consumer) for row in value['determinations'] for consumer in row.get('consumers', [])}
+        return declared, projected
+    old_declared, old_projected = consumer_relations(prior_account)
+    declared, projected = consumer_relations(account)
+    if old_projected - old_declared != projected - declared:
+        raise ValueError('Unmatched prior consumer positives were altered')
+    write(HERE / 'CONSUMER_RELATIONS.json', {
+        'source_commit': args.source_commit, 'account_commit': args.account_commit,
+        'missing_inverse_pairs': sorted(declared - projected),
+        'retained_unmatched_positive_pairs': sorted(projected - declared),
+        'standing': 'Exact declared-edge projection only. Retained unmatched positives and separate material consumer completeness remain unresolved.'})
     for identifier in baseline_ids:
         old = next(r for r in prior_account['determinations'] if r['id'] == identifier)
         new = next(r for r in account['determinations'] if r['id'] == identifier)
-        if old != new or TARGET not in new['dependencies']:
+        if (any(old.get(key) != new.get(key) for key in set(old) | set(new) if key != 'consumers')
+                or TARGET not in new['dependencies']):
             raise ValueError('Declared baseline consumer changed or lost its owner')
-    changed = subprocess.check_output(['git', 'diff', '--name-only', INPUTS['source_repair_commit'],
-                                      args.package_commit], cwd=REPO, text=True).splitlines()
     prefix = str(TENANT.relative_to(REPO)) + '/'
     allowed = ['successor/standards/authority_compressions/', 'successor/standards/frames/',
                'successor/standards/verification_material/', 'successor/interpretation/',
                str(HERE.relative_to(TENANT)) + '/']
-    if any(not p.startswith(prefix) or not any(p[len(prefix):].startswith(a) for a in allowed) for p in changed):
-        raise ValueError('Checkpoint escaped exact RC1 Writer territory')
+    # Other authorised Writers may freeze their closed support between our
+    # checkpoints. Audit this Writer's exact commits, not their inherited work.
+    checkpoints = sorted({args.source_commit, args.account_commit, args.package_commit})
+    changed = set()
+    for checkpoint in checkpoints:
+        paths = subprocess.check_output(['git', 'diff-tree', '--no-commit-id', '--name-only',
+                                         '-r', checkpoint], cwd=REPO, text=True).splitlines()
+        if any(not p.startswith(prefix) or not any(p[len(prefix):].startswith(a) for a in allowed) for p in paths):
+            raise ValueError('Writer checkpoint escaped exact RC1 territory: ' + checkpoint)
+        changed.update(paths)
+    subprocess.run(['git', 'diff', '--exit-code', INPUTS['source_repair_commit'],
+                    args.package_commit, '--', str(I5.relative_to(REPO))], cwd=REPO, check=True,
+                   stdout=subprocess.PIPE)
     check = read(HERE / 'ARTIFACT_CHECK.json')
     write(HERE / 'CANDIDATE.json', {'kind': 'stdo.rc1.candidate-inventory', 'schema_version': 1,
         'common_input': INPUTS['common_input'], 'document_source_commit': args.source_commit,
@@ -323,9 +468,9 @@ def verify(args, context, build):
     write(HERE / 'CHANGED_SCOPE.json', {'kind': 'stdo.rc1.changed-scope-check', 'schema_version': 1,
         'source_commit': args.source_commit, 'account_commit': args.account_commit,
         'package_commit': args.package_commit, 'writer_result': 'satisfied',
-        'changed_paths': changed, 'historical_paths_preserved': True,
+        'writer_checkpoints': checkpoints, 'changed_paths': sorted(changed), 'historical_paths_preserved': True,
         'determinations': len(current['determinations']), 'members': len(check['members']),
-        'native_validation': read(HERE / 'interpretation/GENERATION.json')['native_validation'],
+        'native_validation': generation['native_validation'],
         'changed_owner': TARGET, 'baseline_consumers_preserved': baseline_ids,
         'changed_body_frames': frames, 'generic_binding_cases': read(HERE / 'DISCRIMINATORS.json'),
         'conservation_rows': len(scope['rows']),
@@ -339,17 +484,28 @@ def verify(args, context, build):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation', choices=['source', 'account', 'generate', 'verify'])
+    parser.add_argument('operation', choices=['source', 'account', 'consumers', 'generate', 'verify'])
     parser.add_argument('--source-commit')
     parser.add_argument('--account-commit')
     parser.add_argument('--package-commit')
+    parser.add_argument('--consumer-commit')
+    parser.add_argument('--consumer-patch', action='append', default=[])
+    parser.add_argument('--coordinates', type=Path)
     parser.add_argument('--theory-root', type=Path)
     args = parser.parse_args()
+    if args.coordinates:
+        coordinates = read(args.coordinates)
+        for field in ['source_commit', 'account_commit', 'package_commit']:
+            if getattr(args, field) and getattr(args, field) != coordinates[field]:
+                raise ValueError('Conflicting explicit and recorded coordinate: ' + field)
+            setattr(args, field, coordinates[field])
     context, build = modules()
     if args.operation == 'source':
         source(args, context, build)
     elif args.operation == 'account':
         account(args, context, build)
+    elif args.operation == 'consumers':
+        consumers(args)
     elif args.operation == 'generate':
         bind_account(args, build)
         invoke(importlib.import_module('generate_interpretation'),

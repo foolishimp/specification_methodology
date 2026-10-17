@@ -15,3 +15,7 @@ Resources: 512 KiB newly presented source, repeated reads reported separately; 2
 Construction begins as RC1-INTEGRATION Writer. Each necessary source/account/package checkpoint below is an explicit Git Writer transition; construction resumes as Writer afterward.
 
 RC1-INTEGRATION transitions from Writer to Git Writer for the exact documentary-source checkpoint: the ten changed compression/frame/verification members and this integration directory only. After the commit it resumes Writer to build the authenticated account. The existing index is required empty before staging.
+
+Source checkpoint: `ed940de64f787d05c919efd1a2c45c5e1ef31685`. The parent froze the closed consumer and planning returns separately at `b2c0381c5ed7901452bc2d020001e98c634032c9`. Its disposition at `b83105aba89c9fe140b7f7f6cce5eb117d274ba5` selects the inverse projection then reciprocal calls, with the documented limits. Writer applied only those groups after exact preimage and source-quote authentication.
+
+RC1-INTEGRATION now transitions to Git Writer for the exact authored-account checkpoint: this integration directory only. It resumes Writer afterward for generation through the unchanged compiler.

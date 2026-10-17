@@ -1,0 +1,19 @@
+# RC1 evidence applicability
+
+This record carries bounded construction evidence forward. It grants no member acceptance, independent fidelity result, criterion-4 fit or release qualification.
+
+The generic source repair is frozen at `5fd3b789ef6e0039f722676cdd0126113c745a11`. Documentary source `ed940de64f787d05c919efd1a2c45c5e1ef31685` carries it into the Spec compression, three assessment-paragraph frames, affected source pins and the historical derivation resource. The common WHAT remains `4c340f7adec9f3c893e3e267b23e4cadeb357854`. The installed builder, encoding theory and native checker retain their exact selected identities.
+
+| Evidence or claim | Current applicability boundary |
+|---|---|
+| I5 source/account interpretation and eighteen native projections | Historical observations on their named source/account/package. They are not repinned as current observations. The unchanged compiler and checker identities support reuse of their bounded construction mechanism, with current generation validating the new bindings once. |
+| Generic assessment predicate and its three copied frame bodies | Repaired here. The six source-derived human/software/mixed/independence cases are Writer logical evaluations. Source fidelity and actual use of the changed packet still require the allocated independent assessment. |
+| Baseline `engagement-applicability` and `complete-engagement-transition` | Their authored predicates, source bodies and declared reference to the generic owner are preserved. The changed owner's meaning is material to their current use; unchanged local bytes alone do not qualify that dependency. |
+| Other source clauses and source-table arguments | Exact unchanged bytes are preserved, with source-member, span and source-commit coordinates refreshed where required. A new hash does not establish semantic conservation. The repeated testing-section fences are authenticated by the unchanged complete owner body and exact local offsets. |
+| Packaged derivation verification material | Reconstructed from the selected immutable predecessor and the current source. The consolidated cold check validates reconstruction and its existing negative controls once. It is a hypothetical publication fixture, not a released or installed-v3 admission. |
+| Conservation and frontier | The 691 historical dispositions and their acceptance gaps keep their original subjects. `CONSERVATION_APPLICABILITY.json` binds the current carrying loci and declared dependency cone without rewriting those judgments. Any unchanged row retains only its previously supported scope; unresolved coverage remains unresolved. |
+| Consumer coverage completion | A separate closed author return supplies exact preimages and evidence. Inverse consumer projections and semantic acquisition dependencies are distinguished. Only the admitted patch groups enter the current account; unsupported absence and unmatched positives remain residuals. |
+
+The current binding checks cover the complete documentary inventory, frozen account bytes and source inventory, pinned helper/dependency identities, emitted interpretation, source/view reproduction, complete package inventory and exact Writer territory. They establish a reproducible construction subject for the consolidated review. They do not establish complete semantic coverage, independent conservation, meaning-preserving reduction, task adequacy or owner acceptance.
+
+The existing owner decisions remain with their owners: exact predecessor replacement relations, required independent member and integrated assessments, actual-use mechanisms/resources and adequate-context evidence, tenant/candidate selection, release identity and packaging, and publication/adoption under the release contract. The separate RC1 qualification and release-preparation returns account for those obligations; this build neither waives them nor repeats their planning.
