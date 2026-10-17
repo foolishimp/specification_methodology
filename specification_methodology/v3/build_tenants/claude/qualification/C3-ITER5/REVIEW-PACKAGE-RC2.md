@@ -107,7 +107,9 @@ retained on its stated conditions; the counts in the record come from
 
 ## Found by the author after the freeze
 
-Five checks after commit A was tagged found these in the changed clauses.
+Five checks after commit A was tagged found P1 to P5 in the changed clauses.
+Rerunning the handoff's checks when the Executive restarted found P6 to P8
+in the record and its tools.
 Commit A is not edited; each is disclosed here for the readback, with the
 fix intended for the next candidate.
 
@@ -118,6 +120,17 @@ fix intended for the next candidate.
 | P3 | release note, R6 line: "with correct counts and no link out of the package" | `release/INSTALL_CHECK.json` lists six CONFORMANCE links to `../qualification/cases/…` outside the package; the repair removed only the link to the construction specification | "and no link to the construction specification" |
 | P4 | ODD §11.5D function table, row `evaluate_next`, output `PriorityProjection + NextActionProjection + selected_action` | does not show the core result that a typed no-action with no preceding closure decision now returns (A4, the R5 repair) | add "and, for such a typed no-action, its core result (A4)" to the output cell |
 | P5 | TICKETS Foundation to law, migration row: its consequence derives migration closure; its rule cell lists Recurring realisation and library declaration | after R4 TICKETS owns the recurrence rule, but the rule's premises and consequence (each further local rebuild adds cost with no new route to the outcome, P2; similar code is not one identity, P3) remain only in DESIGN_MODULE's row, the refinement | add the recurrence consequence to TICKETS' family table and make DESIGN_MODULE's row cite it as the refinement |
+| P6 | `frontier/REVIEW.json`, last changed at `b7e8f73`, before the freeze | binds the five sections the repairs changed by their candidate 1 digests: rerunning `qualification/C3-ITER4/tools/frontier_review.py` at commit A changes those five digests and the semantic digest. Three of the rows carry iteration 4 nonauthor `conserved` readings of the text before the repairs: DESIGN_MODULE_METHOD 4 Functional bias (batch 11, the §4 text in which R3 later found the defect), DESIGN_MODULE_METHOD 11C Recurrence extraction (batch 01, Sonnet) and TICKET_METHOD Recurring realization (batch 07). A stored assessment records no digest of the text it read, so the tool carries it to changed text, and the results table counts these three as read | regenerate the record at the next freeze; bind each assessment to the digest of the successor text it read and report a mismatch as `indeterminate` until reread; the readback rereads the three rows; the figure comes from `counts.py` |
+| P7 | `frontier/PREDECESSOR_CLAIMS.md`, the row of ODD_METHOD 11.5D, its note: "`evaluate_next`'s selection, a typed no-action disposition included, is stated to be no result of the core" | contradicts the R5 repair: at commit A a typed no-action that no closure decision precedes returns its own core result (ODD §11.5D A4, lines 1019-1042); the note describes candidate 1 | the note says the selection is no result of the core, and that a typed no-action carries the value of the closure decision it follows or, where none precedes it, its own result (A4); the record then regenerates (P6) |
+| P8 | the rerun tools the handoff names | `qualification/C3-ITER4/tools/freeze_ac.sh` exits 1 when its outputs reproduce unchanged: its README step asserts that the digest table changed, and under `set -e` the controls and the consumer check then never run. The handoff's rerun line omits the arguments of `links.py` (`standards`) and `frontier_check.py` (the common and the tenant frontier), which fail without them | the README step passes when the table is present and unchanged; the handoff's rerun line gives the arguments |
+
+Rerun at the restart, from commits A and B, exit codes read: the manifest,
+the install check and the counts rebuild byte-identically; frames
+`--check` 0; the interpretation's validation and projections
+byte-identical, its controls 7 of 7 when run separately (P8), 155
+clauses with no unresolved owner; 764 loci resolve; every common
+frontier row present once; links clean but for the two known false
+positives; both finite oracles and the assembly check exit 0.
 
 TICKETS is a tier 2 member, not a profile, so "ticket law … whichever
 profiles the Product adopts" holds as written.
