@@ -43,9 +43,9 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 102383 bytes.
+Size of this frame: 102529 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=08e3766bba8e4e871d00f0a2c7c10a86760c8bf7432dc3a96c458647b51cb064
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57
 
 ## 5. Ontology-first design
 
@@ -702,7 +702,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=08e3766bba8e4e871d00f0a2c7c10a86760c8bf7432dc3a96c458647b51cb064
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57
 
 ## 7. Ontology and three-view design gate
 
@@ -1151,7 +1151,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=8044f968eaecfba67d98bf1847e73401f29b6a8500bd6115db3a23c44abccca9
+Source: SPEC_METHOD.md#change-classes sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909
 
 ### Change classes
 
@@ -1499,7 +1499,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: DESIGN_MODULE.md#foundation-to-law sha256=08e3766bba8e4e871d00f0a2c7c10a86760c8bf7432dc3a96c458647b51cb064 rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
+Source: DESIGN_MODULE.md#foundation-to-law sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57 rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
 
 ### Foundation to law
 
@@ -1520,8 +1520,10 @@ F6, claims, evidence, assessment and acceptance
 ([EVALUATION §1](../EVALUATION.md#1-claims)); F8, identity
 ([IDENTITY §1](../IDENTITY.md#1-position)); F10, constitutional chain,
 outcome and build-tenant binding ([SPEC_METHOD §2](../SPEC_METHOD.md#2-the-chain));
-and F12, binding a project to the method
-([PRODUCT_DEFINITION §1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)).
+F12, binding a project to the method
+([PRODUCT_DEFINITION §1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence));
+and F13, work carriers ([TICKETS §5](../TICKETS.md#5-from-carrier-to-execution)),
+whose implementation-migration rule Recurrence extraction refines.
 Standing of the commitments cited
 ([FOUNDATIONS §3](../FOUNDATIONS.md#3-commitments)): P0 recovered; P1, P2,
 P3, P4a and P6 independent; P4b derived from P0 and P2, with P0's premise
@@ -1569,7 +1571,7 @@ are choices this profile, the adopting Product or another owner makes, so
 no profile choice is presented as following from the foundations (P6, P2).
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=8044f968eaecfba67d98bf1847e73401f29b6a8500bd6115db3a23c44abccca9 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

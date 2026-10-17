@@ -215,7 +215,7 @@ not (P2, P6).
 ```text
 Goals → Intent → Product Definition → Requirements → Design → Code
   → Events → Projection → Delta → Scenarios → Gap analysis
-  → Repricing, new Goals or Intent
+  → Repricing at the layer its change class names
 ```
 
 Goals define the current overriding concerns for the active body of work.
@@ -239,8 +239,10 @@ meaning: whether the system can do what the words describe. Gap analysis
 identifies where real use cases hit the current model and reveal
 insufficiency. Repricing updates goals, intent, product, requirements,
 design or code when the system no longer harmonises; when gap analysis
-reveals constitutional insufficiency, it generates new goals or intent (P2,
-P1; rc.2 #constitutional-chain).
+reveals constitutional insufficiency, repricing re-enters at the layer its
+[change class](#change-classes) names and generates new goals or intent
+where the work wave, direction or scope changes (P2, P1; rc.2
+#constitutional-chain).
 
 This is the homeostatic loop. Every link is load-bearing. A break at any
 link, goals with no downstream repricing path, an unowned requirement, an
@@ -386,8 +388,10 @@ current specification → real-world use case → gap analysis → new goals or 
 The generative rule: a real use case (scenario, deployment, external review)
 hits the current model; gap analysis identifies what the constitution cannot
 express; if the gap is constitutional, not merely a missing implementation,
-new goals or intent are written; the repriced surface then flows forward
-through the chain, product to requirements to design to code. New intents
+it re-enters at the layer its [change class](#change-classes) names, and
+new goals or intent are written where it changes the work wave, direction
+or scope; the repriced surface then flows forward through the chain from
+that layer, product to requirements to design to code. New intents
 emerge from repeated, real use-case pressure against the current model, not
 from abstract speculation; the gap is concrete before it becomes intent. Ad
 hoc coding pressure does not generate intent; explicit gap analysis does.
@@ -1157,11 +1161,11 @@ constitutionally grounded.
 When a real use case reveals a gap: run intake triage first and classify
 the report as a lawful change; then write the scenario as the first
 substantive project artifact for the gap so the pressure becomes concrete
-and testable; run gap analysis, asking whether this is a missing
-implementation or a constitutional insufficiency; if constitutional,
-reprice goals when the current work wave changes, write a new intent, then
-flow forward through product, requirements, design and code; if
-implementation, write requirements and design as needed, then implement.
+and testable; run gap analysis to locate its cause under
+[Universal intake triage](#universal-intake-triage), which keeps open what
+the evidence cannot yet separate; then re-enter at the layer the selected
+[change class](#change-classes) names and flow forward from it, writing new
+goals or intent only where the work wave, direction or scope changes.
 The intake source does not change this rule: a bug report, feature request,
 failed test case, release blocker or operator observation still enters
 through intake triage first, then follows the lawful change class selected
@@ -2006,7 +2010,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #manifesto | conserved | §2 Manifesto |
 | #spec-drivenness-litmus | conserved | §2 Spec-drivenness litmus |
 | #process-constitution | conserved; the definition overlay's binding is PRODUCT_DEFINITION §1; the `how.build_tenants` entries are written "tenant registry entries" | §1 Process constitution |
-| #constitutional-chain | conserved; the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout and derivative tenant-local realisation are restated in §11 rule 1, to which §2 refers; §11 rule 4 applies by reference the law of EVALUATION §6 that conforming tenants need not behave identically outside the contract, which is new in that member and has no rc.2 clause | §2 Constitutional chain; §11 |
+| #constitutional-chain | superseded in its repricing sentence, proposed and pending the product owner's acceptance: a constitutional insufficiency re-enters at the layer its change class names (§4 Change classes), generating new goals or intent where the work wave, direction or scope changes, where rc.2 generated new goals or intent for every constitutional insufficiency; the rest conserved: the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout and derivative tenant-local realisation are restated in §11 rule 1, to which §2 refers; §11 rule 4 applies by reference the law of EVALUATION §6 that conforming tenants need not behave identically outside the contract, which is new in that member and has no rc.2 clause | §2 Constitutional chain; §11 |
 | #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
 | #ambiguity-governance-rule | conserved; the four outcomes are named with the values of ACTIVATION §3, which maps them into the core ("carried forward" is `carried`); the hard stops ACTIVATION §4; build-tenant or stack choice is the binding of §11; new, applying §11 rule 2: the admission makes an operation human adjudication, and a person who decides under policy without it acts under the policy that governs lawful probabilistic processing, whose definition is unchanged | §5 |
 | #operational-lifecycle-sufficiency-rule | conserved; the phase states and the `Gap:` and `Unanswered:` markers are stated as declared states that map to no core value; this section is named the owner of the three answers, which ASSURANCE §16 applies to design evidence | §2 Operational lifecycle sufficiency |
@@ -2043,7 +2047,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #requirement-categories | conserved | §2 Requirement categories and classification |
 | #reconstruction-litmus | conserved; the generic law in EVALUATION §6, the five layer derivations and diagnoses here | EVALUATION §6; §2 Reconstruction litmus |
 | #design-rule | conserved; a tenant's choice is named as its execution binding of §11 | §2 Design rule |
-| #renewal-path | conserved | §2 Renewal path |
+| #renewal-path | superseded in its generative rule, proposed and pending the product owner's acceptance: a constitutional gap re-enters at the layer its change class names (§4 Change classes), new goals or intent being written where it changes the work wave, direction or scope, where rc.2 wrote new goals or intent for every constitutional gap; the rest conserved | §2 Renewal path |
 | #trace-closure-and-anti-drift-rule | conserved | §2 Trace closure and anti-drift |
 | #ownership | conserved | §2 Trace closure and anti-drift, Ownership |
 | #downstream-closure | conserved | §2 Trace closure and anti-drift, Downstream closure |
@@ -2054,7 +2058,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #legacy-classification-rule | conserved; the legacy classifications are stated as declared states that map to no core value, and their relation to the successor dispositions of RELEASE §9 is stated (both new, with their purpose stated where they are written) | §2 Requirement categories and classification |
 | #requirement-classification-rules | conserved; the lifecycle statuses and the categories are stated as declared states that map to no core value (new, with its purpose stated where it is written) | §2 Requirement categories and classification |
 | #specification-surface-rule | conserved | §2 Specification surface rule |
-| #method | conserved; the four procedures in full | §4 Procedures |
+| #method | superseded in the gap procedure, proposed and pending the product owner's acceptance: gap analysis locates the cause under Universal intake triage and the gap re-enters at the layer the selected change class names, where rc.2 split it two ways, writing a new intent for a constitutional gap and requirements and design for an implementation gap; the rest conserved: the four procedures in full | §4 Procedures |
 | #adr-conventions | conserved | §10 |
 | #adr-folder-convention | conserved; the record of tenant identity and locations is written "tenant registry entry" | §10 |
 | DESIGN_MODULE_METHOD #3-core-rule | conserved; the core rule at "should" force and the too-imperative, too-coupled test, scoped to boundaries the design profile governs; DESIGN_MODULE §1 Core rule points here | §2 Realisation shape |

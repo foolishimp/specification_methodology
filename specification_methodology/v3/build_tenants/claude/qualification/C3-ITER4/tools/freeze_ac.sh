@@ -2,7 +2,7 @@
 # Regenerate the a_c/i3 checker artifacts at the freeze: materialise the pinned checker, run validate and
 # the eight projections, copy the outputs into a_c/i3, refresh the artifact digests in a_c/i3/README.md,
 # then rerun the controls. Usage, from the tenant root: bash qualification/C3-ITER4/tools/freeze_ac.sh <scratch dir>
-set -e
+set -eo pipefail  # a failed step or control fails the freeze; the pipes into tail hide no exit status
 SP=$1; mkdir -p "$SP"
 AI=$(bash qualification/C3-ITER3/tools/verify_ai.sh "$SP" | tail -1); AC="$AI/build_tenants/core/code/ac.py"
 echo "checker at $AC sha256=$(shasum -a 256 "$AC" | cut -c1-64)"

@@ -53,7 +53,7 @@ interpretation.
 
 Under [ACTIVATION §2](../../standards/ACTIVATION.md#2-context-construction-under-an-envelope)
 Acquisition, a constraint surface projected from this set is a derived
-surface only for the four task scopes below, and only for the clauses
+surface only for the five task scopes below, and only for the clauses
 they hold. For any other task, or any question these clauses do not
 decide, acquire the deciding owner sections instead.
 

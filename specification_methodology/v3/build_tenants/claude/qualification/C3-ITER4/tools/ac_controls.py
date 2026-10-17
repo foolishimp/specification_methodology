@@ -1,5 +1,6 @@
 """Port C5, adapted: positive checker run with adverse controls.
 Usage, from the tenant root: python3 -I qualification/C3-ITER4/tools/ac_controls.py <scratch dir>
+Exits 1 when any control fails. AC_CONTROLS_FORCE_FAIL=<control> records that control as failing, to check that a failure propagates; it never passes a control.
 Writes the record to the path given as the second argument (I5: qualification/C3-ITER5/returns/ac_controls.json; the iteration 4 record at qualification/C3-ITER4/returns/ac_controls.json is immutable). Every control states what it expects and what happened.
 """
 import hashlib, json, os, shutil, subprocess, sys, time
@@ -7,7 +8,9 @@ SP = sys.argv[1]; os.makedirs(SP, exist_ok=True)
 t0 = time.time()
 rec = {'kind': 'claude-ac-controls', 'controls': []}
 def sha(p): return hashlib.sha256(open(p, 'rb').read()).hexdigest()
-def ctl(name, expect, holds, detail): rec['controls'].append({'control': name, 'expects': expect, 'holds': bool(holds), 'detail': detail})
+FORCE_FAIL = os.environ.get('AC_CONTROLS_FORCE_FAIL', '')
+if FORCE_FAIL: rec['forced_failure'] = FORCE_FAIL
+def ctl(name, expect, holds, detail): rec['controls'].append({'control': name, 'expects': expect, 'holds': bool(holds) and name != FORCE_FAIL, 'detail': detail})
 # 1. materialise and identify the checker
 out = subprocess.run(['bash', 'qualification/C3-ITER3/tools/verify_ai.sh', SP], capture_output=True, text=True)
 AI = out.stdout.strip().splitlines()[-1]; AC = os.path.join(AI, 'build_tenants/core/code/ac.py')
@@ -68,3 +71,4 @@ rec['elapsed_seconds'] = round(time.time() - t0, 1); rec['holds_all'] = all(c['h
 json.dump(rec, open(sys.argv[2] if len(sys.argv) > 2 else 'qualification/C3-ITER5/returns/ac_controls.json', 'w'), indent=1)
 for c in rec['controls']: print(('HOLDS ' if c['holds'] else 'FAILS '), c['control'], json.dumps(c['detail'])[:200])
 print('all hold:', rec['holds_all'], 'elapsed', rec['elapsed_seconds'])
+sys.exit(0 if rec['holds_all'] else 1)  # a failed control fails the command
