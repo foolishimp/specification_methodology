@@ -115,11 +115,11 @@ construction, status and checkpoint sequence; unchanged status does not require
 a new activation or wholesale rehash. Refresh material changed bindings.
 
 Construct within the granted write territory and inspect the material relations
-needed by the causal cone. Return cross-territory repairs to their owner. Tests
-follow the re-entry point and owning requirement, design and closure predicates.
-Use the cheapest adequate falsifier under `standards/SPEC_METHOD.md#proportional-method-and-delivery-stdo-up-014`.
-The actual claim determines whether integration, installed-development or a live
-probabilistic lane is needed. Preserve failed and incomplete evidence.
+needed by the causal cone. Return cross-territory repairs to their owner.
+Select proof by applying
+`standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence`
+from the verified basis, including its material owner dependencies, to the
+affected work and intended claim. Preserve failed and incomplete evidence.
 
 Before a candidate return, use the governing contract's affected evidence and
 closure conditions. The library's shared application/result contracts retain

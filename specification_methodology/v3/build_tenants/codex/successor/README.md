@@ -5,6 +5,9 @@ Author: Dimitar Popov.
 STDO governs purposeful construction through specification, typed composition,
 bounded evaluation and authorized disposition.
 
+`3.0.0-rc.1` is this package's unaccepted, unpublished candidate target; its
+manifest version does not identify an issued release cut.
+
 The [standards library](standards/README.md) is the method entry.
 [Foundations](standards/FOUNDATIONS.md) states the premises. The
 [transformation library](standards/TRANSFORMATION_LIBRARY.md) defines shared

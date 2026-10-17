@@ -812,8 +812,17 @@ layer that owns the missing truth.
   requirement, governing-authority, or accepted-design changes re-enter at
   their owner. Routine advancement requires no renewed human ceremony when the
   delegation is already accepted.
-- Disposition bounded candidates as `accept`, `local_repair`, `re_enter`, or
-  `reject`. Conserve every governing relation affected by the local action;
+- Assess the exact predicate that the candidate closes its declared cone and
+  preserves every affected governing relation. Return evidence, a core verdict
+  and a proposed disposition: `accept` maps to `satisfied`; `local_repair` maps
+  to `falsified` for a demonstrated defect or `indeterminate` for inadequate
+  proof; `re_enter` maps to `falsified` for a defeated candidate under an
+  interpretable contract or `invalid_basis` for an unusable governing basis;
+  `reject` maps to `falsified` for a governing-relation violation or undisposed
+  competing truth path. The core verdict does not choose a remedy or confer
+  acceptance authority. Only the bound decision authority applies the proposed
+  disposition; its separate decision result never overwrites the assessment.
+  Conserve every governing relation affected by the local action;
   unrelated incompleteness is repricing input. Repeated failure against an
   unchanged boundary triggers reassessment without a numeric candidate or
   review-round threshold.

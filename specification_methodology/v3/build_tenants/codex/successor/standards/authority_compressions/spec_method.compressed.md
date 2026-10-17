@@ -385,8 +385,17 @@ may record shared derivations for a family of tests.
   requirement, governing-authority, or accepted-design changes re-enter at
   their owner. Routine advancement needs no renewed human ceremony when the
   delegation and re-entry boundary are already accepted.
-- Assess a bounded candidate as `accept`, `local_repair`, `re_enter`, or
-  `reject`. Global correctness conserves every governing relation affected by
+- Assess the exact predicate that the candidate closes its declared cone and
+  preserves every affected governing relation. Return evidence, a core verdict
+  and a proposed disposition: `accept` maps to `satisfied`; `local_repair` maps
+  to `falsified` for a demonstrated defect or `indeterminate` for inadequate
+  proof; `re_enter` maps to `falsified` for a defeated candidate under an
+  interpretable contract or `invalid_basis` for an unusable governing basis;
+  `reject` maps to `falsified` for a governing-relation violation or undisposed
+  competing truth path. The core verdict does not choose a remedy or confer
+  acceptance authority. Only the bound decision authority applies the proposed
+  disposition; its separate decision result never overwrites the assessment.
+  Global correctness conserves every governing relation affected by
   the local action; unrelated incompleteness outside its causal cone is
   repricing input, not a blocker. Repeated rejection against one unchanged
   boundary triggers reassessment, not a candidate-count threshold or review

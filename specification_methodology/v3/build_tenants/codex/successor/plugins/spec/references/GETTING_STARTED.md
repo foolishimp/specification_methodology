@@ -503,6 +503,11 @@ work carrier -> intake triage -> re-entry point
              -> requirement/design/module/closure law -> expected result
 ```
 
+Select proof by applying
+`standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence`
+from the verified basis, including its material owner dependencies, to the
+affected work and intended claim.
+
 Use proof breadth that matches the claim:
 
 - unit tests prove module-owned law;
@@ -513,9 +518,7 @@ Use proof breadth that matches the claim:
 - installed-development proof exercises the built or installed Product through
   its declared public path.
 
-Start with the cheapest focused falsifier adequate for the active relation.
-Run broader qualification at the candidate boundary or earlier when risk
-requires it. Green evidence does not close a claim when it exercised the wrong
+Green evidence does not close a claim when it exercised the wrong
 subject, fixture, route, authority, or external-boundary substitute.
 
 A delegated Worker returns one exact candidate and evidence, then stops at its
