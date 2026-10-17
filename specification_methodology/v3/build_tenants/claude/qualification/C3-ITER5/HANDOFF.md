@@ -1,17 +1,20 @@
-# Iteration 5 Handoff, Claude Line: candidate 4
+# Iteration 5 Handoff, Claude Line: candidate 5
 
-Current candidate: candidate 4, `3.0.0-rc.4`, commit A `7c6497820dfcf0fb9e35ee4b3cc60dd547c004a8`, local tag
-`specification_methodology-claude/v3.0.0-rc.4` (object `dd1b664f99a895e5db90b281445522e953e67d1a`, not pushed),
+Current candidate: candidate 5, `3.0.0-rc.5`, commit A `4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec`, local tag
+`specification_methodology-claude/v3.0.0-rc.5` (object `92ca34cdee52cdd305fc32a5160574651e4bb743`, not pushed),
 commit B the commit that adds `release/manifest.json` for it. It repairs
-the four findings of Codex's affected readback of candidate 3 and, at the
-owner's choice, the intake re-entry that this line's root-cause review of
-the Codex RC1 repair found (Q19). The [review package](REVIEW-PACKAGE-RC4.md)
-is written for Codex's affected readback, with the adverse cases and the
-rerun commands. The [results table](RESULTS.md) and the
-[decision list](DECISIONS.md) (Q1 to Q19) are current. Candidate 3,
-`9e90169`, is superseded. The unrun conservation batches 05, 06 and 13
-hold text of sections the repairs changed; batches are rebuilt from the
-candidate when the reading is scheduled. Nothing is accepted.
+the four findings of Codex's affected readback of candidate 3. At the
+owner's choice it also carries the intake re-entry that this line's
+root-cause review of the Codex RC1 repair found (Q19), at all four sites.
+Its verification tools exit 1 on a failure they report. The
+[review package](REVIEW-PACKAGE-RC5.md) is written for Codex's affected
+readback, with the adverse cases and the rerun commands. The
+[results table](RESULTS.md) and the [decision list](DECISIONS.md) (Q1 to
+Q19) are current. Candidate 3, `9e90169`, is superseded; candidate 4,
+`7c64978`, was superseded before it was sent. The unrun conservation
+batches 05, 06 and 13 hold text of sections the repairs changed; batches
+are rebuilt from the candidate when the reading is scheduled. Nothing is
+accepted.
 
 The record of candidate 2 follows unchanged below.
 
