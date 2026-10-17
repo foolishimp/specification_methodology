@@ -21,6 +21,12 @@ dependencies: [T-002]
 
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
 
+## RC1 continuation
+
+The owner directs larger construction increments and consolidated review at the candidate freeze; only changed contracts and affected consumers are checked during construction. [Execution cadence](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/PACING.md) records this continuation of EC-CODEX-RC1-01. Existing evidence is reused where applicable.
+
+2026-10-17T02:38:53+00:00 — Owner instruction: “ok i'm going to let you both continue to the RC1”. The common pen records continuation toward v3.0.0 RC1 on the ratified I5 input; both lines retain their own execution and territory. Codex's [EC-CODEX-RC1-01 activation](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/ACTIVATION.md) binds preimage `99f932cfece1a7c9ba6f85c44c47d2403a486aa7`, existing criteria, independent source/evidence assessment and staged release preparation. Separate admission: `admitted`, contract SHA-256 `6fa40e8aba8bcdea21d49c2bd39c376fd75b1805d3b870f507f97c0bc5fcc1e9`. RC1-SOURCE, RC1-QUALIFICATION and RC1-RELEASE are the initial dependency-ready activations after inward reception. Scope is continuation, not acceptance of a specific replacement, candidate or release. The common Ledger Writer records this entry; Git Writer checkpoints the record and receives its exact commit into the clean Codex branch with an unchanged tenant tree.
+
 ## Current Iteration 5 Contract
 
 Common input C3-I5-06 is ratified in [T-001](T-001-common-definition-and-checkpoints.md#iteration-5-ratification). Intake is `design_reframe` of the Codex HOW with subsequent scoped realization and qualification work; no common requirement change is selected. The owner-selected Codex Executive selects this run. The common Ledger Writer records the contract and its separate admission before tenant effects.

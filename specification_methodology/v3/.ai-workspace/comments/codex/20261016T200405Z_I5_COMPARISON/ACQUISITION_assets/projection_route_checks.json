@@ -1,0 +1,606 @@
+[
+  {
+    "id": "FOUNDATIONS.workspace-and-context",
+    "materialized_output_bytes": 400589,
+    "native_clause_count": 8,
+    "native_clauses": [
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.foundational-commitments",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.judgment-and-authority",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.premises-and-standing",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-algebra",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-conjunction",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.workspace-and-context",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.foundational-contract",
+      "urn:codex-stdo3:iteration-3-r2:contract:core.shared_contracts.core_evaluation"
+    ],
+    "root_route_counts": {
+      "conditional": 7,
+      "provenance": 3
+    },
+    "qualification_checks": [
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/1",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/1",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/1",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/4",
+        "digest_matches": true,
+        "required_when_matches": true
+      }
+    ],
+    "source_pin_checks": [
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.workspace-and-context",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.change-impact-and-evidence-retention",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.result-algebra",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      }
+    ],
+    "non_premise_routes": [
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.workspace-and-context",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.foundational-commitments",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.change-impact-and-evidence-retention",
+        "required_when": "reuse, resumption or changed material support is present",
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.result-algebra",
+        "required_when": null,
+        "in_native_closure": true
+      }
+    ]
+  },
+  {
+    "id": "SPEC_METHOD.universal-intake-triage",
+    "materialized_output_bytes": 1007516,
+    "native_clause_count": 19,
+    "native_clauses": [
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.bounded-construction",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.foundational-commitments",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.judgment-and-authority",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.premises-and-standing",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.purpose-and-interfaces",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-algebra",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-conjunction",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.typed-composition-and-conservation",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.workspace-and-context",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.computed-classification-and-treatment",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.counterexample-localization",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.position",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.product-outcome-conservation-stdo-up-013",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.universal-intake-triage",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.constraint-surface",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.contract-application",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.foundational-contract",
+      "urn:codex-stdo3:iteration-3-r2:contract:core.shared_contracts.core_evaluation"
+    ],
+    "root_route_counts": {
+      "provenance": 12
+    },
+    "qualification_checks": [
+      {
+        "pointer": "/dependency_relations/6",
+        "digest_matches": true,
+        "required_when_matches": true
+      }
+    ],
+    "source_pin_checks": [
+      {
+        "target": "SPEC_METHOD.counterexample-localization",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.method-families",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.universal-intake-triage",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.universal-intake-triage",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.method-families",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "REFERENCE_FRAME_METHOD.method-functions",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "REFERENCE_FRAME_METHOD.method-functions",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.computed-classification-and-treatment",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.counterexample-localization",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "TRANSFORMATION_LIBRARY.contract-application",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.bounded-construction",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      }
+    ],
+    "non_premise_routes": [
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.counterexample-localization",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.method-families",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.universal-intake-triage",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.universal-intake-triage",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.method-families",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.foundational-commitments",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "REFERENCE_FRAME_METHOD.method-functions",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "REFERENCE_FRAME_METHOD.method-functions",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.computed-classification-and-treatment",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.counterexample-localization",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "TRANSFORMATION_LIBRARY.contract-application",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.bounded-construction",
+        "required_when": null,
+        "in_native_closure": true
+      }
+    ]
+  },
+  {
+    "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+    "materialized_output_bytes": 366126,
+    "native_clause_count": 7,
+    "native_clauses": [
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.change-impact-and-evidence-retention",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.foundational-commitments",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.premises-and-standing",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-algebra",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-conjunction",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.foundational-contract",
+      "urn:codex-stdo3:iteration-3-r2:contract:core.shared_contracts.core_evaluation"
+    ],
+    "root_route_counts": {
+      "conditional": 9,
+      "provenance": 2
+    },
+    "qualification_checks": [
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/argument/source_family_arguments/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/0",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/1",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/2",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/3",
+        "digest_matches": true,
+        "required_when_matches": true
+      },
+      {
+        "pointer": "/dependency_relations/4",
+        "digest_matches": true,
+        "required_when_matches": true
+      }
+    ],
+    "source_pin_checks": [
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.change-impact-and-evidence-retention",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.preservation-obligations",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.assertions-and-observations",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.parallel-assurance-and-provenance",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.risk-and-assurance-selection",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.bounded-construction",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      }
+    ],
+    "non_premise_routes": [
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.change-impact-and-evidence-retention",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.foundational-commitments",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.preservation-obligations",
+        "required_when": "retention relies on preserved changed support",
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.assertions-and-observations",
+        "required_when": "evidence is retained",
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.parallel-assurance-and-provenance",
+        "required_when": "evidence is retained or combined",
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.risk-and-assurance-selection",
+        "required_when": "reassessment strategy is selected",
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "conditional",
+        "target": "FOUNDATIONS.bounded-construction",
+        "required_when": "a failure or discrepancy is exposed",
+        "in_native_closure": false
+      }
+    ]
+  },
+  {
+    "id": "SPEC_METHOD.what-how-and-work-carriers",
+    "materialized_output_bytes": 589244,
+    "native_clause_count": 12,
+    "native_clauses": [
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.foundational-commitments",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.judgment-and-authority",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.orthogonal-descriptions",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.premises-and-standing",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-algebra",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.result-conjunction",
+      "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.workspace-and-context",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.position",
+      "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.what-how-and-work-carriers",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.contract-application",
+      "urn:codex-stdo3:iteration-3-r2:clause:TRANSFORMATION_LIBRARY.foundational-contract",
+      "urn:codex-stdo3:iteration-3-r2:contract:core.shared_contracts.core_evaluation"
+    ],
+    "root_route_counts": {
+      "provenance": 6
+    },
+    "qualification_checks": [],
+    "source_pin_checks": [
+      {
+        "target": "SPEC_METHOD.design-rule",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.method-families",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.reconstruction-litmus",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.what-how-and-work-carriers",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "SPEC_METHOD.what-how-and-work-carriers",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      },
+      {
+        "target": "FOUNDATIONS.foundational-commitments",
+        "member_matches": true,
+        "body_matches": true,
+        "source_account_body_matches": true
+      }
+    ],
+    "non_premise_routes": [
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.design-rule",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.method-families",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.reconstruction-litmus",
+        "required_when": null,
+        "in_native_closure": false
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.what-how-and-work-carriers",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "SPEC_METHOD.what-how-and-work-carriers",
+        "required_when": null,
+        "in_native_closure": true
+      },
+      {
+        "acquisition": "provenance",
+        "target": "FOUNDATIONS.foundational-commitments",
+        "required_when": null,
+        "in_native_closure": true
+      }
+    ]
+  }
+]

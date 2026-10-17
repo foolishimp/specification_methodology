@@ -1,0 +1,14 @@
+# Source triangulation after independent returns
+
+The independent semantic report is frozen at SHA-256 2ae3b401ce550fe9e0b0d851d17b7b149a43830ed03d200f9630970c62ee16ee and its pre-report source judgments at d8957e8f7f4baf63fd76150234511690bbe4e84ab7fa5b8b4c28d123772fcd14. The fresh Claude report is frozen as CROSSFAMILY_FINAL.md, SHA-256 0ef0b41a48a7c56087a50d543c5124dec0418f8164adc3e411c47b83b958f658 (recording 8c1ff16). Neither report is rewritten.
+
+The Executive selects a separate follow-up for the semantic Reviewer to resolve the following source questions. Reading the other report is now authorized solely for this phase, after the independent judgments were fixed. The supplement is triangulated assessment, not a second independent discovery and not additional candidate authorship.
+
+1. Does Claude's local choice of a non-satisfied reported value conflict with the common single conjunction owner, or is it a permitted diagnostic/refinement policy? Distinguish survival of known failure, truth of the whole claimed predicate and report priority; do not assume the common specification mandates Codex's total priority order.
+2. Do Claude's two progress clauses actually require incompatible decisions on the same subject, or can their scopes/terms establish a lawful refinement? Assess the proposed not-yet-accepted, evidenced-progress counterexample.
+3. Do the two generic gap procedures prevent routing prediction/observation defects, or do diagnostic cause and repair layer form separate dimensions with sufficient owner routes? A missing same-named change class alone proves neither result.
+4. Does Codex permit a fabricated performed judgment for a missing check, or do absence and a non-performed operational record remain distinct? Identify an actual offending owner/consumer relation rather than a hypothetical projection that violates its contract.
+5. Do Claude's software terms impose a prerequisite on human realization after the explicit selected-binding qualifications, or are they residual terminology with a lawful generic interpretation?
+6. State which criteria a confirmed common-owner/consumer counterexample bears on. Do not infer an UP-015 predecessor-conservation failure without the relevant predecessor claim and relation being assessed.
+
+Use the exact existing candidate/common coordinates. Write only TRIANGULATION.md and TRIANGULATION_assets in this comparison directory, with original report hash and exact citations. No candidate effects, earlier-report edits, Git mutation, delegation or paid calls. Additional working allowance is 64 KiB newly presented material and 15 minutes for the named questions; unresolved issues remain explicit. Account for repeated acquisitions and unknown active host context. Preserve the original recommendation or revise it with the reason; no acceptance follows.

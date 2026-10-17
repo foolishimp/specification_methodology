@@ -1,0 +1,133 @@
+{
+  "command": [
+    "claude",
+    "--restricted",
+    "--print",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--no-session-persistence",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowed-tools",
+    "Read,Glob,Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--max-budget-usd",
+    "3"
+  ],
+  "cwd": "/private/tmp/stdo-i5-comparison-20261016T200405Z",
+  "started_at": "2026-10-16T20:30:30.990236+00:00",
+  "elapsed_seconds": 150.059,
+  "exit_code": 0,
+  "native_context": "unknown",
+  "limit_usd": 3,
+  "model": "claude-opus-5-5",
+  "tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "result": {
+    "duration_api_ms": 148880,
+    "stop_reason": "end_turn",
+    "session_id": "932b64bb-bf65-4180-a07f-ecf0c29022d9",
+    "total_cost_usd": 0.6959626,
+    "usage": {
+      "input_tokens": 30,
+      "cache_creation_input_tokens": 43980,
+      "cache_read_input_tokens": 409913,
+      "output_tokens": 13101,
+      "output_tokens_details": {
+        "thinking_tokens": 5070
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 43980,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 5424,
+          "cache_read_input_tokens": 46711,
+          "cache_creation_input_tokens": 1411,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1411
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-opus-5-5": {
+        "inputTokens": 30,
+        "outputTokens": 13101,
+        "cacheReadInputTokens": 409913,
+        "cacheCreationInputTokens": 43980,
+        "webSearchRequests": 0,
+        "costUSD": 0.6959626,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 5070,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "safety_stops": 0,
+    "is_error": false,
+    "num_turns": 30,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "# Bounded informed readback of `CROSSFAMILY_FINAL.md`\n\n**Standing.** This is an informed readback, not fresh discovery or a practical-use trial. I read the cross-family report, `TRIANGULATION.md` and the S1\u2013S3 findings and rationale in `SEMANTICS.md`, then checked the disputed source clauses directly. Prefixes: B = common `4c340f7` (`common/specification/`), C = Codex `99f932c`, L = Claude `5da6bde`. I made no edits and did not touch any other source. I didn't instrument byte counts. My estimate is about 105 KiB presented, including repeated reads, within the 128 KiB allowance.\n\n## Claim disposition\n\n| # | Claim | Disposition | Basis |\n|---|---|---|---|\n| 1 | Claude conjunction: with A `falsified` and B missing, the reported value is left open (cross-family finding 1) | **Rejected** | When a mandatory result is not `satisfied`, the rule chooses a non-satisfied value \"from those returned\" (`L:FOUNDATIONS.md:1093-1097`). A missing B goes into the second input, a gap, and is \"never reported as \u2026 an `indeterminate` component\" (`1024-1029, 1036-1039`). So the only non-satisfied value available is `falsified`. The `indeterminate`-with-gap branch applies only when every mandatory returned result is `satisfied` (`1101-1104`). The counterexample treats an absent result as a returned `indeterminate`. **Residual, bounded:** when several non-satisfied values *are* returned, the order is a declared parameter (`1095-1097`; `L:EXECUTIVE_BASELINE.md:1087-1092`). B item 6 says \"defined once, over the core\" (`B:requirements/README.md:171`). Whether a parameterized rule with one owner meets that is an interpretation question. No source here decides it, and no offending consumer was shown. Codex's fixed order (`C:FOUNDATIONS.md:508-518`) is a design choice, not something B requires. |\n| 2 | Claude progress: evidenced versus accepted | **Narrowed; less severe than the triangulation rated it** | The conflict is real: \u00a71 says progress means \"the work moves towards Z on evidence\" (`L:ACTIVATION.md:297-298`), while \u00a75 says \"Progress is accepted material movement\" (`1406`). An independently evidenced but not-yet-accepted change meets \u00a71 and fails \u00a75. However, the triangulation missed `L:ACTIVATION.md:183-184`: inside \u00a71, progress is judged \"as \u00a75 defines progress.\" So \u00a71 itself names \u00a75 as the owner. This is not two rival owners. It is a \u00a71 restatement weaker than the owner it defers to. B keeps acceptance and progress apart (`B:requirements/README.md:112-113`) but does not forbid a generic progress definition that includes acceptance. I rate it a **low-to-medium wording and fidelity issue** (criterion 5), not a single-ownership breach. The cross-family case that \"every uncertainty-reducing step fits no category\" stays rejected: `L:ACTIVATION.md:302-305` allows useful work without claiming progress. |\n| 3 | Four-cause diagnosis versus layer-based change classes (shared) | **Rejected as an incompatibility; low readability residue** | These are separate dimensions. Triage diagnoses among four causes, keeps alternatives open, and says \"a diagnosis \u2026 does not establish that governing meaning must change\" (`L:SPEC_METHOD.md:836-864`). Change classes classify the re-entry layer (`866-888`; `C:SPEC_METHOD.md:1458-1468`). A wrong oracle is a correction to realized test code (`realization_refactor`). A wrong predictive model goes to its realization or design. Insufficient observation can be resolved by getting more evidence before any class is chosen. The two-way gap question (`L:SPEC_METHOD.md:1160-1161`) is coarse, but the procedure ends by following \"the lawful change class selected there\" (`1166-1168`). The conditional repair the cross-family recommendation depended on is not required. I did not re-read Codex `1414-1450` or `3394-3407`; for those I rely on the matching structure and the triangulation's citations. |\n| 4 | Codex fabricates a performed judgment for missing checks | **Rejected; low dual-representation note stands** | A known not-run check carries `not_performed`, which can never pair with `satisfied` (`C:FOUNDATIONS.md:356-360`). An `indeterminate` verdict there means \"no deciding support,\" not that an evaluation was performed (`370-376`). An absent return keeps the missing slot (`375-376, 378-379`). Projections must keep performance (`388-390`). Nothing is fabricated. What remains is wording: a known not-run check can appear either as a `not_performed`/`indeterminate` record or as an absent slot with its performance fact. That only matters for a projection that drops performance, and none was shown. |\n| 5 | Claude's software terms override its binding qualifications | **Rejected; minor wording asymmetry** | The qualifications are explicit and nearby. Code applies where the environment is software, a performed procedure where it is human (`L:SPEC_METHOD.md:228-231`). Events can be \"a signed record or an observation log\" and need no complete replay (`231-236`). \"No product owes a code base or an event store that its binding does not select\" (`248-251`). An \"adequate human process using current records and direct observation\" is permitted (`1801-1808`), which matches B (`B:requirements/README.md:125`). Residue: `realization_refactor` says \"local code, configuration or attribute change\" (`878`), where Codex says \"implementation, procedure\" (`C:SPEC_METHOD.md:1465`). That is weaker naming, not a required software operation. |\n| S1 | Claude's observation consumer requires discrimination between any two subjects | **Narrowed to low; partly unresolved** | The literal text is stronger than the owner: \"cannot separate two admissible subjects\" (`L:ASSURANCE.md:681-683`) versus the owner's opposite-truth-value condition (`L:FOUNDATIONS.md:1287-1297`; B: `requirements/ASSURANCE.md:49-56`, per SEMANTICS). But the paragraph is about *acquiring the subject* (`670-681`), and it links straight to Observation sufficiency (`685`). In that context, \"two admissible subjects\" can fairly mean that which subject was observed is undetermined. That is a lawful subject-binding requirement. On that reading, SEMANTICS's counterexample \u2014 two states of one subject that differ only in an irrelevant annotation \u2014 does not trigger the clause. Which reading is intended is unresolved. Only the state-level reading gives the over-strong consumer. |\n| S2 | Codex generic assessor requires \"exact live code\" | **Upheld, low-to-medium, localized** | \"The assessor evaluates the exact live code, authority paths, proof, and installed subject\" (`C:SPEC_METHOD.md:1889-1890`), with no applicability qualifier in the paragraph (`1886-1894`). B lets generic procedures run without Code unless a binding selects it (`B:requirements/README.md:125`). Codex's human-binding owners make the intended reading recoverable. I did not re-read `1818-1833`. Unlike Claude's item 5, this qualification is not stated at or right next to the clause. |\n| S3 | Claude presents append-only storage as a consequence | **Narrowed; upheld at low severity** | `L:WORLD_MODEL.md:178` derives \"the attribute ledger is append-only\" from P4b (\"accepted facts are not erased\") and P3. For a ledger *of accepted facts*, \"not erased\" comes close to forbidding deletion. So the gap is smaller than SEMANTICS suggested. What the premises don't require is the stronger rule of no in-place supersession that keeps history some other way. Some overstatement remains; its exact size depends on the Attribute ledger law text, which I did not read. Codex's explicit consequence/policy split (`C:WORLD_MODEL_METHOD.md:38`) was cited, not re-read. |\n| \u2014 | Criterion-2 attribution corrected to unresolved | **Upheld** | Criterion 2 is review of each `conserved` predecessor row (`B:PRODUCT.md:417`). S1 and S2 concern fidelity to common law (criterion 5, `420`). S3 concerns reduction (criterion 6, `421`). Neither review assessed predecessor rows, so \"falsified\" under criterion 2 was misattributed. The cross-family report already listed C2 as unresolved for both, so it agrees. |\n\n## Do the original reasons survive?\n\n**Cross-family report (favored Codex).** Its main reason was finding 1, that Claude leaves the combined-result value to consumers. That reason **does not survive** for the case it gave, and leaves only a bounded interpretation question. Finding 2 survives only as a narrowed wording issue, made less serious by `183-184`. Finding 3, which its recommendation depended on, is rejected, so the condition falls away. Findings 4 and 5 are rejected. The Codex strengths it listed are still accurate as descriptions. \"Settles decisions once\" is now a design-preference claim, not evidence of a conflict.\n\n**SEMANTICS (favored Codex).**\n- **The uniform predicate/performance/effect record:** survives as a description. Item 4 removes the only attack on it, but Claude's absence-of-result design meets the same B requirement (`B:requirements/README.md:167`), so it doesn't separate the candidates.\n- **The fixed conjunction:** weakened to a preference, since B doesn't require a fixed order.\n- **Direct application of assurance and reuse at consumers:** not re-examined here, so it stands unverified.\n- **Against Claude:** S1 narrowed to low and partly unresolved; S3 narrowed to low.\n- **Against Codex:** S2 survives intact.\n\nSo the original reasons for Codex mostly don't survive as reasons. The Codex label may stay the same, but what supported it has largely fallen away.\n\n## Recommendation\n\n**No substantive preference is established.** The remaining evidence is roughly balanced, and every item is localized wording:\n- **Against Claude:** the progress restatement (low-to-medium, with the owner named at `183-184`), S1 (low, ambiguous) and S3 (low).\n- **Against Codex:** S2 (low-to-medium, not qualified at the clause) and the dual representation of not-run checks (low).\n- **Small source-quality advantages:** Codex keeps generic and Product progress clearly layered and separates consequence from policy in the world model. Claude has qualified binding wording next to the clause, an explicit build-tenant owner (`L:SPEC_METHOD.md:1801-1808`), and absence-of-result handling for not-run checks.\n\nRanking on finding counts, fixed priority, explicitness or completeness would be exactly the inference the brief excludes. If a working basis is needed now, either candidate is defensible as long as its listed residues are tracked. Keeping Codex would be justified only by continuity with the earlier recommendation, not by a demonstrated methodological edge. A fresh-use trial on the same cases, or the parameterized-conjunction interpretation question, is what could separate them.\n\n**This is advice, not the common qualified-selection predicate.** That predicate remains **unmet** for both candidates:\n- Criteria 1\u20134 are unresolved: no claim-accounting, predecessor-conservation or owner-decision records, and no fresh-use or context evidence.\n- Criteria 5 and 6 have only local source findings and no whole-candidate conclusion.\n\n## Bounds\n\nQuestions left open, and not widened:\n- whether a parameterized conjunction priority with one owner meets B item 6;\n- the intended meaning of \"two admissible subjects\" at `L:ASSURANCE.md:681`;\n- the exact scope of the Attribute ledger law (S3).\n\nCodex loci I cited from the prior reports without re-reading: `C:FOUNDATIONS.md:979-996`, `C:SPEC_METHOD.md:1414-1450, 1818-1833, 2018-2027, 3394-3407`, `C:WORLD_MODEL_METHOD.md:38`, `C:STDO_REFERENCE_FRAME_BASELINE.md:1244-1252`.\n\nNo prior report was repaired or rewritten.",
+    "ttft_ms": 2699,
+    "type": "result",
+    "duration_ms": 149444,
+    "uuid": "cd020170-5fe7-46d9-91a6-502ad4494a8c",
+    "ttft_stream_ms": 2234,
+    "time_to_request_ms": 480,
+    "first_content_frame_ms": 2234,
+    "queued_turn_count": 0,
+    "result_index": 0
+  }
+}

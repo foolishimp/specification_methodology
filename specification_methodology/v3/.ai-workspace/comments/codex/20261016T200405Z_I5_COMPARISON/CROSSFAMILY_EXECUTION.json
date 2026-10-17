@@ -1,0 +1,133 @@
+{
+  "command": [
+    "claude",
+    "--restricted",
+    "--print",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--no-session-persistence",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowed-tools",
+    "Read,Glob,Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--max-budget-usd",
+    "8"
+  ],
+  "cwd": "/private/tmp/stdo-i5-comparison-20261016T200405Z",
+  "started_at": "2026-10-16T20:08:09.645388+00:00",
+  "elapsed_seconds": 387.415,
+  "exit_code": 0,
+  "native_context": "unknown",
+  "limit_usd": 8,
+  "model": "claude-opus-5-5",
+  "tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "result": {
+    "duration_api_ms": 384344,
+    "stop_reason": "end_turn",
+    "session_id": "4404ba31-1c73-4683-adfd-d2ef5294aaff",
+    "total_cost_usd": 2.7004028000000004,
+    "usage": {
+      "input_tokens": 74,
+      "cache_creation_input_tokens": 170890,
+      "cache_read_input_tokens": 4001934,
+      "output_tokens": 26630,
+      "output_tokens_details": {
+        "thinking_tokens": 11562
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 170890,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 7862,
+          "cache_read_input_tokens": 172518,
+          "cache_creation_input_tokens": 1595,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1595
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-opus-5-5": {
+        "inputTokens": 74,
+        "outputTokens": 26630,
+        "cacheReadInputTokens": 4001934,
+        "cacheCreationInputTokens": 170890,
+        "webSearchRequests": 0,
+        "costUSD": 2.7004028000000004,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 11562,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "safety_stops": 0,
+    "is_error": false,
+    "num_turns": 63,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "# I5 comparative review: Codex and Claude standards realizations, architecture and decision consistency\n\n**Subjects.** Common `4c340f7`, Codex `99f932c` (`codex/successor/standards/`), Claude `5da6bde` (`claude/standards/`).\n\n**Reviewer.** Claude CLI, model `claude-opus-5-5`. This is the same model family as the Claude candidate. I have no knowledge of who authored either candidate, and I saw no author explanation or earlier review. Tools were read and search only; I made no edits and ran no commands.\n\n## Comparative verdict\n\n**Codex is the somewhat stronger current methodological basis on the matched architecture cases. Neither candidate is a qualified selection.**\n\n- Codex settles more recurring decisions once, in a shared owner. The clearest example is how combined results report a failure next to a missing assessment.\n- Codex also keeps generic and domain-specific definitions layered correctly, for example progress versus Product progress.\n- Claude's strengths are real: better traceability from owners to consumers, a cleaner treatment of \"not performed\", and a stronger build-tenant owner. But Claude leaves one load-bearing decision, the reported value of a combined result, to every consumer and adopting project.\n- The difference is moderate, not decisive. Several weaknesses are shared.\n\nI did not use the difference in maturity as evidence. Claude says it is under construction (Claude `README.md`, preamble, lines 3\u20137) and openly lists an open obligation (Claude `FOUNDATIONS.md` \u00a74 Assurance relations, Row 8, line 1174). I count neither against its design.\n\n## Criteria and strengths\n\n| | Codex | Claude |\n|---|---|---|\n| **C1 claim accounting** | Unresolved. Disposition records not read (outside sampled scope). | Unresolved. Per-member Source dispositions seen in a sample only (Claude `README.md` \u00a7Source dispositions, lines 170\u2013189). |\n| **C2 semantic conservation** | Unresolved (not available in this review). | Unresolved. |\n| **C3 accepted replacements** | Unresolved. | Unresolved. |\n| **C4 actual task use / context fit** | Unresolved. I make no claim from byte counts. | Unresolved. |\n| **C5 discrimination and interpretation fidelity** | Unresolved. Owners reproduce the common discriminators on the sampled cases; the a_c interpretation was not read. | Unresolved, on the same basis. |\n| **C6 governing reduction** | Indeterminate. Supporting witnesses only; no predecessor deciding-path comparison was done. | Indeterminate. Supporting witnesses only. |\n| **Strength 1** | One fixed precedence for combining results: an authenticated falsification decides the combined result and missing coverage stays explicit. `FOUNDATIONS.md` \u00a7Result conjunction, lines 506\u2013518. | Every owner row lists its consumers and says each consumer \"decides nothing the owning section does not\". `FOUNDATIONS.md` \u00a74 Results, lines 985\u20131008; \u00a7Assurance relations, lines 1164\u20131177. |\n| **Strength 2** | Performance (`performed` / `not_performed` / `unconfirmed`) and effect state are separate from the verdict, and consumers actually use them. Owner: `FOUNDATIONS.md` \u00a7Result algebra, lines 350\u2013416. Consumers: `REFERENCE_FRAME_METHOD.md` lines 501\u2013505, `ODD_METHOD.md` lines 1215\u20131221, `DESIGN_MODULE_METHOD.md` lines 1503\u20131505. | A required evaluation that was not performed simply has no result. That is the cleanest way to keep it apart from `indeterminate`. `FOUNDATIONS.md` \u00a74 Results, lines 835\u2013849 and 922\u2013941. |\n| **Strength 3** | One shared admissibility law (\"Contract application\", six conditions) reused at intake, evidence rules, design admission and frame activation. `TRANSFORMATION_LIBRARY.md` \u00a7Contract application, lines 115\u2013185; consumed at `SPEC_METHOD.md` lines 1442\u20131450 and 2466\u20132477. | A dedicated build-tenant owner that permits human processes and direct observation. `SPEC_METHOD.md` \u00a711 Build-tenant binding, lines 1801\u20131808 and 1928\u20131937. A strong recovery owner: the work state is an explicit object, resumption reconciles uncertain effects first, and three named invalidators replace the predecessor's differing lists. `ACTIVATION.md` \u00a75, lines 1372\u20131388 and 1460\u20131507; \u00a77, lines 1705\u20131748. |\n| **Most consequential weakness** | Finding 4: one owner allows two representations of a check that was never run. Finding 3, shared, also applies. | Finding 1: the reported value of a combined result is left to each consumer and adopting project. |\n\n## Ranked findings\n\n### 1. Claude: combined-result reporting is left to consumers (moderate; affects reduction)\n\n- **Where.** Claude `FOUNDATIONS.md` \u00a74 Conjunction of results, \"Reported value\", lines 1088\u20131111: \"no universal order among the non-satisfied values exists, and the member or profile that applies the conjunction declares its own\". The Executive consumer passes the choice on again to the adopting project: Claude `EXECUTIVE_BASELINE.md` \u00a7Refinement and conjunction, lines 1087\u20131092.\n- **Case.** Mandatory check A is authenticated `falsified`; mandatory check B has no result. Claude's owner fixes only that the combined result is not `satisfied`. Whether it reports `falsified` or `indeterminate` depends on a rule each consumer or project must declare.\n- **Common obligation.** \"Conjunction and composition of results are defined once, over the core\" (`common/specification/requirements/README.md` \u00a7Single Result Algebra Requirement, item 6, lines 171). Also Foundational Reduction item 2: replace the independent decision at each consumer (line 63).\n- **What is preserved.** A's failure does survive in the record (Claude `FOUNDATIONS.md` lines 1070\u20131080), so failure survival holds.\n- **Consequence.** The deciding value is decided again at every combining consumer. Two projects can report different values for the same evidence.\n- **Codex contrast.** Codex decides this once (finding cited in Strength 1, Codex `FOUNDATIONS.md` lines 506\u2013518).\n\n### 2. Claude: progress is defined two ways in tier-1 ACTIVATION (moderate)\n\n- **Where.** Claude `ACTIVATION.md` \u00a75 Work state and restart, lines 1406\u20131418, defines generic progress as \"accepted material movement toward the selected outcome\". The same member's \u00a71 Construction relation, lines 295\u2013305, defines progress as \"the work moves towards Z on evidence\".\n- **Case.** An evidenced candidate that has not yet been accepted, or a bounded uncertainty-reducing step. Under \u00a71 it counts as progress. Under \u00a75 it fits none of the five categories (progress, prerequisite work, evidence that is not new progress, churn, forecast revision).\n- **Common obligation.** Preservation, progress, termination and outcome satisfaction are distinct, and acceptance is separate from progress (`common/.../README.md` \u00a7Universal Construction Requirement, items 6\u20137, lines 112\u2013113). Also single ownership (lines 139\u2013147).\n- **Codex contrast.** Codex layers this correctly. Generic progress is \"supported movement\" (Codex `FOUNDATIONS.md` \u00a7Bounded construction, line 979). \"Accepted\" applies only to Product progress (Codex `SPEC_METHOD.md` \u00a7Checkpoint, Continuation, Progress, And Churn, lines 2018\u20132024).\n\n### 3. Shared: the four-cause diagnosis is not carried through to re-entry (moderate)\n\n- **Codex.** `SPEC_METHOD.md` \u00a7Universal intake triage, lines 1414\u20131423, says to \"bind the supported cause to the change classes below\". The class list at lines 1458\u20131470 is purely layer-based. The procedure \"When a real use case reveals a gap\" (lines 3394\u20133403) still asks a two-way question: \"missing implementation or a constitutional insufficiency?\"\n- **Claude.** The same pattern appears at `SPEC_METHOD.md` lines 836\u2013844 (four causes), 866\u2013888 (class table) and 1157\u20131168 (two-way gap analysis).\n- **Case.** A test fails because its oracle is wrong (insufficient observation), or because a predictive model is wrong. The procedure forces an \"implementation\" or \"constitutional\" branch. No class names correction of an assertion or observation.\n- **Common obligation.** Diagnosis distinguishes four causes, keeps unresolved alternatives open, and routes each supported repair to the affected owner (`common/.../README.md` \u00a7Universal Construction Requirement, item 4, line 110).\n- **Workaround.** Both intake owners allow acquiring further observation first. Codex keeps more surrounding text (lines 1425\u20131450), which makes this route harder to read.\n\n### 4. Codex: one owner allows two representations of a never-run check (low to moderate)\n\n- **Where.** Codex `FOUNDATIONS.md` \u00a7Result algebra, lines 356\u2013360 and 370\u2013379.\n- **Case.** A required check is known never to have run. The legal pairs allow a record with verdict `indeterminate` and performance `not_performed`. The same owner also says a missing required judgment \"stays an absent coverage slot \u2026 not a fabricated child result\".\n- **Consequence.** The combined verdict is the same either way (`indeterminate`, rule 3 at line 514). However, any projection that carries only the verdict merges \"not run\" with \"cannot decide\". Codex forbids verdict-only handoff (line 389) but cannot enforce that on views.\n- **Common obligation.** `common/.../README.md` \u00a7Single Result Algebra Requirement, item 3, line 167; `common/.../ASSURANCE.md` \u00a7Assertions And Observation, line 39.\n\n### 5. Claude: software residue in generic consumers (low)\n\n- **Where.** Claude `SPEC_METHOD.md` \u00a7Change classes, line 878: `realization_refactor` is a \"local code, configuration or attribute change\". The chain at lines 216\u2013217 reads `Design \u2192 Code \u2192 Events`, and lines 248\u2013251 say every realisation carries an \"Events\" responsibility.\n- **What mitigates it.** Lines 228\u2013251 and \u00a711 (lines 1801\u20131808) scope Code, Events and Projection to the selected binding.\n- **Case.** A human-process tenant revises one checklist step. The class text does not name that case. The chain also assumes a retained record where direct observation would suffice.\n- **Common obligation.** `common/.../README.md` \u00a7Build-Tenant Binding Requirement, item 2, line 125.\n- **Codex contrast.** Codex uses \"implementation, procedure\" (line 1465), `Realisation \u2192 Observations` (lines 1113\u20131116), and \"adequate direct observation remains available\" (line 3372).\n\n### 6. Allowed differences, not defects\n\n- Codex models effects with six values; Claude uses three, as a refinement in `ACTIVATION.md` \u00a73 Effects (lines 1117\u20131155). Both keep unknown completion from mapping to \"no effect\" or \"completed\".\n- Claude says resumption may \"reconcile, yield or stop\" (line 1388). Codex also allows an operation proven idempotent to be retried (Codex `FOUNDATIONS.md` lines 898\u2013905). Both meet the common requirement.\n\n## Matched cases with no material difference\n\nBoth owners satisfy the common source on these sampled cases:\n\n- **Assertion necessity vs. sufficiency and observation sufficiency.** Codex `FOUNDATIONS.md` lines 634\u2013696; Claude `FOUNDATIONS.md` lines 1232\u20131302.\n- **Assertion vs. execution provenance and correlated error.** Codex lines 698\u2013733; Claude lines 1304\u20131357. Claude adds that authenticating a returned assessment is a third thing, separate from both.\n- **Quantified assurance.** Codex lines 735\u2013783; Claude lines 1359\u20131409.\n- **Change-based reassessment** (`S_\u0394` selection and `E_new` evidence retention). Codex lines 785\u2013843; Claude lines 1411\u20131492.\n- **A-to-Z recovery from current workspace.** Codex lines 845\u2013905; Claude `ACTIVATION.md` \u00a75.\n\nClaude's assurance owner restates the common text almost verbatim. Codex paraphrases it compactly. I count neither as a reduction witness.\n\n## Recommendation, conditions and limits\n\n**Recommendation.** Use Codex as the current comparison basis, on the condition that finding 3 is repaired. Use Claude's per-row consumer lists, its \"not performed has no result\" treatment and its \u00a711 build-tenant owner as counterexamples Codex must match. This is not qualified selection: criteria 1\u20134 are unresolved and 5\u20136 are indeterminate.\n\n**What would reverse it:**\n- Claude fixes one precedence for combined results in FOUNDATIONS (or shows every deciding consumer declares the same one) and reconciles its two progress definitions.\n- Or a fresh-use trial shows Codex's denser, layered intake text produces more misroutings than Claude's on the same cases.\n- Or Codex consumers are found to pass only the verdict where `not_performed` matters.\n\n**Limits:**\n- I read selected sections only. I estimate roughly 330\u2013370 KiB of presented text, counting search output. This is not instrumented.\n- Elapsed time is unknown to me, since I had no clock.\n- Not read: either a_c interpretation, any frame body, CONFORMANCE, Codex disposition and derivation records, Claude's frontier, the predecessor, and most profile members.\n- Host and active-context conditions are unknown. Nothing here is evidence for criterion 4.",
+    "ttft_ms": 2485,
+    "type": "result",
+    "duration_ms": 386370,
+    "uuid": "304b6923-c4d5-4220-8153-8db861a6cb37",
+    "ttft_stream_ms": 2289,
+    "time_to_request_ms": 513,
+    "first_content_frame_ms": 2289,
+    "queued_turn_count": 0,
+    "result_index": 0
+  }
+}

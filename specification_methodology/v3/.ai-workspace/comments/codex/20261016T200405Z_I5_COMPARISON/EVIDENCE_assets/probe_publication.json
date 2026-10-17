@@ -1,0 +1,24 @@
+{
+  "subject": "99f932cfece1a7c9ba6f85c44c47d2403a486aa7",
+  "package_prefix": "specification_methodology/v3/build_tenants/codex/successor/",
+  "positive": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout_sha256": "db8a17e77d595ce8d3924a7c6cbc2925b4b4ffa95103aab152967fb5fbd26d12"
+  },
+  "source_byte_change": {
+    "exit_code": 1,
+    "stderr": "Documentary subject drift: standards/FOUNDATIONS.md",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "program_byte_change": {
+    "exit_code": 1,
+    "stderr": "Interpretation carrier drift: program.json",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limits": [
+    "Scratch cold binding and exact hash controls only; native checker projection was not rerun.",
+    "Full frozen package member matching is separately measured by probe_evidence.py.",
+    "No semantic fidelity, context fit, actual use, acceptance or release judgment follows."
+  ]
+}
