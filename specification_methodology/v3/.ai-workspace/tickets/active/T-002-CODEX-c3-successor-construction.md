@@ -23,6 +23,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## RC1 continuation
 
+The final construction dependency labels both plugin manifests `3.0.0-rc.1` and rebinds affected identity material under the extended [integration grant](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/BUILD.md#candidate-version-metadata). The [consolidated end review](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REVIEW.md) is admitted on the complete successor freeze; three read-only contexts share the declared USD 18 allowance.
+
 RC1-CONSUMERS returns at `b2c0381c`. The [integration disposition](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/CONSUMER_DISPOSITION.md) selects the supported inverse and conditional workflow-call patches, retaining unresolved coverage; RC1-INTEGRATION completes the single package freeze.
 
 The closed qualification inventory selects [RC1-CONSUMERS](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/CONSUMER_WORK.md) to distinguish actual material coverage gaps from empty extracted fields and complete the existing account within the package increment.
