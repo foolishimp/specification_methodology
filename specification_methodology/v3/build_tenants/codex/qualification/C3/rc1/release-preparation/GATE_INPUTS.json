@@ -1,0 +1,71 @@
+{
+  "kind": "codex.rc1-release-preparation-gate-inputs",
+  "schema_version": 1,
+  "standing": "review_bundle_available; final_release_inputs_not_selected",
+  "source": {
+    "common_commit": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+    "candidate_preimage": "99f932cfece1a7c9ba6f85c44c47d2403a486aa7",
+    "preview_package_commit": "b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5",
+    "preview_package_tree": "c218f62208518fc184faae7a2e5aca16b65f93a9",
+    "inspected_release_tooling_commit": "60eb7a2d43d9ac2d9557eae94a51db192209f06b"
+  },
+  "next_review_package": {
+    "required": ["exact_integrated_package_commit", "fresh_explicit_tmp_output_directory"],
+    "command": ["/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python", "-B", "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/release-preparation/preview_package.py", "--repository", "/Users/jim/src/apps/specification_methodology-codex", "--revision", "${EXACT_INTEGRATED_PACKAGE_COMMIT}", "--output", "${FRESH_TMP_OUTPUT_DIRECTORY}", "--theory-root", "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2", "--record"],
+    "final_candidate_selection_required": false,
+    "release_tag_required": false,
+    "publication_required": false
+  },
+  "owner_choices": {
+    "final_candidate_or_combined_subject": null,
+    "compression_dispositions_and_identifier_acceptance": null,
+    "released_interpretation_theory_and_standalone_acquisition": null,
+    "exact_immutable_cut_and_companion_cohort": null
+  },
+  "commit_a": {
+    "exact_commit": null,
+    "selected_product_member_inventory": null,
+    "required_qualification_and_owner_records": null,
+    "canonical_project_subtree_proposal": "specification_methodology/v3",
+    "proposed_cut_for_path_probe_only": "v3.0.0-rc.1",
+    "annotated_tag_object": null,
+    "installed_manifest_sha256": null,
+    "implementation_remaining": ["promote selected standards, plugin and license into the versioned root", "reconcile exact RC plugin versions and release-note bytes", "apply the selected complete interpretation acquisition and encoding decision", "freeze required current qualification bytes"]
+  },
+  "commit_b": {
+    "exact_commit": null,
+    "child_product_member_inventories": null,
+    "exact_stdo_source_corpus": null,
+    "accepted_rebound_interpretation_and_regenerated_map": null,
+    "native_skills_and_product_definitions": null,
+    "release_records_and_dependency_digests": null,
+    "frozen_publication_endpoint": null,
+    "observed_direct_remote_ref_expectations": null,
+    "observed_complete_version_lines_and_sha256": null,
+    "content_gate": ["python3", "scripts/check_stack_release.py", "--phase", "content", "--revision", "${EXACT_COMMIT_B}"]
+  },
+  "publication": {
+    "selected_effect_grant": null,
+    "local_annotated_child_tags_and_selectors_and_branches": null,
+    "qualified_push_sha256": null,
+    "checked_push_argv": null,
+    "gate": ["python3", "scripts/check_stack_release.py", "--phase", "refs", "--revision", "${EXACT_COMMIT_B}", "--remote", "origin"],
+    "rule": "Execute only the exact successful gate's push_argv in its selected publication activation; never synthesize fallback refspecs."
+  },
+  "fresh_consumer": {
+    "fresh_store": null,
+    "fixture_definition": null,
+    "fixture_definition_id": null,
+    "selected_cohort_coordinate": {"repository": null, "ref": null, "tag_object": null, "path": "stack_release.json"},
+    "cohort_coordinate_rule": "Use a child annotated release tag at commit B; STDO commit A does not contain the final commit-B cohort record.",
+    "required_companion_population": ["axiom_indexer", "stdo_representation"],
+    "per_companion_fields": ["product", "definition_member", "install_root", "links", "target_definition_id", "product_definition", "contracts"],
+    "existing_unique_consumer_compositions": null,
+    "derived_context": null,
+    "derived_context_row_fields": ["program", "map", "bindings"],
+    "dry_run_plan_sha256": null,
+    "accepted_plan_sha256": null,
+    "external_consumer_migration_selected": false
+  },
+  "preserved": ["current v2 source and matched cohort", "all immutable predecessors and installed bases", "both independent candidate lines", "source meaning and held test expectations"]
+}
