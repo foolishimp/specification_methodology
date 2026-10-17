@@ -168,10 +168,9 @@ A role or frame name alone creates no coordination or review obligation.
 Apply [Configuration](FOUNDATIONS.md#configuration) to that choice using the
 actual operations, dependencies, actor capability and assurance requirement.
 The coordination question is whether the direct activation can cover those
-relations lawfully, not whether an Executive or Reviewer is available. Shared
-governing sources do not defeat required independent judgment, while a fresh
-context does not remove an actor's authorship. The selected branch retains
-those conditions in its intake and grants.
+relations lawfully, not whether an Executive or Reviewer is available. Apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment) to shared
+sources, authorship and evidence in the selected branch's intake and grants.
 
 The direct route binds the same exact intake, operation territory, applicable
 obligations, evidence, stop conditions and declared result consumer. It uses
@@ -354,7 +353,7 @@ while U is non-empty:
   record every closed result, technical triage, residual, and invalidation condition
   apply only declared conjunctions or translations
   assign priority and boundary effect only under the current Product mandate
-  invalidate affected results when the subject or basis changes
+  reassess affected result reliance under the shared currentness law when the subject or basis changes
   update U from coverage, dependencies, conflicts, and discovered materiality
 
 stop only when every mandatory evaluation is closed, or governing authority
@@ -367,6 +366,9 @@ Product outcome. A stop uses the [core stop rule](FOUNDATIONS.md#result-algebra)
 on the exact interrupted predicate and cause, retaining open obligations,
 actual performance and effects. Closed evaluations can include falsifications;
 ending the loop cannot promote those results or residuals to satisfaction.
+The cycle's currentness step applies
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to each result's original subject and its proposed use on the current claim.
 
 This relation requires no scheduler or frame engine. `M` may contain parallel
 activations. Recursion follows declared evaluation dependencies and bounded
@@ -676,6 +678,11 @@ This notation requires no Cartesian-product schema or universal frame runtime.
 
 ## Derived Executive Frame
 
+This frame's invalidation row binds its listed material changes to
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention).
+It selects profile-specific inputs to that applicability assessment; historical
+result identity and any new reliance follow that shared owner.
+
 | Frame element | Derived application |
 |---|---|
 | evaluation family | Is the bounded outcome and execution basis authorized? Which frames and actors are capable? Is a returned result exact and current? What priority, current-boundary effect, `STDO-UP-020` disposition, and next action follow from the current Product mandate? |
@@ -683,7 +690,7 @@ This notation requires no Cartesian-product schema or universal frame runtime.
 | material manifold | outcome, mandate, affected causal cone, evaluation inventory, frame configuration, actor envelopes, evidence obligations, returned results and technical triage, priority, boundary effect, re-entry owners, and already-authorized continuation boundary |
 | coordinates | exact method, project, outcome, mandate, authority, checkpoint, candidate, evidence, finding, triage-policy, and actor identities |
 | governing invariants | `RF-001..017`; `STDO-UP-017..020`; applicable identity, ticket, assurance, and release law |
-| authority | existing Product/work frame-set and decision authority or its admitted bounded proxy; no operation authority or other authority arises from the Executive label |
+| authority | existing Product/work frame-set and decision authority or its admitted bounded proxy, applied under [Judgment and authority](FOUNDATIONS.md#judgment-and-authority); Executive's mutation exclusion below remains binding |
 | evidence | live authority surfaces, frame results, Reviewer technical triage, exact candidate identity, transition evidence, coverage residuals, and specialist-frame results |
 | capability envelope | enough method, Product, release or MVP, authority, workspace, triage, and actor-selection competence to configure, prioritize, and dispose the bounded evaluation; implementation expertise may be delegated to specialist frames |
 | exclusions | candidate/Product/worktree byte mutation and implementation effects while occupying Executive, implementation ownership, silently rewriting Reviewer evidence or severity, independent-review claims without a qualifying activation, semantic reconstruction owned elsewhere, and disposition outside the admitted grant |
@@ -728,8 +735,10 @@ probe remains appropriate when it decides a material outcome uncertainty.
 
 The [Product testing frames](#derived-product-testing-frame-set) retain their
 distinct claims and govern the necessary scenarios, independent assessments,
-and repetitions. Reuse qualified results while their exact subject and basis
-remain valid; rerun affected assurance when a material change invalidates it.
+and repetitions. Apply
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to qualified-result reuse on the intended steel-thread claim, including its
+supported applicability relation, affected reassessment and mandatory gates.
 Executive selects this sequence under the existing mandate and activates
 construction through the existing operation grants.
 
@@ -749,14 +758,15 @@ construction through the existing operation grants.
 | capability envelope | the declared method, domain, implementation, tool, access, and finite-context competence required by the causal cone |
 | exclusions | upstream semantic change, unauthorized cone expansion, self-acceptance, hidden competing paths, and advancement after returning the work result |
 | result | one Reference Frame Method result plus exactly one `candidate_ready`, `refused`, `incomplete`, or `re_entry_requested` profile work-result variant |
-| invalidation | material intake, basis, checkpoint, dependency, configuration, capability, or topology change |
+| invalidation | material intake, basis, checkpoint, dependency, configuration, capability, or topology change; apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention) to affected reliance |
 
 `candidate_ready` binds the exact candidate and the transition evidence required
 by `STDO-UP-020`. It is not `accept`. Green tests are evidence only for the
 relations their production and test semantics actually exercise.
 
-The Worker label grants no mutation authority. An effectful Worker may mutate
-only the exact subject and write territory named by its inherited construction
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+Worker activation. Its effectful operation may mutate only the exact subject
+and write territory named by its inherited construction
 or transformation grant. Missing, ambiguous, or out-of-territory mutation
 authority refuses the effect.
 
@@ -782,7 +792,7 @@ relation grants no cross-boundary effect.
 | capability envelope | declared method, domain, implementation, assurance, technical-triage, tool, access, context, counterexample-search, and independence competence |
 | exclusions | candidate editing, repair implementation, priority assignment, release or MVP boundary disposition, next-action selection, Worker-summary substitution, assurance-owned semantic reconstruction, unbound evidence flattening, and silent scope expansion |
 | result | one Reference Frame Method result plus findings, counterexamples, evidence-bound technical triage, and residuals sufficient for Executive to assign priority and apply the existing `STDO-UP-020` disposition where the basis is decidable |
-| invalidation | material candidate, authority, basis, evidence population, severity scale, dependency, configuration, scope, or independence change |
+| invalidation | material candidate, authority, basis, evidence population, severity scale, dependency, configuration, scope, or independence change; apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention) to affected reliance |
 
 `STDO-UP-007` determines when independent review is required and what makes it
 traceable. `STDO-UP-022` determines exact assurance-boundary and qualification
@@ -791,8 +801,10 @@ new independence test.
 
 `STDO-UP-020` remains the owner of assessment and semantic disposition. This
 profile uses an activated Reviewer result as independent live-surface evaluation
-input and, in the coordinated branch, Executive as the authorized assessor or
-proxy that applies the one existing disposition. It creates no second verdict or
+input. In the coordinated branch, Executive exercises its bound decision mandate
+or admitted proxy grant to apply that construction disposition through
+[Dispose](TRANSFORMATION_LIBRARY.md#dispose). The Reviewer assessment remains
+distinct from that decision; this profile creates no second verdict or
 disposition family.
 
 Reviewer may assess likely repair complexity and regression risk without
@@ -1795,9 +1807,10 @@ across different activations where authority and any claimed independence are
 preserved. Different humans, agents, deterministic tools, or mixed
 configurations may occupy them. This profile prescribes no actor count.
 
-Where independent review is required, `STDO-UP-007` controls. The activation
-records the exact subject and verdict carrier, and the Reviewer is not the
-author of that subject. `STDO-UP-022` adds its declared capability,
+Where independent review is required, apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment), with
+`STDO-UP-007` supplying its boundary and trace policy. The activation records
+the exact subject and verdict carrier. `STDO-UP-022` adds its declared capability,
 configuration, comparison-basis, reference-exposure, and freeze conditions for
 generic method qualification.
 
@@ -1847,7 +1860,9 @@ A representative profile trial establishes at least:
    Reviewer;
 8. Reviewer reacquires the exact subject and live production and assurance
    surfaces material to its claim;
-9. changed candidate or basis invalidates the affected review result;
+9. changed candidate or basis causes affected review reliance to be reassessed
+   under [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention);
+   unsupported carryover cannot discharge the required current review claim;
 10. Worker self-review, Reviewer evaluation, Executive decision authority, and
    `STDO-UP-020` disposition remain distinguishable;
 11. missing-frame pressure triggers bounded diagnosis or lawful re-entry;

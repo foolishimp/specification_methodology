@@ -798,13 +798,12 @@ Pure subordinate helpers inherit the authority envelope of their owning
 Ontology function and do not require peer authority rows unless they cross one
 of those boundaries.
 
-Composition must not widen authority implicitly. A composed or higher-order
-function has no more authority than the authority law admitted for its inputs,
-constituent functions, and current basis. Delegation, elevation, transfer, or
-retirement authority requires a named typed transition and an owning admission
-boundary. Projections cannot create authority, and downstream code cannot
-reconstruct an authority witness from actor labels, capability strings, or
-payload shape.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to a
+composed or higher-order function's inputs, constituent functions, projections
+and current basis. The authority matrix binds the admitted grants carried by
+those relations, including any downstream authority witness. This design
+profile additionally requires delegation, elevation, transfer or retirement
+authority to have a named typed transition and an owning admission boundary.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 

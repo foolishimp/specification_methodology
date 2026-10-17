@@ -854,7 +854,9 @@ its required slot remains absent with the known performance fact or uncertainty;
 the override supplies only its own decision result and bounded authority. The
 carrier's `admitted` state cannot convert failure or absence into satisfaction.
 
-Execution-contract admission validates a proposed contract against its cited
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+execution contract's work grant. Execution-contract admission validates a
+proposed contract against its cited
 Product outcome, prerequisite, or experiment basis; it does not admit that
 growth basis. Admission or renewal of the basis belongs to the authority owning
 the selected Goals work wave, or its explicitly bounded proxy, and remains
@@ -864,21 +866,18 @@ the owning work-wave authority has not admitted.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
-Given F2 and F6 and a claim requiring independent assessment, author evidence
-cannot itself establish that independence or transfer acceptance authority.
-The [configuration contract](FOUNDATIONS.md#configuration) preserves required
-independence. UP-007 chooses its applicable boundaries, durable trace and
-promotion-blocking policy below; the governing owner selects required review
-and any reserved decision. Fresh context alone changes no authorship relation.
+Apply [Independent assessment](FOUNDATIONS.md#independent-assessment) to the
+reviewed claim and [Judgment and authority](FOUNDATIONS.md#judgment-and-authority)
+to its assessment, operation and acceptance grants. UP-007 supplies the
+applicable boundaries, durable trace and promotion-blocking policy below;
+the governing owner selects required review and any reserved decision.
 
-Authority to author or implement a change is not independent authority to
-verify it. Where independent review is required, the reviewer is not the author
-of the reviewed subject and identifies the exact subject, basis, scope,
-exclusions, evidence, verdict, and unresolved findings.
+For UP-007's required independent reviews, nonauthor assessment is a required
+authorship condition under that shared owner. The review carrier identifies the
+exact subject, basis, scope, exclusions, evidence, verdict and unresolved
+findings, with the assessor's authorship and evidence conditions bound.
 
-Self-review remains useful authoring evidence but cannot be relabeled as
-independent. Human authority may accept or reject the claim; it does not make
-implementer self-review independent. Independent review is required at Product,
+Independent review is required at Product,
 qualification, release, and explicitly risk-bearing boundaries that claim it,
 not for every local implementation step.
 

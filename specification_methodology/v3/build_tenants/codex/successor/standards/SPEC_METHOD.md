@@ -1885,13 +1885,14 @@ does not block the bounded claim.
 
 ### Construction, Assessment, And Delegation
 
-The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live realisation
+The constructor owns bounded implementation and self-review. Apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment) wherever
+independent assessment supports promotion. The assessor evaluates the exact
+live realisation
 under the selected computational binding, its authority paths, proof, and
 installed subject rather than treating the constructor's summary as sufficient
-evidence. This preserves the independent-review relation; it does not prescribe
-an actor count. One actor may occupy different roles across different claims
-when independence for the assessed claim is preserved.
+evidence. The selected configuration binds actors to that claim under the shared
+independence conditions; this construction binding prescribes no actor count.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local
@@ -1926,8 +1927,9 @@ resolved before effect. Executive mutation restrictions remain applicable.
 Assessment evaluates the exact predicate `the candidate closes its declared
 cone and preserves every affected governing relation` through the shared
 [result algebra](FOUNDATIONS.md#result-algebra). It returns evidence and a
-proposed semantic disposition. Only the existing decision authority applies
-that disposition; an assessment verdict is not acceptance authority.
+proposed semantic disposition. Apply [Dispose](TRANSFORMATION_LIBRARY.md#dispose)
+to the separate decision on that proposal, using this section's construction
+conditions and the existing authority's bound mandate.
 
 | Disposition | Condition on the exact candidate claim | Core verdict |
 |---|---|---|
@@ -1937,9 +1939,12 @@ that disposition; an assessment verdict is not acceptance authority.
 | `re_enter`, defeated candidate | the intended candidate cannot satisfy an interpretable current contract without an owning-layer change | `falsified` |
 | `re_enter`, unusable governing basis | the governing requirements cannot supply a coherent interpretation for this assessment | `invalid_basis` |
 | `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
+| any proposed disposition, missing required reason or support | its qualified condition above is not established and no independently admissible evidence decides the candidate predicate | `indeterminate` |
 
 The proposed remedy retains its original domain outcome; the core verdict does
-not choose among remedies. Governing-requirement coherence is an admission
+not choose among remedies. The core missing-reason rule preserves the raw label
+as non-deciding support and retains independently established counterevidence or
+scope/basis diagnosis on the actual predicate. Governing-requirement coherence is an admission
 condition here; the candidate's alignment, including its design's alignment
 with those requirements, is an evaluated relation. A contradictory design does
 not by itself invalidate otherwise interpretable requirements. A proof defect
@@ -1951,9 +1956,9 @@ authority; the verdict alone neither selects a remedy nor forbids useful
 authorised repair. `An exact candidate is available` remains the construction
 predicate, separate from this cone-preservation assessment.
 
-The applied disposition has a separate decision result under the core contract:
-the predicate concerns that disposition on the exact subject and basis under
-the bound mandate. A lawful recorded `reject` may satisfy that decision
+The applied disposition uses [Dispose](TRANSFORMATION_LIBRARY.md#dispose)'s
+separate decision result on the exact subject, basis and bound mandate.
+A lawful recorded `reject` may satisfy that decision
 predicate without establishing a candidate counterexample. It never overwrites
 the assessment result. The table classifies evidence for a proposed remedy;
 it does not turn policy decisions into fitness verdicts.
@@ -1973,8 +1978,9 @@ an unchanged failed construction relation as if iteration alone could close it.
 
 A reviewable transition identifies the exact candidate, affected relations,
 changed realization paths, authority paths added or removed, retained and open
-seams, focused proof, any required integration proof, explicit non-changes, and
-the assessor disposition. Consumers choose the representation. Transition
+seams, focused proof, any required integration proof, explicit non-changes, the
+assessor's proposed disposition and any separately applied decision. Consumers
+choose the representation. Transition
 evidence is a read model and does not become specification, design, or
 admission authority.
 
@@ -2535,7 +2541,11 @@ until the claim-evidence relation is superseded, withdrawn, or requalified.
 
 Qualification of generic method sufficiency consumes the Probabilistic Work
 Boundary, the `STDO-UP-020` construction/assessment relation, and the
-Reconstruction Litmus; it does not create a second process. A fresh competent
+Reconstruction Litmus. It applies
+[Independent assessment](FOUNDATIONS.md#independent-assessment), with
+[UP-007](TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007)
+owning review trace and promotion policy and this section adding the
+reconstruction exposure and freeze conditions below. A fresh competent
 constructor operates inside a declared capability, context, and configuration
 envelope using only the declared ordinary method and authority surfaces. An
 independently authorized evaluator has a declared governing basis and comparison
@@ -3397,7 +3407,11 @@ When a real use case reveals a gap:
 2. Then write the **Scenario** as the first substantive project artifact for the
    gap so the pressure becomes concrete and testable.
 3. Run **Gap Analysis** — is this a missing implementation or a constitutional insufficiency?
-4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → realisation).
+4. If constitutional: apply the change class selected by
+   [Universal Intake Triage](#universal-intake-triage), re-enter at that owning
+   layer and reconcile its affected downstream span. Reprice Goals or Intent
+   only when their respective work-wave, direction or scope conditions change;
+   a requirement-level gap with stable direction re-enters at Requirements.
 5. If implementation: write requirements/design as needed, then implement.
 
 The intake source does not change this rule.

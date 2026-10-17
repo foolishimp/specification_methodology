@@ -25,29 +25,41 @@ It owns the [single result algebra](FOUNDATIONS.md#result-algebra),
 Transform, Evaluate, Conjoin and Dispose organise these responsibilities. Domain
 instances bind their predicates, policies and grants; they do not copy a rival
 generic law or acquire a new runtime API.
-Responsibility views project selected material clauses:
-[work/recovery](frames/WORK_RECOVERY.md),
-[evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md),
-[constitutional derivation](frames/CONSTITUTIONAL_DERIVATION.md),
-[domain binding](frames/DOMAIN_BINDING.md), and
-[release/adoption](frames/RELEASE_ADOPTION.md). Each has an explicit scope;
-no view is sufficient for every task.
+## Choose a task
 
-For construction or assessment of one member, the
-[member construction/assessment view](frames/MEMBER_CONSTRUCTION_ASSESSMENT.md)
-supplies generic method rules. Bind it to the actual Product requirements,
-member subject, authority and required evidence. Product-specific acceptance
-criteria remain at their owner; selecting this view grants no acceptance.
+Start with the owner sections for the actual question. Bind their material
+inputs to the selected Product, subject, outcome, evidence and existing grant.
+The linked frames assemble exact excerpts when their broader scope is material;
+their presence does not require reading every frame. Acquire the actual domain
+mapping and any adopted profile where the task depends on them.
+Where independent assessment is required, acquire its
+[shared conditions](FOUNDATIONS.md#independent-assessment) with the domain rule
+that requires it.
 
-For intake triage, lawful re-entry, work-carrier selection or execution-contract
-admission, acquire the [triage/carrier frame](frames/TRIAGE_CARRIER.md).
-For typed construction handoffs and transformation admission, acquire the
-[constitutional-derivation frame](frames/CONSTITUTIONAL_DERIVATION.md), which
-projects the library specialization, its Design Method consumer and the
-SPEC_METHOD enclosing-admission owner. These selections follow the task's
-responsibility. Each view names its owner sections and exact member digests. Material
-coupled responsibilities outside the selection require source re-entry under
-the existing sufficiency law; a prepared frame grants no work or admission.
+| Task | Deciding owner routes | Existing excerpt assembly |
+|---|---|---|
+| Diagnose intake and select lawful re-entry | Spec [intake](SPEC_METHOD.md#universal-intake-triage) and [classification/treatment](SPEC_METHOD.md#computed-classification-and-treatment); Ticket [carrier selection](TICKET_METHOD.md#work-carrier-to-execution-rule) when admitting work | [Triage/carrier](frames/TRIAGE_CARRIER.md) |
+| Resume from current state or reconcile uncertain effects | Foundations [workspace and context](FOUNDATIONS.md#workspace-and-context), then the library's [work/recovery specialization](TRANSFORMATION_LIBRARY.md#workrecovery-specialization) | [Work/recovery](frames/WORK_RECOVERY.md) |
+| Reuse evidence after a subject, requirement or basis change | Foundations [change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention) and library [contract application](TRANSFORMATION_LIBRARY.md#contract-application), including currentness | [Evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md) |
+| Assess whether lawful work meets the required outcome | Foundations [bounded construction](FOUNDATIONS.md#bounded-construction), [assertions and observations](FOUNDATIONS.md#assertions-and-observations), and [assurance provenance](FOUNDATIONS.md#parallel-assurance-and-provenance) | [Evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md) |
+| Determine result values or combine required assessments | Foundations [result algebra](FOUNDATIONS.md#result-algebra); [conjunction](FOUNDATIONS.md#result-conjunction) when combining results; the actual domain owner's refinement where applicable | [Evaluation/conjunction](frames/EVALUATION_CONJUNCTION.md) |
+| Assess a candidate and apply its authorised disposition | Spec [construction, assessment and delegation](SPEC_METHOD.md#construction-assessment-and-delegation) and [proportional disposition](SPEC_METHOD.md#proportional-disposition), with Foundations [judgment and authority](FOUNDATIONS.md#judgment-and-authority) | [Member construction/assessment](frames/MEMBER_CONSTRUCTION_ASSESSMENT.md) |
+
+For typed construction handoffs and transformation admission, the
+[constitutional-derivation frame](frames/CONSTITUTIONAL_DERIVATION.md) projects
+the library specialization, its Design Method consumer and the Spec Method
+enclosing-admission owner. The [domain-binding frame](frames/DOMAIN_BINDING.md)
+covers its declared continuation, projection and Markov-overlay questions.
+[Release/adoption](frames/RELEASE_ADOPTION.md) covers its distinct publication,
+qualification, conservation and adoption claims. The
+[member construction/assessment frame](frames/MEMBER_CONSTRUCTION_ASSESSMENT.md)
+supplies generic rules for one member; its actual Product requirements and
+acceptance criteria remain required inputs.
+
+Each view names its owner sections and exact member digests. Material coupled
+responsibilities outside the selection require source re-entry under the
+existing sufficiency law. No view supplies universal task sufficiency or a
+work, effect, admission or acceptance grant.
 
 ## Method owners
 

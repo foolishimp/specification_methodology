@@ -8,8 +8,8 @@ contract operations; particular methods bind their types, predicates, refinement
 of the result algebra and authority. Neither adopted premises nor an entailment argument
 appoints an actor or supplies an operation grant.
 
-The core owns the shared decisions about results, current state, bounded work
-and construction assurance. Particular methods supply domain predicates, types,
+The core owns the shared decisions about results, current state, bounded work,
+authority conservation, required independent assessment and construction assurance. Particular methods supply domain predicates, types,
 policies and authority bindings. They apply those decisions without maintaining
 parallel rules. A specialization does not assign unrelated software or calculus
 definitions a common purpose, signature or workflow.
@@ -217,8 +217,8 @@ authorized response, requests the owning decision, or stops with an explicit
 unresolved result; capacity supplies no configuration grant. Never replace a difficult
 required relation with an easier claim merely to report success.
 
-[Bounded construction](#bounded-construction) owns total control handling.
-The design totality rule refines that contract for its admitted control domain;
+[Bounded construction](#bounded-construction) owns handling within the selected
+control domain. The design totality rule retains its preference and applicability;
 it does not introduce another method result algebra.
 
 Process resumption applies [Workspace and context](#workspace-and-context).
@@ -229,22 +229,37 @@ private actor context into the continuing work state.
 
 ## Judgment and authority
 
-The [frame authority law](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
-owns authority conservation for frame evaluation. Within a_c,
-[AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
-judgment separation. Where a consumer has adopted the construction engagement
-profile and lawfully activated the applicable engagement,
+This section owns the shared authority-conservation and judgment-separation
+determinations. The [imported authority vocabulary](#reference-only-semantic-imports)
+keeps its source meanings. A consumer binds the actual owner-issued grant for
+its subject, operation or decision, permitted effects and scope. Meaning,
+evaluation, operation and decision retain their distinct authority relations,
+even when one actor lawfully holds several. A grant is carried only within its
+declared scope; delegation or transfer requires the governing owner's
+permission.
+
+Actor identity, role or frame selection, a document's presence, available
+capability, shared machinery, implementation reachability, evidence shape and
+a successful judgment cannot mint, widen, transfer or reconstruct authority.
+Missing or ambiguous authority leaves the dependent act ungranted and returns
+the applicable explicit result or owner re-entry. An already-authorized act
+retains its grant within its current conditions.
+
+Definitions, assumptions, observations, candidate judgments and accepted
+claims have distinct standing. A judgment binds a predicate, exact subject,
+basis, evidence, assessor and any required independence. Producing a candidate,
+assessing it and disposing it are separate responsibilities. Evidence establishes
+only its supported claim; it cannot supply an operation or decision mandate.
+The [Dispose contract](TRANSFORMATION_LIBRARY.md#dispose) applies the bound
+decision authority to its permitted dispositions.
+
+Domain owners supply the additional bindings: [RF-006](REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+for frame evaluations, [AC-014](AXIOMATIC_CALCULUS.md#ac-014-judgment-separation)
+for calculus judgments and, only where adopted and lawfully activated,
 [the Baseline](STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
-owns its exact Reviewer/Executive application of the detailed laws. Other
-domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
-have distinct standing. A judgment binds a predicate, exact subject, basis,
-evidence, assessor and any required independence. An operation grant permits
-specified effects; decision authority retains its separately bound mandate.
-Neither evidence shape nor actor capability
-mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
-Reviewer and Executive retain their exact roles from that profile. This account
-assigns neither role or its authority. Domain control such as ODD next-action
-selection remains with its own named function; the explanation appoints none.
+for its Reviewer and Executive. ODD next-action selection retains its own
+function and mandate. These applications appoint no actor and impose no
+optional profile on generic construction.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,
@@ -257,6 +272,33 @@ to [Spec's proportional disposition](SPEC_METHOD.md#proportional-disposition).
 observation or combination of evidence can establish. The evaluating consumer
 binds those relations before relying on a reported pass or failure for a broader
 claim. A supported judgment still supplies no operation or decision mandate.
+
+### Independent assessment
+
+The governing contract selects whether independent assessment is required and
+which authorship, evidence, reference-exposure, actor or configuration conditions
+apply to the claim. Where nonauthor assessment is required, its assessor has
+not materially authored the subject or the repair being assessed. Self-review
+remains authoring evidence; a human acceptance decision cannot turn it into
+independent assessment.
+
+Reporting a defect, supplying a counterexample or identifying behavior already
+required by an owning rule does not itself author the repair; that assessor
+may recheck the defect. Material wording, policy or design adopted in the
+subject is authorship. Its contributor discloses the contribution and cannot
+supply the required independent assessment of that claim; unaffected judgments
+retain their scope. Changed subjects, tests or assessment conditions apply
+[Change impact and evidence retention](#change-impact-and-evidence-retention)
+before the former evidence supports a new claim.
+
+Common source and applicable evidence may be shared where the required
+conditions permit. Actor identity, a fresh context or a different model family
+alone establishes none of the required independence. [Parallel assurance and
+provenance](#parallel-assurance-and-provenance) owns the separate shared-cause
+account; [Frame Method](REFERENCE_FRAME_METHOD.md#disjointness-and-independence)
+owns structural disjointness and procedural evaluation independence. Those
+relations do not substitute for claim-relative independent assurance. This
+contract selects no extra review boundary, reviewer count or model family.
 
 ## Orthogonal descriptions
 
@@ -628,6 +670,8 @@ informational and computational accounts, identify the maps and what they
 preserve under [Orthogonal descriptions](#orthogonal-descriptions). A formula
 states an obligation; a mathematical argument, structural check, finite model,
 sampled test and observed execution retain their distinct subjects and reach.
+Execution by a person, machine or mixed arrangement does not by itself discharge
+the cross-account maps or preservation obligations.
 Unproved universal claims remain unresolved. They stop only work that requires
 that proof; otherwise admitted bounded construction can continue.
 
@@ -651,8 +695,11 @@ q_t implies Q_r                     q_t is sufficient for Q_r.
 These are conditional on Gamma and Omega. A pass on a necessary condition
 cannot establish Q_r. A collection of assertions needs its own coverage and
 compatibility argument before its conjunction establishes Q_r. Valid different
-realisations may satisfy Q_r with different outputs; equality is an oracle only
-where the obligation requires it.
+realisations may satisfy Q_r with different outputs. Equality can be an oracle
+for a justified declared target q_t, including a narrower regression property;
+the conclusion retains that target and scope. Establish its relation to Q_r
+before using it to decide the source obligation. Equality alone cannot reject
+permitted alternatives or prove full obligation satisfaction.
 
 Let pi: Omega → O model the observations available to a checker,
 and T contained in O × R be the checker's admitted evaluation relation, with R
@@ -724,7 +771,7 @@ material shared specifications, interpretations, tools, fixtures, observations,
 copied contributions and other failure causes. Different actors, families or
 codebases do not establish statistical independence. Repeating an observation
 does not make it new independent evidence; required authorship independence
-retains its own conditions.
+applies [Independent assessment](#independent-assessment).
 
 Agreement within an incorrect common model cannot validate that model against
 the desired outcome. Validation uses the model's declared purpose and material
@@ -815,13 +862,19 @@ E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
 ```
 
 Retention establishes that claim and scope still apply, assertion and observation
-bases remain justified, required independence holds, and material dependencies
+bases remain justified, any independence required for that claim still holds
+under [Independent assessment](#independent-assessment), and material dependencies
 are unchanged or covered by an established preservation relation. The original
 record keeps its original subject; an applicability relation permits its use
 for the new claim. A changed digest proves neither invalidity nor equivalence.
 Changed support reopens affected reliance, not the historical observation.
 Keep known failures, unresolved coverage and their citations visible until
-supported repair, reassessment or authorised change of obligation disposes them.
+supported repair, reassessment or authorised change of obligation disposes their
+outstanding status. That disposition retains the original observation,
+counterexample, subject and citations with the reason its current applicability
+changed. A relaxed requirement can change what remains owed; it neither makes
+the former failure a success nor erases it. The changed subject is assessed
+against its current obligations with the applicable evidence.
 
 A changed requirement revisits dependent expectations under its change authority.
 A changed refinement revisits its links to the requirement and realisation; a
@@ -906,13 +959,20 @@ algorithm.
 
 ## Bounded construction
 
+This section owns the shared construction relation connecting purpose, action,
+observation and correction. Its material consumers apply it to their selected
+delivery, correction and control tasks; their domain strategy, actor
+configuration, execution mechanisms and additional assurance policy retain
+their owners.
+
 A is the current material state bound for construction. Its acquired account
 describes material workspace state, relevant authoritative external observations,
 justified knowledge and explicit unknowns; that account can be incomplete or
 stale. Z is the selected set of required outcome and acceptance conditions;
 many states may satisfy it. Intent, Product and Specification refine Z under
 their owning authority. Applicable declared calculi constrain lawful
-transformations but do not choose Z or establish its satisfaction.
+transformations but do not choose Z or establish its satisfaction. Lawfulness
+alone establishes neither delivery nor optimality.
 Write material intermediate states as S0 → S1 → …, reserving Z for the
 destination constraint set and naming a satisfying endpoint separately. A
 transition binds its preconditions, permitted effects, result predicate and
@@ -929,8 +989,10 @@ through construction and evaluation rather than being known in advance.
 Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
 identity identifies the work; compatibility and assurance determine which
 transitions compose. These are additional premises, not consequences of a
-resource bound. Decomposition preserves all material outer obligations and
-the joins between parts. Local success establishes the outer outcome only
+resource bound. Refinement may add detail and construction may change state
+within the permitted variation. Decomposition, delegation, concurrent work and
+recursive application preserve all affected outer obligations and the material
+joins between parts. Local success establishes the outer outcome only
 when the required coverage and preservation argument hold.
 
 A strategy arranges admissible construction and assurance within Z and the
@@ -942,6 +1004,8 @@ choice state their units, boundaries and composition; distinguish estimates,
 assumptions and observations. Multiple objectives may leave alternatives
 incomparable, with tradeoffs decided by the owning criteria. Strategy names
 such as steel thread, phased or iterative delivery supply no superiority proof.
+The actor exercising admitted work authority selects the strategy; a claim
+of superiority states its objectives, comparison and assumptions.
 The selected design or work record carries the rationale; no exhaustive
 optimisation, scalar cost, numerical quota or preferred strategy is imposed.
 [Risk and assurance selection](#risk-and-assurance-selection) constrains the
@@ -967,12 +1031,14 @@ consequence; priority selects response order under the outcome, dependencies,
 resources and authority. [Judgment and authority](#judgment-and-authority)
 retains their distinction from the semantic result and authorised disposition.
 
-A total control contract supplies a response for every admitted control state,
+The selected control model handles its admitted control states,
 including unavailable input, unknown world conditions, failed preconditions,
 partial effects, exhausted capability and revoked or exhausted authority. Its
-outcomes use the core result algebra. Its alternatives may include repair,
-re-entry, refusal, yielding or termination under the actual grant. It does not
-promise to solve every problem or make an external process terminate.
+outcomes use the core result algebra. Applicable responses include continuation,
+repair, recovery, re-entry, refusal, yielding or termination under the actual
+grant. A selected total control contract supplies a response for every state
+in its admitted domain; this does not require every operation to be total.
+It does not promise to solve every problem or make an external process terminate.
 Deterministic, probabilistic and human operations retain their selected outcome
 models; their enclosing control handles the observed result truthfully.
 
@@ -1008,9 +1074,9 @@ or a fixed inventory of roles. An adequate configuration can use one actor,
 peers, a hierarchy or supported adaptive allocation.
 
 Producing, checking and accepting remain different responsibilities even where
-one actor is permitted to perform several. Required independent review retains
-its authorship and evidence conditions; a new context alone does not supply it.
-Roles acquire authority from their grants, never from their names. Functional
+one actor is permitted to perform several. Apply [Judgment and authority](#judgment-and-authority)
+and [Independent assessment](#independent-assessment) to the actual grants and
+any required review. Functional
 decomposition, communication, authority and evaluation dependency are distinct.
 
 The optional [Executive arrangement](STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action)
@@ -1034,12 +1100,14 @@ that every domain policy follows from F1–F6.
 | [Purpose and interfaces](#purpose-and-interfaces), applied by UP-013 and UP-014 | F1 supplies a selected outcome; F4 relates a local interface to that outcome. Specification and project structure supply the requiring relation; functional design supplies the bounded interface. | A local successful operation cannot define the Product outcome or justify its own burden. The interface must serve a material relation of the selected outer contract. | The purpose owner selects adequacy; Spec Method owns outcome conservation and proportional burden. Neither a signature nor finite capacity supplies those value choices. |
 | [Identity, state and evidence](#identity-state-and-evidence), applied by Identity Method and result reuse | F3 distinguishes scoped identity and changing state; F2 binds an observation to its subject. World models and identity contribute object boundaries; evidence and correction distinguish current support from historical observation. | A digest proves selected bytes, not shared identity, current state or acceptance. A reused result needs its material subject and support to remain applicable. | Identity Method owns governed coordinates; domain owners choose observation and currentness protocols. This argument establishes no Markov property or universal replay requirement. |
 | [Typed composition](#typed-composition-and-conservation) and [Orthogonal descriptions](#orthogonal-descriptions), applied by Composition law and AC-016 | F4 requires compatible typed joins; F2 separates preserved meaning from a mathematical model. Algebraic calculus and functional design contribute composition; computational execution contributes the effect laws needed by a rewrite. | Local conformance does not establish the composite, and regrouping does not license reordered or parallel effects. A categorical claim additionally needs its declared objects, equality, identities and composition proof. | The composite owner selects the outer predicate and admitted loss; the execution binding supplies any independence equations. The categorical claimant owns the demonstration; matching outputs do not supply it. |
+| [Judgment and authority](#judgment-and-authority), applied by Bind, Contract application, Dispose and domain authority rules | F2 distinguishes a claim from its evidence; F6 distinguishes that support from the owner's actual grant. The instance supplies the governed subject, effect or decision and the granting relation. Specification supplies owners; evidence and authority preserve their distinct responsibilities. | Capability, a successful judgment or a selected role cannot authorize an otherwise ungranted effect or disposition. Delegation preserves the grant's limits; an owner decision and an evaluation remain different results. | The existing authority owners select grants, delegation and reserved decisions. Domain contracts supply their local identities and additional limits; this shared law appoints no actor or profile. |
+| [Independent assessment](#independent-assessment), applied by Evaluate, Ticket UP-007, Spec assessment and evidence reuse | F2/F6 bind the claim to its actual support and assessor. The instance supplies a governing requirement for independent assurance; evidence and correction distinguish an author's self-check from that assurance. | A contribution adopted into the subject defeats a required nonauthor claim on that contribution. A counterexample alone need not do so; unaffected judgments and evidence keep their supported scope. | The governing contract selects the review boundary and required separation. Domains retain additional exposure, trace and promotion policies; no universal review count, model family or extra review stage follows. |
 | [Result algebra](#result-algebra), applied by RF-012 and Evaluate | F1 selects the predicate; F2/F6 bind its evidence; F3/F5 admit interruption and uncertain effects. Information preserves the original claim; computational execution distinguishes performance and effects from truth. | A completed effect can accompany a failed outcome; a performed evaluation can remain undecidable; independent counterevidence can defeat a predicate without inventing performance. | This member selects five verdicts and separate performance/effect coordinates with their evidence conditions. Domain owners select admissible evidence and observation boundaries. |
 | Domain refinement and decision results in [Result algebra](#result-algebra), applied by Work result, RF-012 and Dispose | F2 retains each domain's meaning; F6 separates evidence from decision authority. Information and interpretation preserve the reason-qualified outcome; evidence and authority preserve the mandate. | `candidate_ready` can establish availability only. A refined label without its deciding reason supplies no fitness or acceptance judgment; a lawful disposition is a separate predicate. | The domain owner selects its outcomes, predicates and total reason-sensitive mapping. The mandate owner selects permitted dispositions; the core never supplies missing authority. |
 | [Result conjunction](#result-conjunction), applied by Conjoin, frame conjunction and engagement coverage | F2 authenticates each claim; F4 preserves the declared required predicates and joins; F6 prevents unsupported promotion. Algebraic calculus supplies one combination rule; evidence and correction retain counterexamples and uncovered obligations. | A known required failure survives missing coverage. Received results cannot define away an absent required slot, and a composite cannot report effect absence merely because its combining operation is pure. | This member selects aggregation precedence and the join over normalized effect parts. Applicability owners supply required coverage; another declared operator owns its different predicate and proof obligations. |
 | [Workspace and context](#workspace-and-context), applied by Acquire, Recovery law and ticket resumption | F3 supplies persistent state; F2 makes an actor's account revisable; F5 bounds acquisition. World models and identity supply the continuing subject; reference frames and information supply its task-specific view. | Losing context does not erase work. Absence from a projection proves no absence in the subject; changed material support reopens affected reliance while independent valid progress remains usable. | Domain owners select freshness, concurrency and any stronger replay rules; the execution binding selects measurements. Context fit and actual-use adequacy retain separate evidence. |
 | Unknown-effect recovery in [Workspace and context](#workspace-and-context), applied by Recovery law and Transform | F3 permits effects to persist beyond observation; F2/F6 forbid invented completion or permission. Outcome-driven development contributes continuation from observed state; computational execution contributes actual effect boundaries. | A lost acknowledgment does not justify an effect-free restart. Before a dependent repeat, reconcile enough state or establish the actual operation's granted idempotence. | The operation owner supplies observation, retry and repair permissions; the domain supplies its idempotence law. No universal transaction, reset or retry strategy follows. |
-| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |
+| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |
 | Strategy and feedback in [Bounded construction](#bounded-construction), applied by Spec intake, work selection and recovery | F1 supplies required conditions; F2 distinguishes their meaning from prediction; F3 supplies observed reality; F5 bounds work; F6 bounds response. The instance supplies its outcome, fallible models and material resource/feedback tradeoffs. Specification, world modelling and outcome-driven development contribute comparison and correction on those distinct accounts. | A prediction error does not choose a repair or decide outcome satisfaction. Diagnose the supported discrepancy and choose useful authorised work within required assurance; a changed target cannot close the former one. | The admitted work authority selects strategy; domain owners select causal models, measurements and additional risk policy. The requirement owner alone changes required conditions; a bug label supplies no authority. |
 | [Construction assurance](#construction-assurance), applied by Evaluate, Conjoin and the testing/closure consumers | F1 binds the intended claim; F2 interprets its support; F4 preserves required joins; F6 separates evidence and authority. Evidence and correction connect the source obligation to the actual consuming decision. | A pass, formula or combined result supplies only the claim its justification establishes. The consumer binds the applicable assurance relations before dependent reliance. | Domain policy selects required assurance and admissible evidence; the existing result algebra supplies conclusions. No additional stage, role or record follows. |
 | [Preservation obligations](#preservation-obligations), applied by Composition law and complete-transition assessment | F2 binds the interpreted state/trace predicates; F4 preserves the outer contract. The instance supplies transition relations, boundary properties and governing assumptions. Algebraic composition and functional design contribute compatible preconditions, postconditions and effects. | Initial conditions, each step, compatible joins and the final implication are required for the end-to-end claim. Local validity, an invariant or a sequential argument establishes no unsupported arrival, concurrency or execution-conformance claim. | The composite owner selects the properties and admissible loss; the execution binding supports conformance. Probability, induction or categorical claims require their separate mathematical premises and arguments. |

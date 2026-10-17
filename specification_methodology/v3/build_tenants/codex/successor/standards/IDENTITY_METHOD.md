@@ -308,12 +308,12 @@ Authority is an identity-bearing semantic relation, not a display label,
 capability string, actor identity, or reachable code path. Its identity
 preserves owner, kind, governed subject, scope, and governing basis.
 
-Composition, delegation, adapters, projections, wrappers, and registries may
-restrict or faithfully carry admitted authority. They must not silently widen
-scope, add a role, increase cardinality, change kind, or reconstruct authority
-from actor identity, payload shape, or available capability. Elevation,
-transfer, split, merge, proxy grant, revocation, and retirement require an
-explicit authority decision and identifiable basis.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to
+composition, delegation, adapters, projections, wrappers and registries that
+restrict or faithfully carry admitted authority. This identity binding prohibits
+silent scope widening, added roles, increased cardinality or changed kind.
+Elevation, transfer, split, merge, proxy grant, revocation and retirement
+require an explicit authority decision and identifiable basis.
 
 Human authority may act directly or through an explicitly admitted bounded
 proxy. Proxy actor identity and human-authority identity remain distinct;

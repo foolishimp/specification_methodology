@@ -1,0 +1,536 @@
+{
+  "schema": "stdo.rc1.consumer-source-account/v1",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "worktree_preimage": "73443dbc6e7c74b3a80e4375727b768ed2ba54d0",
+  "reviewed_successor": "d1b33480b46f45bb46198a2f63ca197e84e40e55",
+  "files": [
+    {
+      "path": "standards/REFERENCE_FRAME_METHOD.md",
+      "preimage_sha256": "ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d",
+      "sections": [
+        {
+          "heading": "Core Claims",
+          "preimage_sha256": "a5c4ef2fc376cea42df1f0656bb20f1c7ee88deabc64e6c462df5facba034009",
+          "id": "REFERENCE_FRAME_METHOD.core-claims",
+          "anchor": "core-claims",
+          "candidate_sha256": "cffd26de5e16ed9cfa2d89945cbda1a6da50cb08838a4d12436ed2422811af11",
+          "start_line": 96,
+          "end_line": 118,
+          "meaning": "Frame selection and result use apply shared authority through RF-006; breadth and capability supply no new grant.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": []
+        },
+        {
+          "heading": "Evaluation",
+          "preimage_sha256": "eb45ced84f935885ee59606716bd053476d4a966281fb20c6dbd84e1b8014f2e",
+          "id": "REFERENCE_FRAME_METHOD.evaluation",
+          "anchor": "evaluation",
+          "candidate_sha256": "7a576d0603ad1aa62bd38e89d24d4b8c13994d29b50c21faf24054df150fa98e",
+          "start_line": 121,
+          "end_line": 133,
+          "meaning": "Evaluation results use the single core algebra directly or a reason-sensitive refinement; family grouping uses that result binding, material manifold and authority basis.",
+          "new_dependencies": [
+            "FOUNDATIONS.result-algebra",
+            "REFERENCE_FRAME_METHOD.rf-012-closed-results"
+          ],
+          "existing_account_consumers": []
+        },
+        {
+          "heading": "Authority",
+          "preimage_sha256": "bbe67cce4fb99ce3288074e3b7769429ceabfa009cf9362d4a5f80f3ea64dae2",
+          "id": "REFERENCE_FRAME_METHOD.authority",
+          "anchor": "authority",
+          "candidate_sha256": "8c8f8eca254ed8a64fa0ba8614aab071e3549dbff63a39d82e9ea06784b36e56",
+          "start_line": 212,
+          "end_line": 236,
+          "meaning": "The local authority vocabulary supplies distinct frame relations; their grant conservation is applied from Foundations, retaining exact effect grants and bounded proxy identity.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "FOUNDATIONS.reference-only-semantic-imports",
+            "REFERENCE_FRAME_METHOD.authority-coverage",
+            "TRANSFORMATION_LIBRARY.reference-only-semantic-imports"
+          ]
+        },
+        {
+          "heading": "RF-005 Exact Basis And Coordinates",
+          "preimage_sha256": "ba8dd44f11981a4a7a73e5fd412b0cd162c5d1b68d150daefe17fc7382e095e7",
+          "id": "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+          "anchor": "rf-005-exact-basis-and-coordinates",
+          "candidate_sha256": "2e69fb3c024ae2d4663ea6238a4164e2b191ce1dd230f62594d6f7b2d08b55d3",
+          "start_line": 406,
+          "end_line": 421,
+          "meaning": "Retain exact result subject/basis/coordinates; attempted interpretation on an unusable governing basis returns invalid_basis or reactivates. Stale supporting evidence with interpretable law follows RF-012, not automatic invalid_basis. New reliance on a historical result needs established applicability; advancement alone does not invalidate the record.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention",
+            "REFERENCE_FRAME_METHOD.rf-012-closed-results"
+          ],
+          "existing_account_consumers": [
+            "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+            "TRANSFORMATION_LIBRARY.workrecovery-specialization"
+          ]
+        },
+        {
+          "heading": "RF-006 Authority Conservation",
+          "preimage_sha256": "90fc845069a9acfd6db30c4396b8753531e2d317d88505075a8cc5f2fcdcecda",
+          "id": "REFERENCE_FRAME_METHOD.rf-006-authority-conservation",
+          "anchor": "rf-006-authority-conservation",
+          "candidate_sha256": "96404ce1c304e59cd6188bc22d2de1380bae8bdeab12a5d00f1ea2f3966c5444",
+          "start_line": 422,
+          "end_line": 429,
+          "meaning": "Apply shared authority conservation to each frame evaluation, operation and disposition grant; bind existing scope and mandate.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority",
+            "REFERENCE_FRAME_METHOD.authority"
+          ],
+          "existing_account_consumers": []
+        },
+        {
+          "heading": "RF-007 Semantic, Evidence, And Verdict Separation",
+          "preimage_sha256": "b1b2c7b4faba8b73c63efae5066c835637292f027632618917f0af7495db9404",
+          "id": "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation",
+          "anchor": "rf-007-semantic-evidence-and-verdict-separation",
+          "candidate_sha256": "ff38a42a2581da37c0b320424f6b4da138ca1eb78b11c40d1c2c6bd5523ba7ff",
+          "start_line": 430,
+          "end_line": 438,
+          "meaning": "Bind semantic owner, observations, evaluator, operation grant and disposition mandate as distinct frame relations under Foundations; apply Dispose using domain decision conditions.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority",
+            "TRANSFORMATION_LIBRARY.dispose"
+          ],
+          "existing_account_consumers": []
+        },
+        {
+          "heading": "Return A Closed Result",
+          "preimage_sha256": "e166f80742c24b6c80f7b5ce6846e1623fff9191a2cf681c68e914387c30a008",
+          "id": "REFERENCE_FRAME_METHOD.return-a-closed-result",
+          "anchor": "return-a-closed-result",
+          "candidate_sha256": "cca953d7d806280a432ba5b3d528453617691a042071d032e0297aff6ab04b3b",
+          "start_line": 742,
+          "end_line": 754,
+          "meaning": "Reuse follows Change impact; revised records retain predecessor/successor relation. Required independent frame evaluators may share mechanical evidence while each supplies its own sufficiently acquired evidence and judgment.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention",
+            "FOUNDATIONS.independent-assessment"
+          ],
+          "existing_account_consumers": [
+            "REFERENCE_FRAME_METHOD.frame-qualification"
+          ]
+        }
+      ],
+      "candidate_sha256": "707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f"
+    },
+    {
+      "path": "standards/SPEC_METHOD.md",
+      "preimage_sha256": "d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5",
+      "sections": [
+        {
+          "heading": "Construction, Assessment, And Delegation",
+          "preimage_sha256": "32f178f219aa7540f45b5c892a3532c1fc39611552be47a3b3bd28e2eb5d5438",
+          "id": "SPEC_METHOD.construction-assessment-and-delegation",
+          "anchor": "construction-assessment-and-delegation",
+          "candidate_sha256": "b52541b394169a6e05c52c0fc4c7ef712dd93f59b757bd796f3d26208ac11639",
+          "start_line": 1886,
+          "end_line": 1924,
+          "meaning": "Apply the shared independence owner to exact live-realisation assessment; preserve existing proxy scope, direct Writer entry, reserved decisions, role transitions and Executive mutation restrictions.",
+          "new_dependencies": [
+            "FOUNDATIONS.independent-assessment"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition",
+            "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability"
+          ]
+        },
+        {
+          "heading": "Proportional Disposition",
+          "preimage_sha256": "778bc3ff7c9bfefa586b65c829bf5411fe00b947da6b921c514f587a352c92d3",
+          "id": "SPEC_METHOD.proportional-disposition",
+          "anchor": "proportional-disposition",
+          "candidate_sha256": "f10398a3910647edc4646db62a5212ca0049a4ff22f6969043be648af431464d",
+          "start_line": 1925,
+          "end_line": 1976,
+          "meaning": "Apply Dispose to the separate mandate-bound decision; any proposed disposition lacking required reason/support stays non-deciding and yields indeterminate absent other deciding evidence. Retain independent counterevidence or scope/basis diagnosis; no automatic remedy follows.",
+          "new_dependencies": [
+            "TRANSFORMATION_LIBRARY.dispose"
+          ],
+          "existing_account_consumers": [
+            "FOUNDATIONS.judgment-and-authority",
+            "STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review",
+            "STDO_REFERENCE_FRAME_BASELINE.7-executive-disposes-and-checkpoints",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.missing-frame-and-re-entry-application",
+            "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+            "TRANSFORMATION_LIBRARY.dispose",
+            "TRANSFORMATION_LIBRARY.evaluate"
+          ]
+        },
+        {
+          "heading": "Transition Evidence And Proof Cadence",
+          "preimage_sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff",
+          "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+          "anchor": "transition-evidence-and-proof-cadence",
+          "candidate_sha256": "61bd8747a442aac172ba5327abf16d8dd7a4452d419c12cebd4d40034e10d4f7",
+          "start_line": 1977,
+          "end_line": 2004,
+          "meaning": "Transition evidence distinguishes assessor proposed disposition from any separately applied decision.",
+          "new_dependencies": [
+            "SPEC_METHOD.proportional-disposition",
+            "TRANSFORMATION_LIBRARY.dispose"
+          ],
+          "existing_account_consumers": [
+            "CARRIER.plugins.spec.references.GETTING_STARTED.md",
+            "CARRIER.plugins.spec.skills.stdo-work.SKILL.md",
+            "STDO_REFERENCE_FRAME_BASELINE.3-worker-returns-to-executive",
+            "STDO_REFERENCE_FRAME_BASELINE.exact-candidate",
+            "STDO_REFERENCE_FRAME_BASELINE.work-result"
+          ]
+        },
+        {
+          "heading": "Assurance-Boundary Congruence And Method Qualification (`STDO-UP-022`)",
+          "preimage_sha256": "b2569f3f70ef4262868c0913e8aabc654253c6b0700f5acc759d4fc6b7754508",
+          "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "anchor": "assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "candidate_sha256": "474a3bbaf3f8d3522e2b08802e0b3e27a5b73e3c0eaa8ad17899dbda4d73f047",
+          "start_line": 2522,
+          "end_line": 2613,
+          "meaning": "Apply generic independent assessment with UP-007 boundary/trace policy; preserve this qualification domain's capability, comparison, reference-exposure and freeze conditions.",
+          "new_dependencies": [
+            "FOUNDATIONS.independent-assessment",
+            "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007"
+          ],
+          "existing_account_consumers": [
+            "SPEC_METHOD.evidence-rules",
+            "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+            "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-end-to-end-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-integration-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-user-acceptance-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.exact-candidate",
+            "STDO_REFERENCE_FRAME_BASELINE.legitimate-path-and-technical-debt-erasure",
+            "STDO_REFERENCE_FRAME_BASELINE.profile-qualification",
+            "STDO_REFERENCE_FRAME_BASELINE.reviewer"
+          ]
+        },
+        {
+          "heading": "Method",
+          "preimage_sha256": "a47ac27e262a288f5b16c5edaacca093dd5de10e1e832f691e980f3e4e95ce42",
+          "id": "SPEC_METHOD.method",
+          "anchor": "method",
+          "candidate_sha256": "1be7659cd39af4bd359f371264b66633d59ee19cb37f53498fc683b2ecd193eb",
+          "start_line": 3347,
+          "end_line": 3424,
+          "meaning": "Constitutional gaps use the selected owning change class; stable-direction requirement gaps re-enter Requirements. New Intent is conditional on its direction/scope changing.",
+          "new_dependencies": [
+            "SPEC_METHOD.universal-intake-triage"
+          ],
+          "existing_account_consumers": []
+        }
+      ],
+      "candidate_sha256": "86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8"
+    },
+    {
+      "path": "standards/TICKET_METHOD.md",
+      "preimage_sha256": "4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552",
+      "sections": [
+        {
+          "heading": "Execution Contract Admission",
+          "preimage_sha256": "bcf5d5ba5560b7d2eccf8e8a2e85b83233a3fecba7cb71bc32934c61201f2c4f",
+          "id": "TICKET_METHOD.execution-contract-admission",
+          "anchor": "execution-contract-admission",
+          "candidate_sha256": "7af385061561805145a0d82ec1ed21c54635267b8708832304f19c4fef373a05",
+          "start_line": 807,
+          "end_line": 866,
+          "meaning": "Execution-contract work grants apply shared authority conservation; contract admission still checks rather than admits or renews the owning Goals work-wave basis.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+            "CARRIER.plugins.spec.references.GETTING_STARTED.md",
+            "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+            "CARRIER.plugins.spec.references.REFRESH.md",
+            "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+            "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+            "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+            "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+            "CARRIER.plugins.spec.skills.stdo-work.SKILL.md",
+            "CARRIER.standards.templates.AGENTS_TEMPLATE.md",
+            "CARRIER.standards.templates.CLAUDE_TEMPLATE.md",
+            "CARRIER.standards.templates.GOALS_TEMPLATE.md",
+            "CARRIER.standards.templates.INTENT_TEMPLATE.md",
+            "CARRIER.standards.templates.PRODUCT_DEFINITION_TEMPLATE.json",
+            "CARRIER.standards.templates.PRODUCT_TEMPLATE.md",
+            "CARRIER.standards.templates.PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+            "CARRIER.standards.templates.README.md",
+            "CARRIER.standards.templates.build_tenants.TENANT_REGISTRY_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.common.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.common.design.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.common.design.adrs.ADR_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.common.design.adrs.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.adrs.ADR_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.adrs.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.fp.INTENT_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.fp.README_TEMPLATE.md",
+            "CARRIER.standards.templates.build_tenants.variant.design.fp.edge-overrides.EDGE_OVERRIDE_TEMPLATE.json",
+            "CARRIER.standards.templates.build_tenants.variant.design.fp.edge-overrides.README_TEMPLATE.md",
+            "CARRIER.standards.templates.docs.README_TEMPLATE.md",
+            "CARRIER.standards.templates.requirements.README_TEMPLATE.md",
+            "CARRIER.standards.templates.requirements.STARTER_REQUIREMENTS_TEMPLATE.md",
+            "TICKET_METHOD.work-carrier-to-execution-rule"
+          ]
+        },
+        {
+          "heading": "Execution And Verification Authority Separation (`STDO-UP-007`)",
+          "preimage_sha256": "3e04d5674da26db4082c7e5a13f8d1f953136715af88f4a7613760c6987c40e9",
+          "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+          "anchor": "execution-and-verification-authority-separation-stdo-up-007",
+          "candidate_sha256": "360ded5bfca3d6facfaee18f58996b9001317719cfd6181bd5678ac74d2eb21e",
+          "start_line": 867,
+          "end_line": 928,
+          "meaning": "UP-007 binds nonauthor assessment as required at its independent-review boundaries, applying shared independence and authority law while retaining durable trace and promotion-blocking policy.",
+          "new_dependencies": [
+            "FOUNDATIONS.independent-assessment",
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "SPEC_METHOD.construction-assessment-and-delegation",
+            "STDO_REFERENCE_FRAME_BASELINE.4-executive-evaluates-the-work-result",
+            "STDO_REFERENCE_FRAME_BASELINE.5a-candidate-does-not-require-independent-review",
+            "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.exact-candidate",
+            "STDO_REFERENCE_FRAME_BASELINE.reviewer",
+            "TICKET_METHOD.recorded-judgment-and-owner-ruling-continuity"
+          ]
+        }
+      ],
+      "candidate_sha256": "22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532"
+    },
+    {
+      "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "preimage_sha256": "c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067",
+      "sections": [
+        {
+          "heading": "Engagement Applicability",
+          "preimage_sha256": "903b38b82bca3edda0040327c42ef064eeee0b9da9bd3e335c6fe3a1f130be58",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+          "anchor": "engagement-applicability",
+          "candidate_sha256": "537a047207654fe7a382b23e1e140c0cee5c196c3d7c472e1bfb2bc937eabc28",
+          "start_line": 158,
+          "end_line": 192,
+          "meaning": "Apply shared independence to source sharing, authorship and evidence in either direct or coordinated branch.",
+          "new_dependencies": [
+            "FOUNDATIONS.independent-assessment"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.closure",
+            "STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition"
+          ]
+        },
+        {
+          "heading": "Executive Attention, Evaluation, And Action",
+          "preimage_sha256": "0a2ad3b1f367dc22e007bf508e629bbfbbbbbb77fbecf3b1e457640535c36670",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+          "anchor": "executive-attention-evaluation-and-action",
+          "candidate_sha256": "59c3447a1dd67ae877a61cf9ece9689262ff43aa1eced1b96e895281c22bc0c8",
+          "start_line": 310,
+          "end_line": 406,
+          "meaning": "The attention cycle reassesses affected reliance after subject/basis change using the shared applicability owner; it does not automatically invalidate every historical result.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention"
+          ],
+          "existing_account_consumers": [
+            "FOUNDATIONS.configuration",
+            "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame",
+            "STDO_REFERENCE_FRAME_BASELINE.executive",
+            "TRANSFORMATION_LIBRARY.workrecovery-specialization"
+          ]
+        },
+        {
+          "heading": "Derived Executive Frame",
+          "preimage_sha256": "a068dcd28201ee6d9ba50bf286269475a7d1a8f7fba7e74cbc274a53aa5d9b6b",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame",
+          "anchor": "derived-executive-frame",
+          "candidate_sha256": "517f20c9b7986a1b1b709d6cc035ad51db806b99c778fad18d617c1de4e33330",
+          "start_line": 679,
+          "end_line": 710,
+          "meaning": "The Executive invalidation coordinates feed shared applicability assessment; Product/work mandate and mutation exclusion remain explicit profile bindings.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention",
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions"
+          ]
+        },
+        {
+          "heading": "Steel-Thread Delivery",
+          "preimage_sha256": "975daa0ce2fd36cfccfe61bda4ce8a4e8360af5bc46cde69516bedb3a7ae8a84",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.steel-thread-delivery",
+          "anchor": "steel-thread-delivery",
+          "candidate_sha256": "e409fd5ba361766b93188416eb9c5b948cf1b95ebbd98e0ebb8748c55dab0c32",
+          "start_line": 711,
+          "end_line": 746,
+          "meaning": "Qualified-result reuse applies shared applicability, affected reassessment and mandatory gates to the steel-thread claim; exact original evidence subject remains preserved.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.interface-integration-obligations"
+          ]
+        },
+        {
+          "heading": "Derived Worker Frame",
+          "preimage_sha256": "97fbe3a344cd77dd263495db42e334916e76d50fdf8f075452ecebe56fd58b26",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.derived-worker-frame",
+          "anchor": "derived-worker-frame",
+          "candidate_sha256": "c7413ea8e7a13bece283a259a26df6f2b47662d4d1795eb5130ba570cd7ad56e",
+          "start_line": 747,
+          "end_line": 780,
+          "meaning": "Worker effect grant applies shared authority with exact subject/write territory; its invalidation coordinates feed shared assessment of affected reliance.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention",
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.2-executive-activates-worker",
+            "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions",
+            "STDO_REFERENCE_FRAME_BASELINE.closure",
+            "STDO_REFERENCE_FRAME_BASELINE.worker",
+            "TRANSFORMATION_LIBRARY.transform"
+          ]
+        },
+        {
+          "heading": "Derived Reviewer Frame",
+          "preimage_sha256": "b5e9f2ac18af32a6586f860b9bfe23826d9b633ac844a880170652e35952791b",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+          "anchor": "derived-reviewer-frame",
+          "candidate_sha256": "34f67a6cd75f26e8771ab74e0dd9eedab678594e31e4346b319ab659cfa75eae",
+          "start_line": 781,
+          "end_line": 829,
+          "meaning": "Reviewer invalidation coordinates feed shared current reliance assessment. Reviewer supplies assessment; Executive in the coordinated branch exercises its bound decision mandate through Dispose.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention",
+            "TRANSFORMATION_LIBRARY.dispose"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.5b-candidate-requires-independent-review",
+            "STDO_REFERENCE_FRAME_BASELINE.6-reviewer-returns-to-executive",
+            "STDO_REFERENCE_FRAME_BASELINE.baseline-specific-activation-additions",
+            "STDO_REFERENCE_FRAME_BASELINE.closure",
+            "STDO_REFERENCE_FRAME_BASELINE.reviewer",
+            "TRANSFORMATION_LIBRARY.evaluate"
+          ]
+        },
+        {
+          "heading": "Actor Binding And Independence",
+          "preimage_sha256": "10f3ea47d28832d830a6f4b6d46afe98603d1a61102caf56d0bc34ea43b2c9e3",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence",
+          "anchor": "actor-binding-and-independence",
+          "candidate_sha256": "f79e322c8beef6f727cb09bc7c5156d979efd1975271ff61331714a7bff7d1fd",
+          "start_line": 1803,
+          "end_line": 1822,
+          "meaning": "Apply shared independent assessment; UP-007 supplies required-boundary/trace policy and UP-022 adds qualification exposure/freeze conditions.",
+          "new_dependencies": [
+            "FOUNDATIONS.independent-assessment"
+          ],
+          "existing_account_consumers": [
+            "STDO_REFERENCE_FRAME_BASELINE.anti-patterns",
+            "STDO_REFERENCE_FRAME_BASELINE.closure"
+          ]
+        },
+        {
+          "heading": "Profile Qualification",
+          "preimage_sha256": "cd85bc1b1e5f8cb25ba58f1e0c0871d370c201cf62bc20f791939f0a5f1bd426",
+          "id": "STDO_REFERENCE_FRAME_BASELINE.profile-qualification",
+          "anchor": "profile-qualification",
+          "candidate_sha256": "bc7bd93e4ab52d3e433c10191a42634d7ae0707ba88fd91915ee208930ad0467",
+          "start_line": 1823,
+          "end_line": 1916,
+          "meaning": "Qualification item 9 requires assessing changed-candidate/basis reliance under shared currentness; unsupported carryover cannot discharge current review.",
+          "new_dependencies": [
+            "FOUNDATIONS.change-impact-and-evidence-retention"
+          ],
+          "existing_account_consumers": []
+        }
+      ],
+      "candidate_sha256": "cb5dc7304c89c3632e6124750d375f77716d404edcd53b6d743e3640683c8e85"
+    },
+    {
+      "path": "standards/AXIOMATIC_CALCULUS.md",
+      "preimage_sha256": "3818cd47b94c82b9b3ae27ede7a30cd5812fc484d56d677e2624371149e5acc4",
+      "sections": [
+        {
+          "heading": "AC-005 Authority Conservation",
+          "preimage_sha256": "4483cca2c7496e05a17b0e42df1b7011f959385079eca1c4029e69d586262d80",
+          "id": "AXIOMATIC_CALCULUS.ac-005-authority-conservation",
+          "anchor": "ac-005-authority-conservation",
+          "candidate_sha256": "09c1a0a274fd7be8cca1d508e5cc3705a00c33bcd3a168e8c0a3004432c80f63",
+          "start_line": 441,
+          "end_line": 449,
+          "meaning": "Apply shared authority conservation to every listed calculus record and operation; encoding, interpretation and transport carry existing grants.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": []
+        }
+      ],
+      "candidate_sha256": "16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0"
+    },
+    {
+      "path": "standards/DESIGN_MODULE_METHOD.md",
+      "preimage_sha256": "f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321",
+      "sections": [
+        {
+          "heading": "Authority Model",
+          "preimage_sha256": "f51f8b0b481fa2c4ff180317710cae97a3953f41cd3573478f0893cdc4bf4c19",
+          "id": "DESIGN_MODULE_METHOD.authority-model",
+          "anchor": "authority-model",
+          "candidate_sha256": "306efd48e50d5d2ed248a1368a8150ec758d0b00bbab8f4741fdfd1fc006f311",
+          "start_line": 772,
+          "end_line": 807,
+          "meaning": "Apply shared authority to composition and its witnesses; retain the domain authority matrix and named typed admission transitions for delegation/elevation/transfer/retirement.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "DESIGN_MODULE_METHOD.sequence-model",
+            "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016"
+          ]
+        }
+      ],
+      "candidate_sha256": "300aaa56d6fd66e002c3a61919ddbbffa94d56bf01a035598fb519523f43f116"
+    },
+    {
+      "path": "standards/IDENTITY_METHOD.md",
+      "preimage_sha256": "30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c",
+      "sections": [
+        {
+          "heading": "Authority Identity And Conservation (`STDO-UP-004`)",
+          "preimage_sha256": "e6b438cd81b0bcd261e38725ec540af64a70f8b1a3f90eb9682a38ca35f04f3e",
+          "id": "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+          "anchor": "authority-identity-and-conservation-stdo-up-004",
+          "candidate_sha256": "ce51dc371617696b8ceaf79eb23b8974bc0092f2e3c9f04df2be754fa0bb3f2d",
+          "start_line": 305,
+          "end_line": 330,
+          "meaning": "Apply shared authority to carriers while retaining scope/role/cardinality/kind preservation, explicit authority-change decisions and distinct bounded proxy identity.",
+          "new_dependencies": [
+            "FOUNDATIONS.judgment-and-authority"
+          ],
+          "existing_account_consumers": [
+            "REFERENCE_FRAME_METHOD.authority",
+            "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence"
+          ]
+        }
+      ],
+      "candidate_sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e"
+    }
+  ]
+}

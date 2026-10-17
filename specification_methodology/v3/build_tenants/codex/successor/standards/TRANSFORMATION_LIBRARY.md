@@ -143,11 +143,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -298,7 +298,9 @@ shared decision; the design consumer binds its domain admission obligations.
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings
-are explicit results. A name, path, cached result or available tool is no grant.
+are explicit results. Apply
+[Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the actual
+grants and distinct authority relations for this instance.
 
 ## Acquire
 
@@ -325,10 +327,13 @@ Apply the [core result algebra](FOUNDATIONS.md#result-algebra) to the exact
 predicate, subject and basis. Preserve the original domain outcome, performance,
 effect observations, citations and residual coverage. A domain's evaluation
 rule determines what evidence decides its predicate; it does not introduce a
-parallel result algebra. Required independent authorship remains part of that
-rule. Evaluation supplies no new operation or decision grant. A function may
-exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](STDO_REFERENCE_FRAME_BASELINE.md) retains the
-grant defined by that profile.
+parallel result algebra. Apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment) wherever that
+rule requires it and [Judgment and authority](FOUNDATIONS.md#judgment-and-authority)
+to its evaluation, operation and decision bindings. A function may exercise
+decision authority already admitted by its own contract, while the
+[Baseline Reviewer](STDO_REFERENCE_FRAME_BASELINE.md) retains the grant defined
+by that profile.
 
 Bind [Assertions and observations](FOUNDATIONS.md#assertions-and-observations)
 to the source obligation, its interpreted required predicate, the assertion's
@@ -367,8 +372,14 @@ several independent observations.
 
 ## Dispose
 
-The actor carrying bound decision authority consumes exact closed work and evaluation results with the
-current mandate. For an agentic construction instance it selects accept, local_repair, re_enter
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+current decision mandate and exact subject. The actor carrying that authority
+consumes the closed work and evaluation results, then selects only a disposition
+the mandate permits. The decision is distinct from the assessment it consumes
+and returns its own predicate-bound core result under
+[Result algebra](FOUNDATIONS.md#result-algebra).
+
+For an agentic construction instance it selects accept, local_repair, re_enter
 or reject for the declared cone under [UP-020](SPEC_METHOD.md#agentic-construction-execution-stdo-up-020). It may select a next already-authorized action or stop under the instance's
 permitted outcomes. Domain-specific yield remains with its declared owner. It cannot change upstream meaning or take a reserved owner decision.
 Accept binds an exact checkpoint; it does not imply release. A Product-outcome

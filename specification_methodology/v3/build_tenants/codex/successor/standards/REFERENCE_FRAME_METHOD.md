@@ -107,9 +107,8 @@ controller, service, registry, graph, or frame engine is required.
    coordinate systems.
 7. Coverage is relative to a declared workspace, governed outcome, evaluation
    inventory, basis, and time.
-8. A frame selection or frame result cannot acquire semantic, operation, or
-   decision authority from its breadth, usefulness, actor, or implementation
-   technology.
+8. Frame selection and result use apply the shared
+   [authority contract](FOUNDATIONS.md#judgment-and-authority) through RF-006.
 9. Unknown and out-of-frame results are lawful pressure for reconfiguration.
    They are not failed evaluations or implied acceptance.
 10. Historical failures, resets, and invisible violations are evidence for
@@ -121,15 +120,16 @@ controller, service, registry, graph, or frame engine is required.
 
 ### Evaluation
 
-An **evaluation** is a declared question whose admissible result family,
-evidence basis, decision authority, and operation authority where it performs a
-material action are known. An evaluation may ask for a judgment, prediction,
-construction, comparison, proof, refusal, classification, or action
-recommendation.
+An **evaluation** is a declared question whose predicate, admissible evidence,
+decision authority, and operation authority where it performs a material action
+are known. Its results use the [core result algebra](FOUNDATIONS.md#result-algebra)
+directly or a declared reason-sensitive refinement under RF-012. An evaluation
+may ask for a judgment, prediction, construction, comparison, proof, refusal,
+classification, or action recommendation.
 
 An evaluation family groups questions that require the same material relation
-manifold, authority basis, and result algebra. Similar wording does not prove
-that two evaluations belong to the same family.
+manifold, authority basis, and result binding or refinement of that one algebra.
+Similar wording does not prove that two evaluations belong to the same family.
 
 ### Workspace
 
@@ -224,11 +224,11 @@ The method distinguishes:
   dispose its result; and
 - **actor identity**: the human, agent, tool, or process performing work.
 
-These relations may coincide in a lawful case. They never collapse by default.
-Declaring, selecting, activating, or executing a frame does not grant semantic,
-operation, or decision authority. A read-only evaluation declares no operation
-authority. An effectful evaluation inherits the exact operation grant from its
-existing owner; the frame does not create that grant.
+These are the frame vocabulary used by
+[Judgment and authority](FOUNDATIONS.md#judgment-and-authority); apply that
+owner's separation and conservation to declaration, selection, activation and
+execution. A read-only evaluation declares no operation authority. An effectful
+evaluation names the existing owner-issued operation grant it applies.
 
 Human authority may act directly or through an explicitly admitted bounded
 proxy where the governing identity and authority law permits it. Proxy identity
@@ -406,24 +406,35 @@ merely because adjacent workspace material exists.
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
-Semantic law defines what the evaluation means. Evidence supplies observations.
-The evaluator applies the declared relation. Where the evaluation performs a
-material operation, the existing operation owner supplies the exact grant.
-Decision authority disposes the result. A frame declaration keeps these roles
-distinguishable even when one actor lawfully performs several of them.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+frame declaration's semantic owner, observations, evaluator, any operation grant
+and disposition mandate. The declaration binds those distinct relations even
+when one actor lawfully occupies several. A disposition consumes the closed
+evaluation through [Dispose](TRANSFORMATION_LIBRARY.md#dispose), with its domain
+conditions supplied by the owning decision contract.
 
 ### RF-008 Overlap Without Identity Collapse
 
@@ -733,11 +744,13 @@ result.
 Return RF-012's core record with frame, activation, actor and `J` invalidation
 coordinates. Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
 to its handoff: the consuming decision must recover the material result and
-provenance without private working context. Result reuse applies the shared
-currentness rule and retains revised results' predecessor/successor relation.
-Required independent evaluations may share valid mechanical evidence while
-supplying their own sufficiently acquired evidence and judgments under their
-declared independence conditions.
+provenance without private working context. Result reuse applies
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+and retains revised results' predecessor/successor relation. Apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment) to required
+independent frame evaluations: they may share valid mechanical evidence while
+each assessor supplies its own sufficiently acquired evidence and judgment under
+the declared conditions.
 
 ### Reconfigure When Necessary
 

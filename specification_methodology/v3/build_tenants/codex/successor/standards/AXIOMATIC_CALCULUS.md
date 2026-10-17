@@ -440,10 +440,12 @@ relation kind explicitly declares symmetry.
 
 ### AC-005 Authority Conservation
 
-Objects, relations, constraints, latitude, residuals, traversals,
-transformations, projections, and judgments retain their declared semantic,
-operation, evaluation, and decision authority. Copying, interpreting, encoding,
-evaluating, or transporting a record does not transfer authority.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+declared semantic, operation, evaluation and decision authority of objects,
+relations, constraints, latitude, residuals, traversals, transformations,
+projections and judgments. Bind each copied, interpreted, encoded, evaluated or
+transported record to those existing grants; the calculus representation is
+their carrier under that law.
 
 ### AC-006 Basis Coherence
 

@@ -1,6 +1,6 @@
 # Evaluation and Conjunction Frame
 
-Scope: Judge and combine declared material predicates without erasing a failed relation, its original citations, incompatible basis or uncovered coverage. This frame supplies no acceptance or repair grant.
+Scope: Assess a required outcome, assess evidence reuse after a material change, and combine declared material predicates without erasing a failed relation, its original citations, incompatible basis or uncovered coverage. This frame supplies no acceptance or repair grant.
 
 Bind this scope to the exact subject, selected governing basis, actor, capability
 envelope, required coverage and existing grant before use. Any missing material

@@ -8,7 +8,9 @@ bounded evaluation and authorized disposition.
 `3.0.0-rc.1` is this package's unaccepted, unpublished candidate target; its
 manifest version does not identify an issued release cut.
 
-The [standards library](standards/README.md) is the method entry.
+The [standards library](standards/README.md) is the method entry. Its
+[task routes](standards/README.md#choose-a-task) locate the deciding owners for
+intake, recovery, evidence reuse, assessment and disposition.
 [Foundations](standards/FOUNDATIONS.md) states the premises. The
 [transformation library](standards/TRANSFORMATION_LIBRARY.md) defines shared
 conditional contracts. Particular methods own their concrete types, policy,
