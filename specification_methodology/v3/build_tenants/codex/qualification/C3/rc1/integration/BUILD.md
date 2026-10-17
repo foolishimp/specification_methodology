@@ -23,3 +23,7 @@ RC1-INTEGRATION now transitions to Git Writer for the exact authored-account che
 Account checkpoint: `1553243d620fc0faf045b17dd98b9ed4ea8cea43`. Existing native generation completed once: 708 determinations, 712 clauses, 732 indexes, two source residuals; validation passed. These counts are observations, not acceptance criteria.
 
 RC1-INTEGRATION transitions to Git Writer for the exact complete-package checkpoint: generated `successor/interpretation/` members and this integration directory only. It resumes Writer for the consolidated changed-scope, package and applicability checks.
+
+Package checkpoint: `a485db611ab9af8cd6154f96b0e4ca6db6e5e605`. The single consolidated check passed with 90 members, 708 rows, 691 conservation rows, seven reproduced frames and a valid cold identity including 19 negative controls. These receipts retain that subject.
+
+The Executive's exact extension at `e0fab2931f2962e518ecacdc79e946c5139649c6`, BUILD.md#candidate-version-metadata, selects only the two plugin manifest version fields as `3.0.0-rc.1`. RC1-INTEGRATION transitions Writer to Git Writer to preserve the completed first-package check receipts in this integration directory before those effects. It resumes Writer for the metadata successor. Unchanged semantic evidence is reused with exact equality proof; no new semantic discriminator or historic sweep is selected.
