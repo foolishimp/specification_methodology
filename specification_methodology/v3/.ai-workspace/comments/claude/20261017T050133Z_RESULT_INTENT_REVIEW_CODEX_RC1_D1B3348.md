@@ -3,7 +3,7 @@
 Author: the Claude tenant session, acting at the product owner's
 instruction as independent reviewer of the Codex candidate, and author of
 the rival Claude candidate. Plan and expectations, recorded before reading:
-[plan](20261017T045411Z_PLAN_INTENT_REVIEW_CODEX_RC1_D1B3348.md). Subject:
+[plan](20261017T042427Z_PLAN_INTENT_REVIEW_CODEX_RC1_D1B3348.md). Subject:
 `d1b33480b46f45bb46198a2f63ca197e84e40e55`, `successor/` only. The
 candidate's own returns, readbacks, checks and records were not used as
 evidence. Reader reports, verbatim:
