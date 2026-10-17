@@ -1,0 +1,30 @@
+{
+  "operation": "bounded_account_clause_relocation_preflight",
+  "source_commit": "3dca37d72b992f15e058159fe9087312d753ac02",
+  "result": "pass",
+  "scan": {
+    "prior_rows": 708,
+    "changed_members": 9,
+    "rows_in_changed_members": 444,
+    "authored_source_clause_replacement_rows": 39,
+    "inherited_blocks_checked": 2125,
+    "ambiguities": 2,
+    "ambiguous_rows": 1
+  },
+  "ambiguities": [
+    "SPEC_METHOD.testing-strategy-taxonomy#c9",
+    "SPEC_METHOD.testing-strategy-taxonomy#c14"
+  ],
+  "cause": "Both prior clauses contain the identical text They answer: in the same unchanged immediate owner. The historical relocation helper requires a unique byte search when a member changes. Earlier edits shifted this owner by 745 bytes, leaving its complete 5138-byte body identical.",
+  "repair": "Explicit coordinate-only patch preserves all 25 clause identities and relative offsets within the authenticated unchanged owner. Distinct c9 and c14 are never selected by first occurrence.",
+  "owner_body_sha256": "ec86b62234d44950751bf4e1f3e9d8a58c8b5b066e01f44d333b1b5810c7d14c",
+  "byte_displacement": 745,
+  "existing_relocate_blocks_authored_guard": "passed",
+  "clause_count": 25,
+  "role_count": 0,
+  "patch_sha256": "b42c04f416ce50f92dc7c7950275c69363e4d74ae0a9a35346948608a6cdb8dc",
+  "changed_successor_files": [],
+  "historical_helper_changes": [],
+  "account_phase_rerun": false,
+  "standing": "Await parent source-coordinate checkpoint. No documentary rerender, account output, generation or new semantic assessment performed."
+}
