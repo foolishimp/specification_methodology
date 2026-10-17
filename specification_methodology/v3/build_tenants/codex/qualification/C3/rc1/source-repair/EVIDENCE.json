@@ -1,0 +1,74 @@
+{
+  "activation": "RC1-SOURCE",
+  "actor": "Codex Writer; not Executive or independent assessor",
+  "work_result": "candidate_ready",
+  "bounded_judgment": "satisfied",
+  "predicate": "The authorized generic assessment paragraph names the actual realization under its selected computational binding while preserving exact-subject, independence, proof and authority duties.",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "own_preimage": "99f932cfece1a7c9ba6f85c44c47d2403a486aa7",
+  "head_during_work": "60eb7a2d43d9ac2d9557eae94a51db192209f06b",
+  "basis": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "verification_command": "stdo verify v2.5.1-rc.2 --manifest-sha256 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "valid": true,
+    "failures": []
+  },
+  "change": {
+    "path": "specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md",
+    "anchor": "construction-assessment-and-delegation",
+    "lines": [
+      1888,
+      1894
+    ],
+    "pre_sha256": "a58a251b4a8b12ba49cb30f90b7754f9874ecba350b0eb950dbf6eb52f33ab87",
+    "post_sha256": "d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5",
+    "pre_bytes": 198091,
+    "post_bytes": 198142,
+    "pre_paragraph": "The constructor owns bounded implementation and self-review. Where independent\nassessment supports promotion, the assessor evaluates the exact live code,\nauthority paths, proof, and installed subject rather than treating the\nconstructor's summary as sufficient evidence. This preserves the independent-\nreview relation; it does not prescribe an actor count. One actor may occupy\ndifferent roles across different claims when independence for the assessed\nclaim is preserved.",
+    "post_paragraph": "The constructor owns bounded implementation and self-review. Where independent\nassessment supports promotion, the assessor evaluates the exact live realisation\nunder the selected computational binding, its authority paths, proof, and\ninstalled subject rather than treating the constructor's summary as sufficient\nevidence. This preserves the independent-review relation; it does not prescribe\nan actor count. One actor may occupy different roles across different claims\nwhen independence for the assessed claim is preserved."
+  },
+  "checks": {
+    "only_selected_section_changed": true,
+    "only_first_paragraph_changed": true,
+    "line_count_unchanged": true,
+    "git_diff_check_exit_code": 0,
+    "git_diff_check_output": ""
+  },
+  "discriminator_basis": [
+    "specification/requirements/README.md:124-129",
+    "specification/requirements/ASSURANCE.md:17-23",
+    "build_tenants/codex/successor/standards/SPEC_METHOD.md:908-929",
+    "build_tenants/codex/successor/standards/SPEC_METHOD.md:1113-1119",
+    "build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md:129-158",
+    "build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md:198-250"
+  ],
+  "discriminators": [
+    {
+      "case": "Permitted human-only binding",
+      "observation": "Independent assessor acquires the exact performed procedure and its admitted observations, authority paths, proof and installed subject under the selected binding.",
+      "consequence": "The absence of software code alone cannot exclude this permitted assessment. Satisfaction of the assessed candidate remains evidence-dependent."
+    },
+    {
+      "case": "Software binding requires live code",
+      "observation": "Assessor has only a constructor summary or stale code.",
+      "consequence": "The exact live realization has not been assessed; the repair supplies no promotion support or code bypass."
+    },
+    {
+      "case": "Mixed realization",
+      "observation": "Assessor inspects code but omits a material performed human operation required by the binding.",
+      "consequence": "The exact live realization remains incompletely assessed; inspecting code alone cannot close the affected claim."
+    },
+    {
+      "case": "Required independence or authority absent",
+      "observation": "Constructor self-review is offered as the required independent assessment, or an assessment verdict is offered as acceptance authority.",
+      "consequence": "The retained independence and separately bound decision-authority conditions remain unmet."
+    }
+  ],
+  "limits": [
+    "Source-derived Writer discriminators are construction evidence, not independent semantic or actual-use qualification.",
+    "Affected compression, accounts, generated views and pinned inventories are intentionally unchanged under this grant; the corrected source is not yet an integrated freeze.",
+    "No other standard was repaired; no Git mutation, paid external call, peer live-worktree inspection or held test expectation acquisition occurred.",
+    "Acquisition measurement limitations are explicit in ACQUISITION.json."
+  ]
+}

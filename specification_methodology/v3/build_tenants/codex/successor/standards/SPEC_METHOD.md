@@ -1886,12 +1886,12 @@ does not block the bounded claim.
 ### Construction, Assessment, And Delegation
 
 The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live code,
-authority paths, proof, and installed subject rather than treating the
-constructor's summary as sufficient evidence. This preserves the independent-
-review relation; it does not prescribe an actor count. One actor may occupy
-different roles across different claims when independence for the assessed
-claim is preserved.
+assessment supports promotion, the assessor evaluates the exact live realisation
+under the selected computational binding, its authority paths, proof, and
+installed subject rather than treating the constructor's summary as sufficient
+evidence. This preserves the independent-review relation; it does not prescribe
+an actor count. One actor may occupy different roles across different claims
+when independence for the assessed claim is preserved.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local
