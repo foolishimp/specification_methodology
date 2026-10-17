@@ -193,7 +193,7 @@ def main() -> None:
                     "manifest_sha256": digest(Path(manifest_module.__file__).read_bytes())},
         "effects": {"git_mutations": False, "installer_called": False, "external_calls": False,
                     "scratch_root": str(output)},
-        "limits": ["Frozen pre-repair package; rerun on the final candidate freeze.",
+        "limits": ["This receipt applies only to its exact source_commit; a changed candidate requires an applicability check.",
                    "The filesystem adapter probes path selection, not a tagged Git acquisition.",
                    "No release note, tag, installed-manifest digest, acceptance or fresh install exists for this preview.",
                    "Interpretation fidelity and complete native usability are separate qualification obligations."]
