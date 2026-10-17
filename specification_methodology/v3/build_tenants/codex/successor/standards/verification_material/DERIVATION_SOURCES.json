@@ -35,7 +35,7 @@
       "historical_member": "standards/IDENTITY_METHOD.md",
       "historical_member_sha256": "e65b875464cc93a3f9186d915ad88603755de34bac6f27072562ed34c13f64cd",
       "source_member": "standards/IDENTITY_METHOD.md",
-      "source_member_sha256": "30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c",
+      "source_member_sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e",
       "segments": [
         {
           "start_byte": 0,
@@ -43,29 +43,36 @@
         },
         {
           "start_byte": 10695,
-          "end_byte": 19494
+          "end_byte": 15592
         },
         {
-          "start_byte": 20462,
-          "end_byte": 20555
+          "literal_utf8": "Composition, delegation, adapters, projections, wrappers, and registries may\nrestrict or faithfully carry admitted authority. They must not silently widen\nscope, add a role, increase cardinality, change kind, or reconstruct authority\nfrom actor identity, payload shape, or available capability. Elevation,\ntransfer, split, merge, proxy grant, revocation, and retirement require an\nexplicit authority decision and identifiable basis.\n"
+        },
+        {
+          "start_byte": 16035,
+          "end_byte": 19504
+        },
+        {
+          "start_byte": 20472,
+          "end_byte": 20565
         },
         {
           "literal_utf8": "Per `RELEASE_METHOD.md` and `SPEC_METHOD.md`:\n"
         },
         {
-          "start_byte": 20708,
-          "end_byte": 20801
+          "start_byte": 20718,
+          "end_byte": 20811
         },
         {
           "literal_utf8": "- the mutable `v<version>` tag is only the latest-accepted version-line\n  selector\n"
         },
         {
-          "start_byte": 20959,
-          "end_byte": 21283
+          "start_byte": 20969,
+          "end_byte": 21293
         },
         {
-          "start_byte": 21547,
-          "end_byte": 23441
+          "start_byte": 21557,
+          "end_byte": 23451
         }
       ]
     },
@@ -73,265 +80,314 @@
       "historical_member": "standards/REFERENCE_FRAME_METHOD.md",
       "historical_member_sha256": "6e9148d7c8eff847abf172315b0e282e4477f3d40866b28f7fef21c41cb067e7",
       "source_member": "standards/REFERENCE_FRAME_METHOD.md",
-      "source_member_sha256": "ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d",
+      "source_member_sha256": "707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f",
       "segments": [
         {
           "start_byte": 0,
-          "end_byte": 1996
+          "end_byte": 1997
         },
         {
-          "start_byte": 3191,
-          "end_byte": 6423
+          "start_byte": 3192,
+          "end_byte": 5060
+        },
+        {
+          "literal_utf8": "8. A frame selection or frame result cannot acquire semantic, operation, or\n   decision authority from its breadth, usefulness, actor, or implementation\n   technology.\n"
+        },
+        {
+          "start_byte": 5190,
+          "end_byte": 5517
+        },
+        {
+          "literal_utf8": "An **evaluation** is a declared question whose admissible result family,\nevidence basis, decision authority, and operation authority where it performs a\nmaterial action are known. An evaluation may ask for a judgment, prediction,\nconstruction, comparison, proof, refusal, classification, or action\nrecommendation.\n"
+        },
+        {
+          "start_byte": 5959,
+          "end_byte": 6038
+        },
+        {
+          "literal_utf8": "manifold, authority basis, and result algebra. Similar wording does not prove\nthat two evaluations belong to the same family.\n"
+        },
+        {
+          "start_byte": 6198,
+          "end_byte": 6547
         },
         {
           "literal_utf8": "carrier.\n"
         },
         {
-          "start_byte": 6722,
-          "end_byte": 9070
+          "start_byte": 6846,
+          "end_byte": 9195
         },
         {
-          "start_byte": 9483,
-          "end_byte": 12775
+          "start_byte": 9608,
+          "end_byte": 10242
+        },
+        {
+          "literal_utf8": "These relations may coincide in a lawful case. They never collapse by default.\nDeclaring, selecting, activating, or executing a frame does not grant semantic,\noperation, or decision authority. A read-only evaluation declares no operation\nauthority. An effectful evaluation inherits the exact operation grant from its\nexisting owner; the frame does not create that grant.\n"
+        },
+        {
+          "start_byte": 10586,
+          "end_byte": 12872
         },
         {
           "literal_utf8": "- \\(R\\) is the closed result algebra;\n"
         },
         {
-          "start_byte": 12856,
-          "end_byte": 15461
+          "start_byte": 12953,
+          "end_byte": 15558
         },
         {
-          "start_byte": 22831,
-          "end_byte": 23002
+          "start_byte": 22928,
+          "end_byte": 23099
         },
         {
-          "start_byte": 23364,
-          "end_byte": 23697
+          "start_byte": 23461,
+          "end_byte": 23794
         },
         {
           "literal_utf8": "Every known relation whose lawful change can alter the evaluation result,\nbasis validity, evidence sufficiency, operation authority, or decision\nauthority appears in the frame or enters through a declared authoritative\ninput.\n\nOmitting a material relation makes the frame insufficient. The method does not\nrequire proving that no undiscovered material relation exists.\n"
         },
         {
-          "start_byte": 24099,
-          "end_byte": 24134
+          "start_byte": 24196,
+          "end_byte": 24231
         },
         {
           "literal_utf8": "Relations that cannot affect the declared evaluation remain outside active\nattention unless they are required to establish irrelevance. A frame does not\nexpand merely because adjacent workspace material exists.\n"
         },
         {
-          "start_byte": 24422,
-          "end_byte": 25771
+          "start_byte": 24519,
+          "end_byte": 24638
+        },
+        {
+          "literal_utf8": "A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or\nrequires reactivation. Apparent equality does not substitute for declared\ncoordinate equality.\n"
+        },
+        {
+          "start_byte": 25583,
+          "end_byte": 25619
+        },
+        {
+          "literal_utf8": "A frame carries and applies admitted authority. It does not mint, widen,\ntransfer, or reconstruct semantic, evaluation, operation, or decision authority\nfrom actor identity, available capability, evidence shape, implementation\nreachability, or frame selection.\n"
         },
         {
           "start_byte": 25998,
-          "end_byte": 26893
+          "end_byte": 26054
         },
         {
-          "start_byte": 27298,
-          "end_byte": 27612
+          "literal_utf8": "Semantic law defines what the evaluation means. Evidence supplies observations.\nThe evaluator applies the declared relation. Where the evaluation performs a\nmaterial operation, the existing operation owner supplies the exact grant.\nDecision authority disposes the result. A frame declaration keeps these roles\ndistinguishable even when one actor lawfully performs several of them.\n"
+        },
+        {
+          "start_byte": 26499,
+          "end_byte": 26822
+        },
+        {
+          "start_byte": 27049,
+          "end_byte": 27945
+        },
+        {
+          "start_byte": 28350,
+          "end_byte": 28664
         },
         {
           "literal_utf8": "Every evaluation returns a member of its declared result algebra. The baseline\nresult family is:\n"
         },
         {
-          "start_byte": 28147,
-          "end_byte": 28148
+          "start_byte": 29199,
+          "end_byte": 29200
         },
         {
           "literal_utf8": "- `satisfied`: the declared predicate holds on the exact basis;\n- `falsified`: a declared counterexample defeats it;\n- `indeterminate`: available admissible evidence cannot decide it;\n- `out_of_frame`: the evaluation requires an undeclared material relation or\n  capability; or\n- `invalid_basis`: the subject or basis cannot support the evaluation.\n"
         },
         {
-          "start_byte": 28927,
-          "end_byte": 28928
+          "start_byte": 29979,
+          "end_byte": 29980
         },
         {
           "literal_utf8": "An externally owned compatible extension may refine this algebra while\npreserving explicit indeterminate, out-of-frame, and invalid-basis pressure.\n"
         },
         {
-          "start_byte": 29830,
-          "end_byte": 31020
+          "start_byte": 30882,
+          "end_byte": 32072
         },
         {
           "literal_utf8": "A frame compresses accumulated practice when its declaration preserves the\nmaterial distinctions and failure detections required by its evaluation family\nwhile fitting its capability envelope.\n"
         },
         {
-          "start_byte": 31528,
-          "end_byte": 35342
+          "start_byte": 32580,
+          "end_byte": 36394
         },
         {
           "literal_utf8": "  -> decision | conflict | indeterminate\n"
         },
         {
-          "start_byte": 35392,
-          "end_byte": 35784
+          "start_byte": 36444,
+          "end_byte": 36836
         },
         {
           "literal_utf8": "software interfaces.\n"
         },
         {
-          "start_byte": 36349,
-          "end_byte": 36406
+          "start_byte": 37401,
+          "end_byte": 37458
         },
         {
           "literal_utf8": "An engagement names:\n\n- the governed outcome or decision;\n- the exact workspace subject and basis;\n- the evaluation or evaluation family;\n- the applicable frame-set, semantic, evaluation, operation where material,\n  and decision authority;\n- the available actor capability envelopes; and\n- the conditions that make the result stale or out of scope.\n"
         },
         {
-          "start_byte": 36778,
-          "end_byte": 37431
+          "start_byte": 37830,
+          "end_byte": 38483
         },
         {
           "literal_utf8": "A required result that is absent, stale, bound to another subject/basis or\nincapable of establishing its claim cannot satisfy a dependent conjunction.\nUnresolved applicability withholds the dependent claim until sufficient\nevidence or the owning decision resolves it. Other applicable constraints\nremain in force even if only one evaluation detects them. Qualification of an\napplicability rule must distinguish true, false and unknown premises, required\nmissing or wrong-subject results, and a sufficient positive result under a\nfinite declared fixture; always skipping or always activating cannot satisfy\nthose different expected outcomes.\n"
         },
         {
-          "start_byte": 37898,
-          "end_byte": 37924
+          "start_byte": 38950,
+          "end_byte": 38976
         },
         {
           "literal_utf8": "The actor or assigning authority selects one frame or one declared active frame\nconfiguration capable of the evaluation. Activation binds each reusable frame\ndeclaration to the exact subject and basis. It loads the declared material\nrelations and evidence sources rather than an undifferentiated workspace dump.\n"
         },
         {
-          "start_byte": 38948,
-          "end_byte": 39028
+          "start_byte": 40000,
+          "end_byte": 40080
         },
         {
           "literal_utf8": "activation returns a refusal or `out_of_frame` pressure. Work does not proceed\nthrough implied context.\n"
         },
         {
-          "start_byte": 39277,
-          "end_byte": 39367
+          "start_byte": 40329,
+          "end_byte": 40419
         },
         {
           "literal_utf8": "result algebra. It distinguishes semantic law, observed evidence, inference,\n"
         },
         {
-          "start_byte": 39481,
-          "end_byte": 39591
+          "start_byte": 40533,
+          "end_byte": 40643
         },
         {
           "literal_utf8": "The result identifies the frame and activation, subject, basis, evaluation,\nactor, evidence, verdict, residual uncertainty, and invalidation conditions.\nThe frame's internal working context does not need to be transferred when its\nclosed result and provenance are sufficient for the consuming decision.\n\nAn unchanged consumer checks exact applicability and reuses a valid closed\nresult. Role, conversation or resumption changes alone do not invalidate it.\nChanged material inputs or a declared revising observation invalidates the\naffected result before reliance; preserve its predecessor/successor relation\nand any demonstrably independent surviving results. Required independent\nevaluations may share valid mechanical evidence but must still supply their\nown sufficiently acquired evidence and judgments under the declared\nindependence conditions.\n"
         },
         {
-          "start_byte": 40174,
-          "end_byte": 41192
+          "start_byte": 41370,
+          "end_byte": 42388
         },
         {
-          "start_byte": 41538,
-          "end_byte": 41562
+          "start_byte": 42734,
+          "end_byte": 42758
         },
         {
           "literal_utf8": "A declared decision rule consumes closed frame results. The rule states:\n"
         },
         {
-          "start_byte": 41715,
-          "end_byte": 41747
+          "start_byte": 42911,
+          "end_byte": 42943
         },
         {
           "literal_utf8": "- how conflict and indeterminacy are handled;\n"
         },
         {
-          "start_byte": 41826,
-          "end_byte": 41968
+          "start_byte": 43022,
+          "end_byte": 43164
         },
         {
           "literal_utf8": "Conjunction does not transfer the semantic authority of a contributing frame.\n\nEvery mandatory constraint must be satisfied with valid applicable evidence.\nCommon agreement cannot discard a constraint or material counterexample found\nby only one contributor. Missing, wrong-subject, conflicted or indeterminate\nmandatory results remain unresolved under the declared rule; aggregate green\nstatus cannot replace them.\n"
         },
         {
-          "start_byte": 42258,
-          "end_byte": 42299
+          "start_byte": 43454,
+          "end_byte": 43495
         },
         {
           "literal_utf8": "One frame supplies evidence or a value consumed inside another frame. The\ntranslation declares source and target coordinates, preserved meaning,\naccepted loss, provenance, equality law, and refusal conditions.\n"
         },
         {
-          "start_byte": 43555,
-          "end_byte": 43582
+          "start_byte": 44751,
+          "end_byte": 44778
         },
         {
           "literal_utf8": "Several frame-governed operations form one material execution or reasoning\nrelation. The owning application declares the composition, shared invariants,\neffect or decision order where material, closure, failure, and semantic,\noperation, and decision-authority conservation.\n"
         },
         {
-          "start_byte": 43931,
-          "end_byte": 45245
+          "start_byte": 45127,
+          "end_byte": 46441
         },
         {
-          "start_byte": 46361,
-          "end_byte": 49023
+          "start_byte": 47557,
+          "end_byte": 50219
         },
         {
           "literal_utf8": "| status | coverage disposition |\n"
         },
         {
-          "start_byte": 49097,
-          "end_byte": 49159
+          "start_byte": 50293,
+          "end_byte": 50355
         },
         {
           "literal_utf8": "The baseline coverage statuses are:\n"
         },
         {
-          "start_byte": 49307,
-          "end_byte": 49308
+          "start_byte": 50503,
+          "end_byte": 50504
         },
         {
           "literal_utf8": "- `covered`;\n- `separately_covered`;\n- `conditionally_covered`;\n- `conflicted`;\n- `uncovered`;\n- `unknown`; and\n- `excluded_by_authority`.\n"
         },
         {
-          "start_byte": 50301,
-          "end_byte": 52443
+          "start_byte": 51497,
+          "end_byte": 53639
         },
         {
-          "start_byte": 53508,
-          "end_byte": 56724
+          "start_byte": 54704,
+          "end_byte": 57920
         },
         {
           "literal_utf8": "The minimum activation packet contains:\n\n- frame identity and revision;\n- evaluation and result algebra;\n- exact subject and basis;\n- material relations and applicable invariants;\n- semantic, evaluation, operation where material, and decision authority;\n- admissible evidence and tools;\n- capability and context envelope;\n- exclusions and prohibited assumptions;\n- declared frame dependencies or conjunction outputs; and\n- invalidation, stop, and reconfiguration conditions.\n"
         },
         {
-          "start_byte": 57027,
-          "end_byte": 57898
+          "start_byte": 58223,
+          "end_byte": 59094
         },
         {
           "literal_utf8": "- exact evaluation and closed result algebra:\n"
         },
         {
-          "start_byte": 57978,
-          "end_byte": 59396
+          "start_byte": 59174,
+          "end_byte": 60592
         },
         {
           "literal_utf8": "- evaluation:\n"
         },
         {
-          "start_byte": 59430,
-          "end_byte": 64867
+          "start_byte": 60626,
+          "end_byte": 66063
         },
         {
-          "start_byte": 65336,
-          "end_byte": 66641
+          "start_byte": 66532,
+          "end_byte": 67837
         },
         {
           "literal_utf8": "| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy, and declared veto return conflict, indeterminate, or refusal without flattening frame meaning |\n"
         },
         {
-          "start_byte": 67111,
-          "end_byte": 70594
+          "start_byte": 68307,
+          "end_byte": 71790
         },
         {
           "literal_utf8": "<questions, predicates, and closed result algebra>\n"
         },
         {
-          "start_byte": 70657,
-          "end_byte": 72548
+          "start_byte": 71853,
+          "end_byte": 73744
         },
         {
-          "start_byte": 72589,
-          "end_byte": 72740
+          "start_byte": 73785,
+          "end_byte": 73936
         },
         {
           "literal_utf8": "- result:\n"
         },
         {
-          "start_byte": 72822,
-          "end_byte": 73860
+          "start_byte": 74018,
+          "end_byte": 75056
         }
       ]
     },
@@ -339,7 +395,7 @@
       "historical_member": "standards/SPEC_METHOD.md",
       "historical_member_sha256": "7f12d32ef4e5720d5d59ee5ace50de6c1a12cc56afa53dd67a8ee4c54f8fb8a4",
       "source_member": "standards/SPEC_METHOD.md",
-      "source_member_sha256": "d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5",
+      "source_member_sha256": "86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8",
       "segments": [
         {
           "start_byte": 0,
@@ -612,238 +668,252 @@
         },
         {
           "start_byte": 112263,
-          "end_byte": 112500
+          "end_byte": 112421
         },
         {
-          "literal_utf8": "assessment supports promotion, the assessor evaluates the exact live code,\nauthority paths, proof, and installed subject rather than treating the\nconstructor's summary as sufficient evidence. This preserves the independent-\nreview relation; it does not prescribe an actor count. One actor may occupy\ndifferent roles across different claims when independence for the assessed\nclaim is preserved.\n"
+          "literal_utf8": "The constructor owns bounded implementation and self-review. Where independent\nassessment supports promotion, the assessor evaluates the exact live code,\nauthority paths, proof, and installed subject rather than treating the\nconstructor's summary as sufficient evidence. This preserves the independent-\nreview relation; it does not prescribe an actor count. One actor may occupy\ndifferent roles across different claims when independence for the assessed\nclaim is preserved.\n"
         },
         {
-          "start_byte": 112946,
-          "end_byte": 114710
+          "start_byte": 112966,
+          "end_byte": 114730
         },
         {
           "literal_utf8": "Assessment returns one of these semantic dispositions:\n"
         },
         {
-          "start_byte": 115079,
-          "end_byte": 115080
+          "start_byte": 115168,
+          "end_byte": 115169
         },
         {
           "literal_utf8": "| Disposition | Condition |\n|---|---|\n| `accept` | the candidate closes its declared cone and preserves every affected governing relation |\n| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent |\n| `re_enter` | Product, requirement, identity, lifecycle, authority, public contract, or accepted design must change |\n| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path |\n"
         },
         {
-          "start_byte": 117371,
-          "end_byte": 117536
+          "start_byte": 117820,
+          "end_byte": 117985
         },
         {
           "literal_utf8": "Repeated rejection against one unchanged boundary requires reassessment of the\n"
         },
         {
-          "start_byte": 117682,
-          "end_byte": 118437
+          "start_byte": 118131,
+          "end_byte": 118639
+        },
+        {
+          "literal_utf8": "seams, focused proof, any required integration proof, explicit non-changes, and\nthe assessor disposition. Consumers choose the representation. Transition\n"
+        },
+        {
+          "start_byte": 118836,
+          "end_byte": 118929
         },
         {
           "literal_utf8": "Construction uses the cheapest focused proof capable of falsifying the active\nrelation. Expensive whole-candidate qualification occurs at a declared\ncandidate boundary rather than after every local edit, unless the affected\nrisk makes whole-candidate proof necessary.\n"
         },
         {
-          "start_byte": 119288,
-          "end_byte": 120032
+          "start_byte": 119780,
+          "end_byte": 120524
         },
         {
           "literal_utf8": "neither acceptance, promotion nor publication. A proposed restart identifies\nwhy repair of retained work is insufficient, which obligations and evidence\nsurvive, and which causal assumptions change; reconstructability alone does\nnot select reconstruction.\n"
         },
         {
-          "start_byte": 120079,
-          "end_byte": 120080
+          "start_byte": 120571,
+          "end_byte": 120572
         },
         {
           "literal_utf8": "Accepted material Product movement is progress. Prerequisite work names the\nProduct obligation it enables. Preservation and repeated proof are evidence,\nnot new progress. Rejected or superseded construction is churn. Discovery of\n"
         },
         {
-          "start_byte": 120888,
-          "end_byte": 121725
+          "start_byte": 121380,
+          "end_byte": 122217
         },
         {
           "literal_utf8": "For a material transition, each admission owner is independently responsible\nfor deriving and validating the complete enclosing relation from authoritative\ninputs. The relation contains every participant and equality join whose\nidentity, validity, authority, currentness, or transition can affect or be\naffected by admission; each crossing seam includes its relevant far side or\nauthoritatively establishes\nthat the far side cannot participate. Caller or owner assertions of\ncompleteness, validity, prior admission, or authority do not establish truth.\n"
         },
         {
-          "start_byte": 122213,
-          "end_byte": 122214
+          "start_byte": 122705,
+          "end_byte": 122706
         },
         {
           "literal_utf8": "An owner may consume established facts when their exact subject, basis, scope,\nprovenance and validity remain applicable to its relation. Their production and\ninvalidation must be recoverable; an unsupported assertion of prior success is\nnot such a fact. A function, component, role, conversation or status boundary\nalone invalidates none of those coordinates and requires no repeated derivation.\nMaterial mutation, rollback, changed authority or basis, expired validity, and\nan actual trust boundary trigger the applicable validation before reliance or\neffect. Reuse does not transfer the owner's admission responsibility, omit a\nparticipant or satisfy a separately required independent judgment.\n"
         },
         {
-          "start_byte": 123330,
-          "end_byte": 123711
+          "start_byte": 123822,
+          "end_byte": 124203
         },
         {
           "literal_utf8": "composite basis; independently valid mixed-basis judgments cannot combine.\n"
         },
         {
-          "start_byte": 126623,
-          "end_byte": 128402
+          "start_byte": 127115,
+          "end_byte": 128894
         },
         {
-          "start_byte": 128613,
-          "end_byte": 129478
+          "start_byte": 129105,
+          "end_byte": 129970
         },
         {
           "literal_utf8": "| incoherent multi-owner basis | owner judgments on bases that are neither equal nor joined by a design-declared coherent composite basis cannot combine and are refused without effect |\n"
         },
         {
-          "start_byte": 129721,
-          "end_byte": 131072
+          "start_byte": 130213,
+          "end_byte": 131564
         },
         {
-          "start_byte": 131778,
-          "end_byte": 139520
+          "start_byte": 132270,
+          "end_byte": 140012
         },
         {
           "literal_utf8": "Projections, reports, status views, and topology views may reflect the\nauthoritative carrier.\n\nThey must not become a second closure surface.\n\nTherefore:\n\n- if runtime, reporting, topology, and proof can disagree about closure because\n  they consume different carriers or different closure laws, the migration is\n  incomplete\n- if a projection can independently close while the authoritative carrier is\n  still open, the migration is incomplete\n- if the authoritative carrier can close while a projection still depends on an\n  older law, the migration is incomplete\n"
         },
         {
-          "start_byte": 140019,
-          "end_byte": 144598
+          "start_byte": 140511,
+          "end_byte": 145090
         },
         {
           "literal_utf8": "The only exact operative release identifier is the immutable RC cut tag\n`v<version>-rc.<n>`.\n\nThat cut is:\n\n- a point-in-time release identity\n- a boundary over the feature set accepted for that cut\n- part of release metadata and release-process evaluation\n\nIt is not part of the live project specification.\n\nThe mutable `v<version>` tag is a version-line discovery selector to the\nhighest-ordinal published immutable RC. It is not an exact dependency,\nevidence, or constitutional basis and cannot silently change a consumer\nselection.\n\nActive constitutional and shared realization surfaces should therefore describe\ncurrent truth by role, boundary, and status rather than by release-line version\nlabels.\n\nRelease criteria, immutable RC publication, selector advancement, and the\nprocess for cutting a release belong to `RELEASE_METHOD.md`.\n"
         },
         {
-          "start_byte": 145148,
-          "end_byte": 145251
+          "start_byte": 145640,
+          "end_byte": 145743
         },
         {
-          "start_byte": 146126,
-          "end_byte": 146182
+          "start_byte": 146618,
+          "end_byte": 146674
         },
         {
           "literal_utf8": "Every load-bearing proof identifies the exact subject, intended property,\ngoverning basis, relation between witness and claim, nearest weaker excluded\nproperty, and falsification condition before selecting its witness. Without\nthose relations, the result is evidence discovery rather than closure-grade\nproof.\n"
         },
         {
-          "start_byte": 146949,
-          "end_byte": 147567
+          "start_byte": 147441,
+          "end_byte": 148059
         },
         {
           "literal_utf8": "Evidence change may invalidate a verdict without changing law. Projection\nchange may invalidate a view without changing semantic truth. Semantic change\nrequires lawful re-entry and invalidates affected downstream acceptance. A\nbroad digest may conservatively invalidate review, but it does not prove that\nevery semantic relation changed.\n"
         },
         {
-          "start_byte": 147973,
-          "end_byte": 148050
+          "start_byte": 148465,
+          "end_byte": 148542
         },
         {
           "literal_utf8": "A checker, validator, harness, reviewer, or other assurance surface supporting\npromotion or closure binds the exact claimed subject and its authoritative\ncomposition relation. Evidence over one file or carrier proves only that\nboundary; it cannot establish a multi-file or carrier-set claim. Cross-carrier\nsatisfaction and conflict are decided at the declared composite boundary.\n"
         },
         {
-          "start_byte": 148391,
-          "end_byte": 150275
+          "start_byte": 148883,
+          "end_byte": 149783
+        },
+        {
+          "literal_utf8": "Reconstruction Litmus; it does not create a second process. A fresh competent\n"
+        },
+        {
+          "start_byte": 150114,
+          "end_byte": 151020
         },
         {
           "literal_utf8": "alternative construction permitted by the basis passes. Subjective similarity\n"
         },
         {
-          "start_byte": 150465,
-          "end_byte": 155309
+          "start_byte": 151210,
+          "end_byte": 156054
         },
         {
-          "start_byte": 155812,
-          "end_byte": 156103
+          "start_byte": 156557,
+          "end_byte": 156848
         },
         {
-          "start_byte": 156723,
-          "end_byte": 160830
+          "start_byte": 157468,
+          "end_byte": 161575
         },
         {
-          "start_byte": 161243,
-          "end_byte": 166259
+          "start_byte": 161988,
+          "end_byte": 167004
         },
         {
           "literal_utf8": "5. Given **Requirements + Design**, a competent team should be able to derive conformant **Code**.\n"
         },
         {
-          "start_byte": 166405,
-          "end_byte": 166406
+          "start_byte": 167150,
+          "end_byte": 167151
         },
         {
           "literal_utf8": "This does not mean the derivation is unique. Different designs may satisfy the same requirements, and different codebases may satisfy the same design. The test is sufficiency, not determinism.\n"
         },
         {
-          "start_byte": 166627,
-          "end_byte": 167290
+          "start_byte": 167372,
+          "end_byte": 168035
         },
         {
           "literal_utf8": "- If code cannot be derived from requirements plus design, the design surface is incomplete, ambiguous, or not operational enough.\n"
         },
         {
-          "start_byte": 167455,
-          "end_byte": 167456
+          "start_byte": 168200,
+          "end_byte": 168201
         },
         {
           "literal_utf8": "The purpose of ADRs and design documents is therefore not decorative explanation. They are the load-bearing bridge between constitutional truth and executable realization.\n"
         },
         {
-          "start_byte": 167592,
-          "end_byte": 168292
+          "start_byte": 168337,
+          "end_byte": 169037
         },
         {
           "literal_utf8": "challenge the affected relation. `DESIGN_MODULE_METHOD.md` owns design-view\ncoverage, its material-change gate and unchanged-boundary reuse; this litmus\ndoes not waive that gate or require recreating unchanged accepted views.\n"
         },
         {
-          "start_byte": 168536,
-          "end_byte": 169979
+          "start_byte": 169281,
+          "end_byte": 170724
         },
         {
           "literal_utf8": "4. The repriced surface then flows forward through the chain: product → requirements → design → code\n"
         },
         {
-          "start_byte": 170093,
-          "end_byte": 170471
+          "start_byte": 170838,
+          "end_byte": 171216
         },
         {
           "literal_utf8": "- code is repeatedly re-derived against the current constitutional surface\n"
         },
         {
-          "start_byte": 170553,
-          "end_byte": 170654
+          "start_byte": 171298,
+          "end_byte": 171399
         },
         {
           "literal_utf8": "What must remain stable is the full direction of authority: goals govern intent, intent governs product, product governs requirements, requirements govern design, and requirements plus design govern code, even when the project advances through many iterations.\n"
         },
         {
-          "start_byte": 170922,
-          "end_byte": 171029
+          "start_byte": 171667,
+          "end_byte": 171774
         },
         {
-          "start_byte": 171654,
-          "end_byte": 192827
+          "start_byte": 172399,
+          "end_byte": 193572
         },
         {
           "literal_utf8": "10. Develop **Code** under the selected design relation and reconcile design,\n    implementation, and tests before promotion or closure.\n11. Use **Events, Projection, and Delta** to verify whether reality still satisfies the requirements.\n"
         },
         {
-          "start_byte": 193281,
-          "end_byte": 193550
+          "start_byte": 194026,
+          "end_byte": 194295
         },
         {
           "literal_utf8": "2. Perform the `goals → intent` step and write or confirm `INTENT.md`.\n3. Perform the `intent → product` step and write or confirm `PRODUCT.md` as the current product-definition bridge.\n"
         },
         {
-          "start_byte": 193766,
-          "end_byte": 193845
+          "start_byte": 194511,
+          "end_byte": 194590
         },
         {
           "literal_utf8": "5. Perform the `product → requirements` step and write the resulting live surface under `requirements/`.\n6. Store requirements as individual files or grouped requirement families, whichever best preserves clarity and avoids monolithic sprawl.\n7. Make `requirements/` the sole live requirement authority before proceeding to design and code.\n"
         },
         {
-          "start_byte": 194385,
-          "end_byte": 195054
+          "start_byte": 195130,
+          "end_byte": 195799
         },
         {
           "literal_utf8": "4. If constitutional: reprice **Goals** when the current work wave changes, write a new **Intent**, then flow forward (product → requirements → design → code).\n"
         },
         {
-          "start_byte": 195227,
-          "end_byte": 198142
+          "start_byte": 196168,
+          "end_byte": 199083
         }
       ]
     }

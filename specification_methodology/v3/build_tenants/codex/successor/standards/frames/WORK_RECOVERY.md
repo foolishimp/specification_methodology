@@ -34,7 +34,7 @@ a route alone does not discharge that judgment.
 - [TICKET_METHOD.md — Carrier Families](../TICKET_METHOD.md#carrier-families).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result algebra
 
@@ -168,7 +168,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result conjunction
 
@@ -299,7 +299,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Workspace and context](../FOUNDATIONS.md#workspace-and-context); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Workspace and context
 
@@ -364,9 +364,15 @@ reconstruction; it is not universally the work state or a compulsory recovery
 algorithm.
 
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Bounded construction
+
+This section owns the shared construction relation connecting purpose, action,
+observation and correction. Its material consumers apply it to their selected
+delivery, correction and control tasks; their domain strategy, actor
+configuration, execution mechanisms and additional assurance policy retain
+their owners.
 
 A is the current material state bound for construction. Its acquired account
 describes material workspace state, relevant authoritative external observations,
@@ -374,7 +380,8 @@ justified knowledge and explicit unknowns; that account can be incomplete or
 stale. Z is the selected set of required outcome and acceptance conditions;
 many states may satisfy it. Intent, Product and Specification refine Z under
 their owning authority. Applicable declared calculi constrain lawful
-transformations but do not choose Z or establish its satisfaction.
+transformations but do not choose Z or establish its satisfaction. Lawfulness
+alone establishes neither delivery nor optimality.
 Write material intermediate states as S0 → S1 → …, reserving Z for the
 destination constraint set and naming a satisfying endpoint separately. A
 transition binds its preconditions, permitted effects, result predicate and
@@ -391,8 +398,10 @@ through construction and evaluation rather than being known in advance.
 Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
 identity identifies the work; compatibility and assurance determine which
 transitions compose. These are additional premises, not consequences of a
-resource bound. Decomposition preserves all material outer obligations and
-the joins between parts. Local success establishes the outer outcome only
+resource bound. Refinement may add detail and construction may change state
+within the permitted variation. Decomposition, delegation, concurrent work and
+recursive application preserve all affected outer obligations and the material
+joins between parts. Local success establishes the outer outcome only
 when the required coverage and preservation argument hold.
 
 A strategy arranges admissible construction and assurance within Z and the
@@ -404,6 +413,8 @@ choice state their units, boundaries and composition; distinguish estimates,
 assumptions and observations. Multiple objectives may leave alternatives
 incomparable, with tradeoffs decided by the owning criteria. Strategy names
 such as steel thread, phased or iterative delivery supply no superiority proof.
+The actor exercising admitted work authority selects the strategy; a claim
+of superiority states its objectives, comparison and assumptions.
 The selected design or work record carries the rationale; no exhaustive
 optimisation, scalar cost, numerical quota or preferred strategy is imposed.
 [Risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection) constrains the
@@ -429,12 +440,14 @@ consequence; priority selects response order under the outcome, dependencies,
 resources and authority. [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
 retains their distinction from the semantic result and authorised disposition.
 
-A total control contract supplies a response for every admitted control state,
+The selected control model handles its admitted control states,
 including unavailable input, unknown world conditions, failed preconditions,
 partial effects, exhausted capability and revoked or exhausted authority. Its
-outcomes use the core result algebra. Its alternatives may include repair,
-re-entry, refusal, yielding or termination under the actual grant. It does not
-promise to solve every problem or make an external process terminate.
+outcomes use the core result algebra. Applicable responses include continuation,
+repair, recovery, re-entry, refusal, yielding or termination under the actual
+grant. A selected total control contract supplies a response for every state
+in its admitted domain; this does not require every operation to be total.
+It does not promise to solve every problem or make an external process terminate.
 Deterministic, probabilistic and human operations retain their selected outcome
 models; their enclosing control handles the observed result truthfully.
 
@@ -458,7 +471,7 @@ next dependent action. These relations use the existing work and evidence
 carriers; they prescribe no role sequence or orchestration runtime.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Work/recovery specialization](../TRANSFORMATION_LIBRARY.md#workrecovery-specialization); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Work/recovery specialization
 
@@ -488,7 +501,7 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -562,13 +575,14 @@ does not block the bounded claim.
 
 ### Construction, Assessment, And Delegation
 
-The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live realisation
+The constructor owns bounded implementation and self-review. Apply
+[Independent assessment](../FOUNDATIONS.md#independent-assessment) wherever
+independent assessment supports promotion. The assessor evaluates the exact
+live realisation
 under the selected computational binding, its authority paths, proof, and
 installed subject rather than treating the constructor's summary as sufficient
-evidence. This preserves the independent-review relation; it does not prescribe
-an actor count. One actor may occupy different roles across different claims
-when independence for the assessed claim is preserved.
+evidence. The selected configuration binds actors to that claim under the shared
+independence conditions; this construction binding prescribes no actor count.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local
@@ -603,8 +617,9 @@ resolved before effect. Executive mutation restrictions remain applicable.
 Assessment evaluates the exact predicate `the candidate closes its declared
 cone and preserves every affected governing relation` through the shared
 [result algebra](../FOUNDATIONS.md#result-algebra). It returns evidence and a
-proposed semantic disposition. Only the existing decision authority applies
-that disposition; an assessment verdict is not acceptance authority.
+proposed semantic disposition. Apply [Dispose](../TRANSFORMATION_LIBRARY.md#dispose)
+to the separate decision on that proposal, using this section's construction
+conditions and the existing authority's bound mandate.
 
 | Disposition | Condition on the exact candidate claim | Core verdict |
 |---|---|---|
@@ -614,9 +629,12 @@ that disposition; an assessment verdict is not acceptance authority.
 | `re_enter`, defeated candidate | the intended candidate cannot satisfy an interpretable current contract without an owning-layer change | `falsified` |
 | `re_enter`, unusable governing basis | the governing requirements cannot supply a coherent interpretation for this assessment | `invalid_basis` |
 | `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | `falsified` |
+| any proposed disposition, missing required reason or support | its qualified condition above is not established and no independently admissible evidence decides the candidate predicate | `indeterminate` |
 
 The proposed remedy retains its original domain outcome; the core verdict does
-not choose among remedies. Governing-requirement coherence is an admission
+not choose among remedies. The core missing-reason rule preserves the raw label
+as non-deciding support and retains independently established counterevidence or
+scope/basis diagnosis on the actual predicate. Governing-requirement coherence is an admission
 condition here; the candidate's alignment, including its design's alignment
 with those requirements, is an evaluated relation. A contradictory design does
 not by itself invalidate otherwise interpretable requirements. A proof defect
@@ -628,9 +646,9 @@ authority; the verdict alone neither selects a remedy nor forbids useful
 authorised repair. `An exact candidate is available` remains the construction
 predicate, separate from this cone-preservation assessment.
 
-The applied disposition has a separate decision result under the core contract:
-the predicate concerns that disposition on the exact subject and basis under
-the bound mandate. A lawful recorded `reject` may satisfy that decision
+The applied disposition uses [Dispose](../TRANSFORMATION_LIBRARY.md#dispose)'s
+separate decision result on the exact subject, basis and bound mandate.
+A lawful recorded `reject` may satisfy that decision
 predicate without establishing a candidate counterexample. It never overwrites
 the assessment result. The table classifies evidence for a proposed remedy;
 it does not turn policy decisions into fitness verdicts.
@@ -650,8 +668,9 @@ an unchanged failed construction relation as if iteration alone could close it.
 
 A reviewable transition identifies the exact candidate, affected relations,
 changed realization paths, authority paths added or removed, retained and open
-seams, focused proof, any required integration proof, explicit non-changes, and
-the assessor disposition. Consumers choose the representation. Transition
+seams, focused proof, any required integration proof, explicit non-changes, the
+assessor's proposed disposition and any separately applied decision. Consumers
+choose the representation. Transition
 evidence is a read model and does not become specification, design, or
 admission authority.
 
@@ -713,7 +732,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 ### Computed Classification And Treatment
 
@@ -816,7 +835,7 @@ carrier and recorded-J/O continuity rules.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-003 Material Sufficiency
 
@@ -828,17 +847,18 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](../REFERENCE_FRAME_METHOD.md#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-012 Closed Results
 
@@ -878,25 +898,22 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552`.
+Source: [TICKET_METHOD.md — Execution And Verification Authority Separation (`STDO-UP-007`)](../TICKET_METHOD.md#execution-and-verification-authority-separation-stdo-up-007); SHA256 `22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532`.
 
 ### Execution And Verification Authority Separation (`STDO-UP-007`)
 
-Given F2 and F6 and a claim requiring independent assessment, author evidence
-cannot itself establish that independence or transfer acceptance authority.
-The [configuration contract](../FOUNDATIONS.md#configuration) preserves required
-independence. UP-007 chooses its applicable boundaries, durable trace and
-promotion-blocking policy below; the governing owner selects required review
-and any reserved decision. Fresh context alone changes no authorship relation.
+Apply [Independent assessment](../FOUNDATIONS.md#independent-assessment) to the
+reviewed claim and [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+to its assessment, operation and acceptance grants. UP-007 supplies the
+applicable boundaries, durable trace and promotion-blocking policy below;
+the governing owner selects required review and any reserved decision.
 
-Authority to author or implement a change is not independent authority to
-verify it. Where independent review is required, the reviewer is not the author
-of the reviewed subject and identifies the exact subject, basis, scope,
-exclusions, evidence, verdict, and unresolved findings.
+For UP-007's required independent reviews, nonauthor assessment is a required
+authorship condition under that shared owner. The review carrier identifies the
+exact subject, basis, scope, exclusions, evidence, verdict and unresolved
+findings, with the assessor's authorship and evidence conditions bound.
 
-Self-review remains useful authoring evidence but cannot be relabeled as
-independent. Human authority may accept or reject the claim; it does not make
-implementer self-review independent. Independent review is required at Product,
+Independent review is required at Product,
 qualification, release, and explicitly risk-bearing boundaries that claim it,
 not for every local implementation step.
 
@@ -946,7 +963,7 @@ carries selection and traceability; `SPEC_METHOD.md` owns the execution
 semantics.
 
 
-Source: [TICKET_METHOD.md — Condition-Based Closure And Reuse](../TICKET_METHOD.md#condition-based-closure-and-reuse); SHA256 `4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552`.
+Source: [TICKET_METHOD.md — Condition-Based Closure And Reuse](../TICKET_METHOD.md#condition-based-closure-and-reuse); SHA256 `22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532`.
 
 ### Condition-Based Closure And Reuse
 
@@ -988,17 +1005,26 @@ the claim or expanding work. Record the exact evaluated scope, satisfied
 conditions, evidence and residuals in the existing carrier.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-014 Capability Fit](../REFERENCE_FRAME_METHOD.md#rf-014-capability-fit); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-014 Capability Fit
 
@@ -1008,7 +1034,7 @@ the frame, sequence activations, or provide a lawful compression. The actor may
 not silently omit material relations to fit context.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Contract application
 
@@ -1041,11 +1067,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](../FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -1144,7 +1170,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Change impact and evidence retention
 
@@ -1179,13 +1205,19 @@ E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
 ```
 
 Retention establishes that claim and scope still apply, assertion and observation
-bases remain justified, required independence holds, and material dependencies
+bases remain justified, any independence required for that claim still holds
+under [Independent assessment](../FOUNDATIONS.md#independent-assessment), and material dependencies
 are unchanged or covered by an established preservation relation. The original
 record keeps its original subject; an applicability relation permits its use
 for the new claim. A changed digest proves neither invalidity nor equivalence.
 Changed support reopens affected reliance, not the historical observation.
 Keep known failures, unresolved coverage and their citations visible until
-supported repair, reassessment or authorised change of obligation disposes them.
+supported repair, reassessment or authorised change of obligation disposes their
+outstanding status. That disposition retains the original observation,
+counterexample, subject and citations with the reason its current applicability
+changed. A relaxed requirement can change what remains owed; it neither makes
+the former failure a success nor erases it. The changed subject is assessed
+against its current obligations with the applicable evidence.
 
 A changed requirement revisits dependent expectations under its change authority.
 A changed refinement revisits its links to the requirement and realisation; a

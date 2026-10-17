@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: 4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552
+source_digest: 22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -136,10 +136,11 @@ existing carriers, without per-test tickets or duplicate ledgers.
   question needs no invented J. Preserve original owner rulings and their
   conditions separately from interpretations; consume sufficient existing
   authority without asking for it again. Neither record creates authority.
-- Reuse valid support across roles and resumption. A material invalidator
-  revises affected claims; preserve unrelated support only where independence
-  is established. Shared C does not replace a required assessor's independent
-  acquisition and judgment. Use the existing carrier lifetime and proof route,
+- Reuse valid support across roles and resumption. Apply Foundations' change-impact
+  and evidence-retention owner to affected current reliance while retaining
+  original records on their original subjects. Shared C does not replace a
+  required assessor's own sufficient acquisition and judgment under the shared
+  independent-assessment conditions. Use the existing carrier lifetime and proof route,
   with no new judgment registry or ticket per decision.
 - Repricing dispositions each affected obligation as retained, superseded,
   deferred or withdrawn in the existing carrier with owner/evidence links.

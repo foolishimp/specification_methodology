@@ -27,21 +27,21 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336
-  TRANSFORMATION_LIBRARY.md: 5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10
-  AXIOMATIC_CALCULUS.md: 3818cd47b94c82b9b3ae27ede7a30cd5812fc484d56d677e2624371149e5acc4
+  FOUNDATIONS.md: 36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36
+  TRANSFORMATION_LIBRARY.md: 7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6
+  AXIOMATIC_CALCULUS.md: 16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0
   TRAVERSAL_OCCURRENCE_PROFILE.md: 2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf
-  REFERENCE_FRAME_METHOD.md: ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d
-  STDO_REFERENCE_FRAME_BASELINE.md: c586746143bc060ed1e96efe520972aa4daee46d158415cf94d5cdcbc8b94067
-  SPEC_METHOD.md: d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5
+  REFERENCE_FRAME_METHOD.md: 707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f
+  STDO_REFERENCE_FRAME_BASELINE.md: cb5dc7304c89c3632e6124750d375f77716d404edcd53b6d743e3640683c8e85
+  SPEC_METHOD.md: 86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: f0cb386cc0550e6a6c60b170e3ebdd3ac81422ca22aa171d3ed9bd06bbd30321
+  DESIGN_MODULE_METHOD.md: 300aaa56d6fd66e002c3a61919ddbbffa94d56bf01a035598fb519523f43f116
   ODD_METHOD.md: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
   WORLD_MODEL_METHOD.md: fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f
-  TICKET_METHOD.md: 4c518a36e37655aa1cd8086df64d1da197156b07c7dc9f228973d4ee1a869552
+  TICKET_METHOD.md: 22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532
   UX_METHOD.md: 6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d
-  IDENTITY_METHOD.md: 30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c
+  IDENTITY_METHOD.md: ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e
   RELEASE_METHOD.md: be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de
   POSTING_GUIDE.md: a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179
 index_digests:
@@ -463,9 +463,11 @@ layer that owns the missing truth.
   conditions separately from interpretation. Consume applicable authority
   once; no new registry or owner ceremony is implied.
 - Reuse current facts, judgments and reconstruction across roles or resumption.
-  Material changed premises invalidate affected claims; preserve independent
-  surviving support. Required independent assessment still acquires sufficient
-  evidence and supplies its own judgment. Design Module Method retains complete
+  Apply [change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+  to affected current reliance; a changed digest alone decides neither
+  invalidity nor equivalence, and original records keep their original subjects.
+  Required [independent assessment](../FOUNDATIONS.md#independent-assessment)
+  retains its own sufficient evidence and judgment. Design Module Method retains complete
   Ontology and three-view coverage for new or materially changed boundaries;
   checked unchanged coverage is reusable.
 - Repricing dispositions affected obligations as retained, superseded, deferred
@@ -814,7 +816,8 @@ layer that owns the missing truth.
   delegation is already accepted.
 - Assess the exact predicate that the candidate closes its declared cone and
   preserves every affected governing relation. Return evidence, a core verdict
-  and a proposed disposition: `accept` maps to `satisfied`; `local_repair` maps
+  and a proposed disposition: `accept` maps to `satisfied` on complete
+  preservation support; `local_repair` maps
   to `falsified` for a demonstrated defect or `indeterminate` for inadequate
   proof; `re_enter` maps to `falsified` for a defeated candidate under an
   interpretable contract or `invalid_basis` for an unusable governing basis;
@@ -822,12 +825,17 @@ layer that owns the missing truth.
   competing truth path. The core verdict does not choose a remedy or confer
   acceptance authority. Only the bound decision authority applies the proposed
   disposition; its separate decision result never overwrites the assessment.
+  A proposal without its required reason or support stays `indeterminate`
+  unless independently deciding evidence establishes another core result.
+  Retain the raw proposal and any deciding counterevidence, scope or basis
+  diagnosis; the label supplies no missing support.
   Conserve every governing relation affected by the local action;
   unrelated incompleteness is repricing input. Repeated failure against an
   unchanged boundary triggers reassessment without a numeric candidate or
   review-round threshold.
 - Transition evidence binds the exact candidate, affected relations, changed
-  and competing paths, proof, remaining seams, non-changes, and disposition.
+  and competing paths, proof, remaining seams, non-changes, proposed disposition
+  and any separately applied decision.
   Use focused falsification during construction and whole-candidate proof at a
   declared boundary unless risk requires it earlier. A durable reconstruction
   claim needs loss or exclusion of incidental process state when same-process

@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5
+source_digest: 86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -387,7 +387,8 @@ may record shared derivations for a family of tests.
   delegation and re-entry boundary are already accepted.
 - Assess the exact predicate that the candidate closes its declared cone and
   preserves every affected governing relation. Return evidence, a core verdict
-  and a proposed disposition: `accept` maps to `satisfied`; `local_repair` maps
+  and a proposed disposition: `accept` maps to `satisfied` on complete
+  preservation support; `local_repair` maps
   to `falsified` for a demonstrated defect or `indeterminate` for inadequate
   proof; `re_enter` maps to `falsified` for a defeated candidate under an
   interpretable contract or `invalid_basis` for an unusable governing basis;
@@ -395,6 +396,10 @@ may record shared derivations for a family of tests.
   competing truth path. The core verdict does not choose a remedy or confer
   acceptance authority. Only the bound decision authority applies the proposed
   disposition; its separate decision result never overwrites the assessment.
+  A proposal without its required reason or support stays `indeterminate`
+  unless independently deciding evidence establishes another core result.
+  Retain the raw proposal and any deciding counterevidence, scope or basis
+  diagnosis; the label supplies no missing support.
   Global correctness conserves every governing relation affected by
   the local action; unrelated incompleteness outside its causal cone is
   repricing input, not a blocker. Repeated rejection against one unchanged
@@ -402,7 +407,8 @@ may record shared derivations for a family of tests.
   state machine.
 - Transition evidence binds the exact candidate, affected relations, changed
   paths, authority-path disposition, focused and required integration proof,
-  remaining seams, non-changes, and assessor disposition. Select focused proof
+  remaining seams, non-changes, assessor proposed disposition and any separately
+  applied decision. Select focused proof
   under Foundations' change-impact and assurance-risk relations: bind material
   assertion/execution dependencies, justified exclusions, new cases and gates.
   A weaker cheap falsifier cannot close a stronger claim. Combine applicable

@@ -21,7 +21,7 @@ a route alone does not discharge that judgment.
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result algebra
 
@@ -155,7 +155,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result conjunction
 
@@ -286,7 +286,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — Reference Frame Laws](../REFERENCE_FRAME_METHOD.md#reference-frame-laws); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ## Reference Frame Laws
 
@@ -346,24 +346,35 @@ merely because adjacent workspace material exists.
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](../REFERENCE_FRAME_METHOD.md#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
-Semantic law defines what the evaluation means. Evidence supplies observations.
-The evaluator applies the declared relation. Where the evaluation performs a
-material operation, the existing operation owner supplies the exact grant.
-Decision authority disposes the result. A frame declaration keeps these roles
-distinguishable even when one actor lawfully performs several of them.
+Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the
+frame declaration's semantic owner, observations, evaluator, any operation grant
+and disposition mandate. The declaration binds those distinct relations even
+when one actor lawfully occupies several. A disposition consumes the closed
+evaluation through [Dispose](../TRANSFORMATION_LIBRARY.md#dispose), with its domain
+conditions supplied by the owning decision contract.
 
 ### RF-008 Overlap Without Identity Collapse
 
@@ -509,7 +520,7 @@ overlap.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — Applicability And Required Results](../REFERENCE_FRAME_METHOD.md#applicability-and-required-results); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### Applicability And Required Results
 
@@ -530,7 +541,7 @@ wrong-subject required results, and a sufficient positive result within a finite
 declared fixture; always skipping or always activating cannot meet that contract.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — Using Frames In Conjunction](../REFERENCE_FRAME_METHOD.md#using-frames-in-conjunction); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ## Using Frames In Conjunction
 
@@ -602,7 +613,7 @@ future interaction does not require a general composition law in every frame.
 ---
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_FRAME_METHOD.md#minimal-evaluation-result); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ## Minimal Evaluation Result
 
@@ -628,16 +639,18 @@ Source: [REFERENCE_FRAME_METHOD.md — Minimal Evaluation Result](../REFERENCE_F
 ---
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Bind](../TRANSFORMATION_LIBRARY.md#bind); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Bind
 
 Recover the current purpose, subject identity, governing specification, role,
 authority, state and required relations. Conflicting, missing or stale bindings
-are explicit results. A name, path, cached result or available tool is no grant.
+are explicit results. Apply
+[Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the actual
+grants and distinct authority relations for this instance.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Acquire](../TRANSFORMATION_LIBRARY.md#acquire); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Acquire
 
@@ -650,7 +663,7 @@ the selected grant determines available refinement, reassignment or escalation.
 Capacity does not license omission.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Evaluate](../TRANSFORMATION_LIBRARY.md#evaluate); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Evaluate
 
@@ -658,10 +671,13 @@ Apply the [core result algebra](../FOUNDATIONS.md#result-algebra) to the exact
 predicate, subject and basis. Preserve the original domain outcome, performance,
 effect observations, citations and residual coverage. A domain's evaluation
 rule determines what evidence decides its predicate; it does not introduce a
-parallel result algebra. Required independent authorship remains part of that
-rule. Evaluation supplies no new operation or decision grant. A function may
-exercise decision authority already admitted by its own contract, while the [Baseline Reviewer](../STDO_REFERENCE_FRAME_BASELINE.md) retains the
-grant defined by that profile.
+parallel result algebra. Apply
+[Independent assessment](../FOUNDATIONS.md#independent-assessment) wherever that
+rule requires it and [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+to its evaluation, operation and decision bindings. A function may exercise
+decision authority already admitted by its own contract, while the
+[Baseline Reviewer](../STDO_REFERENCE_FRAME_BASELINE.md) retains the grant defined
+by that profile.
 
 Bind [Assertions and observations](../FOUNDATIONS.md#assertions-and-observations)
 to the source obligation, its interpreted required predicate, the assertion's
@@ -681,7 +697,7 @@ mapping and conditions. The actor with bound decision authority separately
 returns the authorised disposition; the library supplies no second table.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Conjoin](../TRANSFORMATION_LIBRARY.md#conjoin); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Conjoin
 
@@ -702,7 +718,7 @@ logical conjunction rule. One execution supporting several predicates is not
 several independent observations.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Contract application
 
@@ -735,11 +751,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](../FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -838,7 +854,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Assertions and observations
 
@@ -860,8 +876,11 @@ q_t implies Q_r                     q_t is sufficient for Q_r.
 These are conditional on Gamma and Omega. A pass on a necessary condition
 cannot establish Q_r. A collection of assertions needs its own coverage and
 compatibility argument before its conjunction establishes Q_r. Valid different
-realisations may satisfy Q_r with different outputs; equality is an oracle only
-where the obligation requires it.
+realisations may satisfy Q_r with different outputs. Equality can be an oracle
+for a justified declared target q_t, including a narrower regression property;
+the conclusion retains that target and scope. Establish its relation to Q_r
+before using it to decide the source obligation. Equality alone cannot reject
+permitted alternatives or prove full obligation satisfaction.
 
 Let pi: Omega → O model the observations available to a checker,
 and T contained in O × R be the checker's admitted evaluation relation, with R
@@ -905,7 +924,7 @@ bound. Additional independently admissible evidence retains its normal core
 standing; the limited observation is not permission to erase it.
 
 
-Source: [FOUNDATIONS.md — Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Parallel assurance and provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Parallel assurance and provenance
 
@@ -936,10 +955,186 @@ material shared specifications, interpretations, tools, fixtures, observations,
 copied contributions and other failure causes. Different actors, families or
 codebases do not establish statistical independence. Repeating an observation
 does not make it new independent evidence; required authorship independence
-retains its own conditions.
+applies [Independent assessment](../FOUNDATIONS.md#independent-assessment).
 
 Agreement within an incorrect common model cannot validate that model against
 the desired outcome. Validation uses the model's declared purpose and material
 external observations through their owners. Preserve counterexamples and route
 supported corrections under [Bounded construction](../FOUNDATIONS.md#bounded-construction).
 The dependence account constrains [risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection).
+
+
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+
+## Bounded construction
+
+This section owns the shared construction relation connecting purpose, action,
+observation and correction. Its material consumers apply it to their selected
+delivery, correction and control tasks; their domain strategy, actor
+configuration, execution mechanisms and additional assurance policy retain
+their owners.
+
+A is the current material state bound for construction. Its acquired account
+describes material workspace state, relevant authoritative external observations,
+justified knowledge and explicit unknowns; that account can be incomplete or
+stale. Z is the selected set of required outcome and acceptance conditions;
+many states may satisfy it. Intent, Product and Specification refine Z under
+their owning authority. Applicable declared calculi constrain lawful
+transformations but do not choose Z or establish its satisfaction. Lawfulness
+alone establishes neither delivery nor optimality.
+Write material intermediate states as S0 → S1 → …, reserving Z for the
+destination constraint set and naming a satisfying endpoint separately. A
+transition binds its preconditions, permitted effects, result predicate and
+outer obligations. Where finite context or attention prevents one adequate
+activation, refine the task into supported transitions over those states.
+
+The governing specification models required conditions. Observations describe
+what holds in the bound reality. A causal or predictive model explains how an
+intervention may affect it. Judge their adequacy on their distinct purposes:
+prediction accuracy proves no required outcome, and a prediction error alone
+does not establish that the outcome failed. A selected path may need discovery
+through construction and evaluation rather than being known in advance.
+
+Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
+identity identifies the work; compatibility and assurance determine which
+transitions compose. These are additional premises, not consequences of a
+resource bound. Refinement may add detail and construction may change state
+within the permitted variation. Decomposition, delegation, concurrent work and
+recursive application preserve all affected outer obligations and the material
+joins between parts. Local success establishes the outer outcome only
+when the required coverage and preservation argument hold.
+
+A strategy arranges admissible construction and assurance within Z and the
+selected resource envelope. Its material rationale accounts for context,
+attention, time, effort, computation, communication and other relevant costs,
+feedback delay, uncertainty, integration exposure and expected rework. Planning,
+checking and coordination consume resources too. Measures used to justify the
+choice state their units, boundaries and composition; distinguish estimates,
+assumptions and observations. Multiple objectives may leave alternatives
+incomparable, with tradeoffs decided by the owning criteria. Strategy names
+such as steel thread, phased or iterative delivery supply no superiority proof.
+The actor exercising admitted work authority selects the strategy; a claim
+of superiority states its objectives, comparison and assumptions.
+The selected design or work record carries the rationale; no exhaustive
+optimisation, scalar cost, numerical quota or preferred strategy is imposed.
+[Risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection) constrains the
+assurance chosen within that strategy.
+
+Feedback observes the current subject, compares it with required conditions,
+diagnoses a material discrepancy, selects an authorised response, acts and
+observes the result. Distinguish a defective realisation, inadequate requirement
+or design, inaccurate predictive model and insufficient observation. Preserve
+unresolved alternatives; the next useful action may acquire evidence rather
+than repair. Route a supported correction to the affected owner, preserving
+the counterexample and the unaffected work. Changing a governing model supplies
+no automatic repair of the realisation or evidence that former Z was reached.
+Homeostasis names this correction toward required conditions; it guarantees
+neither convergence nor adequacy of those conditions.
+
+For work management, a bug is a category of feature/change work in that same
+process. Its intake label supplies neither cause, repair class nor grant.
+[Spec intake](../SPEC_METHOD.md#universal-intake-triage) binds the common process to
+the Product chain and its lawful re-entry points; a bug list projects existing
+work state rather than creating another delivery mechanism. Severity states
+consequence; priority selects response order under the outcome, dependencies,
+resources and authority. [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+retains their distinction from the semantic result and authorised disposition.
+
+The selected control model handles its admitted control states,
+including unavailable input, unknown world conditions, failed preconditions,
+partial effects, exhausted capability and revoked or exhausted authority. Its
+outcomes use the core result algebra. Applicable responses include continuation,
+repair, recovery, re-entry, refusal, yielding or termination under the actual
+grant. A selected total control contract supplies a response for every state
+in its admitted domain; this does not require every operation to be total.
+It does not promise to solve every problem or make an external process terminate.
+Deterministic, probabilistic and human operations retain their selected outcome
+models; their enclosing control handles the observed result truthfully.
+
+Progress is supported movement toward the selected destination. Preservation,
+progress, termination and outcome satisfaction are distinct claims. An induction
+or termination claim needs its premises and argument; no universal termination
+proof is required merely to begin admitted bounded work. Continuing work has a
+supported purpose under the strategy, which can be a bounded hypothesis or
+reduction of uncertainty. Useful discovery can enlarge the known frontier;
+counts alone are no distance metric. Stopping
+can be lawful without completion. Completion needs the required evidence and
+acceptance conditions on the current candidate. Changing Z follows its owner
+and cannot establish that the old destination was reached. Repeating a failed
+relation needs a supported causal change; elapsed activity is no repair.
+Exhausting a limit proves neither completion nor impossibility. Ongoing
+maintenance can continue under its mandate; delivery needs its completion
+condition. New observations reopen affected claims under
+[Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention),
+and recovery applies [Workspace and context](../FOUNDATIONS.md#workspace-and-context) before the
+next dependent action. These relations use the existing work and evidence
+carriers; they prescribe no role sequence or orchestration runtime.
+
+
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+
+### Change impact and evidence retention
+
+Assertion justification explains why a check expresses an obligation. Evidence
+validity additionally depends on what can affect its behaviour, conclusion or
+applicability: implementation, libraries, data, instruments, environments and
+governing assumptions. A requirements-to-test relation alone cannot establish
+complete change impact.
+
+Let Delta change material facts or dependencies, including discovery of an
+invalid assumption. Let I(Delta) conservatively cover those facts and affected
+dependents, and D*(t) cover the transitive dependencies material to assertion,
+execution and reliance on check t. A candidate reassessment selection is:
+
+```text
+S_Delta = { t : D*(t) intersects I(Delta) }.
+```
+
+Excluding a check requires supported dependency coverage and a reason the change
+cannot invalidate the reused claim. An absent edge proves no non-influence.
+Unknown impact widens assessment or leaves the dependent assurance unresolved.
+New obligations and uncovered cases create assessment work even when no existing
+check covers them; mandatory gates remain applicable. Selection itself produces
+no execution evidence. The representation need not be an exhaustive graph or a
+separate ledger.
+
+For the new subject and basis, the evidence account combines applicable retained
+records with actual reassessment, including new obligations and mandatory gates:
+
+```text
+E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
+```
+
+Retention establishes that claim and scope still apply, assertion and observation
+bases remain justified, any independence required for that claim still holds
+under [Independent assessment](../FOUNDATIONS.md#independent-assessment), and material dependencies
+are unchanged or covered by an established preservation relation. The original
+record keeps its original subject; an applicability relation permits its use
+for the new claim. A changed digest proves neither invalidity nor equivalence.
+Changed support reopens affected reliance, not the historical observation.
+Keep known failures, unresolved coverage and their citations visible until
+supported repair, reassessment or authorised change of obligation disposes their
+outstanding status. That disposition retains the original observation,
+counterexample, subject and citations with the reason its current applicability
+changed. A relaxed requirement can change what remains owed; it neither makes
+the former failure a success nor erases it. The changed subject is assessed
+against its current obligations with the applicable evidence.
+
+A changed requirement revisits dependent expectations under its change authority.
+A changed refinement revisits its links to the requirement and realisation; a
+changed realisation revisits affected implementation and integration under the
+still-applicable obligations. These are semantic dependencies, not fixed file
+boundaries. Recovery acquires current reality and invalidates affected reliance
+without erasing valid work or requiring every check to run again. A role,
+conversation, component or resumption boundary alone is no invalidator.
+
+The account's completeness differs from the freshness of every execution.
+Selection considers impact analysis, acquisition, execution and assessment
+costs together, separating estimates from measurements. Required assurance,
+risk policy and mandatory gates constrain that choice; cheap selection cannot
+leave a required obligation uncovered. Broad or uncertain impact, a changed
+selection model, a release rule or a missed dependency can justify wider testing.
+Full-suite execution is available and can still have coverage gaps; no universal
+cadence or exemption from required gates follows. Failures enter the existing
+diagnosis and authorised-response relation; obtaining evidence may precede a
+justified repair.

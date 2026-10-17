@@ -17,9 +17,15 @@ a route alone does not discharge that judgment.
 - [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Bounded construction
+
+This section owns the shared construction relation connecting purpose, action,
+observation and correction. Its material consumers apply it to their selected
+delivery, correction and control tasks; their domain strategy, actor
+configuration, execution mechanisms and additional assurance policy retain
+their owners.
 
 A is the current material state bound for construction. Its acquired account
 describes material workspace state, relevant authoritative external observations,
@@ -27,7 +33,8 @@ justified knowledge and explicit unknowns; that account can be incomplete or
 stale. Z is the selected set of required outcome and acceptance conditions;
 many states may satisfy it. Intent, Product and Specification refine Z under
 their owning authority. Applicable declared calculi constrain lawful
-transformations but do not choose Z or establish its satisfaction.
+transformations but do not choose Z or establish its satisfaction. Lawfulness
+alone establishes neither delivery nor optimality.
 Write material intermediate states as S0 → S1 → …, reserving Z for the
 destination constraint set and naming a satisfying endpoint separately. A
 transition binds its preconditions, permitted effects, result predicate and
@@ -44,8 +51,10 @@ through construction and evaluation rather than being known in advance.
 Finite capacity motivates bounded acquisition. Purpose chooses the outcome;
 identity identifies the work; compatibility and assurance determine which
 transitions compose. These are additional premises, not consequences of a
-resource bound. Decomposition preserves all material outer obligations and
-the joins between parts. Local success establishes the outer outcome only
+resource bound. Refinement may add detail and construction may change state
+within the permitted variation. Decomposition, delegation, concurrent work and
+recursive application preserve all affected outer obligations and the material
+joins between parts. Local success establishes the outer outcome only
 when the required coverage and preservation argument hold.
 
 A strategy arranges admissible construction and assurance within Z and the
@@ -57,6 +66,8 @@ choice state their units, boundaries and composition; distinguish estimates,
 assumptions and observations. Multiple objectives may leave alternatives
 incomparable, with tradeoffs decided by the owning criteria. Strategy names
 such as steel thread, phased or iterative delivery supply no superiority proof.
+The actor exercising admitted work authority selects the strategy; a claim
+of superiority states its objectives, comparison and assumptions.
 The selected design or work record carries the rationale; no exhaustive
 optimisation, scalar cost, numerical quota or preferred strategy is imposed.
 [Risk and assurance selection](../FOUNDATIONS.md#risk-and-assurance-selection) constrains the
@@ -82,12 +93,14 @@ consequence; priority selects response order under the outcome, dependencies,
 resources and authority. [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
 retains their distinction from the semantic result and authorised disposition.
 
-A total control contract supplies a response for every admitted control state,
+The selected control model handles its admitted control states,
 including unavailable input, unknown world conditions, failed preconditions,
 partial effects, exhausted capability and revoked or exhausted authority. Its
-outcomes use the core result algebra. Its alternatives may include repair,
-re-entry, refusal, yielding or termination under the actual grant. It does not
-promise to solve every problem or make an external process terminate.
+outcomes use the core result algebra. Applicable responses include continuation,
+repair, recovery, re-entry, refusal, yielding or termination under the actual
+grant. A selected total control contract supplies a response for every state
+in its admitted domain; this does not require every operation to be total.
+It does not promise to solve every problem or make an external process terminate.
 Deterministic, probabilistic and human operations retain their selected outcome
 models; their enclosing control handles the observed result truthfully.
 
@@ -111,7 +124,7 @@ next dependent action. These relations use the existing work and evidence
 carriers; they prescribe no role sequence or orchestration runtime.
 
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result algebra
 
@@ -245,7 +258,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result conjunction
 
@@ -376,26 +389,41 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Judgment and authority
 
-The [frame authority law](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
-owns authority conservation for frame evaluation. Within a_c,
-[AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
-judgment separation. Where a consumer has adopted the construction engagement
-profile and lawfully activated the applicable engagement,
+This section owns the shared authority-conservation and judgment-separation
+determinations. The [imported authority vocabulary](../FOUNDATIONS.md#reference-only-semantic-imports)
+keeps its source meanings. A consumer binds the actual owner-issued grant for
+its subject, operation or decision, permitted effects and scope. Meaning,
+evaluation, operation and decision retain their distinct authority relations,
+even when one actor lawfully holds several. A grant is carried only within its
+declared scope; delegation or transfer requires the governing owner's
+permission.
+
+Actor identity, role or frame selection, a document's presence, available
+capability, shared machinery, implementation reachability, evidence shape and
+a successful judgment cannot mint, widen, transfer or reconstruct authority.
+Missing or ambiguous authority leaves the dependent act ungranted and returns
+the applicable explicit result or owner re-entry. An already-authorized act
+retains its grant within its current conditions.
+
+Definitions, assumptions, observations, candidate judgments and accepted
+claims have distinct standing. A judgment binds a predicate, exact subject,
+basis, evidence, assessor and any required independence. Producing a candidate,
+assessing it and disposing it are separate responsibilities. Evidence establishes
+only its supported claim; it cannot supply an operation or decision mandate.
+The [Dispose contract](../TRANSFORMATION_LIBRARY.md#dispose) applies the bound
+decision authority to its permitted dispositions.
+
+Domain owners supply the additional bindings: [RF-006](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+for frame evaluations, [AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation)
+for calculus judgments and, only where adopted and lawfully activated,
 [the Baseline](../STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
-owns its exact Reviewer/Executive application of the detailed laws. Other
-domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
-have distinct standing. A judgment binds a predicate, exact subject, basis,
-evidence, assessor and any required independence. An operation grant permits
-specified effects; decision authority retains its separately bound mandate.
-Neither evidence shape nor actor capability
-mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
-Reviewer and Executive retain their exact roles from that profile. This account
-assigns neither role or its authority. Domain control such as ODD next-action
-selection remains with its own named function; the explanation appoints none.
+for its Reviewer and Executive. ODD next-action selection retains its own
+function and mandate. These applications appoint no actor and impose no
+optional profile on generic construction.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,
@@ -409,8 +437,35 @@ observation or combination of evidence can establish. The evaluating consumer
 binds those relations before relying on a reported pass or failure for a broader
 claim. A supported judgment still supplies no operation or decision mandate.
 
+### Independent assessment
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+The governing contract selects whether independent assessment is required and
+which authorship, evidence, reference-exposure, actor or configuration conditions
+apply to the claim. Where nonauthor assessment is required, its assessor has
+not materially authored the subject or the repair being assessed. Self-review
+remains authoring evidence; a human acceptance decision cannot turn it into
+independent assessment.
+
+Reporting a defect, supplying a counterexample or identifying behavior already
+required by an owning rule does not itself author the repair; that assessor
+may recheck the defect. Material wording, policy or design adopted in the
+subject is authorship. Its contributor discloses the contribution and cannot
+supply the required independent assessment of that claim; unaffected judgments
+retain their scope. Changed subjects, tests or assessment conditions apply
+[Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+before the former evidence supports a new claim.
+
+Common source and applicable evidence may be shared where the required
+conditions permit. Actor identity, a fresh context or a different model family
+alone establishes none of the required independence. [Parallel assurance and
+provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance) owns the separate shared-cause
+account; [Frame Method](../REFERENCE_FRAME_METHOD.md#disjointness-and-independence)
+owns structural disjointness and procedural evaluation independence. Those
+relations do not substitute for claim-relative independent assurance. This
+contract selects no extra review boundary, reviewer count or model family.
+
+
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Contract application
 
@@ -443,11 +498,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](../FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -546,7 +601,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -613,17 +668,18 @@ bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
 
 
-Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 ### Construction, Assessment, And Delegation
 
-The constructor owns bounded implementation and self-review. Where independent
-assessment supports promotion, the assessor evaluates the exact live realisation
+The constructor owns bounded implementation and self-review. Apply
+[Independent assessment](../FOUNDATIONS.md#independent-assessment) wherever
+independent assessment supports promotion. The assessor evaluates the exact
+live realisation
 under the selected computational binding, its authority paths, proof, and
 installed subject rather than treating the constructor's summary as sufficient
-evidence. This preserves the independent-review relation; it does not prescribe
-an actor count. One actor may occupy different roles across different claims
-when independence for the assessed claim is preserved.
+evidence. The selected configuration binds actors to that claim under the shared
+independence conditions; this construction binding prescribes no actor count.
 
 The governing authority relation declares whether a bounded proxy may accept
 and advance routine actions. A proxy may accept preservation, require local
@@ -654,7 +710,7 @@ authority or validity conditions still requires the affected binding to be
 resolved before effect. Executive mutation restrictions remain applicable.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Frame Activation Binding](../REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Frame Activation Binding](../REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### Minimal Frame Activation Binding
 
@@ -699,7 +755,7 @@ line numbers, member counts, summaries, and matching labels may aid navigation
 or diagnostics but do not substitute for the declared identity and basis.
 
 
-Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Preservation obligations
 
@@ -739,11 +795,13 @@ informational and computational accounts, identify the maps and what they
 preserve under [Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions). A formula
 states an obligation; a mathematical argument, structural check, finite model,
 sampled test and observed execution retain their distinct subjects and reach.
+Execution by a person, machine or mixed arrangement does not by itself discharge
+the cross-account maps or preservation obligations.
 Unproved universal claims remain unresolved. They stop only work that requires
 that proof; otherwise admitted bounded construction can continue.
 
 
-Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Assertions and observations
 
@@ -765,8 +823,11 @@ q_t implies Q_r                     q_t is sufficient for Q_r.
 These are conditional on Gamma and Omega. A pass on a necessary condition
 cannot establish Q_r. A collection of assertions needs its own coverage and
 compatibility argument before its conjunction establishes Q_r. Valid different
-realisations may satisfy Q_r with different outputs; equality is an oracle only
-where the obligation requires it.
+realisations may satisfy Q_r with different outputs. Equality can be an oracle
+for a justified declared target q_t, including a narrower regression property;
+the conclusion retains that target and scope. Establish its relation to Q_r
+before using it to decide the source obligation. Equality alone cannot reject
+permitted alternatives or prove full obligation satisfaction.
 
 Let pi: Omega → O model the observations available to a checker,
 and T contained in O × R be the checker's admitted evaluation relation, with R
@@ -810,7 +871,7 @@ bound. Additional independently admissible evidence retains its normal core
 standing; the limited observation is not permission to erase it.
 
 
-Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Change impact and evidence retention
 
@@ -845,13 +906,19 @@ E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
 ```
 
 Retention establishes that claim and scope still apply, assertion and observation
-bases remain justified, required independence holds, and material dependencies
+bases remain justified, any independence required for that claim still holds
+under [Independent assessment](../FOUNDATIONS.md#independent-assessment), and material dependencies
 are unchanged or covered by an established preservation relation. The original
 record keeps its original subject; an applicability relation permits its use
 for the new claim. A changed digest proves neither invalidity nor equivalence.
 Changed support reopens affected reliance, not the historical observation.
 Keep known failures, unresolved coverage and their citations visible until
-supported repair, reassessment or authorised change of obligation disposes them.
+supported repair, reassessment or authorised change of obligation disposes their
+outstanding status. That disposition retains the original observation,
+counterexample, subject and citations with the reason its current applicability
+changed. A relaxed requirement can change what remains owed; it neither makes
+the former failure a success nor erases it. The changed subject is assessed
+against its current obligations with the applicable evidence.
 
 A changed requirement revisits dependent expectations under its change authority.
 A changed refinement revisits its links to the requirement and realisation; a

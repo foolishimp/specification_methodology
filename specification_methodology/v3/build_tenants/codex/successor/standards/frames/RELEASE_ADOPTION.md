@@ -22,7 +22,7 @@ a route alone does not discharge that judgment.
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result algebra
 
@@ -156,7 +156,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result conjunction
 
@@ -554,7 +554,7 @@ material integration and exact-cut qualification. The consumer owns its record,
 branch strategy, comparison, and proof mechanism.
 
 
-Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — Explicit Complete Consumer Update](../SPEC_METHOD.md#explicit-complete-consumer-update); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 #### Explicit Complete Consumer Update
 
@@ -614,27 +614,37 @@ required observation of every begun part. Keep staged-install and consumer
 effects on their actual boundaries, including `partial` or `unknown` effects.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](../REFERENCE_FRAME_METHOD.md#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-012 Closed Results
 
@@ -674,7 +684,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Contract application
 
@@ -707,11 +717,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](../FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -810,26 +820,41 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Judgment and authority
 
-The [frame authority law](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
-owns authority conservation for frame evaluation. Within a_c,
-[AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) owns its calculus
-judgment separation. Where a consumer has adopted the construction engagement
-profile and lawfully activated the applicable engagement,
+This section owns the shared authority-conservation and judgment-separation
+determinations. The [imported authority vocabulary](../FOUNDATIONS.md#reference-only-semantic-imports)
+keeps its source meanings. A consumer binds the actual owner-issued grant for
+its subject, operation or decision, permitted effects and scope. Meaning,
+evaluation, operation and decision retain their distinct authority relations,
+even when one actor lawfully holds several. A grant is carried only within its
+declared scope; delegation or transfer requires the governing owner's
+permission.
+
+Actor identity, role or frame selection, a document's presence, available
+capability, shared machinery, implementation reachability, evidence shape and
+a successful judgment cannot mint, widen, transfer or reconstruct authority.
+Missing or ambiguous authority leaves the dependent act ungranted and returns
+the applicable explicit result or owner re-entry. An already-authorized act
+retains its grant within its current conditions.
+
+Definitions, assumptions, observations, candidate judgments and accepted
+claims have distinct standing. A judgment binds a predicate, exact subject,
+basis, evidence, assessor and any required independence. Producing a candidate,
+assessing it and disposing it are separate responsibilities. Evidence establishes
+only its supported claim; it cannot supply an operation or decision mandate.
+The [Dispose contract](../TRANSFORMATION_LIBRARY.md#dispose) applies the bound
+decision authority to its permitted dispositions.
+
+Domain owners supply the additional bindings: [RF-006](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation)
+for frame evaluations, [AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation)
+for calculus judgments and, only where adopted and lawfully activated,
 [the Baseline](../STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition)
-owns its exact Reviewer/Executive application of the detailed laws. Other
-domain judgment and control functions retain their own declared contracts. Definitions, assumptions, observations, candidate judgments and accepted claims
-have distinct standing. A judgment binds a predicate, exact subject, basis,
-evidence, assessor and any required independence. An operation grant permits
-specified effects; decision authority retains its separately bound mandate.
-Neither evidence shape nor actor capability
-mints a grant. In a consumer-adopted, lawfully activated Baseline engagement, Baseline
-Reviewer and Executive retain their exact roles from that profile. This account
-assigns neither role or its authority. Domain control such as ODD next-action
-selection remains with its own named function; the explanation appoints none.
+for its Reviewer and Executive. ODD next-action selection retains its own
+function and mandate. These applications appoint no actor and impose no
+optional profile on generic construction.
 
 Unknown applicability, missing context, incompatible basis and failed predicates
 remain observable. Severity grades the supported consequence if a finding manifests. Priority,
@@ -843,8 +868,35 @@ observation or combination of evidence can establish. The evaluating consumer
 binds those relations before relying on a reported pass or failure for a broader
 claim. A supported judgment still supplies no operation or decision mandate.
 
+### Independent assessment
 
-Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+The governing contract selects whether independent assessment is required and
+which authorship, evidence, reference-exposure, actor or configuration conditions
+apply to the claim. Where nonauthor assessment is required, its assessor has
+not materially authored the subject or the repair being assessed. Self-review
+remains authoring evidence; a human acceptance decision cannot turn it into
+independent assessment.
+
+Reporting a defect, supplying a counterexample or identifying behavior already
+required by an owning rule does not itself author the repair; that assessor
+may recheck the defect. Material wording, policy or design adopted in the
+subject is authorship. Its contributor discloses the contribution and cannot
+supply the required independent assessment of that claim; unaffected judgments
+retain their scope. Changed subjects, tests or assessment conditions apply
+[Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+before the former evidence supports a new claim.
+
+Common source and applicable evidence may be shared where the required
+conditions permit. Actor identity, a fresh context or a different model family
+alone establishes none of the required independence. [Parallel assurance and
+provenance](../FOUNDATIONS.md#parallel-assurance-and-provenance) owns the separate shared-cause
+account; [Frame Method](../REFERENCE_FRAME_METHOD.md#disjointness-and-independence)
+owns structural disjointness and procedural evaluation independence. Those
+relations do not substitute for claim-relative independent assurance. This
+contract selects no extra review boundary, reviewer count or model family.
+
+
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Change impact and evidence retention
 
@@ -879,13 +931,19 @@ E_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.
 ```
 
 Retention establishes that claim and scope still apply, assertion and observation
-bases remain justified, required independence holds, and material dependencies
+bases remain justified, any independence required for that claim still holds
+under [Independent assessment](../FOUNDATIONS.md#independent-assessment), and material dependencies
 are unchanged or covered by an established preservation relation. The original
 record keeps its original subject; an applicability relation permits its use
 for the new claim. A changed digest proves neither invalidity nor equivalence.
 Changed support reopens affected reliance, not the historical observation.
 Keep known failures, unresolved coverage and their citations visible until
-supported repair, reassessment or authorised change of obligation disposes them.
+supported repair, reassessment or authorised change of obligation disposes their
+outstanding status. That disposition retains the original observation,
+counterexample, subject and citations with the reason its current applicability
+changed. A relaxed requirement can change what remains owed; it neither makes
+the former failure a success nor erases it. The changed subject is assessed
+against its current obligations with the applicable evidence.
 
 A changed requirement revisits dependent expectations under its change authority.
 A changed refinement revisits its links to the requirement and realisation; a

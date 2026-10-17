@@ -22,7 +22,7 @@ a route alone does not discharge that judgment.
 - [TRANSFORMATION_LIBRARY.md — Foundational contract](../TRANSFORMATION_LIBRARY.md#foundational-contract).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result algebra
 
@@ -156,7 +156,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Result conjunction
 
@@ -287,7 +287,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Configuration](../FOUNDATIONS.md#configuration); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Configuration
 
@@ -302,9 +302,9 @@ or a fixed inventory of roles. An adequate configuration can use one actor,
 peers, a hierarchy or supported adaptive allocation.
 
 Producing, checking and accepting remain different responsibilities even where
-one actor is permitted to perform several. Required independent review retains
-its authorship and evidence conditions; a new context alone does not supply it.
-Roles acquire authority from their grants, never from their names. Functional
+one actor is permitted to perform several. Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+and [Independent assessment](../FOUNDATIONS.md#independent-assessment) to the actual grants and
+any required review. Functional
 decomposition, communication, authority and evaluation dependency are distinct.
 
 The optional [Executive arrangement](../STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action)
@@ -700,7 +700,7 @@ An absent or incomplete adoption means the profile is available but inactive
 for that Product.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-003 Material Sufficiency](../REFERENCE_FRAME_METHOD.md#rf-003-material-sufficiency); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-003 Material Sufficiency
 
@@ -712,27 +712,37 @@ known-relation boundary does not require proving that no undiscovered relation
 exists.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-005 Exact Basis And Coordinates](../REFERENCE_FRAME_METHOD.md#rf-005-exact-basis-and-coordinates); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-006 Authority Conservation](../REFERENCE_FRAME_METHOD.md#rf-006-authority-conservation); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](../REFERENCE_FRAME_METHOD.md#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `ddfab516705f945f2bf5e08b89ea32834273b7dd09f6c5bf9f583f9ea241645d`.
+Source: [REFERENCE_FRAME_METHOD.md — RF-012 Closed Results](../REFERENCE_FRAME_METHOD.md#rf-012-closed-results); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
 
 ### RF-012 Closed Results
 
@@ -772,7 +782,7 @@ non-performance or uncertain effect, or promote candidate availability into
 fitness, acceptance or authority.
 
 
-Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `5e6103a666f0ceb866bda43c6a133a6f9815cf28148bc00b070a3c1f14daef10`.
+Source: [TRANSFORMATION_LIBRARY.md — Contract application](../TRANSFORMATION_LIBRARY.md#contract-application); SHA256 `7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6`.
 
 ## Contract application
 
@@ -805,11 +815,11 @@ conditions once at the responsible consumer:
    authority and effect distinctions where material. A difference may be
    lawful; it needs the instance's admitted relation. Neither universal field
    equality nor an invented translation decides compatibility.
-4. **Authority.** Establish the actual operation or decision grant for the
-   selected effect. Keep the owners of meaning, evidence, operation and
-   disposition distinct. Shared code, a source reference or a satisfied
-   judgment supplies no missing grant. Required independent assessment retains
-   its owning conditions.
+4. **Authority.** Apply [Judgment and authority](../FOUNDATIONS.md#judgment-and-authority)
+   to the actual operation or decision grant for this subject and selected
+   effect. Bind any required assessment under
+   [Independent assessment](../FOUNDATIONS.md#independent-assessment); the domain
+   supplies its additional conditions and the authority requiring them.
 5. **Currentness.** Acquire observations, concurrency conditions and uncertain
    effects under [Workspace and context](../FOUNDATIONS.md#workspace-and-context),
    and apply [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
@@ -908,7 +918,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [FOUNDATIONS.md — Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ## Orthogonal descriptions
 
@@ -995,7 +1005,7 @@ graph, ledger and four-function architecture remains this profile's choice.
 <!-- STDO3_PROFILE_BINDING_END -->
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -1062,7 +1072,7 @@ bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
 
 
-Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336`.
+Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
 
 ### Preservation obligations
 
@@ -1102,5 +1112,7 @@ informational and computational accounts, identify the maps and what they
 preserve under [Orthogonal descriptions](../FOUNDATIONS.md#orthogonal-descriptions). A formula
 states an obligation; a mathematical argument, structural check, finite model,
 sampled test and observed execution retain their distinct subjects and reach.
+Execution by a person, machine or mixed arrangement does not by itself discharge
+the cross-account maps or preservation obligations.
 Unproved universal claims remain unresolved. They stop only work that requires
 that proof; otherwise admitted bounded construction can continue.
