@@ -896,6 +896,12 @@ Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.identity-state-and-evid
 
 - [standards/FOUNDATIONS.md#identity-state-and-evidence](../standards/FOUNDATIONS.md#identity-state-and-evidence)
 
+## Unit foundationsindependent-assessment f7594869a0f1
+
+Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.independent-assessment`.
+
+- [standards/FOUNDATIONS.md#independent-assessment](../standards/FOUNDATIONS.md#independent-assessment)
+
 ## Unit foundationsinterpretation-and-representation c4b2aca0a77f
 
 Index: `urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.interpretation-and-representation`.
