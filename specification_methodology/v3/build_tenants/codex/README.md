@@ -6,10 +6,10 @@ This tenant realizes the shared [Intent](../../specification/INTENT.md) and
 [Product](../../specification/PRODUCT.md). The current method package is
 [successor/](successor/README.md); it contains one [standards library](successor/standards/README.md).
 [Design](design/README.md) owns the document HOW.
-[Qualification](qualification/C3/rc1/content-repair/integration/RETURN.md) records
-the current repair's subjects, evidence, limits and remaining acceptance work.
-Its [coordinates](qualification/C3/rc1/content-repair/integration/COORDINATES.json)
-distinguish frozen inputs, completed phases and outstanding package work.
+[Qualification](qualification/C3/rc4/integration/RETURN.md) records
+the RC4 candidate's subjects, evidence, limits and remaining acceptance work.
+Its [coordinates](qualification/C3/rc4/integration/COORDINATES.json)
+distinguish frozen inputs, completed phases and remaining acceptance work.
 
 The historical [I5 work plan](qualification/C3/iteration-5/PLAN.md) binds its ratified
 common input and successor construction. The completed I5 construction continues the I4 package

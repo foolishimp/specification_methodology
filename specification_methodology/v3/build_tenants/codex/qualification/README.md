@@ -1,8 +1,8 @@
 # Codex Qualification
 
-The [current content-repair return](C3/rc1/content-repair/integration/RETURN.md)
+The [current RC4 candidate return](C3/rc4/integration/RETURN.md)
 reports the documentary subject, applicable checks and unresolved acceptance
-obligations. Its [coordinates](C3/rc1/content-repair/integration/COORDINATES.json)
+obligations. Its [coordinates](C3/rc4/integration/COORDINATES.json)
 identify the source, account and complete package as each phase is frozen.
 Current account and inventory availability is stated in that return; a pending
 phase supplies no current conservation or qualification judgment.

@@ -1,0 +1,51 @@
+{
+  "package_commit": "92fdb01c52bc4c6c7a7e265f92a668d0adb65098",
+  "cases": [
+    {
+      "case": "intake-owner-and-consumers",
+      "indexes": [
+        "SPEC_METHOD.constitutional-chain",
+        "SPEC_METHOD.renewal-path",
+        "SPEC_METHOD.drift-signals",
+        "SPEC_METHOD.method",
+        "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+        "STDO_REFERENCE_FRAME_BASELINE.failure-classification"
+      ],
+      "mode": "materialized",
+      "required_clauses_present": [
+        "urn:codex-stdo3:iteration-3-r2:clause:DESIGN_MODULE_METHOD.proportional-design-sequencing",
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.drift-signals",
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.method",
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.renewal-path",
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.universal-intake-triage",
+        "urn:codex-stdo3:iteration-3-r2:clause:STDO_REFERENCE_FRAME_BASELINE.failure-classification"
+      ],
+      "clause_count": 60,
+      "output_bytes": 3424751,
+      "output_sha256": "71b6432c917609ec741d63bf8bcfea6f1514fb2633f62ab82061780bb0418a00",
+      "standing": "Mechanical native route availability; applicability and semantic fidelity remain separate."
+    },
+    {
+      "case": "authorship-and-reuse",
+      "indexes": [
+        "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+        "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+        "STDO_REFERENCE_FRAME_BASELINE.anti-patterns"
+      ],
+      "mode": "materialized",
+      "required_clauses_present": [
+        "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.change-impact-and-evidence-retention",
+        "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.independent-assessment",
+        "urn:codex-stdo3:iteration-3-r2:clause:REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+        "urn:codex-stdo3:iteration-3-r2:clause:STDO_REFERENCE_FRAME_BASELINE.anti-patterns",
+        "urn:codex-stdo3:iteration-3-r2:clause:TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007"
+      ],
+      "clause_count": 67,
+      "output_bytes": 3692552,
+      "output_sha256": "d4195bd95e094da261752dc82203b100dfadfdd638ad639ad819ba853c375ab2",
+      "standing": "Mechanical native route availability; applicability and semantic fidelity remain separate."
+    }
+  ],
+  "replay": "Use the frozen package program/map and bindings.py with PROJECTION_CASES.json indexes; output may remain in scratch.",
+  "standing": "Two changed-route projections; no fresh actor actual-use or whole-interpretation qualification."
+}
