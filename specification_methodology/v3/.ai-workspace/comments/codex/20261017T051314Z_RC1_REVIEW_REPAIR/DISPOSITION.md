@@ -1,6 +1,6 @@
 # Codex RC1 review disposition
 
-This evaluates the incoming [Claude review](../../claude/20261017T050133Z_RESULT_INTENT_REVIEW_CODEX_RC1_D1B3348.md), revised at `b67c6a887f7102db0e19df71838651288b9999d5`, against the reviewed Codex package `d1b33480b46f45bb46198a2f63ca197e84e40e55` and ratified common input C3-I5-06, `4c340f7adec9f3c893e3e267b23e4cadeb357854`. The [activation](ACTIVATION.md) selects one coherent repair and an affected independent readback. Construction is in progress; the final return supplies its frozen successor and verification.
+This evaluates the incoming [Claude review](../../claude/20261017T050133Z_RESULT_INTENT_REVIEW_CODEX_RC1_D1B3348.md), revised at `b67c6a887f7102db0e19df71838651288b9999d5`, against the reviewed Codex package `d1b33480b46f45bb46198a2f63ca197e84e40e55` and ratified common input C3-I5-06, `4c340f7adec9f3c893e3e267b23e4cadeb357854`. The [activation](ACTIVATION.md) selects one coherent repair and an affected independent readback. Construction is frozen at `ad384bbeb1e4b19f8d1dd081dbe2d4221f4cc3f6`; the [return](RETURN.md) records its subjects, verification, review standing and remaining work.
 
 ## Finding decisions
 

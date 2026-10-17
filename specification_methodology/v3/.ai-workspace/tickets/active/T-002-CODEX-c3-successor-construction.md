@@ -12,7 +12,7 @@ change_class: design_reframe
 re_entry_point: specification_methodology/v3/build_tenants/codex/design/
 triaged_at: 2026-10-12T01:32:20Z
 created_at: 2026-10-12T01:32:20Z
-updated_at: 2026-10-16T15:11:14Z
+updated_at: 2026-10-17T06:07:03Z
 priority: high
 dependencies: [T-002]
 ---
@@ -22,6 +22,8 @@ dependencies: [T-002]
 Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) under [Multi-Build-Tenant Ticket Independence](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#multi-build-tenant-ticket-independence). Status, proof, closure and reopening are this tenant's alone; green status in the peer tenant hides nothing here. The upstream intake triage, Product-chain basis, admission mechanism and member sequencing are inherited from T-002 and not repeated.
 
 ## RC1 continuation
+
+2026-10-17T06:07:03Z — The content-review repair returns `candidate_ready` at package `ad384bbeb1e4b19f8d1dd081dbe2d4221f4cc3f6`, with source `ebc35652`, account `e2e40fbc` and integration evidence `f45fa26a`. The [return and next-review coordinates](../../comments/codex/20261017T051314Z_RC1_REVIEW_REPAIR/RETURN.md) record independently triaged repairs, passed changed-scope checks and the closed same-family nonauthor readback: `satisfied / performed` for its bounded affected-repair predicate, with no defect established. The Executive conjoins those bounded returns for readiness for the next review; the Ledger Writer records this disposition. The acquisition increase, uninstrumented review totals/context, incomplete whole-method qualification, 89 proposed replacements in 31 questions, separate UX question, owner selection and release obligations remain explicit. No common meaning or peer implementation changes, outward merge, push or release are selected.
 
 2026-10-17T05:13:14Z — The owner instructs “evaluate the review and apply it, prepare for next round”. The Executive admits the [content-review repair continuation](../../comments/codex/20261017T051314Z_RC1_REVIEW_REPAIR/ACTIVATION.md) on package `d1b33480` and unchanged tenant preimage `88841787`, receiving main `b67c6a88` inward. It evaluates Claude's revised incoming review, batches confirmed owner/consumer/entry repairs, refreshes affected derived assets and freezes one successor for one independent affected readback. The common input remains C3-I5-06. Independent disposition of claims precedes each repair; full qualification, predecessor replacements, candidate choice and release remain separate. The Ledger Writer records this admission; the Executive's coordination frame performs no effects.
 
