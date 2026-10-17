@@ -33,3 +33,5 @@ testing: the conservation reading, the path traces, the receiving-line
 assessment of the two ports, the integrated readback of the iteration 5
 repairs, and tests 2 and 3 of the blind read. Their results are posted
 here as they close; findings may lead to candidate 2 on the same line.
+
+Correction (same session, after the freeze): the unread conserved rows number 471 by `frontier/REVIEW.json`, not 505; commit A is unchanged and the error is disclosed in the ledger and handoff.
