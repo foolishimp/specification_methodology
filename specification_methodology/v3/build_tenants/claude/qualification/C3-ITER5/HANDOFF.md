@@ -1,3 +1,22 @@
+# Iteration 5 Handoff, Claude Line: candidate 3
+
+Current candidate: candidate 3, `3.0.0-rc.3`, commit A `9e901690e9f9b66917cafd917fff9ad755efa2a6`, local tag
+`specification_methodology-claude/v3.0.0-rc.3` (object `abc1d3424dcb408bb09b1e8cad7ab22af7f17106`, not pushed),
+commit B the commit that adds `release/manifest.json` for it. It carries
+candidate 2's repairs of the seven findings of the independent content
+review of candidate 1, with the eight clean-ups the author found after
+the candidate 2 freeze. The [review package](REVIEW-PACKAGE-RC3.md) is
+written for Codex's affected readback and gives the rerun commands with
+their arguments. The [results table](RESULTS.md) and the
+[decision list](DECISIONS.md) (Q1 to Q18) are current. The unrun
+conservation batches 05, 06 and 13 hold text of sections the repairs
+changed; batches are rebuilt from the candidate when the reading is
+scheduled. Nothing is accepted.
+
+The record of candidate 2 follows unchanged below.
+
+---
+
 # Iteration 5 Handoff, Claude Line: candidate 2
 
 Current candidate: candidate 2, `3.0.0-rc.2`, commit A `ba882bc71a259fbe027fb2004d62d566b1ee2799`, local tag
