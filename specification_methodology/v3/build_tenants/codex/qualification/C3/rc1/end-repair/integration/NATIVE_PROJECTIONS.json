@@ -1,0 +1,81 @@
+{
+  "package_commit": "d1b33480b46f45bb46198a2f63ca197e84e40e55",
+  "observations": [
+    {
+      "case": "workflow-and-ux-residuals",
+      "selected_indexes": [
+        "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+        "UX_METHOD.4a-process-model-without-language-or-framework-mandate",
+        "UX_METHOD.12-realization-discretion",
+        "UX_METHOD.18-canonical-compression"
+      ],
+      "mode": "materialized",
+      "required_procedure_present": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+      "required_residuals_present": [
+        "urn:codex-stdo3:iteration-3-r2:residual:UX_METHOD.12-realization-discretion:known-compliance-test-ambiguity",
+        "urn:codex-stdo3:iteration-3-r2:residual:UX_METHOD.18-canonical-compression:known-compliance-test-ambiguity",
+        "urn:codex-stdo3:iteration-3-r2:residual:UX_METHOD.4a-process-model-without-language-or-framework-mandate:known-compliance-test-ambiguity"
+      ],
+      "bytes": 2803525,
+      "sha256": "a6032b89dc57cb9d62ff92975fa80f13d0c8fa16e2fa46d58310ab6d0190a1ad",
+      "elapsed_seconds": 9.250359249999747,
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/end-repair/integration/interpretation/projections/bindings.json",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/end-repair/integration/interpretation/projections/workflow-and-ux-residuals.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.4a-process-model-without-language-or-framework-mandate",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.12-realization-discretion",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:UX_METHOD.18-canonical-compression"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "manual-refresh",
+      "selected_indexes": [
+        "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md"
+      ],
+      "mode": "materialized",
+      "required_procedure_present": "CARRIER.plugins.spec.references.REFRESH.md",
+      "required_residuals_present": [],
+      "bytes": 1848392,
+      "sha256": "f13b0f2bd4ff67023455740ba75b8c7dfaefb70485fa389fec457f53c129e4a9",
+      "elapsed_seconds": 9.348675083951093,
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/end-repair/integration/interpretation/projections/bindings.json",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/end-repair/integration/interpretation/projections/manual-refresh.json",
+        "--frame-index",
+        "urn:codex-stdo3:iteration-3-r2:index:CARRIER.plugins.spec.claude-skills.refresh.SKILL.md"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "standing": "Existing native acquisition and residual retention for these selected routes; no task applicability or execution permission inferred."
+}
