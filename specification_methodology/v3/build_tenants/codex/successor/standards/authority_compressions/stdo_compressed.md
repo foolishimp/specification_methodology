@@ -27,19 +27,19 @@ source_refs:
 index_refs:
   - ../GLOSSARY_GUIDE.md
 source_digests:
-  FOUNDATIONS.md: 36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36
+  FOUNDATIONS.md: 2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e
   TRANSFORMATION_LIBRARY.md: 7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6
   AXIOMATIC_CALCULUS.md: 16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0
   TRAVERSAL_OCCURRENCE_PROFILE.md: 2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf
-  REFERENCE_FRAME_METHOD.md: 707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f
-  STDO_REFERENCE_FRAME_BASELINE.md: cb5dc7304c89c3632e6124750d375f77716d404edcd53b6d743e3640683c8e85
-  SPEC_METHOD.md: 86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8
+  REFERENCE_FRAME_METHOD.md: 41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01
+  STDO_REFERENCE_FRAME_BASELINE.md: 1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe
+  SPEC_METHOD.md: 30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 300aaa56d6fd66e002c3a61919ddbbffa94d56bf01a035598fb519523f43f116
+  DESIGN_MODULE_METHOD.md: 2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec
   ODD_METHOD.md: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
   WORLD_MODEL_METHOD.md: fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f
-  TICKET_METHOD.md: 22015a5c3989a269c663195eee4e25c575d5da44442d19e1543a83f99f45a532
+  TICKET_METHOD.md: 682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1
   UX_METHOD.md: 6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d
   IDENTITY_METHOD.md: ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e
   RELEASE_METHOD.md: be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de
@@ -1108,8 +1108,10 @@ layer that owns the missing truth.
   missing, ambiguous, or out-of-territory authority refuses. Self-review is not
   independent review. Reviewer returns one Reference Frame Method result with
   its evidence, findings or explicit no-finding state, technical triage where
-  applicable, residuals, and invalidation conditions. It does not edit, direct
-  repair, apply an STDO disposition, or authorize continuation. Executive
+  applicable, residuals, and invalidation conditions. Findings and counterexamples
+  may identify already-required behavior and be independently rechecked. The
+  Reviewer does not implement repairs, direct repair operations, apply an STDO
+  disposition, or authorize continuation. Executive
   cannot exceed its existing grant or become another semantic, operation, or
   implementation owner.
 - Worker read scope follows the causal cone within its access grant, while

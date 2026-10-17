@@ -17,7 +17,7 @@ a route alone does not discharge that judgment.
 - [SPEC_METHOD.md — Method Families](../SPEC_METHOD.md#method-families).
 - [FOUNDATIONS.md — Core contract derivations](../FOUNDATIONS.md#core-contract-derivations).
 
-Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Bounded construction](../FOUNDATIONS.md#bounded-construction); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ## Bounded construction
 
@@ -124,7 +124,7 @@ next dependent action. These relations use the existing work and evidence
 carriers; they prescribe no role sequence or orchestration runtime.
 
 
-Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Result algebra](../FOUNDATIONS.md#result-algebra); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ## Result algebra
 
@@ -258,7 +258,7 @@ evidence defeats that predicate, or the established scope/basis diagnosis.
 Lawfulness of stopping is a separate decision predicate.
 
 
-Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Result conjunction](../FOUNDATIONS.md#result-conjunction); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ## Result conjunction
 
@@ -389,7 +389,7 @@ sequence without an established outer interpretation or join returns the
 applicable unresolved or invalid-basis result rather than a guessed success.
 
 
-Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Judgment and authority](../FOUNDATIONS.md#judgment-and-authority); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ## Judgment and authority
 
@@ -441,17 +441,18 @@ claim. A supported judgment still supplies no operation or decision mandate.
 
 The governing contract selects whether independent assessment is required and
 which authorship, evidence, reference-exposure, actor or configuration conditions
-apply to the claim. Where nonauthor assessment is required, its assessor has
-not materially authored the subject or the repair being assessed. Self-review
-remains authoring evidence; a human acceptance decision cannot turn it into
-independent assessment.
+apply to the claim. Where nonauthor assessment is required, its assessor is not
+an author of the reviewed subject or repair. Self-review remains authoring
+evidence; a human acceptance decision cannot turn it into independent
+assessment.
 
 Reporting a defect, supplying a counterexample or identifying behavior already
 required by an owning rule does not itself author the repair; that assessor
 may recheck the defect. Material wording, policy or design adopted in the
-subject is authorship. Its contributor discloses the contribution and cannot
-supply the required independent assessment of that claim; unaffected judgments
-retain their scope. Changed subjects, tests or assessment conditions apply
+subject is authorship. Its contributor cannot supply the required independent
+assessment of that claim; unaffected judgments retain their scope. Any
+additional separation or contributor-disclosure duty comes from the applicable
+governing contract. Changed subjects, tests or assessment conditions apply
 [Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention)
 before the former evidence supports a new claim.
 
@@ -601,7 +602,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
 
 ### WHAT, HOW, And Work Carriers
 
@@ -668,7 +669,7 @@ bounded work wave, ticket state remains ticket authority, and comments remain
 non-authoritative commentary.
 
 
-Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8`.
+Source: [SPEC_METHOD.md — Construction, Assessment, And Delegation](../SPEC_METHOD.md#construction-assessment-and-delegation); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
 
 ### Construction, Assessment, And Delegation
 
@@ -710,7 +711,7 @@ authority or validity conditions still requires the affected binding to be
 resolved before effect. Executive mutation restrictions remain applicable.
 
 
-Source: [REFERENCE_FRAME_METHOD.md — Minimal Frame Activation Binding](../REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding); SHA256 `707b56a89dedab9b23c75baf04e499aa4b226666b18526a25c0cc57a3ce2db1f`.
+Source: [REFERENCE_FRAME_METHOD.md — Minimal Frame Activation Binding](../REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding); SHA256 `41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01`.
 
 ### Minimal Frame Activation Binding
 
@@ -755,7 +756,7 @@ line numbers, member counts, summaries, and matching labels may aid navigation
 or diagnostics but do not substitute for the declared identity and basis.
 
 
-Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Preservation obligations](../FOUNDATIONS.md#preservation-obligations); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ### Preservation obligations
 
@@ -801,7 +802,7 @@ Unproved universal claims remain unresolved. They stop only work that requires
 that proof; otherwise admitted bounded construction can continue.
 
 
-Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Assertions and observations](../FOUNDATIONS.md#assertions-and-observations); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ### Assertions and observations
 
@@ -871,7 +872,7 @@ bound. Additional independently admissible evidence retains its normal core
 standing; the limited observation is not permission to erase it.
 
 
-Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `36cf5f11379f71b6a568748054781ca980df392c3301f4deec54bb5309b33e36`.
+Source: [FOUNDATIONS.md — Change impact and evidence retention](../FOUNDATIONS.md#change-impact-and-evidence-retention); SHA256 `2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e`.
 
 ### Change impact and evidence retention
 

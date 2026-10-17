@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: 300aaa56d6fd66e002c3a61919ddbbffa94d56bf01a035598fb519523f43f116
+source_digest: 2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -98,8 +98,11 @@ independent reason for the gate.
 Design/implementation bidirectionality carries evidence, counterexamples,
 falsification, and reconciliation, never reverse semantic authority.
 Implementation cannot select a missing semantic answer or rewrite upstream
-truth to legalize itself. Material semantic surprise gates the affected
-decision set; serial code repair does not establish design acceptance.
+truth to legalize itself. Established architectural ambiguity gates the
+affected decision set; serial code repair does not establish design acceptance.
+Repeated or cross-cutting surprises enter Universal Intake Triage. Its diagnosis
+selects a bounded design reframe when design is underconstrained and governing
+requirements remain sufficient; a surprise alone does not decide the cause.
 
 A design boundary is decision-complete only when its complete source-defined
 material-relation set—entities, identities, relationships, cardinalities,
