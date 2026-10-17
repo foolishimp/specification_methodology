@@ -23,6 +23,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## RC1 continuation
 
+The corrected RC1 construction increment is complete at package `d1b33480b46f45bb46198a2f63ca197e84e40e55`, with source `2e0c77b9`, account `0c1ffdb4`, integration evidence `5038e834` and bundle evidence `88841787`. The [closed return](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/RETURN.md) and [current bundle](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/BUNDLE.md) expose the exact candidate for owner comparison. The single affected readback finds no supported remaining defect in its eight selected repair obligations; its resource-measurement limit remains explicit. Complete qualification, all proposed replacement/member decisions, candidate choice and release remain open. Prior entries below retain their historical subjects.
+
 The closed SOURCE and DOMAIN end reviews select a [bounded successor repair](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REPAIR.md): two entry defects plus truthful conservation and residual accounting. RC1-ENTRY owns the three specified carriers; integration follows the representation return. The current complete archive remains the frozen reviewed subject.
 
 RC1-INTEGRATION returns at `763d97073210a9a34808512d6ca65dfead57f495`: documentary source `f1e5ba38`, account `4f209833`, complete package `ea27616b93c80b13ee15a9931cd9114275e5de13`. The [end-review input receipt](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REVIEW_INPUTS.json) binds the three admitted read-only contexts to that package and exact evidence. This is the one consolidated review after the completed increment.
