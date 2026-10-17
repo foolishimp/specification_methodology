@@ -21,3 +21,11 @@ Generation authenticates the documentary member set and bytes at the source comm
 The `source` operation is a one-time construction step from the complete `5fd3b789ef6e0039f722676cdd0126113c745a11` documentary preimage. The `account` operation authenticates the source freeze and integrates the one generic repair over the exact prior account. Admitted consumer groups are then applied by `consumers --consumer-commit <exact-return-commit> --consumer-patch <selected-file>`, with both field presence and value checked against each preimage. These construction stages precede the frozen current invocation above; they are not silently repeated against a later subject.
 
 `REUSE.md`, `CONSERVATION_APPLICABILITY.json` and `FRONTIER.json` preserve the limits of prior evidence and current dependencies. `ACQUISITION.json` records incomplete source/context instrumentation. This is a reviewable construction package; qualification, acceptance and release decisions remain separate.
+
+The final candidate includes the Executive-selected plugin manifest version metadata. Use the same `rc1.py generate --coordinates ... --theory-root ...` command for generation. The final verification entrypoint is:
+
+```sh
+/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python -B specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/version_metadata.py verify --coordinates specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/COORDINATES.json
+```
+
+`version_metadata.py` authenticates final documentary/account/package coordinates, proves that the four package differences from the first freeze are exactly two version fields and two generated source-coordinate carriers, and binds the successful first-package checks at `ba547177d7c9f2977fd48fa025618264f913a00a` to their unchanged subjects. It preserves every account row and earlier semantic/reuse limitation. The original `rc1.py verify` command remains the historical first-package invocation; its check receipts are not relabeled current.
