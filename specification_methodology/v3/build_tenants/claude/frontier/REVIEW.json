@@ -562,6 +562,36 @@
    }
   },
   {
+   "id": "AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal-missing-result",
+   "source_member": "AXIOMATIC_CALCULUS.md",
+   "source_anchor": "#ac-007-constraint-and-refusal-missing-result",
+   "identifiers": "",
+   "disposition": "superseded",
+   "disposition_note": "superseded, proposed and pending the product owner's acceptance, by AXIOMATIC_CALCULUS AC-007 with FOUNDATIONS \u00a74 Results, Not performed: a constraint judgment that was not performed has no closed result and is a gap, never `indeterminate`; the rc.2 sentence \"A failed, missing, indeterminate, out-of-scope, or invalid-basis result follows the declared result algebra rather than being coerced to success.\" leaves the mapping of a missing result to the declared result algebra; under Q1, raised by the I5-03 reading (batch 01)",
+   "proposed_replacement": true,
+   "disposition_standing": "author_proposal",
+   "acceptance": "ticket_decision_pending",
+   "predecessor_sha256": null,
+   "successor_loci": [
+    {
+     "locus": "AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal",
+     "sha256": "3275b17ea8523b5e183d4db2e1e06a544c8b23a76304e7c2ea750b6ff0403460"
+    },
+    {
+     "locus": "FOUNDATIONS.md#results",
+     "sha256": "c8e183abcbdf8f56353da0878ff6c84c29320e3a4d7a9948a9a9db5087a44f37"
+    }
+   ],
+   "modal_conversion": false,
+   "semantic_review": {
+    "result": "indeterminate",
+    "scope": "author disposition; no nonauthor assessment recorded for this row",
+    "remaining_obligations": [
+     "author-independent comparison of required and permitted decisions, modal force, triggers, scope and exceptions"
+    ]
+   }
+  },
+  {
    "id": "AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude",
    "source_member": "AXIOMATIC_CALCULUS.md",
    "source_anchor": "#ac-008-explicit-latitude",
@@ -821,6 +851,32 @@
     "what_changed": "Binding law unchanged. rc.2 gives the absent-[v] case only the outcome 'incomplete'; the successor makes it refusal(constraint), falsified, and excludes the step-stop reading. What rc.2's 'incomplete' entailed is not in the given text.",
     "counterexample": "Undecided: an F_D application recorded without [v] and later completed by binding [v]. The successor has already returned refusal(constraint), falsified; rc.2's 'incomplete' may have held it open as a pending stop.",
     "smallest_repair": "Supply rc.2's meaning of 'incomplete' for a functor application and the rc.2 result algebra, or record a replacement relation for the refusal(constraint) outcome."
+   }
+  },
+  {
+   "id": "AXIOMATIC_CALCULUS.md#ac-015-functor-classification-incomplete-outcome",
+   "source_member": "AXIOMATIC_CALCULUS.md",
+   "source_anchor": "#ac-015-functor-classification-incomplete-outcome",
+   "identifiers": "",
+   "disposition": "superseded",
+   "disposition_note": "superseded, proposed and pending the product owner's acceptance, by AXIOMATIC_CALCULUS AC-015 with AC-007: an `F_*` application without `[v]` is `refusal(constraint)`, `falsified`, distinct from a step that stops; the rc.2 sentence \"Applying any F_* kind without bracketed traversal identity [v] is incomplete.\" gives the case the outcome incomplete; under Q1, raised by the I5-03 reading (batch 01)",
+   "proposed_replacement": true,
+   "disposition_standing": "author_proposal",
+   "acceptance": "ticket_decision_pending",
+   "predecessor_sha256": null,
+   "successor_loci": [
+    {
+     "locus": "AXIOMATIC_CALCULUS.md#ac-015-functor-classification",
+     "sha256": "a068b7bfd4a73965148bd37c21bade91136cb8db43b690168342c22dc8ec3f08"
+    }
+   ],
+   "modal_conversion": false,
+   "semantic_review": {
+    "result": "indeterminate",
+    "scope": "author disposition; no nonauthor assessment recorded for this row",
+    "remaining_obligations": [
+     "author-independent comparison of required and permitted decisions, modal force, triggers, scope and exceptions"
+    ]
    }
   },
   {
@@ -17844,18 +17900,18 @@
    }
   }
  ],
- "row_count": 648,
- "semantic_sha256": "29dae1708db8c05616dfe871598d79a8cee09b685ac196b20210de8bbdc50080",
+ "row_count": 650,
+ "semantic_sha256": "2595169f8608e2c10e6d969ae0e20a8a1c6d6c73a08a9578829491ef830e4482",
  "counts": {
   "modal_conversion": 125,
   "assessed": 189,
-  "unresolved_predecessor_anchor": 15,
+  "unresolved_predecessor_anchor": 17,
   "unresolved_successor_locus": 0,
-  "proposed_replacement": 18,
+  "proposed_replacement": 20,
   "by_disposition": {
    "conserved": 611,
    "not": 19,
-   "superseded": 18
+   "superseded": 20
   }
  }
 }

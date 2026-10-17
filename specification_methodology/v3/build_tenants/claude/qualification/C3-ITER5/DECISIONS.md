@@ -13,7 +13,7 @@ the reconstruction-return owner (I5-06) and the residual-rival repairs
 
 | Question | Rows | Owner of the replacement | Decision asked |
 |---|---|---|---|
-| Q1 work-result values and the single result algebra | 7 | ACTIVATION §3 Construction availability; FOUNDATIONS §4 Conjunction of results | `incomplete` maps to `falsified` for "a candidate is available"; a planned, unperformed evaluation is a residual; a held result under a failed lock is a gap |
+| Q1 work-result values and the single result algebra | 9 (AXIOMATIC_CALCULUS AC-007's missing-result mapping and AC-015's incomplete outcome added by the I5-03 reading) | ACTIVATION §3 Construction availability; FOUNDATIONS §4 Conjunction of results | `incomplete` maps to `falsified` for "a candidate is available"; a planned, unperformed evaluation is a residual; a held result under a failed lock is a gap |
 | Q2 who adopts a profile | 4 (one added by the I4 reading) | PRODUCT_DEFINITION §7 | only Product authority adopts an available profile; the predecessor's means and steps become the record of that act |
 | Q3 diagnostic order of the Executive | 1 | REFERENCE_FRAME §10 | the eight diagnostic questions in order, specialist-frame inputs verified before question 5 |
 | Q4 who disposes an assessed candidate | 1 | ACTIVATION §3 Disposition | the decision owner disposes; the assessor's recommendation is evidence |
