@@ -23,6 +23,8 @@ Tenant-local duplicate of [T-002](../active/T-002-c3-successor-construction.md) 
 
 ## RC1 continuation
 
+The closed SOURCE and DOMAIN end reviews select a [bounded successor repair](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REPAIR.md): two entry defects plus truthful conservation and residual accounting. RC1-ENTRY owns the three specified carriers; integration follows the representation return. The current complete archive remains the frozen reviewed subject.
+
 RC1-INTEGRATION returns at `763d97073210a9a34808512d6ca65dfead57f495`: documentary source `f1e5ba38`, account `4f209833`, complete package `ea27616b93c80b13ee15a9931cd9114275e5de13`. The [end-review input receipt](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REVIEW_INPUTS.json) binds the three admitted read-only contexts to that package and exact evidence. This is the one consolidated review after the completed increment.
 
 The final construction dependency labels both plugin manifests `3.0.0-rc.1` and rebinds affected identity material under the extended [integration grant](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/BUILD.md#candidate-version-metadata). The [consolidated end review](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/END_REVIEW.md) is admitted on the complete successor freeze; three read-only contexts share the declared USD 18 allowance.
