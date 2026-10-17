@@ -16,9 +16,10 @@ import hashlib, re
 p='a_c/i3/README.md'; s=open(p).read()
 files=['axiomatic-program.json','bindings.json','coverage.json','consumers.json','validation-report.json','logical-constraint-map.json']+[f'projections/{x}' for x in sorted(__import__('os').listdir('a_c/i3/projections')) if x.endswith('.json')]
 rows='\n'.join(f"| `{f}` | `{hashlib.sha256(open('a_c/i3/'+f,'rb').read()).hexdigest()}` |" for f in files)
-new=re.sub(r'(\| File \| SHA-256 \|\n\|---\|---\|\n)(?:\| `[^`]+` \| `[0-9a-f]{64}` \|\n)+', r'\1'+rows+'\n', s, count=1)
-assert new!=s, 'artifact table not found'
-open(p,'w').write(new); print('README artifact table refreshed:', len(files), 'files')
+pat=r'(\| File \| SHA-256 \|\n\|---\|---\|\n)(?:\| `[^`]+` \| `[0-9a-f]{64}` \|\n)+'
+assert re.search(pat, s), 'artifact table not found'
+new=re.sub(pat, r'\1'+rows+'\n', s, count=1)
+open(p,'w').write(new); print('README artifact table', 'refreshed' if new!=s else 'unchanged', len(files), 'files')
 PY
 python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
 python3 -I qualification/C3-ITER4/tools/consumers.py

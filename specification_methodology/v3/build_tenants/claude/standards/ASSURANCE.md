@@ -681,8 +681,7 @@ implementation fragments and then evaluate that self-authored state as if
 it were the Product subject. Where the acquired observation cannot
 separate two admissible subjects on which the assessed predicate takes
 opposite truth values, the frame returns further evidence, a justified
-narrower scope or `indeterminate`; an observation that cannot separate
-subjects on which the predicate agrees decides it. The binding of the
+narrower scope or `indeterminate`. The binding of the
 observation itself needs support
 ([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
 Observation sufficiency) (P1, P6).

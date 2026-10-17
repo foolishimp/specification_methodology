@@ -399,7 +399,7 @@ description of practice: a realisation that takes an avoided shape, or
 forgoes a preferred one, does not conform unless a rule of this profile
 permits that departure and the realisation records the justification the
 rule requires. The permitted departures are those the owning rules state:
-mutable carrier state where it is materially necessary, under §7
+mutable carrier state where it is materially necessary, under §10
 [Immutable carriers](#immutable-carriers), and the failure-carrier
 preference only where practical. Convenience permits no departure (P6,
 P2; the predecessor's "must prefer" and "must avoid", read with the

@@ -1034,7 +1034,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: ASSURANCE.md#10-testing-evidence-composition sha256=e513e1d8e8bb41d96473759401bfa5277cdcc917db59a69213690805ced695dd
+Source: ASSURANCE.md#10-testing-evidence-composition sha256=5ebbcfce5b57bf9e58a73ca8982f2f2a19d6980916c3a176f6c4a2bebf7f8e65
 
 ## 10. Testing evidence composition
 
@@ -1381,7 +1381,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=e513e1d8e8bb41d96473759401bfa5277cdcc917db59a69213690805ced695dd rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
+Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=5ebbcfce5b57bf9e58a73ca8982f2f2a19d6980916c3a176f6c4a2bebf7f8e65 rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
 
 ### Foundation to law: assurance and testing
 
