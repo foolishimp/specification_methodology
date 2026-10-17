@@ -19,3 +19,7 @@ RC1-INTEGRATION transitions from Writer to Git Writer for the exact documentary-
 Source checkpoint: `ed940de64f787d05c919efd1a2c45c5e1ef31685`. The parent froze the closed consumer and planning returns separately at `b2c0381c5ed7901452bc2d020001e98c634032c9`. Its disposition at `b83105aba89c9fe140b7f7f6cce5eb117d274ba5` selects the inverse projection then reciprocal calls, with the documented limits. Writer applied only those groups after exact preimage and source-quote authentication.
 
 RC1-INTEGRATION now transitions to Git Writer for the exact authored-account checkpoint: this integration directory only. It resumes Writer afterward for generation through the unchanged compiler.
+
+Account checkpoint: `1553243d620fc0faf045b17dd98b9ed4ea8cea43`. Existing native generation completed once: 708 determinations, 712 clauses, 732 indexes, two source residuals; validation passed. These counts are observations, not acceptance criteria.
+
+RC1-INTEGRATION transitions to Git Writer for the exact complete-package checkpoint: generated `successor/interpretation/` members and this integration directory only. It resumes Writer for the consolidated changed-scope, package and applicability checks.
