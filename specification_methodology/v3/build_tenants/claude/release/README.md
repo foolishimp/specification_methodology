@@ -1,6 +1,10 @@
 # Release record
 
-This candidate carries no release note. A release note is a release-scoped
+The RC1 release note is [release-note.md](release-note.md), reconciled to the
+freeze commit that holds it; the manifest follows in commit B. The
+paragraphs below record the standing before the cut and stay as history.
+
+Before the cut this candidate carried no release note. A release note is a release-scoped
 surface that is reconciled to the exact RC subject before publication
 ([RELEASE section 6](../standards/RELEASE.md#6-release-scoped-assets-and-the-product-subject)),
 and in a coordinated cohort the release record is frozen with the corpus
@@ -12,8 +16,9 @@ construction.
 Target version and standing. The successor this candidate constructs
 targets version `3.0.0` of the release line, the version the common
 Product names for this construction. The target is a fact about intent:
-no member carries a version label, the plugin manifests carry
-`REPLACE_AT_RC_CUT`, and the label is applied at the RC cut. The candidate
+no member carries a version label; the plugin manifests carried
+`REPLACE_AT_RC_CUT` until the RC cut, where the label `3.0.0-rc.1` was
+applied. The candidate
 is unreleased: no RC has been published, no acceptance is recorded and no
 selector has advanced. A version label alone would establish no released
 status; released standing comes from the acceptance record of

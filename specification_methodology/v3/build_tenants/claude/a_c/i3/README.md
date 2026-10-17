@@ -9,7 +9,7 @@ assurance relations (group G14). It is a partial encoding: read
 
 | Coordinate | Value |
 |---|---|
-| Method subject | the members under `standards/` at the commit the ledger's I5-05 entry names; statements are quoted from those bytes by the build tool, which refuses a quote that does not occur exactly once in its section. This set's source references name heading slugs under `stdo-3://build_tenants/claude/standards/` |
+| Method subject | the members under `standards/` at the RC1 freeze commit the handoff names (refrozen at every member change since I5-05); statements are quoted from those bytes by the build tool, which refuses a quote that does not occur exactly once in its section. This set's source references name heading slugs under `stdo-3://build_tenants/claude/standards/` |
 | Calculus basis | `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md` (`calculus_ref`) |
 | Signature | [SIGNATURE.md](SIGNATURE.md): vocabulary under `urn:stdo-3:claude:i3:vocabulary:` |
 
