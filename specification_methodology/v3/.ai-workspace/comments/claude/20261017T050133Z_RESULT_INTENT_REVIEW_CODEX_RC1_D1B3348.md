@@ -18,12 +18,19 @@ of five construction and assurance situations, and the predecessor's
 obligations are conserved faithfully. Its new Foundations owns the core
 algebra of results, their combination, construction assurance and bounded
 construction, and most rewritten consumers defer to it. It does not deliver
-the Intent's central change: reconstructing the method around shared laws
-so that consumers stop deciding independently. The predecessor's member
-set and 419 of its 687 sections are unchanged. Unchanged predecessor rules
-still decide beside the new owners on reuse, disposition, authority and
-intake, three of them with a different answer. The construction relation's
-owner text drops conditions the specification states.
+the Intent's central change: one shared owner per question, so that
+consumers stop deciding independently.
+
+- Two shared questions are still answered differently by rules beside the
+  new owners: when a recorded result may be reused, and where a
+  constitutional gap re-enters work.
+- Authority has no single owner.
+- Three more questions are restated in their consumers without citing the
+  owner.
+- The construction relation's owner text drops conditions the
+  specification states.
+- Deciding two basic questions from the README means reading 12 separate
+  places.
 
 ## What it delivers
 
@@ -53,41 +60,42 @@ owner text drops conditions the specification states.
 
 ## What it does not deliver
 
-- **Reconstruction around shared laws (Intent, What The Product Is;
-  reduction requirement items 2 and 4).**
-  - The candidate keeps the predecessor's members and names: SPEC_METHOD,
-    STDO_REFERENCE_FRAME_BASELINE, REFERENCE_FRAME_METHOD and the rest.
-  - 419 of 687 sections, 36.6% of section bytes, are identical to rc.2
-    sections. WORLD_MODEL is 70 of 79; DESIGN_MODULE 43 of 64.
-  - Unchanged text cannot cite the new Foundations. The requirement allows
-    unchanged text only "where it carries the relationships". The rival
-    deciders below show where it does not.
-- **Rival deciders.** Eight shared questions were traced across the
-  candidate. Only two have one owner whose consumers defer: what follows
-  when work cannot finish, and how required results combine. Three still
-  carry predecessor rules with a different answer:
+- **One owner per question (reduction requirement items 2 and 4; single
+  ownership).** Eight shared questions were traced across the candidate.
+  Only two have one owner whose consumers defer: what follows when work
+  cannot finish, and how required results combine. Two are still answered
+  differently beside the new owner:
   - Reuse. Foundations: "an applicability relation permits its use for the
     new claim. A changed digest proves neither invalidity nor equivalence."
     Unchanged RF-005, copied into all six task frames: "A stale, advanced,
     ambiguous, or mismatched basis returns `invalid_basis` or requires
     reactivation."
-  - Disposition. Spec owner: "It returns evidence and a proposed semantic
-    disposition. Only the existing decision authority applies that
-    disposition." Unchanged Sprint Execution Boundary: "Close review …
-    classifies each gap, accepts compliant work".
-  - Intake. Spec owner: `requirement_reprice` "re-enters at
-    Requirements"; Foundations: the intake label "supplies neither cause,
-    repair class nor grant". Spec `## Method`: "If constitutional: … write
-    a new Intent, then flow forward"; Ticket Method pairs the `bug` label
-    with change classes.
+  - Intake. Spec owner: `requirement_reprice` applies when
+    "constitutional truth changes while project direction remains stable"
+    and "re-enters at Requirements". Spec `## Method`: "If constitutional:
+    reprice Goals when the current work wave changes, write a new Intent,
+    then flow forward". A requirement-level gap with stable direction
+    re-enters at Requirements under the first and at Intent under the
+    second.
+
+  The reviewer checked the reader's claimed conflicts directly. The reuse
+  pair differs in what it permits: RF-005 allows only `invalid_basis` or
+  reactivation, while Foundations allows reuse through an applicability
+  relation without re-running. The claimed disposition conflict did not
+  hold. The unchanged Sprint Execution Boundary says "Close review …
+  accepts compliant work", but it defers mechanics to Ticket Method, which
+  separates the decision "made under the sprint's bound mandate" from the
+  assessment; the sentence blurs the two acts without contradicting the
+  owner. Ticket Method's `bug` pairings are "Common pairings",
+  descriptive rather than a rule that the label selects the class.
 
   Authority has no single owner: at least five loci decide it
   independently, each over a different list of things that cannot confer
-  it. Independence of review and result values are restated without the
-  owner, with compatible answers.
+  it. Disposition, independence of review and result values are restated
+  without citing the owner, with compatible answers.
 - **Simpler to determine and apply.** To decide which result values apply
-  and who disposes a candidate, an actor from the README must read and
-  reconcile 12 distinct loci, or 19 when the executive profile is adopted.
+  and who disposes a candidate, an actor from the README must read 12
+  distinct loci, or 19 when the executive profile is adopted.
   Each traced scenario cost 31 to 50 KB over 7 to 12 hops. Every frame
   repeats the same 17.8 KB of result algebra and conjunction, and two frames
   matching their task lack the deciding clause, which sits one link away
@@ -125,12 +133,12 @@ owner text drops conditions the specification states.
 | E11 | observation and necessary conditions | delivered |
 | E12 | reference frames | partly: scoped frames, but heavy, repeated, and missing deciding clauses they need |
 | E13 | configuration | delivered (limited evidence) |
-| E14 | produce, check, accept | partly: owner delivered; Sprint Execution Boundary accepts in review |
+| E14 | produce, check, accept | delivered; one unchanged summary blurs assessment and acceptance but defers to the owner |
 | E15 | standalone | delivered |
 | E16 | tiers | partly: new Foundations and Transformation Library beside the predecessor member set |
 | E17 | foundation to law | partly: own families argued; inherited rules not, in the text |
-| E18 | reduction | partly: results and their combination contracted; reuse, disposition, authority and intake not |
-| E19 | single ownership | partly: authority has no single owner; three conflicting restatements |
+| E18 | reduction | partly: results, their combination and stops contracted; reuse, intake and authority not |
+| E19 | single ownership | partly: authority has no single owner; two conflicting restatements |
 | E20 | single result algebra | delivered with two defects |
 | E21 | pillars | partly: cited per family row (limited evidence) |
 | E22 | ownership and use | partly: rewritten consumers apply the shared contracts; unchanged ones do not |
@@ -143,6 +151,18 @@ owner text drops conditions the specification states.
 | E29 | conservation | delivered |
 | E30 | no needless additions | partly: three added binding rules at the construction owner |
 
+## Retention, as a reading map only
+
+The candidate keeps the predecessor's members and names (SPEC_METHOD,
+STDO_REFERENCE_FRAME_BASELINE, REFERENCE_FRAME_METHOD and the rest), and
+419 of its 687 sections, 36.6% of section bytes, are identical to rc.2
+sections; WORLD_MODEL is 70 of 79. The Claude candidate has 0 identical
+sections. Neither figure is a finding: the specification permits
+unchanged text "when those relationships hold" and says "the share of text
+rewritten is not evidence that a relationship holds". The figure served
+only to locate where predecessor rules sit unchanged beside the new
+owners, which the rival-decider test then examined.
+
 ## Limits and fairness
 
 Two fresh-context Fable readers did the deep reads, one at a time: 261,607
@@ -152,6 +172,7 @@ were run on both candidates. The rival-decider and walkthrough tests were
 run on Codex only, so they do not compare the two lines. The same two
 tests can be run blind on the Claude candidate at about the same cost.
 Rival deciders were found by keyword search, so a rival written in other
-words could have been missed. Not read: the interpretation, the authority
+words could have been missed. The reviewer checked the three claimed
+conflicts directly; one did not hold. Not read: the interpretation, the authority
 compressions, templates and schemas, and most of UX, WORLD_MODEL, POSTING
 and WRITING. No acceptance follows; the choice is the product owner's.
