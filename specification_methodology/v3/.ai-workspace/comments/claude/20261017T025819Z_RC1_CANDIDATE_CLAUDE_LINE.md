@@ -35,3 +35,5 @@ repairs, and tests 2 and 3 of the blind read. Their results are posted
 here as they close; findings may lead to candidate 2 on the same line.
 
 Correction (same session, after the freeze): the unread conserved rows number 471 by `frontier/REVIEW.json`, not 505; commit A is unchanged and the error is disclosed in the ledger and handoff.
+
+Owner scoping (same session, verbatim): "im going to put those out of scope as they can be done by any llm, i's after the baseline STDO V3". Out of scope for this candidate as the baseline: complete interpretation coverage, the remaining actual-use expectation sets, and the authority compressions with their projections; follow-on work on the baseline.
