@@ -23,3 +23,14 @@ row identity and updates the selected policy and source pin. Combined
 reconciliation of both patches passes in memory against all 52 authenticated
 source paths (709 rows, 21 direct updates); the two consumers use the current
 pin and no old pin remains. The normal frozen account operation follows.
+
+Native generation passed on the first compiled subject (709 determinations,
+713 clauses, 733 indexes, five residuals). Conservation completion then refused
+`SPEC_METHOD.md#constitutional-change-class`, a nonexistent nested replacement
+route also found independently by the Reviewer. The earlier Writer check had
+resolved top-level carrying routes, not the nested replacement list. The
+corrected authored input selects the existing Universal Intake Triage owner.
+The combined twelve updates now resolve all 95 route occurrences. The existing
+phase adapter binds authored conservation input to the source coordinate, so
+account and generation are rebound to the corrected input checkpoint; source
+rendering and source-semantic review are reused on identical documentary bytes.
