@@ -22,4 +22,7 @@ print('common rows',len(ck),'tenant rows',len(tk))
 missing=[k for k in cc if tc[k]<cc[k]]
 extra=[(n,k) for n,k in tenant if tc[k]>cc.get(k,0)]
 print('missing from tenant',len(missing),missing[:5])
-print('tenant-only rows',len(extra)); [print(' ',n,k) for n,k in extra[:10]]
+dup=[(n,k) for n,k in extra if k in cc]
+print('tenant-only rows',len(extra)-len(dup)); [print(' ',n,k) for n,k in extra[:10] if k not in cc]
+print('duplicated common rows',len(dup),dup[:5])
+sys.exit(1 if missing or dup else 0)  # a common row missing or present twice fails the check

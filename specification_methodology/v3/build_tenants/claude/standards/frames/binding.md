@@ -51,7 +51,7 @@ Routes, in order:
 
 Size of this frame: 99846 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07
 
 ## 11. Build-tenant binding
 
@@ -249,7 +249,7 @@ behave identically outside the contract, which is new in that member.
 The rest of this section is new in this corpus.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -1262,7 +1262,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
@@ -1298,7 +1298,7 @@ step's results and its use of the tenant's binding. §12 records
 dispositions and decides nothing.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

@@ -67,6 +67,7 @@ o3 = os.path.join(SP, 'proj', 'dropped.json'); rc, so, se = run(['project', '--p
 ix0 = fi0['uri'].rsplit(':', 1)[-1]; f0 = f'a_c/i3/projections/projection-{ix0}-materialized.json'
 base = os.path.join(SP, 'proj', f'projection-{ix0}-materialized.json')  # the fresh positive projection of the same index
 ctl('project-adverse-dropped-clause', 'a program with one clause dropped from a frame index validates, and its projection differs from the fresh positive projection of that index (the passing baseline), and from the frozen one', st3 == 'valid' and os.path.exists(o3) and os.path.exists(base) and sha(o3) != sha(base) and sha(o3) != sha(f0), {'dropped': dropped, 'exit': rc, 'validate_status': st3, 'baseline_exists': os.path.exists(base), 'differs_from_fresh': os.path.exists(o3) and os.path.exists(base) and sha(o3) != sha(base), 'stderr': se[-160:]})
+if FORCE_FAIL and FORCE_FAIL not in {c['control'] for c in rec['controls']}: sys.exit(f'refusal: AC_CONTROLS_FORCE_FAIL names no control: {FORCE_FAIL}')
 rec['elapsed_seconds'] = round(time.time() - t0, 1); rec['holds_all'] = all(c['holds'] for c in rec['controls'])
 json.dump(rec, open(sys.argv[2] if len(sys.argv) > 2 else 'qualification/C3-ITER5/returns/ac_controls.json', 'w'), indent=1)
 for c in rec['controls']: print(('HOLDS ' if c['holds'] else 'FAILS '), c['control'], json.dumps(c['detail'])[:200])

@@ -379,10 +379,12 @@ recreating unchanged accepted views ([DESIGN_MODULE](DESIGN_MODULE.md)).
 ### Renewal path
 
 Intent is not only top-down. The full homeostatic cycle includes a reverse
-path where real use cases generate new intent (P2; rc.2 #renewal-path):
+path, from real use cases back into the chain, that generates new goals or
+intent where a use case changes the work wave, direction or scope (P2;
+rc.2 #renewal-path):
 
 ```text
-current specification → real-world use case → gap analysis → new goals or intent
+current specification → real-world use case → gap analysis → re-entry at the layer its change class names
 ```
 
 The generative rule: a real use case (scenario, deployment, external review)
@@ -390,13 +392,12 @@ hits the current model; gap analysis identifies what the constitution cannot
 express; if the gap is constitutional, not merely a missing implementation,
 it re-enters at the layer its [change class](#change-classes) names, and
 new goals or intent are written where it changes the work wave, direction
-or scope; the repriced surface then flows forward through the chain from
-that layer, product to requirements to design to code. New intents
-emerge from repeated, real use-case pressure against the current model, not
-from abstract speculation; the gap is concrete before it becomes intent. Ad
-hoc coding pressure does not generate intent; explicit gap analysis does.
-This is how the system stays alive instead of becoming a frozen
-constitution.
+or scope; the repriced surface then flows forward through the layers that
+class lists. New intents emerge from repeated, real use-case pressure
+against the current model, not from abstract speculation; a gap becomes
+intent only once it is concrete. Ad hoc coding pressure does not generate
+intent; explicit gap analysis does. This is how the system stays alive
+instead of becoming a frozen constitution.
 
 The flow is not a one-pass waterfall computation; it is cumulative
 iteration: requirements and design are refined over time; code is
@@ -603,8 +604,9 @@ A requirement treated as a product feature when it is a guarantee,
 governance rule or verification obligation is misclassified. A live
 constitutional artifact corrected by in-place mutation rather than
 supersession or withdrawal has corrupted constitutional history. A real use
-case that reveals a gap not expressible in current requirements needs a new
-intent, not a code hack.
+case that reveals a gap not expressible in current requirements needs
+re-entry at the layer its [change class](#change-classes) names,
+Requirements or upstream, not a code hack.
 
 ### Live surface immutability
 
@@ -2047,11 +2049,11 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #requirement-categories | conserved | §2 Requirement categories and classification |
 | #reconstruction-litmus | conserved; the generic law in EVALUATION §6, the five layer derivations and diagnoses here | EVALUATION §6; §2 Reconstruction litmus |
 | #design-rule | conserved; a tenant's choice is named as its execution binding of §11 | §2 Design rule |
-| #renewal-path | superseded in its generative rule, proposed and pending the product owner's acceptance: a constitutional gap re-enters at the layer its change class names (§4 Change classes), new goals or intent being written where it changes the work wave, direction or scope, where rc.2 wrote new goals or intent for every constitutional gap; the rest conserved | §2 Renewal path |
+| #renewal-path | superseded in its opening, diagram and generative rule, proposed and pending the product owner's acceptance: a constitutional gap re-enters at the layer its change class names (§4 Change classes) and flows forward through the layers that class lists, new goals or intent being written where it changes the work wave, direction or scope, where rc.2 wrote new goals or intent for every constitutional gap; the rest conserved | §2 Renewal path |
 | #trace-closure-and-anti-drift-rule | conserved | §2 Trace closure and anti-drift |
 | #ownership | conserved | §2 Trace closure and anti-drift, Ownership |
 | #downstream-closure | conserved | §2 Trace closure and anti-drift, Downstream closure |
-| #drift-signals | conserved; all ten signals | §2 Trace closure and anti-drift, Drift signals |
+| #drift-signals | superseded in its tenth signal, proposed and pending the product owner's acceptance: a gap not expressible in current requirements re-enters at the layer its change class names (§4 Change classes), Requirements or upstream, where rc.2 required a new intent; the other nine signals conserved | §2 Trace closure and anti-drift, Drift signals |
 | #live-surface-immutability | conserved | §2 Live surface immutability |
 | #fundamental-migration-rule | conserved; for an inherited requirement the four classes of inherited constitutional material are stated as the legacy classifications of §2, adopted being Active, so that one requirement is classified once; their relation to the successor dispositions of RELEASE §9 is stated (both new, with their purpose stated where they are written) | §7 Fundamental migration |
 | #transformation-wave-rule | conserved | §7 Transformation wave |

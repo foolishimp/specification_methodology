@@ -3,7 +3,7 @@ and the sections of this candidate that cite that owner. support is `cites` when
 derived from a link; `required`/`conditional` only where a_c/i3/consumer_readings.json
 records a reader's judgment. Run from the tenant root with python3 -I.
 """
-import glob, hashlib, json, os, re
+import glob, hashlib, json, os, re, sys
 def slug(h): return re.sub(r'[^\w\- ]', '', h.strip().lower().replace('`', '')).replace(' ', '-')
 def sections(path):
     out, seen, cur, buf, code = {}, {}, None, [], False
@@ -47,3 +47,4 @@ out = {'kind': 'claude-i3-consumers', 'schema_version': 1, 'units': units,
                   'clauses_without_consumer': sum(1 for u in units if not u['consumers']),
                   'read_support': sum(1 for u in units for x in u['consumers'] if x['support'] != 'cites')}}
 json.dump(out, open('a_c/i3/consumers.json', 'w'), indent=1); print(json.dumps(out['counts']))
+sys.exit(1 if out['counts']['owners_unresolved'] else 0)  # a clause whose owner locus does not resolve fails the step

@@ -61,3 +61,5 @@ json.dump(rec, open('release/INSTALL_CHECK.json', 'w'), indent=1)
 print(json.dumps({k: (v if not isinstance(v, list) else len(v)) for k, v in rec.items() if k != 'bootstrap_inputs'}), json.dumps(boot)[:700])
 for r, t in outside: print('OUTSIDE', r, t)
 for r, t in bad_anchor: print('ANCHOR', r, t)
+fail = bool(bad_anchor) or boot.get('schema_is_valid_json_schema') is not True or any(not v.get('present') or v.get('parses') is not True for k, v in boot.items() if k.startswith('standards/'))
+sys.exit(1 if fail else 0)  # a missing anchor or an absent, unparseable or invalid bootstrap input fails the check

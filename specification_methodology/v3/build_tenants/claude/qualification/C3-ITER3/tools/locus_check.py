@@ -3,6 +3,7 @@
 Usage, from the tenant root: python3 -I qualification/C3-ITER3/tools/locus_check.py
 """
 import glob
+import sys
 import os
 import re
 
@@ -37,3 +38,4 @@ for n, line in enumerate(open('frontier/PREDECESSOR_CLAIMS.md', encoding='utf-8'
             bad += 1
             print('BAD', n, m.group(0)[:80])
 print('loci', tot, 'bad', bad)
+sys.exit(1 if bad else 0)  # an unresolved locus fails the check

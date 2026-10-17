@@ -19,7 +19,9 @@ for f in files:
             n=seen.get(s,0); seen[s]=n+1
             a.add(s if n==0 else f'{s}-{n}')
     anch[os.path.abspath(f)]=a
-bad=0
+# Known false positives, as exact (file relative to the root, target) pairs: `X_v` is notation, not a link.
+KNOWN={('AXIOMATIC_CALCULUS.md','X_v'),('frames/ac-task-a.md','X_v')}
+bad=0; known=0
 for f in files:
     txt=open(f,encoding='utf-8').read()
     for m in re.finditer(r'\]\(([^)\s]+)\)',txt):
@@ -28,7 +30,9 @@ for f in files:
         p,_,frag=t.partition('#')
         tgt=os.path.abspath(os.path.join(os.path.dirname(f),p)) if p else os.path.abspath(f)
         if not os.path.exists(tgt):
+            if (os.path.relpath(f,root),t) in KNOWN: print('KNOWN',os.path.relpath(f,root),t); known+=1; continue
             print('MISSING',os.path.relpath(f,root),t); bad+=1; continue
         if frag and tgt.endswith('.md') and frag not in anch.get(tgt,set()):
             print('ANCHOR',os.path.relpath(f,root),t); bad+=1
-print('bad',bad)
+print('bad',bad,'known false positives',known)
+sys.exit(1 if bad else 0)  # a broken link or anchor fails the check

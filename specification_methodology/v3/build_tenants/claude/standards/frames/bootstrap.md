@@ -50,7 +50,7 @@ Routes, in order:
 
 Size of this frame: 86163 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909
+Source: SPEC_METHOD.md#canonical-statement sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07
 
 ### Canonical statement
 
@@ -1104,7 +1104,7 @@ global context, universal completeness or domain authority inferred from
 adopting the member. §15 records dispositions and decides nothing.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=314a7e42e3162bd7739fe0eeffabfda2bdb5ef0075c9526c9c846dc3755bb909 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 

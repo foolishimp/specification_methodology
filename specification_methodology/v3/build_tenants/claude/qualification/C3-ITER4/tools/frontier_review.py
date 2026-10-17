@@ -90,3 +90,27 @@ out = {'kind': 'claude-frontier-review', 'schema_version': 1, 'rows': rows, 'row
                   'unresolved_predecessor_anchor': unres_pred, 'unresolved_successor_locus': unres_succ,
                   'proposed_replacement': sum(r['proposed_replacement'] for r in rows), 'by_disposition': {d: sum(1 for r in rows if r['disposition'] == d) for d in sorted({r['disposition'] for r in rows})}}}
 json.dump(out, open('frontier/REVIEW.json', 'w'), indent=1); print(json.dumps(out['counts']), 'rows', len(rows))
+# Known unresolved predecessor anchors, as exact row ids: clause-split child rows, whose anchor names a clause, not a
+# heading, and two common-frontier UX anchors without the double hyphen that an rc.2 em-dash heading slugs to.
+KNOWN_UNRESOLVED = {
+    'AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal-missing-result',
+    'AXIOMATIC_CALCULUS.md#ac-015-functor-classification-incomplete-outcome',
+    'SPEC_METHOD.md#proportional-disposition-returning-party',
+    'STDO_REFERENCE_FRAME_BASELINE.md#3-worker-returns-to-executive-mapping',
+    'STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression-adoption-authority',
+    'STDO_REFERENCE_FRAME_BASELINE.md#closure-condition-4-mapping',
+    'STDO_REFERENCE_FRAME_BASELINE.md#define-a-project-configuration-allocation-explanation',
+    'STDO_REFERENCE_FRAME_BASELINE.md#derived-generic-specialist-frame-set-seam-result',
+    'STDO_REFERENCE_FRAME_BASELINE.md#derived-worker-frame-result',
+    'STDO_REFERENCE_FRAME_BASELINE.md#executive-drift-locks-stale-held-result',
+    'STDO_REFERENCE_FRAME_BASELINE.md#missing-frame-and-re-entry-application-order',
+    'STDO_REFERENCE_FRAME_BASELINE.md#profile-qualification-obligation-5',
+    'STDO_REFERENCE_FRAME_BASELINE.md#status-and-authority-boundary-ownership',
+    'STDO_REFERENCE_FRAME_BASELINE.md#work-result-disjointness-and-incomplete-pairing',
+    'TRAVERSAL_OCCURRENCE_PROFILE.md#closed-profile-signature-fourteen-members',
+    'UX_METHOD.md#4-process-model-elm-architecture',
+    'UX_METHOD.md#8-ux-twin-of-odd-115a-view-does-not-own-continuation',
+}
+unknown = [r['id'] for r in rows if r['predecessor_sha256'] is None and r['id'] not in KNOWN_UNRESOLVED]
+if unknown: print('unexplained unresolved predecessor anchors', unknown)
+sys.exit(1 if unknown or unres_succ else 0)  # an unexplained predecessor anchor or an unresolved successor locus fails the build
