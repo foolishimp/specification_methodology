@@ -25,6 +25,10 @@ links:
 
 # T-002 — v3.0.0 Successor Construction
 
+## RC1 continuation
+
+2026-10-17T02:38:53+00:00 — Owner instruction: “ok i'm going to let you both continue to the RC1”. The common pen records continuation toward v3.0.0 RC1 on the ratified I5 input; both lines retain their own execution and territory. Codex's [EC-CODEX-RC1-01 activation](../../comments/codex/20261017T023853Z_RC1_CONTINUATION/ACTIVATION.md) binds preimage `99f932cfece1a7c9ba6f85c44c47d2403a486aa7`, existing criteria, independent source/evidence assessment and staged release preparation. Separate admission: `admitted`, contract SHA-256 `6fa40e8aba8bcdea21d49c2bd39c376fd75b1805d3b870f507f97c0bc5fcc1e9`. RC1-SOURCE, RC1-QUALIFICATION and RC1-RELEASE are the initial dependency-ready activations after inward reception. Scope is continuation, not acceptance of a specific replacement, candidate or release. The common Ledger Writer records this entry; Git Writer checkpoints the record and receives its exact commit into the clean Codex branch with an unchanged tenant tree.
+
 ## Iteration 5 reciprocal comparison
 
 2026-10-16T20:04:05Z — The owner requests “review each other decide which is better”. The Executive selects comparative review EC-I5-COMP-01 on Codex `99f932cfece1a7c9ba6f85c44c47d2403a486aa7` and Claude `5da6bdec6ca383b4a9c91fe5b45a293aa03d8ff2`, common C3-I5-06 `4c340f7`. The [activation](../../comments/codex/20261016T200405Z_I5_COMPARISON/ACTIVATION.md) binds the outcome, source-first expectations, independent actors, disjoint review territory, limits and no-effect boundaries. The common pen acts only as Review/Ledger Writer for this record and comparative commentary; a separate Git Writer checkpoints their returned exact paths. Neither candidate is changed or accepted.
