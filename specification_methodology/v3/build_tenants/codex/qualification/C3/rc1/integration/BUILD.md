@@ -33,3 +33,5 @@ First-package successful check receipts are frozen at `ba547177d7c9f2977fd48fa02
 RC1-INTEGRATION transitions Writer to Git Writer for the metadata documentary checkpoint: the two exact manifest paths and integration support only. It then resumes Writer for authenticated account rebinding.
 
 Metadata source checkpoint: `f1e5ba38c338fd7a1e5fcc3e7cdfbb5abee718b3`. Account rebinding authenticated complete documentary membership and all owner/support member bytes. All 708 authored rows and semantic projection are exact unchanged. RC1-INTEGRATION transitions Writer to Git Writer for this account/support-only checkpoint, then resumes Writer for required current generation and focused binding validation.
+
+Metadata account checkpoint: `4f20983396c5ead2c2bff51a5df0ffc4bc5573ab`. Required native generation validated the successor: 708 determinations, 712 clauses, 732 indexes, two residuals. RC1-INTEGRATION transitions Writer to Git Writer for the final package checkpoint, staging generated interpretation and integration support only. It resumes Writer for the one metadata/binding delta check and final return.
