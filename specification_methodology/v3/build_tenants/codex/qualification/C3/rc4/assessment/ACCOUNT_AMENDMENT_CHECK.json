@@ -1,0 +1,39 @@
+{
+  "kind": "rc4_assessment_combined_account_readback",
+  "source_commit": "5e87b0f7e6e1bd736cb7e3ae667e60b241a92c1c",
+  "prior_source_commit": "ebc35652d0cc2adc2b984123ef47c0b869405eb4",
+  "prior_account_commit": "ca885ae93d08df5fb1a3b3af443e928345e21f62",
+  "prior_account_sha256": "fff4319db631661865f7afe3701a5d19e8846c435ddf2ffc2c43ca4dd7544c74",
+  "inputs_sha256": "ea93b57f195f9bbe278c8cd7a89b0efc6fed242937cf86222965b7d8cbbc7513",
+  "patches": [
+    {
+      "path": "qualification/C3/rc4/intake/ACCOUNT_PATCH.json",
+      "sha256": "2f5f2ca21b9caf8353d5476c88bb993bbb86dc3698c108813becc866fb0a27a0",
+      "standing": "working amendment overlay for assessment; other selected patch unchanged"
+    },
+    {
+      "path": "qualification/C3/rc4/assessment/ACCOUNT_PATCH.json",
+      "sha256": "2a9cf9463076d20e378b88a3606996b5e53ab3c985d6a633f87559ec3c44f507",
+      "standing": "working amendment overlay for assessment; other selected patch unchanged"
+    }
+  ],
+  "result": "passed",
+  "rows": 709,
+  "authored_updates": 21,
+  "source_paths": 52,
+  "documentary_inventory": 81,
+  "exact_inverse": true,
+  "changed_argument_row_consumers": [
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "path": "/definition/source_family_arguments/5"
+    },
+    {
+      "id": "FOUNDATIONS.independent-assessment",
+      "path": "/argument/source_family_arguments/0"
+    }
+  ],
+  "stale_argument_row_consumers": [],
+  "check_boundary": "Both explicit patches and current RC4 INPUTS reconciled in memory against all authenticated documentary source paths. No parent integration output was written; no generated package, semantic fidelity, acceptance or release verdict follows.",
+  "timestamp": "2026-10-17T13:03:37.475026+00:00"
+}
