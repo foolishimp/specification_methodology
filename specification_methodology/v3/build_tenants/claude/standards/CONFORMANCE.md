@@ -233,6 +233,48 @@ logical-review check is recorded for this revision: each is a planned
 assessment without a closed result until a review records it
 ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed).
 
+### Universal-construction and assurance discriminators
+
+The governing specification adds, beside the member discriminators above,
+nine universal-construction discriminators and twelve assurance
+discriminators, assessed under criterion 5 within a member's declared
+responsibility. Each is numbered UC-n or AS-n in the order the governing
+specification lists it. A logical-review check L-UCn or L-ASn is a planned
+assessment without a closed result until a review records it; a case is
+exercised only when it has been run and assessed; the finite oracle named
+for three of them is mechanical evidence on a finite model and establishes
+neither fidelity nor semantic conformance
+([EVALUATION §2](EVALUATION.md#2-separation)).
+
+| No. | Discriminator | Member sections | Exercised by |
+|---|---|---|---|
+| UC-1 | Internal tasks pass while a required end-to-end feature fails | ACTIVATION §1 Composition boundaries; FOUNDATIONS §4 Preservation through construction; EVALUATION §1 | L-UC1 |
+| UC-2 | Every selected operation is lawful but the result fails the chosen outcome constraints | ACTIVATION §1 Binding A and Z (lawfulness establishes neither delivery nor optimality); SPEC_METHOD §11 | L-UC2 |
+| UC-3 | A report called a bug could concern implementation, requirements or missing observations | ACTIVATION §1 Feedback and diagnosis; SPEC_METHOD §4 Universal intake triage | L-UC3 |
+| UC-4 | A requirement is weakened until the current realisation passes | ACTIVATION §1 Transitions, Destination change, and Evaluation and completion; SPEC_METHOD §4 change classes; FOUNDATIONS §4 Parallel derivation and mutual assurance (corrections preserve counterexamples) | L-UC4 |
+| UC-5 | A predictive model agrees with observations while the required outcome is absent, or predicts incorrectly while the outcome holds | ACTIVATION §1 Three accounts of the subject; Feedback and diagnosis | L-UC5 |
+| UC-6 | A strategy is selected solely by its name, or a cheaper plan loses required assurance | ACTIVATION §1 Strategy; FOUNDATIONS §4 Quantified assurance (no waiver by a cheaper plan); EXECUTIVE_BASELINE Steel-thread delivery | L-UC6 |
+| UC-7 | Every recursive step preserves an invariant but the process does not deliver | ACTIVATION §1 Preservation, progress and completion; FOUNDATIONS §3 Construction synthesis | L-UC7 |
+| UC-8 | A limit is exhausted, an observation exposes more work, or an ongoing maintenance loop continues | ACTIVATION §1 Preservation, progress and completion, and Transitions (Stops); ACTIVATION §6 | L-UC8 |
+| UC-9 | A restart or later disturbance contradicts a cached successful result | ACTIVATION §5 The workspace and an actor's account; ACTIVATION §7; case CD-03 | CD-03 (not run); L-UC9 |
+| AS-1 | Every local check passes, but a postcondition does not establish the next precondition or the final property does not imply Z | FOUNDATIONS §4 Preservation through construction | L-AS1 |
+| AS-2 | A histogram has the right keys but incorrect counts; a key-only test passes | FOUNDATIONS §4 Assertions and observation (a check of a necessary condition); case AR-01 | AR-01 (not run); L-AS2 |
+| AS-3 | Two admissible states have identical acquired observations but opposite truth values for the asserted obligation | FOUNDATIONS §4 Assertions and observation, Observation sufficiency; case AR-02; the finite oracle instance `assurance` | AR-02 (not run); the finite oracle (mechanical); L-AS3 |
+| AS-4 | A test copies its expected answer from the implementation and cites the requirement's digest | FOUNDATIONS §4 Parallel derivation and mutual assurance (an implementation-derived decision supplies no independent justification) | L-AS4 |
+| AS-5 | A human or probabilistic checker can soundly return satisfied or indeterminate on the same observations | FOUNDATIONS §4 Assertions and observation (a universal soundness claim covers all admitted conclusions) | L-AS5 |
+| AS-6 | Two implementations or reviewers agree through the same wrong interpretation, fixture or received contribution | FOUNDATIONS §4 Parallel derivation and mutual assurance; case AR-03 | AR-03 (not run); L-AS6 |
+| AS-7 | Miss rates are multiplied without conditional independence, or an injected-defect score is reported as whole-product correctness probability | FOUNDATIONS §4 Quantified assurance; the finite oracle instance `assurance` | the finite oracle (mechanical); L-AS7 |
+| AS-8 | Finite successful examples or a schema-valid formula are called a proof of a universal preservation law | FOUNDATIONS §4 Formal representation; AXIOMATIC_CALCULUS §9 Constraint surfaces, condition 1 | L-AS8 |
+| AS-9 | A governing requirement changes but expected answers and acceptance evidence are silently retained | FOUNDATIONS §4 Change impact and evidence reuse; ACTIVATION §7; case AR-04 | AR-04 (performed once by the author); L-AS9 |
+| AS-10 | An implementation or environment dependency changes but the only selection relation is requirement-to-test provenance | FOUNDATIONS §4 Change impact and evidence reuse (a requirements-to-test link is no impact model); the finite oracle instance `assurance` | the finite oracle (mechanical); L-AS10 |
+| AS-11 | A local repair has supported isolation from an unchanged obligation and its evidence conditions | FOUNDATIONS §4 Change impact and evidence reuse (retention) | L-AS11 |
+| AS-12 | Selection is cheap but omits a material obligation, or selection overhead exceeds the saved execution | FOUNDATIONS §4 Change impact and evidence reuse (cost); FOUNDATIONS §4 Quantified assurance | L-AS12 |
+
+Coverage of these 21: four are mapped to cases (AR-01, AR-02, AR-03,
+CD-03, none run; AR-04 performed once by the author), three to the finite
+oracle beside their logical review, and all 21 to a logical-review check;
+no logical-review check is recorded for this revision.
+
 Purpose and material relation: a reader sees, for each discriminator,
 whether actual use or only a reasoned reading exercises it and which
 sections it reads, so a discriminator mapped to a case that has not been

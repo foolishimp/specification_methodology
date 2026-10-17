@@ -17,7 +17,11 @@ F_P and F_H are tier-1 calculus terms owned by AXIOMATIC_CALCULUS §5, and
 "module" is a generic term, as the predecessor's generic testing law uses
 it; neither is restricted here. A profile may bind a core mechanism to one of these;
 the binding is declared in the profile with its direction, preserved
-meaning, narrowed scope and invalidation. The declared-binding rule is new
+meaning, narrowed scope and invalidation. In this member "binding" means
+that declared binding of a core mechanism; a Product's adoption binding is
+[PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)'s,
+and a carrier binding to a typed contract is [UX §7](UX.md#7-carrier-binding)'s;
+the three are not interchanged. The declared-binding rule is new
 (P0 boundary, P1); its shape follows ODD's specialisations of F_P and F_H,
 which [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute) owns in
 the graph-native context and carries as their provenance; the

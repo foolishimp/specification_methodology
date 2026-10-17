@@ -1470,6 +1470,7 @@ that decision is recorded.
 | TO1 | Frames carry family tables (premises, pillar contributions) and result maps, which raises M4a and M4b | M3 falls on the same path, or G gains a premise or map an actor needs, and the increase is disclosed against both baselines |
 | TO2 | Generic law moves to a tier-1 owner, so a path needs owner plus binding (M5 up) where the predecessor's profile restated the rule locally | M2 or M3 falls on the same path |
 | TO3 | Refinement maps carry the domain outcome beside the core value, which adds text per value | required by the single result algebra requirement item 4; disclosed |
+| TO4 | The entry README routes by task (its Routes and Documents tables), which raised the entry's M4a from 2,330 to 28,087 bytes against rc.2 | on a traced path M5, M2 or M3 falls against rc.2 and the route reaches the owner without a search; declared at I5-07 before the iteration 5 traces, so the rule can apply it; the iteration 4 traces, measured before this declaration, keep their `indeterminate` verdicts |
 
 Expected adverse, declared before measurement: on the frame-entry
 measure, M4a on DP-01, DP-03, DP-04 and DP-08 against S1 (TO1); M5 on DP-01 and DP-03 against S0

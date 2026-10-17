@@ -25,7 +25,10 @@ PREDICATE = ('On the declared domain, the encoded conjunction rule meets propert
 
 # Line numbers cited below are those of standards/FOUNDATIONS.md at 8b42994;
 # the run refuses if either bound FOUNDATIONS section has changed.
-# Re-declared in I3-3i after review: requirement item 2 now says "No evaluation
+# Re-declared at I5-07 (iteration 5): the common single result algebra requirement is the ratified C3-I5-06 text
+# (4c340f7), whose items 2 and 3 still state the sentences P0 and P4 rest on; the Results section gained its consumers paragraph at I5-02 and
+# the Foundation to law format its Consumers rule; the rule paragraphs this oracle cites are unchanged,
+# checked by diff of the section bodies without those paragraphs. Earlier: re-declared in I3-3i after review: requirement item 2 now says "No evaluation
 # or decision outcome exists outside the core" and adds explicit conditions;
 # P0 still follows from it, and P4 rests on item 3, unchanged. The new
 # lifecycle paragraph concerns recorded states, outside this domain. In
@@ -36,13 +39,13 @@ ORACLE_SOURCES = [
     {
         'path': '../../specification/requirements/README.md',
         'sections': {
-            'single-result-algebra-requirement': 'f485ce8d400b9114a5e82f948a0d5057dee64fb3f4deb004f7d79d7fbfdfe82c',
+            'single-result-algebra-requirement': '13217dd601d753bb57c47d972456f90627691e14acd32dba5cf28228febb4e99',
         },
     },
     {
         'path': 'standards/FOUNDATIONS.md',
         'sections': {
-            'results': '2e020cbfbfa3c93ecb27a098e62cc26225a0d9bd7598e4c405c4110dd9d11e26',
+            'results': 'cd0edadfc9ea14804984eade0a7e3f77a584932eee3dd0cf082052b4017bd12f',
             'conjunction-of-results': 'e426656616cd9c3909ea2bd54afa8c7eaf7b78159ea9300cf599c4cb94a37766',
         },
     },

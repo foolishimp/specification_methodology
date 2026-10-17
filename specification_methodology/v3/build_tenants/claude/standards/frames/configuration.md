@@ -6,8 +6,8 @@ Purpose: The owning sections for transitions, intake, configuration with its opt
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=bc0ebe0e4702d1593552df86bd4df5619acdb89825940bdfd7023568349b9fac spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=999878fc125b35047cadc804e7a904d7c1095a7669a28f05c55d690642397d17 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -60,7 +60,7 @@ Routes, in order:
 
 Size of this frame: 144806 bytes.
 
-Source: ACTIVATION.md#transitions sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#transitions sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Transitions
 
@@ -146,7 +146,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. This account is new in this corpus.
 
 
-Source: ACTIVATION.md#intake sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#intake sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Intake
 
@@ -190,7 +190,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#configuration sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#configuration sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Configuration
 
@@ -316,7 +316,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. This law is new in this corpus.
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#roles-and-delegation sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Roles and delegation
 
@@ -394,7 +394,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ## 2. Context construction under an envelope
 
@@ -632,7 +632,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ## 7. Closed result and reuse
 
@@ -725,7 +725,7 @@ the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
 
-Source: ACTIVATION.md#construction-availability sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#construction-availability sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Construction availability
 
@@ -776,7 +776,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4
+Source: ACTIVATION.md#effects sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
 
 ### Effects
 
@@ -1105,7 +1105,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=cd35f60c5db379225824da5d39cfbc4832b0b4adda1416e8166204ef2ea40e50
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
 
 ### The executive configuration
 
@@ -1188,7 +1188,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#authority-kinds sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Authority kinds
 
@@ -1255,7 +1255,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#disjointness-and-independence sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#disjointness-and-independence sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Disjointness and independence
 
@@ -1274,7 +1274,7 @@ be disjoint; and the unqualified word "independent" establishes none of
 the three.
 
 
-Source: FOUNDATIONS.md#results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1459,7 +1459,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#conjunction-of-results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Conjunction of results
 
@@ -1653,7 +1653,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=cd35f60c5db379225824da5d39cfbc4832b0b4adda1416e8166204ef2ea40e50 rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3 rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

@@ -253,6 +253,10 @@ design or work records, and a claim that one strategy is superior states
 the objectives, comparison and assumptions it depends on. No exhaustive
 optimisation, universal numerical budget, scalar cost measure or preferred
 strategy is imposed by this relation or its consumers (P2, P5, P6).
+Context bounds what one activation can hold and attention what it can
+use; the frame selects the material and the task contract of one step,
+and the destination stays Z across the activations that reach it
+([§2](#2-context-construction-under-an-envelope)).
 
 Composition boundaries. A composition boundary is the boundary between
 successive steps, where one step's output becomes the next step's
@@ -324,7 +328,10 @@ Producing a candidate, proving a property and accepting delivery remain
 distinct acts ([EVALUATION §5](EVALUATION.md#5-acceptance)). Completion
 requires sufficient evidence against Z, including its acceptance
 conditions; exhaustion or an unresolved attempt proves neither completion
-nor impossibility (P5, P6).
+nor impossibility (P5, P6). A change to Z follows its owning authority and
+the re-entry rules of Transitions (Destination change); it establishes
+nothing about whether the former Z was reached, and the original
+counterexample stands.
 
 Ownership and limits. This subsection is the one owner of the
 construction relation in this corpus. Its consumers apply it where an

@@ -6,8 +6,8 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=499eff383ba87f62b65cd81c31c628d18748e28efbd849cd7fe73a93f3359fe4; section sha256=9714028ebb998247f6ec9827b9ec6d05148a38426c7e02ffd19c03c617357535)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0; section sha256=bc0ebe0e4702d1593552df86bd4df5619acdb89825940bdfd7023568349b9fac spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=999878fc125b35047cadc804e7a904d7c1095a7669a28f05c55d690642397d17 spanning to #formal-representation)
 - As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
@@ -46,9 +46,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 75818 bytes.
+Size of this frame: 81663 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#authority-kinds sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Authority kinds
 
@@ -115,7 +115,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#imports-between-members sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Imports between members
 
@@ -175,7 +175,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0
+Source: FOUNDATIONS.md#foundation-to-law sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
 
 ### Foundation to law
 
@@ -317,7 +317,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=5dfb82c8a19086947911fb67e96debfa60e71602dfafae5934b45ba4bd173ed0 rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -703,7 +703,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=e10e730864a25c3047eb638edbd8c53d047ade689551ab9a7c51a15eb20cb8e3
+Source: CONFORMANCE.md#5-coverage-of-the-common-discriminators sha256=16eddc49fd1b2cf109e67c3faafeb9414d3bbc4504023e61f6cb9bc46ae619eb
 
 ## 5. Coverage of the common discriminators
 
@@ -814,6 +814,48 @@ the logical review of its discriminators does not stand in for it. No
 logical-review check is recorded for this revision: each is a planned
 assessment without a closed result until a review records it
 ([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Not performed).
+
+### Universal-construction and assurance discriminators
+
+The governing specification adds, beside the member discriminators above,
+nine universal-construction discriminators and twelve assurance
+discriminators, assessed under criterion 5 within a member's declared
+responsibility. Each is numbered UC-n or AS-n in the order the governing
+specification lists it. A logical-review check L-UCn or L-ASn is a planned
+assessment without a closed result until a review records it; a case is
+exercised only when it has been run and assessed; the finite oracle named
+for three of them is mechanical evidence on a finite model and establishes
+neither fidelity nor semantic conformance
+([EVALUATION §2](../EVALUATION.md#2-separation)).
+
+| No. | Discriminator | Member sections | Exercised by |
+|---|---|---|---|
+| UC-1 | Internal tasks pass while a required end-to-end feature fails | ACTIVATION §1 Composition boundaries; FOUNDATIONS §4 Preservation through construction; EVALUATION §1 | L-UC1 |
+| UC-2 | Every selected operation is lawful but the result fails the chosen outcome constraints | ACTIVATION §1 Binding A and Z (lawfulness establishes neither delivery nor optimality); SPEC_METHOD §11 | L-UC2 |
+| UC-3 | A report called a bug could concern implementation, requirements or missing observations | ACTIVATION §1 Feedback and diagnosis; SPEC_METHOD §4 Universal intake triage | L-UC3 |
+| UC-4 | A requirement is weakened until the current realisation passes | ACTIVATION §1 Transitions, Destination change, and Evaluation and completion; SPEC_METHOD §4 change classes; FOUNDATIONS §4 Parallel derivation and mutual assurance (corrections preserve counterexamples) | L-UC4 |
+| UC-5 | A predictive model agrees with observations while the required outcome is absent, or predicts incorrectly while the outcome holds | ACTIVATION §1 Three accounts of the subject; Feedback and diagnosis | L-UC5 |
+| UC-6 | A strategy is selected solely by its name, or a cheaper plan loses required assurance | ACTIVATION §1 Strategy; FOUNDATIONS §4 Quantified assurance (no waiver by a cheaper plan); EXECUTIVE_BASELINE Steel-thread delivery | L-UC6 |
+| UC-7 | Every recursive step preserves an invariant but the process does not deliver | ACTIVATION §1 Preservation, progress and completion; FOUNDATIONS §3 Construction synthesis | L-UC7 |
+| UC-8 | A limit is exhausted, an observation exposes more work, or an ongoing maintenance loop continues | ACTIVATION §1 Preservation, progress and completion, and Transitions (Stops); ACTIVATION §6 | L-UC8 |
+| UC-9 | A restart or later disturbance contradicts a cached successful result | ACTIVATION §5 The workspace and an actor's account; ACTIVATION §7; case CD-03 | CD-03 (not run); L-UC9 |
+| AS-1 | Every local check passes, but a postcondition does not establish the next precondition or the final property does not imply Z | FOUNDATIONS §4 Preservation through construction | L-AS1 |
+| AS-2 | A histogram has the right keys but incorrect counts; a key-only test passes | FOUNDATIONS §4 Assertions and observation (a check of a necessary condition); case AR-01 | AR-01 (not run); L-AS2 |
+| AS-3 | Two admissible states have identical acquired observations but opposite truth values for the asserted obligation | FOUNDATIONS §4 Assertions and observation, Observation sufficiency; case AR-02; the finite oracle instance `assurance` | AR-02 (not run); the finite oracle (mechanical); L-AS3 |
+| AS-4 | A test copies its expected answer from the implementation and cites the requirement's digest | FOUNDATIONS §4 Parallel derivation and mutual assurance (an implementation-derived decision supplies no independent justification) | L-AS4 |
+| AS-5 | A human or probabilistic checker can soundly return satisfied or indeterminate on the same observations | FOUNDATIONS §4 Assertions and observation (a universal soundness claim covers all admitted conclusions) | L-AS5 |
+| AS-6 | Two implementations or reviewers agree through the same wrong interpretation, fixture or received contribution | FOUNDATIONS §4 Parallel derivation and mutual assurance; case AR-03 | AR-03 (not run); L-AS6 |
+| AS-7 | Miss rates are multiplied without conditional independence, or an injected-defect score is reported as whole-product correctness probability | FOUNDATIONS §4 Quantified assurance; the finite oracle instance `assurance` | the finite oracle (mechanical); L-AS7 |
+| AS-8 | Finite successful examples or a schema-valid formula are called a proof of a universal preservation law | FOUNDATIONS §4 Formal representation; AXIOMATIC_CALCULUS §9 Constraint surfaces, condition 1 | L-AS8 |
+| AS-9 | A governing requirement changes but expected answers and acceptance evidence are silently retained | FOUNDATIONS §4 Change impact and evidence reuse; ACTIVATION §7; case AR-04 | AR-04 (performed once by the author); L-AS9 |
+| AS-10 | An implementation or environment dependency changes but the only selection relation is requirement-to-test provenance | FOUNDATIONS §4 Change impact and evidence reuse (a requirements-to-test link is no impact model); the finite oracle instance `assurance` | the finite oracle (mechanical); L-AS10 |
+| AS-11 | A local repair has supported isolation from an unchanged obligation and its evidence conditions | FOUNDATIONS §4 Change impact and evidence reuse (retention) | L-AS11 |
+| AS-12 | Selection is cheap but omits a material obligation, or selection overhead exceeds the saved execution | FOUNDATIONS §4 Change impact and evidence reuse (cost); FOUNDATIONS §4 Quantified assurance | L-AS12 |
+
+Coverage of these 21: four are mapped to cases (AR-01, AR-02, AR-03,
+CD-03, none run; AR-04 performed once by the author), three to the finite
+oracle beside their logical review, and all 21 to a logical-review check;
+no logical-review check is recorded for this revision.
 
 Purpose and material relation: a reader sees, for each discriminator,
 whether actual use or only a reasoned reading exercises it and which

@@ -1636,6 +1636,11 @@ branches and evidence populations actually evaluated (P6; EVALUATION §1).
 
 ### Project-basis additions
 
+The items of the template below add to the adoption record that
+[§16 Adopt this baseline](#adopt-this-baseline) owns; an adopting Product
+records both lists as one record, and where an item appears in both, the
+§16 statement decides it, so the two lists are one record and not rivals.
+
 An adopting Product starts from the Project Reference-Frame Basis of
 PRODUCT_DEFINITION §7 and its starter template. This profile adds only the
 following profile-specific content; it is not a competing basis definition

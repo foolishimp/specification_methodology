@@ -1163,7 +1163,7 @@ Consumers of these rows, one list per row, each consumer linked to its own
 locus:
 
 - Row 1, the step obligation: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation); [ACTIVATION §4 Refinement](ACTIVATION.md#refinement).
-- Row 2, the end-to-end argument: the same two sections.
+- Row 2, the end-to-end argument: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation) and [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), as for row 1.
 - Row 3, assertion directions: [EVALUATION §1](EVALUATION.md#1-claims); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §10](ASSURANCE.md#10-testing-evidence-composition).
 - Row 4, observation sufficiency: [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation).
 - Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route); the Cross-Synthesis rule of the Product that owns this corpus.
@@ -1453,7 +1453,9 @@ observation basis remain justified, and the affected dependencies are
 unchanged or covered by an established preservation relation. The
 original evidence keeps its original subject; a new applicability
 relation permits its use. A changed hash alone establishes neither
-invalidity nor equivalence. Known failures, unresolved coverage and their
+invalidity nor equivalence. A corrected run is not an unchanged independent
+test of the correction: the corrected subject carries its own evidence.
+Known failures, unresolved coverage and their
 citations remain visible until a supported repair, a reassessment or an
 authorised change of obligation disposes of them (P3, P4b, P6).
 
