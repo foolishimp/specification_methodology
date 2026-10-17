@@ -20,7 +20,7 @@ the reconstruction-return owner (I5-06) and the residual-rival repairs
 | Q5 the release selector | 1 | RELEASE §1, §3, §8 | the highest-ordinal published cut, never moved by acceptance, replaces "latest-accepted" |
 | Q6 the profile population count | 1 | AXIOMATIC_CALCULUS §8 | the count the bound calculus member's derivation account yields replaces "fourteen" |
 | Q7 the current-surface writing rule | 1 | SPEC_METHOD §2 Specification surface rule | the rule at mandatory force replaces the guide's; the guide keeps its terms |
-| Q8 the ten authority compressions | 10 auxiliary members | RELEASE §7; PRODUCT_DEFINITION §11 | superseded by projection from the a_c program, with the projection obligation outstanding, or carried as members, or rejected |
+| Q8 the ten authority compressions | 10 auxiliary members | RELEASE §7; PRODUCT_DEFINITION §11 | superseded by projection from the a_c program, with the projection obligation outstanding, or carried as members, or rejected. Owner's scoping (ledger): out of scope for the baseline, follow-on work |
 | Q9 the configuration record's contents | 1 (added by the I4 reading) | ACTIVATION §1 Configuration | a configuration record carries the explanation of its allocation with resource limits and failure assumptions |
 | Q10 the UX compliance-test replacement | the UX row the I4 handoff names | UX | which of the two compliance tests governs where they disagree; UX applies the stricter reading under the ambiguity rule until decided |
 | Q11 identity and packaging of the released interpretation | — | RELEASE §6, §7; the a_c design | whether the interpretation set is a release-scoped asset of the cut or a separate cohort member |

@@ -69,6 +69,10 @@ Digests at commit A: SHA-256 of the sorted `shasum -a 256` lines of each tree's 
 
 - The release note, `RESULTS.md` and the I5-03 return say 505 `conserved` rows are unread; the exact count by `frontier/REVIEW.json` is 471 (REFERENCE_FRAME_METHOD 70, WORLD_MODEL_METHOD 69, STDO_REFERENCE_FRAME_BASELINE 53, ODD_METHOD 48, SPEC_METHOD 46, AXIOMATIC_CALCULUS 37, TICKET_METHOD 25, TRAVERSAL_OCCURRENCE_PROFILE 24, DESIGN_MODULE_METHOD 21, RELEASE_METHOD 19, UX_METHOD 18, GLOSSARY_GUIDE 14, IDENTITY_METHOD 9, POSTING_GUIDE 9, WRITING_GUIDE 8, README 1). The I5-03 return's per-member list counts all 611 `conserved` rows. Commit A is not edited; candidate 2 carries the corrected figures (ledger, record correction).
 
+## Owner scoping after the freeze
+
+The product owner put out of scope for this candidate as the baseline STDO v3 (ledger, verbatim): complete interpretation coverage, the remaining actual-use expectation sets, and the authority compressions with their projections. They are follow-on work on the baseline, not conditions of it.
+
 ## Open decisions for the product owner
 
 [DECISIONS.md](DECISIONS.md), Q1 to Q16.
