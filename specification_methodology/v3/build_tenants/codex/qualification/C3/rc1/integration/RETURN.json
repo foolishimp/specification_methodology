@@ -1,0 +1,161 @@
+{
+  "kind": "stdo.rc1.integration-return",
+  "schema_version": 1,
+  "producer": "RC1-INTEGRATION",
+  "return_state": "candidate_ready",
+  "writer_result": "satisfied",
+  "closed_at": "2026-10-17T03:22:27.979024+00:00",
+  "coordinates": {
+    "kind": "stdo.rc1.integration-coordinates",
+    "schema_version": 1,
+    "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+    "source_repair_commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+    "source_commit": "f1e5ba38c338fd7a1e5fcc3e7cdfbb5abee718b3",
+    "consumer_return_commit": "b2c0381c5ed7901452bc2d020001e98c634032c9",
+    "consumer_disposition_commit": "b83105aba89c9fe140b7f7f6cce5eb117d274ba5",
+    "account_commit": "4f20983396c5ead2c2bff51a5df0ffc4bc5573ab",
+    "package_commit": "ea27616b93c80b13ee15a9931cd9114275e5de13",
+    "standing": "Frozen construction package; qualification and owner decisions remain open.",
+    "first_package_coordinates": {
+      "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+      "account_commit": "1553243d620fc0faf045b17dd98b9ed4ea8cea43",
+      "package_commit": "a485db611ab9af8cd6154f96b0e4ca6db6e5e605",
+      "check_commit": "ba547177d7c9f2977fd48fa025618264f913a00a"
+    },
+    "version_metadata_grant": "e0fab2931f2962e518ecacdc79e946c5139649c6"
+  },
+  "inventory": {
+    "path": "CANDIDATE.json",
+    "sha256": "0d5b06ff9489bb0ef068a6cd6c5ed7547363e24f44b011063678089fa7f1019b",
+    "members": 90,
+    "documentary_members": 81,
+    "interpretation_members": 9,
+    "bytes": 38582447
+  },
+  "construction": {
+    "determinations": 708,
+    "clauses": 712,
+    "indexes": 732,
+    "source_residuals": 2,
+    "generic_owner": "SPEC_METHOD.construction-assessment-and-delegation",
+    "changed_body_frames": [
+      "WORK_RECOVERY",
+      "TRIAGE_CARRIER",
+      "MEMBER_CONSTRUCTION_ASSESSMENT"
+    ],
+    "inverse_pairs_added": 100,
+    "required_workflow_calls_added": 5,
+    "explicit_consumer_patch_field_updates": 36,
+    "plugin_versions": "3.0.0-rc.1",
+    "compiler_or_renderer_changes": false
+  },
+  "validation": {
+    "first_package": {
+      "commit": "a485db611ab9af8cd6154f96b0e4ca6db6e5e605",
+      "check_commit": "ba547177d7c9f2977fd48fa025618264f913a00a",
+      "result": "satisfied",
+      "reproduced_frames": 7,
+      "cold_identity_valid": true,
+      "negative_identity_controls": 19
+    },
+    "final_metadata": {
+      "result": "satisfied",
+      "changed_package_members": [
+        "interpretation/MAPPING.json",
+        "interpretation/SOURCE_INVENTORY.json",
+        "plugins/spec/.claude-plugin/plugin.json",
+        "plugins/spec/.codex-plugin/plugin.json"
+      ],
+      "determinations_and_semantic_projection_unchanged": true,
+      "native_generation_validation": "passed"
+    },
+    "native_generation_runs": 2,
+    "reason_for_second_run": "Selected version metadata changed documentary inventory and requires current generation binding.",
+    "historic_native_projections_rerun": 0,
+    "full_historic_suites_rerun": 0,
+    "new_independent_review": false
+  },
+  "evidence": {
+    "CHANGED_SCOPE.json": {
+      "path": "CHANGED_SCOPE.json",
+      "sha256": "a30f0d398f5879bf4c4913e659a70f461006f60221947e88dd2a017153066fa3"
+    },
+    "METADATA_CHECK.json": {
+      "path": "METADATA_CHECK.json",
+      "sha256": "4844ae6d3bc9c389bea1a1ff08b1c16cf235f6bcae9225e0db0c0ae2d7a00a6c"
+    },
+    "CONSERVATION_APPLICABILITY.json": {
+      "path": "CONSERVATION_APPLICABILITY.json",
+      "sha256": "408a54d0945925a8a9b523e369f3b9a6d3e3609edf4f0b5d37227173259966f3"
+    },
+    "FRONTIER.json": {
+      "path": "FRONTIER.json",
+      "sha256": "a39eb300a660a979a7322681e7ce1f2b77acfc54ed8a0583fd41133c298772f9"
+    },
+    "CONSUMER_RELATIONS.json": {
+      "path": "CONSUMER_RELATIONS.json",
+      "sha256": "3ed76755116b5e4f7defab79b1b456b28c08b0701fcdc5fb5527a5ecc7995ba0"
+    },
+    "IDENTITY_CHECK.json": {
+      "path": "IDENTITY_CHECK.json",
+      "sha256": "b51d10cbc698c88ba767de266237fd8edd81f92549e1a681dacc9a0eefeea26e"
+    },
+    "ARTIFACT_CHECK.json": {
+      "path": "ARTIFACT_CHECK.json",
+      "sha256": "0221550b4efa6c4ea61fa4709a0ab18d49d0007c4ca033a9e94aba3e5faa6c45"
+    },
+    "VERSION_ACCOUNT.json": {
+      "path": "VERSION_ACCOUNT.json",
+      "sha256": "b33f25e587ff4a214cb3bb64414d87b3f72a2bd43b8d80d4e8988bb72be3be17"
+    },
+    "interpretation/GENERATION.json": {
+      "path": "interpretation/GENERATION.json",
+      "sha256": "37cd2ae58f9e6ea7e4a65478ec783edec0e3d3a5157e7200a3fc314743c3e3b9"
+    },
+    "ACQUISITION.json": {
+      "path": "ACQUISITION.json",
+      "sha256": "aaa75549d5c65090c767c52fabb6942ab2c6b59659833ea78a5de29a964ef417"
+    }
+  },
+  "prior_evidence_reuse": {
+    "boundary": "REUSE.md and METADATA_CHECK.json. Prior judgments retain their supported subjects and standing; unchanged bytes grant no new semantic or actual-use qualification.",
+    "conservation_rows": 691,
+    "affected_conservation_rows": 12,
+    "declared_dependency_cone": [
+      "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+      "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+      "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+      "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+      "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+      "SPEC_METHOD.construction-assessment-and-delegation",
+      "STDO_REFERENCE_FRAME_BASELINE.closure",
+      "STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition",
+      "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability"
+    ],
+    "missing_declared_inverse_pairs": 0,
+    "retained_unmatched_positive_pairs": 11,
+    "material_consumer_coverage": "indeterminate",
+    "historical_I5_preserved": true
+  },
+  "pending_decisions": [
+    "Independent source-to-compression/frame/account/interpretation fidelity and affected conservation assessment.",
+    "Disposition of 11 unmatched consumer positives; complete material consumer/dependency coverage remains unresolved.",
+    "Actual-use qualification, context/acquisition sufficiency and criterion-4 fit.",
+    "Executive candidate choice, acceptance, adoption and release/publication decisions."
+  ],
+  "resource_report": {
+    "paid_external_calls": 0,
+    "subagents_spawned": 0,
+    "source_selection_subtotal_bytes": 520189,
+    "known_repeated_full_file_bytes_at_initial_ledger": 35886,
+    "newly_presented_bytes": null,
+    "complete_repeated_bytes": null,
+    "full_active_context_bytes": null,
+    "budget_fit": "indeterminate",
+    "criterion_4_fit": "unclaimed",
+    "measurement_limit": "Initial calls were truncated; later bounded return/check/metadata excerpts and repeat projections were not completely instrumented. Selection subtotal is not exact presentation or total context. Parent directed continued bounded construction without another acquisition repair.",
+    "elapsed_upper_bound_from_preimage_commit_seconds": 2023.979,
+    "elapsed_measurement": "Activation began after the preimage commit; its timestamp provides a conservative upper elapsed bound, not an instrumented actor start."
+  },
+  "standing": "Complete frozen construction ready for consolidated independent review. No qualification, acceptance, tag, installed selection, adoption or publication claim."
+}
