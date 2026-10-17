@@ -1,0 +1,19 @@
+{
+  "operation": "source",
+  "authored_input_commit": "fc7e20a91bcae6c50075c97aec169c6e36f47109",
+  "result": "stopped_before_documentary_effects",
+  "error": "Installed checker membership has drifted",
+  "expected_members": 7,
+  "actual_members": 8,
+  "extra_members": [
+    {
+      "path": "build_tenants/core/code/__pycache__/ac.cpython-312.pyc",
+      "bytes": 47638,
+      "sha256": "88cbce476d783303ef0387363a4e447e2d7b4bfdfef2c1203cbcf1e8e4e15fff"
+    }
+  ],
+  "missing_members": [],
+  "changed_successor_files": [],
+  "subsequent_phases_run": [],
+  "disposition": "Return environment discrepancy to parent; source-only replay requires the selected immutable checker membership. Historical evidence and declared dependency member bytes remain untouched."
+}

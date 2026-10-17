@@ -43,6 +43,20 @@ def authored_inputs(commit):
             raise ValueError('Closed source member changed: ' + member['path'])
 
 
+def prepare_compressions(decisions):
+    """Check every authored replacement before any documentary write."""
+    prepared = {}
+    for decision in decisions['rows']:
+        path = PACKAGE / decision['path']
+        value = path.read_text()
+        for replacement in decision.get('replacements', []):
+            if value.count(replacement['before']) != 1:
+                raise ValueError('Compression authored preimage is absent or ambiguous: ' + decision['path'])
+            value = value.replace(replacement['before'], replacement['after'])
+        prepared[path] = value
+    return prepared
+
+
 def source(args, context, build):
     authored_inputs(args.source_commit)
     build.documentary_inventory(rc1.exact(args.source_commit))
@@ -52,13 +66,10 @@ def source(args, context, build):
     if comparison['common_input'] != INPUTS['common_input']:
         raise ValueError('Compression account uses another common input')
     decisions = json.loads(rc1.authenticate(args.source_commit, HERE / 'COMPRESSION_DECISIONS.json'))
+    prepared = prepare_compressions(decisions)
     for decision in decisions['rows']:
         path = PACKAGE / decision['path']
-        value = path.read_text()
-        for replacement in decision.get('replacements', []):
-            if value.count(replacement['before']) != 1:
-                raise ValueError('Compression authored preimage is absent or ambiguous: ' + decision['path'])
-            value = value.replace(replacement['before'], replacement['after'])
+        value = prepared[path]
         if value != path.read_text():
             path.write_text(value)
         row = comparison['rows'][decision['path']]
