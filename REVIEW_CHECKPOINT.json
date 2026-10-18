@@ -1,0 +1,59 @@
+{
+  "kind": "repository-full-tree-review-checkpoint",
+  "standing": "Owner-requested repository publication for cross-machine review; no method or Product acceptance, release or integration qualification.",
+  "owner_instruction": "checkin everything and push to remote the entire tree so i can review on another machine including the work on a_c",
+  "operation_role": "Writer: checkpoint existing bytes, assemble a review-only branch, push source branches and verify remote identities.",
+  "branch": "review/2026-10-19-full-tree",
+  "components": [
+    {
+      "path": "a_c",
+      "source_branch": "main",
+      "source_commit": "bfe228511415d346459523cec44e7e8157e2991a",
+      "source_tree": "a9c74508d0ea08ce32614f14476c6f8f378bc6cc",
+      "review_tree": "a9c74508d0ea08ce32614f14476c6f8f378bc6cc",
+      "identical": true
+    },
+    {
+      "path": "specification_methodology/v2",
+      "source_branch": "main",
+      "source_commit": "bfe228511415d346459523cec44e7e8157e2991a",
+      "source_tree": "9fd4e460254e5c06fe6743d5aae49e347d991288",
+      "review_tree": "9fd4e460254e5c06fe6743d5aae49e347d991288",
+      "identical": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/claude",
+      "source_branch": "tenant/claude/c3-synthesis",
+      "source_commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "source_tree": "a741ae490f6e1512699a23db5439d0ffbe98176f",
+      "review_tree": "a741ae490f6e1512699a23db5439d0ffbe98176f",
+      "identical": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex",
+      "source_branch": "tenant/codex/c3-iteration-5",
+      "source_commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "source_tree": "18128aa2c9ab7487c9a59c7b7fc89700df5411ae",
+      "review_tree": "18128aa2c9ab7487c9a59c7b7fc89700df5411ae",
+      "identical": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common",
+      "source_branch": "tenant/common/standalone-v3",
+      "source_commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+      "source_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+      "review_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+      "identical": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/common-build",
+      "source_branch": "tenant/common/standalone-v3",
+      "source_commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+      "source_tree": "999fcb1a72c0d2d0da33bf5e631e2289228544dc",
+      "review_tree": "999fcb1a72c0d2d0da33bf5e631e2289228544dc",
+      "identical": true
+    }
+  ],
+  "merge_resolution": "T-003 progress prose retains both the historical first-build checkpoint and current common construction record. No candidate member changed.",
+  "ignored_files": "Existing Git ignores remain: local environments, caches and generated output directories are not part of this source/evidence checkpoint."
+}
