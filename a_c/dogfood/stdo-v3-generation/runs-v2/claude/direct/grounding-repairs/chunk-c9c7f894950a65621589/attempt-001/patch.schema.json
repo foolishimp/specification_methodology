@@ -1,0 +1,126 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "qualification_case_requirements",
+              "reconfiguration_conservation",
+              "work_state_external_continuations"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FIntake",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FExecution%20unit",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FApplicability",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FOutput",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,54 @@
+{
+  "claim": "Same frozen authoring algorithm; no grounding recovery or semantic assessment.",
+  "cli_version": "codex-cli 0.162.1",
+  "coordinator_sha256": "025c30baca2646c392fff368ca656f74aaa97dc3872d7dc95746b703e4bf3708",
+  "created_at": "2026-10-18T06:01:54.360651+00:00",
+  "jobs": 4,
+  "profile": "ac.generation.coordinator-plan/1",
+  "runner_sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+  "selected": [
+    {
+      "attempt": 2,
+      "candidate": "codex",
+      "chunk": "chunk-3536e55742017ac9ca55",
+      "chunk_sha256": "2a417b3e19adb992ca945584792b74daaf407f7954c66d8d705c90123659f82f",
+      "mode": "graphify-ac",
+      "prompt_chars": 252564,
+      "prompt_sha256": "f5b880dc047c9e664305f590507e593005b6eb80a393cd60d85d22fc173d74fa"
+    },
+    {
+      "attempt": 2,
+      "candidate": "codex",
+      "chunk": "chunk-3536e55742017ac9ca55",
+      "chunk_sha256": "2a417b3e19adb992ca945584792b74daaf407f7954c66d8d705c90123659f82f",
+      "mode": "direct",
+      "prompt_chars": 212723,
+      "prompt_sha256": "8900c3fbb5875d48d25456720c38c9ccc0cbb66ac782b2730fcc501625b4ccb6"
+    },
+    {
+      "attempt": 2,
+      "candidate": "claude",
+      "chunk": "chunk-8926f266bc1134f91eef",
+      "chunk_sha256": "a1d3e9a91dbb541b80cc37b0ae76b2f818933d703ea868debf574dd22fefbb98",
+      "mode": "direct",
+      "prompt_chars": 141907,
+      "prompt_sha256": "3e782b53f3d709aef069d7f9e4ea69482757d179efc7b2813a28b0684f70c4fe"
+    },
+    {
+      "attempt": 2,
+      "candidate": "claude",
+      "chunk": "chunk-986113d13e5314b291c9",
+      "chunk_sha256": "1b3c683cac8262407f25207cb1d7021b77fbe3e20ec2032def981d7becae2185",
+      "mode": "direct",
+      "prompt_chars": 188925,
+      "prompt_sha256": "b4291177e49e2afa6c5bc3cfc211531b3c7910ee66fdacc08b8eee0341d62407"
+    }
+  ],
+  "selection_sha256": "ba20a030afc865589a112653e17c5097a4d2d63ada0f98fc4b14910810d65020",
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "high",
+    "service_tier": "default"
+  },
+  "timeout_seconds": 1200
+}

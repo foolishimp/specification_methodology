@@ -1,6 +1,6 @@
 # Specification Methodology Repository Bootstrap
 
-This root coordinates four peer source projects. It is not a Product and owns
+This root coordinates five peer source projects. It is not a Product and owns
 no Product meaning.
 
 The Git checkout is `specification_methodology`. The STDO Specification
@@ -8,6 +8,10 @@ Methodology product has two version lines side by side: STDO 2.* authoring
 belongs in `./specification_methodology/v2/`; v3.0.0 construction belongs in
 `./specification_methodology/v3/`. Each child retains its own Product
 Definition and source boundary.
+
+Independent axiomatic-calculus implementation work belongs in `./a_c/`, whose
+Graphify realization is a build tenant. Select `a_c/stdo_a_c.json` and its local
+bootstrap. This child is outside the existing STDO release-matched cohort.
 
 Before work:
 

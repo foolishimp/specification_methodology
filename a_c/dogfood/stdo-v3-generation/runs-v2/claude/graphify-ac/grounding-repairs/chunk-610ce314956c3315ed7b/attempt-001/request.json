@@ -1,0 +1,411 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-610ce314956c3315ed7b",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "section_id is outside the exact dispatched chunk",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 306,
+        "quote": "It treats derived artifacts,\nindexes, trace matrices, reports, automation and generated views, as read\nmodels, never as constitutional truth. If these claims do not hold, the\nwork is not spec-driven.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+        "start_line": 303
+      },
+      "grounding_index": 0,
+      "record_key": "manifesto_commitments",
+      "record_ordinal": 31
+    }
+  ],
+  "mode": "graphify-ac",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-610ce314956c3315ed7b/attempt-001"
+  },
+  "parent_answer_sha256": "616f7446ccbdee5a5ee6fecf016e4de9bd149d53d19412367e51e06ba78e5cf0",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "bcb57e4428d83e76112566eb5e2b10e79d05180dffbe7015f4950972c0267d2b",
+      "original_attempt": "actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+      "original_recorded_failure": "record[manifesto_commitments]/grounding/0: grounding names source outside chunk",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[manifesto_commitments]/grounding/0: grounding names source outside chunk",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 69198,
+          "output_tokens": 40197,
+          "reasoning_output_tokens": 457
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/answer.json": "13cad01608c99a7013b3bc075c08f729c9560360e5d224c9d7bde2d4648ac9e1",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/events.jsonl": "4e6b80e0cb0f4be8b85bc4998ddbcc1c03d485708580b28f8d0a2c7a4a969b41",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/invocation.json": "3a12d916ea7b61f63da1e7993bfda502499388879350de8001358a563b6b0e17",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/prompt.txt": "cb9a9ad4387372611cb44783782521fb6b9b36995080dc47a00522ae9231578e",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/result.json": "d55697725b1779e74df98356dde17e09ef8c1e39d076d27a355bbd8bce89c241",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-610ce314956c3315ed7b/attempt-001/usage.json": "5a729c1b6a83d8fbd3eccdc430797b54d1be78b824aed71180cf9759d85d0617",
+        "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+        "plan.json": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+        "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+      },
+      "source_sections": [
+        {
+          "end_line": 156,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+          "path": "standards/RELEASE.md",
+          "sha256": "7b53843d058247644fef22c236dcc2c4f074bee019f101a3d2c5bef87c0360fa",
+          "start_line": 94
+        },
+        {
+          "end_line": 183,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "path": "standards/RELEASE.md",
+          "sha256": "5ee3fc0b716ed7c59f5812613fb816333dac1177d955cbd1da0ce7395df39ed2",
+          "start_line": 157
+        },
+        {
+          "end_line": 218,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs",
+          "path": "standards/RELEASE.md",
+          "sha256": "9091842c3a385b85771a8e022b64884bd9ec7f00bd228f7f710df6628ffdf264",
+          "start_line": 184
+        },
+        {
+          "end_line": 248,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-subtree%20release%20identity",
+          "path": "standards/RELEASE.md",
+          "sha256": "adb6c65f020ec1ba337c0ce417ebdedcfba50783586d2f0bd82914d512657816",
+          "start_line": 219
+        },
+        {
+          "end_line": 272,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation",
+          "path": "standards/RELEASE.md",
+          "sha256": "a73703504e95c07af9d27dcbe32b7c3386d7ea4389f8ca1f49578fc9900a17a7",
+          "start_line": 249
+        },
+        {
+          "end_line": 287,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases",
+          "path": "standards/RELEASE.md",
+          "sha256": "3eaee3a7a64886aee97ce03132366e96b1c5981ce768626033ce5d5d3349f403",
+          "start_line": 273
+        },
+        {
+          "end_line": 303,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction",
+          "path": "standards/RELEASE.md",
+          "sha256": "a66f7911a8edaf561784eef5d2d3cd6eea49fc83a1e45969c7f8fc8d316c7c67",
+          "start_line": 288
+        },
+        {
+          "end_line": 335,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication",
+          "path": "standards/RELEASE.md",
+          "sha256": "c30154f5ee5ef4178b9e40d5abae4d36c50974b11bbff481d56e1a7ea2875c38",
+          "start_line": 304
+        },
+        {
+          "end_line": 360,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification",
+          "path": "standards/RELEASE.md",
+          "sha256": "457cef9f6554f45238e7f6324a0bafc83f06802e32dfc3c7a41c1e60626009fa",
+          "start_line": 336
+        },
+        {
+          "end_line": 390,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMonotonic%20version-line%20advancement",
+          "path": "standards/RELEASE.md",
+          "sha256": "e92f420e848db952bce76e256c86f6a484db31980644b983b420c784728988eb",
+          "start_line": 361
+        },
+        {
+          "end_line": 441,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption",
+          "path": "standards/RELEASE.md",
+          "sha256": "d76fbea359b552300417e46c00c41e532431b7ea5e8e992291ab4cf02c2bd94a",
+          "start_line": 391
+        },
+        {
+          "end_line": 464,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F5.%20Naming",
+          "path": "standards/RELEASE.md",
+          "sha256": "f17ab6ac924618db021e0ebb5c99cd32d9a5fdae644a1483c819fe61ab4fb865",
+          "start_line": 442
+        },
+        {
+          "end_line": 466,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject",
+          "path": "standards/RELEASE.md",
+          "sha256": "9b7149fc5281a2316d18c7a02ad3405b1be077cfd32736aae507dd27da935339",
+          "start_line": 465
+        },
+        {
+          "end_line": 489,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets",
+          "path": "standards/RELEASE.md",
+          "sha256": "706ee6517a87ccb7487bda29a8881dca96b3b354c0f62f1fa56dc3820f3842e6",
+          "start_line": 467
+        },
+        {
+          "end_line": 508,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier",
+          "path": "standards/RELEASE.md",
+          "sha256": "df19c67253cd9cd49748df7e8d8adf59b72e698e1346f08ad66011aaadd33ee6",
+          "start_line": 490
+        },
+        {
+          "end_line": 549,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts",
+          "path": "standards/RELEASE.md",
+          "sha256": "cdbef4a2162da3ca15960600bc7df57579a3d5553f5934721b6876a85170d72d",
+          "start_line": 509
+        },
+        {
+          "end_line": 596,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction",
+          "path": "standards/RELEASE.md",
+          "sha256": "2371f73318206b456149dc4815d63b7fbeb2453cf0ed387f30a07541de45606e",
+          "start_line": 550
+        },
+        {
+          "end_line": 623,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery",
+          "path": "standards/RELEASE.md",
+          "sha256": "b37a8f58401fdfcc8a4b2efbf897a4b71d7bf9751777f75538a61a9585cbca7f",
+          "start_line": 597
+        },
+        {
+          "end_line": 625,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance",
+          "path": "standards/RELEASE.md",
+          "sha256": "4aee02f2ea328f7a5d2c06aa75eb5a202929ec4b789de904d45515f61a0bb8b4",
+          "start_line": 624
+        },
+        {
+          "end_line": 651,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria",
+          "path": "standards/RELEASE.md",
+          "sha256": "8748b493e4a259e8ffbd622907d56f3a34702f37646039a496525dd2d5a3aab8",
+          "start_line": 626
+        },
+        {
+          "end_line": 666,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies",
+          "path": "standards/RELEASE.md",
+          "sha256": "aa84aa7fc8e8a3963afa07db35b1fb239876f969f6d033921248593ebc6062b2",
+          "start_line": 652
+        },
+        {
+          "end_line": 732,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+          "path": "standards/RELEASE.md",
+          "sha256": "d7dd33d73635ceff25b14518be65e8158e5f01ac2ced08fb6a19bf87b9792d8d",
+          "start_line": 667
+        },
+        {
+          "end_line": 740,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F10.%20Open%20questions",
+          "path": "standards/RELEASE.md",
+          "sha256": "24482c8f1eb028d798e8e930fd4b7c5dcb60637ee86ae5c858a7dade20763ae2",
+          "start_line": 733
+        },
+        {
+          "end_line": 790,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions",
+          "path": "standards/RELEASE.md",
+          "sha256": "09006e408ee89829d892980c97eefe228680772d6b916be0d96b693e93a591e9",
+          "start_line": 741
+        },
+        {
+          "end_line": 25,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ee590981bef9a71a8237593330620e8b7131cc26207e39eb08d5cb9756a4a730",
+          "start_line": 1
+        },
+        {
+          "end_line": 27,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ea5b58cd3bc7169f4575f9f50b8a31b9af94eafce75384de685d465e391d9b03",
+          "start_line": 26
+        },
+        {
+          "end_line": 46,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "50ee303fd56cafa59fcf179515738ca83bd0491d190eaf7200ab13450539c1d2",
+          "start_line": 28
+        },
+        {
+          "end_line": 88,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8933346728669da6dc2126226a1acd3df0faed1a255b2d2187f083bcb06e01c7",
+          "start_line": 47
+        },
+        {
+          "end_line": 104,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "0093fbcef8d3c55e4d4a5b1d6e89fad130fd88c3d2bed68e4e18dfe122b9b32b",
+          "start_line": 89
+        },
+        {
+          "end_line": 146,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "716830880d728c24337ce0a1ebc5fc61a340a099a6e216b8b167efedc7ba8bd9",
+          "start_line": 105
+        },
+        {
+          "end_line": 148,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "35e8dd3002957721e3715d219485c7f359154bd2faaac5ba9e549b5d88914729",
+          "start_line": 147
+        },
+        {
+          "end_line": 212,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b082de2273f59c86634040a4a68b31cd7f986bfe59bb1428217f92ba8cef318a",
+          "start_line": 149
+        },
+        {
+          "end_line": 280,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "14a73072c0b529afccfc17ddfa92aa72251f47cd02eb26701b93e0b5418edf2b",
+          "start_line": 213
+        },
+        {
+          "end_line": 307,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "baf3368cb4ea0d5e0d2f774c8526e8377bc6ac10b0445920e7b48e42dbbf9acf",
+          "start_line": 281
+        },
+        {
+          "end_line": 338,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "67112f3060fffad105c8403bf94741c854469434a01ef9feb3b467cbaf3e4494",
+          "start_line": 308
+        },
+        {
+          "end_line": 380,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "a1dcf5fd5c7e453cf5beaf246da351542cd3d2941dcfb9bcb9daa69513e31a99",
+          "start_line": 339
+        },
+        {
+          "end_line": 412,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "6ab4214bac0fda480c3f3feaac54fd881e5850f804cb210b782d6f3c38db8b66",
+          "start_line": 381
+        },
+        {
+          "end_line": 452,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5b0d4d0684d47341ad8fb360db9ef56c7e0554a4368ae3af39192009b4a35633",
+          "start_line": 413
+        },
+        {
+          "end_line": 470,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ad0b5d804d2d80aea34ec10e2ef671a108747dd19e0ee5f602efb063df593448",
+          "start_line": 453
+        },
+        {
+          "end_line": 491,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5724cc87b0a42a94cb32dcf3d08bbc1691e3b7227ba884753737169b4166be59",
+          "start_line": 471
+        },
+        {
+          "end_line": 572,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "abb6930b29daf37f15e6634b84b5a8d7b4cbc0531995c2ddbff49c5e57e41f82",
+          "start_line": 492
+        },
+        {
+          "end_line": 614,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "54f863373907f59cd388acd0c30fa7890c5085960b6da3eb5ddc9dba86b2abfa",
+          "start_line": 573
+        },
+        {
+          "end_line": 632,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "0ba3ce95f8fa435c096c8111ee19f9058e7087d793cb68aab509b3ce31dd251a",
+          "start_line": 615
+        },
+        {
+          "end_line": 677,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "d5d5a0659c68ab502bdc92df9ff2fca020620232646c009bca8c097f8474125d",
+          "start_line": 633
+        },
+        {
+          "end_line": 766,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "a5829201ee06054d78b61feea72340fdfd24a4fcfcb57e35dab9b7dabb1a568a",
+          "start_line": 678
+        },
+        {
+          "end_line": 772,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "15919d925d05facc48ce0d4a58a31308cbf1c863b87c16f60ce35bb65df9682c",
+          "start_line": 767
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-610ce314956c3315ed7b/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "fcdec46022d4447cf2e629e32669436dabeff2b37fc4cf4ea56999fae1573a77",
+  "schema_sha256": "d96e7f887fe39518aee0ce5d3f0f92458bd0c0021e100c29bd804ea40c3638df",
+  "source_chunk_sha256": "bcb57e4428d83e76112566eb5e2b10e79d05180dffbe7015f4950972c0267d2b",
+  "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+}

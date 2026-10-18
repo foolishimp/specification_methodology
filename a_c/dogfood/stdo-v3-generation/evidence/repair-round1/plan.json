@@ -1,0 +1,464 @@
+{
+  "claim": "Conditional F_P evidence-selection repairs; original failures remain measured; no semantic equivalence or acceptance.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "coordinator_sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7",
+  "created_at": "2026-10-18T06:18:49.370026+00:00",
+  "jobs": 4,
+  "profile": "ac.generation.repair-coordinator-plan/1",
+  "selected": [
+    {
+      "invalid_groundings": 2,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-303ba21541c7795c1c8e/attempt-001"
+      },
+      "parent_proof_sha256": "5f25d650eb925077200ce05f337b0a93348cd5871e35f851216020f6c781cdd8",
+      "prompt_sha256": "93fa6bec122e2e4a3975053edc968474fcf88abbb8e9a092c1a10206ba3726a3",
+      "selection": {
+        "candidate": "codex",
+        "chunk": "chunk-303ba21541c7795c1c8e",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "97706f638ee2b59f146958c4bf6e8beecea8d03af4992eb9f02cc55098d7dc7a"
+    },
+    {
+      "invalid_groundings": 4,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001"
+      },
+      "parent_proof_sha256": "11dd0c6557296873fb38e4e1dcfed26b2b8a7a9f315691d80aa771d4e56f9659",
+      "prompt_sha256": "4dae765d095ee972bc9abf8915d15c4a0dcad8e3033383239a28fbb6b90a82a0",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-d3ef7cd18b24cd303de7",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 2,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-d40baf1b4da50f62ae06/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-d40baf1b4da50f62ae06/attempt-001"
+      },
+      "parent_proof_sha256": "1dfa9ace8020bf469547f940dfb1047401ddc56d6b0887d322d9ec459b9b2871",
+      "prompt_sha256": "20b8ef91f95e7935dd39b34c6f4ca65398349eb9eb7df9f9a545e7211455862a",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-d40baf1b4da50f62ae06",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001"
+      },
+      "parent_proof_sha256": "6e5b979c878f000473fde0157a87c4d7b64798cd8b607a5222fa02491f219d03",
+      "prompt_sha256": "b9609ae237e0d3fef0947686e77a7eb55b5e933ed7c88ea0abb8108e4e154cd0",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-8926f266bc1134f91eef/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-8926f266bc1134f91eef/attempt-001"
+      },
+      "parent_proof_sha256": "fb0dfdac421821d1fab611191cbac05e8c236b81c19622df67b047b5e6cbd5d4",
+      "prompt_sha256": "1c1265070b1637a4203c0c9f2de1443b2987ce596864794198308a773bacc3f1",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-8926f266bc1134f91eef",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-986113d13e5314b291c9/attempt-001"
+      },
+      "parent_proof_sha256": "9cf236e6f79402268427fc651fb6b637ae40f8cce56ef21a2e481770e2f23349",
+      "prompt_sha256": "348b0a3e107ea97da6a5b4485367451c2df91e1510ba25743587745e9314e15f",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-986113d13e5314b291c9",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 2,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001"
+      },
+      "parent_proof_sha256": "4c5f8b748ad7cdde0fa761918f41094499c2601ceca4693fa66a03c6998ba768",
+      "prompt_sha256": "cbe845fba76138a0c511763c8fdbc26ae5d848073e20668a9b81419bddf1de08",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-caddb7dd9905a44febeb",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001"
+      },
+      "parent_proof_sha256": "f19301b181d49bc3f3db233d2f797f1a3420b5edec08772a70124b13feae31f7",
+      "prompt_sha256": "e6ffdb76485820bf86faf8b2de8bd97dbadde8cff1f624e8c1c1c56bcfbfb8ad",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-efb7b986ff5631c4fbc0",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-610ce314956c3315ed7b/attempt-001"
+      },
+      "parent_proof_sha256": "11765bc108e70a52e0a7ef33f84a37cb9a714e69f496e2332f61eddc76bbb08d",
+      "prompt_sha256": "fcdec46022d4447cf2e629e32669436dabeff2b37fc4cf4ea56999fae1573a77",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-610ce314956c3315ed7b",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001"
+      },
+      "parent_proof_sha256": "775e75f945027c3f25e667363521b34afe8ef53e215e2a9d985d6daecd19f706",
+      "prompt_sha256": "e65ea464fd331f57804ad2850b7405abba1bb1c3d7239ac6d8b0dc3f2297094e",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-bcd515f6c8df632f2fad",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001"
+      },
+      "parent_proof_sha256": "b07b4421f24b8044af0743a15fd063a59c359c760b1fb4f8da920d45b96cc911",
+      "prompt_sha256": "efe8be50e61bfd4e488ad0f9993c7e3f0597f6c18111e2e0345095bfe670a861",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-f1002ac9d6de2a2d89c1",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-c9c7f894950a65621589/attempt-001"
+      },
+      "parent_proof_sha256": "c7437d74b7804758c51e02340dc6d745b11bee6922eabd0d2a6b3f017d8657d3",
+      "prompt_sha256": "bee1a09629e89f1a672cd4547633ba3497810af5d404bf4bb32768520cf513a5",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-c9c7f894950a65621589",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-46fb339024ea1a82b45f/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-46fb339024ea1a82b45f/attempt-001"
+      },
+      "parent_proof_sha256": "9c465ca73cbcf7c5b592ba67e0dbe0e337ba1ebaf1a810eb46c4b5e265c24b64",
+      "prompt_sha256": "c821f90ad1d049a48fea7c67370880ed8e798c089f5a7de94b0c7d0b47b9a0e0",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-46fb339024ea1a82b45f",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        },
+        {
+          "attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-002",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-986113d13e5314b291c9/attempt-002"
+      },
+      "parent_proof_sha256": "8040d4671f525479475b034a446df5a6c5e6424b840e82c9bc9b6571294b72ae",
+      "prompt_sha256": "eb211432c55c91eddc8f8e87f81dba6e08ab84afdcdc80fca6e6f5bcaf681937",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-986113d13e5314b291c9",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-2414d8d8612f850c1895/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-2414d8d8612f850c1895/attempt-001"
+      },
+      "parent_proof_sha256": "56076e8967476976a3e6b17d1e70628237ce331c57b62252850cc6732e2ce641",
+      "prompt_sha256": "89825755795d7da99e7a005105696f8632c3310e1576fbc32e78a87d7881d6cd",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-2414d8d8612f850c1895",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001"
+      },
+      "parent_proof_sha256": "20bb5cc31ef40cc11e4fe83612027e9f41872500400e9e55d1e9ffa1f6878ef2",
+      "prompt_sha256": "92437ecd08b1c2b0e9b2361300f431acab1a5f1a3b8ce04f8f9d6d8a207714e3",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-caddb7dd9905a44febeb",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 6,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-9b7e6f52849b98967974/attempt-001"
+      },
+      "parent_proof_sha256": "9046b3e1fe75db6c1c4e49b5acdfaca2edff2cbfdeef2a6cf7fdfd20554363db",
+      "prompt_sha256": "d107cdb554cee27e294998653ead2553335e68b73e23d125f4d520c40ded22ed",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-9b7e6f52849b98967974",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-5a03e80d9db03efe45a2/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-5a03e80d9db03efe45a2/attempt-001"
+      },
+      "parent_proof_sha256": "fb40af86df0d3a34c6e12ff29a2afbea67f05d8c2025d69bd6567878c9722add",
+      "prompt_sha256": "d78d0b8312de1918da709252107295761bd7efbb0e25d5ef1f49e73ed728a70a",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-5a03e80d9db03efe45a2",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-e9bb857e768dcddc1e11/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-e9bb857e768dcddc1e11/attempt-001"
+      },
+      "parent_proof_sha256": "4435529a7ebdb2ff01928b46a2456db604966113ac685d6c427d9a1f9a5db8a9",
+      "prompt_sha256": "0a50a5577f276711c7855adc9cca696b8a9b09c2f14d594a31757cee6a05f907",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-e9bb857e768dcddc1e11",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001"
+      },
+      "parent_proof_sha256": "5275333a709d3b90fd233e884eeb0135f97dfa56861b4fbb572d63a1946c992a",
+      "prompt_sha256": "46465401046318f913d6bd1e80a961a478d177101816468198d3878aaf29a6e5",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-f1002ac9d6de2a2d89c1",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+    }
+  ],
+  "selection_sha256": "706a842f30eae718d0d93e7c1ba7e90bde9a35701205fa1340684fd28d119f90",
+  "timeout_seconds": 1200
+}

@@ -1,0 +1,21 @@
+{
+  "decision": "patch",
+  "limitations": [
+    "Limited to the listed grounding repair using supplied source; establishes no semantic equivalence, completeness, acceptance, authority, qualification or execution."
+  ],
+  "patches": [
+    {
+      "family": "concepts",
+      "grounding_index": 2,
+      "reason": "Corrects the mistyped section ID. CLAUDE_TEMPLATE.md line 20 supplies the closing marker supporting the unchanged bootstrap-boundary definition.",
+      "record_key": "claude_bootstrap_template",
+      "replacement": {
+        "end_line": 20,
+        "quote": "<!-- STDO_BOOTSTRAP_END -->",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap",
+        "start_line": 20
+      }
+    }
+  ],
+  "refusal_reason": ""
+}

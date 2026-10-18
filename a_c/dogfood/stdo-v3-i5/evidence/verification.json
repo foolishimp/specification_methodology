@@ -1,0 +1,68 @@
+{
+  "browser_qa": "browser-qa.json",
+  "checks": [
+    {
+      "all_selector_closures": {
+        "all_required_closures_match": true,
+        "selectors": 5
+      },
+      "builder_sha256": "fea4cd7997d75dd8d8371fecf6a1317a6a96a8cb0d0328f0872d92fc453a7e9f",
+      "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "counts": {
+        "clauses": 155,
+        "frame_indexes": 5,
+        "graph_edges": 6414,
+        "graph_nodes": 4565,
+        "residuals": 0,
+        "source_members": 78,
+        "symbols": 39
+      },
+      "discovery_expected_record": true,
+      "inspection": true,
+      "native_program_round_trip": true,
+      "selected_records": 38,
+      "status": "passed",
+      "tenant": "claude",
+      "zero_budget_refused": true
+    },
+    {
+      "all_selector_closures": {
+        "all_required_closures_match": true,
+        "selectors": 732
+      },
+      "builder_sha256": "fea4cd7997d75dd8d8371fecf6a1317a6a96a8cb0d0328f0872d92fc453a7e9f",
+      "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "counts": {
+        "clauses": 712,
+        "frame_indexes": 732,
+        "graph_edges": 78174,
+        "graph_nodes": 53654,
+        "residuals": 5,
+        "source_members": 73,
+        "symbols": 0
+      },
+      "discovery_expected_record": true,
+      "inspection": true,
+      "native_program_round_trip": true,
+      "selected_records": 10,
+      "status": "passed",
+      "tenant": "codex",
+      "zero_budget_refused": true
+    }
+  ],
+  "consumer_tests": 17,
+  "generic_tests": 47,
+  "scope": "author verification of exact transport and documented search/inspection/selection paths; no v3 semantic acceptance",
+  "status": "passed",
+  "temporary_preview_servers": "stopped",
+  "v3_worktrees": {
+    "claude": {
+      "clean": true,
+      "head": "b7e8f73d6b9908ecb0f6cc1609aa99ed94ce81f7"
+    },
+    "codex": {
+      "clean": true,
+      "head": "8884178770672c933aef706947a864ab6422e1c6"
+    }
+  }
+}

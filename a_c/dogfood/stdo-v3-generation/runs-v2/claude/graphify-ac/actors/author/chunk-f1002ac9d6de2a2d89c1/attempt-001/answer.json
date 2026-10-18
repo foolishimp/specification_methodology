@@ -1,0 +1,1174 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "A provenance and conservation ledger for rows received from rc.2 WORLD_MODEL_METHOD.md. Its routes identify predecessor anchors and current loci; conservation is asserted by this document, not independently demonstrated by the supplied excerpt.",
+      "exceptions": [],
+      "grounding": [{"end_line":1253,"quote":"Every conserved row is restated in this\nmember's own text; a route is provenance only.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1252}],
+      "key": "world_model_disposition_ledger",
+      "label": "WORLD_MODEL source dispositions"
+    },
+    {
+      "conditions": [],
+      "definition": "Guide owning practical writing discipline for method surfaces: core and style rules, habits, prose quality, authority-aligned tone, specification practice, layer checks and current-surface writing. It consumes, but does not define, SPEC_METHOD's chain, layers, specification-surface rule and release boundary, and POSTING_GUIDE's commentary layer. Clauses identify requiring principles P0–P6 in FOUNDATIONS §3.",
+      "exceptions": [],
+      "grounding": [{"end_line":14,"quote":"and [POSTING_GUIDE](POSTING_GUIDE.md) (the commentary layer); defines none\nof them. Every clause names the principle that requires it (P0 to P6,\nFOUNDATIONS §3). A route written `rc.2 #anchor` is into\n`stdo://releases/v2.5.1-rc.2/standards/WRITING_GUIDE.md` and is provenance\nonly; nothing here depends on that cut to be applied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE","start_line":10}],
+      "key": "writing_guide",
+      "label": "Writing Guide"
+    },
+    {
+      "conditions": [],
+      "definition": "Referenced constitutional owner of specification-layer roles and closure. Only the supplied descriptions of this owner are interpreted; the referenced SPEC_METHOD text is absent.",
+      "exceptions": [],
+      "grounding": [{"end_line":88,"quote":"[SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain) is the constitutional\nauthority for the roles and closure of the specification layers; this\nguide supplies the practical writing discipline for those artifacts (P6;\nrc.2 #specification-artifact-practice).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice","start_line":85}],
+      "key": "specification_layer_owner",
+      "label": "Referenced SPEC_METHOD layer authority"
+    },
+    {
+      "conditions": [],
+      "definition": "Draft 2020-12 schema urn:stdo:schema:installed-release-manifest:1, titled STDO Installed Release Manifest, representing deterministic identity and an exact installed-member inventory for one immutable STDO RC cut.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"  \"$id\": \"urn:stdo:schema:installed-release-manifest:1\",\n  \"title\": \"STDO Installed Release Manifest\",\n  \"description\": \"Deterministic identity and exact installed-member inventory for one immutable STDO RC cut.\",","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble","start_line":3}],
+      "key": "installed_release_manifest",
+      "label": "Installed release manifest schema"
+    },
+    {
+      "conditions": [],
+      "definition": "Draft 2020-12 schema urn:stdo:schema:product-definition:3 for a layout-neutral overlay binding one product WHAT to identity, exact STDO basis, authority locations, bounded-context disambiguation, collective frame bases, realizations, work carriers, bootstrap and composition.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"  \"$id\": \"urn:stdo:schema:product-definition:3\",\n  \"title\": \"STDO Product Definition Overlay\",\n  \"description\": \"Layout-neutral exact STDO basis, identity, authority-location, bounded-context disambiguation, collective reference-frame basis, realization, work-carrier, bootstrap, and composition bindings for one STDO-defined product WHAT.\",","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":3}],
+      "key": "product_definition_schema",
+      "label": "Product Definition Overlay schema"
+    },
+    {
+      "conditions": [],
+      "definition": "Schema-defined binding separating a source Git repository, mutable annotated-tag version-line discovery selector, and exact immutable installed release URI plus deterministic manifest digest.",
+      "exceptions": [],
+      "grounding": [{"end_line":319,"quote":"          \"description\": \"Mutable version-line discovery selector carried by an annotated Git tag. It is never operative constitutional authority without digest-bound explicit resolution and adoption.\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":319}],
+      "key": "schema_stdo_binding",
+      "label": "STDO source, selector and basis binding"
+    },
+    {
+      "conditions": [],
+      "definition": "Schema-defined local resolution carrier binding an exact lexical term to a bounded context, complete material candidate set, selected concept, lawful owning authorities, semantic bases and exact governed scopes. The label is not a context-free concept identity.",
+      "exceptions": [],
+      "grounding": [{"end_line":470,"quote":"          \"description\": \"Exact lexical label being resolved; the label is not a context-free concept identity.\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":470}],
+      "key": "schema_local_disambiguation",
+      "label": "Local disambiguation binding"
+    },
+    {
+      "conditions": [],
+      "definition": "AGENTS_TEMPLATE's marker-bounded bootstrap projection, describing preparation and admission boundaries before constitutional work in a scope routed by a Product Definition Overlay.",
+      "exceptions": [],
+      "grounding": [
+        {"end_line":1,"quote":"<!-- STDO_BOOTSTRAP_START -->","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#preamble","start_line":1},
+        {"end_line":4,"quote":"This scope is routed by an STDO Product Definition Overlay.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap","start_line":4},
+        {"end_line":20,"quote":"<!-- STDO_BOOTSTRAP_END -->","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap","start_line":20}
+      ],
+      "key": "agents_bootstrap_template",
+      "label": "AGENTS bootstrap template"
+    },
+    {
+      "conditions": [],
+      "definition": "CLAUDE_TEMPLATE's marker-bounded bootstrap projection. This is a separately located template with the supplied bootstrap wording, not an identity merger with AGENTS_TEMPLATE.",
+      "exceptions": [],
+      "grounding": [
+        {"end_line":1,"quote":"<!-- STDO_BOOTSTRAP_START -->","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#preamble","start_line":1},
+        {"end_line":4,"quote":"This scope is routed by an STDO Product Definition Overlay.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap","start_line":4},
+        {"end_line":20,"quote":"<!-- STDO_BOOTSTRAP_END -->","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap","start_line":20}
+      ],
+      "key": "claude_bootstrap_template",
+      "label": "CLAUDE bootstrap template"
+    },
+    {
+      "conditions": [],
+      "definition": "Project Goals starter for current overriding concerns, their project role and active goals for the current work wave.",
+      "exceptions": [],
+      "grounding": [{"end_line":3,"quote":"State the current overriding concerns for this project in present tense.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals","start_line":3}],
+      "key": "project_goals_template",
+      "label": "Project Goals template"
+    },
+    {
+      "conditions": [],
+      "definition": "Project Intent starter for present-tense project direction, purpose, required outcomes and shaping constraints.",
+      "exceptions": [],
+      "grounding": [{"end_line":3,"quote":"State the direction for this project in present tense.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent","start_line":3}],
+      "key": "project_intent_template",
+      "label": "Project Intent template"
+    },
+    {
+      "conditions": [],
+      "definition": "Illustrative per-product fill-in JSON overlay, with replacement identities and release selectors, repository https://github.com/foolishimp/specification_methodology.git, source_project ./, an illustrative enclosing context, and paths for specification and realization. It provides four basis-qualified entrypoints (bootstrap, SPEC_METHOD, REFERENCE_FRAME, EXECUTIVE_BASELINE), bootstrap entrypoint index 0 and AGENTS.md/CLAUDE.md targets; empty additional-authority, axiom, override, common and composition arrays; one illustrative disambiguation and frame basis; Intent/Product/requirements references; a default build tenant; and Goals, backlog/active/completed ticket, comment and sprint carriers. These are template values, not an instantiated product or accepted binding.",
+      "exceptions": [],
+      "grounding": [{"end_line":7,"quote":"  \"$schema\": \"stdo://releases/REPLACE_WITH_IMMUTABLE_CUT/standards/schemas/product-definition.schema.json\",\n  \"kind\": \"stdo.product-definition\",\n  \"product\": {\n    \"definition_id\": \"urn:stdo:product-definition:replace-me\",\n    \"name\": \"Replace Me\",\n    \"source_project\": \"./\",","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble","start_line":2}],
+      "key": "product_overlay_template",
+      "label": "Product Definition JSON template"
+    },
+    {
+      "conditions": [],
+      "definition": "Project Product starter for current realization, product kind/domain, bounded-context concepts, goal model, intended end-state shape and a current definition decomposable into requirements.",
+      "exceptions": [],
+      "grounding": [{"end_line":3,"quote":"State the current product realization for this project in present tense.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product","start_line":3}],
+      "key": "project_product_template",
+      "label": "Project Product template"
+    },
+    {
+      "conditions": [],
+      "definition": "Structured-prose starter projecting PRODUCT_DEFINITION §7 collective reference-frame binding. Copying it supplies no authority; its completed declaration is to be admitted by existing authorities owning its decisions.",
+      "exceptions": [],
+      "grounding": [{"end_line":7,"quote":"This starter projects\n`PRODUCT_DEFINITION.md#7-collective-reference-frame-basis`. It is not\nauthority. Replace every placeholder and admit the completed declaration\nthrough the existing Product, requirement, Goals, accepted-design, identity,\nwork, or release authorities that own its decisions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis","start_line":3}],
+      "key": "project_frame_basis_template",
+      "label": "Project Reference-Frame Basis template"
+    },
+    {
+      "conditions": [],
+      "definition": "Planning inventory of every known material evaluation. Planning dispositions activate, non_material and residual are distinct from coverage status; applicability premises are true/false/unknown, and required-result evidence is satisfied/missing/invalid.",
+      "exceptions": [],
+      "grounding": [{"end_line":57,"quote":"- disposition: `activate | non_material | residual` (a planning choice, not\n  a coverage status; see Coverage And Residuals)\n- non-material evidence or residual and re-entry condition:\n- owning applicability predicate and true/false/unknown premises:\n- required-result identity and current satisfied/missing/invalid evidence:","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory","start_line":53}],
+      "key": "frame_evaluation_inventory",
+      "label": "Evaluation inventory"
+    },
+    {
+      "conditions": ["The Product adopts the executive profile."],
+      "definition": "Optional executive configuration for coordination and decision attention. It consumes closed results and chooses already-authorized next actions; its label confers no Product meaning, implementation, mutation, acceptance or publication authority.",
+      "exceptions": ["Another adopted configuration supplies its own selected coordination."],
+      "grounding": [{"end_line":113,"quote":"This section, and the Executive steps of the topology below, bind the\nexecutive configuration of `EXECUTIVE_BASELINE.md`. They apply only when the\nProduct adopts that profile. Under another configuration, replace them with the\ncoordination the applicable configuration selects:","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action","start_line":110}],
+      "key": "template_executive_configuration",
+      "label": "Executive configuration"
+    },
+    {
+      "conditions": [],
+      "definition": "Template coverage and residual ledger separating material evaluation closure, authority-retained exclusions, conditional or absent coverage, and non-material inventory entries.",
+      "exceptions": [],
+      "grounding": [{"end_line":178,"quote":"A `residual` row is\n`excluded_by_authority` where governing authority explicitly retains its\nresidual consistently with the claim, and otherwise `conditionally_covered` or\n`uncovered`. A `non_material` row is no material evaluation and takes no\ncoverage status; its non-material evidence stays in the inventory above.\nAvailable frame count and coordinator visibility are not coverage.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals","start_line":173}],
+      "key": "template_coverage_ledger",
+      "label": "Coverage and residual ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "Starter source material for shared specification and agent-bootstrap files: stdo_default.json or stdo_<label>.json, GOALS.md, INTENT.md, PRODUCT.md, CLAUDE.md, AGENTS.md and a Product-owned Project Reference-Frame Basis.",
+      "exceptions": [],
+      "grounding": [{"end_line":9,"quote":"Use these templates as source material for project-local files such as:\n\n- `stdo_default.json` or `stdo_<label>.json`, copied from\n  `PRODUCT_DEFINITION_TEMPLATE.json`","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates","start_line":6}],
+      "key": "standards_template_collection",
+      "label": "Standards templates"
+    },
+    {
+      "conditions": [],
+      "definition": "Optional human-readable companion to canonical how.build_tenants bindings. The overlay owns build-tenant identity/location; one constitutional WHAT is singleton Product truth with many-valued independent realization structure beneath it.",
+      "exceptions": [],
+      "grounding": [{"end_line":8,"quote":"This is an optional human-readable companion to the canonical\n`how.build_tenants` bindings in the Product's `stdo_<label>.json` definition.\n\nThe Product Definition Overlay owns build-tenant identity and location. Keep\nthis table consistent with that JSON or generate it from the definition. This\nfile must not become a second tenant registry.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry","start_line":3}],
+      "key": "tenant_registry_template",
+      "label": "Tenant registry companion"
+    },
+    {
+      "conditions": [],
+      "definition": "Project-local realization root for surfaces shared across more than one tenant.",
+      "exceptions": [],
+      "grounding": [{"end_line":3,"quote":"This root holds project-local realization surfaces shared across more than one tenant.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces","start_line":3}],
+      "key": "common_realization_surface",
+      "label": "Common build-tenant surfaces"
+    },
+    {
+      "conditions": [],
+      "definition": "Shared realization design surface reserved for design law that applies across multiple build tenants.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"Use this surface only for design law that genuinely applies across multiple build tenants.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76b1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design","start_line":5}],
+      "key": "common_design_surface",
+      "label": "Common tenant design"
+    },
+    {
+      "conditions": [],
+      "definition": "Cross-tenant ADR document template with local ID/title and fields Status (illustratively active), Implements (REQ-*), Derives from (INT-* or motivating strategy/design document), Supersedes (prior ADR/doctrine or none), conditional Superseded by, and Retained special case (retained earlier behavior or none).",
+      "exceptions": [],
+      "grounding": [{"end_line":10,"quote":"| `Status:` | `active` |\n| `Implements:` | `REQ-*` IDs this ADR makes true |\n| `Derives from:` | `INT-*` or strategy/design doc that motivated the decision |\n| `Supersedes:` | Prior ADR or doctrine this replaces, or `none` |\n| `Superseded by:` | Successor ADR if this one becomes `superseded`, otherwise omit |\n| `Retained special case:` | When earlier behavior is intentionally retained, or `none` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E","start_line":5}],
+      "key": "common_adr_template",
+      "label": "Cross-tenant ADR template"
+    },
+    {
+      "conditions": [],
+      "definition": "Directory of ADRs governing realization across at least two build tenants: durable design memory within Design, not an extra constitutional layer above design or a second requirement surface.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"This folder holds the Architecture Decision Records that govern realization across two or more build tenants.\n\nADRs at this surface are the durable design memory for cross-tenant realization choices. They are the form of `Design` defined in `SPEC_METHOD.md` section 10, Design records, not a separate constitutional layer above design, and not a second requirement surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs","start_line":3}],
+      "key": "common_adr_directory",
+      "label": "Common tenant ADR directory"
+    },
+    {
+      "conditions": [],
+      "definition": "Root holding one concrete build tenant, including tenant-local design, tooling, traces and implementation unless explicitly promoted to common.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"This root holds one concrete build tenant for the project.\n\nKeep tenant-local design, tooling, traces, and implementation here unless they are explicitly promoted to `build_tenants/common/`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/README_TEMPLATE.md#Tenant%20Root","start_line":3}],
+      "key": "variant_tenant_root",
+      "label": "Tenant root"
+    },
+    {
+      "conditions": [],
+      "definition": "Tenant-local design surface whose governing method is resolved from the applicable Product Definition's exact installed STDO basis; common/design carries shared realization law.",
+      "exceptions": [],
+      "grounding": [{"end_line":7,"quote":"Resolve the governing method from the exact installed STDO basis in the\napplicable Product Definition and use `build_tenants/common/design/` for shared\nrealization law.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design","start_line":5}],
+      "key": "variant_design_surface",
+      "label": "Tenant design"
+    },
+    {
+      "conditions": [],
+      "definition": "Tenant-local ADR template, separately located from the common template, with local ID/title and Status, Implements, Derives from, Supersedes, conditional Superseded by and Retained special case fields. Its displayed active status and REQ/INT placeholders do not instantiate a decision.",
+      "exceptions": [],
+      "grounding": [{"end_line":10,"quote":"| `Status:` | `active` |\n| `Implements:` | `REQ-*` IDs this ADR makes true |\n| `Derives from:` | `INT-*` or strategy/design doc that motivated the decision |\n| `Supersedes:` | Prior ADR or doctrine this replaces, or `none` |\n| `Superseded by:` | Successor ADR if this one becomes `superseded`, otherwise omit |\n| `Retained special case:` | When earlier behavior is intentionally retained, or `none` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E","start_line":5}],
+      "key": "variant_adr_template",
+      "label": "Tenant-local ADR template"
+    },
+    {
+      "conditions": [],
+      "definition": "ADRs governing one build tenant as durable design memory for local realization choices; a form of Design under SPEC_METHOD §10, not a separate higher constitutional layer or second requirement surface.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"ADRs are the durable design memory for tenant-local realization choices. They are the form of `Design` defined in `SPEC_METHOD.md` section 10, Design records, not a separate constitutional layer above design, and not a second requirement surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs","start_line":5}],
+      "key": "variant_adr_directory",
+      "label": "Tenant-local ADR directory"
+    },
+    {
+      "conditions": [],
+      "definition": "Intent template stating tenant-local aims for bounded constructive turns, including optimization goal, directly shaping requirements, depended-on tenant/shared design surfaces and local constraints.",
+      "exceptions": [],
+      "grounding": [{"end_line":3,"quote":"State the tenant-local intent for bounded constructive turns.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent","start_line":3}],
+      "key": "tenant_fp_intent_template",
+      "label": "Tenant F_P customization intent"
+    },
+    {
+      "conditions": [],
+      "definition": "Tenant-local design/fp surface for F_P tuning of bounded constructive turns.",
+      "exceptions": [],
+      "grounding": [
+        {"end_line":32,"quote":"Use `design/fp/` to describe tenant-local F_P tuning for bounded constructive turns.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FF_P%20Customization","start_line":32},
+        {"end_line":3,"quote":"This folder holds tenant-local F_P tuning for bounded constructive turns.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization","start_line":3}
+      ],
+      "key": "tenant_fp_customization",
+      "label": "Tenant F_P customization surface"
+    },
+    {
+      "conditions": [],
+      "definition": "Illustrative edge-override JSON shape: edge requirements→feature_decomp, customization_intent, requirement_refs containing REQ-PROJ-001, design_refs containing build_tenants/<tenant-path>/design/README.md, guidance_append, suggested_output output/feature_decomp.md and required_sections containing # Feature Decomposition. Placeholder descriptions and suggested output are not realized requirements or runtime results.",
+      "exceptions": [],
+      "grounding": [{"end_line":14,"quote":"  \"guidance_append\": \"Describe how this tenant wants the edge handled.\",\n  \"suggested_output\": \"output/feature_decomp.md\",\n  \"required_sections\": [\n    \"# Feature Decomposition\"\n  ]","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json#preamble","start_line":10}],
+      "key": "edge_override_template",
+      "label": "Edge override template"
+    },
+    {
+      "conditions": [],
+      "definition": "Supporting project documentation root for explanatory, operational or supporting material that is not itself the constitutional requirement surface.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"Use this root for explanatory, operational, or supporting material that is not itself the constitutional requirement surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/docs/README_TEMPLATE.md#Project%20Docs","start_line":5}],
+      "key": "project_docs_surface",
+      "label": "Project documentation"
+    },
+    {
+      "conditions": [],
+      "definition": "Folder for project-specific requirement families; writing and revision resolve governing method references from the applicable Product Definition's exact installed STDO basis.",
+      "exceptions": [],
+      "grounding": [{"end_line":6,"quote":"Resolve the governing method references from the exact installed STDO basis in\nthe applicable Product Definition when writing or revising these files.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements","start_line":5}],
+      "key": "project_requirement_families",
+      "label": "Project requirements"
+    },
+    {
+      "conditions": [],
+      "definition": "Starter requirement family REQ-PROJ-STARTER-* with Deferred status and Capability category, containing placeholder REQ-PROJ-STARTER-001 Replace me.",
+      "exceptions": [],
+      "grounding": [{"end_line":5,"quote":"**Family**: REQ-PROJ-STARTER-*\n**Status**: Deferred\n**Category**: Capability","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements","start_line":3}],
+      "key": "starter_requirement_family",
+      "label": "Deferred starter requirements"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["world_model_disposition_ledger"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1271,"quote":"The predecessor's \"must\" is written in the indicative; every\nother modal keeps its force.\n\nThree clauses have no predecessor row and are new: the declared binding of\nFOUNDATIONS §2 Object and P3's boundary claim to the entity cut (lead);\nthe refinements of the core result algebra (§14), which FOUNDATIONS §4\nResults requires of a profile with its own result vocabulary; and the\nfamily table (§1 Foundation to law), in the format of FOUNDATIONS §3\nFoundation to law (P1, P3, P5, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1263}],
+      "key":"world_model_provenance_rules",
+      "statement":"The ledger reports these generalizations: WORLD_MODEL_METHOD.md/this method → this profile; SPEC_METHOD.md, RELEASE_METHOD.md, TICKET_METHOD.md → SPEC_METHOD, RELEASE, TICKETS; ODD_METHOD.md → graph-execution profile (PROFILES §2); DESIGN_MODULE_METHOD.md → DESIGN_MODULE; GLOSSARY_GUIDE.md → GLOSSARY; STDO basis/release → method basis/release. Recursive-product-taxonomy ownership moves to FOUNDATIONS §2 Product lineage objects; Builder Project ownership moves to §6 Units. Predecessor must becomes indicative without changing other modal forces. The entity-cut binding to FOUNDATIONS Object/P3, profile refinements of the core result algebra and P1/P3/P5/P6 family table are explicitly new, not conserved predecessor clauses. The core-claims and method-units predecessor headings have no claim text (15 and 16 bytes respectively); their nine and seventeen children are disposed separately.",
+      "uncertainty":"These are authored conservation and ownership assertions; referenced predecessor and receiving bodies are not supplied."
+    },
+    {
+      "applies_to_keys":["world_model_disposition_ledger"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1286,"quote":"| #method-objectives | conserved; the eight \"should\" qualities and eight answerable questions | §3 Objectives |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1286},{"end_line":1284,"quote":"| #epistemic-status-of-the-construct | conserved; working vocabulary, candidate program, no completion prerequisite, working commitments, the promotion gate not met and not relocated, candidate-class overlays, entity cuts not inheriting the status, the \"should default\" publication kind; the formal object is FOUNDATIONS §5's hypothesis, pointed to | §4 Epistemic status; §14 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1284}],
+      "key":"world_model_position_and_epistemic_conservation",
+      "statement":"The table reports conservation of: position's lost-context premise, eight enacting surfaces, seven starting claims and inspectable/versioned/machine-reasonable truth; role split, primary surface, owned and narrower Product contexts, graph-execution composition, four imports with invalidation/no alias and five particular meanings; semantic-import classification under PRODUCT_DEFINITION §5 applying FOUNDATIONS §2; all ten Builder Project specialization coordinates against that carrier; two constitutional intents, query/serving non-constitutional and a later plane at may; fifteen manifesto commitments and the not-world-model-driven condition; descriptive-before-generative meaning, primary entity cut/shorthand rule, eight should-make-explicit items and five negations; load-bearing Markov definition, four-substrate neutrality, propagation and recovery as practice; rejection of the set-theoretic blanket reading on two grounds, three geometric statements, candidate evidence and failed promotion condition; four experimentally associated working refinements, pin rule, sharpening without weakening and no entity-cut-admissibility status; working vocabulary/candidate program without a completion prerequisite, working commitments, unmet/unrelocated promotion gate, candidate overlays without transferring their status to cuts, should-default publication kind and FOUNDATIONS §5 hypothesis reference; four should-prefer design preferences without making them prerequisites, directed relation and DESIGN_MODULE §8 analogues; eight should qualities and eight answerable objective questions.",
+      "uncertainty":"The numbered sets and several conditions are described by count or name only; their contents cannot be reconstructed from this section."
+    },
+    {
+      "applies_to_keys":["world_model_disposition_ledger"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1309,"quote":"| #entity-cut | conserved; primary unit, lawful without direction, the eight published surfaces traced to ledger and assurance, convergence of looser candidates | §6 Entity Cut |\n| #markov-object-overlay | conserved; optional, admissible only with a declared space, the three additions, strengthens and its absence does not weaken | §6, row Markov-Object Overlay |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1308}],
+      "key":"world_model_truth_and_units_conservation",
+      "statement":"Conserved core-claim topics are sovereign source systems; domains with six functional coordinates; data as evidence rather than self-sufficient meaning; externalized expert cognition; semantic treatments with five declarations each; mandatory fully qualified naming; value lists as domain artifacts; world model above APIs/schemas; probability that should remain epistemic overlay, four overlay kinds, five may-include items, substrate rationale, overlay distinct from truth and three distinct artifacts. Single truth has four constituents/four supporting surfaces and no second truth surface. Evidence uses a preferred five-level hierarchy, high-fidelity code, broader behavior and no code prerequisite. Units retained are App, Builder Project (identity/definition, directional specialization and non-equivalence), Published Domain Artifact, Fragment, World Model Object (weaker than Markov Object, uses and nonpreferred published name), Assurance, Attribute Ledger (seven may-carry entry kinds), Markov Object (immutable ledger projection, evidenced direction rather than columns, recovery rather than invention, entity cut with optional overlay and three routes), Entity Cut (primary, lawful without direction, eight published ledger/assurance-traced surfaces and converging looser candidates), optional Markov-Object Overlay (declared-space prerequisite, three additions, strengthening without weakening a cut by absence), Treatment Surface, Covariance Edge, Adjoint Mapping, Temporal Reference Artifact, Composed World Model, Projection and Query Plane.",
+      "uncertainty":"Named units with only conserved labels have no supplied definitions; unnamed enumerations remain unresolved."
+    },
+    {
+      "applies_to_keys":["world_model_disposition_ledger"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1331,"quote":"| #13-compile-optional | conserved; optional, the five \"may include\" examples, the three-part rule with \"should run\" | §7, stage 13 |\n| #14-serve-or-query-optional | conserved; optional, \"if delivery needs justify it\", filesystem-first or a later plane at \"may\" | §7, stage 14 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1330}],
+      "key":"world_model_flow_and_cut_laws_conservation",
+      "statement":"The conserved ordered flow is Observe (five surfaces), Trace (should trace to span/field/locator/code path/record), Extract (six intermediate surfaces, not yet world model, auditable path), Assure (five should-make-explicit items), Ledger (append-only, new claims/later cuts, no in-place mutation), Bound (contexts/coherent candidates, two rejected modellings/four boundary terms), Materialize (sufficient-context projection, sparse first publication under three conditions), Relate, Publish (immutable/no mutation; Git/filesystem sufficient at low volume), Compose (recursive/inspectable/bounded, preserving local authority), optional Align (five may-produce outputs, overlays not truth), Project (eight outputs), optional Compile (five may-include examples, three-part rule with should run), and optional Serve/Query if delivery needs justify it (filesystem-first or later plane at may). Conserved representation law is prompt-sufficient with eight minimum surfaces, surviving interventional rather than structural blanket, geometric form, should-expose overlay and §9 discharge. Materialization retains builder artifact/four-part split, should-be-versioned derivation/literal projection, many cuts per ledger state, four-step recoverability and three should prohibitions. Publication retains four should properties, sufficient Git/filesystem, later database as query plane and two distinct ledgers that should remain append-only/replayable. Ledger law retains immediate source, six should claim parts, three may-supported evidence surfaces and one lawful claim record per fact. Entity-cut construction is recovered, not invented: trawl then qualify under FOUNDATIONS Object/P3 binding. Admissibility retains eight-surface whole test, proportional altitude without prescribing method, three explicit values, no manufactured treatment, sparse-first five entity kinds/altitude bound. Discrimination strengthens with claim strength; five techniques are nonmandatory; adjoint round-trip is semantic analogue; interventional over declarative and weaker field-set reading retain should. Publication exposes eight traceable surfaces, three values and discrimination basis, immutable superseding cuts and consumer-realized storage.",
+      "uncertainty":"The unlisted stage surfaces, sparse-publication conditions, values and tests are not supplied; no traversal or construction is executed."
+    },
+    {
+      "applies_to_keys":["world_model_disposition_ledger"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1347,"quote":"| #3-verification-by-treatment | conserved; acceptance condition, at least one of the three verifications, unverified is candidate, publishing it violates the Representation law, the cut stays lawful, battery not a closed blanket; the mapping to the core result algebra is new (§14): a verification not run has no result, and publishing an unverified direction is `published_unverified` | §10 Verification by treatment; §14 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1343}],
+      "key":"world_model_overlay_and_delivery_conservation",
+      "statement":"Markov construction is a representation-substrate specialization with applicability/three space kinds, not otherwise required; built/stored minimum, space in overlay and no cross-space composition. Paired collection requires at least one null peer and three evidence items; distributed entries are not the object. Direction extraction retains low-rank projection, mean-offset formula and three supervised variants; principal-component/maximum-variance extraction is inadmissible and direction is not a column. Verification requires its acceptance condition and at least one of three verifications: unverified remains candidate; publishing an unverified direction violates Representation law as published_unverified while the cut stays lawful; not-run verification has no result; the battery is not a closed blanket. Core persists across ≥ N of N contexts, coat is distinguished, both are evidence and ratio characterizes. Null-peer discrimination retains three questions/expected answers; failure means not yet lawful. Overlay publication has seven minimum items, immutable projection, superseding revisions/space changes and no in-place mutation. Storage is not row/list: six package items, lossy layout unlawful, derived planes no substitute. Saturation is iterative with repetition at may, three saturation conditions, lawful sparsity and unlawful silent unsupported attributes. Composition starts local then stitches, not monolith-first, preserves five items without erasure; mesh is preferred, topology product-local at may, ratification at should only when stable. Projection is convenience, not authority: kernel primary, six should-trace targets, publication forms/preferred order, query/traversal at may. Control/data-plane conservation includes four control members, data plane, three carriers without truth split, LLMs in control plane with four should-help items and should-not execution rule. Proof retains should-not-depend, preferred five-step wedge, incremental capture, practical obligation and should-also-show compilation proof. World-model-driven development is parallel to spec-driven, retains two usually claims, projection without reauthoring, preferred/shorter relations, four normative-spec cases and world model as substrate. Output has ten results; companions comprise three method companions and scoped empirical program with findings, commit/document SHA-256 pin, as research evidence rather than authority.",
+      "uncertainty":"Only summarized results and boundaries are available; formulas, verification acceptance condition, package contents and external references remain unresolved."
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":22,"quote":"Write for a reader who is technically fluent and short on time (P0; rc.2\n#core-rule).\n\nState the claim. State the reason. Remove the performance around them\n(P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F1.%20Core%20rule","start_line":18}],
+      "key":"writing_core_rule",
+      "statement":"The guide directs writing toward technically fluent, time-limited readers (P0): state claim and reason and remove performative surrounding prose (P2).",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":35,"quote":"1. Prefer direct positive statements over contrast framing (P1).\n2. Remove setup paragraphs that announce what a section will say (P2).\n3. Use concrete nouns and verbs, not motivational or promotional\n   language (P1).\n4. Keep one claim per sentence when possible (P1, P6).\n5. Prefer precise technical vocabulary over vague intensifiers (P1).\n6. Use an example only when it reduces ambiguity (P2, P1).\n7. Do not write filler transitions whose only purpose is tone (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F2.%20Style%20rules","start_line":28}],
+      "key":"writing_style_rules",
+      "statement":"Prefer direct positive statements and precise technical vocabulary; remove announcing setup paragraphs; use concrete nouns/verbs rather than promotion or motivation; keep one claim per sentence when possible; examples are allowed only when reducing ambiguity; tone-only filler transitions are prohibited. Preferences and feasibility qualification retain their weaker force.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":53,"quote":"Remove these habits (P2; rc.2 #remove-these-habits):\n\n- \"not X, but Y\"\n- \"simply\"\n- \"just\"\n- \"clearly\"\n- \"obviously\"\n- \"powerful\"\n- \"robust\"\n- \"seamless\"\n- \"game-changing\"\n- generic reassurance\n- dramatic phrasing\n\nThey usually add tone and no information (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F3.%20Habits%20to%20remove","start_line":39}],
+      "key":"writing_remove_habits",
+      "statement":"Remove the eleven named habits: not X, but Y; simply; just; clearly; obviously; powerful; robust; seamless; game-changing; generic reassurance; dramatic phrasing. The rationale is that these usually add tone without information, not that every occurrence necessarily does.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":62,"quote":"Good prose on these surfaces is factual, bounded, explicit about\nauthority, explicit about uncertainty and easy to challenge (P6, P4b;\nrc.2 #good-prose).\n\nA sentence that sounds polished and carries no new constraint or\nobservation is cut (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F4.%20Good%20prose","start_line":57}],
+      "key":"writing_good_prose",
+      "statement":"Good prose is factual, bounded, explicit about authority and uncertainty, and challengeable. Cut polished sentences carrying no new constraint or observation.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":73,"quote":"- implies conclusions instead of grounding them;\n- repeats one claim in different words;\n- mixes current reality with target intent without labelling the\n  difference;\n- explains basic concepts to an expert audience; or\n- turns straightforward instructions into brand language.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F5.%20Bad%20prose","start_line":68}],
+      "key":"writing_bad_prose",
+      "statement":"The guide classifies as bad prose: ungrounded implied conclusions, repeated claims, unlabeled mixing of current reality and target intent, basic explanations to experts, or branding of straightforward instructions.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":81,"quote":"Method documents should sound constitutional. Requirements should sound\nnormative. Design should sound structural. Commentary should sound\nanalytical (P6; rc.2 #method-alignment).\n\nWhere the tone does not match the authority layer, rewrite it (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F6.%20Tone%20and%20authority%20layer","start_line":77}],
+      "key":"writing_authority_tone",
+      "statement":"Method, requirement, design and commentary prose should respectively sound constitutional, normative, structural and analytical. A tone/authority-layer mismatch triggers rewriting; the four tone mappings remain should recommendations.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":["Writing a specification artifact."],
+      "exceptions":["Design detail may occupy a constitutional layer when the detail is itself constitutional."],
+      "grounding":[{"end_line":99,"quote":"- state the current live truth, not a narrated transition;\n- keep each sentence in its right layer;\n- remove stale law, as §9 states; and\n- keep design detail out of constitutional layers unless the detail is\n  itself constitutional.\n\nA sentence that sounds informative and changes no authority, constraint\nor derivability is cut (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice","start_line":92}],
+      "key":"writing_specification_practice",
+      "statement":"State current live truth, keep sentences in their proper layers, remove stale law under §9, and exclude nonconstitutional design detail from constitutional layers. Cut informative-sounding sentences that change no authority, constraint or derivability.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":["Writing or revising a specification artifact."],
+      "exceptions":[],
+      "grounding":[{"end_line":110,"quote":"1. Can the next downstream layer derive from this?\n2. Does this artifact state current truth rather than work in progress?\n3. Does any sentence belong in a lower layer instead?\n\nIf any answer is wrong, rewrite or delete (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F8.%20Layer%20checks","start_line":106}],
+      "key":"writing_layer_checks",
+      "statement":"Ask whether the next downstream layer can derive, whether current truth rather than work in progress is stated, and whether any sentence belongs lower. Rewrite or delete on any wrong answer; this does not mean all three questions require yes.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":["Explicit version labels are reserved for immutable release facts, selector bindings, or clearly historical/superseded material."],
+      "grounding":[{"end_line":122,"quote":"constitutional specification is written in the present tense, material\nthat is no longer live is deleted, superseded or moved to commentary, and\nan explicit version label is reserved for an immutable release fact, a\nselector binding, or clearly historical or superseded material (P3;\nrc.2 #current-surface-writing). This guide adds the writing practice:\nduring a change wave prefer terms such as active, current, base, live,\nshared and tenant-local (P3).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F9.%20Current-surface%20writing","start_line":116},{"end_line":145,"quote":"| #current-surface-writing | conserved; present tense at \"should\", the three dispositions of non-live material, no dead law, the six preferred terms, the three uses of version labels | §9 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions","start_line":145}],
+      "key":"writing_current_surface_rule",
+      "statement":"Current-surface practice references SPEC_METHOD's rule: constitutional specification uses present tense; non-live material is deleted, superseded or moved to commentary, leaving no dead law. During change waves prefer active, current, base, live, shared and tenant-local. The disposition table explicitly describes present tense at should; do not silently strengthen it from the indicative restatement.",
+      "uncertainty":"The operative force is attributed to an absent SPEC_METHOD rule; the supplied body and disposition use different grammatical forms."
+    },
+    {
+      "applies_to_keys":["writing_guide"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":133,"quote":"member's own text; a route is provenance only. Generalisations recorded\nhere: \"in this repo\" is written \"on these surfaces\"; `SPEC_METHOD.md` is\nwritten as the tenant's SPEC_METHOD §2; \"labeling\" is written\n\"labelling\"; the predecessor's section titles \"Remove These Habits\",\n\"Method Alignment\" and \"Practical Layer Checks\" are written \"Habits to\nremove\", \"Tone and authority layer\" and \"Layer checks\".","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions","start_line":128}],
+      "key":"writing_disposition_conservation",
+      "statement":"The table asserts conservation of all nine predecessor topics into §§1–9: core reader/claim/reason/performance removal; seven style rules with prefer/when possible; eleven habits with usually; five good marks/cut rule; five bad marks; four should-tone mappings/rewrite; authority split/four artifact practices/cut; three checks/rewrite-or-delete; current-surface rules. Routes are provenance only. Declared changes are repo→surfaces, SPEC_METHOD.md→tenant SPEC_METHOD §2, labeling→labelling and three renamed headings.",
+      "uncertainty":"Predecessor conservation is reported, not independently compared."
+    },
+    {
+      "applies_to_keys":["installed_release_manifest"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":19,"quote":"  \"required\": [\n    \"kind\",\n    \"schema_version\",\n    \"release\",\n    \"standards\",\n    \"auxiliary\"\n  ],\n  \"properties\": {\n    \"kind\": {\n      \"const\": \"stdo.installed-release-manifest\"\n    },\n    \"schema_version\": {\n      \"const\": 1","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble","start_line":7}],
+      "key":"manifest_object_structure",
+      "statement":"The root is an object requiring kind=stdo.installed-release-manifest, schema_version=1, release, standards and auxiliary. release requires cut, tag_object, commit, tree and standards_tree. Optional project_release_namespace, qualified_ref, project_subtree_root and project_subtree_tree form an all-or-none dependentRequired quartet. All declared objects reject additional properties. standards satisfies memberSet, fixes source_root=specification/standards and installed_root=standards, and additionally requires member_set_sha256. auxiliary requires plugin, license and release_note: plugin satisfies memberSet with both roots plugins/spec; license requires path=LICENSE and sha256; release_note requires source_path, installed_path=release/release-note.md and sha256.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["installed_release_manifest"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":203,"quote":"          \"pattern\": \"^(?!/)(?!.*(?:^|/)\\\\.\\\\.(?:/|$)).+$\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble","start_line":203},{"end_line":240,"quote":"          \"uniqueItems\": true","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble","start_line":240}],
+      "key":"manifest_value_domains",
+      "statement":"All patterns below are the decoded schema regexes. immutableCut is string matching ^v(?!.*-rc\\..*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*$. Git IDs are lowercase hexadecimal of length 40 or 64 (^[0-9a-f]{40}([0-9a-f]{24})?$); SHA-256 strings match ^[0-9a-f]{64}$. Namespace is a nonempty string matching ^[a-z0-9][a-z0-9._-]*$; qualified_ref matches ^refs/tags/[a-z0-9][a-z0-9._-]*/v[^/]+-rc\\.[1-9][0-9]*$. Project subtree root is nonempty and matches ^(?:\\.|(?!/)(?!.*(?:^|/)(?:\\.|\\.\\.)(?:/|$))(?!.*//).+)$; subtree tree is a Git ID. Release-note source_path matches ^releases/v[^/]+\\.md$. member requires nonempty path matching ^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$ and sha256. memberSet requires nonempty source_root/installed_root strings, integer member_count≥0, and an array of unique whole member objects; member_set_sha256 is optional in the base definition. No minimum array size is imposed.",
+      "uncertainty":"Whole-object uniqueItems does not by itself establish unique paths, member-count equality, digest correctness or repository identity."
+    },
+    {
+      "applies_to_keys":["product_definition_schema"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":18,"quote":"  \"required\": [\n    \"$schema\",\n    \"kind\",\n    \"product\",\n    \"constitution\",\n    \"local_constitution\",\n    \"reference_frame_bases\",\n    \"what\",\n    \"how\",\n    \"ticketing\",\n    \"composition\"\n  ],","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":7}],
+      "key":"product_schema_structure",
+      "statement":"Root requires $schema (referenceUri), kind=stdo.product-definition, product, constitution, local_constitution, reference_frame_bases, what, how, ticketing and composition. Every explicitly defined object rejects additional properties. product requires definition_id (identityUri), nonempty name, source_project (referenceUri) and bounded_context, whose required field value is either null or an object requiring id (identityUri) and definition (referenceUri). This optional enclosing context is not an exhaustive subordinate/peer/composed/tenant/user/runtime registry. constitution requires stdo, additional_authorities (references), a nonempty unique constitutionalEntrypoint array and agent_bootstrap. local_constitution requires unique arrays axioms, overrides and disambiguations, which may be empty. reference_frame_bases is a nonempty unique referenceFrameBasis array. what requires intent/product referenceUri values and specification nonEmptyReferences. how requires common references and a nonempty unique buildTenant array. ticketing requires goals referenceUri, tickets and comments carrierRoot; sprints carrierRoot is optional. tickets requires root referenceUri and lanes requiring backlog/active/completed referenceUri values. composition is a unique compositionEdge array with no minimum length.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["product_definition_schema","schema_stdo_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":255,"quote":"      \"description\": \"URI syntax annotation. Conformance requires an assertion-capable URI validator in addition to portable Draft 2020-12 structural validation.\"\n    },\n    \"referenceUri\": {\n      \"type\": \"string\",\n      \"format\": \"uri-reference\",\n      \"minLength\": 1,\n      \"description\": \"URI-reference syntax annotation. Conformance requires an assertion-capable URI-reference validator in addition to portable Draft 2020-12 structural validation.\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":249}],
+      "key":"product_schema_scalar_and_binding_rules",
+      "statement":"identityUri and referenceUri are nonempty strings annotated uri and uri-reference; conformance additionally requires assertion-capable syntax validators. references is a unique referenceUri array; nonEmptyReferences also requires ≥1 item. sha256 matches ^[0-9a-f]{64}$. stdoChannelUri combines identityUri with decoded regex ^stdo://channels/(?![^/]*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*/?$; stdoReleaseUri combines identityUri with ^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*/?$. stdoBinding requires source, selector and basis: source requires repository referenceUri; selector is stdoChannelUri; basis requires uri stdoReleaseUri and manifest_sha256. The selector never supplies operative constitutional authority without digest-bound explicit resolution and adoption. The basis identifies the exact immutable installed cut; its digest refers to the deterministic manifest carrying tag, commit, tree and complete distribution identity.",
+      "uncertainty":"The release-URI regex lacks the manifest cut regex's explicit duplicate-rc exclusion; the patterns are preserved as distinct."
+    },
+    {
+      "applies_to_keys":["product_definition_schema","schema_local_disambiguation"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":482,"quote":"          \"description\": \"Exact concept reference selected by the owning resolution carrier. Conformance separately verifies that it is a member of disambiguates.\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":482}],
+      "key":"product_schema_relation_carriers",
+      "statement":"constitutionalEntrypoint requires basis and uri referenceUri values; uri is a reading route relative to the referenced constitutional basis. carrierRoot requires root referenceUri. localAxiom and referenceFrameBasis each require uri referenceUri plus authority/applies_to nonEmptyReferences. localOverride additionally requires overrides nonEmptyReferences. localDisambiguation requires uri referenceUri, nonempty term, context identityUri, disambiguates/authority/basis/applies_to nonEmptyReferences and resolves_to referenceUri. Its candidate list is complete for term/context/basis/scope; resolves_to membership is separately verified. Authority names existing lawful owners; basis names required semantic bases; applies_to gives exact governed scopes. Cross-context uri carriers declare the complete authorized import, translation, equivalence or disambiguation relation. buildTenant requires id identityUri, root referenceUri, design and implementation nonEmptyReferences. compositionEdge requires product_definition referenceUri, target_definition_id identityUri, relation referenceUri and contracts nonEmptyReferences.",
+      "uncertainty":"Schema references carry locations and declared relations; they do not establish the lawfulness or content of referenced authorities."
+    },
+    {
+      "applies_to_keys":["product_definition_schema"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":392,"quote":"      \"description\": \"Portable relative file reference confined to the resolved product.source_project. Absolute paths, authorities, parent traversal, queries, fragments, backslashes, symlinks, and reparse points are refused by manager conformance.\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":392}],
+      "key":"product_schema_bootstrap_targets",
+      "statement":"agentBootstrap requires entrypoint referenceUri and a nonempty unique targets array. Targets identify instruction files relative to product.source_project whose marker-bounded projection the manager manages. Each target combines referenceUri with decoded regex ^(?![A-Za-z][A-Za-z0-9+.-]*:)(?!//)(?!/)(?!\\.\\.(?:/|$))(?!.*\\/\\.\\.(?:\\/|$))[^?#\\\\]+$. Manager conformance confines references to the resolved source project and refuses absolute paths, authorities, parent traversal, queries, fragments, backslashes, symlinks and reparse points.",
+      "uncertainty":"Filesystem confinement and symlink/reparse refusal exceed portable structural schema validation."
+    },
+    {
+      "applies_to_keys":["agents_bootstrap_template"],
+      "conditions":["Before constitutional work under this template's represented workflow."],
+      "exceptions":[],
+      "grounding":[{"end_line":14,"quote":"6. Bind the exact outcome, basis and existing work grant. Use direct Writer entry when the accepted frame configuration permits it and one capable context suffices; use Executive or the declared project equivalent for material coordination. Activate only applicable dependency-ready evaluations, preserving unknown applicability and required independence. Executive does not mutate files or Git; a separate Writer activation binds those effects.\n7. Fail closed when the Product Definition, frame basis, subject, authority, or activation is missing, ambiguous, stale, or outside the governed scope.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap","start_line":13}],
+      "key":"agents_bootstrap_workflow",
+      "statement":"The represented order resolves applicable stdo_<label>.json for Product scope; uses constitution.stdo.basis rather than selector; resolves/verifies that exact installed release through the manager; loads declared bootstrap entrypoint then exact owning standards as needed; resolves accepted applicable Project Reference-Frame Basis or declared composition; binds exact outcome/basis/existing grant. Direct Writer entry requires accepted configuration permission and one sufficient capable context; material coordination uses Executive or declared equivalent. Activate only applicable dependency-ready evaluations while preserving unknown applicability and independence. Executive does not mutate files/Git; separate Writer activation binds effects. Fail closed for missing, ambiguous, stale or out-of-scope Product Definition, frame basis, subject, authority or activation. Mutable source, other installed versions, cache and bootstrap cannot replace selected exact basis; prompts/summaries/maps/prior results may route attention but cannot replace current source authority or a closed frame result.",
+      "uncertainty":"This describes template instructions without activating or verifying the represented workflow."
+    },
+    {
+      "applies_to_keys":["claude_bootstrap_template"],
+      "conditions":["Before constitutional work under this template's represented workflow."],
+      "exceptions":[],
+      "grounding":[{"end_line":19,"quote":"Mutable methodology source, another installed version, a cache entry, and this\nbootstrap cannot replace the exact basis selected by the Product Definition.\nA prompt, summary, symbolic map, or prior result may route attention but cannot\nreplace current source authority or a closed frame result.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap","start_line":16}],
+      "key":"claude_bootstrap_workflow",
+      "statement":"The represented order resolves scope-applicable stdo_<label>.json, uses constitution.stdo.basis rather than selector, resolves/verifies its exact installed release through the manager, loads declared bootstrap entrypoint then exact owners as needed, and resolves accepted frame basis or its declared composition. Bind exact outcome/basis/existing grant. Direct Writer requires configuration permission and one sufficient capable context; material coordination uses Executive or equivalent. Only applicable dependency-ready evaluations activate, preserving unknown applicability and required independence. Executive has no file/Git mutation; effects require separate Writer activation. Missing/ambiguous/stale/out-of-scope Product Definition, frame basis, subject, authority or activation requires fail-closed. Mutable source, another installed version, cache or bootstrap cannot substitute for exact basis; prompts, summaries, symbolic maps or prior results can route attention but cannot replace current source authority or closed frame results.",
+      "uncertainty":"This separately preserves CLAUDE_TEMPLATE's content without executing it."
+    },
+    {
+      "applies_to_keys":["project_goals_template"],
+      "conditions":["Filling the Goals document."],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":6,"quote":"Resolve and verify the exact installed STDO basis declared by the applicable\nProduct Definition while you fill this document out.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals","start_line":5},
+        {"end_line":11,"quote":"State what role goals play in this project and how they differ from intent,\nproduct definition, and requirements.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FPosition","start_line":10},
+        {"end_line":18,"quote":"List the active goals for the current wave of work.\n\nEach goal should orient work. It should not masquerade as a requirement or a\nrelease version label.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FCurrent%20Goals","start_line":15}
+      ],
+      "key":"goals_template_content",
+      "statement":"State current overriding concerns in present tense and resolve/verify the applicable declared exact installed basis. Explain goals' role and difference from intent, product definition and requirements. List active goals of the current wave. Each should orient work and should not masquerade as a requirement or release-version label.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_intent_template"],
+      "conditions":["Filling the Intent document."],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":6,"quote":"Resolve and verify the exact installed STDO basis declared by the applicable\nProduct Definition while you fill this document out.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent","start_line":5},
+        {"end_line":10,"quote":"Describe why this project exists.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FPurpose","start_line":10},
+        {"end_line":14,"quote":"List the outcomes the project must deliver.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FOutcomes","start_line":14},
+        {"end_line":18,"quote":"List the constraints that shape the project.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FConstraints","start_line":18}
+      ],
+      "key":"intent_template_content",
+      "statement":"State project direction in present tense; resolve/verify the applicable exact installed basis; explain why the project exists; list outcomes it must deliver and constraints shaping it.",
+      "uncertainty":"No actual purpose, outcomes or constraints are filled in."
+    },
+    {
+      "applies_to_keys":["project_product_template"],
+      "conditions":["Filling the Product document."],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":6,"quote":"Resolve and verify the exact installed STDO basis declared by the applicable\nProduct Definition while you fill this document out.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product","start_line":5},
+        {"end_line":10,"quote":"Describe what kind of product this is and what domain it provides.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Position","start_line":10},
+        {"end_line":28,"quote":"State how goals focus one bounded body of work and how those goals feed intent\nand downstream product change.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FGoal%20Model","start_line":27},
+        {"end_line":32,"quote":"Describe the intended end-state product shape in concrete terms.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20End%20State","start_line":32},
+        {"end_line":37,"quote":"State the current product realization in terms that can be decomposed into\nrequirements.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FCurrent%20Product%20Definition","start_line":36}
+      ],
+      "key":"product_template_content",
+      "statement":"State current realization in present tense and resolve/verify applicable exact installed basis. Describe product kind/domain, how goals focus one bounded work body and feed intent/downstream change, intended end-state shape concretely, and current realization in requirement-decomposable terms. Intended end state remains distinguishable from current realization.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_product_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":23,"quote":"Declare each bounded context, its stable identity, owning authority, applicable\nbasis, and governed scope. Define the key Product concepts that downstream\nrequirements and design will use.\n\nTreat term spelling as a label rather than a context-free concept identity.\nWhere another context uses the same term, either keep the meanings isolated or\ndeclare the exact authorized import, translation, equivalence, or\ndisambiguation relation. Define Product meanings such as user, tenant, account,\nactor, owner, frame, and product explicitly when they are material; do not rely\non a shared glossary default.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Terms","start_line":14}],
+      "key":"product_terms_boundaries",
+      "statement":"Declare every bounded context's stable identity, owner, applicable basis and scope; define downstream Product concepts. Spelling is a label, not context-free identity. Cross-context homonyms require isolated meanings or an exact authorized import/translation/equivalence/disambiguation relation. Material user, tenant, account, actor, owner, frame and product meanings must be explicit rather than borrowed from a glossary default.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":["Completing a project frame-basis declaration."],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":15,"quote":"- declaration identity and revision: `<stable project identity>`\n- Product Definition and governed scopes: `<exact identities>`\n- owning and admitting authorities: `<exact source references>`\n- governed workspace and outcome: `<exact scope and outcome>`\n- admitting decision and actor: `<decision, actor, and grant identities>`","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDeclaration%20And%20Authority","start_line":11},
+        {"end_line":27,"quote":"Availability does not establish adoption. Adoption does not activate a frame.\nThe authorities above own this concrete basis; the selected methods and\nprofiles retain their own meaning.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExact%20Method%20And%20Optional%20Profile%20Basis","start_line":25}
+      ],
+      "key":"frame_basis_declaration_fields",
+      "statement":"Replace every placeholder and admit through existing Product, requirement, Goals, accepted-design, identity, work or release owners. Record stable declaration identity/revision, exact Product Definition/scopes, owner/admitting source references, workspace/outcome and decision/actor/grant identities. Record complete selected immutable STDO cut/inventory, exact REFERENCE_FRAME member, adopted optional profile or project configuration (or explicit none), and exact acquisition/verification route. Availability is not adoption; adoption is not activation. Concrete basis ownership does not transfer ownership of selected methods' or profiles' meanings.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":42,"quote":"Record each material role separately:\n\n- mutable Source Project and current Product Definition:\n- exact candidate checkpoints and Release Cuts:\n- released Products and exact Installs:\n- Artifacts:\n- installed Products acting as Development Products:\n- dependent or composed Products:\n- directed composition edges, authorities, and governing contracts:\n\nShared actors, repositories, implementations, files, outputs, or tool access\ndo not merge these roles or create a composition edge.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FProduct-Role%20And%20Composition%20Map","start_line":31}],
+      "key":"frame_product_role_separation",
+      "statement":"Record each material Source Project/current Product Definition, candidate checkpoint/Release Cut, released Product/exact Install, Artifact, installed Development Product, dependent/composed Product, and directed composition edge with authorities/contracts separately. Shared actors, repositories, implementations, files, outputs or tool access neither merge roles nor create composition edges.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_evaluation_inventory"],
+      "conditions":["For every known material evaluation."],
+      "exceptions":[],
+      "grounding":[{"end_line":62,"quote":"Determine applicable evaluations from their owners, not only a caller's list,\nunder `ACTIVATION.md` section 1, Applicability, which states what a false or\nunknown predicate does. Retain every required constraining result in the\ndeclared conjunction. Frame availability alone does not activate it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory","start_line":59}],
+      "key":"evaluation_inventory_fields_and_applicability",
+      "statement":"Record stable identity/provenance, exact subject/basis, required result algebra, material frame family/declaration, dependencies/affected Product edges, planning disposition, non-material evidence or residual/re-entry condition, owning applicability predicate with true/false/unknown premises, and required-result identity with satisfied/missing/invalid evidence. Determine applicability from owners under ACTIVATION §1, not solely caller lists. Retain every required constraining result in the declared conjunction. Availability alone activates nothing.",
+      "uncertainty":"The referenced false/unknown-predicate behavior is absent and must not be invented."
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":["For each available project frame."],
+      "exceptions":[],
+      "grounding":[{"end_line":79,"quote":"- material manifold, coordinates, equality, and invariants:\n- semantic, evaluation, operation where material, and decision authority:\n- admissible evidence and exclusions:\n- actor capability, access, configuration, and independence envelope:\n- dependencies, overlaps, inputs, outputs, conjunctions, or translations:\n- result consumer and return relation:\n- invalidation and qualification evidence:\n\nActor identity and frame identity remain separate. One actor may occupy several\nframes only where every authority and independence condition remains valid.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FFrame%20Declarations%20And%20Actor%20Binding","start_line":70}],
+      "key":"frame_declaration_and_actor_binding",
+      "statement":"Record frame identity/revision, evaluation family, manifold/coordinates/equality/invariants, semantic/evaluation/decision authority and operation authority where material, admissible evidence/exclusions, actor capability/access/configuration/independence envelope, dependencies/overlaps/inputs/outputs/conjunctions/translations, consumer/return relation and invalidation/qualification evidence. Actor and frame identities remain separate. Multiple frames per actor are permitted only while every authority and independence condition stays valid.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":106,"quote":"This template imposes no universal numeric scale. A project may bind `S0..Sn`\nand `P0..Pn`, including a `P2` decision cutoff, only by defining their exact\ndirection and effect here. When a finding blocks promotion, and that a\ncutoff cannot waive a hard stop or turn an out-of-claim observation into a\nblocker, is decided by `EVALUATION.md` section 5, When a finding blocks\npromotion.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy","start_line":101}],
+      "key":"technical_triage_and_promotion",
+      "statement":"Declare exact current Product/MVP or release mandate; Product-selected severity scale/direction/evidence and priority scale/direction/assignment authority; current-boundary cutoff and owner's required disposition (Executive only when its profile is adopted); Product-bound authority/safety/integrity/retained-claim hard stops owned by ACTIVATION §4; claim-relative release-blocking/scope-narrowing rule; Reviewer fields/capability; and unsupported/indeterminate return route. Reviewer grades severity and returns evidence, affected claims, supportable causal assessment, blast radius, workaround, repair complexity, regression risk, confidence and residual uncertainty. Under the executive profile Executive assigns priority and boundary effect against complete Product/current mandate. Severity, priority, frame result, boundary effect and STDO-UP-020 disposition remain distinct. No universal numeric scale is imposed; S0..Sn/P0..Pn, including P2 cutoff, require exact direction/effect definitions. A cutoff cannot waive hard stops or turn an out-of-claim observation into a blocker; EVALUATION §5 owns promotion-blocking rules.",
+      "uncertainty":"Referenced hard stops, STDO-UP-020 and the full promotion rule are not supplied."
+    },
+    {
+      "applies_to_keys":["template_executive_configuration"],
+      "conditions":["The Product adopts the executive profile."],
+      "exceptions":["Other configurations replace the executive coordination with their selected role."],
+      "grounding":[{"end_line":130,"quote":"Executive selects the smallest dependency-ready activation set sufficient for\nthe next decision. It consumes closed results, preserves explicit residuals,\nand chooses only an already-authorized next action. It does not acquire Product\nmeaning, implementation, mutation, acceptance, or publication authority from\nthe Executive label.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action","start_line":126}],
+      "key":"executive_attention_bindings",
+      "statement":"Declare configuration/coordinator, exact outcome/current mandate/basis lock, unresolved evaluation frontier/dependencies, attention/capability limits, closed-result/triage/priority/boundary/residual ledger, conjunction/conflict rule and existing disposition/next-action authority. Executive selects the smallest dependency-ready set sufficient for the next decision, consumes closed results, retains explicit residuals and chooses only already-authorized actions; its title adds no other authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template","template_executive_configuration"],
+      "conditions":[],
+      "exceptions":["No ticket, coordinating appointment or review is added where none applies.","Executive steps apply only under an adopted executive configuration."],
+      "grounding":[{"end_line":157,"quote":"No child result, tool output, model response, shared actor, or lateral handoff\nactivates another frame or authorizes continuation by itself\n(`ACTIVATION.md` section 1, Admission).\n\nExecutive performs no file or Git mutation. The same actor may construct only\nafter entering a separately bound Writer activation with the inherited exact\ngrant. Changing roles does not create authority or independent assessment.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FActivation%20And%20Return%20Topology","start_line":151}],
+      "key":"activation_and_return_topology",
+      "statement":"Bind a sufficient direct Writer path and material coordination conditions under selected law. Direct entry still requires exact work authority, admission, operation scope and closure conditions. Coordinated topology is existing authority → Executive basis/outcome lock → exact Worker/Reviewer/specialist activation → closed result and applicable Reviewer triage → Executive or declared conjunction → Executive priority/boundary effect → authorized disposition and next activation, stop or re-entry. No child result, tool/model output, shared actor or lateral handoff alone activates another frame or authorizes continuation. Executive cannot mutate files/Git. The same actor constructs only in a separately bound Writer activation with inherited exact grant; role changes create neither authority nor independent assessment.",
+      "uncertainty":"The sequence is represented as data; admission law and concrete grants are not supplied."
+    },
+    {
+      "applies_to_keys":["template_coverage_ledger"],
+      "conditions":[],
+      "exceptions":["Governing authority may explicitly retain a residual consistently with the exact claim."],
+      "grounding":[{"end_line":187,"quote":"Reuse a valid result after checking its question, subject/basis, evidence and\ninvalidators. Record reusable judgments and original owner rulings through the\nexisting work carrier under TICKETS, separately from interpretation.\nChanged material premises invalidate affected claims under the invalidators\nof `ACTIVATION.md` section 7; a new role or session alone does not. Required independent assessments still supply their own\njudgment. Closure requires satisfied applicable obligations, valid evidence,\nrequired judgments/rulings and no active non-closure condition; review is not\nitself the closing event.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals","start_line":180}],
+      "key":"coverage_closure_and_reuse",
+      "statement":"Record exact coverage tuple/interval; every material evaluation's capable activation or residual; material interactions/Product edges; intentional overlap/independence; uncovered, conditional, conflicted, unknown, excluded and out-of-frame residuals; and exact-claim terminal predicate. Complete coverage requires every mandatory material evaluation and interaction closed or an explicit claim-consistent authority-retained residual. Such residual rows are excluded_by_authority; otherwise conditionally_covered or uncovered. Non_material rows receive no coverage status and retain evidence in inventory. Frame count/coordinator visibility are not coverage. Reuse valid results only after question, subject/basis, evidence and invalidator checks; record reusable judgments/owner rulings in existing TICKETS work carrier separately from interpretation. Material-premise changes invalidate affected claims; new role/session alone does not. Required independent assessments supply their own judgment. Closure needs satisfied applicable obligations, valid evidence, required judgments/rulings and no active non-closure condition; review alone is not closure.",
+      "uncertainty":"Full referenced coverage-ledger vocabulary and invalidators are absent."
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":["Before activation and disposition."],
+      "exceptions":[],
+      "grounding":[{"end_line":214,"quote":"Exact review checkpoints and released Products remain immutable under their\nown lifecycle law. Their immutability does not make the Source Project building\na successor immutable. A lawful mutation creates a new checkpoint and\ninvalidates every affected prior result.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDrift%20Locks%2C%20Invalidation%2C%20And%20Revision","start_line":211}],
+      "key":"frame_drift_and_invalidation",
+      "statement":"Revalidate outcome lock (Goal, Product outcome, current mandate, promotion policy, boundary, re-entry class); basis lock (subject, checkpoint, authority, dependency, configuration, topology, evidence, time); Product-role lock (Source Project, Product Definition, Development Product, Release Cut, Product, Install, Artifact, dependency roles); authority lock (semantic/evaluation/operation/decision/acceptance/publication owners and grants); and coverage-return lock (evaluations, interactions, residuals, routes). List every invalidating method/Product/outcome/subject/checkpoint/candidate/dependency/composition-contract/actor/capability/evidence/authority/workspace/topology change as a named material-input or basis change under ACTIVATION §7, covering basis, derived activations/results/conjunctions/coverage. Review checkpoints and released Products remain immutable under their lifecycle law; successor-building Source Projects need not be immutable. Lawful mutation creates a new checkpoint and invalidates every affected prior result.",
+      "uncertainty":"Concrete invalidators and lifecycle law are not supplied."
+    },
+    {
+      "applies_to_keys":["project_frame_basis_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":226,"quote":"- exact governing source references:\n- source resolution and freshness route:\n- residual-to-source re-entry owners:\n- ambiguous, missing, stale, or substituted-source refusal:\n\nPrompts, summaries, symbolic maps, compressions, and other projections are\nderived surfaces under `ACTIVATION.md` section 2, Acquisition and Staleness of\nderived surfaces, which state when one may be used and when the owning sources\nare acquired instead. None replaces this accepted binding.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry","start_line":218}],
+      "key":"frame_source_reentry",
+      "statement":"Declare exact governing sources, resolution/freshness route, residual re-entry owners and refusal for ambiguous/missing/stale/substituted source. Prompts, summaries, maps, compressions and projections are derived surfaces governed by ACTIVATION §2 acquisition/staleness rules; none replaces accepted binding.",
+      "uncertainty":"Conditions for using a projection versus acquiring its owner are referred to but not supplied."
+    },
+    {
+      "applies_to_keys":["product_overlay_template"],
+      "conditions":["Preparing a filled Product Definition."],
+      "exceptions":[],
+      "grounding":[{"end_line":53,"quote":"One definition represents one distinct product `WHAT`. Put multiple\nindependent realizations of that same `WHAT` in `how.build_tenants`, not in\nadditional definition files.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":51}],
+      "key":"overlay_layout_and_identity",
+      "statement":"The one-per-product overlay's normative schema is ../schemas/product-definition.schema.json. Revision 3 replaces undifferentiated constitution.authorities with source, nonoperative mutable selector, exact installed basis/digest and additional_authorities; entrypoints are basis-qualified and bootstrap declares managed entrypoint/targets. Other relations retain revision-2 meaning. Copy to a logical definition root: singleton stdo_default.json, named stdo_<label>.json, multiple distinct WHAT definitions at a monorepo root or arbitrarily nested project roots. Containing directory is definition root; relative references resolve from copied JSON. Bind existing project files/systems without restructuring merely for default paths. $schema addresses the same exact logical release basis, without machine-local store paths; install once/resolve stdo: through the manager; no local .genesis copy is required. One definition is one distinct WHAT; independent realizations of that WHAT belong in how.build_tenants.",
+      "uncertainty":"Revision-2 relation meanings are not supplied independently."
+    },
+    {
+      "applies_to_keys":["product_overlay_template"],
+      "conditions":["Preparing or validating a filled Product Definition."],
+      "exceptions":["When no separate enclosing context is claimed, bounded_context is null.","When there are no material local resolutions, disambiguations is empty."],
+      "grounding":[{"end_line":79,"quote":"The template includes one `local_constitution.disambiguations` placeholder to\nshow the complete binding. Replace it for every material local term resolution,\nor remove it and retain an empty array when the product has none. Each binding\nnames the exact term, target bounded context, complete material candidate set,\nselected concept, owning resolution carrier and authority, semantic bases, and\ngoverned scope. When candidates cross contexts, the referenced `uri` also owns\nthe complete import, translation, or equivalence relation required by\n`PRODUCT_DEFINITION.md` section 5; the JSON entry does not restate that\nmeaning.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":71}],
+      "key":"overlay_required_binding_completion",
+      "statement":"reference_frame_bases must be nonempty and point to accepted declarations on existing lawful Product, requirement, local-constitution, accepted-design or other surfaces; bind every admitting authority and exact scope. Agent identities and temporary activations belong outside the overlay, in work/activation instructions citing the basis. Replace at least exact-release $schema; product identity/name/source/context (distinct from immutable Product/release identities); repository/selector/exact basis/digest; additional authorities, qualified entrypoints, targets and local relations; each retained disambiguation's exact term/context/complete candidates/selection/carrier/authority/bases/scope; frame-basis URIs/authorities/scopes; WHAT and shared/local HOW references; Goals/tickets/comments/optional sprint references; and explicit composition edges with target definition identity, relation authority and ≥1 governing contract. Cross-context resolution meaning resides in its complete authorized carrier, not merely the JSON entry. Enclosing context is not an exhaustive registry; other contexts retain owners and explicit relations. Empty local-constitution/composition arrays explicitly declare none.",
+      "uncertainty":"Referenced PRODUCT_DEFINITION §§5,7,9 are not included."
+    },
+    {
+      "applies_to_keys":["product_overlay_template"],
+      "conditions":["Validating or using a filled definition under the described toolchain."],
+      "exceptions":[],
+      "grounding":[{"end_line":125,"quote":"For a filled definition, `stdo sync --definition <file>` installs and verifies\nonly its already selected exact basis. Run\n`stdo adopt --definition <file> --dry-run` to show the immutable cut currently\nadvertised by its annotated version-line selector and its exact plan digest;\napply with `--accept-plan-sha256 <digest>` in a separate invocation only after\nexplicitly accepting that basis change. `stdo bootstrap --definition <file>`\npreflights targets relative to `product.source_project` and refreshes only the\ndeclared marker-bounded agent bootstrap. Fleet writes require `--all`; fleet\nadoption also requires its separately presented aggregate plan digest.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":117}],
+      "key":"overlay_validation_and_tool_operations",
+      "statement":"Portable Draft 2020-12 validation proves JSON shape only. Use assertion-capable RFC 3986 URI/reference validation, resolve every URI/fragment, verify immutable constitutional set, unique definition/tenant identities, composition target identities/contracts, and evaluate sufficiency, semantic resolution, cross-context completeness and authority congruence under PRODUCT_DEFINITION §9. Described sync installs/verifies only already-selected exact basis. adopt dry-run presents advertised immutable cut and exact plan digest; application requires a separate invocation with --accept-plan-sha256 after explicit basis-change acceptance. bootstrap preflights relative to source_project and refreshes only declared marker-bounded projection. Fleet writes require --all; fleet adoption additionally requires separately presented aggregate digest.",
+      "uncertainty":"No validation, installation, adoption or bootstrap operation has been performed."
+    },
+    {
+      "applies_to_keys":["tenant_registry_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":17,"quote":"Use build tenancy for one-to-many independent implementations of the same\nconstitutional `WHAT`.\n\nThe bound `WHAT` is singleton Product truth. The bound build tenants are\nmany-valued realization structure beneath it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry","start_line":13},{"end_line":31,"quote":"When `how.common` is non-empty, list those shared realization references here\nfor readers. `common` is not itself a build tenant and must not appear as a\ntenant identity.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FShared%20Surface","start_line":29}],
+      "key":"tenant_registry_authority_and_common",
+      "statement":"Keep the companion consistent with canonical overlay JSON or generate it from that definition; it must not become a second registry. Build tenancy represents independent implementations of the same WHAT. If how.common is nonempty, list its shared references for readers. common is not a build tenant and must not appear as tenant identity.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["tenant_registry_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":49,"quote":"Record the currently active realization focus explicitly in the table notes or\nan adjacent short section when more than one tenant exists. The entry identity\nmust match the corresponding `how.build_tenants[].id`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FRegistry","start_line":47}],
+      "key":"tenant_registry_entries",
+      "statement":"Suggested, nonexhaustive lifecycle states are Planned, In Development, Paused, Released and Deprecated. The illustrative table has Entry, Kind, Path, Status and Notes, with a tenant-id URI and family/variant path placeholder to replace with current candidates. Every entry identity must match how.build_tenants[].id. When more than one tenant exists, explicitly record active realization focus in notes or an adjacent short section.",
+      "uncertainty":"The suggested lifecycle list is not a mandatory closed enum."
+    },
+    {
+      "applies_to_keys":["common_realization_surface","common_design_surface"],
+      "conditions":[],
+      "exceptions":["Tenant-specific implementation detail may enter common only when explicitly promoted."],
+      "grounding":[{"end_line":5,"quote":"Do not place tenant-specific implementation detail here unless it is explicitly promoted to common.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces","start_line":5},{"end_line":5,"quote":"Use this surface only for design law that genuinely applies across multiple build tenants.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design","start_line":5}],
+      "key":"common_surface_scope",
+      "statement":"Common root serves shared realization; common design is restricted to genuinely multi-tenant design law. Tenant-specific implementation details require explicit promotion to common.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["common_design_surface","common_adr_directory"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":15,"quote":"ADRs at this surface govern decisions that apply to two or more build tenants. Tenant-local decisions belong under `build_tenants/<tenant-path>/design/adrs/`, not here.\n\nADR conventions and frontmatter shape are defined in `SPEC_METHOD.md` section 10, Design records. See `design/adrs/README.md` for the full conventions and `design/adrs/ADR_TEMPLATE.md` for the canonical ADR shape.\n\nNumbering is local to this `adrs/` directory; cross-tenant ADR IDs do not share numbering with tenant-local ADR IDs.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design%2FADRs","start_line":11}],
+      "key":"common_design_adr_routing",
+      "statement":"Cross-tenant ADRs reside under design/adrs and govern at least two tenants; tenant-local decisions go to build_tenants/<tenant-path>/design/adrs. SPEC_METHOD §10 owns conventions/frontmatter; local README and ADR_TEMPLATE provide full conventions/body. Numbering is local and separate from tenant-local numbering.",
+      "uncertainty":"SPEC_METHOD §10 is referenced but absent."
+    },
+    {
+      "applies_to_keys":["common_adr_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":14,"quote":"State the cross-tenant situation that demands a decision. Cite the requirements or strategy material that frames the choice. Identify the build tenants this decision is intended to govern. Keep this section to the constraints, not the answer.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext","start_line":14},
+        {"end_line":20,"quote":"State the chosen design in present tense. One decision per ADR; split into multiple ADRs if the choice covers more than one decision boundary.\n\nName concrete mechanisms when requirements name them. If a requirement names an operational mechanism, this ADR must name that mechanism too.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision","start_line":18},
+        {"end_line":30,"quote":"- positive consequences the decision enables\n- negative consequences or trade-offs the decision accepts\n- downstream design or implementation work the decision requires in each affected tenant\n- proof or qualification surfaces affected\n- migration cost for tenants that previously diverged from the decision","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences","start_line":26},
+        {"end_line":34,"quote":"List the alternatives that were on the table, with one or two sentences on why each was rejected. Be specific enough that a future maintainer can recover the reasoning. Note any alternative that was kept lawful at the tenant-local level.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered","start_line":34}
+      ],
+      "key":"common_adr_body_requirements",
+      "statement":"Context states cross-tenant situation, framing requirement/strategy citations and governed tenants, limited to constraints. Decision states chosen design in present tense, one decision per ADR, splitting multiple boundaries; explicitly names mechanisms required by requirements. Consequences describe what becomes true in governed tenants, including positives, negatives/tradeoffs, each affected tenant's downstream work, proof/qualification effects and migration costs for previously diverging tenants. Alternatives record each considered choice with one or two specific rejection-reason sentences recoverable by future maintainers, plus any alternative retained as lawful tenant-locally.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["common_adr_directory"],
+      "conditions":[],
+      "exceptions":["A constitutional-truth change requires constitutional intake before design recording."],
+      "grounding":[{"end_line":18,"quote":"If the decision governs only one build tenant, write the ADR at that tenant's `build_tenants/<tenant-path>/design/adrs/` instead. The `<tenant-path>` is one or more segments per `SPEC_METHOD.md` section 10, Design records.\n\nIf the decision changes constitutional truth (intent / product / requirement), it does not belong in an ADR; re-enter through `SPEC_METHOD.md` section 4 intake triage and reprice the appropriate constitutional layer first.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR","start_line":16}],
+      "key":"common_adr_selection",
+      "statement":"The listed reasons for a cross-tenant ADR are multi-tenant governance, concrete realization of ≥1 cross-tenant requirement under specification/requirements, structural/interface choices binding tenant realizations, or superseding a cross-tenant decision. The governing scope must exceed one tenant. A one-tenant decision routes to that tenant's ADR directory with a one-or-more-segment tenant path. Changes to intent/product/requirement truth do not belong in an ADR: re-enter SPEC_METHOD §4 intake and reprice the constitutional layer first.",
+      "uncertainty":"The bullet list does not specify a formal Boolean connective; the separately explicit multi-tenant boundary is retained."
+    },
+    {
+      "applies_to_keys":["common_adr_directory"],
+      "conditions":[],
+      "exceptions":["Namespace-prefixed IDs are allowed when the common design surface already uses them.","Supersedes and Retained special case apply only when relevant; Superseded by applies when status is superseded."],
+      "grounding":[{"end_line":35,"quote":"- `Status:` `active` | `superseded` | `retired`\n- `Implements:` REQ-* IDs this ADR makes true\n- `Derives from:` INT-* or strategy document that motivated the decision\n- `Supersedes:` prior ADR or doctrine this replaces (when applicable)\n- `Superseded by:` successor ADR (when `Status:` is `superseded`)\n- `Retained special case:` when earlier behavior is intentionally retained as a special case (when applicable)","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FFile%20shape","start_line":30}],
+      "key":"common_adr_file_shape",
+      "statement":"Filename is ADR-<local-id>-short-slug.md; ID is directory-local unique, numeric by default, using one consistent convention. Common numbering is separate from tenant-local numbering. Frontmatter carries Status from active/superseded/retired, Implements REQ-* and Derives from INT-* or strategy; conditional replacement/successor/retained-case fields follow SPEC_METHOD §10. Local ADR_TEMPLATE is canonical body shape.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["common_adr_directory"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":41,"quote":"One ADR per decision boundary, not per requirement file. Cross-tenant scope is the constraint that distinguishes this folder from a tenant-local one: the decision must govern more than one tenant. If the scope narrows during implementation, move the ADR to the relevant tenant's `design/adrs/` and record the move in the supersession chain (`SPEC_METHOD.md` section 10).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FBoundary%20rule","start_line":41}],
+      "key":"common_adr_boundary_and_move",
+      "statement":"Use one ADR per decision boundary, not per requirement file. Common ADRs must govern >1 tenant. If implementation narrows scope to one tenant, move the ADR to that tenant's design/adrs and record the move in its supersession chain.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["common_adr_directory"],
+      "conditions":["A later ADR supersedes an earlier ADR."],
+      "exceptions":["Deletion is allowed only for explicit retirement."],
+      "grounding":[{"end_line":45,"quote":"When a later ADR supersedes this one, set `Status: superseded` and `Superseded by:` to the successor ADR's local ID, and leave the file in place. ADRs are append-only history; do not delete superseded ADRs unless they are being explicitly retired. `SPEC_METHOD.md` section 10, Design records, owns these rules.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FSupersession","start_line":45}],
+      "key":"common_adr_supersession",
+      "statement":"Set the predecessor's Status to superseded and Superseded by to successor local ID; leave the file in place as append-only history under SPEC_METHOD §10.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["variant_design_surface"],
+      "conditions":[],
+      "exceptions":["If no common surface is adopted, state that explicitly."],
+      "grounding":[{"end_line":18,"quote":"List the exact shared surfaces from `build_tenants/common/` that this tenant\nadopts.\n\n- Shared design law under `build_tenants/common/design/`\n- Shared qualification law under `build_tenants/common/qualification/` when it\n  constrains tenant-local tests or evidence\n\nIf no common surface is currently adopted, say that explicitly.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FAdopted%20Common%20Surfaces","start_line":11}],
+      "key":"tenant_adopted_common_surfaces",
+      "statement":"List exact adopted common surfaces, including shared design law and shared qualification law when it constrains local tests/evidence. Shared existence alone is not stated to imply adoption.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["variant_design_surface","variant_adr_directory"],
+      "conditions":[],
+      "exceptions":["Namespace-prefixed local IDs are permitted when the tenant design surface already uses them."],
+      "grounding":[{"end_line":28,"quote":"ADRs are the durable design memory layer per `SPEC_METHOD.md` section 10, Design records. Use `design/adrs/ADR-NNN-short-slug.md` as the default filename pattern; namespace-prefixed local IDs are permitted when this tenant's design surface already uses them.\n\nCross-tenant decisions belong under `build_tenants/common/design/adrs/`, not here.\n\nSee `design/adrs/README.md` for the full ADR conventions and `design/adrs/ADR_TEMPLATE.md` for the canonical ADR shape.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FADRs","start_line":24}],
+      "key":"tenant_design_adr_routing",
+      "statement":"Tenant-local ADRs live in design/adrs with default ADR-NNN-short-slug.md. Cross-tenant decisions route to common/design/adrs. SPEC_METHOD §10 defines durable design-memory role; local README and ADR_TEMPLATE supply full conventions/canonical body.",
+      "uncertainty":"Referenced SPEC_METHOD §10 is absent."
+    },
+    {
+      "applies_to_keys":["variant_adr_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":14,"quote":"State the situation that demands a decision. Cite the requirements or strategy material that frames the choice. Keep this section to the constraints, not the answer.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext","start_line":14},
+        {"end_line":20,"quote":"State the chosen design in present tense. One decision per ADR; split into multiple ADRs if the choice covers more than one decision boundary.\n\nName concrete mechanisms when requirements name them. If a requirement names an operational mechanism, this ADR must name that mechanism too.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision","start_line":18},
+        {"end_line":29,"quote":"- positive consequences the decision enables\n- negative consequences or trade-offs the decision accepts\n- downstream design or implementation work the decision requires\n- proof or qualification surfaces affected","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences","start_line":26},
+        {"end_line":33,"quote":"List the alternatives that were on the table, with one or two sentences on why each was rejected. Be specific enough that a future maintainer can recover the reasoning.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered","start_line":33}
+      ],
+      "key":"tenant_adr_body_requirements",
+      "statement":"Context records situation, requirement/strategy citations and constraints without giving the answer. Decision is present tense, one decision per ADR, splitting multiple boundaries and explicitly naming requirement-specified mechanisms. Consequences record resulting positives, accepted negatives/tradeoffs, required downstream work and affected proof/qualification surfaces. Alternatives give one or two specific rejection-reason sentences for each considered choice so future maintainers recover the reasoning.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["variant_adr_directory"],
+      "conditions":[],
+      "exceptions":["Constitutional-truth changes require intake at the constitutional layer first."],
+      "grounding":[{"end_line":18,"quote":"If the decision applies across two or more tenants, write the ADR at `build_tenants/common/design/adrs/` instead.\n\nIf the decision changes constitutional truth (intent / product / requirement), it does not belong in an ADR; re-enter through `SPEC_METHOD.md` section 4 intake triage and reprice the appropriate constitutional layer first.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR","start_line":16}],
+      "key":"tenant_adr_selection",
+      "statement":"Listed reasons for a tenant ADR are governance of only that tenant (single or multisegment path), realization satisfying ≥1 specification/requirements requirement, structural/interface choices future maintainers need, or supersession of a local decision. Decisions applying to ≥2 tenants route to common ADRs. Intent/product/requirement truth changes are excluded from ADRs and re-enter SPEC_METHOD §4 intake to reprice the appropriate constitutional layer first.",
+      "uncertainty":"The bullet-list connective is not formalized; explicit local-versus-common boundaries govern routing."
+    },
+    {
+      "applies_to_keys":["variant_adr_directory"],
+      "conditions":[],
+      "exceptions":["Namespace-prefixed IDs such as ADR-GM-005 are allowed when already used by the tenant.","Replacement and retained-case fields are conditional; successor is required when superseded."],
+      "grounding":[{"end_line":33,"quote":"- `Status:` `active` | `superseded` | `retired`\n- `Implements:` REQ-* IDs this ADR makes true\n- `Derives from:` INT-* or strategy document that motivated the decision\n- `Supersedes:` prior ADR or doctrine this replaces (when applicable)\n- `Superseded by:` successor ADR (when `Status:` is `superseded`)\n- `Retained special case:` when earlier behavior is intentionally retained as a special case (when applicable)","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FFile%20shape","start_line":28}],
+      "key":"tenant_adr_file_shape",
+      "statement":"Use ADR-<local-id>-short-slug.md with directory-local unique ID, numeric by default, and one consistent convention. Frontmatter under SPEC_METHOD §10 carries Status active/superseded/retired, Implements REQ-* and Derives from INT-* or strategy, plus conditional Supersedes/Superseded by/Retained special case. Local ADR_TEMPLATE supplies canonical body.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["variant_adr_directory"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":39,"quote":"One ADR per decision boundary, not per requirement file. The ADR question is: *what design choice makes these acceptance criteria true?* Multiple requirements may share one ADR; one requirement may be implemented by multiple ADRs.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FBoundary%20rule","start_line":39}],
+      "key":"tenant_adr_decision_boundary",
+      "statement":"One ADR corresponds to a decision boundary, asking what design choice makes acceptance criteria true, rather than to a requirement file. Many requirements may share one ADR and one requirement may have many implementing ADRs.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["variant_adr_directory"],
+      "conditions":["A later ADR supersedes an earlier ADR."],
+      "exceptions":["Deletion is allowed for explicit retirement."],
+      "grounding":[{"end_line":43,"quote":"When a later ADR supersedes this one, set `Status: superseded` and `Superseded by:` to the successor ADR's local ID, and leave the file in place. ADRs are append-only history; do not delete superseded ADRs unless they are being explicitly retired. `SPEC_METHOD.md` section 10, Design records, owns these rules.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FSupersession","start_line":43}],
+      "key":"tenant_adr_supersession",
+      "statement":"Set predecessor Status to superseded and Superseded by to successor local ID; retain the file as append-only history under SPEC_METHOD §10.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["tenant_fp_intent_template"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {"end_line":7,"quote":"Describe what this tenant is optimizing for.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FGoal","start_line":7},
+        {"end_line":11,"quote":"List the requirements that most directly shape this tenant's constructive tuning.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FRequirement%20Mapping","start_line":11},
+        {"end_line":15,"quote":"List the tenant or shared design surfaces that this tuning depends on.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FDesign%20Mapping","start_line":15},
+        {"end_line":19,"quote":"List any tenant-local constraints for bounded constructive turns.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FBoundaries","start_line":19}
+      ],
+      "key":"tenant_fp_intent_content",
+      "statement":"Describe tenant optimization aims; list most directly shaping requirements, depended-on tenant/shared design surfaces and any tenant-local bounded-turn constraints.",
+      "uncertainty":"No actual tuning choices or dependency endpoints are filled in."
+    },
+    {
+      "applies_to_keys":["tenant_fp_customization","edge_override_template"],
+      "conditions":["A tenant needs to tune a bounded constructive turn."],
+      "exceptions":[],
+      "grounding":[{"end_line":8,"quote":"Resolve\n`standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json`\nfrom the exact installed STDO basis in the applicable Product Definition and\nuse it as the authoritative template shape for edge override files.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization","start_line":5},{"end_line":5,"quote":"Place one JSON file per edge in this folder when the tenant needs to tune a bounded constructive turn.\n\nThe installed runtime loads only override files from this tenant-local edge-override root.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides","start_line":3}],
+      "key":"tenant_edge_override_scope",
+      "statement":"Resolve the edge-override template from the applicable exact installed basis and use its authoritative shape. Place one JSON override per edge in the tenant-local edge-override folder when tuning is needed. The described installed runtime loads overrides only from that root.",
+      "uncertainty":"The runtime, merge semantics and validation behavior are not supplied."
+    },
+    {
+      "applies_to_keys":["project_requirement_families"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":19,"quote":"- Write requirement families as separate `*.md` files.\n- Every requirement family must declare `Family`, `Status`, and `Category`\n  metadata in the header.\n- `Status` must use the lifecycle vocabulary from `SPEC_METHOD.md`:\n  `Active`, `Deferred`, `Superseded`, or `Orphaned`.\n- `Category` must use the requirement-category vocabulary from\n  `SPEC_METHOD.md`: `Capability`, `Constraint / Guarantee`, `Governance`, or\n  `Verification`.\n- Use deterministic REQ headers in the form `### REQ-...`.\n- Replace `00-starter.md` with real project requirement families as the project becomes concrete.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements%2FRules","start_line":10}],
+      "key":"requirement_family_rules",
+      "statement":"Each family uses a separate Markdown file with Family, Status and Category header metadata. Status is Active/Deferred/Superseded/Orphaned; Category is Capability/Constraint / Guarantee/Governance/Verification, as attributed to SPEC_METHOD. Use deterministic ### REQ-... headings and replace 00-starter.md with real families as the project becomes concrete.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["starter_requirement_family"],
+      "conditions":[],
+      "exceptions":["Temporary bootstrap retention is allowed with honest Deferred classification."],
+      "grounding":[{"end_line":11,"quote":"Replace this starter family with the first real project-specific requirement\nfamily. If it is retained temporarily during bootstrap, keep it honestly\nclassified as deferred rather than presenting it as active product truth.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements%2FREQ-PROJ-STARTER-001%20Replace%20me","start_line":9}],
+      "key":"starter_requirement_replacement",
+      "statement":"Replace the starter family with the first real project-specific family; retained bootstrap placeholders must not be presented as active product truth.",
+      "uncertainty":""
+    }
+  ],
+  "dispositions": [
+    {"decision":"residual","keys":["world_model_disposition_ledger","world_model_provenance_rules","world_model_position_and_epistemic_conservation","world_model_truth_and_units_conservation","world_model_flow_and_cut_laws_conservation","world_model_overlay_and_delivery_conservation","world_model_missing_bodies"],"reason":"Retains the disposition assertions and their modal boundaries; missing enumerations and referenced bodies remain unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions"},
+    {"decision":"residual","keys":["writing_guide","writing_external_owners"],"reason":"Retains guide role and provenance-only routes; imported owners are absent.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE"},
+    {"decision":"retained","keys":["writing_core_rule"],"reason":"Retains reader, claim, reason and removal rule.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F1.%20Core%20rule"},
+    {"decision":"retained","keys":["writing_style_rules"],"reason":"Retains seven rules and qualified modalities.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F2.%20Style%20rules"},
+    {"decision":"retained","keys":["writing_remove_habits"],"reason":"Retains all eleven habits and usually rationale.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F3.%20Habits%20to%20remove"},
+    {"decision":"retained","keys":["writing_good_prose"],"reason":"Retains five qualities and cut condition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F4.%20Good%20prose"},
+    {"decision":"retained","keys":["writing_bad_prose"],"reason":"Retains five bad-prose categories.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F5.%20Bad%20prose"},
+    {"decision":"retained","keys":["writing_authority_tone"],"reason":"Retains should mappings and conditional rewrite.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F6.%20Tone%20and%20authority%20layer"},
+    {"decision":"retained","keys":["specification_layer_owner","writing_specification_practice","specification_owner_governs_layers"],"reason":"Retains authority split, practices, exception and cut rule.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice"},
+    {"decision":"retained","keys":["writing_layer_checks"],"reason":"Retains questions and rewrite-or-delete response.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F8.%20Layer%20checks"},
+    {"decision":"residual","keys":["writing_current_surface_rule","writing_present_tense_force"],"reason":"Retains current-surface content with modal cross-reference uncertainty.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F9.%20Current-surface%20writing"},
+    {"decision":"residual","keys":["writing_disposition_conservation","writing_current_surface_rule","writing_present_tense_force"],"reason":"Retains conservation claims and explicit should force without claiming predecessor verification.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions"},
+    {"decision":"residual","keys":["installed_release_manifest","manifest_object_structure","manifest_value_domains","manifest_validation_limits"],"reason":"Retains structural schema and exact value domains; inventory truth is not proved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble"},
+    {"decision":"residual","keys":["product_definition_schema","schema_stdo_binding","schema_local_disambiguation","product_schema_structure","product_schema_scalar_and_binding_rules","product_schema_relation_carriers","product_schema_bootstrap_targets","schema_contains_stdo_binding","schema_contains_disambiguations","product_schema_semantic_limits"],"reason":"Retains schema domains, carriers and conformance boundaries without asserting semantic validation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble"},
+    {"decision":"retained","keys":["agents_bootstrap_template"],"reason":"Retains opening marker as template boundary.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#preamble"},
+    {"decision":"retained","keys":["agents_bootstrap_template","agents_bootstrap_workflow"],"reason":"Interprets bootstrap sequence and refusals as data.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap"},
+    {"decision":"retained","keys":["claude_bootstrap_template"],"reason":"Retains this separate template's opening marker.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#preamble"},
+    {"decision":"retained","keys":["claude_bootstrap_template","claude_bootstrap_workflow"],"reason":"Interprets this template's bootstrap without executing it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap"},
+    {"decision":"retained","keys":["project_goals_template","goals_template_content"],"reason":"Retains present-tense purpose and exact-basis preparation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals"},
+    {"decision":"retained","keys":["goals_template_content"],"reason":"Retains requested goals-role distinctions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FPosition"},
+    {"decision":"retained","keys":["goals_template_content"],"reason":"Retains active-wave listing and should boundaries.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FCurrent%20Goals"},
+    {"decision":"retained","keys":["project_intent_template","intent_template_content"],"reason":"Retains direction and exact-basis preparation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent"},
+    {"decision":"retained","keys":["intent_template_content"],"reason":"Retains purpose field.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FPurpose"},
+    {"decision":"retained","keys":["intent_template_content"],"reason":"Retains must-deliver outcome field.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FOutcomes"},
+    {"decision":"retained","keys":["intent_template_content"],"reason":"Retains shaping-constraints field.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FConstraints"},
+    {"decision":"residual","keys":["product_overlay_template","overlay_placeholder_bindings"],"reason":"Retains illustrative structure while leaving placeholder identities and referenced content unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble"},
+    {"decision":"retained","keys":["project_product_template","product_template_content"],"reason":"Retains current-realization role and basis preparation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product"},
+    {"decision":"retained","keys":["product_template_content"],"reason":"Retains kind/domain field.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Position"},
+    {"decision":"retained","keys":["product_terms_boundaries"],"reason":"Retains context declarations and homonym boundaries.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Terms"},
+    {"decision":"retained","keys":["product_template_content"],"reason":"Retains goal-to-intent/product-change description request.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FGoal%20Model"},
+    {"decision":"retained","keys":["product_template_content"],"reason":"Retains intended end-state field as distinct from current realization.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20End%20State"},
+    {"decision":"retained","keys":["product_template_content"],"reason":"Retains requirement-decomposable current definition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FCurrent%20Product%20Definition"},
+    {"decision":"retained","keys":["project_frame_basis_template"],"reason":"Retains starter/non-authority distinction and admission owners.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis"},
+    {"decision":"retained","keys":["frame_basis_declaration_fields"],"reason":"Retains exact declaration and authority fields.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDeclaration%20And%20Authority"},
+    {"decision":"retained","keys":["frame_basis_declaration_fields"],"reason":"Retains exact cut/profile fields and availability/adoption/activation distinctions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExact%20Method%20And%20Optional%20Profile%20Basis"},
+    {"decision":"retained","keys":["frame_product_role_separation"],"reason":"Retains role inventory and no inferred composition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FProduct-Role%20And%20Composition%20Map"},
+    {"decision":"residual","keys":["frame_evaluation_inventory","evaluation_inventory_fields_and_applicability","frame_external_operational_law"],"reason":"Retains evaluation domains; external applicability behavior is unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory"},
+    {"decision":"retained","keys":["frame_declaration_and_actor_binding"],"reason":"Retains frame fields and conditional actor multiplicity.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FFrame%20Declarations%20And%20Actor%20Binding"},
+    {"decision":"residual","keys":["technical_triage_and_promotion","triage_external_rules"],"reason":"Retains triage distinctions and cutoff boundaries; owning rules remain external.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy"},
+    {"decision":"retained","keys":["template_executive_configuration","executive_attention_bindings"],"reason":"Retains profile-conditional coordination and authority limits.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action"},
+    {"decision":"retained","keys":["activation_and_return_topology"],"reason":"Retains direct/coordinated routes and mutation/admission boundaries as descriptions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FActivation%20And%20Return%20Topology"},
+    {"decision":"residual","keys":["template_coverage_ledger","coverage_closure_and_reuse","coverage_external_law"],"reason":"Retains coverage statuses, reuse and closure distinctions without executing judgments.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals"},
+    {"decision":"retained","keys":["frame_drift_and_invalidation"],"reason":"Retains lock coordinates, change classes and immutability boundaries.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDrift%20Locks%2C%20Invalidation%2C%20And%20Revision"},
+    {"decision":"residual","keys":["frame_source_reentry","source_acquisition_unresolved"],"reason":"Retains re-entry/refusal fields; external projection-use conditions are unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry"},
+    {"decision":"retained","keys":["standards_template_collection"],"reason":"Retains collection and project-local starter roles.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates"},
+    {"decision":"residual","keys":["overlay_layout_and_identity","overlay_required_binding_completion","overlay_validation_and_tool_operations","overlay_carrier_latitude","overlay_uses_normative_schema","overlay_references_frame_basis","overlay_external_semantics"],"reason":"Retains binding/layout/validation/operation distinctions; external conformance law and revision-2 meaning remain unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay"},
+    {"decision":"retained","keys":["tenant_registry_template","tenant_registry_authority_and_common","tenant_layout_latitude"],"reason":"Retains optional companion, canonical ownership and singleton-WHAT/multiple-realization distinction.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry"},
+    {"decision":"retained","keys":["tenant_layout_latitude"],"reason":"Retains recommended defaults and lawful alternatives.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FStructure"},
+    {"decision":"retained","keys":["tenant_registry_authority_and_common"],"reason":"Retains conditional shared listing and non-tenant status of common.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FShared%20Surface"},
+    {"decision":"retained","keys":["tenant_registry_entries"],"reason":"Retains suggested states, illustrative fields and focus/identity requirements.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FRegistry"},
+    {"decision":"retained","keys":["common_realization_surface","common_surface_scope"],"reason":"Retains shared scope and explicit-promotion exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces"},
+    {"decision":"retained","keys":["common_design_surface","common_surface_scope"],"reason":"Retains multi-tenant design-law scope.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design"},
+    {"decision":"retained","keys":["common_design_adr_routing"],"reason":"Retains ADR location, scope, conventions and local numbering.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design%2FADRs"},
+    {"decision":"retained","keys":["common_adr_template"],"reason":"Retains illustrative frontmatter with conditional fields.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E"},
+    {"decision":"retained","keys":["common_adr_body_requirements"],"reason":"Retains cross-tenant context and framing citations.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext"},
+    {"decision":"retained","keys":["common_adr_body_requirements"],"reason":"Retains present-tense decision, split and mechanism rules.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision"},
+    {"decision":"retained","keys":["common_adr_body_requirements"],"reason":"Retains all five consequence categories including tenant migration costs.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences"},
+    {"decision":"retained","keys":["common_adr_body_requirements"],"reason":"Retains rejection reasoning and lawful local alternatives.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered"},
+    {"decision":"retained","keys":["common_adr_notes_latitude"],"reason":"Retains optional notes and prohibition on new requirements.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes"},
+    {"decision":"retained","keys":["common_adr_directory"],"reason":"Retains durable design role and constitutional boundaries.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs"},
+    {"decision":"residual","keys":["common_adr_selection","common_adr_trigger_reading"],"reason":"Retains scope/intake rules without inventing a Boolean connective for the trigger list.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR"},
+    {"decision":"retained","keys":["common_adr_file_shape"],"reason":"Retains filenames, numbering, conditional frontmatter and canonical body reference.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FFile%20shape"},
+    {"decision":"retained","keys":["common_adr_boundary_and_move"],"reason":"Retains decision boundary, multi-tenant requirement and narrowing relocation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FBoundary%20rule"},
+    {"decision":"retained","keys":["common_adr_supersession"],"reason":"Retains append-only history with explicit-retirement exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FSupersession"},
+    {"decision":"retained","keys":["common_adr_registry_latitude"],"reason":"Retains recommended-but-optional read-model registry.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FOptional%20registry"},
+    {"decision":"retained","keys":["variant_tenant_root"],"reason":"Retains concrete tenant root and promotion exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/README_TEMPLATE.md#Tenant%20Root"},
+    {"decision":"retained","keys":["variant_design_surface"],"reason":"Retains exact-basis local design and shared-law routing.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design"},
+    {"decision":"retained","keys":["tenant_adopted_common_surfaces"],"reason":"Retains exact adoption listing and explicit-none condition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FAdopted%20Common%20Surfaces"},
+    {"decision":"retained","keys":["tenant_design_adr_routing"],"reason":"Retains local/common routing and naming variation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FADRs"},
+    {"decision":"retained","keys":["tenant_fp_customization"],"reason":"Retains design/fp role.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FF_P%20Customization"},
+    {"decision":"retained","keys":["variant_adr_template"],"reason":"Retains this separately located ADR template's fields.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E"},
+    {"decision":"retained","keys":["tenant_adr_body_requirements"],"reason":"Retains situation, citations and constraint-only context.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext"},
+    {"decision":"retained","keys":["tenant_adr_body_requirements"],"reason":"Retains decision and mechanism obligations.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision"},
+    {"decision":"retained","keys":["tenant_adr_body_requirements"],"reason":"Retains four consequence categories.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences"},
+    {"decision":"retained","keys":["tenant_adr_body_requirements"],"reason":"Retains recoverable alternative-rejection reasoning.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered"},
+    {"decision":"retained","keys":["tenant_adr_notes_latitude"],"reason":"Retains optional notes and requirement-surface prohibition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes"},
+    {"decision":"retained","keys":["variant_adr_directory"],"reason":"Retains tenant-local design-memory role.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs"},
+    {"decision":"residual","keys":["tenant_adr_selection","tenant_adr_trigger_reading"],"reason":"Retains local/common/intake boundaries with trigger-list connective unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR"},
+    {"decision":"retained","keys":["tenant_adr_file_shape"],"reason":"Retains file shape, local uniqueness and conditional fields.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FFile%20shape"},
+    {"decision":"retained","keys":["tenant_adr_decision_boundary"],"reason":"Retains decision-boundary unit and many-to-many requirement relation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FBoundary%20rule"},
+    {"decision":"retained","keys":["tenant_adr_supersession"],"reason":"Retains supersession fields and retirement exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FSupersession"},
+    {"decision":"retained","keys":["tenant_adr_registry_latitude"],"reason":"Retains optional registry as read model.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FOptional%20registry"},
+    {"decision":"retained","keys":["tenant_fp_intent_template"],"reason":"Retains bounded constructive-turn intent role.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent"},
+    {"decision":"retained","keys":["tenant_fp_intent_content"],"reason":"Retains optimization-goal field.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FGoal"},
+    {"decision":"retained","keys":["tenant_fp_intent_content"],"reason":"Retains directly shaping requirement mapping.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FRequirement%20Mapping"},
+    {"decision":"retained","keys":["tenant_fp_intent_content"],"reason":"Retains design-dependency mapping.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FDesign%20Mapping"},
+    {"decision":"retained","keys":["tenant_fp_intent_content"],"reason":"Retains local-constraint listing.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FBoundaries"},
+    {"decision":"retained","keys":["tenant_fp_customization","tenant_edge_override_scope","fp_uses_override_shape"],"reason":"Retains customization role and exact-basis template-shape dependency.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization"},
+    {"decision":"retained","keys":["edge_override_template"],"reason":"Retains illustrative override fields without turning suggested output into a mandatory runtime result.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json#preamble"},
+    {"decision":"residual","keys":["tenant_edge_override_scope","edge_override_runtime_unresolved"],"reason":"Retains one-file-per-edge and load-root boundary; runtime mechanics remain absent.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides"},
+    {"decision":"retained","keys":["project_docs_surface"],"reason":"Retains supporting-documentation scope.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/docs/README_TEMPLATE.md#Project%20Docs"},
+    {"decision":"retained","keys":["project_requirement_families"],"reason":"Retains requirement-family location and exact-method resolution.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements"},
+    {"decision":"retained","keys":["requirement_family_rules"],"reason":"Retains metadata, closed vocabularies, headings and starter replacement.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements%2FRules"},
+    {"decision":"retained","keys":["starter_requirement_family"],"reason":"Retains illustrative family identity and Deferred/Capability classification.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements"},
+    {"decision":"retained","keys":["starter_requirement_replacement"],"reason":"Retains replacement instruction and temporary-retention condition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements%2FREQ-PROJ-STARTER-001%20Replace%20me"}
+  ],
+  "latitude": [
+    {
+      "allowed":["Existing project layouts and arbitrarily nested definition roots.","Another frame-basis carrier preserving the same exact sources, roles, frames, grants, results, coverage, invalidation and re-entry relations.","Replacing the default reference-frame-basis path with the owning project's chosen layout."],
+      "applies_to_keys":["product_overlay_template","project_frame_basis_template"],
+      "forbidden":["Restructuring an existing project merely to match template defaults.","Treating a copied frame-basis starter as authority.","Omitting preserved binding relations when changing carriers."],
+      "grounding":[{"end_line":69,"quote":"A project\nmay use another carrier when it preserves the same exact sources, roles,\nframes, grants, results, coverage, invalidation, and re-entry relations.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":67}],
+      "key":"overlay_carrier_latitude"
+    },
+    {
+      "allowed":["An existing project may bind a realization root other than default build_tenants/.","common/ is the default shared-design location.","<family>/<variant>/ is recommended; single-label <variant>/ and other definition-bound layouts are lawful."],
+      "applies_to_keys":["tenant_registry_template"],
+      "forbidden":[],
+      "grounding":[{"end_line":11,"quote":"`build_tenants/` is the default project-owned realization root beneath the\nshared project specification. An existing project may bind another layout.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry","start_line":10},{"end_line":25,"quote":"- `common/` is the default location for shared realization/design law adopted\n  across more than one tenant.\n- `<family>/<variant>/` is the recommended default location for one concrete\n  tenant realization. Single-label paths such as `<variant>/` and other\n  definition-bound layouts are also lawful.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FStructure","start_line":21}],
+      "key":"tenant_layout_latitude"
+    },
+    {
+      "allowed":["Notes may be omitted.","Notes may contain cross-references, related tenant-local ADRs or implementation hints outside the preceding constitutional sections."],
+      "applies_to_keys":["common_adr_template"],
+      "forbidden":["New requirements in Notes.","Using ADRs as a second requirement surface."],
+      "grounding":[{"end_line":38,"quote":"Optional. Use for cross-references, related ADRs in tenant-local `design/adrs/` directories, or implementation hints that do not belong in the constitutional sections above. Do not put new requirements here: ADRs are durable design memory, not a second requirement surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes","start_line":38}],
+      "key":"common_adr_notes_latitude"
+    },
+    {
+      "allowed":["A REGISTRY.md alongside common ADRs is recommended for tooling/review but optional.","If maintained, it is a read model over ADR files."],
+      "applies_to_keys":["common_adr_directory"],
+      "forbidden":["Displacing ADR files as accepted design authority with the registry."],
+      "grounding":[{"end_line":49,"quote":"A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but not required. If you maintain one, treat it as a read model over the ADR files; the ADR files remain the accepted design authority.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FOptional%20registry","start_line":49}],
+      "key":"common_adr_registry_latitude"
+    },
+    {
+      "allowed":["Notes may be omitted.","Notes may contain cross-references, related ADRs or implementation hints outside the preceding constitutional sections."],
+      "applies_to_keys":["variant_adr_template"],
+      "forbidden":["New requirements in Notes.","Treating ADRs as a second requirement surface."],
+      "grounding":[{"end_line":37,"quote":"Optional. Use for cross-references, related ADRs, or implementation hints that do not belong in the constitutional sections above. Do not put new requirements here: ADRs are durable design memory, not a second requirement surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes","start_line":37}],
+      "key":"tenant_adr_notes_latitude"
+    },
+    {
+      "allowed":["A tenant ADR REGISTRY.md is recommended for tooling/review but optional.","If maintained, it is a read model over ADR files."],
+      "applies_to_keys":["variant_adr_directory"],
+      "forbidden":["Replacing ADR files' accepted design authority with the registry."],
+      "grounding":[{"end_line":47,"quote":"A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but not required. If you maintain one, treat it as a read model over the ADR files; the ADR files remain the accepted design authority.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FOptional%20registry","start_line":47}],
+      "key":"tenant_adr_registry_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source-linked interpretation under the selected STDO 2.5.1-rc.2 calculus basis, not semantic acceptance, installed qualification, execution or a completeness judgment.",
+    "No tools, external files, graph endpoints or referenced authority bodies were consulted. Graphify-only nodes and links are not normative evidence.",
+    "WORLD_MODEL's disposition ledger reports conservation but frequently supplies only counts or names. Missing definitions, formulas, enumerations and predicates remain unresolved rather than reconstructed.",
+    "Source-defined judgments, traversals, transformations, validation and tool operations are represented as descriptive concepts and constraints only. The adapter's judgment, traversal and transformation populations remain empty.",
+    "Template processing neither fills placeholders nor instantiates Products, accepted frame bases, requirements, ADRs, actors or grants.",
+    "The finite schema does not implement JSON Schema validation, URI resolution, filesystem checks, admission, result conjunction, invalidation or coverage closure. Descriptive retention does not establish those operations' outcomes.",
+    "Referenced SPEC_METHOD, FOUNDATIONS, PRODUCT_DEFINITION, ACTIVATION, EVALUATION, REFERENCE_FRAME, TICKETS, POSTING_GUIDE and other owners require source re-entry for meanings not stated here.",
+    "Common and tenant-local ADR templates, and AGENTS and CLAUDE bootstrap templates, retain separate local identities despite repeated wording.",
+    "No material source section is intentionally omitted. Repeated content is grouped across groundings; disposition selection records processing choices rather than fidelity or completeness proof."
+  ],
+  "relations": [
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":87,"quote":"[SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain) is the constitutional\nauthority for the roles and closure of the specification layers; this\nguide supplies the practical writing discipline for those artifacts (P6;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice","start_line":85}],
+      "key":"specification_owner_governs_layers",
+      "kind":"declared_authority_boundary",
+      "meaning":"SPEC_METHOD owns layer roles and closure consumed by the guide; the guide supplies practical discipline without redefining that ownership.",
+      "source_key":"specification_layer_owner",
+      "target_key":"writing_guide"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":82,"quote":"        \"stdo\": {\n          \"$ref\": \"#/$defs/stdoBinding\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":81}],
+      "key":"schema_contains_stdo_binding",
+      "kind":"schema_member_type",
+      "meaning":"The schema assigns constitution.stdo the stdoBinding type; containment itself confers no operative constitutional authority.",
+      "source_key":"product_definition_schema",
+      "target_key":"schema_stdo_binding"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":126,"quote":"        \"disambiguations\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"$ref\": \"#/$defs/localDisambiguation\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":123}],
+      "key":"schema_contains_disambiguations",
+      "kind":"schema_member_type",
+      "meaning":"local_constitution.disambiguations contains localDisambiguation objects; this type link does not perform a resolution.",
+      "source_key":"product_definition_schema",
+      "target_key":"schema_local_disambiguation"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":21,"quote":"`PRODUCT_DEFINITION_TEMPLATE.json` is the one per-product fill-in overlay. Its\nnormative schema is `../schemas/product-definition.schema.json`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":20}],
+      "key":"overlay_uses_normative_schema",
+      "kind":"normative_shape_dependency",
+      "meaning":"The supplied README explicitly identifies the supplied product-definition schema as the overlay template's normative schema.",
+      "source_key":"product_definition_schema",
+      "target_key":"product_overlay_template"
+    },
+    {
+      "conditions":["A completed, accepted frame-basis declaration is bound by the filled overlay."],
+      "exceptions":["Another lawful carrier preserving all specified relations may be used."],
+      "governing":false,
+      "grounding":[{"end_line":66,"quote":"`PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` is the copyable structured-prose\nstarter for that referenced declaration. It projects the normative binding law\nfrom `PRODUCT_DEFINITION.md` section 7; it does not become authority by being","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":64}],
+      "key":"overlay_references_frame_basis",
+      "kind":"template_reference_role",
+      "meaning":"The frame-basis template is a starter for the declaration the overlay references, not itself an accepted declaration or authority.",
+      "source_key":"product_overlay_template",
+      "target_key":"project_frame_basis_template"
+    },
+    {
+      "conditions":["Resolved from the exact installed basis in the applicable Product Definition."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":8,"quote":"`standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json`\nfrom the exact installed STDO basis in the applicable Product Definition and\nuse it as the authoritative template shape for edge override files.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization","start_line":6}],
+      "key":"fp_uses_override_shape",
+      "kind":"declared_template_shape_authority",
+      "meaning":"The named edge-override template governs override file shape for tenant F_P customization; this does not authorize or execute a constructive turn.",
+      "source_key":"edge_override_template",
+      "target_key":"tenant_fp_customization"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Retain reported conservation, counts and explicit modal/result boundaries without supplying missing tests, definitions, enumerated members, formulas or proofs. The ledger alone cannot establish predecessor fidelity.",
+      "grounding":[{"end_line":1337,"quote":"| #admissibility | conserved; the whole test with its eight surfaces and proportional altitude, not prescribing method, the three explicit values, no manufactured treatment, sparse first publication with the five entity kinds and the bound on altitude | §9 Admissibility; §14 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions","start_line":1337}],
+      "key":"world_model_missing_bodies",
+      "subject_key":"world_model_disposition_ledger",
+      "uncertainty":"Most receiving §§1–14 and predecessor WORLD_MODEL_METHOD.md are absent, as are referenced FOUNDATIONS/PRODUCT_DEFINITION/PROFILES/DESIGN_MODULE owners and empirical pins' actual values."
+    },
+    {
+      "consequence":"Treat imported layer, principle, release and commentary meanings as referenced dependencies only.",
+      "grounding":[{"end_line":11,"quote":"current surface. Consumes [SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain)\n(the chain, its layers and the specification surface rule) and\n[§6](SPEC_METHOD.md#6-lineage-and-release) (the release version boundary),\nand [POSTING_GUIDE](POSTING_GUIDE.md) (the commentary layer); defines none\nof them.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE","start_line":7}],
+      "key":"writing_external_owners",
+      "subject_key":"writing_guide",
+      "uncertainty":"Referenced SPEC_METHOD, POSTING_GUIDE and FOUNDATIONS content is not supplied."
+    },
+    {
+      "consequence":"Preserve explicit should from the conservation row and avoid declaring a stronger present-tense obligation without the owning rule.",
+      "grounding":[{"end_line":116,"quote":"The rule for current-surface writing, with its force, is the\n[SPEC_METHOD §2 Specification surface rule](SPEC_METHOD.md#specification-surface-rule):\nconstitutional specification is written in the present tense,","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F9.%20Current-surface%20writing","start_line":114},{"end_line":145,"quote":"present tense at \"should\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions","start_line":145}],
+      "key":"writing_present_tense_force",
+      "subject_key":"writing_current_surface_rule",
+      "uncertainty":"Indicative body wording, explicit should in the ledger and force delegated to absent SPEC_METHOD require source re-entry for a definitive modal reconciliation."
+    },
+    {
+      "consequence":"A structurally valid object is not evidence of installed inventory completeness, correct hashes, correct Git ancestry or correspondence between count and members.",
+      "grounding":[{"end_line":240,"quote":"        \"member_count\": {\n          \"type\": \"integer\",\n          \"minimum\": 0\n        },\n        \"member_set_sha256\": {\n          \"$ref\": \"#/$defs/sha256\"\n        },\n        \"members\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"$ref\": \"#/$defs/member\"\n          },\n          \"uniqueItems\": true","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble","start_line":228}],
+      "key":"manifest_validation_limits",
+      "subject_key":"installed_release_manifest",
+      "uncertainty":"The supplied schema does not assert count-array equality, path-only uniqueness, digest recomputation or cross-field repository consistency."
+    },
+    {
+      "consequence":"Keep syntax, structural validation, referenced meanings and manager/semantic conformance distinct. No live identities, authorities, filesystem targets or resolutions are validated here.",
+      "grounding":[{"end_line":482,"quote":"Conformance separately verifies that it is a member of disambiguates.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":482},{"end_line":392,"quote":"symlinks, and reparse points are refused by manager conformance.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble","start_line":392}],
+      "key":"product_schema_semantic_limits",
+      "subject_key":"product_definition_schema",
+      "uncertainty":"Portable shape and uniqueItems do not establish URI resolution, unique embedded identities, lawful authority, candidate selection membership or filesystem confinement."
+    },
+    {
+      "consequence":"Retain template fields as examples; do not resolve placeholder endpoints, claim an installed cut or instantiate Product/frame authority.",
+      "grounding":[{"end_line":21,"quote":"      \"selector\": \"stdo://channels/REPLACE_WITH_VERSION_LINE\",\n      \"basis\": {\n        \"uri\": \"stdo://releases/REPLACE_WITH_IMMUTABLE_CUT/\",\n        \"manifest_sha256\": \"REPLACE_WITH_64_LOWERCASE_HEX_SHA256\"","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble","start_line":18}],
+      "key":"overlay_placeholder_bindings",
+      "subject_key":"product_overlay_template",
+      "uncertainty":"Release, digest, identities, local term resolution, reference-frame authorities and referenced project files are illustrative or unprovided."
+    },
+    {
+      "consequence":"Unknown applicability remains unknown. The representation does not evaluate predicates or perform admissions, conjunctions or activation transitions.",
+      "grounding":[{"end_line":62,"quote":"under `ACTIVATION.md` section 1, Applicability, which states what a false or\nunknown predicate does. Retain every required constraining result in the\ndeclared conjunction. Frame availability alone does not activate it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory","start_line":60}],
+      "key":"frame_external_operational_law",
+      "subject_key":"evaluation_inventory_fields_and_applicability",
+      "uncertainty":"ACTIVATION §1's false/unknown behavior and concrete result algebras/dependencies are absent; five active families retain descriptions rather than operational semantics."
+    },
+    {
+      "consequence":"Do not assign numerical severity/priority or infer promotion blockage from the template.",
+      "grounding":[{"end_line":99,"quote":"Severity, priority, frame result, boundary effect,\nand `STDO-UP-020` disposition remain distinct.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy","start_line":98}],
+      "key":"triage_external_rules",
+      "subject_key":"technical_triage_and_promotion",
+      "uncertainty":"ACTIVATION §4 hard stops, EVALUATION §5 promotion criteria, STDO-UP-020 and project-selected scales are not supplied."
+    },
+    {
+      "consequence":"No coverage, reuse validity or closure judgment is produced. Referenced lifecycle and work-carrier semantics require their owners.",
+      "grounding":[{"end_line":172,"quote":"Coverage is complete only when every mandatory material evaluation and\ninteraction is closed, or governing authority explicitly retains its residual\nconsistently with the claim (`REFERENCE_FRAME.md` section 8, Operational full\ncoverage). Record each material row's status in the values of that section's","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals","start_line":169}],
+      "key":"coverage_external_law",
+      "subject_key":"coverage_closure_and_reuse",
+      "uncertainty":"Full REFERENCE_FRAME §8 ledger, ACTIVATION §7 invalidators, TICKETS carrier rules and concrete terminal predicates are absent."
+    },
+    {
+      "consequence":"Retain refusal classes and derived-source limitations without inventing a freshness test or permission to substitute projections.",
+      "grounding":[{"end_line":226,"quote":"derived surfaces under `ACTIVATION.md` section 2, Acquisition and Staleness of\nderived surfaces, which state when one may be used and when the owning sources\nare acquired instead. None replaces this accepted binding.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry","start_line":224}],
+      "key":"source_acquisition_unresolved",
+      "subject_key":"frame_source_reentry",
+      "uncertainty":"The referenced acquisition/staleness rule and concrete sources/owners are absent."
+    },
+    {
+      "consequence":"Preserve stated binding and validation obligations but do not claim constitutional sufficiency, relation completeness or authority congruence.",
+      "grounding":[{"end_line":115,"quote":"composition target identities and contracts, and evaluate constitutional\nsufficiency, semantic resolution, cross-context relation completeness, and\nauthority congruence under `PRODUCT_DEFINITION.md` section 9.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay","start_line":113}],
+      "key":"overlay_external_semantics",
+      "subject_key":"overlay_required_binding_completion",
+      "uncertainty":"PRODUCT_DEFINITION §§5,7,9 and retained revision-2 relation meanings are external to the supplied corpus."
+    },
+    {
+      "consequence":"Treat the list as stated decision occasions while preserving the explicit >1-tenant prerequisite and constitutional-change exclusion; do not impose an invented all-items conjunction.",
+      "grounding":[{"end_line":14,"quote":"Write an ADR here when the decision:\n\n- governs more than one build tenant under this project\n- chooses a concrete realization that satisfies one or more requirements declared under `specification/requirements/` and that requirement applies across tenants\n- introduces a structural or interface choice that tenant-local realizations must comply with\n- supersedes a prior cross-tenant decision","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR","start_line":9}],
+      "key":"common_adr_trigger_reading",
+      "subject_key":"common_adr_selection",
+      "uncertainty":"The trigger bullets lack an explicit all/any connective; complete intake and design-record law is referenced elsewhere."
+    },
+    {
+      "consequence":"Preserve local scope and listed occasions without requiring every new ADR to supersede a predecessor.",
+      "grounding":[{"end_line":14,"quote":"Write an ADR here when the decision:\n\n- governs only this build tenant (the path segment(s) under `build_tenants/` that identify this tenant, e.g., `<family>/<variant>` or a single-label tenant path)\n- chooses a concrete realization that satisfies one or more requirements declared under `specification/requirements/`\n- introduces a structural or interface choice future maintainers will need to know about\n- supersedes a prior tenant-local decision","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR","start_line":9}],
+      "key":"tenant_adr_trigger_reading",
+      "subject_key":"tenant_adr_selection",
+      "uncertainty":"The listed occasions lack an explicit formal connective; SPEC_METHOD §§4,10 are absent."
+    },
+    {
+      "consequence":"No loading, edge transformation, guidance merge or output generation is inferred or performed.",
+      "grounding":[{"end_line":5,"quote":"The installed runtime loads only override files from this tenant-local edge-override root.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides","start_line":5}],
+      "key":"edge_override_runtime_unresolved",
+      "subject_key":"tenant_edge_override_scope",
+      "uncertainty":"Runtime implementation, filename resolution, override validation, merge behavior and execution semantics are not supplied."
+    }
+  ]
+}

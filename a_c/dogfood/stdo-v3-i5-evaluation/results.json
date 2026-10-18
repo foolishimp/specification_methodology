@@ -1,0 +1,1398 @@
+{
+  "cells": [
+    {
+      "candidate": "codex",
+      "condition": "direct",
+      "critical_incorrect": 0,
+      "critical_unmet": 3,
+      "critical_unmet_returned": 3,
+      "graph_uptake_runs": 0,
+      "mean_calls": 20.0,
+      "mean_content_utf8_bytes": 158912.0,
+      "mean_elapsed_seconds": 389.31498275051126,
+      "mean_score": 93.2292,
+      "mean_score_returned": 93.2292,
+      "practical_task_passes": 5,
+      "prohibited_assertions": 0,
+      "returned_runs": 2,
+      "runs": 2,
+      "task_answers": 8,
+      "threshold_task_passes": 5,
+      "total_graph_startup_seconds": 0,
+      "total_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 665600,
+        "input_tokens": 779194,
+        "output_tokens": 32076,
+        "reasoning_output_tokens": 16905
+      },
+      "usage_reported_runs": 2,
+      "valid_runs": 2
+    },
+    {
+      "candidate": "codex",
+      "condition": "graphify",
+      "critical_incorrect": 0,
+      "critical_unmet": 17,
+      "critical_unmet_returned": 1,
+      "graph_uptake_runs": 1,
+      "mean_calls": 19.5,
+      "mean_content_utf8_bytes": 153549.0,
+      "mean_elapsed_seconds": 538.2974703750224,
+      "mean_score": 46.875,
+      "mean_score_returned": 93.75,
+      "practical_task_passes": 3,
+      "prohibited_assertions": 0,
+      "returned_runs": 1,
+      "runs": 2,
+      "task_answers": 8,
+      "threshold_task_passes": 3,
+      "total_graph_startup_seconds": 13.796122249914333,
+      "total_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 267008,
+        "input_tokens": 323426,
+        "output_tokens": 15816,
+        "reasoning_output_tokens": 7825
+      },
+      "usage_reported_runs": 1,
+      "valid_runs": 1
+    },
+    {
+      "candidate": "claude",
+      "condition": "direct",
+      "critical_incorrect": 0,
+      "critical_unmet": 9,
+      "critical_unmet_returned": 9,
+      "graph_uptake_runs": 0,
+      "mean_calls": 20.0,
+      "mean_content_utf8_bytes": 159310.5,
+      "mean_elapsed_seconds": 388.1122898955364,
+      "mean_score": 85.4167,
+      "mean_score_returned": 85.4167,
+      "practical_task_passes": 2,
+      "prohibited_assertions": 0,
+      "returned_runs": 2,
+      "runs": 2,
+      "task_answers": 8,
+      "threshold_task_passes": 2,
+      "total_graph_startup_seconds": 0,
+      "total_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1070464,
+        "input_tokens": 1196682,
+        "output_tokens": 31243,
+        "reasoning_output_tokens": 16109
+      },
+      "usage_reported_runs": 2,
+      "valid_runs": 2
+    },
+    {
+      "candidate": "claude",
+      "condition": "graphify",
+      "critical_incorrect": 0,
+      "critical_unmet": 8,
+      "critical_unmet_returned": 8,
+      "graph_uptake_runs": 0,
+      "mean_calls": 13.5,
+      "mean_content_utf8_bytes": 159339.5,
+      "mean_elapsed_seconds": 354.5925495000556,
+      "mean_score": 85.9375,
+      "mean_score_returned": 85.9375,
+      "practical_task_passes": 2,
+      "prohibited_assertions": 0,
+      "returned_runs": 2,
+      "runs": 2,
+      "task_answers": 8,
+      "threshold_task_passes": 2,
+      "total_graph_startup_seconds": 0,
+      "total_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 506752,
+        "input_tokens": 640737,
+        "output_tokens": 29711,
+        "reasoning_output_tokens": 16572
+      },
+      "usage_reported_runs": 2,
+      "valid_runs": 2
+    }
+  ],
+  "freeze_sha256": "3b006ab85d3c23b1a4e815682d5e912797b6fe25e8cab80fc2f7f5677c40c13a",
+  "limitations": [
+    "Two repeats of four questions per candidate; no independent sampling/significance claim.",
+    "Condition-blinded same-family nonauthor assessment, not owner acceptance.",
+    "Assisted treatment bundles Graphify discovery with a_c declared acquisition; uptake optional.",
+    "Structured semantic contracts, not full native a_c re-authoring or calculus conformance.",
+    "Backend-reported tokens/cache, not dollars, billing discounts or corrected accepted-result cost."
+  ],
+  "profile": "ac.eval.summary/1",
+  "runs": [
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "f42fd4d08a04",
+      "candidate": "codex",
+      "condition": "direct",
+      "content_utf8_bytes": 158779,
+      "elapsed_seconds": 371.9766754170414,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 3,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "invalid_path": 1,
+        "narrow_read_required": 1
+      },
+      "run_id": "R01",
+      "score": 94.7917,
+      "source_text_utf8_bytes": 70455,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "C1",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "C2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 12,
+          "id": "C3",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 100.0,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "C4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 3,
+      "tool_calls": 21,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 11,
+        "search": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 309120,
+        "input_tokens": 368561,
+        "output_tokens": 15431,
+        "reasoning_output_tokens": 7617
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 173274
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "3d3de2c13794",
+      "candidate": "claude",
+      "condition": "graphify",
+      "content_utf8_bytes": 158807,
+      "elapsed_seconds": 355.4008556250483,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 1,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "invalid_argument": 1
+      },
+      "run_id": "R02",
+      "score": 82.2917,
+      "source_text_utf8_bytes": 126311,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Detailed owner text for the durable Product frame basis, activation signature, preservation/reuse, quantified assurance and module-derived test-lane contract was not acquired within the payload envelope.'",
+            "L1 also states the complete Product Definition §7 and detailed activation contract 'were not acquired'. These disclose acquisition limits; no access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 3,
+            "partial": 5
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L1.1",
+            "L1.4",
+            "L1.5"
+          ],
+          "earned_weight": 8.0,
+          "id": "L1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 66.6667,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 5,
+            "partial": 3
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 10.5,
+          "id": "L2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [
+            "L3 says: 'The detailed preservation/reuse and quantified-assurance owner sections were not acquired.' No access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L3.5"
+          ],
+          "earned_weight": 10.5,
+          "id": "L3",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [
+            "L4 says: 'The detailed ASSURANCE §15 lane contract was not acquired.' No access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "L4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 1,
+      "tool_calls": 10,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 7,
+        "search": 1
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 216704,
+        "input_tokens": 270082,
+        "output_tokens": 14054,
+        "reasoning_output_tokens": 7594
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 168043
+    },
+    {
+      "answer_task_ids_exact": false,
+      "blind_label": "54536a3ff1e9",
+      "candidate": "codex",
+      "condition": "graphify",
+      "content_utf8_bytes": 150798,
+      "elapsed_seconds": 720.0248632499715,
+      "errors": [
+        "process_timeout",
+        "missing_backend_usage",
+        "output_schema_failure"
+      ],
+      "graph_startup_seconds": 13.796122249914333,
+      "graph_uptake": true,
+      "practical_task_passes": 0,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "anchor_not_found": 2,
+        "narrow_read_required": 1
+      },
+      "run_id": "R03",
+      "score": 0.0,
+      "source_text_utf8_bytes": 73782,
+      "status": "failed",
+      "tasks": [
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "missed": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C1.1",
+            "C1.3",
+            "C1.4",
+            "C1.6"
+          ],
+          "earned_weight": 0,
+          "id": "C1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 0.0,
+          "strict_valid_citations": 0,
+          "supported_valid_citations": [],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "missed": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C2.3",
+            "C2.4",
+            "C2.5",
+            "C2.6"
+          ],
+          "earned_weight": 0,
+          "id": "C2",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 0.0,
+          "strict_valid_citations": 0,
+          "supported_valid_citations": [],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "missed": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C3.1",
+            "C3.2",
+            "C3.3",
+            "C3.5"
+          ],
+          "earned_weight": 0,
+          "id": "C3",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 0.0,
+          "strict_valid_citations": 0,
+          "supported_valid_citations": [],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "missed": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C4.3",
+            "C4.4",
+            "C4.5",
+            "C4.7"
+          ],
+          "earned_weight": 0,
+          "id": "C4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 0.0,
+          "strict_valid_citations": 0,
+          "supported_valid_citations": [],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 0,
+      "tool_calls": 21,
+      "tool_counts": {
+        "graph_query": 1,
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 13,
+        "search": 5
+      },
+      "usage": {},
+      "usage_reported": false,
+      "wire_utf8_bytes": 164035
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "d884f650311f",
+      "candidate": "claude",
+      "condition": "direct",
+      "content_utf8_bytes": 159020,
+      "elapsed_seconds": 346.93460483301897,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 1,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "invalid_argument": 1,
+        "narrow_read_required": 1
+      },
+      "run_id": "R04",
+      "score": 85.4167,
+      "source_text_utf8_bytes": 82922,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Unacquired owner sections are identified where material; citations refer only to acquired documentary text.'",
+            "L1 states the exact native PRODUCT_DEFINITION §7 and complete activation-packet requirements 'were not acquired'. These are acquisition disclosures; no access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 4,
+            "partial": 4
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L1.1",
+            "L1.4"
+          ],
+          "earned_weight": 9.0,
+          "id": "L1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 75.0,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.0,
+          "id": "L2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 91.6667,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [
+            "L3 says: 'The detailed dependency-reuse and probabilistic-assurance clauses were not acquired.' No access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L3.5"
+          ],
+          "earned_weight": 10.5,
+          "id": "L3",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [
+            "L4 says: 'Detailed module-derived test-lane criteria in ASSURANCE §15 were not acquired.' No access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "L4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 6,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 1,
+      "tool_calls": 17,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 9,
+        "search": 6
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 448640,
+        "input_tokens": 525026,
+        "output_tokens": 13859,
+        "reasoning_output_tokens": 6832
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 172881
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "373432f865d3",
+      "candidate": "codex",
+      "condition": "graphify",
+      "content_utf8_bytes": 156300,
+      "elapsed_seconds": 356.57007750007324,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 3,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {},
+      "run_id": "R05",
+      "score": 93.75,
+      "source_text_utf8_bytes": 97862,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.0,
+          "id": "C1",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 91.6667,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C2.3"
+          ],
+          "earned_weight": 10.5,
+          "id": "C2",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 12,
+          "id": "C3",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 100.0,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "C4",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 3,
+      "tool_calls": 18,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 12,
+        "search": 4
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 267008,
+        "input_tokens": 323426,
+        "output_tokens": 15816,
+        "reasoning_output_tokens": 7825
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 168704
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "30ea862615fa",
+      "candidate": "claude",
+      "condition": "direct",
+      "content_utf8_bytes": 159601,
+      "elapsed_seconds": 429.2899749580538,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 1,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "invalid_argument": 2,
+        "invalid_path": 1
+      },
+      "run_id": "R06",
+      "score": 85.4167,
+      "source_text_utf8_bytes": 81153,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Its reported same-family fidelity evidence and repaired clauses were not independently re-read.'",
+            "Answer-level limitation says: 'Focused source cuts do not reproduce the full activation protocol, evidence-retention predicate or module-test specification'. These are acquisition/review disclosures; no access condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 3,
+            "partial": 5
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L1.3",
+            "L1.4",
+            "L1.5"
+          ],
+          "earned_weight": 8.0,
+          "id": "L1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 66.6667,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "L2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L3.5"
+          ],
+          "earned_weight": 11.0,
+          "id": "L3",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 91.6667,
+          "strict_valid_citations": 9,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "L4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 1,
+      "tool_calls": 23,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 11,
+        "search": 10
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 621824,
+        "input_tokens": 671656,
+        "output_tokens": 17384,
+        "reasoning_output_tokens": 9277
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 174001
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "4a5f4b0e0d2f",
+      "candidate": "codex",
+      "condition": "direct",
+      "content_utf8_bytes": 159045,
+      "elapsed_seconds": 406.6532900839811,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 2,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "narrow_read_required": 1
+      },
+      "run_id": "R07",
+      "score": 91.6667,
+      "source_text_utf8_bytes": 62970,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [
+            "Answer-level limitation states: \"Only selected deciding sections were acquired.\" This discloses source-acquisition scope without naming a tool or an access condition; no condition is inferred."
+          ],
+          "criterion_counts": {
+            "met": 5,
+            "partial": 3
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C1.3"
+          ],
+          "earned_weight": 10.0,
+          "id": "C1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 83.3333,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "C2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 8
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 12,
+          "id": "C3",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 100.0,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "C4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "C4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 2,
+      "tool_calls": 19,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 9,
+        "search": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 356480,
+        "input_tokens": 410633,
+        "output_tokens": 16645,
+        "reasoning_output_tokens": 9288
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 174141
+    },
+    {
+      "answer_task_ids_exact": true,
+      "blind_label": "8e306cbad408",
+      "candidate": "claude",
+      "condition": "graphify",
+      "content_utf8_bytes": 159872,
+      "elapsed_seconds": 353.78424337506294,
+      "errors": [],
+      "graph_startup_seconds": 0,
+      "graph_uptake": false,
+      "practical_task_passes": 1,
+      "prescribed_tool_order_compliant": null,
+      "refusal_codes": {
+        "invalid_argument": 1
+      },
+      "run_id": "R08",
+      "score": 89.5833,
+      "source_text_utf8_bytes": 87277,
+      "status": "completed",
+      "tasks": [
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L1.4"
+          ],
+          "earned_weight": 10.5,
+          "id": "L1",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 7,
+            "partial": 1
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [],
+          "earned_weight": 11.5,
+          "id": "L2",
+          "practical_pass": true,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 95.8333,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": true,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L3.5"
+          ],
+          "earned_weight": 10.5,
+          "id": "L3",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 8,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        },
+        {
+          "blinding_disclosures": [],
+          "criterion_counts": {
+            "met": 6,
+            "partial": 2
+          },
+          "critical_incorrect": [],
+          "critical_unmet": [
+            "L4.7"
+          ],
+          "earned_weight": 10.5,
+          "id": "L4",
+          "practical_pass": false,
+          "prohibited_ambiguous": [],
+          "prohibited_asserted": [],
+          "score": 87.5,
+          "strict_valid_citations": 7,
+          "supported_valid_citations": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "threshold_pass": false,
+          "total_weight": 12,
+          "unsupported_claims": []
+        }
+      ],
+      "threshold_task_passes": 1,
+      "tool_calls": 17,
+      "tool_counts": {
+        "info": 1,
+        "list_sources": 1,
+        "read_source": 9,
+        "search": 6
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 290048,
+        "input_tokens": 370655,
+        "output_tokens": 15657,
+        "reasoning_output_tokens": 8978
+      },
+      "usage_reported": true,
+      "wire_utf8_bytes": 174348
+    }
+  ]
+}

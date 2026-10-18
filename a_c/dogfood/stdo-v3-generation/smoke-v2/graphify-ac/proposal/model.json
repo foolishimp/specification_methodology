@@ -1,0 +1,2924 @@
+{
+  "basis": {
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+    "subject": {
+      "id": "urn:a-c:generation:synthetic-smoke:20261018",
+      "inventory": [
+        {
+          "id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+          "sha256": "edb62ebade74fc1964077c6d96a2b8c67184193736668561c8119e06ed98da25"
+        },
+        {
+          "id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "sha256": "1ee196d558560b0da52fc5881a39bb828e87ec4b80004fb18e5e75078d8aefa8"
+        },
+        {
+          "id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "sha256": "e0d9cd168f967aed96f3e7a0aee8b6f3d58db4267361c18e650f81ecf05ed84a"
+        },
+        {
+          "id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "sha256": "4206c0a86370ed758e6ee5c4d433a5bda00babefb148afaa066e5ce0124a1a1b"
+        }
+      ],
+      "sha256": "81fb2c6b5ba9710ab347a0196378028d41886ec025fda826a57b08c18152b82c"
+    }
+  },
+  "coordinates": {
+    "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+    "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+    ]
+  },
+  "dependency_contract": {
+    "attachment_families": [
+      "constraints",
+      "latitude",
+      "residuals"
+    ],
+    "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:dependency-contract:authored-governing-relations",
+    "required_relation_kinds": [
+      "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies",
+      "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires"
+    ]
+  },
+  "external_resolutions": [
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:authority",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:constraint-kind",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:invalidation",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:judgment-kind",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:residual-kind",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:sort",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:stop",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+      "external_target_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+      "resolved_target_identity": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+    }
+  ],
+  "functor_bindings": {},
+  "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:model:fd3a368be603491becfa67ba",
+  "identity_universe": [
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:11955fc7923759d2ed5ad8eb3f4a6e7e",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:1eb79ea4967a44814d21599a46d8f0fe",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2e9387e72795aa34bd855d6ba70b7929",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2ec05e05469dcc1ac3b4f70cc08bec98",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2f65bc9b947a773f75c0bd9b95449e03",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:327bd2374f7f904954c38c1823fd7851",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:32df9186de10513ec0b39b1e2684f44e",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:42ff03bb64f0ab51794e3e6ed35f8c2d",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:49c932e6c3cdc84311f1c847286f1b71",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:4f280f4f134b10500d485c87c4ee244e",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:5352bbaf1a254e4093fb6392707af3c2",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:63b4c001475a0f5d422c68e33ec0ca81",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:6ea8566a82fd9e28c868afb5c2df6548",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:87adfe402ed87b764f174707bcfae5a8",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:9654550a74960f9b97e9082f16fc561b",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a2f8e5f3282d13506589b61af9f79133",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a5a40e10be423719c6eeda4930f87e15",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:be78d2aa7c7ac446f21b9a0d8b8227ae",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e23a96deda0bd52a6f13f44e956aaad0",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e3ff7fce57e683b1b7fd6c0fbf6bfc5e",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e9f50edd21dce2f3e7f60a1b4117e122",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:fc2411917d52fd9d39f78e099b13140f",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+    "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+    "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+    "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+    "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+    "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+  ],
+  "interpretation": {
+    "authority": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+      "sha256": "332110e600d3ac9be0047e9c5fed7dfc01d4cf9d6f8805b40ad871a91766e1ed"
+    },
+    "contract": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:interpretation-contract",
+      "sha256": "1ebddafc75d395c99b4d9e5e276cfc150dafba7617847b898387fd534f1b57d3"
+    },
+    "dispositions": [
+      {
+        "authority": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "decision": "retained",
+        "reason": "Retains the corpus's test-subject identity and its explicit exclusion of Product authorization and acceptance.",
+        "records": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:327bd2374f7f904954c38c1823fd7851",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:63b4c001475a0f5d422c68e33ec0ca81"
+        ],
+        "source": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus"
+      },
+      {
+        "authority": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "decision": "residual",
+        "reason": "Retains the necessary gate condition and receipt/result distinction, with unresolved qualification criteria recorded explicitly.",
+        "records": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:6ea8566a82fd9e28c868afb5c2df6548",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e23a96deda0bd52a6f13f44e956aaad0",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:1eb79ea4967a44814d21599a46d8f0fe",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:9654550a74960f9b97e9082f16fc561b",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:32df9186de10513ec0b39b1e2684f44e",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:be78d2aa7c7ac446f21b9a0d8b8227ae",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:fc2411917d52fd9d39f78e099b13140f"
+        ],
+        "source": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate"
+      },
+      {
+        "authority": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "decision": "residual",
+        "reason": "Retains both reuse prerequisites and the conditional requirement to preserve uncertainty and withhold the dependent claim; unresolved dependency and preservation meanings remain explicit.",
+        "records": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a5a40e10be423719c6eeda4930f87e15",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:42ff03bb64f0ab51794e3e6ed35f8c2d",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:87adfe402ed87b764f174707bcfae5a8",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e9f50edd21dce2f3e7f60a1b4117e122",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a2f8e5f3282d13506589b61af9f79133",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:11955fc7923759d2ed5ad8eb3f4a6e7e",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2e9387e72795aa34bd855d6ba70b7929",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:4f280f4f134b10500d485c87c4ee244e"
+        ],
+        "source": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+      },
+      {
+        "authority": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "decision": "retained",
+        "reason": "Retains expressly permitted layout variation, its preservation conditions, and the universal exclusion of semantic acceptance supplied by representation or shape checks.",
+        "records": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2ec05e05469dcc1ac3b4f70cc08bec98",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2f65bc9b947a773f75c0bd9b95449e03",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:49c932e6c3cdc84311f1c847286f1b71",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e3ff7fce57e683b1b7fd6c0fbf6bfc5e",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:5352bbaf1a254e4093fb6392707af3c2"
+        ],
+        "source": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation"
+      }
+    ],
+    "interpreter": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:interpreter:f-p-cli",
+      "sha256": "a626f0852a4e784bea86f4b10bf671ce8161a968cd01568c0ac990fb25250e6f"
+    },
+    "invalidation": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+      "sha256": "ec23fb2d5994461d3e78305466f14b0922e86f4e3e25e66ce35749f4849b6e08"
+    },
+    "provenance": [
+      {
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:provenance:generation-plan",
+        "sha256": "c0bd897e168c72b1fa79e4360a805b6922a47d5caa22ff312f446dd6caae7773"
+      },
+      {
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:provenance:author-invocations",
+        "sha256": "a626f0852a4e784bea86f4b10bf671ce8161a968cd01568c0ac990fb25250e6f"
+      }
+    ],
+    "selection_ledger": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:selection-ledger",
+      "sha256": "2f6521b092f94736d7625e0bd27d9902df98d89189a4c9b8974eb2b1780ad5e6"
+    },
+    "source_reentry": {
+      "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:source-reentry",
+      "sha256": "402cf88a295c898aad6bfcad6bfd5e5502d719ed986e058e91418c654a251985"
+    }
+  },
+  "populations": {
+    "constraints": [
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:327bd2374f7f904954c38c1823fd7851"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:63b4c001475a0f5d422c68e33ec0ca81",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "rules.md",
+              "quote": "This is a test subject, not a Product authorization or acceptance.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+              "start_line": 3
+            }
+          ],
+          "statement": "The test subject must not be treated as Product authorization or acceptance.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:6ea8566a82fd9e28c868afb5c2df6548",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e23a96deda0bd52a6f13f44e956aaad0"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:9654550a74960f9b97e9082f16fc561b",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "Deployment is to proceed."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "statement": "Deployment may proceed only if the required independent gate has a current passing result on the exact candidate and basis. This is a necessary condition, not a command to deploy or a statement that this condition alone suffices.",
+          "uncertainty": "The supplied source does not identify a particular gate, candidate, basis, or result."
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:1eb79ea4967a44814d21599a46d8f0fe",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:32df9186de10513ec0b39b1e2684f44e",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "The dispatch receipt has no returned result."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "A dispatch receipt without a returned result does not satisfy the gate.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "statement": "A dispatch receipt without a returned result does not satisfy the gate; receipt alone cannot substitute for the required result.",
+          "uncertainty": "No returned result is supplied, and absence of a result is not classified as a failing result."
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a5a40e10be423719c6eeda4930f87e15",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e9f50edd21dce2f3e7f60a1b4117e122",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "Reuse of an old passing check is proposed."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "statement": "Reuse requires an applicable preservation relation that both establishes the old passing check's current relevance and covers its material dependencies. Earlier passing status alone does not establish this prerequisite.",
+          "uncertainty": "No particular preservation relation, applicability determination, or material dependency set is supplied."
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:42ff03bb64f0ab51794e3e6ed35f8c2d",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:87adfe402ed87b764f174707bcfae5a8"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a2f8e5f3282d13506589b61af9f79133",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "A dependency edge is absent.",
+            "Dependency coverage is incomplete."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete. Preserve that uncertainty and withhold the dependent reuse claim.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "statement": "An absent edge does not establish non-influence under incomplete dependency coverage. The uncertainty must be preserved and the dependent reuse claim withheld.",
+          "uncertainty": "Influence remains unresolved; neither influence nor non-influence follows from the stated absence."
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2ec05e05469dcc1ac3b4f70cc08bec98",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2f65bc9b947a773f75c0bd9b95449e03",
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:49c932e6c3cdc84311f1c847286f1b71"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e3ff7fce57e683b1b7fd6c0fbf6bfc5e",
+        "judgment_kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "No representation or shape check supplies semantic acceptance.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "statement": "No representation and no shape check supplies semantic acceptance.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      }
+    ],
+    "judgments": [],
+    "latitude": [
+      {
+        "allowed_variation": {
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "statements": [
+            "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning."
+          ]
+        },
+        "applies_to": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2ec05e05469dcc1ac3b4f70cc08bec98"
+        ],
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "forbidden_variation": {
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "statements": [
+            "Layout variation that fails to preserve stated conditions or unresolved meaning falls outside the expressed permission."
+          ]
+        },
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:5352bbaf1a254e4093fb6392707af3c2",
+        "invalidation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:327bd2374f7f904954c38c1823fd7851",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The supplied corpus is a test subject; it supplies neither Product authorization nor acceptance.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "rules.md",
+              "quote": "This is a test subject, not a Product authorization or acceptance.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+              "start_line": 3
+            }
+          ],
+          "label": "Synthetic generation smoke corpus"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:6ea8566a82fd9e28c868afb5c2df6548",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The operation whose proceeding is subject to the required independent gate.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "label": "Deployment"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The required independent gate governing whether deployment may proceed.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "the required independent gate",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "label": "Required independent gate"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:e23a96deda0bd52a6f13f44e956aaad0",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A gate result distinguished by passing status, currentness, and application to the exact candidate and basis.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "a current passing result on the exact candidate and basis",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "label": "Current passing result"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:1eb79ea4967a44814d21599a46d8f0fe",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A receipt for dispatch, distinguished from a returned result.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "A dispatch receipt without a returned result does not satisfy the gate.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "label": "Dispatch receipt"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a5a40e10be423719c6eeda4930f87e15",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "An earlier passing check whose reuse requires an applicable preservation relation.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "label": "Old passing check"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A relation relevant to reuse by establishing a check's current relevance and covering its material dependencies.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "an applicable preservation relation establishes its current relevance and covers its material dependencies",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "label": "Preservation relation"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:42ff03bb64f0ab51794e3e6ed35f8c2d",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "Coverage of dependencies, whose incompleteness limits what an absent dependency edge establishes about influence.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "label": "Dependency coverage"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:87adfe402ed87b764f174707bcfae5a8",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A reuse claim dependent on the unresolved influence question described by the source.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "Preserve that uncertainty and withhold the dependent reuse claim.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "label": "Dependent reuse claim"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2ec05e05469dcc1ac3b4f70cc08bec98",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "An authored source-linked record layout, with permitted variation subject to preservation of stated conditions and unresolved meaning.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "label": "Source-linked representation"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2f65bc9b947a773f75c0bd9b95449e03",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A check of shape that supplies no semantic acceptance.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "No representation or shape check supplies semantic acceptance.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "label": "Shape check"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:49c932e6c3cdc84311f1c847286f1b71",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "An acceptance category that is not supplied by representation or shape checking; its positive criteria are not specified here.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 15,
+              "path": "rules.md",
+              "quote": "No representation or shape check supplies semantic acceptance.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+              "start_line": 15
+            }
+          ],
+          "label": "Semantic acceptance"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:be78d2aa7c7ac446f21b9a0d8b8227ae",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [
+            "Deployment is to proceed."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "kind": "requires",
+          "meaning": "Deployment depends on the required independent gate having a current passing result on the exact candidate and basis. The governing flag records this source-defined prerequisite, without granting runtime authority."
+        },
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:6ea8566a82fd9e28c868afb5c2df6548",
+        "target": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:01392452e333661b90579347c03045b3"
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:11955fc7923759d2ed5ad8eb3f4a6e7e",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [
+            "The preservation relation is applicable.",
+            "The relation establishes the check's current relevance and covers its material dependencies."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "kind": "establishes_relevance_and_covers_dependencies",
+          "meaning": "An applicable preservation relation establishes current relevance and covers material dependencies for an old passing check as a prerequisite to reuse; no actual relation instance or successful reuse is asserted."
+        },
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc",
+        "target": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:a5a40e10be423719c6eeda4930f87e15"
+      }
+    ],
+    "residuals": [
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "consequence": "The prerequisite can be represented, but this source alone cannot determine whether a particular deployment satisfies it.",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:fc2411917d52fd9d39f78e099b13140f",
+        "invalidation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:9654550a74960f9b97e9082f16fc561b",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "rules.md",
+              "quote": "the required independent gate has a current passing result on the exact candidate and basis",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+              "start_line": 7
+            }
+          ],
+          "statement": "The source does not specify how gate independence, result currentness, or exact candidate/basis correspondence is established."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "consequence": "Preserve the unresolved influence question and withhold the reuse claim dependent on it; withholding does not establish that the claim is false.",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:2e9387e72795aa34bd855d6ba70b7929",
+        "invalidation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:42ff03bb64f0ab51794e3e6ed35f8c2d",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete. Preserve that uncertainty and withhold the dependent reuse claim.",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "statement": "When coverage is incomplete, an absent edge leaves non-influence unestablished. The source supplies no concrete missing edge or influence determination."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis",
+        "consequence": "No applicable preservation relation or qualified reuse can be inferred merely from the presence of an old passing check.",
+        "context": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:context:source-first-proposal",
+        "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:4f280f4f134b10500d485c87c4ee244e",
+        "invalidation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:0913e1a4293f6e4985fa71d0:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:record:530b5654e4bec51cceec4f1421cb72cc",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 11,
+              "path": "rules.md",
+              "quote": "an applicable preservation relation establishes its current relevance and covers its material dependencies",
+              "section": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+              "start_line": 11
+            }
+          ],
+          "statement": "The source leaves the preservation relation's form, applicability criteria, method of establishing current relevance, and material dependency coverage criteria unspecified."
+        }
+      }
+    ],
+    "transformations": [],
+    "traversals": []
+  },
+  "profile": "a_c.graphify.model/1",
+  "signature": {
+    "definition": {
+      "constraint_kinds": {
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:constraint-kind:authored-source-statement": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "fields": {
+        "constraints": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "judgment_kind": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:constraint-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "latitude_ref": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "latitude"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "refusal": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "judgments": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "decided_at": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evaluator": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "subject_digest": {
+            "min_length": 1,
+            "type": "string"
+          }
+        },
+        "latitude": {
+          "allowed_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "forbidden_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "objects": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "sort": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:sort"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "relations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:relation-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "residuals": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:residual-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "transformations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain_model": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain_model": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_resolution_witnesses": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:witness"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:future-record"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "operation_authority": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preservation_relation": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:preservation-law"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "residuals": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "residuals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "traversal": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "traversals": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "postconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        }
+      },
+      "functor_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:f-d",
+        "urn:stdo:concept:axiomatic-calculus:f-p",
+        "urn:stdo:concept:axiomatic-calculus:f-h"
+      ],
+      "judgment_kinds": {
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:judgment-kind:external-semantic-review": {
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "relation_kinds": {
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:establishes_relevance_and_covers_dependencies": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:relation-kind:governing:requires": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "required_families": [],
+      "residual_kinds": {
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:residual-kind:authored-uncertainty": {
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+              "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+            "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "sorts": {
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:sort:authored-concept": {
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:basis-relation:exact",
+                      "domain": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "stop_kinds": [
+        "urn:a-c:generation:0913e1a4293f6e4985fa71d0:stop:no-execution-or-acceptance"
+      ]
+    },
+    "id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:signature:compact-source-proposal-v1",
+    "sha256": "18c2902bfa927baef8c6c62012ce505d1f5f4f516aee8d44f126920017bf97fb"
+  }
+}

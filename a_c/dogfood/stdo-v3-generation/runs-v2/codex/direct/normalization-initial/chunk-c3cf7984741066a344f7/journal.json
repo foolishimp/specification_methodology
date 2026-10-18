@@ -1,0 +1,747 @@
+{
+  "changes": [],
+  "chunk": "chunk-c3cf7984741066a344f7",
+  "derived_answer_sha256": "7b5ac6c023021428919547c966aa4b6ff14e19d576e3406c326d5b2c23b75b27",
+  "derived_non_grounding_sha256": "5bbc4f77b89a5607b43bf8ca846dd37531152666d09d4a8f97a04606df258307",
+  "fd_elapsed_seconds": 0.044077667174860835,
+  "non_grounding_sha256": "5bbc4f77b89a5607b43bf8ca846dd37531152666d09d4a8f97a04606df258307",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "28d7660a36f1653a05490946f622cc255d04e94b0cd1f6a2655201eb86f49ef3",
+    "original_attempt": "actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 76184,
+        "output_tokens": 47453,
+        "reasoning_output_tokens": 1033
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/answer.json": "316ef5ce0b659e28d03a5ed76f8ba95d48e6e77dfcb653f2129ee21502292dc5",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/events.jsonl": "d7c7a740cd68d96f3edc49f2f8b1d3ec447a957a38023be2115f7ef3e489d6a2",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/invocation.json": "9810957450bfc39aa668fed0a27f3eb90d30a478f32acf4aa1d4fc0a2c909970",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/prompt.txt": "b53ada4eeccf1c9fcd8b5d25040e12c3c9938a01b97292b213b28c7156bbad49",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/result.json": "04aefa2aa85e30feaa31c4471e93c017e1714801c77add13ab5d3384c44a3d31",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/usage.json": "8afed86d19b56f81e69755047d9819a1bfea3e7b65ab16a513b76e1bf057e841",
+      "actors/author/chunk-c3cf7984741066a344f7/attempt-001/validation.json": "05442faa52ccab0347c93afd770dec60a914a473351f3fcd55db794eaa136495",
+      "chunks.json": "3561447df08d41e09678fe51cc593ffa7b863649ba7674284fa4e2a7784a71e8",
+      "plan.json": "97706f638ee2b59f146958c4bf6e8beecea8d03af4992eb9f02cc55098d7dc7a",
+      "source-manifest.json": "32a1c7c7970389881c9059a22e8f38fa61def25e1293c4d8033901d51c37918a"
+    },
+    "source_sections": [
+      {
+        "end_line": 1465,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "45e0c03a9188a5a7d83696717c1782caeee8e54149b1c14bfd3009728d5c9db6",
+        "start_line": 860
+      },
+      {
+        "end_line": 1479,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.6%20Product-Specific%20Semantics%20Sit%20Above%20The%20Shared%20Carrier",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "3eabf4005f05b222b6a841322bbba854921717f7f36fa1866937b8374859f561",
+        "start_line": 1466
+      },
+      {
+        "end_line": 1512,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7%20Manual%20Walkthrough%20Must%20Still%20Be%20Lawful",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "00cf5dbc9a7d959004ab38a77ca0390df05534ff7580e08b0437c23ecf9fff88",
+        "start_line": 1480
+      },
+      {
+        "end_line": 1559,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7A%20Conforming%20Agentic%20Development",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "4b647e625f38463ebcfef51cfd118056cfb56d0dd5e6d0e064600e53ca0ea104",
+        "start_line": 1513
+      },
+      {
+        "end_line": 1587,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7B%20Real%20Authority-Path%20Negative%20Proof%20%28%60STDO-UP-010%60%29",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "4d044d68096c5c196c9b4542c23297d8503ee431781a6df4f42c324e3716b124",
+        "start_line": 1560
+      },
+      {
+        "end_line": 1609,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.8%20Cumulative%20Environment%20Law%20Is%20Mandatory",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "84b80e726ea08ea686e9450a54cc45f38da2fc8e496936f29af448c1fdde02f0",
+        "start_line": 1588
+      },
+      {
+        "end_line": 1638,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.9%20Global%20Convergence%20Must%20Be%20Stable%20Under%20Zoom",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "7850263262472c0f5135c3e908d3951686e047c5d7537d7d892a3778ad472c0f",
+        "start_line": 1610
+      },
+      {
+        "end_line": 1658,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F12.%20Scenario%20Rule",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "ee3917ae32d2998a96bde12f1cd87c78babda4789d5ea98bdcbe255b7fcc144c",
+        "start_line": 1639
+      },
+      {
+        "end_line": 1674,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F13.%20Installed-Dev%20Rule",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "10f68895e53b0f3e8ef42d56ccd0ab3910ebc21187347ca4642b28cd58182246",
+        "start_line": 1659
+      },
+      {
+        "end_line": 1694,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F14.%20Dogfooding%20Rule",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "d0aff63e112e732683720071ffa84e9bcc42064236984353216923de1a55c12b",
+        "start_line": 1675
+      },
+      {
+        "end_line": 1712,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F15.%20Release%20Boundary",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "c616a6fd798554cfe0c51cdae9fe7e532b519642adaeb9c82fd02be55a8289f5",
+        "start_line": 1695
+      },
+      {
+        "end_line": 1738,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F16.%20Failure%20Pattern",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "804eb234cc56bbe0f0a5804854de098d74f1d3958e91865ec7713442ba81c06d",
+        "start_line": 1713
+      },
+      {
+        "end_line": 1780,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F17.%20Invocation%20Rule",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "a3809d1d3c952261b61edbedfd753de9661e944e5d68ee8860cfab0fd269aa49",
+        "start_line": 1739
+      },
+      {
+        "end_line": 1784,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "1b25de4b4fcf471a4866c442813f1cc6ceb70071dab6bb10e3a535e547a478a3",
+        "start_line": 1781
+      },
+      {
+        "end_line": 1797,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FGeneral%20ODD%20Product",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "6ebf6372f339c47d9ebfd14aefa0bed74d2839c03d81ce9065f3087c0ae405e3",
+        "start_line": 1785
+      },
+      {
+        "end_line": 1824,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FWorld-Model%20Product",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "3e5900fb9552113968c818ee0befc34d295abeb706c189e52195eaa27be12317",
+        "start_line": 1798
+      },
+      {
+        "end_line": 1843,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F19.%20Ramp-Up%20Checklist",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "f99dd7979f9ff76c75a76bb15146d9f9268e0d0ec82d30e973063da126cd4f3b",
+        "start_line": 1825
+      },
+      {
+        "end_line": 1846,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F20.%20Canonical%20Compression",
+        "path": "standards/ODD_METHOD.md",
+        "sha256": "5f2fedb2a5ecfc715eecd8bc28008c17a77b84121199ed7ba3a708343dc4dd6b",
+        "start_line": 1844
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "ac6124fdb9733d3f345ee3b2522837581eaf3d23d0246508854f47c39c7380ec",
+        "start_line": 1
+      },
+      {
+        "end_line": 47,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FBoundary",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "7053cd0681e4683af5e18af98e4b9c364de32d1fc6bf31c3be1bc3f90fa8bbdb",
+        "start_line": 19
+      },
+      {
+        "end_line": 70,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FLocation",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "c6da5264a97abec4630dd0388c97a252756eb6ed14cb2ae4dbe231f6777332a8",
+        "start_line": 48
+      },
+      {
+        "end_line": 90,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCarrier%20Identity",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "3c31b5177708d96ce6c08f73132e9c4e4db8b3b24ffb5e9e15010b903743f63d",
+        "start_line": 71
+      },
+      {
+        "end_line": 103,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCategories",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "02c7a1c450431d5c2d2c8d412e43bde2e322fb6dbd81601672cfc9d16f09030e",
+        "start_line": 91
+      },
+      {
+        "end_line": 130,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FStructure",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "ae7a85940e4d743a2004375f8bba7c15c8d0e95b6c191dae88420f65dd813e4f",
+        "start_line": 104
+      },
+      {
+        "end_line": 162,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FDiscussion%20State%20And%20Mutability",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "3bf64bcb03f15ef8483355348ca2209d7aaa3c1d3d42594f6302f5fd6c01ed23",
+        "start_line": 131
+      },
+      {
+        "end_line": 174,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FPosting%20Rules",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "754e66254223d06896fb054fdce2701f3e5d583f227321125f3eb05d28c6a256",
+        "start_line": 163
+      },
+      {
+        "end_line": 184,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FRatification",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "a5d5f1f2005a0e898ae0f25b796a22c6bfccdf5316fa336fc2f4f02c47e3704d",
+        "start_line": 175
+      },
+      {
+        "end_line": 205,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FShared%20Method%20Adoption%20And%20Propagation%20%28%60STDO-UP-012%60%29",
+        "path": "standards/POSTING_GUIDE.md",
+        "sha256": "113956e0b3062a8e4dce59105c651c655bac2f97ba02d1feb1edede70694cad7",
+        "start_line": 185
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library",
+        "path": "standards/README.md",
+        "sha256": "e4fb4dec344724377c36a83355a8f7d2c61da98b915000d11a69f5488d86d61e",
+        "start_line": 1
+      },
+      {
+        "end_line": 27,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FFoundations%20and%20shared%20library",
+        "path": "standards/README.md",
+        "sha256": "1c0a682b8d29c23b9fe40260de3aec7faebc2e97a939e884ed35b06cd2c84cc7",
+        "start_line": 12
+      },
+      {
+        "end_line": 63,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FChoose%20a%20task",
+        "path": "standards/README.md",
+        "sha256": "217902b61dc18912cfdfa10c9a896182a1e51990ad0e3790c3bdb0fd4b4df238",
+        "start_line": 28
+      },
+      {
+        "end_line": 98,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FMethod%20owners",
+        "path": "standards/README.md",
+        "sha256": "044d3dd5310dead0ed38e68e265fe3c24b3427c555cb95326f0bb436f523f8a5",
+        "start_line": 64
+      },
+      {
+        "end_line": 139,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FDistribution%20and%20entry",
+        "path": "standards/README.md",
+        "sha256": "eb4d272b70cc8b947745c3d5dd552ba0e79b22f8589c1c68dd987fad3cd3d151",
+        "start_line": 99
+      },
+      {
+        "end_line": 2,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "527bae6b58ff27ca4d22ba90feb1b0ed1d894373d7d408ea24d793ce395dc053",
+        "start_line": 1
+      },
+      {
+        "end_line": 48,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCanonical%20Compression",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "73ed593af3d42bb9c3c4e81d7e3ccfa21dbc38588bb8b417cf96092b2cc7d808",
+        "start_line": 3
+      },
+      {
+        "end_line": 95,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FPosition",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "3950c6b21faa8fd2631ad4a0cc8b1cfbc289144d81f2369a8388a319228b26d8",
+        "start_line": 49
+      },
+      {
+        "end_line": 118,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCore%20Claims",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "cffd26de5e16ed9cfa2d89945cbda1a6da50cb08838a4d12436ed2422811af11",
+        "start_line": 96
+      },
+      {
+        "end_line": 120,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "76189fc519e01431e620924926393d6e9fa5b025f78ef0959f983190f9105e2a",
+        "start_line": 119
+      },
+      {
+        "end_line": 133,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvaluation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "7a576d0603ad1aa62bd38e89d24d4b8c13994d29b50c21faf24054df150fa98e",
+        "start_line": 121
+      },
+      {
+        "end_line": 146,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FWorkspace",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "c54e0e48e69df139ee7d30da30329e3be94a8ae545898c172f234a4a1d477aba",
+        "start_line": 134
+      },
+      {
+        "end_line": 155,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FBasis",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "b1f932332fe4a7842c85748326232cefd5f7ad696df1e049c89e232258d5f070",
+        "start_line": 147
+      },
+      {
+        "end_line": 165,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial%20relation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "aa98c4edf4643b3ae8a996b59d2fde91c9e621192fc8ae4aa4860c677fc74cd3",
+        "start_line": 156
+      },
+      {
+        "end_line": 175,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial-relation%20manifold",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "a56a4925facaabc158e1ba856e1637c616af039b8373a6804b6c519f5a9ae95c",
+        "start_line": 166
+      },
+      {
+        "end_line": 185,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCoordinate",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "c8cab9aefe9675c537078023f0536397df1f356a2751838e53caafbacddaa66d",
+        "start_line": 176
+      },
+      {
+        "end_line": 197,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FTopology",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "973c4ea80304dec2a3ff016036c3f940fd3379507d1228e82a65823aebac0c68",
+        "start_line": 186
+      },
+      {
+        "end_line": 211,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvidence",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "a025ad26a996af4f5064854c4ddb013065ad36889711a52850f1f5a12ca78ec4",
+        "start_line": 198
+      },
+      {
+        "end_line": 236,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FAuthority",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "8c8f8eca254ed8a64fa0ba8614aab071e3549dbff63a39d82e9ea06784b36e56",
+        "start_line": 212
+      },
+      {
+        "end_line": 255,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FDisjointness%20And%20Independence",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "781c79a4846f0a19f240203bf0c1d42ab776bc8e6a3d9f3fb8ec0ac05c5f2504",
+        "start_line": 237
+      },
+      {
+        "end_line": 265,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCapability%20envelope",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "e07fd965d6a3298ef68fac4630db9597b2304792ffebf1ab0dbb959e7d12709e",
+        "start_line": 256
+      },
+      {
+        "end_line": 305,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FReference%20frame",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "db592283d68b8b53f0f9e5a09927c8bf0ccf872b20dbf1395521ce012a3a4930",
+        "start_line": 266
+      },
+      {
+        "end_line": 311,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActivated%20frame",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "c0b7e5da578c0a30c77f5e490f0b700f0ee8585ca1c4bd0800c3d213566fe061",
+        "start_line": 306
+      },
+      {
+        "end_line": 321,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FFrame%20set",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "63659fb4964c4f1b3c8a9e8699d3589db07f9c0918336f6b8a00d884f8640229",
+        "start_line": 312
+      },
+      {
+        "end_line": 328,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActive%20frame%20configuration",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "3683387e36dd4ee3bc1fd9bdce73862587d0c2f55eabb0712d6010a692accbb8",
+        "start_line": 322
+      },
+      {
+        "end_line": 338,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FLens",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "0ad0f0c325a111ccbc99728470de6f5ad9eaabae3769a26bfedc84959f5fe28f",
+        "start_line": 329
+      },
+      {
+        "end_line": 350,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FRole%2C%20persona%2C%20abstraction%2C%20and%20component",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "f2e42214023f4270b10164b7900ecd8d812e16fc308109670a1587646abbdb9c",
+        "start_line": 339
+      },
+      {
+        "end_line": 371,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "53dfbcecde17253e1c340de6fb2598b629df953374a40ee470ae2422501d29fc",
+        "start_line": 351
+      },
+      {
+        "end_line": 382,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-001%20Evaluation%20Relativity",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "b26a9a2df8962801c1e42c2d9de41ab64aa53a6b57ed5bc9105ca3f34c2e7553",
+        "start_line": 372
+      },
+      {
+        "end_line": 389,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-002%20Finite%20Attention",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "8ec3417f5997376935a1df2ef1fe2d1c59a70e98bf376900b26e23b025a4858e",
+        "start_line": 383
+      },
+      {
+        "end_line": 398,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-003%20Material%20Sufficiency",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "6428c6f138e29a5b1935cf4faad9571467556b60dd6565269616ff20bd787f3f",
+        "start_line": 390
+      },
+      {
+        "end_line": 405,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-004%20Irrelevance%20Exclusion",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "fba2f64a140b2499f0c2306d64153a3c30b20dc13b95463f99d5ae2ccd474d79",
+        "start_line": 399
+      },
+      {
+        "end_line": 421,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-005%20Exact%20Basis%20And%20Coordinates",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "2e69fb3c024ae2d4663ea6238a4164e2b191ce1dd230f62594d6f7b2d08b55d3",
+        "start_line": 406
+      },
+      {
+        "end_line": 429,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-006%20Authority%20Conservation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "96404ce1c304e59cd6188bc22d2de1380bae8bdeab12a5d00f1ea2f3966c5444",
+        "start_line": 422
+      },
+      {
+        "end_line": 438,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-007%20Semantic%2C%20Evidence%2C%20And%20Verdict%20Separation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "ff38a42a2581da37c0b320424f6b4da138ca1eb78b11c40d1c2c6bd5523ba7ff",
+        "start_line": 430
+      },
+      {
+        "end_line": 445,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-008%20Overlap%20Without%20Identity%20Collapse",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "5c56a724745e8815e36813af816912d347bd83a6588414a7e914c1ba4adb41d5",
+        "start_line": 439
+      },
+      {
+        "end_line": 460,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-009%20No%20Assumed%20Hierarchy",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "d22d0e5cf9f4afc9f7dd029dfff9f99bda186dcdd1479f9ec1aa3481016d39f4",
+        "start_line": 446
+      },
+      {
+        "end_line": 477,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-010%20Composition%20On%20Demand",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "e4e61e21d90a05c3a95567aa93a267702617a74d5af41952471999452abc19b9",
+        "start_line": 461
+      },
+      {
+        "end_line": 484,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-011%20Topology%20Mutation%20And%20Recharting",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "fa65becbcae83e811ba7a13881020ad990f2b95f7fe378656b682cade0b14c05",
+        "start_line": 478
+      },
+      {
+        "end_line": 521,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-012%20Closed%20Results",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "cce179ce80825e49aa4fc5699d14162152561fc1fedcf36e89a3fa3e974a5d50",
+        "start_line": 485
+      },
+      {
+        "end_line": 527,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-013%20Reconstructable%20Activation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "16ba57fa9c1a22fec3ef954eb38fa8654ce8c200d2ebeebbb6d342c8f11d260f",
+        "start_line": 522
+      },
+      {
+        "end_line": 534,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-014%20Capability%20Fit",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "49ef0d704f5e797c1112138c536b4c4445c0f79c944d49f61cb26ded0bc9c48c",
+        "start_line": 528
+      },
+      {
+        "end_line": 541,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-015%20Residual%20Uncertainty",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "e037ef9b3826aaab351a1d337959e4dc1f3d89f565bad758039a334b40abd8f8",
+        "start_line": 535
+      },
+      {
+        "end_line": 548,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-016%20Implementation%20Neutrality",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "43a70e495c23530c9c7cc45b970f7f2c97632e18aab0b624889624501d3e0d27",
+        "start_line": 542
+      },
+      {
+        "end_line": 564,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-017%20Proportional%20Compression",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "69e806d32f9b4e44d623e8394fa8e4e7046850ee64a28fda836a30c814057093",
+        "start_line": 549
+      },
+      {
+        "end_line": 581,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FEngagement%20Atom%20And%20Semantic%20Prime",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "421f6fc5ed73856d5aa175ef21056adda2ce6f6ab8fbbf3ac08c13e7b1e5f2c4",
+        "start_line": 565
+      },
+      {
+        "end_line": 604,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "88c681c4b6ee4c8433f4a385a283c86152c3c7f74b95d6a237cbc2dc148f942a",
+        "start_line": 582
+      },
+      {
+        "end_line": 643,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration%2FFrame-Set%20Optimization",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "a0b4e6787740535dec2fae488f0806dbe8d4a38fc0ea96336c444480b3d87231",
+        "start_line": 605
+      },
+      {
+        "end_line": 683,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMethod%20Functions",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "27a91417de6a2185c2667fe66c841f6165b45c6b787594d0da9cfca7b84d0e7f",
+        "start_line": 644
+      },
+      {
+        "end_line": 685,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "2ae02dd58c1c1f90302e76d7702a21c40f15fbb306f2641feaf935324549a0a7",
+        "start_line": 684
+      },
+      {
+        "end_line": 693,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEstablish%20The%20Evaluation%20Basis",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "6889ac8fcb24cc803827a109421ee26483cab231be0fdfb3fbba9f68d37baf70",
+        "start_line": 686
+      },
+      {
+        "end_line": 711,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FApplicability%20And%20Required%20Results",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "2d688af48187ac1101d4b4515c2dd192f50ae0427c65b957879bf16e063aa0c5",
+        "start_line": 694
+      },
+      {
+        "end_line": 734,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FSelect%20And%20Activate",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "6a51e1109781f6636d256f3ecaa88935d58b5e6f162178125bc5fac9c541f3ad",
+        "start_line": 712
+      },
+      {
+        "end_line": 741,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEvaluate",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "8fdf6d5ebc3a4f6e03af514f1c0473ed4e5d01c7f30194838a8590e453864a80",
+        "start_line": 735
+      },
+      {
+        "end_line": 754,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReturn%20A%20Closed%20Result",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "cca953d7d806280a432ba5b3d528453617691a042071d032e0297aff6ab04b3b",
+        "start_line": 742
+      },
+      {
+        "end_line": 772,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReconfigure%20When%20Necessary",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "0c50d5b846ca7bc064c6df4273e1c0465fd8ed1edd138987d7431572fa09924c",
+        "start_line": 755
+      },
+      {
+        "end_line": 776,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "13ce860e195c5aa391b9f74c23022c22b62490432f19f841a490b168ce5971c1",
+        "start_line": 773
+      },
+      {
+        "end_line": 790,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FIndependently%20Activated%20Co-Evaluation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "a86b96713f1f801d4bc7ba2690bcfdcc2b1fe020f01397bbe936466acc05e46c",
+        "start_line": 777
+      },
+      {
+        "end_line": 807,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FResult%20Conjunction",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "b54e0362fac7affe57f1ecd96da48cb1ef9de5a1920ebbbe823cf76ac87b987b",
+        "start_line": 791
+      },
+      {
+        "end_line": 828,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FEvidence%20Or%20Coordinate%20Translation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "7820728c791c33e8495172ba8e118aa2f9cbcb4ae73a365619037144ffb710df",
+        "start_line": 808
+      },
+      {
+        "end_line": 841,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FMaterial%20Composition",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "5d4a8a83ddfea670c691234858458376fb68101311ef32ae96c41261b58e0897",
+        "start_line": 829
+      },
+      {
+        "end_line": 867,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FFrame%20Relations",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "634df6771c063d5eda527febec32b238d9fd8bf8731e4da98684ddcfc54e9765",
+        "start_line": 842
+      },
+      {
+        "end_line": 886,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "6507663275ca10bf7f68983e39ae51be8c5dfb596f838801ec71f991eb60bda2",
+        "start_line": 868
+      },
+      {
+        "end_line": 905,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Basis",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "4a59fa9f5adc46def0bdce7fe48baf5bd08b87b56c13a622d1fb3d9a47977ba6",
+        "start_line": 887
+      },
+      {
+        "end_line": 927,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FEvaluation%20Inventory",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "83dc133e707f0dc6808dc7ebd2a62c0ad9e3f4cf41d2d8ec30a0484192022104",
+        "start_line": 906
+      },
+      {
+        "end_line": 945,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Dimensions",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "e64e2f5130e5820bab8561875f5470c946f1c944735c8c8faae0cba57182eff0",
+        "start_line": 928
+      },
+      {
+        "end_line": 983,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Ledger",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "38927752a6b3944b49281abad05e8ceb8a2c6af829b971e8893cf0a9af049729",
+        "start_line": 946
+      },
+      {
+        "end_line": 990,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FInteraction%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "995e7f77398a12325759a79765ce65a56fe9f4277207b0eef092488b80b45f32",
+        "start_line": 984
+      },
+      {
+        "end_line": 998,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FAuthority%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "595387d81fbcf3ebb05ea7066c87dcb1265c23ca4d25e6a80fb3c1e6a74a78ef",
+        "start_line": 991
+      },
+      {
+        "end_line": 1005,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FFailure%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "b446554b6a598c24bd33b4eca384e1a735eb975f7cfc2f621133609c6a8fdac1",
+        "start_line": 999
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/answer.json": "316ef5ce0b659e28d03a5ed76f8ba95d48e6e77dfcb653f2129ee21502292dc5",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/events.jsonl": "d7c7a740cd68d96f3edc49f2f8b1d3ec447a957a38023be2115f7ef3e489d6a2",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/invocation.json": "9810957450bfc39aa668fed0a27f3eb90d30a478f32acf4aa1d4fc0a2c909970",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/prompt.txt": "b53ada4eeccf1c9fcd8b5d25040e12c3c9938a01b97292b213b28c7156bbad49",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/result.json": "04aefa2aa85e30feaa31c4471e93c017e1714801c77add13ab5d3384c44a3d31",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-c3cf7984741066a344f7/attempt-001/usage.json": "8afed86d19b56f81e69755047d9819a1bfea3e7b65ab16a513b76e1bf057e841"
+  }
+}

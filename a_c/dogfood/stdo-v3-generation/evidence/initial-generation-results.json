@@ -1,0 +1,1700 @@
+{
+  "profile": "ac.generation.results/2",
+  "runs": [
+    {
+      "candidate": "codex",
+      "subject": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/",
+      "mode": "graphify-ac",
+      "plan_sha256": "b0ef07f212c15b02a3fd2ba445fbe16cd26d42e8f3199401dce97aaec9c7b1b3",
+      "planned_chunks": 11,
+      "validated_author_chunks": 9,
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "attempts": [
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-230eb1c5ee6232501303/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-230eb1c5ee6232501303",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 763.8189095410053,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "1cc095b7b08e007433c571961b868b70c7d56ac0b031d9a7f87cc1b79ad06e00"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 734.7156391250901,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "794d39cde2761b7dbdcd9e455b14b3e3290f56ce38e2de75d0cb60477270b97f"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-3536e55742017ac9ca55/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-3536e55742017ac9ca55",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 808.3683469579555,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "section dispositions do not cover exact supplied sections",
+          "result_sha256": "e0a5be6f208f0c5bd6c60895b0b9f0fa7e42fce83fb6fc1ecbfea0c3e0729e89"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-6469845e54e28c586f83/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-6469845e54e28c586f83",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 770.6450940840878,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "b53b2ea82ae0e1f2651c452801b76f35ca3587cd87c07f79ec36fca9be0a9232"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-78ad0cd4e2b82ebefd47/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-78ad0cd4e2b82ebefd47",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 922.7971222081687,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "bc11ddcfb42c231d15e8c89c6d205c515b7f6c14d418b85b37d3b332ac2a176d"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-ba679cf25951c2115c4a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 698.0317408340052,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[historical_verification_requirements]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "6d6fe516f71050fdbf62c7fbe2cc78918c0fa5490df619e904ea6d59e30ba15b"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-c3cf7984741066a344f7",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 775.7490600000601,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "ae3645349f0ccd57f23678b45fefd68b57524f067655e780269b1a1b8969e29f"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-cae356beaf4319d41f17",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 957.1050309590064,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "50fe9d9e6ddfc2cdcb20c679712cc2c757a9e8c52fc77df0cbebaea0be767c92"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-d3896cc85f64a611f9e9/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d3896cc85f64a611f9e9",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 1024.6834060000256,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "46d6ac7ac2f2a80f2fc34f18ccc8b7864b208e37833b321f7b9ab81dc16cc7bc"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d4711da9b03d12b52e08",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 903.4478300421033,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "3c0c1532f1c22ba9b3bf7ca184a768ed0de356c07ec350e836ee190f62d45d3b"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-dbe76be56335c8edb7bc/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-dbe76be56335c8edb7bc",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 884.3601759171579,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "bde7ba13528bab4490ad992ac86ddfd066abe86efe928b91098b449e6f904f89"
+        }
+      ],
+      "attempt_count": 11,
+      "strict_first_attempt_states": {
+        "completed": 9,
+        "failed": 2
+      },
+      "strict_first_attempt_validated": 9,
+      "fp_repair_calls": 0,
+      "attempts_with_usage": 11,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 877719,
+        "cached_input_tokens": 324736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 540891,
+        "reasoning_output_tokens": 9774
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 11,
+        "cached_input_tokens": 11,
+        "cache_write_input_tokens": 11,
+        "output_tokens": 11,
+        "reasoning_output_tokens": 11
+      },
+      "sum_recorded_actor_seconds": 9243.722355668666,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-first/chunk-cae356beaf4319d41f17/journal.json",
+          "sha256": "ed958dd8627fb89cead46f37deabb74eaf41240bf4fcd5c1f8747aa5a3229ff3",
+          "chunk": "chunk-cae356beaf4319d41f17",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+          "fd_elapsed_seconds": 0.06527179200202227,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-230eb1c5ee6232501303/journal.json",
+          "sha256": "620739e2982595c6e4a9f454a1d611a629940fb96f4a10cc3c0bd2224d9ff645",
+          "chunk": "chunk-230eb1c5ee6232501303",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-230eb1c5ee6232501303/attempt-001",
+          "fd_elapsed_seconds": 0.07036591693758965,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-303ba21541c7795c1c8e/journal.json",
+          "sha256": "72e715b6c34c596f30f43e35879bb5efb098fb79db07e9afc7db7e7dadeda062",
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+          "fd_elapsed_seconds": 0.06237329193390906,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-3536e55742017ac9ca55/journal.json",
+          "sha256": "42cac23aadb5241997379bc85fec00787dbed5ba411a012fb2c825ed6f6620af",
+          "chunk": "chunk-3536e55742017ac9ca55",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "section dispositions do not cover exact supplied sections",
+          "original_attempt": "actors/author/chunk-3536e55742017ac9ca55/attempt-001",
+          "fd_elapsed_seconds": 0.060634957859292626,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-6469845e54e28c586f83/journal.json",
+          "sha256": "2365cd03fab163fa31013c35dbad88d6a3f22f117a21f7bab1e357b84e924edf",
+          "chunk": "chunk-6469845e54e28c586f83",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-6469845e54e28c586f83/attempt-001",
+          "fd_elapsed_seconds": 0.0652960839215666,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-78ad0cd4e2b82ebefd47/journal.json",
+          "sha256": "8973259c9a5ce1e259db49ca9452e90d4ebb046540190ee70f64751107dc8fe8",
+          "chunk": "chunk-78ad0cd4e2b82ebefd47",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-78ad0cd4e2b82ebefd47/attempt-001",
+          "fd_elapsed_seconds": 0.07025091582909226,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-ba679cf25951c2115c4a/journal.json",
+          "sha256": "a2642d8e333a68b8bd4ae55fb466dd4f17c825d41e3924f4b455a7257dacc075",
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-ba679cf25951c2115c4a/attempt-001",
+          "fd_elapsed_seconds": 0.07374220783822238,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-c3cf7984741066a344f7/journal.json",
+          "sha256": "89722ff6f56a07fea4b7121847ff9cc81394f51c0224b791b229d731d68e663c",
+          "chunk": "chunk-c3cf7984741066a344f7",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+          "fd_elapsed_seconds": 0.07967699994333088,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-d3896cc85f64a611f9e9/journal.json",
+          "sha256": "e55ce37745261e0b1d1e971d46eb9f8dd27f64cf1ced16e8bbcf4a93268577fc",
+          "chunk": "chunk-d3896cc85f64a611f9e9",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d3896cc85f64a611f9e9/attempt-001",
+          "fd_elapsed_seconds": 0.08307291683740914,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-d4711da9b03d12b52e08/journal.json",
+          "sha256": "da50b7b2bb4755ee6b3f0d4ece853123c996109db0e08f430da91f4a3d1f3bbc",
+          "chunk": "chunk-d4711da9b03d12b52e08",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+          "fd_elapsed_seconds": 0.06718820915557444,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-initial/chunk-dbe76be56335c8edb7bc/journal.json",
+          "sha256": "8daf9f36ac4b7ac3c913fcb1b7c4a1136536d7e3f0ddb906ff0626549452f9a4",
+          "chunk": "chunk-dbe76be56335c8edb7bc",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-dbe76be56335c8edb7bc/attempt-001",
+          "fd_elapsed_seconds": 0.07812779187224805,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 0.7760010841302574,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": {
+        "counts": {
+          "communities": 70,
+          "graph_edges": 937,
+          "graph_nodes": 877,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 947,
+          "structural_nodes": 877
+        },
+        "elapsed_seconds": 0.2638807501643896,
+        "files": {
+          "coverage.json": "d28897e7dc8e27b2ec3f5f0d3b15e71277cd30d97b6eed2716ed2ca2358263de",
+          "graph.json": "852d388d5e1e0235871e9ee557c0f54d5f7d4313b8be84d17ac4f839491d12bb",
+          "structural.json": "9045c97657c673b802042518df27c0ac3d76f839e03c9ab196dc56bfe8009a4f"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "proposal": null,
+      "proposal_path": null,
+      "proposal_file_bytes": null,
+      "state": "incomplete_generation"
+    },
+    {
+      "candidate": "codex",
+      "subject": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/",
+      "mode": "direct",
+      "plan_sha256": "97706f638ee2b59f146958c4bf6e8beecea8d03af4992eb9f02cc55098d7dc7a",
+      "planned_chunks": 11,
+      "validated_author_chunks": 8,
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "attempts": [
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-230eb1c5ee6232501303/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-230eb1c5ee6232501303",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 707.1994559580926,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[profile_triage_rules]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "91bf603b118ab3c51a32ff1458638a67c721cbadf499da592810211e0e00071e"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 1160.0642100840341,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[post_ticket_bounded_review]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "8e4c3bc7d6881d84d4c4fd8ac19450e796567b4189f93ef2478e440eb0501718"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-3536e55742017ac9ca55/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-3536e55742017ac9ca55",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": false,
+          "elapsed_seconds": 1200.0257194167934,
+          "failures": [
+            "process_timeout",
+            "missing_backend_usage",
+            "output_schema_failure"
+          ],
+          "validation_error": null,
+          "result_sha256": "512c54b4856b96371fd0b9babcfec446eef83de64cd0ca08ce63a3a6d543e2b7"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-6469845e54e28c586f83/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-6469845e54e28c586f83",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 565.966614499921,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "5ea1db7133a055091ee6f09e03e04c4b83db60326850b61fc5598123a5439f45"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-78ad0cd4e2b82ebefd47/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-78ad0cd4e2b82ebefd47",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 785.8049538328778,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "9457c0612966966bf2d629040575fb940afc54e512cc4265175b120e7a00a617"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-ba679cf25951c2115c4a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 842.1787157079671,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "442d4a2fb1c6a06646932255224117a18684eb2aff32e941302da68c0c7637a8"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-c3cf7984741066a344f7",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 791.8714896249585,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "04aefa2aa85e30feaa31c4471e93c017e1714801c77add13ab5d3384c44a3d31"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-cae356beaf4319d41f17",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 820.8877746670041,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "e79e3ebb932da3c9b2f0f2ab3dd6651d37fba68e73136fe02f51d1db75ddc099"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-d3896cc85f64a611f9e9/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d3896cc85f64a611f9e9",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 1034.554637833964,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "76c474d18cad634f8059e4d75401e514f230744848a99163716108b3c752639d"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d4711da9b03d12b52e08",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 787.9261103749741,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "72522aa9c42538fab937d9a25e9d4b17a8ada0a710ad7c5f357d8ecd715676fd"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-dbe76be56335c8edb7bc/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-dbe76be56335c8edb7bc",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 1032.0765886669978,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "7191580c4c0be486ee27f08acbdf7a6ff4918b30c2597042b2b46e4ae62bd767"
+        }
+      ],
+      "attempt_count": 11,
+      "strict_first_attempt_states": {
+        "failed": 3,
+        "completed": 8
+      },
+      "strict_first_attempt_validated": 8,
+      "fp_repair_calls": 0,
+      "attempts_with_usage": 10,
+      "attempts_without_usage": 1,
+      "reported_usage_totals": {
+        "input_tokens": 697552,
+        "cached_input_tokens": 190592,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 505754,
+        "reasoning_output_tokens": 9205
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 10,
+        "cached_input_tokens": 10,
+        "cache_write_input_tokens": 10,
+        "output_tokens": 10,
+        "reasoning_output_tokens": 10
+      },
+      "sum_recorded_actor_seconds": 9728.556270667585,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/codex/direct/normalization-first/chunk-cae356beaf4319d41f17/journal.json",
+          "sha256": "2ed95b5355936bb7c2a1f9187a72ef92152832e32ccacfa80c9ee54852d70748",
+          "chunk": "chunk-cae356beaf4319d41f17",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+          "fd_elapsed_seconds": 0.03654995816759765,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-230eb1c5ee6232501303/journal.json",
+          "sha256": "e62a3e22da94596322319fce764f9fe0f718f36ead2e3ca2708871aad87a025c",
+          "chunk": "chunk-230eb1c5ee6232501303",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-230eb1c5ee6232501303/attempt-001",
+          "fd_elapsed_seconds": 0.03893533302471042,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-303ba21541c7795c1c8e/journal.json",
+          "sha256": "c994c940c74f2020e5442b2ad8c3301113e04afc9f9a0ed8ac0c8bfbad577dc8",
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[post_ticket_bounded_review]/constraints/29/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+          "fd_elapsed_seconds": 0.029099500039592385,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-3536e55742017ac9ca55/journal.json",
+          "sha256": "66c1e49cd291b5a05ec684261ecab9868871c8da56f65c2391599fc02f6bd5cd",
+          "chunk": "chunk-3536e55742017ac9ca55",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "incomplete actor evidence",
+          "original_attempt": null,
+          "fd_elapsed_seconds": 0.020391875179484487,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-6469845e54e28c586f83/journal.json",
+          "sha256": "42353b80f0c24d54df6c734f66e127099d9309c9966b471f05b6375c58df3385",
+          "chunk": "chunk-6469845e54e28c586f83",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-6469845e54e28c586f83/attempt-001",
+          "fd_elapsed_seconds": 0.03733091615140438,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-78ad0cd4e2b82ebefd47/journal.json",
+          "sha256": "b7bcd55ecb72304e697ca80a19fed52ec50d614940b8ca399d017a7623d5eb09",
+          "chunk": "chunk-78ad0cd4e2b82ebefd47",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-78ad0cd4e2b82ebefd47/attempt-001",
+          "fd_elapsed_seconds": 0.04788970900699496,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-ba679cf25951c2115c4a/journal.json",
+          "sha256": "d7a4d6ed3b338553b14dfa76e4069987257b0e55d12bfd17a50f651d2c655d3c",
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-ba679cf25951c2115c4a/attempt-001",
+          "fd_elapsed_seconds": 0.03636233392171562,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-c3cf7984741066a344f7/journal.json",
+          "sha256": "f252df6a484ab88afbe295f5a64ab974a9f036b703fcc1b152c292fb25e19825",
+          "chunk": "chunk-c3cf7984741066a344f7",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-c3cf7984741066a344f7/attempt-001",
+          "fd_elapsed_seconds": 0.044077667174860835,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-d3896cc85f64a611f9e9/journal.json",
+          "sha256": "6c97bb6396890b1240d108320ac4cff49301b6ffe00e76a088c071d07f0c83cc",
+          "chunk": "chunk-d3896cc85f64a611f9e9",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d3896cc85f64a611f9e9/attempt-001",
+          "fd_elapsed_seconds": 0.04565641679801047,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-d4711da9b03d12b52e08/journal.json",
+          "sha256": "dbd6ab60e3559c60ea957dfe7c9cbab5307cdee885c4dec296039808c57dc9d6",
+          "chunk": "chunk-d4711da9b03d12b52e08",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+          "fd_elapsed_seconds": 0.03558879205957055,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-initial/chunk-dbe76be56335c8edb7bc/journal.json",
+          "sha256": "2da3ea8fe4391c30d9e9237295a9198aaf119fe93826a16ca436e4acfef8a2c9",
+          "chunk": "chunk-dbe76be56335c8edb7bc",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-dbe76be56335c8edb7bc/attempt-001",
+          "fd_elapsed_seconds": 0.04429862508550286,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 0.4161811266094446,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": null,
+      "proposal": null,
+      "proposal_path": null,
+      "proposal_file_bytes": null,
+      "state": "incomplete_generation"
+    },
+    {
+      "candidate": "claude",
+      "subject": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/",
+      "mode": "graphify-ac",
+      "plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+      "planned_chunks": 19,
+      "validated_author_chunks": 5,
+      "source_files": 49,
+      "source_bytes": 2147228,
+      "attempts": [
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-20f415a0d8d3d04f90b0",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 677.2902172501199,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "67d54ea19d5cfa48700e936210a2e1baf7d886cc1429af6f4933128c4c51dc4a"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-2414d8d8612f850c1895/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 568.4633654581849,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "92610203d2c9efcd8b862c5debe7268a5c1ca2415420678c9cf25afa0e3b38af"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-42f3fb0dc74ce274ea57/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-42f3fb0dc74ce274ea57",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 766.1770638749003,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "2359e5ca62541576e95ea0cb90a793b749d94d9b6695b834ec833d3a7a860abd"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-46fb339024ea1a82b45f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 656.78879245813,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "33d5234f7243d51124abdec05465996dfe8274f0899086257e8468c8d4708a0c"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 844.1385521250777,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[effect_edge]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "53e643f3a9fa22ddda6d1a74a956c177cd6229fc6c2089146c0e498a8f3ea57e"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-5a03e80d9db03efe45a2/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 710.1132601250429,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[change_governance_family]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "dd53831a530e7d9702ab7f3458bfca68b41e7066eda8bf29e2e29fe4b477d161"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-610ce314956c3315ed7b",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 614.501084000105,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[manifesto_commitments]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "d55697725b1779e74df98356dde17e09ef8c1e39d076d27a355bbd8bce89c241"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-8926f266bc1134f91eef/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-8926f266bc1134f91eef",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 585.3529533750843,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[frame_qualification_minimum_tests]/grounding/1: grounding names source outside chunk",
+          "result_sha256": "484cffdb2ee3f60f21e46c72f45c7113af8c26ab02de2da16a2763552a185ac4"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-986113d13e5314b291c9",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 805.0664804170374,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[executive_occupancy_latitude]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "92af140a8a15cd950017f01ab24605fb9037ca69df9bd3a495171aefa6fec9df"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 654.5045225839131,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[bootstrap_authority_split]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "7af8ca72a017a0148f44ef7ea844c8ef8fd05a1791ea7996466b62e64f04c977"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-bcd515f6c8df632f2fad",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 740.3660385829862,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[publication_ledger]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "47fcbace2ef138d2c94d1602aa838324e3138cc0e14305d7368b43cf79d0577d"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-c9c7f894950a65621589",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 625.5469432079699,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[derived_surface]/grounding/1: grounding quote is not exact source at declared range",
+          "result_sha256": "af69b0dd666269f618a369b48ce646ad65d4ad59434e99a63a36f606988b2ccf"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 633.9582018330693,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[environment_carries_function_inputs]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "9e5ca978f3f4cefb93e0e7eaa66775bb4c9276d44c0ea51b6aa32dd9178b5a6f"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 623.6750936659519,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[subject_axiomatic_calculus]/grounding/1: grounding names source outside chunk",
+          "result_sha256": "aa28ce861da6521cca03c368f541b1e9c23f914016acd38b9294ea72c2a7e6af"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-d40baf1b4da50f62ae06/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 711.4266438749619,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[dominance_constrains_selection]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "579ede7dba533ecb4f766e4ce3c1b089da12716924dc76fda23f25ab09e25e55"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-db82b95364ae94dad131/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-db82b95364ae94dad131",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 614.8474432078656,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[frame_evidence_and_unexercised_capability_boundary]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "4a09793243f93d001f2476d931c22f6bb0fba58299a4bd8d5d3ceea79adf69a7"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-e9bb857e768dcddc1e11/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-e9bb857e768dcddc1e11",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 726.368697124999,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "567bb0c4222b06c91c1621449b16baffc71a9aa92c839bbaae0cfa23c712741d"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-efb7b986ff5631c4fbc0",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 814.8369363748934,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[post_categories]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "cd048e27c35b5bf0f7ab9102e1931eae04c66fc724970e497e9e03582256d896"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 765.3899488330353,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[common_design_surface]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "255bcfad83f2c438457a81e1ecaee0b23becbbcd7b207781a2f50bf36e9519ca"
+        }
+      ],
+      "attempt_count": 19,
+      "strict_first_attempt_states": {
+        "completed": 5,
+        "failed": 14
+      },
+      "strict_first_attempt_validated": 5,
+      "fp_repair_calls": 0,
+      "attempts_with_usage": 19,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 1320594,
+        "cached_input_tokens": 251648,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 769878,
+        "reasoning_output_tokens": 14687
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 19,
+        "cached_input_tokens": 19,
+        "cache_write_input_tokens": 19,
+        "output_tokens": 19,
+        "reasoning_output_tokens": 19
+      },
+      "sum_recorded_actor_seconds": 13138.812238373328,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-first/chunk-c9c7f894950a65621589/journal.json",
+          "sha256": "8e1b8c6de8409373854c8d5c2942c6ceed4f6251b6dd16aee826a9eb9fd923cf",
+          "chunk": "chunk-c9c7f894950a65621589",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/residuals/3/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "fd_elapsed_seconds": 0.04962395806796849,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-20f415a0d8d3d04f90b0/journal.json",
+          "sha256": "2055be4e66016521942630faa4a65387a2e1eccdec5255d6c2a9b859167f0269",
+          "chunk": "chunk-20f415a0d8d3d04f90b0",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+          "fd_elapsed_seconds": 0.07680912502110004,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-2414d8d8612f850c1895/journal.json",
+          "sha256": "64de2dfb7d9a83144bcc7e3d61cb98f41d51bd41442b1c482c8a3c9eb5e0866c",
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-2414d8d8612f850c1895/attempt-001",
+          "fd_elapsed_seconds": 0.07219937490299344,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-42f3fb0dc74ce274ea57/journal.json",
+          "sha256": "700cc1be7cf6d8805ac3a97de0acc469662ffdd1df71b01b26e5f326de090425",
+          "chunk": "chunk-42f3fb0dc74ce274ea57",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-42f3fb0dc74ce274ea57/attempt-001",
+          "fd_elapsed_seconds": 0.07302795792929828,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-46fb339024ea1a82b45f/journal.json",
+          "sha256": "0f8295eb64f0213c62e07fa355d40dbc8e0a19ead022ec43db4a7dbc264b3fbb",
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-46fb339024ea1a82b45f/attempt-001",
+          "fd_elapsed_seconds": 0.063530792016536,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-4a7f4c1e75eb1b5cd9c3/journal.json",
+          "sha256": "6bc8a3eda29ccb1516e1ee274e0329ab54bd4f0be24d368b4262aff9e34f16b7",
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/25/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001",
+          "fd_elapsed_seconds": 0.06078395899385214,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-5a03e80d9db03efe45a2/journal.json",
+          "sha256": "bd20bb3a7d23cd64a58612c0b1ebaa5dc71856b150d3b40deb47163ea35a7db8",
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "status": "derived_validated",
+          "changes": 2,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-5a03e80d9db03efe45a2/attempt-001",
+          "fd_elapsed_seconds": 0.08698566700331867,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-610ce314956c3315ed7b/journal.json",
+          "sha256": "e91223565cad722ef12b8d9ce080e31fa1f903b0eb84969a78726d7551826c77",
+          "chunk": "chunk-610ce314956c3315ed7b",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/constraints/31/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+          "fd_elapsed_seconds": 0.06832237495109439,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-8926f266bc1134f91eef/journal.json",
+          "sha256": "2fe2bf7df0ad9cf2b1d1e274994660ecf9ae886c0a8644113cc5826bbe2559a0",
+          "chunk": "chunk-8926f266bc1134f91eef",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/constraints/24/grounding/1: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-8926f266bc1134f91eef/attempt-001",
+          "fd_elapsed_seconds": 0.06784645887091756,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-986113d13e5314b291c9/journal.json",
+          "sha256": "02677834afc80ab820a49016909d2532ae04f74546f27888fbb05cbd38b525b4",
+          "chunk": "chunk-986113d13e5314b291c9",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/latitude/2/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "fd_elapsed_seconds": 0.06164391711354256,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-9b7e6f52849b98967974/journal.json",
+          "sha256": "287a1988a6611822837e5f8e98481c090eb41b1ad3220974ad402db568e71e2d",
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+          "fd_elapsed_seconds": 0.08157216594554484,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-bcd515f6c8df632f2fad/journal.json",
+          "sha256": "e5981fd0d2d8c2de87faef4d9869a5e14f77dcee8d7c88f2f525386f71126475",
+          "chunk": "chunk-bcd515f6c8df632f2fad",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/43/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+          "fd_elapsed_seconds": 0.06170033384114504,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-caddb7dd9905a44febeb/journal.json",
+          "sha256": "59da4bd5c7214cb8abf731e31d1f12b8da06f853089fc6ab08cd63f4a0a749c7",
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[environment_carries_function_inputs]/relations/4/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "fd_elapsed_seconds": 0.0744692909065634,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-d3ef7cd18b24cd303de7/journal.json",
+          "sha256": "2d0e4cfda1f413d364e144b870482f434092f0c98a3a1666ed8a66e07ae889dd",
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/4/grounding/1: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+          "fd_elapsed_seconds": 0.06410745903849602,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-d40baf1b4da50f62ae06/journal.json",
+          "sha256": "5f040c6908f69e66be9f791a645134e04d37088e0e48639ff344de3a39fc3c4a",
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/constraints/17/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-d40baf1b4da50f62ae06/attempt-001",
+          "fd_elapsed_seconds": 0.06176358391530812,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-db82b95364ae94dad131/journal.json",
+          "sha256": "89e23c5d22b89109e719deddbcc2dfcdef8999380a04443c9430b90f0545bae7",
+          "chunk": "chunk-db82b95364ae94dad131",
+          "status": "derived_validated",
+          "changes": 3,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-db82b95364ae94dad131/attempt-001",
+          "fd_elapsed_seconds": 0.07710950006730855,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-e9bb857e768dcddc1e11/journal.json",
+          "sha256": "e77d1d669276479f85cb0a45dbc11783fc9e831c556d1f675f27ab1bbc792f9b",
+          "chunk": "chunk-e9bb857e768dcddc1e11",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-e9bb857e768dcddc1e11/attempt-001",
+          "fd_elapsed_seconds": 0.06788716604933143,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-efb7b986ff5631c4fbc0/journal.json",
+          "sha256": "30a846984b922851b0bc3f209688f7c846597444a861417989347b3516bebd74",
+          "chunk": "chunk-efb7b986ff5631c4fbc0",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/23/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+          "fd_elapsed_seconds": 0.06742216600105166,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-initial/chunk-f1002ac9d6de2a2d89c1/journal.json",
+          "sha256": "ef4f05a46306ba66f45efd61a3117c8e0115f4570900078b66a335a6f4a7ec88",
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/20/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "fd_elapsed_seconds": 0.06977337505668402,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 1.3065786256920546,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": {
+        "counts": {
+          "communities": 78,
+          "graph_edges": 1142,
+          "graph_nodes": 897,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 1162,
+          "structural_nodes": 897
+        },
+        "elapsed_seconds": 0.3330299579538405,
+        "files": {
+          "coverage.json": "a2eb356f7936775426c817c5e7c07b6f01bbb0593fc6af354ff26c31f5d1e71f",
+          "graph.json": "4e84a339ba8a576e79d24478c7bc9f751a67c7aaab4fa573cc4ccea215d4f435",
+          "structural.json": "7f784d60448f2a83d811845a07a2f635b5d0504a85ae0511dd09cc6d2e9dc7d2"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "proposal": null,
+      "proposal_path": null,
+      "proposal_file_bytes": null,
+      "state": "incomplete_generation"
+    },
+    {
+      "candidate": "claude",
+      "subject": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/",
+      "mode": "direct",
+      "plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc",
+      "planned_chunks": 19,
+      "validated_author_chunks": 7,
+      "source_files": 49,
+      "source_bytes": 2147228,
+      "attempts": [
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-20f415a0d8d3d04f90b0",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 643.1393207090441,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "23388e155aed92b228ae8e6dc7ff9ee280ea4919a2aa05f356a01f1d23721e01"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-2414d8d8612f850c1895/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 625.252692209091,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[profile_misapplication]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "84553738d5ed92bbf7ab812a9f248e7f5edfebcc7da5ab09e893ff425b95b5c1"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-42f3fb0dc74ce274ea57/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-42f3fb0dc74ce274ea57",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 708.3516703329515,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "3d8e1815f0de84809ba500aebc6d86b33971b5398d57c494fe053ca98f2ab3f5"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-46fb339024ea1a82b45f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 595.9784293749835,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[closed_result]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "ce824cc73d58c9d13bdd9c95b6995c6855ee9ebcf79c00ae3a1909e071d827a8"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 611.5954020419158,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "a3f1f6a2d079a8a72e166f5fa3bb12bf0496241621dc4b2b7f3a6faa5d9a7630"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-5a03e80d9db03efe45a2/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 623.7300264579244,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[change_management_foundation_family]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "21357e350c1198333ade7d79fdc573ef88fcfc47bf58ecd1f14b8d0b0b2bf7fc"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-610ce314956c3315ed7b",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 675.202061207965,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "e7a11159908e3c2161b5fad62c75a84f7fee4b1b54bc8fbe9cd4d41da54b6c89"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-8926f266bc1134f91eef/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-8926f266bc1134f91eef",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 512.4061329998076,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "section dispositions do not cover exact supplied sections",
+          "result_sha256": "56778f21752bca2b9373cde6af7f040d262730ceeb896092dce26bc16885aabb"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-986113d13e5314b291c9",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 703.5421066670679,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "section dispositions do not cover exact supplied sections",
+          "result_sha256": "f76bc399c69385dc3f7ea714b140186cf548fe058e9a4af06070d79c0ab67672"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 560.7775014999788,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[cohort_update]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "192bd799d268f88bc071b5f7a3c48e057aca2e5c31ce18fdf52c07cac6727c00"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-bcd515f6c8df632f2fad",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 1047.0809120419435,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "fc5bb83670879d0cccc78a22ba9805f73b50be4c53588366c067b72da7e93921"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-c9c7f894950a65621589",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 713.9092290829867,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[reconfiguration_conservation]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "fc5dec60ddf588f21947b4ed3db2f6ec2c90046a3f77ee3ef1eb9f8499b37a0f"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 637.6239342079498,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[identity_source_dispositions]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "4f947cc36188b155cc80ffa52f3ed8c4d7fcfd11fb7fd7981e60f03e1b68589b"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 735.6401771251112,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[module_unit_proof]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "ce5540bd3c048082244a43e6e422d32d0e6643e8733efcecdd9bbce8256d119a"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-d40baf1b4da50f62ae06/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 772.2779442919418,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "364c79494d48dfdca77f8952ee8c365b0e882c47f283a38cbb5efebdd42e461c"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-db82b95364ae94dad131/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-db82b95364ae94dad131",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 588.644798874855,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[evaluation_result]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "0dfe95d2bf43f9e629bf1e6f3a1aa42d49a0fbcac1af09546c3fd5ef03a02350"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-e9bb857e768dcddc1e11/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-e9bb857e768dcddc1e11",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 853.663029458141,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[occurrence]/grounding/0: grounding names source outside chunk",
+          "result_sha256": "284a8ff2dc5d150f79fd1bf7367337d32c3d5fa5d19e47b2ec9174b964cc49b3"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-efb7b986ff5631c4fbc0",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 797.9541061669588,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "f8c012217aadea59525cd849bbb2a44d279b8de25868d85c9f4e1f7cd442a470"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 909.4897195838857,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[claude_bootstrap_template]/grounding/2: grounding names source outside chunk",
+          "result_sha256": "e7776432df1f840b529daa6f3bb375bb486a92fdc027761e95f75e014d97e78d"
+        }
+      ],
+      "attempt_count": 19,
+      "strict_first_attempt_states": {
+        "completed": 7,
+        "failed": 12
+      },
+      "strict_first_attempt_validated": 7,
+      "fp_repair_calls": 0,
+      "attempts_with_usage": 19,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 1152873,
+        "cached_input_tokens": 277248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 763506,
+        "reasoning_output_tokens": 13972
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 19,
+        "cached_input_tokens": 19,
+        "cache_write_input_tokens": 19,
+        "output_tokens": 19,
+        "reasoning_output_tokens": 19
+      },
+      "sum_recorded_actor_seconds": 13316.259194334503,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/claude/direct/normalization-first/chunk-c9c7f894950a65621589/journal.json",
+          "sha256": "74c8b197cc02ede329a12a3429d0b4637115a551d605bdc7e64fd7b8d3db9a5c",
+          "chunk": "chunk-c9c7f894950a65621589",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/constraints/13/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "fd_elapsed_seconds": 0.032571583054959774,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-20f415a0d8d3d04f90b0/journal.json",
+          "sha256": "5880c28082a57e4104f7c81c194f43cc030c8a7ff5a7bf75b1714786cd01275f",
+          "chunk": "chunk-20f415a0d8d3d04f90b0",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+          "fd_elapsed_seconds": 0.045689500169828534,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-2414d8d8612f850c1895/journal.json",
+          "sha256": "9bcacf5be38df81eafa269f6654123d4e42da6f1d04c65d5e460a020fc96c89b",
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/5/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-2414d8d8612f850c1895/attempt-001",
+          "fd_elapsed_seconds": 0.03440454206429422,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-42f3fb0dc74ce274ea57/journal.json",
+          "sha256": "685028bda9a1325610c34a85ce8c2284341c93c8afe4ec08ed2d7deda443e21b",
+          "chunk": "chunk-42f3fb0dc74ce274ea57",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-42f3fb0dc74ce274ea57/attempt-001",
+          "fd_elapsed_seconds": 0.04402991593815386,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-46fb339024ea1a82b45f/journal.json",
+          "sha256": "e6a6006c430cf8713dd959f8c23741f73900f291c74d4c64e8f955ce1ab5f412",
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/residuals/4/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-46fb339024ea1a82b45f/attempt-001",
+          "fd_elapsed_seconds": 0.0349248331040144,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-4a7f4c1e75eb1b5cd9c3/journal.json",
+          "sha256": "6a3ee456bd03c0c1a91d91e5d9efdaecfd67846d2a59288fc69a425319a0acce",
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-4a7f4c1e75eb1b5cd9c3/attempt-001",
+          "fd_elapsed_seconds": 0.03851970913819969,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-5a03e80d9db03efe45a2/journal.json",
+          "sha256": "5d49f9aef3c37567d78e47827b018325501445fa5d8a1182108ff74a10d5ae20",
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/33/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-5a03e80d9db03efe45a2/attempt-001",
+          "fd_elapsed_seconds": 0.03922333405353129,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-610ce314956c3315ed7b/journal.json",
+          "sha256": "348224dcaab6a3c32f71e18c14da93f0e9d4acfcb3f2aa18068b2fb264efa10e",
+          "chunk": "chunk-610ce314956c3315ed7b",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-610ce314956c3315ed7b/attempt-001",
+          "fd_elapsed_seconds": 0.04526045802049339,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-8926f266bc1134f91eef/journal.json",
+          "sha256": "0631b5d1700f010420492176b301c99f2e537519122dcb05724af16179e0977b",
+          "chunk": "chunk-8926f266bc1134f91eef",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "section dispositions do not cover exact supplied sections",
+          "original_attempt": "actors/author/chunk-8926f266bc1134f91eef/attempt-001",
+          "fd_elapsed_seconds": 0.037333541084080935,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-986113d13e5314b291c9/journal.json",
+          "sha256": "1606fa094c572103c91434c8734cf9874f27d4e312b48c18b5e0e6569ea77b5d",
+          "chunk": "chunk-986113d13e5314b291c9",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "section dispositions do not cover exact supplied sections",
+          "original_attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-001",
+          "fd_elapsed_seconds": 0.043522250140085816,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-9b7e6f52849b98967974/journal.json",
+          "sha256": "0e4fd3d1a9e2c792522d29de4cf17c5140673555eae2c0ee123605c741652c0e",
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/1/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+          "fd_elapsed_seconds": 0.03445725003257394,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-bcd515f6c8df632f2fad/journal.json",
+          "sha256": "d27a1296624e3ee88ad29f3036e8a426996c1de1fd08535611d2c73f72665fcc",
+          "chunk": "chunk-bcd515f6c8df632f2fad",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+          "fd_elapsed_seconds": 0.04476870805956423,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-caddb7dd9905a44febeb/journal.json",
+          "sha256": "a6e09c832036ba241e398cad8d1b65e18e994e7cd1b55afd0987b5486c7ac207",
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/24/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-caddb7dd9905a44febeb/attempt-001",
+          "fd_elapsed_seconds": 0.03694337490014732,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-d3ef7cd18b24cd303de7/journal.json",
+          "sha256": "3757885e607bc9a285fb45a3e0a28d45a3fe13744bda63091f8787b59ffabb79",
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+          "fd_elapsed_seconds": 0.04146045818924904,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-d40baf1b4da50f62ae06/journal.json",
+          "sha256": "75e0f16a650507826370b200a0ecf7cee5e19e290672efa2a756a86493579e7c",
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d40baf1b4da50f62ae06/attempt-001",
+          "fd_elapsed_seconds": 0.03958879108540714,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-db82b95364ae94dad131/journal.json",
+          "sha256": "33a8a8171a4344775d1459f738b42946243894fbe7631c429559da3bb105609d",
+          "chunk": "chunk-db82b95364ae94dad131",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-db82b95364ae94dad131/attempt-001",
+          "fd_elapsed_seconds": 0.045672459062188864,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-e9bb857e768dcddc1e11/journal.json",
+          "sha256": "d2fa0b11775bfa13efd89c17549e47cb9d68b04a6db7f8034c6bf452e10ec02f",
+          "chunk": "chunk-e9bb857e768dcddc1e11",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/5/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-e9bb857e768dcddc1e11/attempt-001",
+          "fd_elapsed_seconds": 0.036675834096968174,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-efb7b986ff5631c4fbc0/journal.json",
+          "sha256": "f65f45e5eb312b02467eeff706849ac39dde71ccff1391b4ed564078df38e828",
+          "chunk": "chunk-efb7b986ff5631c4fbc0",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+          "fd_elapsed_seconds": 0.04761245893314481,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-initial/chunk-f1002ac9d6de2a2d89c1/journal.json",
+          "sha256": "d4a3653059c4c4993c8aa4d3f5d52319a2604e3cf215c93029722dc265b1e40d",
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/concepts/9/grounding/2: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+          "fd_elapsed_seconds": 0.03986124997027218,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 0.7625202510971576,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": null,
+      "proposal": null,
+      "proposal_path": null,
+      "proposal_file_bytes": null,
+      "state": "incomplete_generation"
+    }
+  ],
+  "claim_boundary": [
+    "All retained source-generation attempts are included, including failures and repairs.",
+    "Unreported usage remains unknown; totals cover reported counters only.",
+    "Reasoning is reported separately and is not added to output tokens again.",
+    "Cached input subtraction is not a billing formula; no dollars are inferred.",
+    "Synthetic smokes, engineering, oracle and assessment costs are separate.",
+    "Supported mechanical grounding recovery creates no new F_P usage and does not erase strict first-pass failures.",
+    "Conditional F_P grounding repairs are counted as model calls, including their failed outcomes and usage; unchanged statement bytes do not prove equivalence.",
+    "A complete structural proposal does not establish semantic fidelity or owner acceptance.",
+    "One repeat per treatment/candidate does not establish a population timing effect."
+  ]
+}

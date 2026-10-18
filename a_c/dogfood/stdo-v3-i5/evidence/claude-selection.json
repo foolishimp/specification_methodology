@@ -1,0 +1,3160 @@
+{
+  "acquisition_routes": [],
+  "claim": "proposed lossless transport of an existing authored interpretation; source discovery adds no semantic premise, acceptance or efficiency claim",
+  "conditional_rule": "Establish applicability externally; add an applicable target selector explicitly, or retain unknown applicability and withhold dependent action.",
+  "native": {
+    "clauses": [
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:assertion",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation"
+        ],
+        "statement": "Passing a check of a necessary condition does not establish the full obligation.",
+        "uri": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:observation",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "while the oracle's fidelity is unestablished",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:condition"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation"
+        ],
+        "statement": "An observed test pass remains an observation while the oracle's fidelity is unestablished; it does not become established satisfaction of the source obligation, and a reported failure is treated the same way.",
+        "uri": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:retention",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "statement": "A changed hash alone establishes neither invalidity nor equivalence.",
+        "uri": "urn:stdo-3:claude:i3:clause:ci-hash-alone"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:mandatory-gate",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "must",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:force"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "statement": "A mandatory gate, an assessment that the governing policy requires irrespective of selection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable (P5, P6).",
+        "uri": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:retention",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "must",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:force"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p4b",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "statement": "Retention establishes the material validity conditions on the new subject: the claim and its scope still apply, its assertion and observation basis remain justified, and the affected dependencies are unchanged or covered by an established preservation relation.",
+        "uri": "urn:stdo-3:claude:i3:clause:ci-retention-conditions"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:impact-cover",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:validity-dependency",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "stated-formula",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "statement": "S_Δ = { t : D*(t) intersects I(Δ) }.",
+        "uri": "urn:stdo-3:claude:i3:clause:ci-selection"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:construction",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p2",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "A construction binds A, the current state of Transitions above with its account, and Z, the destination as a predicate over realised states that includes the acceptance conditions of the selected outcome.",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-binds-a-z"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:construction",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "must",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:force"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p5",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "Completion requires sufficient evidence against Z, including its acceptance conditions; exhaustion or an unresolved attempt proves neither completion nor impossibility (P5, P6).",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-completion-evidence"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "must",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:force"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p1",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "Diagnosis distinguishes four causes: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, and insufficient observation.",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-four-causes"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:construction",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p5",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p2",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "Recursive and repeated work distinguish four claims: preservation, that an invariant or obligation is kept through the steps; progress, that the work moves towards Z on evidence; termination; and outcome satisfaction.",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-four-claims"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:construction",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p2",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "A lawful construction can remain incomplete or fail to reach Z, and lawfulness establishes neither delivery nor optimality.",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p1",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "statement": "A prediction error alone does not decide whether the required outcome holds.",
+        "uri": "urn:stdo-3:claude:i3:clause:cr-prediction-error"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:support-kind",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#formal-representation"
+        ],
+        "statement": "Finite examples do not prove the universal implications above.",
+        "uri": "urn:stdo-3:claude:i3:clause:fr-finite-examples"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "literal": "recovered: P0's standing in FOUNDATIONS §3",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P0 Bounded construction. A finite actor realises a selected outer contract through steps. Each step's selected context fits the actor's envelope.",
+        "uri": "urn:stdo-3:claude:i3:clause:p0"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P1 Interpretation. Subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract.",
+        "uri": "urn:stdo-3:claude:i3:clause:p1"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P2 Purpose. A selected outcome defines adequacy; interfaces inherit material obligations from the transformation they serve.",
+        "uri": "urn:stdo-3:claude:i3:clause:p2"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P3 Identity. An object's identity is declared (authority, kind, value) and survives admissible change; a boundary is a claim with a proof obligation.",
+        "uri": "urn:stdo-3:claude:i3:clause:p3"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "literal": "only when the first's result type and judgment satisfy the second's exact declared domain and preconditions",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:condition"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.",
+        "uri": "urn:stdo-3:claude:i3:clause:p4a"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p0",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p2",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P4b Conservation of step-produced facts. Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produced them.",
+        "uri": "urn:stdo-3:claude:i3:clause:p4b"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p0",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P5 Totality. A step can meet a condition outside its context (P0's open-world premise), and it cannot report success on one (P6).",
+        "uri": "urn:stdo-3:claude:i3:clause:p5"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:premise",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "statement": "P6 Justification and authority. Definitions, assumptions, observations, candidate judgments and accepted claims have distinct standing; evidence supports a claim on a basis; authority permits or disposes within scope.",
+        "uri": "urn:stdo-3:claude:i3:clause:p6"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:mutual-assurance",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p4a",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance"
+        ],
+        "statement": "Agreement is compatible with both being correct and with a shared error; disagreement requires diagnosis ([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)) and does not identify the faulty party by itself.",
+        "uri": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:mutual-assurance",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance"
+        ],
+        "statement": "Different actors, model families or codebases do not establish statistical independence.",
+        "uri": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence"
+      },
+      {
+        "arguments": [
+          {
+            "ref": "urn:stdo-3:claude:i3:standing:consequence",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:standing"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:concept:preservation-step",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:subject"
+          },
+          {
+            "literal": "discharged-argument",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support-kind"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p4a",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          },
+          {
+            "ref": "urn:stdo-3:claude:i3:clause:p6",
+            "role": "urn:stdo-3:claude:i3:vocabulary:role:support"
+          }
+        ],
+        "clause_type": "constraint",
+        "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#preservation-through-construction"
+        ],
+        "statement": "Local success alone establishes neither composition compatibility nor Z.",
+        "uri": "urn:stdo-3:claude:i3:clause:pr-local-success-alone"
+      }
+    ],
+    "residuals": [],
+    "symbols": [
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Assertion: a check targeting a predicate that is the full obligation, a necessary condition of it or part of a sufficient conjunction",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:assertion"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Construction: the relation from the bound current state A to the destination Z through lawful steps",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:construction"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Diagnosis cause: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, or insufficient observation",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:diagnosis-cause"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Impact cover: the conservative cover of changed facts and their affected dependents",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:impact-cover"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Mandatory gate: an assessment the governing policy requires irrespective of selection",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:mandatory-gate"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Mutual assurance: the comparison of independently justified constructions or assertions within their scope",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:mutual-assurance"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Observation: what a checker can see of a case, through which it judges a predicate",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:observation"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Preservation step: the obligation that a property at one boundary carries to the next through the declared transition relation",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#preservation-through-construction"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:preservation-step"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Retention: the use of existing evidence on a new subject under established validity conditions",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:retention"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Kind of support: stated formula, discharged argument, mechanically checked structure, externally assessed predicate or execution evidence",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#formal-representation"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:support-kind"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+        "label": "Validity dependency: what can affect a check's behaviour, conclusion or applicability",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse"
+        ],
+        "uri": "urn:stdo-3:claude:i3:concept:validity-dependency"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:standing",
+        "label": "consequence",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "uri": "urn:stdo-3:claude:i3:standing:consequence"
+      },
+      {
+        "kind": "urn:stdo-3:claude:i3:vocabulary:kind:standing",
+        "label": "premise",
+        "source_refs": [
+          "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+        ],
+        "uri": "urn:stdo-3:claude:i3:standing:premise"
+      }
+    ]
+  },
+  "native_selectors": [
+    {
+      "clause_refs": [
+        "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+        "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+        "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+        "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+        "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+        "urn:stdo-3:claude:i3:clause:ci-selection",
+        "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+        "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+        "urn:stdo-3:claude:i3:clause:cr-four-causes",
+        "urn:stdo-3:claude:i3:clause:cr-four-claims",
+        "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+        "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+        "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+        "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+        "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+        "urn:stdo-3:claude:i3:clause:pr-local-success-alone"
+      ],
+      "frame_ref": "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation",
+      "residual_refs": [],
+      "scope": "Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, what an assertion establishes, what agreement proves, what is retained after a change and which gates stay applicable.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assurance-relations"
+      ],
+      "uri": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance"
+    }
+  ],
+  "profile": "a_c.v3-graphify-selection/1",
+  "projection": {
+    "boundary": {
+      "crossing_relations": [],
+      "external": [
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:basis",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:basis"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:context",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:context"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:scope",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:sort",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:frame_indexes",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:sort",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:frame_indexes"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:sort",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols"
+        },
+        {
+          "basis_relation": "urn:a-c:dogfood:stdo-v3-i5:claude:basis-relation",
+          "evidence_identity": "urn:sha256:5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb",
+          "external_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "external_target_kind": "urn:a-c:dogfood:stdo-v3-i5:claude:external-kind:owner",
+          "reference_domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "resolution_basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "resolved_target_identity": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner"
+        }
+      ],
+      "invalidation": {
+        "id": "urn:a-c:dogfood:stdo-v3-i5:claude:invalidation",
+        "sha256": "0a7e8a9d320757fa58128a378ac9f0ee20e83af51a5838493689666460032fed"
+      },
+      "non_governing_references": [
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:ci-selection",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p0",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p1",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p2",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p3",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p4a",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p4b",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p5",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:p6",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:assertion",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:construction",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:impact-cover",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:mandatory-gate",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:mutual-assurance",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:observation",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:preservation-step",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:retention",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:support-kind",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:concept:validity-dependency",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "1",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:standing:consequence",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        },
+        {
+          "domain": "urn:a-c:dogfood:stdo-v3-i5:claude:reference-domain",
+          "owner": "urn:stdo-3:claude:i3:standing:premise",
+          "path": [
+            "value",
+            "non_governing_refs",
+            "0",
+            "target"
+          ],
+          "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+        }
+      ],
+      "unresolved_residuals": []
+    },
+    "claim": "view of exact parent; not a replacement complete model or semantic acceptance",
+    "excluded": [
+      "urn:a-c:dogfood:stdo-v3-i5:claude:program-envelope",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:README.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/README.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/SIGNATURE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/ACTIVATION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/AXIOMATIC_CALCULUS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/CONFORMANCE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/EVALUATION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/FOUNDATIONS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/IDENTITY.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/PROFILES.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/dispositions/REFERENCE_FRAME.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/fidelity/cases-i5.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/fidelity/cases.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/fidelity/review-i5.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:a_c/i3/fidelity/review.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:consumer-contract/A_C_DEPENDENCY.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:design/INTERPRETATION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:qualification/C3-ITER5/HANDOFF.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:qualification/C3-ITER5/RESULTS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:release/README.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:release/release-note.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ASSURANCE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/AXIOMATIC_CALCULUS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/CONFORMANCE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/DESIGN_MODULE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/EVALUATION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/EXECUTIVE_BASELINE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/GLOSSARY.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/IDENTITY.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ODD.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/POSTING_GUIDE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/PRODUCT_DEFINITION.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/PROFILES.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/README.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/REFERENCE_FRAME.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/RELEASE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/SPEC_METHOD.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/TICKETS.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/TRAVERSAL_OCCURRENCE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/UX.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/WORLD_MODEL.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/WRITING_GUIDE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/ac-task-a.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/acceptance-release.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/binding.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/bootstrap.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/configuration.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/dm-task-d.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/eb-task-d.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/member-build-assess.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/rf-task-a.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/rf-task-b.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/stale-summary.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/frames/traversal-task-f.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/AGENTS_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/CLAUDE_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/GOALS_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/INTENT_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/PRODUCT_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/README.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/common/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/docs/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/requirements/README_TEMPLATE.md",
+      "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+      "urn:stdo-3:claude:i3:clause:ac-declared-result",
+      "urn:stdo-3:claude:i3:clause:ac-failed",
+      "urn:stdo-3:claude:i3:clause:ac-gap",
+      "urn:stdo-3:claude:i3:clause:ac-hold",
+      "urn:stdo-3:claude:i3:clause:ac-holds",
+      "urn:stdo-3:claude:i3:clause:ac-indeterminate",
+      "urn:stdo-3:claude:i3:clause:ac-invalid-basis",
+      "urn:stdo-3:claude:i3:clause:ac-out-of-scope",
+      "urn:stdo-3:claude:i3:clause:ac-refusal-basis",
+      "urn:stdo-3:claude:i3:clause:ac-refusal-constraint",
+      "urn:stdo-3:claude:i3:clause:amb-blocked",
+      "urn:stdo-3:claude:i3:clause:amb-carried",
+      "urn:stdo-3:claude:i3:clause:amb-escalated",
+      "urn:stdo-3:claude:i3:clause:amb-resolved",
+      "urn:stdo-3:claude:i3:clause:ao-conjunction-coverage",
+      "urn:stdo-3:claude:i3:clause:ao-digest-not-fidelity",
+      "urn:stdo-3:claude:i3:clause:ao-directions",
+      "urn:stdo-3:claude:i3:clause:ao-indeterminate-vs-unresolved",
+      "urn:stdo-3:claude:i3:clause:ao-insufficient-response",
+      "urn:stdo-3:claude:i3:clause:ao-observation-binding",
+      "urn:stdo-3:claude:i3:clause:ao-qr",
+      "urn:stdo-3:claude:i3:clause:ao-soundness",
+      "urn:stdo-3:claude:i3:clause:ao-sufficiency",
+      "urn:stdo-3:claude:i3:clause:ar-notation-obligations",
+      "urn:stdo-3:claude:i3:clause:ar-shared-owner",
+      "urn:stdo-3:claude:i3:clause:authority-changes-need-decision",
+      "urn:stdo-3:claude:i3:clause:authority-kinds-never-collapse",
+      "urn:stdo-3:claude:i3:clause:avail-candidate-ready",
+      "urn:stdo-3:claude:i3:clause:avail-incomplete",
+      "urn:stdo-3:claude:i3:clause:avail-re-entry-authority",
+      "urn:stdo-3:claude:i3:clause:avail-re-entry-basis",
+      "urn:stdo-3:claude:i3:clause:avail-refused",
+      "urn:stdo-3:claude:i3:clause:availability-assessment-acceptance",
+      "urn:stdo-3:claude:i3:clause:block-four-conditions",
+      "urn:stdo-3:claude:i3:clause:block-hard-stop-row",
+      "urn:stdo-3:claude:i3:clause:block-outside-claim",
+      "urn:stdo-3:claude:i3:clause:block-owner-decides",
+      "urn:stdo-3:claude:i3:clause:boundary-claim-proof",
+      "urn:stdo-3:claude:i3:clause:ci-cheap-insufficient",
+      "urn:stdo-3:claude:i3:clause:ci-e-new",
+      "urn:stdo-3:claude:i3:clause:ci-exclusion",
+      "urn:stdo-3:claude:i3:clause:ci-failures-visible",
+      "urn:stdo-3:claude:i3:clause:ci-link-not-model",
+      "urn:stdo-3:claude:i3:clause:ci-no-cadence",
+      "urn:stdo-3:claude:i3:clause:ci-two-relations",
+      "urn:stdo-3:claude:i3:clause:ci-unknown-impact",
+      "urn:stdo-3:claude:i3:clause:ci-used-by-activation-7",
+      "urn:stdo-3:claude:i3:clause:conjunction-defined-once",
+      "urn:stdo-3:claude:i3:clause:conjunction-three-inputs",
+      "urn:stdo-3:claude:i3:clause:core-only-one",
+      "urn:stdo-3:claude:i3:clause:cr-account-of-a",
+      "urn:stdo-3:claude:i3:clause:cr-bug-change-work",
+      "urn:stdo-3:claude:i3:clause:cr-calculi-lawful",
+      "urn:stdo-3:claude:i3:clause:cr-composition-boundary",
+      "urn:stdo-3:claude:i3:clause:cr-feedback-loop",
+      "urn:stdo-3:claude:i3:clause:cr-governing-spec-supplies-z",
+      "urn:stdo-3:claude:i3:clause:cr-homeostasis",
+      "urn:stdo-3:claude:i3:clause:cr-local-success",
+      "urn:stdo-3:claude:i3:clause:cr-no-preferred-strategy",
+      "urn:stdo-3:claude:i3:clause:cr-no-runtime",
+      "urn:stdo-3:claude:i3:clause:cr-no-solver",
+      "urn:stdo-3:claude:i3:clause:cr-no-universal-termination",
+      "urn:stdo-3:claude:i3:clause:cr-one-owner",
+      "urn:stdo-3:claude:i3:clause:cr-repeated-activity",
+      "urn:stdo-3:claude:i3:clause:cr-resource-limit",
+      "urn:stdo-3:claude:i3:clause:cr-revised-model",
+      "urn:stdo-3:claude:i3:clause:cr-route-to-owner",
+      "urn:stdo-3:claude:i3:clause:cr-several-states",
+      "urn:stdo-3:claude:i3:clause:cr-severity-priority",
+      "urn:stdo-3:claude:i3:clause:cr-steps-compose",
+      "urn:stdo-3:claude:i3:clause:cr-strategy-selection-owner",
+      "urn:stdo-3:claude:i3:clause:cr-strategy-serves-z",
+      "urn:stdo-3:claude:i3:clause:cr-three-accounts-distinct",
+      "urn:stdo-3:claude:i3:clause:cs-no-proof-of-reachability",
+      "urn:stdo-3:claude:i3:clause:cs-synthesis-derived",
+      "urn:stdo-3:claude:i3:clause:disp-accept",
+      "urn:stdo-3:claude:i3:clause:disp-local-repair",
+      "urn:stdo-3:claude:i3:clause:disp-re-enter",
+      "urn:stdo-3:claude:i3:clause:disp-reject",
+      "urn:stdo-3:claude:i3:clause:effect-completed",
+      "urn:stdo-3:claude:i3:clause:effect-completion-unknown",
+      "urn:stdo-3:claude:i3:clause:effect-not-effected",
+      "urn:stdo-3:claude:i3:clause:failure-survives-joins",
+      "urn:stdo-3:claude:i3:clause:fr-external-predicate",
+      "urn:stdo-3:claude:i3:clause:fr-five-kinds",
+      "urn:stdo-3:claude:i3:clause:fr-no-seventh",
+      "urn:stdo-3:claude:i3:clause:fr-no-tooling",
+      "urn:stdo-3:claude:i3:clause:fr-unresolved-universal",
+      "urn:stdo-3:claude:i3:clause:gap-never-satisfied",
+      "urn:stdo-3:claude:i3:clause:invalidators-are-three",
+      "urn:stdo-3:claude:i3:clause:markov-boundary-hypothesis",
+      "urn:stdo-3:claude:i3:clause:no-mapping-raises-standing",
+      "urn:stdo-3:claude:i3:clause:not-performed-no-result",
+      "urn:stdo-3:claude:i3:clause:only-admitted-contract-activates",
+      "urn:stdo-3:claude:i3:clause:only-satisfied-establishes",
+      "urn:stdo-3:claude:i3:clause:p4a-retention",
+      "urn:stdo-3:claude:i3:clause:parent-value-rule",
+      "urn:stdo-3:claude:i3:clause:pd-assertion-provenance",
+      "urn:stdo-3:claude:i3:clause:pd-authentication-third",
+      "urn:stdo-3:claude:i3:clause:pd-both-needed",
+      "urn:stdo-3:claude:i3:clause:pd-execution-provenance",
+      "urn:stdo-3:claude:i3:clause:pd-implementation-derived",
+      "urn:stdo-3:claude:i3:clause:pd-incorrect-model",
+      "urn:stdo-3:claude:i3:clause:pd-no-per-test-document",
+      "urn:stdo-3:claude:i3:clause:pr-approximate",
+      "urn:stdo-3:claude:i3:clause:pr-completion-only",
+      "urn:stdo-3:claude:i3:clause:pr-end-to-end",
+      "urn:stdo-3:claude:i3:clause:pr-execution-not-discharge",
+      "urn:stdo-3:claude:i3:clause:pr-postcondition-must",
+      "urn:stdo-3:claude:i3:clause:pr-step-form",
+      "urn:stdo-3:claude:i3:clause:proxy-identity-distinct",
+      "urn:stdo-3:claude:i3:clause:qa-actor-selects",
+      "urn:stdo-3:claude:i3:clause:qa-bayes",
+      "urn:stdo-3:claude:i3:clause:qa-denominator",
+      "urn:stdo-3:claude:i3:clause:qa-independence-needed",
+      "urn:stdo-3:claude:i3:clause:qa-joint-miss",
+      "urn:stdo-3:claude:i3:clause:qa-model-states",
+      "urn:stdo-3:claude:i3:clause:qa-no-threshold",
+      "urn:stdo-3:claude:i3:clause:qa-no-waiver",
+      "urn:stdo-3:claude:i3:clause:qa-not-product-correct",
+      "urn:stdo-3:claude:i3:clause:qa-unsupported-unresolved",
+      "urn:stdo-3:claude:i3:clause:refinement-maps-once",
+      "urn:stdo-3:claude:i3:clause:reuse-not-by-role-change",
+      "urn:stdo-3:claude:i3:clause:rf-decision-fails",
+      "urn:stdo-3:claude:i3:clause:rf-decision-holds",
+      "urn:stdo-3:claude:i3:clause:severity-not-priority",
+      "urn:stdo-3:claude:i3:clause:stale-satisfied-never-counts",
+      "urn:stdo-3:claude:i3:clause:surface-definition",
+      "urn:stdo-3:claude:i3:clause:surface-no-strategy",
+      "urn:stdo-3:claude:i3:clause:three-invalidators",
+      "urn:stdo-3:claude:i3:clause:what-creates-no-authority",
+      "urn:stdo-3:claude:i3:concept:assertion-provenance",
+      "urn:stdo-3:claude:i3:concept:authority",
+      "urn:stdo-3:claude:i3:concept:boundary-claim",
+      "urn:stdo-3:claude:i3:concept:closed-result",
+      "urn:stdo-3:claude:i3:concept:composition-boundary",
+      "urn:stdo-3:claude:i3:concept:conjunction",
+      "urn:stdo-3:claude:i3:concept:constraint-surface",
+      "urn:stdo-3:claude:i3:concept:core-result",
+      "urn:stdo-3:claude:i3:concept:execution-provenance",
+      "urn:stdo-3:claude:i3:concept:feedback",
+      "urn:stdo-3:claude:i3:concept:gap",
+      "urn:stdo-3:claude:i3:concept:hard-stop",
+      "urn:stdo-3:claude:i3:concept:invalidator",
+      "urn:stdo-3:claude:i3:concept:not-performed",
+      "urn:stdo-3:claude:i3:concept:promotion-block",
+      "urn:stdo-3:claude:i3:concept:proxy",
+      "urn:stdo-3:claude:i3:concept:quantified-claim",
+      "urn:stdo-3:claude:i3:concept:refinement",
+      "urn:stdo-3:claude:i3:concept:stale-result",
+      "urn:stdo-3:claude:i3:concept:strategy",
+      "urn:stdo-3:claude:i3:core:falsified",
+      "urn:stdo-3:claude:i3:core:indeterminate",
+      "urn:stdo-3:claude:i3:core:invalid_basis",
+      "urn:stdo-3:claude:i3:core:out_of_frame",
+      "urn:stdo-3:claude:i3:core:satisfied",
+      "urn:stdo-3:claude:i3:frame-index:authority-kinds",
+      "urn:stdo-3:claude:i3:frame-index:promotion-block",
+      "urn:stdo-3:claude:i3:frame-index:result-algebra-and-conjunction",
+      "urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation",
+      "urn:stdo-3:claude:i3:standing:policy-choice"
+    ],
+    "included": [
+      "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+      "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+      "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+      "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+      "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+      "urn:stdo-3:claude:i3:clause:ci-selection",
+      "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+      "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+      "urn:stdo-3:claude:i3:clause:cr-four-causes",
+      "urn:stdo-3:claude:i3:clause:cr-four-claims",
+      "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+      "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+      "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+      "urn:stdo-3:claude:i3:clause:p0",
+      "urn:stdo-3:claude:i3:clause:p1",
+      "urn:stdo-3:claude:i3:clause:p2",
+      "urn:stdo-3:claude:i3:clause:p3",
+      "urn:stdo-3:claude:i3:clause:p4a",
+      "urn:stdo-3:claude:i3:clause:p4b",
+      "urn:stdo-3:claude:i3:clause:p5",
+      "urn:stdo-3:claude:i3:clause:p6",
+      "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+      "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+      "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+      "urn:stdo-3:claude:i3:concept:assertion",
+      "urn:stdo-3:claude:i3:concept:construction",
+      "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+      "urn:stdo-3:claude:i3:concept:impact-cover",
+      "urn:stdo-3:claude:i3:concept:mandatory-gate",
+      "urn:stdo-3:claude:i3:concept:mutual-assurance",
+      "urn:stdo-3:claude:i3:concept:observation",
+      "urn:stdo-3:claude:i3:concept:preservation-step",
+      "urn:stdo-3:claude:i3:concept:retention",
+      "urn:stdo-3:claude:i3:concept:support-kind",
+      "urn:stdo-3:claude:i3:concept:validity-dependency",
+      "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+      "urn:stdo-3:claude:i3:standing:consequence",
+      "urn:stdo-3:claude:i3:standing:premise"
+    ],
+    "parent": {
+      "id": "urn:a-c:dogfood:stdo-v3-i5:claude:model:proposal:1",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "a434430546071851a8e1dbd2ade19261166db7debfb481d690adc1b2a9a78c5b"
+    },
+    "populations": {
+      "constraints": [],
+      "judgments": [],
+      "latitude": [],
+      "objects": [
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:assertion",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Assertion: a check targeting a predicate that is the full obligation, a necessary condition of it or part of a sufficient conjunction",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Assertion: a check targeting a predicate that is the full obligation, a necessary condition of it or part of a sufficient conjunction\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation\"],\"uri\":\"urn:stdo-3:claude:i3:concept:assertion\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:assertion",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 0,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:construction",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Construction: the relation from the bound current state A to the destination Z through lawful steps",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Construction: the relation from the bound current state A to the destination Z through lawful steps\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"uri\":\"urn:stdo-3:claude:i3:concept:construction\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:construction",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 8,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Diagnosis cause: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, or insufficient observation",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Diagnosis cause: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, or insufficient observation\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"uri\":\"urn:stdo-3:claude:i3:concept:diagnosis-cause\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:diagnosis-cause",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 10,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:impact-cover",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Impact cover: the conservative cover of changed facts and their affected dependents",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Impact cover: the conservative cover of changed facts and their affected dependents\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"uri\":\"urn:stdo-3:claude:i3:concept:impact-cover\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:impact-cover",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 15,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:mandatory-gate",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Mandatory gate: an assessment the governing policy requires irrespective of selection",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Mandatory gate: an assessment the governing policy requires irrespective of selection\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"uri\":\"urn:stdo-3:claude:i3:concept:mandatory-gate\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:mandatory-gate",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 17,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:mutual-assurance",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Mutual assurance: the comparison of independently justified constructions or assertions within their scope",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Mutual assurance: the comparison of independently justified constructions or assertions within their scope\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance\"],\"uri\":\"urn:stdo-3:claude:i3:concept:mutual-assurance\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:mutual-assurance",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 18,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:observation",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Observation: what a checker can see of a case, through which it judges a predicate",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Observation: what a checker can see of a case, through which it judges a predicate\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation\"],\"uri\":\"urn:stdo-3:claude:i3:concept:observation\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:observation",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 20,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:preservation-step",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Preservation step: the obligation that a property at one boundary carries to the next through the declared transition relation",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Preservation step: the obligation that a property at one boundary carries to the next through the declared transition relation\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#preservation-through-construction\"],\"uri\":\"urn:stdo-3:claude:i3:concept:preservation-step\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:preservation-step",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 21,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:retention",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Retention: the use of existing evidence on a new subject under established validity conditions",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Retention: the use of existing evidence on a new subject under established validity conditions\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"uri\":\"urn:stdo-3:claude:i3:concept:retention\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:retention",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 26,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:support-kind",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Kind of support: stated formula, discharged argument, mechanically checked structure, externally assessed predicate or execution evidence",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Kind of support: stated formula, discharged argument, mechanically checked structure, externally assessed predicate or execution evidence\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#formal-representation\"],\"uri\":\"urn:stdo-3:claude:i3:concept:support-kind\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:support-kind",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 29,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:concept:validity-dependency",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "Validity dependency: what can affect a check's behaviour, conclusion or applicability",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:concept\",\"label\":\"Validity dependency: what can affect a check's behaviour, conclusion or applicability\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"uri\":\"urn:stdo-3:claude:i3:concept:validity-dependency\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:concept:validity-dependency",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 30,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:standing:consequence",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "consequence",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:standing\",\"label\":\"consequence\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"uri\":\"urn:stdo-3:claude:i3:standing:consequence\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:standing:consequence",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 36,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:standing:premise",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:symbols",
+          "value": {
+            "a_text": "premise",
+            "native_family": "symbols",
+            "native_json": "{\"kind\":\"urn:stdo-3:claude:i3:vocabulary:kind:standing\",\"label\":\"premise\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"uri\":\"urn:stdo-3:claude:i3:standing:premise\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:standing:premise",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 38,
+            "required_refs": [],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Passing a check of a necessary condition does not establish the full obligation.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:assertion\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation\"],\"statement\":\"Passing a check of a necessary condition does not establish the full obligation.\",\"uri\":\"urn:stdo-3:claude:i3:clause:ao-necessary-not-full\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 19,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:assertion"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "An observed test pass remains an observation while the oracle's fidelity is unestablished; it does not become established satisfaction of the source obligation, and a reported failure is treated the same way.\nwhile the oracle's fidelity is unestablished\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:observation\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"while the oracle's fidelity is unestablished\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:condition\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assertions-and-observation\"],\"statement\":\"An observed test pass remains an observation while the oracle's fidelity is unestablished; it does not become established satisfaction of the source obligation, and a reported failure is treated the same way.\",\"uri\":\"urn:stdo-3:claude:i3:clause:ao-pass-is-observation\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 21,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:observation"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "A changed hash alone establishes neither invalidity nor equivalence.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:retention\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"statement\":\"A changed hash alone establishes neither invalidity nor equivalence.\",\"uri\":\"urn:stdo-3:claude:i3:clause:ci-hash-alone\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 44,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:retention"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p3"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "A mandatory gate, an assessment that the governing policy requires irrespective of selection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable (P5, P6).\nmust\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:mandatory-gate\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"must\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:force\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"statement\":\"A mandatory gate, an assessment that the governing policy requires irrespective of selection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable (P5, P6).\",\"uri\":\"urn:stdo-3:claude:i3:clause:ci-mandatory-gate\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 46,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:mandatory-gate"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Retention establishes the material validity conditions on the new subject: the claim and its scope still apply, its assertion and observation basis remain justified, and the affected dependencies are unchanged or covered by an established preservation relation.\nmust\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:retention\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"must\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:force\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p4b\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"statement\":\"Retention establishes the material validity conditions on the new subject: the claim and its scope still apply, its assertion and observation basis remain justified, and the affected dependencies are unchanged or covered by an established preservation relation.\",\"uri\":\"urn:stdo-3:claude:i3:clause:ci-retention-conditions\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 48,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:retention"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p3"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/arguments/5/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p4b"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "pointer": "/arguments/6/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:ci-selection",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "S_Δ = { t : D*(t) intersects I(Δ) }.\nstated-formula",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:impact-cover\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:validity-dependency\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"stated-formula\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#change-impact-and-evidence-reuse\"],\"statement\":\"S_Δ = { t : D*(t) intersects I(Δ) }.\",\"uri\":\"urn:stdo-3:claude:i3:clause:ci-selection\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-selection",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 49,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-selection",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-selection",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:impact-cover"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-selection",
+                "pointer": "/arguments/2/ref",
+                "target": "urn:stdo-3:claude:i3:concept:validity-dependency"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:ci-selection",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p3"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "A construction binds A, the current state of Transitions above with its account, and Z, the destination as a predicate over realised states that includes the acceptance conditions of the selected outcome.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:construction\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p2\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"A construction binds A, the current state of Transitions above with its account, and Z, the destination as a predicate over realised states that includes the acceptance conditions of the selected outcome.\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-binds-a-z\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 57,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:construction"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p2"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p3"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Completion requires sufficient evidence against Z, including its acceptance conditions; exhaustion or an unresolved attempt proves neither completion nor impossibility (P5, P6).\nmust\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:construction\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"must\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:force\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p5\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"Completion requires sufficient evidence against Z, including its acceptance conditions; exhaustion or an unresolved attempt proves neither completion nor impossibility (P5, P6).\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-completion-evidence\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 60,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:construction"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "pointer": "/arguments/5/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p5"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Diagnosis distinguishes four causes: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, and insufficient observation.\nmust\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:diagnosis-cause\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"must\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:force\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p1\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"Diagnosis distinguishes four causes: a defective realisation, an inadequate governing requirement or design, an inaccurate predictive model, and insufficient observation.\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-four-causes\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 63,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:diagnosis-cause"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-causes",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p1"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Recursive and repeated work distinguish four claims: preservation, that an invariant or obligation is kept through the steps; progress, that the work moves towards Z on evidence; termination; and outcome satisfaction.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:construction\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p5\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p2\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"Recursive and repeated work distinguish four claims: preservation, that an invariant or obligation is kept through the steps; progress, that the work moves towards Z on evidence; termination; and outcome satisfaction.\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-four-claims\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 64,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:construction"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p5"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p2"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "A lawful construction can remain incomplete or fail to reach Z, and lawfulness establishes neither delivery nor optimality.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:construction\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p2\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"A lawful construction can remain incomplete or fail to reach Z, and lawfulness establishes neither delivery nor optimality.\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 67,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:construction"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p2"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p3"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "pointer": "/arguments/5/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "A prediction error alone does not decide whether the required outcome holds.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:diagnosis-cause\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p1\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\"],\"statement\":\"A prediction error alone does not decide whether the required outcome holds.\",\"uri\":\"urn:stdo-3:claude:i3:clause:cr-prediction-error\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              }
+            ],
+            "ordinal": 74,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:diagnosis-cause"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p1"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Finite examples do not prove the universal implications above.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:support-kind\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#formal-representation\"],\"statement\":\"Finite examples do not prove the universal implications above.\",\"uri\":\"urn:stdo-3:claude:i3:clause:fr-finite-examples\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 96,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:support-kind"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p0",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P0 Bounded construction. A finite actor realises a selected outer contract through steps. Each step's selected context fits the actor's envelope.\nrecovered: P0's standing in FOUNDATIONS §3",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"literal\":\"recovered: P0's standing in FOUNDATIONS §3\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:qualification\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P0 Bounded construction. A finite actor realises a selected outer contract through steps. Each step's selected context fits the actor's envelope.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p0\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p0",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 108,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p0",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p1",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P1 Interpretation. Subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract.\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P1 Interpretation. Subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p1\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p1",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 109,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p1",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p2",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P2 Purpose. A selected outcome defines adequacy; interfaces inherit material obligations from the transformation they serve.\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P2 Purpose. A selected outcome defines adequacy; interfaces inherit material obligations from the transformation they serve.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p2\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p2",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 110,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p2",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p3",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P3 Identity. An object's identity is declared (authority, kind, value) and survives admissible change; a boundary is a claim with a proof obligation.\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P3 Identity. An object's identity is declared (authority, kind, value) and survives admissible change; a boundary is a claim with a proof obligation.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p3\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p3",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 111,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p3",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p4a",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.\nonly when the first's result type and judgment satisfy the second's exact declared domain and preconditions",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"literal\":\"only when the first's result type and judgment satisfy the second's exact declared domain and preconditions\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:condition\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p4a\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p4a",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 112,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p4a",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p4b",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P4b Conservation of step-produced facts. Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produced them.\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p0\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p2\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P4b Conservation of step-produced facts. Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produced them.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p4b\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p4b",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 114,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p4b",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p4b",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p0"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p4b",
+                "pointer": "/arguments/2/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p2"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p5",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P5 Totality. A step can meet a condition outside its context (P0's open-world premise), and it cannot report success on one (P6).\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p0\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P5 Totality. A step can meet a condition outside its context (P0's open-world premise), and it cannot report success on one (P6).\",\"uri\":\"urn:stdo-3:claude:i3:clause:p5\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p5",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 115,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p5",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p5",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p0"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p5",
+                "pointer": "/arguments/2/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:p6",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "P6 Justification and authority. Definitions, assumptions, observations, candidate judgments and accepted claims have distinct standing; evidence supports a claim on a basis; authority permits or disposes within scope.\n",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:premise\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:requires\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments\"],\"statement\":\"P6 Justification and authority. Definitions, assumptions, observations, candidate judgments and accepted claims have distinct standing; evidence supports a claim on a basis; authority permits or disposes within scope.\",\"uri\":\"urn:stdo-3:claude:i3:clause:p6\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:p6",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 116,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:p6",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:premise"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Agreement is compatible with both being correct and with a shared error; disagreement requires diagnosis ([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)) and does not identify the faulty party by itself.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:mutual-assurance\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p4a\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance\"],\"statement\":\"Agreement is compatible with both being correct and with a shared error; disagreement requires diagnosis ([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)) and does not identify the faulty party by itself.\",\"uri\":\"urn:stdo-3:claude:i3:clause:pd-agreement-shared-error\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 118,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:mutual-assurance"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p4a"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Different actors, model families or codebases do not establish statistical independence.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:mutual-assurance\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance\"],\"statement\":\"Different actors, model families or codebases do not establish statistical independence.\",\"uri\":\"urn:stdo-3:claude:i3:clause:pd-no-statistical-independence\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 126,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:mutual-assurance"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:clauses",
+          "value": {
+            "a_text": "Local success alone establishes neither composition compatibility nor Z.\ndischarged-argument",
+            "native_family": "clauses",
+            "native_json": "{\"arguments\":[{\"ref\":\"urn:stdo-3:claude:i3:standing:consequence\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:standing\"},{\"ref\":\"urn:stdo-3:claude:i3:concept:preservation-step\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:subject\"},{\"literal\":\"discharged-argument\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support-kind\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p4a\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"},{\"ref\":\"urn:stdo-3:claude:i3:clause:p6\",\"role\":\"urn:stdo-3:claude:i3:vocabulary:role:support\"}],\"clause_type\":\"constraint\",\"operator\":\"urn:stdo-3:claude:i3:vocabulary:operator:states\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#preservation-through-construction\"],\"statement\":\"Local success alone establishes neither composition compatibility nor Z.\",\"uri\":\"urn:stdo-3:claude:i3:clause:pr-local-success-alone\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 131,
+            "required_refs": [
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+                "pointer": "/arguments/0/ref",
+                "target": "urn:stdo-3:claude:i3:standing:consequence"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+                "pointer": "/arguments/1/ref",
+                "target": "urn:stdo-3:claude:i3:concept:preservation-step"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+                "pointer": "/arguments/3/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p4a"
+              },
+              {
+                "kind": "argument",
+                "origin": "urn:stdo-3:claude:i3:clause:pr-local-success-alone",
+                "pointer": "/arguments/4/ref",
+                "target": "urn:stdo-3:claude:i3:clause:p6"
+              }
+            ],
+            "routes": []
+          }
+        },
+        {
+          "basis": "urn:a-c:dogfood:stdo-v3-i5:claude:basis",
+          "context": "urn:a-c:dogfood:stdo-v3-i5:claude:context",
+          "id": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+          "owner": "urn:a-c:dogfood:stdo-v3-i5:claude:transport-owner",
+          "scope": [
+            "urn:a-c:dogfood:stdo-v3-i5:claude:scope:frozen-input"
+          ],
+          "sort": "urn:a-c:dogfood:stdo-v3-i5:claude:sort:frame_indexes",
+          "value": {
+            "a_text": "Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, what an assertion establishes, what agreement proves, what is retained after a change and which gates stay applicable.",
+            "native_family": "frame_indexes",
+            "native_json": "{\"clause_refs\":[\"urn:stdo-3:claude:i3:clause:ao-necessary-not-full\",\"urn:stdo-3:claude:i3:clause:ao-pass-is-observation\",\"urn:stdo-3:claude:i3:clause:ci-hash-alone\",\"urn:stdo-3:claude:i3:clause:ci-mandatory-gate\",\"urn:stdo-3:claude:i3:clause:ci-retention-conditions\",\"urn:stdo-3:claude:i3:clause:ci-selection\",\"urn:stdo-3:claude:i3:clause:cr-binds-a-z\",\"urn:stdo-3:claude:i3:clause:cr-completion-evidence\",\"urn:stdo-3:claude:i3:clause:cr-four-causes\",\"urn:stdo-3:claude:i3:clause:cr-four-claims\",\"urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery\",\"urn:stdo-3:claude:i3:clause:cr-prediction-error\",\"urn:stdo-3:claude:i3:clause:fr-finite-examples\",\"urn:stdo-3:claude:i3:clause:pd-agreement-shared-error\",\"urn:stdo-3:claude:i3:clause:pd-no-statistical-independence\",\"urn:stdo-3:claude:i3:clause:pr-local-success-alone\"],\"frame_ref\":\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\",\"residual_refs\":[],\"scope\":\"Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, what an assertion establishes, what agreement proves, what is retained after a change and which gates stay applicable.\",\"source_refs\":[\"stdo-3://build_tenants/claude/standards/ACTIVATION.md#construction-relation\",\"stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#assurance-relations\"],\"uri\":\"urn:stdo-3:claude:i3:frame-index:construction-and-assurance\"}",
+            "non_governing_refs": [
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/source_refs/0",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/ACTIVATION.md"
+              },
+              {
+                "kind": "source",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/source_refs/1",
+                "target": "urn:a-c:dogfood:stdo-v3-i5:claude:source:standards/FOUNDATIONS.md"
+              }
+            ],
+            "ordinal": 1,
+            "required_refs": [
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/0",
+                "target": "urn:stdo-3:claude:i3:clause:ao-necessary-not-full"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/1",
+                "target": "urn:stdo-3:claude:i3:clause:ao-pass-is-observation"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/2",
+                "target": "urn:stdo-3:claude:i3:clause:ci-hash-alone"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/3",
+                "target": "urn:stdo-3:claude:i3:clause:ci-mandatory-gate"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/4",
+                "target": "urn:stdo-3:claude:i3:clause:ci-retention-conditions"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/5",
+                "target": "urn:stdo-3:claude:i3:clause:ci-selection"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/6",
+                "target": "urn:stdo-3:claude:i3:clause:cr-binds-a-z"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/7",
+                "target": "urn:stdo-3:claude:i3:clause:cr-completion-evidence"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/8",
+                "target": "urn:stdo-3:claude:i3:clause:cr-four-causes"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/9",
+                "target": "urn:stdo-3:claude:i3:clause:cr-four-claims"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/10",
+                "target": "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/11",
+                "target": "urn:stdo-3:claude:i3:clause:cr-prediction-error"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/12",
+                "target": "urn:stdo-3:claude:i3:clause:fr-finite-examples"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/13",
+                "target": "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/14",
+                "target": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence"
+              },
+              {
+                "kind": "selector-root",
+                "origin": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+                "pointer": "/clause_refs/15",
+                "target": "urn:stdo-3:claude:i3:clause:pr-local-success-alone"
+              }
+            ],
+            "routes": []
+          }
+        }
+      ],
+      "relations": [],
+      "residuals": [],
+      "transformations": [],
+      "traversals": []
+    },
+    "profile": "a_c.graphify.projection/1",
+    "selection": {
+      "budget_records": null,
+      "dependency_contract": {
+        "attachment_families": [
+          "constraints",
+          "latitude",
+          "residuals"
+        ],
+        "id": "urn:a-c:dogfood:stdo-v3-i5:claude:dependency-contract:native-explicit-closure",
+        "required_relation_kinds": []
+      },
+      "seeds": [
+        "urn:stdo-3:claude:i3:frame-index:construction-and-assurance"
+      ]
+    }
+  },
+  "tenant": "claude"
+}

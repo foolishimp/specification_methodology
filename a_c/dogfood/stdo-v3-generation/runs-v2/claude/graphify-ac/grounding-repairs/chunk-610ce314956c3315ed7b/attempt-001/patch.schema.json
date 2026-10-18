@@ -1,0 +1,146 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "manifesto_commitments"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-subtree%20release%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMonotonic%20version-line%20advancement",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F5.%20Naming",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F10.%20Open%20questions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

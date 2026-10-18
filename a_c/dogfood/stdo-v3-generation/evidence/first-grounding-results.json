@@ -1,0 +1,91 @@
+{
+  "profile": "ac.generation.initial-grounding-observation/1",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "new_fp_calls": 0,
+  "runs": [
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "elapsed_seconds": 0.08151429216377437,
+      "result": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-first",
+        "chunks": [
+          {
+            "chunk": "chunk-cae356beaf4319d41f17",
+            "status": "validated_original",
+            "changes": 0,
+            "refusal": null,
+            "fd_elapsed_seconds": 0.06527179200202227
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.08134895795956254,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "elapsed_seconds": 0.04696424980647862,
+      "result": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-first",
+        "chunks": [
+          {
+            "chunk": "chunk-cae356beaf4319d41f17",
+            "status": "validated_original",
+            "changes": 0,
+            "refusal": null,
+            "fd_elapsed_seconds": 0.03654995816759765
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.046797458082437515,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "elapsed_seconds": 0.06772504188120365,
+      "result": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-first",
+        "chunks": [
+          {
+            "chunk": "chunk-c9c7f894950a65621589",
+            "status": "refused",
+            "changes": 0,
+            "refusal": "/residuals/3/grounding/0: grounding names a section outside this exact source chunk",
+            "fd_elapsed_seconds": 0.04962395806796849
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.06738341692835093,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "elapsed_seconds": 0.043750999961048365,
+      "result": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-first",
+        "chunks": [
+          {
+            "chunk": "chunk-c9c7f894950a65621589",
+            "status": "refused",
+            "changes": 0,
+            "refusal": "/constraints/13/grounding/0: grounding names a section outside this exact source chunk",
+            "fd_elapsed_seconds": 0.032571583054959774
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.04358037514612079,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    }
+  ]
+}

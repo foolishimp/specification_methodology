@@ -1,0 +1,33 @@
+{
+  "decision": "patch",
+  "limitations": [
+    "Only the two listed grounding entries are repaired using supplied source. This proposal establishes no semantic equivalence, completeness, acceptance, authority, qualification or execution."
+  ],
+  "patches": [
+    {
+      "family": "relations",
+      "grounding_index": 0,
+      "reason": "The quotation supports the prohibition and its invalidation exception, but ends on line 771 rather than 770.",
+      "record_key": "dominance_constrains_selection",
+      "replacement": {
+        "end_line": 771,
+        "quote": "A\ndominated candidate cannot be selected unless new evidence or another\nmaterial dimension invalidates the dominance relation; therefore a local\nrebuild of generic mechanics is inadmissible when an existing lawful\nfoundation composition dominates it.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+        "start_line": 767
+      }
+    },
+    {
+      "family": "constraints",
+      "grounding_index": 0,
+      "reason": "Corrects the transcribed section ID. The supplied Python typing section supports the unchanged requirements; the existing quotation and range exactly identify its strict-check prerequisite.",
+      "record_key": "python_typed_design_requirements",
+      "replacement": {
+        "end_line": 440,
+        "quote": "Python boundaries under this profile are checked with a strict static\ntyping pass such as `mypy --strict` or an equivalent strict checker\nconfiguration. If the checker cannot run cleanly on the adopted boundary,\nthe boundary is not yet implementation-conformant under this profile (P1,\nP6).",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+        "start_line": 436
+      }
+    }
+  ],
+  "refusal_reason": ""
+}

@@ -1,0 +1,2005 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "The cumulative feedback route from current specification through real use, gap analysis, and intake-selected owning-layer re-entry or observation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2956,
+          "quote": "Current spec → real-world use case → gap analysis → intake-selected re-entry or observation",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2954
+        }
+      ],
+      "key": "spec_renewal",
+      "label": "Renewal Path"
+    },
+    {
+      "conditions": [],
+      "definition": "Goals orient the current bounded work wave.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3201,
+          "quote": "**Goals** orient the current bounded work wave.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3201
+        }
+      ],
+      "key": "spec_goals",
+      "label": "Goals"
+    },
+    {
+      "conditions": [],
+      "definition": "Intent states why the system exists and which directional changes are within or outside scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3202,
+          "quote": "**Intent** states why the system exists and what directional change is in or out of scope.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3202
+        }
+      ],
+      "key": "spec_intent",
+      "label": "Intent"
+    },
+    {
+      "conditions": [],
+      "definition": "Product is the current concrete product-definition surface bridging Intent to Requirements.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3203,
+          "quote": "**Product** states the current concrete product definition and bridges intent to requirements.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3203
+        }
+      ],
+      "key": "spec_product",
+      "label": "Product specification surface"
+    },
+    {
+      "conditions": [],
+      "definition": "Requirements express stable obligations that must be true, with acceptance criteria sufficient for downstream design derivation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3204,
+          "quote": "**Requirements** state stable obligations that must be true.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3204
+        }
+      ],
+      "key": "spec_requirements",
+      "label": "Requirements"
+    },
+    {
+      "conditions": [],
+      "definition": "Design states how requirement truth is realized and owns downstream structural choices.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3205,
+          "quote": "**Design** states how requirement truth is realized.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3205
+        }
+      ],
+      "key": "spec_design",
+      "label": "Design"
+    },
+    {
+      "conditions": [],
+      "definition": "Realization is constructed under selected design and execution bindings; code is its software case. It remains governed jointly by Requirements and Design.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3408,
+          "quote": "10. Construct the **Realization** under its selected design and execution\n    binding, and reconcile design, realized behavior and applicable proof\n    before promotion or closure. Code is the software case of this step.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod",
+          "start_line": 3406
+        }
+      ],
+      "key": "spec_realization",
+      "label": "Realization"
+    },
+    {
+      "conditions": [],
+      "definition": "Constitutional trace closure connects live obligations to owning realization or explicit unresolved/deferred relations and closes constitutional authority over realized behavior; documentation completeness alone is weaker.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2990,
+          "quote": "a live\nobligation needs an owning realization or an explicit unresolved/deferred\nrelation, and historical evidence cannot change current authority.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule",
+          "start_line": 2988
+        },
+        {
+          "end_line": 3049,
+          "quote": "Trace closure is stricter than documentation completeness. It is the rule that\ncloses the constitution over realized behavior.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDrift%20Signals",
+          "start_line": 3048
+        }
+      ],
+      "key": "spec_trace_closure",
+      "label": "Constitutional trace closure"
+    },
+    {
+      "conditions": [],
+      "definition": "An ADR is durable design memory, organized by the decision that makes acceptance criteria true, rather than by requirement file. It is not another requirement surface.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3206,
+          "quote": "**ADRs** are durable design memory. They are not a second requirement surface.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3206
+        },
+        {
+          "end_line": 3473,
+          "quote": "Write ADRs per decision boundary, not per requirement file.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions",
+          "start_line": 3473
+        }
+      ],
+      "key": "spec_adr",
+      "label": "Architecture decision record"
+    },
+    {
+      "conditions": ["The artifact has been published as a live constitutional surface."],
+      "definition": "A live domain surface is versioned constitutional history, immutable in place; a project may accumulate multiple such surfaces.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3058,
+          "quote": "The project may accumulate multiple live domain surfaces over time. A live surface is versioned constitutional history, not scratch space.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability",
+          "start_line": 3055
+        }
+      ],
+      "key": "spec_live_surface",
+      "label": "Live constitutional surface"
+    },
+    {
+      "conditions": ["A project intentionally abandons a prior constitutional shape and re-derives itself on a new branch, version line, or methodology basis."],
+      "definition": "Fundamental migration is a constitutional reset through controlled explicit adoption, rather than an in-place refactor or passive inheritance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3072,
+          "quote": "A fundamental migration is a constitutional reset, not an in-place refactor.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FFundamental%20Migration%20Rule",
+          "start_line": 3070
+        }
+      ],
+      "key": "spec_fundamental_migration",
+      "label": "Fundamental migration"
+    },
+    {
+      "conditions": [],
+      "definition": "Refactor and migration should be understood as transformation waves over mutable implementation surfaces, with an in-flight break boundary and a declared affected landing scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3125,
+          "quote": "Refactor and migration should be understood as a transformation wave over\nmutable implementation surfaces.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTransformation%20Wave%20Rule",
+          "start_line": 3124
+        }
+      ],
+      "key": "spec_transformation_wave",
+      "label": "Transformation wave"
+    },
+    {
+      "conditions": [],
+      "definition": "Requirement classification has independent lifecycle and category axes. Lifecycle values are Active, Deferred, Superseded, Orphaned; they concern constitutional membership and operative/deferred standing. Category values are Capability, Constraint / Guarantee, Governance, Verification; they identify the kind of project truth.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3193,
+          "quote": "Lifecycle status says whether the requirement still belongs in the constitution and whether it is operative or explicitly deferred. Requirement category says what kind of project truth it asserts.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRequirement%20Classification%20Rules",
+          "start_line": 3178
+        }
+      ],
+      "key": "spec_requirement_classification",
+      "label": "Requirement lifecycle and category"
+    },
+    {
+      "conditions": [],
+      "definition": "The Product Definition template bootstraps an STDO-defined product through explicit URI bindings. The default definition filename is stdo_default.json for a singleton default project or stdo_<label>.json for a named definition. Its stable product.definition_id identifies the mutable WHAT definition line, distinct from immutable Product and release identities.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3232,
+          "quote": "Every STDO-defined product begins from\n`templates/PRODUCT_DEFINITION_TEMPLATE.json`.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3227
+        },
+        {
+          "end_line": 3340,
+          "quote": "4. Assign the stable `product.definition_id` for the mutable `WHAT` definition\n   line, its source-project locator, and bounded-context declaration; keep it\n   distinct from every immutable Product and release identity.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3338
+        }
+      ],
+      "key": "spec_product_definition",
+      "label": "Product Definition bootstrap"
+    },
+    {
+      "conditions": [],
+      "definition": "STDO Reference Frame Baseline is an optional specialized role and evaluation profile. Its chosen mappings apply shared law without independently owning execution protocol or Product bindings. Its terms and examples describe a profile, not an activation performed by this interpretation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1,
+          "quote": "# STDO Reference Frame Baseline",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline",
+          "start_line": 1
+        },
+        {
+          "end_line": 94,
+          "quote": "This document is an optional specialized role and evaluation profile.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary",
+          "start_line": 91
+        }
+      ],
+      "key": "profile_baseline",
+      "label": "STDO Reference Frame Baseline"
+    },
+    {
+      "conditions": [],
+      "definition": "An engagement frame is a Reference Frame Method frame evaluating selection, construction, assessment, or disposition of governed work. The profile names Executive, Worker, and Reviewer as overlapping engagement contexts, not an actor hierarchy.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 234,
+          "quote": "An **engagement frame** is a `REFERENCE_FRAME_METHOD.md` frame whose evaluation\nfamily concerns selection, construction, assessment, or disposition of governed\nwork. Executive, Worker, and Reviewer are this profile's engagement frames.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FEngagement%20frame",
+          "start_line": 232
+        }
+      ],
+      "key": "profile_engagement_frame",
+      "label": "Engagement frame"
+    },
+    {
+      "conditions": ["Needed by one engagement evaluation.", "Evaluation, basis, material manifold, authority, evidence, result algebra, and capability envelope are declared."],
+      "definition": "A specialist frame is an activated Product, requirement, design, identity, release, domain, implementation, test, operational, historical, or capability frame. A method member, file, component, or lens becomes a frame only through the required declaration.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 242,
+          "quote": "A method member, file, component, or\nlens becomes a frame only when its evaluation, basis, material manifold,\nauthority, evidence, result algebra, and capability envelope are declared.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FSpecialist%20frame",
+          "start_line": 240
+        }
+      ],
+      "key": "profile_specialist_frame",
+      "label": "Specialist frame"
+    },
+    {
+      "conditions": [],
+      "definition": "A generic specialist-frame family is a reusable evaluation archetype, not a complete frame declaration or a selected architecture, owner, carrier, actor, component, or implementation. The twelve chosen families are Product, Product Composition, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install, and Proof.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 256,
+          "quote": "A **generic specialist-frame family** is a reusable evaluation-family\narchetype in this profile.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FGeneric%20specialist-frame%20family",
+          "start_line": 246
+        },
+        {
+          "end_line": 57,
+          "quote": "This profile also selects twelve generic specialist-frame families: Product,\nProduct Composition, Design, Design Component, Public Boundary, Entity,\nOperator, Owner, Effect, Reuse/Foundation, Install, and Proof.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression",
+          "start_line": 49
+        }
+      ],
+      "key": "profile_generic_families",
+      "label": "Generic specialist-frame families"
+    },
+    {
+      "conditions": ["A declared subject is executed or observed to discriminate one exact claim."],
+      "definition": "A testing frame is a specialist frame with an explicit oracle, evidence population, path boundary, and falsification condition. A test file, suite, runner, fixture, scenario label, coverage percentage, or actor is not a testing frame merely by existing.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 264,
+          "quote": "A **testing frame** is a specialist frame whose evaluation executes or observes\na declared subject to discriminate one exact claim through an explicit oracle,\nevidence population, path boundary, and falsification condition.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FTesting%20frame",
+          "start_line": 260
+        }
+      ],
+      "key": "profile_testing_frame",
+      "label": "Testing frame"
+    },
+    {
+      "conditions": [],
+      "definition": "The authoritative Product path is the declared ordinary causal composition from supported user or Public entry through exact selected interfaces, owners, state transitions, effects, persistence, recovery, and outcome projection required by the claim.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 275,
+          "quote": "An **authoritative Product path** is the declared ordinary causal composition\nfrom a supported user or Public entry through the exact selected interfaces,\nowners, state transitions, effects, persistence and recovery boundaries, and\noutcome projection required by the Product claim.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FAuthoritative%20Product%20path",
+          "start_line": 272
+        }
+      ],
+      "key": "profile_authoritative_path",
+      "label": "Authoritative Product path"
+    },
+    {
+      "conditions": [],
+      "definition": "Material combinatorial complexity is the claim-relative population of independent dimensions and interactions whose combinations can change outcomes, violate invariants, select another authority path, or expose failure. Unit dimensions include module-owned public-contract laws, operators, calculation regimes, states, transitions, boundary classes, and failure cases.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 290,
+          "quote": "**Material combinatorial complexity** is the claim-relative population of\nindependent dimensions and interactions whose combinations can change an\noutcome, violate an invariant, select another authority path, or expose a\nfailure.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FMaterial%20combinatorial%20complexity",
+          "start_line": 282
+        }
+      ],
+      "key": "profile_combinatorial_complexity",
+      "label": "Material combinatorial complexity"
+    },
+    {
+      "conditions": ["The coordinated branch is selected under existing project authority."],
+      "definition": "Executive selects or confirms bounded activation configuration and consumes closed Worker and Reviewer results under existing decision authority. It maintains a sufficient delivery view of long-term outcome, MVP/release mandate, unresolved obligations, dependencies, and exact results for priority, disposition, and next authorized action. The workspace holds the durable frontier; Executive need not load all Product history or worker contexts. A direct human or admitted bounded proxy may occupy it; it is not a universal semantic owner, manager service, controller, or runtime observer.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 306,
+          "quote": "**Executive** is the profile label for the frame that selects or confirms the\nbounded activation configuration and consumes closed Worker and Reviewer\nresults under existing project decision authority.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FExecutive",
+          "start_line": 294
+        }
+      ],
+      "key": "profile_executive",
+      "label": "Executive"
+    },
+    {
+      "conditions": ["Successfully activated as a reference frame with sufficient inherited operation authority."],
+      "definition": "Worker is the profile's STDO-UP-020 bounded constructor, owning construction and self-review inside exact intake. It acquires no admission, publication, acceptance, or continuation authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 493,
+          "quote": "**Worker** is the profile label for `STDO-UP-020`'s bounded constructor role\nwhen activated as a reference frame.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWorker",
+          "start_line": 489
+        }
+      ],
+      "key": "profile_worker",
+      "label": "Worker"
+    },
+    {
+      "conditions": ["Activated as an independent live-surface evaluation frame."],
+      "definition": "Reviewer evaluates one exact subject for the STDO-UP-020 assessment relation under STDO-UP-007 and STDO-UP-022, returning a closed result and evidence-bound technical triage when findings exist. It does not implement repair, assign priority, apply disposition, or activate another frame.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 502,
+          "quote": "It\nevaluates one exact subject and returns a closed result with evidence-bound\ntechnical triage when a finding exists.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FReviewer",
+          "start_line": 499
+        }
+      ],
+      "key": "profile_reviewer",
+      "label": "Reviewer"
+    },
+    {
+      "conditions": [],
+      "definition": "Technical triage is Reviewer-owned assessment of one finding against exact claim and basis. Severity grades consequence if it manifests; priority orders response against complete outcome, likelihood/exposure, MVP/release mandate, reversibility, dependencies, delay cost, and capacity. Current-boundary effect is Executive's decision that the finding blocks promotion, requires narrowing, or may remain an explicit residual. These are distinct from core evaluation results and execution dispositions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 555,
+          "quote": "**Severity** grades consequence if the finding manifests. **Priority** orders\nresponse relative to the complete Product outcome, likelihood and exposure,\ncurrent MVP or release mandate, reversibility, dependencies, cost of delay, and\navailable capacity. Reviewer grades severity. Executive assigns priority.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect",
+          "start_line": 512
+        }
+      ],
+      "key": "profile_technical_triage",
+      "label": "Technical triage and decision payloads"
+    },
+    {
+      "conditions": ["Successful Worker activation has occurred."],
+      "definition": "A work result is closed Worker output to its declared consumer, Executive in the coordinated branch. It carries the shared core record, actual performance and effects, and the exact predicate that requested candidate and transition evidence are available on the activated basis within admitted grant bounds. Domain variants are candidate_ready, refused, incomplete, and re_entry_requested; they are neither another result algebra nor semantic dispositions. activation_refusal produces neither activation nor work result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 572,
+          "quote": "A **work result** is the closed Worker output to its declared consumer; in the\ncoordinated branch that consumer is Executive.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result",
+          "start_line": 559
+        }
+      ],
+      "key": "profile_work_result",
+      "label": "Work result"
+    },
+    {
+      "conditions": [],
+      "definition": "An exact candidate supplies the subject identity required for STDO-UP-020 transition evidence and STDO-UP-007 review traceability. Where generic-method qualification applies, STDO-UP-022 freezes the construction result before material reference exposure; elsewhere an immutable identity or equivalent exact-subject relation stabilizes the claimed assessment. This creates no constitutional lifecycle state called frozen.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 617,
+          "quote": "An **exact candidate** is the subject identity required by `STDO-UP-020`\ntransition evidence and `STDO-UP-007` review traceability.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExact%20candidate",
+          "start_line": 609
+        }
+      ],
+      "key": "profile_exact_candidate",
+      "label": "Exact candidate"
+    },
+    {
+      "conditions": [],
+      "definition": "A baseline-adoption projection applies Faithful projection from the Product-owned Project Reference-Frame Basis to this engagement, preserving selected mapping, outcome, actor envelopes, evidence coordinates, and revision conditions. Adoption remains the source owner's decision.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 627,
+          "quote": "A **baseline-adoption projection** applies\n[Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection) from the\nProduct-owned [Project Reference-Frame Basis](SPEC_METHOD.md#collective-reference-frame-basis)\nto this profile's engagement.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FBaseline-adoption%20projection",
+          "start_line": 621
+        }
+      ],
+      "key": "profile_adoption_projection",
+      "label": "Baseline-adoption projection"
+    },
+    {
+      "conditions": [],
+      "definition": "A Product-chain basis represents one Product or an explicit directed chain, distinguishing every mutable Source Project, current Product Definition, exact candidate checkpoint, Release Cut, Product, Install, Artifact, Development Product, dependent Product, and composition edge. Each Development Product role binds one exact underlying Install; every edge names source/target roles, governing authority/contracts, lifecycle, evidence boundary, refusal, and invalidation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 471,
+          "quote": "Each edge names its source and target roles, governing authority and\ncontracts, lifecycle, evidence boundary, refusal, and invalidation.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FProduct-Chain%20Basis",
+          "start_line": 465
+        }
+      ],
+      "key": "profile_product_chain",
+      "label": "Product-chain basis"
+    },
+    {
+      "conditions": [],
+      "definition": "Active configuration distinguishes authority precedence, temporal/evidence flow, and frame topology. Precedence selects existing work/admission/disposition/re-entry owners; flow carries activation packets and closed results; topology records disjointness, overlap, conjunction, translation, or composition. Evaluation independence and Reviewer-assurance independence are separate activation relations. Engagement frame plus material specialists, exact subject/basis, and capable actor describes an activated evaluation without requiring a Cartesian-product schema or universal frame runtime.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 675,
+          "quote": "These structures may align in one case. They are not one hierarchy.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FNon-Hierarchical%20Frame%20Configuration",
+          "start_line": 643
+        }
+      ],
+      "key": "profile_configuration",
+      "label": "Non-hierarchical frame configuration"
+    },
+    {
+      "conditions": [],
+      "definition": "A steel thread is the smallest real runnable path from a supported Product entry through selected composition to a material outcome.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 718,
+          "quote": "Executive sequences delivery around a steel thread: the smallest real,\nrunnable path from a supported Product entry to a material outcome through\nthe selected composition.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame%2FSteel-Thread%20Delivery",
+          "start_line": 713
+        }
+      ],
+      "key": "profile_steel_thread",
+      "label": "Steel-thread delivery"
+    },
+    {
+      "conditions": [],
+      "definition": "User acceptance evaluates whether the declared user, with admitted capability and information, can obtain the exact Product-defined outcome through its supported ordinary surface on the exact deployed, installed, or otherwise runnable subject.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 975,
+          "quote": "Can a declared user, with the user's admitted capability and information, obtain the exact Product-defined outcome through the supported ordinary Product surface?",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20User-Acceptance%20Frame",
+          "start_line": 974
+        }
+      ],
+      "key": "profile_user_acceptance",
+      "label": "User-acceptance frame"
+    },
+    {
+      "conditions": [],
+      "definition": "End-to-end evaluation concerns the complete authoritative runnable Product path, including every material interface, owner, state transition, effect, persistence, continuation, recovery, and projection boundary.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1004,
+          "quote": "Does the exact Product subject realize the claimed outcome through the complete authoritative Product path, including every material interface, owner, state transition, effect, persistence, continuation, recovery, and projection boundary?",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20End-To-End%20Frame",
+          "start_line": 1004
+        }
+      ],
+      "key": "profile_end_to_end",
+      "label": "End-to-end frame"
+    },
+    {
+      "conditions": [],
+      "definition": "Integration evaluates actual participants at one declared material composition boundary against their joint contract over state, authority, configuration, timing, failure, and recovery combinations that can change the result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1025,
+          "quote": "Do the actual participants at one declared material composition boundary satisfy their joint contract across the combinations of state, authority, configuration, timing, failure, and recovery that can change the boundary result?",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Integration%20Frame",
+          "start_line": 1025
+        }
+      ],
+      "key": "profile_integration",
+      "label": "Integration frame"
+    },
+    {
+      "conditions": [],
+      "definition": "Unit evaluation concerns one exact module-owned law, including public module contracts, across material algebraic operators, calculation regimes, states, transitions, public/private boundary classes, and failures, using a module-bounded decidable oracle.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1047,
+          "quote": "Does one module-owned law hold across its material combinations of algebraic operator, calculation regime, state, transition, public or private boundary class, and failure case?",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Unit-Test%20Frame",
+          "start_line": 1046
+        }
+      ],
+      "key": "profile_unit",
+      "label": "Unit-test frame"
+    },
+    {
+      "conditions": [],
+      "definition": "The testing-value index concerns material combinations discriminated for an exact claim, considering at least subject congruence, independent-dimension number/materiality, covered interaction strength, authoritative-path exactness, oracle independence/precision, realistic-fault/rival-path/history sensitivity, observability/reconstruction/reproducibility, and residual combinations/invalidation. It is not a test-count index, probability, or statistical-independence claim.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1119,
+          "quote": "Testing value is indexed first by the material combinations a frame can\ndiscriminate for its exact claim.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FCombinatorial%20Coverage%20And%20Testing-Value%20Index",
+          "start_line": 1087
+        }
+      ],
+      "key": "profile_testing_value",
+      "label": "Combinatorial coverage and testing-value index"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": ["spec_renewal", "spec_goals", "spec_intent", "spec_requirements", "spec_realization"],
+      "conditions": ["Real use supplies feedback against the current model and required outcome."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "If the cause or necessary change is unresolved, dependent repair remains\n   unjustified; further observation may proceed under its existing grant.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2958
+        }
+      ],
+      "key": "spec_renewal_conditions",
+      "statement": "Universal Intake Triage owns classification and re-entry. Gap analysis applies intake diagnosis, locates supported cause, and retains unresolved alternatives. Justified changes re-enter the selected owning layer and reconcile affected downstream meaning without repricing sufficient upstream meaning. Unresolved cause or necessary change leaves dependent repair unjustified; observation may continue only under its existing grant. New Goals or Intent require the selected class to establish their work-wave, direction, or scope change, supported by concrete gap and owning decision; implementation pressure alone is insufficient. A requirement gap with stable direction and Product meaning can re-enter Requirements; an implementation defect under sufficient law can be repaired at its realized surface. Iteration cumulatively refines requirements/design, repeatedly re-derives realization against current constitutional surfaces, and feeds implementation, testing, replay, and scenario gaps into repricing while preserving authority direction.",
+      "uncertainty": "Universal Intake Triage itself is not supplied."
+    },
+    {
+      "applies_to_keys": ["spec_trace_closure"],
+      "conditions": ["Spec-driven development under the declared constitutional chain."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2995,
+          "quote": "Design and Product authorities retain their respective structure and\nmeaning choices; the labels and default scaffold do not determine a verdict.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule",
+          "start_line": 2986
+        }
+      ],
+      "key": "spec_trace_authority",
+      "statement": "Constitutional trace closure is required. The family applies F1–F4 and F6 and shared preservation/currentness conditions: a live obligation needs owning realization or an explicit unresolved/deferred relation; historical evidence cannot alter current authority. This member chooses trace metadata, live-surface supersession/withdrawal, lifecycle/category axes, and bootstrap roles. Design and Product retain structural and meaning choices, and labels/default scaffold determine no verdict.",
+      "uncertainty": "The cited foundational and transformation contracts are external to this supplied span."
+    },
+    {
+      "applies_to_keys": ["spec_requirements", "spec_design", "spec_adr"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3002,
+          "quote": "- Every live requirement family must map to one or more owning design\n  decisions.\n- Every ADR or other design record must ground itself in requirements via an\n  explicit `Implements:` line.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FOwnership",
+          "start_line": 2999
+        }
+      ],
+      "key": "spec_requirement_design_ownership",
+      "statement": "Every live requirement family must map to at least one owning design decision. Every ADR and every other design record must explicitly ground itself in requirements through an Implements: line.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_trace_closure", "spec_requirements", "spec_realization"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3017,
+          "quote": "- No live requirement may remain as a free-floating statement of intent. If it\n  is live, it must either:\n  - be realized through the downstream chain, or\n  - be explicitly deferred with an honest surface that records the deferment.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDownstream%20Closure",
+          "start_line": 3006
+        }
+      ],
+      "key": "spec_downstream_closure",
+      "statement": "Every live requirement and live requirement family must have downstream realization through design/code/tests or explicit honest deferment; free-floating live intent is prohibited. Shipping code/tests must trace to live requirements and authorizing design decisions. Hidden Product surfaces are prohibited; behavior without trace authority is accidental law even when functional.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_trace_closure", "spec_requirements", "spec_design", "spec_realization", "spec_renewal"],
+      "conditions": ["The specified signal is present."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3046,
+          "quote": "persistence alone does not decide which relation is wrong or whether the\n  observation is sufficient.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDrift%20Signals",
+          "start_line": 3021
+        }
+      ],
+      "key": "spec_drift_signal_interpretation",
+      "statement": "Unowned requirements, ungrounded design records, unrecorded deferments, and code without trace authority are design drift. A design artifact without requirement grounding lacks constitutional authority; code without design ownership demonstrates drift; shipping code/tests lacking live requirement and design trace are ungoverned Product surface. Tests of implementation habit rather than requirement truth lock in drift. Persistent observation/projection delta requires intake diagnosis but alone establishes neither wrong relation nor observation sufficiency. Requirements/design without a capability scenario leave operational meaning unverified. Treating guarantees, governance rules, or verification obligations as features misclassifies requirements. In-place correction of live constitutional artifacts corrupts history. A realization patch cannot close a use-case gap whose required meaning is absent from current requirements: the governing gap remains unresolved, intake selects its owning layer, and missing requirement meaning alone establishes no direction/scope change.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_live_surface"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3064,
+          "quote": "Live domain artifacts, once published as live constitutional surfaces, are immutable in place.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability",
+          "start_line": 3057
+        }
+      ],
+      "key": "spec_live_surface_change",
+      "statement": "Wrong live domain artifacts must be superseded by a new version or withdrawn/deleted from the live surface. Transitional implementation paths, migration scaffolds, and fallback behavior have no permanent authority: retire them once superseded, with any retained responsibility satisfying the Core Interface Migration Rule retention relation. Preserve the past through version control, operational event history where present, and superseded artifacts. Forever-shipped compatibility shims are not required; silent mutation of live constitutional history is forbidden.",
+      "uncertainty": "The Core Interface Migration Rule retention relation is not supplied."
+    },
+    {
+      "applies_to_keys": ["spec_fundamental_migration", "spec_live_surface"],
+      "conditions": ["Fundamental migration's intentional-reset applicability condition holds."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3118,
+          "quote": "nothing carries forward by default; every retained statement, requirement, design choice, or guide rule must be explicitly re-adopted",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FFundamental%20Migration%20Rule",
+          "start_line": 3076
+        }
+      ],
+      "key": "spec_migration_adoption",
+      "statement": "Inherited constitutional documents become migration source, not new-line authority. Every retained statement, requirement, design choice, or guide rule requires explicit re-adoption; carry-forward is intentional and should land in goals, intent, product, requirements, design, guide, or template as appropriate. Absence means not yet adopted, with no inherited authority. Old design/code govern only if explicitly re-derived and re-adopted; a sideways reference line has no live implementation authority. Before reuse classify every inherited module, interface, carrier, projection, and proof surface: carry_across means materially unchanged and intentionally re-adopted; redundant means no longer needed; rewrite means needed but rebuilt under new requirements/design. Unclassified inherited implementation is a defect. The represented sequence declares the migration line; establishes fresh method/goals/intent/product/requirements/design surfaces; moves prior implementation sideways if needed; classifies constitutional material as adopted/superseded/deferred/orphaned and implementation as carry_across/redundant/rewrite; copies only intentional retentions; and re-derives downstream design/code from new surfaces. carry_across never means automatic copying. Direct runtime, projection, prompt, proof, or review dependence on the sideways line is bridge debt; partially target-like proxy interfaces still depending on it are not lawful closure. Creating a new surface is lawful supersession rather than violation of old-surface immutability.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_transformation_wave"],
+      "conditions": ["A refactor or migration wave is in flight or lands across its declared affected scope."],
+      "exceptions": ["An explicit compatibility feature meeting all retained-compatibility conditions may remain."],
+      "grounding": [
+        {
+          "end_line": 3157,
+          "quote": "The only lawful exception is an explicit compatibility feature.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTransformation%20Wave%20Rule",
+          "start_line": 3127
+        }
+      ],
+      "key": "spec_wave_boundaries",
+      "statement": "In flight, mixed-state implementation may exist only below the current break boundary as explicitly non-authoritative plumbing. Adapters/scaffolds must be named, bounded, and outside acceptance. Prior-model traces must never create competing or ambiguous dual authority over the same request, fact, identity, state, or projection. Explicitly specified, deterministically routed, non-overlapping Product/compatibility scopes may coexist while migration remains visibly open. On landing, only the new operative surface remains live for the declared scope; erase prior operative paths, retain the journey only in version control/event history/superseded records, and reject mixed operative models as a stable end state. Retained compatibility must be named current Product behavior, specification-justified, scope-bounded, and intentionally tested; otherwise delete rather than passively preserve.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_requirement_classification", "spec_requirements", "spec_adr"],
+      "conditions": ["A requirement is inherited or legacy; nothing live may remain unclassified."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3172,
+          "quote": "| **Deferred** | Retained in the live surface as an explicit not-yet-operative or not-yet-realized obligation | Keep with an honest deferment surface and do not present as current closure |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLegacy%20Classification%20Rule",
+          "start_line": 3163
+        }
+      ],
+      "key": "spec_legacy_classification_actions",
+      "statement": "Every inherited/legacy requirement must be classified. Deferred retains a live not-yet-operative or not-yet-realized obligation with honest deferment and no current-closure claim. Superseded means ownership moved to a newer constitutional surface/design decision and requires Implements/Supersedes on the governing design record. Active remains current live constitutional law and requires an owning design decision to be written or updated. Orphaned is outside the intended system and must be removed or explicitly superseded. Nothing live may remain unclassified.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_requirement_classification", "spec_requirements"],
+      "conditions": ["A requirement family is live."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3193,
+          "quote": "In project documents, this classification shall be explicit in requirement header metadata. `Status` carries lifecycle status. `Category` carries the requirement kind.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRequirement%20Classification%20Rules",
+          "start_line": 3178
+        }
+      ],
+      "key": "spec_requirement_axes_required",
+      "statement": "Every live requirement family must have both independent classification axes. Missing either makes a live requirement incomplete. Project requirement-header metadata shall explicitly carry lifecycle in Status and category in Category.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_goals", "spec_intent", "spec_product", "spec_requirements", "spec_design", "spec_adr", "spec_live_surface"],
+      "conditions": [],
+      "exceptions": ["Optional realization detail may appear in Intent when that detail is itself constitutional."],
+      "grounding": [
+        {
+          "end_line": 3221,
+          "quote": "Before treating a downstream specification artifact as complete, check the whole affected span:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3201
+        }
+      ],
+      "key": "spec_surface_roles_and_gate",
+      "statement": "Goals shall not substitute for Requirements. Intent shall not carry optional realization detail except when constitutional. Product is not release notes and shall convey enough intended-use, release/install, live-use, observability, and retirement/supersession posture where materially affecting Product meaning. Requirements shall have explicit acceptance criteria and sufficient design-derivation meaning, including lifecycle obligations or named ambiguity gaps where build, assurance, release, deployment, use, telemetry, or retirement materially affect obligations. ADRs are not second requirements. Constitutional specifications shall use present tense. Dead law must be deleted, superseded, or moved to commentary; migration does not justify stale live wording. Change-wave wording must express current truth and declared affected boundary. Recency-only version branding is forbidden; explicit version labels are reserved for immutable release facts, selector bindings, or clearly historical/superseded material. Before downstream completeness, check clear change class, lawful re-entry, downstream derivability, and agreement of active Intent/Product/Requirements/Design/qualification over the whole affected scope. If these do not hold, the gate is not closed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_product_definition"],
+      "conditions": ["Bootstrapping or operating an STDO-governed project."],
+      "exceptions": ["A project-local exact release copy is lawful when explicitly bound and verified; it is not the default."],
+      "grounding": [
+        {
+          "end_line": 3282,
+          "quote": "Projects shall not create a competing local methodology root such as the\ndefault `specification/standards/`, nor bind mutable or partial method source\nas if it were the selected immutable release.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3234
+        }
+      ],
+      "key": "spec_bootstrap_authority_split",
+      "statement": "Default bindings are an exact constitution.stdo.basis in a shared versioned store; specification/GOALS.md, INTENT.md, PRODUCT.md, requirements/; build_tenants/ for shared/tenant realization; and .ai-workspace/ for sprints, tickets, comments. These are defaults selected/replaced by actual URI bindings. Mutable methodology authoring at specification_methodology/specification/standards/ governs a future candidate only. Released authority is the consumer-selected exact immutable version; installed distribution must match basis URI and manifest digest. Project constitutional authority is at what/WHAT bindings; realization/work are at how and ticketing. Do not create competing local methodology authority or bind mutable/partial method as a selected release. Mutable method is not operative consumer law before release and explicit selection. The resolved installed basis stays operative until explicit adoption of another cut; file proximity cannot select a local copy.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_product_definition"],
+      "conditions": ["The source-defined bootstrap sequence is being represented."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3372,
+          "quote": "14. Validate the JSON shape, assert URI and URI-reference syntax, synchronize\n    and verify the exact installed basis, then resolve\n    every URI and perform the cross-definition identity, composition,\n    constitutional-sufficiency, and authority-congruence checks.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3330
+        }
+      ],
+      "key": "spec_bootstrap_sequence",
+      "statement": "The represented sequence is: install the manager once, resolve one version-line selector, explicitly select one immutable RC cut; install the complete cut in the shared store and retain deterministic manifest digest; copy that cut's Product Definition template to the definition root under the prescribed default/named filename; assign stable mutable-definition identity, source-project locator, and bounded context distinct from immutable identities; bind constitution.stdo.source, non-operative selector, exact basis URI/digest, all additional authorities and relevant basis-qualified entrypoints, confirming collective axioms/ontology/epistemology/taxonomy/semantics sufficiency; bind agent bootstrap and portable targets relative to resolved product.source_project, preflight every target, and install/refresh only marker-bounded discovery blocks; bind or explicitly empty local axioms/overrides/disambiguations; bind at least one accepted collective reference-frame basis with admitting authorities and exact scope; write/confirm Goals, perform goals→intent→product, and bind Intent/Product; gather/derive/classify/bind live specifications without a co-equal rival; bind at least one tenant root/design/implementation and shared realization law where any; bind Goals, ticket lanes, comments, optional sprint root; explicitly bind every known composition edge with target definition identity, relation authority, and non-empty contracts; validate JSON and URI syntax, synchronize/verify exact basis, resolve every URI, and check cross-definition identity, composition, constitutional sufficiency, and authority congruence. Once the bound requirement set is live, a rival monolithic document should not remain co-equal.",
+      "uncertainty": "Referenced schemas, entrypoint protocols, and validation contracts are not supplied; the sequence is described, not executed."
+    },
+    {
+      "applies_to_keys": ["spec_renewal", "spec_goals", "spec_intent", "spec_product", "spec_requirements", "spec_design", "spec_realization"],
+      "conditions": ["Substantive intake arrives or a feature is introduced/changed."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3411,
+          "quote": "1. Triage the intake and classify the change.\n2. Determine the lawful re-entry point into the constitutional chain.\n3. Identify the affected downstream span that must remain consistent.\n4. Only then treat the work as implementation, repricing, or release-bound change.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod",
+          "start_line": 3378
+        }
+      ],
+      "key": "spec_feature_method",
+      "statement": "Triage, classify, select lawful re-entry, and identify affected downstream span before treating substantive intake as implementation/repricing/release work. For feature changes update Goals if work wave/overriding concerns change, Intent if purpose/scope changes, Product if realization/terms/boundaries/end-state shape changes, and Requirements to decompose explicit invariants including lifecycle obligations/named gaps and categories. Establish/update governing structural Design. Where DESIGN_MODULE_METHOD applies, co-evolution of design/implementation/tests is allowed only if co_evolution_admissible(B); otherwise accept the smallest causally closed affected design set before retained implementation establishes an unresolved, contradictory, or materially non-equivalent relation. Elsewhere co-evolution is allowed only without unresolved material design decisions; accept affected design before implementation establishes any such decision. ADRs are one valid form. Write scenarios for capability claims needing operational proof and other evidence for non-capabilities where appropriate. Prefer declarative problem/acceptance expression before imperative mechanism. Check each reconstruction link Goals→Intent→Product→Requirements→Design→implementation. Record major active-boundary ambiguity and govern it by declared risk appetite. Construct under selected design/execution binding and reconcile design, behavior, and applicable proof before promotion/closure. Observe through declared evidence and compare with requirements; events/projection/delta apply where selected, with adequate direct observation still available.",
+      "uncertainty": "co_evolution_admissible(B) and DESIGN_MODULE_METHOD applicability are referenced but not defined here."
+    },
+    {
+      "applies_to_keys": ["spec_product_definition", "spec_requirements", "spec_renewal"],
+      "conditions": ["Bootstrapping/repricing a requirement surface, or handling a real use-case gap."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3456,
+          "quote": "a failed scenario does not decide the cause by itself.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod",
+          "start_line": 3413
+        }
+      ],
+      "key": "spec_bootstrap_and_gap_method",
+      "statement": "Bootstrap/repricing first resolves Product Definition, verifies exact installed basis, loads bootstrap then bound Goals/epic; performs Goals→Intent and Intent→Product; gathers constitutional requirement inputs; derives Product→Requirements at what-bound locations; uses individual/grouped families preserving clarity/recoverable ownership; establishes this as sole live requirement authority before downstream governance claims; prefers declarative structure; records remaining major ambiguity before realization; and only after that surface exists should design/implementation be treated as constitutionally grounded. For a real-use gap, intake comes first and unresolved classification persists until supported. Scenario is then the first substantive gap artifact. Gap analysis uses intake diagnosis/evidence to identify supported cause or discriminating observation; scenario failure alone does not determine cause. Constitutional changes follow selected class, owning re-entry, and downstream reconciliation; Goals/Intent repricing requires their respective conditions and stable-direction requirement gaps re-enter Requirements. Sufficient requirements/design permit granted implementation repair with affected-obligation recheck. Newly needed governing-meaning changes return to intake before being made. Bug reports, requests, failed tests, release blockers, and operator observations all obey this route.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["spec_adr"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3475,
+          "quote": "Each ADR shall explicitly include:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions",
+          "start_line": 3462
+        }
+      ],
+      "key": "spec_adr_fields",
+      "statement": "Every ADR shall explicitly include Status (active/superseded/retired), Implements (REQ-* IDs made true), Derives from (motivating INT-* or strategy document), Supersedes (prior ADR/doctrine replaced), Superseded by (successor when status is superseded), and Retained special case (when earlier behavior is intentionally retained as a current-surface special case). Organize ADRs per acceptance-criteria design decision boundary. If a requirement names an operational mechanism, its ADR must name it. Requirement expansion of event taxonomy requires immediate EC ADR repricing so event semantics do not become a second constitution.",
+      "uncertainty": "EC is not expanded in the supplied source; representation of inapplicable conditional fields is unspecified."
+    },
+    {
+      "applies_to_keys": ["spec_adr", "spec_product_definition"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3502,
+          "quote": "The governing design surface is the closest design surface whose authority owns the decision. ADRs must not be placed in comments, generated views, runtime archives, or requirement folders.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions%2FADR%20Folder%20Convention",
+          "start_line": 3479
+        }
+      ],
+      "key": "spec_adr_storage",
+      "statement": "Store ADRs at the closest design surface whose authority owns the decision: tenant-local at how.build_tenants[].design, shared/cross-tenant at how.common, and non-tenanted/project-local at the governing design surface. Default directories are build_tenants/<tenant-path>/design/adrs/, build_tenants/common/design/adrs/, or <governing-design-surface>/adrs/. Every layout records tenant identities/locations in how.build_tenants. Comments, generated views, runtime archives, and requirement folders are prohibited locations. Filename convention is ADR-<local-id>-short-slug.md with ID unique in its owning adrs/ directory; numeric IDs are default. A recommended but optional REGISTRY.md is a potentially drifting read model, while each ADR remains constitutional source.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_baseline", "profile_engagement_frame", "profile_configuration", "profile_generic_families", "profile_testing_frame"],
+      "conditions": ["The optional profile has been adopted and the relevant branch selected."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 85,
+          "quote": "Exact operation grants and Product-owned adoption retain\ntheir separate authority; the selected configuration cannot grant it.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression",
+          "start_line": 5
+        }
+      ],
+      "key": "profile_canonical_boundaries",
+      "statement": "Reference Frame Method owns the finite engagement atom; the selected complete cut owns specification/design/construction/assessment/disposition/checkpoint/continuation/identity/release law. The profile maps existing authority, exact outcome/workspace, known inventory/dependencies/residuals to sufficient direct work or materially required coordination; coordinated work locks outcome/basis and a ready frontier, evaluates applicable frames, consumes closed results/triage through declared conjunction, applies existing bounded decisions, records results/next lawful action, updates basis/coverage/residuals/frontier, and repeats or stops. Finite context/attention/dependencies/capabilities/assurance motivate allocation but do not force hierarchy or exhaustive roles. Worker supplies a candidate but never activates Reviewer; Reviewer evaluates without implementing; Executive uses only already-granted decisions. Labels grant no admission/publication/mutation or other operation authority. Select only materially relevant specialist families and retain uncovered material families explicitly. Four testing families are optional-profile claim mappings, not new roles/stages/authority or a testing hierarchy: user outcomes→UAT, runnable causal paths→E2E, composition boundaries→integration, module laws→unit. Bound results use declared conjunction for Product/release disposition; broader tests cannot establish module laws and any number of narrower green results cannot establish unevaluated composition/user outcomes. Configuration adoption is decided by the existing affected-decision owner; a local axioms carrier gains no ownership by carrying it.",
+      "uncertainty": "The referenced shared algebra, conjunction, configuration, context, and transformation definitions are not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_baseline"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 154,
+          "quote": "Neither kind creates a second amendment path for the owning federal law.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary",
+          "start_line": 91
+        }
+      ],
+      "key": "profile_ownership_and_adoption",
+      "statement": "Derived means shared-law application plus optional profile choices, not uniquely forced roles. Reference Frame Method owns pure principles and declaration/activation/refinement/translation/coverage/revision; this profile owns optional engagement/specialist/testing mappings; SPEC_METHOD collective-reference-frame-basis owns binding and adopting Product owns its concrete basis. FOUNDATIONS owns result/conjunction/current-state/context and shared independence; Design UP-017..019 and Spec UP-020 supply bounded execution intake; Spec UP-020 owns construction/self-review/assessment/disposition/checkpoint/continuation; Ticket UP-007 owns required independence boundaries, exact verdict trace, and promotion; Spec UP-022 owns assurance subject/population/freeze; Design owns module unit proof and UP-023 proportional foundation comparison without authority transfer. Spec testing law plus Product/requirements/design/release own test claims, paths, subjects, modes, and populations. Existing Product, composition, design, identity, release, domain/effect/interface/dependency/assurance owners retain specialist predicates. Goals/Product/requirements/admitted work own selection; design owns structure; identity/project law binds Executive proxy envelope; Product/release retain reserved acceptance. Adopted configuration, selected boundary, and actual grants are premises; coordination additionally requires work/assurance not coverable directly. Every profile requirement is either an exact cited-law application or a condition of profile adoption. Contradiction with a cited owner is a defective application requiring revision, not alternative law. Packaged/released availability is not adoption: a separately accepted Product-owned Project Reference-Frame Basis is required; mutable source, installed presence, prompts, summaries, and commentary cannot select/adopt it.",
+      "uncertainty": "The normative owners are named references, not imported definitions."
+    },
+    {
+      "applies_to_keys": ["profile_baseline", "profile_work_result", "profile_executive", "profile_generic_families"],
+      "conditions": ["The corresponding profile decision or qualification claim is made."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 139,
+          "quote": "A successful local activation cannot qualify every actor, configuration or task.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary",
+          "start_line": 130
+        }
+      ],
+      "key": "profile_argument_consequences",
+      "statement": "Dependency-ready bounded attention does not close excluded obligations or convert failing evaluations into completion. Compact handoffs must preserve next-decision material evidence, failures, effects, invalidators, subject, outcome, and authority. candidate_ready answers availability only; fitness/independence remain separate, missing returns prove neither non-performance nor no effects, and review recommendations are not dispositions. Missing required coverage cannot pass; irrelevant available families need not run; diagnosis may concern basis, capability, or evidence. Selecting the coordinated profile makes its duties/prohibitions applicable without waiving the mutation lock. Local success cannot qualify all actors/configurations/tasks; changed material support reopens affected qualification and unknown context is not fit. Work performed, review completed, or loop stopped does not establish every required predicate; truthful stops retain unresolved obligations and actual effects, with reserved Product/release acceptance unchanged.",
+      "uncertainty": "Several argument rows cite later profile sections not supplied in this span."
+    },
+    {
+      "applies_to_keys": ["profile_engagement_frame", "profile_worker", "profile_executive", "profile_reviewer"],
+      "conditions": ["Profile applicability and Product-owned configuration govern the selected work."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 191,
+          "quote": "A role or frame name alone creates no coordination or review obligation.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEngagement%20Applicability",
+          "start_line": 160
+        }
+      ],
+      "key": "profile_engagement_applicability",
+      "statement": "One capable context with sufficient work authority, intake, and operation grant may enter directly as Worker/Writer without Executive appointment. Coordination activates only when material contexts, authority, capability, or required independence cannot be covered by direct activation, judged from actual operations/dependencies/capability/assurance rather than available role labels. Apply independence to shared sources/authorship/evidence. Direct work binds exact intake, territory, obligations, evidence, stop conditions, and consumer using the smallest existing Ticket carrier, with admission distinct from drafting. A sufficient local outcome with no required independent assessment or reserved acceptance may finish as Writer and record satisfied conditions without profile-created review/ticket/diagram/owner ceremony. Required assessments/decisions remain required; discovered insufficiency withholds dependent effect and returns the question to its owner. Executive transition/handoff clauses apply only to coordinated work. Direct closed results go to declared work authority/carrier with the same algebra and operation/decision separation. Both routes use owning applicability and valid C/J/O reuse clauses; neither alters adopted basis or supplies authority.",
+      "uncertainty": "C/J/O and the owning applicability, independence, and carrier contracts are only referenced."
+    },
+    {
+      "applies_to_keys": ["profile_baseline", "profile_worker", "profile_reviewer", "profile_executive"],
+      "conditions": ["Delivery practice, observed failure, or engagement revision is considered."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 224,
+          "quote": "They justify reevaluation; they do not identify one universal architecture or\ngrant precedent semantic authority.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEmpirical%20Revision%20Boundary",
+          "start_line": 195
+        }
+      ],
+      "key": "profile_empirical_revision",
+      "statement": "Practice/failure may inform selection, qualification, and revision but gains no STDO authority or import of consumer architecture/names/actors/topology/runtime/artifacts/stages. One bounded authority selects active work and finite needed frames; Worker constructs one exact candidate, self-reviews, reports, and stops. Required independent review is separately activated, acquires sufficient exact live authority/subject/evidence, retains valid computed facts, and supplies its own judgment. Reviewer returns evidence-bound severity/technical implications without a repair loop. Required coordination assigns priority/adjudicates current mandate under existing grant. Failure to perceive a known violation evidences a missing, misactivated, oversized, or capability-incompatible frame. Repeated resets, repair loops, moving subjects, proof masking, and duplicate authority signal potentially defective declarations/activation/capability/basis/authority and justify reevaluation, not a universal diagnosis. Visible useful implementation, specialization, scenario, dependency, builder, or downstream Product does not thereby become the Product being authored.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_generic_families"],
+      "conditions": ["A recurring family distinction is relevant to a governed outcome."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 256,
+          "quote": "One declared frame may cover several families only when its evaluation\nand result relations preserve every material distinction rather than flattening\nthem behind one broad label.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FGeneric%20specialist-frame%20family",
+          "start_line": 246
+        }
+      ],
+      "key": "profile_family_materiality",
+      "statement": "Each recurring distinction must be instantiated where material, established non-material by capable authority, or retained as explicit coverage residual. A family may have multiple instances; one frame may cover multiple families only if evaluation and results preserve every material distinction. Family labels select no concrete architecture or owner.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_testing_frame", "profile_authoritative_path", "profile_combinatorial_complexity"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 268,
+          "quote": "Testing-frame authority is bounded by the claim actually exercised.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FTesting%20frame",
+          "start_line": 266
+        },
+        {
+          "end_line": 278,
+          "quote": "Producing an expected output\nthrough a bypass, obsolete executor, test-only seam, undeclared fallback, or\ncompeting authority falsifies path conformance even when the output value is\nequal.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FAuthoritative%20Product%20path",
+          "start_line": 275
+        },
+        {
+          "end_line": 290,
+          "quote": "Cross-participant\ninterface, Product, persistence, configuration, and user-role combinations\nbelong to integration, end-to-end, or user-acceptance frames rather than being\nmocked away and counted as unit evidence.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FMaterial%20combinatorial%20complexity",
+          "start_line": 287
+        }
+      ],
+      "key": "profile_testing_claim_boundary",
+      "statement": "Counts of tests/assertions, coverage, duration, and framework category cannot widen exercised claim authority. Expected output via bypass, obsolete executor, test-only seam, undeclared fallback, or competing authority falsifies path conformance despite output equality. Cross-participant interfaces and Product/persistence/configuration/user-role combinations belong at integration, E2E, or UAT boundaries; mocking them does not create unit evidence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_executive"],
+      "conditions": ["Acting as Executive in the coordinated branch."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 340,
+          "quote": "An actor occupying Executive must not modify candidate, Product or worktree\nbytes or perform an implementation effect.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+          "start_line": 312
+        }
+      ],
+      "key": "profile_executive_duties_and_mutation_lock",
+      "statement": "Executive has three inseparable duties over one outcome: maintain exact outcome/basis, Product-role map, evaluation inventory, dependencies, unresolved frontier, actor envelopes, MVP/release mandate, triage policy, and residual boundary, selecting the smallest sufficient dependency-ready activation set fitting actors; activate capable Workers/Reviewers/specialists with exact subjects/bases and consume only closed results or declared translations; assign priority/promotion effect, apply existing disposition, and issue only already-authorized next action. Executive need not contain all workspace or perform all evaluations and gains no Product meaning, implementation, mutation, acceptance, publication, or operation authority. Candidate/Product/worktree byte mutation and implementation effects are forbidden while occupying Executive, without exceptions for access, size, test-only scope, reversibility, or obviousness. Mutation needs separate Worker/Writer activation with exact grant, subject, and territory. Same-actor transition must be explicit and recorded before effect; later recording/delegation cannot authorize an Executive edit retroactively.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_executive", "profile_work_result", "profile_configuration"],
+      "conditions": ["The Executive attention cycle is active."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 405,
+          "quote": "These conditions govern ending the attention cycle, not satisfaction of the\nProduct outcome.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+          "start_line": 342
+        }
+      ],
+      "key": "profile_attention_cycle",
+      "statement": "Initialize U0 from every known material evaluation not closed on current basis, using applicable obligations/dependencies rather than visible returns. Select finite dependency-ready M only with supported dependencies and actor fit; activate against exact outcome/basis; keep assurance-independent evaluations free of unclosed peer results; await decision-relevant input when no other authorized decision is ready; record closed results, triage, residuals, invalidators; apply only declared conjunctions/translations; assign priority/boundary effects under current mandate; reassess original-subject results for proposed current use after subject/basis change; update U from coverage/dependencies/conflicts/materiality. Stop only after all mandatory evaluations close, authority explicitly retains every remaining residual consistently with the claim, or an applicable stop returns remaining obligations open. Closed falsifications and loop termination are not satisfaction; retain exact interrupted predicate/cause, performance, effects, and open obligations. No scheduler/frame engine is required; parallel M is permitted and recursion follows declared dependencies/bounded refinements, not copies of all frames. A decision exceeding capacity must be refined, separately evaluated, or stopped with unresolved obligations, never by dropping material dependencies. Closed results retain source routes/blockers/uncertainty/invalidators; omitted obligations and missing results/unknown applicability/uncertain effects remain in durable frontier while independently granted/evidenced work may proceed. Recovery applies after context loss. Reviewer severity and Executive priority/boundary effect/disposition/action are separate ledger entries. Every return uses explicit D to Executive, conjunction, or another frame; lateral handoffs, completions, outputs, and shared actors do not implicitly activate or authorize continuation. Consumers receive closed results/source routes, not hidden reasoning context.",
+      "uncertainty": "Core stop, currentness, recovery, applicability, D, and conjunction contracts are referenced rather than defined fully."
+    },
+    {
+      "applies_to_keys": ["profile_executive"],
+      "conditions": ["Executive is awaiting or receiving work information."],
+      "exceptions": ["Unavailable/unreliable notification or an actual supervision obligation permits bounded fallback observation under declared conditions."],
+      "grounding": [
+        {
+          "end_line": 435,
+          "quote": "Silence proves neither progress nor failure.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FEvent-Driven%20Executive%20Attention",
+          "start_line": 409
+        }
+      ],
+      "key": "profile_event_driven_attention",
+      "statement": "Default re-entry triggers are decision-relevant closed result, material exception/changed basis, owner request, or declared deadline/checkpoint. Wait while Workers execute grants and no other authorized decision is ready; avoid repeated unfinished-work inspection, unchanged-judgment replay, and status requests without decision need. Retain frontier/return conditions/valid support, refresh materially changed support, and revalidate drift locks before activation/disposition. Waiting waives no workspace verification, evidence validity, independent assessment, closed-result, authority, or closure duties. Fallback observation requires purpose, cadence/checkpoint, evidence target, and stop/escalation condition. Unknown status proves no stall; investigate genuine blockers/risks and intervene when required within grants. Repeated no-progress observations/returns without new decision evidence require bounded reassessment of frame/grant/dependency/evidence gap and an authorized decision, not repeated polling/repair on unchanged basis. Reduced churn does not reduce assurance/capability or create a universal cost/budget/accounting gate.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_executive", "profile_product_chain"],
+      "conditions": ["Before activation and disposition."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 461,
+          "quote": "Enlarging the Executive frame supplies no missing grant or\nsupport.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExecutive%20Drift%20Locks",
+          "start_line": 439
+        }
+      ],
+      "key": "profile_executive_drift_locks",
+      "statement": "Apply Contract application through five locks: outcome preserves selected Goal/Product outcome/boundary/lawful re-entry, MVP/release mandate, and triage policy; basis keeps subject, authority, dependency, configuration, topology, evidence, time, and candidate exact/current; Product-role preserves distinct Source Project/Definition/Release Cut/Product/Install/Artifact/dependent Product identities and exact underlying Install for every Development Product; authority preserves semantic/evaluation/operation/decision/acceptance/publication owners and grants; coverage-and-return requires every material evaluation/interaction closed or explicit residual and every consumed result on declared return relation. Changed Product meaning requires owning re-entry; activation pressure uses RF-012 admission/work distinction and consumed results their exact predicate/core mapping. Enlarging Executive grants neither authority nor support.",
+      "uncertainty": "RF-012 and Contract application are not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_product_chain", "profile_worker", "profile_reviewer", "profile_exact_candidate"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 485,
+          "quote": "Exact basis does not make a Source Project immutable.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FProduct-Chain%20Basis",
+          "start_line": 473
+        }
+      ],
+      "key": "profile_product_chain_identity",
+      "statement": "An installed Development Product may build its successor or another Product but stays distinct from mutable Source Project and authored Product. Nesting, shared code/actors, imports, reachability, matching labels, or equal output creates no identity, composition edge, or authority transfer. Worker may cumulatively mutate only its granted exact Source Project/territory. Reviewer assesses an exact candidate checkpoint; repair advances workspace, creates a new candidate, and invalidates affected results. Released Product, Release Cut, and exact Install retain lifecycle immutability without making successor-building source immutable.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_technical_triage", "profile_reviewer", "profile_executive"],
+      "conditions": ["A finding is assessed or its current-boundary effect determined."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 555,
+          "quote": "A lawful `blocks` decision can satisfy this predicate while the candidate claim\nis falsified; neither label determines the other result.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect",
+          "start_line": 506
+        }
+      ],
+      "key": "profile_triage_rules",
+      "statement": "Failure evidence grants no response-selection authority. Product-owned basis selects severity/priority scales, current-boundary cutoff, and non-waivable stops; no universal numeric scale exists. Within evidence/capability, Reviewer records affected claim/failure, severity, cause/confidence, blast radius/users/paths/relations, workaround/containment, repair complexity/regression/dependencies, uncertainty and needed evidence. Missing support stays explicit; if material to evaluation, return indeterminate or out_of_frame pressure, without invented precision or lateral Worker assignment. Severity, priority, frame result, and boundary effect remain distinct; none alone makes release-blocking. Executive determines blocks/narrowing/residual and applies exactly one existing disposition. Lower priority cannot waive hard stops or falsified mandatory claims; severe out-of-claim observations cannot alone create another review round. Evaluating the boundary-decision contract maps supported current-mandate/bound-authority compliance to satisfied, established mandate/grant/hard-stop violation to falsified, undecided mandate/application to indeterminate, missing evaluation scope/capability to out_of_frame, and unusable basis to invalid_basis. Missing causes use the core missing-reason rule. A lawful blocks decision may satisfy its decision predicate while candidate claim is falsified.",
+      "uncertainty": "The core missing-reason rule and Product-selected scales are not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_work_result"],
+      "conditions": ["Lawful successful Worker activation precedes the work-result mapping."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 605,
+          "quote": "| any variant lacking its required cause or its row's evidence condition | retain the raw outcome without inventing deciding support; independently admissible evidence on the same bound predicate remains available | apply the core missing-reason rule; the unsupported label supplies no verdict |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result",
+          "start_line": 565
+        }
+      ],
+      "key": "profile_work_result_mapping",
+      "statement": "Map the exact availability predicate as follows: candidate_ready with established bounds→satisfied; refused with established governing prohibition or owner-valid refusal after activation→falsified; incomplete/undecided with insufficient evidence or unfinished work→indeterminate; incomplete/postcondition_defeated with observed missing delivery, missed declared bound, or missing required transition evidence→falsified; re_entry_requested/outside_frame with a material relation/decision/capability outside frame→out_of_frame; re_entry_requested/basis_invalid with unsupportive activated subject/basis→invalid_basis. Required cause and evidence make mappings exclusive and total over declared cases. Unsupported variants retain raw outcome and invoke core missing-reason handling, supplying no verdict themselves; independent admissible evidence on the same predicate remains usable. Time bounds apply only where granted; late delivery does not repair original missed bound, and changed bounds define successor claims. candidate_ready establishes neither fitness, admission, acceptance, nor publication. Equal verdicts do not permit conjunction of different predicates; non-performance and uncertain effects remain explicit. Wording, stop timing, and preference cannot choose variants. Capability/authority/stale-basis/ambiguous-basis/topology mismatches known at activation are activation_refusal, not synthetic work results; refusal identifies reason/authority, incomplete work stop basis, and re-entry owner/material relation. Consumers choose representation; UP-020 retains execution/dispositions. Reference existing classification/evidence/judgment/ruling carriers instead of reconstructing unchanged C/J/O at each handoff; check applicability/invalidators and revise only affected results, preserving originals and supported surviving claims.",
+      "uncertainty": "Core missing-reason and continuity clauses are not included."
+    },
+    {
+      "applies_to_keys": ["profile_configuration", "profile_engagement_frame"],
+      "conditions": ["Allocating governed work and any Product-required independent assurance."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 663,
+          "quote": "Their overlap does not collapse evaluation or\nauthority:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FNon-Hierarchical%20Frame%20Configuration",
+          "start_line": 633
+        }
+      ],
+      "key": "profile_configuration_separation",
+      "statement": "Allocation must preserve outcome, material dependencies, capability limits, grants, and required assurance independence. These premises do not force three roles. Profile choices are labels, return flow, Executive mutation exclusion, and event-driven attention; Product authority selects adoption, direct/coordinated route, and grants. Overlapping STDO basis, outcome, checkpoint, affected relations, candidate, evidence, and residuals never merge authority: Executive evaluates activation/priority/boundary effect/disposition, Worker evaluates/performs bounded construction, Reviewer evaluates exact candidate claim and triage when activated.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_executive"],
+      "conditions": ["Derived Executive frame activation or result reliance."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 709,
+          "quote": "bounded candidate disposition remains exactly `accept`, `local_repair`,\n`re_enter`, or `reject` under `STDO-UP-020`.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame",
+          "start_line": 681
+        }
+      ],
+      "key": "profile_executive_frame_contract",
+      "statement": "Executive evaluates authorized outcome/basis, capable frames/actors, exact/current returns, and mandate-derived priority/boundary/disposition/action. Bind complete selected cut; exact Goals/Product/requirements/design/work authority; MVP/release mandate; workspace/checkpoint; findings/triage/policy; proxy grant if any. Preserve outcome, affected causal cone, inventory/configuration/envelopes, evidence, returns/triage, priority, boundary effect, re-entry owners, and already-authorized continuation, with exact method/project/outcome/mandate/authority/checkpoint/candidate/evidence/finding/policy/actor identities. Invariants are RF-001..017, UP-017..020, and applicable identity/ticket/assurance/release law. Evidence is live authority, frame/specialist results, triage, exact candidate, transition evidence, and coverage residuals. Capability must cover method/Product/mandate/authority/workspace/triage/actor selection; specialists may supply implementation expertise. Exclude mutation/implementation ownership, silent Reviewer-evidence/severity rewriting, unqualified independence claims, others' semantic reconstruction, and out-of-grant disposition. Return one frame result, priority, boundary effect, and existing disposition where decidable. Material method/authority/outcome/mandate/policy/checkpoint/candidate/evidence/finding/capability/topology changes trigger shared-currentness applicability assessment, preserving historical result identity. Dispositions remain exactly accept/local_repair/re_enter/reject; authorize/no_action are not peers, and priority/boundary effect are not new results/dispositions. Unreliable severity/assessment requires capable reevaluation or retained uncertainty, never silent rewriting.",
+      "uncertainty": "Named RF/UP invariants and shared currentness are external references."
+    },
+    {
+      "applies_to_keys": ["profile_steel_thread", "profile_executive", "profile_testing_frame"],
+      "conditions": ["Sequencing delivery under an existing mandate and operation grants."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 743,
+          "quote": "Each passing thread establishes only the relations and\nconditions actually exercised;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame%2FSteel-Thread%20Delivery",
+          "start_line": 713
+        }
+      ],
+      "key": "profile_steel_thread_sequence",
+      "statement": "Establish the runnable thread early and expand boundedly, or extend/revalidate an existing affected thread; choose increments by consequential uncertainty, dependency/interface reach, and failure impact. Early E2E/integration evidence settles exercised interfaces, prunes incompatible choices, preserves composition, and focuses unresolved obligations. Passing threads prove only exercised relations/conditions; untested branches/combinations/refusal/recovery retain proof duties. Revisit settled construction when material counterevidence invalidates basis. During construction use focused deterministic regression and targeted judgment probes; module laws use unit evidence. Schedule substantial resource-intensive UAT near release or when bounded capability is ready to qualify; early focused user probes remain appropriate for material uncertainty. Distinct testing-frame claims govern scenarios, independent assessments, and repetitions. Qualified-result reuse applies currentness to intended thread claim, applicability, reassessment, and mandatory gates. Executive sequences under mandate and activates construction under existing grants.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_worker", "profile_work_result"],
+      "conditions": ["Worker activation and construction inside its inherited operation grant."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 777,
+          "quote": "Missing, ambiguous, or out-of-territory mutation\nauthority refuses the effect.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Worker%20Frame",
+          "start_line": 751
+        }
+      ],
+      "key": "profile_worker_frame_contract",
+      "statement": "Construct exact authorized outcome through the smallest coherent causal cone, preserving affected governing relations and disposing competing paths. Basis is sufficient UP-020 intake plus accepted UP-017..019 design-to-execution basis where applicable. Manifold includes affected entities/lifecycles/transformations/authorities/capabilities/algorithms/inputs/outputs/dependencies/seams/failures/proof; coordinates include exact activation/source checkpoint/workspace/inputs/dependencies/configuration/actor envelope/outputs/candidate/evidence. Apply complete selected method/project relations material to the cone. Evidence may include live implementation/test source, analysis/artifacts, claimed installed/operational behavior, reconstruction/mutations, and transition evidence. Capability covers declared method/domain/implementation/tool/access/finite context. Authority is inherited construction/transformation and self-review only; mutation requires exact named subject and write territory. No admission/publication/independent acceptance/frame-set revision/inferred next action, upstream semantic change, unauthorized cone expansion, self-acceptance, hidden competing paths, or advancement after return. Return one frame result and exactly one work variant. candidate_ready binds candidate/transition evidence, is not accept, and green tests support only exercised semantics. Material intake/basis/checkpoint/dependency/configuration/capability/topology changes reassess affected reliance. Missing/ambiguous/out-of-territory mutation authority refuses effect. Read scope covers the complete causal cone and may exceed writes only within declared access; narrow writes do not excuse missing material producers/consumers/owners. Return out-of-territory repairs to owners; understanding grants no effect.",
+      "uncertainty": "The accepted execution-intake and design-to-execution contracts are not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_reviewer", "profile_technical_triage"],
+      "conditions": ["Reviewer is lawfully activated for an exact claimed assessment."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 826,
+          "quote": "A suggested repair becomes an obligation only through its proper owner.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Reviewer%20Frame",
+          "start_line": 785
+        }
+      ],
+      "key": "profile_reviewer_frame_contract",
+      "statement": "Evaluate exact subject/basis against applicable law without competing authority, proof masking, or unevaluated composition, and assess supported severity/technical implications. Bind candidate/claim/authority/scope/exclusions/evidence population/Product severity/review carrier/independence. Inspect claimed relations, causal producers/consumers, authority seams, competing paths, claimed failure/recovery/install/reconstruction, test/fixture semantics, historical counterexamples, and supportable triage. Coordinates retain candidate/source basis/authority revision/configuration/dependencies/population/scale/install/time/Reviewer. Invariants include RF-001..017, UP-020/007/022, and applicable Product/design/identity/release law. Independently acquire material live authority, code/tests/artifacts/history/operations/mutations/replay/reproduction. Capability includes method/domain/implementation/assurance/triage/tools/access/context/counterexample search/independence. Review access confers only bounded evaluation, no construction/transformation/admission/publication/mutation/decision/disposition/next activation. Exclude candidate editing, repairs, priority, release/MVP disposition, next-action selection, Worker-summary substitution, assurance-owned semantic reconstruction, unbound evidence flattening, and silent scope expansion. Return one frame result with findings/counterexamples/triage/residuals sufficient for an authorized decidable disposition. Material candidate/authority/basis/population/scale/dependency/configuration/scope/independence changes reassess reliance. UP-007 decides required review/traceability and UP-022 assurance/freeze; this profile creates no universal review round, independence test, or second verdict/disposition family. Unsupported cause/blast radius/workaround/repair risk stays uncertain. Review tests when code/fixtures/mutations/environment/interpretation can alter proof; passing results cannot replace that inspection. Each finding and retained guard/acceptance predicate binds violated property, supported entry/state, governing operating/threat model, and credible causal path. Excluded threats provide no retention claim; broader threat models re-enter owners. Internal location does not prove trust and hypothetical hostility does not prove applicability. Preserve supported-model untrusted-input/mutable-state/authority/effect checks; suggested repairs become obligations only through proper owners.",
+      "uncertainty": "Exact assurance and independence contracts remain external."
+    },
+    {
+      "applies_to_keys": ["profile_generic_families"],
+      "conditions": ["A generic family is material and instantiated under the adopted profile."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 874,
+          "quote": "The existing authority graph remains controlling.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Generic%20Specialist%20Frame%20Set",
+          "start_line": 832
+        }
+      ],
+      "key": "profile_generic_family_predicates",
+      "statement": "The twelve archetypes preserve separate predicates, owners, and immediate falsifiers. Product evaluates exact current claim/outcome/boundary/lifecycle on Intent/Product/requirements/acceptance/coordinates; Product/requirement owners retain meaning/acceptance, and downstream reinterpretation or subject substitution falsifies. Product Composition evaluates one directed edge with roles, Definition/Release Cut/Product/Install identities, Development Product bindings, contracts/authority/lifecycle/evidence/invalidation; bounded edges and declared conjunction evaluate chains, each Product retains meaning, and incidental nesting/code/actors/imports/reachability/output/builder convenience or node redefinition cannot create/change edges. Design evaluates accepted HOW against constitutional WHAT, required relations, owners/topology; design may identify satisfaction/contradiction/re-entry but cannot invent Product truth; precedent resolving open decisions, Product meaning creation, or undeclared material/competing structure falsifies. Design Component evaluates bounded component/direct dependency cone, parent contract, internal relations, sibling seams, outputs; parent/sibling/Product/requirement/runtime owners remain; missing far-side seams, absorbed decisions, or local closure over unresolved composition falsify. Public Boundary evaluates assigned validation/selection/transport/refusal/projection at supported entry/exit under Product/interface/identity/security/design owners; owner-meaning interpretation, hidden domain sequencing, interior-carrier-as-truth, or unsupported admission falsifies. Entity evaluates exact identity/kind/lifecycle/owner/representation/effect regime under existing domain owners; filename/wrapper/ticket/shape/cache/process substitution or collapsed coordinates falsifies. Operator evaluates irreducible declared domain/input/output/refusal/algebra/effect/composition relation under Product/requirements/Ontology/design/operation owner, without new executable plan; labels asserted as semantic atoms, hidden operators, or generic mechanics rebuilt as domain law falsify. Owner evaluates role/subject/scope/basis/lifecycle/refusal/delegation congruence only; recreated judgments, authorship-as-transfer, or widened proxy/foundation/frame/actor grants falsify. Effect evaluates pure/observational/artifact/runtime regimes including material commit/failure/retry/recovery/compensation/admission/projection; collapsed regimes, owner bypass, compensation-as-semantic-rollback, or rival writable reads falsify. Reuse/Foundation evaluates normalized generic capability/dependency against credible lawful foundations, preserving irreducible remainder and authority roles under UP-023/tradeoff owner; unexamined incumbency, reproducing richer lawful foundations, favorably scored unknowns, or authority transfer falsify. Install evaluates selected Product/release/artifact/dependencies/configuration/callable entry through admitted installed coordinates independently of source convenience; source imports, ambient resolution, registries, fixtures, rebuilds, or moving workspace substitution falsify. Proof evaluates exact claim/subject/basis/path/population/oracle/evidence/falsifier/residual/invalidation under claim/testing/assurance/review/Product/release owners; recreated meaning, wrong subject/path, aggregate green/counts, or undetectable proof-tool mutation falsify. All return bounded evidence/evaluation without acquiring others' meaning, operation, acceptance, or disposition. Frames may overlap without hierarchy; Product's constitutional authority is not a topology ranking and Proof is not Reviewer.",
+      "uncertainty": "The domain owners supply actual predicates; archetypes alone are not complete frame declarations."
+    },
+    {
+      "applies_to_keys": ["profile_generic_families", "profile_specialist_frame"],
+      "conditions": ["An adopting project inventories or activates generic specialist families."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 922,
+          "quote": "Accounting for a residual does not establish adequate coverage or the family's\nunderlying Product claim.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Generic%20Specialist%20Frame%20Set",
+          "start_line": 841
+        }
+      ],
+      "key": "profile_generic_inventory_and_refinement",
+      "statement": "Every activated instance binds exact subject/basis/manifold/coordinates/invariants/authority/evidence/exclusions/result algebra/capability/dependencies/invalidation. Labels resolve in urn:stdo:bounded-context:reference-frame-evaluation under selected basis and are not identical to same-spelled Product/domain/runtime/authority concepts; every material cross-context seam needs explicit relation. For every outcome account for every family through material exact declarations or authoritative acquisition, capable-authority evidenced non-materiality, or explicit uncovered/conditional/conflicted/scope-capability residual, with actual out_of_frame results separate. These inventory treatments are not verdicts. For the accounting predicate, supported instantiation/non-materiality or justified explicit residual→satisfied; established omission/disproved treatment→falsified; undecided treatment/missing reason→indeterminate; unusable basis→invalid_basis; outside scope/capability→out_of_frame. Apply core conjunction to required accounting predicates, retaining performance/effects. Accounting residuals does not prove coverage or underlying claims. Missing named files/components/runtime objects/actors does not establish non-materiality; adoption does not require twelve actors/components/activations. Recursive children record parent contract/purpose/material entities/identity/lifecycle/semantic owners/direct sibling seams/invariants/prohibited competing paths, and open only for distinctions needed to close parent evaluation; this is dependency, not organization/runtime hierarchy. Coverage is union of admissible observations; composite claims conjoin required predicates and material seams and use declared cross-frame relations without dominant family or waived row conditions. Consumer-specific frames/topologies are not imported into baseline, though owners may separately declare material ones.",
+      "uncertainty": "Core conjunction, Operational Full Coverage, and cross-frame relation contracts are external."
+    },
+    {
+      "applies_to_keys": ["profile_testing_frame", "profile_user_acceptance", "profile_end_to_end", "profile_integration", "profile_unit", "profile_generic_families"],
+      "conditions": ["This profile supports Product promotion, closure, or release assurance."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 968,
+          "quote": "The kind of\nrunner does not select the frame. The evaluated claim, subject, path,\npopulation, oracle, and falsification boundary do.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set",
+          "start_line": 928
+        }
+      ],
+      "key": "profile_testing_set_rules",
+      "statement": "Testing supports only actually evaluated path/population/oracle. Four archetypes are profile choices, not consequences of F1–F6 alone; Spec assurance/testing owners, Product, and accepted design select claims, populations, and acceptance. Configure claim-relative frames by claim/subject/path/population/oracle/falsifier rather than runner. UAT evaluates supported-user outcome; E2E complete runnable causal realization; integration material composition interactions; unit module law, with internal complexity affecting proportional evidence strategy rather than eligibility. With generic families adopted, test results provide claim-congruent Proof evidence without an aggregate-green hierarchy. Frames may overlap and one execution may support several, but results retain exact claims/coordinates; UAT/E2E/integration/unit labels lack assurance without declarations. Each selected claim binds requirement/refinement source, predicate, observation basis, and required construction assurance, adding no mandatory actor/archetype and retaining adoption, ordinary-path, and exact-subject conditions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_user_acceptance"],
+      "conditions": ["The evaluated claim is that a declared user can use the Product."],
+      "exceptions": ["Harnessed sandbox substitutes are permitted only where SPEC_METHOD admits them and limit the supported claim."],
+      "grounding": [
+        {
+          "end_line": 998,
+          "quote": "Automation can execute acceptance\nevidence; it cannot assume acceptance authority.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20User-Acceptance%20Frame",
+          "start_line": 974
+        }
+      ],
+      "key": "profile_uat_contract",
+      "statement": "UAT is the primary Product-outcome evidence frame for user-use claims. Bind exact runnable Product and current Product/requirement/UX/identity/policy/acceptance authority, declared user/environment, and admitted harnessed/live mode. Cover user goal, supported entries, permissions, inputs/configuration/dependencies, declared worker/transport substitution boundary, visible state/output, refusal/recovery, acceptance interval. Coordinates include Product/artifact/install/user/capability/configuration/dependency realization/mode/data/workspace/invocation/time/outcome/scenario. Apply Product/requirements, supported-interface/identity/UX/safety/persistence/release law, RF-001..017 and UP-001/008/022. Evidence comprises actual supported requests/responses/projections, claimed durable effects, refusal/recovery/scenarios, exact subject and live/substituted dependency identities. Actor must operate as the declared user and detect hidden setup/assistance. Exclude source imports/private APIs/state injection/test-only endpoints/hidden admin capability/undeclared fixtures/substitutes, doubles at claimed-live boundaries, compatibility bypass, and internal-success substitution. Return one user-claim result with witnessed paths/counterexamples/residual user populations/invalidators. Material Product/interface/user/capability/configuration/dependency/substitution/data/runnable subject/acceptance/path changes invalidate affected reliance. Automation is allowed only when faithfully occupying the user frame without extra paths/capability; it gains no human/Product acceptance authority. Harnessed fake/recorded/injected worker/transport proves only exercised composition, not live boundary. Claims depending on real external compute/transport require live sandbox UAT; substitute-based unit/integration/semantic/E2E and harnessed-green evidence are insufficient.",
+      "uncertainty": "The harnessed-sandbox admission law is referenced but not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_end_to_end", "profile_authoritative_path"],
+      "conditions": ["An end-to-end claim is evaluated."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1019,
+          "quote": "The expected output is necessary but not sufficient. Reaching it through a\nforbidden or obsolete path falsifies the end-to-end claim.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20End-To-End%20Frame",
+          "start_line": 1004
+        }
+      ],
+      "key": "profile_e2e_contract",
+      "statement": "Bind exact runnable Product, composition design, supported entry, selected owners/dependencies, ordinary runtime configuration, and claim. Include all causal producers/consumers, interface/authority transitions, state/event/persistence/process/continuation/retry/recovery/projection and competing paths. Coordinates retain artifact/installed-tree/entry/operation/definition/owner/path/edges/process/event prefix/state/configuration/dependency/result/replay/scenario. Apply Product/design composition, exact subject/assurance, required path singularity, lifecycle/authority/persistence/replay/recovery/release law. Evidence includes supported invocation, observed semantic path/authority edges/owner receipts/durable events/transitions/output, claimed replay/reconstruction, installed identity, and negative paths. Actor must exercise/observe complete path without changing it and distinguish rivals/reproduce material failures. Evaluation may expose internal evidence but cannot bypass/repair/replace/reinterpret path. Exclude source-only runnable substitutes, below-entry invocation, doubles at real boundaries, test routing, hidden retry/repair, omitted persistence/fresh-process boundaries, and equality without path evidence. Return one exact result with exercised edges, unexercised material paths, counterexamples, residual combinations. Material artifact/install/dependency/configuration/interface/owner/path/lifecycle/persistence/recovery/projection/test semantics/population changes invalidate reliance. Expected output is necessary but insufficient; forbidden/obsolete routes falsify, while process count, code breadth, or label establishes no E2E standing.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_integration"],
+      "conditions": ["One material composition boundary is evaluated."],
+      "exceptions": ["An admitted exact substitute may support a deliberately narrower claim with explicit equivalence boundary and exclusions."],
+      "grounding": [
+        {
+          "end_line": 1040,
+          "quote": "Its result cannot be\npromoted to evidence that the real participant or Product composition was\nexercised.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Integration%20Frame",
+          "start_line": 1025
+        }
+      ],
+      "key": "profile_integration_contract",
+      "statement": "Bind exact interface/composition, actual participants or claim-admitted exact substitutes, governing Product/requirement/design law, and interaction population. Include both sides/shared carriers/pre-postconditions/authority/ownership/ordering/state/configuration/failure/retry/recovery/translation/competitors. Coordinates preserve participant/version/interface/carrier/state/configuration/dependency/case/input/output/failure/evidence identities. Apply interface/composition laws, complete participant admission, applicable atomicity/reconstruction, and UP-022 exact assurance boundary. Evidence comprises actual exchanges/carriers/transitions/contract verdicts/failures/retry/recovery/combinations/participant identity; capability must observe real seam, detect substitution, and vary every material dimension. No result proves unevaluated Product outcomes or authorizes substitutes. Exclude hidden-real-contract mocks, one-sided assertions, happy-path-only exchange, helper equivalence, flattened versions/states, or whole-Product projection without governing relation. Return one bounded result with combinations, counterexamples, omitted interactions, invalidators. Material participant/interface/carrier/state/configuration/dependency/timing/failure/recovery/population changes invalidate reliance. Narrow substituted evidence never proves real participant/composition exercise.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_unit"],
+      "conditions": ["A coded module or module-owned unit claim is in scope."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1083,
+          "quote": "Low internal\ncombinatorial complexity justifies a small lane, not omission and not hundreds\nof implementation-shaped tests.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Unit-Test%20Frame",
+          "start_line": 1046
+        }
+      ],
+      "key": "profile_unit_contract",
+      "statement": "Every coded module requires the Design-owned module-derived unit lane; public contracts are valid subjects. Bind exact module, accepted Ontology/design, active IACS or equivalent inventory, owned requirements/public contracts, implementation, decidable bounded oracle. Include owned contracts/algebras/calculations/parsers/reducers/state machines/transitions/combinators/admission/conservation/invariants/numerical boundaries/failures. Coordinates preserve module/implementation revision/law/operator family/state/input/boundary/expected relation/generated case/mutation/result. Apply module ownership/unit-proof and material Ontology/IACS/domain/sequence/state/algorithm/error relations. Evidence may be law-derived examples, equivalence classes, available finite exhaustive cases, generative/property/metamorphic cases, algebra/calculation oracles, boundaries, and killed internal mutations. Capability must independently derive oracle from law, identify bounded combinations, and distinguish invariant violation from restatement. Return one exact local-law/population result with counterexamples/residual combinations/invalidators; material Ontology/IACS/module/law/algorithm/state space/numerical regime/implementation/oracle/generator/population changes affect reliance. Unit authority excludes Product/install/integration/UAT/architecture/path-selection/release claims, cross-module composition, user paths, packaging, real external participants, orchestration, mocked-away interfaces, and broader assurance from incidental branches/helper layout/counts/coverage. Complexity determines proportional evidence, not omission; low complexity warrants a small lane and volume has no independent closure value. Implementation-repeating or branch-following oracles are weak/circular. Material composition/orchestration/configuration/persistence/ownership/user complexity requires evidence at actual integration/E2E/UAT boundary; mocking cannot convert it to unit evidence. No amount of counts, coverage, mutation score, runtime, or historical pass rate closes broader claims from unit green.",
+      "uncertainty": "IACS and the full module-derived unit law are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": ["profile_testing_value", "profile_combinatorial_complexity", "profile_testing_frame"],
+      "conditions": ["Selecting or assessing a testing strategy for an exact claim."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1151,
+          "quote": "Pairwise or other covering-array reduction is lawful\nonly where the basis explains why omitted higher-order interactions cannot\nchange the claim or retains them as residuals.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FCombinatorial%20Coverage%20And%20Testing-Value%20Index",
+          "start_line": 1087
+        }
+      ],
+      "key": "profile_coverage_and_value_rules",
+      "statement": "Do not index value by test/assertion/file/line/branch/mock/snapshot/runner counts. No universal scalar is required; any project scalar needs Product/requirement/accepted-design authority and preserved underlying coordinates. Unit value normally rises with module-bounded combinatorial complexity and precise cheap local discrimination. Higher-boundary value can be multiplicative through materially interacting pre/postconditions/authority/state/configuration/failure/recovery, not merely many touched interfaces and not a probability/independence claim. Common Product factors are user role/capability, operation/composition, definition/owner/implementation/dependency, lifecycle/persisted state, configuration/version, process/continuation/retry/re-entry/recovery, success/refusal/malformed/partial-failure/rival-path, fresh process/replay/reconstruction/migration, and visible outcome/projection. Activated frames declare finite interaction population and adequacy rationale. Covering-array reduction needs a basis that omitted higher-order interactions cannot change claim or retains them as residuals. High-consequence authority/persistence/concurrency/recovery/migration/historical failures normally require explicit higher-strength combinations. Code coverage diagnoses visitation, not semantic combinations, authoritative path, user coverage, or absence of rivals. Admitted work authority chooses assurance under risk law; compare strategies with failure consequences, coverage, uncertainty, and action/acceptance conditions. Cost includes acquisition, impact analysis, execution, assessment; estimates remain distinct from measurements. Numeric confidence requires owning probability/dependence/calibration conditions, never index or test-count substitution.",
+      "uncertainty": "The owning risk, probability, dependence, and calibration contracts are not supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": ["spec_renewal", "spec_renewal_conditions", "spec_goals_govern_intent", "spec_intent_governs_product", "spec_product_governs_requirements", "spec_requirements_govern_design", "spec_requirements_govern_realization", "spec_design_governs_realization", "spec_external_intake"],
+      "reason": "Retains renewal, re-entry conditions, unresolved alternatives, iteration, and explicit authority direction; intake's owning definition is outside the supplied span.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path"
+    },
+    {
+      "decision": "residual",
+      "keys": ["spec_trace_closure", "spec_trace_authority", "spec_trace_owner_dependency"],
+      "reason": "Retains trace closure and local choices while leaving cited shared-law definitions unresolved.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_requirement_design_ownership"],
+      "reason": "Retains universal requirement-family ownership and explicit Implements grounding.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FOwnership"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_downstream_closure"],
+      "reason": "Retains realization/deferment alternatives and prohibitions on ungoverned behavior.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDownstream%20Closure"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_trace_closure", "spec_drift_signal_interpretation"],
+      "reason": "Retains every listed drift signal and limits on causal inference.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDrift%20Signals"
+    },
+    {
+      "decision": "residual",
+      "keys": ["spec_live_surface", "spec_live_surface_change", "spec_mutable_surface_latitude", "spec_retention_dependency"],
+      "reason": "Retains immutability, lawful corrections, mutable implementation latitude, and the unresolved retention-rule dependency.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_fundamental_migration", "spec_migration_adoption", "spec_migration_latitude"],
+      "reason": "Retains reset applicability, explicit adoption, classifications, sequence, bridge-debt boundaries, and supersession distinction.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FFundamental%20Migration%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_transformation_wave", "spec_wave_boundaries"],
+      "reason": "Retains in-flight and landed restrictions with the explicit compatibility exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTransformation%20Wave%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_legacy_classification_actions"],
+      "reason": "Retains all four lifecycle meanings and required actions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLegacy%20Classification%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_requirement_classification", "spec_requirement_axes_required"],
+      "reason": "Retains independent axes, all values, incompleteness condition, and explicit metadata.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRequirement%20Classification%20Rules"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_goals", "spec_intent", "spec_product", "spec_requirements", "spec_design", "spec_adr", "spec_surface_roles_and_gate", "spec_design_latitude"],
+      "reason": "Retains layer roles, lifecycle sufficiency, wording/currentness rules, and whole-span closure checks.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule"
+    },
+    {
+      "decision": "residual",
+      "keys": ["spec_product_definition", "spec_bootstrap_authority_split", "spec_bootstrap_sequence", "spec_bootstrap_layout_latitude", "spec_bootstrap_external_contracts"],
+      "reason": "Retains template roles, defaults, authority split, optional topology, input variation, and sequence; schemas and referenced validation/adoption laws are not supplied.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule"
+    },
+    {
+      "decision": "residual",
+      "keys": ["spec_realization", "spec_feature_method", "spec_bootstrap_and_gap_method", "spec_design_coevolution_dependency"],
+      "reason": "Retains conditional method sequences as data and explicitly leaves the co-evolution predicate and applicability unresolved.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod"
+    },
+    {
+      "decision": "residual",
+      "keys": ["spec_adr", "spec_adr_fields", "spec_adr_conditional_fields"],
+      "reason": "Retains field purposes, decision boundaries, mechanism correspondence, and immediate event-taxonomy repricing; EC and conditional-field representation remain unspecified.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions"
+    },
+    {
+      "decision": "retained",
+      "keys": ["spec_adr_storage", "spec_adr_layout_latitude"],
+      "reason": "Retains ownership-based location, default/recommended distinctions, prohibited locations, IDs, and registry status.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions%2FADR%20Folder%20Convention"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_baseline"],
+      "reason": "Retains the document identity without deriving substantive rules from its title.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_generic_families", "profile_canonical_boundaries", "profile_configuration_latitude"],
+      "reason": "Retains optional engagement mapping, specialist/test populations, authority separation, and configuration latitude.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_baseline", "profile_ownership_and_adoption", "profile_argument_consequences", "profile_external_owners"],
+      "reason": "Retains distinct normative owners, adoption conditions, and argument consequences without importing unavailable owner definitions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_engagement_applicability"],
+      "reason": "Retains sufficient direct entry, conditional coordination/review, return routing, and no-ceremony/no-authority-invention boundaries.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEngagement%20Applicability"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_empirical_revision"],
+      "reason": "Retains bounded engagement duties and empirical evidence's limited diagnostic and authority significance.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEmpirical%20Revision%20Boundary"
+    },
+    {
+      "decision": "omitted",
+      "keys": [],
+      "reason": "The section contains only the Profile Terms heading and a blank line. It is a structural grouping; the supplied child definitions are interpreted individually.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_engagement_frame"],
+      "reason": "Retains the engagement-frame definition and named instances.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FEngagement%20frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_specialist_frame"],
+      "reason": "Retains activation and declaration prerequisites for specialist-frame standing.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FSpecialist%20frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_generic_families", "profile_family_materiality"],
+      "reason": "Retains archetype status, materiality accounting, and conditional many-to-many instantiation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FGeneric%20specialist-frame%20family"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_testing_frame", "profile_testing_claim_boundary"],
+      "reason": "Retains exact-claim testing-frame definition and limits of counts and labels.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FTesting%20frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_authoritative_path", "profile_testing_claim_boundary"],
+      "reason": "Retains ordinary causal path and falsification despite output equality.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FAuthoritative%20Product%20path"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_combinatorial_complexity", "profile_testing_claim_boundary"],
+      "reason": "Retains claim-relative combination populations and separation of module and cross-participant evidence.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FMaterial%20combinatorial%20complexity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_executive"],
+      "reason": "Retains bounded decision-frame role, durable frontier distinction, and human/proxy occupancy.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FExecutive"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_executive_duties_and_mutation_lock", "profile_attention_cycle", "profile_operational_representation_limit"],
+      "reason": "Retains duties, mutation prohibition, attention/return conditions, and stop-versus-satisfaction distinction as descriptions rather than executing a transition system.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_event_driven_attention"],
+      "reason": "Retains event triggers, waiting duties, bounded fallback conditions, and no-progress reassessment.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FEvent-Driven%20Executive%20Attention"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_executive_drift_locks"],
+      "reason": "Retains all five locks and limits on re-entry, activation pressure, and expanded attention.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExecutive%20Drift%20Locks"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_product_chain", "profile_product_chain_identity"],
+      "reason": "Retains exact role/edge coordinates and source mutability versus release/install immutability.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FProduct-Chain%20Basis"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_worker"],
+      "reason": "Retains bounded constructor identity and its authority exclusions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWorker"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_reviewer"],
+      "reason": "Retains independent evaluation role, exact subject, triage, and prohibited decisions/effects.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FReviewer"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_technical_triage", "profile_triage_rules", "profile_reviewer_supplies_triage"],
+      "reason": "Retains triage fields, decision separation, hard stops, and all boundary-decision result mappings.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_work_result", "profile_work_result_mapping", "profile_worker_returns_result", "profile_work_result_missing_reason"],
+      "reason": "Retains activation boundary, every cause-qualified mapping, exact availability predicate, effects, and continuity; missing-reason semantics remain externally owned.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_exact_candidate"],
+      "reason": "Retains conditional freeze, equivalent exact-subject alternatives, and no-new-lifecycle-state boundary.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExact%20candidate"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_adoption_projection", "profile_adoption_projection_dependency"],
+      "reason": "Retains projection direction and preserved distinctions; owning adoption and faithful-projection details are outside the supplied source.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FBaseline-adoption%20projection"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_configuration", "profile_configuration_separation"],
+      "reason": "Retains three distinct relation structures and overlapping but separate evaluations/authority.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FNon-Hierarchical%20Frame%20Configuration"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_executive_frame_contract"],
+      "reason": "Retains declaration dimensions, exact result/disposition distinction, exclusions, and affected-reliance invalidation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_steel_thread", "profile_steel_thread_sequence"],
+      "reason": "Retains runnable-path sequencing, limited evidence scope, timing of assurance, and mandatory-gate preservation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame%2FSteel-Thread%20Delivery"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_worker_frame_contract"],
+      "reason": "Retains frame declaration, write refusal, read-cone obligations, and no inferred continuation/acceptance.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Worker%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_reviewer_frame_contract"],
+      "reason": "Retains bounded review, evidence/independence/triage requirements, test-semantic inspection, and supported-threat applicability.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Reviewer%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_generic_family_predicates", "profile_generic_inventory_and_refinement"],
+      "reason": "Retains all twelve archetypes, owners/falsifiers, bounded-context distinctions, inventory result mapping, refinement, and conjunction limits.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Generic%20Specialist%20Frame%20Set"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_testing_set_rules"],
+      "reason": "Retains four chosen claim-relative frames, their overlap, evidence limits, and source/assurance bindings.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_user_acceptance", "profile_uat_contract"],
+      "reason": "Retains UAT declaration, ordinary-user restrictions, automation limits, and mandatory live-sandbox condition.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20User-Acceptance%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_end_to_end", "profile_e2e_contract"],
+      "reason": "Retains full runnable-path evidence and falsification by forbidden or obsolete routes.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20End-To-End%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_integration", "profile_integration_contract"],
+      "reason": "Retains joint-boundary population, participant conditions, and explicitly narrowed substitution limits.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Integration%20Frame"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_unit", "profile_unit_contract"],
+      "reason": "Retains mandatory module-derived lane, independently grounded oracle, proportional evidence, and prohibition on broader closure from unit green.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Unit-Test%20Frame"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_testing_value", "profile_coverage_and_value_rules", "profile_assurance_selection_dependency"],
+      "reason": "Retains index dimensions, interaction populations, reduction conditions, and cost/confidence distinctions; owning risk/probability laws remain external.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FCombinatorial%20Coverage%20And%20Testing-Value%20Index"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": ["Aggressive refactoring of engine code, design documents, tests, and tooling while they remain mutable implementation surfaces."],
+      "applies_to_keys": ["spec_live_surface"],
+      "forbidden": ["Applying that mutable-implementation permission to artifacts already published as live constitutional surfaces."],
+      "grounding": [
+        {
+          "end_line": 3058,
+          "quote": "- Engine code, design documents, tests, and tooling may be refactored aggressively while they remain mutable implementation surfaces.\n- Live domain artifacts, once published as live constitutional surfaces, are immutable in place.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability",
+          "start_line": 3057
+        }
+      ],
+      "key": "spec_mutable_surface_latitude"
+    },
+    {
+      "allowed": ["On a qualifying fundamental migration line, zero inherited constitutional surfaces and rebuild from first principles.", "Use old design/code as reference implementations.", "Move prior implementation sideways as a reference line when needed."],
+      "applies_to_keys": ["spec_fundamental_migration"],
+      "forbidden": ["Default inheritance of authority or automatic copy-forward.", "Treating a sideways reference line or dependent proxy interfaces as lawful new-line closure."],
+      "grounding": [
+        {
+          "end_line": 3085,
+          "quote": "it is lawful to zero inherited constitutional surfaces on the migration line and rebuild them from first principles",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FFundamental%20Migration%20Rule",
+          "start_line": 3076
+        }
+      ],
+      "key": "spec_migration_latitude"
+    },
+    {
+      "allowed": ["Design may choose structure, interfaces, carriers, packaging, and tenant boundaries under governing requirements."],
+      "applies_to_keys": ["spec_design"],
+      "forbidden": ["Using ADRs as a second requirement surface."],
+      "grounding": [
+        {
+          "end_line": 3206,
+          "quote": "It is downstream of requirements and may choose structure, interfaces, carriers, packaging, and tenant boundaries.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+          "start_line": 3205
+        }
+      ],
+      "key": "spec_design_latitude"
+    },
+    {
+      "allowed": ["Bind an existing layout without moving, renaming, or duplicating authority or realization surfaces.", "Use project-specific URI-bound carriers instead of template paths.", "Default topology includes build_tenants/common and default, and .ai-workspace/sprints, tickets/backlog/active/completed, and comments; it is a starter, not conformance law.", "Place multiple named definitions at one monorepo root with different WHAT bindings, or one or more at nested project roots; recursive discovery supports both.", "Start without a complete requirements tree.", "Source requirements from any legitimate constitutional input regardless of path, including Goals, Intent, Product, existing requirements, imported standards/policies, prior versions, and migration/repricing material.", "The usual Goals→Intent→Product→Requirements starting route is not the only lawful source."],
+      "applies_to_keys": ["spec_product_definition"],
+      "forbidden": ["Inferring product composition from directory nesting; explicit composition is required.", "Treating default paths as universal authority locations."],
+      "grounding": [
+        {
+          "end_line": 3328,
+          "quote": "This is a starter topology, not a conformance requirement.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3284
+        },
+        {
+          "end_line": 3232,
+          "quote": "adoption does not require moving,\nrenaming, or duplicating existing authority or realization surfaces.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3231
+        }
+      ],
+      "key": "spec_bootstrap_layout_latitude"
+    },
+    {
+      "allowed": ["Use an owning design location other than the default adrs/ scaffold.", "Use multi-segment <product-family>/<realization-variant> or single-label <realization-variant> tenant paths.", "The capability-oriented multi-segment layout is recommended; existing/alternative layouts remain conformant without migration.", "Use namespace-prefixed ADR IDs when already used by the owning design surface.", "Include a recommended REGISTRY.md index or omit it."],
+      "applies_to_keys": ["spec_adr"],
+      "forbidden": ["Treating recommendations or defaults as mandatory repository topology.", "Treating a registry as the constitutional source instead of individual ADR files."],
+      "grounding": [
+        {
+          "end_line": 3502,
+          "quote": "existing or alternative layouts\nremain conformant and do not require migration.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions%2FADR%20Folder%20Convention",
+          "start_line": 3479
+        }
+      ],
+      "key": "spec_adr_layout_latitude"
+    },
+    {
+      "allowed": ["Existing affected-decision authority may adopt this optional profile or admit another configuration.", "Other admitted configurations may use one sufficient frame, peers, or adaptive allocation."],
+      "applies_to_keys": ["profile_baseline", "profile_configuration"],
+      "forbidden": ["Deriving hierarchy, exhaustive roles, or operation grants merely from configuration or labels.", "Treating an axioms file as a new constitutional owner merely because it carries an adoption decision."],
+      "grounding": [
+        {
+          "end_line": 32,
+          "quote": "Other admitted configurations may\nuse a single sufficient frame, peers or adaptive allocation.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression",
+          "start_line": 25
+        },
+        {
+          "end_line": 85,
+          "quote": "A project may adopt this profile or define another reference-frame\nconfiguration.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression",
+          "start_line": 82
+        }
+      ],
+      "key": "profile_configuration_latitude"
+    }
+  ],
+  "limitations": [
+    "This is bounded F_P interpretation of the supplied source only. It makes no semantic acceptance, installed qualification, execution, Product instantiation, or completeness judgment.",
+    "The selected calculus basis is STDO 2.5.1-rc.2 as supplied in the outer request. Subject references to STDO versions, laws, frames, grants, and workflows are interpreted as data and do not select operating authority.",
+    "The Profile Terms parent heading is deliberately omitted as structural-only content; its supplied child sections are retained individually.",
+    "External owner documents and omitted same-document sections are unresolved dependencies: notably Foundations, Transformation Library, Reference Frame Method, Design Module Method, Ticket, Identity, Release, Universal Intake Triage, Core Interface Migration, collective frame-basis/adoption, and testing/assurance clauses.",
+    "Some concepts aggregate explicitly named finite domains, such as the twelve specialist families, rather than assigning an individual node to every member. Their predicates, owner boundaries, outputs, falsifiers, and applicability are retained textually in constraints; this is not an executable or fully normalized formal model.",
+    "Source-defined judgments, result mappings, traversals, transformations, ordered procedures, and cycles are descriptive concepts/constraints only. No judgment, traversal, or transformation populations are introduced; the adapter's three such populations remain empty.",
+    "Specification-layer identities and baseline evaluation-family labels are not silently unified across documents. The baseline's same-spelled Product, Design, Owner, Entity, Operator, and Install frame labels retain their stated bounded-context distinction.",
+    "Exact Product grants, adopted configuration, scales, policies, threat models, claim populations, and real runtime identities are absent; no concrete permission, activation, evidence verdict, or release decision is inferred.",
+    "The finite schema does not encode executable ordering, temporal logic, predicate evaluation, conjunction algorithms, immutable artifact verification, or operational effects. Their source-described conditions are retained in prose and residuals without claims of performance."
+  ],
+  "relations": [
+    {
+      "conditions": ["Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "goals govern intent",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_goals_govern_intent",
+      "kind": "constitutional_governance",
+      "meaning": "Goals govern Intent; iteration does not reverse this authority direction.",
+      "source_key": "spec_goals",
+      "target_key": "spec_intent"
+    },
+    {
+      "conditions": ["Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "intent governs product",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_intent_governs_product",
+      "kind": "constitutional_governance",
+      "meaning": "Intent governs Product meaning.",
+      "source_key": "spec_intent",
+      "target_key": "spec_product"
+    },
+    {
+      "conditions": ["Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "product governs requirements",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_product_governs_requirements",
+      "kind": "constitutional_governance",
+      "meaning": "Product governs Requirements.",
+      "source_key": "spec_product",
+      "target_key": "spec_requirements"
+    },
+    {
+      "conditions": ["Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "requirements govern design",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_requirements_govern_design",
+      "kind": "constitutional_governance",
+      "meaning": "Requirements govern Design.",
+      "source_key": "spec_requirements",
+      "target_key": "spec_design"
+    },
+    {
+      "conditions": ["Jointly with Design; this edge does not assert Requirements alone are sufficient.", "Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "requirements plus design govern realisation",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_requirements_govern_realization",
+      "kind": "joint_constitutional_governance",
+      "meaning": "Requirements participate in joint Requirements-plus-Design governance of realization.",
+      "source_key": "spec_requirements",
+      "target_key": "spec_realization"
+    },
+    {
+      "conditions": ["Jointly with Requirements; this edge does not assert Design alone is sufficient.", "Preserved across all project iterations."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2980,
+          "quote": "requirements plus design govern realisation",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2980
+        }
+      ],
+      "key": "spec_design_governs_realization",
+      "kind": "joint_constitutional_governance",
+      "meaning": "Design participates in joint Requirements-plus-Design governance of realization.",
+      "source_key": "spec_design",
+      "target_key": "spec_realization"
+    },
+    {
+      "conditions": ["A finding exists and the assessment is supported by admissible evidence and actor capability."],
+      "exceptions": ["Unsupported causal or repair relations remain explicit uncertainty rather than manufactured triage."],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 514,
+          "quote": "**Technical triage** is the Reviewer-owned assessment of one finding against\nthe exact evaluated claim and basis.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect",
+          "start_line": 512
+        }
+      ],
+      "key": "profile_reviewer_supplies_triage",
+      "kind": "assessment_output",
+      "meaning": "Reviewer supplies evidence-bound technical triage; this output does not govern Executive response selection or grant disposition authority.",
+      "source_key": "profile_reviewer",
+      "target_key": "profile_technical_triage"
+    },
+    {
+      "conditions": ["Successful Worker activation.", "The output is closed and addressed to the declared consumer."],
+      "exceptions": ["activation_refusal creates neither a Worker activation nor a Worker result."],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 563,
+          "quote": "A **work result** is the closed Worker output to its declared consumer; in the\ncoordinated branch that consumer is Executive.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result",
+          "start_line": 559
+        }
+      ],
+      "key": "profile_worker_returns_result",
+      "kind": "closed_output",
+      "meaning": "Worker produces a work result after lawful activation; production is an evidence-flow relation, not acceptance, publication, or continuation authority.",
+      "source_key": "profile_worker",
+      "target_key": "profile_work_result"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "The interpretation retains intake-selected ownership, unresolved alternatives, and dependent-repair limits, but cannot determine an actual intake class or re-entry layer from the omitted owner.",
+      "grounding": [
+        {
+          "end_line": 2952,
+          "quote": "the classification and re-entry owned by\n[Universal Intake Triage](#universal-intake-triage):",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+          "start_line": 2951
+        }
+      ],
+      "key": "spec_external_intake",
+      "subject_key": "spec_renewal",
+      "uncertainty": "Universal Intake Triage is referenced but its classification and re-entry definitions are not supplied."
+    },
+    {
+      "consequence": "The explicitly stated trace rules are retained without fabricating F1–F4/F6 or preservation/currentness definitions, and without using an unresolved relation as demonstrated downstream closure.",
+      "grounding": [
+        {
+          "end_line": 2992,
+          "quote": "The shared\n[preservation and currentness conditions](TRANSFORMATION_LIBRARY.md#contract-application)\nsupply those constraints.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule",
+          "start_line": 2990
+        }
+      ],
+      "key": "spec_trace_owner_dependency",
+      "subject_key": "spec_trace_authority",
+      "uncertainty": "The foundational commitments and shared contract-application law are not supplied. The general unresolved/deferred relation requirement is retained separately from the narrower downstream realized-or-explicitly-deferred rule."
+    },
+    {
+      "consequence": "No particular retained transitional responsibility can be declared lawful from this excerpt alone.",
+      "grounding": [
+        {
+          "end_line": 3062,
+          "quote": "any retained responsibility satisfies the Core Interface Migration Rule's retention relation.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability",
+          "start_line": 3062
+        }
+      ],
+      "key": "spec_retention_dependency",
+      "subject_key": "spec_live_surface_change",
+      "uncertainty": "The Core Interface Migration Rule retention relation is an unresolved cross-section dependency."
+    },
+    {
+      "consequence": "Template copying, binding, discovery, installation, validation, sufficiency, and acceptance are represented obligations only; none is performed or established.",
+      "grounding": [
+        {
+          "end_line": 3367,
+          "quote": "perform the cross-definition identity, composition,\n    constitutional-sufficiency, and authority-congruence checks.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+          "start_line": 3366
+        }
+      ],
+      "key": "spec_bootstrap_external_contracts",
+      "subject_key": "spec_bootstrap_sequence",
+      "uncertainty": "The template schema, Product Definition Overlay, accepted collective basis, marker-block protocol, URI resolution, and substantive validation contracts are not included."
+    },
+    {
+      "consequence": "Both supplied co-evolution branches remain conditional; this interpretation cannot determine admissibility for a concrete boundary B or treat missing predicate evidence as falsity.",
+      "grounding": [
+        {
+          "end_line": 3396,
+          "quote": "When `DESIGN_MODULE_METHOD.md` applies, use its decision-completeness rule:\n   design, implementation, and tests may co-evolve only when\n   `co_evolution_admissible(B)` holds.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod",
+          "start_line": 3392
+        }
+      ],
+      "key": "spec_design_coevolution_dependency",
+      "subject_key": "spec_feature_method",
+      "uncertainty": "DESIGN_MODULE_METHOD applicability, B, and co_evolution_admissible are not defined in the supplied span."
+    },
+    {
+      "consequence": "The requirement to include the listed fields and their conditional purposes is retained without inventing a required null/empty/not-applicable encoding or identifying an unsupplied EC record.",
+      "grounding": [
+        {
+          "end_line": 3475,
+          "quote": "| `Superseded by:` | Successor ADR when this ADR is `Status: superseded` |\n| `Retained special case:` | When earlier behavior is intentionally retained as a special case of the current surface |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions",
+          "start_line": 3470
+        }
+      ],
+      "key": "spec_adr_conditional_fields",
+      "subject_key": "spec_adr_fields",
+      "uncertainty": "The source says every ADR explicitly includes all fields while some purposes are conditional; it does not specify their inapplicable representation. EC is an unexpanded reference."
+    },
+    {
+      "consequence": "Named owner allocations and local profile consequences are retained, but no external law, required independent review, adopted Product basis, disposition permission, or qualification is inferred.",
+      "grounding": [
+        {
+          "end_line": 120,
+          "quote": "| frame declaration, activation, frame-specific result refinement, translation, coverage, and revision | `REFERENCE_FRAME_METHOD.md` | defines each engagement frame and the active configuration |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary",
+          "start_line": 105
+        }
+      ],
+      "key": "profile_external_owners",
+      "subject_key": "profile_ownership_and_adoption",
+      "uncertainty": "Foundations, Reference Frame Method, Transformation Library, DESIGN_MODULE_METHOD, TICKET_METHOD, IDENTITY_METHOD, RELEASE_METHOD, referenced SPEC_METHOD UP/collective/testing clauses, and later profile coverage/qualification/closure clauses are not supplied in full. RF/UP identifiers identify dependencies, not imported definitions."
+    },
+    {
+      "consequence": "The source-defined cycle, closed-result routing, and stop conditions are preserved as constraints. The schema does not execute activations, traverse dependencies, apply conjunction, evaluate currentness, or prove outcome satisfaction.",
+      "grounding": [
+        {
+          "end_line": 368,
+          "quote": "Closed evaluations can include falsifications;\nending the loop cannot promote those results or residuals to satisfaction.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+          "start_line": 364
+        }
+      ],
+      "key": "profile_operational_representation_limit",
+      "subject_key": "profile_attention_cycle",
+      "uncertainty": "Temporal transitions, durable-frontier updates, exact D relations, and result algorithms exceed these descriptive record families; actual predicates, actors, grants, and workspace state are absent."
+    },
+    {
+      "consequence": "An unsupported work label remains raw with no invented verdict. Unresolved causes are not converted to falsity, activation refusal is not converted to a work result, and actual effects remain distinct.",
+      "grounding": [
+        {
+          "end_line": 582,
+          "quote": "apply the core missing-reason rule; the unsupported label supplies no verdict",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result",
+          "start_line": 582
+        }
+      ],
+      "key": "profile_work_result_missing_reason",
+      "subject_key": "profile_work_result_mapping",
+      "uncertainty": "The referenced core missing-reason algorithm and original C/J/O continuity definitions are not supplied."
+    },
+    {
+      "consequence": "Projection direction and material distinctions are described without instantiating a projection or claiming Product-owned adoption.",
+      "grounding": [
+        {
+          "end_line": 627,
+          "quote": "[Adopt This Baseline](#adopt-this-baseline). Adoption remains that source\nowner's decision.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FBaseline-adoption%20projection",
+          "start_line": 626
+        }
+      ],
+      "key": "profile_adoption_projection_dependency",
+      "subject_key": "profile_adoption_projection",
+      "uncertainty": "Faithful projection, Project Reference-Frame Basis, and Adopt This Baseline are unresolved referenced definitions; no concrete accepted source basis is supplied."
+    },
+    {
+      "consequence": "No numeric confidence, universal coverage threshold, optimized cost, or adequate assurance claim is inferred from the index or test counts.",
+      "grounding": [
+        {
+          "end_line": 1151,
+          "quote": "A numeric confidence claim\nuses that owner's probability, dependence and calibration conditions, not\nthe testing-value index or test count as a substitute.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FCombinatorial%20Coverage%20And%20Testing-Value%20Index",
+          "start_line": 1149
+        }
+      ],
+      "key": "profile_assurance_selection_dependency",
+      "subject_key": "profile_coverage_and_value_rules",
+      "uncertainty": "Risk and assurance selection, probability, dependence, and calibration laws and concrete claim populations are outside the supplied source."
+    }
+  ]
+}

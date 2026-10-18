@@ -1,0 +1,126 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "categorical_demonstration_requirements",
+              "pillar_and_pending_trace_semantics",
+              "profile_misapplication"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F17.%20Actor%20binding%20and%20independence",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F18.%20Profile%20qualification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F19.%20Baseline-specific%20basis%20and%20activation%20additions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F19.%20Baseline-specific%20basis%20and%20activation%20additions%2FProject-basis%20additions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F19.%20Baseline-specific%20basis%20and%20activation%20additions%2FActivation%20additions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F20.%20Failure%20classification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F21.%20Anti-patterns",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F22.%20Closure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F23.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F1.%20Vocabulary%20of%20standing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FFrame%20objects",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FAuthority%20kinds",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FDisjointness%20and%20independence",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FThe%20frame%20tuple",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FProduct%20lineage%20objects",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FWork%20boundary",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FAccounts%20of%20a%20construction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F2.%20Ontology%2FImports%20between%20members",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F3.%20Commitments",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F3.%20Commitments%2FConstruction%20synthesis",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F3.%20Commitments%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

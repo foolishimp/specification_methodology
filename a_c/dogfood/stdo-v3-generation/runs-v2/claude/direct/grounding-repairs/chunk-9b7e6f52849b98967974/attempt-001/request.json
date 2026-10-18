@@ -1,0 +1,336 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-9b7e6f52849b98967974",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "section_id is outside the exact dispatched chunk",
+      "family": "concepts",
+      "grounding": {
+        "end_line": 376,
+        "quote": "The separate `cohort-update` operation presents the whole plan without\nconsumer effects.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+        "start_line": 375
+      },
+      "grounding_index": 0,
+      "record_key": "cohort_update",
+      "record_ordinal": 1
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 450,
+        "quote": "A caught application failure\nis also `not_effected` (`falsified`):",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+        "start_line": 432
+      },
+      "grounding_index": 0,
+      "record_key": "manager_effect_result_mapping",
+      "record_ordinal": 5
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 472,
+        "quote": "A missing explicit acceptance of the\nexact plan, or missing whole-selection authorisation of a fleet write,\nis missing operation authority: `admission_refused(authority)`\n(`out_of_frame`)",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+        "start_line": 459
+      },
+      "grounding_index": 0,
+      "record_key": "manager_refusal_result_mapping",
+      "record_ordinal": 6
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 485,
+        "quote": "A command without an intended\nexternal effect, such as `verify` or `adopt --dry-run`, has no value\nunder Effects",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+        "start_line": 473
+      },
+      "grounding_index": 0,
+      "record_key": "manager_result_predicate_separation",
+      "record_ordinal": 7
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "latitude",
+      "grounding": {
+        "end_line": 137,
+        "quote": "without\nchanging the calculus or selecting a consumer, and whose adoption stays\noptional;",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+        "start_line": 135
+      },
+      "grounding_index": 0,
+      "record_key": "library_optional_tooling",
+      "record_ordinal": 3
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "residuals",
+      "grounding": {
+        "end_line": 465,
+        "quote": "each other\ncondition of the fail-closed list above",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+        "start_line": 464
+      },
+      "grounding_index": 1,
+      "record_key": "manager_external_contracts",
+      "record_ordinal": 0
+    }
+  ],
+  "mode": "direct",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-9b7e6f52849b98967974/attempt-001"
+  },
+  "parent_answer_sha256": "34728cd5800f75e2cadd03064c84346c00f76b31e92db8f5643963b281d060d8",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "f5cecf270a07dcce1f7e7c89aa3f559f752815b7fea265f366003d53b5cbc427",
+      "original_attempt": "actors/author/chunk-9b7e6f52849b98967974/attempt-001",
+      "original_recorded_failure": "record[cohort_update]/grounding/0: grounding names source outside chunk",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[cohort_update]/grounding/0: grounding names source outside chunk",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 49018,
+          "output_tokens": 31301,
+          "reasoning_output_tokens": 729
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/answer.json": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/events.jsonl": "4dbf35038b343b5ec6c6cf119658b6378ea70e4524cec1dbbff0c4d4d8207a64",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/invocation.json": "d573a8b597a63cd98f68adf736371d4c024c5fecc0bb89121ce781015f2acf2c",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/prompt.txt": "6535ca26e35aa781e77e3e9c1c28eb400ed2578506c1f227a53da20aabda37a9",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/result.json": "192bd799d268f88bc071b5f7a3c48e057aca2e5c31ce18fdf52c07cac6727c00",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-9b7e6f52849b98967974/attempt-001/usage.json": "b7d289ed1e82b935ab7e9363cf079430171bdccd61a64ac301c0f7d4684c3ce6",
+        "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+        "plan.json": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc",
+        "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+      },
+      "source_sections": [
+        {
+          "end_line": 487,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "8135ef8d022cb1ca73bcd74b5888086102bfc427fbb6e6677cee29f206580f34",
+          "start_line": 359
+        },
+        {
+          "end_line": 610,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "0827506841c005cbb2a29a275a240b85c3a2821735f5e6c4bfbee260dfdeff49",
+          "start_line": 488
+        },
+        {
+          "end_line": 646,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F6.%20Local%20constitutional%20binding",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "1c4c5941ff0aa83b0acb0b016be059bb8ea3b4623c91345878f17c075b100576",
+          "start_line": 611
+        },
+        {
+          "end_line": 739,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "969a5c15c6e8723443dedb73e97bc3c6d324d10b81d19b75363c07a25adf83be",
+          "start_line": 647
+        },
+        {
+          "end_line": 785,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "93632142a261eafc69785d802dd2cb934056ad5fe53421068ae4dde2f1def02c",
+          "start_line": 740
+        },
+        {
+          "end_line": 858,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "e7e7282f68426c1bb4625adf53fe91742156df0029f47f1ee1fd65bfab5ef20a",
+          "start_line": 786
+        },
+        {
+          "end_line": 882,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F10.%20Semantic-resolution%20conformance%20cases",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "3dab8c746e5a65fe25f14ebc2c6d6d910379cde36f30e044306c2400e5dbe627",
+          "start_line": 859
+        },
+        {
+          "end_line": 943,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "90e367614e9174d0ba7f1e0944e22540f6c76068857136385edf2e0524f20418",
+          "start_line": 883
+        },
+        {
+          "end_line": 1088,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "66c83060eac097e33e1e445a802d4a99c559ad7139c15a981327fea28ad75756",
+          "start_line": 944
+        },
+        {
+          "end_line": 1120,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F13.%20Source%20dispositions",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "7a97af08b5a43a4088e5336cd7609a57ede34ee33bdc2a5839fa8a1da8e66bb0",
+          "start_line": 1089
+        },
+        {
+          "end_line": 8,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES",
+          "path": "standards/PROFILES.md",
+          "sha256": "d6a2b07822f7150af5d5bf48b15352dd77cb4d782fe68f5590f433e3eebc2269",
+          "start_line": 1
+        },
+        {
+          "end_line": 54,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F1.%20The%20boundary",
+          "path": "standards/PROFILES.md",
+          "sha256": "581b1264c9856a85649bedc57ff92914c4a7ad050a2d4005fa2eab3a4a58aeac",
+          "start_line": 9
+        },
+        {
+          "end_line": 72,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F2.%20Graph%20execution",
+          "path": "standards/PROFILES.md",
+          "sha256": "efb6684d7f85954647d8fbe135c6e98e033fec8282ef10f389a294ddd626db4d",
+          "start_line": 55
+        },
+        {
+          "end_line": 90,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F3.%20Software%20design",
+          "path": "standards/PROFILES.md",
+          "sha256": "17065af06363df86cb8063d96edccd8f5472552ddc25fa77c1058c672de76e78",
+          "start_line": 73
+        },
+        {
+          "end_line": 105,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F4.%20UX",
+          "path": "standards/PROFILES.md",
+          "sha256": "0f8a5a96e0906bdfb956d65ad09557062e8cb65fd4aecee04b8c52bd8a66d26e",
+          "start_line": 91
+        },
+        {
+          "end_line": 123,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F5.%20World%20model",
+          "path": "standards/PROFILES.md",
+          "sha256": "2e367ee5b87a90e1a3c217a685df6e7c999dddcf8e5a23aa6d59e21908104f89",
+          "start_line": 106
+        },
+        {
+          "end_line": 135,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F6.%20Engagement%20baseline",
+          "path": "standards/PROFILES.md",
+          "sha256": "c217abbc12ebaff4e0f6fd92271c1c322b3fcb8ce4a6b343c409853aacc1ba6a",
+          "start_line": 124
+        },
+        {
+          "end_line": 153,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions",
+          "path": "standards/PROFILES.md",
+          "sha256": "c9bcec98ad5a6d320d7f1494b33c8cf4259d400471d2db32a5a21af001136fc6",
+          "start_line": 136
+        },
+        {
+          "end_line": 15,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29",
+          "path": "standards/README.md",
+          "sha256": "e9286d1dfc9d744787ebf51038c9462eebe4576fcb6a61ad309e262fc25f3be5",
+          "start_line": 1
+        },
+        {
+          "end_line": 46,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FRoutes",
+          "path": "standards/README.md",
+          "sha256": "1f7b5386d9ec2ccab0258623f3051215e94312fb00d8ada21ae9c5c0e3188769",
+          "start_line": 16
+        },
+        {
+          "end_line": 121,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "path": "standards/README.md",
+          "sha256": "46f6b192555787cf886880cef9443c32f4f2f95ca9a81c46c812f67dbd5ac4cf",
+          "start_line": 47
+        },
+        {
+          "end_line": 169,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "path": "standards/README.md",
+          "sha256": "0a1e4e9f61d5f6881c6c1b38ce58c073595b8edaddf0f1d0da7b79a50f44c835",
+          "start_line": 122
+        },
+        {
+          "end_line": 189,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FSource%20dispositions",
+          "path": "standards/README.md",
+          "sha256": "563e1c0337d1cbee0e1fad0bc7472102b74ae0a3df92e2068eb43d340864b676",
+          "start_line": 170
+        },
+        {
+          "end_line": 15,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME",
+          "path": "standards/REFERENCE_FRAME.md",
+          "sha256": "5052d4eb0eb51dfce08d8fefcee2d69b467ce1c25210c3cecf66b57387227f6c",
+          "start_line": 1
+        },
+        {
+          "end_line": 81,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit",
+          "path": "standards/REFERENCE_FRAME.md",
+          "sha256": "b5c963a03c334bf1105e69669f88f630992f1395b2b2a25b3023971f850d2a03",
+          "start_line": 16
+        },
+        {
+          "end_line": 122,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "path": "standards/REFERENCE_FRAME.md",
+          "sha256": "3a2b43c26fad3b6d9cd0a8e7caae5bebdb679eb8f5f669cb8d16d0406ec560da",
+          "start_line": 82
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-9b7e6f52849b98967974/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "d107cdb554cee27e294998653ead2553335e68b73e23d125f4d520c40ded22ed",
+  "schema_sha256": "fa706366c108acd6e10ff2003ceb7c9d5b207c094a21818f63eee5c4b6d97738",
+  "source_chunk_sha256": "f5cecf270a07dcce1f7e7c89aa3f559f752815b7fea265f366003d53b5cbc427",
+  "source_plan_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+}

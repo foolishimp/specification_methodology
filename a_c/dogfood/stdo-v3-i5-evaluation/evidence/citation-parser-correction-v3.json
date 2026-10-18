@@ -1,0 +1,34 @@
+{
+  "profile": "ac.eval.checker-correction/3",
+  "reason": "Uniform parser correction implementing the frozen file+section-or-line rule: unambiguous explicit line coordinates remain valid inside combined heading/line strings, with standard dash variants. Exact quote must still occur inside the actual source line range. No answer, oracle, semantic rule or threshold changed. Original packets retained.",
+  "outcomes": [
+    {
+      "series": "primary",
+      "candidate": "codex",
+      "changed_from_original": 0,
+      "valid": 97,
+      "total": 97
+    },
+    {
+      "series": "primary",
+      "candidate": "claude",
+      "changed_from_original": 7,
+      "valid": 123,
+      "total": 123
+    },
+    {
+      "series": "followup",
+      "candidate": "codex",
+      "changed_from_original": 27,
+      "valid": 27,
+      "total": 27
+    },
+    {
+      "series": "followup",
+      "candidate": "claude",
+      "changed_from_original": 32,
+      "valid": 32,
+      "total": 32
+    }
+  ]
+}

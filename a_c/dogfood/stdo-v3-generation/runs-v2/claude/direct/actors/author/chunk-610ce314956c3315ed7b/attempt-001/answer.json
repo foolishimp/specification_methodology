@@ -1,0 +1,1079 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "F15 is the release and successor-conservation family. Its instance premises are recursive products, published point-in-time cuts for uncontrolled consumers, mutable and possibly shared carriers, source-matched derived assets, external service dependencies, and predecessor/successor lines. These premises are not supplied by the commitments. The table traces but does not own FOUNDATIONS §2 lineage objects. Cited standing is P0 recovered; P1, P3 and P6 independent; P4b derived from P0 and P2 with non-reacquirable step-produced facts; P5 derived from P0 and P6 with the open-world premise.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":114,
+          "quote":"Its instance premises, which the commitments do not supply, are\nnamed in the rows as follows:",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+          "start_line":100
+        }
+      ],
+      "key":"release_foundation_map",
+      "label":"Release foundation-to-law map"
+    },
+    {
+      "conditions": [],
+      "definition": "The lineage roles are substrate, development product, source project, release cut, Product, install, artifact and product definition. Each binds its own identity and basis. A mutable source workspace has no fixed Product identity. An install used as builder substrate is bound as a development product. A product definition is a source-project surface, distinct from a released artifact.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":118,
+          "quote":"substrate, development product, source project, release cut, product, install, artifact and product definition are distinct objects.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+          "start_line":118
+        }
+      ],
+      "key":"lineage_objects",
+      "label":"Product lineage objects"
+    },
+    {
+      "conditions": [],
+      "definition": "A Project Release Namespace is a stable repository-local key assigned by Product release authority to one independently released source project.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":164,
+          "quote":"- Project Release Namespace: a stable repository-local key assigned by\n  the Product release authority to one independently released source\n  project;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":162
+        }
+      ],
+      "key":"project_release_namespace",
+      "label":"Project Release Namespace"
+    },
+    {
+      "conditions": [],
+      "definition": "Project Subtree is the exact repository-relative source-project root and Git tree selected for one cut.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":166,
+          "quote":"- Project Subtree: the exact repository-relative source-project root and\n  Git tree object selected for one cut;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":165
+        }
+      ],
+      "key":"project_subtree",
+      "label":"Project Subtree"
+    },
+    {
+      "conditions": [],
+      "definition": "Candidate Source is mutable source-project state constructing a possible successor. Its RC Branch is the mutable project-qualified carrier of the current candidate window. The optional Release Branch is a mutable convenience carrier aligned to the selector's latest-published commit.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":170,
+          "quote":"- Candidate Source: the candidate source of FOUNDATIONS §2, the mutable\n  source-project state constructing a possible successor;\n- RC Branch: a mutable project-qualified carrier for the current\n  candidate window;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":167
+        },
+        {
+          "end_line":179,
+          "quote":"- Release Branch: an optional mutable project-qualified convenience\n  carrier aligned to the same latest-published commit as the selector.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":178
+        }
+      ],
+      "key":"candidate_and_branch_carriers",
+      "label":"Candidate Source, RC Branch and Release Branch"
+    },
+    {
+      "conditions": [],
+      "definition": "An Immutable RC Cut is an annotated project-qualified Git tag together with its exact Product release subject. It names one published candidate and, once accepted, one released Product; it realises the generic release cut.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":173,
+          "quote":"- Immutable RC Cut: an annotated project-qualified Git tag plus its exact\n  Product release subject (FOUNDATIONS §2), naming one published candidate\n  and, once accepted, one released Product; it realises the release cut;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":171
+        }
+      ],
+      "key":"immutable_rc_cut",
+      "label":"Immutable RC Cut"
+    },
+    {
+      "conditions": [],
+      "definition": "The Version-Line Selector is a mutable project-qualified tag alias naming the highest-ordinal published immutable RC cut for one project and version line. It is discovery, not an exact operative basis or consumer-selection authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":176,
+          "quote":"- Version-Line Selector: the mutable project-qualified tag alias naming\n  the highest-ordinal published immutable RC cut for that project and\n  version line; it realises the version-line selector of FOUNDATIONS §2;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+          "start_line":174
+        }
+      ],
+      "key":"version_line_selector",
+      "label":"Version-Line Selector"
+    },
+    {
+      "conditions": [],
+      "definition": "The release process has ordered phases: mutable candidate construction; immutable RC publication with monotonic version-line advancement; exact-cut qualification, acceptance and explicit consumer adoption. Publication provides one exact subject for review, replay and possible acceptance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":279,
+          "quote":"1. mutable candidate construction;\n2. immutable RC publication and monotonic version-line advancement; and\n3. exact-cut qualification, acceptance and explicit consumer adoption.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases",
+          "start_line":277
+        }
+      ],
+      "key":"release_process",
+      "label":"Release process"
+    },
+    {
+      "conditions": [],
+      "definition": "Exact-cut qualification evaluates claims on their bound immutable subject and evidence. Acceptance is the human Product authority's verdict on that exact subject, distinct from publication, selector advancement, operation outcomes and consumer adoption.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":359,
+          "quote":"An RC is accepted only when the required exact-cut review and operator\nchecks are complete and the human authority accepts that exact subject.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification",
+          "start_line":354
+        }
+      ],
+      "key":"release_qualification_acceptance",
+      "label":"Exact-cut qualification and acceptance"
+    },
+    {
+      "conditions": [],
+      "definition": "Consumer adoption is a separate explicit Product-Definition transition that resolves, presents, installs, verifies and pins an immutable RC. Its read-only Adoption Plan binds current definition bytes and basis to the target cut, annotated tag object, peeled commit, tree and installed-manifest digest, producing a deterministic plan digest. Fleet adoption uses one aggregate digest over all exact per-definition plans.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":409,
+          "quote":"Adoption is a separate\nexplicit Product-Definition transition that resolves, presents, installs,\nverifies and pins the selected immutable RC.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption",
+          "start_line":407
+        },
+        {
+          "end_line":429,
+          "quote":"The read-only plan,\nthe Adoption Plan of PRODUCT_DEFINITION §4, binds the current Product\nDefinition bytes and basis to the target immutable cut, annotated tag\nobject, peeled commit, tree and installed-manifest digest, then emits a\ndeterministic plan digest.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption",
+          "start_line":425
+        }
+      ],
+      "key":"consumer_adoption",
+      "label":"Consumer adoption and Adoption Plan"
+    },
+    {
+      "conditions": [],
+      "definition": "Optional release-scoped surfaces include release notes, release and installed-distribution manifests, dependency declarations, package or installed-carrier metadata, qualification receipts, and branch/tag identity declarations.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":477,
+          "quote":"- release notes;\n- release and installed-distribution manifests;\n- dependency declarations;\n- package or installed-carrier metadata;\n- qualification receipts; and\n- branch and tag identity declarations.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets",
+          "start_line":472
+        }
+      ],
+      "key":"release_scoped_assets",
+      "label":"Release-scoped assets"
+    },
+    {
+      "conditions": [],
+      "definition": "The Product release subject is the declared exact member set or artifact, distinguished from its release-scoped claims and excluded co-located mutable source fields. A repository commit is the wider carrier; its subtree tree and member inventory identify the subject within it.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":504,
+          "quote":"A repository commit carries those declared sets but does not make every\nco-located file or sibling Project Subtree a Product member. The exact\nProject Subtree tree and Product member inventory distinguish the subject\nfrom the wider carrier.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier",
+          "start_line":501
+        }
+      ],
+      "key":"product_release_subject",
+      "label":"Product subject and repository carrier"
+    },
+    {
+      "conditions":["A Product authority explicitly declares the relation when a source corpus and required distributed or derived assets need to remain usable as one versioned set."],
+      "definition":"A Release-Matched Asset Cohort names every required Product and asset, exact source dependency, owning authorities, qualification boundary and publication transaction. The closed release-matched STDO stack contains the exact standards corpus cut; its distributed spec plugin and host assets; exact Axiom Indexer mechanics Product used for validation/projection; exact STDO Representation Product; and its released a_c.STDO program and logical constraint map or equivalent semantic index, including complete source inventory, member digests, member-set digest and derivation cut identity.",
+      "exceptions":[],
+      "grounding":[
+        {"end_line":518,"quote":"The declaring\nrelation names every required Product and asset, the exact source\ndependency, its owning authorities, the qualification boundary and the\npublication transaction.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts","start_line":513},
+        {"end_line":539,"quote":"1. the exact STDO standards corpus cut;\n2. the distributed `spec` plugin and host assets carried by that STDO cut;\n3. the exact Axiom Indexer mechanics Product used to validate and project\n   the index;\n4. the exact STDO Representation Product; and\n5. its released `a_c.STDO` axiomatic program and logical constraint map\n   or equivalent semantic index, with the complete source-STDO member\n   inventory, member digests, member-set digest and exact cut identity\n   used to derive it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts","start_line":531}
+      ],
+      "key":"release_matched_cohort",
+      "label":"Release-Matched Asset Cohort"
+    },
+    {
+      "conditions":["A coordinated STDO cohort is being constructed."],
+      "definition":"Two-commit construction avoids self-reference because installed-manifest identity includes the annotated STDO tag object. Commit A freezes STDO source and qualification material; its local unpushed tag is installed and verified to obtain the manifest identity. Commit B freezes derived Products, index and cohort record. One qualified atomic transaction publishes the carrier branch and complete Product ref set.",
+      "exceptions":[],
+      "grounding":[{"end_line":556,"quote":"Exact installed-manifest identity includes the annotated STDO tag object,\nso a same-commit carrier containing both that identity and derived child\nbytes would be self-referential.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction","start_line":552}],
+      "key":"cohort_publication_transaction",
+      "label":"Two-commit cohort publication"
+    },
+    {
+      "conditions":[],
+      "definition":"An external qualification dependency is a backend, transport or operator-facing service outside the local carrier. It can remain outside Product for carrier/migration classification while blocking a dependent claim. A clean skip is an evaluation not performed, with no result.",
+      "exceptions":[],
+      "grounding":[{"end_line":658,"quote":"Such a dependency may remain out of\nProduct for carrier and migration classification while still blocking the\ndependent release claim","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies","start_line":655}],
+      "key":"external_qualification_dependency",
+      "label":"External qualification dependency"
+    },
+    {
+      "conditions":[],
+      "definition":"A successor disposition is a claim about one predecessor claim: conserved means retained; superseded means replaced by an accepted successor relation; intentionally removed means removed by current Product authority; not applicable means no successor effect with a bounded reason. These predicates are not result values or the acceptance disposition of an assessed candidate. Evaluation records its own core result with the predicate; an unresolved disposition states no claim, has no result and is a planned assessment without a closed result.",
+      "exceptions":[],
+      "grounding":[
+        {"end_line":678,"quote":"- conserved: the successor retains the claim;\n- superseded: an accepted successor relation replaces it;\n- intentionally removed: current Product authority removes it; or\n- not applicable: it has no successor effect, with a bounded reason.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":675},
+        {"end_line":716,"quote":"An unresolved disposition states no claim and so has no result: in the\nqualification of the affected claim it is a planned assessment without a\nclosed result, which is why it blocks that qualification","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":714}
+      ],
+      "key":"successor_disposition",
+      "label":"Semantic successor disposition"
+    },
+    {
+      "conditions":[],
+      "definition":"The source-disposition register records claimed conservation and loci for received rc.2 RELEASE_METHOD.md rows. Routes are provenance only. Its editorial generalisations remove identity emphasis, replace local references with §9 or 'this member', use British spelling, and express 'need to remain usable' as a declaration condition rather than a new obligation. Generic release objects are defined in FOUNDATIONS and realised here. The register reports new Results, foundation-map and disposition-evaluation material without itself deciding conservation.",
+      "exceptions":[],
+      "grounding":[{"end_line":755,"quote":"Every conserved row is restated in this member's own\ntext; a route is provenance only.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions","start_line":745}],
+      "key":"release_source_disposition_register",
+      "label":"Release source-disposition register"
+    },
+    {
+      "conditions":[],
+      "definition":"SPEC_METHOD is the Tier 2 particular method and process constitution. It owns method identity, constitutional chain and surfaces, manifesto and litmus tests, requirement/design and trace law, live-surface and outcome conservation, triage/classification, consistency and sprint boundaries, ambiguity and lifecycle sufficiency, lineage/version boundary, migration, procedures, design-record conventions and build-tenant binding. It is realised from FOUNDATIONS, REFERENCE_FRAME, ACTIVATION and EVALUATION, not foundational; its mechanisms could differ under the same principles. PRODUCT_DEFINITION owns project binding, ASSURANCE testing law, TICKETS work carriers and RELEASE release mechanics.",
+      "exceptions":[],
+      "grounding":[{"end_line":16,"quote":"nothing here is foundational, every clause\nnames the principle that requires it (P0 to P6, FOUNDATIONS §3), and each\nmechanism could be realised differently under the same principles.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD","start_line":14}],
+      "key":"spec_method",
+      "label":"SPEC_METHOD process constitution"
+    },
+    {
+      "conditions":[],
+      "definition":"Spec-driven development treats specification as constitutional source to make software re-derivable, auditable and correctable under explicit authority. Its declarative preference is to declare truths, structures, interfaces, constraints and evidence surfaces, with lawful processing realising work. It is a meta-constitution for relations among goals, intent, product, requirements, design, code, evidence and repricing, sufficiency and authority during iteration.",
+      "exceptions":[],
+      "grounding":[
+        {"end_line":38,"quote":"Its\noverriding bias is declarative rather than imperative: the system should\nprimarily declare truths, structures, interfaces, constraints and evidence\nsurfaces, and let lawful processing derive and realise work from that\ndeclared surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition","start_line":32},
+        {"end_line":54,"quote":"Its role is meta-constitutional: it defines how goals, intent, product,\nrequirements, design, code, evidence and repricing relate; what counts as\nspecification sufficiency; what kinds of requirement truth exist; and how\nauthority flows during iterative delivery.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution","start_line":51}
+      ],
+      "key":"spec_driven_development",
+      "label":"Spec-driven development"
+    },
+    {
+      "conditions":["Within urn:stdo:bounded-context:method-identity under the selected complete basis."],
+      "definition":"STDO abbreviates four named areas of method law: S Specification owned by SPEC_METHOD; T Ticketing owned by TICKETS; D Design owned by DESIGN_MODULE; O Outcome-Driven Development, whose complete area identity and realisation meaning are owned by ODD.",
+      "exceptions":[],
+      "grounding":[{"end_line":100,"quote":"S,\nSpecification, owned by this member; T, Ticketing, owned by\n[TICKETS](TICKETS.md); D, Design, owned by the design profile member\n[DESIGN_MODULE](DESIGN_MODULE.md); and O, Outcome-Driven Development, the\ncomplete area whose identity and realisation meaning are owned by its\nprofile member [ODD](ODD.md).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity","start_line":95}],
+      "key":"stdo_method_identity",
+      "label":"STDO method identity"
+    },
+    {
+      "conditions":[],
+      "definition":"F10 explains how specification governs realisations, conditional on owned layers, layered interpretable surfaces, potentially several changing realisations and immutable releases. It distinguishes consequences from added choices and their owners. P0 is recovered; P1, P2, P3, P4a and P6 independent; P4b derives from P0/P2 with non-reacquirable step-produced facts; P5 derives from P0/P6 with the open-world premise.",
+      "exceptions":[],
+      "grounding":[{"end_line":163,"quote":"Standing of the commitments cited (FOUNDATIONS §3): P0\nrecovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and\nP2, with P0's premise that step-produced facts are not re-acquirable; P5\nderived from P0 and P6, with P0's open-world premise.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding","start_line":160}],
+      "key":"chain_foundation_map",
+      "label":"Chain, outcome and build-tenant foundation map"
+    },
+    {
+      "conditions":[],
+      "definition":"Goals define current overriding concerns for a bounded work wave. They keep temporary focus out of deeper layers until intentional repricing, are more immediate than intent, and higher-level than product definition and requirements.",
+      "exceptions":[],
+      "grounding":[{"end_line":259,"quote":"The goals surface is the bounded work-wave surface: it captures the current\noverriding concerns for the next body of work, keeps temporary focus out of\ndeeper constitutional layers until it is intentionally repriced there, and\nis more immediate than intent while remaining higher-level than product\ndefinition and requirements.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":255}],
+      "key":"goals_surface",
+      "label":"Goals"
+    },
+    {
+      "conditions":[],
+      "definition":"Intent states purpose, direction and directional scope. It carries optional realisation detail only when that detail is constitutional.",
+      "exceptions":[],
+      "grounding":[{"end_line":419,"quote":"Intent states why the\nsystem exists and what directional change is in or out of scope; it carries\nno optional realisation detail unless that detail is itself constitutional.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule","start_line":417}],
+      "key":"intent_surface",
+      "label":"Intent"
+    },
+    {
+      "conditions":[],
+      "definition":"The product-definition surface states the current mutable source project's realisation, terms, boundaries and end-state shape in present-tense, requirement-decomposable form. It bridges direction to obligation and routes actual authority locations; it is neither released cut nor installed Product, release note nor rival truth surface.",
+      "exceptions":[],
+      "grounding":[{"end_line":265,"quote":"The product-definition surface is the bridge\nbetween direction and obligation: it states the current product definition\nof the mutable source project in present-tense terms, names the product\nterms and boundaries that downstream layers rely on, and provides the\nsurface that requirements decompose. It is not the immutable release cut\nand not the installed product;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":259}],
+      "key":"product_definition_surface",
+      "label":"Product Definition surface"
+    },
+    {
+      "conditions":[],
+      "definition":"Requirements are the constitutional WHAT: invariant truths and stable obligations the project must make true, including capabilities, constraints, guarantees, governance and verification. They carry explicit acceptance criteria and sufficient lifecycle obligations or named ambiguity gaps for downstream design.",
+      "exceptions":[],
+      "grounding":[{"end_line":271,"quote":"Requirements are the constitutional what of the project. They are not\nlimited to user-visible features: the live requirement surface may include\ncapabilities, invariants, constraints, governance and verification\nobligations; what matters is that each requirement states something the\nproject must make true.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":267}],
+      "key":"requirements_surface",
+      "label":"Requirements"
+    },
+    {
+      "conditions":[],
+      "definition":"Design is structural HOW: decisions, interfaces, topology, carrier surfaces, file placement, entry/control surfaces, runtime wiring and lawful tenant boundaries that realise requirement truth. ADRs are durable design records and memory, not an additional constitutional layer or requirement surface.",
+      "exceptions":[],
+      "grounding":[{"end_line":228,"quote":"Design\ndefines the structural decisions, interfaces, carrier surfaces and delivery\ntopology that make those truths achievable; ADRs are one durable form of\ndesign record, not a second constitutional layer above design.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":225}],
+      "key":"design_surface",
+      "label":"Design and ADRs"
+    },
+    {
+      "conditions":[],
+      "definition":"Realisation carries design decisions as software code, performed human procedure or both according to its execution binding. Code, Events and Projection name responsibilities rather than mandatory software infrastructure. A tenant binding distinguishes requirements calculus, computational calculus and execution environment.",
+      "exceptions":[],
+      "grounding":[{"end_line":233,"quote":"Code\nrealises those decisions where the selected execution environment is\nsoftware; a performed human procedure realises them where it is a human\nprocess, and both where it is mixed (§11).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":228}],
+      "key":"realisation_binding",
+      "label":"Realisation and build-tenant binding"
+    },
+    {
+      "conditions":[],
+      "definition":"The homeostatic chain is Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta → Scenarios → Gap analysis → Repricing at the layer selected by change class. Events retain what happened using the chosen carrier; Projection reconstructs current truth where that record suffices for obligations; Delta exposes intended/realised drift; Scenarios test operational meaning; Gap analysis identifies model insufficiency from real use; Repricing updates affected constitutional or implementation layers.",
+      "exceptions":[],
+      "grounding":[{"end_line":218,"quote":"Goals → Intent → Product Definition → Requirements → Design → Code\n  → Events → Projection → Delta → Scenarios → Gap analysis\n  → Repricing at the layer its change class names","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":216}],
+      "key":"constitutional_chain",
+      "label":"Constitutional homeostatic chain"
+    },
+    {
+      "conditions":[],
+      "definition":"Requirements have two independent classifications: Category identifies Capability; Constraint / Guarantee; Governance; or Verification truth. Status identifies Active, Deferred, Superseded or Orphaned lifecycle standing. Capability is required behaviour/function/surface; Constraint / Guarantee bounds behaviour by invariant or law; Governance controls lifecycle, authority, visibility, release or operator action; Verification obliges tests, evidence, traceability, qualification or forensic surfaces. Category is neither priority nor user-facing status.",
+      "exceptions":[],
+      "grounding":[{"end_line":503,"quote":"| Capability | a behaviour, function or surface the system must provide | what can the system do |\n| Constraint / Guarantee | an invariant, law, safety property, portability rule or semantic guarantee that bounds how the system may behave | what must always remain true |\n| Governance | a policy or control rule over lifecycle, authority, visibility, release or operator action | what governs use and change |\n| Verification | a requirement on tests, evidence, traceability, qualification or forensic surfaces | how do we know the claim is true |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification","start_line":500}],
+      "key":"requirement_classification",
+      "label":"Requirement category and lifecycle status"
+    },
+    {
+      "conditions":[],
+      "definition":"A live domain surface is published versioned constitutional history, immutable in place. Mutable engine code, design documents, tests and tooling retain implementation status while mutable. Prior truth is preserved in version control, operational event history where present and superseded constitutional artifacts.",
+      "exceptions":[],
+      "grounding":[{"end_line":624,"quote":"A live\nsurface is versioned constitutional history, not scratch space","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability","start_line":617}],
+      "key":"live_constitutional_surface",
+      "label":"Live constitutional surface"
+    },
+    {
+      "conditions":["Applies to any material product, application, module, function, runtime surface, plugin surface, public interface, data surface or capability."],
+      "definition":"The operational lifecycle is intent, requirement, build, assurance, release, deployment, live usage, observed telemetry and retirement. Each phase has a declared surface state: answered; not applicable with reason; or unknown with a named Gap: or Unanswered: marker. These states are not evaluation results and map to no core value.",
+      "exceptions":[],
+      "grounding":[{"end_line":644,"quote":"Any material\nproduct, application, module, function, runtime surface, plugin\nsurface, public interface, data surface or capability has an operational\nlifecycle, whose canonical chain is intent, requirement, build, assurance,\nrelease, deployment, live usage, observed telemetry, retirement.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency","start_line":636}],
+      "key":"operational_lifecycle",
+      "label":"Operational lifecycle and phase states"
+    },
+    {
+      "conditions":["For a product-outcome-bearing work wave."],
+      "definition":"A selected product outcome is one explicitly selected, unresolved, directly verifiable product-defined outcome with a declared acceptance interval. Evidence classes are material advance, prerequisite readiness, preservation and regression: only accepted material advance towards this outcome projects product progress; bounded prerequisite readiness names its enabled obligation; preservation/repeated proof and regression are not new progress.",
+      "exceptions":[],
+      "grounding":[{"end_line":685,"quote":"Every product-outcome-bearing work wave identifies one explicitly selected,\nunresolved, directly verifiable product-defined outcome and declares the\nacceptance interval for that instance.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":680}],
+      "key":"selected_product_outcome",
+      "label":"Selected product outcome and progress classes"
+    },
+    {
+      "conditions":[],
+      "definition":"An admitted growth basis is the selected unresolved outcome, a named bounded prerequisite to it, or a named bounded experiment whose stated observation discriminates a stated decision for it. A prerequisite or experiment states provisional bounds and exhaustion/falsification conditions; admission or renewal belongs to the work-wave owner or explicitly bounded proxy and is recorded in durable goals or ticket authority.",
+      "exceptions":[],
+      "grounding":[{"end_line":738,"quote":"Admission or renewal of a prerequisite or experiment belongs to the\nauthority owning the selected work wave, or its explicitly bounded proxy,\nand is recorded in the existing durable goals or ticket authority. The\nadmitted basis states its provisional bound and its exhaustion or\nfalsification condition.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":734}],
+      "key":"admitted_growth_basis",
+      "label":"Admitted outcome, prerequisite or experiment basis"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["release_foundation_map","lineage_objects","release_process"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":121,"quote":"a refused, stopped or fail-closed release operation, an invalid state and a failed check report in the one core, and none is read as success.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation","start_line":121},{"end_line":155,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation","start_line":154}],
+      "key":"release_scope_and_results",
+      "statement":"Binding or shared carrier membership transfers no meaning or authority. Release process is separate from live specification and owns neither Product meaning nor consumer adoption. Release handling follows intake triage; an open release window authorises no untriaged change. Operation outcome is not acceptance: refused, stopped, fail-closed, invalid and failed-check reporting cannot be read as success. F15's consumers apply only the owning rule's decisions; its table adds no rule, §10 decides nothing, and §11 records dispositions without deciding them.",
+      "uncertainty":"The complete core result algebra and triage determinations are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["project_release_namespace","project_subtree","candidate_and_branch_carriers","immutable_rc_cut","version_line_selector"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":182,"quote":"Equal version text does not collapse these identities. Branches and the\nversion-line selector may move. An immutable RC tag never moves (P3).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities","start_line":181}],
+      "key":"release_identity_distinctness",
+      "statement":"All seven named release identities remain distinct despite equal version text. Branches and selector may move; an immutable RC tag never moves.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["project_release_namespace","candidate_and_branch_carriers","immutable_rc_cut","version_line_selector"],
+      "conditions":["For future publication from a shared release source."],
+      "exceptions":["The declared single-project unqualified profile is allowed only while exactly one independently released project exists.","Existing historical refs are conserved prospectively.","Alternative spelling is separately conditioned by the naming policy."],
+      "grounding":[{"end_line":191,"quote":"`<project>` is one explicit Project Release Namespace. It matches\n`[a-z0-9]+(?:[-_][a-z0-9]+)*`, contains no slash, is unique within the\nrelease source, and remains stable for the continuing release line.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs","start_line":186},{"end_line":200,"quote":"RC branch:              refs/heads/rc/<project>/<version>\nimmutable RC cut tag:   refs/tags/<project>/v<version>-rc.<n>\nversion-line selector:  refs/tags/<project>/v<version>\nrelease branch:         refs/heads/release/<project>/<version>","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs","start_line":197}],
+      "key":"qualified_namespace_and_refs",
+      "statement":"The explicit namespace must match [a-z0-9]+(?:[-_][a-z0-9]+)*, have no slash, be source-local unique and stable for the continuing line, and be assigned by Product release authority; directory/display/definition/package names or equal versions cannot infer or reassign it. Required default refs are refs/heads/rc/<project>/<version>, refs/tags/<project>/v<version>-rc.<n>, refs/tags/<project>/v<version>, refs/heads/release/<project>/<version>. Shared sources publish no future unqualified cuts/selectors. Adding a second independent project requires qualified refs before either next cut. Allocated Specification Stack keys are specification_methodology, axiom_indexer and stdo_representation; these do not merge Products or imply dependency/composition.",
+      "uncertainty":"The relation between the exact default shapes and the expressly permitted alternative spelling is retained as a conditional policy variation."
+    },
+    {
+      "applies_to_keys":["immutable_rc_cut","project_subtree","product_release_subject"],
+      "conditions":["For an immutable cut in a shared release source."],
+      "exceptions":["The root spelling '.' alone denotes repository root; its subtree tree equals the repository-root tree."],
+      "grounding":[{"end_line":231,"quote":"- the Project Release Namespace and owning Product authority;\n- the exact qualified Git ref and annotated tag object;\n- the peeled commit and repository-root tree;\n- the normalised repository-relative Project Subtree root at that commit;\n- the Git tree object at that exact Project Subtree root;\n- the declared Product member inventory and release-scoped claim bytes;\n  and\n- the predecessor and successor dispositions required by §9.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-subtree%20release%20identity","start_line":224}],
+      "key":"reacquirable_subtree_identity",
+      "statement":"A cut binds namespace and owner, qualified ref and annotated tag object, peeled commit and repository-root tree, normalised subtree root and exact subtree tree, declared inventory and release-scoped claim bytes, and required predecessor/successor dispositions. The root is a locator inside the exact commit, not Product identity: slash-separated exact tree-entry bytes, no leading/trailing slash, empty, '.' or '..' component. Moving the project changes locator and cut identity without reassigning namespace. Tagging a monorepo commit does not include siblings; unrelated sibling bytes remain outside the subject. Inventory or payload digest without qualified ref, commit, subtree root and tree is not a complete reacquirable identity.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["immutable_rc_cut","version_line_selector","project_release_namespace"],
+      "conditions":["Project qualification or a version line crosses from historical unqualified to qualified refs."],
+      "exceptions":["An additional archival ref may preserve reachability of the same historical tag object."],
+      "grounding":[{"end_line":256,"quote":"Project qualification is prospective. Existing unqualified refs retain\ntheir names, objects, peels and public links.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation","start_line":251},{"end_line":271,"quote":"The first qualified publication creates the\nqualified selector. The historical unqualified selector is preserved at\nits existing object and ceases to be the current selector for the shared\nsource; it is not force-moved to imitate the qualified namespace (P3).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation","start_line":268}],
+      "key":"historical_identity_conservation",
+      "statement":"Existing refs retain names, objects, peels and public links; historical tags are never recreated, re-annotated, moved or replaced. Product-local names and logical URIs stay unchanged, including stdo://releases/v<version>-rc.<n>/; qualified transport refs are not inserted into that URI. Resolution binds the public coordinate to its exact historical or qualified ref and fails closed if one local coordinate names different tag objects. Transitional latest is the greatest positive ordinal across that project's historical and future qualified cuts. First qualified publication creates the qualified selector; the historical selector remains at its old object and stops being current.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["release_process","immutable_rc_cut","version_line_selector","release_qualification_acceptance"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":286,"quote":"There is no second final cut after an accepted RC. Publication immediately\nmakes the new highest ordinal discoverable through the version-line\nselector; acceptance remains a verdict over the exact immutable RC rather\nthan a second carrier.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases","start_line":281}],
+      "key":"publication_acceptance_separation",
+      "statement":"Publication immediately exposes the highest ordinal through the selector. Acceptance remains a verdict on the immutable RC and creates no second final cut/carrier. Any change to bytes capable of affecting Product or release-scoped claims requires publication and review of a higher immutable RC.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["candidate_and_branch_carriers","release_process"],
+      "conditions":["During candidate construction and before RC publication."],
+      "exceptions":[],
+      "grounding":[{"end_line":302,"quote":"The intended Product boundary, release-scoped claims, excluded\nsource-project state and qualification basis become explicit before RC\npublication. A material scope change is repriced instead of being silently\nabsorbed (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction","start_line":299}],
+      "key":"candidate_scope_control",
+      "statement":"Before publication make intended Product boundary, release-scoped claims, excluded source state and qualification basis explicit. Reprice material scope changes. Mutable source remains non-operative for released consumers.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["release_process","immutable_rc_cut","version_line_selector"],
+      "conditions":["Publishing an immutable RC; shared-source tag creation applies in a shared release source."],
+      "exceptions":["Push atomicity in this general procedure is conditional on transport support; the cohort procedure separately requires atomicity or refusal.","The release branch is optional."],
+      "grounding":[{"end_line":327,"quote":"8. atomically pushes the carrier, RC branch, immutable RC tag, selector\n   and optional release branch where the transport supports it;\n9. verifies remotely that the immutable tag, selector and release branch\n   resolve to the highest published RC commit; and\n10. records enough ref, subtree, identity and inventory evidence to\n    reacquire the cut without trusting a mutable checkout.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication","start_line":322}],
+      "key":"immutable_publication_sequence",
+      "statement":"Publication's ten ordered steps are: confirm triaged scope and lawful constitutional re-entry; declare exact subject and claims; reconcile release-facing assets; run proportionate pre-RC qualification/operator checks; commit exact carrier; resolve and record namespace/subtree root/tree; create annotated immutable <project>/v<version>-rc.<n> and annotated selector <project>/v<version> over the same commit; push carrier and complete relevant refs atomically where supported; remotely verify highest-published-commit alignment; retain reacquisition evidence independent of a mutable checkout. Tags stay immutable. Further work increments n on the same applicable line; bounded review repair alone does not require a minor-version increment. A higher published RC without matching selector advancement is invalid and fail-closed, never permission to resolve the older cut as latest.",
+      "uncertainty":"The general procedure does not specify a non-atomic transport protocol."
+    },
+    {
+      "applies_to_keys":["release_qualification_acceptance","immutable_rc_cut"],
+      "conditions":[],
+      "exceptions":["Artifact presence can establish the exact claim of presence, but does not by itself establish usability."],
+      "grounding":[{"end_line":347,"quote":"- the Project Release Namespace, qualified immutable RC ref, annotated tag\n  object, peeled commit, repository tree, Project Subtree root and tree,\n  and declared Product member set;\n- the exact release-scoped claim bytes;\n- the governing Product and release basis;\n- each claimed property and its observation boundary;\n- evidence subjects, owner verdicts and unresolved gaps; and\n- the complete successor relation to the declared predecessor (§9).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification","start_line":340}],
+      "key":"qualification_bindings_and_evidence",
+      "statement":"Qualification binds namespace, qualified ref, tag object, peeled commit, repository tree, subtree root/tree and member set; exact claim bytes; governing Product/release basis; every property with observation boundary; evidence subjects, owner verdicts and gaps; and complete declared-predecessor relation. Evidence must match the claim: source success does not prove packaged/installed behaviour, packaging equivalence does not prove semantic behaviour, and presence does not prove usability. Acceptance requires complete required exact-cut and operator review plus human acceptance of the exact subject. A qualifying-byte change leaves the verdict on the old RC and requires a higher RC; acceptance never moves or rewrites the selector or creates a final carrier.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["version_line_selector","immutable_rc_cut","candidate_and_branch_carriers"],
+      "conditions":["Advancing a project version line."],
+      "exceptions":["Update the release branch only when used; general push atomicity is conditional on transport support."],
+      "grounding":[{"end_line":383,"quote":"Advancement is refused when the target has no matching immutable annotated\nRC tag, any higher ordinal already exists, the selector would move to a\nlower RC, or the selector and release branch would not align to the same\nhighest commit (P5).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMonotonic%20version-line%20advancement","start_line":380}],
+      "key":"monotonic_advancement_protocol",
+      "statement":"Identify new immutable tag, ordinal and peel; confirm no higher ordinal exists; confirm selector absent or at a lower ordinal on the same project line; atomically create/force-update annotated selector to the highest commit; align optional release branch; push carrier, RC branch, cut tag, selector and optional branch atomically where supported; remotely verify selector peel and matching annotated immutable tag. Refuse missing matching immutable tag, any existing higher ordinal, backward movement or selector/release-branch misalignment. Movement is strictly monotonic by ordinal; repair defects with a higher cut, never moved old tags or rollback. Selector means v<version>-rc.latest; concrete RC tags remain addressable.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["consumer_adoption","version_line_selector","immutable_rc_cut"],
+      "conditions":["Resolving or adopting a latest-version channel."],
+      "exceptions":["An intentionally older basis is retained by explicit immutable URI and digest with exact-basis operations such as sync, not through the latest channel."],
+      "grounding":[{"end_line":423,"quote":"Channel resolution enumerates the published RC tags for the selected\nProject Release Namespace, including preserved unqualified historical cuts\nduring a namespace transition, selects the greatest positive ordinal,\nrequires that cut and the current selector to be annotated tags peeling to\nthe same commit, and fails closed when the selector lags or points\nelsewhere.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption","start_line":414}],
+      "key":"channel_resolution_and_basis",
+      "statement":"A Product Definition may retain stdo://channels/<version> for discovery, but operative basis is exact stdo://releases/v<version>-rc.<n>/ plus installed-manifest digest. Selector movement updates no consumer. Resolution requires an annotated selector with a distinct peeled commit: missing peeled ref fails closed, never interpreted as a lightweight tag. Enumerate namespace cuts including preserved historical ones, choose greatest positive ordinal, and require annotated cut/selector peeling to the same commit; lag or other target fails closed. Refuse channel adoption below the definition's current same-line ordinal. The selected complete immutable basis cannot be repaired, replaced or outranked by mutable source or selector.",
+      "uncertainty":"Installed release-basis details beyond these bindings belong to unsupplied PRODUCT_DEFINITION §4."
+    },
+    {
+      "applies_to_keys":["consumer_adoption"],
+      "conditions":["Before mutating any Product Definition, including fleet adoption."],
+      "exceptions":[],
+      "grounding":[{"end_line":435,"quote":"Mutation requires that exact digest as the\noperator's acceptance and re-derives it before changing any Product\nDefinition. Selector, target, manifest or definition drift invalidates the\nacceptance. A fleet uses the same law with one aggregate digest over all\nexact per-definition plans. Planning inside a mutating invocation is not\nexternal presentation and cannot authorise itself.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption","start_line":429}],
+      "key":"adoption_presentation_acceptance",
+      "statement":"Read-only presentation and mutation are separate invocations. Mutation requires operator acceptance of the exact presented deterministic plan digest and re-derives it before change. Selector, target, manifest or definition drift invalidates acceptance. Fleets require the aggregate of all exact per-definition plans. In-mutation planning is not external presentation and cannot authorise itself. Only explicit adoption changes a governed consumer basis.",
+      "uncertainty":"The plan hashing rule and manager command boundaries are delegated to PRODUCT_DEFINITION §4."
+    },
+    {
+      "applies_to_keys":["release_scoped_assets","immutable_rc_cut","version_line_selector"],
+      "conditions":["For every release-scoped surface actually used."],
+      "exceptions":[],
+      "grounding":[{"end_line":483,"quote":"Before RC publication, each used surface is reconciled to the exact RC\nsubject. After publication, changing one of those bytes creates a\ndifferent candidate and therefore requires a higher RC tag. The\nversion-line selector has no content-reconciliation phase because it adds\nno new Product bytes (P3).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets","start_line":479}],
+      "key":"asset_reconciliation_and_version_location",
+      "statement":"Reconcile every used surface with the exact RC subject before publication; changing its bytes afterward requires a higher RC. Selector movement adds no Product bytes and has no reconciliation phase. Exact version/RC identity belongs in release-scoped carriers and consumer basis bindings; live constitutional version labels follow SPEC_METHOD's specification surface rule.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["product_release_subject","immutable_rc_cut"],
+      "conditions":["Before qualification; after immutable publication for the delta/bookkeeping restrictions."],
+      "exceptions":[],
+      "grounding":[{"end_line":507,"quote":"Once the immutable RC is published, no post-review\ncarrier delta is admitted into that cut. Publication-caused ticket or\nsource-work bookkeeping is recorded afterward on the continuing source\nbranch and cannot move the immutable RC tag (P3, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier","start_line":504}],
+      "key":"subject_declaration_and_carrier_exclusion",
+      "statement":"Declare namespace and exact subtree root, exact Product member set/artifact, subject-describing release claims, and mutable co-located fields excluded from both. Commit co-location does not grant Product membership. Admit no post-review carrier delta into a published cut. Publication-caused ticket/source bookkeeping belongs afterward on the continuing source branch and cannot move the immutable tag.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["release_matched_cohort"],
+      "conditions":["For an explicitly declared cohort and every required member."],
+      "exceptions":["A stale index can remain immutable history, but cannot accompany changed source as the current cohort."],
+      "grounding":[{"end_line":526,"quote":"Qualification normalises only that leading cut-name marker\nand requires exact suffix equality. Equal versions establish release\nmatching only. They do not collapse Product identities, member\ninventories, tags, acceptance judgments or release authorities (P3, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts","start_line":523},{"end_line":548,"quote":"The cohort is incomplete when a required member is missing, stale,\ndifferently versioned, built from another source cut, or unable to\nreproduce its declared source-member and digest closure.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts","start_line":541}],
+      "key":"cohort_matching_and_invalidation",
+      "statement":"Co-location, equal versions and common actors cannot infer a cohort. All required members use exact suffix <version>-rc.<n>; local cut names/refs render v<version>-rc.<n>, embedded versions omit v, and qualification normalises only that leading marker. Matching never merges Product identities, inventories, tags, acceptance judgments or authorities. A missing, stale, differently versioned, differently sourced or closure-unreproducible member makes the cohort incomplete. Any covered source-member change invalidates the old derived candidate for the successor; regenerate, mechanically validate, independently qualify where required, and release the index under the same new cut name.",
+      "uncertainty":"Independent qualification applicability is referenced but not fully specified."
+    },
+    {
+      "applies_to_keys":["cohort_publication_transaction","release_matched_cohort"],
+      "conditions":["Publishing a coordinated STDO cohort."],
+      "exceptions":[],
+      "grounding":[{"end_line":577,"quote":"7. a mandatory post-tag, pre-push gate re-runs qualification over every\n   local annotated tag object and peel, selector, RC and release branch,\n   normalised version mapping, target commit and the exact closed ref\n   set; it also fetches and binds the expected remote object ID or\n   required absence for every destination ref; and\n8. one transport transaction atomically publishes only that qualified\n   carrier branch and complete Product ref set.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction","start_line":571}],
+      "key":"two_commit_order_and_gate",
+      "statement":"The eight ordered construction steps are: freeze corpus/plugin/release record/qualification bytes in A; locally create but do not push annotated STDO cut tag; install and verify that exact cut to obtain all derived consumers' manifest identity; derive and freeze Axiom Indexer, Representation, index and cohort record in B; prequalify B against the local STDO tag before child tags; locally prepare annotated child tags and each Product's RC branch, selector and optional release branch; mandatorily requalify the complete post-tag local ref graph, normalised versions, target commits and closed ref set while fetching/binding every remote expected object or absence; atomically publish only that qualified carrier and complete ref set.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["cohort_publication_transaction"],
+      "conditions":["Cohort publication and remote verification."],
+      "exceptions":["Later bookkeeping commits are allowed without moving any immutable cohort tag."],
+      "grounding":[{"end_line":589,"quote":"If the remote does not support atomic ref publication, publication\nrefuses. The process has no sequential-push fallback.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction","start_line":579},{"end_line":595,"quote":"Remote verification fails closed when any required cohort ref is absent,\nlightweight, differently versioned, points to the wrong Product commit, or\nhas a selector or release branch that does not match its immutable cut.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction","start_line":591}],
+      "key":"cohort_atomic_refusal_and_leases",
+      "statement":"Refuse publication without remote atomic-ref support; no sequential fallback. Immutable tags are create-only with bound remote absence. Every mutable carrier, RC branch, selector and release branch has an explicit per-ref compare-and-swap lease, such as --force-with-lease=<ref>:<expected-oid>, in the same transaction. Missing expected refs, unexpected tags or changed remote IDs stop publication; refetch and repeat complete content and local-ref-graph qualification before another push. Never substitute unguarded force, partial push or in-place expectation update after lease mismatch. Remote missing/lightweight/wrong-version/wrong-commit refs or selector/branch misalignment fail closed.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["release_matched_cohort","cohort_publication_transaction"],
+      "conditions":[],
+      "exceptions":["Historical same-version backfill only under separately authorised recovery law naming the exception."],
+      "grounding":[{"end_line":609,"quote":"Post-publication qualification verifies the same relation from remote refs\nand refuses a partial cohort","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery","start_line":607},{"end_line":618,"quote":"A historically published source cut may be the basis of a later\nsame-version backfill only when separately authorised recovery law names\nthat exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery","start_line":611}],
+      "key":"cohort_qualification_recovery_nonretroactivity",
+      "statement":"Content qualification binds exact A tag/manifest, B source tree, all target refs, versions, inventories, index bytes and complete corpus digest closure, showing tagging needs no qualifying-byte change. After refs are created, local-ref-graph qualification binds annotated objects, peels, commits, exact push set and every expected remote ID/absence to unchanged content; remote qualification verifies the same relation and refuses partial cohorts. Authorised backfills still bind exact historical cut/name and require remote completeness; they cannot move historical tags, add Product bytes or claim an original atomic cohort. Normal successors use atomic publication. Adding/changing this law changes qualifying bytes, governs only a higher cut containing them and never retroactively creates a cohort.",
+      "uncertainty":"No separate recovery authorisation is supplied."
+    },
+    {
+      "applies_to_keys":["release_qualification_acceptance","consumer_adoption"],
+      "conditions":["Considering acceptance of an RC."],
+      "exceptions":["Independent exact-cut review is required where applicable.","Release-blocking gaps may be addressed by explicitly narrowing claimed scope.","Retained evidence is usable only under the referenced validity conditions."],
+      "grounding":[{"end_line":644,"quote":"Each criterion is a mandatory gate in the sense of\n[FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):\nit applies irrespective of any selection of checks after a change, and\nretained evidence satisfies it only under the validity conditions stated\nthere (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria","start_line":640}],
+      "key":"acceptance_mandatory_gates",
+      "statement":"All seven gates apply: passed pre-RC qualification for declared subject; passed independent exact-cut review where required; complete required operator review; stable intended scope and successor relation; accurate exact-cut release assets; all release-blocking gaps, including EVALUATION promotion-blocking findings, closed or scope explicitly narrowed; and human Product authority acceptance of exact immutable identity. Check selection does not waive gates. Meeting gates permits acceptance rather than automatic adoption. Acceptance attaches to the cut and neither advances nor rolls back selector; adoption separately evaluates exact latest channel target and mutates only after digest-bound plan acceptance.",
+      "uncertainty":"External evidence-reuse validity and promotion-blocking predicates are not fully supplied."
+    },
+    {
+      "applies_to_keys":["external_qualification_dependency","release_qualification_acceptance"],
+      "conditions":["A release claim depends on an external service, including an unhealthy dependency causing a clean skip."],
+      "exceptions":[],
+      "grounding":[{"end_line":665,"quote":"A clean skip caused by an unhealthy external dependency is an evaluation\nnot performed, which has no result\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed). It may\npreserve correct Product classification, but it cannot establish that the\ndependent capability passed. The claim is either qualified against a\nhealthy dependency or narrowed before acceptance (P6, P5).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies","start_line":660}],
+      "key":"external_dependency_qualification_boundary",
+      "statement":"Being outside Product does not remove a dependency's claim-blocking effect. A skipped evaluation has no result and cannot prove capability success, although classification may remain correct. Before acceptance qualify against a healthy dependency or narrow the claim.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["successor_disposition","immutable_rc_cut","release_qualification_acceptance"],
+      "conditions":["A candidate evolves predecessor claims; every predecessor claim capable of affecting it is in scope."],
+      "exceptions":["A missing patch does not establish loss if successor-native realisation preserves behaviour.","Earlier conserved evidence remains applicable if owning text and consumer bindings are unchanged or changes are shown immaterial to the claim."],
+      "grounding":[{"end_line":673,"quote":"A successor identifies the exact predecessor immutable RC whose semantic\nclaims it evolves. That origin remains immutable for the candidate. Every\npredecessor claim capable of affecting the successor receives one semantic\ndisposition","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":669},{"end_line":704,"quote":"A `conserved` disposition recorded\nbefore this test applied is re-evaluated under it before the affected\nclaim qualifies; until then its standing is `unresolved`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":702}],
+      "key":"successor_conservation_evidence",
+      "statement":"Name one exact immutable predecessor and keep the candidate's origin immutable. Give each affecting predecessor claim one semantic disposition, evaluated on relevant evidence. Unresolved blocks affected-claim qualification; recorded labels alone establish nothing. Compare conserved claims on the same material case, scope and authority, required/permitted/prohibited behaviour, missing triggers/exceptions/premises, owning text and applying consumer bindings, with decision-changing counterexamples. Indicative wording may bind; replacing must/shall proves neither conservation nor supersession. Obligations, preferences, every exception and scope condition must retain their force for conservation. Names, code similarity and blanket package-equivalence claims prove none of this. Pre-test conserved records require re-evaluation and remain unresolved meanwhile.",
+      "uncertainty":"Full result algebra and EVALUATION's acceptance-evidence requirements remain external."
+    },
+    {
+      "applies_to_keys":["successor_disposition","release_process"],
+      "conditions":["A maintenance or support line may affect retained successor claims."],
+      "exceptions":[],
+      "grounding":[{"end_line":727,"quote":"Where a maintenance or support line may affect retained claims, the\nrelease basis identifies the watched source, observation boundary,\ninclusion policy and successor candidate. Relevant changes receive\nsemantic disposition at material integration and exact-cut qualification.\nThe consumer owns its record, branch strategy, comparison and proof\nmechanism (P4b, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":722}],
+      "key":"support_line_observation",
+      "statement":"The release basis names watched source, observation boundary, inclusion policy and successor candidate. Relevant changes receive semantic disposition at both material integration and exact-cut qualification. The consumer owns record, branch strategy, comparison and proof mechanism.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["release_source_disposition_register","release_foundation_map"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":790,"quote":"it\ndecides nothing beyond the rules it names.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions","start_line":784}],
+      "key":"source_register_provenance_boundary",
+      "statement":"The register claims conservation of the listed release-publication, position, identity, ref, subtree, historical, phase, construction, publication, qualification, advancement, adoption, naming, asset, cohort, transaction, recovery, subject, acceptance, external-dependency, successor and open-question rows. It attributes generic objects to FOUNDATIONS, claim/acceptance law to EVALUATION and plan/hash/commands to PRODUCT_DEFINITION. These are source claims and provenance, not proof. The family table decides nothing beyond owning rules and must not present added choices as derived. The clean-skip statement applies FOUNDATIONS Results and adds no rule.",
+      "uncertainty":"Predecessor row bodies and the referenced tenant frontier are absent, so conservation claims cannot be independently evaluated."
+    },
+    {
+      "applies_to_keys":["spec_method","spec_driven_development"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":24,"quote":"Routes are\nprovenance only; nothing here depends on that cut to be applied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD","start_line":23},{"end_line":45,"quote":"Constitutional examples use neutral capability and authority identities:\nthey demonstrate enabled capabilities rather than cite a consumer as\nprecedent, whose particulars cannot become method law","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition","start_line":40}],
+      "key":"method_position_and_provenance",
+      "statement":"Imperative procedure remains subordinate to declared authority; declarative primacy is a preference expressed with should. Constitutional examples use neutral capability/authority identities and consumer particulars cannot become method law. rc.2 #anchor routes name the corresponding SPEC_METHOD cut, and rc.2 MEMBER routes that member of the same cut; both are provenance only, not application dependencies.",
+      "uncertainty":"The neutral-example claim cites compression provenance that the source says no rc.2 body states."
+    },
+    {
+      "applies_to_keys":["spec_method","product_definition_surface","requirements_surface","design_surface","realisation_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":78,"quote":"The authoritative split is strict: the surfaces bound as WHAT define WHAT;\ndesign and realisation surfaces define HOW; no build tenant, design, code,\ndefinition overlay or derived surface becomes co-equal constitutional\nauthority with the bound WHAT (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution","start_line":75}],
+      "key":"process_constitution_authority_split",
+      "statement":"The method should bootstrap a new project process if implementation disappears; method plus surviving domain specification can reconstruct it. Goals conventionally use GOALS.md, intent INTENT.md, definition PRODUCT.md and requirements specification/requirements/, with shared and tenant-local design surfaces selecting mechanisms. Definition binds actual authority locations and tenant-owned realisations beneath one shared specification; conventions require no relocation or duplication. Bound WHAT governs WHAT; HOW, tenants, code, overlays and derived surfaces never become co-equal constitutional authority.",
+      "uncertainty":"Detailed overlay and tenant-registry rules are external."
+    },
+    {
+      "applies_to_keys":["stdo_method_identity"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":103,"quote":"The expansion does not make the four owning\nmembers independently selectable and does not reduce the released product\nto four members: consumer authority remains one complete immutable released\ncut with its exact member inventory","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity","start_line":100}],
+      "key":"method_identity_complete_basis",
+      "statement":"The four-letter expansion neither permits independent selection of the four owners nor reduces the Product to four members. Consumer authority remains one complete immutable released cut with exact member inventory.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["spec_method","constitutional_chain","product_definition_surface"],
+      "conditions":[],
+      "exceptions":["Blocking/escalation of detected ambiguity is declared-risk policy except hard-stop prerequisite failures."],
+      "grounding":[{"end_line":129,"quote":"A material term\nresolves only under its bounded-context identity, owning authority, selected\nbasis and governed scope; equal spelling creates no cross-context meaning or\nauthority; explicit imports, translations, equivalences and disambiguations\ngovern those seams, and zero or multiple applicable meanings fail closed","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement","start_line":117}],
+      "key":"canonical_method_conditions",
+      "statement":"Every method Product publishes a layout-neutral routing definition locating constitution, local constitutional decisions, collective reference-frame bases, WHAT, independent tenant HOW, work surfaces and explicit composition; it is no rival truth. Material terms resolve only under bounded context, owner, selected basis and scope; equal spelling transfers no authority, seams require explicit import/translation/equivalence/disambiguation, and zero or multiple applicable meanings fail closed. Each major lifecycle boundary reduces lawful interpretations and explicitly surfaces major ambiguity; detection is mandatory. Implementations never substitute for constitutional documents. Scenarios supply end-to-end proof where capability claims need it. Sprints price proof and force close review but are neither authority layers nor means to hide drift. This canonical compression owns no independent law.",
+      "uncertainty":"Full ambiguity, reference-frame and sprint rules are outside the supplied source."
+    },
+    {
+      "applies_to_keys":["chain_foundation_map","realisation_binding"],
+      "conditions":["As applicable to owned layers, layered surfaces and several realisations."],
+      "exceptions":["Negative proof is required where drift is plausible.","Mapping preservation invokes AC-013 where recorded in a_c."],
+      "grounding":[{"end_line":179,"quote":"A mapping from one account to another is a transformation, so it states and discharges its preservation under the law of [ACTIVATION §4 Refinement](ACTIVATION.md#refinement) and, where it is recorded in a_c, of [AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding","start_line":179}],
+      "key":"binding_and_foundation_accountability",
+      "statement":"F10 consumers apply only their owners' decisions. A closure claim's evidence includes authority trace, realisation proof, negative proof where drift is plausible and remaining open pressure; closure itself belongs to TICKETS and evidence law to EVALUATION/ASSURANCE. Bindings preserve obligations across differing means: executor kind alone neither accepts nor rejects, human performance is not adjudication, structural validation is not correct execution, and convenient stacks weaken nothing. Only obligation owners may weaken WHAT. Bindings identify operations, core-mapped outcomes and resource measures with units/boundaries, enabling finite evaluation. A calculus serves wherever its laws hold regardless of executor. Project law owns multi-tenant development mechanics. Construction steps, data meaning and execution remain three separate accounts; mappings state and discharge preservation. Tenant design chooses calculi/environment; tenant binding owns resource choices and mapping evidence; the corpus Product's Intent owns the three-account choice.",
+      "uncertainty":"Detailed §9–§11 laws, evidence closure, core mappings, resources and preservation obligations are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["constitutional_chain","goals_surface","product_definition_surface","requirements_surface","design_surface","realisation_binding"],
+      "conditions":[],
+      "exceptions":["Projection need not replay a complete event stream when retained records suffice for Product obligations.","No Product owes a code base or event store absent its selected binding.","Design selects location/mechanism unless the path itself is constitutional."],
+      "grounding":[{"end_line":253,"quote":"Every link is load-bearing. A break at any\nlink, goals with no downstream repricing path, an unowned requirement, an\nungrounded design record, code without a design decision, creates\naccidental law (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":247}],
+      "key":"chain_ownership_and_realisation",
+      "statement":"Every chain link has an owner; missing repricing paths, unowned requirements, ungrounded design or code without design decisions create accidental law. Events may use stream, ledger, signed record or observation log according to binding. Constitutional insufficiency re-enters at the change-class layer; changed wave, direction or scope generates goals or intent. Requirements can oblige surfaces to exist and be delivered; design chooses their concrete structure, location and mechanism within constitutional constraints.",
+      "uncertainty":"Change-class mapping and full build-tenant law are external to this selection."
+    },
+    {
+      "applies_to_keys":["spec_driven_development","constitutional_chain","live_constitutional_surface"],
+      "conditions":[],
+      "exceptions":["Transitional paths may remain live when explicitly retained as compatibility features."],
+      "grounding":[{"end_line":306,"quote":"It treats derived artifacts,\nindexes, trace matrices, reports, automation and generated views, as read\nmodels, never as constitutional truth. If these claims do not hold, the\nwork is not spec-driven.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":303}],
+      "key":"manifesto_commitments",
+      "statement":"Define current work-wave goals before deeper repricing; work from intent before implementation and explicit present-tense product definition before detailed requirements. Requirements express full WHAT, design explicitly bridges to derivable code, and declaring truth/boundaries is preferred to imperative procedure. Each major gate narrows interpretations before downstream realisation. Claims demand evidence through scenarios, tests, events, projection and delta; constitutional gaps require specification change. Authority remains directional through iteration. Once current reality is established, remove transitional paths from the live product unless explicitly retained for compatibility. Derived artifacts, indexes, matrices, reports, automation and views are read models, never constitutional truth. Failure of these commitments means work is not spec-driven.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["spec_driven_development","constitutional_chain"],
+      "conditions":["Any one of the thirteen listed failures holds."],
+      "exceptions":[],
+      "grounding":[{"end_line":311,"quote":"The work is not spec-driven if any of these holds (P2, P6; rc.2\n#spec-drivenness-litmus):","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus","start_line":310}],
+      "key":"spec_drivenness_failure_conditions",
+      "statement":"Work is not spec-driven if a competent team cannot derive conformant intent from goals, definition from intent, requirements from definition, design from requirements, or code from requirements plus design; if any live requirement lacks explicit status/category/design owner or realisation/explicit deferment; if code lacks requirement/design authority; if a live domain artifact is rewritten in place; if a capability claim lacks operational evidence; if discovered drift triaged to constitutional source leaves that source unrepriced; if major boundary ambiguity is neither recorded nor governed; or if a material product/module/function/application/runtime surface/capability has neither declared lifecycle signal nor a recorded gap for unanswered release, deployment, live-use, telemetry or retirement.",
+      "uncertainty":"This records the source's test; no work is evaluated here."
+    },
+    {
+      "applies_to_keys":["constitutional_chain","spec_driven_development","design_surface"],
+      "conditions":["Reconstructing the selected chain span using competent actors."],
+      "exceptions":["Different designs may satisfy the same requirements and different codebases the same design.","Accepted relations may be reused on exact basis after checking applicability and invalidation.","A local selected function's span excludes recreating the whole Product; unchanged accepted views need not be recreated."],
+      "grounding":[{"end_line":345,"quote":"The generic law, that a layered specification is sufficient when a competent\nactor can derive each layer from the one above, that sufficiency is not\ndeterminism, that a boundary crossed only by hiding a major ambiguity is not\nsufficient, and that an accepted relation may be reused on its exact basis\nafter checking applicability and invalidation, is EVALUATION §6.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus","start_line":341}],
+      "key":"reconstruction_sufficiency",
+      "statement":"Spec-driven layers must be reconstructable in order; a competent team should derive goals→intent→definition→requirements→design and requirements+design→code. Sufficiency is not determinism and cannot hide major ambiguity. Failed derivation is an upper-layer defect: goals/intent lack clarity, consistency or concreteness; definition lacks decomposition; requirements lack specification or contain accidental mechanism; design lacks completeness, clarity or operational detail. Design records are load-bearing. Ambiguity governance and EVALUATION layered-sufficiency limits apply. This litmus does not waive design-profile coverage or material-change gates.",
+      "uncertainty":"Complete applicability, invalidation, ambiguity and design-view reuse rules are external."
+    },
+    {
+      "applies_to_keys":["constitutional_chain","goals_surface","intent_surface"],
+      "conditions":["A real scenario, deployment or external review exposes a gap in the current model."],
+      "exceptions":["A merely missing implementation is distinguished from constitutional insufficiency."],
+      "grounding":[{"end_line":402,"quote":"a gap becomes\nintent only once it is concrete. Ad hoc coding pressure does not generate\nintent; explicit gap analysis does.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path","start_line":399}],
+      "key":"renewal_and_repricing",
+      "statement":"Gap analysis identifies what the constitution cannot express. Constitutional gaps re-enter at the change-class layer and flow forward through that class's affected layers; changed work wave/direction/scope produces new goals or intent. Intent emerges from concrete repeated real-use pressure and explicit gap analysis, not speculation or ad hoc coding pressure. Iteration cumulatively refines requirements/design and re-derives code; implementation, test, replay and scenario gaps feed repricing without reversing authority.",
+      "uncertainty":"The change classes and exact downstream spans are not supplied."
+    },
+    {
+      "applies_to_keys":["goals_surface","intent_surface","product_definition_surface","requirements_surface","design_surface","live_constitutional_surface"],
+      "conditions":["For active specification surfaces and before treating a downstream artifact as complete."],
+      "exceptions":["Optional intent realisation detail is allowed when itself constitutional.","Version labels may denote immutable release facts, selector bindings or clearly historical/superseded material.","Lifecycle detail is required where it materially affects meaning or obligations."],
+      "grounding":[{"end_line":451,"quote":"Before a downstream specification artifact is treated as complete, the\nwhole affected span is checked: is the change class clear; is the re-entry\npoint lawful for that class; can each downstream layer still be derived\nfrom the upstream layer; do the active intent, product, requirements,\ndesign and qualification surfaces still say the same thing in the affected\nscope. If not, the gate is not closed (§4, consistency gate).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule","start_line":446}],
+      "key":"surface_roles_and_consistency_gate",
+      "statement":"Goals orient work, not substitute for requirements; intent supplies why/directional scope; definition states current Product, not release notes, with material use/install/release/live-use/observability/retirement posture; requirements state stable obligations, explicit acceptance criteria and sufficient lifecycle obligations or named gaps; design chooses HOW downstream. Write current constitutional law in present tense. Delete, supersede or move dead law to commentary; migration does not justify stale live wording. Version branding cannot merely imply recency. Before completion check the whole affected span for clear class, lawful re-entry, downstream derivability and agreement among active intent, definition, requirements, design and qualification. Any failure leaves the gate unclosed.",
+      "uncertainty":"Full §4 consistency-gate mechanics are not supplied."
+    },
+    {
+      "applies_to_keys":["requirements_surface","design_surface","realisation_binding"],
+      "conditions":["A concrete technology, carrier, runtime, filename, packaging choice or placement is not constrained by upstream constitution."],
+      "exceptions":["Constitutionally necessary concrete choices remain upstream constraints."],
+      "grounding":[{"end_line":460,"quote":"If a technology stack,\ncarrier or runtime is not already constrained by an upstream constitutional\nsurface, choosing it is part of design, not a separate upstream authority","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule","start_line":456}],
+      "key":"design_choice_boundary",
+      "statement":"Requirements state which control/delivery surfaces must exist; design chooses concrete mechanisms and the tenant's software/human/mixed execution binding. Bootstrap requirements may demand authoritative surfaces, bare axioms and routes to the canonical method; design selects entry documents, embedded blocks, compiled artifacts or other lawful topology. Hardcoding filenames/placement without constitutional necessity absorbs design into requirements and obstructs re-derivation.",
+      "uncertainty":"PRODUCT_DEFINITION §12's topology rules are external."
+    },
+    {
+      "applies_to_keys":["realisation_binding","design_surface"],
+      "conditions":["The realisation boundary is governed by the Tier 3 design profile under its adoption rule.","Explicit composition/effect algebra is required where the boundary composes higher-order functions or effectful computation."],
+      "exceptions":[],
+      "grounding":[{"end_line":479,"quote":"semantic\nsteps should read as transforms over admitted truth; effects should be\nexplicit and pushed to the edge.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape","start_line":474},{"end_line":490,"quote":"Where a boundary composes\nhigher-order functions or effectful computation, it does require an\nexplicit composition and effect algebra with its applicable identity,\nclosure, cardinality, effect and authority-conservation laws","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape","start_line":486}],
+      "key":"realisation_shape_modal_requirements",
+      "statement":"Semantic steps should be readable as transforms over admitted truth and effects should be explicit at the edge. Needing orchestration, mutable workspace, service methods or fallback defaults to discover meaning signals excessive imperative coupling. Readability, modularity and honest locations of meaning/effects are required. Applicable identity, closure, cardinality, effect and authority-conservation laws of explicit composition/effect algebra are mandatory; vocabulary is optional.",
+      "uncertainty":"The adoption rule and full composition laws are not supplied; recommendations retain should force."
+    },
+    {
+      "applies_to_keys":["requirement_classification","requirements_surface","successor_disposition"],
+      "conditions":["Every live requirement family and every inherited or legacy requirement."],
+      "exceptions":["Paths, filenames and packaging belong to design unless constitutional."],
+      "grounding":[{"end_line":526,"quote":"A live requirement\nis incomplete if either axis is missing. In project documents the\nclassification is explicit in the requirement's header metadata: `Status`\ncarries lifecycle status and `Category` carries the kind.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification","start_line":523}],
+      "key":"requirement_classification_rules",
+      "statement":"Every live family has explicit independent Status and Category header metadata; neither axis may be missing. Nothing live remains unclassified. Deferred retains an honest not-yet-operative/realised obligation, not current closure; Superseded means ownership moved and requires Implements and Supersedes on governing design; Active remains live law with an owning design decision to write/update; Orphaned is outside intended system and is removed or explicitly superseded. Categories remain constitutional, need not become marketed features, and should avoid premature mechanism choices. Lifecycle/legacy labels never supply successor dispositions: Active may be semantically superseded, Superseded does not name an accepted successor relation, and Orphaned is not intentional removal.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["requirement_classification","selected_product_outcome","operational_lifecycle"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":555,"quote":"a declared state is never combined as an evaluation result, so\na requirement marked Active, or evidence classed as material advance,\ncannot stand in for a `satisfied` result, and a requirement marked\nDeferred or Orphaned cannot stand in for a `falsified` one","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification","start_line":552}],
+      "key":"declared_classes_are_not_results",
+      "statement":"Lifecycle statuses, categories, legacy classifications, material advance/prerequisite readiness/preservation/regression classes, old-path classes, inherited-material adopted/superseded/deferred/orphaned, implementation carry_across/redundant/rewrite, ADR statuses and change classes are declared states, not core result values. Evaluation reading them returns its own predicate-bound core value. Active or material advance cannot replace satisfied; Deferred or Orphaned cannot replace falsified. Lifecycle answered/not-applicable/gap states likewise cannot substitute for evaluation.",
+      "uncertainty":"Unlisted old-path, ADR-status and change-class members are not invented."
+    },
+    {
+      "applies_to_keys":["requirements_surface","design_surface","realisation_binding","constitutional_chain"],
+      "conditions":["For every live requirement family, every design record and all shipping behaviour/tests."],
+      "exceptions":["Explicit honest deferment is an alternative to downstream realisation."],
+      "grounding":[{"end_line":592,"quote":"Ownership: every live requirement family maps to one or more owning design\ndecisions; every ADR or other design record grounds itself in requirements\nthrough an explicit `Implements:` line","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift","start_line":580}],
+      "key":"trace_closure_and_drift_signals",
+      "statement":"Every live family maps to one or more design owners; every ADR/design record explicitly grounds requirements through Implements:. Live requirements are realised through design/code/tests or honestly deferred. Shipping code/tests trace to live requirements and authorising design; working but untraced behaviour is forbidden hidden Product surface and accidental law. Unowned requirements, ungrounded design, undocumented deferment and ownerless code signal design drift; tests enforcing implementation habit lock in drift. Persistent event/projection delta requires triage among code, requirement/design stack, predictive model and observation. Capability without scenario has unverified operational meaning. Feature treatment of guarantee/governance/verification is misclassification; live in-place correction corrupts history; inexpressible real-use gaps re-enter Requirements or upstream by change class, not code hacks.",
+      "uncertainty":"The intake diagnostic procedure and class mapping remain external."
+    },
+    {
+      "applies_to_keys":["live_constitutional_surface","realisation_binding"],
+      "conditions":["Once a domain artifact is published as live constitutional surface."],
+      "exceptions":["Implementation surfaces may be aggressively refactored while mutable.","Retained transitional responsibility must satisfy the referenced retention relation."],
+      "grounding":[{"end_line":631,"quote":"Live domain artifacts, once published as live\nconstitutional surfaces, are immutable in place; if one is wrong, the valid\nactions are to supersede it with a new version or to withdraw or delete it\nfrom the live surface.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability","start_line":621}],
+      "key":"live_surface_change_boundary",
+      "statement":"Multiple live surfaces may accumulate, but published live artifacts cannot be silently mutated in place. Correct errors by a new superseding version, withdrawal or deletion from the live surface while preserving history. Transitional paths, scaffolds and fallback behaviour have no permanent authority and retire when superseded; retained responsibility satisfies §7 retention law. Perpetual compatibility shims are not required.",
+      "uncertainty":"The §7 retention relation is not supplied."
+    },
+    {
+      "applies_to_keys":["operational_lifecycle","product_definition_surface","requirements_surface","design_surface"],
+      "conditions":["Lifecycle aspects materially affect Product meaning or an obligation."],
+      "exceptions":["No requirement must become a release plan or specify every implementation mechanism.","A phase may be deferred only with named deferment and the surface owning later resolution."],
+      "grounding":[{"end_line":667,"quote":"Silent absence is not a valid lifecycle answer.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency","start_line":661}],
+      "key":"lifecycle_signal_and_gap_governance",
+      "statement":"Definition supplies boundary, intended use, release/install, live-use, observability and retirement/supersession posture as material. Requirements state invariant obligations over build, assurance, release, deployment, live use, telemetry, retirement, ownership, source truth, authority and interpretation. Supply sufficient signal for design or explicitly record ambiguity. Every phase must be answered, reasoned not-applicable or a named gap; silent absence is invalid. Design cannot fill missing signal by convention, precedent, prompt prose or test fixtures: reprice the owning constitutional surface or carry explicit governed debt. Evaluations return their own predicate-bound results; answered or not applicable is not satisfied.",
+      "uncertainty":"Full debt governance and ASSURANCE's application are external."
+    },
+    {
+      "applies_to_keys":["selected_product_outcome","admitted_growth_basis"],
+      "conditions":["A product-outcome-bearing work wave or subsequent work concerning its accepted instance."],
+      "exceptions":["Acceptance exhausts only that outcome instance and declared interval, not enduring guarantees, recurring obligations or broader families.","Explicitly product-defined assurance capability may be Product output, evaluated as progress; evidence still does not author its claim."],
+      "grounding":[{"end_line":708,"quote":"Acceptance exhausts only that instance and its\ndeclared acceptance interval; it does not discharge an enduring guarantee,\na recurring obligation or a broader product family beyond the accepted\ninstance.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":702}],
+      "key":"outcome_progress_and_acceptance_scope",
+      "statement":"Judge progress and supported-path promotion against the same selected outcome. Only material advance projects progress. Once its owner accepts the instance, it no longer selects later progress work; witnesses become preservation/regression evidence. Further work is preservation, a bounded prerequisite for another admitted outcome, or a repriced new change, not added progress on that instance. Choosing an already-defined next unresolved outcome is goals/sequencing; changing meaning/scope or adding an outcome requires Product re-entry. Completing proof surfaces, matrices, ledgers, inventories, design-method artifacts or tests cannot select/enlarge/replace outcome. One artifact may be output for one claim and evidence for another only with separately declared roles.",
+      "uncertainty":"Churn and forecast revision are referred to ACTIVATION §5 without local restatement."
+    },
+    {
+      "applies_to_keys":["admitted_growth_basis","selected_product_outcome"],
+      "conditions":["Material realisation growth within a product-outcome-bearing work wave."],
+      "exceptions":[],
+      "grounding":[{"end_line":732,"quote":"A prerequisite or experiment authorises only its declared provisional\nbound; it does not select or enlarge the product outcome, authorise\ndownstream work, confer promotion or closure, or waive applicable design,\nsafety, authority or release law, including the prime law of a design\nprofile where one applies.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":728},{"end_line":751,"quote":"Ended authority cannot be renewed by repair,\ncontinuation, evidence, active ticket or run state, or prior admission;\nfurther material work requires a new admission by the owning authority or\nits explicitly bounded proxy","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":748}],
+      "key":"growth_admission_and_exhaustion",
+      "statement":"Growth requires selected unresolved outcome or admitted named bounded prerequisite/decision-discriminating experiment. Provisional bases authorise only their bound, never outcome expansion, downstream work, promotion, closure or waiver of design/safety/authority/release law. Owner or bounded proxy admits/renews in durable goals/ticket authority with limits and terminal conditions. Ticket/contract drafting or validation, active status and past admission confer no renewal. Outcome acceptance, prerequisite discharge or experiment decision/observation resolution exhausts its basis; other admitted terminal conditions, rejection, withdrawal, supersession, repricing or evidential falsification end it too. Repair, continuation, evidence and active run/ticket state cannot revive ended authority; further material work requires new admission.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["selected_product_outcome","admitted_growth_basis"],
+      "conditions":["Retention, salvage, regression or unresolved gaps affect a work path."],
+      "exceptions":["Independent parallel work may proceed under its own admitted basis."],
+      "grounding":[{"end_line":765,"quote":"A regression or unresolved gap blocks further promotion on the affected\npath until repaired, repriced or accepted by the owning authority. It does\nnot globally serialise independent work: parallel work may proceed under\nits own admitted basis and cannot be laundered into the governed outcome's\nprogress claim. Outcome success is necessary delivery evidence, not\ncomplete product or release closure (§6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation","start_line":760}],
+      "key":"retention_salvage_and_promotion_limits",
+      "statement":"Retention as supported behaviour, required evidence, regression protection or bounded donor material grants no growth. Consumers own deletion/archive/quarantine/salvage mechanics; salvage carries only explicitly re-adopted semantics, not enclosing authority, dependencies, completion claim or further-work selection power. Regression/unresolved gaps block only the affected path's promotion until repair, repricing or owner acceptance. Independent work cannot be counted as that governed outcome's progress. Outcome success is necessary delivery evidence, not full Product/release closure.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["constitutional_chain","spec_method"],
+      "conditions":["Every substantive change."],
+      "exceptions":[],
+      "grounding":[{"end_line":771,"quote":"Every substantive change begins with intake triage, an explicit declared\nchange intent and a lawful re-entry point into the constitutional chain","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management","start_line":769}],
+      "key":"substantive_change_entry",
+      "statement":"Begin every substantive change with intake triage, explicit declared change intent and lawful constitutional-chain re-entry.",
+      "uncertainty":"The following detailed change-management subsections are outside this source selection."
+    }
+  ],
+  "dispositions": [
+    {"decision":"residual","keys":["release_foundation_map","lineage_objects","release_scope_and_results","release_map_external_loci"],"reason":"Retains premises, standing, authority/result distinctions and map scope; external owning laws and consumer loci remain reference dependencies.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation"},
+    {"decision":"retained","keys":["project_release_namespace","project_subtree","candidate_and_branch_carriers","immutable_rc_cut","version_line_selector","release_identity_distinctness","selector_discovers_cut"],"reason":"Retains seven identities and their movement/distinctness boundaries.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities"},
+    {"decision":"retained","keys":["qualified_namespace_and_refs"],"reason":"Retains namespace law, exact ref shapes, single-project conditions and allocated namespaces.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs"},
+    {"decision":"retained","keys":["reacquirable_subtree_identity"],"reason":"Retains every identity binding, locator rule and carrier-membership limitation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-subtree%20release%20identity"},
+    {"decision":"retained","keys":["historical_identity_conservation"],"reason":"Retains historical objects, logical URI and transition semantics.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation"},
+    {"decision":"retained","keys":["release_process","publication_acceptance_separation"],"reason":"Retains ordered phases and publication/acceptance distinction.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases"},
+    {"decision":"retained","keys":["candidate_scope_control","candidate_construction_variation"],"reason":"Retains candidate permissions, triage and scope obligations.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction"},
+    {"decision":"residual","keys":["immutable_publication_sequence","general_transport_atomicity"],"reason":"Retains ten steps and failure state; unsupported general transport behaviour is unspecified.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication"},
+    {"decision":"retained","keys":["release_qualification_acceptance","qualification_bindings_and_evidence","acceptance_binds_cut"],"reason":"Retains exact qualification subject, evidence non-implications and acceptance limits.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification"},
+    {"decision":"retained","keys":["monotonic_advancement_protocol"],"reason":"Retains ordered advancement, all refusal conditions and ordinal monotonicity.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMonotonic%20version-line%20advancement"},
+    {"decision":"residual","keys":["consumer_adoption","channel_resolution_and_basis","adoption_presentation_acceptance","adoption_external_mechanics"],"reason":"Retains channel/adoption law and drift boundary; exact hashing and manager mechanics remain external.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption"},
+    {"decision":"retained","keys":["release_naming_variation"],"reason":"Retains shapes, illustrative names and conditional alternative spelling.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F5.%20Naming"},
+    {"decision":"omitted","keys":[],"reason":"Heading and blank line only; substantive asset and subject meanings are retained from the two supplied child sections.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject"},
+    {"decision":"retained","keys":["release_scoped_assets","asset_reconciliation_and_version_location"],"reason":"Retains optional surfaces and exact-cut reconciliation/version rules.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets"},
+    {"decision":"retained","keys":["product_release_subject","subject_declaration_and_carrier_exclusion"],"reason":"Retains declarations, subject/carrier distinction and bookkeeping limits.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier"},
+    {"decision":"retained","keys":["release_matched_cohort","cohort_matching_and_invalidation"],"reason":"Retains declaration, five-member closure, matching and regeneration conditions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts"},
+    {"decision":"residual","keys":["cohort_publication_transaction","two_commit_order_and_gate","cohort_atomic_refusal_and_leases","procedural_representation_limit"],"reason":"Retains all construction/gate/refusal obligations as data; no operational execution trace is represented.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction"},
+    {"decision":"residual","keys":["cohort_qualification_recovery_nonretroactivity","recovery_authorisation_absent"],"reason":"Retains three qualification stages and recovery/nonretroactivity limits; no recovery grant is supplied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery"},
+    {"decision":"omitted","keys":[],"reason":"Structural heading and blank line only; its two supplied child sections carry the acceptance meanings.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance"},
+    {"decision":"residual","keys":["acceptance_mandatory_gates","acceptance_external_validity"],"reason":"Retains seven gates and adoption separation; external evidence validity and finding rules remain unresolved references.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria"},
+    {"decision":"retained","keys":["external_qualification_dependency","external_dependency_qualification_boundary"],"reason":"Retains out-of-Product blocking and no-result skip semantics.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies"},
+    {"decision":"residual","keys":["successor_disposition","successor_conservation_evidence","support_line_observation","successor_result_law_reference"],"reason":"Retains disposition predicates, semantic comparison and support-line obligations; full result/acceptance algebra remains referenced.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29"},
+    {"decision":"residual","keys":["release_open_questions"],"reason":"Both questions remain explicitly unresolved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F10.%20Open%20questions"},
+    {"decision":"residual","keys":["release_source_disposition_register","source_register_provenance_boundary","predecessor_register_unverified"],"reason":"Retains register claims and editorial generalisations as provenance, with absent predecessor/frontier evidence explicit.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions"},
+    {"decision":"retained","keys":["spec_method","method_position_and_provenance"],"reason":"Retains method ownership, tier, external realisation basis and provenance-only routing.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD"},
+    {"decision":"omitted","keys":[],"reason":"Structural heading and blank line only; supplied subsections retain position and identity content.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity"},
+    {"decision":"retained","keys":["spec_driven_development","method_position_and_provenance"],"reason":"Retains declarative preference, subordinate procedure and neutral-example rule.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition"},
+    {"decision":"retained","keys":["spec_driven_development","process_constitution_authority_split","surface_layout_variation"],"reason":"Retains meta-constitutional role, surface conventions, layout freedom and strict WHAT/HOW authority split.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution"},
+    {"decision":"retained","keys":["stdo_method_identity","method_identity_complete_basis"],"reason":"Retains named areas/owners and complete-cut consumer basis.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity"},
+    {"decision":"residual","keys":["canonical_method_conditions","canonical_external_rules"],"reason":"Retains canonical obligations as owned elsewhere, with unprovided semantic-resolution and ambiguity mechanics explicit.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement"},
+    {"decision":"omitted","keys":[],"reason":"Structural chain heading and blank line only; substantive child sections are interpreted.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain"},
+    {"decision":"residual","keys":["chain_foundation_map","binding_and_foundation_accountability","chain_map_external_loci"],"reason":"Retains premise/standing, binding, ownership and policy distinctions; referenced consumer/owner laws remain external.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding"},
+    {"decision":"retained","keys":["goals_surface","product_definition_surface","requirements_surface","design_surface","realisation_binding","constitutional_chain","chain_ownership_and_realisation","chain_feedback_sequence"],"reason":"Retains every chain role, ordered feedback, material ownership and carrier conditions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain"},
+    {"decision":"retained","keys":["manifesto_commitments","goals_govern_intent","intent_governs_definition","definition_governs_requirements","requirements_govern_design","design_governs_realisation","requirements_govern_realisation"],"reason":"Retains manifesto commitments and explicitly directed authority.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto"},
+    {"decision":"retained","keys":["spec_drivenness_failure_conditions"],"reason":"Retains all thirteen disqualifying conditions without evaluating any work.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus"},
+    {"decision":"residual","keys":["reconstruction_sufficiency","reconstruction_external_limits"],"reason":"Retains reconstructability, defect attribution and bounded reuse; external sufficiency/design gates remain references.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus"},
+    {"decision":"retained","keys":["renewal_and_repricing"],"reason":"Retains real-use gap conditions, class-based re-entry and cumulative authority-preserving iteration.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path"},
+    {"decision":"retained","keys":["intent_surface","surface_roles_and_consistency_gate"],"reason":"Retains surface roles, lifecycle applicability, current-law/version constraints and whole-span gate.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule"},
+    {"decision":"retained","keys":["design_choice_boundary"],"reason":"Retains conditional design ownership of mechanisms and bootstrap topology.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule"},
+    {"decision":"retained","keys":["realisation_shape_modal_requirements","realisation_shape_variation"],"reason":"Retains profile applicability, should/require distinction, non-goals and conditional algebra obligation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape"},
+    {"decision":"retained","keys":["requirement_classification","requirement_classification_rules","declared_classes_are_not_results"],"reason":"Retains categories, statuses, legacy actions and separation from results and successor dispositions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification"},
+    {"decision":"retained","keys":["trace_closure_and_drift_signals","design_traces_requirements"],"reason":"Retains ownership, closure/deferment alternatives, shipping trace and drift diagnostics.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift"},
+    {"decision":"residual","keys":["live_constitutional_surface","live_surface_change_boundary","retention_external_relation"],"reason":"Retains immutable live history and mutable implementation distinction; retention criterion is unsupplied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability"},
+    {"decision":"retained","keys":["operational_lifecycle","lifecycle_signal_and_gap_governance"],"reason":"Retains lifecycle chain, three states, material signal and missing-signal restrictions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency"},
+    {"decision":"retained","keys":["selected_product_outcome","admitted_growth_basis","outcome_progress_and_acceptance_scope","growth_admission_and_exhaustion","retention_salvage_and_promotion_limits"],"reason":"Retains selected-instance progress, evidence roles, admission/exhaustion and path-specific promotion limits.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation"},
+    {"decision":"residual","keys":["substantive_change_entry","change_management_missing_detail"],"reason":"Retains mandatory entry conditions; subsequent detailed triage/classification rules are not supplied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management"}
+  ],
+  "latitude": [
+    {
+      "allowed":["After intake triage, bounded fixes are allowed.","Qualification and operator review may continue.","Release notes may stay draft until RC publication.","The RC branch may move."],
+      "applies_to_keys":["candidate_and_branch_carriers"],
+      "forbidden":["Treating mutable source as operative for released consumers.","Silently absorbing material scope changes."],
+      "grounding":[{"end_line":297,"quote":"- bounded fixes are allowed after intake triage;\n- qualification and operator review may continue;\n- release notes may remain draft until RC publication;\n- the RC branch may move; and\n- mutable source is explicitly non-operative for released consumers.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction","start_line":293}],
+      "key":"candidate_construction_variation"
+    },
+    {
+      "allowed":["Default shared short names are rc/<project>/<version>, <project>/v<version>-rc.<n>, optional release/<project>/<version>, and <project>/v<version>.","The examples instantiate stdo_representation/2.5.0: rc/stdo_representation/2.5.0; stdo_representation/v2.5.0-rc.1 and -rc.2; release/stdo_representation/2.5.0; stdo_representation/v2.5.0.","Unqualified names remain lawful under single-project or historical-conservation conditions.","Another spelling is allowed only where source ref policy proves collision freedom and preserves project namespace, mutable carrier, immutable cut and mutable selector distinctions."],
+      "applies_to_keys":["project_release_namespace","candidate_and_branch_carriers","immutable_rc_cut","version_line_selector"],
+      "forbidden":["Alternative spelling without the stated collision and identity-distinction guarantees.","Treating illustrative version examples as an additional release requirement."],
+      "grounding":[{"end_line":463,"quote":"The unqualified profile remains lawful only under the single-project and\nhistorical-conservation conditions of §2. Projects may choose another\nspelling only in a release source whose ref policy proves collision\nfreedom and preserves the same project namespace, mutable carrier,\nimmutable cut and mutable selector distinctions (P3).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F5.%20Naming","start_line":459},{"end_line":457,"quote":"- candidate branch: `rc/stdo_representation/2.5.0`;\n- first immutable cut: `stdo_representation/v2.5.0-rc.1`;\n- second immutable cut: `stdo_representation/v2.5.0-rc.2`;\n- latest-release branch: `release/stdo_representation/2.5.0`; and\n- latest-published selector: `stdo_representation/v2.5.0`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F5.%20Naming","start_line":453}],
+      "key":"release_naming_variation"
+    },
+    {
+      "allowed":["Requirements can be individual files or grouped families at any location bound by the product definition.","Default scaffold places requirements/ under specification/.","Declaring structure/family boundaries is preferred over one imperative catch-all document."],
+      "applies_to_keys":["requirements_surface","product_definition_surface"],
+      "forbidden":["Making conventional folder placement constitutional.","Demanding existing projects move or duplicate files merely to match conventional names.","Promoting a definition overlay or derived surface to co-equal WHAT authority."],
+      "grounding":[{"end_line":87,"quote":"Requirements may instead be stored at any location the product definition\nbinds, as individual files or grouped into requirement families.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution","start_line":81}],
+      "key":"surface_layout_variation"
+    },
+    {
+      "allowed":["No specific programming language is required.","Imperative code need not be eliminated.","Monadic or category-theory vocabulary is optional.","Not every exception must be replaced by a custom algebraic type."],
+      "applies_to_keys":["realisation_binding","design_surface"],
+      "forbidden":["Waiving required readability, modularity and explicit locations of meaning/effects.","Omitting required composition/effect laws merely because their vocabulary is optional."],
+      "grounding":[{"end_line":490,"quote":"it does not require one specific programming language,\nelimination of all imperative code, monadic or category-theory vocabulary,\nor replacing every exception with a custom algebraic type.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape","start_line":482}],
+      "key":"realisation_shape_variation"
+    }
+  ],
+  "limitations": [
+    "This is source interpretation only under the requested basis, with no semantic acceptance, installed qualification, execution or completeness judgment.",
+    "Four heading-only sections are deliberately omitted as structural wrappers; their supplied child sections carry their substantive interpretation.",
+    "Referenced documents and omitted subsections are not reconstructed. In particular, core result algebra, admission/refinement, evidence reuse, change classes, design adoption, retention, manager hashing and recovery law remain external dependencies.",
+    "Foundation tables and source-disposition registers are retained as authored accounts of standing, ownership, routes and conservation; their claims do not prove derivation or predecessor conservation.",
+    "Grouped concepts and compound constraints preserve source distinctions textually; this finite schema does not implement publication state machines, result composition, traversals, transformations or evidence evaluation.",
+    "Judgment, traversal and transformation populations are not instantiated. Source descriptions of those operations remain data in the five active families.",
+    "Cross-document linkage is asserted only where the supplied source explicitly states it. Unprovided referenced bodies have no fabricated local authority or content."
+  ],
+  "relations": [
+    {
+      "conditions":["For the named project and version line."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":176,"quote":"the mutable project-qualified tag alias naming\n  the highest-ordinal published immutable RC cut for that project and\n  version line","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities","start_line":174}],
+      "key":"selector_discovers_cut",
+      "kind":"discovery_reference",
+      "meaning":"The selector names the highest published cut without governing consumer selection.",
+      "source_key":"version_line_selector",
+      "target_key":"immutable_rc_cut"
+    },
+    {
+      "conditions":["Required exact-cut review/operator checks are complete and the human authority accepts that exact subject."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":357,"quote":"If\nreview requires any qualifying-byte change, the verdict remains attached\nto the old RC and a higher RC is published.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification","start_line":355}],
+      "key":"acceptance_binds_cut",
+      "kind":"exact_subject_binding",
+      "meaning":"Qualification and acceptance attach to their exact immutable cut, with no transfer to changed bytes.",
+      "source_key":"release_qualification_acceptance",
+      "target_key":"immutable_rc_cut"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":218,"quote":"Goals → Intent → Product Definition → Requirements → Design → Code\n  → Events → Projection → Delta → Scenarios → Gap analysis\n  → Repricing at the layer its change class names","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain","start_line":216}],
+      "key":"chain_feedback_sequence",
+      "kind":"realisation_feedback",
+      "meaning":"Realisation enters retained events, projection, delta, scenarios and gap analysis, returning to class-selected constitutional repricing. Sequence alone grants no reverse authority.",
+      "source_key":"realisation_binding",
+      "target_key":"constitutional_chain"
+    },
+    {
+      "conditions":["Throughout iteration."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":300,"quote":"goals govern intent, intent governs\nproduct definition, product definition governs requirements, requirements\ngovern design, and requirements plus design govern code.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":298}],
+      "key":"goals_govern_intent",
+      "kind":"constitutional_governance",
+      "meaning":"Goals govern intent.",
+      "source_key":"goals_surface",
+      "target_key":"intent_surface"
+    },
+    {
+      "conditions":["Throughout iteration."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":300,"quote":"intent governs\nproduct definition","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":298}],
+      "key":"intent_governs_definition",
+      "kind":"constitutional_governance",
+      "meaning":"Intent governs product definition.",
+      "source_key":"intent_surface",
+      "target_key":"product_definition_surface"
+    },
+    {
+      "conditions":["Throughout iteration."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":299,"quote":"product definition governs requirements","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":299}],
+      "key":"definition_governs_requirements",
+      "kind":"constitutional_governance",
+      "meaning":"Product definition governs requirements.",
+      "source_key":"product_definition_surface",
+      "target_key":"requirements_surface"
+    },
+    {
+      "conditions":["Throughout iteration."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":300,"quote":"requirements\ngovern design","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":299}],
+      "key":"requirements_govern_design",
+      "kind":"constitutional_governance",
+      "meaning":"Requirements govern design.",
+      "source_key":"requirements_surface",
+      "target_key":"design_surface"
+    },
+    {
+      "conditions":["Together with requirements; for code realisation."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":300,"quote":"requirements plus design govern code.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":300}],
+      "key":"design_governs_realisation",
+      "kind":"joint_realisation_governance",
+      "meaning":"Design jointly with requirements governs code; design alone supplies no independent WHAT authority.",
+      "source_key":"design_surface",
+      "target_key":"realisation_binding"
+    },
+    {
+      "conditions":["Together with design; for code realisation."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":300,"quote":"requirements plus design govern code.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto","start_line":300}],
+      "key":"requirements_govern_realisation",
+      "kind":"joint_realisation_governance",
+      "meaning":"Requirements jointly with design govern code; this preserves the source's conjunctive authority.",
+      "source_key":"requirements_surface",
+      "target_key":"realisation_binding"
+    },
+    {
+      "conditions":["Every ADR or other design record."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":582,"quote":"every ADR or other design record grounds itself in requirements\nthrough an explicit `Implements:` line","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift","start_line":581}],
+      "key":"design_traces_requirements",
+      "kind":"authority_trace",
+      "meaning":"Design records explicitly identify their requirement grounding through Implements; the trace does not reverse authority.",
+      "source_key":"design_surface",
+      "target_key":"requirements_surface"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Retain F15's table and consumer catalog as source assertions, without reconstructing external laws or treating connectivity as additional authority. Local rules remain bounded by their owners.",
+      "grounding":[{"end_line":139,"quote":"Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation","start_line":137}],
+      "key":"release_map_external_loci",
+      "subject_key":"release_foundation_map",
+      "uncertainty":"FOUNDATIONS owns generic lineage/release objects and commitment standing. External consumers named include SPEC_METHOD, EXECUTIVE_BASELINE, WORLD_MODEL, ODD, IDENTITY, PRODUCT_DEFINITION, ACTIVATION, AXIOMATIC_CALCULUS, EVALUATION, TICKETS and CONFORMANCE. Their cited bodies are not supplied. The catalog distinguishes imports/applications from explicit non-consumers: release-operation reporting is local; manager outcomes map through ACTIVATION; manifest bindings do not imply application of the ref section; cohort declaration, external dependency qualification and support-line monitoring have no separate consumer. Choice owners include FOUNDATIONS taxonomy; this member's ref/phase/step/criteria/cohort policies; Product authorities for namespaces, cohorts, acceptance and removals; consumers for support-line mechanisms; and separately authorised recovery law. Counts and routes alone do not supply absent bodies."
+    },
+    {
+      "consequence":"Do not infer a sequential fallback, refusal rule or atomic guarantee for the general procedure where transport lacks support. The separately explicit cohort atomic-or-refuse law remains intact.",
+      "grounding":[{"end_line":323,"quote":"8. atomically pushes the carrier, RC branch, immutable RC tag, selector\n   and optional release branch where the transport supports it;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication","start_line":322}],
+      "key":"general_transport_atomicity",
+      "subject_key":"immutable_publication_sequence",
+      "uncertainty":"The ordinary publication procedure conditions atomic pushing on transport support but supplies no alternate protocol."
+    },
+    {
+      "consequence":"The exact plan/hash/command implementation and installed manifest cannot be instantiated from this selection.",
+      "grounding":[{"end_line":435,"quote":"The plan's hashing rule\nand the manager's command boundaries are PRODUCT_DEFINITION §4","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption","start_line":434}],
+      "key":"adoption_external_mechanics",
+      "subject_key":"consumer_adoption",
+      "uncertainty":"PRODUCT_DEFINITION §4 owns the full Adoption Plan, hashing, installed basis and manager command boundaries; only the locally stated requirements are available."
+    },
+    {
+      "consequence":"Ordered steps, gates, leases and failure boundaries are descriptive constraints here, not an executed transaction, verified ref graph, proof, judgment or state-machine trace.",
+      "grounding":[{"end_line":577,"quote":"8. one transport transaction atomically publishes only that qualified\n   carrier branch and complete Product ref set.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction","start_line":576}],
+      "key":"procedural_representation_limit",
+      "subject_key":"cohort_publication_transaction",
+      "uncertainty":"The schema has no operational trace, temporal-state or transaction-proof population; the source's operational ordering is retained textually."
+    },
+    {
+      "consequence":"No same-version backfill permission is established by this interpretation.",
+      "grounding":[{"end_line":613,"quote":"only when separately authorised recovery law names\nthat exception.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery","start_line":612}],
+      "key":"recovery_authorisation_absent",
+      "subject_key":"cohort_qualification_recovery_nonretroactivity",
+      "uncertainty":"The separately authorised recovery law is not included."
+    },
+    {
+      "consequence":"Preserve gate applicability without deciding which retained evidence is valid or which omitted findings block promotion.",
+      "grounding":[{"end_line":644,"quote":"retained evidence satisfies it only under the validity conditions stated\nthere","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria","start_line":643}],
+      "key":"acceptance_external_validity",
+      "subject_key":"acceptance_mandatory_gates",
+      "uncertainty":"FOUNDATIONS §4 evidence-reuse validity and EVALUATION §5 promotion-blocking findings are referenced, not supplied."
+    },
+    {
+      "consequence":"Preserve unresolved as no-result and qualification-blocking, not falsified; do not calculate result conjunction or acceptance.",
+      "grounding":[{"end_line":719,"quote":"Qualification evaluates each\ndisposition on evidence and records a value of the core result algebra\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) with that predicate.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29","start_line":711}],
+      "key":"successor_result_law_reference",
+      "subject_key":"successor_disposition",
+      "uncertainty":"FOUNDATIONS core algebra and conjunction, ACTIVATION acceptance disposition, and EVALUATION acceptance requirements are external. The F15 consumer catalog reports that unresolved disposition blocks acceptance, but its detailed owning rule is absent."
+    },
+    {
+      "consequence":"Do not supply a mandatory class-specific check bundle or decide that a particular repair requires a new version line.",
+      "grounding":[{"end_line":739,"quote":"- What exact qualification bundle is mandatory for each Product class?\n- What version-line compatibility rule requires a new `<version>` rather\n  than a higher RC ordinal?","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F10.%20Open%20questions","start_line":737}],
+      "key":"release_open_questions",
+      "subject_key":"release_process",
+      "uncertainty":"The mandatory qualification bundle per Product class and the compatibility rule choosing new version versus higher RC remain open."
+    },
+    {
+      "consequence":"The register's conserved labels remain unevaluated source claims and do not establish predecessor conservation or tenant acceptance.",
+      "grounding":[{"end_line":779,"quote":"its application to this corpus is the tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md), which holds every predecessor row's disposition and locus","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F11.%20Source%20dispositions","start_line":779}],
+      "key":"predecessor_register_unverified",
+      "subject_key":"release_source_disposition_register",
+      "uncertainty":"Neither rc.2 RELEASE_METHOD.md nor frontier/PREDECESSOR_CLAIMS.md is supplied. The register also references unavailable §1 position/triage details, including five triage determinations."
+    },
+    {
+      "consequence":"Use only the local canonical conditions; do not fabricate resolution rules, ambiguity thresholds, frame semantics or sprint mechanics.",
+      "grounding":[{"end_line":129,"quote":"detection is mandatory; blocking or escalation is\npolicy under declared risk appetite, except for hard-stop prerequisite\nfailures (§5; ACTIVATION §4).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement","start_line":127}],
+      "key":"canonical_external_rules",
+      "subject_key":"canonical_method_conditions",
+      "uncertainty":"The canonical statement points to PRODUCT_DEFINITION semantic resolution/overlay, ASSURANCE scenarios, ACTIVATION hard stops and unsupplied SPEC_METHOD ambiguity/sprint sections; it owns no independent law."
+    },
+    {
+      "consequence":"The table's standing, ownership and described consequences are retained without reconstructing its external laws or promoting listed consumer connectivity into authority.",
+      "grounding":[{"end_line":211,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding","start_line":210}],
+      "key":"chain_map_external_loci",
+      "subject_key":"chain_foundation_map",
+      "uncertainty":"The map assigns choices over declarative bias/examples, categories/statuses/ADR conventions, layer order/names, release labels, lifecycle markers, outcome/evidence policies, eight-step method adoption, bounded-context identity, profile should force, binding division, resources and three construction accounts. Several detailed owning sections are absent. Named consumers include ASSURANCE, DESIGN_MODULE, ODD, TICKETS, CONFORMANCE, WRITING_GUIDE, IDENTITY, PRODUCT_DEFINITION, POSTING_GUIDE, ACTIVATION, FOUNDATIONS and unsupplied migration/binding sections. No separate consumer applies closure-evidence assembly or three-account mapping; refinement/AC-013 retain their own authority. §8 binds ACTIVATION terms with F5/F2 accounting; canonical statement and §12 decide nothing independently."
+    },
+    {
+      "consequence":"No reconstruction judgment or blanket reuse permission is made; missing limits remain open references.",
+      "grounding":[{"end_line":379,"quote":"The design\nprofile owns design-view coverage, its material-change gate and\nunchanged-boundary reuse; this litmus neither waives that gate nor requires\nrecreating unchanged accepted views","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus","start_line":376}],
+      "key":"reconstruction_external_limits",
+      "subject_key":"reconstruction_sufficiency",
+      "uncertainty":"EVALUATION §6 defines full reconstruction grants, limits and evidence reuse; DESIGN_MODULE owns coverage/material-change/reuse gates; SPEC_METHOD §5 owns ambiguity governance."
+    },
+    {
+      "consequence":"Do not infer permission for any particular retained migration path or fallback.",
+      "grounding":[{"end_line":627,"quote":"any retained responsibility\nsatisfies the retention relation of §7 (closure criterion).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability","start_line":626}],
+      "key":"retention_external_relation",
+      "subject_key":"live_surface_change_boundary",
+      "uncertainty":"The migration closure criterion's retention relation is not supplied."
+    },
+    {
+      "consequence":"The universal entry requirement remains meaningful, but no particular change is classified, repriced or authorised here.",
+      "grounding":[{"end_line":771,"quote":"Every substantive change begins with intake triage, an explicit declared\nchange intent and a lawful re-entry point into the constitutional chain","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management","start_line":769}],
+      "key":"change_management_missing_detail",
+      "subject_key":"substantive_change_entry",
+      "uncertainty":"Detailed intake triage, computed change classes, lawful class-specific re-entry points and consistency mechanics follow beyond the supplied section."
+    }
+  ]
+}

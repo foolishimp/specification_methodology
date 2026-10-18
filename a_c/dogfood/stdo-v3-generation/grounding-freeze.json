@@ -1,0 +1,43 @@
+{
+  "profile": "ac.generation.grounding-freeze/1",
+  "frozen_after_initial_drafts": true,
+  "frozen_before_normalization_artifacts": true,
+  "frozen_generator_unchanged": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+  "review": {
+    "assessor": "/root/ac_generation_design",
+    "verdict": "no actionable defect for bounded use",
+    "evidence": "Root independently ran all18helpertests with actual upstream; reviewer inspected contract/code/tests and consumed those results.",
+    "scope": "FD locator recovery and orchestration; no semantic acceptance."
+  },
+  "initial_observation": "BothCodexfirstdrafts strictvalid; bothClaudefirstdrafts contain an unknown section identity and remain refused after pure whitespace recovery.",
+  "files": {
+    "a_c/build_tenants/graphify/code/ac_grounding.py": {
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+      "bytes": 31297
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_grounding.py": {
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb",
+      "bytes": 19256
+    },
+    "a_c/build_tenants/graphify/design/grounding.md": {
+      "sha256": "929462b9a3e3af228349973cdf30d2967c307f659ac342e5f6c4ed56833269a6",
+      "bytes": 7755
+    },
+    "a_c/dogfood/stdo-v3-generation/coordinate_generation.py": {
+      "sha256": "025c30baca2646c392fff368ca656f74aaa97dc3872d7dc95746b703e4bf3708",
+      "bytes": 9050
+    },
+    "a_c/dogfood/stdo-v3-generation/GROUNDING-ADDENDUM.md": {
+      "sha256": "0f2cd0cde9cb4d9c0b5bb3b53dbef203d08288ef34a93d1924e691053b808c06",
+      "bytes": 2976
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/coordinator-review.json": {
+      "sha256": "025e27ed1d106a466b365b0810c8b7934ce2bc7443f9675a9d63f13641a0bc0c",
+      "bytes": 1121
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/grounding-tests.txt": {
+      "sha256": "d57eda514772507dbc5ba19153e61d7537352efac78ca870cba77635aa1b0dcf",
+      "bytes": 2995
+    }
+  }
+}

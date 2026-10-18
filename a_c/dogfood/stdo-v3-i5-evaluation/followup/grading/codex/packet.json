@@ -1,0 +1,953 @@
+{
+  "answers": [
+    {
+      "answer": {
+        "limitations": [
+          "Satisfaction in P is bounded to the fixed required assurance obligations, material joins and S1/B1. It establishes neither universal Product correctness nor an acceptance decision."
+        ],
+        "tasks": [
+          {
+            "decision": "Reuse A within its established applicability to S1/B1. Reassess B; C's exclusion and reuse remain unsupported until its coverage gap is resolved. G cannot be skipped. Reject the asserted 99% probability of Product correctness as unsupported. For the bounded required-assurance claim: P is satisfied, F is falsified, and U is indeterminate.",
+            "id": "C3",
+            "justification": "Change impact and evidence retention permits applicable retained evidence, requires material dependency coverage for exclusion, and preserves mandatory gates. Parallel assurance and provenance makes shared derivations and observations material to dependence; different model families do not establish statistical independence. Risk and assurance selection distinguishes conditional detection probability from Product correctness. Result conjunction preserves the fixed required set: complete valid support establishes satisfaction, an admissible required counterexample establishes falsification despite missing coverage, and an otherwise undecided required slot leaves the aggregate indeterminate.",
+            "representation": {
+              "applicability": [
+                "A's established relation permits reliance on its retained evidence for the corresponding S1/B1 claim. Keep the original record bound to S0/B0; do not represent it as a fresh execution.",
+                "B's execution dependency on changed L places it in the reassessment selection. Its old pass does not establish its current predicate; the change alone also does not establish failure.",
+                "C's absent path cannot establish non-influence because coverage is incomplete. Its historical pass remains a historical observation, but current applicability is unresolved.",
+                "The completion judgment concerns the fixed required obligations and joins, not merely the checks whose returns happen to be available."
+              ],
+              "exceptions": [
+                "Completeness does not require every check to execute afresh: A's applicable retained evidence can contribute. Conversely, selecting or dispatching a check produces no passing evidence.",
+                "Even if both 0.1 miss rates and the necessary conditional independence were established, 0.01 would be a joint miss probability under the specified violation conditions. Its complement would describe detection under those conditions, not a 99% probability that the Product is correct.",
+                "Unsupported numerical confidence does not erase otherwise justified qualitative evidence or create a universal numerical acceptance threshold.",
+                "Missing evidence is not itself a counterexample. An actual admissible counterexample remains decisive even when other required evidence is missing."
+              ],
+              "obligations": [
+                "Retain A's applicability justification and provenance. Obtain current admissible assurance for B.",
+                "For C, establish sufficient material dependency coverage and justified non-influence or preservation for reuse, or obtain adequate current reassessment evidence. Widen assessment where impact remains uncertain; do not silently drop required coverage.",
+                "Obtain and assess G's required evidence independently of change-based selection.",
+                "Preserve assertion justification separately from execution provenance. Agreement with an implementation-derived oracle may support regression or a justified local property, but supplies no independent upstream justification by itself.",
+                "Any quantitative assurance claim needs a defined violation event and uncertainty model, applicable rates, shared-cause treatment and calibration. A posterior correctness claim additionally needs the relevant prior and likelihoods; none may be invented."
+              ],
+              "premises": [
+                "L changed, producing S1/B1. A, B and C passed historically on S0/B0.",
+                "A has supported assertion, execution and reliance dependency coverage, unaffected dependencies and an applicable preservation relation to S1/B1. B executes L. C has no recorded path from L, but its material dependency coverage is incomplete.",
+                "G applies independently of change-based selection. The agreeing suites share an implementation-derived expected-output generator and the same old input observations despite different model families.",
+                "P, F and U are separate followups. Evidence stipulated in one is not imported into another."
+              ],
+              "residuals": [
+                "F requires diagnosis of B's counterexample and a supported response under the governing authority, followed by the necessary reassessment. Acquire C's missing support and any other outstanding required support, including G's unstated outcome. Changing an obligation cannot establish that the original obligation was satisfied.",
+                "U requires recovery of C's current evidence and evaluation status, or another admissible assessment sufficient to decide its required predicate and material joins. Until then, withhold the completion claim.",
+                "P supports only completion of the stipulated assurance scope on S1/B1. Any broader Product-fitness, deployment or acceptance claim must satisfy its own governing conditions and authority."
+              ],
+              "result_mapping": [
+                "Initial state: required-assurance completion is not established. A can contribute through retention, while B needs reassessment, C has unresolved applicability or current coverage, and G remains mandatory.",
+                "P — satisfied: valid current B and C evidence, G's pass, established A applicability, and valid support for every fixed required obligation and material join establish the bounded completion predicate on S1/B1. No additional evidence is needed for that stipulated claim. This does not validate the manager's numerical claim or itself establish authorised acceptance.",
+                "F — falsified: B's admissible counterexample to a required predicate defeats the conjunction. C's missing current return remains explicit alongside that failure; it does not reduce the aggregate to indeterminate. Preserve B's counterexample and its scope. G's current outcome is not stipulated in F.",
+                "U — indeterminate: B and G pass and no counterexample is supplied, but C remains an absent required evaluation slot. Its dispatch receipt establishes dispatch only. C's evaluation performance is unconfirmed; neither non-performance nor a performed-but-undecidable result is established. Do not fabricate a child result or count the receipt as satisfaction.",
+                "Applying the aggregate combining rule is a performed aggregate evaluation. That fact does not establish that every component evaluation was performed."
+              ],
+              "statement": "Evaluate whether every fixed required assurance obligation and material join for this change is satisfied on S1/B1. Keep this predicate separate from universal Product correctness and authorised acceptance."
+            },
+            "sources": [
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Excluding a check requires supported dependency coverage and a reason the change\ncannot invalidate the reused claim. An absent edge proves no non-influence."
+              },
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "New obligations and uncovered cases create assessment work even when no existing\ncheck covers them; mandatory gates remain applicable. Selection itself produces\nno execution evidence."
+              },
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The original\nrecord keeps its original subject; an applicability relation permits its use\nfor the new claim. A changed digest proves neither invalidity nor equivalence."
+              },
+              {
+                "anchor": "#parallel-assurance-and-provenance, lines 698-734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An implementation-derived assertion can support regression or a stated local\nproperty. Repeating that implementation's decision supplies no independent\nupstream justification."
+              },
+              {
+                "anchor": "#parallel-assurance-and-provenance, lines 698-734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Different actors, families or\ncodebases do not establish statistical independence. Repeating an observation\ndoes not make it new independent evidence"
+              },
+              {
+                "anchor": "#risk-and-assurance-selection, lines 735-784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Quantified assurance requires a declared population or uncertainty model,\nprior information, likelihoods, shared causes and calibration limits."
+              },
+              {
+                "anchor": "#risk-and-assurance-selection, lines 735-784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Replacing a\nconditional factor with P(M_i | V, Gamma) requires the relevant conditional\nindependence under that model. One minus the joint miss probability is the\nchance of at least one detection under those conditions, not the probability\nthat the whole product is correct."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The required set comes from the composite's applicability and coverage\ncontract, not from the list of returns received."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Any authenticated, applicable falsification of a required predicate or material join makes\n   the conjunction `falsified`. Missing or undecidable other coverage remains\n   explicit alongside it."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Otherwise any unresolved applicability, missing evaluation, undecidable\n   predicate or undecided material join yields `indeterminate`."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "`satisfied` requires every applicable obligation and material join to be\n   authentically satisfied, with coverage itself established."
+              },
+              {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An absent return establishes neither non-performance nor an\nundecidable evaluation: retain the missing slot and what is actually known."
+              },
+              {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "A missing required judgment stays an absent coverage slot, with the known\nperformance fact or its uncertainty; it is not a fabricated child result."
+              },
+              {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Candidate availability, candidate fitness and authorised acceptance are three\npredicates."
+              },
+              {
+                "anchor": "#bounded-construction, lines 907-997",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Completion needs the required evidence and\nacceptance conditions on the current candidate. Changing Z follows its owner\nand cannot establish that the old destination was reached."
+              }
+            ],
+            "unknowns": [
+              "Initially, C's material influence and reuse applicability are unresolved; B's and G's current results are not supplied.",
+              "The suites' relevant conditional dependence, calibrated operational miss rates, prior and likelihoods are not established. No replacement numerical probability is justified.",
+              "In F, C has no current return and G's current result is unstated. B's established failure remains decisive.",
+              "In U, C's evaluation performance and conclusion remain unconfirmed despite the dispatch receipt.",
+              "No authorised acceptance or deployment disposition is stipulated."
+            ]
+          }
+        ]
+      },
+      "label": "11e244b34598",
+      "mechanical_citation_checks": [
+        {
+          "citations": [
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 0,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Excluding a check requires supported dependency coverage and a reason the change\ncannot invalidate the reused claim. An absent edge proves no non-influence."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 1,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "New obligations and uncovered cases create assessment work even when no existing\ncheck covers them; mandatory gates remain applicable. Selection itself produces\nno execution evidence."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 2,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785-844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The original\nrecord keeps its original subject; an applicability relation permits its use\nfor the new claim. A changed digest proves neither invalidity nor equivalence."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 3,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#parallel-assurance-and-provenance, lines 698-734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An implementation-derived assertion can support regression or a stated local\nproperty. Repeating that implementation's decision supplies no independent\nupstream justification."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 4,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#parallel-assurance-and-provenance, lines 698-734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Different actors, families or\ncodebases do not establish statistical independence. Repeating an observation\ndoes not make it new independent evidence"
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 5,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#risk-and-assurance-selection, lines 735-784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Quantified assurance requires a declared population or uncertainty model,\nprior information, likelihoods, shared causes and calibration limits."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 6,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#risk-and-assurance-selection, lines 735-784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Replacing a\nconditional factor with P(M_i | V, Gamma) requires the relevant conditional\nindependence under that model. One minus the joint miss probability is the\nchance of at least one detection under those conditions, not the probability\nthat the whole product is correct."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 7,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The required set comes from the composite's applicability and coverage\ncontract, not from the list of returns received."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 8,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Any authenticated, applicable falsification of a required predicate or material join makes\n   the conjunction `falsified`. Missing or undecidable other coverage remains\n   explicit alongside it."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 9,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Otherwise any unresolved applicability, missing evaluation, undecidable\n   predicate or undecided material join yields `indeterminate`."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 10,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453-580",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "`satisfied` requires every applicable obligation and material join to be\n   authentically satisfied, with coverage itself established."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 11,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An absent return establishes neither non-performance nor an\nundecidable evaluation: retain the missing slot and what is actually known."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 12,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "A missing required judgment stays an absent coverage slot, with the known\nperformance fact or its uncertainty; it is not a fabricated child result."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 13,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-algebra, lines 322-452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Candidate availability, candidate fitness and authorised acceptance are three\npredicates."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 14,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#bounded-construction, lines 907-997",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Completion needs the required evidence and\nacceptance conditions on the current candidate. Changing Z follows its owner\nand cannot establish that the old destination was reached."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            }
+          ],
+          "strict_valid_count": 0,
+          "task_id": "C3"
+        }
+      ],
+      "original_answer_sha256": "9b706c61e555f3bfb48c66ea1bcda83546ed0b3199cf4ec3c6144b7a20a3027f"
+    },
+    {
+      "answer": {
+        "limitations": [
+          "The conclusions apply to the stipulated facts, S1/B1 and the fixed required assurance scope. They neither certify unrestricted Product correctness nor enact acceptance or deployment."
+        ],
+        "tasks": [
+          {
+            "decision": "Reuse A within its established applicability. Reassess B. Do not exclude C using its incomplete dependency view. Do not skip G. Refuse the unsupported 99% Product-correctness claim. For the bounded assurance-completeness claim: P is satisfied; F is falsified; U is indeterminate.",
+            "id": "C3",
+            "justification": "The owning rules permit evidence retention through supported applicability and preservation, require supported dependency coverage before exclusion, and preserve mandatory gates. Different model families do not establish statistical independence, particularly where assertion generation and observations are shared. Result conjunction requires the fixed applicable obligations and material joins to be satisfied; an admissible counterexample defeats that conjunction despite another missing return, while missing evidence alone leaves it undecided.",
+            "representation": {
+              "applicability": [
+                "Bind the judgment to S1/B1 and the governing fixed required set, rather than defining completeness from whichever returns arrive.",
+                "Retain A's original S0/B0 evidence identity and the applicability relation supporting its use for S1/B1. Its historical execution need not be relabeled as a current execution.",
+                "Required independence, assertion and observation justification, risk policy, coverage and mandatory gates remain governing conditions. A missing edge or return establishes no exemption."
+              ],
+              "exceptions": [
+                "Applicable retained evidence can contribute to complete assurance without every check being freshly executed.",
+                "Implementation-derived assertions can support regression or a stated local property within justified scope.",
+                "No universal full-suite cadence or numerical-confidence estimate is required. Qualitative evidence remains usable within governing policy; these permissions do not remove required obligations or G."
+              ],
+              "obligations": [
+                "A: reuse the stipulated applicable evidence within its supported claim and scope; no rerun follows merely from the change.",
+                "B: acquire valid current reassessment of the affected execution dependency. Its old pass remains historical evidence but does not by itself discharge the S1/B1 obligation. The change alone does not establish a current failure.",
+                "C: obtain supported material dependency coverage sufficient to justify retention, or broaden reassessment and acquire applicable current evidence. Until the required support exists, retain unresolved assurance; the absent path does not prove non-influence.",
+                "G: satisfy the independently mandatory gate and retain its evidence. Change-based selection cannot waive it, and selecting work supplies no execution evidence.",
+                "Assurance claim: preserve assertion provenance separately from execution provenance. Shared implementation-derived expectations supply no independent upstream justification, and repeated observations supply no new independent evidence. Any numerical claim needs a supported population or uncertainty model, relevant conditional independence or dependence account, priors, likelihoods, shared causes and calibration limits."
+              ],
+              "premises": [
+                "L changed, producing S1/B1. A, B and C previously passed on S0/B0.",
+                "A has supported coverage of assertion, execution and reliance dependencies, an applicable preservation relation to S1/B1, and unaffected dependencies.",
+                "B executes changed library L. C's dependency view lacks a path from L but has incomplete material coverage. G applies independently of change-based selection.",
+                "The agreeing suites use different model families but share an implementation-derived expected-output generator and the same old input observations.",
+                "P, F and U are separate followups. Each retains the initial stipulated facts; additional facts from P do not carry into F or U."
+              ],
+              "residuals": [
+                "Initially, acquire B's current reassessment, resolve C's material coverage and applicable evidence, and obtain G's required support.",
+                "In F, diagnose and address B's failure through supported repair and reassessment or an authorized change of obligation. Acquire C's missing support and any other still-unsupported required slots. Preserve the failure until a supported disposition addresses it.",
+                "In U, acquire C's authenticated current return or evidence establishing what evaluation occurred, followed by the support needed to decide its required predicate. Establish any remaining required coverage and joins.",
+                "The actual Product-wide correctness probability remains unresolved. If numerical assurance is retained, acquire its missing probabilistic justification; otherwise limit the claim to supported scoped evidence.",
+                "Any acceptance or deployment disposition retains its separate governing authority and conditions. No such authorized decision is stipulated."
+              ],
+              "result_mapping": [
+                "Manager's claim: unsupported; refuse the numerical conclusion without declaring the Product incorrect. Multiplying the two nominal marginal miss rates requires relevant conditional independence under a justified model, which the stated authorship differences do not establish. Even if a joint miss probability of 0.01 were justified, its complement would express a 99% chance of at least one detection conditional on the specified violation and conditions, not a 99% probability of whole-Product correctness.",
+                "P — satisfied: valid current B/C passes, G's pass, A's established applicability, and stipulated valid support satisfying every fixed required obligation and material join establish the bounded conjunction. No further assurance evidence is missing for that stipulated predicate. This does not establish universal Product correctness, validate the manager's probability, or itself constitute authorized acceptance or deployment.",
+                "F — falsified: B's admissible counterexample to a required predicate defeats the conjunction. C's missing current return remains an explicit coverage gap and does not downgrade the supported failure to indeterminate. Preserve the counterexample and all unresolved slots; do not import P's gate or complete-coverage facts.",
+                "U — indeterminate: with no counterexample, B/G passes and applicable A evidence do not fill C's required slot. A dispatch receipt establishes neither execution nor non-performance. C remains an absent required judgment with performance unconfirmed, rather than an invented child result. Applying the aggregate rule is a performed aggregate evaluation and does not establish C's performance."
+              ],
+              "statement": "Evaluate whether the required assurance for this change is complete on S1/B1: every fixed applicable required obligation and material join must be authentically satisfied, with coverage established."
+            },
+            "sources": [
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Excluding a check requires supported dependency coverage and a reason the change\ncannot invalidate the reused claim. An absent edge proves no non-influence.\nUnknown impact widens assessment or leaves the dependent assurance unresolved."
+              },
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "New obligations and uncovered cases create assessment work even when no existing\ncheck covers them; mandatory gates remain applicable. Selection itself produces\nno execution evidence."
+              },
+              {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Retention establishes that claim and scope still apply, assertion and observation\nbases remain justified, required independence holds, and material dependencies\nare unchanged or covered by an established preservation relation. The original\nrecord keeps its original subject; an applicability relation permits its use\nfor the new claim."
+              },
+              {
+                "anchor": "#parallel-assurance-and-provenance, lines 698–734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An implementation-derived assertion can support regression or a stated local\nproperty. Repeating that implementation's decision supplies no independent\nupstream justification."
+              },
+              {
+                "anchor": "#parallel-assurance-and-provenance, lines 698–734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Different actors, families or\ncodebases do not establish statistical independence. Repeating an observation\ndoes not make it new independent evidence; required authorship independence\nretains its own conditions."
+              },
+              {
+                "anchor": "#risk-and-assurance-selection, lines 735–784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Quantified assurance requires a declared population or uncertainty model,\nprior information, likelihoods, shared causes and calibration limits."
+              },
+              {
+                "anchor": "#risk-and-assurance-selection, lines 735–784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Replacing a\nconditional factor with P(M_i | V, Gamma) requires the relevant conditional\nindependence under that model. One minus the joint miss probability is the\nchance of at least one detection under those conditions, not the probability\nthat the whole product is correct."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453–545",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The required set comes from the composite's applicability and coverage\ncontract, not from the list of returns received."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453–545, rule 1",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Any authenticated, applicable falsification of a required predicate or material join makes\n   the conjunction `falsified`. Missing or undecidable other coverage remains\n   explicit alongside it."
+              },
+              {
+                "anchor": "#result-conjunction, lines 453–545, rules 3–4",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Otherwise any unresolved applicability, missing evaluation, undecidable\n   predicate or undecided material join yields `indeterminate`.\n4. `satisfied` requires every applicable obligation and material join to be\n   authentically satisfied, with coverage itself established."
+              },
+              {
+                "anchor": "#result-algebra, lines 322–452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An absent return establishes neither non-performance nor an\nundecidable evaluation: retain the missing slot and what is actually known.\n\nA missing required judgment stays an absent coverage slot, with the known\nperformance fact or its uncertainty; it is not a fabricated child result."
+              },
+              {
+                "anchor": "#result-algebra, lines 322–452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Candidate availability, candidate fitness and authorised acceptance are three\npredicates."
+              }
+            ],
+            "unknowns": [
+              "C's actual evaluation performance and current result in F and U are not established by its missing return; U's dispatch receipt does not resolve them.",
+              "The suites' calibrated dependence, joint miss probability and posterior Product-correctness probability are not supplied.",
+              "An authorized acceptance or deployment decision is not supplied."
+            ]
+          }
+        ]
+      },
+      "label": "6eff8528d685",
+      "mechanical_citation_checks": [
+        {
+          "citations": [
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 0,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Excluding a check requires supported dependency coverage and a reason the change\ncannot invalidate the reused claim. An absent edge proves no non-influence.\nUnknown impact widens assessment or leaves the dependent assurance unresolved."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 1,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "New obligations and uncovered cases create assessment work even when no existing\ncheck covers them; mandatory gates remain applicable. Selection itself produces\nno execution evidence."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 2,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#change-impact-and-evidence-retention, lines 785–844",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Retention establishes that claim and scope still apply, assertion and observation\nbases remain justified, required independence holds, and material dependencies\nare unchanged or covered by an established preservation relation. The original\nrecord keeps its original subject; an applicability relation permits its use\nfor the new claim."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 3,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#parallel-assurance-and-provenance, lines 698–734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An implementation-derived assertion can support regression or a stated local\nproperty. Repeating that implementation's decision supplies no independent\nupstream justification."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 4,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#parallel-assurance-and-provenance, lines 698–734",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Different actors, families or\ncodebases do not establish statistical independence. Repeating an observation\ndoes not make it new independent evidence; required authorship independence\nretains its own conditions."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 5,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#risk-and-assurance-selection, lines 735–784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Quantified assurance requires a declared population or uncertainty model,\nprior information, likelihoods, shared causes and calibration limits."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 6,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#risk-and-assurance-selection, lines 735–784",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Replacing a\nconditional factor with P(M_i | V, Gamma) requires the relevant conditional\nindependence under that model. One minus the joint miss probability is the\nchance of at least one detection under those conditions, not the probability\nthat the whole product is correct."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 7,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453–545",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "The required set comes from the composite's applicability and coverage\ncontract, not from the list of returns received."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 8,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453–545, rule 1",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Any authenticated, applicable falsification of a required predicate or material join makes\n   the conjunction `falsified`. Missing or undecidable other coverage remains\n   explicit alongside it."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 9,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-conjunction, lines 453–545, rules 3–4",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Otherwise any unresolved applicability, missing evaluation, undecidable\n   predicate or undecided material join yields `indeterminate`.\n4. `satisfied` requires every applicable obligation and material join to be\n   authentically satisfied, with coverage itself established."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 10,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-algebra, lines 322–452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "An absent return establishes neither non-performance nor an\nundecidable evaluation: retain the missing slot and what is actually known.\n\nA missing required judgment stays an absent coverage slot, with the known\nperformance fact or its uncertainty; it is not a fabricated child result."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            },
+            {
+              "error": "Anchor must identify exactly one literal Markdown heading or explicit anchor; use exact line coordinates otherwise.",
+              "exact_quote_in_member": true,
+              "exact_quote_observed": true,
+              "index": 11,
+              "path_allowlisted": true,
+              "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336",
+              "strict_citation_valid": false,
+              "supplied": {
+                "anchor": "#result-algebra, lines 322–452",
+                "path": "package/standards/FOUNDATIONS.md",
+                "quote": "Candidate availability, candidate fitness and authorised acceptance are three\npredicates."
+              },
+              "whitespace_normalized_quote_in_member": true,
+              "whitespace_normalized_quote_observed": true
+            }
+          ],
+          "strict_valid_count": 0,
+          "task_id": "C3"
+        }
+      ],
+      "original_answer_sha256": "d119c9651d4bd0928d2b452e6ed2cb198a138aeb4c9ce301d584dbbbf26042ef"
+    }
+  ],
+  "candidate": "codex",
+  "frozen_oracle_sha256": "002f21861c3c8ada5aa5868667cbc0fce668517e6eeb13c1a8de0ee276ae9968",
+  "guide": {
+    "allowed_read_scope": [
+      "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-evaluation/followup/grading/codex",
+      "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-evaluation/baselines/codex/sources"
+    ],
+    "criterion_policy": "Met=full faithful meaning. Partial=some faithful subset with no material contradiction. Missed=absent/undecidable. Incorrect=material contradiction. Semantic equivalence earns credit; tool choice/verbosity/preferred phrasing earns none.",
+    "excluded_scope": "Do not read run folders, protocol, schedule, private map, usage, tool logs or other study files.",
+    "grades": [
+      "met",
+      "partial",
+      "missed",
+      "incorrect"
+    ],
+    "instruction": "For EACH anonymous answer and EACH of its one question, judge every frozen expected criterion with short answer excerpt and reason, every prohibited claim (asserted/absent/ambiguous), citation relevance, unsupported claims and any answer-level condition/tool-use disclosure. Preserve positive, negative and unresolved branches on stipulated facts. Source quotes in the oracle are exact; re-enter the allowed owner documents where needed. Mechanical checks do not judge semantic relevance. Do not repair, rewrite or author actor answers.",
+    "output_contract": "Write grades.json in your own grading/<candidate>/ folder only. Top object: profile, candidate, assessor, answers:[{label,tasks:[{id,criteria:[{id,grade,answer_excerpt,reason}],prohibitions:[{id,status,reason}],supporting_valid_citation_indices:[integers],citation_notes,unsupported_claims:[strings],blinding_disclosures:[strings]}]}], limitations:[strings]. Include all8 expected criteria and3 prohibitions for the one task for every answer; no condition guesses. Score aggregation will be mechanical later.",
+    "pass_policy": "Every critical criterion met, no prohibited claim asserted, weighted score>=80%, and at least one exact documentary citation valid at its section/line and semantically supporting a deciding claim. A threshold pass can still contain noncritical omissions.",
+    "purpose": "Nonauthor, condition-blinded semantic assessment of bounded dogfood outputs. No acceptance.",
+    "score_policy": "Expected criteria only; critical weight2, ordinary weight1; met1, partial0.5, missed/incorrect0. Prohibitions give no credit for silence and veto passing when asserted.",
+    "source_table": "Each source_coordinates source_ref resolves to the complete exact passage in source_passages; duplicate passages are factored without omitted content."
+  },
+  "oracle": {
+    "C3": {
+      "acceptable_uncertainty": [
+        "Current C influence is genuinely unresolved on the incomplete dependency view; name the dependency or observation evidence needed, rather than asserting non-influence.",
+        "The numerical confidence model lacks justified priors/likelihoods/dependence; qualitative scoped assurance can remain useful without inventing those values.",
+        "A, and the stipulated positive followup P, have supplied support. A blanket \"everything is unknown\" answer does not satisfy those positive branches."
+      ],
+      "ambiguity": [
+        "For F the Codex conjunction gives falsified on an interpretable all-required claim while retaining missing C. For U no returned C exists; do not turn a dispatch into performed evidence."
+      ],
+      "expected_semantic_criteria": [
+        {
+          "critical": true,
+          "id": "C3.1",
+          "source_coordinates": [
+            {
+              "source_ref": "S001"
+            }
+          ],
+          "text": "A may be reused through its supported applicability/preservation relation for S1/B1; retain the original evidence on S0/B0 rather than pretending it was freshly executed. Freshness of every execution is not required for a complete applicable evidence account."
+        },
+        {
+          "critical": true,
+          "id": "C3.2",
+          "source_coordinates": [
+            {
+              "source_ref": "S002"
+            },
+            {
+              "source_ref": "S001"
+            }
+          ],
+          "text": "B's old pass does not discharge its changed current dependency. Reassess the affected claim on S1/B1 and retain any old observation only for its supported scope; a changed digest alone proves neither invalidity nor equivalence."
+        },
+        {
+          "critical": true,
+          "id": "C3.3",
+          "source_coordinates": [
+            {
+              "source_ref": "S002"
+            }
+          ],
+          "text": "C's absent graph path is insufficient evidence of non-influence because dependency coverage is incomplete. Widen reassessment or leave its dependent assurance unresolved until material dependency/observation support exists."
+        },
+        {
+          "critical": false,
+          "id": "C3.4",
+          "source_coordinates": [
+            {
+              "source_ref": "S002"
+            }
+          ],
+          "text": "G remains applicable despite selective testing; include new obligations and mandatory gates. Selecting reassessments is not their execution evidence and does not justify skipping the gate."
+        },
+        {
+          "critical": true,
+          "id": "C3.5",
+          "source_coordinates": [
+            {
+              "source_ref": "S003"
+            },
+            {
+              "source_ref": "S004"
+            }
+          ],
+          "text": "Different model families and agreement do not establish statistical or authorship independence. The shared implementation-derived oracle and old observations are shared failure causes; they can support scoped regression/local claims but do not independently justify upstream fidelity. Multiplying marginal miss rates requires conditional independence under a justified model; 1 minus joint miss probability is a detection chance under that model, not probability the entire Product is correct. The stated 99% product-correctness conclusion is unsupported."
+        },
+        {
+          "critical": false,
+          "id": "C3.6",
+          "source_coordinates": [
+            {
+              "source_ref": "S001"
+            },
+            {
+              "source_ref": "S005"
+            }
+          ],
+          "text": "P can establish the stipulated bounded assurance account using applicable retained A evidence plus actual current B/C/G evidence and established fixed coverage/joins. This establishes that assurance predicate under its declared rule; Product acceptance or release still needs the relevant owner decision and criteria."
+        },
+        {
+          "critical": false,
+          "id": "C3.7",
+          "source_coordinates": [
+            {
+              "source_ref": "S006"
+            }
+          ],
+          "text": "In F, the interpretable all-required conjunction is falsified by B's applicable authenticated counterexample, with C's missing slot retained."
+        },
+        {
+          "critical": false,
+          "id": "C3.8",
+          "source_coordinates": [
+            {
+              "source_ref": "S006"
+            },
+            {
+              "source_ref": "S007"
+            },
+            {
+              "source_ref": "S003"
+            }
+          ],
+          "text": "In U, a dispatch receipt does not confirm performance or produce the missing C result. Keep performance unconfirmed on the known information, the absent required slot visible, and the aggregate indeterminate when its other required current predicates and basis are supported. Cite the deciding source law for reuse, dependence and the result/coverage conclusions."
+        }
+      ],
+      "forbidden_claims": [
+        {
+          "critical": true,
+          "id": "C3.F1",
+          "source_coordinates": [
+            {
+              "source_ref": "S002"
+            }
+          ],
+          "text": "No graph edge/path means C is unaffected, all old passes carry unchanged to the new subject, or change-based selection permits omission of mandatory G."
+        },
+        {
+          "critical": true,
+          "id": "C3.F2",
+          "source_coordinates": [
+            {
+              "source_ref": "S003"
+            },
+            {
+              "source_ref": "S004"
+            }
+          ],
+          "text": "Different model families plus agreement proves independence, 0.1 x 0.1 is justified without a conditional-independence model, or a 99% Product-correctness probability follows from the supplied facts."
+        },
+        {
+          "critical": true,
+          "id": "C3.F3",
+          "source_coordinates": [
+            {
+              "source_ref": "S006"
+            },
+            {
+              "source_ref": "S001"
+            },
+            {
+              "source_ref": "S005"
+            }
+          ],
+          "text": "B's known counterexample can be erased by C's missing return, P necessarily requires rerunning every unaffected check, or a completed bounded assurance account itself is Product acceptance/release."
+        }
+      ]
+    }
+  },
+  "profile": "ac.eval.blind-actualuse-packet/1",
+  "source_passages": {
+    "S001": {
+      "anchor": "#change-impact-and-evidence-retention",
+      "line_end": 841,
+      "line_start": 810,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "For the new subject and basis, the evidence account combines applicable retained\nrecords with actual reassessment, including new obligations and mandatory gates:\n\n```text\nE_new = retain_applicable(E_old, new_subject, new_basis) union E_reassessed.\n```\n\nRetention establishes that claim and scope still apply, assertion and observation\nbases remain justified, required independence holds, and material dependencies\nare unchanged or covered by an established preservation relation. The original\nrecord keeps its original subject; an applicability relation permits its use\nfor the new claim. A changed digest proves neither invalidity nor equivalence.\nChanged support reopens affected reliance, not the historical observation.\nKeep known failures, unresolved coverage and their citations visible until\nsupported repair, reassessment or authorised change of obligation disposes them.\n\nA changed requirement revisits dependent expectations under its change authority.\nA changed refinement revisits its links to the requirement and realisation; a\nchanged realisation revisits affected implementation and integration under the\nstill-applicable obligations. These are semantic dependencies, not fixed file\nboundaries. Recovery acquires current reality and invalidates affected reliance\nwithout erasing valid work or requiring every check to run again. A role,\nconversation, component or resumption boundary alone is no invalidator.\n\nThe account's completeness differs from the freshness of every execution.\nSelection considers impact analysis, acquisition, execution and assessment\ncosts together, separating estimates from measurements. Required assurance,\nrisk policy and mandatory gates constrain that choice; cheap selection cannot\nleave a required obligation uncovered. Broad or uncertain impact, a changed\nselection model, a release rule or a missed dependency can justify wider testing.\nFull-suite execution is available and can still have coverage gaps; no universal\ncadence or exemption from required gates follows. Failures enter the existing",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S002": {
+      "anchor": "#change-impact-and-evidence-retention",
+      "line_end": 808,
+      "line_start": 787,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "Assertion justification explains why a check expresses an obligation. Evidence\nvalidity additionally depends on what can affect its behaviour, conclusion or\napplicability: implementation, libraries, data, instruments, environments and\ngoverning assumptions. A requirements-to-test relation alone cannot establish\ncomplete change impact.\n\nLet Delta change material facts or dependencies, including discovery of an\ninvalid assumption. Let I(Delta) conservatively cover those facts and affected\ndependents, and D*(t) cover the transitive dependencies material to assertion,\nexecution and reliance on check t. A candidate reassessment selection is:\n\n```text\nS_Delta = { t : D*(t) intersects I(Delta) }.\n```\n\nExcluding a check requires supported dependency coverage and a reason the change\ncannot invalidate the reused claim. An absent edge proves no non-influence.\nUnknown impact widens assessment or leaves the dependent assurance unresolved.\nNew obligations and uncovered cases create assessment work even when no existing\ncheck covers them; mandatory gates remain applicable. Selection itself produces\nno execution evidence. The representation need not be an exhaustive graph or a\nseparate ledger.",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S003": {
+      "anchor": "#parallel-assurance-and-provenance",
+      "line_end": 732,
+      "line_start": 700,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "Construction and assertion paths can derive from a common obligation through\ndifferent refinements. Their assurance depends on each path's justification,\nnot its length or label. Requirement-derived assertions assess the requirement's\napplicable conditions; refinement-derived assertions assess their more detailed\nconditions. Neither path automatically covers the other.\n\nAssertion provenance identifies the owning obligation, interpretation,\nassumptions, derivation and shared dependencies that justify the expected\npredicate. Execution provenance identifies the actual checker, exact subject,\napplicable environment, inputs, acquired observations and result. Preserve both\nrelations in existing bindings and evidence; execution logs cannot justify an\nexpected answer's derivation. A shared derivation can serve a declared family\nwithout a separate document for every test.\n\nAn implementation-derived assertion can support regression or a stated local\nproperty. Repeating that implementation's decision supplies no independent\nupstream justification. A shorter assertion path can reduce acquisition or\nexecution cost when demonstrated for that path, but it supplies no automatic\ncorrectness, coverage or independence.\n\nMutual assurance compares justified constructions or assertions on their stated\nscope. Agreement admits shared error as well as correctness; disagreement\nrequires diagnosis and does not identify the faulty party by itself. Account for\nmaterial shared specifications, interpretations, tools, fixtures, observations,\ncopied contributions and other failure causes. Different actors, families or\ncodebases do not establish statistical independence. Repeating an observation\ndoes not make it new independent evidence; required authorship independence\nretains its own conditions.\n\nAgreement within an incorrect common model cannot validate that model against\nthe desired outcome. Validation uses the model's declared purpose and material\nexternal observations through their owners. Preserve counterexamples and route\nsupported corrections under [Bounded construction](#bounded-construction).",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S004": {
+      "anchor": "#risk-and-assurance-selection",
+      "line_end": 783,
+      "line_start": 745,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "Quantified assurance requires a declared population or uncertainty model,\nprior information, likelihoods, shared causes and calibration limits. For a\nviolation event V and evidence event E under Gamma, Bayes' rule gives:\n\n```text\nP(V | E, Gamma) =\n  P(E | V, Gamma) P(V | Gamma)\n  / [P(E | V, Gamma) P(V | Gamma)\n     + P(E | not V, Gamma) P(not V | Gamma)].\n```\n\nThe denominator must be nonzero and every used conditional defined. Agreement,\ndisagreement or another observation may be E; its likelihood in faulty and\nnon-faulty conditions matters. The equation supplies no missing prior or\nlikelihood. Its numerical conclusion is bounded by the supporting model and\nevidence; agreement can fail to increase confidence when shared causes or new\ninformation change that model.\n\nLet M_i mean that check i misses V under the specified conditions. The exact\njoint miss probability factors as:\n\n```text\nP(M_1 and ... and M_n | V, Gamma)\n  = product over i of P(M_i | V, Gamma, M_1, ..., M_(i-1)).\n```\n\nUse the factorisation only on defined conditioning events; handle a\nzero-probability prefix without inventing a conditional value. Replacing a\nconditional factor with P(M_i | V, Gamma) requires the relevant conditional\nindependence under that model. One minus the joint miss probability is the\nchance of at least one detection under those conditions, not the probability\nthat the whole product is correct.\n\nSampled cases or injected defects calibrate only their justified relation to\noperational failures. Unsupported numerical confidence remains unresolved;\nqualitative evidence remains usable within governing policy and stated limits.\nNo universal probability threshold or per-test probability estimate is required.\nThe assurance and risk policy constrain cost selection rather than disappearing\nwhen a cheaper plan is available.",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S005": {
+      "anchor": "#result-algebra",
+      "line_end": 445,
+      "line_start": 437,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "Candidate availability, candidate fitness and authorised acceptance are three\npredicates. `candidate_ready` can satisfy availability while fitness remains\nfalsified or unassessed. A lawful yield can satisfy the selected yielding\ncontract while product completion remains unresolved. A decision result binds\nthe predicate “disposition D on subject S at basis B was made under mandate M\nby its bound authority”. A lawful rejection can satisfy that predicate while\ncandidate fitness remains undecided. Recording the decision is not its authority.\nA not-applicable classification needs a supported applicability judgment; it is\nnever a synonym for a missing evaluation.",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S006": {
+      "anchor": "#result-conjunction",
+      "line_end": 530,
+      "line_start": 498,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "First authenticate each contribution against its producer, subject, basis and\nrequired plan membership. An unauthenticated claim cannot discharge an\nobligation. A missing planned judgment remains an absent slot with its known performance\nfact or uncertainty; required coverage outside an authenticated plan remains\nuncovered. These are separate\nconditions. An invalid contribution does not erase an independently\nauthenticated finding.\n\nFor an interpretable composite predicate and governing basis:\n\n1. Any authenticated, applicable falsification of a required predicate or material join makes\n   the conjunction `falsified`. Missing or undecidable other coverage remains\n   explicit alongside it.\n2. With no such falsification, an invalid required basis prevents satisfaction\n   and yields `invalid_basis`; a required out-of-frame judgment yields\n   `out_of_frame` when no invalid basis applies.\n3. Otherwise any unresolved applicability, missing evaluation, undecidable\n   predicate or undecided material join yields `indeterminate`.\n4. `satisfied` requires every applicable obligation and material join to be\n   authentically satisfied, with coverage itself established. An empty list\n   proves nothing unless the declared required set is established as empty.\n\nThe composite declaration distinguishes its admission conditions from the\nmaterial joins of the predicate being evaluated. Each relation has one of\nthose roles in that evaluation. A failed admission condition prevents an\ninterpretation; a false required join is counterevidence within an admitted\ninterpretation. The result names that declared role instead of reclassifying a\nknown failed join as a missing basis. If the composite subject or governing basis itself cannot be interpreted, the\naggregate is `invalid_basis`; independently valid component failures and their\nscope remain exposed. This does not pronounce them false or forgotten.\nEffect uncertainty prevents satisfaction where the predicate requires a known\neffect state. An unrelated effect does not automatically invalidate a different\npredicate; the dependency relation must justify its relevance.",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    },
+    "S007": {
+      "anchor": "#result-algebra",
+      "line_end": 390,
+      "line_start": 362,
+      "path": "package/standards/FOUNDATIONS.md",
+      "quote": "An interruption does not erase evaluation already undertaken or admissible\nevidence obtained. A suite aborted after a witnessed failure is performed with\nthat partial extent and falsifies “all tests pass”. A completed load test that\ncannot generate its required load is performed but indeterminate on the\nrequested service-performance predicate. Neither case is a never-run test.\nSatisfaction still requires all evidence and completion conditions selected by\nthe predicate's evaluation rule; performed alone proves none of them.\n\nWhen the selected evaluation was not undertaken or its performance is\nunconfirmed, separately admissible counterevidence to its bound predicate can\nstill establish falsified; an established basis or scope diagnosis can likewise\nestablish invalid_basis or out_of_frame. The result identifies that independent\nsupport without inventing execution. Without deciding support it is\nindeterminate. An absent return establishes neither non-performance nor an\nundecidable evaluation: retain the missing slot and what is actually known.\n\nA missing required judgment stays an absent coverage slot, with the known\nperformance fact or its uncertainty; it is not a fabricated child result. A\nperformed but undecidable evaluation differs from a known unperformed one and\nfrom unconfirmed execution. A failed admission check can conclude while\ndownstream work does not. The plan fixes which predicates are required; a\nprecondition is evidence for its dependent evaluation unless the plan separately\nrequires that precondition as a predicate. A concluding basis/scope diagnosis\non P reports invalid_basis/out_of_frame on P with its supporting evidence; a\ndifferent admission predicate is not silently substituted for P. An aborted\nprocedure does not erase separately authenticated counterexamples observed\nduring the attempt. Every result projection preserves these\ncoordinates and the original predicate; a verdict alone is an insufficient\nhandoff where performance is material.",
+      "source_sha256": "a3e19f8a266b11ed4322ffe1516686a4dba7033850cb7e9c86b3de807e414336"
+    }
+  },
+  "tasks": [
+    {
+      "id": "C3",
+      "kind": "application",
+      "question": "A maintenance team changes shared parser library L, producing subject S1 on basis B1. Old checks A, B and C all passed on S0/B0. For A, supported analysis covers its assertion, execution and reliance dependencies and establishes an applicable preservation relation to S1/B1; those dependencies are unaffected. B executes L. For C, the dependency view has no path from L, but its material dependency coverage is incomplete. A mandatory deployment gate G applies independently of change-based selection. Two agreeing suites were written by different model families but use the same implementation-derived expected-output generator and the same old input observations. A manager multiplies their nominal miss rates 0.1 x 0.1 and calls the result a 99% probability that the Product is correct. Give an applied decision on reusing A/B/C, skipping G, and that assurance claim. Then assess the bounded claim \"the required assurance for this change is complete\" under three separate followups: P, B and C produce valid current passing evidence, G passes, A's applicability is established, and every fixed required obligation and material join has valid support; F, B produces an admissible counterexample to a required predicate while C has no current return; U, there is no counterexample, B and G pass, and the only current information about C is a dispatch receipt with no return. State supported conclusions, refusal or uncertainty, what remains to be acquired or decided, and the limit of any acceptance claim. Cite exact source law; treat the stated hypothetical facts as facts."
+    }
+  ]
+}

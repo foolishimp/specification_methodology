@@ -1,0 +1,369 @@
+{
+  "tasks": [
+    {
+      "id": "L1",
+      "decision": "The adopted design rules apply to W because W changes A. B is outside this adoption. An unresolved relationship between later work and the adopted boundary withholds the dependent conclusion; it does not establish non-applicability.",
+      "justification": "Profile availability, Product adoption, work applicability, actor activation and evaluation are distinct. Partial adoption narrows the design boundary without waiving other applicable common constraints.",
+      "representation": {
+        "statement": "Proposed bounded contract: decide applicability from Product P's declared adoption and the work's established relationship to it, then activate a bounded actor evaluation on the exact subject and basis.",
+        "premises": [
+          "The selected method cut contains the software-design and engagement-baseline profiles.",
+          "P has adopted design rule family R for boundary A; B is outside that declaration.",
+          "W changes A.",
+          "D denotes the Product-owned durable basis carrying the selected cut and adoption declaration. This contract uses D as an explicit input; its complete normative signature remains unverified.",
+          "Any execution requires an admitted grant and an actor configuration capable of evaluating the selected predicates."
+        ],
+        "applicability": [
+          "Available(profile) does not imply Adopted(P, profile), and adoption does not itself establish an actor's authority.",
+          "Adopted(P, R, A) together with Changes(W, A) establishes applicability of the adopted rules to W.",
+          "The adoption does not establish design obligations for B. Excluded obligations have no evaluation result; exclusion is not a successful evaluation of them.",
+          "For later work V, evaluate its relationship to the adopted boundary before relying on dependent design conclusions.",
+          "Selection of the engagement-baseline profile makes its configuration available. The scenario does not establish its adoption or activate every named frame."
+        ],
+        "obligations": [
+          "Keep the Product adoption declaration durable and distinguish it from the work-specific subject, evidence and active frame.",
+          "For W, identify the applicable adopted rules and independently applicable common obligations, with their predicates, exact subject and basis.",
+          "Activate one declared frame or active frame configuration for the bounded evaluation; provide its actor with the projection needed for that evaluation.",
+          "Evaluate conditional obligations when their applicability premises hold. Record performed evaluations with their predicate, original domain outcome, core value and unresolved requirements."
+        ],
+        "exceptions": [
+          "Partial design adoption is permitted; the adopted boundary and rule family should be explicit.",
+          "Narrow adoption does not license a design-completion claim that skips evidence needed to audit, refactor or reconstruct the adopted boundary.",
+          "The engagement baseline describes one configuration; its frame names are not automatically assigned authorities."
+        ],
+        "result_mapping": [
+          "W/A: design applicability is satisfied on the stipulated adoption and change facts; this does not establish satisfaction of the resulting design obligations.",
+          "B: this adoption does not apply. No successful design evaluation follows from that exclusion.",
+          "Later work with undecidable boundary relationship: applicability is indeterminate and dependent claims are withheld. If a required material relation is undeclared, out_of_frame identifies that missing relation.",
+          "A performed evaluation whose subject or basis cannot support it returns invalid_basis. A required evaluation not performed has no core result.",
+          "A satisfied evaluation establishes only its declared predicate; availability, fitness and owner acceptance remain separate."
+        ],
+        "residuals": [
+          "Resolve later-work applicability using current boundary evidence or the relevant Product authority; preserve the unresolved obligation meanwhile.",
+          "The complete durable-basis and activation signatures are outside the acquired owner text, so this contract does not assert full conformance to those signatures."
+        ]
+      },
+      "sources": [
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "inclusion in the selected method cut makes the profile available, and only\nProduct authority adopts it."
+        },
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "Partial adoption is allowed, but the adopted boundary and adopted rule\nfamily should be named explicitly."
+        },
+        {
+          "path": "standards/PROFILES.md",
+          "anchor": "#1-the-boundary",
+          "quote": "A profile imports the generic families of tiers 1 and 2 that\nits rules rest on, and owns only its own bindings"
+        },
+        {
+          "path": "standards/PROFILES.md",
+          "anchor": "#6-engagement-baseline",
+          "quote": "Its frame names\nbind the responsibilities that configuration allocates"
+        },
+        {
+          "path": "standards/ACTIVATION.md",
+          "anchor": "#1-the-step",
+          "quote": "A step is the activation of one reference frame, or one declared active\nframe configuration, on an exact subject"
+        },
+        {
+          "path": "standards/ACTIVATION.md",
+          "anchor": "#1-the-step",
+          "quote": "an unresolved premise withholds the dependent claim and is never read as false"
+        },
+        {
+          "path": "standards/ACTIVATION.md",
+          "anchor": "#1-the-step",
+          "quote": "an excluded obligation, after a `falsified` applicability result, has no result and maps to no core value"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "Availability, assessment and acceptance are separate results, each with its\nown predicate"
+        }
+      ],
+      "unknowns": [
+        "The complete requirements of PRODUCT_DEFINITION §7 for the durable collective reference-frame basis and the detailed activation contract were not acquired.",
+        "Adoption of the engagement-baseline configuration is not stipulated; its availability alone does not establish adoption."
+      ]
+    },
+    {
+      "id": "L2",
+      "decision": "Use separate predicate-bound returns and an explicitly declared conjunction rule. Missing assessments, stale or mismatched returns, counterexamples and uncertain effects must remain distinguishable.",
+      "justification": "A handoff contract specifies what evidence and decisions would establish each claim. It does not establish that X exists, meets its criteria or has been accepted. The core forbids success in the presence of required gaps or non-satisfied mandatory results, while leaving specified aggregation choices to the consumer.",
+      "representation": {
+        "statement": "Proposed bounded handoff contract H(X, B): preserve availability, criteria assessment and mandate-bound acceptance separately, and combine evaluator contributions only under a declared rule for the composite predicate.",
+        "premises": [
+          "Availability predicate: a step produced candidate X on B.",
+          "Fitness predicate: X meets its declared criteria on B.",
+          "Acceptance predicate: the mandate-bound decision owner accepts X at the stated boundary.",
+          "Each contribution identifies its evaluated predicate, subject, basis, evidence, original domain outcome and core value.",
+          "The consumer declares required coverage, planned assessments, mandatory results and the composite predicate."
+        ],
+        "applicability": [
+          "A contribution counts only toward the predicate, subject and basis it supports.",
+          "A result about availability cannot satisfy fitness or acceptance. An evaluator's assessment cannot substitute for the owner's acceptance."
+        ],
+        "obligations": [
+          "Carry returned results, planned assessments without applicable closed returns, and uncovered required coverage separately.",
+          "Preserve original domain outcomes beside their core mappings. Each refined outcome maps to exactly one core value without increasing its standing.",
+          "Treat an absent return, an inapplicable stale return, or a return for another subject or basis as a gap for the required current assessment.",
+          "Keep every material counterexample, unresolved assessment and uncertain effect visible through the handoff and conjunction.",
+          "Record what evidence, missing relation, capability or basis repair would decide each unresolved evaluation."
+        ],
+        "exceptions": [
+          "An evaluation not performed has no core value. It is not an indeterminate evaluation.",
+          "A stale prior result remains a result about its original basis. It is not automatically relabelled invalid_basis; a performed evaluation on an unsupportable basis can itself return invalid_basis.",
+          "The consumer must still declare conflict and indeterminacy handling, required basis agreements, conjunction authority, treatment of nonmandatory results, and any veto or deferral."
+        ],
+        "result_mapping": [
+          "satisfied: the declared predicate holds on its exact basis.",
+          "falsified: an admissible declared counterexample defeats that predicate.",
+          "indeterminate: available admissible evidence cannot decide the predicate.",
+          "out_of_frame: the evaluation needs an undeclared material relation or capability.",
+          "invalid_basis: the subject or basis cannot support the performed evaluation.",
+          "Any gap or non-satisfied mandatory result excludes a satisfied composite. When non-satisfied results coexist, the declared conjunction determines the reported value without deleting their causes.",
+          "Where every mandatory result is satisfied, disagreement in required basis relations yields invalid_basis; otherwise a remaining gap yields indeterminate. With agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies the composite; otherwise its declared rule determines the value.",
+          "A sufficient counterexample to a required conjunct can directly falsify the conjunctive claim despite another required assessment being missing. Preserve both the witnessed failure and the missing assessment; do not manufacture a result for the missing part.",
+          "Unobserved effect completion remains unknown. It cannot map to no effect or completed; any required completion assessment remains unresolved or missing according to whether it was performed."
+        ],
+        "residuals": [
+          "Before using the conjunction, the consumer must fix its mandatory set, coverage and decision rule.",
+          "This contract supplies no actual result for X and performs no acceptance act."
+        ]
+      },
+      "sources": [
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "A result records its core value together with the predicate\nevaluated and the original domain outcome"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "Availability, assessment and acceptance are separate results, each with its\nown predicate"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "An evaluation that is required or planned and was not\nperformed has no closed result"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L963",
+          "quote": "a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L964",
+          "quote": "a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L965",
+          "quote": "a composite with a gap or a non-satisfied mandatory result is never `satisfied`"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L966",
+          "quote": "the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L925-L936",
+          "quote": "a counterexample found by what was exercised, as when source inspection\n  falsifies A in a claim of A and B, returns `falsified`, and common\n  agreement cannot discard it"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "an effect whose completion is unknown never maps to no effect or to\n  completed."
+        }
+      ],
+      "unknowns": [
+        "The consumer's mandatory set and aggregation choices are not supplied.",
+        "No actual availability, fitness, acceptance or effect-completion evidence for X is stipulated."
+      ]
+    },
+    {
+      "id": "L3",
+      "decision": "Reuse A under the stipulated preservation relation. Do not reuse B or C as current passing assurance without further support. G cannot be skipped. Reject the claimed 99% Product-correctness probability. For the bounded completeness claim: P is satisfied; F is falsified with C's gap retained; U is indeterminate with no result for C.",
+      "justification": "A has established current applicability through preservation. B has an affected execution dependency, while C's incomplete dependency coverage cannot establish preservation from the absence of a path. G remains mandatory independently. Shared expected-output generation and old observations do not establish independent, current Product-level assurance. The followups determine different outcomes for the fixed bounded claim.",
+      "representation": {
+        "statement": "Applied contract for assurance completeness on S1/B1, preserving original S0/B0 results and requiring valid current support for every fixed applicable obligation and material join.",
+        "premises": [
+          "A, B and C passed on S0/B0.",
+          "For A, supported analysis covers assertion, execution and reliance dependencies, establishes applicable preservation to S1/B1, and establishes that those dependencies are unaffected.",
+          "B executes changed library L. C's dependency view has no path from L but is materially incomplete.",
+          "G is independently mandatory.",
+          "The two suites share an implementation-derived expected-output generator and the same old input observations despite different authoring model families."
+        ],
+        "applicability": [
+          "Old results remain evidence about S0/B0. Current reliance requires support for their applicability to S1/B1; the stipulated preservation relation supplies that support for A."
+        ],
+        "obligations": [
+          "A: reuse its evidence with the preservation and current applicability basis explicit.",
+          "B: re-evaluate on S1/B1 or establish adequate preservation before current reliance. Its old pass does not establish either current success or current failure.",
+          "C: obtain sufficient dependency and preservation evidence or a valid current evaluation. The incomplete no-path view does not discharge this obligation.",
+          "G: obtain its required current support; change-based selection cannot remove the stipulated mandatory gate.",
+          "Assurance claim: withdraw the 99% Product-correctness conclusion. The supplied facts establish neither independent miss events nor a justified mapping from suite misses to Product correctness; they also do not establish a current independent oracle."
+        ],
+        "exceptions": [
+          "Supported reuse does not require pretending A was rerun.",
+          "Failure to justify reuse of B or C does not itself show that either check would fail.",
+          "Agreement between suites does not expand their predicate or erase shared dependencies."
+        ],
+        "result_mapping": [
+          "P — satisfied: B and C have valid current passing evidence, G passes, A's applicability is established, and every fixed required obligation and material join has valid support. The bounded required-assurance claim is complete; no additional missing condition is invented.",
+          "F — falsified: B's admissible counterexample defeats a required conjunct. C's missing current return remains a gap and does not erase the failure or become a result for C.",
+          "U — indeterminate: there is no counterexample and B and G pass, but C has only a dispatch receipt. That receipt supplies no closed evaluation result. The composite lacks required support; C itself is not assigned indeterminate merely because its return is absent.",
+          "None of these outcomes establishes unrestricted Product correctness, Product acceptance or release authority."
+        ],
+        "residuals": [
+          "Initially, acquire current support for B, C and G; retain the established reuse support for A.",
+          "In F, retain and address B's counterexample and obtain C's required return. A failed completeness claim does not discharge unfinished obligations.",
+          "In U, obtain C's valid current assessment. In P, no required assurance gap remains under the stipulated facts.",
+          "A numerical assurance claim would need support for the claimed events, dependence assumptions, evidence currency and connection to the Product-level predicate; no replacement probability is established here."
+        ]
+      },
+      "sources": [
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "`satisfied` | the declared predicate holds on the exact basis"
+        },
+        {
+          "path": "standards/EVALUATION.md",
+          "anchor": "#2-separation",
+          "quote": "An evidence change can invalidate a verdict without any change of law."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L964",
+          "quote": "a result supports its predicate only on the basis it binds"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L965",
+          "quote": "a composite with a gap or a non-satisfied mandatory result is never `satisfied`"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L925-L936",
+          "quote": "a counterexample found by what was exercised, as when source inspection\n  falsifies A in a claim of A and B, returns `falsified`"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "a missing result, being no result, enters every\nconjunction over it as a gap"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "A step having produced a candidate never maps to the candidate's\nfitness or acceptance"
+        }
+      ],
+      "unknowns": [
+        "The detailed preservation/reuse and quantified-assurance owner sections were not acquired. These decisions use the acquired exact-basis and result law together with the expressly stipulated preservation, dependencies and mandatory gate; they do not purport to reproduce those detailed contracts.",
+        "The joint miss probability and any warranted probability of Product correctness are not established.",
+        "The initial scenario establishes neither a current pass nor a counterexample for B or C; the separate followups supply their stated additional facts."
+      ]
+    },
+    {
+      "id": "L4",
+      "decision": "Reject the present design-method completion declaration: two expressly applicable publication obligations are unmet. Variant P satisfies the stated bounded gate. Variant U leaves applicability unresolved and cannot support a completion declaration.",
+      "justification": "The adopted boundary is materially changed, includes typed schema work, derives from an existing realisation and has active implementation. The adoption law therefore requires the reference-to-target derivation asset and a published module-derived unit test lane. The stipulated Ontology, IACS and three-view evidence satisfy their corresponding premises; silence in a partial representation does not remove the remaining obligations.",
+      "representation": {
+        "statement": "Applied design-completion contract for the materially changed adopted boundary A, with applicability evaluated separately from satisfaction of its completion criteria.",
+        "premises": [
+          "The present adoption covers A and its active implementation.",
+          "W materially changes A's typed schema and derives from an existing realisation.",
+          "The accepted Ontology is complete for this material change, including admitted atom domains and projection traceability; its IACS is derived and reconciled.",
+          "Ontology-derived domain, sequence and state assets are published.",
+          "The reference-to-target asset and published module-derived unit test lane are absent. All other applicable bounded-gate criteria have adequate current evidence."
+        ],
+        "applicability": [
+          "Material schema change activates the Ontology and IACS conditions.",
+          "Derivation from an existing realisation activates both reference-to-target and Ontology-derived three-view publication conditions.",
+          "Active implementation activates the module-derived unit test lane publication condition."
+        ],
+        "obligations": [
+          "Publish the reference-to-target derivation asset on the current basis.",
+          "Publish a justified module-derived unit test lane and establish its applicable criteria. Existing helper-level tests do not supply the explicitly absent published lane.",
+          "Evaluate the resulting bounded completion predicate against the applicable owner law and current evidence."
+        ],
+        "exceptions": [
+          "Partial adoption can narrow a declared boundary but cannot excuse the evidence required for completion of the boundary actually adopted.",
+          "The supplied Ontology, IACS and three-view facts are accepted as stipulated; no additional deficiency in them is inferred."
+        ],
+        "result_mapping": [
+          "Present — falsified for the bounded completion predicate: the required publication conditions are known to be unmet. This conclusion does not fabricate results for any unperformed tests or assessments.",
+          "P — satisfied for the bounded gate: the missing derivation asset and justified module-derived lane are published on the current basis, their criteria are established, and the stipulated other applicable criteria remain supported.",
+          "U — applicability indeterminate: the old adoption record cannot yet establish that the design rules govern this changed service. Withhold the dependent completion claim; do not convert unresolved applicability into exclusion or success. An evaluation attempted on an unsupportable old basis must identify that basis defect.",
+          "A satisfied bounded gate supplies evidence for its declared predicate. It does not itself constitute Product acceptance, a design-owner disposition or release authorisation."
+        ],
+        "residuals": [
+          "Present: acquire the two missing publications and establish their criteria.",
+          "P: no unmet criterion remains within the stipulated bounded gate; any acceptance or release decision retains its own predicate and authority.",
+          "U: obtain current adoption/boundary evidence or an authority resolution before deciding dependent design applicability.",
+          "A representation can stand for the governing body only when it supports the same consuming decision. Its omissions are not waivers."
+        ]
+      },
+      "sources": [
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "When the\nmaterial change includes schema or typed carrier work, the project derives\nand reconciles the IACS from that Ontology before claiming design-method\ncompletion."
+        },
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "When the new or materially changed boundary is derived from an\nexisting realisation, the project also publishes the reference-to-target\nderivation asset and the Ontology-derived three-view design asset before\nclaiming design-method completion for the changed boundary."
+        },
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "When the new or\nmaterially changed boundary has active implementation, the project also\npublishes a module-derived unit test lane (ASSURANCE §15) before claiming\nclosure for that change"
+        },
+        {
+          "path": "standards/DESIGN_MODULE.md",
+          "anchor": "#adoption",
+          "quote": "Partial adoption may narrow scope; it is\nnot used to claim design-method completion while skipping the evidence\nneeded to audit, refactor or reconstruct the realised boundary"
+        },
+        {
+          "path": "standards/ACTIVATION.md",
+          "anchor": "#1-the-step",
+          "quote": "an unresolved premise withholds the dependent claim and is never read as false"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L962",
+          "quote": "a changed member or basis whose applicability is not re-established cannot support the evaluation"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "L969",
+          "quote": "a reference stands for a body only where it supports the same consuming decision; otherwise the shortfall is a residual, never success, and no carrier or budget limit trims a required member"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "#results",
+          "quote": "acceptance is never inferred from a successful\nstep"
+        }
+      ],
+      "unknowns": [
+        "In U, the current applicability of the adoption remains unresolved; no authority resolution is stipulated.",
+        "The detailed ASSURANCE §15 lane contract was not acquired. The present failure follows directly from the explicit publication requirement, while P expressly stipulates a justified lane with established criteria.",
+        "No Product acceptance or release decision is supplied in any variant."
+      ]
+    }
+  ],
+  "limitations": [
+    "Scope is the frozen claude candidate. Its declared representation is proposed and partial: 24 sections encoded in part, 182 sections not encoded, and no encoded residuals. Absence from that representation does not establish absence of an obligation or unresolved question.",
+    "These are bounded semantic contracts and applications, not a full native a_c program or a determination of candidate fidelity.",
+    "Detailed owner text for the durable Product frame basis, activation signature, preservation/reuse, quantified assurance and module-derived test-lane contract was not acquired within the payload envelope. The affected limits are explicit in the individual tasks.",
+    "All hypothetical facts are treated as stipulated. Conclusions establish only their named predicates and confer no Product acceptance, mutation mandate or release authority."
+  ]
+}

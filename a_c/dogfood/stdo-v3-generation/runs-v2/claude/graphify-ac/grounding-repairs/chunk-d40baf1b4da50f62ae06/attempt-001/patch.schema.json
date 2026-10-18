@@ -1,0 +1,131 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "dominance_constrains_selection",
+              "python_typed_design_requirements"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Trials%20from%20the%20comparative%20baseline",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F6.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

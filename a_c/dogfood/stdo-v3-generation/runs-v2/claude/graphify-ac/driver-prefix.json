@@ -1,0 +1,95 @@
+{
+  "stages": [
+    {
+      "counts": {
+        "communities": 78,
+        "graph_edges": 1142,
+        "graph_nodes": 897,
+        "raw_semantic_edges": 0,
+        "raw_semantic_nodes": 0,
+        "structural_edges": 1162,
+        "structural_nodes": 897
+      },
+      "elapsed_seconds": 0.3330299579538405,
+      "files": {
+        "coverage.json": "a2eb356f7936775426c817c5e7c07b6f01bbb0593fc6af354ff26c31f5d1e71f",
+        "graph.json": "4e84a339ba8a576e79d24478c7bc9f751a67c7aaab4fa573cc4ccea215d4f435",
+        "structural.json": "7f784d60448f2a83d811845a07a2f635b5d0504a85ae0511dd09cc6d2e9dc7d2"
+      },
+      "mode": "graphify-ac",
+      "profile": "ac.generation.discovery/1",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "status": "completed",
+      "upstream": {
+        "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+        "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+        "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+        "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+      }
+    },
+    {
+      "completed_chunks": [],
+      "mode": "graphify-ac",
+      "processed": [
+        {
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086",
+          "attempt": "actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "chunk": "chunk-c9c7f894950a65621589",
+          "cli_exit_code": 0,
+          "cli_version": "codex-cli 0.162.1",
+          "elapsed_seconds": 625.5469432079699,
+          "events_sha256": "c1d69d1cb16ec4d5a43d37bab327553b4c5329a2b62eed4016dd521c26acfee3",
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "profile": "ac.generation.actor-result/1",
+          "schema_errors": [],
+          "settings": {
+            "model": "gpt-6-astra",
+            "model_reasoning_effort": "high",
+            "service_tier": "default"
+          },
+          "status": "failed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "unexpected_item_types": [],
+          "usage_events": [
+            {
+              "cache_write_input_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 61497,
+              "output_tokens": 33465,
+              "reasoning_output_tokens": 858
+            }
+          ],
+          "user_config_unchanged": true,
+          "validation_error": "record[derived_surface]/grounding/1: grounding quote is not exact source at declared range"
+        }
+      ],
+      "profile": "ac.generation.stage/1",
+      "remaining_chunks": [
+        "chunk-c9c7f894950a65621589",
+        "chunk-46fb339024ea1a82b45f",
+        "chunk-d3ef7cd18b24cd303de7",
+        "chunk-d40baf1b4da50f62ae06",
+        "chunk-4a7f4c1e75eb1b5cd9c3",
+        "chunk-8926f266bc1134f91eef",
+        "chunk-986113d13e5314b291c9",
+        "chunk-2414d8d8612f850c1895",
+        "chunk-db82b95364ae94dad131",
+        "chunk-caddb7dd9905a44febeb",
+        "chunk-efb7b986ff5631c4fbc0",
+        "chunk-9b7e6f52849b98967974",
+        "chunk-20f415a0d8d3d04f90b0",
+        "chunk-610ce314956c3315ed7b",
+        "chunk-5a03e80d9db03efe45a2",
+        "chunk-42f3fb0dc74ce274ea57",
+        "chunk-e9bb857e768dcddc1e11",
+        "chunk-bcd515f6c8df632f2fad",
+        "chunk-f1002ac9d6de2a2d89c1"
+      ],
+      "stage": "author",
+      "status": "incomplete"
+    }
+  ]
+}

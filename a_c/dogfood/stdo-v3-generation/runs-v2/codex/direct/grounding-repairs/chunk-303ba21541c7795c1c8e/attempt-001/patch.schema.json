@@ -1,0 +1,156 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "declared_operator_and_regrouping",
+              "post_ticket_bounded_review"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule%2FIACS%20Revision%20Obligation",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5B.%20Promotion%20Test",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5C.%20Boundary%20Inflation%20Prohibition",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5D.%20Reference-Derived%20Module%20Design%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FOntology%20evidence",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FInvariant%20Reconstruction%20Sufficiency%20%28%60STDO-UP-018%60%29",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FDomain%20model",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FSequence%20model",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FState%20model",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FCross-view%20axiom%20evaluation",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FGate%20and%20retrospective%20work",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FComputational%20Realization%20Projection%20%28%60STDO-UP-019%60%29",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5F.%20Theoretical%20Framing%20For%20Boundary%20Law",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6.%20Design%20Module%20Taxonomy",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6A.%20Design%20To%20Module%20To%20%28Implementation%2C%20Unit%20Tests%29%20Evidence%20Route",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6B.%20Module-Derived%20Unit%20Test%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6C.%20Module%20Lifecycle%20Confirmation%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F7.%20Immutable%20Carrier%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F8.%20Totality%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F9.%20Effect-Edge%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F10.%20No%20Semantic%20Center%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11.%20Coupling%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11A.%20Governance%2FStrategy%20Separation%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11B.%20Opportunistic%20Optimization%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11C.%20Recurrence%20Extraction%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11D.%20Post-Ticket%20Design%20Review%20Rule",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F12.%20Interface%20Bleed%20Prohibition",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F13.%20Proxy%20Interface%20Prohibition",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F14.%20Design%20Review%20Questions",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F14A.%20Functional%20Realization%20Review%20Checklist",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F15.%20Adoption%20Guidance",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F16.%20Relationship%20To%20Other%20Method%20Surfaces",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F17.%20Non-Goals",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FPremises%20and%20standing",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FFoundational%20commitments",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FInterpretation%20and%20representation",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FPurpose%20and%20interfaces",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FIdentity%2C%20state%20and%20evidence",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FReference-only%20semantic%20imports",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FTyped%20composition%20and%20conservation",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FFinite%20capacity%20and%20total%20handling",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FJudgment%20and%20authority",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FJudgment%20and%20authority%2FIndependent%20assessment",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FOrthogonal%20descriptions",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FCanonical%20transformations",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20and%20use",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20algebra",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20conjunction",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FPreservation%20obligations",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FAssertions%20and%20observations",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FParallel%20assurance%20and%20provenance",
+                  "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FRisk%20and%20assurance%20selection"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,43 @@
+{
+  "profile": "ac.eval.prelaunch-design-review/1",
+  "reviewer": "/root/ac_eval_design_review",
+  "author_of_answers": false,
+  "review_scope": "Read-only source/protocol/native baseline/harness design assessment before actor answers",
+  "semantic_task_oracle_blocker": false,
+  "reviewed_tasks": 8,
+  "required_criteria": 64,
+  "prohibited_claims": 24,
+  "findings": [
+    {
+      "finding": "Baseline source path/manifest compatibility mismatch",
+      "disposition": "Harness mapped original paths to sources/<path> and separate native/coverage pins before launch."
+    },
+    {
+      "finding": "Original graph includes historical review sources outside common allowlist",
+      "disposition": "Assisted discovery induces only native records, allowlisted source records and their eligible reference/endpoint nodes; metadata and excluded source content removed."
+    },
+    {
+      "finding": "Discovery search should page instead of refusing large match counts",
+      "disposition": "Pagination with total/offset/limit/next_offset required before tool freeze."
+    },
+    {
+      "finding": "Required-ID manifests and source reference coordinates do not establish content acquisition",
+      "disposition": "Explicit mode flags and separate telemetry; source reads still required."
+    },
+    {
+      "finding": "Weights/prohibitions/partial semantics could conflate silence with credit",
+      "disposition": "Expected criteria only denominator; prohibitions veto; partial excludes material contradiction; all critical criteria fully met."
+    },
+    {
+      "finding": "24-call cap needs attempted-versus-admitted distinction",
+      "disposition": "More than24 attempts invalidates run even though server returns further explicit refusals."
+    }
+  ],
+  "limitations": [
+    "Blinding requires fresh grader context without inherited schedule.",
+    "Assisted effect is discovery/acquisition bundle, optional uptake reported.",
+    "Fresh structured prose is not native a_c grammar or full-method authoring.",
+    "Within-candidate comparisons only; four task clusters per candidate.",
+    "Threshold passing is not complete semantic coverage or acceptance."
+  ]
+}

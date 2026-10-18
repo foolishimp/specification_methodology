@@ -1,0 +1,153 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "constraint_surface_use_conditions",
+              "subject_axiomatic_calculus",
+              "surface_support_kinds_unresolved",
+              "surface_worker_variation"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FSemantic%20object",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FTyped%20relation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FConstraint",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FLatitude",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-001%20Closed%20signature",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-002%20Scoped%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-003%20Reference%20closure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-004%20Relation%20typing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-005%20Authority%20conservation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-006%20Basis%20coherence",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-008%20Explicit%20latitude",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-009%20Residual%20conservation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-012%20Overlay",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F11.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexamples%20from%20the%20builder%27s%20own%20history"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,73 @@
+{
+  "profile": "ac.eval.checker-correction/1",
+  "reason": "Uniform parser correction: unambiguous standard hyphen, en-dash and em-dash line ranges implement the frozen section-or-line citation rule. No answer/oracle/semantic threshold changed. Original blind packets retained.",
+  "outcomes": [
+    {
+      "candidate": "codex",
+      "changed_citations": 0,
+      "all_changes": []
+    },
+    {
+      "candidate": "claude",
+      "changed_citations": 7,
+      "all_changes": [
+        {
+          "label": "30ea862615fa",
+          "task_id": "L1",
+          "index": 1,
+          "before": false,
+          "after": true,
+          "anchor": "lines 647–679"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L3",
+          "index": 0,
+          "before": false,
+          "after": true,
+          "anchor": "lines 1409–1437"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L3",
+          "index": 1,
+          "before": false,
+          "after": true,
+          "anchor": "lines 1428–1437"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L3",
+          "index": 2,
+          "before": false,
+          "after": true,
+          "anchor": "lines 1428–1437"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L3",
+          "index": 4,
+          "before": false,
+          "after": true,
+          "anchor": "lines 1302–1340"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L3",
+          "index": 5,
+          "before": false,
+          "after": true,
+          "anchor": "lines 1302–1340"
+        },
+        {
+          "label": "30ea862615fa",
+          "task_id": "L4",
+          "index": 5,
+          "before": false,
+          "after": true,
+          "anchor": "lines 647–679"
+        }
+      ]
+    }
+  ]
+}

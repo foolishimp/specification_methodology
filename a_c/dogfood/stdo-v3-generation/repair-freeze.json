@@ -1,0 +1,77 @@
+{
+  "profile": "ac.generation.fp-repair-freeze/1",
+  "before_any_repair_actor": true,
+  "original_generation_freeze": "freeze-v2.json",
+  "fd_helper_freeze": "grounding-freeze-final.json",
+  "review": {
+    "assessor": "/root/ac_generation_design",
+    "verdict": "no actionable defect for bounded repair execution and result integration",
+    "root_actual_boundary_tests": 107,
+    "scope": "F_P citation-selection repair with invariant statement fields; semantic equivalence/fidelity/acceptance unassessed."
+  },
+  "call_limits": {
+    "combined_author_and_repair_per_chunk": 3,
+    "concurrent_generation_or_repair": 4
+  },
+  "schedule": [
+    "Initial author coordinator closes",
+    "Any unsupported-parent fresh source retries precede F_P repairs and respect combined budget",
+    "One bounded first F_P repair is verified",
+    "Remaining conditional repairs use separately reviewed coordinator",
+    "Old author-only coordinator is excluded after repair reservations begin"
+  ],
+  "files": {
+    "a_c/build_tenants/graphify/code/ac_repair.py": {
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928",
+      "bytes": 36708
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/patch.schema.json": {
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+      "bytes": 2037
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/repair.txt": {
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+      "bytes": 2231
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_repair.py": {
+      "sha256": "a0097ae36ce732fd84fdeaef21707acb4566bdbcc78faa5231fda4fdabacae18",
+      "bytes": 16130
+    },
+    "a_c/build_tenants/graphify/design/grounding_repair.md": {
+      "sha256": "6d91d36d908a30d18d8b092a0728c0dbe0d2156575d30738f4b623144a675a3a",
+      "bytes": 8660
+    },
+    "a_c/dogfood/stdo-v3-generation/coordinate_repairs.py": {
+      "sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7",
+      "bytes": 8072
+    },
+    "a_c/dogfood/stdo-v3-generation/REPAIR-ADDENDUM.md": {
+      "sha256": "3a7dd78706688acf1f1e5cbc1154698b57001ca2193cfcf7a0b0d1caec3c4bf0",
+      "bytes": 2559
+    },
+    "a_c/dogfood/stdo-v3-generation/prepare_assessment.py": {
+      "sha256": "585d3177b17a32bce8ef58eb5f3e3e151edf0d8f19f420eda88e501e1255c4d8",
+      "bytes": 9047
+    },
+    "a_c/dogfood/stdo-v3-generation/check_assessment.py": {
+      "sha256": "bf3337e22a1f0e692e65a8b14933f601547647c021b92cff8cc31982fa9a4ab9",
+      "bytes": 8218
+    },
+    "a_c/dogfood/stdo-v3-generation/summarize_generation.py": {
+      "sha256": "d6d7aebf6577fa5bf72589aeb58df4e251542bb9b8ec7a7968989d5d76e94dbd",
+      "bytes": 7930
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/repair-tests.txt": {
+      "sha256": "0a71d6dccd4791ba1f3de5f405a95631d61032d4c9bc718e21c72b8385676eb9",
+      "bytes": 2643
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/tenant-tests-with-repair.json": {
+      "sha256": "b891300be3e5039b5b0b2687944b1863d139a6e461c4e6e11fc05186384c1409",
+      "bytes": 691
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/tenant-tests-with-repair.txt": {
+      "sha256": "457c2d9f07e45f8725121c88d0eaf0f7147c0d2ee460b73e0e20799c3ef3eefe",
+      "bytes": 18277
+    }
+  }
+}

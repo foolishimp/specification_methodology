@@ -1,0 +1,2020 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "An invocation-specific plan binding one explicitly selected Product Definition, the complete companion population of one exact upstream release-matched cohort, and owner-selected consumer bindings. Product Definition owns composition; cohort and Product release records own release and member identity. Invocation selection, plan and result are operation evidence, not a persistent dependency declaration, registry or lock.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 368,
+          "quote": "A Complete Consumer Update Plan binds one explicitly selected Product\nDefinition and the complete companion population of one exact upstream\nrelease-matched cohort to the consumer bindings selected by the\ninvocation's owner.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 361
+        }
+      ],
+      "key": "complete_consumer_update_plan",
+      "label": "Complete Consumer Update Plan"
+    },
+    {
+      "conditions": [],
+      "definition": "The separate cohort-update operation presents a complete plan without consumer effects and, upon the prescribed acceptance and checks, applies the selected consumer update. Its scope remains distinct from the narrower adopt, sync and fleet contracts.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 376,
+          "quote": "The separate `cohort-update` operation presents the whole plan without\nconsumer effects.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 375
+        }
+      ],
+      "key": "cohort_update",
+      "label": "Complete consumer update operation"
+    },
+    {
+      "conditions": [],
+      "definition": "Manager outcomes are predicate-specific refinements of the referenced core result algebra, adding no core value. Effect outcomes concern whether the intended external effect occurred; admission or construction outcomes concern permission or candidate availability; effectless commands report their own evaluated predicates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 420,
+          "quote": "each\nfor its own predicate; the cause of an outcome selects its value, and the\nmapping adds no core value (P5, P6):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 418
+        }
+      ],
+      "key": "manager_result_domains",
+      "label": "Manager result domains"
+    },
+    {
+      "conditions": [],
+      "definition": "PRODUCT_DEFINITION declares ownership of the semantic-resolution bounded context urn:stdo:bounded-context:semantic-resolution under the selected complete STDO basis. A glossary may index that identity but does not declare it.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 493,
+          "quote": "This member owns this law in the semantic-resolution bounded context,\n`urn:stdo:bounded-context:semantic-resolution`, under the selected complete\nSTDO basis.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 490
+        }
+      ],
+      "key": "semantic_resolution_context",
+      "label": "Semantic-resolution bounded context"
+    },
+    {
+      "conditions": [],
+      "definition": "A term is a lexical label in an occurrence, not a context-free concept identity. Every material occurrence has the semantic address (term, bounded-context identity, owning authority, selected basis, governed scope).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 496,
+          "quote": "A term is a lexical label used in an occurrence, not a context-free concept\nidentity.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 495
+        },
+        {
+          "end_line": 512,
+          "quote": "(term, bounded-context identity, owning authority, selected basis, governed scope)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 512
+        }
+      ],
+      "key": "term_occurrence",
+      "label": "Term occurrence and semantic address"
+    },
+    {
+      "conditions": [],
+      "definition": "An explicitly identified semantic scope in which governed vocabulary, concepts and relations are jointly interpretable under named authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 498,
+          "quote": "A bounded context is an explicitly identified semantic scope in\nwhich a governed vocabulary, concept set and relation set are jointly\ninterpretable under named authority.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 496
+        }
+      ],
+      "key": "bounded_context",
+      "label": "Bounded context"
+    },
+    {
+      "conditions": [],
+      "definition": "An exact, resolvable reference locating a meaning owned by an authority under a selected basis; it creates neither meaning nor authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 501,
+          "quote": "A concept reference is an exact,\nresolvable reference to a meaning owned by an authority under a selected\nbasis; the reference locates that meaning and mints neither the meaning nor\nits authority",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 498
+        }
+      ],
+      "key": "concept_reference",
+      "label": "Concept reference"
+    },
+    {
+      "conditions": [],
+      "definition": "An explicit, owner-authorised relation between exact concepts in bounded contexts. Its four kinds are Semantic Import, Semantic Translation, Semantic Equivalence and Semantic Disambiguation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 561,
+          "quote": "A cross-context relation is explicit and owner-authorised. Its carrier\nstates (P1, P6, P4b):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 560
+        },
+        {
+          "end_line": 597,
+          "quote": "These four kinds are related to the typed relations that",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 597
+        }
+      ],
+      "key": "cross_context_relation",
+      "label": "Cross-context semantic relation"
+    },
+    {
+      "conditions": [],
+      "definition": "Semantic Import applies the FOUNDATIONS import definition to a declared target scope, preserving unchanged meaning, direction, loss and lack of authority. Semantic Translation declares directional meaning change and loss and is not an import. Semantic Equivalence requires governing authorities to establish equality while each concept retains its owner and context; neither spelling nor opposing translations proves it. Semantic Disambiguation selects one meaning for one scope without equating competitors; a selected foreign concept enters only through a declared import, translation or equivalence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 593,
+          "quote": "| Semantic Disambiguation | not an import: it selects one meaning for one scope and does not make competing concepts equal. Where the selected concept is owned in another bounded context, it enters that scope only by the import, translation or equivalence its carrier declares (§6) |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 593
+        },
+        {
+          "end_line": 592,
+          "quote": "| Semantic Equivalence | not an import: each concept keeps its own owner and context, and neither adopts the other's meaning. It requires the governing authorities to establish the claimed equality; neither identical spelling nor two opposing translations proves it automatically |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 592
+        }
+      ],
+      "key": "semantic_relation_kinds",
+      "label": "Four semantic relation kinds"
+    },
+    {
+      "conditions": [],
+      "definition": "A directional translation preserving declared source meaning while narrowing admissible instances or adding target-context constraints. It identifies the exact target, preserved and narrowed meaning, excluded source instances, and absence or law of an inverse; the label alone establishes nothing.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 609,
+          "quote": "A specialisation is a directional translation whose target preserves the\ndeclared source meaning while narrowing its admissible instances or adding\ntarget-context constraints.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 604
+        }
+      ],
+      "key": "semantic_specialisation",
+      "label": "Semantic specialisation"
+    },
+    {
+      "conditions": [],
+      "definition": "GLOSSARY is a non-deciding locator index whose records point to exact source clauses declaring contexts and owning concepts. It defines neither, repairs no missing declaration and creates no shared default; a concept applies only through the semantic address or explicit target-context import.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 558,
+          "quote": "The glossary (the [GLOSSARY](GLOSSARY.md) member) is a non-deciding locator index.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 553
+        }
+      ],
+      "key": "glossary_locator_index",
+      "label": "Glossary locator index"
+    },
+    {
+      "conditions": [],
+      "definition": "Local axiom, override and disambiguation bindings locate source-owned decisions and lawful authority. Overlay listing and file category confer no authority; metadata makes decisions discoverable and checkable without restating meanings or creating decisions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 615,
+          "quote": "A local axiom, override or disambiguation gains no authority from its file\ncategory or from being listed in the overlay.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F6.%20Local%20constitutional%20binding",
+          "start_line": 613
+        }
+      ],
+      "key": "local_constitution_binding",
+      "label": "Local constitutional binding"
+    },
+    {
+      "conditions": [],
+      "definition": "A Product-owned accepted declaration of the shared frame set for finite actors engaging one governed Product scope or outcome. It binds exact reference-frame law and optional profile basis; admitting authorities and scopes; frames and evaluation inventory; actor-binding rules and capability envelopes; semantic, evaluation, operation and decision grants; result, conjunction, translation and coverage relations; lifecycle triggers and invalidation law.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 652,
+          "quote": "A Project Reference-Frame Basis is the Product-owned accepted declaration\nof the shared frame set through which finite actors collectively engage one\ngoverned Product scope or outcome",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 649
+        }
+      ],
+      "key": "project_reference_frame_basis",
+      "label": "Project Reference-Frame Basis"
+    },
+    {
+      "conditions": [],
+      "definition": "An execution-scoped binding of one agent to an applicable frame declaration or active configuration, exact evaluation, subject, basis, evidence boundary and capability envelope. An authorised ticket or work instruction carries the activation packet referenced to REFERENCE_FRAME §11; the step is referenced to ACTIVATION §1. This differs from the durable collective basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 702,
+          "quote": "An Agent Frame\nActivation is the execution-scoped binding of one agent to an applicable\nframe declaration or active configuration, an exact evaluation, subject,\nbasis, evidence boundary and capability envelope;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 695
+        }
+      ],
+      "key": "agent_frame_activation",
+      "label": "Agent Frame Activation"
+    },
+    {
+      "conditions": [],
+      "definition": "PRODUCT_DEFINITION owns urn:stdo:bounded-context:build-tenancy under the selected complete basis. Build tenancy relates one constitutional WHAT to one or more independent project-owned HOW realisations; one tenant is the singleton case and multiple independent realisations constitute multi-build-tenancy. Build-tenant and binding concepts are explicitly owned by SPEC_METHOD §11; the multi-tenant work-item relation is owned by TICKETS §4.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 758,
+          "quote": "In this context build tenancy is that one-or-more relation; one tenant is\nits singleton case, and multi-build-tenancy begins when the same WHAT has\nmore than one independent realisation",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 755
+        }
+      ],
+      "key": "build_tenancy",
+      "label": "Build tenancy"
+    },
+    {
+      "conditions": [],
+      "definition": "The WHAT locators identify current constitutional Intent, Product and specification surfaces. The Tenant Registry is canonical how.build_tenants, each stable tenant locating root, design and implementation. how.common binds shared realisation law explicitly adopted by more than one tenant. Work locators identify Goals, durable ticket root and backlog/active/completed lanes, commentary root and optional sprint manifests; Goals own the wave, ticket authority owns state and comments remain non-authoritative.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 768,
+          "quote": "The Tenant Registry is the canonical `how.build_tenants` collection for the\nproduct's independent HOW realisations.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 765
+        },
+        {
+          "end_line": 784,
+          "quote": "this section binds where each carrier kind lives.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 784
+        }
+      ],
+      "key": "what_how_work_locators",
+      "label": "WHAT, HOW and work locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Recursive discovery locates stdo_*.json within the selected workspace boundary, including root and arbitrarily nested project roots. Explicit directed composition, rather than nesting, relates independent definitions through target locator, stable expected definition identity, relation authority and non-empty governing contracts.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 791,
+          "quote": "Tools discover `stdo_*.json` recursively within the selected workspace\nboundary: definitions at the workspace root and definitions at arbitrarily\ndeep nested project roots",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition",
+          "start_line": 788
+        }
+      ],
+      "key": "product_discovery_composition",
+      "label": "Product discovery and explicit composition"
+    },
+    {
+      "conditions": [],
+      "definition": "Minimum semantic-resolution conformance cases under an exact selected basis cover unique use and material collision: Frame distinguishes evaluation context from runtime carrier; Owner distinguishes specialist family from semantic or decision authority; Product distinguishes immutable release from mutable definition; Tenant distinguishes build realisation from hosted/customer/account/runtime/data tenancy; User remains unresolved among Product role, human, principal, account, actor, operator and data subject until downstream authority defines or relates meanings.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 863,
+          "quote": "Conformance covers both uniquely resolved use and material collision. At\nminimum it establishes these cases under an exact selected basis",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F10.%20Semantic-resolution%20conformance%20cases",
+          "start_line": 861
+        },
+        {
+          "end_line": 871,
+          "quote": "| `User` | a Product role, human person, identity principal, account, actor, operator or data subject | unresolved until downstream authority defines or explicitly relates the applicable meanings |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F10.%20Semantic-resolution%20conformance%20cases",
+          "start_line": 871
+        }
+      ],
+      "key": "semantic_resolution_conformance",
+      "label": "Semantic-resolution conformance cases"
+    },
+    {
+      "conditions": [],
+      "definition": "STDO-SURFACE-001 describes modular authorship with singular authority: each law has one owning member, consumed elsewhere by reference, and members become operative only as one complete released version. A release identifies exact members, digests, review basis, human acceptance and immutable identity. Method law owns normative algebra, authority, abstract states/transitions, admissibility, necessary causal order and evidence invariants; consumers own concrete realisation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 889,
+          "quote": "STDO-SURFACE-001. The shared methodology is modular in authorship and\nsingular in authority. Each law has one owning member; other members\nconsume it by reference.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary",
+          "start_line": 885
+        }
+      ],
+      "key": "constitutional_method_surface",
+      "label": "One constitutional method surface"
+    },
+    {
+      "conditions": [],
+      "definition": "Bootstrap starts every method-defined product from the selected cut's PRODUCT_DEFINITION_TEMPLATE.json, copied to its definition root as stdo_default.json for a singleton default project or stdo_<label>.json for a named definition. Its starter topology places Goals, Intent, Product and requirements under specification/, common/default realisation under build_tenants/, and sprint, ticket and comment carriers under .ai-workspace/. These are defaults selected or replaced through URI bindings.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 952,
+          "quote": "Every product defined under this method begins from\n`templates/PRODUCT_DEFINITION_TEMPLATE.json`, copied to the product's\ndefinition root as `stdo_default.json` for a singleton default project or\nas `stdo_<label>.json` for a named product definition.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 946
+        }
+      ],
+      "key": "product_bootstrap",
+      "label": "Product bootstrap and starter topology"
+    },
+    {
+      "conditions": [],
+      "definition": "The PRODUCT_DEFINITION source-disposition ledger reports received rc.2 SPEC_METHOD rows as conserved at §§1–12. Routes are provenance only; member-name carrying is not itself a disposition. Reported carryings include IDENTITY_METHOD→IDENTITY, RELEASE_METHOD→RELEASE, GLOSSARY_GUIDE→GLOSSARY, REFERENCE_FRAME_METHOD→REFERENCE_FRAME and STDO_REFERENCE_FRAME_BASELINE→Executive baseline; accepted design ontology wording and mutable source paths are generalised without claimed loss. New material includes the §1 family table, cause-sensitive manager result mapping and semantic-relation readings. These are source claims, not verified conservation results.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1096,
+          "quote": "Every row\nis restated in this member's own text; a route is provenance only. Where\nthe predecessor named one of its own members, the tenant member that\nreceives the same law is named instead; this is carrying, not a\ndisposition, and is recorded in the row.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F13.%20Source%20dispositions",
+          "start_line": 1092
+        }
+      ],
+      "key": "product_definition_source_ledger",
+      "label": "Product Definition source-disposition ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "PROFILES is tier 3 and owns the core/profile boundary, declared-binding rule and profile import rule, while indexing profiles. Profiles are domain or operational specialisations; tiers 1 and 2 are the core.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A profile is a domain or\noperational specialisation of the method; the members of tiers 1 and 2\nare the core.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES",
+          "start_line": 5
+        }
+      ],
+      "key": "profiles_member",
+      "label": "Profiles and core boundary"
+    },
+    {
+      "conditions": [],
+      "definition": "Within PROFILES, binding means the profile-declared binding of a core mechanism with direction, preserved meaning, narrowed scope and invalidation. It is distinct from Product adoption binding in PRODUCT_DEFINITION §7 and typed-contract carrier binding in UX §7. The rule is described as new, with provenance in ODD's graph-native specialisations of F_P and F_H.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 24,
+          "quote": "In this member \"binding\" means\nthat declared binding of a core mechanism; a Product's adoption binding is\n[PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)'s,\nand a carrier binding to a typed contract is [UX §7](UX.md#7-carrier-binding)'s;\nthe three are not interchanged.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F1.%20The%20boundary",
+          "start_line": 20
+        }
+      ],
+      "key": "profile_declared_binding",
+      "label": "Profile-declared binding"
+    },
+    {
+      "conditions": [],
+      "definition": "The graph-execution index names two tier-3 members. ODD reports all 48 predecessor rows and binds P0's bounded step to one vector or edge traversal; graph-native F_P/F_D/F_H shorthands, F_P/F_H specialisations of SPEC_METHOD §5; and ACTIVATION §4 graph-function refinement with §11.8 cumulative environment as a specialised earlier-output contract. TRAVERSAL_OCCURRENCE offers an optional closed model-family signature over one exact a_c basis for immutable histories over a mutable subject, OP-001–OP-007, reporting 25 conserved rows and one proposed supersession pending the Product owner. ODD §10 owns runtime/product/service responsibility layers; worker internal solution strategy stays outside the framework.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 59,
+          "quote": "Graph execution is two tier-3 members, indexed here; each restates its\npredecessor in full in its own text and declares its bindings under §1",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F2.%20Graph%20execution",
+          "start_line": 57
+        },
+        {
+          "end_line": 64,
+          "quote": "| [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md) | rc.2 TRAVERSAL_OCCURRENCE_PROFILE, all 26 rows, 25 conserved and 1 proposed superseded, pending the product owner | an optional closed model-family signature over one exact `a_c` basis of AXIOMATIC_CALCULUS for immutable occurrence histories over a mutable subject, with OP-001 to OP-007 |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F2.%20Graph%20execution",
+          "start_line": 64
+        }
+      ],
+      "key": "graph_execution_profiles",
+      "label": "Graph-execution profile index"
+    },
+    {
+      "conditions": [],
+      "definition": "DESIGN_MODULE imports the core and binds ontology-first derivation from discovered functionality through logical completeness, Prime contraction, irreducible architectural carriers and projections; proportional sequencing and decision-complete gate; bounded frame conservation; native constructability; capability/foundation selection; transformation-admission completeness; invariant reconstruction; computational projection; module taxonomy/realisation; and review. ASSURANCE §§14–16 own the evidence route, module-derived tests and lifecycle confirmation; SPEC_METHOD §2 owns core rule/non-goals; DESIGN_MODULE §§5,7 decide per-boundary derivation cost.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 79,
+          "quote": "[DESIGN_MODULE](DESIGN_MODULE.md) is the software-design profile. It\nimports the core and binds: ontology-first derivation of operation\nidentities from discovered functionality through logical completeness,\nPrime contraction, the irreducible architectural carrier set and its\nprojections;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F3.%20Software%20design",
+          "start_line": 75
+        }
+      ],
+      "key": "software_design_profile",
+      "label": "Software-design profile"
+    },
+    {
+      "conditions": [
+        "Applies to modules realising a UX surface."
+      ],
+      "definition": "UX imports the core and refines DESIGN_MODULE. Its indexed bindings cover typed Elm State/Msg/Update/View/Cmd/Sub; UX-message versus admitted-carrier boundary; transition law; effect membrane; AssetSurface or equivalent typed contract; continuation and Msg replay; view shape; shared types with runtime validation at untrusted seams; accessibility minimum; realisation discretion; adoption scaffold/exemptions and sprint compliance escrow; failure/review cases; and result refinements each mapping to one core value. The lead declares its TICKETS §3 escrow binding.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 104,
+          "quote": "[UX](UX.md) is the UX profile. It refines DESIGN_MODULE for modules that\nrealise a UX surface, imports the core, and binds:",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F4.%20UX",
+          "start_line": 93
+        }
+      ],
+      "key": "ux_profile",
+      "label": "UX profile"
+    },
+    {
+      "conditions": [],
+      "definition": "WORLD_MODEL imports the core and binds product lineage and Builder Project specialisation; candidate-status Markov-object construct, effective blanket, refinements, epistemic status and promotion gate; claims/units; entity recovery and identity-bearing entity cuts with admission, discrimination and publication; attribute ledger; representation/materialisation/publication; overlays, saturation, composition, projection, control/data planes, proof and world-model-driven development. Its result refinements each map to one core value, and its lead binds FOUNDATIONS Object and P3 boundary law to entity cuts. Core law does not depend on establishment of the candidate construct.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 112,
+          "quote": "[WORLD_MODEL](WORLD_MODEL.md) is the world-model profile. It imports the\ncore and binds: the imported product-lineage concepts and the Builder\nProject specialisation; the Markov-object construct at candidate status",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F5.%20World%20model",
+          "start_line": 108
+        },
+        {
+          "end_line": 122,
+          "quote": "Nothing in the core depends on the construct being established (P3, P6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F5.%20World%20model",
+          "start_line": 122
+        }
+      ],
+      "key": "world_model_profile",
+      "label": "World-model profile"
+    },
+    {
+      "conditions": [],
+      "definition": "EXECUTIVE_BASELINE is an optional engagement profile importing the core. It describes one configuration under ACTIVATION §1 with Executive, Worker and Reviewer engagement frames plus specialist-frame catalogue. Names bind responsibilities allocated by that configuration under Roles and delegation; spelling does not import roles.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 134,
+          "quote": "[EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) is the optional\nengagement-baseline profile.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F6.%20Engagement%20baseline",
+          "start_line": 126
+        }
+      ],
+      "key": "engagement_baseline_profile",
+      "label": "Engagement-baseline profile"
+    },
+    {
+      "conditions": [],
+      "definition": "PROFILES' provenance ledger routes predecessor dispositions to receiving members: ODD's 48 rows with generic bounded-unit/refinement/loop law generalised to ACTIVATION; traversal occurrence 25 conserved and one proposed superseded; runtime baseline to EXECUTIVE_BASELINE; design to DESIGN_MODULE, ASSURANCE §§14–16 and SPEC_METHOD §2; UX to UX; world model to WORLD_MODEL while generic identity/boundary law remains FOUNDATIONS and IDENTITY. Earlier unsourced UX reader/task, projection and screen-acceptance candidate wording is withdrawn and is no predecessor claim. Schemas/templates are reported conserved; the declared-binding and import rules are reported new.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 142,
+          "quote": "Each cell names where the rows of one rc.2 member receive their\ndispositions.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions",
+          "start_line": 138
+        },
+        {
+          "end_line": 150,
+          "quote": "| UX_METHOD | disposed row by row in UX; §4 is its index entry. The first-pass description of UX by reader and task obligations, operational projection and screen-level acceptance was candidate text with no source in UX_METHOD, so it is no predecessor claim; it is withdrawn |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions",
+          "start_line": 150
+        }
+      ],
+      "key": "profile_source_ledger",
+      "label": "Profile source-disposition ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "The standards tree describes the Claude tenant's candidate under member-by-member construction according to DOCUMENT_STRUCTURE, starting from steel threads T1–T4. It is not released, installed or common WHAT; its builder basis is stdo://releases/v2.5.1-rc.2/. Its stated purpose is finite-actor construction and evaluation: interpret scoped subjects, select purpose and contract, transform within admitted authority conserving material relations, evaluate, and continue/recover/conclude under explicit uncertainty.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "Status: the Claude tenant's candidate, under construction member by\nmember on the order of [DOCUMENT_STRUCTURE](../design/DOCUMENT_STRUCTURE.md);\nthe first pass (steel threads T1 to T4) is its starting text. Not\nreleased, not installed, not common WHAT. Builder basis\n`stdo://releases/v2.5.1-rc.2/`.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29",
+          "start_line": 3
+        }
+      ],
+      "key": "claude_candidate_corpus",
+      "label": "Claude tenant candidate corpus"
+    },
+    {
+      "conditions": [],
+      "definition": "README's ordered navigation index maps tasks to reading routes: understanding→FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, AXIOMATIC_CALCULUS, SPEC_METHOD; project binding→SPEC_METHOD §1 then PRODUCT_DEFINITION; build tenant→SPEC_METHOD §11 then PRODUCT_DEFINITION §8; triage→SPEC_METHOD §§4,5 then TICKETS §4; migration→SPEC_METHOD §7 then TICKETS §6; proof→EVALUATION §§1–2,6 then ASSURANCE; interpretation/projection/encoding→AXIOMATIC_CALCULUS §§2–4,6–8 then EVALUATION §2; bounded work→ACTIVATION §§1–3, FOUNDATIONS §4, REFERENCE_FRAME §11 then SPEC_METHOD §4; frame revision→REFERENCE_FRAME §§4,8,10 then EVALUATION §7; resumption→ACTIVATION §§5,7 then TICKETS §7; work carriers→TICKETS §§5,4,7; review→EVALUATION, its §5 and nearest CONFORMANCE case; acceptance→EVALUATION §5, SPEC_METHOD §6, RELEASE §§8,9; release→RELEASE §§1–4 then PRODUCT_DEFINITION §4; identity→IDENTITY §§2–4,8,10,6 and boundary/sufficiency §2; coordination→ACTIVATION §1 then EXECUTIVE_BASELINE §§3,7,6,12,16; software design→DESIGN_MODULE §§5–7,11 then ASSURANCE §§14–16; profiles→PROFILES §§1–6 with UX §§4,8,12 or WORLD_MODEL §§7,9,10; ODD→§§17,18; occurrence histories→TRAVERSAL_OCCURRENCE authority/adoption; writing→WRITING_GUIDE then SPEC_METHOD §2; posting→POSTING_GUIDE then SPEC_METHOD §6; term ownership→GLOSSARY, its §17 then PRODUCT_DEFINITION §5; foundations of rules→FOUNDATIONS §3 then owner family table. Acquisition and interpretation routes are separately qualified by currentness and task coverage.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 20,
+          "quote": "| You want to | Read, in order |\n|---|---|\n| understand the method | [FOUNDATIONS](FOUNDATIONS.md) → [REFERENCE_FRAME](REFERENCE_FRAME.md) → [ACTIVATION](ACTIVATION.md) → [EVALUATION](EVALUATION.md) → [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) → [SPEC_METHOD](SPEC_METHOD.md) |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FRoutes",
+          "start_line": 18
+        }
+      ],
+      "key": "method_reading_routes",
+      "label": "Task-directed reading routes"
+    },
+    {
+      "conditions": [],
+      "definition": "The document index assigns tier 1: FOUNDATIONS (ontology, standing, commitments, composition/conservation/results/hypotheses), REFERENCE_FRAME (RF-001–017, frames/coverage/activation), ACTIVATION (bounded step, context, results, refinement, restart, cost/reuse), AXIOMATIC_CALCULUS (signature, AC-001–020, traversals/functors, models/layers/identity/conformance), IDENTITY (scoped identity, hierarchy, authority, overrides/parsing/version boundary), EVALUATION (claims/evidence/review/acceptance/conformance/qualification). Tier 2: SPEC_METHOD (constitutional chain, categories, trace/lifecycle, change/ambiguity/lineage/migration/delivery/ADRs), PRODUCT_DEFINITION (project binding §§1–12), ASSURANCE (verification/testing authority and taxonomy, scenarios, installed/path/product-frame/combinatorial evidence, acquisition/localisation/integration/module evidence), TICKETS (work carriers, lanes/sprints/escrow, triage, migration, judgments/closure/test authority), RELEASE (identities/phases/qualification/selectors/assets/cohorts/acceptance/dispositions/questions), CONFORMANCE (required cases and coverage of 31 discriminators). Tier 3 indexes PROFILES, EXECUTIVE_BASELINE, DESIGN_MODULE, ODD, TRAVERSAL_OCCURRENCE, UX and WORLD_MODEL with their profile subjects. Guides are POSTING_GUIDE (commentary and ratification), WRITING_GUIDE (writing discipline) and GLOSSARY (non-deciding locator index). The catalogue reports ownership; it does not supply all indexed laws.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 54,
+          "quote": "| File | Tier | Owns |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 49
+        },
+        {
+          "end_line": 75,
+          "quote": "The constitutional method members of this corpus are its tier 1 and tier 2\nstandards and, when a project selects them, its tier 3 profiles (P6, P3).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 74
+        }
+      ],
+      "key": "method_document_catalogue",
+      "label": "Method document and ownership catalogue"
+    },
+    {
+      "conditions": [],
+      "definition": "Verbatim frames in frames/, indexed by FRAME_INPUTS.json, copy needed owning sections byte-for-byte and name source digests. They own no determination and become stale when source digests mismatch. The task catalogue covers bootstrap entry; rf-task-a declaration/activation/minimal result/disposition owner; rf-task-b coverage/diagnosis/revision; ac-task-a model-step transformation, successor judgment and promotion; traversal-task-f causality/correction/lineage/precedence/stops; eb-task-d drift locks, candidate_ready and disposition distinctions; dm-task-d design gates, sequencing, retained code, substrate and Prime; configuration proposals and optimality; software/human-process binding; and stale-summary resumption/dependency survival. They are described as activation units, not independently deciding authorities.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 95,
+          "quote": "Each frame copies, byte for byte, the owning\nsections that one task needs and names each source with its digest; the\nowning sections decide, and a frame owns no determination.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 91
+        }
+      ],
+      "key": "verbatim_frame_catalogue",
+      "label": "Verbatim frame catalogue"
+    },
+    {
+      "conditions": [],
+      "definition": "README identifies ../a_c/i3/ as a current but partial interpretation whose own README defines subject, coverage and limits. Earlier t1–t3, set and set-2–set-6 bind pre-rebuild digests and are historical, not current. Predecessor compressed summaries retain unresolved frontier rows pending Product-owner acceptance of proposed supersession.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 120,
+          "quote": "The current interpretation is [`../a_c/i3/`](../a_c/i3/README.md), a\npartial encoding whose subject, coverage and limits its README states.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 113
+        }
+      ],
+      "key": "indexed_current_interpretation",
+      "label": "Indexed current partial interpretation"
+    },
+    {
+      "conditions": [],
+      "definition": "One complete immutable released RC cut is the selectable STDO Product's constitutional member set and may also carry subordinate executable/interaction tooling. Its nine indexed kinds are tier-1/2 members; carrier-neutral calculus separate from subject models and encodings; optional application-neutral traversal-occurrence profile over an exact a_c basis without calculus change or consumer selection; derived profiles; posting/writing guides; non-deciding glossary; compact read models with unresolved carrier; interoperability schemas including layout-neutral overlay and deterministic installed manifest; and per-product/project/reference-frame/agent-bootstrap starter templates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 127,
+          "quote": "One complete immutable released RC cut of this standards tree is the\nconstitutional member set of the selectable STDO Product. The release may\nalso carry subordinate executable and interaction tooling",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "start_line": 124
+        }
+      ],
+      "key": "released_standards_library",
+      "label": "Released library and installed basis"
+    },
+    {
+      "conditions": [],
+      "definition": "README reports conservation of rc.2 #standards-library, generalising 'this tree' to the tenant tree; RELEASE_METHOD/TICKET_METHOD/DESIGN_MODULE_METHOD to tier-2/3 RELEASE/TICKETS/DESIGN_MODULE; ODD_METHOD/WORLD_MODEL_METHOD to selected tier-3 profiles; companion surfaces to the two guides; and compressed read models to a member kind with unresolved carrier. Installed cut/store/manifest ownership is attributed to PRODUCT_DEFINITION §§4,12, consumed by RELEASE §1. The conservation claim preserves tooling at 'may', optional traversal adoption, no glossary default, logical URIs, non-default verified local copies and non-replacement of basis by mutable head or moving selector.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 185,
+          "quote": "A route is provenance\nonly.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FSource%20dispositions",
+          "start_line": 172
+        }
+      ],
+      "key": "library_source_ledger",
+      "label": "Library source-disposition ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "REFERENCE_FRAME is tier 1, owning engagement laws for frames, frame-set declaration/selection, relations/conjunction, bounded coverage audit, revision and activation packets. It imports frame objects, activation step, core results/conjunction and qualification unchanged from other owners rather than defining them again. Clauses cite requiring principles; rc.2 anchors are provenance only, not an application dependency.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 10,
+          "quote": "The frame objects, the step that activates a frame,\nthe core result algebra with its conjunction, and qualification belong to\nother members; this member imports them unchanged and defines none of them",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME",
+          "start_line": 7
+        }
+      ],
+      "key": "reference_frame_member",
+      "label": "Reference-frame member"
+    },
+    {
+      "conditions": [
+        "Applies wherever the governing Product or method permits the relevant human, agentic, deterministic, probabilistic, assurance or mixed work."
+      ],
+      "definition": "The reference frame is the atomic engagement unit, activated and evaluated as one bounded context for actors with finite context, attention, time and capability. An activated frame combines evaluation family, exact workspace/topology basis, finite material relations/coordinates, invariants/authorities, admissible evidence/exclusions and capability envelope, yielding one closed core result. A declared frame set follows from workspace/outcome, practice/failures, capabilities and human judgment, then supports bounded evaluations, required conjunction/translation, coverage/residuals and empirical revision. This member owns urn:stdo:bounded-context:reference-frame-evaluation under its exact publication basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 56,
+          "quote": "The reference frame is the atomic engagement unit: the unit that is\nactivated and evaluated as one bounded context.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit",
+          "start_line": 48
+        },
+        {
+          "end_line": 70,
+          "quote": "This member owns the reference-frame-evaluation\nbounded context, `urn:stdo:bounded-context:reference-frame-evaluation`,\nunder its exact publication basis.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit",
+          "start_line": 68
+        }
+      ],
+      "key": "reference_frame_engagement",
+      "label": "Reference frame and engagement context"
+    },
+    {
+      "conditions": [],
+      "definition": "The declared import population comprises FOUNDATIONS §2 frame objects (evaluation/family, workspace, material-relation manifold, coordinate, topology, capability envelope, frame/activated frame/set/configuration, lens, role/persona/abstraction/component), ontology (subject, outcome, basis, material relation, evidence, actor, claim, judgment, residual), authority kinds and actor identity, disjointness/independence, and tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩; FOUNDATIONS §4 core values/standing, evaluation not performed, refinements and conjunction with decision rule; ACTIVATION §§1–2 step/intake/admission/applicability/context size/activation/evaluation, §3 results/disposition, §7 closed result/reuse; EVALUATION §7 frame/method qualification. Their source contexts are their members because those members declare no bounded-context identity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 94,
+          "quote": "FOUNDATIONS, ACTIVATION and\nEVALUATION declare no bounded-context identity, so each row's source\ncontext is its member (P1, P3).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "start_line": 92
+        },
+        {
+          "end_line": 102,
+          "quote": "| the frame tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩ | FOUNDATIONS | [The frame tuple](FOUNDATIONS.md#the-frame-tuple), FOUNDATIONS §2 |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "start_line": 102
+        }
+      ],
+      "key": "reference_frame_import_population",
+      "label": "Reference-frame declared import population"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "complete_consumer_update_plan",
+        "cohort_update"
+      ],
+      "conditions": [
+        "A complete consumer update is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 373,
+          "quote": "The caller selects every native route and derived context\nfor the claimed update scope; directory proximity or an empty discovery\nresult cannot supply that selection",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 368
+        }
+      ],
+      "key": "complete_update_explicit_selection",
+      "statement": "The caller must select every native route and derived context within the claimed scope. Neither proximity nor empty discovery supplies selection. An empty derived-context population means the owner selected none; it does not establish absence of semantic context.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "complete_consumer_update_plan",
+        "cohort_update"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 385,
+          "quote": "Mutation requires\nexplicit acceptance of this exact plan and re-derives it; possession of its\ndigest alone grants no operation authority.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 382
+        }
+      ],
+      "key": "complete_update_acceptance",
+      "statement": "The acceptance object binds physical effect destinations, binding preimages, exact cohort bytes, companion annotated tags/commits/subtrees/inventories, replacement dependency locators, native routes and declared derived-source observations. It uses the referenced canonical JSON hashing rule. Already-installed status changes neither digest nor authority. Mutation requires explicit acceptance of the exact plan and its re-derivation; possession of a digest is insufficient authority.",
+      "uncertainty": "The referenced hashing rule and narrower operation contracts occur outside the supplied subsection."
+    },
+    {
+      "applies_to_keys": [
+        "cohort_update"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 395,
+          "quote": "The complete operation verifies the selected cohort's dependency closure\nand each exact companion's definition, release record and admitted members\nbefore relying on them.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 387
+        }
+      ],
+      "key": "complete_update_integrity_and_scope",
+      "statement": "Before reliance, verify cohort dependency closure and every exact companion's definition, release record and admitted members; stage absent immutable installs, verify existing installs without in-place repair, and preflight every consumer target. Only selected basis/schema, existing composition locators/contracts and selected native/install links may change. Historical installs and unrelated content remain available and unchanged; create no consumer-local checker and change neither Product meaning nor local semantic map.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "cohort_update"
+      ],
+      "conditions": [
+        "For each selected derived context."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 405,
+          "quote": "For each selected derived context, missing, ambiguous, changed or\nunavailable program, map or source evidence holds the complete update\nbefore any consumer effect.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 397
+        }
+      ],
+      "key": "complete_update_evidence_hold",
+      "statement": "Missing, ambiguous, changed or unavailable program/map/source evidence holds the whole update before consumer effects. The source owner performs needed semantic re-entry; the manager cannot mechanically relabel an old map current. Exact freshness establishes integrity, not semantic conformance or an independent verdict. After immutable staging, recheck consumer preimages and source evidence; report completion only after verifying every selected resulting binding and companion.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "cohort_update"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Newly staged immutable installs may remain unused."
+      ],
+      "grounding": [
+        {
+          "end_line": 412,
+          "quote": "The operation requires an exclusive consumer\nwrite scope during application. It claims no crash-atomic transaction\nacross independent filesystem paths",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 408
+        }
+      ],
+      "key": "complete_update_failure_recovery",
+      "statement": "Refusal before consumer effects retains prior state. Caught application failure restores affected preimages and does not report completion. Application requires an exclusive consumer write scope. There is no crash-atomic claim across independent paths: abrupt process/host loss or unavailable rollback storage requires recovery from presented preimages before claiming the complete relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "manager_result_domains"
+      ],
+      "conditions": [
+        "The operation has an intended external effect, as install, sync, mutating adopt, fleet adoption or complete update does."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 450,
+          "quote": "A caught application failure\nis also `not_effected` (`falsified`):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 432
+        }
+      ],
+      "key": "manager_effect_result_mapping",
+      "statement": "For 'the intended effect occurred', completed maps to satisfied only when subject evidence establishes the whole effect. Pre-effect refusal maps to not_effected/falsified with ended effect and retained prior state as evidence. Caught application failure also maps to not_effected/falsified because the full update fell short and no later part is applied; restoration verification decides only whether its end is established. Verified restoration establishes the end; unverified restoration or unavailable rollback storage leaves the end unestablished, with a residual naming needed verification. Record unused staged installs as the part that occurred. Abrupt process/host loss without a caught failure establishing shortfall maps to completion_unknown/indeterminate, never completed or not_effected. completion_unknown and not_effected with unestablished end require reconciliation from presented preimages before repetition or a complete-relation claim.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "manager_result_domains"
+      ],
+      "conditions": [
+        "An operation refuses application on its exact bound subject and basis."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 472,
+          "quote": "A missing explicit acceptance of the\nexact plan, or missing whole-selection authorisation of a fleet write,\nis missing operation authority: `admission_refused(authority)`\n(`out_of_frame`)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 459
+        }
+      ],
+      "key": "manager_refusal_result_mapping",
+      "statement": "Before commencement, refusal answers lawful admission/activation; after commencement, including post-staging recheck, it answers construction availability. Missing exact-plan acceptance or whole-selection fleet-write authorisation is admission_refused(authority)/out_of_frame and names the needed authority and owner. Every other refusal has a basis cause: definition/preimage drift, stale plan, referenced fail-closed conditions including ambiguous discovery with no exact subject, escaping/broken path/locator/marker boundary, or defective derived evidence. Basis refusal is admission_refused(basis) before commencement and re_entry_requested(basis) after, both invalid_basis; name the failing coordinate and, for derived evidence, the repairing source owner.",
+      "uncertainty": "The full fail-closed list is referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "manager_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 485,
+          "quote": "A command without an intended\nexternal effect, such as `verify` or `adopt --dry-run`, has no value\nunder Effects",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 473
+        }
+      ],
+      "key": "manager_result_predicate_separation",
+      "statement": "Effectless verify and adopt --dry-run have no Effects value, though refusals still map by cause. Missing/extra/changed members observed by verify falsify its own predicate and are not refusals. Composition with other results must not turn refusal/failure into completion, completion_unknown into completed or not_effected, known caught failure with unverified restoration into undecided value, or missing acceptance into defective basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "bounded_context",
+        "term_occurrence",
+        "concept_reference"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 507,
+          "quote": "A bounded context exists only when an owning authority declares its stable\nidentity, owner, selected basis and governed semantic scope.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 503
+        }
+      ],
+      "key": "context_declaration_and_identity",
+      "statement": "Context existence requires an owning authority's declaration of stable identity, owner, basis and scope. A consuming member defines a concept in it only through an explicit owner relation. Filename, heading, index/glossary row, schema value or bare URI cannot constitute it. Equal spelling/capitalisation/shape/location/nesting/actor/implementation establishes neither equal meaning, identity, equivalence, inheritance nor authority; different spelling does not prove different meaning. Such relations require the semantic address or explicit authorised relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "term_occurrence",
+        "bounded_context"
+      ],
+      "conditions": [
+        "A material occurrence is being resolved."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 532,
+          "quote": "4. apply every applicable owner-authorised override or disambiguation; and\n5. admit the occurrence only when exactly one concept remains.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 531
+        }
+      ],
+      "key": "semantic_resolution_order",
+      "statement": "Resolve in order: identify governed scope and nearest explicit context declaration; identify exact basis and applicable authorities; collect admitted local definitions and explicit imports; apply every applicable owner-authorised override/disambiguation; admit only if exactly one concept remains. An owning document/section/schema field/operation may declare context for subordinate occurrences, avoiding repeated qualifiers in uniquely resolved prose. Repositories, directories, filenames, headings, glossary matches, prompts, actors or nearby definitions do not declare context accidentally.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "term_occurrence",
+        "semantic_resolution_conformance"
+      ],
+      "conditions": [
+        "Zero or multiple applicable concepts remain at a material boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 551,
+          "quote": "Zero applicable concepts is unresolved meaning; more than one is ambiguous\nmeaning. Both fail closed at a material boundary:",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 540
+        }
+      ],
+      "key": "semantic_resolution_failure_results",
+      "statement": "Zero concepts is unresolved; multiple concepts is ambiguous. Agents, designs, schemas, implementations, tests, translations and reviewers must not choose by familiarity, frequency, recency, nominal match or context-free glossary fallback. A dependent evaluation returns out_of_frame and names the missing definition/import/disambiguation relation and owner, or indeterminate when admissible evidence also cannot decide the claim, naming that ground too. In either case the ground is explicit; unresolved meaning is not false meaning.",
+      "uncertainty": "The external core rule deciding these result grounds is referenced, not fully supplied."
+    },
+    {
+      "applies_to_keys": [
+        "cross_context_relation",
+        "semantic_relation_kinds",
+        "semantic_specialisation"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 574,
+          "quote": "- the preserved meaning, changed meaning, loss and refusal conditions;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 569
+        }
+      ],
+      "key": "cross_context_carrier_requirements",
+      "statement": "Every carrier states exact source/target concept references and context identities; kind (unchanged import, disambiguation, directional translation including specialisation, or stronger equivalence); direction and lawful inverse where material; preserved/changed meaning, loss and refusal conditions; both semantic owners without authority transfer; both selected bases, scope and provenance; lifecycle and invalidation. Semantic owners are authorities, distinct from owning clauses. The member-import rule applies between any two authority-declared contexts; changed, narrowed or lost source meaning is not an import. None of the four kinds widens source or target authority, and translation/equivalence/disambiguation cannot pass as unchanged import.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "local_constitution_binding"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 635,
+          "quote": "- `resolves_to`: the exact selected concept reference, which is one member\n  of `disambiguates`;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F6.%20Local%20constitutional%20binding",
+          "start_line": 630
+        }
+      ],
+      "key": "local_entry_coordinates",
+      "statement": "Every local entry names its decision URI, existing lawful Product/requirement/accepted-design/other authority, overridden clause or resolved ambiguity where applicable, and exact scope. Each local_constitution.disambiguations binding additionally names exact term, context identity, complete material candidate concept/clause references, resolves_to as one candidate, every needed semantic basis, and uri/authority/applies_to. The URI owns resolution; crossing contexts requires its complete §5 import/translation/equivalence relation. Empty arrays explicitly declare no bound entries of that kind; omission is not equivalent.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "project_reference_frame_basis",
+        "agent_frame_activation"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 687,
+          "quote": "The JSON entry locates that\ndeclaration and its authority relation; it does not contain the binding,\nadopt the profile, restate the frames or create frame-set authority (P6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 685
+        }
+      ],
+      "key": "collective_basis_authority_and_locators",
+      "statement": "reference_frame_bases is non-empty; each entry names an accepted declaration URI, every existing admitting authority and exact governed Product/context/tenant/outcome/other scope. The declaration owns frame set, method/profile basis, outcome, actor rules, envelopes, grants, triggers, coverage, results and invalidation. REFERENCE_FRAME supplies principles and declaration shape, and the Executive baseline supplies only an optional profile; neither selects, adopts or owns a Product binding. Existing Product authority owns the declaration and every grant. Profile availability through method-cut inclusion, Product adoption and exact-work-instruction activation are distinct relations.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "project_reference_frame_basis",
+        "agent_frame_activation"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 710,
+          "quote": "An Agent Frame Activation does not mutate the overlay, and the overlay\nregisters no agents, assigns no permanent frames and persists no temporary\nactive frame configuration",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 702
+        }
+      ],
+      "key": "activation_and_product_role_separation",
+      "statement": "Activation does not mutate the overlay, which registers no agents, assigns no permanent frames and persists no temporary configuration. Frames and actors retain distinct identities; actor name or broad frame grants no semantic/operation/review/acceptance/disposition authority beyond cited owners and exact activation. For outcomes crossing a Product chain, the collective basis records a Product-role map distinguishing mutable projects, definitions, candidate checkpoints, release cuts, released Products, installs, artifacts and dependents; development products are role bindings over exact install identities. Every directed composition edge names roles, governing authority/contracts, lifecycle, evidence boundary, refusal and invalidation. Shared actors/repositories/files/implementations/outputs/tools establish no identity or composition. A same-named runtime/domain Frame enters a collective frame set only by explicit declaration with evaluation and authority relations; otherwise it remains under bound WHAT/HOW and may be an evaluation subject or coordinate.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "what_how_work_locators",
+        "build_tenancy"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 773,
+          "quote": "A separate\n`TENANT_REGISTRY.md` may remain as a human-readable companion or generated\nprojection and cannot become a second tenant-identity or location\nauthority",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 770
+        }
+      ],
+      "key": "carrier_identity_and_authority",
+      "statement": "Intent and Product each have one canonical entrypoint; specification may cite several surfaces. Each tenant has stable identity and root/design/implementation locators, with the binding governed by SPEC_METHOD §11. A separate TENANT_REGISTRY.md may be a companion or projection, never a second tenant-identity/location authority. Work bindings locate carriers without deciding which carrier an item takes; SPEC_METHOD §4 and TICKETS own that choice. Ticket lanes include at least backlog, active and completed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_discovery_composition"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 801,
+          "quote": "For a requested Product scope exactly one applicable definition is\nselected; zero or several unresolved definitions fail closed, and a\nsymlinked definition is refused",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition",
+          "start_line": 793
+        }
+      ],
+      "key": "discovery_and_composition_identity",
+      "statement": "Select exactly one applicable definition for a requested Product scope; zero or several unresolved definitions fail closed and symlinked definitions are refused. Nesting creates no implicit inheritance, ownership, composition or override. Each explicit edge names product_definition locator, target_definition_id matching target product.definition_id, directed relation authority defining roles/owner/scope/lifecycle/invalidation, and one or more exact governing contracts. Resolve locator and identity: moving requires a locator update but preserves identity; replacement with another identity at the same locator fails closed. If the edge binds immutable Product/release versions, relation and contracts must also carry and verify those identities; mutable definition identity cannot substitute.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_discovery_composition"
+      ],
+      "conditions": [
+        "A discovered set claims conformance."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 846,
+          "quote": "A conforming discovered set satisfies all of the following (P3, P6, P1):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition",
+          "start_line": 826
+        }
+      ],
+      "key": "discovered_set_conformance",
+      "statement": "Every definition validates against its selected released schema; every required URI/fragment resolves within declared workspace/resolver boundaries; definition IDs are globally unique in the set and tenant IDs unique within each overlay; every governed scope has a resolvable applicable frame basis with overlaps reconciled by cited authority; every disambiguation has exact term/context, complete candidates, selected candidate member, authority/basis/scope and congruent carrier; every material cross-context seam has explicit semantic relation; every composition target identity, relation and non-empty contract set resolves; no two carriers claim authority over the same Product, tenant, ticket state or constitutional relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_discovery_composition"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 857,
+          "quote": "The structural subset and\nthe semantic subset of these checks are distinct claims",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition",
+          "start_line": 855
+        }
+      ],
+      "key": "structural_semantic_validation_split",
+      "statement": "Portable Draft 2020-12 validation establishes shape. uri and uri-reference are annotations unless the validator asserts formats. Conformance therefore explicitly checks RFC 3986 URI/reference syntax with an assertion-capable validator, then separately checks resolution, fragments, selected-release identity, cross-file uniqueness, constitutional sufficiency, semantic resolution, cross-context-relation completeness and authority congruence. Structural and semantic subsets are separate claims.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "semantic_resolution_conformance"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 881,
+          "quote": "Correct\ndownstream behaviour produced through a guessed meaning does not pass\nsemantic conformance",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F10.%20Semantic-resolution%20conformance%20cases",
+          "start_line": 878
+        }
+      ],
+      "key": "semantic_conformance_case_requirements",
+      "statement": "Without an explicit cross-context relation, Frame/Owner/Product/Tenant candidates remain distinct: no runtime-frame enrolment, specialist owner authority or default tenancy inference; Product is selected only through declared occurrence context. User is unresolved pending downstream definition/relation. Positive local cases declare one context and exactly one concept; positive cross-context cases supply a complete authorised relation. Negative cases cover zero candidates, multiple after disambiguation, selection outside candidates, context-free glossary fallback, incomplete coordinates, authority/basis mismatch, undeclared loss and invalidated relations. Correct output reached through guessed meaning fails semantic conformance. CONFORMANCE may index but not redefine these cases.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constitutional_method_surface"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 904,
+          "quote": "A projected prohibition cannot lose its condition\nor its lawful alternative, even when every source digest is correct.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary",
+          "start_line": 899
+        }
+      ],
+      "key": "derived_surface_conservation_and_staleness",
+      "statement": "Compressions, templates, comments, candidates, installs and mutable source are derived/evidential/authoring surfaces, not selectable partial constitutions or reinterpretations of owners. Derived instructions preserve applicability, obligations, permissions, exclusions, decision owners and invalidators within scope; compression cannot strengthen/weaken a relation or drop a prohibition's condition/lawful alternative. References must resolve within actor access or supply needed meaning directly. Cut/install derived surfaces carry paths and digests of every deciding source and watched index; any digest change makes them stale, requiring regeneration or explicit re-acceptance before current treatment. Raw owners in the same selected cut decide questions a stale/insufficient carrier cannot decide.",
+      "uncertainty": "The full external staleness, standalone-scope and digest-evidence laws are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "constitutional_method_surface"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Concrete form is method law when explicitly accepted by the method as an interoperability boundary, as the referenced definition schema/template are."
+      ],
+      "grounding": [
+        {
+          "end_line": 942,
+          "quote": "A shared-method amendment cannot create an executable tool, workflow\nengine, runtime, assurance system or consumer realisation as STDO Product\nscope without separate explicit human authorisation.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary",
+          "start_line": 934
+        }
+      ],
+      "key": "method_realisation_and_publication_boundary",
+      "statement": "Consumers own instantiated types/schemas/files/tools/runtime/orchestration/tests/executable conformance; method ownership of abstract law does not generally prescribe these forms. Creating executable tooling, workflow engines, runtime, assurance systems or consumer realisations as STDO Product scope by shared-method amendment requires separate explicit human authorisation. Recording a ruling cannot widen subject, implication, authority or change class. Only a released method version is publication authority; mutable source may author a future cut but must not silently govern consumers.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_bootstrap"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "A project-local exact copy is lawful when explicitly bound and verified, though not the default."
+      ],
+      "grounding": [
+        {
+          "end_line": 999,
+          "quote": "A project creates no competing local methodology root, such as a default\n`specification/standards/`, and binds no mutable or partial method source\nas if it were the selected immutable release",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 985
+        }
+      ],
+      "key": "bootstrap_authority_split",
+      "statement": "Mutable method authoring belongs in its source workspace and governs a future candidate only. Released authority is the consumer-selected exact immutable version; installed distribution normally uses the shared store and matches basis URI/manifest digest. Project constitutional authority lives at WHAT bindings, realisation/work at HOW/ticketing. No competing local method root or mutable/partial source may impersonate the selected release. During editing/repricing, mutable source is candidate-authoring authority, not consumer law before release and explicit selection. The resolved installed basis remains operative distribution until explicit adoption of another cut; proximity cannot select a local copy.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_bootstrap"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1059,
+          "quote": "The bootstrap sequence is (P3, P6, P2):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 1043
+        }
+      ],
+      "key": "bootstrap_ordered_bindings",
+      "statement": "The described sequence is: (1) install manager once, resolve one version-line selector and explicitly select an immutable RC; (2) install complete cut in shared store and retain deterministic manifest digest; (3) copy exact-cut template to named/default definition; (4) assign stable mutable definition-line ID, source-project locator and context, distinct from immutable Product/releases; (5) bind constitutional source, non-operative selector, exact basis/digest, additional authorities and basis-qualified entrypoints, confirming collective axioms/ontology/epistemology/taxonomy/semantics; (6) bind bootstrap/portable targets relative to resolved source_project, preflight all and refresh only marker-bounded discovery blocks; (7) bind or explicitly empty each local collection; (8) bind at least one accepted collective frame basis with authorities/scope; (9) confirm Goals, run Goals→Intent→Product and bind entrypoints; (10) gather/derive/classify/bind live requirements without co-equal rival; (11) bind at least one tenant with root/design/implementation and shared law; (12) bind Goals, ticket lanes, comments and optional sprint root; (13) bind every known composition edge with target ID, relation authority and non-empty contracts; (14) validate shape, assert URI syntax, synchronise/verify exact installed basis, resolve every URI and check cross-definition identity, composition, constitutional sufficiency and authority congruence.",
+      "uncertainty": "This records the source's sequence without performing it."
+    },
+    {
+      "applies_to_keys": [
+        "product_bootstrap"
+      ],
+      "conditions": [
+        "A bound requirement set has become the live constitutional surface."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1087,
+          "quote": "Once a bound requirement set is the live constitutional surface, no rival\nmonolithic requirements document should remain co-equal authority with it.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 1084
+        }
+      ],
+      "key": "live_requirement_surface_recommendation",
+      "statement": "No rival monolithic requirements document should remain co-equal authority with the live set. This is the source's recommendation, intended to keep requirement truth clear, derivable and non-monolithic without prescribing its folder.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "profiles_member",
+        "profile_declared_binding"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Externally owned terms may appear in core disposition tables.",
+        "The tier-1 traversal record, F_D/F_P/F_H and generic 'module' are not restricted by this exclusion."
+      ],
+      "grounding": [
+        {
+          "end_line": 18,
+          "quote": "The core names no runtime, no carrier and no executor.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F1.%20The%20boundary",
+          "start_line": 11
+        }
+      ],
+      "key": "core_profile_term_boundary",
+      "statement": "Externally owned profile/realisation/rc.2 terms do not enter tiers 1–2: graph, edge, vector, ledger, event log, worksite, HoG, Markov overlay, screen, entity cut, IACS and Prime are named examples. A profile may bind core mechanisms to such terms only by a declared direction, preserved meaning, narrowed scope and invalidation. Worked applications, hello worlds and data mappers remain external test subjects; particulars do not become generic functionality by precedent.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "profiles_member",
+        "profile_declared_binding"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 49,
+          "quote": "A profile that refines\nanother profile declares the refinement in its lead; the refined profile\nkeeps its rules, and the refining profile owns only what it adds",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F1.%20The%20boundary",
+          "start_line": 43
+        }
+      ],
+      "key": "profile_import_and_refinement_ownership",
+      "statement": "A profile imports each used tier-1/2 concept and generic family under FOUNDATIONS §2, restating none of their rules, and owns only its added domain/operation terms and choices. Its family table follows FOUNDATIONS §3 and names imported family IDs and table sections in the premise column; rules rest on those consequences with their original standing and owners. Refinement of another profile is declared in the lead; the refined profile retains its rules. Generic rules gain no second owner and added choices are not presented as foundational consequences.",
+      "uncertainty": "The referenced import and consequence-standing rules are not fully supplied."
+    },
+    {
+      "applies_to_keys": [
+        "profile_source_ledger"
+      ],
+      "conditions": [
+        "A received predecessor row lacks a disposition."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 142,
+          "quote": "a\nrow with none is unresolved, which blocks qualification of the claim it\naffects.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions",
+          "start_line": 140
+        }
+      ],
+      "key": "predecessor_disposition_qualification_boundary",
+      "statement": "Each predecessor disposition must take one of RELEASE §9's four values. No disposition means unresolved and blocks qualification of the affected claim; it is not an inferred conservation or supersession.",
+      "uncertainty": "The four-value domain itself is referenced but not enumerated in the supplied section."
+    },
+    {
+      "applies_to_keys": [
+        "method_reading_routes",
+        "indexed_current_interpretation",
+        "verbatim_frame_catalogue"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 45,
+          "quote": "It is an optional derived surface under ACTIVATION §2 Acquisition; for a task it does not cover, acquire the deciding owner sections.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FRoutes",
+          "start_line": 45
+        }
+      ],
+      "key": "indexed_acquisition_currentness",
+      "statement": "The indexed acquisition rule uses a derived surface with current sources when it serves the task, otherwise deciding owner sections. Verbatim frames and constraint surfaces projected from a current a_c interpretation are examples. The i3 interpretation is optional; its README determines coverage and insufficiency, and uncovered tasks require owner sections. Earlier a_c sets are historical, not current. These are described routes, not performed acquisition.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "method_document_catalogue",
+        "claude_candidate_corpus",
+        "verbatim_frame_catalogue"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 88,
+          "quote": "The corpus is applicable\nwithout the rc.2 cut, which remains the operative builder of this\nconstruction until this candidate is released.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 86
+        }
+      ],
+      "key": "catalogue_constitution_and_provenance",
+      "statement": "Constitutional membership comprises tiers 1–2 and project-selected tier-3 profiles. Each clause names its requiring principle. Predecessor routes are provenance, not dispositions; dispositions use RELEASE §9 values, are recorded in each receiving member's final section, and are indexed with loci in the tenant frontier. The source claims candidate applicability without the predecessor cut while retaining rc.2 as operative builder until release. Verbatim frames remain non-deciding copies and their use versus owner sections follows external ACTIVATION acquisition law.",
+      "uncertainty": "Applicability is a source claim, not an acceptance or release judgment here."
+    },
+    {
+      "applies_to_keys": [
+        "released_standards_library"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "An explicitly bound and verified project-local copy remains possible, but is not the default."
+      ],
+      "grounding": [
+        {
+          "end_line": 168,
+          "quote": "Installed bytes take their authority from the exact RC cut, the product\ndefinition's basis URI, the manifest digest and the member inventory",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "start_line": 162
+        }
+      ],
+      "key": "installed_library_basis_identity",
+      "statement": "The manager installs each complete immutable cut once in a shared versioned store and resolves logical release URIs. Product definitions name basis by logical URI and manifest digest, without machine-local paths. Installed authority derives from exact RC cut, basis URI, manifest digest and member inventory. Mutable authoring head and moving version-line selector never silently replace the selected consumer basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "reference_frame_engagement",
+        "reference_frame_member"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 75,
+          "quote": "\"Atomic\" is said at engagement altitude only. It does not assert that every\nrelation inside the frame is one irreducible semantic atom;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit",
+          "start_line": 53
+        }
+      ],
+      "key": "frame_engagement_scope_boundary",
+      "statement": "Frame-set selection, activation, evaluation, conjunction, translation, coverage and revision are separate functions. Engagement atomicity does not imply semantic irreducibility: multiple atoms and owners can coexist without merged meaning/authority; no universal theory of all relationships is prerequisite. Engagement law defines no application profile, role mapping, Product frame-basis binding, domain Product, specification taxonomy, design ontology, runtime, workflow, adoption relation or assurance implementation. External imports/specialisations under other owners do not enter or amend this member. Scope ownership of frame declaration/activation/evaluation/basis/relation/result/coverage/revision/qualification concepts does not redefine imported owner concepts. Nominally matching profiles, Products, roles or runtime carriers are not imported by proximity.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "reference_frame_import_population",
+        "reference_frame_engagement"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 118,
+          "quote": "A refinement this member states, such as the function outcomes of §5\nor the coverage statuses of §8, names its owner in this table and maps\nback to it.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "start_line": 114
+        }
+      ],
+      "key": "reference_frame_import_ownership",
+      "statement": "Every listed import runs from its named source member to the reference-frame-evaluation context with no loss, ownership transfer or authority grant. Imported concepts are not defined a second time. Local refinements, including function outcomes and coverage statuses, name and map back to their owner. A profile- or Product-declared frame/family in this context remains that owner's specialisation and is not thereby imported into this member. The declaration is reported new and intended to retain one owning section per concept.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "complete_consumer_update_plan",
+        "cohort_update",
+        "manager_result_domains",
+        "complete_update_explicit_selection",
+        "complete_update_acceptance",
+        "complete_update_integrity_and_scope",
+        "complete_update_evidence_hold",
+        "complete_update_failure_recovery",
+        "manager_effect_result_mapping",
+        "manager_refusal_result_mapping",
+        "manager_result_predicate_separation",
+        "update_uses_exact_plan",
+        "manager_external_contracts"
+      ],
+      "reason": "Retains plan, mutation boundaries, evidence checks, recovery and cause-sensitive results; retains unresolved external hashing, contracts and result-law references.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "semantic_resolution_context",
+        "term_occurrence",
+        "bounded_context",
+        "concept_reference",
+        "cross_context_relation",
+        "semantic_relation_kinds",
+        "semantic_specialisation",
+        "glossary_locator_index",
+        "context_declaration_and_identity",
+        "semantic_resolution_order",
+        "semantic_resolution_failure_results",
+        "cross_context_carrier_requirements",
+        "relation_kinds_refine_cross_context_rule",
+        "specialisation_is_directional_translation",
+        "semantic_external_law"
+      ],
+      "reason": "Retains context, resolution and relation distinctions; external owner rules remain bounded references.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "local_constitution_binding",
+        "local_entry_coordinates",
+        "local_cross_context_binding_requires_relation"
+      ],
+      "reason": "Retains authority, complete disambiguation coordinates and empty-versus-omitted distinction.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F6.%20Local%20constitutional%20binding"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "project_reference_frame_basis",
+        "agent_frame_activation",
+        "collective_basis_authority_and_locators",
+        "activation_and_product_role_separation",
+        "collective_basis_expression_latitude",
+        "collective_basis_external_packet"
+      ],
+      "reason": "Retains collective basis, scoped activation, grants, role identities and optional representation; packet and lineage details are external.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "build_tenancy",
+        "what_how_work_locators",
+        "carrier_identity_and_authority",
+        "work_carrier_location_latitude",
+        "build_tenant_external_owners"
+      ],
+      "reason": "Retains WHAT/HOW cardinalities, registry and work locators; externally owned tenant and carrier-selection law remains unresolved beyond stated references.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "product_discovery_composition",
+        "discovery_and_composition_identity",
+        "discovered_set_conformance",
+        "structural_semantic_validation_split"
+      ],
+      "reason": "Retains recursive discovery, explicit identity-bound composition, all discovered-set conditions and structural/semantic claim separation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "semantic_resolution_conformance",
+        "semantic_conformance_case_requirements"
+      ],
+      "reason": "Retains all five collision cases and positive/negative conformance boundaries.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F10.%20Semantic-resolution%20conformance%20cases"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "constitutional_method_surface",
+        "derived_surface_conservation_and_staleness",
+        "method_realisation_and_publication_boundary",
+        "derived_surface_external_staleness"
+      ],
+      "reason": "Retains singular ownership, release boundary, compression conservation and consumer/method split; external staleness and evidence law is not reconstructed.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "product_bootstrap",
+        "bootstrap_authority_split",
+        "bootstrap_ordered_bindings",
+        "live_requirement_surface_recommendation",
+        "bootstrap_layout_and_sources"
+      ],
+      "reason": "Retains defaults, authority split, fourteen-step sequence, layout/source latitude and recommendation modality without executing bootstrap.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "product_definition_source_ledger",
+        "product_definition_conservation_evidence"
+      ],
+      "reason": "Retains reported carryings, conservation and new-law provenance without treating them as verified conservation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F13.%20Source%20dispositions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "profiles_member"
+      ],
+      "reason": "Retains profile identity, tier boundary and indexing role.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "profile_declared_binding",
+        "core_profile_term_boundary",
+        "profile_import_and_refinement_ownership"
+      ],
+      "reason": "Retains declared bindings, explicit term exceptions, import/refinement ownership and external-test boundary.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F1.%20The%20boundary"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "graph_execution_profiles",
+        "graph_profile_pending_supersession"
+      ],
+      "reason": "Retains both profiles and their indexed bindings, including the pending owner decision.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F2.%20Graph%20execution"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "software_design_profile"
+      ],
+      "reason": "Retains the software-design binding inventory and named external owners without expanding their laws.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F3.%20Software%20design"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_profile",
+        "ux_refines_software_design"
+      ],
+      "reason": "Retains conditional refinement, binding inventory and one-core-value result mapping.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F4.%20UX"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_profile"
+      ],
+      "reason": "Retains binding inventory, candidate construct status and core non-dependence.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F5.%20World%20model"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "engagement_baseline_profile"
+      ],
+      "reason": "Retains optionality, configuration identity and non-nominal role binding.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F6.%20Engagement%20baseline"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "profile_source_ledger",
+        "predecessor_disposition_qualification_boundary",
+        "profile_unresolved_compressions"
+      ],
+      "reason": "Retains all ledger routes and withdrawn candidate wording, with explicit unresolved compression/template and supersession boundaries.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "claude_candidate_corpus"
+      ],
+      "reason": "Retains candidate status, builder basis and finite-actor purpose as source claims.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "method_reading_routes",
+        "indexed_acquisition_currentness"
+      ],
+      "reason": "Retains the task-route inventory and conditional acquisition guidance as navigation data, not performed instructions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FRoutes"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "method_document_catalogue",
+        "verbatim_frame_catalogue",
+        "indexed_current_interpretation",
+        "catalogue_constitution_and_provenance",
+        "catalogue_external_detail"
+      ],
+      "reason": "Retains ownership/tier and frame-task indexes, current-versus-historical status and pending compression decision; referenced bodies and interpretation coverage remain unavailable.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "released_standards_library",
+        "installed_library_basis_identity",
+        "library_optional_tooling",
+        "compact_read_model_carrier"
+      ],
+      "reason": "Retains nine member kinds, optional tooling, exact installed basis and unresolved compact-model carrier.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "library_source_ledger",
+        "library_conservation_pending_carrier"
+      ],
+      "reason": "Retains claimed conservation and generalisations without proving them; the compact-carrier decision remains pending.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FSource%20dispositions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "reference_frame_member"
+      ],
+      "reason": "Retains member scope, imported ownership and provenance-only predecessor references.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "reference_frame_engagement",
+        "frame_engagement_scope_boundary",
+        "frame_representation_latitude"
+      ],
+      "reason": "Retains finite-actor engagement, frame and frame-set descriptions, scope limits and substrate latitude.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "reference_frame_import_population",
+        "reference_frame_import_ownership",
+        "declared_population_imports_into_frame_context",
+        "reference_frame_imported_meanings"
+      ],
+      "reason": "Retains every import group, owner, direction and no-loss/no-authority condition while leaving absent owner definitions unresolved.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "Express an accepted basis entirely in source-linked prose.",
+        "Adopt an available profile or define a project configuration.",
+        "Use the starter template after replacing every placeholder with exact Product identities, owners, scopes, sources, grants, results and invalidation conditions and admitting it under existing authority.",
+        "Activate overlapping frame subsets for several agents or different frames for one agent over time."
+      ],
+      "applies_to_keys": [
+        "project_reference_frame_basis",
+        "agent_frame_activation"
+      ],
+      "forbidden": [
+        "Treat the template as authority.",
+        "Require a schema, axiomatic representation, prompt framework or runtime frame engine merely to use the method.",
+        "Infer frame membership or authority from a matching name."
+      ],
+      "grounding": [
+        {
+          "end_line": 732,
+          "quote": "An accepted Project Reference-Frame Basis may be expressed entirely as\nsource-linked prose.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 724
+        }
+      ],
+      "key": "collective_basis_expression_latitude"
+    },
+    {
+      "allowed": [
+        "Resolve work bindings to directories, repository resources, tracker collections, API endpoints or product-scoped queries.",
+        "Optionally bind sprint manifests.",
+        "Cite multiple requirement/specification surfaces.",
+        "Keep a human-readable or generated TENANT_REGISTRY.md companion."
+      ],
+      "applies_to_keys": [
+        "what_how_work_locators"
+      ],
+      "forbidden": [
+        "Make the registry companion a second identity/location authority.",
+        "Treat commentary as ticket-state authority."
+      ],
+      "grounding": [
+        {
+          "end_line": 782,
+          "quote": "These bindings may resolve to directories,\nrepository resources, tracker collections, API endpoints or product-scoped\nqueries.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 779
+        }
+      ],
+      "key": "work_carrier_location_latitude"
+    },
+    {
+      "allowed": [
+        "Bind an existing layout without moving, renaming or duplicating authority/realisation surfaces.",
+        "Use multiple named definitions at one monorepo root or definitions at nested roots, each explicitly bound to its WHAT.",
+        "Start without a complete requirements tree.",
+        "Source requirements from any legitimate constitutional input regardless of path, including Goals, Intent, Product, requirements, imported standards/policy, prior versions or migration/repricing material.",
+        "Use the usual Goals→Intent→Product→first requirements path without treating it as the only lawful source.",
+        "Use an explicitly bound and verified exact project-local method copy."
+      ],
+      "applies_to_keys": [
+        "product_bootstrap"
+      ],
+      "forbidden": [
+        "Treat starter paths/topology as universal path law or conformance requirements.",
+        "Infer composition from directory nesting.",
+        "Select a local method copy by proximity."
+      ],
+      "grounding": [
+        {
+          "end_line": 1041,
+          "quote": "that is the usual starting point, not the only lawful source",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 1040
+        },
+        {
+          "end_line": 1031,
+          "quote": "This is a starter topology, not a conformance requirement.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "start_line": 1026
+        }
+      ],
+      "key": "bootstrap_layout_and_sources"
+    },
+    {
+      "allowed": [
+        "A released cut may carry subordinate executable and interaction tooling.",
+        "Traversal-occurrence profile adoption remains optional.",
+        "An explicitly bound and verified local copy is possible."
+      ],
+      "applies_to_keys": [
+        "released_standards_library"
+      ],
+      "forbidden": [
+        "Treat subordinate tooling as mandatory from this section's 'may'.",
+        "Treat the traversal profile as changing the calculus or selecting a consumer.",
+        "Let a moving selector or mutable head silently replace the consumer basis."
+      ],
+      "grounding": [
+        {
+          "end_line": 137,
+          "quote": "without\nchanging the calculus or selecting a consumer, and whose adoption stays\noptional;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "start_line": 135
+        }
+      ],
+      "key": "library_optional_tooling"
+    },
+    {
+      "allowed": [
+        "Represent a frame in prose, structured data, prompt, design asset, typed carrier, runtime context or any consumer-selected form.",
+        "Carry multiple semantic atoms and owner relations without merging them.",
+        "Import or specialise engagement relations under external owner authority within the stated scope."
+      ],
+      "applies_to_keys": [
+        "reference_frame_engagement"
+      ],
+      "forbidden": [
+        "Require a class, aggregate, actor, controller, service, registry, graph or frame engine.",
+        "Treat external specialisation as entering or amending the reference-frame member."
+      ],
+      "grounding": [
+        {
+          "end_line": 80,
+          "quote": "Substrate. A reference frame may be represented in prose, structured data,\na prompt, a design asset, a typed carrier, a runtime context or any other\nform its consumer selects. No class, aggregate, actor, controller, service,\nregistry, graph or frame engine is required",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit",
+          "start_line": 77
+        }
+      ],
+      "key": "frame_representation_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source-linked F_P proposal over the supplied sections only. It grants no semantic acceptance, execution, installed qualification, release or completeness judgment.",
+    "No external documents, earlier PRODUCT_DEFINITION sections, predecessor rows, actual schemas, release inventories, frame packets or referenced i3 interpretation were available for examination. Their names and stated ownership are retained as references, not reconstructed authority.",
+    "Operational sequences, result mappings, source-defined judgments, traversals and transformations are represented descriptively in the five active families. No judgment, traversal or transformation population is instantiated.",
+    "Index inventories and reading routes are compressed into collection concepts; they preserve named roles and routes without asserting the full laws of absent targets or executable navigation semantics.",
+    "Reported conservation, source currentness, applicability and ownership are interpreted as assertions made by the candidate source, not independently established facts.",
+    "Pending compression/template dispositions, proposed traversal-row supersession and compact-read-model carrier selection remain unresolved. Source pending decisions are not converted into refusals or false claims.",
+    "Cross-document identity is linked only where the supplied source explicitly names the relationship; matching labels alone do not establish identity.",
+    "The selected interpretation basis is the supplied STDO 2.5.1-rc.2 metadata. Calculus and profile claims occurring inside the candidate source remain subject data."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "Any mutating complete update requires explicit acceptance and re-derivation of this exact plan."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 384,
+          "quote": "Mutation requires\nexplicit acceptance of this exact plan and re-derives it;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 382
+        }
+      ],
+      "key": "update_uses_exact_plan",
+      "kind": "requires_exact_accepted_plan",
+      "meaning": "The complete-update operation is constrained by the exact accepted plan; a digest by itself grants no operation authority.",
+      "source_key": "cohort_update",
+      "target_key": "complete_consumer_update_plan"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 586,
+          "quote": "The four relation kinds refine the rule of\n[FOUNDATIONS §2 Imports between members]",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 576
+        }
+      ],
+      "key": "relation_kinds_refine_cross_context_rule",
+      "kind": "classifies",
+      "meaning": "The four named semantic kinds classify explicit cross-context relations; the classification does not itself assert an actual import or confer authority.",
+      "source_key": "semantic_relation_kinds",
+      "target_key": "cross_context_relation"
+    },
+    {
+      "conditions": [
+        "Exact target, preserved/narrowed meaning, excluded instances and inverse law or absence are declared."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 609,
+          "quote": "A specialisation is a directional translation",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 604
+        }
+      ],
+      "key": "specialisation_is_directional_translation",
+      "kind": "is_translation_kind",
+      "meaning": "Specialisation belongs to the directional-translation kind, not unchanged import.",
+      "source_key": "semantic_specialisation",
+      "target_key": "semantic_relation_kinds"
+    },
+    {
+      "conditions": [
+        "The disambiguation candidates cross bounded contexts."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 641,
+          "quote": "When the candidates cross bounded\ncontexts, that carrier also declares the complete import, translation or\nequivalence relation §5 requires.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F6.%20Local%20constitutional%20binding",
+          "start_line": 637
+        }
+      ],
+      "key": "local_cross_context_binding_requires_relation",
+      "kind": "requires_declared_semantic_relation",
+      "meaning": "The owning local-resolution carrier must declare the complete applicable import, translation or equivalence relation.",
+      "source_key": "local_constitution_binding",
+      "target_key": "cross_context_relation"
+    },
+    {
+      "conditions": [
+        "The module realises a UX surface."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 94,
+          "quote": "It refines DESIGN_MODULE for modules that\nrealise a UX surface",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F4.%20UX",
+          "start_line": 93
+        }
+      ],
+      "key": "ux_refines_software_design",
+      "kind": "refines",
+      "meaning": "UX refines the software-design profile in its declared UX-module scope, retaining the refined profile's ownership of its rules.",
+      "source_key": "ux_profile",
+      "target_key": "software_design_profile"
+    },
+    {
+      "conditions": [
+        "For every concept in the supplied import table."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 94,
+          "quote": "the direction is from each source member named below to\nthis context, and the loss is none, for every concept in the table;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "start_line": 89
+        }
+      ],
+      "key": "declared_population_imports_into_frame_context",
+      "kind": "declared_semantic_import",
+      "meaning": "The listed source-owned concept population is imported toward the reference-frame-evaluation context unchanged and without loss. This relation records the explicit import declaration, not a transfer of authority or ownership.",
+      "source_key": "reference_frame_import_population",
+      "target_key": "reference_frame_engagement"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "The plan and outcomes can be described, but exact digest computation, all admission failures and complete external result semantics cannot be reconstructed or evaluated.",
+      "grounding": [
+        {
+          "end_line": 385,
+          "quote": "It uses the same\ncanonical JSON hashing rule.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 380
+        },
+        {
+          "end_line": 465,
+          "quote": "each other\ncondition of the fail-closed list above",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "start_line": 464
+        }
+      ],
+      "key": "manager_external_contracts",
+      "subject_key": "cohort_update",
+      "uncertainty": "The earlier adoption/fleet contracts, hashing rule and fail-closed list, plus FOUNDATIONS and ACTIVATION bodies, are not supplied. The finite records describe rather than implement staging, rollback, recovery and effect-end tracking."
+    },
+    {
+      "consequence": "Retain stated import, representation and result distinctions without inventing full owner definitions or assigning missing evaluation grounds.",
+      "grounding": [
+        {
+          "end_line": 551,
+          "quote": "as [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or\nindeterminate, states",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F5.%20Bounded-context%20semantic%20resolution",
+          "start_line": 550
+        }
+      ],
+      "key": "semantic_external_law",
+      "subject_key": "semantic_resolution_context",
+      "uncertainty": "FOUNDATIONS §2 import/representation law, §4 result law and AC-012 are referenced but absent. Their exact broader semantics are unresolved here."
+    },
+    {
+      "consequence": "No concrete activation packet, frame set, grants or Product-role graph is instantiated.",
+      "grounding": [
+        {
+          "end_line": 704,
+          "quote": "what the agent receives\nis the activation packet of REFERENCE_FRAME §11, and the step it performs\nis ACTIVATION §1.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F7.%20Collective%20reference-frame%20basis",
+          "start_line": 698
+        }
+      ],
+      "key": "collective_basis_external_packet",
+      "subject_key": "agent_frame_activation",
+      "uncertainty": "The full packet, activation law, SPEC_METHOD §6 lineage definitions and reference-frame template body are outside the supplied source."
+    },
+    {
+      "consequence": "The registry and cardinality are retained, but no tenant-specific law or work-item carrier choice can be inferred.",
+      "grounding": [
+        {
+          "end_line": 753,
+          "quote": "[SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), its terms and\n  rule 1;\n- the multi-build-tenant work-item relation:\n  [TICKETS §4](TICKETS.md#multi-build-tenant-independence).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F8.%20WHAT%2C%20HOW%20and%20work%20carriers",
+          "start_line": 750
+        }
+      ],
+      "key": "build_tenant_external_owners",
+      "subject_key": "build_tenancy",
+      "uncertainty": "SPEC_METHOD §11 and TICKETS' multi-tenant law, plus generic WHAT/HOW and carrier selection, are named but not supplied."
+    },
+    {
+      "consequence": "Apply only the local described freshness conditions; do not equate matching digests with semantic fidelity or infer all standalone decision powers.",
+      "grounding": [
+        {
+          "end_line": 923,
+          "quote": "which questions a derived surface decides on its own is ACTIVATION §2,\nStandalone scope.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F11.%20One%20constitutional%20surface%20and%20version%20boundary",
+          "start_line": 909
+        }
+      ],
+      "key": "derived_surface_external_staleness",
+      "subject_key": "derived_surface_conservation_and_staleness",
+      "uncertainty": "ACTIVATION §2, GLOSSARY §2 and EVALUATION §7 own additional staleness, watched-index, standalone-scope and digest-evidence semantics not supplied here."
+    },
+    {
+      "consequence": "Conservation and novelty remain attributed claims. No predecessor comparison, release qualification or family-table consequence is established.",
+      "grounding": [
+        {
+          "end_line": 1120,
+          "quote": "[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law) owns\nthe table's format and the standing of its consequences.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F13.%20Source%20dispositions",
+          "start_line": 1119
+        }
+      ],
+      "key": "product_definition_conservation_evidence",
+      "subject_key": "product_definition_source_ledger",
+      "uncertainty": "The predecessor and PRODUCT_DEFINITION §§1–3/earlier §4 are absent, as is the foundation-table standing law. The ledger's claims of full conservation cannot be independently checked."
+    },
+    {
+      "consequence": "The proposed supersession is not treated as accepted; the profile's full signature, OP laws and runtime layer contracts are not fabricated.",
+      "grounding": [
+        {
+          "end_line": 64,
+          "quote": "25 conserved and 1 proposed superseded, pending the product owner",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F2.%20Graph%20execution",
+          "start_line": 64
+        }
+      ],
+      "key": "graph_profile_pending_supersession",
+      "subject_key": "graph_execution_profiles",
+      "uncertainty": "One traversal-occurrence row awaits Product-owner disposition. ODD and TRAVERSAL_OCCURRENCE full definitions are absent."
+    },
+    {
+      "consequence": "Do not claim qualified conservation or accepted supersession for affected material. Preserve the explicit unresolved state and Product-owner decision boundary.",
+      "grounding": [
+        {
+          "end_line": 152,
+          "quote": "the ten compressions and the requirements template's bootstrap entrypoint have no disposition yet, so they are unresolved, pending the product owner's ruling on supersession by projected frames",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PROFILES.md#PROFILES%2F7.%20Source%20dispositions",
+          "start_line": 152
+        }
+      ],
+      "key": "profile_unresolved_compressions",
+      "subject_key": "profile_source_ledger",
+      "uncertainty": "Ten compressions and the requirements-template bootstrap entrypoint lack dispositions; traversal supersession is also pending. RELEASE §9's four-value disposition domain and receiving member ledgers are not supplied."
+    },
+    {
+      "consequence": "The index does not establish complete profile laws, current interpretation sufficiency, frame semantics or acceptance of compressed-summary supersession.",
+      "grounding": [
+        {
+          "end_line": 120,
+          "quote": "The predecessor's compressed\nsummaries keep their `unresolved` rows in the frontier, pending the\nproduct owner's acceptance of their proposed supersession.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FDocuments",
+          "start_line": 118
+        }
+      ],
+      "key": "catalogue_external_detail",
+      "subject_key": "method_document_catalogue",
+      "uncertainty": "Most indexed bodies, frame files/manifests, frontier and i3 README are absent. Collection descriptions compress those index entries and do not encode every external rule or execute the named tasks."
+    },
+    {
+      "consequence": "Retain compact read models as an intended member kind without choosing a carrier or treating projected frames as accepted replacement.",
+      "grounding": [
+        {
+          "end_line": 146,
+          "quote": "- compact read models for activations that need a compact method basis;\n  their carrier awaits the ruling on the rc.2 compression rows;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "start_line": 145
+        }
+      ],
+      "key": "compact_read_model_carrier",
+      "subject_key": "released_standards_library",
+      "uncertainty": "The carrier of compact read models awaits the compression-row ruling."
+    },
+    {
+      "consequence": "The library conservation statement does not settle carrier choice or establish release qualification.",
+      "grounding": [
+        {
+          "end_line": 182,
+          "quote": "the compressed read models under `authority_compressions/` are restated as\na member kind only, their carrier staying unresolved at the compression\nrows pending the product owner's ruling;",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FSource%20dispositions",
+          "start_line": 180
+        }
+      ],
+      "key": "library_conservation_pending_carrier",
+      "subject_key": "library_source_ledger",
+      "uncertainty": "The predecessor README is absent and compact-read-model carrier supersession remains owner-pending."
+    },
+    {
+      "consequence": "Import declarations and ownership are retained without synthesising missing concept meanings, frame tuple coordinates, result algebras or qualification criteria.",
+      "grounding": [
+        {
+          "end_line": 118,
+          "quote": "a concept of those kinds that another member defines,\nsuch as evaluation, basis, the activation step, the core results or\nqualification, is imported here, and this member defines it no second\ntime.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FImports%20into%20this%20context",
+          "start_line": 111
+        }
+      ],
+      "key": "reference_frame_imported_meanings",
+      "subject_key": "reference_frame_import_population",
+      "uncertainty": "FOUNDATIONS, ACTIVATION and EVALUATION owner clauses are not supplied. REFERENCE_FRAME §§5,8 refinement details are also absent; the table alone supplies references and import conditions."
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "profile": "ac.eval.actualuse-routing-evidence/1",
+  "scope": "Successful query/selector/source-routing facts only. No actor answers, content grades, usage or elapsed costs. Assess relevance separately; selecting coordinates does not establish acquired native content or semantic sufficiency.",
+  "candidates": [
+    {
+      "candidate": "claude",
+      "question": {
+        "id": "L3",
+        "question": "A maintenance team changes shared parser library L, producing subject S1 on basis B1. Old checks A, B and C all passed on S0/B0. For A, supported analysis covers its assertion, execution and reliance dependencies and establishes an applicable preservation relation to S1/B1; those dependencies are unaffected. B executes L. For C, the dependency view has no path from L, but its material dependency coverage is incomplete. A mandatory deployment gate G applies independently of change-based selection. Two agreeing suites were written by different model families but use the same implementation-derived expected-output generator and the same old input observations. A manager multiplies their nominal miss rates 0.1 x 0.1 and calls the result a 99% probability that the Product is correct. Give an applied decision on reusing A/B/C, skipping G, and that assurance claim. Then assess the bounded claim \"the required assurance for this change is complete\" under three separate followups: P, B and C produce valid current passing evidence, G passes, A's applicability is established, and every fixed required obligation and material join has valid support; F, B produces an admissible counterexample to a required predicate while C has no current return; U, there is no counterexample, B and G pass, and the only current information about C is a dispatch receipt with no return. State supported conclusions, refusal or uncertainty, what remains to be acquired or decided, and the limit of any acceptance claim. Cite exact source law; treat the stated hypothetical facts as facts.",
+        "kind": "application"
+      },
+      "successful_routing_and_source_reads": [
+        {
+          "step": 2,
+          "tool": "graph_query",
+          "arguments": {
+            "question": "Changed dependency L: reuse passing assurance evidence from S0/B0 for S1/B1, dependency coverage and preservation, mandatory gates, common-mode oracle agreement, probabilistic confidence, bounded assurance completeness with supported failed and undetermined results",
+            "depth": 2,
+            "token_budget": 4000
+          }
+        },
+        {
+          "step": 3,
+          "tool": "graph_select",
+          "arguments": {
+            "materialize": false,
+            "selectors": [
+              "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+              "urn:stdo-3:claude:i3:frame-index:result-algebra-and-conjunction"
+            ]
+          },
+          "selectors": [
+            {
+              "uri": "urn:stdo-3:claude:i3:frame-index:construction-and-assurance",
+              "scope": "Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, what an assertion establishes, what agreement proves, what is retained after a change and which gates stay applicable.",
+              "clause_refs": [
+                "urn:stdo-3:claude:i3:clause:ao-necessary-not-full",
+                "urn:stdo-3:claude:i3:clause:ao-pass-is-observation",
+                "urn:stdo-3:claude:i3:clause:ci-hash-alone",
+                "urn:stdo-3:claude:i3:clause:ci-mandatory-gate",
+                "urn:stdo-3:claude:i3:clause:ci-retention-conditions",
+                "urn:stdo-3:claude:i3:clause:ci-selection",
+                "urn:stdo-3:claude:i3:clause:cr-binds-a-z",
+                "urn:stdo-3:claude:i3:clause:cr-completion-evidence",
+                "urn:stdo-3:claude:i3:clause:cr-four-causes",
+                "urn:stdo-3:claude:i3:clause:cr-four-claims",
+                "urn:stdo-3:claude:i3:clause:cr-lawful-not-delivery",
+                "urn:stdo-3:claude:i3:clause:cr-prediction-error",
+                "urn:stdo-3:claude:i3:clause:fr-finite-examples",
+                "urn:stdo-3:claude:i3:clause:pd-agreement-shared-error",
+                "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+                "urn:stdo-3:claude:i3:clause:pr-local-success-alone"
+              ],
+              "residual_refs": []
+            },
+            {
+              "uri": "urn:stdo-3:claude:i3:frame-index:result-algebra-and-conjunction",
+              "scope": "Combine results or refine result values: the one core algebra, its standing, non-performance, the refinement and parent-value rules, and the conjunction with its three inputs, gaps, stale results and survival.",
+              "clause_refs": [
+                "urn:stdo-3:claude:i3:clause:availability-assessment-acceptance",
+                "urn:stdo-3:claude:i3:clause:conjunction-defined-once",
+                "urn:stdo-3:claude:i3:clause:conjunction-three-inputs",
+                "urn:stdo-3:claude:i3:clause:core-only-one",
+                "urn:stdo-3:claude:i3:clause:failure-survives-joins",
+                "urn:stdo-3:claude:i3:clause:gap-never-satisfied",
+                "urn:stdo-3:claude:i3:clause:no-mapping-raises-standing",
+                "urn:stdo-3:claude:i3:clause:not-performed-no-result",
+                "urn:stdo-3:claude:i3:clause:only-satisfied-establishes",
+                "urn:stdo-3:claude:i3:clause:parent-value-rule",
+                "urn:stdo-3:claude:i3:clause:refinement-maps-once",
+                "urn:stdo-3:claude:i3:clause:stale-satisfied-never-counts"
+              ],
+              "residual_refs": []
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "change-impact-and-evidence-reuse"
+          },
+          "documentary_source_bytes": 4671
+        },
+        {
+          "step": 5,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "parallel-derivation-and-mutual-assurance"
+          },
+          "documentary_source_bytes": 3305
+        },
+        {
+          "step": 6,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "conjunction-of-results"
+          },
+          "documentary_source_bytes": 7053
+        },
+        {
+          "step": 7,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "results"
+          },
+          "documentary_source_bytes": 40668
+        },
+        {
+          "step": 8,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "start_line": 790,
+            "end_line": 875
+          },
+          "documentary_source_bytes": 4883
+        },
+        {
+          "step": 9,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "start_line": 1357,
+            "end_line": 1408
+          },
+          "documentary_source_bytes": 2367
+        },
+        {
+          "step": 10,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "start_line": 875,
+            "end_line": 910
+          },
+          "documentary_source_bytes": 2161
+        },
+        {
+          "step": 11,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "assertions-and-observation"
+          },
+          "documentary_source_bytes": 3616
+        },
+        {
+          "step": 12,
+          "tool": "read_source",
+          "arguments": {
+            "path": "standards/EVALUATION.md",
+            "anchor": "5-acceptance"
+          },
+          "documentary_source_bytes": 4950
+        }
+      ]
+    },
+    {
+      "candidate": "codex",
+      "question": {
+        "id": "C3",
+        "question": "A maintenance team changes shared parser library L, producing subject S1 on basis B1. Old checks A, B and C all passed on S0/B0. For A, supported analysis covers its assertion, execution and reliance dependencies and establishes an applicable preservation relation to S1/B1; those dependencies are unaffected. B executes L. For C, the dependency view has no path from L, but its material dependency coverage is incomplete. A mandatory deployment gate G applies independently of change-based selection. Two agreeing suites were written by different model families but use the same implementation-derived expected-output generator and the same old input observations. A manager multiplies their nominal miss rates 0.1 x 0.1 and calls the result a 99% probability that the Product is correct. Give an applied decision on reusing A/B/C, skipping G, and that assurance claim. Then assess the bounded claim \"the required assurance for this change is complete\" under three separate followups: P, B and C produce valid current passing evidence, G passes, A's applicability is established, and every fixed required obligation and material join has valid support; F, B produces an admissible counterexample to a required predicate while C has no current return; U, there is no counterexample, B and G pass, and the only current information about C is a dispatch receipt with no return. State supported conclusions, refusal or uncertainty, what remains to be acquired or decided, and the limit of any acceptance claim. Cite exact source law; treat the stated hypothetical facts as facts.",
+        "kind": "application"
+      },
+      "successful_routing_and_source_reads": [
+        {
+          "step": 2,
+          "tool": "graph_query",
+          "arguments": {
+            "question": "Reuse prior passing checks after a shared parser library change: assertion execution reliance dependencies, applicable preservation relation, incomplete dependency coverage, mandatory independent gate; correlated verification suites and probabilistic Product correctness; bounded required assurance completion with counterexample or dispatch without return.",
+            "depth": 2,
+            "token_budget": 4000
+          }
+        },
+        {
+          "step": 4,
+          "tool": "graph_select",
+          "arguments": {
+            "selectors": [
+              "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention"
+            ],
+            "materialize": false
+          },
+          "selectors": [
+            {
+              "uri": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.change-impact-and-evidence-retention",
+              "scope": "Apply the source-bound constraint FOUNDATIONS.change-impact-and-evidence-retention with its declared conditions, references and task inputs.",
+              "clause_refs": [
+                "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.change-impact-and-evidence-retention"
+              ],
+              "residual_refs": []
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "change-impact-and-evidence-retention"
+          },
+          "documentary_source_bytes": 3381
+        },
+        {
+          "step": 6,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "parallel-assurance-and-provenance"
+          },
+          "documentary_source_bytes": 2244
+        },
+        {
+          "step": 7,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "result-algebra"
+          },
+          "documentary_source_bytes": 8911
+        },
+        {
+          "step": 8,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "result-conjunction"
+          },
+          "documentary_source_bytes": 8551
+        },
+        {
+          "step": 9,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "preservation-obligations"
+          },
+          "documentary_source_bytes": 2376
+        },
+        {
+          "step": 10,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "assertions-and-observations"
+          },
+          "documentary_source_bytes": 3195
+        },
+        {
+          "step": 11,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "risk-and-assurance-selection"
+          },
+          "documentary_source_bytes": 2342
+        },
+        {
+          "step": 12,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "premises-and-standing"
+          },
+          "documentary_source_bytes": 2330
+        },
+        {
+          "step": 13,
+          "tool": "read_source",
+          "arguments": {
+            "path": "package/standards/FOUNDATIONS.md",
+            "anchor": "bounded-construction"
+          },
+          "documentary_source_bytes": 6086
+        }
+      ]
+    }
+  ]
+}

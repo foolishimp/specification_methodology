@@ -1,0 +1,195 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "common_design_surface"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F1.%20Core%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F2.%20Style%20rules",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F3.%20Habits%20to%20remove",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F4.%20Good%20prose",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F5.%20Bad%20prose",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F6.%20Tone%20and%20authority%20layer",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F8.%20Layer%20checks",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F9.%20Current-surface%20writing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FPosition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FCurrent%20Goals",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FPurpose",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FOutcomes",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FConstraints",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Position",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Terms",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FGoal%20Model",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20End%20State",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FCurrent%20Product%20Definition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDeclaration%20And%20Authority",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExact%20Method%20And%20Optional%20Profile%20Basis",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FProduct-Role%20And%20Composition%20Map",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FFrame%20Declarations%20And%20Actor%20Binding",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FActivation%20And%20Return%20Topology",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDrift%20Locks%2C%20Invalidation%2C%20And%20Revision",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FStructure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FShared%20Surface",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FRegistry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design%2FADRs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FFile%20shape",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FBoundary%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FSupersession",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FOptional%20registry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/README_TEMPLATE.md#Tenant%20Root",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FAdopted%20Common%20Surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FADRs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FF_P%20Customization",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FFile%20shape",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FBoundary%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FSupersession",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FOptional%20registry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FGoal",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FRequirement%20Mapping",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FDesign%20Mapping",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FBoundaries",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json#preamble",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/docs/README_TEMPLATE.md#Project%20Docs",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements%2FRules",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements%2FREQ-PROJ-STARTER-001%20Replace%20me"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

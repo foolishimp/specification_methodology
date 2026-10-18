@@ -1,0 +1,161 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "publication_ledger"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F9.%20View%20shape",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F14.%20Review%20questions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F16.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FConstitutional%20intents",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FManifesto",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FObjectives",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FSingle%20truth%20surface",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FEvidence%20hierarchy",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEffective%20blanket",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FFour%20working%20refinements",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEpistemic%20status",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FRelation%20to%20the%20design%20profile",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FRepresentation%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FMaterialisation%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FAttribute%20ledger%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FAdmissibility",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FDiscrimination",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FPublishing%20a%20cut",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FPaired%20evidence%20collection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FIdentity-direction%20extraction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FVerification%20by%20treatment",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FNull-peer%20discrimination",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FOverlay%20publication",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FStorage%20shape",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FSaturation%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FComposition%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FProjection%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FControl%20plane%20and%20data%20plane",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FProof%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FWorld-model-driven%20development",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FOutput",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

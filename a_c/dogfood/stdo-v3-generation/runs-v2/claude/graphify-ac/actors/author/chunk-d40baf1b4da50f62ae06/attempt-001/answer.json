@@ -1,0 +1,1060 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "Eight comparative trials: T-01 context cap and decomposition, including tighter caps and an inseparable cannot-fit case; T-02 a usable small feature from sufficient but ambiguous intent; T-03 composition of two valid bounded results; T-04 an observed failure together with an unassessed required obligation; T-05 interruption, context clearing and actor replacement; T-06 a governing requirement changed during construction; T-07 structurally valid but behaviourally defective acceptance; T-08 sourced decision analysis with uncertainty and stale evidence. T-01's first fixture was run twice and reviewed; its successor CASE-2 was run twice but not assessed. The shared T-03/T-04 fixture and T-05 fixture were each run twice but not assessed. T-02, T-06, T-07 and T-08 were not run.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":74,
+          "quote":"| T-08 Broader process use | a sourced decision analysis with uncertainty and stale evidence | facts, assumptions, judgments and authority stay distinct; the result is independently assessable | not run |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Trials%20from%20the%20comparative%20baseline",
+          "start_line":74
+        }
+      ],
+      "key":"comparative_trials",
+      "label":"Comparative baseline trials"
+    },
+    {
+      "conditions":[],
+      "definition":"R-01 gives a fresh actor only this corpus for bounded activation on a declared subject, comparing the same task against the rc.2 corpus; its five fixture variants were each run twice, without assessment. R-02 additionally withholds validator folklore, author memory and whole-corpus loading; fixture R-01 variant V1 was run twice, without assessment.",
+      "exceptions":[],
+      "grounding":[{"end_line":89,"quote":"| R-02 No private knowledge | the same with validator folklore, author memory and whole-corpus loading withheld | the activation still succeeds or returns out_of_frame truthfully | fixture [R-01](../qualification/cases/R-01/CASE.md) variant V1 run twice; not assessed |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability","start_line":89}],
+      "key":"recoverability_trials",
+      "label":"Recoverability trials"
+    },
+    {
+      "conditions":[],
+      "definition":"CD-01 tests peer actors without a central coordinator or fixed executive role inventory, an uncertain external-effect handover, and a separately installed release-building executive configuration; mechanisms are ACTIVATION §1 Configuration, §3 Effects, §5 and EXECUTIVE_BASELINE §16. CD-02 tests identical requirements realised by software and by people plus software, including a faster plan merging required independent assessments and automating a required human decision; mechanisms are SPEC_METHOD §11 rules 1, 2, 4 and EVALUATION §3. CD-03 tests fresh-context resumption from a summary conflicting with current workspace and external-effect evidence, with one resolution outside the actor's grant; mechanisms are ACTIVATION §5, §3 and §7. All three are recorded as not run.",
+      "exceptions":[],
+      "grounding":[{"end_line":101,"quote":"The three cases below exercise them. A case here is\nnamed CD (common discriminator); the numbers in brackets are those of the\ndiscriminators it exercises.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators","start_line":99}],
+      "key":"common_discriminator_cases",
+      "label":"Common-discriminator actual-use cases"
+    },
+    {
+      "conditions":[],
+      "definition":"AR-01 places in each actual-use expectation set a necessary-condition assertion satisfiable by a wrong decision. AR-02 places in each set an observation shared by two recorded admissible returns with opposite correctness. AR-03 uses an expectation writer, actors and grader from one model family, with writer and actors reading the same owning sections. These three are not run and await product-owner selection of criterion 4's actual-use trial. AR-04 concerns changes to two owning sections and addition of nine against dependent curated frames, hashed expectation sets, interpretation and conservation readings. AR-04 was performed once by the candidate's author; its retention claims await nonauthor readback.",
+      "exceptions":[],
+      "grounding":[{"end_line":121,"quote":"The first three are exercised by the actual-use trial of\ncriterion 4 and are not run until the product owner selects it; the fourth\nwas performed once by the candidate's author.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators","start_line":119}],
+      "key":"assurance_relation_cases",
+      "label":"Assurance-relation cases"
+    },
+    {
+      "conditions":[],
+      "definition":"A reasoned reviewer reading constructs a discriminator's situation against the text and determines whether it yields the expected distinction, a counterexample or a contradiction, without execution. Its result is a review result under EVALUATION §4, produced by a reviewer meeting EVALUATION §3.",
+      "exceptions":[],
+      "grounding":[{"end_line":137,"quote":"A logical-review check is a reviewer's reasoned reading: the reviewer\nconstructs a discriminator's situation against the text and finds whether\nthe text yields the expected distinction, or finds a counterexample or a\ncontradiction, without running anything (P6). Its result is a review result\nunder [EVALUATION §4](EVALUATION.md#4-review-results), by a reviewer who\nmeets [EVALUATION §3](EVALUATION.md#3-independent-assessment).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":132}],
+      "key":"logical_review",
+      "label":"Logical-review check"
+    },
+    {
+      "conditions":[],
+      "definition":"The numbered member-discriminator situations are: 1 claimed derivation or independence; 2 edited rules accounted for while inherited deciding rules are omitted; 3 new foundations with unchanged rival consumer rules; 4 shorter candidate with unchanged independent entry reconciliations; 5 unified recurring rule retaining necessary domain exception; 6 outcome-driven development reduced to operational vocabulary; 7 several predecessor clauses implemented by one shared successor law; 8 deletion of an exception to shrink the core; 9 domain rule replaced by shared-law reference; 10 required generic rule owned only by optional profile; 11 functional helper promoted to public mechanism; 12 small interface used to claim a Markov object; 13 source-condition omission despite a_c schema validity; 14 faithful a_c fragment offered as whole-method interpretation; 15 a_c projection used instead of verbatim clause; 16 unresolved premise treated as unrestricted freedom; 17 multiple solutions within one constraint surface; 18 not-required changed to prohibited or preference to obligation; 19 ordinary entry through an earlier interpretation marked current; 20 representation differing from information; 21 content change without identity change; 22 producer-consumer type/domain/precondition incompatibility, including same-shaped fields; 23 failed assessment A plus uncovered required B; 24 planned assessment carrying another subject's judgment; 25 interdependent context exceeding one actor; 26 byte fit with irrelevant material obscuring a required dependency; 27 post-trial frame/task change or instructions giving the expected answer; 28 author self-review in a fresh context, including a received contribution; 29 frontier work outside current attention; 30 discovered obligations or destination changed to pass the current candidate; 31 directly authorised task fitting a sufficient frame; 32 peer configuration without central Executive or familiar roles; 33 work redistribution with uncertain effects; 34 optimality claimed from familiarity, persistence or self-organisation; 35 compact result hiding a material blocker; 36 changed dependency or observation invalidating a claim; 37 relevant rule packet lacking material context or authority; 38 summary conflicting with workspace after fresh-context resumption; 39 interruption leaving partly written work; 40 successful parse or map; 41 carrier/process change proposed as new law; 42 requirements realised by software, humans or mixed process; 43 optimisation weakening independent assessment or required human authority; 44 one calculus across environments or one actor across operation kinds; 45 structurally valid a_c human-process model; 46 two loci deciding one question; 47 member/profile result refinements; 48 lifecycle/classification labels deciding admission, compliance or closure; 49 preserved heading with changed obligation or superseded row naming only old location; 50 result-returning frame; 51 claimed functor or categorical join; 52 applied rewrite/refinement. Number n has logical check L-n. Cases additionally map 22→T-03, 23→T-04, 25→T-01, 32/33→CD-01, 36→T-06, 38→CD-03, 39→T-05, 40→T-07, 42/43→CD-02; 22, 23, 36, 39 and 40 have only partial case coverage.",
+      "exceptions":[],
+      "grounding":[{"end_line":156,"quote":"Each discriminator's expected distinction is\nthe one the common conformance table of the construction specification\nstates (`specification/conformance/README.md`, Member Conformance, in the\nsource project, outside this package); this member does not restate it,\nand a reviewer acquires it with the table below.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":152}],
+      "key":"member_discriminators",
+      "label":"Member-discriminator catalogue and case mapping"
+    },
+    {
+      "conditions":[],
+      "definition":"J53 concerns locally passing members that decide a shared question differently; J54 concerns a reviewer finding replacement text clear without an owner accepting its changed meaning; J55 concerns five satisfied member criteria with a sixth missing, stale or falsified. They are integrated construction/closure checks, not member predicates.",
+      "exceptions":[],
+      "grounding":[{"end_line":216,"quote":"The construction and integrated closure checks of the common conformance\ntable are not member predicates. The integrated working assessment reads\nthem over the whole candidate, and the cross-family acceptance review\nevaluates them before closure:","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":213}],
+      "key":"integrated_closure_checks",
+      "label":"Integrated closure checks J53–J55"
+    },
+    {
+      "conditions":[],
+      "definition":"Nine universal-construction situations: UC-1 local tasks pass but required end-to-end feature fails; UC-2 lawful operations fail chosen outcome constraints; UC-3 a bug report may concern implementation, requirements or missing observations; UC-4 requirements weakened to fit current realisation; UC-5 prediction agrees while outcome is absent or disagrees while outcome holds; UC-6 name-only strategy choice or cheaper plan losing assurance; UC-7 invariant-preserving recursion without delivery; UC-8 exhausted limit, newly exposed work or continuing maintenance; UC-9 disturbance contradicting cached success. Twelve assurance situations: AS-1 local postconditions fail next preconditions or final implication to Z; AS-2 correct histogram keys but wrong counts; AS-3 observationally indistinguishable states with opposite obligation truth; AS-4 expected answer copied from implementation with requirement digest citation; AS-5 sound checker returning satisfied or indeterminate on identical observations; AS-6 shared erroneous interpretation, fixture or contribution; AS-7 multiplying miss rates without conditional independence or equating defect-injection score with product correctness probability; AS-8 finite examples or schema-valid formula claimed as universal proof; AS-9 changed requirement with silently retained answers/evidence; AS-10 implementation/environment change with only requirement-test provenance; AS-11 isolated repair preserving unchanged obligation and evidence conditions; AS-12 selection omitting an obligation or costing more than saved execution. Each maps to its L-UCn/L-ASn review. Additional mappings are UC-9→CD-03, AS-2→AR-01, AS-3→AR-02 and finite oracle assurance, AS-6→AR-03, AS-7→finite oracle assurance, AS-9→AR-04, AS-10→finite oracle assurance.",
+      "exceptions":[],
+      "grounding":[{"end_line":254,"quote":"The construction specification adds, beside the member discriminators\nabove, nine universal-construction discriminators and twelve assurance\ndiscriminators, with their expected distinctions in the same file and not\nrestated here, assessed under criterion 5 within a member's declared\nresponsibility. Each is numbered UC-n or AS-n in the order the governing\nspecification lists it. A logical-review check L-UCn or L-ASn is a planned\nassessment without a closed result until a review records it; a case is\nexercised only when it has been run and assessed; the finite oracle named\nfor three of them is mechanical evidence on a finite model and establishes\nneither fidelity nor semantic conformance\n([EVALUATION §2](EVALUATION.md#2-separation)).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators","start_line":244}],
+      "key":"universal_assurance_discriminators",
+      "label":"Universal-construction and assurance discriminator catalogue"
+    },
+    {
+      "conditions":[],
+      "definition":"The source-disposition account records, without deciding, conservation of eight comparative trials; new builder-history counterexamples derived from common inputs; naming from the construction specification of 52 member situations, J53–J55 as three of seven integrated-closure situations, and 21 universal/assurance situations; and new mappings, logical-review checks and §4 cases. Expected distinctions are not restated, and the member carries no predecessor claim. Primary counterexample sources are to be reacquired when a case is designed for execution.",
+      "exceptions":[],
+      "grounding":[{"end_line":303,"quote":"This section records dispositions and decides nothing. The comparative\nbaseline's eight trials are conserved as §2. The builder-history\ncounterexamples are new, derived from the common inputs; their primary\nsources are reacquired when a case is designed for execution. The\nsituations of the common discriminators in §5 (52 member discriminators,\nthree of the seven integrated-closure discriminators, J53 to J55, and the\n21 universal-construction and assurance discriminators) are named from\nthe construction specification in the header, whose expected distinctions\n§5 does not restate; their mapping, the logical-review checks and the\ncases of §4 are new. This member carries no\npredecessor claim.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F6.%20Source%20dispositions","start_line":293}],
+      "key":"conformance_source_account",
+      "label":"Conformance source-disposition account"
+    },
+    {
+      "conditions":["Applies to boundaries for which the optional profile is adopted."],
+      "definition":"Tier-3 optional realisation-design profile, covering ontology-first derivation, proportional sequencing, decision completeness, frame conservation, constructability, foundation selection, entity/authority/admission/function completeness, Prime atoms and contraction, IACS, three-view design, reconstruction, computational realisation, module taxonomy, realisation rules, review, adoption and bound-runtime identity defaults. It imports FOUNDATIONS, ACTIVATION, EVALUATION, IDENTITY, SPEC_METHOD, ASSURANCE, TICKETS and RELEASE without redefining their objects. ODD and UX refine or bound it within their own scope.",
+      "exceptions":[],
+      "grounding":[{"end_line":26,"quote":"The graph-execution and\nUX profiles ([ODD](ODD.md) and [UX](UX.md)) refine or bound this one where their own scope\napplies.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":24}],
+      "key":"design_profile",
+      "label":"DESIGN_MODULE optional profile"
+    },
+    {
+      "conditions":["A boundary is governed by this profile."],
+      "definition":"Profile-to-tier-2 binding: ASSURANCE's declared carrier inventory binds to IACS; accepted ontology and design bind to accepted Ontology and target design; domain, sequence and state projections bind to the three-view asset; decision-completeness and co-evolution conditions bind to decision_complete(B) and co_evolution_admissible(B). Tier-2 law applies unchanged, only within governed boundaries; changed definitions of any bound object require re-evaluation of the binding.",
+      "exceptions":[],
+      "grounding":[{"end_line":42,"quote":"Direction: profile to tier 2; preserved meaning: the tier-2 law applies\nunchanged to the bound objects; narrowed scope: boundaries this profile\ngoverns; invalidation: a change of this profile's definition of any bound\nobject re-evaluates the binding (P1, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":39}],
+      "key":"assurance_profile_binding",
+      "label":"Profile binding to ASSURANCE"
+    },
+    {
+      "conditions":[],
+      "definition":"Performed evaluations return a FOUNDATIONS §4 core result directly or through two locally mapped refinements: reconstruction decisions and cross-view axiom verdicts. Ontology and design verdicts are owner dispositions under ACTIVATION §3. Other closed vocabularies are design-record entries, not results: function derivation, entity-lifecycle cells, discovery/admission-form exclusions, competing paths, IACS revision classes, reference mappings, algorithmic obligation dispositions and module roles. Evaluating a record yields a separate core result. An exclusion entry not_applicable leaves the excluded obligation without a result; a not_applicable axiom verdict is instead a value of a declared predicate disjunction including non-application.",
+      "exceptions":[],
+      "grounding":[{"end_line":73,"quote":"Purpose and material\nrelation: a consumer that combines this profile's outcomes with other\nresults reads each result in the one core and never reads a record entry\nas a result (P5, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":70}],
+      "key":"design_results_and_records",
+      "label":"Results, dispositions and design-record entries"
+    },
+    {
+      "conditions":[],
+      "definition":"Realisation-design discipline aims to reduce ambiguity, entropy, avoidable technical debt, hidden authority, hidden mutation and semantic drift; increase refactorability; and preserve auditable reconstruction evidence. Its bias is low coupling, modular composition, immutable typed carriers, total or nearly total transforms and explicit effect boundaries. It applies across module boundaries, schema/carrier families, entity/record design and interface contracts, without a language or runtime monopoly. A module is one possible finite, inspectable intermediate traversal unit, not the only one.",
+      "exceptions":[],
+      "grounding":[{"end_line":98,"quote":"The goals are to reduce ambiguity, reduce\nentropy, eliminate avoidable technical debt, increase refactorability,\nreduce hidden authority, hidden mutation and semantic drift in realisation\ncode, and preserve enough evidence that later reviewers can audit,\nrefactor and reconstruct why the realisation took its current shape (P2,\nP6). The profile is therefore about realisation design and implementation\nshape.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose","start_line":92}],
+      "key":"realisation_design_purpose",
+      "label":"Realisation design purpose and bounded units"
+    },
+    {
+      "conditions":["Within a boundary governed by the profile."],
+      "definition":"Preferred functionally biased shape: meaning should reside in explicit typed carriers and transforms; imperative coordination should remain subordinate to admitted truth; side effects should be isolated at explicit boundary modules; shared mutable state should be minimised and justified. Functional design discipline is required; a functional programming language is not.",
+      "exceptions":[],
+      "grounding":[{"end_line":142,"quote":"The\nprofile does not require a functional programming language; it does\nrequire a functional design discipline. A Python, Scala, TypeScript,\nKotlin or Java implementation may each satisfy it if it keeps semantic law\nin explicit carriers and transforms rather than hidden orchestration.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition","start_line":138}],
+      "key":"functional_design_discipline",
+      "label":"Functional design discipline"
+    },
+    {
+      "conditions":["Within boundaries this profile governs."],
+      "definition":"Core realisation rule owned once by SPEC_METHOD §2 Realisation shape and refined by the profile's subsequent rules. Its stated diagnostic is that a design is too imperative and coupled when learning its meaning requires inspecting orchestration.",
+      "exceptions":[],
+      "grounding":[{"end_line":151,"quote":"The core rule, with the test that a design is too imperative and too\ncoupled when a reader has to inspect orchestration to learn what the\nsystem means, is stated once in\n[SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape),\nscoped to boundaries this profile governs; every rule below refines it\n(P1, P6; rc.2 #3-core-rule).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule","start_line":146}],
+      "key":"realisation_core_rule",
+      "label":"Referenced realisation core rule"
+    },
+    {
+      "conditions":["An actor designs, implements or reviews a governed boundary; instance premises are adopted with the profile, not derived from foundations."],
+      "definition":"F17 software-design family imports F1 authority kinds/frames, F2 transitions and configuration, F3 results, F4 reuse, F6 claims and acceptance, F8 identity, F10 constitutional chain, F12 project binding, F13 work carriers and F18 graph-native construction. Stated commitment standings: P0 recovered; P1, P2, P3, P4a, P6 independent; P4b derived from P0/P2 assuming step-produced facts cannot be reacquired; P5 derived from P0/P6 with P0's open-world premise. I1: Product outcomes/capabilities decided and profile adopted for named boundary. I2: meaning can reside in typed carriers/transforms or orchestration/helpers/open payloads/shared state, potentially multiply. I3: bounded actors work and later change the boundary without generally retaining earlier design reasoning. I4: mechanisms can be local or reused, with recurring computation. The table accounts for the head, §§1–12 and binding; §13 records only dispositions. The table is new, has no rc.2 row, and separates consequences from owner-chosen domain/policy commitments.",
+      "exceptions":[],
+      "grounding":[{"end_line":182,"quote":"Standing of the commitments cited\n([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)): P0 recovered; P1, P2,\nP3, P4a and P6 independent; P4b derived from P0 and P2, with P0's premise\nthat step-produced facts are not re-acquirable; P5 derived from P0 and P6,\nwith P0's open-world premise. Its instance premises hold where a project\nadopts this profile for a boundary; they are adopted with it and do not\nfollow from the foundations (P1, P6):","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":176}],
+      "key":"software_design_family",
+      "label":"F17 foundation-to-law account"
+    },
+    {
+      "conditions":[],
+      "definition":"Source-declared consumer map, retaining owner separation: purpose/core→SPEC_METHOD §2, UX §2/relations, WORLD_MODEL §4, ODD §11.5D A15; results/records→reconstruction, cross-view evaluation and gate; closure evaluators→Adoption, review questions 4/5/7/9/17–19 and ingress/truth checks; typing→UX §10 six seams, CONFORMANCE discriminator 11, questions 12/18; ontology→PRODUCT_DEFINITION §3, ASSURANCE §§14–15, Adoption, questions 21/41–48; sequencing→SPEC_METHOD §4 Procedures, ASSURANCE §14, gate, question 40; frame conservation→ACTIVATION Intake, EXECUTIVE_BASELINE §§8/14, post-ticket review; constructability/selection→EXECUTIVE_BASELINE §§11/14, ASSURANCE §14, foundation checklist, questions 49–56; lifecycle/function→ASSURANCE §15, Ontology evidence, questions 42/44/46; authority/admission→ACTIVATION Intake, ODD §11.5B, Ontology evidence, question 43; Prime→SPEC_METHOD §3, carrier consolidation, Ontology evidence, Adoption, questions 10/45; IACS→ASSURANCE §§2/7/14/15, UX §§12/14 question 13, WORLD_MODEL §4, questions 13–16/22; three views→ASSURANCE §§7/14/15, UX §§12/14 question 13, questions 35–39; gate→SPEC_METHOD §2 Reconstruction litmus, ASSURANCE §14, ontology/decision completeness, post-ticket review and hard-gate checklist; computational projection→ACTIVATION Intake, ASSURANCE §13; module taxonomy→ASSURANCE §§2/7/14/15/16, Adoption, question 23; immutable/total→UX §2, question 6, carrier/purity checks; effects/coupling→UX §§6/2, questions 1–3, effect/coupling checks; governance/strategy→question 20 and governance checklist only; optimisation→questions 24/25 and cleanup checklist only, with SPEC_METHOD §4 owning cross-boundary re-entry; recurrence→ASSURANCE §13, capability selection, Prime contraction, taxonomy, questions 26/27; post-ticket review→question 28 and closure checklist only, applying rather than governing ACTIVATION §4 and EVALUATION §5; interfaces→questions 8/11 and one-owner checklist only, citing rather than governing SPEC_METHOD §7; review→ACTIVATION §2 and Adoption; adoption→SPEC_METHOD §2, ASSURANCE §14, UX §2, with PRODUCT_DEFINITION §7 owning adopter authority; runtime identity defaults→IDENTITY §7 Derived domain overrides. ASSURANCE consumes through the explicit binding; UX refinements apply to UX surfaces; recurrence refines TICKETS §6; selection refines FOUNDATIONS Shared machinery; ACTIVATION Intake consumes frame evidence only for governed boundaries.",
+      "exceptions":[],
+      "grounding":[{"end_line":269,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":268}],
+      "key":"design_rule_consumers",
+      "label":"Declared rule consumers and ownership direction"
+    },
+    {
+      "conditions":["The profile operates inside a graph-execution-governed Product."],
+      "definition":"A deterministic module is a realisation cut inside the graph program. Review first identifies whether the boundary is an operative graph traversal. Typed asset-state movement follows outcome traversal, then declarative graph carriers (GTL and ABG), then deterministic module realisation.",
+      "exceptions":[],
+      "grounding":[{"end_line":290,"quote":"If the boundary represents product\nmovement from one typed asset state to another, the governing shape is:\n\n1. outcome traversal under the graph-execution profile;\n2. the declarative graph carrier structure (GTL and ABG in that profile's\n   terms); and\n3. deterministic module realisation under this profile.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation","start_line":284}],
+      "key":"graph_realisation_alignment",
+      "label":"Graph traversal and deterministic realisation alignment"
+    },
+    {
+      "conditions":["The profile governs the changed boundary."],
+      "definition":"Three overriding boundary-closure evaluators: authority seam closure, essential carrier consolidation and enforcement after proof. Each design or implementation change should be judged against them; they are not optional heuristics. Better ergonomics, tests or static-checker output with failure of an evaluator is not real progress under the profile.",
+      "exceptions":[],
+      "grounding":[{"end_line":315,"quote":"When this profile governs a boundary, each design or implementation change\nshould be judged against three overriding evaluators (P6, P2;\nrc.2 #3b-boundary-closure-evaluators). They are not optional heuristics. A\nchange that improves local ergonomics, test output or static-checker\noutput but fails one of them is not real progress under this profile.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators","start_line":311}],
+      "key":"boundary_closure_evaluators",
+      "label":"Overriding boundary-closure evaluators"
+    },
+    {
+      "conditions":[],
+      "definition":"Closure of a semantic authority seam requires one authoritative carrier or contract, with no surviving silent reconstruction path when that carrier is removed. Query and projection closure additionally includes coherence with named admitted source truth.",
+      "exceptions":[],
+      "grounding":[{"end_line":328,"quote":"The test: if the authoritative carrier\nwere removed, would the system fail closed, or would another path silently\nreconstruct the same meaning? If meaning survives by reconstruction, the\nseam is not closed.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure","start_line":325}],
+      "key":"authority_seam",
+      "label":"Authority seam closure"
+    },
+    {
+      "conditions":[],
+      "definition":"Consolidation toward the few real identity-bearing carrier families, beginning with declared IACS and default subordination of Subordinate Payloads. Its progress measure is sharper/fewer families, less duplicate authority and less boundary inflation, rather than additional wrappers, branch-local peer types or public records mirroring payload details.",
+      "exceptions":[],
+      "grounding":[{"end_line":349,"quote":"Each change should collapse the slice to the few real identity-bearing\ncarrier families (P3, P2; rc.2 #2-essential-carrier-consolidation). This\nmeans declaring the IACS first (§6), keeping Subordinate Payloads\nsubordinate by default, and avoiding fragment classes, interfaces or result\nrecords created only to satisfy typing, serialisation or convenience\nextraction. Progress is fewer, sharper carrier families, less duplicate\nauthority and less boundary inflation; not one more wrapper layer, one more\nbranch-local peer type, or one more public record that only mirrors\npayload detail.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation","start_line":341}],
+      "key":"carrier_consolidation",
+      "label":"Essential carrier consolidation"
+    },
+    {
+      "conditions":[],
+      "definition":"Language-independent sequence: parse, validate or construct; explicitly admit and narrow; then enforce the already-proved shape with typing, schemas, validators, contracts or codecs. Examples include mypy --strict, sealed algebraic type plus parser, or compiler-enforced sum type plus decoder.",
+      "exceptions":[],
+      "grounding":[{"end_line":356,"quote":"Typing, schemas, validators, contracts and codecs exist to lock in a seam\nthat has already been made real (P6, P1; rc.2 #3-enforcement-after-proof).\nParse, validate or construct first; admit and narrow the boundary\nexplicitly; then use types or schemas to enforce the proved shape.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof","start_line":353}],
+      "key":"enforcement_after_proof",
+      "label":"Proof before enforcement"
+    },
+    {
+      "conditions":[],
+      "definition":"Ingress conversion receives foreign input, parses/validates/normalises once, constructs admitted local carrier truth, and exposes only that local truth to semantic kernels.",
+      "exceptions":[],
+      "grounding":[{"end_line":372,"quote":"Foreign, dynamic or weakly typed input is lawful only at ingress (P1, P5;\nrc.2 #3b-ingress-collapse-rule). Once admitted, it collapses immediately\ninto local carrier truth before semantic transforms begin. The required\nshape: receive foreign input; parse, validate or normalise it once;\nconstruct local admitted carrier truth; consume only that local truth in\nsemantic kernels.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse","start_line":367}],
+      "key":"ingress_collapse",
+      "label":"Ingress collapse"
+    },
+    {
+      "conditions":["The profile governs repo-authored Python at the adopted boundary."],
+      "definition":"Python semantic design uses fully annotated callable parameters/returns and closed typed carriers, including tests, scripts and support code at the production bar. Closed forms may include dataclass, TypedDict, Protocol, Literal, Enum or equivalents. Strict static checking, such as mypy --strict or an equivalent strict configuration, is required.",
+      "exceptions":[],
+      "grounding":[{"end_line":416,"quote":"When this profile governs a Python boundary, repo-authored Python is fully\ntyped (P1; rc.2 #4a-python-typing-rule): every function, method and\ncallable surface has explicit parameter and return annotations; semantic\ncarriers are closed and typed; and repo-authored tests, scripts and\nsupport code are typed too, with no lower bar than production code.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing","start_line":412}],
+      "key":"python_boundary",
+      "label":"Governed Python boundary"
+    },
+    {
+      "conditions":[],
+      "definition":"Engineering Ontology of one designed boundary consists of entities, identities, relationships, invariants, lifecycle, authority, atomic functions, higher-order composition, effects and projections. Once accepted it is the prior semantic-design authority, subordinate to constitutional intent, Product, requirements and applicable graph/domain profiles. Accepted target design remains the structural HOW: topology, interfaces, carrier placement, module boundaries, algorithms and local realisation. A class, schema, endpoint, command or carrier inventory alone is not an Ontology.",
+      "exceptions":[],
+      "grounding":[{"end_line":495,"quote":"Ontology =\n  entities + identities + relationships + invariants + lifecycle\n  + authority + atomic functions + higher-order composition\n  + effects + projections","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design","start_line":492}],
+      "key":"accepted_ontology",
+      "label":"Ontology and accepted semantic basis"
+    },
+    {
+      "conditions":["For one governed boundary B."],
+      "definition":"U(B) is the unresolved subset of complete material relations M(B). decision_complete(B) holds iff U(B) is empty, M(B) is jointly satisfiable, and every network admitted by M(B) is semantically equivalent under governing Product, requirements and accepted design relations. co_evolution_admissible(B) iff decision_complete(B). design_gate(B) is the smallest causally closed affected set needed to establish decision completeness.",
+      "exceptions":[],
+      "grounding":[{"end_line":517,"quote":"U(B) = unresolved(M(B))\ndecision_complete(B) iff\n  U(B) = empty\n  and M(B) is jointly satisfiable\n  and every network admitted by M(B) is semantically equivalent under the\n      governing Product, requirements and accepted design relations\nco_evolution_admissible(B) iff decision_complete(B)\ndesign_gate(B) =\n  the smallest causally closed affected set needed to establish\n  decision_complete(B)","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing","start_line":508}],
+      "key":"design_sequencing",
+      "label":"Decision completeness and proportional sequencing"
+    },
+    {
+      "conditions":["For one governed boundary B."],
+      "definition":"M(B) includes entities, identities, relationships, cardinalities, invariants, authorities, authority transitions, functions, higher-order composition laws, topology, lifecycle states/transitions, public contracts, externally observable Product meaning, declared domains/admission conditions, failure/refusal routes, effect/closure laws, projections, module mappings and material algorithmic obligations. Ontology, Prime contraction, IACS, target design, three views, public contracts, module boundaries, implementation and tests are projections of this single network at different reasoning altitudes.",
+      "exceptions":[],
+      "grounding":[{"end_line":586,"quote":"M(B) =\n  entities + identities + relationships + cardinalities + invariants\n  + authorities + authority transitions + functions\n  + higher-order composition laws + topology\n  + lifecycle states and transitions + public contracts\n  + externally observable Product meaning\n  + declared domains and admission conditions\n  + failure and refusal routes + effect and closure laws\n  + projections + module mappings + material algorithmic obligations","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design","start_line":578}],
+      "key":"material_relation_network",
+      "label":"Complete material-relation network M(B)"
+    },
+    {
+      "conditions":[],
+      "definition":"A material design frame declares its governing accepted frames/relations, proposed action's bounded affected relation set, inherited invariants, crossing authority/composition seams, and subordinate frames opened by unresolved material distinctions. Global and local are relative to the selected frame. Governing frames form a constraint network, possibly with several parents rather than a compulsory hierarchy.",
+      "exceptions":[],
+      "grounding":[{"end_line":629,"quote":"Each material design frame identifies:\n\n- the governing frames and accepted relations from which it derives;\n- the bounded affected relation set of the proposed action;\n- the applicable inherited invariants;\n- the authority and composition seams crossing that set; and\n- the subordinate frames opened by unresolved material distinctions.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29","start_line":623}],
+      "key":"bounded_design_frame",
+      "label":"Bounded design frame"
+    },
+    {
+      "conditions":[],
+      "definition":"Native constructability is the selected substrate's ability to construct the design's required identities, relationships, transitions, authority boundaries, effects, lifecycle, composition, publication and retirement behaviour. It is an acceptance obligation, not a prescribed implementation.",
+      "exceptions":[],
+      "grounding":[{"end_line":686,"quote":"A semantically coherent design is not acceptable when its selected\nsubstrate cannot natively construct the required identities,\nrelationships, transitions, authority boundaries, effects, lifecycle,\ncomposition, publication and retirement behaviour (P2, P5;\nrc.2 #native-constructability-before-design-acceptance-stdo-up-002). A missing\nsubstrate capability remains an explicit design gap or triggers lawful\nre-entry (SPEC_METHOD §4); it is not hidden behind a reference bridge,\nadapter, filesystem runner, test double or promised future feature (P6;\nSPEC_METHOD §7 Bridge prohibition). This is a constructability obligation,\nnot a prescribed implementation; the consumer chooses the substrate and the\nevidence mechanism (P0).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29","start_line":676}],
+      "key":"native_constructability",
+      "label":"Native constructability"
+    },
+    {
+      "conditions":["Before constructing a material generic capability, common mechanic or algorithm, or selecting a material dependency."],
+      "definition":"Proportional bounded foundation-selection procedure refining FOUNDATIONS §4 Shared machinery. It compares candidate compositions drawn from admitted project foundations; language/runtime/platform/standard-library capabilities; accepted predecessor or immutable-lineage realisations usable as evidence; maintained external foundations where dependencies are permitted; and bounded local implementation. Constructability alone does not establish local construction as best.",
+      "exceptions":["No package survey or ledger is required for a trivial helper whose choice cannot materially affect authority, Product behaviour, lifecycle cost or the accepted design network."],
+      "grounding":[{"end_line":714,"quote":"The bounded candidate population draws applicable compositions from:\nfoundations already admitted in the current project; language, runtime,\nplatform or standard-library capabilities; accepted predecessor or\nimmutable-lineage realisations usable as evidence; maintained external\nfoundations where the Product permits a dependency; and a bounded local\nimplementation (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":709}],
+      "key":"foundation_selection",
+      "label":"Capability and foundation selection"
+    },
+    {
+      "conditions":["Among lawful candidate compositions on the current declared basis."],
+      "definition":"Dominance holds only if every material decision dimension is comparable or evidenced non-discriminating, one composition is no worse on every comparable dimension and strictly better on at least one. Material unknowns that could reverse this prevent dominance. Materially incomparable lawful candidates form an explicit undominated frontier.",
+      "exceptions":[],
+      "grounding":[{"end_line":772,"quote":"One lawful candidate composition dominates another on the current basis\nonly when every material decision dimension is comparable or evidenced as\nnon-discriminating between them, it is no worse on every comparable\ndimension, and it is strictly better on at least one. A material unknown\nthat could reverse the relation prevents dominance and remains a gap. A\ndominated candidate cannot be selected unless new evidence or another\nmaterial dimension invalidates the dominance relation; therefore a local\nrebuild of generic mechanics is inadmissible when an existing lawful\nfoundation composition dominates it. Unused feature breadth alone does not\nestablish dominance and may itself add lifecycle cost (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":763}],
+      "key":"candidate_dominance",
+      "label":"Evidence-bounded dominance and frontier"
+    },
+    {
+      "conditions":["For identity-bearing entities and independently governed value families inside the active boundary."],
+      "definition":"Logical-completeness matrix or equivalent closed representation identifies Entity, Identity, Authority owner, Declare/create, Read/project, Update/transition and Delete/retire, alongside Ontology relationships, cardinalities, invariants and lifecycle states. These are completeness questions rather than a mutable-CRUD mandate. Entity lifecycle describes domain states/transformations, distinct from ASSURANCE §16's build/release/deploy/observe/retire operational module lifecycle.",
+      "exceptions":["Subordinate Payloads and value objects inherit their owner's lifecycle and authority without a ceremonial peer row unless they pass the Promotion Test."],
+      "grounding":[{"end_line":823,"quote":"The matrix applies to identity-bearing entities and independently governed\nvalue families (P3, P2). A Subordinate Payload or value object inherits the\nlifecycle and authority of its owning entity unless it passes the\nPromotion Test (§6); it does not require a ceremonial peer lifecycle row.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness","start_line":820}],
+      "key":"entity_lifecycle_matrix",
+      "label":"Entity and lifecycle completeness matrix"
+    },
+    {
+      "conditions":["For every Ontology function or lifecycle transition crossing a semantic, authority, admission, effect, persistence or public boundary."],
+      "definition":"Authority is part of Ontology from design inception. Matrix or equivalent closed representation distinguishes Function/transition, Proposer, Evaluator, Verifier, Admitter, Executor, Projector and Retirement owner. It separates actor identity from authority, capability from admitted authority for the current basis, each operational role from the others, attribution from permission, and domain-meaning ownership from runtime-effect ownership.",
+      "exceptions":["Pure subordinate helpers inherit their owning Ontology function's authority envelope and need no peer row unless crossing one of the specified boundaries."],
+      "grounding":[{"end_line":857,"quote":"The model distinguishes actor identity from authority; available\ncapability from authority admitted for the current basis; proposal from\nevaluation, verification, admission, execution, projection and retirement;\nattribution from permission; and ownership of domain meaning from\nownership of runtime effects (P6; FOUNDATIONS §2 Authority kinds).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model","start_line":853}],
+      "key":"ontology_authority_model",
+      "label":"Ontology authority matrix"
+    },
+    {
+      "conditions":["For every consequential entity-transition domain."],
+      "definition":"Complete relation deciding which candidate transformation becomes durable entity truth, covering entity identity, predecessor basis, authority scope, candidate family, decision cardinality, admission predicate, resulting durable fact and supersession law. A matrix naming who admits does not establish this relation. Singularity attaches to the complete decision relation, not to one actor, callable or component.",
+      "exceptions":[],
+      "grounding":[{"end_line":892,"quote":"For every consequential entity-transition domain, design evidence contains\nthe complete transformation-admission relation over entity identity,\npredecessor basis, authority scope, candidate family, decision\ncardinality, admission predicate, resulting durable fact and supersession\nlaw, through the authority matrix or an equivalent closed representation\n(P6, P4b):","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":887}],
+      "key":"transformation_admission",
+      "label":"Complete transformation-admission relation"
+    }
+  ],
+  "constraints":[
+    {
+      "applies_to_keys":["comparative_trials"],
+      "conditions":["The corresponding trial situation is exercised."],
+      "exceptions":[],
+      "grounding":[{"end_line":70,"quote":"| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation | fixture [T-03-04](../qualification/cases/T-03-04/CASE.md) run twice; not assessed |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Trials%20from%20the%20comparative%20baseline","start_line":70}],
+      "key":"comparative_expected_distinctions",
+      "statement":"T-01 refinement must preserve the outer contract under independent assessment; cannot-fit yields out_of_frame or lawful escalation, never omission. T-02 resolves ambiguity or keeps it explicit and meets independently owned acceptance. T-03 preserves every input, constraint, judgment and evidence through composition and refuses incompatible producing-step boundaries. T-04 preserves both failure and unassessed obligation and cannot report composite success or erase the obligation. T-05 recovers valid progress/basis and detects unsupported completion and unnecessary restart. T-06 reopens affected claims and explicitly records dependencies for reused unaffected results. T-07 detects behavioural defect or reports evidential limits; structural green is not acceptance. T-08 preserves distinctions among facts, assumptions, judgments and authority and remains independently assessable.",
+      "uncertainty":"Expected distinctions are specifications of trials, not reported successful outcomes."
+    },
+    {
+      "applies_to_keys":["comparative_trials"],
+      "conditions":["Before and during every trial run; repetition clause applies to probabilistic trials."],
+      "exceptions":[],
+      "grounding":[{"end_line":82,"quote":"Trials declare a per-actor context cap, the fit of\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),\nand a total-work budget, a resource limit under\n[ACTIVATION §6 Resource limits](ACTIVATION.md#resource-limits), before each\nrun, include a required basis larger than the cap, count transferred context\nacross every delegated actor, keep acceptance criteria independent of the\nconstructing actor, and repeat probabilistic trials with varied task order.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Trials%20from%20the%20comparative%20baseline","start_line":76}],
+      "key":"comparative_trial_protocol",
+      "statement":"Declare per-actor context cap and total-work budget before each run, include required basis larger than the cap, count context transferred across every delegated actor, keep acceptance criteria independent of the constructor, and repeat probabilistic trials in varied task order. Context fit and resource-limit meanings are imported from ACTIVATION §§2 and 6.",
+      "uncertainty":"Referenced ACTIVATION provisions and fixture contents are not supplied."
+    },
+    {
+      "applies_to_keys":["recoverability_trials"],
+      "conditions":["Under the respective R-01 or R-02 setup."],
+      "exceptions":[],
+      "grounding":[{"end_line":88,"quote":"| R-01 Fresh-context activation | a fresh actor given only this corpus performs a bounded activation on a declared subject; the same task against the rc.2 corpus as baseline | the governing relations are recovered with fidelity judged independently; reconstruction cost is lower than baseline or the difference is explained | fixture [R-01](../qualification/cases/R-01/CASE.md) run, each of its five variants twice; not assessed |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability","start_line":88}],
+      "key":"recoverability_expected_distinctions",
+      "statement":"R-01 recovers governing relations with independently judged fidelity and either lowers reconstruction cost against baseline or explains the difference. R-02 still succeeds or truthfully returns out_of_frame without the withheld private knowledge and whole-corpus loading.",
+      "uncertainty":"Runs are recorded but not assessed; no successful recoverability result follows."
+    },
+    {
+      "applies_to_keys":["common_discriminator_cases"],
+      "conditions":["For the corresponding CD case."],
+      "exceptions":[],
+      "grounding":[{"end_line":111,"quote":"Purpose and material relation: a reading of the text can show that the\ncorpus states these distinctions, but only use shows that an actor\napplying the corpus keeps them while it works (P6, P0).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators","start_line":109}],
+      "key":"common_case_expectations",
+      "statement":"Actual use by a fresh constructor on a declared subject with assessed results is required in addition to logical review. CD-01 evaluates configuration against task, dependencies, actor limits, applied authority and assurance; labels/topology neither accept nor reject. The installed executive keeps its scope and is no measure of the peer arrangement. Handover preserves outstanding obligations and dependent results, reconciles effect completion before dependent action, and preserves admitted authority and independence; self-organisation waives nothing. CD-02 judges each realisation against requirements with its calculus, execution binding and conformance evidence; executor kind neither accepts nor rejects. The faster plan falsifies conformance for each weakened obligation; equivalent outputs, cost or speed cannot replace independence or authority. CD-03 reacquires current subject/authoritative inputs, corrects the summary from evidence, preserves applicable work, continues within grant and stops with re_entry_requested(authority) for the outside-grant disagreement. Summary cannot override workspace; context deletion erases no workspace facts; missing effect record yields completion_unknown, never absent.",
+      "uncertainty":"The introductory discriminator numbering conflicts with the case/table numbering."
+    },
+    {
+      "applies_to_keys":["assurance_relation_cases"],
+      "conditions":["Applicable positive, negative and unresolved assurance cases are demonstrated; AR-01–AR-03 actual use awaits product-owner selection."],
+      "exceptions":[],
+      "grounding":[{"end_line":117,"quote":"The assurance relations require the candidate to demonstrate here the\napplicable positive, negative and unresolved cases of a weak assertion, an\ninsufficient observation, shared error, and change selection that retains\nvalid evidence or invalidates affected evidence\n([FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators","start_line":113}],
+      "key":"assurance_case_expectations",
+      "statement":"AR-01 satisfied proves only the checked necessary condition, supports no correct-frame-use claim and is excluded from benefit attribution; falsified remains a failed run condition. AR-02 grades indeterminate because observations cannot distinguish admissible answers, never satisfied/falsified; a return matching neither recorded return is listed for diagnosis because item or return, rather than method, may be defective. AR-03 agreement is not independent evidence; disagreement is diagnosed among ACTIVATION §1's four causes, including the expectation item; no statistical independence follows from families/codebases; ported material names donor and common dependencies. AR-04 reassesses dependents whose validity dependencies meet the impact cover, regenerating frames/rerunning tests, or keeps them invalidated until rebuilt, including interpretation lacking added-section coverage. An expectation set with unchanged deciding sentences is retained only with stated validity conditions; changed hash alone decides nothing.",
+      "uncertainty":"The four diagnosis causes, actual-use criterion 4 and full S_Δ/retain_applicable definitions are outside supplied source."
+    },
+    {
+      "applies_to_keys":["logical_review","member_discriminators","integrated_closure_checks"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":152,"quote":"Whatever its mapping, every discriminator is\nread by logical review against every member; a case adds actual use and\nreplaces no part of that reading (P6). Check L-50 also reads each frame\nwhose task returns a result.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":149}],
+      "key":"logical_review_scope",
+      "statement":"Every discriminator receives logical review against every member regardless of mapping; actual-use cases replace none of that reading. L-50 additionally reviews every result-returning frame. A case is mapped only when its subject instantiates the discriminator and its expected distinction tests that discriminator; partial coverage additionally names logical review for the remainder. Mechanical/structural checks establish no logical-review result, and logical review provides no actual-use evidence. Reviewers acquire the external construction-specification expected distinctions. Integrated working assessment reads J53–J55 over the whole candidate and cross-family acceptance review evaluates them before closure.",
+      "uncertainty":"Reviewer qualification and external expected distinctions are referenced rather than defined here."
+    },
+    {
+      "applies_to_keys":["member_discriminators","integrated_closure_checks"],
+      "conditions":["For the specifically described discriminator or integrated-check situations."],
+      "exceptions":[],
+      "grounding":[{"end_line":206,"quote":"| 47 | A member or profile defines its own result values | FOUNDATIONS §4 Results (Recording, Refinements, the rule that nothing raises standing); ACTIVATION §3; each member or profile that defines result values | L-47 refined values map once, including two effects: one whose declared outcome requires five updates by 12:00, where at 12:01 the evidence establishes three and not whether the effect has ended, is `not_effected` (`falsified`) with the two missing updates as counterexample and the unestablished end as a residual; one whose response was lost with no counterexample observed is `completion_unknown` (`indeterminate`); neither is repeated before reconciliation |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":206}],
+      "key":"explicit_discriminator_distinctions",
+      "statement":"L-1 requires shown premises; L-20 separates structure and meaning; L-21 identity and content; L-23 authenticates each planned judgment and preserves B as uncovered; L-24 plan membership authenticates nothing; L-26 fit is not attention, with actual-use frame qualification separately required; L-28 fresh context or contributor self-reading is not independent acceptance; L-29 out-of-view work stays open; L-34 optimality is separate; L-35 compact results hide no blocker. L-36 harmless explanatory metadata permits reuse only after exact consumer applicability check; newly admitted material evidence or an activation outside its frame family reopens the result and consuming coverage claims before reliance, while demonstrably independent results survive. L-37 rule packet is not activation; L-40 includes practical evidence; L-41 new law states purpose; L-45 a model selects no executor; L-46 one owner per question. L-47 result refinements map once and raise no standing: a five-updates-by-noon effect with only three established at 12:01 is not_effected/falsified with two missing updates as counterexample and unknown termination as residual; a lost response without counterexample is completion_unknown/indeterminate; neither is repeated before reconciliation. L-49 judges meaning, including required/permitted decisions, modal force, triggers, scope and exceptions, not preserved heading or indicative wording. L-50 result-returning frames carry the algebra; L-51 categorical claims need demonstration; L-52 rewrite/refinement steps require licence. For J55, the decision owner also applies the installed builder's result conjunction at member acceptance; supported conditional inapplicability is recorded separately and waives no criterion.",
+      "uncertainty":"Only distinctions explicitly stated here are retained; absent expected distinctions are not reconstructed from scenario titles."
+    },
+    {
+      "applies_to_keys":["comparative_trials","recoverability_trials","common_discriminator_cases","logical_review","member_discriminators"],
+      "conditions":["Claims concern the revision described by this source."],
+      "exceptions":[],
+      "grounding":[{"end_line":240,"quote":"A case that has not been run on this revision and assessed has no\nresult for it: it is a planned assessment without a closed result, never a\npass ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed), and\nthe logical review of its discriminators does not stand in for it. No\nlogical-review check is recorded for this revision: each is a planned\nassessment without a closed result until a review records it\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":234}],
+      "key":"conformance_revision_standing",
+      "statement":"Eleven of 52 discriminators map to cases, five only partially, and the other 41 to logical review only; J53–J55 map to integrated assessment. No case has a recorded pass. Fresh-constructor runs exist for T-01/T-03/T-04/T-05 and R-01/R-02; the R cases exercise no common discriminator. Those runs used earlier corpus revisions and none was assessed, hence none supplies actual-use evidence for this revision. T-06/T-07/CD-01/CD-02/CD-03 are unrun. A case without both run on this revision and assessment has no closed result and is never a pass. No logical-review check is recorded for this revision; each remains planned without a closed result.",
+      "uncertainty":"Historical fixture execution is not current-revision qualification."
+    },
+    {
+      "applies_to_keys":["universal_assurance_discriminators"],
+      "conditions":["Assessment is under criterion 5 within a member's declared responsibility."],
+      "exceptions":[],
+      "grounding":[{"end_line":289,"quote":"Purpose and material relation: a reader sees, for each discriminator,\nwhether actual use or only a reasoned reading exercises it and which\nsections it reads, so a discriminator mapped to a case that has not been\nrun and assessed is never counted as passed, and no mapping exempts a\nmember from logical review (P6, P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators","start_line":285}],
+      "key":"universal_assurance_evidence_standing",
+      "statement":"All 21 require logical review; no such review is recorded for this revision. A logical check stays planned without closed result until recorded; a case is exercised only after both running and assessment. Mapping an unrun/unassessed case never counts as passing and exempts no member from logical review. The finite assurance oracle for AS-3, AS-7 and AS-10 is mechanical evidence on a finite model, establishing neither fidelity nor semantic conformance. Source annotations distinguish lawfulness from delivery/optimality, preserve counterexamples through correction, forbid assurance waiver for a cheaper plan, deny independent justification to implementation-derived answers, quantify universal soundness over all admitted conclusions and reject requirement-test provenance as a complete impact model.",
+      "uncertainty":"External expected distinctions and the finite oracle implementation are not supplied; case-count prose conflicts with its mappings."
+    },
+    {
+      "applies_to_keys":["design_profile","design_results_and_records","assurance_profile_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":82,"quote":"Every clause names the principle that requires it (P0 to P6, FOUNDATIONS\n§3). The predecessor's \"must\" is written in the\nindicative; its \"should\", \"may\", \"recommended\", \"typical\", \"preferred\",\n\"normally\", \"usually\", \"minimum\", \"where practical\" and \"allowed\" keep\ntheir force. A route written `rc.2 #anchor` is into\n`stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md` and is\nprovenance only; every predecessor row received here is restated in this\ntext, and nothing here depends on that cut to be applied.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":75}],
+      "key":"profile_import_result_and_modal_boundaries",
+      "statement":"Do not redefine imported owners: proportionality belongs to ACTIVATION §6; execution unit/seams to §1; enclosing admission to §4; authority identity to IDENTITY §6; shared machinery to FOUNDATIONS §4; core rule/non-goals to SPEC_METHOD §2; design-to-module evidence, unit tests and operational module lifecycle to ASSURANCE §§14–16. Performed evaluations return core values, directly or through the two explicitly mapped refinements; design-record entries do not become results. Exclusion not_applicable gives the excluded obligation no result, whereas disjunctive axiom not_applicable has its declared mapping. Indicative predecessor must remains obligatory; should, may, recommended, typical, preferred, normally, usually, minimum, where practical and allowed retain their force. rc.2 anchors are provenance only, not application dependencies.",
+      "uncertainty":"Core algebra, exact refinement mappings and imported ownership laws are only partially described in supplied sections."
+    },
+    {
+      "applies_to_keys":["design_profile","realisation_design_purpose","functional_design_discipline"],
+      "conditions":["The project has decided its outcomes and capabilities; graph-specific restriction applies where graph-execution governs."],
+      "exceptions":[],
+      "grounding":[{"end_line":126,"quote":"It does not mandate one optimal authoring path for every agent, worker or\nruntime.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose","start_line":100}],
+      "key":"design_scope_and_authoring",
+      "statement":"No single optimal authoring path is mandated. Same-pass implementation/proof is acceptable only under co_evolution_admissible(B), with decision completeness before any design-method closure claim. Every intermediate traversal should have a finite inspectable reasoning/implementation/evaluation/proof/refactor unit. The profile does not replace constitutional authority or graph-native law. Required functionality does not decide entity, function, operation, carrier or module counts. In graph-governed Products, deterministic modules do not replace graph functions, edge traversals or graph modules; they realise inside/beneath them. The rules are not confined to one language or runtime.",
+      "uncertainty":"The source's should for bounded intermediate units is preserved as recommendation."
+    },
+    {
+      "applies_to_keys":["software_design_family","design_profile"],
+      "conditions":["Instance premises and imported family rules apply within an adopted boundary."],
+      "exceptions":[],
+      "grounding":[{"end_line":277,"quote":"Purpose and material relation: a reader of this profile sees\nwhich of its rules rest on the commitments and imported families and which\nare choices this profile, the adopting Product or another owner makes, so\nno profile choice is presented as following from the foundations (P6, P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":274}],
+      "key":"foundation_rule_consequences",
+      "statement":"The table's additional consequences are retained as source claims: each discovered functionality item is derived, deferred, excluded or an owned gap; higher-order behaviour declares composition/effect algebra and helpers cannot become undeclared constructors. Top-level Prime conformity requires projection of accepted atoms over declared domains without new semantic authority; contraction covers the whole family, preserves root authority, and cannot succeed by increasing authority centres, truth surfaces or review burden. IACS is the smallest Ontology-derived carrier set supporting functionality/authority flow; other shapes stay subordinate unless promoted by declared test; extra boundaries are debt; revisions rederive the whole set and rerun all its gates. Three distinct views are fidelity-checked Ontology projections rather than peer truths; before promotion or closure every applicable axiom is evaluated across them and maps once to a core value; non-application satisfies only its declared disjunction, not the axiom as met. Ontology/design verdicts are the design authority's dispositions, not assessment results or produced packs; a new/semantically changed boundary cannot be promoted, published or closed without both accepted; provisional co-evolution evidence awaits acceptance; an unchanged realization_refactor can reuse verdicts with no-delta proof. At material boundaries computational projection gives each material algorithmic obligation semantic and realisation dispositions; code similarity yields only commonisation candidates, materially non-equivalent laws require separation, and reuse cannot claim newly owned authority. Module roles are recommended classifications, not a language mandate. Semantic functions should be total or as near total as language/problem allow; immutable carriers, explicit edge effects, no hidden controller semantics and reduced coupling retain their stated should force. A boundary governing another actor publishes state, boundary and admissible routes, not strategy unless ratified responsibility includes it. Cleanup is lawful only when boundary-local and neutral in behaviour, authority, visibility and effect; cross-boundary opportunities are owner repricing input. Credible recurrence requires commonisation review, never automatic merging. Before an exact design closure claim a bounded check reconstructs its function, reusing evidence only lawfully; a falsifier or applicable hard stop blocks the claim, while outside-claim discoveries do not expand scope. Each interface family has one authoritative source consumed downstream; a new proxy preserving an old authority path is bridge debt. Review demands evidence, and design-law prompt clauses require provenance and evidence that they still cause/prevent their governed behaviour. Adoption requires authorised Product adoption, consistent application to the named boundary, and declared/cited Ontology and evidence for new/material completion claims; partial adoption names boundary/rule family and cannot claim completion whose evidence was skipped. Consumer-bound ABG runtime identity generators/validators/normalisers may publish defaults for that role's own surfaces, but defaults confer no authority and remain overridable by the identity owner.",
+      "uncertainty":"These are authored derivation claims, not independently verified proofs; detailed later owning sections are absent."
+    },
+    {
+      "applies_to_keys":["software_design_family","design_rule_consumers"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":198,"quote":"| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |\n|---|---|---|---|---|","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":197}],
+      "key":"foundation_choice_ownership",
+      "statement":"Domain choices remain with their stated owners: profile vocabulary, matrices, gates and local refinements belong to this profile; project selects strict checker/configuration and composition/effect algebra; consumer selects substrate and constructability evidence; Product sets supported workloads/acceptance limits; existing Product trade-off owner applies declared priorities/risk tolerances; design authority accepts Ontology and design; Product authority adopts under PRODUCT_DEFINITION §7. TICKETS §6 owns recurrence rule-of-two, third-rebuild threshold and commonisation order; SPEC_METHOD §7 owns bridge prohibition and migration; IDENTITY §7 owns defaults' standing/override law; FOUNDATIONS owns shared machinery and authority non-creation; ACTIVATION owns proportionality, exclusion, admission, reuse and diagnosis; EVALUATION owns claims and blocking findings. Profile-specific counts identify, without supplying their later contents, ten Ontology terms, nineteen M(B) terms, five frame items/four reconstruction decisions, six example carrier roles/five promotion grounds, three Mermaid views/ten axiom-matrix columns, six recommended module roles, seven lawful governance publications/four drifts, five post-ticket determinations, and 56 review questions/43 checklist items/14 hard gates. Another text-native view format requires project ratification. Consumers apply but do not enlarge what the owner decides; applying another owner's rule creates no reverse ownership dependency.",
+      "uncertainty":"Exact unsupplied enumerations, recurrence thresholds' operative definitions and owner procedures remain unresolved."
+    },
+    {
+      "applies_to_keys":["graph_realisation_alignment"],
+      "conditions":["A deterministic module appears to decide next work, semantic target movement, traversal closure or performed graph function in a graph-governed Product."],
+      "exceptions":[],
+      "grounding":[{"end_line":307,"quote":"If a deterministic module appears to own what work is next, what target is\nbeing moved to, what closes the traversal or what graph function is being\nperformed, the boundary should be repriced against the graph-execution\nprofile before claiming design-method closure. In such products the module\nboundary is a realisation cut inside the graph program; it is not the\nprogram (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation","start_line":302}],
+      "key":"graph_boundary_repricing",
+      "statement":"The boundary should be repriced against the graph-execution profile before a design-method closure claim; a module cut must not be treated as the graph program.",
+      "uncertainty":"The repricing instruction retains should force; graph-native definitions are external."
+    },
+    {
+      "applies_to_keys":["authority_seam"],
+      "conditions":["For each change; additional source-coherence requirements apply to projection and query modules."],
+      "exceptions":["Same-name/different-shape carrier divergence may be lawful under an explicit migration design."],
+      "grounding":[{"end_line":337,"quote":"For projection and query modules, seam closure also requires source\ncoherence (P6, P1): the projection names the admitted carrier, runtime,\nevent or source truth it derives from; reconstructed catalogue, ownership,\nroute, status or closure truth is structurally compared against the\nadmitted source carrier before publication; same-name but different-shape\ncarriers fail closed unless an explicit migration design makes the\ndivergence lawful; and negative tests cover structural drift, not only\nmissing source truth.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure","start_line":330}],
+      "key":"authority_seam_requirements",
+      "statement":"Changes do not increase truth-surface count; existing rivals should be reduced. Each semantic boundary has one authoritative carrier/contract, without controller reconstruction, silent downstream reconstruction from raw artifacts or raw/open payload trust beyond ingress. Removing the carrier must not leave silently reconstructed meaning. Projections name admitted carrier/runtime/event/source truth; reconstructed catalogue, ownership, route, status and closure truth are structurally compared against that source before publication; different-shaped same-name carriers fail closed absent lawful migration. Negative tests cover structural drift as well as missing source.",
+      "uncertainty":"Reduction of already duplicated surfaces retains should force."
+    },
+    {
+      "applies_to_keys":["enforcement_after_proof","ingress_collapse"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":376,"quote":"Not lawful seam closure: repeated parsing of the same\nloose payload in several modules; `from_dict(...).to_dict()` or equivalent\nround-trip ceremony that preserves the same open authority; loaders that\nmerely relabel stored JSON or map data without validating it; semantic\nkernels that continue to inspect open payload fragments directly.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse","start_line":372},{"end_line":359,"quote":"It does\nnot mean relabelling an open payload and calling it closed, wrapping loose\ndata in a typed envelope while keeping the same authority path, or using\ncasts, unchecked assertions or dynamic mutation as fake closure.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof","start_line":356}],
+      "key":"false_seam_closure_prohibition",
+      "statement":"Foreign/dynamic/weakly typed input is lawful only at ingress and must become admitted local truth immediately before semantic transforms. Relabelling open data, typed envelopes preserving the same authority path, casts/unchecked assertions/dynamic mutation as fake closure, repeated cross-module loose-payload parsing, open-authority round trips, unvalidated JSON/map relabelling and kernel inspection of open payload fragments do not establish lawful seam closure.",
+      "uncertainty":"This concerns casts as fake closure; the separate Python exception permits narrowly justified foreign-boundary casts."
+    },
+    {
+      "applies_to_keys":["functional_design_discipline","design_profile"],
+      "conditions":["A project adopts this profile."],
+      "exceptions":["Materially necessary mutable carrier state only under the owning Immutable carriers rule with its required justification.","Explicit failure carriers are preferred only where practical."],
+      "grounding":[{"end_line":408,"quote":"Both lists bind. A project that adopts this profile prefers the first\nand avoids the second as an obligation of the profile, not as a\ndescription of practice: a realisation that takes an avoided shape, or\nforgoes a preferred one, does not conform unless a rule of this profile\npermits that departure and the realisation records the justification the\nrule requires. The permitted departures are those the owning rules state:\nmutable carrier state where it is materially necessary, under §10\n[Immutable carriers](#immutable-carriers), and the failure-carrier\npreference only where practical. Convenience permits no departure (P6,\nP2; the predecessor's \"must prefer\" and \"must avoid\", read with the\nnecessity exception of its immutable carrier rule).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate","start_line":398}],
+      "key":"binding_functional_preferences",
+      "statement":"Binding preferences are immutable over shared mutable carriers, closed types over open dictionaries/string protocols, one-time ingress admission, explicit returns over hidden mutation, explicit failure carriers over ambient exception flow where practical, and small-transform composition over long controllers. Binding avoidances are giant mutable workspace objects, orchestration owning semantic law, hidden global/registry/service-state coupling, typed envelopes over open truth, central dynamic mutation, helpers that both decide meaning and write, and proxy interfaces preserving old authority. Taking an avoided shape or forgoing a preferred one is nonconforming unless an owning profile rule permits the departure and its required justification is recorded. Convenience is no exception.",
+      "uncertainty":"Detailed immutable-state exception requirements are in an unsupplied later section."
+    },
+    {
+      "applies_to_keys":["python_boundary"],
+      "conditions":["Within the adopted Python boundary."],
+      "exceptions":[],
+      "grounding":[{"end_line":440,"quote":"Python boundaries under this profile are checked with a strict static\ntyping pass such as `mypy --strict` or an equivalent strict checker\nconfiguration. If the checker cannot run cleanly on the adopted boundary,\nthe boundary is not yet implementation-conformant under this profile (P1,\nP6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76b1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing","start_line":436}],
+      "key":"python_typed_design_requirements",
+      "statement":"Every repo-authored callable is explicitly annotated, and tests/scripts/support code have no lower bar. Untyped def, implicit Any, semantic dict[str, Any]/Mapping[str, Any]/object truth, unchecked JSON passed through layers and .get chains do not count as typed semantic design. Dynamic inputs are parsed, validated and narrowed to closed local carriers before semantic transforms; Any stays at foreign boundaries and collapses immediately. Failure to run a clean strict checker means the boundary is not yet implementation-conformant.",
+      "uncertainty":"A strict pass is necessary here, not an independent semantic acceptance result."
+    },
+    {
+      "applies_to_keys":["accepted_ontology"],
+      "conditions":["Every new or materially changed active semantic boundary; before promotion of a new/changed entity, function, authority, effect, Prime carrier, module boundary, public operation or schema."],
+      "exceptions":["A realization_refactor wholly inside an accepted boundary may cite existing Ontology/design and prove no Ontology delta instead of reauthoring or reaccepting unchanged evidence."],
+      "grounding":[{"end_line":476,"quote":"Ontology acceptance identifies the constitutional sources it derives from\nand the design authority that accepted it. It carries stable element and\nrelation identities plus a version or basis that makes source change,\nstaleness and the affected projection set decidable (P3; FOUNDATIONS §2,\nBasis). A reprice of a governing source invalidates only the affected\nOntology relations and downstream projections until their impact is\nre-evaluated; the reprice is an instance of the material input change of\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), which owns the\ninvalidators. Code, tests, generated schemas or a single implementing\nagent cannot self-ratify missing Ontology authority (P6). The Ontology\nverdict may live in the same design pack and acceptance record as the\nthree-view verdict (§7); this rule does not require a second document,\nticket or approval ceremony.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design","start_line":464}],
+      "key":"ontology_acceptance_and_change",
+      "statement":"Derive semantic model from one accepted Ontology; first produce a candidate slice and carry it through acceptance. Ontology derives from constitutional WHAT and invents no Product meaning. Implementation/tests derive from requirements plus accepted structural design, preserve Ontology, and substitute for neither. Acceptance records constitutional sources, accepting design authority, stable element/relation identities and version/basis making staleness/impact decidable. Repricing invalidates only affected relations/projections pending impact re-evaluation; code/tests/generated schemas/one implementing agent cannot self-ratify missing authority. Materiality includes identity, authority, lifecycle, public contract, observable Product meaning, cross-module topology and effect/closure law. Semantic/structural changes publish affected deltas and impact sets; a changed digest alone freezes neither unrelated boundaries nor unaffected maintenance.",
+      "uncertainty":"The later complete acceptance sequence is referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["design_sequencing","material_relation_network"],
+      "conditions":["For a governed boundary and its material affected relation set."],
+      "exceptions":[],
+      "grounding":[{"end_line":529,"quote":"Design sequencing follows `decision_complete(B)`, not one global authoring\norder (P2, P6). Co-evolution is lawful only when `decision_complete(B)` holds:\ndesign still owns the structural HOW, but design, implementation and tests\nmay evolve together and reconcile before promotion or closure.\nDesign-gated sequencing is required when implementation would otherwise\nestablish an unresolved or contradictory relation, or choose between\nmaterially non-equivalent networks, with durable consequences for future\nchange: the affected design decision is accepted before retained\nimplementation establishes it. A disposable spike may supply evidence\nwithout becoming the selected design.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing","start_line":520}],
+      "key":"sequencing_admissibility",
+      "statement":"Co-evolution is lawful only with decision completeness, and design/implementation/tests reconcile before promotion or closure while design owns HOW. Where retained implementation would settle unresolved/contradictory relations or choose materially non-equivalent networks with durable consequences, prior acceptance of the affected design decision is required. Neither mode is a global default. Proportionality determines material relations and bounds the smallest causally closed gate; completeness tests admissibility. Symbolic contraction's removed code/state/test/review/reconciliation space is counterfactual evidence, not a separate ground for gating. A gate is warranted when contraction of materially divergent durable architecture justifies its reasoning load; with no material alternative a separate prior gate adds no disambiguation. Record the selected relation/basis in existing work/design carriers; no separate artifact is required.",
+      "uncertainty":"This describes source-defined admissibility and does not establish it for any actual boundary."
+    },
+    {
+      "applies_to_keys":["design_sequencing"],
+      "conditions":["Implementation supplies evidence, exposes hidden ambiguity or produces repeated/cross-cutting material surprises."],
+      "exceptions":[],
+      "grounding":[{"end_line":562,"quote":"Repeated or\ncross-cutting material surprises are evidence for diagnosis under\n[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation),\nnot a diagnosis. Where the diagnosis establishes that the affected design\ncut is underconstrained, so that `decision_complete(B)` fails, one bounded\n`design_reframe` follows (SPEC_METHOD §4 Change classes), and retained code\nremains provisional evidence until that reframe is accepted. Where the\naccepted design is decision-complete and the realisation alone deviates\nfrom it, the repair is a `realization_refactor`, however often the surprise\nrecurs (P6, P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing","start_line":553}],
+      "key":"implementation_evidence_and_diagnosis",
+      "statement":"Implementation may counterexample, falsify constraints or expose ambiguity, but cannot supply missing semantic authority, rewrite upstream truth to legalise itself or retroactively ratify a decision it established. Hidden architectural ambiguity switches the smallest causally closed affected set to design-gated sequencing without invalidating unrelated work. Serial repairs do not establish design acceptance. Repeated/material cross-cutting surprises prompt diagnosis but are not diagnosis. Diagnosed underconstraint requires one bounded design_reframe, with retained code provisional until acceptance. If accepted design is decision-complete and only realisation deviates, repair remains realization_refactor regardless of recurrence.",
+      "uncertainty":"ACTIVATION's diagnosis procedure and SPEC_METHOD change-class definitions are external."
+    },
+    {
+      "applies_to_keys":["material_relation_network","design_sequencing"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":615,"quote":"The boundary is underconstrained whenever `decision_complete(B)` is false,\nincluding when implementation has to introduce a new material semantic\ndecision, projections contradict one another, or two materially\nnon-equivalent networks remain admissible. Local algorithm and layout\nchoices may remain open only when every admitted choice is semantically\nequivalent under the accepted network. Contradictory projections make the\ndesign unsatisfiable and block promotion (P1, P5): an unsatisfiable design\nfails the design gate's acceptance criterion, so this block is a\nprecondition of the gate (§7 Gate and retrospective work), not a decision\non a review finding. Decision completeness\ndoes not require another document: the constraint network may be expressed\nthrough the existing Ontology, algebra, module mapping and views when those\nsurfaces jointly carry the complete relation (P2).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design","start_line":603}],
+      "key":"decision_completeness_gate",
+      "statement":"Readiness for retained implementation without a prior gate holds exactly when decision_complete(B) holds. A gate failing to reach it is not closed. Artifact presence, headings, individual plausibility and mechanical validity prove no completeness. False completeness means underconstraint, including missing material decisions, contradictory projections or non-equivalent admissible networks. Contradictory projections are unsatisfiable and block promotion as a gate precondition rather than a discretionary review-finding decision. Remaining local algorithm/layout choices are lawful only if every admitted choice is semantically equivalent. Existing Ontology/algebra/mappings/views may jointly express the whole relation without another document.",
+      "uncertainty":"Unknown completeness is not equated with false completeness or unrestricted variation."
+    },
+    {
+      "applies_to_keys":["bounded_design_frame","accepted_ontology"],
+      "conditions":["For bounded local design actions and discovered functionality."],
+      "exceptions":["A subordinate frame opens only for a material distinction unresolved at governing altitude; irrelevant descendants need not be recursively documented."],
+      "grounding":[{"end_line":654,"quote":"The result is evaluated against every affected governing frame, preserves\neach applicable accepted relation, and updates only affected subordinate\nprojections. A bounded local action conserves governing truth; it does not\nrewrite it. A result that changes a governing relation re-enters at that\nrelation before acceptance (P4b; FOUNDATIONS §3 P4b, frame instance). A\nsubordinate frame opens only when a material distinction cannot be\nresolved at the governing altitude; this rule does not require recursively\ndocumenting irrelevant descendants (P2). The law is false if a change is\nlocally valid inside the selected frame but violates, duplicates or\nsilently reinterprets an invariant in any affected governing frame.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29","start_line":645}],
+      "key":"frame_conservation_and_derivation",
+      "statement":"Evaluate against every affected governing frame, preserve every applicable accepted relation, update only affected subordinate projections, and re-enter changed governing relations before acceptance. Local validity cannot excuse violating, duplicating or silently reinterpreting any affected inherited invariant. Declared seams make the affected set testable without a closure algorithm or irrelevant expansion. Discovered verbs/screens/endpoints/commands/ticket phrases/use cases are behavioural evidence, not immediately public operation identities, peer carriers, modules or functions. Derivation order is constitutional functionality → candidate Ontology → logical completeness → whole-family Prime contraction → accepted Ontology basis → IACS → target design and domain/sequence/state projections → public-contract/adapter projections → implementation/test projections.",
+      "uncertainty":"The imported seam law and later contraction/projection details are not supplied."
+    },
+    {
+      "applies_to_keys":["native_constructability"],
+      "conditions":["A required substrate capability is absent."],
+      "exceptions":[],
+      "grounding":[{"end_line":684,"quote":"A missing\nsubstrate capability remains an explicit design gap or triggers lawful\nre-entry (SPEC_METHOD §4); it is not hidden behind a reference bridge,\nadapter, filesystem runner, test double or promised future feature (P6;\nSPEC_METHOD §7 Bridge prohibition).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29","start_line":680}],
+      "key":"constructability_gap_boundary",
+      "statement":"A semantically coherent but natively unconstructable design is not acceptable. Missing capability stays an explicit design gap or triggers lawful re-entry, never concealment by bridge, adapter, filesystem runner, test double or future-feature promise.",
+      "uncertainty":"No substrate or design is evaluated in this interpretation."
+    },
+    {
+      "applies_to_keys":["foundation_selection"],
+      "conditions":["A selection pass applies."],
+      "exceptions":[],
+      "grounding":[{"end_line":730,"quote":"Candidate discovery is bounded, reproducible and explicitly\nnon-exhaustive. For every candidate category the evidence record declares\nthe sources or collections searched, cutoff time and relevant version\nbasis, applicability and inclusion criteria, material exclusions,\npredecessor or incumbent status, discovered candidates and residual\nunknowns; a category not searched records `not_applicable` or a named gap\nwith its reason. Discovery closes only for that declared basis and cutoff.\nA discovery gap that could materially alter the frontier prevents\nselection; an immaterial residual records why it cannot change the current\ndecision. A later candidate that satisfies the applicability criteria and\ncould materially alter the lawful frontier invalidates the affected\nselection evidence and re-enters this relation (P6, P5, P3); such a\ncandidate is newly acquired admissible evidence material to the selection,\nan instance of the material input change of\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":716}],
+      "key":"foundation_discovery_requirements",
+      "statement":"First state capability without Product/domain/module/vendor/file/incumbent labels. Factor irreducible semantic or authority-bearing relations, with owner, role kind, subject, scope, basis, lifecycle and refusal invariants, from supporting generic mechanics; source authorship is not the distinction. Discovery is bounded, reproducible and explicitly non-exhaustive. Every category records searched sources/collections, cutoff/version, applicability/inclusion criteria, material exclusions, predecessor/incumbent status, candidates and unknowns; an unsearched category records reasoned not_applicable or named gap. Closure is only for that basis/cutoff. A potentially frontier-changing discovery gap prevents selection; an immaterial residual explains why it cannot alter the decision. A newly admissible potentially frontier-changing candidate invalidates affected evidence and re-enters selection.",
+      "uncertainty":"Non-exhaustive discovery does not imply unknown candidates are absent."
+    },
+    {
+      "applies_to_keys":["foundation_selection","candidate_dominance"],
+      "conditions":["For every material candidate admitted to the bounded population."],
+      "exceptions":["A dominance relation can be invalidated by new evidence or another material dimension."],
+      "grounding":[{"end_line":761,"quote":"A hard authority, Product-contract, safety, security, licensing or\nnative-constructability failure eliminates a candidate. Unknown evidence\nremains unknown and cannot be converted into a favourable score. A\nuniversal scalar is not required. Lawful candidates that remain materially\nincomparable form an explicit undominated frontier (P6, P5).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":757}],
+      "key":"foundation_comparison_and_selection",
+      "statement":"Use one evidence ledger or equivalent record comparing every decision-changing dimension: functional/constructability fit; semantic/operation-authority leakage; adapter/integration/migration/deletion/future-code cost; licence/maintenance/security/upgrade/supply-chain posture; package/runtime/startup/storage/operational cost; determinism/concurrency/failure/recovery/reconstruction/replay; proof/assurance burden; and exit/replacement/reversibility. Hard authority, Product-contract, safety, security, licensing or constructability failure eliminates. Unknowns stay unknown, not favourable scores; no universal scalar is required. Dominated candidates cannot be selected while dominance holds, including local rebuild dominated by lawful foundation composition; unused features alone do not establish dominance and may cost lifecycle effort. The existing trade-off owner selects only a lawful undominated composition by exact-Product/basis declared priorities and risk tolerances, recording frontier resolution. If unresolved, keep a design gap. Rejected material candidates record decisive evidence/falsifier. Unsupported preference is not closure; fewest dependencies, smallest edit, least local code or richest features are not necessarily the answer.",
+      "uncertainty":"No candidate scores, dominance proof or selection are supplied or inferred."
+    },
+    {
+      "applies_to_keys":["foundation_selection"],
+      "conditions":["Within the already admitted Product boundary and applicable migration strategy."],
+      "exceptions":["A trivial helper without material authority, behaviour, lifecycle-cost or network impact requires no survey/ledger."],
+      "grounding":[{"end_line":795,"quote":"A selected foundation may realise\nan explicitly assigned authority-bearing role when accepted design\npreserves the declared relation's owner, role kind, subject, scope, basis\nand material lifecycle and refusal invariants. Foundation capability,\nprovenance or source authorship cannot widen or remint that role.\nOwnership belongs to the declared relation, not necessarily to locally\nwritten code; an irreducible Product or domain relation retains its\ndeclared owner whether local code, a reused foundation or their\ncomposition realises it. Generic local code is lawful only when it wins\nthe same comparison; it is not the default (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":786}],
+      "key":"foundation_scope_authority_and_recursion",
+      "statement":"Selection does not choose bounded evolution versus fundamental re-adoption or override the admitted migration-strategy presumption; a working predecessor may constrain candidates at migration altitude. Discovery may start from incumbent/installed dependency, but selection has no source-order, familiarity, sunk-cost, local-code or dependency-count preference. Evaluate compositions as well as packages. Reuse does not automatically transfer/create authority. Foundations may implement explicitly assigned authority-bearing roles only while accepted design preserves owner, role kind, subject, scope, basis and material lifecycle/refusal invariants; capability, provenance and authorship cannot widen/remint roles. Local generic code must win the same comparison and is no default. Newly exposed material generic subproblems recursively undergo selection before retaining implementation. This prior pass differs from later recurrence extraction and is mandatory for material algorithms, common mechanics, new dependencies and locally rebuilt foundations.",
+      "uncertainty":"The governing migration presumption and Shared machinery rule are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["entity_lifecycle_matrix"],
+      "conditions":["Every applicable lifecycle cell for every covered entity/value family."],
+      "exceptions":[],
+      "grounding":[{"end_line":834,"quote":"The lifecycle columns are completeness questions, not a mandate for\nmutable CRUD: create may be declaration, construction, admission or\nmaterialisation; read should normally be a typed projection over\nauthoritative truth; update should normally be an admitted transition or\nnew version rather than in-place semantic mutation; delete should normally\nbe retirement, revocation, decommission or supersession where history or\nidentity has to remain true (P3). Every cell identifies a lawful function,\ndeclares `not_applicable` with a reason, or names a `Gap:` or\n`Unanswered:` item and owner. Silence is not logical-completeness evidence\n(P5, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness","start_line":825}],
+      "key":"lifecycle_cell_completeness",
+      "statement":"Every cell names a lawful function, reasoned not_applicable, or owned Gap:/Unanswered: item; silence is not evidence. Create may mean declaration/construction/admission/materialisation. Read should normally project typed authoritative truth; update should normally be admitted transition/new version; deletion should normally be retirement/revocation/decommission/supersession where identity/history must remain true.",
+      "uncertainty":"Normally/should remain qualified preferences; not_applicable is a record exclusion rather than an evaluation result."
+    },
+    {
+      "applies_to_keys":["ontology_authority_model"],
+      "conditions":[],
+      "exceptions":["One owner may occupy multiple roles only when governing authority explicitly permits it."],
+      "grounding":[{"end_line":877,"quote":"Composition does not widen authority implicitly: a composed or\nhigher-order function has no more authority than the authority law\nadmitted for its inputs, constituent functions and current basis.\nDelegation, elevation, transfer or retirement authority requires a named\ntyped transition and an owning admission boundary; these carry in the\ndesign the explicit authority decision that FOUNDATIONS requires and do not\nreplace it. Projections cannot create authority, and downstream code\ncannot reconstruct an authority witness from actor labels, capability\nstrings or payload shape.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model","start_line":869}],
+      "key":"authority_conservation_requirements",
+      "statement":"Role coincidence cannot be inferred from implementation convenience. Composed/higher-order functions have no more authority than admitted law for inputs, constituents and current basis. Delegation, elevation, transfer and retirement authority require named typed transitions and owning admission boundaries carrying, not replacing, explicit authority decisions. Projections create no authority; actor labels, capability strings and payload shape cannot reconstruct an authority witness downstream.",
+      "uncertainty":"The complete external list of what creates no authority is not restated."
+    },
+    {
+      "applies_to_keys":["transformation_admission"],
+      "conditions":["For every material admission relation, each owner and supported boundary."],
+      "exceptions":["Unsupported composite/nested forms may be marked not_applicable only if accepted domain/design excludes them and no weaker or competing admission path exists."],
+      "grounding":[{"end_line":925,"quote":"The declaration binds the admission and standing-test semantics of\nACTIVATION §4 (Complete enclosing-relation admission; Standing structural\nqualification), which solely owns them. Qualification is instantiated per\nowner and supported boundary. Unsupported composite or nested forms use\n`not_applicable` only when accepted domain or design excludes the form and\nthe boundary has no weaker or competing admission path (P6, P4b). This\nobligation is false if a field, owner or supported boundary is missing or\ninvented downstream; if basis continuity, partial-failure boundary\ncoverage or its dominance or equivalence proof, or reconstruction is left\nto implementation inference; or if non-applicability is established only\nby a parser, helper or manufactured refusal.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":915}],
+      "key":"admission_declaration_completeness",
+      "statement":"Accepted design declares all admission owners/supported boundaries; exact valid basis identity, predecessor/currentness continuity and equal/coherent composite multi-owner basis; complete enclosing relation, participant identities and equality joins; refusal/effect boundaries; complete semantic commit unit and decomposability, including every materially distinct post-validation commit/publication boundary exposing a subset or a declared dominance/equivalence proof that named observations cover the complete partial-failure surface; reconstruction and supported direct/composite/nested forms; and competing-path dispositions. ACTIVATION §4 solely owns admission and standing-test semantics, instantiated per owner/boundary. Missing or downstream-invented fields/owners/boundaries, implementation-inferred continuity/partial-failure coverage/proof/reconstruction, or parser/helper/manufactured-refusal-only non-applicability falsify this obligation.",
+      "uncertainty":"No standing qualification is instantiated by this document interpretation."
+    },
+    {
+      "applies_to_keys":["transformation_admission"],
+      "conditions":["For the same governed transition domain, entity identity, authority scope and predecessor basis."],
+      "exceptions":["Disjoint scopes or identities are not counterexamples to singularity.","Equivalent paths may remain when explicitly related to the singular law as constituents, replicas, replacements or deliberately independent realisations."],
+      "grounding":[{"end_line":956,"quote":"This law is false if any of the following holds (P6, P4b): two materially\nnon-equivalent admission relations remain reachable for the same governed\ntransition domain on the same entity identity, authority scope and\npredecessor basis (disjoint scopes or identities are not a\ncounterexample); a materially equivalent competing implementation remains\nreachable without being identified as a constituent, replica, replacement\nor deliberately independent realisation; or a projection-triggered\nreaction uses its own reconstructive state as self-authenticating\nadmission evidence.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":948}],
+      "key":"admission_singularity_and_projection",
+      "statement":"Two reachable materially non-equivalent admission relations falsify the law. Equivalent reachable implementations also falsify it unless their relation to the single law is explicit. Competing-path disposition does not itself demand deletion; retaining a superseded responsibility requires a distinct supported purpose, not only a label or existing test. Projections may propose transformations but gain no admission authority; consequential results re-enter admission against explicit predecessor basis. Reconstructed projection state is never self-authenticating admission evidence.",
+      "uncertainty":"Reachability and equivalence are source-defined conditions, not evaluated here."
+    }
+  ],
+  "dispositions":[
+    {
+      "decision":"retained",
+      "keys":["comparative_trials","comparative_expected_distinctions","comparative_trial_protocol"],
+      "reason":"Retains all eight situations, expected distinctions, run/assessment states and per-run protocol.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Trials%20from%20the%20comparative%20baseline"
+    },
+    {
+      "decision":"retained",
+      "keys":["recoverability_trials","recoverability_expected_distinctions"],
+      "reason":"Retains fresh-context/private-knowledge conditions, baseline comparison and unassessed execution status.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability"
+    },
+    {
+      "decision":"residual",
+      "keys":["common_discriminator_cases","assurance_relation_cases","common_case_expectations","assurance_case_expectations","common_discriminator_numbering"],
+      "reason":"Retains actual-use and assurance distinctions while preserving conflicting discriminator numbering.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators"
+    },
+    {
+      "decision":"residual",
+      "keys":["logical_review","member_discriminators","integrated_closure_checks","logical_review_scope","explicit_discriminator_distinctions","conformance_revision_standing","case_exercises_member_discriminators","external_conformance_expectations"],
+      "reason":"Retains situations, mappings, review scope and evidence standing; missing governing expected distinctions remain unresolved.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators"
+    },
+    {
+      "decision":"residual",
+      "keys":["universal_assurance_discriminators","universal_assurance_evidence_standing","assurance_cases_exercise_discriminators","universal_case_count"],
+      "reason":"Retains all 21 situations and mappings; explicitly preserves the conflicting reported count and absent external expected distinctions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators"
+    },
+    {
+      "decision":"residual",
+      "keys":["conformance_source_account","source_account_missing_inputs"],
+      "reason":"Retains provenance-only status and conservation/new-material claims; original common inputs and header specification are unavailable.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F6.%20Source%20dispositions"
+    },
+    {
+      "decision":"residual",
+      "keys":["design_profile","assurance_profile_binding","design_results_and_records","profile_import_result_and_modal_boundaries","profile_declares_assurance_binding","unavailable_result_mappings"],
+      "reason":"Retains optional scope, imports, bindings, result/record distinctions and modal conservation; exact imported algebra and refinement mappings are unresolved.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE"
+    },
+    {
+      "decision":"omitted",
+      "keys":[],
+      "reason":"Only the organizational heading and blank line are supplied; substantive purpose and position are retained from their own sections.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position"
+    },
+    {
+      "decision":"retained",
+      "keys":["realisation_design_purpose","design_scope_and_authoring"],
+      "reason":"Retains goals, bounded traversal recommendation, authoring conditions and constitutional/graph scope boundaries.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose"
+    },
+    {
+      "decision":"retained",
+      "keys":["functional_design_discipline","language_latitude"],
+      "reason":"Retains required discipline and qualified preferences without imposing a functional language.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition"
+    },
+    {
+      "decision":"residual",
+      "keys":["realisation_core_rule","profile_refines_core_rule","external_core_rule"],
+      "reason":"Retains the supplied diagnostic and owner/refinement direction; the referenced full core rule is absent.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule"
+    },
+    {
+      "decision":"residual",
+      "keys":["software_design_family","design_rule_consumers","foundation_rule_consequences","foundation_choice_ownership","family_consumer_owner_boundary","foundation_derivation_detail"],
+      "reason":"Retains premises, standings, consequence families, owner choices and directed consumer map; detailed derivations and absent later definitions remain source-reentry obligations.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law"
+    },
+    {
+      "decision":"retained",
+      "keys":["graph_realisation_alignment","graph_boundary_repricing","graph_module_latitude"],
+      "reason":"Retains graph-to-module ordering, permitted module work, prohibited semantic concealment and should-force escalation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation"
+    },
+    {
+      "decision":"retained",
+      "keys":["boundary_closure_evaluators","closure_evaluators_include_authority","closure_evaluators_include_consolidation","closure_evaluators_include_enforcement"],
+      "reason":"Retains the three-evaluator status, should-force application and denial of progress when an evaluator fails.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators"
+    },
+    {
+      "decision":"retained",
+      "keys":["authority_seam","authority_seam_requirements"],
+      "reason":"Retains truth-surface conservation, fail-closed test, coherence, migration exception and drift testing.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure"
+    },
+    {
+      "decision":"retained",
+      "keys":["carrier_consolidation"],
+      "reason":"Retains consolidation recommendation, IACS-first order, payload subordination and non-progress examples.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation"
+    },
+    {
+      "decision":"retained",
+      "keys":["enforcement_after_proof","false_seam_closure_prohibition"],
+      "reason":"Retains proof/admission/enforcement sequence, language independence and false-closure prohibitions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof"
+    },
+    {
+      "decision":"retained",
+      "keys":["ingress_collapse","false_seam_closure_prohibition"],
+      "reason":"Retains exclusive ingress allowance, immediate local admission and rejected round-trip/reparse patterns.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse"
+    },
+    {
+      "decision":"omitted",
+      "keys":[],
+      "reason":"Only an organizational heading and blank line are supplied; the two substantive subsections are retained separately.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing"
+    },
+    {
+      "decision":"retained",
+      "keys":["binding_functional_preferences","functional_departure_latitude"],
+      "reason":"Retains the source's explicitly binding preference/avoidance lists and narrowly permitted departures.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate"
+    },
+    {
+      "decision":"retained",
+      "keys":["python_boundary","python_typed_design_requirements","python_imprecision_latitude"],
+      "reason":"Retains all-code typing scope, unacceptable semantic shapes, conjunctive escape conditions and strict-check prerequisite.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing"
+    },
+    {
+      "decision":"retained",
+      "keys":["accepted_ontology","ontology_acceptance_and_change","ontology_record_latitude"],
+      "reason":"Retains Ontology contents, constitutional subordination, acceptance/evidence requirements and affected-only change treatment.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design"
+    },
+    {
+      "decision":"retained",
+      "keys":["design_sequencing","sequencing_admissibility","implementation_evidence_and_diagnosis","sequencing_latitude","material_network_governs_sequencing"],
+      "reason":"Retains formal conditions, proportional gate selection, evidence/authority separation and diagnosis-dependent change classes.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing"
+    },
+    {
+      "decision":"residual",
+      "keys":["material_relation_network","decision_completeness_gate","decision_complete_latitude","ontology_projects_material_network","semantic_network_evaluation"],
+      "reason":"Retains complete relation categories and gate conditions; no semantic equivalence, satisfiability or completeness evaluation is performed.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design"
+    },
+    {
+      "decision":"retained",
+      "keys":["bounded_design_frame","frame_conservation_and_derivation","frame_parent_latitude"],
+      "reason":"Retains multi-frame inheritance, affected-set conservation, re-entry and the authored derivation sequence as data.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29"
+    },
+    {
+      "decision":"retained",
+      "keys":["native_constructability","constructability_gap_boundary","constructability_latitude"],
+      "reason":"Retains native capability requirement, explicit gap/re-entry outcome and consumer choice of means.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29"
+    },
+    {
+      "decision":"retained",
+      "keys":["foundation_selection","candidate_dominance","foundation_discovery_requirements","foundation_comparison_and_selection","foundation_scope_authority_and_recursion","dominance_constrains_selection","constructability_does_not_prove_selection"],
+      "reason":"Retains discovery basis, uncertainty, candidate comparisons, dominance, ownership, recursion and trivial-helper exception.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29"
+    },
+    {
+      "decision":"retained",
+      "keys":["entity_lifecycle_matrix","lifecycle_cell_completeness","ontology_requires_lifecycle_evidence"],
+      "reason":"Retains matrix scope, inherited subordinate lifecycle, closed cell alternatives and qualified lifecycle preferences.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness"
+    },
+    {
+      "decision":"retained",
+      "keys":["ontology_authority_model","authority_conservation_requirements","ontology_includes_authority"],
+      "reason":"Retains roles, authority distinctions, helper/role-coincidence conditions and authority non-creation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model"
+    },
+    {
+      "decision":"residual",
+      "keys":["transformation_admission","admission_declaration_completeness","admission_singularity_and_projection","admission_implementation_latitude","authority_matrix_does_not_establish_admission","admission_operational_semantics"],
+      "reason":"Retains complete declaration, exclusion and singularity requirements; imported admission/standing procedures are not instantiated.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29"
+    }
+  ],
+  "latitude":[
+    {
+      "allowed":["Python, Scala, TypeScript, Kotlin, Java or another language may satisfy the profile when semantic law remains in explicit carriers/transforms and the required discipline is met."],
+      "applies_to_keys":["functional_design_discipline"],
+      "forbidden":["Treating use of a functional programming language as a profile prerequisite."],
+      "grounding":[{"end_line":142,"quote":"The\nprofile does not require a functional programming language; it does\nrequire a functional design discipline. A Python, Scala, TypeScript,\nKotlin or Java implementation may each satisfy it if it keeps semantic law\nin explicit carriers and transforms rather than hidden orchestration.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition","start_line":138}],
+      "key":"language_latitude"
+    },
+    {
+      "allowed":["Within graph-governed Products, govern F_D evaluators/proofs, carrier constructors/admissions, deterministic edge-internal transforms, result-publishing effect shells and projections of admitted carrier truth."],
+      "applies_to_keys":["graph_realisation_alignment"],
+      "forbidden":["Hide graph functions in service methods, edge semantics in orchestration, continuation/re-entry in deterministic controllers, target movement in constructors/materialisers/projections, or probabilistic worker boundaries in imperative prompt/dispatch code."],
+      "grounding":[{"end_line":300,"quote":"This profile may govern `F_D` evaluators and proofs, carrier constructors\nand admissions, deterministic transforms inside an edge traversal, effect\nshells that publish the traversal result, and projections over\nalready-admitted carrier truth. It is not used to hide graph functions\ninside service methods, edge-traversal semantics inside module\norchestration, continuation or re-entry decisions inside deterministic\ncontrollers, semantic target movement inside constructors, materialisers\nor projections, or probabilistic worker boundaries inside imperative\nprompt or dispatch code (P0 boundary commitment, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation","start_line":292}],
+      "key":"graph_module_latitude"
+    },
+    {
+      "allowed":["Depart from immutable carrier preference only for materially necessary mutation permitted by its owning rule and with that rule's recorded justification.","The explicit failure-carrier preference is conditional on practicality."],
+      "applies_to_keys":["functional_design_discipline"],
+      "forbidden":["Convenience-based departures.","Other departures from binding preference/avoidance lists without profile permission and its required justification."],
+      "grounding":[{"end_line":406,"quote":"The permitted departures are those the owning rules state:\nmutable carrier state where it is materially necessary, under §10\n[Immutable carriers](#immutable-carriers), and the failure-carrier\npreference only where practical. Convenience permits no departure (P6,","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate","start_line":403}],
+      "key":"functional_departure_latitude"
+    },
+    {
+      "allowed":["Any, cast(...) and # type: ignore only when all hold: genuinely foreign/dynamic boundary; local code cannot express a more precise shape; narrow explicit use justified in place; imprecision never enters the semantic kernel as governing truth.","Equivalent closed local carrier forms and equivalent strict checker configurations."],
+      "applies_to_keys":["python_boundary"],
+      "forbidden":["Semantic-kernel Any or unchecked carrier truth.","Using typing escape hatches when any conjunctive allowance condition fails."],
+      "grounding":[{"end_line":434,"quote":"`Any`, `cast(...)` and\n`# type: ignore` are allowed only when all of these hold: the boundary is\ngenuinely foreign or dynamically typed; the local code cannot express the\nshape more precisely; the use is narrow, explicit and justified in place;\nand the imprecision does not cross into the semantic kernel as governing\ntruth.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing","start_line":429}],
+      "key":"python_imprecision_latitude"
+    },
+    {
+      "allowed":["Ontology and three-view verdicts may share one design pack and acceptance record.","Wholly internal realization_refactor may cite existing accepted basis and prove no Ontology delta instead of reauthoring/reaccepting unchanged evidence."],
+      "applies_to_keys":["accepted_ontology"],
+      "forbidden":["Self-ratification of missing Ontology authority by code, tests, generated schemas or one implementing actor."],
+      "grounding":[{"end_line":476,"quote":"The Ontology\nverdict may live in the same design pack and acceptance record as the\nthree-view verdict (§7); this rule does not require a second document,\nticket or approval ceremony.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design","start_line":473}],
+      "key":"ontology_record_latitude"
+    },
+    {
+      "allowed":["Decision-complete boundaries may co-evolve design, implementation and tests, reconciling before promotion/closure.","Disposable spikes may provide evidence without becoming selected design.","Use existing work/design carriers for sequencing basis."],
+      "applies_to_keys":["design_sequencing"],
+      "forbidden":["Retained implementation establishing an unresolved durable design decision before required acceptance.","Treating either sequencing mode as a universal default.","Implementation selecting missing semantic answers or retroactively ratifying itself."],
+      "grounding":[{"end_line":529,"quote":"A disposable spike may supply evidence\nwithout becoming the selected design.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing","start_line":528}],
+      "key":"sequencing_latitude"
+    },
+    {
+      "allowed":["Local algorithm/layout alternatives may remain open only when every admitted choice is semantically equivalent under the accepted network.","Existing Ontology, algebra, mappings and views may jointly carry the complete network."],
+      "applies_to_keys":["material_relation_network"],
+      "forbidden":["Promotion with contradictory projections.","Inferring completeness from document presence, headings, plausibility or mechanical validity."],
+      "grounding":[{"end_line":609,"quote":"Local algorithm and layout\nchoices may remain open only when every admitted choice is semantically\nequivalent under the accepted network. Contradictory projections make the\ndesign unsatisfiable and block promotion (P1, P5):","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design","start_line":606}],
+      "key":"decision_complete_latitude"
+    },
+    {
+      "allowed":["Derive from multiple governing frames.","Use a single governing frame where structure is genuinely hierarchical.","A shared callable may serve sibling domains without subordination to one."],
+      "applies_to_keys":["bounded_design_frame"],
+      "forbidden":["Imposing a single-parent hierarchy as a universal requirement.","Rewriting governing truth through local action."],
+      "grounding":[{"end_line":638,"quote":"A frame may derive from more than one governing frame. A persistence\ncomponent belongs to an entity lifecycle boundary and an operational\nconsistency boundary; an admission function belongs to a domain transition\nand a runtime-authority boundary; a shared callable may be consumed by\nseveral sibling domains without becoming subordinate to one. A single\ngoverning frame is lawful where the structure is genuinely hierarchical,\nand is not required. Governing frames form a constraint network for the\nsame reason `M(B)` does (P4b, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29","start_line":631}],
+      "key":"frame_parent_latitude"
+    },
+    {
+      "allowed":["Consumer chooses substrate and evidence mechanism, subject to native constructability."],
+      "applies_to_keys":["native_constructability"],
+      "forbidden":["Concealing missing native capability using substitute bridges, adapters, runners, doubles or promises."],
+      "grounding":[{"end_line":686,"quote":"This is a constructability obligation,\nnot a prescribed implementation; the consumer chooses the substrate and the\nevidence mechanism (P0).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29","start_line":684}],
+      "key":"constructability_latitude"
+    },
+    {
+      "allowed":["Multiple actors, stages or implementations may constitute or instantiate one admission relation.","One actor, multiple signatures, quorum, human step-up, delegated proxy authority or jurisdictional partitions are lawful if cardinality and adjudication law are declared.","Equivalent paths may remain explicitly classified as constituent, replica, replacement or deliberately independent realisation."],
+      "applies_to_keys":["transformation_admission"],
+      "forbidden":["Inferring singular admission requires one component or one actor.","Retaining superseded responsibility only because a path label or test exists.","Treating projection reconstruction as admission authority or self-authenticating evidence."],
+      "grounding":[{"end_line":932,"quote":"Singularity attaches to the complete decision relation, not to one actor,\ncallable or component. Several actors, stages or implementations are\nlawful as constituents or disjoint instances of that relation. A relation\nmay lawfully require one actor, several signatures, a quorum, a human\nstep-up, delegated proxy authority or jurisdictional partitioning, provided\nits cardinality and adjudication law are declared (P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":927}],
+      "key":"admission_implementation_latitude"
+    }
+  ],
+  "limitations":[
+    "This is a bounded source interpretation only. No trial, review, semantic acceptance, execution, installed qualification, gate evaluation or Product instantiation has occurred.",
+    "Only supplied sections were used. Graphify nodes and links outside them were not promoted into semantic endpoints or authority.",
+    "External construction-specification expected distinctions, qualification fixtures, rc.2 baseline content, imported standards and later DESIGN_MODULE owner sections remain unresolved dependencies.",
+    "The member-discriminator catalogue retains all supplied situations and case mappings, but the detailed per-row external member-section routing remains in source rather than expanded into local endpoint entities.",
+    "Foundation-to-law claims, policy owners and consumer routes are described as data. Their row-by-row premise-to-consequence proof structure and Pillar assignments are not executable derivations in this schema.",
+    "Conflicting CD discriminator numbers and the universal/assurance case-count discrepancy remain explicit residuals.",
+    "Heading-only sections are omitted as organizational content. No separate judgments, traversals or transformations are populated; described operations remain concepts, constraints and residuals.",
+    "Disposition choices do not establish completeness. Exact equivalence, applicability, fidelity, currentness and authority tests require the referenced owning sources and subject evidence."
+  ],
+  "relations":[
+    {
+      "conditions":["A mapped case actually instantiates the situation and tests its distinction; partial mappings require additional logical review."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":228,"quote":"Coverage. Eleven of the 52 discriminators are exercised by cases: 22\n(T-03), 23 (T-04), 25 (T-01), 32 and 33 (CD-01), 36 (T-06), 38 (CD-03),\n39 (T-05), 40 (T-07), and 42 and 43 (CD-02). For 22, 23, 36, 39 and 40\nthe case tests part of the expected distinction, and checks L-22, L-23,\nL-36, L-39 and L-40 cover the rest.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":224}],
+      "key":"case_exercises_member_discriminators",
+      "kind":"planned_exercise_mapping",
+      "meaning":"CD-01 maps to 32/33, CD-02 to 42/43 and CD-03 to 38; the mapping is coverage planning, not evidence of passing.",
+      "source_key":"common_discriminator_cases",
+      "target_key":"member_discriminators"
+    },
+    {
+      "conditions":["Cases count as exercised only after run and assessment."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":275,"quote":"| AS-9 | A governing requirement changes but expected answers and acceptance evidence are silently retained | FOUNDATIONS §4 Change impact and evidence reuse; ACTIVATION §7; case AR-04 | AR-04 (performed once by the author); L-AS9 |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators","start_line":275}],
+      "key":"assurance_cases_exercise_discriminators",
+      "kind":"planned_exercise_mapping",
+      "meaning":"AR-01→AS-2, AR-02→AS-3, AR-03→AS-6 and AR-04→AS-9, with the respective run/assessment limitations retained.",
+      "source_key":"assurance_relation_cases",
+      "target_key":"universal_assurance_discriminators"
+    },
+    {
+      "conditions":["The boundary is governed by the profile."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":42,"quote":"Direction: profile to tier 2; preserved meaning: the tier-2 law applies\nunchanged to the bound objects; narrowed scope: boundaries this profile\ngoverns; invalidation: a change of this profile's definition of any bound\nobject re-evaluates the binding (P1, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":39}],
+      "key":"profile_declares_assurance_binding",
+      "kind":"declares_scoped_binding",
+      "meaning":"The profile supplies bound objects to unchanged tier-2 ASSURANCE law; changed bound definitions require binding re-evaluation.",
+      "source_key":"design_profile",
+      "target_key":"assurance_profile_binding"
+    },
+    {
+      "conditions":["Only within governed boundaries."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":151,"quote":"scoped to boundaries this profile governs; every rule below refines it\n(P1, P6; rc.2 #3-core-rule).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule","start_line":150}],
+      "key":"profile_refines_core_rule",
+      "kind":"refines",
+      "meaning":"Profile rules refine the externally owned core realisation rule rather than replacing its ownership.",
+      "source_key":"design_profile",
+      "target_key":"realisation_core_rule"
+    },
+    {
+      "conditions":["A listed consumer applies a source-owned family rule."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":269,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":268}],
+      "key":"family_consumer_owner_boundary",
+      "kind":"constrains_consumer_authority",
+      "meaning":"F17's declared consumer map preserves each owner; application cannot enlarge the owner's decisions.",
+      "source_key":"software_design_family",
+      "target_key":"design_rule_consumers"
+    },
+    {
+      "conditions":["The profile governs the boundary."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":313,"quote":"When this profile governs a boundary, each design or implementation change\nshould be judged against three overriding evaluators (P6, P2;\nrc.2 #3b-boundary-closure-evaluators).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators","start_line":311},{"end_line":317,"quote":"### Authority seam closure","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure","start_line":317}],
+      "key":"closure_evaluators_include_authority",
+      "kind":"includes",
+      "meaning":"Authority seam closure is one of the three evaluators; membership itself creates no additional obligation.",
+      "source_key":"boundary_closure_evaluators",
+      "target_key":"authority_seam"
+    },
+    {
+      "conditions":["The profile governs the boundary."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":313,"quote":"should be judged against three overriding evaluators (P6, P2;\nrc.2 #3b-boundary-closure-evaluators).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators","start_line":312},{"end_line":339,"quote":"### Essential carrier consolidation","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation","start_line":339}],
+      "key":"closure_evaluators_include_consolidation",
+      "kind":"includes",
+      "meaning":"Essential carrier consolidation is one of the three evaluators.",
+      "source_key":"boundary_closure_evaluators",
+      "target_key":"carrier_consolidation"
+    },
+    {
+      "conditions":["The profile governs the boundary."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":313,"quote":"should be judged against three overriding evaluators (P6, P2;\nrc.2 #3b-boundary-closure-evaluators).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators","start_line":312},{"end_line":351,"quote":"### Enforcement after proof","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof","start_line":351}],
+      "key":"closure_evaluators_include_enforcement",
+      "kind":"includes",
+      "meaning":"Enforcement after proof is one of the three evaluators.",
+      "source_key":"boundary_closure_evaluators",
+      "target_key":"enforcement_after_proof"
+    },
+    {
+      "conditions":["For the governed boundary B."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":523,"quote":"Design sequencing follows `decision_complete(B)`, not one global authoring\norder (P2, P6). Co-evolution is lawful only when `decision_complete(B)` holds:\ndesign still owns the structural HOW, but design, implementation and tests\nmay evolve together and reconcile before promotion or closure.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing","start_line":520}],
+      "key":"material_network_governs_sequencing",
+      "kind":"determines_admissibility",
+      "meaning":"The network's decision completeness determines whether co-evolution is admissible and which affected design gate is required.",
+      "source_key":"material_relation_network",
+      "target_key":"design_sequencing"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":601,"quote":"Ontology, Prime contraction, IACS, target design, the domain, sequence and\nstate views, public contracts, module boundaries, implementation and tests\nare projections of that one network at different reasoning altitudes.\nTheir presence, section names, individual plausibility or mechanical\nvalidity does not establish decision completeness (P1, EVALUATION §1).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design","start_line":597}],
+      "key":"ontology_projects_material_network",
+      "kind":"projection_of",
+      "meaning":"Ontology is one representation of the common material network; representation alone proves no completeness.",
+      "source_key":"accepted_ontology",
+      "target_key":"material_relation_network"
+    },
+    {
+      "conditions":["Current-basis lawful candidates are compared."],
+      "exceptions":["New evidence or a material dimension may invalidate dominance."],
+      "governing":true,
+      "grounding":[{"end_line":770,"quote":"A\ndominated candidate cannot be selected unless new evidence or another\nmaterial dimension invalidates the dominance relation; therefore a local\nrebuild of generic mechanics is inadmissible when an existing lawful\nfoundation composition dominates it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":767}],
+      "key":"dominance_constrains_selection",
+      "kind":"excludes_dominated_selection",
+      "meaning":"Valid dominance forbids selecting the dominated composition.",
+      "source_key":"candidate_dominance",
+      "target_key":"foundation_selection"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":692,"quote":"Native constructability proves that the selected substrate can realise the\ndesign; it does not prove that locally constructing another generic\nmechanism is the best realisation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29","start_line":690}],
+      "key":"constructability_does_not_prove_selection",
+      "kind":"insufficient_for",
+      "meaning":"Ability to construct a design does not establish the best generic-mechanism choice.",
+      "source_key":"native_constructability",
+      "target_key":"foundation_selection"
+    },
+    {
+      "conditions":["For entities/value families within the matrix's stated scope."],
+      "exceptions":["Subordinate payloads inherit unless promoted."],
+      "governing":true,
+      "grounding":[{"end_line":815,"quote":"The Ontology enumerates the entities inside the active boundary, their\nidentities, relationships, cardinalities, invariants, lifecycle states and\nauthority owners (P3, P5; rc.2 #entity-and-lifecycle-completeness). For\neach entity, design evidence provides this logical-completeness matrix or\nan equivalent closed representation:","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness","start_line":811}],
+      "key":"ontology_requires_lifecycle_evidence",
+      "kind":"requires_evidence",
+      "meaning":"Ontology entity coverage requires the lifecycle matrix or equivalent closed evidence.",
+      "source_key":"accepted_ontology",
+      "target_key":"entity_lifecycle_matrix"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":844,"quote":"Authority is part of the Ontology, not metadata added to an operation\nafter its shape has been selected (P6; rc.2 #authority-model).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model","start_line":843}],
+      "key":"ontology_includes_authority",
+      "kind":"includes_semantic_component",
+      "meaning":"Authority belongs to Ontology from design inception.",
+      "source_key":"accepted_ontology",
+      "target_key":"ontology_authority_model"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":885,"quote":"The authority matrix names who admits; it does not by itself establish the\nrelation that decides which candidate transformation becomes durable\nentity truth. Two designs can complete the matrix plausibly and still leave\ntwo materially different ways to admit the same transformation (P6, P4b;\nrc.2 #transformation-admission-completeness-stdo-up-016).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":881}],
+      "key":"authority_matrix_does_not_establish_admission",
+      "kind":"insufficient_for",
+      "meaning":"Naming the admitting role does not establish a complete singular admission decision relation.",
+      "source_key":"ontology_authority_model",
+      "target_key":"transformation_admission"
+    }
+  ],
+  "residuals":[
+    {
+      "consequence":"Retain introductory numbers and case/table numbers as conflicting source accounts; do not silently renumber or treat the introduction as authoritative over the explicit mappings.",
+      "grounding":[{"end_line":101,"quote":"Five common discriminators, 13, 14, 19, 23 and 24 of §5, turn on what\nactors do during real work: how a configuration they belong to is judged\nand kept while they redistribute work, how a realisation is judged against\nits kind of executor, and whether an actor trusts a retained account over\nthe workspace. Each needs actual use, a fresh constructor applying this\ncorpus to a declared subject with the result assessed, in addition to the\nlogical review of §5. The three cases below exercise them. A case here is\nnamed CD (common discriminator); the numbers in brackets are those of the\ndiscriminators it exercises.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20from%20the%20common%20discriminators","start_line":93}],
+      "key":"common_discriminator_numbering",
+      "subject_key":"common_discriminator_cases",
+      "uncertainty":"The introduction names 13, 14, 19, 23 and 24, while case rows and §5 map CD-01/02/03 to 32, 33, 42, 43 and 38."
+    },
+    {
+      "consequence":"No absent expected distinction or reviewer qualification is invented. Catalogued situations and routing are discovery/re-entry material, not independent conformance judgments.",
+      "grounding":[{"end_line":156,"quote":"Each discriminator's expected distinction is\nthe one the common conformance table of the construction specification\nstates (`specification/conformance/README.md`, Member Conformance, in the\nsource project, outside this package); this member does not restate it,\nand a reviewer acquires it with the table below.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators","start_line":152}],
+      "key":"external_conformance_expectations",
+      "subject_key":"member_discriminators",
+      "uncertainty":"The governing construction-specification table and referenced member sections are outside the supplied text. Per-row routing is retained by source re-entry rather than a full local endpoint expansion."
+    },
+    {
+      "consequence":"Retain five explicit discriminator-to-case mappings and separately preserve the prose claim of four; infer no corrected coverage total or passing result.",
+      "grounding":[{"end_line":283,"quote":"Coverage of these 21: four are mapped to cases (AR-01, AR-02, AR-03,\nCD-03, none run; AR-04 performed once by the author), three to the finite\noracle beside their logical review, and all 21 to a logical-review check;\nno logical-review check is recorded for this revision.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Coverage%20of%20the%20common%20discriminators%2FUniversal-construction%20and%20assurance%20discriminators","start_line":280}],
+      "key":"universal_case_count",
+      "subject_key":"universal_assurance_discriminators",
+      "uncertainty":"The prose says four mapped discriminators but lists five cases, matching five table mappings: UC-9 and AS-2/3/6/9. Their externally defined expected distinctions are also absent."
+    },
+    {
+      "consequence":"Treat conservation/newness as source claims only; do not authenticate predecessor fidelity or reconstruct omitted integrated-closure checks.",
+      "grounding":[{"end_line":301,"quote":"their primary\nsources are reacquired when a case is designed for execution. The\nsituations of the common discriminators in §5 (52 member discriminators,\nthree of the seven integrated-closure discriminators, J53 to J55, and the\n21 universal-construction and assurance discriminators) are named from\nthe construction specification in the header, whose expected distinctions\n§5 does not restate;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F6.%20Source%20dispositions","start_line":295}],
+      "key":"source_account_missing_inputs",
+      "subject_key":"conformance_source_account",
+      "uncertainty":"Builder-history primary sources, common inputs, referenced header and four other integrated-closure discriminators are not supplied."
+    },
+    {
+      "consequence":"Preserve distinctions among performed evaluations, owner dispositions, exclusions and design records without inventing refined values or their mappings.",
+      "grounding":[{"end_line":49,"quote":"A performed evaluation under this profile\nreturns a value of the core result algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), directly or through one\nof this profile's two refinements, each mapped where it is defined: the\nreconstruction decisions of §7 Invariant reconstruction sufficiency and\nthe axiom verdicts of §7 Cross-view axiom evaluation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE","start_line":44}],
+      "key":"unavailable_result_mappings",
+      "subject_key":"design_results_and_records",
+      "uncertainty":"FOUNDATIONS core algebra, ACTIVATION disposition semantics and §7 refinement definitions/mappings are outside the supplied source."
+    },
+    {
+      "consequence":"Retain the diagnostic and scoped refinement direction only; the imported core rule cannot be expanded from its reference.",
+      "grounding":[{"end_line":150,"quote":"is stated once in\n[SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape),\nscoped to boundaries this profile governs; every rule below refines it","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule","start_line":148}],
+      "key":"external_core_rule",
+      "subject_key":"realisation_core_rule",
+      "uncertainty":"SPEC_METHOD §2 is not supplied, so the complete once-owned rule and non-goals remain unresolved."
+    },
+    {
+      "consequence":"The table's derivations and counted later structures remain descriptive claims. Exact per-row premise/Pillar tuples and unsupplied definitions require source re-entry; no proof, automatic traversal or authoritative consumer endpoint is fabricated.",
+      "grounding":[{"end_line":158,"quote":"This member is material family F17, software design. The table below\nshows which of its rules follow from which premises, in the format of\n[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),\nwhich also states the standing of the consequences.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law","start_line":155}],
+      "key":"foundation_derivation_detail",
+      "subject_key":"software_design_family",
+      "uncertainty":"The finite five-family schema does not encode the full proof structure of 26 derivation rows, their Pillar tuples or operational consumer entry. Later Prime/IACS/review/identity sections and imported family definitions are unavailable."
+    },
+    {
+      "consequence":"Retain universal quantification over admitted networks as a source condition, without calculating or asserting satisfaction, equivalence, completeness or gate closure.",
+      "grounding":[{"end_line":595,"quote":"A design boundary is decision-complete when `U(B)` is empty, `M(B)` forms\none jointly satisfiable constraint network, and every network admitted by\n`M(B)` is semantically equivalent under the governing Product,\nrequirements and accepted design relations. This is the design gate's\nacceptance criterion: a boundary is ready for retained implementation\nwithout a prior gate exactly when it is decision-complete, and a gate that\ncannot reach decision completeness has not closed (P2, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design","start_line":589}],
+      "key":"semantic_network_evaluation",
+      "subject_key":"material_relation_network",
+      "uncertainty":"No concrete boundary network, admissible-network population, equivalence procedure or decision evidence is supplied; operational gate semantics exceed this descriptive schema."
+    },
+    {
+      "consequence":"Retain declaration and refusal boundaries as data. No qualification, commit, effect, publication, reconstruction or admission operation is executed or claimed.",
+      "grounding":[{"end_line":918,"quote":"The declaration binds the admission and standing-test semantics of\nACTIVATION §4 (Complete enclosing-relation admission; Standing structural\nqualification), which solely owns them. Qualification is instantiated per\nowner and supported boundary.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29","start_line":915}],
+      "key":"admission_operational_semantics",
+      "subject_key":"transformation_admission",
+      "uncertainty":"ACTIVATION §4's admission and standing-test procedures are referenced but absent. The schema records their required design inputs without representing their execution."
+    }
+  ]
+}

@@ -1,0 +1,2120 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "The STDO Axiomatic Calculus for Governed Symbolic Systems, abbreviated a_c: a domain-specific, carrier-neutral constitutional calculus for representing and relating governed symbolic systems. Its stable concept identity is urn:stdo:concept:axiomatic-calculus:a-c, owned by this standard in urn:stdo:bounded-context:axiomatic-calculus. The concept identity does not identify an immutable edition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1,
+          "quote": "# The STDO Axiomatic Calculus for Governed Symbolic Systems",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems",
+          "start_line": 1
+        },
+        {
+          "end_line": 43,
+          "quote": "urn:stdo:concept:axiomatic-calculus:a-c",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FPosition",
+          "start_line": 5
+        }
+      ],
+      "key": "axiomatic_calculus",
+      "label": "Subject-defined a_c calculus"
+    },
+    {
+      "conditions": [],
+      "definition": "Sigma comprises RecordKind, Sort, RelationKind, ConstraintKind, ResidualKind, FunctorKind, JudgmentKind and StopKind, each a finite closed identity set for one model family. The eight fixed RecordKind_ac identities have prefix urn:stdo:concept:axiomatic-calculus:record-kind: and suffixes semantic-object, typed-relation, constraint, latitude, residual, traversal, transformation and judgment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 193,
+          "quote": "Every signature member is a finite, closed identity set for one model family.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature",
+          "start_line": 147
+        }
+      ],
+      "key": "calculus_signature",
+      "label": "Closed signature Sigma"
+    },
+    {
+      "conditions": [],
+      "definition": "An abstract model M_b = (b,I,O,E,C,L,X,V,T,J) binds exact basis b and closed identity universe I. Population_M maps the eight core record kinds respectively to finite populations of semantic objects O, directed typed relations E, constitutional constraints C, latitude L, residual uncertainty X, traversals V, transformations T and judgments J. Local_M is their disjoint union; I = Local_M disjoint_union External_M.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 236,
+          "quote": "M_b = (b, I, O, E, C, L, X, V, T, J)",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature",
+          "start_line": 198
+        }
+      ],
+      "key": "symbolic_model",
+      "label": "Exact-basis symbolic model"
+    },
+    {
+      "conditions": [],
+      "definition": "SemanticObject has exactly id, sort, context, owner, scope, basis and value. id, sort, context, owner and basis are identities; scope is the closed governed domain; value is sort-defined carrier-neutral content or a reference to exact content.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 291,
+          "quote": "Every semantic object has exactly:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FSemantic%20Object",
+          "start_line": 275
+        }
+      ],
+      "key": "semantic_object",
+      "label": "SemanticObject"
+    },
+    {
+      "conditions": [],
+      "definition": "TypedRelation has exactly id, kind, source, target, context, owner, scope, basis and qualifiers. Its endpoints resolve to members of I. qualifiers is a closed kind-specific record containing the direction, cardinality, preservation, loss, inverse, invalidation or other semantics required by the signature.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 313,
+          "quote": "Every relation has exactly:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FTyped%20Relation",
+          "start_line": 295
+        }
+      ],
+      "key": "typed_relation",
+      "label": "TypedRelation"
+    },
+    {
+      "conditions": [],
+      "definition": "Constraint has exactly id, kind, applies_to, predicate, context, owner, scope, basis, judgment_kind, latitude_ref and refusal. kind resolves one declared ConstraintKind and judgment_kind one declared JudgmentKind. The signature owns the predicate language and result assessment; a predicate not deterministically decidable declares the required probabilistic or human judgment kind.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 339,
+          "quote": "Every constraint has exactly:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FConstraint",
+          "start_line": 317
+        }
+      ],
+      "key": "constraint_record",
+      "label": "Constraint record"
+    },
+    {
+      "conditions": [],
+      "definition": "Latitude is an explicit permission set within a constraint boundary, with fields id, applies_to, allowed_variation, forbidden_variation, context, owner, scope, basis and invalidation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 356,
+          "quote": "Latitude is an explicit permission set inside a constraint boundary:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FLatitude",
+          "start_line": 343
+        }
+      ],
+      "key": "latitude_record",
+      "label": "Latitude record"
+    },
+    {
+      "conditions": [],
+      "definition": "Residual uncertainty is first-class model content. Residual has fields id, subject, kind, uncertainty, consequence, context, owner, scope, basis, re_entry and invalidation. kind resolves one declared ResidualKind; the signature closes its lawful subject, uncertainty, consequence, re-entry and invalidation domains.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 388,
+          "quote": "Residual uncertainty is first-class model content:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FResidual",
+          "start_line": 364
+        }
+      ],
+      "key": "residual_record",
+      "label": "Residual record"
+    },
+    {
+      "conditions": [],
+      "definition": "Material closure is closure_R(M,Z) = lfp(lambda Q: Z union required_R(M,Q)). It is the least lawful record closure under the exact dependency family R, rather than a minimum of prose, bytes, tokens, cost or cognitive effort.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 531,
+          "quote": "closure_R(M, Z) = lfp(lambda Q: Z union required_R(M, Q))",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-010%20Material%20Closure",
+          "start_line": 520
+        }
+      ],
+      "key": "material_closure",
+      "label": "Material closure"
+    },
+    {
+      "conditions": [],
+      "definition": "Projection selects an exact view without changing selected meaning: project(M,Z,R) -> (M_Z,Boundary_Z) | gap | refusal. M_Z contains material closure; Boundary_Z records excluded, external, unresolved, translated and invalidation-sensitive seams for the declared consumer task.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 546,
+          "quote": "project(M, Z, R) -> (M_Z, Boundary_Z) | gap | refusal",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-011%20Projection",
+          "start_line": 535
+        }
+      ],
+      "key": "model_projection",
+      "label": "Model projection and boundary"
+    },
+    {
+      "conditions": [],
+      "definition": "An overlay adds explicit records to one or more declared populations of a basis model without mutating that basis. Override, disambiguation, equivalence, specialization and translation exist only as typed relations with exact authority, direction, scope, basis, preservation, loss, refusal and invalidation semantics.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 554,
+          "quote": "An overlay adds explicit records to one or more declared `Population_M`",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-012%20Overlay",
+          "start_line": 550
+        }
+      ],
+      "key": "model_overlay",
+      "label": "Typed overlay"
+    },
+    {
+      "conditions": [],
+      "definition": "A transformation t is an operation-bearing specialization of one exact traversal v. Its fields are id, traversal, domain_model, codomain_model, context, owner, scope, basis, operation_authority, preconditions, preservation_relation, preserved, introduced, removed, external_preserved, external_introduced, external_removed, external_resolution_witnesses, residuals, evidence, provenance, stop_states, invalidation and re_entry. Application T[t](M_b,inputs) returns a proposed successor M_b_prime* or hold, gap or refusal.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 587,
+          "quote": "A transformation is an operation-bearing specialization of one exact traversal",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+          "start_line": 558
+        }
+      ],
+      "key": "model_transformation",
+      "label": "Transformation contract"
+    },
+    {
+      "conditions": [],
+      "definition": "Judgment points to an unchanged subject and has fields id, kind, subject, subject_digest, context, owner, scope, basis, evaluator, authority, predicate, verdict, decision, performance, effects, evidence, residuals, provenance and decided_at. Foundations owns result semantics; decision preserves the original calculus/domain outcome and is not a second verdict enum.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 773,
+          "quote": "A judgment points to an unchanged subject:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-014%20Judgment%20Separation",
+          "start_line": 730
+        }
+      ],
+      "key": "judgment_contract",
+      "label": "Subject-defined judgment"
+    },
+    {
+      "conditions": [],
+      "definition": "A traversal v is a typed contract with id, domain, codomain, context, owner, scope, basis, preconditions, postconditions, authority, evidence, provenance and stop_states. F_K[v](X_v) -> Y_v | Omega_v binds one kind, exact traversal identity, typed input/result domains and closed stop refinement. The three kind identities are urn:stdo:concept:axiomatic-calculus:f-d, :f-p and :f-h: deterministic evaluation/proof returning judgment without constructing its evaluated domain; bounded probabilistic interpretation/construction/proposal; and explicitly authorized human adjudication, respectively.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 851,
+          "quote": "A traversal is a typed contract:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds",
+          "start_line": 800
+        }
+      ],
+      "key": "traversal_contract",
+      "label": "Traversal and functor-kind classification"
+    },
+    {
+      "conditions": [],
+      "definition": "Interpret_a_c(subject_basis,signature,interpretation_contract) -> M_subject* | hold | gap | refusal. The star marks a proposed model lacking applicable semantic acceptance. The contract declares exact calculus basis; exact subject identity, inventory and bytes/semantic addresses; signature and compatible extension; mappings to every applicable record population; interpreter identity, capability, provenance and stops; structural evaluation; semantic selection and acceptance authority; source re-entry and invalidation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 933,
+          "quote": "Interpret_a_c(subject_basis, signature, interpretation_contract)",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models",
+          "start_line": 912
+        }
+      ],
+      "key": "subject_interpretation",
+      "label": "Subject interpretation and proposed model"
+    },
+    {
+      "conditions": [],
+      "definition": "The distinct layers are a_c, pure calculus; a_c.X, subject X interpreted as a model; and a_c.X.C, an accepted model encoded in carrier C. J_X is external semantic acceptance over unchanged M_X. D_C is deterministic carrier-admission judgment over unchanged G_C bytes using Profile_C and CarrierBasis_C. Admitted encoding evidence is the exact triple (G_C,J_X,D_C).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1058,
+          "quote": "a_c.X.C   = that accepted model encoded in carrier C",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries",
+          "start_line": 1035
+        }
+      ],
+      "key": "encoded_carrier",
+      "label": "Encoded carrier and external acceptance evidence"
+    },
+    {
+      "conditions": [],
+      "definition": "AxiomaticCalculusBasis is an external record issued after publication bytes exist: kind stdo.axiomatic-calculus-basis, schema_version 1, fixed a_c concept_identity, derivation_basis with immutable absolute predecessor release_uri, manifest_sha256 and nonempty absolute semantic-address principle_refs, and publication_basis with distinct immutable successor release_uri, manifest_sha256, member_uri and member_sha256. Digests use sha256: followed by 64 lowercase hexadecimal characters.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1099,
+          "quote": "AxiomaticCalculusBasis = {",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExact%20Calculus%20Identity",
+          "start_line": 1078
+        }
+      ],
+      "key": "exact_calculus_basis",
+      "label": "AxiomaticCalculusBasis"
+    },
+    {
+      "conditions": [],
+      "definition": "Design Module Method owns generic design-contract law and an adoptable realization profile. Its realization discipline favors low coupling, modular composition, immutable typed carriers, total or nearly-total semantic transforms and explicit effect boundaries, aiming to reduce ambiguity, entropy, avoidable debt, hidden authority/mutation and semantic drift while increasing refactorability and reconstructable evidence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1,
+          "quote": "# Design Module Method",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method",
+          "start_line": 1
+        },
+        {
+          "end_line": 75,
+          "quote": "This method is therefore about realization design and implementation shape.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F1.%20Purpose",
+          "start_line": 51
+        }
+      ],
+      "key": "design_module_method",
+      "label": "Design Module Method"
+    },
+    {
+      "conditions": ["The corresponding design profile is adopted at the boundary."],
+      "definition": "Ontology is the accepted semantic-design authority subordinate to constitutional WHAT, derived from intent, Product, requirements and applicable graph/domain method. It comprises entities, identities, relationships, invariants, lifecycle, authority, atomic functions, higher-order composition, effects and projections. Accepted design separately owns structural HOW: topology, interfaces, carrier placement, modules, algorithms and local realization.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 406,
+          "quote": "The Ontology is the prior **semantic-design authority** for the boundary.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule",
+          "start_line": 396
+        },
+        {
+          "end_line": 517,
+          "quote": "A class inventory, schema list, endpoint list, command list, or carrier census",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FProportional%20Design%20Sequencing",
+          "start_line": 500
+        }
+      ],
+      "key": "design_ontology",
+      "label": "Accepted design Ontology"
+    },
+    {
+      "conditions": ["One governed design boundary B."],
+      "definition": "M(B) is the complete material-relation network: entities, identities, relationships, cardinalities, invariants, authorities and transitions, functions and higher-order composition laws, topology, lifecycle states/transitions, public contracts, externally observable Product meaning, declared domains/admission conditions, failure/refusal routes, effect/closure laws, projections, module mappings and material algorithmic obligations. U(B) contains unresolved members. Decision completeness requires U(B) empty, joint satisfiability and semantic equivalence of every admitted network under governing Product, requirements and accepted design.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 549,
+          "quote": "For one governed boundary `B`, the complete material-relation set is:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FDecision-Complete%20Symbolic%20Design",
+          "start_line": 521
+        }
+      ],
+      "key": "design_boundary_network",
+      "label": "M(B), U(B) and decision completeness"
+    },
+    {
+      "conditions": [],
+      "definition": "Foundation selection compares bounded candidate compositions supporting irreducible semantic or authority-bearing relations and generic mechanics. Its result may be a lawful selected composition, an explicit undominated frontier or a design gap. Native constructability alone does not establish the best realization.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 642,
+          "quote": "Native constructability proves that the selected substrate can realize the",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29",
+          "start_line": 629
+        }
+      ],
+      "key": "foundation_selection",
+      "label": "Capability and foundation selection"
+    },
+    {
+      "conditions": [],
+      "definition": "The entity logical-completeness matrix identifies Entity, Identity, Authority owner, Declare/create, Read/project, Update/transition and Delete/retire. It applies to identity-bearing entities and independently governed value families. Entity lifecycle describes domain states and transformations and differs from operational module lifecycle covering build, release, deploy, observe and retire.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 775,
+          "quote": "| Entity | Identity | Authority owner | Declare/create | Read/project | Update/transition | Delete/retire |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FEntity%20And%20Lifecycle%20Completeness",
+          "start_line": 743
+        }
+      ],
+      "key": "entity_lifecycle_evidence",
+      "label": "Entity lifecycle evidence"
+    },
+    {
+      "conditions": [],
+      "definition": "Authority is part of Ontology. Its matrix distinguishes Function/transition, Proposer, Evaluator, Verifier, Admitter, Executor, Projector and Retirement owner, rather than adding authority after selecting an operation's shape.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 786,
+          "quote": "| Function or transition | Proposer | Evaluator | Verifier | Admitter | Executor | Projector | Retirement owner |",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAuthority%20Model",
+          "start_line": 779
+        }
+      ],
+      "key": "design_authority_model",
+      "label": "Design authority model"
+    },
+    {
+      "conditions": [],
+      "definition": "The transformation-admission relation decides which candidate transformation becomes durable entity truth. It binds entity identity, predecessor basis, authority scope, candidate family, decision cardinality, admission predicate, durable result and supersession law. An authority matrix identifying who admits does not by itself determine this relation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 827,
+          "quote": "The authority matrix names who admits. It does not by itself establish the",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29",
+          "start_line": 815
+        }
+      ],
+      "key": "design_admission_relation",
+      "label": "Durable transformation-admission relation"
+    },
+    {
+      "conditions": [],
+      "definition": "Atomic function families are the smallest parameterized families making entity lifecycles logically complete. Function-derivation evidence relates discovered functionality, entity, atomic function/template, higher-order composition, effect class, required authority and disposition. Higher-order categories may include unit/lift, sequential, parallel/applicative, fold/evaluation, retry/recovery, recursion/fixed point and projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 943,
+          "quote": "The Ontology must derive the smallest parameterized atomic function families",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAtomic%20Functions%20And%20Higher-Order%20Composition",
+          "start_line": 918
+        }
+      ],
+      "key": "atomic_function_family",
+      "label": "Atomic functions and higher-order algebra"
+    },
+    {
+      "conditions": [],
+      "definition": "A Prime semantic atom is an irreducible design relation—atomic function family, identity, authority transition, lifecycle, topology, effect, closure or composition law—that cannot honestly be composed from other accepted atoms preserving meaning. Prime is determined at semantic-design altitude; realization size, naming, typing or independent testability does not establish it.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 969,
+          "quote": "A **Prime semantic atom** is one irreducible design relation:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FPrime%20Semantic%20Atoms%20And%20Universal%20Domain",
+          "start_line": 958
+        }
+      ],
+      "key": "prime_semantic_atom",
+      "label": "Prime semantic atom"
+    },
+    {
+      "conditions": [],
+      "definition": "The Irreducible Architectural Carrier Set (IACS) is the smallest lawful top-level carrier family needed for a boundary's functionality and authority flow. Subordinate Payload is internal detail not top-level by default; Promotion Test is the explicit prerequisite for promoting it; Boundary Inflation promotes such detail to peer types without irreducible need. Prime-conformant realization units project accepted atoms without introducing, duplicating or reinterpreting semantic authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1083,
+          "quote": "- **Irreducible Architectural Carrier Set**: the smallest lawful top-level",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law",
+          "start_line": 1068
+        }
+      ],
+      "key": "architectural_carrier_set",
+      "label": "IACS and subordinate payloads"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": ["axiomatic_calculus"],
+      "conditions": ["For consumption of a model judgment, an explicit interpretation and typed subject are given."],
+      "exceptions": ["An exact separately identified proof may establish a specified claim for a declared fragment, model or relation."],
+      "grounding": [
+        {
+          "end_line": 67,
+          "quote": "finite capacity alone does not derive them.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FPosition",
+          "start_line": 9
+        }
+      ],
+      "key": "calculus_position_boundaries",
+      "statement": "F1–F6 supply purpose, interpretation, identity, composition, finite-capacity and authority premises. AC-003/004/006 require resolved compatible references on one exact basis before judgment consumption. Signature, record kinds, closure and functor classification are additional choices owned by this standard, not uniquely forced by foundations or predecessor provenance. AC-007/014 consume the shared result algebra and AC-016 its conjunction; the transformation library supplies reusable responsibilities without replacing AC-013 or proving categorical laws. Definitions are independent of derivation-record layout, selected interpretation, carrier, provider, runtime and repository. No universal applicability, completeness, consistency, decidability, soundness or categorical status is claimed absent the stated proof exception. Interpretation and encoding cannot redefine the calculus; released Product standing requires separate authorized acceptance and release.",
+      "uncertainty": "Referenced shared laws and exact proofs are not supplied."
+    },
+    {
+      "applies_to_keys": ["axiomatic_calculus", "exact_calculus_basis", "traversal_contract"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 127,
+          "quote": "The derivation direction is one-way.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FDerivation%20Provenance",
+          "start_line": 71
+        }
+      ],
+      "key": "derivation_provenance_boundary",
+      "statement": "The cited Identity, Spec and Reference Frame clause families are historical design provenance for scoped identity/authority conservation, bounded-context meaning and cross-context relations, bounded probabilistic evaluation/construction, exact candidates and construction-assessment separation, ambiguity/human adjudication/hard stops, exact-basis evaluation and evidence-verdict separation, closed results, constitutional re-entry, finite closure/projection/residuals/capability fit and singular released authority. The selected complete STDO cut supplies operative common owners; interpretation needs no implicit STDO representation, GTL carrier or downstream implementation. F_D/F_P/F_H are introduced here as policy-selected generic identities, not imported from equal-spelled graph/runtime/ODD/application shorthand. Nominal equality establishes no identity, import or equivalence. Basis issuance resolves relative authoring links into absolute predecessor-cut principle_refs within derivation_basis.release_uri; mutable links are not digest-bound references. No model, carrier, proof tool or successful application can amend source principles or this calculus.",
+      "uncertainty": "The referenced predecessor clauses and release resolution are unavailable."
+    },
+    {
+      "applies_to_keys": ["axiomatic_calculus"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 143,
+          "quote": "`a_c` governs the form of a symbolic axiomatic model.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FScope",
+          "start_line": 131
+        },
+        {
+          "end_line": 1200,
+          "quote": "- a world-model ontology;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExclusions",
+          "start_line": 1190
+        }
+      ],
+      "key": "calculus_scope_and_exclusions",
+      "statement": "a_c governs symbolic model form: identities/types, exact relation endpoints, explicit constraints/latitude/residuals, typed traversals/judgments, closure/projection/overlay/transformation, subject preservation and distinctions among structural, semantic and authority claims. It does not select vocabulary/materiality, grant semantic acceptance, choose carriers, execute models or prove interpretation uniqueness. It is not a derivation-source representation/compression, selected subject model, carrier profile/instance, executable language/interpreter/compiler/runtime, deterministic semantic assessor/theorem prover, mandatory graph topology, world ontology, authority registry or claim of one vocabulary/relation set for all governed systems.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["calculus_signature", "symbolic_model"],
+      "conditions": ["For every a_c signature and model family."],
+      "exceptions": ["Another fundamental family requires an explicit compatible calculus extension.", "An empty population is permitted only when the selected signature requires no member of that kind."],
+      "grounding": [
+        {
+          "end_line": 260,
+          "quote": "`Population_M` is a total function over `RecordKind_ac`.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature",
+          "start_line": 177
+        }
+      ],
+      "key": "signature_population_contract",
+      "statement": "Every signature imports all eight core identities unchanged; specialization closes fields, value/reference domains and admissible kinds without removing, renaming, shadowing or silently adding a family. Unknown kinds/fields require a new signature or explicit compatible extension, not an extra subject sort. The signature specifies every sort/family's fields and values, identity-field cardinality/reference domains, relation endpoint sorts, constraint subject/predicate domains, residual subject/uncertainty/consequence/re-entry domains, judgment input/output/evidence/stop contracts and traversal functor permissions. Population_M is total; every finite fundamental record occurs in exactly one population with globally unique identity. Every external identity has exactly one signature-declared external domain and exact resolution. Hidden records, unpopulated extra families, duplicate population identity or an identity with neither one local record nor lawful external resolution refuse the model. RefDomain_Sigma(kind,field) returns cardinality, allowed local kinds, semantic sorts, external target kinds and required basis relation; every scalar/collection identity reference is checked through it.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "semantic_object", "traversal_contract", "model_transformation", "judgment_contract"],
+      "conditions": [],
+      "exceptions": ["A subject model may independently represent the concept of a record kind."],
+      "grounding": [
+        {
+          "end_line": 271,
+          "quote": "A traversal, transformation, or judgment is not placed in `O` merely by",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records",
+          "start_line": 264
+        }
+      ],
+      "key": "record_reification_separation",
+      "statement": "SemanticObject, TypedRelation, Constraint, Latitude and Residual populate O/E/C/L/X; actual traversal, transformation and judgment records populate V/T/J. Reifying an operation or record-kind name as a semantic object does not populate its corresponding core family or satisfy the core population law.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["axiomatic_calculus", "symbolic_model"],
+      "conditions": ["A governed symbolic model has a declared signature and interpretation and represents a separately identified subject."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 410,
+          "quote": "These are the\ncalculus's instance conditions.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws",
+          "start_line": 392
+        }
+      ],
+      "key": "fundamental_law_argument_boundaries",
+      "statement": "The F1–F6 arguments are conditional on those instance conditions; some predicates permit mechanical decision and others semantic judgment. Finite actor capacity does not derive the finite signature or record choices. Concrete sorts/cardinalities/reference domains belong to the signature owner and closed syntax does not establish their semantic adequacy. Context owners own identity/composite-basis relations; referenced owners retain meaning/grants. Foundations owns result algebra, while interpretation binds predicates and competent mandates separately govern admission/acceptance. Subject/interpretation authorities determine latitude, material residuals and authorized dispositions. Closure seeds/edge semantics, transformation equality/loss/grants, traversal topology/outer predicates, semantic selection/admitted loss and downstream Product applications/carriers/releases remain their respective owners' choices. Capacity proves neither closure finiteness/uniqueness nor minimum acquisition cost; common executors cannot convert proposal into assessment/adjudication, and structural validity can coexist with fidelity failures.",
+      "uncertainty": "This retains the supplied conditional argument table; referenced foundations are not independently established."
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "calculus_signature"],
+      "conditions": ["For admitted records."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 418,
+          "quote": "Missing, duplicate,\nshadowed, or unknown record kinds and populations fail closed.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-001%20Closed%20Signature",
+          "start_line": 414
+        }
+      ],
+      "key": "closed_signature_admission",
+      "statement": "Every admitted object, relation, constraint, latitude, residual, traversal, transformation specialization and judgment belongs to one declared signature; every fundamental record occurs exactly once in total Population_M under its declared kind. Missing, duplicate, shadowed or unknown kinds/populations fail closed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "semantic_object"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 424,
+          "quote": "An identity resolves one member under one type, context, owner, scope, and\nbasis.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-002%20Scoped%20Identity",
+          "start_line": 422
+        }
+      ],
+      "key": "scoped_identity_law",
+      "statement": "Identity resolves one member under one type, context, owner, scope and basis. Equal spelling, payload, graph position or carrier does not establish semantic identity.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "calculus_signature"],
+      "conditions": ["For every referenced identity, including collection members."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 433,
+          "quote": "Every referenced identity resolves exactly once in the applicable model or",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-003%20Reference%20Closure",
+          "start_line": 428
+        }
+      ],
+      "key": "reference_closure_law",
+      "statement": "References resolve exactly once locally or through one explicit external relation, using exact RefDomain_Sigma(source_record_kind,field) across populations. Local targets satisfy required family and semantic-object sort; external targets satisfy exactly one declared external kind and basis relation. Dangling, duplicate, wrong-kind, wrong-sort, wrong-basis, locally-and-externally ambiguous or undeclared-field references refuse structural admission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["typed_relation"],
+      "conditions": [],
+      "exceptions": ["An explicitly symmetric relation kind makes direction immaterial."],
+      "grounding": [
+        {
+          "end_line": 439,
+          "quote": "A relation is lawful only when its kind admits the exact source and target",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-004%20Relation%20Typing",
+          "start_line": 437
+        }
+      ],
+      "key": "relation_typing_law",
+      "statement": "Lawful relations require their kind to admit the exact endpoint sorts and all required qualifiers; direction is material subject to the explicit symmetry exception.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "model_projection", "traversal_contract", "model_transformation", "judgment_contract"],
+      "conditions": ["Records are copied, interpreted, encoded, evaluated or transported."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 448,
+          "quote": "Bind each copied, interpreted, encoded, evaluated or\ntransported record to those existing grants;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-005%20Authority%20Conservation",
+          "start_line": 443
+        }
+      ],
+      "key": "calculus_authority_conservation",
+      "statement": "The shared Judgment and authority law binds the declared semantic, operation, evaluation and decision authority of all objects, relations, constraints, latitude, residuals, traversals, transformations, projections and judgments. Their calculus representation carries existing grants and does not create replacement authority.",
+      "uncertainty": "The shared authority law is referenced but not supplied."
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "judgment_contract"],
+      "conditions": [],
+      "exceptions": ["Mixed bases require an explicitly owned composite-basis relation."],
+      "grounding": [
+        {
+          "end_line": 454,
+          "quote": "Every fundamental record, model, and result binds an exact basis.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-006%20Basis%20Coherence",
+          "start_line": 452
+        }
+      ],
+      "key": "basis_coherence_law",
+      "statement": "Every fundamental record, model and result binds an exact basis. Proximity of individually valid coordinates does not create a coherent composite basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["constraint_record", "judgment_contract", "subject_interpretation", "model_transformation", "model_projection"],
+      "conditions": ["Assessment binds the exact declared predicate and unchanged subject, not merely an outcome label."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 504,
+          "quote": "The pair of original outcome and cause, not the shorthand alone, identifies one\nrefinement case.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-007%20Constraint%20And%20Refusal",
+          "start_line": 458
+        }
+      ],
+      "key": "constraint_result_refinement",
+      "statement": "Each constraint binds applies_to, predicate, basis, judgment_kind, latitude_ref and refusal to Evaluate. The shared core owns five verdicts, legal performance pairs, effects and missing reasons. Established exact predicate under governing latitude maps to satisfied; admissible counterexample to falsified; undecidable evidence, including missing required reason, to indeterminate; needed material scope/capability outside contract to out_of_frame; uninterpretable subject/governing basis to invalid_basis. Diagnosis and missing-reason handling retain independent counterevidence; multiple required predicates use core conjunction. Returned projection/successor/model satisfies only an established production predicate; missing output defeats it only with contract/evidence support. accepted/admitted assess their own decision predicate over unchanged subject, mandate and bound authority: lawful supported decision is satisfied, established contract violation falsified, undecided decision/grant indeterminate. Other diagnoses apply to the evaluation lacking scope/capability/basis. hold/gap/refusal/refuse require a cause with the same reason-sensitive mapping. Established prohibition falsifies only the defeated permission/admission predicate; absent interpreter grant does not falsify the model constraint. Retain actual constraint evaluation performance, separate admissible counterevidence/diagnoses; without deciding support it remains indeterminate and permission refusal is separately bound. Bare stop words cannot satisfy consumers. Implementations bind mappings before execution and retain performance, known effects, evidence and residuals; no outcome upgrades actual performance/effects or establishes another model's semantic truth.",
+      "uncertainty": "Full shared diagnosis, performance-pair, missing-reason and conjunction definitions are outside the supplied source."
+    },
+    {
+      "applies_to_keys": ["latitude_record"],
+      "conditions": [],
+      "exceptions": ["An applicable transformation relation can also justify lawful value differences."],
+      "grounding": [
+        {
+          "end_line": 360,
+          "quote": "Silence is not latitude.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FLatitude",
+          "start_line": 359
+        },
+        {
+          "end_line": 510,
+          "quote": "Two values may differ lawfully only through an applicable latitude or",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-008%20Explicit%20Latitude",
+          "start_line": 508
+        }
+      ],
+      "key": "explicit_latitude_boundary",
+      "statement": "Latitude grants nothing beyond its owner, scope, basis and invalidation law. Silence, implementation preference, probabilistic choice and human presence supply no implicit latitude; value differences require an applicable latitude or transformation relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["residual_record", "symbolic_model"],
+      "conditions": ["For every material uncertainty, omission, translation loss, unresolved boundary or unproven relation."],
+      "exceptions": ["An authorized disposition creates an exact successor model; otherwise the residual remains represented or causes refusal."],
+      "grounding": [
+        {
+          "end_line": 388,
+          "quote": "Projection, compression, interpretation, or encoding cannot erase a residual.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FResidual",
+          "start_line": 382
+        },
+        {
+          "end_line": 516,
+          "quote": "Absence from a projection is not resolution.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-009%20Residual%20Conservation",
+          "start_line": 514
+        }
+      ],
+      "key": "residual_conservation_law",
+      "statement": "Material residuals remain in X until competent authorized successor disposition. Projection, compression, interpretation or encoding cannot erase or resolve them by omission. An undeclared residual kind or value refuses structural admission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["material_closure", "model_projection"],
+      "conditions": ["Closure or projection is claimed for exact M, Z and R."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 531,
+          "quote": "The result is defined only when `Z`, `R`, required-edge semantics, basis, and",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-010%20Material%20Closure",
+          "start_line": 527
+        },
+        {
+          "end_line": 546,
+          "quote": "a\ncarrier or capability budget supplies no permission to trim required members.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-011%20Projection",
+          "start_line": 543
+        }
+      ],
+      "key": "closure_projection_preconditions",
+      "statement": "Closure is defined only with exact seeds, dependency family, required-edge semantics, basis and scope and an established finite unique fixed point; failure returns gap or refusal. Projection applies the shared Faithful projection contract for its consumer, includes that closure and records all specified boundary seams. Its coordinates bind support/loss boundaries; budgets do not authorize dropping required members.",
+      "uncertainty": "The shared Faithful projection contract is not supplied."
+    },
+    {
+      "applies_to_keys": ["model_transformation", "symbolic_model", "traversal_contract"],
+      "conditions": ["For every claimed transformation."],
+      "exceptions": ["Cross-basis/cross-signature migration requires a separately identified specialization naming both sides through exact composite-basis and compatible signature-extension relations."],
+      "grounding": [
+        {
+          "end_line": 643,
+          "quote": "A broader or mismatched\ncoordinate refuses.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+          "start_line": 590
+        }
+      ],
+      "key": "transformation_identity_and_basis",
+      "statement": "t.traversal resolves exactly one v; context, owner, scope, basis, operation authority, evidence, provenance and stops equal or lawfully restrict traversal coordinates; broader/mismatched coordinates refuse. Both model identities commit to complete exact basis, signature, finite populations, External_M, external-resolution map and model-content identity. Mutable locators, family names, partial projections or population digests without exact model identity refuse. Ordinary transformation requires basis(domain)=basis(codomain)=t.basis=basis(v) and identical signatures. Migration removes and introduces identities whose basis or kind changes, with continuity only through the migration relation. preservation_relation is exact typed equality applicable to both model identities and kinds, binding both bases, comparison domain, direction, authority, scope, evidence and equality law. Equivalence/meaning-preservation may relate removed to introduced identities but cannot justify preserved membership.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["model_transformation", "symbolic_model"],
+      "conditions": ["For complete local and external populations of domain and proposed codomain."],
+      "exceptions": ["Material residuals may leave the successor only with exact authorized disposition in transformation evidence.", "Preserved records use common canonical-byte equality or, when no such grammar is shared, exact typed record equality."],
+      "grounding": [
+        {
+          "end_line": 726,
+          "quote": "A lawful\ntransformation proves the closed local-record delta:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+          "start_line": 645
+        },
+        {
+          "end_line": 622,
+          "quote": "One external identity has exactly one\nresolution tuple in one model;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+          "start_line": 603
+        }
+      ],
+      "key": "transformation_total_delta",
+      "statement": "Resolution_M(x) has exact identity-bearing external_identity, reference_domain, external_target_kind, resolved_target_identity, basis_relation, resolution_basis and evidence_identity; it is a model coordinate, not a ninth family. Every external identity has exactly one tuple; missing/ambiguous/extra tuples refuse. Local delta proves Local_b=P_t disjoint_union R_t, Local_b_prime=P_t disjoint_union N_t, N_t intersect Local_b=empty, R_t intersect Local_b_prime=empty. Every preserved record retains kind, identity, context, owner, scope and basis and proves the applicable equality; changed fields/basis/kind, nominal identity, equivalence or unbound preservation assertions refuse P_t membership. Every introduced identity carries a complete lawful record in exactly one successor population and is absent from input; every removed identity is absent from successor; each input is classified exactly once. External delta separately proves E_b=EP_t disjoint_union ER_t, E_b_prime=EP_t disjoint_union EN_t, EN_t intersect E_b=empty, ER_t intersect E_b_prime=empty. Each EP_t coordinate has exactly one witness naming external_resolution, both models, both resolutions, decision equal and evidence, and no witness names any other coordinate. Resolution tuples must be exactly field-equal; nominal identity, equivalent target, changed kind/target/domain/basis relation/resolution basis or missing witness cannot preserve them. Changed resolution is removal/introduction even if external identity remains unchanged; ER/EN complete resolutions occur only on their corresponding side. Residuals survive absent authorized disposition. Failure to establish any model identity, basis, population, partition, equality, witness, residual or codomain equation refuses. t declares every permitted mutation; input stays unchanged and proposed successor neither accepts nor admits itself.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["judgment_contract", "subject_interpretation"],
+      "conditions": ["For issuing or consuming a judgment."],
+      "exceptions": ["A carrier may use resolved records instead of repeated bodies."],
+      "grounding": [
+        {
+          "end_line": 787,
+          "quote": "Issuing a judgment does not transform, rewrite, reissue, or rename its subject.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-014%20Judgment%20Separation",
+          "start_line": 762
+        }
+      ],
+      "key": "judgment_subject_and_evidence_separation",
+      "statement": "Judgment cannot change or acquire the identity/authority of a changed subject; promotion is an explicit relation between unchanged subject and admission/acceptance judgment. Every semantic field is required; the selected signature closes domains/cardinalities/reference domains. Exact interpretation declares the original-decision-to-core-result map before use. predicate resolves its adopted contract and identity-bearing residuals resolve existing residual records. effects records shared effect state at the predicate/evidence boundary; subject/evidence/provenance identify operation and observation, without introducing a nested effect-identity schema. These are semantic obligations, not universal serialization layout. External checkers retain their released schemas: passing an older pinned checker proves only its predicate, neither upgrading judgment contracts nor accepting a_c.X.",
+      "uncertainty": "Shared performance, observed-extent and effect-state domains are externally owned."
+    },
+    {
+      "applies_to_keys": ["traversal_contract", "judgment_contract"],
+      "conditions": [],
+      "exceptions": ["A categorical-functor claim additionally defines source/target categories and proves identity and composition preservation."],
+      "grounding": [
+        {
+          "end_line": 868,
+          "quote": "The actor, executor, domain operation, and functor kind are different",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds",
+          "start_line": 791
+        },
+        {
+          "end_line": 874,
+          "quote": "Every functor application binds exactly one functor kind and one traversal",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-015%20Functor%20Classification",
+          "start_line": 872
+        }
+      ],
+      "key": "traversal_classification_boundaries",
+      "statement": "Each application binds exactly one functor kind and exact bracketed [v]; absent [v] is incomplete. Each Y_v/Omega_v outcome maps to one core verdict on an explicit predicate while retaining original outcome. Domain handling includes graceful refusal, uncertainty and recovery/termination dispositions for undecidable observations; total handling does not prove external actor/world termination. Actor, executor, domain operation and kind are distinct; Encode/Interpret/Serialize/Measure are not aliases for F_D/F_P/F_H. Shared kind does not imply shared identity, semantics, inputs, outputs, authority or evidence. F_P usefulness/repeatability grants no semantic/admission/acceptance/closure authority; F_H requires exact identity/grant/subject/basis/decision contract, and human presence confers none. Candidate availability does not establish conformity/acceptance; evaluation and disposition require their own predicates/evidence, and completed human decision does not make rejection conformity. The selected three kinds and bracket syntax are calculus choices, not categorical proofs.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["traversal_contract"],
+      "conditions": ["For F_K2[w] compose F_K1[v]."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 898,
+          "quote": "The typed join requires `v`'s result type and judgment to satisfy `w`'s domain",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-016%20Typed%20Composition",
+          "start_line": 878
+        }
+      ],
+      "key": "typed_traversal_composition",
+      "statement": "Composition applies the shared law to both exact contracts. v's result type and judgment satisfy w's domain/preconditions. The outer predicate binds required leaf predicates, intermediate results and material joins, retaining both identities, judgments, evidence, authority, provenance and stops. Its result uses the predicate-selected core conjunction or declared operator; its effect boundary includes material effects under currentness. Proposal/evaluation/human-decision contracts remain distinct. No universal F_P -> F_D -> F_H sequence is prescribed; lawful topology/operator choices cannot change constituent predicates or AC-007 refinements. Categorical claims also require the external Orthogonal descriptions demonstration standard.",
+      "uncertainty": "Shared composition, currentness and categorical demonstration details are not supplied."
+    },
+    {
+      "applies_to_keys": ["subject_interpretation", "symbolic_model"],
+      "conditions": ["A faithful valid model is claimed for a declared use."],
+      "exceptions": ["Model-local content is permitted under competent authority.", "Omission, inapplicability or admitted loss requires recorded basis and authority."],
+      "grounding": [
+        {
+          "end_line": 939,
+          "quote": "No generic checker supplies that semantic selection.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models",
+          "start_line": 902
+        },
+        {
+          "end_line": 993,
+          "quote": "Those five dispositions are declaration-treatment data, not five verdicts.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-017%20Interpretation%20Fidelity",
+          "start_line": 943
+        }
+      ],
+      "key": "interpretation_fidelity_contract",
+      "statement": "Interpretation owner selects subject/signature/materiality/admitted loss within competent source and acceptance ownership; construction does not accept its proposal. Faithful projection binds exact declarations, signature/contract target meaning and declared consumer use. Each admitted record maps to exact provenance or authorized model-local content. Every evaluated declaration has retained/omitted/residual/inapplicable/refused treatment. The treatment predicate assesses preservation of material meaning for use: established preservation including authorized omission/loss -> satisfied; admissible fidelity counterexample -> falsified; undecided preservation/authority/materiality -> indeterminate; missing scope/capability -> out_of_frame; unusable subject/interpretation basis -> invalid_basis; missing reason follows AC-007. Overall fidelity conjoins required declaration/dependency predicates. Faithful uncertainty representation may satisfy fidelity while source claim stays unresolved; treatment permission refusal does not decide source truth. O/E/C/L/X/V/T/J preserve meanings, typed dependencies, predicates/consequences, choices, unresolved conditions and operations; sorts/qualifiers/predicates distinguish premises, consequences, policy, observations and unresolved claims without a new family/fixed tree. AC-011 task views select Z/R and boundary to recover obligations, choices, evidence and open conditions. Consumers separately acquire material authoritative inputs; activated reference-frame consumers use Frame Method. Model facts are source/currentness-supported claims, not world state/effect grants; changed observations reopen affected reliance while independent unchanged support remains reusable. Fidelity evidence compares independently specified permitted/prohibited/unresolved decisions. Required premises and material latitude survive unless authorized admitted loss is recorded; unknown-to-permission, unjustified narrowing or omitted premises fail fidelity even with valid structure. Evidence scope is bounded by selected source, interpretation, projection and admitted approximation.",
+      "uncertainty": "Faithful projection, Frame Method and currentness owners are not supplied."
+    },
+    {
+      "applies_to_keys": ["subject_interpretation", "symbolic_model"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1000,
+          "quote": "Structural success is evidence\nfor semantic review, not a substitute for it.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-018%20Structural%20And%20Semantic%20Separation",
+          "start_line": 997
+        }
+      ],
+      "key": "structural_semantic_separation",
+      "statement": "Structural conformance decides closed syntax, types, identities, references, bases and mechanically decidable predicates. Semantic fidelity decides interpretation meaning/materiality. Structural success supplies review evidence, never substitutes for semantic review or proves that probabilistic selection retained every material meaning.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["symbolic_model", "calculus_signature"],
+      "conditions": ["For a claim M_b satisfies a_c[Sigma]."],
+      "exceptions": ["A checker may claim semantic/authority subsets only with the model's exact lawful decision contract."],
+      "grounding": [
+        {
+          "end_line": 1023,
+          "quote": "only when:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-019%20Valid%20Model",
+          "start_line": 1004
+        }
+      ],
+      "key": "valid_model_requirements",
+      "statement": "Validity requires resolved Sigma and exact calculus basis; every record satisfying AC-001–009; each claimed closure/projection/overlay/transformation/judgment/composition satisfying its applicable law; exact-subject fidelity and residual dispositions; distinct structural evaluation and semantic acceptance, both required where claimed; and resolved evidence/provenance/invalidation/re-entry coordinates. A checker may decide the structural subset, subject to the separate semantic/authority exception.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["encoded_carrier", "subject_interpretation", "axiomatic_calculus"],
+      "conditions": ["For encoding or layer qualification/release claims."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1058,
+          "quote": "hold or refusal cannot be\nencoded.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries",
+          "start_line": 1027
+        },
+        {
+          "end_line": 1074,
+          "quote": "A downstream success cannot ratify an upstream layer or basis.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries%2FAC-020%20Layer%20And%20Release%20Separation",
+          "start_line": 1062
+        }
+      ],
+      "key": "layer_encoding_release_boundary",
+      "statement": "Encoding requires J_X.decision=accepted and exact judgment subject identity/digest equality with unchanged M_X; hold/refusal is not encodable. D_C concerns unchanged bytes, not a transformed carrier; neither judgment enters subject identity. Layers have independent identities, judgments, supersession and proof obligations: a_c internal coherence against complete declared laws; a_c.X fidelity to exact X; a_c.X.C faithful canonical encoding of accepted model. Encoding failure cannot change model, interpretation failure cannot change calculus, and downstream evidence cannot ratify upstream. External Product authorities decide acceptance/release and resulting Product standing; encoding owner chooses lawful carrier.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["exact_calculus_basis", "subject_interpretation", "encoded_carrier"],
+      "conditions": ["When issuing exact basis or downstream content identities."],
+      "exceptions": ["Historical addresses/bytes may resolve through successor-owned immutable derivation-verification material without predecessor installation or remote retrieval."],
+      "grounding": [
+        {
+          "end_line": 1170,
+          "quote": "The record uses RFC 8785 JSON Canonicalization Scheme bytes.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExact%20Calculus%20Identity",
+          "start_line": 1102
+        }
+      ],
+      "key": "exact_identity_construction",
+      "statement": "Reject duplicate object names before RFC8785 JCS canonicalization. principle_refs is duplicate-free and sorted ascending by unsigned UTF-16 code units. Basis identity is urn:stdo:axiomatic-calculus-basis:sha256: plus sha256(JCS(AxiomaticCalculusBasis)). Derivation binds one accepted exact predecessor cut and complete finite referenced clause set identified under Derivation Provenance, resolved inside that cut without hard-coded member count; recompute when derivation changes, independently of publication carrier/new basis identity. Historical evidence keeps original derivation record/identity unchanged, binds immutable successor membership and reconstructed predecessor manifest/fragments, and does not make historical clauses operative. Publication binds distinct immutable successor and exact member bytes; member resolves inside release; external record avoids self-digest. Same-release references are publication/cross-context, not provenance. id(a_c.X) binds at least exact calculus identity, subject basis, interpretation contract, model content identity and semantic-selection ledger identity/digest. Accepted interpretation is external pair (a_c.X,J_X), avoiding circular identities. id(a_c.X.C) binds at least model identity, exact carrier Product/cut, encoding profile and canonical content identity. Encoding mechanically verifies accepted judgment subject/digest and keeps evidence external; admission is triple (a_c.X.C,J_X,D_C). Product acceptance/release likewise point to unchanged content-first identities. Owning Product chooses downstream canonical grammar/issuance authority but cannot omit upstream identities or replace them with mutable locators.",
+      "uncertainty": "RFC8785 and referenced identity/verification laws are not reproduced."
+    },
+    {
+      "applies_to_keys": ["axiomatic_calculus", "subject_interpretation", "encoded_carrier"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1178,
+          "quote": "It selects,\nconstructs, accepts, or releases no concrete interpretation or carrier.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FApplication%20Boundary",
+          "start_line": 1174
+        }
+      ],
+      "key": "generic_application_boundary",
+      "statement": "The standard defines generic a_c.X/a_c.X.C relations without selecting, constructing, accepting or releasing a concrete instance. Downstream authority owns exact subject population, interpretation, carrier, judgments and Product/release status. Downstream identity is never embedded back into calculus/publication basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["axiomatic_calculus"],
+      "conditions": ["Review and qualification of this fundamental standard."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1225,
+          "quote": "Review and qualification of this fundamental standard cover at least:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FConformance%20Obligations",
+          "start_line": 1204
+        }
+      ],
+      "key": "calculus_qualification_scope",
+      "statement": "Review covers at least closed signature/kinds/population/field/value/reference domains; well-typed positive/refusal examples for every law; unique identity and cross-context collision cases; closure/projection/overlay/transformation/composition including exact model identities, partitions, basis equality and byte-or-typed-equality refusal; separation of operations/kinds/actors/judgments; residual/authority conservation through interpretation/encoding; exact basis reconstruction; direct-coordinate, cross-family, wrong-family, duplicate-family and dangling-reference refusal for every family; derivation/publication reconstruction including cyclic/same-carrier counterexamples; and one neutral toy model showing no hidden derivation-record, application-profile or carrier dependency. No example/checker/model/carrier qualifies any law beyond the exact claim evaluated.",
+      "uncertainty": "These are described qualification obligations, not performed qualification."
+    },
+    {
+      "applies_to_keys": ["design_module_method", "design_boundary_network"],
+      "conditions": ["UP-016–019 and module-derived unit-proof claims apply where Spec selects them.", "Other profile policies apply only at adopting boundaries with their stated conditions/exceptions."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 47,
+          "quote": "Referring to that\nlaw does not adopt the remaining profile:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2FGoverning%20Relations",
+          "start_line": 5
+        }
+      ],
+      "key": "design_profile_applicability",
+      "statement": "Generic design-contract law and adoptable Ontology, Prime/IACS, functional, diagram and language policies have distinct applicability. Applicable admission/review binds governing Product/requirements, accepted Ontology/design basis, proposed boundary/complete M(B), evidence and actual design/effect grant through Contract application; local choices remain within admitted relations. This member owns Ontology-first, decision completeness/two sequencing modes, Prime contraction, IACS, three views and functional effect-boundary policies. ODD/Python/UX/world-model refinements keep declared scopes; theoretical analogies add no prerequisite. Acceptance uses core conjunction and existing design-authority decision, adding neither mandatory workflow nor second record. Recoverable-contract arguments do not select optional policies. The table assigns: complete durable admission/commit/competing-path design here with Spec UP-021 owning admission; native evidence/discovery/frontier here with Product workloads/limits/tradeoffs; Prime/IACS/cost policies without numeric minimum from F5; bounded-frame/reconstruction policies without extra documents/tree requirement; execution projection with tenant machine/human/mixed binding and software mechanics only for software; functional should policies as preferences with no language/termination guarantee; and scoped three-view/module-proof/lifecycle policies with currentness-bounded evidence reuse. Reconstruction of a violation and lawfulness of the action remain separate predicates.",
+      "uncertainty": "Several table-linked laws and shared owners are outside this supplied excerpt."
+    },
+    {
+      "applies_to_keys": ["design_module_method", "design_boundary_network"],
+      "conditions": ["Where the method governs the relevant realization boundary."],
+      "exceptions": ["Implementation and proof may share a work pass only when co_evolution_admissible(B) holds and decision completeness precedes closure."],
+      "grounding": [
+        {
+          "end_line": 117,
+          "quote": "It does not mandate one optimal authoring path for every agent, worker, or",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F1.%20Purpose",
+          "start_line": 77
+        }
+      ],
+      "key": "design_purpose_boundary",
+      "statement": "No universal authoring path, language or runtime is mandated. Specification supplies global WHAT; every intermediate traversal should have a finite inspectable reasoning/implementation/evaluation/proof/refactor unit, and modules are one possible realization tool. The method governs Ontology/architecture/module derivation after outcomes/capabilities are chosen; required functionality does not determine counts of entities/functions/operations/carriers/modules. Rules cover module boundaries, schema/carrier families, entities/records and interfaces. They do not replace Spec constitutional authority or ODD graph law. In ODD products deterministic modules realize inside/beneath graph functions, traversals and GTL modules and cannot replace them.",
+      "uncertainty": "Spec and ODD governing details are external."
+    },
+    {
+      "applies_to_keys": ["design_module_method"],
+      "conditions": ["Where the functional realization profile applies."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 138,
+          "quote": "It does require a functional design discipline.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F2.%20Position",
+          "start_line": 123
+        },
+        {
+          "end_line": 154,
+          "quote": "semantic steps should read as transforms over admitted truth; effects should",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3.%20Core%20Rule",
+          "start_line": 146
+        }
+      ],
+      "key": "functional_design_discipline",
+      "statement": "Functional design discipline is required without a functional-language mandate. Semantic meaning should inhabit typed carriers/explicit transforms; imperative coordination should remain subordinate to admitted truth, effects should be isolated at boundary modules and pushed to the edge, and shared mutation should be minimized/justified. Python, Scala, TypeScript, Kotlin or Java may satisfy the method by locating semantic law in explicit carriers/transforms. Requiring readers to infer governing meaning from orchestration, workspace convention, service methods or fallback defaults makes design too imperative/coupled. Workspace inspection remains necessary for actual presence/currentness but incidental state is not authority for intended meaning.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_module_method", "design_boundary_network"],
+      "conditions": ["The method is used inside an ODD-governed Product."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 190,
+          "quote": "reviewers must first\nask whether the boundary is an operative graph traversal.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3A.%20ODD%20Alignment%20And%20Escalation%20Rule",
+          "start_line": 158
+        }
+      ],
+      "key": "odd_alignment_boundary",
+      "statement": "Review first determines whether the boundary is operative graph traversal. Movement between typed asset states is governed by ODD outcome traversal, then declarative GTL/ABG carrier structure, then deterministic module realization. This method may govern F_D evaluators/proofs, constructors/admissions, deterministic internal transforms, publishing effect shells and admitted-truth projections. It must not conceal graph functions in services, traversal semantics in orchestration, continuation/re-entry in controllers, semantic target movement in constructors/materializers/projections, or probabilistic workers in imperative prompt/dispatch code. A module apparently owning next work, target movement, traversal closure or performed graph function should be repriced against ODD before closure. Module boundary is a realization cut within the graph program, not that program.",
+      "uncertainty": "ODD, GTL/ABG and this document's F_D reference are not resolved to external definitions."
+    },
+    {
+      "applies_to_keys": ["design_module_method", "design_boundary_network"],
+      "conditions": ["This method governs the changed design or implementation boundary."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 200,
+          "quote": "These are not optional heuristics.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators",
+          "start_line": 194
+        }
+      ],
+      "key": "boundary_closure_evaluators",
+      "statement": "Each change should be judged against authority seam closure, essential carrier consolidation and enforcement after proof. The source also calls these overriding evaluators nonoptional and says a change failing any is not real progress, even if ergonomics, tests or static-checker output improve.",
+      "uncertainty": "The source combines 'should be judged' with 'not optional'; the assessment recommendation and explicit failure boundary are retained separately."
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "architectural_carrier_set"],
+      "conditions": ["For every changed semantic boundary and its consuming interfaces."],
+      "exceptions": ["Same-name/different-shape carriers may proceed only if explicit migration design admits the difference."],
+      "grounding": [
+        {
+          "end_line": 219,
+          "quote": "The change must not increase truth surfaces;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F1.%20Authority%20Seam%20Closure",
+          "start_line": 204
+        }
+      ],
+      "key": "authority_seam_closure",
+      "statement": "Bind authoritative carrier/contract and every consumer under Contract application. Changes must not increase truth surfaces and seam closure reduces rival surfaces. Removing authoritative carrier must make consumers fail closed rather than reconstruct meaning from raw artifacts/controller state/payload fragments. Projection/query publication applies Faithful projection to named admitted carrier/runtime/event/source truth. Catalog/ownership/route/status/closure views structurally compare exposed relation with source before publication; otherwise same-name/different-shape refuses. Negative proof covers structural drift and absent truth; raw ingress follows Ingress Collapse.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["architectural_carrier_set"],
+      "conditions": ["For changes within the adopted method."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 243,
+          "quote": "Each change should collapse the slice to the few real identity-bearing carrier",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F2.%20Essential%20Carrier%20Consolidation",
+          "start_line": 223
+        }
+      ],
+      "key": "essential_carrier_consolidation",
+      "statement": "Changes should consolidate real identity-bearing carrier families: declare IACS first, keep subordinate payloads subordinate by default, and avoid classes/interfaces/result fragments introduced solely for typing, serialization or extraction convenience. Progress means fewer sharper families, less duplicate authority and boundary inflation; an additional wrapper, branch-local peer type or public payload-mirroring record alone is not such progress.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "architectural_carrier_set"],
+      "conditions": ["Where the enforcement evaluator applies, in any language."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 266,
+          "quote": "proof first, enforcement second.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F3.%20Enforcement%20After%20Proof",
+          "start_line": 247
+        }
+      ],
+      "key": "enforcement_after_proof",
+      "statement": "Types, schemas, validators, contracts and codecs enforce an already-real seam: first parse/validate/construct, explicitly admit/narrow, then enforce proved shape. Relabeling open payloads, typed envelopes retaining open authority, casts/unchecked assertions/dynamic mutation are not closure. Strict typing, sealed ADT plus parser or compiler sum type plus decoder are language-specific realizations of the same order.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "architectural_carrier_set"],
+      "conditions": ["Foreign, dynamic or weakly typed input enters an adopted boundary."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 288,
+          "quote": "Foreign, dynamic, or weakly-typed input is lawful only at ingress.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Ingress%20Collapse%20Rule",
+          "start_line": 270
+        }
+      ],
+      "key": "ingress_collapse",
+      "statement": "Foreign/open input is lawful only at ingress and after admission immediately becomes local carrier truth before semantic transforms. Required order: receive; parse/validate/normalize once; construct admitted local truth; semantic kernels consume only that truth. Repeated parsing across modules, from_dict/to_dict ceremony preserving open authority, unvalidated JSON/map relabeling and kernels inspecting open fragments are not lawful seam closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_module_method", "design_boundary_network", "architectural_carrier_set"],
+      "conditions": ["Projects using the applicable functional profile must adopt its preferences/avoidances.", "Additional purity duties apply at each exact boundary claiming functional bias, pure transforms, immutable carriers, single-owner truth or low coupling."],
+      "exceptions": ["Explicit failure carriers are preferred over exception-driven control flow where practical.", "The policies retain the Immutable Carrier Rule's justified-mutation cases and the adopted language's expressive limits."],
+      "grounding": [
+        {
+          "end_line": 335,
+          "quote": "Projects using this method must prefer:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4.%20Functional%20Bias%20Without%20Language%20Mandate",
+          "start_line": 294
+        }
+      ],
+      "key": "functional_bias_obligations",
+      "statement": "Mandatory preferences favor immutable carriers over shared mutable objects, closed typed carriers over dict/string protocols, one-time ingress admission, explicit returns over hidden mutation, explicit failure carriers where practical and small-transform composition over long controllers. Required avoidances are giant mutable workspaces, semantic-law orchestration, hidden global/registry/service coupling, typed envelopes over open truth, semantic-center payload mutation, helpers combining meaning with writes and proxy interfaces retaining old authority. Claim-specific duties require pure kernels for same admitted inputs; time/randomness/UUID/environment/process/filesystem/network/registry reads at declared ingress/effect boundaries with owned identity creation; rejection of invalid/incomplete ingress; direct local-carrier use without re-entering parsers/loaders on local truth; explicit ratified carrier-owned defaults; one owner/responsibility per function separating admission/semantics/effects; semantic algebra dependent on carrier contracts and admission on validation; shells/bootstrap/controllers/adapters below semantic center; typed effects preserving carrier truth.",
+      "uncertainty": "The referenced justified-mutation rule is outside the supplied excerpt."
+    },
+    {
+      "applies_to_keys": ["design_module_method", "architectural_carrier_set"],
+      "conditions": ["The method governs a Python boundary."],
+      "exceptions": ["Narrow, explicit, in-place justified Any/cast/type-ignore use is allowed only at genuinely foreign/dynamic boundaries where a more precise local shape cannot be expressed and imprecision does not govern the semantic kernel."],
+      "grounding": [
+        {
+          "end_line": 384,
+          "quote": "repo-authored Python must be fully\ntyped.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4A.%20Python%20Typing%20Rule",
+          "start_line": 339
+        }
+      ],
+      "key": "python_boundary_typing",
+      "statement": "All repo-authored functions/methods/callables explicitly annotate parameters/returns; semantic carriers are closed and typed; tests/scripts/support meet the same bar. Untyped def, implicit Any, semantic dict[str,Any]/Mapping[str,Any]/object truth and unchecked multilayer JSON .get chains do not count. Use closed dataclass/TypedDict/Protocol/Literal/Enum or other typed forms, validate dynamic input at ingress and narrow it before transforms; Any remains foreign-boundary only and collapses immediately. Run a strict typing pass such as mypy --strict or equivalent; failure to run cleanly means the adopted boundary is not yet implementation-conformant.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_ontology", "design_boundary_network"],
+      "conditions": ["The Ontology-first policy is adopted and a new or materially changed active semantic boundary is promoted."],
+      "exceptions": ["A realization_refactor wholly inside accepted boundaries may cite existing Ontology/design and prove no ontology delta without reauthoring/reaccepting unchanged evidence.", "Ontology and three-view acceptance may share one pack/record; no second document, ticket or ceremony is required."],
+      "grounding": [
+        {
+          "end_line": 427,
+          "quote": "Every new or materially changed active semantic boundary must derive its",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule",
+          "start_line": 390
+        }
+      ],
+      "key": "ontology_first_acceptance",
+      "statement": "Before promoting changed/new entities, functions, authority, effects, Prime carriers, modules, public operations or schemas, produce and carry a candidate Ontology slice through applicable acceptance. Its meaning derives from constitutional WHAT and governs entities/relations/invariants/lifecycle/authority/functions/composition/effects. Structural HOW remains accepted design; implementation/tests derive from requirements plus design and preserve Ontology, replacing neither. Acceptance identifies constitutional sources and accepting design authority, stable element/relation identities and version/basis making changes, staleness and affected projections decidable. Governing-source reprice invalidates only affected relations/projections pending reevaluation; code/tests/generated schemas/single implementing agent cannot self-ratify missing authority. Material boundaries affect identity, authority, lifecycle, public contract, observable Product meaning, cross-module topology or accepted effect/closure law. Semantic/structural changes publish affected Ontology/design delta and impact set; unrelated maintenance/boundaries do not freeze solely because a source digest changed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "design_ontology"],
+      "conditions": ["For a governed boundary B under the sequencing policy."],
+      "exceptions": ["Disposable spikes may supply evidence before affected design acceptance without becoming selected/retained design."],
+      "grounding": [
+        {
+          "end_line": 498,
+          "quote": "co_evolution_admissible(B) iff decision_complete(B)",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FProportional%20Design%20Sequencing",
+          "start_line": 431
+        }
+      ],
+      "key": "proportional_design_sequencing",
+      "statement": "co_evolution_admissible(B) iff decision_complete(B); design_gate(B) is the smallest causally closed affected set needed to establish completeness. Co-evolution is lawful only when complete; design still owns HOW and design/code/tests reconcile before promotion/closure. Design-gated sequencing is required where retained implementation would establish unresolved/contradictory relations or select materially non-equivalent networks with durable future consequences; affected decisions are accepted first. Neither is a global default: proportionality selects material relations and bounds the gate, completeness tests admissibility. Removed counterfactual code/runtime/test/review/reconciliation work evidences symbolic contraction, not an independent gate reason; no remaining semantic alternative makes a separate prior gate disproportionate. Implementation may supply counterexamples/falsification/ambiguity evidence, not select missing meaning, legalize itself by rewriting upstream truth or retroactively ratify decisions. Record chosen relation/basis in existing work/design carrier. Hidden architectural ambiguity switches only smallest affected decision set to gated mode; serial repairs do not establish acceptance. Repeated/cross-cutting material surprises enter Universal Intake Triage. Only diagnosed underconstrained design with sufficient requirements requires bounded design_reframe; affected retained code remains provisional until accepted. Surprise alone does not establish design cause; unresolved alternatives, upstream changes or further observations must remain. A warranted gate removes durable semantic ambiguity with contraction justifying reasoning load; HOW is owned/recorded before closure in either mode.",
+      "uncertainty": "Universal Intake Triage and governing proportionality details are externally referenced."
+    },
+    {
+      "applies_to_keys": ["design_boundary_network"],
+      "conditions": ["For decision completeness and promotion claims."],
+      "exceptions": ["Existing Ontology, algebra, module mappings and views may jointly express the complete network; no extra document is required."],
+      "grounding": [
+        {
+          "end_line": 566,
+          "quote": "Contradictory projections make the design unsatisfiable and block promotion.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FDecision-Complete%20Symbolic%20Design",
+          "start_line": 551
+        }
+      ],
+      "key": "decision_complete_network_requirements",
+      "statement": "Ontology, Prime contraction, IACS, design, domain/sequence/state views, public contracts, modules, code and tests project one network at different reasoning altitudes. Their mere presence, headings, plausibility or mechanical validity does not establish completeness. The boundary is underconstrained whenever decision_complete is false, including new material decisions left to implementation, contradictory projections or multiple non-equivalent admitted networks. Contradictions are unsatisfiable and block promotion. Local algorithm/layout choices may stay open only when every admitted choice is semantically equivalent under accepted network.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "design_ontology"],
+      "conditions": ["For a proposed action inside M(B), where UP-017 applies."],
+      "exceptions": ["A single governing parent suffices only where actual structure is hierarchical.", "A subordinate frame opens only for a material distinction unresolved at governing altitude."],
+      "grounding": [
+        {
+          "end_line": 612,
+          "quote": "Evaluate preservation against every affected governing frame and update only",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FBounded%20Frame%20Conservation%20%28%60STDO-UP-017%60%29",
+          "start_line": 570
+        }
+      ],
+      "key": "bounded_frame_conservation",
+      "statement": "Bind Contract application/composition to accepted governing frames, bounded affected relations, inherited invariants, crossing authority/composition seams and subordinate frames opened by unresolved material distinctions. Governing structure may be a network of lifecycle/operational, admission/runtime or sibling relations. Seam closure requires causally relevant far-side support or evidenced independence. Preserve every affected governing frame; update only affected subordinate projections; re-enter changed governing relations before acceptance. No closure algorithm or irrelevant descendant documentation is required. Local validity cannot excuse violated/reinterpreted governing invariants; undisposed duplicates cannot establish preservation and follow UP-018 classification/disposition. Discovered functionality is evidence, not an architectural operation: verbs/screens/endpoints/commands/tickets/use cases cannot directly become public identities, peer carriers, modules or functions. Required derivation is constitutional functionality -> candidate Ontology -> logical completeness -> whole-family Prime contraction -> accepted Ontology -> IACS -> target design and domain/sequence/state projections -> public contract/adapter projections -> implementation/test projections.",
+      "uncertainty": "Shared support conditions and UP-018's detailed classification are not supplied."
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "foundation_selection"],
+      "conditions": ["Before design acceptance under native-constructability law."],
+      "exceptions": ["Consumer chooses substrate and evidence mechanism; no particular implementation is prescribed."],
+      "grounding": [
+        {
+          "end_line": 625,
+          "quote": "A semantically coherent design is not acceptable when its selected substrate",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FNative%20Constructability%20Before%20Design%20Acceptance%20%28%60STDO-UP-002%60%29",
+          "start_line": 616
+        }
+      ],
+      "key": "native_constructability_requirement",
+      "statement": "Semantic coherence cannot make a design acceptable if selected substrate cannot natively realize required identities, relationships, transitions, authority boundaries, effects, lifecycle, composition, publication and retirement. Missing capability remains explicit design gap or lawful re-entry; bridges, adapters, filesystem runners, test doubles or future promises cannot conceal it.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["foundation_selection", "design_boundary_network"],
+      "conditions": ["Before material generic capability/common mechanic/algorithm construction or material dependency selection.", "New material generic subproblems recursively re-enter before retaining their implementation."],
+      "exceptions": ["No package survey or ledger is required for a trivial helper unable materially to affect authority, Product behavior, lifecycle cost or accepted design network."],
+      "grounding": [
+        {
+          "end_line": 690,
+          "quote": "Candidate discovery is bounded, reproducible, and explicitly non-exhaustive.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29",
+          "start_line": 629
+        },
+        {
+          "end_line": 739,
+          "quote": "Apply the pass proportionally.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29",
+          "start_line": 729
+        }
+      ],
+      "key": "foundation_discovery_contract",
+      "statement": "A proportional mandatory pass states required capability without Product/domain/module/vendor/file/incumbent labels, distinguishing irreducible owner/role/subject/scope/basis/lifecycle/refusal relations from generic supporting mechanics or assigned roles; factoring concerns relations, not source authorship. Candidate compositions draw from admitted project foundations, language/runtime/platform/stdlib, accepted predecessor/immutable lineage, maintained external foundations when Product permits dependency and bounded local implementation. For every category record sources/collections, cutoff/version basis, applicability/inclusion criteria, exclusions, predecessor/incumbent status, discovered candidates and unknowns; unsearched categories record reasoned not_applicable or named gap. Discovery closes only for that basis/cutoff. Material frontier-changing discovery gaps prevent selection; immaterial residuals justify inability to change decision. Later applicable candidates capable of materially altering lawful frontier invalidate affected evidence/re-enter. Stay inside Product and admitted migration strategy; do not choose evolution vs re-adoption or override Spec's rebuttable strategy presumption. Predecessors may constrain migration candidates; within admitted comparison no source-order/familiarity/sunk-cost/local-code/dependency-count preference. For every material candidate compare decision-changing fit/constructability, semantic or operation leakage, adapter/integration/migration/deletion/future-code costs, license/maintenance/security/upgrade/supply chain, package/runtime/startup/storage/operation cost, determinism/concurrency/failure/recovery/reconstruction/replay, assurance burden and exit/replacement/reversibility. Prior selection differs from later recurrence review.",
+      "uncertainty": "Spec migration strategy and later recurrence review are not supplied."
+    },
+    {
+      "applies_to_keys": ["foundation_selection", "design_authority_model"],
+      "conditions": ["For material candidates in the declared bounded population and exact Product/basis."],
+      "exceptions": ["New evidence or another material dimension may invalidate a dominance relation and reopen a previously dominated candidate."],
+      "grounding": [
+        {
+          "end_line": 727,
+          "quote": "A material unknown that could reverse\nthe relation prevents dominance and remains a gap.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29",
+          "start_line": 692
+        }
+      ],
+      "key": "foundation_frontier_and_authority",
+      "statement": "Hard authority/Product-contract/safety/security/license/native-constructability failure eliminates a candidate. Unknown evidence cannot become favorable scoring; no universal scalar is required and lawful materially incomparable options form an explicit undominated frontier. Dominance requires every material dimension comparable or evidenced nondiscriminating, no worse on all comparable dimensions and strictly better on at least one; reversible material unknowns prevent dominance. Dominated candidates cannot be selected absent invalidation, so dominated generic local rebuilds are inadmissible; unused breadth alone proves no dominance and may add lifecycle cost. Existing tradeoff owner selects lawful undominated composition only using declared Product/basis priorities/risk tolerances and recording frontier resolution; unresolved priorities leave a design gap. Fewest dependencies, smallest edit/line count or richest features do not determine selection; rejected material candidates record decisive evidence/falsifier. Reuse transfers no authority automatically. Foundations may realize explicitly assigned authority-bearing roles only while preserving owner/role/subject/scope/basis/lifecycle/refusal invariants; capability/provenance/authorship cannot widen/remint roles. Declared relations retain ownership regardless of local/reused implementation; local generic code must win the same comparison.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["entity_lifecycle_evidence", "design_ontology"],
+      "conditions": ["For entities within the active Ontology boundary and independently governed value families."],
+      "exceptions": ["Subordinate payloads/value objects inherit owning entity lifecycle/authority unless passing Promotion Test; no ceremonial peer lifecycle row is needed."],
+      "grounding": [
+        {
+          "end_line": 775,
+          "quote": "Every cell must identify a lawful function, declare `not_applicable` with a",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FEntity%20And%20Lifecycle%20Completeness",
+          "start_line": 743
+        }
+      ],
+      "key": "entity_lifecycle_completeness",
+      "statement": "Ontology enumerates entities, identities, relationships, cardinalities, invariants, lifecycle states and authority owners; evidence supplies lifecycle matrix or equivalent closed representation. Every cell names lawful function, reasoned not_applicable or named Gap:/Unanswered: and owner; silence is not evidence. Columns are completeness questions, not mutable CRUD mandates: create may mean declaration/construction/admission/materialization; read normally should project typed authoritative truth; update normally should be admitted transition/new version; delete normally should retire/revoke/decommission/supersede where history/identity must remain true. Keep domain-entity lifecycle distinct from operational module lifecycle.",
+      "uncertainty": "Promotion Test and section 6C are referenced outside this excerpt."
+    },
+    {
+      "applies_to_keys": ["design_authority_model", "design_ontology"],
+      "conditions": ["Every Ontology function or lifecycle transition crossing semantic, authority, admission, effect, persistence or public boundaries."],
+      "exceptions": ["One owner may occupy multiple roles only when governing authority explicitly allows.", "Pure subordinate helpers inherit their function's authority envelope without peer rows unless crossing those boundaries."],
+      "grounding": [
+        {
+          "end_line": 811,
+          "quote": "Role coincidence must not be inferred from\nimplementation convenience.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAuthority%20Model",
+          "start_line": 782
+        }
+      ],
+      "key": "authority_role_separation",
+      "statement": "Provide authority matrix or equivalent closed representation. Distinguish actor from authority, capability from current-basis admitted authority, proposal from evaluation/verification/admission/execution/projection/retirement, attribution from permission and semantic ownership from runtime-effect ownership. Higher-order composition binds shared authority law to inputs/functions/projections/current basis, carrying admitted grants and downstream witnesses. Delegation, elevation, transfer and retirement authority additionally require named typed transition and owning admission boundary.",
+      "uncertainty": "Shared Judgment and authority law is not supplied."
+    },
+    {
+      "applies_to_keys": ["design_admission_relation", "design_boundary_network"],
+      "conditions": ["Every consequential entity-transition domain and every material admission relation selected under UP-016."],
+      "exceptions": ["Unsupported composite/nested forms may be not_applicable only if accepted domain/design excludes them and no weaker/competing admission path exists.", "Disjoint scopes or identities are not counterexamples to admission singularity."],
+      "grounding": [
+        {
+          "end_line": 885,
+          "quote": "Singularity attaches to the complete decision relation, not to one actor,",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29",
+          "start_line": 820
+        }
+      ],
+      "key": "transformation_admission_completeness",
+      "statement": "Evidence contains the complete admission relation, not just plausible role assignments. Accepted design declares each owner/supported boundary; exact admission-valid basis and predecessor/currentness continuity including equal/coherent multi-owner bases; complete enclosing relation/participants/equality joins; refusal/effect boundaries; complete semantic commit unit/decomposability; every distinct post-validation commit/publication boundary exposing a subset or declared dominance/equivalence proof that representative observations cover all partial failures; reconstruction/direct/composite/nested forms; and competing-path disposition. Spec UP-021 solely owns admission/standing tests; qualification is per owner and supported boundary. Missing/downstream-invented fields/owners/boundaries, inferred continuity/failure coverage/reconstruction, or parser/helper/manufactured-refusal nonapplicability falsify this obligation. Multiple actors/stages/implementations may be constituents/disjoint instances of one complete law, including single actor, multisignature, quorum, human step-up, proxy or jurisdictional partition, with declared cardinality/adjudication. Competing paths need not be deleted but must be explicit constituents/replicas/replacements/independent realizations; superseded responsibility retention requires distinct supported purpose under Core Interface Migration, not labels/tests. Consequential projector candidates re-enter admission against explicit predecessor; reconstructed state is not self-authenticating evidence. Law is false if materially non-equivalent admission laws remain reachable for same entity/scope/predecessor, equivalent competing implementations lack disposition, or projection reactions authenticate themselves.",
+      "uncertainty": "UP-021 standing/admission tests and Core Interface Migration details are not supplied."
+    },
+    {
+      "applies_to_keys": ["design_admission_relation"],
+      "conditions": ["At admission of the declared candidate/predecessor on the scoped entity."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 914,
+          "quote": "Candidate\nwell-formedness is a different predicate.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29%2FAdmission%20contract%20use",
+          "start_line": 889
+        }
+      ],
+      "key": "admission_contract_binding",
+      "statement": "Bind Contract application to authoritative basis, complete relation/commit unit, required support, actual admitter grant and supported durable result/other outcome. These are semantic bindings, not a new carrier. Design Method owns design completeness; UP-021 owns admission/standing semantics, reason-sensitive mapping, missing/stale/incompatible/unusable basis, trust-boundary validation and separate assessment/decision/observed-commit predicates. Predecessor continuity/currentness/authority are material joins. Preserve qualified domain outcome and actual performance/effects including nonperformance, partial publication and unknown effects. Shape-correct projector candidates need authentic current-predecessor support and grant, which alone do not prove all admission conditions. Unresolved seams use UP-017 affected-set support. Basis advancement before semantic commit prevents effect and requires UP-021 current-basis re-entry; this is existing assessment, not an extra validation pass.",
+      "uncertainty": "The owning admission predicate, diagnostic mappings and trust-boundary laws are unresolved external references."
+    },
+    {
+      "applies_to_keys": ["atomic_function_family", "design_ontology"],
+      "conditions": ["For function derivation; higher-order laws apply where the boundary has higher-order behavior."],
+      "exceptions": ["Typed parameters/closed variants are normally preferred for entity/projection/transition/policy/payload-only variation, not absolutely required.", "Iterative discovery of composition/effects/implementation is permitted only with co_evolution_admissible(B); otherwise only disposable spikes precede affected design acceptance."],
+      "grounding": [
+        {
+          "end_line": 954,
+          "quote": "Every row must be one of:",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAtomic%20Functions%20And%20Higher-Order%20Composition",
+          "start_line": 918
+        }
+      ],
+      "key": "atomic_function_derivation",
+      "statement": "Derive smallest parameterized families completing entity lifecycles. Every functionality-evidence row is derived through admitted atomic function, derived through declared composition, deferred with owner/re-entry, excluded by current Product authority or unresolved named gap. Higher-order behavior names composition/effect algebra and applicable identity, closure, associativity, cardinality, effect and authority-conservation laws, without hiding them in controllers. Category/monadic vocabulary is not required; ODD may use GTL/ABG and others explicit alternative algebras. Every retained result reconciles into accepted design before promotion/closure; private helpers/loops/adapters/endpoints cannot become undeclared constructors.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["prime_semantic_atom"],
+      "conditions": ["For accepted Prime atoms and their realization mappings."],
+      "exceptions": ["An out-of-domain case may justify another candidate atom proposed for design admission."],
+      "grounding": [
+        {
+          "end_line": 980,
+          "quote": "Every accepted Prime atom declares the admitted domain over which its law",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FPrime%20Semantic%20Atoms%20And%20Universal%20Domain",
+          "start_line": 963
+        }
+      ],
+      "key": "prime_atom_domain_law",
+      "statement": "One atom may map to several realization units and one unit to several atoms only with explicit mapping and no rival meaning/authority. Atomic functions are not proven Prime before whole-family contraction. Every accepted atom declares its admitted domain and governs every admitted instance; later uses compose/parameterize it without local fork/shadow/specialization/reinterpretation. In-domain counterexample falsifies shared atom and requires re-entry at its design boundary, not feature replacement. Without declared domain an atom remains candidate and supplies neither Prime acceptance nor realization conformance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["prime_semantic_atom", "design_ontology", "architectural_carrier_set"],
+      "conditions": ["Before promotion and at material semantic boundaries under Prime policy."],
+      "exceptions": ["Work within an accepted boundary cites existing Prime basis rather than recreating it."],
+      "grounding": [
+        {
+          "end_line": 1006,
+          "quote": "A function-and-carrier-only pass does not establish whole-family Prime.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FWhole-Family%20Prime%20Contraction",
+          "start_line": 984
+        },
+        {
+          "end_line": 1025,
+          "quote": "Contraction must preserve root authority and every retained semantic relation.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FRecursive%20Prime%20And%20Root%20Conservation%20%28%60STDO-UP-003%60%29",
+          "start_line": 1010
+        }
+      ],
+      "key": "whole_family_prime_contraction",
+      "statement": "Review each atom and then complete candidate family plus every realization projection, including identities, authority transitions, lifecycle, topology, functions, composition, effects and closure. Ask whether operations are parameters, commands lifecycle transitions, reads projections, implementations higher-order applications; whether independent identity/authority/effect/lifecycle/reuse/public-pattern-match meaning is introduced; whether every atom kind entered contraction; whether every unit explicitly maps to accepted atoms; and whether projections introduce/duplicate/reinterpret meaning/authority. Individually plausible functions are not Prime if one parameterized template/closed variants preserves meaning/authority. Visible recurrence contracts during design; later recurrence review is no substitute. Local irreducibility/conformance cannot prove global Prime while family duplicates identity/authority/function/lifecycle/topology/effect/projection. Preserve root authority and every retained semantic relation; fewer files/functions/operations/surfaces cannot excuse new authority/truth paths. Evidence states complete family, each atom's stable identity/irreducible relation/domain/falsifier, whole-family contraction, before/after meaning/authority, accepted loss and total realization-to-accepted-atoms mapping.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_ontology", "design_boundary_network", "architectural_carrier_set"],
+      "conditions": ["Every design projection under the adopted Ontology projection law."],
+      "exceptions": ["Intentional omission/flattening declares accepted loss and a failure condition.", "Implementation branches/test expectations need not be individually enumerated in Ontology."],
+      "grounding": [
+        {
+          "end_line": 1044,
+          "quote": "Target\ndesign may add structural HOW, but cannot originate rival semantic meaning.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FOntology%20Projection%20Law",
+          "start_line": 1029
+        }
+      ],
+      "key": "ontology_projection_requirements",
+      "statement": "Faithful projection uses accepted Ontology as semantic source and preserves its identity/relationship/lifecycle/authority/function/effect distinctions. Targets include domain/class/sequence/state views, authority/effect matrices, IACS, APIs/registers/SDK/CLI, schemas/codecs/manifests/catalogs, architecture/modules and implementation/test/proof inventories through accepted design and requirements. Binding names source and preserved laws. Structural HOW cannot introduce rival meaning. Public operations/messages/transitions/carriers/effects untraceable through accepted design to Ontology cannot enter active line. Code branches/tests trace to requirements plus design and preserve Ontology.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["prime_semantic_atom", "architectural_carrier_set"],
+      "conditions": ["Prime policy applies to proposed top-level functions, classes, carrier types, schema records and modules."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1117,
+          "quote": "Typed closure by itself is **not** sufficient reason to create a new top-level",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law",
+          "start_line": 1050
+        }
+      ],
+      "key": "prime_realization_law",
+      "statement": "Derive Prime atoms from logically complete candidate Ontology before top-level units; whole-family Prime evidence supports Ontology acceptance and downstream design/IACS/modules/functions/schemas/tests project accepted atoms. Typed closure alone does not justify new top-level types. Units are Prime-conformant only if projecting accepted atoms without new/duplicate/reinterpreted authority; topology/effect boundaries first require accepted Prime derivation. Size and one-to-one atom mapping are immaterial. Typical lawful reasons include admitted graph topology, typed carrier transform, effect, validation/admission or projection boundaries, subject to those prerequisites. Units solely shortening calls, aggregating unrelated convenience behavior, renaming old interfaces, adding wrappers, concealing mutation/fallback/orchestration, naming nonauthoritative payload variants, publishing internal detail without irreducible boundary, mirroring carriers with small changes or proliferating types for typing discomfort are not conformant. Prefer composition, existing lawful functions and fewer sharper boundaries/families; purpose is preventing semantic fragmentation/helper sprawl, not minimizing lines.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["design_boundary_network", "prime_semantic_atom"],
+      "conditions": ["During Prime review and decomposition."],
+      "exceptions": ["Many-to-one and one-to-many relations among boundaries are permitted; no artifact/review per concern is required."],
+      "grounding": [
+        {
+          "end_line": 1129,
+          "quote": "Review cuts, realization units, runtime modules, and work items are distinct",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law%2FBoundary%20And%20Governance%20Cost%20%28%60STDO-UP-005%60%29",
+          "start_line": 1121
+        }
+      ],
+      "key": "boundary_governance_cost",
+      "statement": "Review cuts, realization units, runtime modules and work items are distinct and cannot be forced one-to-one for administrative convenience. Contraction accounts for governance cost as well as unit count and is unsuccessful if it increases authority centers, maintained truth surfaces, acceptance boundaries, dependency cycles, manual projection reconciliation or review burden. Evidence is proportional to semantic change and risk.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["architectural_carrier_set", "design_ontology", "design_boundary_network"],
+      "conditions": ["When defining schema, carrier family or typed public boundary under IACS policy."],
+      "exceptions": ["With co_evolution_admissible(B), Ontology/IACS evidence/code/tests may develop together, but cannot self-ratify meaning and must reconcile before promotion/closure."],
+      "grounding": [
+        {
+          "end_line": 1185,
+          "quote": "The IACS is a realization projection of the Ontology.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule",
+          "start_line": 1133
+        }
+      ],
+      "key": "iacs_derivation_and_closure",
+      "statement": "Derive IACS from accepted Ontology before naming subordinate payloads/modules; the set should precede helper results/internal detail. Possible roles include source truth, admission, execution, yield/recovery, effect plan and public projection, not a fixed required inventory. Branch payload, persistence detail, read-row shape and typing-only field grouping do not automatically justify top-level carriers. Evidence cites accepted Ontology/function derivation, declares set, maps every carrier to carried identity/lifecycle/function/authority/effect/projection law, distinguishes authoritative/downstream carriers, defaults all other shapes to subordinate/private unless Promotion Test passes, and reconciles typed implementation before closure. IACS cannot replace Ontology or originate entities/functions/lifecycle/authority. Missing declared accepted Ontology or IACS means schema not yet design-method complete. Before promotion/closure both must be accepted and implementation reconciled; gated mode accepts affected unresolved/contradictory/non-equivalent relation before retained implementation establishes it.",
+      "uncertainty": "The full Promotion Test is not supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "retained",
+      "keys": ["axiomatic_calculus"],
+      "reason": "Retains the document's named calculus identity.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems"
+    },
+    {
+      "decision": "retained",
+      "keys": ["axiomatic_calculus", "calculus_position_boundaries", "calculus_to_interpretation"],
+      "reason": "Retains position, identity, conditional premises, independent choices and downstream interpretation direction.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FPosition"
+    },
+    {
+      "decision": "residual",
+      "keys": ["derivation_provenance_boundary", "calculus_external_owners"],
+      "reason": "Retains provenance distinctions and identifies unresolved external clause owners.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FDerivation%20Provenance"
+    },
+    {
+      "decision": "retained",
+      "keys": ["calculus_scope_and_exclusions"],
+      "reason": "Retains governed form and explicit nonfunctions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FScope"
+    },
+    {
+      "decision": "retained",
+      "keys": ["calculus_signature", "symbolic_model", "signature_population_contract", "carrier_representation_latitude"],
+      "reason": "Retains signature, populations, reference-domain contract and conditional carrier variation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature"
+    },
+    {
+      "decision": "residual",
+      "keys": ["record_reification_separation", "operational_population_representation_limit"],
+      "reason": "Retains population separation and explicitly limits this descriptive representation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records"
+    },
+    {
+      "decision": "retained",
+      "keys": ["semantic_object"],
+      "reason": "Retains exact semantic-object fields and meanings.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FSemantic%20Object"
+    },
+    {
+      "decision": "retained",
+      "keys": ["typed_relation"],
+      "reason": "Retains exact relation fields, endpoint domain and qualifiers.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FTyped%20Relation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["constraint_record"],
+      "reason": "Retains exact fields and deterministic versus probabilistic/human assessment distinction.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FConstraint"
+    },
+    {
+      "decision": "retained",
+      "keys": ["latitude_record", "explicit_latitude_boundary"],
+      "reason": "Retains explicit permission structure and authority limits.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FLatitude"
+    },
+    {
+      "decision": "retained",
+      "keys": ["residual_record", "residual_conservation_law"],
+      "reason": "Retains residual fields, closed domains and conservation/refusal alternatives.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FResidual"
+    },
+    {
+      "decision": "retained",
+      "keys": ["fundamental_law_argument_boundaries"],
+      "reason": "Retains instance conditions, conditional arguments and additional-policy ownership.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws"
+    },
+    {
+      "decision": "retained",
+      "keys": ["closed_signature_admission"],
+      "reason": "Retains total single-signature population admission and fail-closed cases.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-001%20Closed%20Signature"
+    },
+    {
+      "decision": "retained",
+      "keys": ["scoped_identity_law"],
+      "reason": "Retains scoped identity and rejected identity shortcuts.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-002%20Scoped%20Identity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["reference_closure_law"],
+      "reason": "Retains exact reference resolution and all stated structural refusal classes.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-003%20Reference%20Closure"
+    },
+    {
+      "decision": "retained",
+      "keys": ["relation_typing_law"],
+      "reason": "Retains typing, qualifier requirements and explicit symmetry exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-004%20Relation%20Typing"
+    },
+    {
+      "decision": "retained",
+      "keys": ["calculus_authority_conservation"],
+      "reason": "Retains binding to existing grants, without fabricating external authority-law content.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-005%20Authority%20Conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["basis_coherence_law"],
+      "reason": "Retains exact basis and explicit composite-basis prerequisite.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-006%20Basis%20Coherence"
+    },
+    {
+      "decision": "residual",
+      "keys": ["constraint_result_refinement", "shared_result_contract_gap"],
+      "reason": "Retains supplied reason-sensitive mappings while leaving missing shared result rules unresolved.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-007%20Constraint%20And%20Refusal"
+    },
+    {
+      "decision": "retained",
+      "keys": ["explicit_latitude_boundary"],
+      "reason": "Retains applicable-latitude/transformation requirement.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-008%20Explicit%20Latitude"
+    },
+    {
+      "decision": "retained",
+      "keys": ["residual_conservation_law"],
+      "reason": "Retains all material residual categories and authorized successor condition.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-009%20Residual%20Conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["material_closure", "closure_projection_preconditions"],
+      "reason": "Retains least-fixed-point definition, existence conditions and gap/refusal boundary.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-010%20Material%20Closure"
+    },
+    {
+      "decision": "retained",
+      "keys": ["model_projection", "closure_projection_preconditions", "projection_requires_closure"],
+      "reason": "Retains view/boundary result, governing closure dependency and no budget-based trimming.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-011%20Projection"
+    },
+    {
+      "decision": "retained",
+      "keys": ["model_overlay"],
+      "reason": "Retains additive overlay and exact typed relation requirements.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-012%20Overlay"
+    },
+    {
+      "decision": "retained",
+      "keys": ["model_transformation", "transformation_identity_and_basis", "transformation_total_delta", "transformation_specializes_traversal"],
+      "reason": "Retains transformation fields, exact models, local/external deltas, witnesses, migration exceptions and proposal boundary.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["judgment_contract", "judgment_subject_and_evidence_separation"],
+      "reason": "Retains complete judgment semantics, unchanged subjects and checker limitations.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-014%20Judgment%20Separation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["traversal_contract", "traversal_classification_boundaries"],
+      "reason": "Retains exact traversal fields, three kinds, outcome handling and authority/termination/category distinctions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds"
+    },
+    {
+      "decision": "retained",
+      "keys": ["traversal_classification_boundaries"],
+      "reason": "Retains exactly-one kind/traversal and bracketed identity requirement.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-015%20Functor%20Classification"
+    },
+    {
+      "decision": "retained",
+      "keys": ["typed_traversal_composition"],
+      "reason": "Retains joins, outer predicate, effects, stops and lawful topology discretion.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-016%20Typed%20Composition"
+    },
+    {
+      "decision": "retained",
+      "keys": ["subject_interpretation", "interpretation_fidelity_contract"],
+      "reason": "Retains proposed-model operation, interpretation contract and separate semantic selection/acceptance.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models"
+    },
+    {
+      "decision": "retained",
+      "keys": ["interpretation_fidelity_contract"],
+      "reason": "Retains treatment/result distinction, fidelity conditions, task acquisition and currentness boundaries.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-017%20Interpretation%20Fidelity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["structural_semantic_separation"],
+      "reason": "Retains structural versus semantic assessment boundaries.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-018%20Structural%20And%20Semantic%20Separation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["valid_model_requirements"],
+      "reason": "Retains six validity prerequisites and checker decision-contract exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-019%20Valid%20Model"
+    },
+    {
+      "decision": "retained",
+      "keys": ["encoded_carrier", "layer_encoding_release_boundary", "accepted_interpretation_encoding"],
+      "reason": "Retains three layers, accepted-model encoding prerequisite and external judgment evidence.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries"
+    },
+    {
+      "decision": "retained",
+      "keys": ["layer_encoding_release_boundary"],
+      "reason": "Retains independent layer proof obligations and external release authority.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries%2FAC-020%20Layer%20And%20Release%20Separation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["exact_calculus_basis", "exact_identity_construction"],
+      "reason": "Retains basis schema, canonical identity rules, predecessor/publication separation and external judgments.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExact%20Calculus%20Identity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["generic_application_boundary"],
+      "reason": "Retains generic-only scope and downstream ownership.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FApplication%20Boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": ["external_specialization_latitude"],
+      "reason": "Retains permitted external imports/translations/specializations and their authority boundaries.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExternal%20Imports%20And%20Specializations"
+    },
+    {
+      "decision": "retained",
+      "keys": ["calculus_scope_and_exclusions"],
+      "reason": "Retains every stated exclusion without treating excluded roles as executable instructions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExclusions"
+    },
+    {
+      "decision": "retained",
+      "keys": ["calculus_qualification_scope"],
+      "reason": "Retains minimum review coverage as subject obligations, without qualification claims.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FConformance%20Obligations"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_module_method"],
+      "reason": "Retains the separate method-document identity.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method"
+    },
+    {
+      "decision": "residual",
+      "keys": ["design_profile_applicability", "design_external_policy_dependencies"],
+      "reason": "Retains policy ownership/applicability and marks missing linked owners and later clauses.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2FGoverning%20Relations"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_module_method", "design_purpose_boundary"],
+      "reason": "Retains design goals, bounded traversal recommendation, scope and co-evolution/ODD limits.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F1.%20Purpose"
+    },
+    {
+      "decision": "retained",
+      "keys": ["functional_design_discipline"],
+      "reason": "Retains required discipline and language-neutral preferences.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F2.%20Position"
+    },
+    {
+      "decision": "retained",
+      "keys": ["functional_design_discipline"],
+      "reason": "Retains admitted-truth/effect recommendation and observation-versus-authority distinction.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3.%20Core%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["odd_alignment_boundary"],
+      "reason": "Retains conditional ODD governing order, allowed realization roles and prohibited concealment.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3A.%20ODD%20Alignment%20And%20Escalation%20Rule"
+    },
+    {
+      "decision": "residual",
+      "keys": ["boundary_closure_evaluators", "evaluator_modality_tension"],
+      "reason": "Retains the three evaluators and both should/nonoptional formulations.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators"
+    },
+    {
+      "decision": "retained",
+      "keys": ["authority_seam_closure"],
+      "reason": "Retains fail-closed source dependence, publication comparisons and migration exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F1.%20Authority%20Seam%20Closure"
+    },
+    {
+      "decision": "retained",
+      "keys": ["essential_carrier_consolidation"],
+      "reason": "Retains consolidation recommendation, sequencing and progress distinctions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F2.%20Essential%20Carrier%20Consolidation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["enforcement_after_proof"],
+      "reason": "Retains proof/admission before enforcement and false-closure prohibitions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F3.%20Enforcement%20After%20Proof"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ingress_collapse"],
+      "reason": "Retains immediate one-time admission and forbidden open-truth propagation.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Ingress%20Collapse%20Rule"
+    },
+    {
+      "decision": "residual",
+      "keys": ["functional_bias_obligations", "design_missing_exception_definitions"],
+      "reason": "Retains preferences, avoidances and claim-specific duties while preserving unresolved justified-mutation exceptions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4.%20Functional%20Bias%20Without%20Language%20Mandate"
+    },
+    {
+      "decision": "retained",
+      "keys": ["python_boundary_typing", "python_foreign_typing_latitude"],
+      "reason": "Retains conditional full typing, strict checking and conjunctive foreign-boundary exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4A.%20Python%20Typing%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_ontology", "ontology_first_acceptance", "ontology_governs_carrier_set"],
+      "reason": "Retains semantic versus structural authority, acceptance/currentness requirements and proportional exceptions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_ontology", "proportional_design_sequencing"],
+      "reason": "Retains exact completeness equivalence, sequencing triggers, evidence direction and scoped reframe conditions.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FProportional%20Design%20Sequencing"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_boundary_network", "decision_complete_network_requirements", "equivalent_realization_latitude"],
+      "reason": "Retains full M(B) inventory, all completeness conditions, contradiction boundary and equivalent local-choice latitude.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FDecision-Complete%20Symbolic%20Design"
+    },
+    {
+      "decision": "retained",
+      "keys": ["bounded_frame_conservation"],
+      "reason": "Retains all affected governing frames, network applicability, re-entry limits and required derivation sequence.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FBounded%20Frame%20Conservation%20%28%60STDO-UP-017%60%29"
+    },
+    {
+      "decision": "retained",
+      "keys": ["native_constructability_requirement"],
+      "reason": "Retains native capability prerequisite, gap/re-entry outcomes and free substrate/evidence choice.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FNative%20Constructability%20Before%20Design%20Acceptance%20%28%60STDO-UP-002%60%29"
+    },
+    {
+      "decision": "retained",
+      "keys": ["foundation_selection", "foundation_discovery_contract", "foundation_frontier_and_authority"],
+      "reason": "Retains bounded discovery, candidate dimensions, dominance/frontier logic, ownership, recursion and trivial-helper exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29"
+    },
+    {
+      "decision": "retained",
+      "keys": ["entity_lifecycle_evidence", "entity_lifecycle_completeness"],
+      "reason": "Retains entity inventory, matrix alternatives, cell outcomes, subordinate exception and non-CRUD modalities.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FEntity%20And%20Lifecycle%20Completeness"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_authority_model", "authority_role_separation"],
+      "reason": "Retains roles, distinctions, explicit role-coincidence permission and subordinate-helper exception.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAuthority%20Model"
+    },
+    {
+      "decision": "retained",
+      "keys": ["design_admission_relation", "transformation_admission_completeness", "admission_realization_latitude"],
+      "reason": "Retains complete admission relation, per-boundary evidence, singularity conditions, competing paths and falsifiers.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29"
+    },
+    {
+      "decision": "residual",
+      "keys": ["admission_contract_binding", "admission_owner_semantics_gap"],
+      "reason": "Retains gate bindings and basis-advancement effects while leaving UP-021's missing reason-sensitive rules unresolved.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29%2FAdmission%20contract%20use"
+    },
+    {
+      "decision": "retained",
+      "keys": ["atomic_function_family", "atomic_function_derivation"],
+      "reason": "Retains evidence rows, five outcomes, explicit algebra and conditional iterative discovery.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAtomic%20Functions%20And%20Higher-Order%20Composition"
+    },
+    {
+      "decision": "retained",
+      "keys": ["prime_semantic_atom", "prime_atom_domain_law"],
+      "reason": "Retains atom meaning, admitted-domain universality, counterexamples and mapping latitude.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FPrime%20Semantic%20Atoms%20And%20Universal%20Domain"
+    },
+    {
+      "decision": "retained",
+      "keys": ["whole_family_prime_contraction"],
+      "reason": "Retains complete family scope, review questions and prior recurrence contraction.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FWhole-Family%20Prime%20Contraction"
+    },
+    {
+      "decision": "retained",
+      "keys": ["whole_family_prime_contraction"],
+      "reason": "Retains local/global distinction, root conservation, evidence and existing-basis reuse.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FRecursive%20Prime%20And%20Root%20Conservation%20%28%60STDO-UP-003%60%29"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ontology_projection_requirements"],
+      "reason": "Retains source laws, target classes, accepted loss and traceability boundaries.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FOntology%20Projection%20Law"
+    },
+    {
+      "decision": "retained",
+      "keys": ["architectural_carrier_set", "prime_realization_law"],
+      "reason": "Retains Prime vocabulary, realization conformance, permitted reasons, defects and preferences.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law"
+    },
+    {
+      "decision": "retained",
+      "keys": ["boundary_governance_cost"],
+      "reason": "Retains distinct decomposition boundaries, governance-cost falsifiers and proportional evidence.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law%2FBoundary%20And%20Governance%20Cost%20%28%60STDO-UP-005%60%29"
+    },
+    {
+      "decision": "residual",
+      "keys": ["iacs_derivation_and_closure", "ontology_governs_carrier_set", "design_missing_exception_definitions"],
+      "reason": "Retains IACS evidence and sequencing while leaving the referenced Promotion Test unresolved.",
+      "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": ["A carrier may use records, tables, graphs, terms, clauses, code or another representation only when its encoding profile proves every tuple relation preserved or explicitly refused."],
+      "applies_to_keys": ["symbolic_model", "encoded_carrier"],
+      "forbidden": ["Treating representation choice as permission to omit tuple relations without preservation or explicit refusal."],
+      "grounding": [
+        {
+          "end_line": 260,
+          "quote": "The tuple is abstract. A carrier may use records, tables, graphs, terms,",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature",
+          "start_line": 258
+        }
+      ],
+      "key": "carrier_representation_latitude"
+    },
+    {
+      "allowed": ["Applications may declare typed import, translation or specialization of a_c concepts under their own exact authority, context, basis, scope, preservation, loss, refusal and invalidation law."],
+      "applies_to_keys": ["axiomatic_calculus"],
+      "forbidden": ["Treating external usefulness or specialization as amendment of a_c or incorporation into this standard."],
+      "grounding": [
+        {
+          "end_line": 1186,
+          "quote": "An application may declare a typed import, translation, or specialization of",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExternal%20Imports%20And%20Specializations",
+          "start_line": 1182
+        }
+      ],
+      "key": "external_specialization_latitude"
+    },
+    {
+      "allowed": ["At adopted Python boundaries, Any, cast(...) and # type: ignore only when all four conditions hold: genuinely foreign/dynamic boundary, more precise local expression unavailable, narrow explicit use justified in place, and no governing imprecision entering the semantic kernel."],
+      "applies_to_keys": ["design_module_method", "architectural_carrier_set"],
+      "forbidden": ["Using these exceptions as semantic-kernel truth or without any required condition."],
+      "grounding": [
+        {
+          "end_line": 378,
+          "quote": "`Any`, `cast(...)`, and `# type: ignore` are allowed only when all of the",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4A.%20Python%20Typing%20Rule",
+          "start_line": 372
+        }
+      ],
+      "key": "python_foreign_typing_latitude"
+    },
+    {
+      "allowed": ["Local algorithm and layout choices may remain open only if every admitted choice is semantically equivalent under the accepted network.", "Existing Ontology, algebra, mappings and views may jointly carry the complete relation without another document."],
+      "applies_to_keys": ["design_boundary_network"],
+      "forbidden": ["Calling the boundary complete while choices introduce material semantic decisions, contradictory projections or non-equivalent admitted networks."],
+      "grounding": [
+        {
+          "end_line": 566,
+          "quote": "Local algorithm and layout choices may remain open only when",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FDecision-Complete%20Symbolic%20Design",
+          "start_line": 557
+        }
+      ],
+      "key": "equivalent_realization_latitude"
+    },
+    {
+      "allowed": ["Multiple actors, stages or implementations may constitute or instantiate disjoint portions of the singular admission relation.", "One actor, multiple signatures, quorum, human step-up, proxy delegation or jurisdictional partition may be used with declared cardinality/adjudication law.", "Equivalent competing paths may be constituents, replicas, replacements or deliberately independent realizations with explicit relationship to the singular law and supported retention purpose where superseded."],
+      "applies_to_keys": ["design_admission_relation"],
+      "forbidden": ["Inferring singularity from one actor/callable/component.", "Leaving equivalent competing implementations undispositioned or non-equivalent laws reachable on identical entity/scope/predecessor coordinates.", "Inferring that competing-path disposition necessarily requires deletion."],
+      "grounding": [
+        {
+          "end_line": 868,
+          "quote": "Competing-path disposition does not imply deletion.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29",
+          "start_line": 856
+        }
+      ],
+      "key": "admission_realization_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source interpretation under the requested published basis STDO 2.5.1-rc.2. The embedded subject calculus is data and is not treated as that basis, an instruction source, an accepted model or an operative authority.",
+    "The supplied a_c document is interpreted alongside only the supplied opening Design Module Method sections. Foundations, Transformation Library, Identity Method, Spec Method, Reference Frame Method, ODD Method, RFC8785 and omitted design sections remain unresolved dependencies; named references do not establish their full semantics.",
+    "Source-defined traversal, transformation and judgment contracts are described through concepts and constraints only. Their operational populations remain empty under the adapter; no execution, proof, acceptance, installed qualification, Product instantiation or completeness judgment is asserted.",
+    "The five active families cannot instantiate every source field, external-reference domain, equality witness, typed result algebra, temporal/currentness relation or qualified authority grant. These details are retained descriptively and require exact source re-entry for operational use.",
+    "No cross-document identity is inferred from equal terms such as F_D, transformation, projection, authority or carrier. Design-specific concepts remain separate from the subject calculus's concepts unless an explicit local relation is grounded.",
+    "Dispositions report section treatment and select authored records; retained does not establish semantic completeness or an authorized source-defined fidelity verdict. No source section is deliberately excluded; repeated obligations are consolidated with separate groundings.",
+    "The boundary-evaluator should/nonoptional wording and missing justified-mutation/Promotion Test details remain explicit uncertainties. Conditional adoption, recommendations, required preferences and prohibition boundaries are not collapsed into a universal mandatory implementation workflow."
+  ],
+  "relations": [
+    {
+      "conditions": ["An exact subject X and separately owned interpretation are supplied."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 60,
+          "quote": "a_c + exact subject X              ──interpret──> a_c.X",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FPosition",
+          "start_line": 57
+        }
+      ],
+      "key": "calculus_to_interpretation",
+      "kind": "interpretation_layer_derivation",
+      "meaning": "The calculus plus exact subject yields a separately owned interpreted layer; this schematic direction grants no semantic acceptance or reverse authority.",
+      "source_key": "axiomatic_calculus",
+      "target_key": "subject_interpretation"
+    },
+    {
+      "conditions": ["Projection uses declared M, Z, R and consumer task."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 544,
+          "quote": "`M_Z` contains AC-010's material closure of `Z` under `R`.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-011%20Projection",
+          "start_line": 543
+        }
+      ],
+      "key": "projection_requires_closure",
+      "kind": "required_content_dependency",
+      "meaning": "Projection's selected model must contain the governed material closure; direction is from dependent projection to its prerequisite.",
+      "source_key": "model_projection",
+      "target_key": "material_closure"
+    },
+    {
+      "conditions": ["Exactly one traversal resolves and transformation coordinates equal or lawfully restrict its contract."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 593,
+          "quote": "`t.traversal` resolves one `v`;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+          "start_line": 590
+        }
+      ],
+      "key": "transformation_specializes_traversal",
+      "kind": "operation_bearing_specialization",
+      "meaning": "A transformation specializes and is bounded by one exact traversal contract; broader or mismatched coordinates refuse.",
+      "source_key": "model_transformation",
+      "target_key": "traversal_contract"
+    },
+    {
+      "conditions": ["External J_X has decision accepted and subject identity/digest exactly equal the unchanged interpreted model."],
+      "exceptions": ["Hold or refusal cannot be encoded."],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1058,
+          "quote": "G_C = Encode_C(M_X, J_X) where J_X = accepted",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries",
+          "start_line": 1046
+        }
+      ],
+      "key": "accepted_interpretation_encoding",
+      "kind": "conditional_encoding",
+      "meaning": "Accepted unchanged interpreted model supplies the semantic source of carrier encoding; carrier admission is a separate judgment and cannot ratify the source layer.",
+      "source_key": "subject_interpretation",
+      "target_key": "encoded_carrier"
+    },
+    {
+      "conditions": ["The boundary adopts the Ontology/IACS profile and Ontology has applicable acceptance."],
+      "exceptions": ["Lawful co-evolution allows joint development but requires acceptance and reconciliation before promotion/closure."],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 400,
+          "quote": "Once accepted, it governs semantic entities, relationships,",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule",
+          "start_line": 396
+        },
+        {
+          "end_line": 1173,
+          "quote": "The IACS is a realization projection of the Ontology.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule",
+          "start_line": 1171
+        }
+      ],
+      "key": "ontology_governs_carrier_set",
+      "kind": "semantic_source_governs_realization",
+      "meaning": "Accepted Ontology supplies IACS meaning; the carrier set projects its laws and cannot originate rival semantic authority.",
+      "source_key": "design_ontology",
+      "target_key": "architectural_carrier_set"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Retain referenced owners and historical role as unresolved dependencies; do not fabricate predecessor-cut resolution or shared-law endpoints, nor treat authoring links as immutable basis references.",
+      "grounding": [
+        {
+          "end_line": 123,
+          "quote": "The mutable authoring links are not themselves\nthe digest-bound derivation references.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FDerivation%20Provenance",
+          "start_line": 118
+        }
+      ],
+      "key": "calculus_external_owners",
+      "subject_key": "derivation_provenance_boundary",
+      "uncertainty": "Identity/Spec/Reference Frame clause contents, Foundations commitments/shared laws, transformation-library contracts and exact predecessor publication coordinates are not supplied. Their source-declared roles are retained without resolving their complete meaning."
+    },
+    {
+      "consequence": "No operational traversal, transformation or judgment is instantiated. Empty adapter populations cannot be represented as satisfying the subject calculus's population law merely because their concepts are described.",
+      "grounding": [
+        {
+          "end_line": 271,
+          "quote": "A subject model may independently\nrepresent the concept of a record kind, but that representation does not\nsatisfy the core population law.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records",
+          "start_line": 268
+        }
+      ],
+      "key": "operational_population_representation_limit",
+      "subject_key": "record_reification_separation",
+      "uncertainty": "The five active families retain operation shapes, equations, outcomes and obligations as data but cannot materialize the subject's V/T/J populations, typed witnesses, judgments, execution joins or their proofs."
+    },
+    {
+      "consequence": "The supplied five-verdict refinements remain interpretable, but complete legal performance/effect pairs, diagnosis combination and missing-reason evaluation cannot be reconstructed or executed from this excerpt.",
+      "grounding": [
+        {
+          "end_line": 474,
+          "quote": "The [core result](FOUNDATIONS.md#result-algebra) owns all five verdict meanings,\nlegal performance pairs, effects and missing-reason handling;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-007%20Constraint%20And%20Refusal",
+          "start_line": 460
+        }
+      ],
+      "key": "shared_result_contract_gap",
+      "subject_key": "constraint_result_refinement",
+      "uncertainty": "Foundations' complete result algebra, conjunction, independent-counterevidence diagnostics, effects and missing-reason rules are external; an unresolved rule is not a negative verdict."
+    },
+    {
+      "consequence": "Retain policy adoption boundaries and the table's declared responsibilities without importing missing laws, selecting a concrete workflow or asserting conformance to those owners.",
+      "grounding": [
+        {
+          "end_line": 47,
+          "quote": "ODD alignment, Python\ntyping, UX and world-model refinements retain their declared adoption scopes;",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2FGoverning%20Relations",
+          "start_line": 18
+        }
+      ],
+      "key": "design_external_policy_dependencies",
+      "subject_key": "design_profile_applicability",
+      "uncertainty": "Spec selection, UP-018's four action classifications/history-withheld discriminator, UP-019 computational projection, module proof, three-view gate, lifecycle confirmation, totality, effect-edge, UX/world-model refinements and later recurrence/review sections are referenced but not supplied in full. Shared Contract application, Faithful projection, currentness, result and authority laws and ODD/GTL/ABG definitions likewise remain external."
+    },
+    {
+      "consequence": "Preserve 'should' for the assessment action and the explicit nonoptional/failure statements without silently promoting every evaluator preference into an unconditional mandatory implementation.",
+      "grounding": [
+        {
+          "end_line": 200,
+          "quote": "should be judged against three overriding evaluators.\n\nThese are not optional heuristics.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators",
+          "start_line": 194
+        }
+      ],
+      "key": "evaluator_modality_tension",
+      "subject_key": "boundary_closure_evaluators",
+      "uncertainty": "The section uses a recommendation for judging each change, calls the evaluators nonoptional, and separately denies progress to changes failing one. The exact intended modal reconciliation is not further specified."
+    },
+    {
+      "consequence": "Keep justified mutation and Promotion Test as unresolved exceptions/prerequisites; do not invent their conditions or infer blanket mutation prohibition or payload-promotion permission.",
+      "grounding": [
+        {
+          "end_line": 335,
+          "quote": "These policies retain the\nImmutable Carrier Rule's justified-mutation cases and the adopted language's\nexpressive limits.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4.%20Functional%20Bias%20Without%20Language%20Mandate",
+          "start_line": 333
+        },
+        {
+          "end_line": 1169,
+          "quote": "6. keep subordinate payload detail private unless it passes the Promotion Test",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule",
+          "start_line": 1167
+        }
+      ],
+      "key": "design_missing_exception_definitions",
+      "subject_key": "architectural_carrier_set",
+      "uncertainty": "The Immutable Carrier Rule's justified-mutation cases and full Promotion Test are not present. The excerpt names the exception and test but does not define enough to decide an instance."
+    },
+    {
+      "consequence": "Retain current-predecessor support, actual grants, separate predicates and effect records as requirements; do not manufacture UP-021 diagnoses, standing results or admission authority from candidate shape.",
+      "grounding": [
+        {
+          "end_line": 906,
+          "quote": "UP-021 owns their missing, stale, incompatible\nand unusable-basis distinctions, required trust-boundary validation and the\nseparate assessment, authorized decision and observed commit predicates.",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29%2FAdmission%20contract%20use",
+          "start_line": 898
+        }
+      ],
+      "key": "admission_owner_semantics_gap",
+      "subject_key": "admission_contract_binding",
+      "uncertainty": "Spec UP-021 and transformation-library admission specialization own detailed admission/standing predicates, reason-sensitive maps and trust-boundary rules, but their content is not supplied. Design completeness is therefore retained separately from those unresolved admission semantics."
+    }
+  ]
+}

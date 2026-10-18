@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tasks", "limitations"],
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "decision", "justification", "representation", "sources", "unknowns"],
+        "properties": {
+          "id": {"type": "string"},
+          "decision": {"type": "string"},
+          "justification": {"type": "string"},
+          "representation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["statement", "premises", "applicability", "obligations", "exceptions", "result_mapping", "residuals"],
+            "properties": {
+              "statement": {"type": "string"},
+              "premises": {"type": "array", "items": {"type": "string"}},
+              "applicability": {"type": "array", "items": {"type": "string"}},
+              "obligations": {"type": "array", "items": {"type": "string"}},
+              "exceptions": {"type": "array", "items": {"type": "string"}},
+              "result_mapping": {"type": "array", "items": {"type": "string"}},
+              "residuals": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "anchor", "quote"],
+              "properties": {
+                "path": {"type": "string"},
+                "anchor": {"type": "string"},
+                "quote": {"type": "string"}
+              }
+            }
+          },
+          "unknowns": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

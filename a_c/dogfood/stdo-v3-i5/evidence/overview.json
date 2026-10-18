@@ -1,0 +1,69 @@
+{
+  "builder_sha256": "dea506b4cbdc0a0521f7db5a17050a7550116380a3511bd5811d6731ca8fce74",
+  "status": "passed",
+  "upstream": {
+    "clean": true,
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "packages": {
+      "networkx": "3.4.2",
+      "tree-sitter": "0.25.2"
+    },
+    "version": "0.9.90"
+  },
+  "views": [
+    {
+      "candidate_records": 153,
+      "claim": "derived record discovery only; parallel occurrences counted; selectors/envelope excluded; no added semantic coverage",
+      "displayed_records": 100,
+      "edges": 700,
+      "input_manifest_sha256": "d9a6dc3826270addc3d69e9db2e6c6733f5cc691659583a176a667ac1f61e412",
+      "input_model": {
+        "id": "urn:a-c:dogfood:stdo-v3-i5:claude:model:proposal:1",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "a434430546071851a8e1dbd2ade19261166db7debfb481d690adc1b2a9a78c5b"
+      },
+      "omitted_records_within_radius": 53,
+      "outputs": {
+        "claude-records.json": {
+          "bytes": 569794,
+          "sha256": "7b3daf1eadbc063156a3c587889ba22ddd91e675227df39f8db6612d57b01bc0"
+        },
+        "claude.html": {
+          "bytes": 151274,
+          "sha256": "6c3988bfe6a12dcdd7822b1db99c7b372b380b1808da93d7f48ed9ab7a5b34bd"
+        }
+      },
+      "radius": 2,
+      "records": 272,
+      "seed": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+      "tenant": "claude"
+    },
+    {
+      "candidate_records": 687,
+      "claim": "derived record discovery only; parallel occurrences counted; selectors/envelope excluded; no added semantic coverage",
+      "displayed_records": 100,
+      "edges": 5247,
+      "input_manifest_sha256": "f7140b802be45b89b82d86b07e837e8e19dcb8235f1676cd0d4f56276a27fbec",
+      "input_model": {
+        "id": "urn:a-c:dogfood:stdo-v3-i5:codex:model:proposal:1",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "15e7919ebe598a1468686c3284b7fa80374c08b8caf0aa8958bfebce745ad474"
+      },
+      "omitted_records_within_radius": 587,
+      "outputs": {
+        "codex-records.json": {
+          "bytes": 5581770,
+          "sha256": "c5325310ad3c3dcaf0d82b9e3b6d68365727744d4f1fd75efb321100078d93b7"
+        },
+        "codex.html": {
+          "bytes": 222893,
+          "sha256": "af6ec5483e6deb0e559f16eed9b0d16a94097dd32554a7f26b84068368bd93cd"
+        }
+      },
+      "radius": 2,
+      "records": 790,
+      "seed": "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.parallel-assurance-and-provenance",
+      "tenant": "codex"
+    }
+  ]
+}

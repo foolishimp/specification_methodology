@@ -1,0 +1,32 @@
+{
+  "answer_sha256": "cc0aa85b4a559af878aec9406e2866727c1d63b8007c5a6e09f4ec5cf3efa886",
+  "cli_exit_code": 0,
+  "cli_version": "codex-cli 0.162.1",
+  "elapsed_seconds": 765.3899488330353,
+  "events_sha256": "6b281cee44663acc5f5a8904b8e1d97c413ad352adfa02bf70171b9987691944",
+  "failures": [
+    "source_or_semantic_fragment_validation"
+  ],
+  "profile": "ac.generation.actor-result/1",
+  "schema_errors": [],
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "high",
+    "service_tier": "default"
+  },
+  "status": "failed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timed_out": false,
+  "unexpected_item_types": [],
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 9600,
+      "input_tokens": 79557,
+      "output_tokens": 47031,
+      "reasoning_output_tokens": 707
+    }
+  ],
+  "user_config_unchanged": true,
+  "validation_error": "record[common_design_surface]/grounding/0: grounding names source outside chunk"
+}

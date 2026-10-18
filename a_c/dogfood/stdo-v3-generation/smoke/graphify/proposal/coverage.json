@@ -1,0 +1,116 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 4,
+    "judgments": 0,
+    "latitude": 1,
+    "objects": 10,
+    "relations": 5,
+    "residuals": 1,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "graphify",
+    "profile": "ac.generation.contract/1"
+  },
+  "mode": "graphify",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-932d3fe7d5ace96e56ac",
+      "dispositions": [
+        {
+          "decision": "retained",
+          "keys": [
+            "synthetic_generation_smoke_corpus",
+            "test_subject_authority_boundary"
+          ],
+          "reason": "Retains the document's test-subject identity and explicit exclusion of Product authorization and acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "deployment_gate",
+            "current_passing_result",
+            "dispatch_receipt_without_result",
+            "deployment_result_prerequisite",
+            "deployment_gate_requires_result",
+            "receipt_does_not_satisfy_gate"
+          ],
+          "reason": "Retains the independent gate, exact candidate and basis requirement, current passing result prerequisite, and dispatch-receipt insufficiency.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "old_passing_check_reuse",
+            "applicable_preservation_relation",
+            "dependency_coverage",
+            "reuse_preservation_prerequisite",
+            "incomplete_coverage_reuse_boundary",
+            "reuse_requires_preservation_relation",
+            "unresolved_dependency_influence"
+          ],
+          "reason": "Retains conditional reuse and its preservation requirements, together with explicit unresolved influence and withholding of the dependent reuse claim under incomplete coverage.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "source_representation",
+            "shape_check",
+            "semantic_acceptance",
+            "record_layout_variation",
+            "representation_does_not_supply_acceptance",
+            "shape_check_does_not_supply_acceptance"
+          ],
+          "reason": "Retains the author's conditional layout latitude and the universal exclusion of representation and shape checks as suppliers of semantic acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation"
+        }
+      ],
+      "limitations": [
+        "This is a bounded F_P interpretation of the four supplied sections; it supplies no semantic acceptance, execution, installed qualification or completeness judgment.",
+        "The source does not identify a concrete gate, candidate, basis, check, preservation relation or dependency evidence, and does not define positive semantic acceptance criteria.",
+        "Discovery graph content adds no normative authority. No external meanings or endpoints have been supplied.",
+        "Source requirements are represented descriptively; no judgments, traversals or transformations are instantiated."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 4,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "This is a bounded F_P interpretation of the four supplied sections; it supplies no semantic acceptance, execution, installed qualification or completeness judgment.",
+        "The source does not identify a concrete gate, candidate, basis, check, preservation relation or dependency evidence, and does not define positive semantic acceptance criteria.",
+        "Discovery graph content adds no normative authority. No external meanings or endpoints have been supplied.",
+        "Source requirements are represented descriptively; no judgments, traversals or transformations are instantiated."
+      ],
+      "chunk": "chunk-932d3fe7d5ace96e56ac"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "profile": "ac.generation.source-custody/1",
+  "work_grant": "T-005-source-first-graphify-generation",
+  "acquisition": "Exact immutable Git blobs; no tenant worktree input and no Git mutation.",
+  "excluded_artifact_custody": "Original admitted artifacts are hashed only for candidate identity checks; they are absent from semantic generation corpora.",
+  "subjects": {
+    "codex": {
+      "revision": "5a5b5ad80f0ba4b56b83aadd42ac130de53ba803",
+      "checkpoint": "87512593de6ec60660f2ad9e040241d67a4108d7",
+      "source_root": "specification_methodology/v3/build_tenants/codex/successor/",
+      "checkpoint_is_descendant": true,
+      "source_equivalence_roots": [
+        "specification_methodology/v3/build_tenants/codex/successor/"
+      ],
+      "source_equivalent_at_checkpoint": true,
+      "candidate_manifest": {
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/rc5/integration/CANDIDATE.json",
+        "revision": "87512593de6ec60660f2ad9e040241d67a4108d7",
+        "sha256": "11006862deb1432d9874f339eb6b9f9364963b8e7507c2d7df84769f63852fce"
+      },
+      "standing": "Unaccepted candidate; source acquisition grants no methodology or semantic acceptance.",
+      "candidate_members": {
+        "verified_members": 90,
+        "verified_bytes": 38958677,
+        "all_digests_match": true
+      },
+      "source_commit": "91b06ebbecc3c0ac3eab4838e94f4544b076a217",
+      "account_commit": "2bcc60c7bbe0696051771541e8b84880040cc51f",
+      "package_tree": "33ea615d4a8f8f9be62cd168ad17d78dbd186964",
+      "selected_input": {
+        "manifest_path": "corpora/codex/manifest.json",
+        "manifest_sha256": "57b00f719a18b422ab59409f2aa009387a7860b7b4cd0c789bb5f71d2c01dff1",
+        "file_count": 44,
+        "total_bytes": 1269082,
+        "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+        "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1"
+      }
+    },
+    "claude": {
+      "revision": "9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e",
+      "checkpoint": "1db13bfeb0675fc95de04aceccb214f5b76873fc",
+      "source_root": "specification_methodology/v3/build_tenants/claude/",
+      "checkpoint_is_descendant": true,
+      "source_equivalence_roots": [
+        "specification_methodology/v3/build_tenants/claude/standards/",
+        "specification_methodology/v3/build_tenants/claude/plugins/"
+      ],
+      "source_equivalent_at_checkpoint": true,
+      "candidate_manifest": {
+        "path": "specification_methodology/v3/build_tenants/claude/release/manifest.json",
+        "revision": "1db13bfeb0675fc95de04aceccb214f5b76873fc",
+        "sha256": "2f3b79e0c7015887c471747b9d9ea6e298f66b5d2290124a09243e77018c2d7c"
+      },
+      "standing": "Unaccepted candidate; source acquisition grants no methodology or semantic acceptance.",
+      "standards_members": {
+        "verified_members": 62,
+        "verified_bytes": 3434859,
+        "all_digests_match": true
+      },
+      "plugin_members": {
+        "verified_members": 17,
+        "verified_bytes": 77032,
+        "all_digests_match": true
+      },
+      "standards_tree": "541e41a0d2149abec7bac415cd2df0d55f459662",
+      "tag_object": "08555a3b6f09df0a0297e59932dc7b6a967582bd",
+      "qualified_ref": "refs/tags/specification_methodology-claude/v3.0.0-rc.8",
+      "tag_ref_role": "Historical locator only; verification uses the exact tag object, not a mutable ref.",
+      "selected_input": {
+        "manifest_path": "corpora/claude/manifest.json",
+        "manifest_sha256": "eb17b723c293aa49224a2b427a9104c8685cc9f185699910adce6a18a826eb56",
+        "file_count": 49,
+        "total_bytes": 2147228,
+        "input_corpus_sha256": "80bf7998bd73fe50a39cd39b4f5e2e0f10461960fd168b69708e7564ce94b3a6",
+        "content_inventory_sha256": "df33030ffd430b3ec0015691dc4cb77f37efa47ec6cf034a20d056c325513911"
+      }
+    }
+  },
+  "limits": "Custody and source selection only; no semantic completeness, fidelity, acceptance, adoption or release claim."
+}

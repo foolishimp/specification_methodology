@@ -1,0 +1,119 @@
+{
+  "profile": "ac.eval.pre-answer-freeze/1",
+  "frozen_at_utc": "2026-10-17T05:30:13.242177+00:00",
+  "actor_runs_started": 0,
+  "files": {
+    "PROTOCOL.md": {
+      "sha256": "8c7c85daafbad98a9b7a0dab427ddf1e919e1f1a9e517924504f61b84441c487",
+      "bytes": 7783
+    },
+    "schedule.json": {
+      "sha256": "946f6d673fcb1a97933f1b006b416e635cfaf9d907da999364e7065795d202db",
+      "bytes": 2138
+    },
+    "private/tasks.json": {
+      "sha256": "254ec532db5fc5f20cacef2e3bdd2d4e62b02db56a924f73bde542ca646d0e8c",
+      "bytes": 11391
+    },
+    "private/oracle.json": {
+      "sha256": "002f21861c3c8ada5aa5868667cbc0fce668517e6eeb13c1a8de0ee276ae9968",
+      "bytes": 344657
+    },
+    "private/ORACLE.md": {
+      "sha256": "767001ae66c4d3c1abd3cd553d3c0f95a470dff0000e649337a3c342b746a269",
+      "bytes": 3871
+    },
+    "build_baselines.py": {
+      "sha256": "6af328105c19336bda1ed5691982bc6c88092d0003eea61353e326ef722e3bfb",
+      "bytes": 8189
+    },
+    "measure_setup.py": {
+      "sha256": "45eee2efa75c6dcf115e6217820cd5398d5c233c3dd6de7913b4b3f1db98ec74",
+      "bytes": 4434
+    },
+    "tools/study_mcp.py": {
+      "sha256": "8b4e932c51dbb8bda96cacb86121c71b1231831dd6a28ad7a662418c63b041b2",
+      "bytes": 47491
+    },
+    "tools/run_actor.py": {
+      "sha256": "bbc3f085b07adec98e4dd2584cf2f6213f8b8eee89f27e488a0d48f3afbc5fef",
+      "bytes": 15757
+    },
+    "output.schema.json": {
+      "sha256": "a9d07b44679eb91b8b3b381c38a764ef805dc07b948a8f5639266b73c9f89a50",
+      "bytes": 1853
+    },
+    "tests/test_study_mcp.py": {
+      "sha256": "32a20b81831a816738991f839bb12e8ae1a2f57ed70589e6063ee311b7cbad34",
+      "bytes": 17435
+    },
+    "tests/qualification.json": {
+      "sha256": "e208d12bd540e47e07492d45c28ea05ef76ec1b9b108418099bae304bb4a810c",
+      "bytes": 2119
+    },
+    "baselines/codex/manifest.json": {
+      "sha256": "3250b5b49539c3d3fb8184108b9e2223d12b77926c4eb4ecfbeed204efdac2a3",
+      "bytes": 18951
+    },
+    "baselines/claude/manifest.json": {
+      "sha256": "e666b35ff704ba2b31d0090c74074bb96d4a40352707ea792c628a4d4c43eb97",
+      "bytes": 17104
+    },
+    "runs/R01/prompt.txt": {
+      "sha256": "22b7ac81b1692c4e1b59a43ecbd2224ae5feee91078a071d422e6a9e7995c5b9",
+      "bytes": 7817
+    },
+    "runs/R02/prompt.txt": {
+      "sha256": "db995e5a65b1c15fc551877932fdd5c4dcb222ad6e803234ed30a272034bd1a1",
+      "bytes": 7815
+    },
+    "runs/R03/prompt.txt": {
+      "sha256": "22b7ac81b1692c4e1b59a43ecbd2224ae5feee91078a071d422e6a9e7995c5b9",
+      "bytes": 7817
+    },
+    "runs/R04/prompt.txt": {
+      "sha256": "db995e5a65b1c15fc551877932fdd5c4dcb222ad6e803234ed30a272034bd1a1",
+      "bytes": 7815
+    },
+    "runs/R05/prompt.txt": {
+      "sha256": "22b7ac81b1692c4e1b59a43ecbd2224ae5feee91078a071d422e6a9e7995c5b9",
+      "bytes": 7817
+    },
+    "runs/R06/prompt.txt": {
+      "sha256": "db995e5a65b1c15fc551877932fdd5c4dcb222ad6e803234ed30a272034bd1a1",
+      "bytes": 7815
+    },
+    "runs/R07/prompt.txt": {
+      "sha256": "22b7ac81b1692c4e1b59a43ecbd2224ae5feee91078a071d422e6a9e7995c5b9",
+      "bytes": 7817
+    },
+    "runs/R08/prompt.txt": {
+      "sha256": "db995e5a65b1c15fc551877932fdd5c4dcb222ad6e803234ed30a272034bd1a1",
+      "bytes": 7815
+    }
+  },
+  "tool_definitions": {
+    "direct": "8b4e932c51dbb8bda96cacb86121c71b1231831dd6a28ad7a662418c63b041b2",
+    "direct_definitions_sha256": "cd968aba074a060e430b9b262e68b8b1cbcfaa078c0fa77120e9babc926d8aed",
+    "assisted_definitions_sha256": "8332a64af13af8ada5309c19dac23f33278df0c5c5739eaf1f53a9d2f83ad8e5"
+  },
+  "cli_version": "0.162.1",
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "max",
+    "service_tier": "default"
+  },
+  "basis": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "verified_live": true
+  },
+  "upstream_commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+  "infrastructure_smoke": {
+    "original": "tools/infrastructure-smoke",
+    "original_outcome": "config parse failure before model/MCP call",
+    "confirmed_infrastructure_retry": "tools/infrastructure-smoke-retry",
+    "retry_status": "completed"
+  },
+  "limits": "Task oracle and protocol frozen before answers; small dogfood availability pilot, no acceptance."
+}

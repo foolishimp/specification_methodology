@@ -1,0 +1,2171 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "F1, frames and context, addresses finite actors' declaration, sizing, binding, activation, relations, coverage audit and revision of bounded frames. Its instance premises are: a workspace exceeds one actor's competence, context, tools and access; evaluations are declared questions about a governed outcome; actors and frames may overlap; workspace topology and capabilities change between activations; and actors may read owning sources or copied, projected or compressed surfaces. These are conditions of the governed work, not commitments or consequences of finite capacity alone. P0's cited actor-change premise permits reacquisition of declared sources, not private memory; its cited open-world premise leaves the world open.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":147,
+          "quote":"They are conditions of the work this family governs, not\ncommitments, and do not follow from finite capacity alone.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":143
+        }
+      ],
+      "key":"frames_context_family",
+      "label":"Frames and context family"
+    },
+    {
+      "conditions": [],
+      "definition": "A finite specification of the attention, coordinates, authority, evidence and result relations required by one evaluation family. Its engagement unit is one activated bounded context, distinct from semantic irreducibility, runtime carriers and the functions over frames. The member's bounded-context identity is urn:stdo:bounded-context:reference-frame-evaluation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":157,
+          "quote":"a reference frame is a finite specification of the attention, coordinates, authority, evidence and result relations one evaluation family requires.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":157
+        }
+      ],
+      "key":"reference_frame",
+      "label":"Reference frame"
+    },
+    {
+      "conditions": [],
+      "definition": "The declared questions or predicates supported by a frame, at its declared coordinates, against which its sufficiency is testable.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":284,
+          "quote":"Every frame declares the evaluation family it supports. A frame with no\ndeclared evaluation family has no testable sufficiency boundary",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-001%20Evaluation%20relativity",
+          "start_line":283
+        }
+      ],
+      "key":"evaluation_family",
+      "label":"Evaluation family"
+    },
+    {
+      "conditions": [],
+      "definition": "The selected actor's declared capability boundary, including competence, context capacity, tools and access. Context fit and adequate attention during actual use are distinct questions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":290,
+          "quote":"An activated frame contains a finite attention surface that fits the\nselected actor's declared capability envelope.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-002%20Finite%20attention",
+          "start_line":289
+        }
+      ],
+      "key":"actor_capability_envelope",
+      "label":"Actor capability envelope"
+    },
+    {
+      "conditions": [],
+      "definition": "The laws applicable to every declared or activated frame; their named objects are defined in FOUNDATIONS §2.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":279,
+          "quote":"Every frame, declared or activated, obeys the following. The objects named\nare defined in FOUNDATIONS §2.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws",
+          "start_line":278
+        }
+      ],
+      "key":"frame_laws",
+      "label":"Frame laws"
+    },
+    {
+      "conditions": [],
+      "definition": "A project selection of frames declared by human authority for a governed workspace and outcome. It need not be a partition, tree, stack, exhaustive ontology or uniquely minimal set.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":480,
+          "quote":"Human authority may declare an initial project frame set from accumulated\ndevelopment practice, known failure modes, domain expertise, the governed\noutcome's risk and knowledge of the available agents and other actors. The\ndeclaration need not reconstruct the set from the workspace bottom up",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration",
+          "start_line":476
+        }
+      ],
+      "key":"frame_set",
+      "label":"Project frame set"
+    },
+    {
+      "conditions": [],
+      "definition": "One closed result returned by a performed frame evaluation in its declared algebra, with exact subject, basis, coordinates and evidence scope. No evaluation result exists for an evaluation not performed.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":401,
+          "quote":"Every performed evaluation of a frame returns one closed result in the\nframe's declared result algebra: the core algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), or a refinement mapped\ninto it under that section.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results",
+          "start_line":398
+        }
+      ],
+      "key":"frame_result",
+      "label":"Closed frame result"
+    },
+    {
+      "conditions": [],
+      "definition": "The source's imported result domain has five core values: satisfied, falsified, indeterminate, out_of_frame and invalid_basis. FOUNDATIONS §4 owns their meanings, refinement and combination rules; REFERENCE_FRAME applies them without redefining them.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":403,
+          "quote":"That section owns the five core values\n(`satisfied`, `falsified`, `indeterminate`, `out_of_frame` and\n`invalid_basis`)",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results",
+          "start_line":401
+        }
+      ],
+      "key":"core_result_domain",
+      "label":"Imported core result algebra"
+    },
+    {
+      "conditions": [],
+      "definition": "Seven relations distinct from frames: declare(human_authority, workspace, outcome, practices, capabilities) → frame_set; activate(frame, evaluation, subject, basis, actor) → activated_frame or activation_refusal; evaluate(activated_frame, admissible_evidence) → result with evidence and residuals; conjoin(decision_rule, frame_results) → decision, conflict or indeterminate; translate(source_frame, target_frame, value_or_evidence, mapping) → translated_value, declared_loss or refusal; audit_coverage(workspace, outcome, evaluation_inventory, frame_set) → coverage_ledger; revise(frame_set, new_evidence, failures, capability_change, topology_change) → proposed_frame_set_delta. Later clauses supplement the displayed signatures with direct out_of_frame and invalid_basis outcomes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":552,
+          "quote":"revise(frame_set, new_evidence, failures, capability_change, topology_change)\n  -> proposed_frame_set_delta",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":551
+        },
+        {
+          "end_line":530,
+          "quote":"The frame and the functions over it remain distinct. An application may\nrealise the following relations in any conforming form; the signatures\ndescribe relations, not callable software interfaces",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":527
+        }
+      ],
+      "key":"frame_method_functions",
+      "label":"Method functions"
+    },
+    {
+      "conditions": [],
+      "definition": "Exchange of information between frames or actors activated on them. Configuration assigns information exchanges as well as responsibilities; exchange alone is neither an authority grant nor a decomposition or evaluation dependency.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":366,
+          "quote":"Communication is the exchange of\ninformation between frames, or between the actors activated on them.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-009%20No%20assumed%20hierarchy",
+          "start_line":364
+        }
+      ],
+      "key":"frame_communication",
+      "label":"Frame communication"
+    },
+    {
+      "conditions": [],
+      "definition": "A semantic unit whose irreducibility is separate from a frame's engagement atomicity. Several semantic atoms may occur in one frame, and one semantic atom may participate in several frames.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":465,
+          "quote":"Semantic irreducibility is a\nseparate question: one frame may contain several semantic atoms, and one\nsemantic atom may take part in several frames",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FEngagement%20atom%20and%20semantic%20atom",
+          "start_line":463
+        }
+      ],
+      "key":"semantic_atom",
+      "label":"Semantic atom"
+    },
+    {
+      "conditions": ["The evaluation requires the relation."],
+      "definition": "Four distinct ways frames act together: independently activated co-evaluation, result conjunction, evidence or coordinate translation, and material composition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":614,
+          "quote":"Frames act together through four distinct relations, and only where the\nevaluation requires one",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction",
+          "start_line":613
+        }
+      ],
+      "key":"frames_in_conjunction",
+      "label":"Frames acting together"
+    },
+    {
+      "conditions": [],
+      "definition": "Separate activations through which several frames may evaluate the same subject and return closed results, serving assurance independence, different evidence altitudes and distinct failure perspectives. Structural disjointness, procedural evaluation independence and claim-relative assurance independence remain different relations.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":623,
+          "quote":"Several frames may evaluate the same subject through separate activations\nand return closed results. They may overlap in subject, manifold or\nevidence sources; neither evaluation consumes or influences the other's\nunclosed working result. This serves assurance independence, different\nevidence altitudes and distinct failure perspectives",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FIndependently%20activated%20co-evaluation",
+          "start_line":618
+        },
+        {
+          "end_line":167,
+          "quote":"frame disjointness (structural), evaluation independence (procedural) and assurance independence (claim-relative) are three relations",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":167
+        }
+      ],
+      "key":"independent_co_evaluation",
+      "label":"Independently activated co-evaluation"
+    },
+    {
+      "conditions": [],
+      "definition": "A declared decision rule consuming closed results of several frames over the imported core values. FOUNDATIONS §4 owns the rule's required declaration and computation; this member defines no separate conjunction.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":632,
+          "quote":"A declared decision rule consumes the closed results of several frames.\nThe rule, what it must state, and the conjunction it computes are\n[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),\nover the core values of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results);\nthis member defines no conjunction of its own.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FResult%20conjunction",
+          "start_line":627
+        }
+      ],
+      "key":"result_conjunction",
+      "label":"Result conjunction"
+    },
+    {
+      "conditions": ["One frame supplies evidence or a value consumed inside another."],
+      "definition": "A declared transport of evidence or values between frames, identifying source and target coordinates, preserved meaning, accepted loss, provenance, equality law and refusal conditions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":639,
+          "quote":"One frame supplies evidence or a value consumed inside another. The\ntranslation declares source and target coordinates, preserved meaning,\naccepted loss, provenance, equality law and refusal conditions",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FEvidence%20or%20coordinate%20translation",
+          "start_line":636
+        }
+      ],
+      "key":"frame_translation",
+      "label":"Evidence or coordinate translation"
+    },
+    {
+      "conditions": ["The evaluation requires composition."],
+      "definition": "Several frame-governed operations forming one material execution or reasoning relation declared by the owning application.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":654,
+          "quote":"Several frame-governed operations form one material execution or reasoning\nrelation. The owning application declares the composition, the shared\ninvariants, the effect or decision order where material, closure, failure,\nand the conservation of semantic, operation and decision authority.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FMaterial%20composition",
+          "start_line":651
+        }
+      ],
+      "key":"material_composition",
+      "label":"Material composition"
+    },
+    {
+      "conditions": [],
+      "definition": "Ten possible frame relations: disjoint shares no material variable, coordinate, evidence or result dependency for declared evaluations; overlapping shares some material variables, evidence or entities; complementary has distinct evaluations jointly informing one decision; alternative permits different frames to evaluate one claim under declared capability or evidence conditions; refinement resolves a material distinction aggregated in another; restriction evaluates a lawful subset of another's domain; translated moves values or evidence through a declared coordinate map; temporally successive evaluates a changed basis in a later frame; composed forms one governed evaluation or action from several frame relations; governing and subordinate inherits declared constraints where a real authority or decomposition relation exists.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":678,
+          "quote":"- governing and subordinate: one frame inherits declared constraints from\n  another where a real authority or decomposition relation exists.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F7.%20Frame%20relations",
+          "start_line":677
+        },
+        {
+          "end_line":664,
+          "quote":"- disjoint: no material variable, coordinate, evidence or result dependency\n  is shared for the declared evaluations;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F7.%20Frame%20relations",
+          "start_line":663
+        }
+      ],
+      "key":"frame_relation_categories",
+      "label":"Frame relation categories"
+    },
+    {
+      "conditions": [],
+      "definition": "The document's workspace-coverage subject, elaborated through coverage basis, inventory, dimensions, ledger, interaction, authority, failure, separately activated checks and operational full coverage.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":684,
+          "quote":"## 8. Workspace coverage",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage",
+          "start_line":684
+        }
+      ],
+      "key":"workspace_coverage",
+      "label":"Workspace coverage"
+    },
+    {
+      "conditions": [],
+      "definition": "Coverage(W, G, B, E, S, T): workspace, governed outcome, exact basis, known evaluation inventory, declared frame set and time or immutable checkpoint of the claim.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":691,
+          "quote":"Coverage is evaluated against the tuple Coverage(W, G, B, E, S, T): the\nworkspace W, the governed outcome G, the exact basis B, the known\nevaluation inventory E, the declared frame set S and the time or immutable\ncheckpoint T of the claim.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20basis",
+          "start_line":688
+        }
+      ],
+      "key":"coverage_tuple",
+      "label":"Coverage basis tuple"
+    },
+    {
+      "conditions": [],
+      "definition": "The known material evaluations derived by the coverage evaluator from all material available sources, recording provenance and materiality.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":700,
+          "quote":"The coverage evaluator derives the known evaluation inventory from every\nmaterial available source",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FEvaluation%20inventory",
+          "start_line":699
+        }
+      ],
+      "key":"evaluation_inventory",
+      "label":"Evaluation inventory"
+    },
+    {
+      "conditions": [],
+      "definition": "Cross-cutting audit lenses, typically outcome and capability; identity and authority; lifecycle and temporal behaviour; topology and interaction seams; transport and representation; evidence and proof; change, failure, recovery and rollback; historical regression; actor capability and context fit. These become frames only when separately instantiated as bounded evaluation families.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":723,
+          "quote":"These are lenses (FOUNDATIONS §2): they become frames only when separately\ninstantiated as bounded evaluation families",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20dimensions",
+          "start_line":722
+        }
+      ],
+      "key":"coverage_dimensions",
+      "label":"Coverage dimensions"
+    },
+    {
+      "conditions": [],
+      "definition": "Per-evaluation coverage records whose baseline statuses are covered, separately_covered, conditionally_covered, conflicted, uncovered, unknown and excluded_by_authority. Statuses answer whether the row's coverage obligation is met on the declared tuple by capable conflict-free coverage or a cited governing exclusion.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":748,
+          "quote":"The baseline coverage statuses are `covered`, `separately_covered`,\n`conditionally_covered`, `conflicted`, `uncovered`, `unknown` and\n`excluded_by_authority`.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger",
+          "start_line":746
+        }
+      ],
+      "key":"coverage_ledger",
+      "label":"Coverage ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "The document's discovery-and-revision subject, comprising missing-frame signals, ordered diagnosis and permitted revision actions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":861,
+          "quote":"## 10. Discovery and revision",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision",
+          "start_line":861
+        }
+      ],
+      "key":"frame_discovery_revision",
+      "label":"Discovery and revision"
+    },
+    {
+      "conditions": [],
+      "definition": "The supplied context for one activated frame or one declared active frame configuration, enabling a fresh competent actor to reconstruct its evaluation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":970,
+          "quote":"An actor receives one activated frame or one declared active frame\nconfiguration, never an implied demand to reconstruct the complete\nworkspace from ambient context",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet",
+          "start_line":967
+        }
+      ],
+      "key":"activation_packet",
+      "label":"Activation packet"
+    },
+    {
+      "conditions": [],
+      "definition": "Carrier-neutral content sufficient to bind one declared frame for one evaluation: stable activation identity; declaration identity and revision; exact evaluation and closed algebra; exact subject or candidate; workspace, authority, dependency, configuration and time basis; material relations and invariants; exact source and semantic references; exclusions and prohibited assumptions; actor and capability envelope; semantic and evaluation authority; operation authority, subject and territory where material; decision, acceptance and publication authority; admissible evidence and acquisition route; used dependency, overlap, input, conjunction or translation relations; expected consumer and return relation; invalidation, stop, residual, re-entry and reconfiguration conditions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":997,
+          "quote":"The following carrier-neutral content is sufficient to bind one declared\nframe for one evaluation. It may be written in Markdown, structured data, a\nprompt or another consumer-selected carrier without changing the relation",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet%2FMinimal%20activation%20binding",
+          "start_line":994
+        }
+      ],
+      "key":"minimal_activation_binding",
+      "label":"Minimal activation binding template"
+    },
+    {
+      "conditions": [],
+      "definition": "Three carrier-neutral shapes stating the least content for declaring a frame, frame set and evaluation result; each is sufficient in Markdown or another consumer-selected carrier.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1076,
+          "quote":"The three carrier-neutral shapes below are the least content that declares\na frame, a frame set and an evaluation result. Each is sufficient as\nwritten in Markdown or any other consumer-selected carrier",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations",
+          "start_line":1073
+        }
+      ],
+      "key":"minimal_declaration_shapes",
+      "label":"Minimal declarations"
+    },
+    {
+      "conditions": [],
+      "definition": "Frame template content: stable local identity; evaluation questions, predicates and closed algebra; workspace boundary, exact identity and version/time/topology coordinates; material entities, variables, relations, states and interactions; coordinates and equality; governing invariants; frame-set, semantic, evaluation, operation where material and decision authority; admissible evidence, provenance and exclusions; competence, context, access, tools, evaluation/assurance independence and configuration; irrelevant material, prohibited assumptions and out-of-frame conditions; optional input, output, overlap, conjunction and translation relations actually used; invalidation and recharting changes; representative qualification cases, counterexamples and known residuals.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1089,
+          "quote":"# Frame: <stable local identity>\n\n## Evaluation Family\n<questions, predicates, and closed result algebra>\n\n## Subject And Basis\n<workspace boundary, exact identity, version/time/topology coordinates>",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame%20declaration",
+          "start_line":1083
+        }
+      ],
+      "key":"minimal_frame_declaration",
+      "label":"Minimal frame declaration template"
+    },
+    {
+      "conditions": [],
+      "definition": "Frame-set template content: stable local identity; workspace, outcome, basis and time; human declaration and acceptance authority; known material evaluations with provenance; selected frame identities, revisions and envelopes; evaluation-to-capable-frame rationale; intentional separately activated checks, assurance-independence conditions or alternative capability fit; only required conjunction and translation relations; uncovered, unknown, conditional or excluded evaluations; revision triggers from history, topology, capability, evidence or outcome changes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1136,
+          "quote":"# Frame Set: <stable local identity>\n\n## Governed Workspace And Outcome\n<workspace, outcome, basis, and time>\n\n## Human Authority\n<declaration and acceptance authority>\n\n## Evaluation Inventory\n<known material evaluations and provenance>",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame-set%20declaration",
+          "start_line":1127
+        }
+      ],
+      "key":"minimal_frame_set_declaration",
+      "label":"Minimal frame-set declaration template"
+    },
+    {
+      "conditions": [],
+      "definition": "Evaluation-result template content: frame identity and revision; activation identity; evaluation; subject and basis; actor and envelope; semantic, evaluation, operation where material and decision authority; admissible evidence; result; inference relation; residual uncertainty; out_of_frame residual naming missing relation or capability, owner and reconfiguration pressure; invalidation conditions; consuming decision or conjunction.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1176,
+          "quote":"- result:\n- inference relation:\n- residual uncertainty:\n- out_of_frame residual (missing relation or capability, owner, reconfiguration pressure):\n- invalidation conditions:\n- consuming decision or conjunction:",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20evaluation%20result",
+          "start_line":1171
+        }
+      ],
+      "key":"minimal_evaluation_result",
+      "label":"Minimal evaluation result template"
+    },
+    {
+      "conditions": [],
+      "definition": "A provenance register of predecessor rc.2 REFERENCE_FRAME_METHOD.md anchors received by this member. Listed substantive anchors are reported conserved at their stated successor loci. Three heading-only anchors are reported not applicable, with children disposed individually: reference-frame-laws (24 bytes), workspace-coverage (22 bytes), discovery-and-revision (26 bytes). The non-normative product-chain drift worked example is reported not applicable: no determination beyond the conserved binding, tier-2 subject ownership and successor qualification case. Reported additions or clarifications include reference-only imports and context boundaries; measurement versus adequate attention ownership; authority and separation ownership; communication; core-result ownership; remedy ownership; generalised semantic-contraction law; outcome and coverage-status mappings; translation preservation/loss references; design ontology wording; family-inclusion diagnosis; default reopening; and the out_of_frame residual field. The new F1 table distinguishes derived consequences from owner-declared choices and decides nothing.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1208,
+          "quote":"RF rows received by this member. Rows that land in FOUNDATIONS, ACTIVATION\nor EVALUATION are listed in those members. Anchors are into rc.2\nREFERENCE_FRAME_METHOD.md; a locus is a section of this file unless it names\nanother member.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F15.%20Source%20dispositions",
+          "start_line":1205
+        },
+        {
+          "end_line":1272,
+          "quote":"New law with no predecessor row: the table of family F1 (§1 Foundation to\nlaw), in the format of FOUNDATIONS §3 Foundation to law; it decides nothing\nand names the rule that states each consequence.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F15.%20Source%20dispositions",
+          "start_line":1267
+        }
+      ],
+      "key":"source_disposition_register",
+      "label":"Source disposition register"
+    },
+    {
+      "conditions": [],
+      "definition": "Tier-2 release-publication context, urn:stdo:bounded-context:release-publication, under the selected complete STDO basis. It owns release identities and transitions for qualification, publication and selection, including project-qualified refs and subtrees, historical conservation, candidate construction, immutable RC publication, exact-cut qualification, monotonic version-line advancement, selectors, naming, release-scoped assets and Product subject, coordinated cohorts, acceptance, external qualification dependencies and successor baseline conservation STDO-UP-015. It does not own Product meaning or consumer adoption. Git, tag, branch, stdo:// forms and Specification Stack Product names are Product realisation/toolchain terms.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":11,
+          "quote":"Tier 2. Owns release publication: the release-publication bounded\ncontext, release identities, project-qualified refs and the project\nsubtree, historical ref conservation, the three phases with candidate\nconstruction, immutable RC publication, exact-cut qualification and\nmonotonic version-line advancement",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE",
+          "start_line":3
+        },
+        {
+          "end_line":42,
+          "quote":"This member owns the release-publication bounded context\n`urn:stdo:bounded-context:release-publication` under the selected complete\nSTDO basis. It owns the identities and transitions used to qualify,\npublish and select released cuts. It does not own Product meaning or\nconsumer adoption",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":37
+        }
+      ],
+      "key":"release_publication",
+      "label":"Release publication context"
+    },
+    {
+      "conditions": [],
+      "definition": "A published point-in-time cut that release process evaluates, bounds, names, publishes and makes discoverable, distinct from live specification's current constitutional truth. Product-local naming is v<version>-rc.<n>.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":52,
+          "quote":"Release process is distinct from live project specification. Live\nspecification defines the current constitutional truth of the project.\nRelease process defines how one published point-in-time cut is evaluated,\nbounded, named, published and made discoverable",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":44
+        }
+      ],
+      "key":"release_cut",
+      "label":"Released RC cut"
+    },
+    {
+      "conditions": [],
+      "definition": "Mutable product-local v<version> selector pointing to the latest published immutable RC cut on that project/version line, where latest means greatest published positive RC ordinal. It provides convenient discovery, not immutable identity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":71,
+          "quote":"It denotes a mutable version-line selector (FOUNDATIONS §2). The selector\npoints to the latest published immutable RC cut on that line, where latest\nmeans the greatest positive RC ordinal published for that project and\nversion line.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":66
+        }
+      ],
+      "key":"version_line_selector",
+      "label":"Version-line selector"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["frames_context_family","reference_frame"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":156,
+          "quote":"It enters by a reference-only import, which grants no semantic, evaluation, operation or decision authority; a refinement this member states names its owner and maps back to the core",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":156
+        },
+        {
+          "end_line":245,
+          "quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":244
+        }
+      ],
+      "key":"frame_scope_and_owner_conservation",
+      "statement":"The family table owns none of its named rules; it distinguishes premises and their standing, consequences, owning loci, added choices and owners, and pillars. The member stops at engagement and defines no application profile, role mapping, product-owned frame-basis binding, domain product, runtime, workflow or assurance implementation. Specialisations remain under their own owners and neither enter nor amend this context through proximity or matching names. Imported concepts keep their owner's meaning and basis; reference-only imports confer no authority; refinements name their owner and map to the core. Core claims and violation lists add no independent law, and dispositions decide nothing. Each listed consumer applies only what its owning rule decides.",
+      "uncertainty":"Full foundational standing and external consumer loci are not supplied."
+    },
+    {
+      "applies_to_keys":["reference_frame","activation_packet"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":157,
+          "quote":"A frame is bound only when every material coordinate resolves to an exact source, subject, basis, authority, evidence route, actor envelope, result relation and invalidation condition, and representation cannot create, widen or replace that binding",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":157
+        }
+      ],
+      "key":"exact_frame_binding",
+      "statement":"Binding requires every material coordinate to resolve to exact source, subject, basis, authority, evidence route, actor envelope, result relation and invalidation condition. A prompt, context packet or program is a projection of an activated frame, not the frame itself; representation cannot create, widen or replace binding. The source attributes the twelve-component tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩ to FOUNDATIONS §2.",
+      "uncertainty":"The component definitions are not supplied."
+    },
+    {
+      "applies_to_keys":["frame_laws","reference_frame"],
+      "conditions":["A frame is declared or activated."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":279,
+          "quote":"Every frame, declared or activated, obeys the following.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws",
+          "start_line":278
+        }
+      ],
+      "key":"frame_law_applicability",
+      "statement":"All following frame laws apply to every declared or activated frame.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","evaluation_family"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":285,
+          "quote":"Every frame declares the evaluation family it supports. A frame with no\ndeclared evaluation family has no testable sufficiency boundary",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-001%20Evaluation%20relativity",
+          "start_line":283
+        }
+      ],
+      "key":"evaluation_relativity",
+      "statement":"Every frame declares its supported evaluation family; without it no testable sufficiency boundary exists. A module, file, service, role, persona, prompt or lens without a declared evaluation relation is not a frame. Sufficiency is relative to the declared family, not wording.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","actor_capability_envelope"],
+      "conditions":["The frame is activated."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":299,
+          "quote":"Whether the actor attends adequately to a frame that fits is a separate\nquestion, answered by actual-use evidence under\n[EVALUATION §7](EVALUATION.md#frame-qualification); a size measurement\ndoes not answer it",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-002%20Finite%20attention",
+          "start_line":296
+        },
+        {
+          "end_line":159,
+          "quote":"Where the envelope declares a context capacity, the selected context's size is measured before the actor reads it, over a stated boundary, and recorded with the capacity and the comparison; context outside the boundary is recorded as not measured.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":159
+        }
+      ],
+      "key":"finite_attention_and_measurement",
+      "statement":"The finite attention surface must fit the selected actor's declared envelope; dependence on undeclared ambient memory, conversation history or effectively global context makes it unreconstructable for that actor. When context capacity is declared, measure selected context before reading, state the boundary, record size, capacity and comparison, and mark outside context unmeasured. Measurement establishes fit only within that boundary, not adequate attention, a resource budget or a universal gate. ACTIVATION §2 owns measurement applicability; EVALUATION §7 uses actual-use evidence for adequate attention. Capacity and bytes/tokens belong to the envelope; measurement boundary and time, spend and other limits belong to the selected execution binding.",
+      "uncertainty":"External measurement and actual-use procedures are only referenced."
+    },
+    {
+      "applies_to_keys":["reference_frame"],
+      "conditions":["A known relation's lawful change can alter result, basis validity, evidence sufficiency, operation authority or decision authority."],
+      "exceptions":["No proof of absence of undiscovered material relations is required."],
+      "grounding":[
+        {
+          "end_line":309,
+          "quote":"Every known relation whose lawful change can alter the evaluation result,\nthe validity of the basis, the sufficiency of evidence, operation authority\nor decision authority appears in the frame or enters through a declared\nauthoritative input. Omitting a material relation makes the frame\ninsufficient. The law does not require proving that no undiscovered\nmaterial relation exists",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-003%20Material%20sufficiency",
+          "start_line":303
+        }
+      ],
+      "key":"material_sufficiency",
+      "statement":"Every such known material relation must appear in the frame or enter through a declared authoritative input; omission makes the frame insufficient.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_method_functions"],
+      "conditions":["Context is constructed from an intake."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":160,
+          "quote":"The context starts as the material closure of the intake's seed set (the subject, outcome and affected relations it names) under that relation family, and a closure that is not finite and unique on the exact basis stops the step and is not guessed",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":160
+        },
+        {
+          "end_line":161,
+          "quote":"the seams the boundary records (excluded, external, unresolved, translated, invalidation-sensitive)",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":161
+        }
+      ],
+      "key":"context_closure_and_projection",
+      "statement":"Start with material closure of the intake's named subject, outcome and affected relations under the relevant relation family. If closure is not finite and unique on the exact basis, stop without guessing, with the referenced closure_unresolved outcome. Project closure into selected context and record excluded, external, unresolved, translated and invalidation-sensitive seams.",
+      "uncertainty":"AC-010 closure, AC-011 projection and ACTIVATION's stop semantics are external."
+    },
+    {
+      "applies_to_keys":["reference_frame"],
+      "conditions":["A relation cannot affect the declared evaluation."],
+      "exceptions":["The relation is needed to establish that irrelevance."],
+      "grounding":[
+        {
+          "end_line":316,
+          "quote":"Relations that cannot affect the declared evaluation stay outside active\nattention unless they are needed to establish that irrelevance. A frame\ndoes not expand because adjacent workspace material exists",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-004%20Irrelevance%20exclusion",
+          "start_line":313
+        }
+      ],
+      "key":"irrelevance_exclusion",
+      "statement":"Keep irrelevant relations outside active attention, subject to the stated exception. Adjacency or corpus presence is no reason to expand the frame or load material.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_result","reference_frame"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":324,
+          "quote":"Every result binds its exact subject, basis, coordinates and evidence\nscope. A stale, advanced, ambiguous or mismatched basis returns\n`invalid_basis` or requires reactivation. Apparent equality never\nsubstitutes for declared coordinate equality",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-005%20Exact%20basis%20and%20coordinates",
+          "start_line":320
+        }
+      ],
+      "key":"exact_basis_and_coordinates",
+      "statement":"Every result binds exact subject, basis, coordinates and evidence scope. A stale, advanced, ambiguous or mismatched basis returns invalid_basis or requires reactivation. Apparent equality, including names, values, shapes, locations or topology positions, cannot replace declared coordinate equality; the frame declaration owns its coordinate and equality law.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_set","frame_result"],
+      "conditions":[],
+      "exceptions":["Authority kinds may coincide in a lawful case without collapsing by default."],
+      "grounding":[
+        {
+          "end_line":334,
+          "quote":"A frame carries and applies admitted authority. It does not mint, widen,\ntransfer or reconstruct semantic, evaluation, operation or decision\nauthority from anything that creates none.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-006%20Authority%20conservation",
+          "start_line":328
+        },
+        {
+          "end_line":163,
+          "quote":"A read-only evaluation declares no operation authority; an effectful one inherits the exact operation grant from its existing owner. A proxy for human authority keeps its identity distinct from the human authority's",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":163
+        }
+      ],
+      "key":"authority_conservation",
+      "statement":"Frames carry admitted owner- and scope-bound authority only. Actor identity, capability, evidence shape, implementation reachability, breadth, usefulness, technology, frame declaration, selection, activation, execution or role naming cannot mint, widen, transfer or reconstruct authority. Actor identity is distinct from frame-set, semantic, evaluation, operation and decision authority; frame-set authority is human authority. Read-only evaluation declares no operation authority; effectful evaluation inherits the exact existing-owner grant. A proxy identity stays distinct from the human authority it represents.",
+      "uncertainty":"Proxy admission conditions are owned by the referenced IDENTITY §6."
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_result"],
+      "conditions":[],
+      "exceptions":["One actor may lawfully perform several distinguishable roles."],
+      "grounding":[
+        {
+          "end_line":345,
+          "quote":"a frame declaration keeps these roles distinguishable even when\none actor lawfully performs several of them, and where the evaluation\nperforms a material operation, the existing operation owner supplies the\nexact grant as a further role the declaration keeps apart",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-007%20Semantic%2C%20evidence%20and%20verdict%20separation",
+          "start_line":341
+        },
+        {
+          "end_line":164,
+          "quote":"The evaluator applies the frame's declared invariants, evidence rules and result algebra and records every assumption whose failure could change the result",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":164
+        }
+      ],
+      "key":"semantic_evidence_verdict_separation",
+      "statement":"Keep semantic law defining meaning, evidence supplying observations, evaluator application and disposing decision authority distinguishable. For material operations also distinguish the existing owner supplying the exact operation grant. Apply declared invariants, evidence rules and result algebra and record every assumption whose failure could change the result. EVALUATION §2 owns the separation; this law binds it to frames.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_translation"],
+      "conditions":["Frames share material or an evaluation uses cross-frame equality or translation."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":353,
+          "quote":"Frames may share entities, variables, evidence or coordinates. Shared\nmaterial establishes neither identical meaning nor identical basis,\nauthority or result. Every cross-frame equality or translation an\nevaluation uses is declared where it is used",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-008%20Overlap%20without%20identity%20collapse",
+          "start_line":349
+        }
+      ],
+      "key":"overlap_without_identity_collapse",
+      "statement":"Shared entities, variables, evidence or coordinates do not establish identical meaning, basis, authority or result. Declare every used cross-frame equality or translation at its point of use.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_relation_categories","frame_communication"],
+      "conditions":[],
+      "exceptions":["Consumers may align distinct relation structures where the governed subject warrants it."],
+      "grounding":[
+        {
+          "end_line":369,
+          "quote":"Parent\nand child relations apply only where explicitly declared. Functional\ndecomposition, communication, authority precedence, frame configuration,\nsubject topology and evaluation dependency are distinct relation\nstructures",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-009%20No%20assumed%20hierarchy",
+          "start_line":358
+        },
+        {
+          "end_line":682,
+          "quote":"No relation is the default universal frame topology. A project declares\nonly the relations its evaluations and coverage claims need",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F7.%20Frame%20relations",
+          "start_line":680
+        }
+      ],
+      "key":"no_assumed_hierarchy",
+      "statement":"Parent-child relations require explicit declaration. Functional decomposition, communication, authority precedence, frame configuration, subject topology and evaluation dependency must not silently become one hierarchy. Information exchange alone grants no authority and creates no decomposition or evaluation dependency. No frame relation is a default universal topology; declare only those needed by evaluations and coverage claims.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frames_in_conjunction","material_composition","result_conjunction"],
+      "conditions":["The governing evaluation combines internal variables, transports evidence or values across frames, or treats operations as one material execution relation."],
+      "exceptions":["Several independently activated frames may instead return closed results to one declared conjunction or decision rule."],
+      "grounding":[
+        {
+          "end_line":384,
+          "quote":"Using several frames does not require composing their internal manifolds.\nComposition law is required only when the governing evaluation combines\ntheir internal variables, transports evidence or values across them, or\ntreats their operations as one material execution relation. Independently\nactivated evaluations may instead return closed results to one declared\nconjunction or decision rule",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-010%20Composition%20on%20demand",
+          "start_line":378
+        },
+        {
+          "end_line":657,
+          "quote":"Composition is introduced only when the evaluation requires it; a possible\nfuture interaction does not require a general composition law in every\nframe",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FMaterial%20composition",
+          "start_line":655
+        }
+      ],
+      "key":"composition_on_demand",
+      "statement":"Composition law is required only under the listed material combination conditions; merely using several frames or anticipating future interaction does not require composing internal manifolds or universal composition machinery. When material composition is required, its owning application declares composition, shared invariants, effect or decision order where material, closure, failure and conservation of semantic, operation and decision authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_result"],
+      "conditions":["A frame is activated; a material topology mutation is detected; or its declaration is materially revised."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":394,
+          "quote":"An activated frame declares the topology changes capable of invalidating\nits coordinates or its materiality judgment. A detected material topology\nmutation causes reevaluation, frame revision or recharting before the\nprevious result is reused. Material revision of the frame itself\ninvalidates for reuse every result bound to the prior revision coordinate",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-011%20Topology%20mutation%20and%20recharting",
+          "start_line":388
+        }
+      ],
+      "key":"topology_invalidation",
+      "statement":"Declare topology changes capable of invalidating coordinates or materiality judgments. Detected material topology mutation requires reevaluation, revision or recharting before result reuse. Material frame revision invalidates every prior-revision-bound result for reuse, subject to the recorded recheck routes in Revision actions.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_result","core_result_domain"],
+      "conditions":["An evaluation is performed."],
+      "exceptions":["An evaluation not performed has no evaluation result; its stop state belongs to ACTIVATION §3."],
+      "grounding":[
+        {
+          "end_line":410,
+          "quote":"that nothing is\ncoerced to success; that a refinement adds no core value, keeps\nindeterminate, out-of-frame and invalid-basis pressure explicit and raises\nno result's standing; and that an evaluation not performed has no result",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results",
+          "start_line":403
+        },
+        {
+          "end_line":271,
+          "quote":"9. Unknown and out-of-frame results are lawful pressure for\n   reconfiguration; they are neither failed evaluations nor implied\n   acceptance (P5).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F2.%20Core%20claims",
+          "start_line":269
+        }
+      ],
+      "key":"closed_result_discipline",
+      "statement":"Return exactly one closed result in the declared core algebra or a lawful mapped refinement. Never coerce a result to success. A refinement adds no core value, raises no standing and retains indeterminate, out_of_frame and invalid_basis pressure. Unknown and out-of-frame results lawfully press for reconfiguration and are neither failed evaluations nor implied acceptance.",
+      "uncertainty":"The source's informal 'unknown' is not silently identified with a sixth core value."
+    },
+    {
+      "applies_to_keys":["reference_frame","activation_packet","minimal_activation_binding"],
+      "conditions":["A fresh competent actor is inside the declared capability envelope."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":418,
+          "quote":"A fresh competent actor inside the declared capability envelope can\nreconstruct the activated evaluation from the frame declaration, the exact\nsubject, the basis and the admissible inputs, without undocumented\nconversational or historical context",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-013%20Reconstructable%20activation",
+          "start_line":414
+        }
+      ],
+      "key":"reconstructable_activation",
+      "statement":"The fresh actor must be able to reconstruct the activated evaluation from declaration, exact subject, basis and admissible inputs without undocumented conversational or historical context.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","actor_capability_envelope"],
+      "conditions":["The material manifold exceeds the actor's capability envelope."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":431,
+          "quote":"Choosing among them is human authority's, exercised directly or\nin advance through the grant; ACTIVATION §2 says which of them a step\nselects itself and which re-enter the grant's owner. The actor may not\nsilently omit material relations to fit its context",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-014%20Capability%20fit",
+          "start_line":427
+        },
+        {
+          "end_line":172,
+          "quote":"the lawful responses are another actor, a refined frame or outer contract, sequenced activations, a lawful compression or `out_of_frame`",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":172
+        }
+      ],
+      "key":"capability_fit_remedies",
+      "statement":"Adequacy includes usability. Lawful responses include another actor, refined frame or outer contract, sequenced activations, lawful compression or out_of_frame. Human authority chooses directly or through a prior grant; ACTIVATION §2 distinguishes in-grant refinement, sequencing and compression from re-entry to the grant/envelope owner for another actor or larger envelope. Never silently omit material relations or grow beyond the selected envelope. Capability may justify size or sequencing changes, never waiver of invariants or widened authority.",
+      "uncertainty":"The complete remedy-selection procedure belongs to the referenced ACTIVATION section."
+    },
+    {
+      "applies_to_keys":["frame_result","workspace_coverage"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":439,
+          "quote":"Coverage and evaluation results retain known uncertainty. Unresolved\nrelations, uncovered evaluations, contested evidence and unknown capability\nstay explicit. Absence of a recorded counterexample is not evidence of\nuniversal completeness",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-015%20Residual%20uncertainty",
+          "start_line":435
+        }
+      ],
+      "key":"retain_residual_uncertainty",
+      "statement":"Coverage and evaluation results retain explicit unresolved relations, uncovered evaluations, contested evidence and unknown capability. Absence of a recorded counterexample is not evidence of universal completeness.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_method_functions","minimal_declaration_shapes"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":446,
+          "quote":"This member requires the declared relations and the observable outcomes.\nIt requires no frame runtime, universal carrier, registry, controller,\nprompt format, repository layout, collaboration topology, worker count or\nsoftware framework",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-016%20Implementation%20neutrality",
+          "start_line":443
+        }
+      ],
+      "key":"implementation_neutrality",
+      "statement":"Require declared relations and observable outcomes, not a frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or software framework. Method signatures specify relations, not callable interfaces.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_set"],
+      "conditions":["A frame compresses accumulated practice or frames are proposed for merging."],
+      "exceptions":["Compression need not produce a unique smallest frame."],
+      "grounding":[
+        {
+          "end_line":458,
+          "quote":"A frame compresses accumulated practice when its declaration preserves the\nmaterial distinctions and failure detections its evaluation family requires\nwhile fitting its capability envelope.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-017%20Proportional%20compression",
+          "start_line":450
+        },
+        {
+          "end_line":173,
+          "quote":"Whether a compression preserved what the evaluation needs is a claim: the compressing step records the compression and its preservation argument",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":173
+        }
+      ],
+      "key":"proportional_compression",
+      "statement":"Compression must preserve required material distinctions and failure detection while fitting the envelope. Retain intentional overlap supplying separately activated evaluation, different capability fit, different evidence altitude or useful fault detection. Merge only if evaluation meaning, authority, capability fit and proportional reasoning cost survive. Record the compression and preservation argument as a claim; independent assessment depends on the promotion it serves.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","semantic_atom","frame_set"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":472,
+          "quote":"Frame-set contraction asks a different\nquestion: whether two frame declarations support the same evaluation\nrelation without material difference in evidence, authority, capability\nfit, evaluation or assurance independence, or failure detection. A frame\nset is not contracted to a disjoint minimum because its material variables\noverlap",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FEngagement%20atom%20and%20semantic%20atom",
+          "start_line":467
+        }
+      ],
+      "key":"engagement_semantic_atomicity",
+      "statement":"Activate and evaluate a frame as one bounded attention unit without merging its semantic atoms' meaning or authority. Any adopting method's semantic-contraction law governs that domain's atoms. Frame contraction instead asks whether declarations support the same evaluation relation without material differences in evidence, authority, capability fit, evaluation or assurance independence, or failure detection. Overlap alone never requires contraction to a disjoint minimum.",
+      "uncertainty":"No adopting domain's contraction law is supplied."
+    },
+    {
+      "applies_to_keys":["frame_set"],
+      "conditions":["Human authority declares a project frame set."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":490,
+          "quote":"- the governed workspace and outcome;\n- the known evaluation inventory;\n- the selected frames and their capability envelopes;\n- intentional overlaps and separately activated checks;\n- known frame dependencies or translations;\n- semantic, evaluation, operation where material, decision and acceptance\n  authority;\n- known exclusions and residual uncertainty; and\n- the conditions for revision.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration",
+          "start_line":482
+        }
+      ],
+      "key":"frame_set_declaration_content",
+      "statement":"Record workspace and outcome, known evaluation inventory, selected frames and envelopes, intentional overlaps and separately activated checks, known dependencies or translations, semantic/evaluation/operation where material/decision/acceptance authority, known exclusions and residual uncertainty, and revision conditions. Human selection is lawful method structure but proves neither completeness nor authority over inspected subject relations.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_set","actor_capability_envelope","evaluation_inventory"],
+      "conditions":["A frame set is selected for known material evaluations E(W,G)."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":509,
+          "quote":"a\nselected frame set S meets the baseline coverage constraint when, for every\nevaluation e in E(W, G), there is a frame F in S and an available actor a\ninside F's capability envelope K_F such that F with a is capable of e",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration%2FFrame-set%20selection",
+          "start_line":499
+        },
+        {
+          "end_line":523,
+          "quote":"Frame selection\ncannot waive another applicable semantic, authority, evidence or\nindependence constraint",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration%2FFrame-set%20selection",
+          "start_line":521
+        }
+      ],
+      "key":"frame_set_selection_coverage",
+      "statement":"Baseline coverage requires, for every known material evaluation, some selected frame and available actor inside its envelope capable of that evaluation. Selection also weighs context and competence, risk and consequence, acquisition and reasoning cost, evidence availability, useful separately activated overlap, translation and reconciliation cost, historical blind spots and reversibility. No optimisation algorithm is prescribed. These considerations create no universal ledger, benchmark, budget or measurement gate. Resource controls apply only through explicitly selected frames and their owning applicability/work scope; ACTIVATION §6 supplies that selection when cost is the governed question. Selection considerations differ from mandatory activation fit testing and waive no other applicable semantic, authority, evidence or independence constraints.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_method_functions","core_result_domain"],
+      "conditions":["An activate outcome is reported."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":579,
+          "quote":"| | `activation_refusal(basis)` | the subject or basis is stale, advanced, ambiguous or mismatched (RF-005), a topology mismatch included: the subject's topology is not the topology basis the frame declares (RF-011) | `invalid_basis` |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":579
+        },
+        {
+          "end_line":606,
+          "quote":"The outcomes of\n`activate` answer whether a frame was activated, never the\nevaluation's claim: a refused activation performs no evaluation.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":604
+        }
+      ],
+      "key":"activation_outcome_mapping",
+      "statement":"For the predicate that the frame is activated for this evaluation, subject, basis and actor: activated_frame maps to satisfied when exact binding holds; activation_refusal(capability) maps to out_of_frame when a declared needed capability is absent from the selected envelope and names the capability and its owner where given; activation_refusal(authority) maps to out_of_frame when needed semantic, evaluation, operation or decision authority is not admitted and names its owner; activation_refusal(basis) maps to invalid_basis for stale, advanced, ambiguous or mismatched subject/basis, including declared-topology mismatch. If no usable frame declares a needed material relation or capability, activate returns out_of_frame itself. Each refined outcome carries its cause, predicate and exactly one core value. Refused activation performs no evaluation and says nothing about the evaluation claim.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["result_conjunction","frame_method_functions","core_result_domain"],
+      "conditions":["conjoin reports on the composite predicate under its declared decision rule."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":582,
+          "quote":"| | `conflict` | the conjunction reports `falsified` while mandatory results for the same claim disagree, one `satisfied` and another `falsified`; the counterexample survives the join, and the disagreement stays unresolved for the decision authority | `falsified` |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":582
+        },
+        {
+          "end_line":609,
+          "quote":"`decision(holds)` assesses the composite predicate and is not its\nacceptance, which is a separate result",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":607
+        }
+      ],
+      "key":"conjunction_outcome_mapping",
+      "statement":"decision(holds) maps to satisfied when the imported conjunction reports satisfied. decision(fails) maps to falsified when it reports falsified and no mandatory result for the same claim is satisfied. conflict maps to falsified when mandatory same-claim satisfied and falsified results disagree: the counterexample survives and disagreement remains unresolved for decision authority. indeterminate maps to indeterminate. If conjunction reports out_of_frame or invalid_basis, return that value directly, including invalid_basis for basis mismatch. Under a declared veto or deferral return the outcome whose cause holds for the conjunction's value, or the direct out_of_frame/invalid_basis value. Planned assessment lacking a closed result and required coverage lacking a planned assessment are recorded beside the value, are not conjoin outcomes and map to no core value. decision(holds) is assessment, not acceptance.",
+      "uncertainty":"FOUNDATIONS §4's underlying conjunction, veto and deferral rules are not supplied."
+    },
+    {
+      "applies_to_keys":["frame_translation","frame_method_functions","core_result_domain"],
+      "conditions":["translate reports whether value or evidence enters the target as declared."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":588,
+          "quote":"| | `refusal(authority)` | an authority mismatch the translation does not declare: the value or evidence carries semantic, evaluation, operation or decision authority whose relation to the target frame's authority the translation states neither as preserved nor as a refusal condition; the refusal names that authority's owner | `out_of_frame` |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":587
+        }
+      ],
+      "key":"translation_outcome_mapping",
+      "statement":"translated_value maps to satisfied when carried into target coordinates with declared meaning. declared_loss maps to satisfied only for loss inside declared accepted loss, carrying that loss as a residual. refusal(condition) maps to falsified when a declared refusal condition holds, including excess loss, or identity/equality fails under the declared equality law. refusal(authority) maps to out_of_frame for an authority mismatch whose semantic/evaluation/operation/decision authority relation to the target is declared neither preserved nor a refusal condition; name that authority's owner. refusal(basis) maps to invalid_basis for a stale, advanced, ambiguous or mismatched source basis or coordinate. Preserve the predicate, cause, outcome and single core mapping rather than conflating refusal, excess loss or unperformed evaluation with success.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["independent_co_evaluation"],
+      "conditions":["Evaluations are separately activated."],
+      "exceptions":["Subject, manifold and evidence sources may overlap."],
+      "grounding":[
+        {
+          "end_line":623,
+          "quote":"They may overlap in subject, manifold or\nevidence sources; neither evaluation consumes or influences the other's\nunclosed working result.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FIndependently%20activated%20co-evaluation",
+          "start_line":619
+        },
+        {
+          "end_line":167,
+          "quote":"disjoint frames need not be independently evaluated, independently activated evaluations need not be disjoint, and the unqualified word \"independent\" establishes none of them",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":167
+        }
+      ],
+      "key":"co_evaluation_independence",
+      "statement":"Neither evaluation consumes or influences the other's unclosed working result. Disjointness does not imply independently conducted evaluation, separately activated evaluation does not imply disjointness, and unqualified 'independent' establishes neither these nor assurance independence. Additional assurance independence follows its governing law.",
+      "uncertainty":"The complete assurance-independence conditions are external."
+    },
+    {
+      "applies_to_keys":["frame_translation"],
+      "conditions":["Evidence or a value is consumed inside another frame."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":647,
+          "quote":"where the\ntranslation is represented in `a_c` it is recorded in the preservation,\nintroduced, removed and residual fields of\n[AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation). This section adds\nonly the frame fields: the source and target coordinates, the\nprovenance, the equality law and the refusal conditions.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FEvidence%20or%20coordinate%20translation",
+          "start_line":642
+        }
+      ],
+      "key":"translation_declaration_and_preservation",
+      "statement":"Declare source and target coordinates, preserved meaning, accepted loss, provenance, equality law and refusal conditions. ACTIVATION §4 Refinement owns what preserved meaning and accepted loss must demonstrate and the licensing law. In the source's a_c representation, use AC-013 preservation, introduced, removed and residual fields. This section adds the frame-specific coordinates, provenance, equality and refusal fields.",
+      "uncertainty":"No transformation is instantiated here; the licensing and preservation laws are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["coverage_tuple","workspace_coverage"],
+      "conditions":["Any material member of the coverage tuple changes."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":695,
+          "quote":"Changing any material member may invalidate the\ncoverage result; whether a change does is decided by\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse): it does when it\ncould change that result, as a material input change or a changed basis",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20basis",
+          "start_line":691
+        }
+      ],
+      "key":"coverage_basis_invalidation",
+      "statement":"Coverage binds the exact declared tuple. A material tuple change may invalidate it, and does so under the referenced reuse rule when the change could alter the result as a material input change or changed basis.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["evaluation_inventory","workspace_coverage"],
+      "conditions":[],
+      "exceptions":["The enumerated source categories apply where material and available; they are not unconditional acquisition requirements."],
+      "grounding":[
+        {
+          "end_line":713,
+          "quote":"The inventory records provenance and\nmateriality. Artifact presence, file count, operation count, test count or\nrepository reachability proves no evaluation coverage",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FEvaluation%20inventory",
+          "start_line":710
+        }
+      ],
+      "key":"inventory_source_requirements",
+      "statement":"Derive the inventory from every material available source, including where applicable goals, intent, product definition, requirements and accepted method; accepted design, ontology, identities, lifecycles, authorities and algorithms; implementation capabilities and external behaviour; operational/release/security/safety/governance obligations; direct and indirect dependencies and interaction seams; evidence, tests, scenarios, qualification and acceptance claims; historical tickets, check-ins, commentary, post-mortems, incidents and rejected candidates; long loops, resets, repeated repairs and rival paths; known actor limits and prior invisible violations; and applicable external law, contracts or standards. Record provenance and materiality. Presence, counts and repository reachability prove no coverage.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["coverage_ledger"],
+      "conditions":["For each evaluation in the ledger."],
+      "exceptions":["Operation authority is none where the evaluation performs no material operation."],
+      "grounding":[
+        {
+          "end_line":744,
+          "quote":"| operation authority | the existing owner grant for construction, transformation, admission, publication or mutation where the evaluation performs one; otherwise none |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger",
+          "start_line":739
+        }
+      ],
+      "key":"coverage_ledger_minimum_fields",
+      "statement":"At minimum record exact question/predicate; source establishing materiality; exact subject and basis coordinate; capable selected frames; required competence and context; semantic owner; existing operation grant for construction, transformation, admission, publication or mutation where performed, otherwise none; decision owner; required observations and provenance; material frame/seam dependencies; coverage status; and uncertainty, exclusion or re-entry residual.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["coverage_ledger","core_result_domain","workspace_coverage"],
+      "conditions":["The audit evaluates a row's coverage obligation on a valid declared tuple."],
+      "exceptions":["For a stale, advanced, ambiguous or mismatched tuple the audit returns invalid_basis and assigns no status."],
+      "grounding":[
+        {
+          "end_line":767,
+          "quote":"| `conditionally_covered` | a capable frame of S covers it only under a condition the audit has not established; the residual names the condition and the evidence that would decide it | `indeterminate` |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger",
+          "start_line":764
+        },
+        {
+          "end_line":779,
+          "quote":"Where the coverage tuple itself is stale, advanced,\nambiguous or mismatched, the audit returns `invalid_basis` (RF-005) and\nassigns no status.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger",
+          "start_line":777
+        }
+      ],
+      "key":"coverage_status_mapping",
+      "statement":"Each status carries its coverage predicate and one core value: covered→satisfied for a capable selected frame evaluating on the tuple without unresolved covering conflict; separately_covered→satisfied for separately activated selected frames each evaluating without unresolved conflict; excluded_by_authority→satisfied for the row's cited governing exclusion; conditionally_covered→indeterminate when an unestablished condition remains, with condition and deciding evidence named in the residual; conflicted→falsified for unresolved covering frame/result/authority conflict, retaining its counterexample for decision authority; uncovered→falsified when no capable selected frame evaluates and no cited authority excludes, with absence as counterexample; unknown→indeterminate when admissible evidence cannot determine coverage, including unknown capability or materiality. These are audit results, never the covered evaluation's result. Exclusion meets the obligation without showing evaluation coverage or performance. In a conjunction over the governed claim, an uncovered row denotes required coverage lacking planned assessment, never a falsified component of that claim. Conditional, conflicted, unknown and uncovered are not covered; cited exclusion is not failure.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["workspace_coverage","frames_in_conjunction"],
+      "conditions":["Covered relations interact in a way capable of changing the governed outcome."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":790,
+          "quote":"Evaluation-row coverage is insufficient when two covered relations interact\nin a way capable of changing the governed outcome. Every material\ninteraction is covered by one frame, a declared conjunction, a translation\nor a material composition evaluation",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FInteraction%20coverage",
+          "start_line":786
+        }
+      ],
+      "key":"interaction_coverage_requirement",
+      "statement":"Evaluation-row coverage alone is insufficient. Cover every material interaction by one frame, declared conjunction, translation or material composition evaluation.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["workspace_coverage","frame_set"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":799,
+          "quote":"Every material evaluation identifies semantic and decision authority.\nEvery material operation also identifies its existing construction,\ntransformation, admission, publication or mutation authority. A frame set\nwith broad observational reach, an unresolved decision owner or an\neffectful path without operation authority is not closed",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FAuthority%20coverage",
+          "start_line":794
+        }
+      ],
+      "key":"authority_coverage_requirement",
+      "statement":"Every material evaluation identifies semantic and decision authority; every material operation identifies its existing construction, transformation, admission, publication or mutation authority. Unresolved decision ownership or an effectful path without operation authority prevents frame-set closure; broad observational reach supplies no missing authority or proof of closure.",
+      "uncertainty":"The literal coordination of 'broad observational reach' with the two defects permits a stronger reading; retained explicitly as a residual."
+    },
+    {
+      "applies_to_keys":["workspace_coverage","evaluation_inventory"],
+      "conditions":["The cases are known and material."],
+      "exceptions":["A historical failure stops being a continuing coverage input once a declared frame detects or excludes its recurrence."],
+      "grounding":[
+        {
+          "end_line":806,
+          "quote":"Coverage includes known success, refusal, boundary, integration, recovery,\nreconstruction and competing-path cases where they are material.\nHistorical failures stay first-class coverage inputs until a declared frame\ndetects or excludes their recurrence",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FFailure%20coverage",
+          "start_line":803
+        }
+      ],
+      "key":"failure_coverage_requirement",
+      "statement":"Include known material success, refusal, boundary, integration, recovery, reconstruction and competing-path cases. Keep historical failures as first-class coverage inputs until the stated detection/exclusion condition is met.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["workspace_coverage","independent_co_evaluation"],
+      "conditions":["Human authority requires independently activated coverage for high consequence, weak observability, strong confirmation bias or a history of local proof masking."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":815,
+          "quote":"Human authority may require independently activated frame coverage for\nevaluations whose failure has high consequence, weak observability, strong\nconfirmation bias or a history of local proof masking. Such coverage uses a\nseparately activated evaluation relation and declares any additional\nassurance-independence conditions. A persona label alone establishes\nneither relation",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FHigh-risk%20separately%20activated%20coverage",
+          "start_line":810
+        }
+      ],
+      "key":"high_risk_separate_coverage",
+      "statement":"Such coverage uses a separately activated evaluation relation and declares additional assurance-independence conditions. Persona labels alone establish neither relation. Requiring it for the listed risks remains human authority's choice, recorded in the frame-set declaration and audited in coverage.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["workspace_coverage","coverage_tuple","frame_set"],
+      "conditions":["Operational full coverage is claimed for a declared tuple."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":838,
+          "quote":"6. no unresolved frame-result conflict is hidden by aggregation;\n7. excluded evaluations cite their governing authority; and\n8. uncovered and unknown residuals are explicit and compatible with the\n   claim.\n\nOperational full coverage is relative to its tuple. It is not a claim that\nno undiscovered evaluation exists",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FOperational%20full%20coverage",
+          "start_line":832
+        }
+      ],
+      "key":"operational_full_coverage_conditions",
+      "statement":"All eight conditions apply: every known material evaluation has at least one capable covering frame; every material interaction has a declared evaluation, conjunction, translation or composition relation; every evaluation has semantic and decision authority and every material operation inherited operation authority; every mandatory claim has admissible evidence and refusal paths; required separately activated overlaps and assurance-independence conditions are present; aggregation hides no unresolved frame-result conflict; excluded evaluations cite governing authority; uncovered and unknown residuals are explicit and compatible with the claim. The claim is tuple-relative and does not establish absence of undiscovered evaluations.",
+      "uncertainty":"The text does not fully delimit compatibility between its universal coverage condition, exclusions and uncovered residuals."
+    },
+    {
+      "applies_to_keys":["workspace_coverage","frame_set"],
+      "conditions":[],
+      "exceptions":["A finite formally closed domain may support exhaustive coverage relative to an independently established domain completeness predicate, without generalising beyond it."],
+      "grounding":[
+        {
+          "end_line":850,
+          "quote":"Without an independently established closed-domain completeness predicate,\na finite frame set cannot establish the absence of every undiscovered\nmaterial evaluation by inspecting its own declared inventory.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F9.%20Completeness%20boundary",
+          "start_line":842
+        },
+        {
+          "end_line":859,
+          "quote":"The method requires an explicit residual\nboundary and never a claim of metaphysical or universal completeness",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F9.%20Completeness%20boundary",
+          "start_line":857
+        }
+      ],
+      "key":"completeness_boundary",
+      "statement":"Self-inspection of finite inventory cannot establish absence of every undiscovered material evaluation without an independently established closed-domain completeness predicate. Formal incompleteness motivates caution, not a proof that this particular workspace or set is incomplete. Coverage remains falsifiable and externally challengeable, with explicit residual boundary and no metaphysical or universal completeness claim. Challenge sources include external human knowledge, independent review, historical failures and predecessor systems, mutation/adversarial/counterexample search, live operation and user behaviour, adjacent-domain comparison, and changes in capability, law, dependencies or topology.",
+      "uncertainty":"No closed-domain completeness predicate is supplied."
+    },
+    {
+      "applies_to_keys":["frame_discovery_revision","frame_set"],
+      "conditions":["Any listed observation occurs."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":878,
+          "quote":"- a competent actor repeatedly cannot see a known material violation;\n- a local repair creates or duplicates another authority path;\n- work repeatedly resets after apparently valid local completion;\n- long implementation loops produce no stable closure;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FMissing-frame%20signals",
+          "start_line":868
+        }
+      ],
+      "key":"missing_frame_diagnostic_triggers",
+      "statement":"Trigger diagnosis for repeated competent-actor blindness to known violations; repair creating or duplicating authority paths; repeated resets after apparently valid completion; long loops without stable closure; passing proof with unbound claimed outcome; material failure visible only at broad integration; repeated context expansion without a decidable question; same-named frames evaluating different material relations; or topology mutation leaving verdicts apparently current. Historical failures, resets and invisible violations are persistent evidence for improving declarations, activations, assignments or sets; diagnosis itself grants no repair authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_discovery_revision","evaluation_family"],
+      "conditions":["Frame diagnosis is undertaken."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":891,
+          "quote":"1. Was the correct declared frame activated?\n2. Were the subject and basis exact?\n3. Was the actor inside the capability envelope?\n4. Was admissible evidence available?\n5. Is a material variable or invariant missing from the frame?\n6. Is a required conjunction or translation missing?\n7. Is the evaluation family itself wrong or incomplete?\n8. Is another frame required?",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FDiagnostic%20order",
+          "start_line":884
+        }
+      ],
+      "key":"ordered_frame_diagnosis",
+      "statement":"Ask in order: correct declared frame activated; exact subject and basis; actor inside envelope; admissible evidence available; missing material variable/invariant; missing required conjunction/translation; wrong or incomplete family; another frame required. Question one uses family inclusion: the decided question must be stated by the declared family at declared coordinates. Set membership, name, role or similar wording is insufficient and is no activation trigger. Activation outside the family answers no regardless of the frame's standing. Exclude preceding defects before adding frames; difficulty alone creates none.",
+      "uncertainty":"The source labels the explicit family-inclusion test a predecessor tightening, not evidence that predecessor conformance was checked here."
+    },
+    {
+      "applies_to_keys":["frame_discovery_revision","reference_frame","frame_result","coverage_ledger"],
+      "conditions":["A frame declaration is materially revised or a reuse-relevant observation changes a closed result."],
+      "exceptions":["A revision changing no declaration needs no new coordinate; this does not preserve result validity.","A harmless explanatory clarification changing no material input and constituting no revising observation invalidates no result by itself; exact applicability is still checked."],
+      "grounding":[
+        {
+          "end_line":931,
+          "quote":"The revision record lists those\nresults as reopened; a result leaves that list only by a recorded re-check\nthat finds it demonstrably independent of the change, or by re-evaluation\non the new revision. A material revision does not select which of the\nresults bound to the prior revision it reopens, and silence does not keep\na result closed.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FRevision%20actions",
+          "start_line":926
+        },
+        {
+          "end_line":963,
+          "quote":"reopens that result\nand every coverage ledger row and coverage claim that consumed it, and\npreserves every demonstrably independent surviving result.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FRevision%20actions",
+          "start_line":957
+        }
+      ],
+      "key":"revision_and_result_reopening",
+      "statement":"Material revision changes frame identity or revision coordinates, produces a new frame revision coordinate and states affected activations, results and coverage claims. Reopen every result bound to the previous revision as mismatched and invalid for reuse; none is selectively spared or kept closed by silence. A result leaves the reopen list only by recorded recheck showing independence or reevaluation on the new revision. Declaration materiality belongs to FOUNDATIONS §2; closed-result validity independently follows ACTIVATION §7. Reopening without material declaration revision is recorded in work state. Clarification revealing outside-family activation or newly acquired material admissible evidence reopens affected results and all consuming ledger rows/coverage claims while preserving demonstrably independent survivors.",
+      "uncertainty":"The source labels default reopening a predecessor tightening; the full external materiality and reuse laws are absent."
+    },
+    {
+      "applies_to_keys":["activation_packet","reference_frame"],
+      "conditions":["An actor receives an activated frame or declared active frame configuration."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":981,
+          "quote":"- frame identity and revision;\n- the evaluation and its result algebra;\n- the exact subject and basis;\n- the material relations and applicable invariants;\n- semantic, evaluation, operation where material, and decision authority;\n- admissible evidence and tools;\n- the capability and context envelope;\n- exclusions and prohibited assumptions;\n- declared frame dependencies or conjunction outputs; and\n- invalidation, stop and reconfiguration conditions.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet",
+          "start_line":972
+        }
+      ],
+      "key":"activation_packet_requirements",
+      "statement":"The minimum packet contains frame identity/revision, evaluation and algebra, exact subject/basis, material relations/invariants, semantic/evaluation/operation where material/decision authority, admissible evidence/tools, capability/context envelope, exclusions/prohibited assumptions, dependencies/conjunction outputs, and invalidation/stop/reconfiguration conditions. Do not imply reconstruction of the whole workspace from ambient context. Return through the declared result relation; hidden reasoning cannot replace required evidence, provenance or authority. Optimise size for reliable evaluation rather than maximum loading; broader frames for stronger actors and lawful refinement sequences for weaker actors preserve the same material invariants and authority relations.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["minimal_activation_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1034,
+          "quote":"Every field resolves through stable identities and source references.\nPaths, line numbers, member counts, summaries and matching labels may aid\nnavigation or diagnostics; they do not substitute for the declared identity\nand basis",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet%2FMinimal%20activation%20binding",
+          "start_line":1031
+        }
+      ],
+      "key":"activation_binding_identity_resolution",
+      "statement":"Supply the template's stated binding content and resolve every field through stable identities and source references. Paths, line numbers, counts, summaries and matching labels may assist navigation or diagnosis but cannot substitute for declared identity and basis.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","workspace_coverage"],
+      "conditions":["A listed practice supports a frame or coverage claim."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1039,
+          "quote":"Each of the following is a violation of this member where it supports a\nframe or coverage claim",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F12.%20Violations",
+          "start_line":1038
+        }
+      ],
+      "key":"frame_claim_violation_boundaries",
+      "statement":"Violations are: presumed omniscient complete-method/workspace frame; calling a module/file/service/role/persona/prompt/lens a frame without evaluation relation; silent collapse of decomposition, authority and frame topology into one tree; requiring every active frame to compose with every other; composition machinery without material cross-frame evaluation; selection or visibility treated as semantic authority; evidence flattened across bases/coordinates as one executed or observed relation; satisfied substituted for lawful indeterminate/out_of_frame/invalid_basis; coverage inferred from artifact/file/operation/test/review/actor counts; silent growth beyond envelope; stale activation reused after topology mutation without recharting; adding frames for every failure before excluding activation/basis/evidence/capability/evaluation defects; contracting overlap providing separately activated failure detection or materially different fit; and claiming a generic runtime/registry/controller/universal carrier is required.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["minimal_declaration_shapes","minimal_frame_declaration","minimal_frame_set_declaration","minimal_evaluation_result"],
+      "conditions":["A frame, frame set or evaluation result is declared using the corresponding minimal shape."],
+      "exceptions":["Frame-relation fields describe only relations actually used; material-operation fields apply only where material."],
+      "grounding":[
+        {
+          "end_line":1076,
+          "quote":"The three carrier-neutral shapes below are the least content that declares\na frame, a frame set and an evaluation result.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations",
+          "start_line":1073
+        },
+        {
+          "end_line":1181,
+          "quote":"The out_of_frame residual field is new in this corpus; it carries what\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) requires an out_of_frame\nresult to name, and reads `none` for any other result",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20evaluation%20result",
+          "start_line":1179
+        }
+      ],
+      "key":"minimal_declaration_content_rule",
+      "statement":"Preserve the content enumerated in each template concept, independent of carrier. An out_of_frame result's dedicated residual names missing relation or capability, owner and reconfiguration pressure; for every other result that field reads none. Processing these document shapes does not itself instantiate their represented frames or evaluations.",
+      "uncertainty":"The owner section for the full out_of_frame semantics is not supplied."
+    },
+    {
+      "applies_to_keys":["frame_set","reference_frame","workspace_coverage"],
+      "conditions":["A project claims to operate under this member."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1201,
+          "quote":"5. workspace coverage maps every known material evaluation and interaction\n   to a capable frame or an explicit residual (§8);\n6. operational full coverage is stated relative to its exact tuple (§8);\n7. topology, capability, evidence and historical failures can trigger\n   frame revision or recharting (§10); and\n8. no executable frame machinery, global context, universal completeness\n   or domain authority is inferred from adopting this member (RF-016, §9).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F14.%20Closure",
+          "start_line":1195
+        }
+      ],
+      "key":"project_member_closure",
+      "statement":"Require human declaration of workspace, outcome, inventory and set; every active frame finite, evaluation- and basis-bound, authority-safe and usable in its envelope; results preserving semantic, evidence, inference and decision distinctions; conjunction/translation/composition only where material evaluation requires; every known material evaluation and interaction mapped to a capable frame or explicit residual; operational full coverage relative to the exact tuple; topology/capability/evidence/history capable of triggering revision or recharting; and no inferred executable machinery, global context, universal completeness or domain authority from adoption.",
+      "uncertainty":"This is the source's closure predicate, not an assessment that any project meets it."
+    },
+    {
+      "applies_to_keys":["activation_packet","reference_frame","frame_method_functions"],
+      "conditions":["Declared inputs are acquired or a reusable frame is activated."],
+      "exceptions":["Where a current derived surface serves the task, the referenced Acquisition rule prefers it; stale, missing or insufficient derived surfaces require direct deciding owner sections."],
+      "grounding":[
+        {
+          "end_line":185,
+          "quote":"a declared input absent from the actor's view is neither licence to read elsewhere nor evidence that it is absent, and a candidate source, a moving selector or another basis is no substitute.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":185
+        },
+        {
+          "end_line":186,
+          "quote":"a reusable declaration is not evidence that a particular activation was correct.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":186
+        }
+      ],
+      "key":"acquisition_and_activation_boundaries",
+      "statement":"Acquire declared inputs by exact identity only from the exact selected basis. Absence from view is neither permission to read elsewhere nor evidence of absence; candidate sources, moving selectors and other bases are not substitutes. Acquisition is read-only and grants no role, operation or decision authority; return missing binding with its outcome before dependent action. Activation binds exact subject/basis and loads declared material relations and evidence, not an undifferentiated workspace dump. Reusable declaration is not evidence of correct activation. If no available frame/actor pairing can lawfully evaluate, return out_of_frame or the refusal whose cause holds; never proceed by implied context. Configuration allocates selection to actor or assigning authority.",
+      "uncertainty":"These are descriptions of the referenced acquisition workflow, not instructions to acquire material in this interpretation."
+    },
+    {
+      "applies_to_keys":["reference_frame","activation_packet"],
+      "conditions":["A derived surface, projected frame or prompt is used."],
+      "exceptions":["Historical workaround prose may be carried when a current surface still needs that constraint."],
+      "grounding":[
+        {
+          "end_line":187,
+          "quote":"For a question another member owns, or one that joins the law of several owners, the step returns `out_of_frame` naming the owning members",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":187
+        },
+        {
+          "end_line":188,
+          "quote":"a prompt is a rendered contract over typed authority, not source law.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":188
+        }
+      ],
+      "key":"derived_surface_and_prompt_scope",
+      "statement":"A derived surface owns no determination and decides standalone only questions owned by its declared source members. For other-owner or multi-owner questions return out_of_frame naming owners, then decide from those members or a surface declaring every owner. A prompt projects needed current authority references, obligations, contracts, boundaries, proof expectations, fallback conditions and acquired material; it has no source-law authority. Begin construction from the highest live authority surface needed by the question, naming unresolved upstream authority gaps before fallback context is read.",
+      "uncertainty":"Referenced design, ODD, UX and ticket specialisations are not supplied."
+    },
+    {
+      "applies_to_keys":["release_publication","release_cut","version_line_selector"],
+      "conditions":[],
+      "exceptions":["With one independently released project the local cut name may also serve as Git tag; shared sources use it as a project-qualified-ref suffix."],
+      "grounding":[
+        {
+          "end_line":71,
+          "quote":"In a release source carrying one independently released project, that\nname may also be the Git tag name. In a shared release source it is the\nsuffix of the project-qualified Git ref of §2. Equal product-local cut\nnames do not collapse releases owned by different projects",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":55
+        }
+      ],
+      "key":"release_naming_and_selector_boundary",
+      "statement":"Product-local cut names are always v<version>-rc.<n>; local selector names are v<version>. Shared release sources require project-qualified refs using the cut name as suffix; equal local names never collapse different projects' releases. The mutable selector points to the greatest positive published RC ordinal for its project/version line and is insufficient as an exact constitutional, dependency, evidence or replay basis.",
+      "uncertainty":"Project-qualified ref syntax and the later identity rules are outside the supplied release excerpt."
+    },
+    {
+      "applies_to_keys":["release_publication"],
+      "conditions":["A bug, feature, regression or release blocker enters release handling."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":78,
+          "quote":"Release handling is downstream of intake triage. A bug, feature,\nregression or release blocker first receives its change class, lawful\nre-entry point, affected scope, downstream proof obligations and\nversion-line disposition",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":73
+        }
+      ],
+      "key":"release_triage_prerequisite",
+      "statement":"First assign change class, lawful re-entry, affected scope, downstream proof obligations and version-line disposition under SPEC_METHOD §4. An RC window authorises no untriaged mutation.",
+      "uncertainty":"The intake triage procedure is referenced, not supplied."
+    },
+    {
+      "applies_to_keys":["release_publication","release_cut"],
+      "conditions":["A release operation is refused, stops or fails closed, or a state/cohort/verification is described as invalid, incomplete or failing."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":92,
+          "quote":"Where it says\nthat an operation is refused, stops or fails closed, the operation does\nnot complete; its intended effect, with any part of it that began, is\nreported under [ACTIVATION §3 Effects](ACTIVATION.md#effects), never as\n`completed`.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":80
+        }
+      ],
+      "key":"release_result_and_effect_separation",
+      "statement":"RELEASE defines no independent result values. Refused/stopped/fail-closed operations do not complete: report intended effect and any begun portion under ACTIVATION §3 Effects, never completed. Invalid release state, incomplete cohort and failed verification supply counterexamples to their named check predicates, whose results use FOUNDATIONS §4. Refused publication is never a published cut and failed verification never qualification. Successor-disposition values remain owned by RELEASE §9.",
+      "uncertainty":"Effect reporting and §9 disposition values are not supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision":"residual",
+      "keys":["frames_context_family","reference_frame","frame_scope_and_owner_conservation","exact_frame_binding","context_closure_and_projection","acquisition_and_activation_boundaries","derived_surface_and_prompt_scope","foundation_and_consumer_dependencies"],
+      "reason":"Retains the family premises, ownership boundaries, supplemental context rules and source trace role; external foundational standing, tuple definitions and consumer loci remain unresolved.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law"
+    },
+    {
+      "decision":"retained",
+      "keys":["closed_result_discipline","core_claim_variation"],
+      "reason":"Retains all ten claims through their shared law records and the explicit unknown/out-of-frame distinction; this section adds no independent laws.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F2.%20Core%20claims"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_laws","frame_law_applicability"],
+      "reason":"Retains universal declared-or-activated applicability and external ontology ownership.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws"
+    },
+    {
+      "decision":"retained",
+      "keys":["evaluation_family","evaluation_relativity","frame_declares_family"],
+      "reason":"Retains the mandatory family declaration and testable sufficiency boundary.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-001%20Evaluation%20relativity"
+    },
+    {
+      "decision":"retained",
+      "keys":["actor_capability_envelope","finite_attention_and_measurement"],
+      "reason":"Retains bounded fit, reconstructability and the separate actual-use attention question.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-002%20Finite%20attention"
+    },
+    {
+      "decision":"retained",
+      "keys":["material_sufficiency"],
+      "reason":"Retains every known material relation requirement and the open-world exception.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-003%20Material%20sufficiency"
+    },
+    {
+      "decision":"retained",
+      "keys":["irrelevance_exclusion"],
+      "reason":"Retains exclusion with its irrelevance-establishment exception.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-004%20Irrelevance%20exclusion"
+    },
+    {
+      "decision":"retained",
+      "keys":["exact_basis_and_coordinates"],
+      "reason":"Retains exact binding, invalid_basis/reactivation alternatives and declared equality.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-005%20Exact%20basis%20and%20coordinates"
+    },
+    {
+      "decision":"retained",
+      "keys":["authority_conservation"],
+      "reason":"Retains admitted-authority conservation and non-authorising frame attributes.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-006%20Authority%20conservation"
+    },
+    {
+      "decision":"retained",
+      "keys":["semantic_evidence_verdict_separation"],
+      "reason":"Retains distinguishable roles and the exact material-operation grant.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-007%20Semantic%2C%20evidence%20and%20verdict%20separation"
+    },
+    {
+      "decision":"retained",
+      "keys":["overlap_without_identity_collapse"],
+      "reason":"Retains sharing permission without identity inference and required declared mappings.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-008%20Overlap%20without%20identity%20collapse"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_communication","no_assumed_hierarchy"],
+      "reason":"Retains distinct relation structures, conditional alignment and communication's non-authorising meaning.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-009%20No%20assumed%20hierarchy"
+    },
+    {
+      "decision":"retained",
+      "keys":["composition_on_demand"],
+      "reason":"Retains material triggers and closed-result conjunction as an alternative.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-010%20Composition%20on%20demand"
+    },
+    {
+      "decision":"retained",
+      "keys":["topology_invalidation"],
+      "reason":"Retains declared invalidation changes and prior-result reuse restrictions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-011%20Topology%20mutation%20and%20recharting"
+    },
+    {
+      "decision":"residual",
+      "keys":["frame_result","core_result_domain","closed_result_discipline","external_result_and_qualification_laws"],
+      "reason":"Retains five values, refinement and nonperformance distinctions while leaving imported full semantics unresolved.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results"
+    },
+    {
+      "decision":"retained",
+      "keys":["reconstructable_activation"],
+      "reason":"Retains reconstruction by a fresh competent in-envelope actor.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-013%20Reconstructable%20activation"
+    },
+    {
+      "decision":"retained",
+      "keys":["capability_fit_remedies"],
+      "reason":"Retains human/grant remedy choice and prohibition on silent material omission.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-014%20Capability%20fit"
+    },
+    {
+      "decision":"retained",
+      "keys":["retain_residual_uncertainty"],
+      "reason":"Retains explicit uncertainty and non-evidence from absent counterexamples.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-015%20Residual%20uncertainty"
+    },
+    {
+      "decision":"retained",
+      "keys":["implementation_neutrality","carrier_and_realisation_latitude"],
+      "reason":"Retains required relations and outcomes without imposing infrastructure.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-016%20Implementation%20neutrality"
+    },
+    {
+      "decision":"retained",
+      "keys":["proportional_compression"],
+      "reason":"Retains preservation, useful overlap and conditional merging.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-017%20Proportional%20compression"
+    },
+    {
+      "decision":"retained",
+      "keys":["semantic_atom","engagement_semantic_atomicity","frame_contains_semantic_atoms"],
+      "reason":"Retains engagement/semantic distinction and separate contraction questions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FEngagement%20atom%20and%20semantic%20atom"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_set","frame_set_declaration_content","frame_set_selects_frames"],
+      "reason":"Retains human declaration, required content and limits on what selection proves.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_set_selection_coverage","frame_set_selection_latitude"],
+      "reason":"Retains universal known-evaluation coverage, considerations and scoped resource controls.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration%2FFrame-set%20selection"
+    },
+    {
+      "decision":"residual",
+      "keys":["frame_method_functions","activation_outcome_mapping","conjunction_outcome_mapping","translation_outcome_mapping","method_relations_operational_residual"],
+      "reason":"Retains all seven signatures and detailed result mappings as data; executable and externally owned qualification semantics are not instantiated.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions"
+    },
+    {
+      "decision":"retained",
+      "keys":["frames_in_conjunction"],
+      "reason":"Retains four distinct, evaluation-required cooperation relations.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction"
+    },
+    {
+      "decision":"retained",
+      "keys":["independent_co_evaluation","co_evaluation_independence"],
+      "reason":"Retains separate activation, permissible overlap and protection of unclosed results.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FIndependently%20activated%20co-evaluation"
+    },
+    {
+      "decision":"retained",
+      "keys":["result_conjunction","conjunction_consumes_closed_results"],
+      "reason":"Retains declared-rule consumption and external ownership of conjunction.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FResult%20conjunction"
+    },
+    {
+      "decision":"residual",
+      "keys":["frame_translation","translation_declaration_and_preservation","translation_licensing_residual"],
+      "reason":"Retains all declaration fields and the external preservation/licensing dependency without creating a transformation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FEvidence%20or%20coordinate%20translation"
+    },
+    {
+      "decision":"retained",
+      "keys":["material_composition","composition_on_demand"],
+      "reason":"Retains application ownership, declared composition requirements and materiality boundary.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FMaterial%20composition"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_relation_categories","no_assumed_hierarchy"],
+      "reason":"Retains all ten relation definitions as categories without asserting instance edges.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F7.%20Frame%20relations"
+    },
+    {
+      "decision":"retained",
+      "keys":["workspace_coverage"],
+      "reason":"Retains the heading's document grouping role; it adds no independent requirement.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage"
+    },
+    {
+      "decision":"retained",
+      "keys":["coverage_tuple","coverage_basis_invalidation"],
+      "reason":"Retains all six coordinates and conditional invalidation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20basis"
+    },
+    {
+      "decision":"retained",
+      "keys":["evaluation_inventory","inventory_source_requirements"],
+      "reason":"Retains all applicable source categories, provenance/materiality and count limitations.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FEvaluation%20inventory"
+    },
+    {
+      "decision":"retained",
+      "keys":["coverage_dimensions","lens_instantiation_as_frame"],
+      "reason":"Retains typical lenses without promoting them to frames absent separate instantiation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20dimensions"
+    },
+    {
+      "decision":"retained",
+      "keys":["coverage_ledger","coverage_ledger_minimum_fields","coverage_status_mapping"],
+      "reason":"Retains minimum fields, seven status causes/mappings and audit-versus-evaluation distinctions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger"
+    },
+    {
+      "decision":"retained",
+      "keys":["interaction_coverage_requirement"],
+      "reason":"Retains the obligation to cover every material interaction beyond row coverage.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FInteraction%20coverage"
+    },
+    {
+      "decision":"residual",
+      "keys":["authority_coverage_requirement","observational_reach_reading"],
+      "reason":"Retains owner requirements and closure defects while exposing the broad-reach wording ambiguity.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FAuthority%20coverage"
+    },
+    {
+      "decision":"retained",
+      "keys":["failure_coverage_requirement"],
+      "reason":"Retains all material case kinds and historical-failure persistence.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FFailure%20coverage"
+    },
+    {
+      "decision":"retained",
+      "keys":["high_risk_separate_coverage"],
+      "reason":"Retains human discretion and consequent separation/assurance requirements without making risk alone a universal mandate.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FHigh-risk%20separately%20activated%20coverage"
+    },
+    {
+      "decision":"residual",
+      "keys":["operational_full_coverage_conditions","full_coverage_residual_compatibility"],
+      "reason":"Retains all eight conditions and tuple relativity without resolving the exclusion/residual compatibility boundary.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FOperational%20full%20coverage"
+    },
+    {
+      "decision":"retained",
+      "keys":["completeness_boundary"],
+      "reason":"Retains closed-domain exception, challenge sources and non-generalisation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F9.%20Completeness%20boundary"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_discovery_revision"],
+      "reason":"Retains the heading's grouping role without adding a law.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision"
+    },
+    {
+      "decision":"retained",
+      "keys":["missing_frame_diagnostic_triggers"],
+      "reason":"Retains each diagnosis-triggering observation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FMissing-frame%20signals"
+    },
+    {
+      "decision":"retained",
+      "keys":["ordered_frame_diagnosis"],
+      "reason":"Retains the eight-question order and exact family-inclusion test.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FDiagnostic%20order"
+    },
+    {
+      "decision":"retained",
+      "keys":["revision_and_result_reopening","revision_action_latitude"],
+      "reason":"Retains permitted revisions, default reopening, independent survival routes and harmless-clarification exception.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FRevision%20actions"
+    },
+    {
+      "decision":"retained",
+      "keys":["activation_packet","activation_packet_requirements","actor_reasoning_latitude"],
+      "reason":"Retains minimum packet, result return, reasoning permission and capability-dependent sizing.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet"
+    },
+    {
+      "decision":"retained",
+      "keys":["minimal_activation_binding","activation_binding_identity_resolution","carrier_and_realisation_latitude"],
+      "reason":"Retains every binding field and stable-identity resolution without executing the template.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet%2FMinimal%20activation%20binding"
+    },
+    {
+      "decision":"retained",
+      "keys":["frame_claim_violation_boundaries"],
+      "reason":"Retains all fourteen violations with their frame-or-coverage-claim applicability.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F12.%20Violations"
+    },
+    {
+      "decision":"retained",
+      "keys":["minimal_declaration_shapes","minimal_declaration_content_rule"],
+      "reason":"Retains carrier-neutral minimum-content status as source data.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations"
+    },
+    {
+      "decision":"retained",
+      "keys":["minimal_frame_declaration"],
+      "reason":"Retains all fields, conditional operation authority and optional relations actually used.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame%20declaration"
+    },
+    {
+      "decision":"retained",
+      "keys":["minimal_frame_set_declaration"],
+      "reason":"Retains all frame-set template fields and required-relation limitation.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame-set%20declaration"
+    },
+    {
+      "decision":"retained",
+      "keys":["minimal_evaluation_result","minimal_declaration_content_rule"],
+      "reason":"Retains all result fields and the conditional out_of_frame residual.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20evaluation%20result"
+    },
+    {
+      "decision":"retained",
+      "keys":["project_member_closure"],
+      "reason":"Retains the source's eight closure conditions without assessing their satisfaction.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F14.%20Closure"
+    },
+    {
+      "decision":"residual",
+      "keys":["source_disposition_register","predecessor_conservation_unverified"],
+      "reason":"Retains reported conservation, additions, tightenings and exclusions as provenance claims; predecessor equivalence is not verified.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F15.%20Source%20dispositions"
+    },
+    {
+      "decision":"residual",
+      "keys":["release_publication","release_external_dependencies"],
+      "reason":"Retains scope and imported ownership while leaving unsupplied release sections and imported laws unresolved.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE"
+    },
+    {
+      "decision":"retained",
+      "keys":["release_cut","version_line_selector","release_naming_and_selector_boundary","release_triage_prerequisite","release_result_and_effect_separation","selector_points_to_cut","publication_owns_cut_transitions"],
+      "reason":"Retains publication/adoption boundary, cut and selector naming, latest ordinal, triage and result/effect distinctions.",
+      "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed":["Human authority may declare practical frame sets from accumulated practice without mechanically deriving a unique partition.","Frames may overlap, compose, refine, restrict, translate or succeed one another; hierarchy is optional.","Several frames may be used together without composing their internal coordinate systems."],
+      "applies_to_keys":["frame_set","reference_frame"],
+      "forbidden":["Presuming a finite actor holds the complete material workspace in active attention.","Inferring authority from selection, result breadth, usefulness, actor or technology.","Treating unknown or out-of-frame results as failed evaluations or implied acceptance."],
+      "grounding":[
+        {
+          "end_line":268,
+          "quote":"4. Human authority may declare a practical project frame set from\n   accumulated practice without deriving a unique frame partition\n   mechanically (P6).\n5. Frames may overlap, compose, refine, restrict, translate or succeed one\n   another; hierarchy is one optional relation among these (P3).\n6. Several frames may be used together without composing their internal\n   coordinate systems (P4a).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F2.%20Core%20claims",
+          "start_line":257
+        }
+      ],
+      "key":"core_claim_variation"
+    },
+    {
+      "allowed":["Any conforming realisation of frame relations and observable outcomes.","Markdown, structured data, a prompt or another consumer-selected carrier for an unchanged activation-binding relation.","Consumer-selected carriers for the minimal declarations."],
+      "applies_to_keys":["reference_frame","frame_method_functions","minimal_activation_binding","minimal_declaration_shapes"],
+      "forbidden":["Presenting runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or framework as required by this member.","Treating a rendered carrier as authority or as a replacement for exact binding."],
+      "grounding":[
+        {
+          "end_line":446,
+          "quote":"It requires no frame runtime, universal carrier, registry, controller,\nprompt format, repository layout, collaboration topology, worker count or\nsoftware framework",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-016%20Implementation%20neutrality",
+          "start_line":444
+        },
+        {
+          "end_line":997,
+          "quote":"It may be written in Markdown, structured data, a\nprompt or another consumer-selected carrier without changing the relation",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet%2FMinimal%20activation%20binding",
+          "start_line":995
+        }
+      ],
+      "key":"carrier_and_realisation_latitude"
+    },
+    {
+      "allowed":["Human authority may accept a non-minimal frame set when added cost buys material risk reduction or better actor fit.","Selection may weigh the enumerated considerations without a prescribed optimisation algorithm."],
+      "applies_to_keys":["frame_set"],
+      "forbidden":["Creating a universal resource ledger, benchmark, budget or measurement gate from selection considerations.","Waiving applicable semantic, authority, evidence or independence constraints through selection."],
+      "grounding":[
+        {
+          "end_line":509,
+          "quote":"No optimisation algorithm is\nprescribed. Human authority may accept a non-minimal set where its added\ncost buys material risk reduction or better actor fit",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration%2FFrame-set%20selection",
+          "start_line":507
+        }
+      ],
+      "key":"frame_set_selection_latitude"
+    },
+    {
+      "allowed":["Clarify activation or evidence acquisition.","Change capability envelope; add or remove a material relation; split an overloaded frame.","Merge duplicative frames where capability and authority remain sound.","Add intentional overlap or add/revise conjunction or translation.","Retire a frame whose family is no longer material, or revise the evaluation inventory."],
+      "applies_to_keys":["frame_discovery_revision","frame_set"],
+      "forbidden":["Keeping prior-revision results closed by silence after material revision.","Selecting only some prior-revision-bound results to reopen.","Treating unchanged declarations as proof that a result remains valid."],
+      "grounding":[
+        {
+          "end_line":920,
+          "quote":"A revision may (P4b; rc.2 #revision-actions): clarify activation or\nevidence acquisition; change the capability envelope; add or remove a\nmaterial relation; split an overloaded frame; merge duplicative frames\nwhere capability and authority stay sound; add intentional overlap; add or\nrevise a conjunction or translation; retire a frame whose evaluation family\nis no longer material; or revise the project evaluation inventory.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FRevision%20actions",
+          "start_line":912
+        }
+      ],
+      "key":"revision_action_latitude"
+    },
+    {
+      "allowed":["An actor may own its internal reasoning and search where the governing method permits.","A more capable actor may activate a broader frame; a less capable actor may use a lawful refinement sequence, preserving material invariants and authority."],
+      "applies_to_keys":["activation_packet","actor_capability_envelope"],
+      "forbidden":["Substituting hidden reasoning for required evidence, provenance or authority.","Optimising frame size merely for maximum context loading."],
+      "grounding":[
+        {
+          "end_line":990,
+          "quote":"The actor may own its internal reasoning and search where the governing\nmethod permits. It returns through the declared result relation. Hidden\ninternal reasoning is no substitute for required evidence, provenance or\nauthority",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet",
+          "start_line":983
+        }
+      ],
+      "key":"actor_reasoning_latitude"
+    }
+  ],
+  "limitations": [
+    "This is source interpretation only. It supplies no semantic acceptance, qualification, execution, project closure or completeness judgment.",
+    "Only the embedded source sections were used. Discovery nodes and edges, including RELEASE sections beyond context and position, supplied no additional normative content.",
+    "FOUNDATIONS, ACTIVATION, EVALUATION, IDENTITY, AXIOMATIC_CALCULUS, SPEC_METHOD and other referenced members are not supplied. Their ownership and explicitly stated dependencies are retained without fabricating their full laws or external graph endpoints.",
+    "The foundation table's row-specific principle/pillar and consumer-locus index remains available through its source grounding; it is not expanded into a complete external dependency graph or derivation proof.",
+    "The selected published calculus basis is STDO 2.5.1-rc.2 as specified by the outer workflow. Calculus, result and transformation descriptions inside the subject remain interpreted data.",
+    "Source-defined method functions, ordered diagnosis, revision, result mappings and template roles are described in the five active families. No judgment, traversal or transformation population is populated or operation performed.",
+    "Template fields are compressed into concept definitions and content constraints; no template is filled and no represented Product, frame, grant, result or release is instantiated.",
+    "The reported predecessor conservation and labelled tightenings are retained as source claims, not independently established equivalence.",
+    "The authority-coverage wording and compatibility of operational-full-coverage exclusions/uncovered residuals remain explicit competing or underdetermined readings.",
+    "Heading-only sections are retained as document groupings, not as independent requirements. Repeated statements are consolidated with section-specific grounding and dispositions."
+  ],
+  "relations": [
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":284,
+          "quote":"Every frame declares the evaluation family it supports.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-001%20Evaluation%20relativity",
+          "start_line":283
+        }
+      ],
+      "key":"frame_declares_family",
+      "kind":"declares_supported_family",
+      "meaning":"The frame's declared family governs its testable sufficiency and evaluation applicability.",
+      "source_key":"reference_frame",
+      "target_key":"evaluation_family"
+    },
+    {
+      "conditions":["The frames are selected in a human-declared project frame set."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":484,
+          "quote":"- the selected frames and their capability envelopes;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration",
+          "start_line":484
+        }
+      ],
+      "key":"frame_set_selects_frames",
+      "kind":"selects",
+      "meaning":"A frame set records selected frames and their envelopes; selection alone conveys no authority or completeness.",
+      "source_key":"frame_set",
+      "target_key":"reference_frame"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":465,
+          "quote":"one frame may contain several semantic atoms, and one\nsemantic atom may take part in several frames",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FEngagement%20atom%20and%20semantic%20atom",
+          "start_line":464
+        }
+      ],
+      "key":"frame_contains_semantic_atoms",
+      "kind":"may_contain",
+      "meaning":"Frames and semantic atoms have permitted many-to-many participation without identity or authority collapse.",
+      "source_key":"reference_frame",
+      "target_key":"semantic_atom"
+    },
+    {
+      "conditions":["A decision rule is declared and the consumed results are closed."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":630,
+          "quote":"A declared decision rule consumes the closed results of several frames.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FResult%20conjunction",
+          "start_line":627
+        }
+      ],
+      "key":"conjunction_consumes_closed_results",
+      "kind":"consumes_under_declared_rule",
+      "meaning":"The declared conjunction rule governs combining closed frame results; consumption does not itself accept the composite claim.",
+      "source_key":"result_conjunction",
+      "target_key":"frame_result"
+    },
+    {
+      "conditions":["A lens is separately instantiated as a bounded evaluation family."],
+      "exceptions":["A typical coverage dimension alone is only a lens."],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":724,
+          "quote":"These are lenses (FOUNDATIONS §2): they become frames only when separately\ninstantiated as bounded evaluation families",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20dimensions",
+          "start_line":722
+        }
+      ],
+      "key":"lens_instantiation_as_frame",
+      "kind":"conditionally_instantiated_as",
+      "meaning":"Separate bounded-family instantiation is required before a coverage lens counts as a frame; no instance is asserted here.",
+      "source_key":"coverage_dimensions",
+      "target_key":"reference_frame"
+    },
+    {
+      "conditions":["The cut is published for the selector's project and version line and has the greatest positive published RC ordinal."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":69,
+          "quote":"The selector\npoints to the latest published immutable RC cut on that line, where latest\nmeans the greatest positive RC ordinal published for that project and\nversion line.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":66
+        }
+      ],
+      "key":"selector_points_to_cut",
+      "kind":"mutable_discovery_pointer",
+      "meaning":"A mutable version-line selector discovers the latest immutable RC cut; the pointer is not an immutable exact basis.",
+      "source_key":"version_line_selector",
+      "target_key":"release_cut"
+    },
+    {
+      "conditions":["Under the selected complete STDO basis."],
+      "exceptions":["Product meaning and consumer adoption remain outside this context's ownership."],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":42,
+          "quote":"It owns the identities and transitions used to qualify,\npublish and select released cuts. It does not own Product meaning or\nconsumer adoption",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+          "start_line":39
+        }
+      ],
+      "key":"publication_owns_cut_transitions",
+      "kind":"owns_identity_and_transition_law",
+      "meaning":"The release-publication context owns qualification, publication and selection identities and transitions for cuts, within its stated boundary.",
+      "source_key":"release_publication",
+      "target_key":"release_cut"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Treat the F1 table as a source-linked trace, not a proof or authority transfer. Do not invent external concept identities, tuple meanings, consumer behaviour or governing edges from the index.",
+      "grounding":[
+        {
+          "end_line":149,
+          "quote":"The standing of the consequences below is stated in\n[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":148
+        },
+        {
+          "end_line":205,
+          "quote":"Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+          "start_line":203
+        }
+      ],
+      "key":"foundation_and_consumer_dependencies",
+      "subject_key":"frames_context_family",
+      "uncertainty":"P0 recovered; P1/P2/P3/P4a/P6 independent; P4b derived from P0/P2 with non-reacquirable step facts; and P5 derived from P0/P6 with open-world premise are reported standings, not derivations available here. Full FOUNDATIONS definitions and the row-specific consumer loci in ACTIVATION, EXECUTIVE_BASELINE, ASSURANCE, PRODUCT_DEFINITION, CONFORMANCE, SPEC_METHOD, EVALUATION, IDENTITY, AXIOMATIC_CALCULUS, DESIGN_MODULE, ODD, TICKETS and UX are absent. The consumer list explicitly gives no separate consumer for engagement/semantic atomicity, imports, proportional compression and high-risk selection; irrelevance exclusion is internal apart from its named CONFORMANCE consumer. Detailed external locus-to-row incidence is preserved by source re-entry rather than fabricated local endpoints."
+    },
+    {
+      "consequence":"Use only the explicit result distinctions and mappings given in these excerpts; do not infer a full algebra, actual qualification, assurance independence or activation correctness.",
+      "grounding":[
+        {
+          "end_line":409,
+          "quote":"This law\napplies them to every frame and defines none of them",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results",
+          "start_line":408
+        }
+      ],
+      "key":"external_result_and_qualification_laws",
+      "subject_key":"core_result_domain",
+      "uncertainty":"FOUNDATIONS §4's complete result meanings and conjunction/refinement laws, ACTIVATION §3 stop states and §7 reuse procedure, and EVALUATION's actual-use qualification and assurance-independence rules are referenced but unavailable."
+    },
+    {
+      "consequence":"Signatures, outcome tables and ordered revision/diagnosis remain descriptive concepts and constraints. This finite representation supplies no executable interface, run trace, proof, traversal or transformation instance.",
+      "grounding":[
+        {
+          "end_line":559,
+          "quote":"`declare` is §4; `activate` and `evaluate` are ACTIVATION §1 and §2;\n`evaluate` returns its result under RF-012, and the closed result is\nreturned and reused under ACTIVATION §7; `conjoin` and `translate` are §6;\n`audit_coverage` is §8, which maps the statuses of its ledger to the core;\n`revise` is §10. EVALUATION §7 qualifies each.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+          "start_line":555
+        }
+      ],
+      "key":"method_relations_operational_residual",
+      "subject_key":"frame_method_functions",
+      "uncertainty":"The five active families express required sequencing and result conditions textually, but do not operationalise the seven method relations or their external qualification, admission, reuse and effect rules."
+    },
+    {
+      "consequence":"Retain required preservation/loss declarations and AC-013 field names without claiming a translation is licensed, preservation proved or any transformation performed.",
+      "grounding":[
+        {
+          "end_line":645,
+          "quote":"What a statement of preserved\nmeaning and accepted loss must show, and the law that licenses the\nstep, are\n[ACTIVATION §4, Refinement](ACTIVATION.md#refinement), and where the\ntranslation is represented in `a_c` it is recorded in the preservation,\nintroduced, removed and residual fields of\n[AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation).",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FEvidence%20or%20coordinate%20translation",
+          "start_line":639
+        }
+      ],
+      "key":"translation_licensing_residual",
+      "subject_key":"translation_declaration_and_preservation",
+      "uncertainty":"The full preservation obligations, transformation representation and licensing law lie in unsupplied sections. The subject's a_c terminology is data, not authority to populate an operational transformation family."
+    },
+    {
+      "consequence":"Retain the unambiguous missing-owner and missing-operation-authority refusal boundaries. Do not silently decide whether broad reach alone prevents closure.",
+      "grounding":[
+        {
+          "end_line":799,
+          "quote":"A frame set\nwith broad observational reach, an unresolved decision owner or an\neffectful path without operation authority is not closed",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FAuthority%20coverage",
+          "start_line":796
+        }
+      ],
+      "key":"observational_reach_reading",
+      "subject_key":"authority_coverage_requirement",
+      "uncertainty":"Literal list syntax can classify broad observational reach itself as a closure defect; the surrounding authority-conservation account supports the reading that breadth is insufficient to establish closure. The supplied source does not explicitly resolve this."
+    },
+    {
+      "consequence":"Keep all eight conditions, exclusions and explicit compatible residuals without weakening the universal known-material coverage requirement or claiming operational full coverage.",
+      "grounding":[
+        {
+          "end_line":835,
+          "quote":"1. every known material evaluation is covered by at least one capable\n   frame;",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FOperational%20full%20coverage",
+          "start_line":822
+        },
+        {
+          "end_line":835,
+          "quote":"7. excluded evaluations cite their governing authority; and\n8. uncovered and unknown residuals are explicit and compatible with the\n   claim.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FOperational%20full%20coverage",
+          "start_line":833
+        }
+      ],
+      "key":"full_coverage_residual_compatibility",
+      "subject_key":"operational_full_coverage_conditions",
+      "uncertainty":"The excerpt requires every known material evaluation covered while also allowing governing exclusions and compatible uncovered/unknown residuals. It does not fully define which claim boundary makes these jointly satisfiable."
+    },
+    {
+      "consequence":"Conservation, generalisation and tightening remain reported provenance dispositions. No predecessor text is reconstructed and no semantic equivalence or successor acceptance is asserted.",
+      "grounding":[
+        {
+          "end_line":1257,
+          "quote":"| #diagnostic-order | conserved; the tenant text carries a labelled tightening: family inclusion, not membership | §10 |\n| #revision-actions | conserved; the tenant text carries a labelled tightening: prior results reopen by default | §10 |",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F15.%20Source%20dispositions",
+          "start_line":1256
+        }
+      ],
+      "key":"predecessor_conservation_unverified",
+      "subject_key":"source_disposition_register",
+      "uncertainty":"The predecessor REFERENCE_FRAME_METHOD.md, excluded worked example and referenced successor qualification cases are not supplied. The register's individual anchors/loci and reported byte counts are source assertions, not independently checked facts."
+    },
+    {
+      "consequence":"Preserve RELEASE's scope, explicit naming/triage/result rules and import boundary; do not invent publication transactions, acceptance criteria, cohort mechanics, adoption rules or successor-disposition values from discovery headings.",
+      "grounding":[
+        {
+          "end_line":33,
+          "quote":"it defines none of those twice.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE",
+          "start_line":27
+        },
+        {
+          "end_line":33,
+          "quote":"A route written `rc.2 #anchor` is\ninto `stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md` and is\nprovenance only; every predecessor row received here is restated in this\ntext, and nothing here depends on that cut to be applied.",
+          "section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE",
+          "start_line":30
+        }
+      ],
+      "key":"release_external_dependencies",
+      "subject_key":"release_publication",
+      "uncertainty":"Only RELEASE's introduction and context are supplied. Its later identity, phases, selector/adoption, naming, assets/Product subject, cohorts, acceptance, external qualification and STDO-UP-015 sections are discovery leads. Imports from FOUNDATIONS §2/§4, ACTIVATION §3 Effects, IDENTITY, EVALUATION §1/§5, AXIOMATIC_CALCULUS AC-020 and calculus identity, SPEC_METHOD §6 and PRODUCT_DEFINITION §4 remain unresolved beyond their expressly stated roles. Predecessor rc.2 routes are provenance only, not an application dependency."
+    }
+  ]
+}

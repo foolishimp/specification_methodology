@@ -1,0 +1,149 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "executive_occupancy_latitude"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F4.%20Empirical%20revision%20boundary",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FEngagement%20frame",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FSpecialist%20frame",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FGeneric%20specialist-frame%20family",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FTerms%20owned%20by%20ASSURANCE",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FExecutive",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FWorker",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FReviewer",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FTechnical%20triage%2C%20severity%2C%20priority%20and%20boundary%20effect",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FWork%20result",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FExact%20candidate",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FBaseline-adoption%20projection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FThe%20three%20duties",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FNo%20mutation%20while%20Executive",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FAttention%20cycle",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FEvent-driven%20attention",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FDrift%20locks",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F6.%20Executive%20attention%2C%20evaluation%20and%20action%2FProduct-chain%20basis",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F7.%20Non-hierarchical%20frame%20configuration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F7.%20Non-hierarchical%20frame%20configuration%2FThe%20executive%20configuration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F8.%20Derived%20Executive%20frame",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F8.%20Derived%20Executive%20frame%2FSteel-thread%20delivery",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F9.%20Derived%20Worker%20frame",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F10.%20Derived%20Reviewer%20frame",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F11.%20Derived%20generic%20specialist%20frame%20set",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F11.%20Derived%20generic%20specialist%20frame%20set%2FFamily%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F11.%20Derived%20generic%20specialist%20frame%20set%2FRefinement%20and%20conjunction",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F11.%20Derived%20generic%20specialist%20frame%20set%2FRelation%20to%20the%20testing%20and%20interface%20frames",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F1.%20Existing%20authority%20selects%20the%20basis",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F2.%20Executive%20activates%20Worker",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F3.%20Worker%20returns%20to%20Executive",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F4.%20Executive%20evaluates%20the%20work%20result",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F5A.%20Candidate%20does%20not%20require%20independent%20review",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F5B.%20Candidate%20requires%20independent%20review",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F6.%20Reviewer%20returns%20to%20Executive",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2F7.%20Executive%20disposes%20and%20checkpoints",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F12.%20Complete%20engagement%20transition%2FPromotion%20constraint%20projection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F13.%20Handoff%20projection",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F14.%20Coverage%20application",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F15.%20Missing-frame%20and%20re-entry%20application",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F16.%20Adoption%20or%20project-defined%20configuration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F16.%20Adoption%20or%20project-defined%20configuration%2FExisting%20authority%20selects%20the%20configuration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F16.%20Adoption%20or%20project-defined%20configuration%2FAdopt%20this%20baseline",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F16.%20Adoption%20or%20project-defined%20configuration%2FDefine%20a%20project%20configuration",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F16.%20Adoption%20or%20project-defined%20configuration%2FExtension%20versus%20replacement"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

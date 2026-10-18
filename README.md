@@ -7,7 +7,7 @@ Methodology product has two source projects side by side under its
 the toolchain manager; `v3/` constructs v3.0.0 of the same product. Select a
 child Product before working on its source.
 
-This repository co-locates four peer source projects:
+This repository co-locates five peer source projects:
 
 | Project | Purpose |
 |---|---|
@@ -15,6 +15,7 @@ This repository co-locates four peer source projects:
 | [`specification_methodology/v3/`](specification_methodology/v3/) | Specification Methodology v3.0.0 construction: common principles and construction contract, with independent Codex and Claude document build tenants |
 | [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
 | [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
+| [`a_c/`](a_c/) | Independent axiomatic-calculus implementations, with Graphify as the first build tenant |
 
 Both STDO source projects share one release namespace, `specification_methodology`,
 and one Product identity. Release tags and rc/release branches keep that
@@ -42,6 +43,11 @@ Specification Methodology prose and reference-frame law
 Axiom Indexer and STDO Representation are attention and consistency tools.
 `a_c` is the calculus they apply. None replaces Source STDO or performs
 downstream semantic interpretation.
+
+The independent [`a_c/`](a_c/) source project realizes the selected published
+axiomatic calculus through its own build tenants. Its Graphify tenant does not
+depend on v3, Axiom Indexer or STDO Representation and is outside the existing
+release-matched cohort. This adds no dependency or member to those Products.
 
 Work from the applicable child root. From this root, inspect all Product
 Definitions without changing them:

@@ -1,8 +1,12 @@
 # Specification Methodology Repository Bootstrap
 
-This repository contains four peer source projects:
-`specification_methodology/v2`, `specification_methodology/v3`, `axiom_indexer`
-and `stdo_representation`. The root is coordination only and is not a Product.
+This repository contains five peer source projects:
+`specification_methodology/v2`, `specification_methodology/v3`, `axiom_indexer`,
+`stdo_representation` and `a_c`. The root is coordination only and is not a Product.
+
+`a_c/` independently realizes the axiomatic calculus, with Graphify as a build
+tenant. Use its local Product Definition and bootstrap. It adds no dependency
+to v3 or membership in the existing release-matched cohort.
 
 The Git checkout is `specification_methodology`. The STDO Specification
 Methodology product has two version lines side by side: STDO 2.* authoring

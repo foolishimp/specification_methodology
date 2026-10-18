@@ -1,0 +1,83 @@
+{
+  "profile": "ac.generation.smoke/2",
+  "mode": "graphify-ac",
+  "scope": "synthetic raw source only, outside evaluated V3 treatment totals",
+  "single_semantic_pass": true,
+  "actors": [
+    {
+      "path": "smoke-v2/graphify-ac/actors/author/chunk-932d3fe7d5ace96e56ac/attempt-001/result.json",
+      "status": "completed",
+      "elapsed_seconds": 90.7742841669824,
+      "usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 18292,
+          "output_tokens": 5356,
+          "reasoning_output_tokens": 477
+        }
+      ],
+      "unexpected_item_types": [],
+      "config_unchanged": true,
+      "result_sha256": "da64e0b97b7e73ca797e84d6ec490c705582a8d1523bacf623f0cd6b48fa6188"
+    }
+  ],
+  "proposal": {
+    "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed.",
+    "family_counts": {
+      "constraints": 6,
+      "judgments": 0,
+      "latitude": 1,
+      "objects": 12,
+      "relations": 2,
+      "residuals": 3,
+      "transformations": 0,
+      "traversals": 0
+    },
+    "files": {
+      "carrier.json": "afca21fd1d653f1a0899b1b97df126394a6c834eba26863e5dbd9032b073d68d",
+      "coverage.json": "6e3a125affbadae548f56c738d7c5b2d957679798920eff1909f6780c0eb19b1",
+      "graph.json": "b10406091f3b1abde7ed39a1c896fd6b628ca7673dee3d7eaaf6666c177bce44",
+      "model.json": "eb7a03098ba42eb7ec45cfeac3f322f41b6b2b0b8a85f3c87029eea45fdefc6e"
+    },
+    "mode": "graphify-ac",
+    "model_id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:model:fd3a368be603491becfa67ba",
+    "model_sha256": "0708bda47cf1c254b68918311d130b37a3d22d7c25413d3fe404655ecdd86956",
+    "processing_complete": true,
+    "profile": "ac.generation.proposal/1",
+    "status": "proposed",
+    "upstream_trial": {
+      "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+      "decoded_model_sha256": "0708bda47cf1c254b68918311d130b37a3d22d7c25413d3fe404655ecdd86956",
+      "edges": 543,
+      "nodes": 404
+    }
+  },
+  "discovery": {
+    "counts": {
+      "communities": 1,
+      "graph_edges": 4,
+      "graph_nodes": 5,
+      "raw_semantic_edges": 0,
+      "raw_semantic_nodes": 0,
+      "structural_edges": 4,
+      "structural_nodes": 5
+    },
+    "elapsed_seconds": 0.032962792087346315,
+    "files": {
+      "coverage.json": "b4734a2ac97dfe0efcfc67d4a20de1c90990e794a1026ceb3d666bb78df8a0b3",
+      "graph.json": "0bf41c05b35171a07a965a828844589abf9091c502fc0947ff8881809b9a9f8e",
+      "structural.json": "dcc45b4373907a11bf80ebb5f03fdc6c17d57fc5354e7bfc74a8d7e42df1d338"
+    },
+    "mode": "graphify-ac",
+    "profile": "ac.generation.discovery/1",
+    "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+    "status": "completed",
+    "upstream": {
+      "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+      "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+      "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+    }
+  }
+}

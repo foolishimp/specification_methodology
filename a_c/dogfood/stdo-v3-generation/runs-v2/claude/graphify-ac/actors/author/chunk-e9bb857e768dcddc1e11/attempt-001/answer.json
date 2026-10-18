@@ -1,0 +1,1444 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "Application-neutral traversal-occurrence profile owning record, relation, identity, causal, effect-boundary, frontier and refusal laws; ownership of those laws supplies no operational or judgment authority.",
+      "exceptions": [],
+      "grounding": [{"end_line":1443,"quote":"This profile owns only the application-neutral record, relation, identity,\ncausal, effect-boundary, frontier and refusal laws above.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption","start_line":1438}],
+      "key": "occurrence_profile",
+      "label": "Traversal-occurrence profile"
+    },
+    {
+      "conditions": [],
+      "definition": "Complete RefDomain_Sigma_occurrence(record_kind, qualified_field) specialization. O:S selects semantic-object sort S; AnyLocal is the closed union O/E/C/L/X/V/T/J; Sigma:K selects an exact member of a closed signature population; an empty table cell permits no target in that class. ReferenceDomain, ExternalTargetKind and BasisRelation are profile-defined signature populations.",
+      "exceptions": [],
+      "grounding": [{"end_line":258,"quote":"`RefDomain_Sigma_occurrence(record_kind, qualified_field)`. Source families\nuse the exact `O/E/C/L/X/V/T/J` populations.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":251}],
+      "key": "reference_domains",
+      "label": "Finite reference domains"
+    },
+    {
+      "conditions": [],
+      "definition": "OccurrenceModelSubject identifies the model content and exact profile basis and is the unchanged subject of model_validation.",
+      "exceptions": [],
+      "grounding": [{"end_line":281,"quote":"| `O:OccurrenceModelSubject.value.model_identity` | 1 |  |  | `ModelContentIdentity` | `B_adopted` |\n| `O:OccurrenceModelSubject.value.profile_basis_ref` | 1 |  |  | `TraversalOccurrenceProfileBasis` | `B_profile` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":280}],
+      "key": "occurrence_model_subject",
+      "label": "OccurrenceModelSubject"
+    },
+    {
+      "conditions": [],
+      "definition": "Pre-existing application identity binding a traversal, functor kind, inputs and application contract.",
+      "exceptions": [],
+      "grounding": [{"end_line":285,"quote":"| `O:TraversalApplication.value.traversal_ref` | 1 | `V` |  |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":282}],
+      "key": "traversal_application",
+      "label": "TraversalApplication"
+    },
+    {
+      "conditions": [],
+      "definition": "Exact inherited Traversal in V; its declared domain, codomain, conditions, authority, evidence, provenance and stop states remain distinct from a domain operation or invocation.",
+      "exceptions": [],
+      "grounding": [{"end_line":395,"quote":"| `V:*.stop_states` | 1..* |  |  | `Sigma:StopKind` | `B_profile` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":395}],
+      "key": "traversal",
+      "label": "Inherited Traversal"
+    },
+    {
+      "conditions": [],
+      "definition": "Immutable identity for a traversal application, seeded by exact profile basis, application, traversal, functor kind, stable subject binding, intended outcome, lineage inputs and identity-dependency inputs available before admission.",
+      "exceptions": [],
+      "grounding": [{"end_line":1099,"quote":"id(o_n) binds (\n  exact traversal-occurrence-profile basis,\n  application identity,\n  traversal identity,\n  functor-kind identity,\n  subject-binding identity,\n  intended-outcome identity,\n  declared lineage inputs,\n  declared identity-dependency inputs","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity","start_line":1091}],
+      "key": "occurrence",
+      "label": "Occurrence"
+    },
+    {
+      "conditions": [],
+      "definition": "Stable binding to an externally mutable subject, with exact authority and invalidation references.",
+      "exceptions": [],
+      "grounding": [{"end_line":295,"quote":"| `O:SubjectBinding.value.subject_ref` | 1 |  |  | `MutableSubject` | `B_adopted` |\n| `O:SubjectBinding.value.authority_ref` | 1 |  |  | `Authority` | `B_adopted` |\n| `O:SubjectBinding.value.invalidation_ref` | 1 |  |  | `InvalidationContract` | `B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":293}],
+      "key": "subject_binding",
+      "label": "SubjectBinding"
+    },
+    {
+      "conditions": [],
+      "definition": "Observation binds a subject binding, observer, evidence and observation coordinate; descriptions and observations do not replace mutable reality.",
+      "exceptions": [],
+      "grounding": [{"end_line":299,"quote":"| `O:Observation.value.observation_coordinate_ref` | 1 |  |  | `ObservationCoordinate` | `B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":299}],
+      "key": "observation",
+      "label": "Observation"
+    },
+    {
+      "conditions": [],
+      "definition": "IntendedOutcome binds an outcome, outcome contract and comparison basis against which attainment evidence is read.",
+      "exceptions": [],
+      "grounding": [{"end_line":302,"quote":"| `O:IntendedOutcome.value.outcome_ref` | 1 |  |  | `Outcome` | `B_adopted` |\n| `O:IntendedOutcome.value.outcome_contract_ref` | 1 |  |  | `OutcomeContract` | `B_adopted` |\n| `O:IntendedOutcome.value.comparison_basis_ref` | 1 |  |  | `ComparisonBasis` | `B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":300}],
+      "key": "intended_outcome",
+      "label": "IntendedOutcome"
+    },
+    {
+      "conditions": [],
+      "definition": "Exact operation-kind object closing an operation contract, target sort and invalidation contract.",
+      "exceptions": [],
+      "grounding": [{"end_line":305,"quote":"| `O:OperationKind.value.operation_contract_ref` | 1 |  |  | `OperationContract` | `B_adopted` |\n| `O:OperationKind.value.target_sort_ref` | 1 |  |  | `TargetSort` | `B_adopted` |\n| `O:OperationKind.value.invalidation_ref` | 1 |  |  | `InvalidationContract` | `B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":303}],
+      "key": "operation_kind",
+      "label": "OperationKind"
+    },
+    {
+      "conditions": [],
+      "definition": "Separately identified domain-operation instance binding operation kind, subject binding, effect territory, operation contract and invalidation.",
+      "exceptions": [],
+      "grounding": [{"end_line":310,"quote":"| `O:EffectOperation.value.operation_kind_ref` | 1 | `O` | `OperationKind` |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":306}],
+      "key": "effect_operation",
+      "label": "EffectOperation"
+    },
+    {
+      "conditions": [],
+      "definition": "Owner-issued grant binding issuer, subject, a nonempty set of allowed exact OperationKind references, allowed effect territory and invalidation.",
+      "exceptions": [],
+      "grounding": [{"end_line":315,"quote":"| `O:OperationGrant.value.allowed_operation_kind_refs` | 1..* | `O` | `OperationKind` |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":313}],
+      "key": "operation_grant",
+      "label": "OperationGrant"
+    },
+    {
+      "conditions": [],
+      "definition": "Immutable invocation binding occurrence, domain operation, executor, actor, grant, territory and inputs; it contains no future disposition.",
+      "exceptions": [],
+      "grounding": [{"end_line":1355,"quote":"The\nimmutable `EffectInvocation` contains no future disposition, and\n`EffectDisposition` records the later outcome without rewriting the\ninvocation (P3, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1352}],
+      "key": "effect_invocation",
+      "label": "EffectInvocation"
+    },
+    {
+      "conditions": [],
+      "definition": "Later effect record with closed cases no_effect, completed_effect, partial_effect and refused_effect, retaining invocation, observation, evidence and residual coordinates as applicable.",
+      "exceptions": [],
+      "grounding": [{"end_line":1349,"quote":"- `refused_effect` binds the refused invocation attempt and the `refusal`\n  stop, with evidence that no authorised mutation began.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1348}],
+      "key": "effect_disposition",
+      "label": "EffectDisposition"
+    },
+    {
+      "conditions": [],
+      "definition": "EffectEvidence binds one invocation, nonempty external evidence references and an observation limit.",
+      "exceptions": [],
+      "grounding": [{"end_line":329,"quote":"| `O:EffectEvidence.value.invocation_ref` | 1 | `O` | `EffectInvocation` |  | `B_model` |\n| `O:EffectEvidence.value.evidence_refs` | 1..* |  |  | `Evidence` | `B_adopted` |\n| `O:EffectEvidence.value.observation_limit_ref` | 1 |  |  | `ObservationLimit` | `B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":327}],
+      "key": "effect_evidence",
+      "label": "EffectEvidence"
+    },
+    {
+      "conditions": [],
+      "definition": "Candidate relation claim binding exact kind, already-existing endpoints, claimant, claim basis, source frontier and relation qualifiers. Construction alone is not admission.",
+      "exceptions": [],
+      "grounding": [{"end_line":1232,"quote":"The endpoints of a pre-admission `RelationClaim` already exist.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation","start_line":1229}],
+      "key": "relation_claim",
+      "label": "RelationClaim"
+    },
+    {
+      "conditions": [],
+      "definition": "Immutable framework event whose event_kind_ref resolves exactly one of urn:stdo:traversal-occurrence:event-kind:claim-admission, urn:stdo:traversal-occurrence:event-kind:occurrence-admission, urn:stdo:traversal-occurrence:event-kind:effect-disposition and urn:stdo:traversal-occurrence:event-kind:external-fact-admission.",
+      "exceptions": [],
+      "grounding": [{"end_line":532,"quote":"EventKind_occurrence = {\n  urn:stdo:traversal-occurrence:event-kind:claim-admission,\n  urn:stdo:traversal-occurrence:event-kind:occurrence-admission,\n  urn:stdo:traversal-occurrence:event-kind:effect-disposition,\n  urn:stdo:traversal-occurrence:event-kind:external-fact-admission\n}","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population","start_line":527}],
+      "key": "framework_event",
+      "label": "FrameworkEvent"
+    },
+    {
+      "conditions": [],
+      "definition": "Immutable complete evaluated event membership, exact basis and declared precedence law. Frontier identity binds profile basis, scope, precedence law, sorted event identities and event content digests.",
+      "exceptions": [],
+      "grounding": [{"end_line":1413,"quote":"An `EventFrontier` binds the complete member set of events evaluated, its\nexact basis and its declared precedence law.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection","start_line":1410}],
+      "key": "event_frontier",
+      "label": "EventFrontier"
+    },
+    {
+      "conditions": [],
+      "definition": "Immutable Projection binding one unchanged frontier, projection rule, selected relation identities, boundary identities and residual identities; a projection judgment binds its unchanged identity and digest.",
+      "exceptions": [],
+      "grounding": [{"end_line":1421,"quote":"Projection identity binds the exact\nfrontier, the projection rule, and the selected relation, boundary and\nresidual ids (P3, P4b).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection","start_line":1419}],
+      "key": "projection",
+      "label": "Projection"
+    },
+    {
+      "conditions": [],
+      "definition": "Seven-member SemanticAdmissionCut: unchanged claim, claim judgment, event, event judgment, materialized relation, source frontier and successor frontier; the cut itself is separately judged.",
+      "exceptions": [],
+      "grounding": [{"end_line":1148,"quote":"  -> SemanticAdmissionCut a = (c, j_c, e, j_e, r, F_k, F_k_plus_1)\n  -> Judgment j_a over unchanged a","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation","start_line":1147}],
+      "key": "semantic_admission_cut",
+      "label": "SemanticAdmissionCut"
+    },
+    {
+      "conditions": [],
+      "definition": "Unchanged readiness subject binding occurrence, subject binding, pre-observation, invocation, operation, grant, territory and currentness/invalidation state.",
+      "exceptions": [],
+      "grounding": [{"end_line":1293,"quote":"s_n = EffectSubject(o_n, b_W, q_n, inv_n, op_n, g_n, territory_n, invalidation_n)\nj_ready = judge_effect_readiness(s_n)","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1292}],
+      "key": "effect_subject",
+      "label": "EffectSubject"
+    },
+    {
+      "conditions": [],
+      "definition": "Transition-evaluation subject binding occurrence, subject binding, pre-observation, optional post-observation, intended outcome, effect disposition and bounded effect evidence.",
+      "exceptions": [],
+      "grounding": [{"end_line":372,"quote":"| `O:TransitionSubject.value.post_observation_ref_or_none` | 0..1 | `O` | `Observation` |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":369}],
+      "key": "transition_subject",
+      "label": "TransitionSubject"
+    },
+    {
+      "conditions": [],
+      "definition": "ProfileRecordRef is the closed union of profile semantic-object records O and exact inherited E, C, L, X, V, T and J in the same model; it is not a ninth record kind.",
+      "exceptions": [],
+      "grounding": [{"end_line":584,"quote":"`ProfileRecordRef` is the closed union of the profile semantic-object\nrecords in `O` and the exact inherited `E`, `C`, `L`, `X`, `V`, `T` and `J`\npopulations in the same model; it introduces no ninth record kind.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":582}],
+      "key": "profile_record",
+      "label": "ProfileRecordRef"
+    },
+    {
+      "conditions": [],
+      "definition": "Exact inherited TypedRelation in E, with direction, cardinality, basis, preservation, refusal and invalidation semantics fixed by its kind and exact qualifier contract.",
+      "exceptions": [],
+      "grounding": [{"end_line":591,"quote":"Each relation is an exact `TypedRelation`. Its qualifiers close direction,\ncardinality, basis, preservation, refusal and invalidation semantics; the\ntable is no permission to omit inherited relation fields.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":588}],
+      "key": "typed_relation",
+      "label": "TypedRelation"
+    },
+    {
+      "conditions": [],
+      "definition": "Inherited Judgment in J, carrying unchanged subject identity and digest, evaluator, authority, evidence, provenance and decision coordinate; its kind determines applicable decision, stop and residual domains.",
+      "exceptions": [],
+      "grounding": [{"end_line":809,"quote":"Each is an inherited `Judgment` and so carries the unchanged subject id\nand digest, evaluator, authority, evidence, provenance and decision\ncoordinate.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":806}],
+      "key": "judgment",
+      "label": "Inherited Judgment"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile result system distinguishes constraint outcomes, judgment decisions, traversal stops, residual kinds and effect dispositions. Each refinement maps totally to one core value for its own named predicate, retaining vocabulary, residual and re-entry.",
+      "exceptions": [],
+      "grounding": [{"end_line":869,"quote":"Each value keeps its own vocabulary, residual and re-entry law beside its\ncore value (FOUNDATIONS §4 Results, Recording) (P5, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":868}],
+      "key": "occurrence_results",
+      "label": "Occurrence result domains"
+    },
+    {
+      "conditions": [],
+      "definition": "Externally mutable subject W remains the reality carrier across observations, effects and traversal reapplications.",
+      "exceptions": [],
+      "grounding": [{"end_line":1395,"quote":"`W` remains the carrier of mutable reality. Observation, evidence, result,\ncheckpoint, event, projection, cache or model content may describe `W`;\nnone replaces it.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation","start_line":1392}],
+      "key": "mutable_subject",
+      "label": "Mutable subject W"
+    },
+    {
+      "conditions": [],
+      "definition": "Typed lineage separates identity-dependency DAG G_id, occurrence-causation DAG G_occ_cause and event-causation DAG G_evt_cause from the wider union of typed lineage relations.",
+      "exceptions": [],
+      "grounding": [{"end_line":1260,"quote":"G_id          identity-dependency DAG\nG_occ_cause   declared occurrence-causation DAG\nG_evt_cause   declared event-causation DAG","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage","start_line":1258}],
+      "key": "typed_lineage",
+      "label": "Typed lineage graphs"
+    },
+    {
+      "conditions": [],
+      "definition": "Stable concept identity urn:stdo:concept:traversal-occurrence-profile differs from an immutable edition identity, which is issued only once publication bytes exist.",
+      "exceptions": [],
+      "grounding": [{"end_line":1466,"quote":"The stable concept identity does not identify one immutable profile\nedition. Once publication bytes exist, the signature preimage is issued as\nbelow (P3, P6).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity","start_line":1464}],
+      "key": "profile_edition_identity",
+      "label": "Exact profile edition identity"
+    },
+    {
+      "conditions": [],
+      "definition": "TraversalOccurrenceSignature is the closed canonical signature preimage. TraversalOccurrenceProfileBasis embeds it, its digest, exact imported calculus identity, stable concept identity and immutable publication coordinates.",
+      "exceptions": [],
+      "grounding": [{"end_line":1530,"quote":"TraversalOccurrenceProfileBasis = {\n  kind: \"stdo.traversal-occurrence-profile-basis\",\n  schema_version: 1,\n  concept_identity: \"urn:stdo:concept:traversal-occurrence-profile\",\n  calculus_basis_identity: exact AxiomaticCalculusBasis identity,\n  occurrence_signature: TraversalOccurrenceSignature,\n  occurrence_signature_sha256: \"sha256:\" + 64 lowercase hexadecimal characters,","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature","start_line":1524}],
+      "key": "profile_signature_basis",
+      "label": "Signature and profile basis"
+    },
+    {
+      "conditions": [],
+      "definition": "Source-disposition account claims receipt of all 25 predecessor rows under STDO-UP-015, conserving modal force and formal content while distinguishing provenance routes, successor-specific generalizations, new clauses and a proposed supersession awaiting owner acceptance.",
+      "exceptions": [],
+      "grounding": [{"end_line":1667,"quote":"Rows of rc.2 TRAVERSAL_OCCURRENCE_PROFILE.md received by this member, all\n25 under STDO-UP-015.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FSource%20dispositions","start_line":1661}],
+      "key": "occurrence_source_account",
+      "label": "Occurrence source-disposition account"
+    },
+    {
+      "conditions": [],
+      "definition": "Tier-3 optional UX profile refining DESIGN_MODULE for UX surfaces. Its scope includes Elm State/Msg/Update/View/Cmd/Sub, product-carrier boundaries, transitions, effects, carrier binding, continuation/replay, view shape, types, accessibility, stack discretion, adoption/exemptions/escrow, failure patterns, review and result refinements. Imported objects are not redefined.",
+      "exceptions": [],
+      "grounding": [{"end_line":16,"quote":"Tier 3. An optional profile for realising UX surfaces: the Elm process\nmodel with typed State, Msg, Update, View, Cmd and Sub;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX","start_line":3}],
+      "key": "ux_profile",
+      "label": "UX profile"
+    },
+    {
+      "conditions": [],
+      "definition": "UX surface renders admitted product truth and emits typed messages; it is a projection and control surface whose product-changing requests require admitted product carriers.",
+      "exceptions": [],
+      "grounding": [{"end_line":231,"quote":"UX surfaces are projection and control surfaces: they render admitted\ntruth and emit typed messages","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers","start_line":226}],
+      "key": "ux_surface",
+      "label": "UX surface"
+    },
+    {
+      "conditions": [],
+      "definition": "Elm Architecture constitutional process model: runtime holds typed State and owns lifecycle; typed Msg names every user/system action; pure Update has signature (Msg, State) → (State, Cmd); pure View has signature State → ViewTree and repeats output for identical state; Cmd describes scheduled effects and Sub external sources to subscribe to. Runtime interprets them at the effect membrane.",
+      "exceptions": [],
+      "grounding": [{"end_line":268,"quote":"- Update: the pure reducer of signature `(Msg, State) → (State, Cmd)`; it\n  describes side effects as Cmd values and does not perform them;\n- View: the pure function of signature `State → ViewTree`; given the same\n  state, it produces the same output;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model","start_line":262}],
+      "key": "elm_process_model",
+      "label": "State, Msg, Update, View, ViewTree, Cmd and Sub"
+    },
+    {
+      "conditions": [],
+      "definition": "Declared boundary interpreting reducer-produced Cmd values and returning side-effect outcomes as typed Msg values to the reducer; a UX refinement of DESIGN_MODULE's effect edge.",
+      "exceptions": [],
+      "grounding": [{"end_line":376,"quote":"The membrane interprets Cmd values\nproduced by the reducer and translates side-effect outcomes back into Msg\nvalues delivered to the reducer.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F6.%20Effect%20membrane","start_line":374}],
+      "key": "effect_membrane",
+      "label": "Effect membrane"
+    },
+    {
+      "conditions": [],
+      "definition": "Product-design-admitted carrier: AssetSurface action; published graph function or lawful composition; admitted workorder/job/runtime command; ABG event/command boundary when ABG is runtime authority; or another typed product contract named by the design module.",
+      "exceptions": [],
+      "grounding": [{"end_line":247,"quote":"- an AssetSurface action;\n- a published graph function or lawful graph-function composition;\n- a workorder, job or runtime command admitted by the product's design;\n- an ABG event or command boundary where ABG is the runtime authority;\n- another typed product contract named by the design module.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers","start_line":243}],
+      "key": "admitted_product_carrier",
+      "label": "Admitted product carrier"
+    },
+    {
+      "conditions": [],
+      "definition": "UX material family F20 imports F2 transitions/steps/configuration, F3 results/combination, F4 work state/resumption/reuse, F11 change management/ambiguity and F13 work carriers, and refines F17 software design. Its foundation table separates stated consequences from profile, Product and project choices and maps consumers to owning rules.",
+      "exceptions": [],
+      "grounding": [{"end_line":115,"quote":"Its instance\npremises hold where a UX surface is realised under this profile; they are\nadopted with it and do not follow from the foundations (P1, P6):","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law","start_line":113}],
+      "key": "ux_foundation_account",
+      "label": "UX foundation, policy and consumer account"
+    },
+    {
+      "conditions": [],
+      "definition": "External member roles as cited by UX: SPEC_METHOD owns constitutional process, lawful re-entry, authority flow, repricing and migration; graph-execution profile owns graph-native constructive carriers; DESIGN_MODULE owns deterministic module realization; TICKETS owns ticket/sprint lifecycle; WORLD_MODEL owns world-model semantics where applicable.",
+      "exceptions": [],
+      "grounding": [{"end_line":212,"quote":"SPEC_METHOD governs constitutional process, authority flow, repricing and\nmigration law.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members","start_line":202}],
+      "key": "ux_imported_member_roles",
+      "label": "UX imported member roles"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": ["reference_domains"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":266,"quote":"B_model     = same M_occ,b and record basis\nB_profile   = exact TraversalOccurrenceProfileBasis resolution\nB_calculus  = exact imported AxiomaticCalculusBasis resolution\nB_adopted   = exact Product-adoption basis relation named for that external kind","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":263}],
+      "key": "reference_basis_and_common_fields",
+      "statement": "Basis codes denote exact relations, not labels: B_model requires the same M_occ,b and record basis; B_profile exact profile-basis resolution; B_calculus exact imported calculus-basis resolution; B_adopted the exact Product-adoption relation named for that external kind. Every O/E/C/L/X/V/T/J record has exactly one external Context, Owner and GovernedScope via B_adopted and exactly one TraversalOccurrenceProfileBasis via B_profile. O.sort resolves exactly one Sigma:Sort via B_profile.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","occurrence_model_subject","traversal_application","occurrence","subject_binding","observation","intended_outcome"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":302,"quote":"| `O:TraversalApplication.value.input_refs` | 0..* | `AnyLocal` |  | `TraversalInput` | `B_model or B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":284}],
+      "key": "seed_observation_reference_contracts",
+      "statement": "For the following value fields, cardinality is 1 unless specified; local targets use B_model, external targets B_adopted unless specified. OccurrenceModelSubject: model_identity→external ModelContentIdentity; profile_basis_ref→external TraversalOccurrenceProfileBasis/B_profile. TraversalApplication: traversal_ref→V; functor_kind_ref→external Sigma:FunctorKind/B_calculus; input_refs[0..*]→AnyLocal or external TraversalInput; application_contract_ref→external ApplicationContract. Occurrence: application_ref→O:TraversalApplication; traversal_ref→V; functor_kind_ref→external Sigma:FunctorKind/B_calculus; subject_binding_ref→O:SubjectBinding; intended_outcome_ref→O:IntendedOutcome; lineage_refs[0..*]→O:Occurrence; identity_dependency_refs[0..*]→AnyLocal only. SubjectBinding: subject_ref→external MutableSubject; authority_ref→external Authority; invalidation_ref→external InvalidationContract. Observation: subject_binding_ref→O:SubjectBinding; observer_ref→external Actor; evidence_ref→external Evidence; observation_coordinate_ref→external ObservationCoordinate. IntendedOutcome: outcome_ref→external Outcome; outcome_contract_ref→external OutcomeContract; comparison_basis_ref→external ComparisonBasis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","operation_kind","effect_operation","operation_grant","effect_invocation","effect_disposition","effect_evidence","effect_subject","transition_subject"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":326,"quote":"| `O:EffectDisposition.value.invocation_ref_or_none` | 0..1 | `O` | `EffectInvocation` |  | `B_model` |\n| `O:EffectDisposition.value.post_observation_ref_or_none` | 0..1 | `O` | `Observation` |  | `B_model` |\n| `O:EffectDisposition.value.effect_evidence_refs` | 0..* | `O` | `EffectEvidence` |  | `B_model` |\n| `O:EffectDisposition.value.residual_ref_or_none` | 0..1 | `X` |  |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":323}],
+      "key": "effect_reference_contracts",
+      "statement": "For these value fields cardinality is 1 unless specified; local targets use B_model and external targets B_adopted. OperationKind: operation_contract_ref→external OperationContract, target_sort_ref→external TargetSort, invalidation_ref→external InvalidationContract. EffectOperation: operation_kind_ref→O:OperationKind; subject_binding_ref→O:SubjectBinding; effect_territory_ref→external EffectTerritory; operation_contract_ref→external OperationContract; invalidation_ref→external InvalidationContract. OperationGrant: issuer_ref→external Authority; subject_binding_ref→O:SubjectBinding; allowed_operation_kind_refs[1..*]→O:OperationKind; allowed_effect_territory_ref→external EffectTerritory; invalidation_ref→external InvalidationContract. EffectInvocation: occurrence_ref→O:Occurrence; operation_ref→O:EffectOperation; executor_ref→external Executor; actor_ref→external Actor; operation_grant_ref→O:OperationGrant; effect_territory_ref→external EffectTerritory; input_refs[0..*]→AnyLocal or external EffectInput. EffectDisposition: invocation_ref_or_none[0..1]→O:EffectInvocation; post_observation_ref_or_none[0..1]→O:Observation; effect_evidence_refs[0..*]→O:EffectEvidence; residual_ref_or_none[0..1]→X. EffectEvidence: invocation_ref→O:EffectInvocation; evidence_refs[1..*]→external Evidence; observation_limit_ref→external ObservationLimit. EffectSubject: occurrence_ref→O:Occurrence, subject_binding_ref→O:SubjectBinding, pre_observation_ref→O:Observation, invocation_ref→O:EffectInvocation, operation_ref→O:EffectOperation, operation_grant_ref→O:OperationGrant, effect_territory_ref→external EffectTerritory, currentness_invalidation_ref→external InvalidationContract. TransitionSubject: occurrence_ref→O:Occurrence, subject_binding_ref→O:SubjectBinding, pre_observation_ref→O:Observation, post_observation_ref_or_none[0..1]→O:Observation, intended_outcome_ref→O:IntendedOutcome, effect_disposition_ref→O:EffectDisposition, effect_evidence_refs[0..*]→O:EffectEvidence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","relation_claim","framework_event","event_frontier","projection","semantic_admission_cut"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":357,"quote":"| `O:SemanticAdmissionCut.value.claim_ref` | 1 | `O` | `RelationClaim` |  | `B_model` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":351}],
+      "key": "admission_frontier_reference_contracts",
+      "statement": "For these value fields cardinality is 1 unless specified; local targets use B_model, external targets B_adopted unless specified. RelationClaim: relation_kind_ref→external Sigma:RelationKind/B_profile; source_ref and target_ref each→AnyLocal or external DeclaredRelationEndpoint; claimant_ref→external Claimant; claim_basis_ref→external ClaimBasis; source_frontier_ref→O:EventFrontier. FrameworkEvent: event_kind_ref→external Sigma:EventKind_occurrence/B_profile; payload_ref→AnyLocal only; occurrence_ref_or_none[0..1]→O:Occurrence; claim_ref_or_none[0..1]→O:RelationClaim; claim_judgment_ref_or_none[0..1]→J; source_frontier_ref→O:EventFrontier. EventFrontier: event_set_identity→external EventSetIdentity/B_model; member_event_refs[0..*]→O:FrameworkEvent; projection_basis_ref→external ProjectionBasis; precedence_law_ref→external PrecedenceLaw. Projection: frontier_ref→O:EventFrontier; projection_rule_ref→external ProjectionRule; selected_relation_refs[0..*]→E; boundary_refs[0..*]→AnyLocal or external ProjectionBoundary; residual_refs[0..*]→X. SemanticAdmissionCut: claim_ref→O:RelationClaim; claim_judgment_ref→J; event_ref→O:FrameworkEvent; event_judgment_ref→J; materialized_relation_ref→E; source_frontier_ref and successor_frontier_ref each→O:EventFrontier.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","profile_record","typed_relation","traversal","judgment"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":412,"quote":"| `T:*.re_entry` | 1 | `V` |  | `ReEntryContract` | `B_model or B_adopted` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":406}],
+      "key": "inherited_reference_contracts",
+      "statement": "Cardinality is 1 unless specified; local references use B_model and external references B_adopted unless specified. E source/target each use the exact family/sort and permitted external endpoint of the relation table; E.kind→Sigma:RelationKind/B_profile. E.qualifiers: authority_ref→Authority; evidence_refs[0..*]→Evidence; provenance_refs[0..*]→Provenance; invalidation_ref→InvalidationContract; inverse_kind_ref_or_none[0..1]→Sigma:RelationKind/B_profile. C: kind→Sigma:ConstraintKind/B_profile; applies_to→AnyLocal; predicate→PredicateContract; judgment_kind→Sigma:JudgmentKind/B_profile; latitude_ref[0..1]→L. L: applies_to→AnyLocal; invalidation→InvalidationContract. X: subject→AnyLocal or external ResidualSubject; kind→Sigma:ResidualKind/B_profile; re_entry→V or external ReEntryContract; invalidation→InvalidationContract. V: domain and codomain each→TypeDomain; preconditions and postconditions each[0..*]→C; authority→AuthorityGrant; evidence and provenance each[0..*]→EvidenceOrProvenance; stop_states[1..*]→Sigma:StopKind/B_profile. T: traversal→V; domain_model and codomain_model each→ModelContentIdentity; operation_authority→AuthorityGrant; preconditions[0..*]→C; preservation_relation→E; preserved, introduced and removed each[0..*]→AnyLocal or external ModelMemberIdentity; residuals[0..*]→X; evidence and provenance each[0..*]→EvidenceOrProvenance; stop_states[1..*]→Sigma:StopKind/B_profile; invalidation→InvalidationContract; re_entry→V or external ReEntryContract. J: kind→Sigma:JudgmentKind/B_profile; subject→AnyLocal or external JudgmentSubject; evaluator→Evaluator; authority→AuthorityGrant; evidence and provenance each[0..*]→EvidenceOrProvenance; decided_at→DecisionCoordinate.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","profile_record"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":509,"quote":"Every coordinate has exactly `Q_ext`; every witness has exactly\n`external_resolution`, `domain_model`, `codomain_model`,\n`domain_resolution`, `codomain_resolution`, `decision` and `evidence`;\nand `decision` is exactly `equal`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":503}],
+      "key": "external_resolution_expansion",
+      "statement": "D_ext is exactly {external_preserved, external_introduced, external_removed}; W_ext exactly {external_resolution, domain_resolution, codomain_resolution}; Q_ext exactly {external_identity, reference_domain, external_target_kind, resolved_target_identity, basis_relation, resolution_basis, evidence_identity}. For every d∈D_ext and q∈Q_ext, T.d[].q uses ResolutionRefDomain(q); likewise every witness[].w.q for every w∈W_ext. All ResolutionRefDomain coordinates have cardinality 1 and no local targets. external_identity and resolved_target_identity resolve the sibling external_target_kind using sibling basis_relation over sibling resolution_basis; reference_domain→Sigma:ReferenceDomain/B_profile; external_target_kind→Sigma:ExternalTargetKind/(B_profile or B_adopted); basis_relation→Sigma:BasisRelation/B_profile; resolution_basis→{TraversalOccurrenceProfileBasis,AxiomaticCalculusBasis,ProductAdoptionBasis}/(B_profile or B_calculus or B_adopted); evidence_identity→Evidence/B_adopted. Witness domain_model and codomain_model each resolve exactly one external ModelContentIdentity/B_adopted; evidence resolves one Evidence/B_adopted. Each D_ext member is a finite duplicate-free Resolution_M list; witnesses form a finite duplicate-free ExternalResolutionPreservationWitness list. Each coordinate has exactly Q_ext; each witness has exactly external_resolution, domain_model, codomain_model, domain_resolution, codomain_resolution, decision, evidence, with decision=equal. Missing/extra nested fields, unresolved nested identities, coordinate/basis mismatch, duplicate coordinates or witnesses outside the exact preserved population refuse model validation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reference_domains","profile_record"],
+      "conditions": [],
+      "exceptions": ["An unresolved required reference whose resolution remains open retains gap until repaired; evaluation to no target is dangling and refuses."],
+      "grounding": [{"end_line":519,"quote":"`id` fields own identities rather than reference them. Digests, closed\nenum values, predicates, qualifiers other than the listed refs,\nuncertainty, consequence, variation content and refusal values are closed\nnon-reference content.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":511},{"end_line":1061,"quote":"A required reference\nthat `model_validation` leaves unresolved, its resolution still open as\nAC-007 defines for `gap`, is not refused: it retains `gap` until repaired","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":1055}],
+      "key": "reference_closure_refusal",
+      "statement": "Identity-owning id fields are not references. Digests, closed enums, predicates, unlisted qualifier content, uncertainty, consequence, variation content and refusal values are closed non-reference content. Every list is duplicate-free before set comparison. Missing reference-domain rows, targets outside their row, wrong local family/sort, unresolved external targets, cardinality violations and basis-relation mismatches refuse model validation, with the later explicit open-resolution distinction retained. ProfileRecordRef outside its closed union, resolved under a wrong population/sort or absent from an applicable declared external domain refuses. Basis-only mismatches take the basis refusal cause; a demonstrated structural violation takes the constraint cause.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["framework_event"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":545,"quote":"| `claim-admission` | exact `RelationClaim` | exact claim and claim-judgment refs; source frontier equals the claim frontier; occurrence ref follows `scope_class` |\n| `occurrence-admission` | exact `Occurrence` | `occurrence_scoped`; occurrence ref equals the payload ref; claim fields absent |\n| `effect-disposition` | exact `EffectDisposition` | `occurrence_scoped`; occurrence ref equals the invocation's occurrence; claim fields absent |\n| `external-fact-admission` | exact non-event `ProfileRecordRef` | `subject_scoped` or `authority_scoped`; occurrence and claim fields absent |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population","start_line":537}],
+      "key": "event_payload_scope_contract",
+      "statement": "claim-admission requires exact RelationClaim payload, exact claim and claim-judgment references, source frontier identical to the claim frontier and occurrence binding according to scope_class. occurrence-admission requires exact Occurrence payload, occurrence_scoped scope, occurrence reference equal to payload and no claim fields. effect-disposition requires exact EffectDisposition payload, occurrence_scoped scope, occurrence reference equal to the invocation's occurrence and no claim fields. external-fact-admission requires exact non-event ProfileRecordRef payload, subject_scoped or authority_scoped scope and no occurrence or claim fields. Payload reference and digest bind unchanged payload. Unknown event kind, wrong payload sort, mismatched digest, incompatible scope or forbidden fields refuse event_admission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["typed_relation","relation_claim"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":676,"quote":"Every relation, and every `RelationClaim.value.relation_qualifiers`, has\nexactly those nine fields and satisfies the contract its exact relation\nkind selects.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":667}],
+      "key": "relation_qualifier_contract",
+      "statement": "Each profile relation and RelationClaim.value.relation_qualifiers has exactly nine fields: cardinality, authority_ref, evidence_refs, provenance_refs, invalidation_ref, inverse_kind_ref_or_none, preservation, loss, refusal. Closed enum domains: cardinality={exactly_one,zero_or_one,zero_or_more,one_or_more}; preservation={identity_preserved,meaning_preserved,not_applicable}; loss={none,declared_loss}; refusal={refuse_missing,refuse_duplicate,refuse_wrong_type,refuse_invalid_basis,refuse_out_of_scope,not_applicable}. Every core kind fixes cardinality to its table value, preservation=meaning_preserved, loss=none, inverse_kind_ref_or_none=none, and refusal to one of the five refuse_* values; not_applicable is unavailable. Authority/evidence/provenance/invalidation are exact instance coordinates. The five identity-bearing fields resolve through the reference-domain table and four enums use only their closed values. Missing/extra fields, duplicate refs, unknown enums, kind/cardinality mismatch, incompatible preservation, declared loss, non-null inverse, unavailable refusal, unresolved identity-bearing refs or qualifier basis mismatch refuse structural admission. Materialisation copies the accepted qualifier record byte for byte; inherited relation fields cannot be omitted.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence","traversal_application","typed_relation"],
+      "conditions": ["For every occurrence o."],
+      "exceptions": [],
+      "grounding": [{"end_line":704,"quote":"The equalities are set equalities only after list and relation-population\nuniqueness is proved.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":695}],
+      "key": "occurrence_relation_congruence",
+      "statement": "target(application_of(o))=o.application_ref; that application's traversal_ref and functor_kind_ref equal o's; target(applies_traversal(application_of(o).target))=o.traversal_ref; target(bound_to_subject(o))=o.subject_binding_ref; target(intends(o))=o.intended_outcome_ref. Targets of identity_depends_on with source o equal set(o.identity_dependency_refs). Sources of causally_precedes_occurrence with target o union sources of component_of_occurrence with target o equal set(o.lineage_refs). Lists, relation identities and exact (kind,source,target) triples must each be duplicate-free before set conversion; singleton relations exist exactly once. Duplicate, missing, extra, reversed or mismatched edges refuse occurrence_admission; a relation label cannot repair another identity preimage. Lineage contains only admitted occurrence-cause predecessors and aggregate component occurrences, never support, correction, timestamp, ordinal, adjacency or correlation edges. Identity, causal, support, correction, component, frontier-membership and evidence relations are finite and duplicate-free. Inverse is explicit; silence implies none.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results","judgment"],
+      "conditions": ["Each constraint is evaluated only on its named record kind within its declared scope."],
+      "exceptions": [],
+      "grounding": [{"end_line":791,"quote":"Every constraint predicate returns exactly one of `satisfied`,\n`falsified`, `indeterminate` or `invalid_basis`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":777}],
+      "key": "constraint_outcomes_and_kind_closure",
+      "statement": "Closed constraint kinds: identity_dependency_acyclic, occurrence_causation_acyclic, event_causation_acyclic, occurrence_seed_complete, relation_claim_admissible, semantic_cut_complete, pre_effect_current, operation_grant_contains_effect, event_scope_compatible, frontier_complete, transition_subject_complete. Closed judgment kinds: model_validation, occurrence_admission, event_admission, claim_admission, semantic_cut_admission, effect_readiness, transition_evaluation, frontier_projection. Closed residual kinds: unobserved_subject_state, partial_effect, unresolved_cause, unresolved_scope, competing_lineage, stale_frontier, stale_currentness, unobserved_external_mutation. Closed stop kinds: hold, gap, refusal, invalid_basis, out_of_scope, partial_effect. Constraint predicates return exactly satisfied, falsified, indeterminate or invalid_basis, excluding out_of_frame because evaluation stays inside applies_to. satisfied maps to the first listed judgment decision, invalid_basis only to invalid_basis; other mappings are fixed below. Event scope conflicting with admission authority falsifies event_scope_compatible; its out_of_scope stop is distinct from out_of_frame. No omitted result, residual or stop becomes success. FunctorKind contains exact b_ac references F_D, F_P and F_H only, with unchanged imported laws.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["judgment","occurrence_results"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":804,"quote":"| `effect_readiness` | `EffectSubject` | `ready`, `stale`, `unauthorized`, `hold`, `invalid_basis` | exact pre-observation, invocation, operation, grant, territory, and invalidation state | stale yields `hold` plus `stale_currentness` and re-observation; unauthorized yields `refusal` and no dispatch |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":802}],
+      "key": "judgment_domain_contracts",
+      "statement": "model_validation: unchanged OccurrenceModelSubject; decisions valid/hold/refused/invalid_basis; evidence exact model id/digest, profile basis, typed graph populations; refusal or invalid basis, with unresolved references retaining gap until repaired. occurrence_admission: Occurrence; admitted/hold/refused/invalid_basis; exact occurrence id/digest and resolved pre-existing seed inputs; missing seed retains hold+unresolved_cause, re-entry is a new complete occurrence candidate. event_admission: FrameworkEvent; admitted/hold/refused/invalid_basis/out_of_scope; exact event id/digest, payload digest, scope authority and source frontier; unresolved scope retains hold+unresolved_scope, incompatible scope refuses. claim_admission: RelationClaim; admitted/hold/refused/invalid_basis; exact claim id/digest, endpoints, qualifiers, claimant authority and current source frontier; unresolved cause or stale frontier retains hold, re-entry is a new claim over current frontier. semantic_cut_admission: SemanticAdmissionCut; admitted/hold/refused/invalid_basis; exact seven-member cut and source/successor frontier equality; incomplete/inconsistent cut refuses, stale source retains hold+stale_frontier and requires reconstruction. effect_readiness: EffectSubject; ready/stale/unauthorized/hold/invalid_basis; exact pre-observation, invocation, operation, grant, territory and invalidation state; stale yields hold+stale_currentness with re-observation, unauthorized yields refusal and no dispatch. transition_evaluation: TransitionSubject; satisfied/falsified/partial/indeterminate/refused/invalid_basis; exact pre/post observations, intended outcome, disposition and bounded evidence; partial yields partial_effect, indeterminate retains hold+declared residual, refused yields refusal. frontier_projection: Projection; admitted/hold/gap/refused/invalid_basis; exact projection/frontier ids/digests, complete members, basis, precedence law, boundary and residuals; stale retains hold+stale_frontier, unresolved lineage retains gap, re-entry is a new projection. Each judgment retains inherited unchanged-subject, evaluator, authority, evidence, provenance and decision coordinates; stops and residuals are determined by kind, not inferred from prose.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results","judgment"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":825,"quote":"| `event_scope_compatible` | `FrameworkEvent` | `event_admission` | `out_of_scope` plus `refusal` | `hold` plus `unresolved_scope` |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":823}],
+      "key": "constraint_decision_mapping",
+      "statement": "Exact subject/judgment/falsified/indeterminate mappings: identity_dependency_acyclic, occurrence_causation_acyclic and event_causation_acyclic each use OccurrenceModelSubject/model_validation/refused+refusal/hold+unresolved_cause. occurrence_seed_complete uses Occurrence/occurrence_admission/refused+refusal/hold+unresolved_cause. relation_claim_admissible uses RelationClaim/claim_admission/refused+refusal/hold+(unresolved_cause or stale_frontier). semantic_cut_complete uses SemanticAdmissionCut/semantic_cut_admission/refused+refusal/hold+stale_frontier. pre_effect_current uses EffectSubject/effect_readiness/stale+hold+stale_currentness/hold+stale_currentness. operation_grant_contains_effect uses EffectSubject/effect_readiness/unauthorized+refusal/hold+unobserved_subject_state. event_scope_compatible uses FrameworkEvent/event_admission/out_of_scope+refusal/hold+unresolved_scope. frontier_complete uses Projection/frontier_projection/refused+refusal/hold+stale_frontier. transition_subject_complete uses TransitionSubject/transition_evaluation/refused+refusal/indeterminate+unobserved_subject_state.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":840,"quote":"| `stale_currentness` | `EffectSubject` | re-observe and re-judge before effect |\n| `unobserved_external_mutation` | `SubjectBinding` | observe or retain an explicit material unknown |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":839}],
+      "key": "residual_reentry_contracts",
+      "statement": "Residual kind fixes subject and re-entry: unobserved_subject_state→SubjectBinding, acquire bounded observation or retain hold; partial_effect→EffectInvocation, acquire post-observation and explicit disposition; unresolved_cause→claim or event, acquire authority and evidence or retain unresolved; unresolved_scope→FrameworkEvent, declare lawful scope or refuse admission; competing_lineage→EventFrontier, apply authorized frontier_projection judgment; stale_frontier→Projection, construct new exact frontier and projection; stale_currentness→EffectSubject, re-observe and re-judge before effect; unobserved_external_mutation→SubjectBinding, observe or retain explicit material unknown.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results","judgment","effect_disposition"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":869,"quote":"A judgment decision is the evaluation's result and a stop is the step's.\nWhere values emitted together map to different core values, as `stale`\nwith `hold` does, each answers its own predicate.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":861}],
+      "key": "result_predicates_and_core_mapping",
+      "statement": "Judgment mapping predicate: the first listed decision holds for the unchanged subject on the exact basis. Stop mapping predicate: the traversal application can reach its declared result on the exact basis, distinct from construction availability ('a candidate is available'). Effect-disposition predicate: the intended effect occurred, when applicable. Each emitted value answers only its own predicate, even when co-emitted values have different core results. Stops map hold→indeterminate; gap→invalid_basis because required reference/lineage closure is unresolved; refusal(constraint)→falsified; refusal(basis)→invalid_basis; invalid_basis→invalid_basis; out_of_scope→falsified; partial_effect(not_attained)→falsified; partial_effect(undecided)→indeterminate. Decisions map partial(not_attained)→falsified; partial(undecided)→indeterminate; refused(constraint)→falsified; refused(basis)→invalid_basis. Each judgment's first decision maps satisfied; out_of_scope, unauthorized and stale map falsified; hold maps indeterminate; gap maps invalid_basis; invalid_basis, falsified and indeterminate retain their namesake core values. out_of_scope is emitted only with refusal for declared scope conflicting with admitting authority, not for an undeclared event scope; while unresolved, that case is hold+unresolved_scope. Core mappings preserve original vocabulary, residuals and re-entry and cannot be remapped by individual traversals.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results","typed_relation","judgment"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":925,"quote":"- `refusal(constraint)`: every other refusal, that is, every refusal that\n  names a demonstrated violation by what is under judgment, whatever\n  condition of the basis it also names, or names no condition that AC-007\n  lists for `refusal(basis)`.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":918}],
+      "key": "refusal_cause_classification",
+      "statement": "Refusal cause is determined by named conditions under the cited AC-007, not chosen by qualifier or structural location. refusal(basis) names only conditions of the operation's basis and no demonstrated violation by the object under judgment; violations inside an input acted on as basis count as basis conditions. A basis-only coordinate/basis mismatch, model/record basis-relation mismatch, qualifier mismatch or cross-basis cut edge is mixed bases, not a structural counterexample. If a qualifier records this cause it is refuse_invalid_basis. refusal(constraint) covers every other refusal: a demonstrated violation by the judged record/model/carrier/transformation/application, even with a basis condition, or no condition eligible for refusal(basis). Qualifiers recording it use refuse_missing/refuse_duplicate/refuse_wrong_type/refuse_out_of_scope. Named accompanying basis conditions and co-emitted invalid_basis decisions retain their own invalid_basis result. refused(basis/constraint) follows its yielded refusal's cause. Structural counterexamples include unknown/missing fields; missing populations, hidden records, ambiguous refs, unknown kinds, undeclared domains; reference/cardinality/nested-coordinate defects; event-kind/payload/digest/forbidden-field defects; qualifier/closed-union defects; and duplicate/missing/extra/reversed/mismatched edges. A scope still undeclared when unresolved_scope re-entry closes is a demonstrated event defect: refusal(constraint), retained unresolved_scope, and re-entry through a new lawfully scoped event candidate. It is not the out_of_scope stop. Open resolution retains gap; a reference evaluated to no target, including a missing local record, is dangling and refuses. Qualifier defect distinctions remain alongside the core value.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_results","effect_disposition","effect_evidence","transition_subject"],
+      "conditions": ["For partial_effect stops/dispositions and partial transition decisions."],
+      "exceptions": [],
+      "grounding": [{"end_line":982,"quote":"A lost response, an absent record or an\n  actor's context holding no trace of the effect is no evidence about the\n  subject, so it establishes neither non-attainment nor the end of the\n  effect","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":979}],
+      "key": "partial_effect_cause_and_conservation",
+      "statement": "not_attained requires admitted effect evidence and bounded post-observation, interpreted under intended outcome contract and comparison basis, establishing both that the outcome is unmet and that no later completion can meet it. Examples include an effect ended short, a bounded interval closed partially attained, or an irreversible performed part defeating the outcome. Whether the effect ended is not part of this cause; unestablished end remains a residual. undecided covers every other partial_effect: no bounded post-observation yet, partial progress with completion still possible, currently met outcome with still-acting effect, or lost response without observed counterexample. Lost response, missing record or absent actor trace establishes neither non-attainment nor effect end. partial decisions inherit the cause of their partial_effect stop; missing required post-observation under transition_subject_complete remains indeterminate+unobserved_subject_state. Neither falsified nor indeterminate records actual mutation or end; partial_effect residual and re-entry carry these through every join. Falsified cannot imply no effect; indeterminate cannot imply no effect or completion; neither implies ended without evidence. Explicit re-entry precedes every further effect; an effect of unestablished end is reconciled under cited ACTIVATION §5 before repetition.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence","traversal_application"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1127,"quote":"A\nretry or a continuation creates a fresh occurrence only when it reapplies\nthe traversal.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity","start_line":1116}],
+      "key": "occurrence_seed_and_application_identity",
+      "statement": "Only pre-admission facts enter occurrence identity. Post-effect observations, effect evidence, judgments, admitted events, timestamps, admission ordinals and projection results are excluded; they may reference the occurrence after their own identities exist. Application identity is exact and pre-existing; application traversal/functor fields equal occurrence fields. Lineage and identity-dependency inputs are precisely the congruence-law populations; relation records are minted after occurrence identity and reproduce its endpoints rather than seed it. Two applications of one traversal over one subject are distinct occurrences. Retry/continuation creates a fresh occurrence only upon traversal reapplication; a later controller step, observation, wait or correlation record is insufficient. Every retained bracketed AC-016 traversal application gets an occurrence; an applied declared composite also gets an aggregate. Components point to aggregate via component_of_occurrence without implied material cause. Intermediate results, judgments, evidence, authority, provenance and stops remain explicit.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence","typed_lineage"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1134,"quote":"The directed graph formed by `identity_depends_on` is finite and acyclic.\nEvery dependency target exists before the dependent identity is minted. A\nfuture result or event cannot be smuggled into its own occurrence seed","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity%2FOP-001%20Seed%20acyclicity","start_line":1131}],
+      "key": "seed_acyclicity",
+      "statement": "identity_depends_on forms a finite DAG. Every target exists before minting its dependent identity. A future result or event cannot enter its own occurrence seed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["semantic_admission_cut","relation_claim","framework_event","judgment","typed_relation","event_frontier"],
+      "conditions": ["For relation-claim admission."],
+      "exceptions": [],
+      "grounding": [{"end_line":1157,"quote":"Only `j_c.decision = admitted`, `j_e.decision = admitted` and\n`j_a.decision = admitted` together admit the complete semantic cut.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation","start_line":1151}],
+      "key": "semantic_admission_sequence",
+      "statement": "Described sequence: claim c; claim_admission judgment j_c over unchanged c; candidate event e binding c,j_c,source F_k; event_admission judgment j_e over unchanged e; deterministic relation r from (c,j_c,e,j_e,basis); successor frontier; seven-member cut a; semantic_cut_admission judgment j_a over unchanged a. Admission requires all three judgments admitted. c,j_c,e,j_e,r,a,j_a have distinct identities and authority. Constructing c does not admit it; judgments do not rewrite subjects; events do not inherit candidate authority. Materialisation preserves accepted kind, endpoints, qualifiers and basis. Each j_c/j_e/j_a has its exact kind, respective subject id and sha256(canonical subject bytes), complete inherited context, owner, scope, basis, evaluator, authority, decision, evidence, provenance and decision-time fields. Missing cut judgment, non-admitted decision, wrong subject/digest or cross-basis judgment refuses the cut.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["semantic_admission_cut","framework_event","event_frontier","typed_relation"],
+      "conditions": ["For a claim-admission cut."],
+      "exceptions": [],
+      "grounding": [{"end_line":1221,"quote":"The source frontier must not\nalready contain `e`, and duplicate frontier members refuse before any set\ncomparison (P3, P5).","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation","start_line":1219}],
+      "key": "semantic_cut_identity_and_edges",
+      "statement": "Admission-event identity binds event kind, payload digest, scope, optional occurrence, exact claim and claim judgment, source frontier, owner and basis. Materialized relation identity binds unchanged claim, claim judgment, event, event judgment and profile basis. frontier_contains(F,e) iff e occurs exactly once in F.member_event_refs, with no extras or omissions. Event kind is exact claim-admission URN; claim/event/cut source_frontier_ref values are identical. Each cut reference resolves the unchanged judged/materialized record. All seven cut subjects, all three judgments and three required relation records share exact profile basis. Frontiers share projection_basis_ref and precedence_law_ref; only successor difference is adding e.id once. Required edges are exactly admits_claim(e,c), materializes_relation(e,r), frontier_contains(successor,e), with inherited relation shape and exact qualifiers. Missing, extra, reversed, duplicate or cross-basis required edges refuse; source must not already contain e; frontier duplicates refuse before set comparison. First event requires no fictional predecessor. Re-admission with same claim, claim judgment, event judgment, source frontier, basis and authority returns existing byte-equal cut; nonidentical collision refuses with refuse_duplicate and creates no rival facts. Claim endpoints pre-exist; generated admission/materialization edges are post-admission relations, never self-future-endpoint claims.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["semantic_admission_cut"],
+      "conditions": ["For a relation claim."],
+      "exceptions": [],
+      "grounding": [{"end_line":1244,"quote":"Missing,\nconflicting or inconsistent members refuse the cut. This atomicity is\nsemantic; the profile prescribes no storage or transaction mechanism","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-002%20Atomic%20semantic%20admission","start_line":1241}],
+      "key": "atomic_semantic_admission",
+      "statement": "One admitted cut contains unchanged claim and admission judgment, event with scope and admission judgment, deterministic relation, exact common source frontier and unique successor equal to source plus exactly the admitted event. Missing, conflicting or inconsistent members refuse. Atomicity is semantic and prescribes no storage or transaction mechanism.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["framework_event","projection"],
+      "conditions": ["When corrects_event(new,existing) holds."],
+      "exceptions": [],
+      "grounding": [{"end_line":1251,"quote":"`corrects_event(new, existing)` keeps both immutable events. A correction\nchanges later projection through an explicit selection law; it does not\ndelete, rewrite or retrospectively re-identify the corrected fact","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-003%20Correction%20without%20erasure","start_line":1248}],
+      "key": "correction_without_erasure",
+      "statement": "Both events remain immutable. Correction affects later projection only through explicit selection law; it does not delete, rewrite or retrospectively re-identify the corrected fact.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["typed_lineage"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1271,"quote":"Each is acyclic under its own typed relation. Cause is established only by\nan admitted causal claim under competent authority and evidence.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage","start_line":1263}],
+      "key": "typed_causality_boundary",
+      "statement": "Identity-dependency, occurrence-causation and event-causation graphs remain distinct and each acyclic under its own typed relation. Cause requires admitted causal claim, competent authority and evidence. Timestamp, ordinal, adjacency, containment, shared subject, shared actor, correlation and arrival order create no cause. An untyped-union cycle is not a causal cycle unless a declared causal subgraph itself cycles.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["projection"],
+      "conditions": ["When projection uses precedence to select current truth."],
+      "exceptions": [],
+      "grounding": [{"end_line":1278,"quote":"The coordinate, its comparison law, its basis and its admitting\nauthority are explicit. The coordinate orders eligible facts; it gains no\nsemantic, admission, causal or decision authority","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage%2FOP-004%20Precedence%20is%20not%20authority","start_line":1276}],
+      "key": "precedence_authority_boundary",
+      "statement": "Precedence coordinate, comparison law, basis and admitting authority must be explicit. The coordinate orders eligible facts and gains no semantic, admission, causal or decision authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["effect_operation","operation_kind","operation_grant","effect_invocation","effect_subject","occurrence"],
+      "conditions": [],
+      "exceptions": ["An adopting Product may replace exact territory equality only by an explicit authority-owned containment relation in its compatible signature."],
+      "grounding": [{"end_line":1337,"quote":"No operation is lawful without a matching grant that names the subject\nbinding, the operation kind and the effect territory.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1308}],
+      "key": "effect_grant_binding",
+      "statement": "Functor kind, traversal, domain operation, executor, actor, grant and invocation are different coordinates. F_P/F_D/F_H classification alone neither identifies, authorizes nor executes an operation; profile construction and occurrence admission mint no grant. Every lawful operation requires an exact owner-issued matching grant. invocation.operation_ref=operation.id; target(operation_of_kind(operation))=operation.operation_kind_ref; target(targets_subject(operation))=operation.subject_binding_ref; target(authorized_by(invocation))=invocation.operation_grant_ref=grant.id. Operation, grant and occurrence subject bindings are equal; operation kind belongs to grant.allowed_operation_kind_refs; operation contract equals the exact OperationKind object's contract; operation, invocation and grant territory values are equal. Same label with different contract/target sort, invalidated kind or unresolved kind reference cannot be authorized by the grant. Nominal kind equality, role label, executor access and broad workspace access are insufficient.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["effect_subject","effect_invocation","effect_disposition","mutable_subject","transition_subject"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1388,"quote":"`j_ready` judges the unchanged `EffectSubject` immediately before effect\ndispatch under the application's declared currentness and invalidation\nlaw.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1381}],
+      "key": "effect_readiness_and_disposition",
+      "statement": "Described effect sequence observes W under stable binding, constructs exact invocation and readiness subject, judges readiness immediately before dispatch, dispatches when ready, obtains later disposition and bounded post-observation, then judges TransitionSubject. unauthorized or stale readiness never dispatches; invokes_effect exists iff a concrete invocation was dispatched. Stale pre-observation or grant prevents starting: re-observe and issue new readiness subject/judgment or stop. no_effect has no dispatched invocation and records no attempted domain effect. completed_effect binds one dispatched invocation, bounded post-observation and sufficient evidence. partial_effect binds one dispatched invocation, bounded post-observation/evidence, partial_effect residual and stop, and explicit re-entry before further effect. refused_effect binds refused invocation attempt and refusal stop with evidence that no authorized mutation began. A begun effect lacking complete disposition keeps partial_effect explicit and requires bounded post-observation. Invocation is immutable and lacks future disposition; later disposition does not rewrite it. No lock or transaction implementation is required.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["effect_disposition","occurrence_results","occurrence"],
+      "conditions": ["An EffectInvocation names the occurrence, thereby making it intend an effect."],
+      "exceptions": ["If no EffectInvocation names the occurrence, no effect is intended: no_effect is only a record of no attempted domain effect, not an effect result."],
+      "grounding": [{"end_line":1379,"quote":"An occurrence that no `EffectInvocation` names intends no effect.\nACTIVATION §3 Effects poses no predicate for it, and its `no_effect`\nrecords only that no domain effect was attempted: it is a record, not an\neffect result","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1376}],
+      "key": "effect_disposition_core_mapping",
+      "statement": "For predicate 'the intended effect occurred': completed_effect→completed→satisfied requires bounded observation and sufficient evidence establishing occurrence and end; partial_effect(not_attained)→not_effected→falsified requires unmet and unattainable-by-later-completion outcome, retaining actual occurred part and unestablished end beside the value; partial_effect(undecided)→completion_unknown→indeterminate; refused_effect→not_effected→falsified because evidence shows no authorized mutation began; no_effect→not_effected→falsified because exact admitted disposition records no dispatched invocation. Applicability is not inferred for occurrences intending no effect.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["mutable_subject","subject_binding","occurrence"],
+      "conditions": ["For a later traversal application when authority is unchanged."],
+      "exceptions": [],
+      "grounding": [{"end_line":1395,"quote":"A later traversal application observes the then-current\n`W` under the stable binding when authority is unchanged","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation","start_line":1394}],
+      "key": "mutable_reality_conservation",
+      "statement": "Observe then-current W under stable binding. Observation, evidence, result, checkpoint, event, projection, cache and model content may describe W but none replaces it. A new occurrence implies no rollback.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence","framework_event","mutable_subject"],
+      "conditions": ["On traversal reapplication."],
+      "exceptions": [],
+      "grounding": [{"end_line":1406,"quote":"Iteration does not mutate an earlier occurrence. Each traversal\nreapplication mints a fresh immutable occurrence over the evolving\nsubject, so the admitted occurrence and event history is append-only even\nwhen the external subject changes repeatedly","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-006%20Immutable%20iteration%20history","start_line":1403}],
+      "key": "immutable_iteration_history",
+      "statement": "Reapplication mints a fresh immutable occurrence over the evolving subject; it never mutates an earlier occurrence. Admitted occurrence and event histories remain append-only despite repeated external mutation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["event_frontier","projection"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1427,"quote":"New events create a new frontier, and a prior projection does not silently\nadvance. Latest-only summaries do not prove frontier completeness.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection","start_line":1423}],
+      "key": "frontier_projection_identity",
+      "statement": "For each exact profile basis b, scope s and precedence law p there is one empty frontier F_0(b,s,p). Admitting e constructs successor membership exactly members(F_k) union {e}. Frontier identity binds basis/scope/precedence law/sorted event ids/content digests; projection identity binds exact frontier, rule, selected relation/boundary/residual ids. Judgment binds unchanged projection id/digest and each projection exactly one unchanged frontier. New events create new frontiers without silently advancing prior projections. Latest-only summaries prove no completeness. Competing corrections, unresolved scope, missing causal inputs and stale basis remain residuals or stops under selected projection law.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["framework_event"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1434,"quote":"Every event carries its declared scope class. `event_for` is present only\nwhen the scope law names one exact occurrence. Facts that are\nsubject-wide, publication-wide or otherwise independent of any occurrence\nstay independent","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection%2FOP-007%20Scope%20conservation","start_line":1431}],
+      "key": "event_scope_conservation",
+      "statement": "Every event declares scope class. event_for is present only where scope law names one exact occurrence. Subject-wide, publication-wide and otherwise occurrence-independent facts remain independent.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_profile"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1460,"quote":"An absent or incomplete adoption means the profile is available but\ninactive for that Product","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption","start_line":1459}],
+      "key": "profile_authority_and_adoption",
+      "statement": "Profile grants no semantic, operation, evaluation, admission, decision, correction, continuation or closure authority. Every material operation/judgment resolves an existing owner-issued grant; copying records or adopting transfers none. Only Product authority adopts. Adoption declares at least exact profile basis; exact subject/binding interpretation; Product-concept mappings to sorts and relation kinds; operation/actor/executor/admission/projection/decision authorities; event-scope/frontier laws; invalidation/re-entry conditions; and qualification evidence that no Product distinction was lost. Absent/incomplete adoption leaves the profile available but inactive for that Product.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_signature_basis","profile_edition_identity"],
+      "conditions": ["Once publication bytes exist."],
+      "exceptions": [],
+      "grounding": [{"end_line":1519,"quote":"The list is free of duplicates and sorted by ascending unsigned\nUTF-16 code units.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature","start_line":1510}],
+      "key": "signature_preimage_contract",
+      "statement": "TraversalOccurrenceSignature has kind='stdo.traversal-occurrence-signature', schema_version=1, exact calculus_basis_identity, calculus_signature_schema_clause_ref, occurrence_signature_clause_refs and profile_member_sha256. Signature identity is sha256(JCS(signature)) using RFC 8785. Occurrence clause refs are a sorted nonempty duplicate-free absolute URI list, ascending unsigned UTF-16, resolving exactly publication-member fragments #authority-and-adoption, #candidate-judgment-event-and-relation-separation, #causality-and-typed-lineage, #closed-constraint-judgment-residual-and-stop-kinds, #closed-event-kind-population, #closed-relation-families, #closed-semantic-object-sorts, #event-frontier-and-projection, #mutable-subject-effect-relation, #occurrence-identity. Their base equals exact member_uri. Calculus clause resolves inherited signature schema/record law inside exact calculus publication, #2-signature in this corpus. profile_member_sha256 equals publication member digest. Relative paths, mutable source URIs, missing fragments, duplicate refs or refs outside the two exact publication members refuse signature. The closed signature has one reconstructable preimage and no implementation-defined serialization.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_signature_basis","profile_edition_identity"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1589,"quote":"The signature and basis preimages are their\nexact RFC 8785 JCS values; a newline, another object order, a duplicate\nname, a value outside I-JSON or an implementation-specific serialisation\ncannot acquire the declared identity","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature","start_line":1586}],
+      "key": "profile_basis_publication_contract",
+      "statement": "Basis kind='stdo.traversal-occurrence-profile-basis', schema_version=1, concept_identity='urn:stdo:concept:traversal-occurrence-profile'; fields also include exact calculus_basis_identity, embedded occurrence_signature, occurrence_signature_sha256 and publication_basis={release_uri,manifest_sha256,member_uri,member_sha256}. Signature digest equals embedded canonical signature digest. Basis identity is 'urn:stdo:traversal-occurrence-profile-basis:sha256:' + sha256(JCS(basis)); duplicate object names are rejected before canonicalization. release_uri is absolute immutable stdo://releases/v<version>-rc.<positive-ordinal>/; member_uri is exactly release_uri+'standards/TRAVERSAL_OCCURRENCE.md'. Installed manifest contains that path and digest exactly once; digest also equals embedded signature's member digest. All digests use lowercase sha256:<64-hex>; kind/schema values and RFC8785/I-JSON preimages are exact. Noncanonical bytes, newline, other object ordering, duplicate names or custom serialization cannot acquire declared identity. Any change to calculus basis, signature refs, closed signature or member bytes mints a new basis. Supersession is an external Product/release judgment; old bases never silently advance. Predecessor rc.2 TRAVERSAL_OCCURRENCE_PROFILE.md digest 618bb7c8f9f1eab8283cf595ac9da3533f0f9cf80a684c6f42e09142da6590c1 is provenance, not this edition's identity; concept identity is unchanged.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_signature_basis"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1577,"quote":"A string of\nthe right shape, an unresolved basis record, a mismatched manifest or\nmember, a missing or extra principle ref, an invented or absent fragment,\nan unbound predecessor byte sequence, or a derivation from the same\ncarrier refuses","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature","start_line":1568}],
+      "key": "imported_basis_resolution",
+      "statement": "Imported AxiomaticCalculusBasis resolves exact RFC8785 bytes with required kind/schema/concept/derivation/publication basis; calculated identity equals both calculus_basis_identity fields. Its manifest digest resolves exact bytes containing calculus member path/digest once; member bytes match. Signature clause URI is exact calculus member plus applicable heading fragment. Distinct predecessor manifest resolves every sorted duplicate-free principle ref inside declared predecessor release. Principle population is exactly absolute predecessor-release expansion of every derivation address declared by the bound calculus member, neither subset nor invented list; size follows its derivation account. Each predecessor member's exact bytes have a digest appearing once in manifest; each fragment resolves one heading under publication semantic-address law. Merely shaped strings, unresolved basis, mismatched manifest/member, missing/extra principle refs, invented/absent fragment, unbound predecessor bytes or same-carrier derivation refuse. Profile publication uses the same manifest/member rule. Mutable source paths, strategy posts, implementations and consumer mappings cannot substitute for imported basis or publication identity.",
+      "uncertainty": "Required publication and predecessor bytes are not supplied."
+    },
+    {
+      "applies_to_keys": ["occurrence_profile"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":1613,"quote":"- a process, traversal, retry, continuation or closure engine;\n- an event store, event-log schema, projection implementation or state\n  carrier;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExclusions","start_line":1607}],
+      "key": "occurrence_profile_exclusions",
+      "statement": "Profile is not a change to pure a_c/reference-frame law; mandatory for every symbolic model; concrete subject/workspace ontology; process/traversal/retry/continuation/closure engine; event store/log schema/projection implementation/state carrier; mutation/admission/evaluation/decision authority; prospective-frame/sensor-population profile; guarantee that every event belongs to an occurrence; or assertion that every typed lineage graph is acyclic.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["occurrence_profile"],
+      "conditions": ["For review and qualification."],
+      "exceptions": [],
+      "grounding": [{"end_line":1657,"quote":"Representative examples or checkers establish only the claims they\nactually evaluate. They do not become an occurrence engine or a semantic\nauthority","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations","start_line":1655}],
+      "key": "occurrence_conformance_coverage",
+      "statement": "Review/qualification cover at least all 21 cases: one exact a_c basis/eight-member RecordKind_ac function/closed domains without inherited-field shadowing; exact inherited families/direct coordinates/disjoint local-external identities; complete seeds/congruence/future-input refusal; first event without fictional predecessor; distinct candidate/judgment/event/relation/cut/cut-judgment identities and subject digest; idempotent-or-refused duplicate admission; cycles in each identity/causal subgraph; lawful opposing support/correction; closed event kinds/payload/digest/scope/bindings and independent events without fabricated event_for; separation of functor/traversal/operation kind/instance/executor/actor/grant/invocation/target/territory; missing/stale/mismatched/out-of-territory grants; all four effect cases; mutable reality carrier; fresh reapplication identity; component/aggregate identities; refusal on stale pre-observation and grant currentness; incomplete semantic batch refusal including missing/non-admitted cut judgment and unequal source frontiers; frontier completeness/staleness/correction selection; non-causation by timestamp/ordinal/adjacency/containment/correlation; absent adoption and incomplete-mapping refusal; exact JCS/kinds/schemas/immutable URIs/digests/calculus address/unique-membership basis reconstruction. Examples/checkers establish only evaluated claims, not engine or semantic authority.",
+      "uncertainty": "The checklist's stale-readiness 'refusal' wording is retained alongside the more specific stale/hold law, without equating them."
+    },
+    {
+      "applies_to_keys": ["occurrence_source_account"],
+      "conditions": [],
+      "exceptions": ["The fourteen-member predecessor count is marked superseded only as proposed and pending Product-owner acceptance."],
+      "grounding": [{"end_line":1682,"quote":"Three clauses have no predecessor row and are new: the mapping of the\njudgment decisions and stop kinds to the core result algebra","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FSource%20dispositions","start_line":1676}],
+      "key": "source_conservation_claims",
+      "statement": "The account claims all 25 predecessor rows conserved at predecessor modal force, with formal tables/code exact and surrounding prose rewritten; routes are provenance only and heading slugs preserve ten signature fragments. It attributes successor member path/calculus fragment and profile ownership of instantiate_signature, OccurrenceSignatureDefinition, Sigma:ReferenceDomain/ExternalTargetKind/BasisRelation as generalizations; British spelling changes prose only. New clauses are judgment/stop core mappings, effect-disposition mappings and foundation-family table. Conserved coverage explicitly includes position/URNs, scope, inherited boundary, nineteen sorts, complete reference table/expansion, four event kinds, 24 relation kinds/qualifiers/cardinality/congruence, closed kind populations/tables, identity, admission separation, seven OP laws, causality, effects, frontier, adoption, edition/signature, exclusions and 21 conformance obligations. Source account repeats cause-sensitive mappings and open-gap versus dangling distinction; these remain the rules stated in their owning supplied sections. The synthetic child row proposes replacing the edition-specific fourteen principle-ref count with size derived from exact bound calculus account, retaining the population law; acceptance remains pending.",
+      "uncertainty": "Conservation and proposed supersession are source claims, not verified comparison or acceptance."
+    },
+    {
+      "applies_to_keys": ["ux_profile","ux_surface"],
+      "conditions": ["For UX surfaces governed by this profile."],
+      "exceptions": [],
+      "grounding": [{"end_line":46,"quote":"Direction: profile to tier 2; preserved meaning: the tier-2 escrow law\napplies unchanged to the bound objects; narrowed scope: UX surfaces this\nprofile governs; invalidation: a change of this profile's definition of\nthe replay proof or of the bound contract re-evaluates the binding","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX","start_line":42}],
+      "key": "ux_import_and_escrow_binding",
+      "statement": "UX imports FOUNDATIONS, ACTIVATION, EVALUATION, SPEC_METHOD and TICKETS under PROFILES §1 without redefining their objects, and refines DESIGN_MODULE. Core results belong to FOUNDATIONS §4; step construction/ambiguity refinements to ACTIVATION §3; ambiguity governance and sprint boundary to SPEC_METHOD §§5/4; sprint mechanics/escrow/close classification to TICKETS §3; functional bias and realization/effect-edge rules to DESIGN_MODULE §§4/10; graph execution to ODD. UX owns its listed local terms; graph function/ABG retain graph-profile meanings and AssetSurface/workorder retain Product-design meanings. Binding direction is profile→tier 2: TICKETS' product-meaningful UI replay proof binds to UX Msg-replay proof §8, and changed public function/carrier contracts bind to AssetSurface or equivalent typed product contract §7. Tier-2 escrow law is preserved unchanged, scope narrows to governed UX surfaces, and changed replay-proof or contract definitions trigger binding re-evaluation. Predecessor must is restated indicatively; should/may/may not/recommended/typically/mandatory/optional/allowed/at least/non-normative retain force. rc.2 UX_METHOD routes are provenance only, not application dependencies.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_profile","ux_surface","elm_process_model"],
+      "conditions": ["For a UX surface governed by this profile."],
+      "exceptions": ["The separately stated view-local ephemera permission applies only under its three locality conditions and unmount test."],
+      "grounding": [{"end_line":70,"quote":"The view is not a state owner.\nStateful local mutation in views, two-way bindings without action\nemission, and effect handlers used as controllers are violations of this\nprofile even when the surrounding ecosystem conventionally accepts them","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position","start_line":66}],
+      "key": "ux_constitutional_process",
+      "statement": "View is pure typed-state projection, transitions are pure reductions over typed messages, effects are reducer-described values interpreted by declared membrane, runtime owns lifecycle and view never owns continuation. Stateful local view mutation, two-way binding without action emission and effect handlers acting as controllers violate the model despite ecosystem convention.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_profile","ux_surface"],
+      "conditions": ["Product authority adopts the profile for a UX surface, recording adoption in a product definition, ticket, design module or review."],
+      "exceptions": [],
+      "grounding": [{"end_line":93,"quote":"until one of them is taken, the ambiguity is\n`blocked` and implementation does not proceed.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FAuthority","start_line":92}],
+      "key": "ux_authority_and_ambiguity",
+      "statement": "Adopted profile is sole UX realization authority for that surface. Project ADRs may choose stack but cannot weaken process model. Existing code, library conventions, screenshots, comments, design history, prototype behavior and generated artifacts are evidence only and cannot override it. Ambiguity fails closed: satisfy stricter interpretation→resolved; reprice through governing constitutional method to governing-surface owner→escalated; record scoped exemption in design module→carried with exemption residual. Until an exit is taken ambiguity remains blocked and implementation does not proceed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_foundation_account","ux_profile"],
+      "conditions": ["Where a UX surface is realized under this profile."],
+      "exceptions": [],
+      "grounding": [{"end_line":150,"quote":"which are choices of this profile, the product or the\nproject, with their owners, so no choice is presented as derived","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law","start_line":148}],
+      "key": "ux_foundation_premises_and_ownership",
+      "statement": "Instance premises adopted with UX, not derived from foundations: I1 surfaces expose admitted truth/change requests; I2 external Product design declares truth/carriers; I3 stacks vary and accept view-owned state/continuation/effects; I4 data crosses uncontrolled seams; I5 short-cycle per-change proof can exceed expected correction cost. Foundation standing: P0 recovered; P1/P2/P3/P4a/P6 independent; P5 derived from P0/P6 with open-world premise; P4b derived from P0/P2 with non-reacquirable step facts. Ten authored consequence groups: (P6,P1,F2,F11,I1,I2) admitted carriers/no hidden UX carrier; (P0,P1,P4a,F2,I3) typed pure transitions, with TEA and ephemera test profile policy; (P0,P5,F2) declared effect boundary, with membrane/handler forms profile-owned and interpreter project-owned; (P4b,P6,F4) recorded-input reproducibility and closure replay evidence, with empty-state Msg replay and six proof contents profile-owned and proof surface in project design module; (P3,P1,P6,I4) shared contract types/runtime validation at untrusted or out-of-process ingress, with six seams and single typed schema yielding types/validators profile-owned, mechanism project-owned; (P2,P6,I1) public-capability accessibility declarations and recorded internal-debug exemption, five declarations profile-owned and web WCAG AA recommended, stricter refinement project-owned; (P2,P1,I3) stack freedom preserving model, tests profile-owned and competing test ruling Product-owner-owned; (P6,F11,I3) Product adoption/one UX authority/fail-closed outcomes with project-recorded scope; (P6,P4b,F4,F11,F13,I5) authorized scoped/retiring scaffold and visible payable proof escrow, profile-owned detailed conditions/items/triggers, TICKETS-owned generic law/six classifications and SPEC_METHOD-owned sprint boundary; (P5,P6,F3) four profile result refinements each preserving own predicate/core map. Adoption steps, failure patterns and review questions apply these consequences; source dispositions decide nothing. Consumers apply only owning-section rules and acquire no additional decision authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_profile","ux_surface","ux_imported_member_roles"],
+      "conditions": ["Composition is per surface within the profile's adoption scope."],
+      "exceptions": ["For a non-UX module, only DESIGN_MODULE applies and its design module ignores UX."],
+      "grounding": [{"end_line":198,"quote":"- when a module realises a UX surface, DESIGN_MODULE and this profile both\n  apply, and its design module reads both;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition","start_line":188}],
+      "key": "ux_surface_composition",
+      "statement": "UX modules apply DESIGN_MODULE and UX together and their design modules read both. UX extends rather than duplicates parent immutability, totality, effect edge, no semantic centre and coupling laws; it adds render lifecycle, browser events, layout and accessibility discipline under Elm. In a graph-execution Product, projection/query surfaces including UX follow UX realization law. Graph profile answers Product graph shape; DESIGN_MODULE answers module discipline; UX answers additional surface discipline; SPEC_METHOD retains constitutional process/lawful re-entry.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_surface","ux_imported_member_roles","admitted_product_carrier"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":213,"quote":"UX work may use sprint\ncompliance escrow under §12 when the sprint boundary makes deferred proof\nvisible, bounded and payable.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members","start_line":207}],
+      "key": "ux_other_member_boundaries",
+      "statement": "SPEC_METHOD governs process, authority flow, repricing and migration; graph-execution profile governs constructive carriers and treats UX as projection/query surfaces; DESIGN_MODULE governs realization; TICKETS governs ticket/sprint lifecycle. UX sprint escrow is permitted only where sprint boundary makes deferred proof visible, bounded and payable. For Products with world-model dimension, WORLD_MODEL governs semantic law, while UX over world-model state still binds through AssetSurface or equivalent under UX §7.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_profile"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":222,"quote":"This profile is not a styling guide or design-system specification, a\ncomponent library, a brand or visual-identity surface, a wireframing or\nprototyping process, a research method for user studies, or a stack\nranking or framework recommendation.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FNon-goals","start_line":217}],
+      "key": "ux_non_goals",
+      "statement": "Styling/design-system specification, component libraries, brand/visual identity, wireframing/prototyping processes, user-study research and stack rankings/framework recommendations are outside this constitutional profile and belong in Product-local surfaces.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_surface","admitted_product_carrier","elm_process_model"],
+      "conditions": ["A Msg changes product truth."],
+      "exceptions": ["A view-local Msg may govern expansion, sort order, filter text, focus or draft input subject to the ephemera boundary."],
+      "grounding": [{"end_line":252,"quote":"If no\nadmitted carrier exists for a product-truth-changing message, the UX\nsurface is blocked until the carrier is authored or the requirement is\nrepriced","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers","start_line":249}],
+      "key": "product_truth_carrier_requirement",
+      "statement": "Every product-truth-changing Msg maps to one admitted product carrier; UX cannot become a hidden constructive carrier. Product changes include writing/creating/moving/deleting assets; changing Context, selection authority, pinning or global state; spawning/attaching/resuming sessions; dispatching agents/jobs/workorders/graph calls/runtime commands; changing closure/approval/continuation/lineage/provenance/evidence; publishing/accepting/rejecting/superseding product records. Carrier absence blocks the surface until carrier authoring or requirement repricing.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["elm_process_model","ux_surface","effect_membrane"],
+      "conditions": ["For UX work under the profile."],
+      "exceptions": [],
+      "grounding": [{"end_line":275,"quote":"`current State → render View → user emits Msg → Update produces new State and Cmds → runtime interprets Cmds → repeat`","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model","start_line":272}],
+      "key": "elm_runtime_loop",
+      "statement": "Runtime owns the loop: current State→pure render View→user Msg→pure Update yielding new State and Cmds→runtime interpretation of Cmds→repeat. Msg algebra names every user/system action, State resides in runtime rather than view, and Cmd/Sub are typed descriptions interpreted at membrane, not effects performed by Update.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["ux_profile","elm_process_model","ux_surface"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":310,"quote":"Any\nrealisation that preserves §4 to §8 is compliant with this profile. This\ntest differs from the test of §4 Realisation discretion; §15 states which\ntest applies while the product owner's ruling between them is pending.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate","start_line":284}],
+      "key": "ux_stack_independent_test",
+      "statement": "Elm process model is non-negotiable; implementation stack is project-local and free if it preserves the model. This subsection states compliance when §§4–8 hold. Selected framework is recorded in design module with short justification of preserving §4; frameworks are tested, never ranked. Rejected regardless of stack: view-owned state continuation, render effects, state mutation outside typed reducer, multi-step view-local machines bypassing Msg, two-way binding without Msg, imperative render DOM manipulation and effect handlers as controllers. Language-integrated reducer runtime, typed reducer+interpreter, reactive signals behind reducer with no outside mutation, and server-rendered hypermedia with server-state reducer/request-response membrane are non-normative examples.",
+      "uncertainty": "This stated test competes with the §§4–10/no-failure-pattern test; owner ruling is pending."
+    },
+    {
+      "applies_to_keys": ["ux_profile","ux_surface","elm_process_model","effect_membrane"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":332,"quote":"A realisation is compliant with this profile when §4 to §10\nhold under inspection and the §13 failure patterns are absent","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion","start_line":328}],
+      "key": "ux_realisation_inspection_test",
+      "statement": "Project records language, framework/runtime, optional state-container library, effect-interpreter mechanism, optional runtime validator and build/bundle/deploy toolchain choices in design module, each briefly justified against Elm model and effect-membrane rule. This subsection states compliance only when §§4–10 hold under inspection and §13 failure patterns are absent, without ranking stacks. It explicitly differs from the §§4–8 test and refers interim selection to §15.",
+      "uncertainty": "The supplied foundation table says the stricter test applies pending owner ruling; detailed §15 and referenced test sections are not supplied."
+    },
+    {
+      "applies_to_keys": ["ux_surface","elm_process_model","effect_membrane"],
+      "conditions": [],
+      "exceptions": ["Sub algebra is required when the surface subscribes to external or runtime events."],
+      "grounding": [{"end_line":358,"quote":"The reducer is pure: it does not perform I/O, log to side channels or\nmutate global state.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F5.%20State%20transitions","start_line":356}],
+      "key": "ux_state_and_command_declarations",
+      "statement": "State changes through typed Msg applied by pure Update. Surface declares State shape, Msg algebra, Update:(Msg,State)→(State,Cmd), Cmd algebra and conditional Sub algebra. Each Cmd declares effect kind, typed input payload, admitted carrier or external target boundary, success Msg, failure Msg and any deterministic correlation key required for replay. Reducer performs no I/O, side-channel logging or global mutation; runtime interprets scheduled effects at membrane. Product-meaningful state goes through reducer without exception; if losing a value on unmount changes Product behavior or another view, it belongs in reducer.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["effect_membrane","elm_process_model"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [{"end_line":390,"quote":"A platform-specific effect handler,\nwhatever name the chosen framework gives it (`useEffect`,\n`createEffect`, `onMount`, `subscribe`, a server-action handler), is part\nof the membrane only when it interprets a declared Cmd.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F6.%20Effect%20membrane","start_line":385}],
+      "key": "effect_membrane_logic_boundary",
+      "statement": "Membrane's sole job is interpreting declared Cmd, one Cmd per effect, and delivering typed outcome Msg to reducer. Branching, conditional state derivation and multi-step business decisions belong in reducer. useEffect/createEffect/onMount/subscribe/server-action or other handler counts as membrane only while interpreting declared Cmd. Conditional logic deciding state transitions inside a handler violates the rule and belongs in reducer.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": ["reference_domains","occurrence_model_subject","traversal_application","traversal","subject_binding","observation","intended_outcome","operation_kind","effect_operation","operation_grant","effect_evidence","transition_subject","reference_basis_and_common_fields","seed_observation_reference_contracts","effect_reference_contracts","admission_frontier_reference_contracts","inherited_reference_contracts","external_resolution_expansion","reference_closure_refusal","reference_signature_extension","inherited_schema_dependency"],
+      "reason": "Retains all reference-domain rows and quantified nested expansion; inherited schemas and concrete external resolutions remain unavailable.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table"
+    },
+    {
+      "decision": "retained",
+      "keys": ["framework_event","event_payload_scope_contract","event_kind_extension"],
+      "reason": "Retains four exact event identities, payload/scope bindings, refusal cases and extension boundary.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_record","typed_relation","relation_qualifier_contract","occurrence_relation_congruence","application_of","applies_traversal","bound_to_subject","intends","observes_before","observes_after","invokes_effect","operation_of_kind","targets_subject","authorized_by","disposition_for","evidenced_by","event_for","frontier_contains","projects_frontier","identity_depends_on","causally_precedes_occurrence","causally_precedes_event","supports_event","corrects_event","component_of_occurrence","admits_claim","materializes_relation","transition_for"],
+      "reason": "Retains every typed relation kind, direction, cardinality and core law, qualifier closure and occurrence congruence.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families"
+    },
+    {
+      "decision": "residual",
+      "keys": ["judgment","occurrence_results","constraint_outcomes_and_kind_closure","judgment_domain_contracts","constraint_decision_mapping","residual_reentry_contracts","result_predicates_and_core_mapping","refusal_cause_classification","partial_effect_cause_and_conservation","constraint_latitude_and_stop_refinement","result_operational_dependencies","partial_observation_tension"],
+      "reason": "Retains closed kinds, decisions, evidence, outcome mappings, refusal causes and re-entry; imported algebra and an observation-boundary tension remain explicit.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds"
+    },
+    {
+      "decision": "retained",
+      "keys": ["occurrence","occurrence_seed_and_application_identity"],
+      "reason": "Retains seed exclusions, application identity, retry applicability and component/aggregate distinctions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["seed_acyclicity"],
+      "reason": "Retains finite acyclicity and prior-existence requirement.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity%2FOP-001%20Seed%20acyclicity"
+    },
+    {
+      "decision": "retained",
+      "keys": ["relation_claim","semantic_admission_cut","semantic_admission_sequence","semantic_cut_identity_and_edges"],
+      "reason": "Retains admission sequence as data, independent identities/authorities, exact cut closure and idempotency/refusal.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["atomic_semantic_admission"],
+      "reason": "Retains semantic atomicity without imposing storage or transaction implementation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-002%20Atomic%20semantic%20admission"
+    },
+    {
+      "decision": "retained",
+      "keys": ["correction_without_erasure"],
+      "reason": "Retains immutable correction history and explicit projection selection.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-003%20Correction%20without%20erasure"
+    },
+    {
+      "decision": "retained",
+      "keys": ["typed_lineage","typed_causality_boundary","typed_lineage_variation"],
+      "reason": "Retains distinct DAGs and lawful mixed-kind opposing edges without inferred cause.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage"
+    },
+    {
+      "decision": "retained",
+      "keys": ["precedence_authority_boundary","precedence_selection_latitude"],
+      "reason": "Retains permitted precedence selection and denial of acquired authority.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage%2FOP-004%20Precedence%20is%20not%20authority"
+    },
+    {
+      "decision": "residual",
+      "keys": ["effect_invocation","effect_disposition","effect_subject","effect_grant_binding","effect_readiness_and_disposition","effect_disposition_core_mapping","territory_containment_variation","partial_observation_tension","no_effect_event_binding_gap"],
+      "reason": "Retains grant equality, readiness, dispositions and predicate applicability; missing-invocation and partial-observation cases remain unresolved where supplied laws do not close them.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["mutable_subject","mutable_reality_conservation","snapshot_rollback_latitude"],
+      "reason": "Retains reality-carrier distinction and separately authorized optional snapshot/rollback.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["immutable_iteration_history"],
+      "reason": "Retains fresh reapplication identity and append-only history.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-006%20Immutable%20iteration%20history"
+    },
+    {
+      "decision": "retained",
+      "keys": ["event_frontier","projection","frontier_projection_identity"],
+      "reason": "Retains exact frontier/projection identity and unresolved selection conditions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection"
+    },
+    {
+      "decision": "retained",
+      "keys": ["event_scope_conservation"],
+      "reason": "Retains event independence and conditional occurrence binding.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection%2FOP-007%20Scope%20conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["occurrence_profile","profile_authority_and_adoption"],
+      "reason": "Retains authority non-transfer and Product adoption minimum/inactivity boundary.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption"
+    },
+    {
+      "decision": "retained",
+      "keys": ["profile_edition_identity"],
+      "reason": "Retains stable-concept versus immutable-edition distinction.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_signature_basis","signature_preimage_contract","profile_basis_publication_contract","imported_basis_resolution","publication_resolution_unavailable"],
+      "reason": "Retains canonical identity and exact publication laws without claiming supplied immutable bytes or resolved imports.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature"
+    },
+    {
+      "decision": "retained",
+      "keys": ["occurrence_profile_exclusions"],
+      "reason": "Exclusions are retained as substantive scope boundaries.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExclusions"
+    },
+    {
+      "decision": "residual",
+      "keys": ["occurrence_conformance_coverage","stale_readiness_wording"],
+      "reason": "Retains all 21 review obligations and checker limits, with stale/refusal wording left explicit.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations"
+    },
+    {
+      "decision": "residual",
+      "keys": ["occurrence_source_account","source_conservation_claims","pending_derivation_count_supersession"],
+      "reason": "Retains provenance/conservation assertions and explicitly pending supersession without treating them as acceptance.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FSource%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": ["ux_profile","ux_import_and_escrow_binding","ux_missing_imports_and_later_sections"],
+      "reason": "Retains optional profile scope, imported ownership, exact escrow binding and modal preservation; cited later definitions remain unavailable.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_constitutional_process"],
+      "reason": "Retains Elm process law and prohibited view/controller patterns, read with explicit ephemera qualification.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_authority_and_ambiguity"],
+      "reason": "Retains conditional Product adoption, evidence-only artifacts and all four ambiguity outcomes.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FAuthority"
+    },
+    {
+      "decision": "residual",
+      "keys": ["ux_foundation_account","ux_foundation_premises_and_ownership","ux_consumer_index_detail","ux_competing_compliance_tests"],
+      "reason": "Retains premises, standing, ten consequence/policy ownership groups and consumer boundary; detailed referenced rule populations and pending test ruling remain residual.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_surface_composition","ux_refines_module_discipline"],
+      "reason": "Retains UX/non-UX applicability and per-surface composition.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_imported_member_roles","ux_other_member_boundaries"],
+      "reason": "Retains named member roles, conditional escrow and world-model carrier boundary.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_non_goals"],
+      "reason": "Retains Product-local concern allocation rather than discarding exclusions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FNon-goals"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_surface","admitted_product_carrier","product_truth_carrier_requirement","ux_changes_through_carrier"],
+      "reason": "Retains truth-changing categories, five carrier alternatives, local-message distinction and blocked outcome.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers"
+    },
+    {
+      "decision": "retained",
+      "keys": ["elm_process_model","elm_runtime_loop"],
+      "reason": "Retains all typed process roles, signatures, purity and runtime ownership.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model"
+    },
+    {
+      "decision": "residual",
+      "keys": ["ux_stack_independent_test","ux_stack_latitude","ux_competing_compliance_tests"],
+      "reason": "Retains §§4–8 compliance wording, project freedom, example non-normativity and prohibitions without settling the competing test.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate"
+    },
+    {
+      "decision": "residual",
+      "keys": ["ux_realisation_inspection_test","ux_stack_latitude","ux_competing_compliance_tests"],
+      "reason": "Retains six project choices and stricter inspection criterion while owner ruling remains pending.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion"
+    },
+    {
+      "decision": "retained",
+      "keys": ["ux_state_and_command_declarations","view_local_ephemera_latitude"],
+      "reason": "Retains declarations, Cmd contents, conditional Sub, reducer purity and all ephemera conditions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F5.%20State%20transitions"
+    },
+    {
+      "decision": "retained",
+      "keys": ["effect_membrane","effect_membrane_logic_boundary","effect_membrane_latitude","membrane_interprets_process_commands"],
+      "reason": "Retains boundary permissions/prohibitions and single-command handler discipline.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F6.%20Effect%20membrane"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": ["A compatible extension changes the finite reference table only by minting a new signature."],
+      "applies_to_keys": ["reference_domains"],
+      "forbidden": ["Reinterpreting an existing row."],
+      "grounding": [{"end_line":516,"quote":"A compatible extension changes this table by\nminting a new signature; it cannot reinterpret an existing row.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":514}],
+      "key": "reference_signature_extension"
+    },
+    {
+      "allowed": ["Compatible extension declares a new event-kind population and its relation to this signature."],
+      "applies_to_keys": ["framework_event"],
+      "forbidden": ["Adding undeclared values to the existing population."],
+      "grounding": [{"end_line":548,"quote":"A\ncompatible extension declares a new event-kind population and its relation\nto this signature; it cannot add an undeclared value to this population","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population","start_line":545}],
+      "key": "event_kind_extension"
+    },
+    {
+      "allowed": ["Constraint latitude only when its exact record names latitude_ref.", "Traversal stop_states may refine hold, gap, refusal(constraint) and refusal(basis) by cause through an explicit PROFILES §1-shaped binding declaring direction, preserved meaning, narrowed scope and invalidation; each refined value adds no kind and keeps its parent's core value."],
+      "applies_to_keys": ["occurrence_results","traversal"],
+      "forbidden": ["Treating silence as constraint latitude.", "Remapping core results.", "Refining other stops or any judgment decision under this permission.", "Assuming an undeclared refinement binding."],
+      "grounding": [{"end_line":829,"quote":"Each constraint declares zero latitude unless its exact record names a\n`latitude_ref`; silence is not latitude.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":827},{"end_line":1023,"quote":"The other stops and\nevery judgment decision keep the mapping above unrefined, and a record\nthat declares no binding takes it unrefined","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":1021}],
+      "key": "constraint_latitude_and_stop_refinement"
+    },
+    {
+      "allowed": ["Opposing edges of different kinds in wider typed lineage, including one event supporting another while the second corrects the first."],
+      "applies_to_keys": ["typed_lineage"],
+      "forbidden": ["Treating a cycle of the untyped union alone as a causal cycle."],
+      "grounding": [{"end_line":1271,"quote":"The wider typed-lineage graph may lawfully contain opposing edges of\ndifferent kinds: one event may support another while the second corrects\nthe first.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage","start_line":1268}],
+      "key": "typed_lineage_variation"
+    },
+    {
+      "allowed": ["Projection may select current truth using a declared precedence coordinate with explicit comparison law, basis and admitting authority."],
+      "applies_to_keys": ["projection"],
+      "forbidden": ["Granting semantic, admission, causal or decision authority to the coordinate."],
+      "grounding": [{"end_line":1278,"quote":"A projection may use a declared precedence coordinate to select current\ntruth.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage%2FOP-004%20Precedence%20is%20not%20authority","start_line":1275}],
+      "key": "precedence_selection_latitude"
+    },
+    {
+      "allowed": ["Adopting Product may replace exact effect-territory equality with explicit authority-owned containment in a compatible signature."],
+      "applies_to_keys": ["operation_grant","effect_operation","effect_invocation"],
+      "forbidden": ["Using nominal kind equality, role labels, executor access or workspace access as a substitute grant."],
+      "grounding": [{"end_line":1337,"quote":"An adopting Product may replace exact territory equality only through an\nexplicit, authority-owned containment relation in its compatible\nsignature.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1334}],
+      "key": "territory_containment_variation"
+    },
+    {
+      "allowed": ["Separately authorized application may supply snapshotting or rollback; the profile neither requires nor forbids it."],
+      "applies_to_keys": ["mutable_subject","occurrence"],
+      "forbidden": ["Inferring rollback from a new occurrence."],
+      "grounding": [{"end_line":1399,"quote":"Snapshotting or rollback may be supplied by a separately authorised\napplication. This profile neither requires nor forbids it and does not\ninfer rollback from a new occurrence","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation","start_line":1397}],
+      "key": "snapshot_rollback_latitude"
+    },
+    {
+      "allowed": ["Project chooses language, framework/runtime, optional state-container library, effect interpreter, optional runtime validator and build/bundle/deploy toolchain, recording and justifying preservation of process model and effect membrane."],
+      "applies_to_keys": ["ux_profile","elm_process_model","effect_membrane"],
+      "forbidden": ["Weakening Elm process model through stack choice.", "Treating non-normative realization examples as a mandatory stack.", "Ranking frameworks as a profile rule."],
+      "grounding": [{"end_line":287,"quote":"the stack is project-local\nand free, provided it preserves the model","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate","start_line":282},{"end_line":323,"quote":"- the language;\n- the framework or runtime;\n- the state-container library, if any;\n- the effect-interpreter mechanism;\n- the runtime validator, if any;\n- the build, bundling and deployment toolchain.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion","start_line":318}],
+      "key": "ux_stack_latitude"
+    },
+    {
+      "allowed": ["Implementation-local state cells for view-local ephemera only if framework provides them, no other view observes the value, it is outside Product state, and it has no consequence after unmount."],
+      "applies_to_keys": ["elm_process_model","ux_surface"],
+      "forbidden": ["Keeping product-meaningful state outside reducer.", "Classifying a value as ephemera when its loss on unmount changes Product behavior or another view."],
+      "grounding": [{"end_line":368,"quote":"View-local ephemera (open or closed flags, hover state, draft input) may\nbe held in implementation-local state cells where the framework provides\nthem, but only when the value is genuinely view-local: not observed by\nother views, not part of the product's state surface, and not\nconsequential after the view unmounts.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F5.%20State%20transitions","start_line":360}],
+      "key": "view_local_ephemera_latitude"
+    },
+    {
+      "allowed": ["Inside declared membrane: I/O, subscriptions to external sources and imperative host interop including DOM, filesystem and native APIs, in interpretation of declared Cmd."],
+      "applies_to_keys": ["effect_membrane","elm_process_model"],
+      "forbidden": ["I/O, subscriptions and imperative platform manipulation outside membrane, including render, render-consumed pure helpers and reducer.", "Business transition decisions in effect handlers."],
+      "grounding": [{"end_line":380,"quote":"Inside the membrane, I/O, subscriptions\nto external sources, and imperative interop with the host platform (DOM,\nfile system, native APIs) are allowed. Outside it, in render code, in\npure helpers consumed by render, and in the reducer, there is no I/O, no\nsubscription and no imperative platform manipulation","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F6.%20Effect%20membrane","start_line":376}],
+      "key": "effect_membrane_latitude"
+    }
+  ],
+  "limitations": [
+    "This is an interpretation of supplied text only, without semantic acceptance, model validation, execution, installed qualification, publication reconstruction or completeness judgment.",
+    "Judgment, traversal and transformation descriptions remain data in the five active families; no judgment, traversal or transformation population is instantiated.",
+    "Reference tables are compactly encoded in constraints rather than expanded into one graph edge for every field. Quoted grounds enable source re-entry; they do not certify all authored paraphrases.",
+    "Occurrence profile inherited record schemas, earlier semantic-object definitions, imported calculus/foundations/profile/activation/product-definition laws, manifests and predecessor bytes are not supplied. Discovery-only nodes and links supply no substitute definitions or authority.",
+    "UX §§7–16 and imported member texts are absent. Their summarized obligations are retained only as stated in supplied sections; detailed carrier bindings, replay-proof contents, seam/accessibility lists, escrow mechanics, failure patterns and result domains cannot be reconstructed.",
+    "Pending UX compliance-test ruling and proposed predecessor count supersession remain pending. Source assertions of conserved predecessor content are not verified comparisons.",
+    "All relation governing flags are false because these records describe source-defined schema links or profile relationships, not admitted instance dependencies or grants in an operating Product.",
+    "Source tensions concerning partial-effect observation, no-effect event binding and stale-readiness refusal wording remain explicit residuals.",
+    "The UX consumer index is compressed into its rule-to-consumer meaning and residual account; every individual navigational link is not materialized as a relation."
+  ],
+  "relations": [
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":557,"quote":"| `application_of` | `Occurrence` | `TraversalApplication` | target equals the occurrence's exact application seed |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":557}],
+      "key": "application_of",
+      "kind": "application_of",
+      "meaning": "Occurrence points to its exact application seed; exactly_one per occurrence.",
+      "source_key": "occurrence",
+      "target_key": "traversal_application"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":558,"quote":"| `applies_traversal` | `TraversalApplication` | exact inherited `Traversal` | target equals the application's and occurrence's traversal ref |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":558}],
+      "key": "applies_traversal",
+      "kind": "applies_traversal",
+      "meaning": "Exactly_one inherited Traversal per application, identical to application and occurrence traversal references.",
+      "source_key": "traversal_application",
+      "target_key": "traversal"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":559,"quote":"| `bound_to_subject` | `Occurrence` | `SubjectBinding` | exactly one stable subject binding |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":559}],
+      "key": "bound_to_subject",
+      "kind": "bound_to_subject",
+      "meaning": "Exactly_one stable subject binding per occurrence.",
+      "source_key": "occurrence",
+      "target_key": "subject_binding"
+    },
+    {
+      "conditions": ["Resolves before occurrence identity is minted."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":560,"quote":"| `intends` | `Occurrence` | `IntendedOutcome` | resolves before occurrence identity is minted |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":560}],
+      "key": "intends",
+      "kind": "intends",
+      "meaning": "Exactly_one intended outcome per occurrence.",
+      "source_key": "occurrence",
+      "target_key": "intended_outcome"
+    },
+    {
+      "conditions": ["Observation precedes any admitted effect for the occurrence."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":561,"quote":"| `observes_before` | `Occurrence` | `Observation` | observation precedes any admitted effect for the occurrence |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":561}],
+      "key": "observes_before",
+      "kind": "observes_before",
+      "meaning": "zero_or_one pre-observation relation of the declared kind.",
+      "source_key": "occurrence",
+      "target_key": "observation"
+    },
+    {
+      "conditions": ["When an effect occurs, observation follows admitted effect disposition."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":562,"quote":"| `observes_after` | `Occurrence` | `Observation` | observation follows the admitted effect disposition when an effect occurs |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":562}],
+      "key": "observes_after",
+      "kind": "observes_after",
+      "meaning": "zero_or_one post-observation relation of the declared kind.",
+      "source_key": "occurrence",
+      "target_key": "observation"
+    },
+    {
+      "conditions": ["Requires exact operation grant; exists iff concrete invocation was dispatched."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":563,"quote":"| `invokes_effect` | `Occurrence` | `EffectInvocation` | optional; requires an exact operation grant |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":563},{"end_line":1352,"quote":"`invokes_effect` exists if and only if a concrete invocation was\ndispatched;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1351}],
+      "key": "invokes_effect",
+      "kind": "invokes_effect",
+      "meaning": "zero_or_one effect invocation per occurrence.",
+      "source_key": "occurrence",
+      "target_key": "effect_invocation"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":564,"quote":"| `operation_of_kind` | `EffectOperation` | `OperationKind` | exactly one operation kind per operation instance |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":564}],
+      "key": "operation_of_kind",
+      "kind": "operation_of_kind",
+      "meaning": "Exactly_one exact OperationKind per operation instance.",
+      "source_key": "effect_operation",
+      "target_key": "operation_kind"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":565,"quote":"| `targets_subject` | `EffectOperation` | `SubjectBinding` | exactly one effect target binding |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":565}],
+      "key": "targets_subject",
+      "kind": "targets_subject",
+      "meaning": "Exactly_one effect target binding per operation.",
+      "source_key": "effect_operation",
+      "target_key": "subject_binding"
+    },
+    {
+      "conditions": ["Exact grant is checked against operation kind, target and territory."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":566,"quote":"| `authorized_by` | `EffectInvocation` | `OperationGrant` | exact grant checked against operation kind, target, and territory |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":566}],
+      "key": "authorized_by",
+      "kind": "authorized_by",
+      "meaning": "Exactly_one OperationGrant reference per invocation; described authorization relation confers no grant in this interpretation.",
+      "source_key": "effect_invocation",
+      "target_key": "operation_grant"
+    },
+    {
+      "conditions": ["Exactly one for every disposition other than no_effect."],
+      "exceptions": ["no_effect has none."],
+      "governing": false,
+      "grounding": [{"end_line":567,"quote":"| `disposition_for` | `EffectDisposition` | `EffectInvocation` | required except for `no_effect`; never rewrites the invocation |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":567}],
+      "key": "disposition_for",
+      "kind": "disposition_for",
+      "meaning": "zero_or_one qualifier; later disposition never rewrites invocation.",
+      "source_key": "effect_disposition",
+      "target_key": "effect_invocation"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":568,"quote":"| `evidenced_by` | `EffectInvocation` | `EffectEvidence` | evidence does not become the mutable subject |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":568}],
+      "key": "evidenced_by",
+      "kind": "evidenced_by",
+      "meaning": "zero_or_more effect-evidence links; evidence never becomes mutable subject.",
+      "source_key": "effect_invocation",
+      "target_key": "effect_evidence"
+    },
+    {
+      "conditions": ["Permitted only by declared scope law naming an exact occurrence."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":569,"quote":"| `event_for` | `FrameworkEvent` | `Occurrence` | optional and permitted only by the event's declared scope law |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":569}],
+      "key": "event_for",
+      "kind": "event_for",
+      "meaning": "zero_or_one occurrence link per event; no universal occurrence membership.",
+      "source_key": "framework_event",
+      "target_key": "occurrence"
+    },
+    {
+      "conditions": ["Complete membership under one exact frontier basis."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":570,"quote":"| `frontier_contains` | `EventFrontier` | `FrameworkEvent` | complete membership under one exact frontier basis |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":570}],
+      "key": "frontier_contains",
+      "kind": "frontier_contains",
+      "meaning": "zero_or_more finite duplicate-free event members, exactly congruent with frontier member references.",
+      "source_key": "event_frontier",
+      "target_key": "framework_event"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":571,"quote":"| `projects_frontier` | `Projection` | `EventFrontier` | exactly one unchanged frontier per projection |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":571}],
+      "key": "projects_frontier",
+      "kind": "projects_frontier",
+      "meaning": "Exactly_one unchanged frontier per projection.",
+      "source_key": "projection",
+      "target_key": "event_frontier"
+    },
+    {
+      "conditions": ["Target is an earlier existing identity input; graph is acyclic."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":572,"quote":"| `identity_depends_on` | `ProfileRecordRef` | `ProfileRecordRef` | earlier identity input; acyclic |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":572}],
+      "key": "identity_depends_on",
+      "kind": "identity_depends_on",
+      "meaning": "Dependent record points to earlier identity input; zero_or_more.",
+      "source_key": "profile_record",
+      "target_key": "profile_record"
+    },
+    {
+      "conditions": ["Admitted material cause; typed subgraph acyclic."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":573,"quote":"| `causally_precedes_occurrence` | `Occurrence` | `Occurrence` | admitted material cause; acyclic |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":573}],
+      "key": "causally_precedes_occurrence",
+      "kind": "causally_precedes_occurrence",
+      "meaning": "Causal predecessor occurrence points to consequent occurrence; zero_or_more.",
+      "source_key": "occurrence",
+      "target_key": "occurrence"
+    },
+    {
+      "conditions": ["Admitted material cause; typed subgraph acyclic."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":574,"quote":"| `causally_precedes_event` | `FrameworkEvent` | `FrameworkEvent` | admitted material cause; acyclic |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":574}],
+      "key": "causally_precedes_event",
+      "kind": "causally_precedes_event",
+      "meaning": "Causal predecessor event points to consequent event; zero_or_more.",
+      "source_key": "framework_event",
+      "target_key": "framework_event"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":575,"quote":"| `supports_event` | `FrameworkEvent` | `FrameworkEvent` | typed evidential lineage; not cause by implication |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":575}],
+      "key": "supports_event",
+      "kind": "supports_event",
+      "meaning": "Supporting event points to supported event; zero_or_more evidential links imply no cause.",
+      "source_key": "framework_event",
+      "target_key": "framework_event"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":576,"quote":"| `corrects_event` | `FrameworkEvent` | `FrameworkEvent` | typed correction lineage; does not erase its target |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":576}],
+      "key": "corrects_event",
+      "kind": "corrects_event",
+      "meaning": "New correction event points to existing corrected event; zero_or_more; target remains immutable.",
+      "source_key": "framework_event",
+      "target_key": "framework_event"
+    },
+    {
+      "conditions": ["Child application belongs to one declared composite application."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":577,"quote":"| `component_of_occurrence` | `Occurrence` | `Occurrence` | child application belongs to one declared composite application |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":577}],
+      "key": "component_of_occurrence",
+      "kind": "component_of_occurrence",
+      "meaning": "Child occurrence points to aggregate; zero_or_one qualifier; no implied material cause.",
+      "source_key": "occurrence",
+      "target_key": "occurrence"
+    },
+    {
+      "conditions": ["For each claim-admission event."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":578,"quote":"| `admits_claim` | `FrameworkEvent` | `RelationClaim` | event binds one unchanged claim and its exact admission judgment |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":578}],
+      "key": "admits_claim",
+      "kind": "admits_claim",
+      "meaning": "Exactly_one unchanged claim bound with its exact admission judgment.",
+      "source_key": "framework_event",
+      "target_key": "relation_claim"
+    },
+    {
+      "conditions": ["For each claim-admission event."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":579,"quote":"| `materializes_relation` | `FrameworkEvent` | exact inherited `TypedRelation` | identity derives from claim, both judgments, event, and profile basis |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":579}],
+      "key": "materializes_relation",
+      "kind": "materializes_relation",
+      "meaning": "Exactly_one exact inherited relation whose identity derives from claim, claim/event judgments, event and profile basis.",
+      "source_key": "framework_event",
+      "target_key": "typed_relation"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":580,"quote":"| `transition_for` | `TransitionSubject` | `Occurrence` | binds the exact transition subject judged |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families","start_line":580}],
+      "key": "transition_for",
+      "kind": "transition_for",
+      "meaning": "Exactly_one occurrence binding for the exact transition subject judged.",
+      "source_key": "transition_subject",
+      "target_key": "occurrence"
+    },
+    {
+      "conditions": ["A module realizes a UX surface within applicable adoption scope."],
+      "exceptions": ["Non-UX modules apply DESIGN_MODULE alone."],
+      "governing": false,
+      "grounding": [{"end_line":183,"quote":"This profile refines DESIGN_MODULE with the\nadditional rules a module needs when it realises a UX surface","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F2.%20Role%20and%20composition","start_line":175}],
+      "key": "ux_refines_module_discipline",
+      "kind": "refines",
+      "meaning": "UX adds surface-specific discipline to the DESIGN_MODULE role identified among imported member roles, without redefining the parent.",
+      "source_key": "ux_profile",
+      "target_key": "ux_imported_member_roles"
+    },
+    {
+      "conditions": ["A typed Msg changes product truth."],
+      "exceptions": ["View-local messages are subject to local-state conditions instead."],
+      "governing": false,
+      "grounding": [{"end_line":241,"quote":"Such a message maps to one admitted product carrier","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers","start_line":241}],
+      "key": "ux_changes_through_carrier",
+      "kind": "requires_admitted_carrier",
+      "meaning": "Surface's product-changing message maps to exactly one admitted carrier; absent carrier blocks rather than creates UX-local constructive authority.",
+      "source_key": "ux_surface",
+      "target_key": "admitted_product_carrier"
+    },
+    {
+      "conditions": ["Cmd is declared and produced by reducer."],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [{"end_line":376,"quote":"The membrane interprets Cmd values\nproduced by the reducer and translates side-effect outcomes back into Msg\nvalues delivered to the reducer.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F6.%20Effect%20membrane","start_line":374}],
+      "key": "membrane_interprets_process_commands",
+      "kind": "interprets_and_returns_messages",
+      "meaning": "Membrane interprets Elm Cmd descriptions and returns outcomes as typed Msg to Update; it does not own transition decisions.",
+      "source_key": "effect_membrane",
+      "target_key": "elm_process_model"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "The full inherited schema, external target semantics and applicable external-domain population cannot be instantiated or validated. References are retained as named contracts, not fabricated local entities.",
+      "grounding": [{"end_line":258,"quote":"`Sigma:ReferenceDomain`, `Sigma:ExternalTargetKind` and\n`Sigma:BasisRelation` are populations of this profile's signature, named\nhere and not by the calculus","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table","start_line":256}],
+      "key": "inherited_schema_dependency",
+      "subject_key": "reference_domains",
+      "uncertainty": "Earlier closed semantic-object schemas, inherited calculus record laws, Product-adoption bindings and concrete external resolutions are outside supplied sections."
+    },
+    {
+      "consequence": "Result mappings and re-entry descriptions are represented declaratively; no judgments, joins, traversal execution, proof, reconciliation or authority resolution are performed.",
+      "grounding": [{"end_line":1083,"quote":"The profile changes none of\ntheir laws, which are AXIOMATIC_CALCULUS §5","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":1082}],
+      "key": "result_operational_dependencies",
+      "subject_key": "occurrence_results",
+      "uncertainty": "Referenced AC-003/007/010/016, calculus §5, FOUNDATIONS conjunction/recording, PROFILES binding and ACTIVATION restart laws are not supplied in full; five active families do not encode their operational semantics."
+    },
+    {
+      "consequence": "Retain both the obligation to obtain a bounded post-observation for a partial disposition and the undecided case where it is not yet acquired; do not infer a fully admissible disposition from missing observation.",
+      "grounding": [{"end_line":975,"quote":"the bounded post-observation that the\n  [effect law](#mutable-subject-effect-relation) requires is not yet\n  acquired","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":973},{"end_line":1347,"quote":"- `partial_effect` binds one dispatched invocation, a bounded\n  post-observation, bounded evidence, the `partial_effect` residual and\n  stop, and explicit re-entry before any further effect; and","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1345}],
+      "key": "partial_observation_tension",
+      "subject_key": "effect_readiness_and_disposition",
+      "uncertainty": "The text distinguishes incomplete observation from closed disposition requirements but does not fully specify the intermediate record/admission state."
+    },
+    {
+      "consequence": "Do not fabricate an invocation or occurrence reference to admit an effect-disposition event for a no_effect record lacking invocation.",
+      "grounding": [{"end_line":539,"quote":"| `effect-disposition` | exact `EffectDisposition` | `occurrence_scoped`; occurrence ref equals the invocation's occurrence; claim fields absent |","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population","start_line":539},{"end_line":1342,"quote":"- `no_effect` has no dispatched invocation and records that no domain\n  effect was attempted;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation","start_line":1341}],
+      "key": "no_effect_event_binding_gap",
+      "subject_key": "event_payload_scope_contract",
+      "uncertainty": "Event-kind law binds effect-disposition scope through invocation; no_effect may have no invocation reference, and the supplied sections do not specify that event case."
+    },
+    {
+      "consequence": "No exact edition identity, installed manifest membership, imported-basis resolution or predecessor derivation verification is claimed.",
+      "grounding": [{"end_line":1577,"quote":"The profile publication member resolves by the same manifest and member\nrule.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature","start_line":1574}],
+      "key": "publication_resolution_unavailable",
+      "subject_key": "profile_signature_basis",
+      "uncertainty": "Exact publication/calculus/predecessor basis and manifest bytes required by the described identity law are absent; source-file digests are not substitutes."
+    },
+    {
+      "consequence": "Keep the checklist coverage requirement without replacing the explicit stale decision, hold stop and stale_currentness residual with a refused decision.",
+      "grounding": [{"end_line":1643,"quote":"16. refusal on a stale pre-effect observation and on grant currentness;","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations","start_line":1643},{"end_line":802,"quote":"stale yields `hold` plus `stale_currentness` and re-observation; unauthorized yields `refusal` and no dispatch","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds","start_line":802}],
+      "key": "stale_readiness_wording",
+      "subject_key": "occurrence_conformance_coverage",
+      "uncertainty": "Checklist uses 'refusal' for stale observation/grant while judgment law gives stale with hold, re-observation or stopping; whether checklist means dispatch refusal generically is unstated."
+    },
+    {
+      "consequence": "Dynamic derivation-count wording is interpreted as the proposed current text without declaring accepted supersession or predecessor equivalence.",
+      "grounding": [{"end_line":1709,"quote":"superseded, proposed and pending the product owner's acceptance, by AXIOMATIC_CALCULUS §8","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FSource%20dispositions","start_line":1709}],
+      "key": "pending_derivation_count_supersession",
+      "subject_key": "source_conservation_claims",
+      "uncertainty": "Owner acceptance of replacing rc.2's fourteen-member sentence is expressly pending; predecessor text and STDO-UP-015 are not supplied for independent comparison."
+    },
+    {
+      "consequence": "Retain named obligations and bindings only to their supplied extent. Do not invent replay-proof components, carrier-binding requirements, seam lists, accessibility declarations, escrow exemptions/triggers, failure patterns or refined result values.",
+      "grounding": [{"end_line":31,"quote":"Msg-replay test and Msg-replay proof (§8), scaffold and exemption record\n(§12), UX sprint (§12) and the refined result values of §15.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX","start_line":30}],
+      "key": "ux_missing_imports_and_later_sections",
+      "subject_key": "ux_profile",
+      "uncertainty": "UX later sections and imported profiles/methods are discovery references, not supplied definitions. No Product adoption, contract or actual surface is instantiated."
+    },
+    {
+      "consequence": "Both criteria remain represented; the supplied foundation table's interim stricter interpretation is retained without issuing a compliance result or inventing §15 details.",
+      "grounding": [{"end_line":136,"quote":"which of the two compliance tests governs, the test over §4 to §10 with no §13 failure pattern or the test over §4 to §8: pending the product owner's ruling; §15 applies the stricter while the ruling is pending","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law","start_line":136},{"end_line":287,"quote":"This\ntest differs from the test of §4 Realisation discretion; §15 states which\ntest applies while the product owner's ruling between them is pending.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate","start_line":285},{"end_line":332,"quote":"This test differs from the test of §4 Process model without stack\nmandate; §15 states which test applies while the product owner's ruling\nbetween them is pending.","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion","start_line":330}],
+      "key": "ux_competing_compliance_tests",
+      "subject_key": "ux_realisation_inspection_test",
+      "uncertainty": "Owner ruling between §§4–8 preservation and §§4–10 inspection plus absent §13 failures is pending; §15 itself is unavailable."
+    },
+    {
+      "consequence": "Retain the index as an application-routing account, not additional governing authority: carrier rule consumers include ACTIVATION prompt construction, composition/world-model surfaces, compliance tests, adoption, escrow, failures/review/results; process/effect/replay/type/accessibility/discretion/authority/escrow rules route to their cited adoption, failure, review and result loci; result consumers return only their own test/exit and FOUNDATIONS owns the core. Missing consumer texts are not reconstructed.",
+      "grounding": [{"end_line":168,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot","section_id":"repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law","start_line":167}],
+      "key": "ux_consumer_index_detail",
+      "subject_key": "ux_foundation_account",
+      "uncertainty": "The finite schema compresses the source's per-row navigational consumer lists; unprovided target clauses and enumerated counts are not available for complete endpoint interpretation."
+    }
+  ]
+}

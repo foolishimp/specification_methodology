@@ -1,0 +1,46 @@
+{
+  "decision": "patch",
+  "limitations": [
+    "Only the three listed invalid grounding entries are repaired using supplied source; all other authored content remains unchanged.",
+    "These proposed repairs establish no semantic equivalence, completeness, acceptance, authority, qualification or execution."
+  ],
+  "patches": [
+    {
+      "family": "concepts",
+      "grounding_index": 1,
+      "reason": "Preserves source indentation and directly supports the distinction between source identity, fidelity and question-specific sufficiency.",
+      "record_key": "derived_surface",
+      "replacement": {
+        "end_line": 924,
+        "quote": "- Matching source identities establish only that the surface was derived\n  from those sources. They establish neither its fidelity to them nor its\n  sufficiency for a question; a surface found insufficient for a named\n  question is handled as Acquisition above states.\n",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+        "start_line": 921
+      }
+    },
+    {
+      "family": "relations",
+      "grounding_index": 0,
+      "reason": "Directly supports work state's recording of current state, its retained components and its distinction from an actor's account.",
+      "record_key": "work_state_records_current_state",
+      "replacement": {
+        "end_line": 125,
+        "quote": "Construction moves work from a current state towards a destination\n(P0, P2). The current state is the material state of the workspace and\nits authoritative inputs, together with what is justifiably known about\nthat state, with the unknowns explicit. The work state of §5 records it:\nthe workspace, the governing basis, and the closed results and judgments\nthat still apply, with the residuals and the uncertainty over external\neffects as the explicit unknowns. An actor's context is an account of the\ncurrent state, not the state itself\n([§5](#the-workspace-and-an-actors-account)) (P3, P5).\n",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+        "start_line": 117
+      }
+    },
+    {
+      "family": "residuals",
+      "grounding_index": 0,
+      "reason": "Corrects the section identifier transcription error and locates the unchanged quotation establishing RF-009's ownership of the distinct structures.",
+      "record_key": "configuration_external_distinctions",
+      "replacement": {
+        "end_line": 551,
+        "quote": "RF-009 owns that list and the rule, and this\nsection adds no structure to it and drops none.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+        "start_line": 550
+      }
+    }
+  ],
+  "refusal_reason": ""
+}

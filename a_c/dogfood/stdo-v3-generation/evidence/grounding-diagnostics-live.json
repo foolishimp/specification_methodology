@@ -1,0 +1,218 @@
+{
+  "profile": "ac.generation.grounding-diagnostics/1",
+  "observed_at": "2026-10-18T03:54:09.393767+00:00",
+  "groups": [
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "schema_valid_initial_drafts_observed": 5,
+      "grounding_entries": 677,
+      "classes": {
+        "strict_valid": 676,
+        "unique_same_section_whitespace_or_range_recovery": 1
+      },
+      "failures": [
+        {
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "record_key": "historical_verification_requirements",
+          "field": "/constraints/23/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/IDENTITY_METHOD.md#Identity%20Method%2FDerivation%20Verification%20Material",
+          "answer_sha256": "6e761f010c73b6757426101e35faeb980f6f9709d688514255d412c9934ecc69"
+        }
+      ]
+    },
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "schema_valid_initial_drafts_observed": 5,
+      "grounding_entries": 672,
+      "classes": {
+        "strict_valid": 670,
+        "no_same_section_whitespace_equivalent_quote": 2
+      },
+      "failures": [
+        {
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "record_key": "post_ticket_bounded_review",
+          "field": "/constraints/29/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11D.%20Post-Ticket%20Design%20Review%20Rule",
+          "answer_sha256": "bb2c87d59da4bcb8be75ddff921453578c007cbd224df2fef07ca57177f8cf02"
+        },
+        {
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "record_key": "declared_operator_and_regrouping",
+          "field": "/constraints/56/grounding/1",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20conjunction",
+          "answer_sha256": "bb2c87d59da4bcb8be75ddff921453578c007cbd224df2fef07ca57177f8cf02"
+        }
+      ]
+    },
+    {
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "schema_valid_initial_drafts_observed": 5,
+      "grounding_entries": 575,
+      "classes": {
+        "strict_valid": 565,
+        "unique_same_section_whitespace_or_range_recovery": 6,
+        "source_path_and_heading_match_but_subject_prefix_differs": 4
+      },
+      "failures": [
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "derived_surface",
+          "field": "/concepts/18/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "work_state_records_current_state",
+          "field": "/relations/8/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "configuration_external_distinctions",
+          "field": "/residuals/3/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "subject_axiomatic_calculus",
+          "field": "/concepts/4/grounding/1",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "constraint_surface_use_conditions",
+          "field": "/constraints/32/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "surface_worker_variation",
+          "field": "/latitude/4/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "surface_support_kinds_unresolved",
+          "field": "/residuals/5/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "record_key": "dominance_constrains_selection",
+          "field": "/relations/10/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "answer_sha256": "52a20750778ae0fea65616e0c0d7e2962e7050c9c32bcd673c715042edb26bd8"
+        },
+        {
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "record_key": "python_typed_design_requirements",
+          "field": "/constraints/17/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+          "answer_sha256": "52a20750778ae0fea65616e0c0d7e2962e7050c9c32bcd673c715042edb26bd8"
+        },
+        {
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "record_key": "effect_edge",
+          "field": "/concepts/25/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F10.%20Realisation%20rules%2FEffect%20edge",
+          "answer_sha256": "343d5386821b0f01a75d83f5ce4d230df40de91ce146310be7c61b49f7e6ce6b"
+        }
+      ]
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "schema_valid_initial_drafts_observed": 5,
+      "grounding_entries": 576,
+      "classes": {
+        "strict_valid": 569,
+        "source_path_and_heading_match_but_subject_prefix_differs": 2,
+        "no_same_section_whitespace_equivalent_quote": 2,
+        "unique_same_section_whitespace_or_range_recovery": 3
+      },
+      "failures": [
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "reconfiguration_conservation",
+          "field": "/constraints/13/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "qualification_case_requirements",
+          "field": "/constraints/33/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "work_state_external_continuations",
+          "field": "/residuals/10/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "closed_result",
+          "field": "/concepts/4/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "resource_declaration_and_measurement",
+          "field": "/constraints/4/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "assurance_family_external_dependencies",
+          "field": "/residuals/4/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "module_unit_proof",
+          "field": "/concepts/1/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "answer_sha256": "5e441fc12f0c59a84403fd4b9732eed47fec25c30b572f217e54149cff121b07"
+        }
+      ]
+    }
+  ],
+  "claim": "Observed source-locator syntax/range/quotation classes only; these do not establish why a model made an error or whether its statement is faithful."
+}

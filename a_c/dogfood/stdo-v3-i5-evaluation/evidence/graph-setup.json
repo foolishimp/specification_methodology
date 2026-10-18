@@ -1,0 +1,65 @@
+{
+  "import_seconds": 0.146625,
+  "limits": [
+    "One local build measurement; not a throughput estimate.",
+    "Common historical LLM/F_P authoring and validation costs are not measured or attributed to either arm.",
+    "Full original transport preparation cost is separate from the actor's filtered discovery-view startup."
+  ],
+  "profile": "ac.eval.graph-setup/1",
+  "results": [
+    {
+      "counts": {
+        "edges": 78174,
+        "nodes": 53654
+      },
+      "full_export_bytes": 82282887,
+      "graph_scope": "Full already-qualified T003 transport, including historical source files excluded from actor discovery. Actor filtering/loading is separately metered per run.",
+      "gzip_export_bytes": 5435508,
+      "native_program_bytes": 14403693,
+      "preserved_node_and_edge_counts": true,
+      "source_manifest_sha256": "f7140b802be45b89b82d86b07e837e8e19dcb8235f1676cd0d4f56276a27fbec",
+      "stages": {
+        "compress_export_seconds": 0.834361,
+        "construct_and_validate_model_seconds": 2.97503,
+        "materialize_codec_seconds": 2.349968,
+        "upstream_build_seconds": 1.998826,
+        "upstream_export_seconds": 1.314318,
+        "upstream_reload_seconds": 0.562453,
+        "verify_frozen_source_seconds": 0.52981
+      },
+      "tenant": "codex"
+    },
+    {
+      "counts": {
+        "edges": 6414,
+        "nodes": 4565
+      },
+      "full_export_bytes": 11276154,
+      "graph_scope": "Full already-qualified T003 transport, including historical source files excluded from actor discovery. Actor filtering/loading is separately metered per run.",
+      "gzip_export_bytes": 2104108,
+      "native_program_bytes": 220494,
+      "preserved_node_and_edge_counts": true,
+      "source_manifest_sha256": "d9a6dc3826270addc3d69e9db2e6c6733f5cc691659583a176a667ac1f61e412",
+      "stages": {
+        "compress_export_seconds": 0.233671,
+        "construct_and_validate_model_seconds": 0.535948,
+        "materialize_codec_seconds": 0.453567,
+        "upstream_build_seconds": 0.307677,
+        "upstream_export_seconds": 0.125024,
+        "upstream_reload_seconds": 0.035067,
+        "verify_frozen_source_seconds": 0.021235
+      },
+      "tenant": "claude"
+    }
+  ],
+  "script_sha256": "45eee2efa75c6dcf115e6217820cd5398d5c233c3dd6de7913b4b3f1db98ec74",
+  "upstream": {
+    "clean": true,
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "packages": {
+      "networkx": "3.4.2",
+      "tree-sitter": "0.25.2"
+    },
+    "version": "0.9.90"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "profile": "ac.generation.unblinded-fidelity-summary/1",
+  "models": [
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "assessor": "/root/ac_generation_codex_fidelity",
+      "label": "2be8e2f40ea7",
+      "model_sha256": "649d9e19a7b7949501a4e55cb173663b2e87a2e61c3df04ddc87354e801dcf78",
+      "criteria": {
+        "preserved": 24
+      },
+      "prohibited_checks": {
+        "absent": 22
+      },
+      "probe_verdicts": {
+        "preserved": 6
+      },
+      "blinding_disclosures": []
+    },
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "assessor": "/root/ac_generation_codex_fidelity",
+      "label": "e54f9bfd20d3",
+      "model_sha256": "50971f14f3014e025407efe0d0ad8de57f79fe8e74c5c5afe055aecf7dc878e5",
+      "criteria": {
+        "preserved": 24
+      },
+      "prohibited_checks": {
+        "absent": 22
+      },
+      "probe_verdicts": {
+        "preserved": 6
+      },
+      "blinding_disclosures": []
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "assessor": "/root/ac_generation_claude_fidelity",
+      "label": "9bb8e6128154",
+      "model_sha256": "1f7a4079d4615fc21e0503e6f0393d448b3f1c126bbb70a0203ed8816eaffecd",
+      "criteria": {
+        "preserved": 24
+      },
+      "prohibited_checks": {
+        "absent": 23
+      },
+      "probe_verdicts": {
+        "preserved": 6
+      },
+      "blinding_disclosures": [
+        "The exact model /profile reads 'a_c.graphify.model/1'. This explicitly names the shared carrier, not an assigned source-generation treatment; no treatment is inferred. No explicit direct-source or Graphify-generation arm claim was found in the model strings or task-relevant frozen source wording."
+      ]
+    },
+    {
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "assessor": "/root/ac_generation_claude_fidelity",
+      "label": "558bb480498c",
+      "model_sha256": "95bd38e3ca11127c8c57cbcd55edcf0b2fdc001f723a4df1e3917351b006a973",
+      "criteria": {
+        "preserved": 24
+      },
+      "prohibited_checks": {
+        "absent": 23
+      },
+      "probe_verdicts": {
+        "preserved": 6
+      },
+      "blinding_disclosures": [
+        "The exact model /profile reads 'a_c.graphify.model/1'. This explicitly names the shared carrier, not an assigned source-generation treatment; no treatment is inferred. No explicit direct-source or Graphify-generation arm claim was found in the model strings or task-relevant frozen source wording."
+      ]
+    }
+  ],
+  "totals": {
+    "criteria": {
+      "preserved": 96
+    },
+    "prohibited_checks": {
+      "absent": 90
+    },
+    "probe_verdicts": {
+      "preserved": 24
+    }
+  },
+  "order": "Treatment map consumed after both assessments closed and protected inputs/coordinates passed.",
+  "closed_assessment_sha256": "715f6135363af3f4545b22b8746ebe2a9163bf80299ce70938b8e8d309449805",
+  "claim": "Both treatments preserve all sampled distinctions in the independent documentary assessments; no quality difference detected on these probes. Whole-method fidelity, executable behavior and semantic acceptance are not established.",
+  "semantic_acceptance": "not issued"
+}

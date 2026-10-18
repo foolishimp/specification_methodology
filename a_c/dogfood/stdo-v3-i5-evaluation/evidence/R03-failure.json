@@ -1,0 +1,26 @@
+{
+  "profile": "ac.eval.failure-observation/1",
+  "run_id": "R03",
+  "outcome": "shared_wall_timeout_without_final_answer",
+  "tool_calls": 21,
+  "last_tool_elapsed_seconds": 116.78340758394916,
+  "tool_errors": [
+    {
+      "tool": "search",
+      "code": "narrow_read_required"
+    },
+    {
+      "tool": "read_source",
+      "code": "anchor_not_found"
+    },
+    {
+      "tool": "read_source",
+      "code": "anchor_not_found"
+    }
+  ],
+  "graph_startup_seconds": 13.796122249914333,
+  "stderr_bytes": 0,
+  "backend_usage_returned": false,
+  "cause": "Unresolved. Retrieval returned and no tool was pending in the final event history; subsequent CLI generation did not return a final answer before720s. This does not establish Graphify caused the timeout.",
+  "retry": "No quality-run replacement under the frozen protocol."
+}

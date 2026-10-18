@@ -1,0 +1,388 @@
+{
+  "actual_cli_use": {
+    "report": "evidence/actual-use.json",
+    "sha256": "ede850270ded4c315c32284ac1184151e265067cd1c08959c9432602cd568c7c",
+    "trials": [
+      {
+        "elapsed_seconds": 20.684,
+        "exit_code": 0,
+        "name": "writing"
+      },
+      {
+        "elapsed_seconds": 20.778,
+        "exit_code": 0,
+        "name": "release-questions"
+      },
+      {
+        "conditional_checks": {
+          "routes": 3,
+          "target_indexes_promoted": false,
+          "unknown_applicability_retained": true
+        },
+        "elapsed_seconds": 20.762,
+        "exit_code": 0,
+        "name": "conditional"
+      },
+      {
+        "elapsed_seconds": 20.815,
+        "exit_code": 2,
+        "name": "short-budget"
+      },
+      {
+        "elapsed_seconds": 21.078,
+        "exit_code": 0,
+        "name": "find"
+      }
+    ]
+  },
+  "actual_upstream": {
+    "checks": [
+      "actual upstream validates extraction",
+      "dedup=False builder preserves every node identity and occurrence edge",
+      "actual exporter/loader preserve every node identity and edge count",
+      "decoder recovers complete exact model after actual upstream processing",
+      "unseeded depth-zero native search retrieves expected authored wording",
+      "exact seed resolves and renders bounded native graph context",
+      "missing-occurrence refused after actual upstream export",
+      "reversed-occurrence refused after actual upstream export",
+      "search-identity refused after actual upstream export",
+      "directed-profile refused after actual upstream export"
+    ],
+    "edges": 59550,
+    "exported_graph": {
+      "bytes": 48489869,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/graphify-out/v3-i3-c29b2be/graph.json",
+      "sha256": "565cc9795f50e55827b0c53d60cc0bdc19d5e7713d59d4962c93dad77a69a1ab"
+    },
+    "nodes": 41144,
+    "report": "evidence/native-graphify.json",
+    "sha256": "903ecac462225dbeb504d5273e1d07d71483ca40c2e886de9d8071b15563adef",
+    "upstream": {
+      "clean": true,
+      "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+      "entrypoint_sha256": {
+        "graphify/build.py": "742075a82ec2797925a2e9d16d325b2e86a3e674eea04f06377f88bf7653fc17",
+        "graphify/export.py": "737cb97c5ca596f48a405a26e283140272b14d7ce5b63c89e6542ba8ac904e17",
+        "graphify/paths.py": "529cf874f7a990d8f318c8ca343bffced5378a5cff74f31c36404dc609ee5855",
+        "graphify/serve.py": "5ed6d9b150aae093b2f7e3b8cd7a7d4b922d73f88829b4b3992a1399159520be",
+        "graphify/validate.py": "be068c6b2ff4e514f31663e0155a9d63f35096d154b98ab6c9c467a23febd6f7"
+      },
+      "packages": {
+        "networkx": "3.4.2",
+        "tree-sitter": "0.25.2"
+      },
+      "version": "0.9.90"
+    }
+  },
+  "all_selector_comparison": {
+    "claim": "exact equality with original native direct-reference closure for every selector; no interpretation-fidelity judgment",
+    "required_clause_closure": {
+      "max": 131,
+      "median": 18,
+      "min": 6
+    },
+    "selectors_compared": 725
+  },
+  "basis_check": {
+    "command": [
+      "stdo",
+      "status",
+      "--definition",
+      "a_c/stdo_a_c.json",
+      "--verify"
+    ],
+    "exit_code": 0,
+    "failures": [],
+    "installed": true,
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "valid": true
+  },
+  "claim": "source-program transport and mechanical acquisition only; no v3 semantic acceptance or efficiency result",
+  "counts": {
+    "clauses": 705,
+    "conditional_routes": 30,
+    "graph_links": 59550,
+    "graph_nodes": 41144,
+    "inline_contract_arguments": 410,
+    "provenance_routes": 2046,
+    "records": 1433,
+    "required_reference_occurrences": 7741,
+    "residuals": 2,
+    "selectors": 725,
+    "semantic_contracts_in_frozen_account": 37,
+    "typed_references": 19850
+  },
+  "historical_evidence": "T-001 records preceding codec e8d3fcaa26bf724186d05ba245fa621bfc87c8f75c5d9294795d619a9467e1bb; this record binds current codec and corpus.",
+  "input": {
+    "archive_sha256": "13aed5e6ba34955865c7de8099fce462bbb1affb790b6106376ab46a7da2be05",
+    "canonical_program_sha256": "7337088a3f82fa8b8614adde486abf1d0d62bae5df69093d20a5fca7ddb85a58",
+    "frozen_manifest_sha256": "9f71927ee90ef25081658016a85d2cc8f1a7b551e5874b46ceaa150619140f2e",
+    "package_commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+    "package_tree": "3648bfc1a664ec8e7f93a686d7818461f4034cac",
+    "raw_program_sha256": "1fb7d06294717fa12cb3daad5dc5ec037446962a48f2a5b1214bd594948cd5c1",
+    "source_commit": "c29b2be37f9a12e050478be97793927d99c01781"
+  },
+  "kind": "a_c.v3-i3.transport-verification",
+  "model": {
+    "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+    "profile": "a_c.graphify.model/1",
+    "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+  },
+  "nonauthor_review": {
+    "conflict_disclosure": "Reviewer supplied mapping advice and counterexamples; authored no implementation/test files. This is not the independent v3 semantic review.",
+    "corpus_probe_sha256": "1b21b94ddfce91818c49eebb944f9ed9c31d7d0298a0f951e1424b842f7addad",
+    "differential_selections": 1500,
+    "findings": [],
+    "randomized_models": 100,
+    "return": "evidence/REVIEW.md",
+    "reviewer": "/root/v3_graphify_mapping_assessment",
+    "scale_probe_sha256": "27e9f6aab92dedb84808bca1664d1199e309e5f167a8b63de5302e8bc359cb2e",
+    "verdict": "passes bounded transport review"
+  },
+  "observations": {
+    "claim": "observations only; no matched accepted-result efficiency comparison",
+    "compressed_artifacts": {
+      "graph.json.gz": {
+        "bytes": 2051736,
+        "sha256": "d93ffd33f7d6199f89b2ab99eb489f82b9f433995a2215978dae9641bbcd6c5b"
+      },
+      "model.json.gz": {
+        "bytes": 1159246,
+        "sha256": "1c5fd2a953efcee145c3165c859680c838bb988b5c93c7eeaea5394c80a435a0"
+      },
+      "selectors.json": {
+        "bytes": 334808,
+        "sha256": "80f21cf97e9455d57fe2afd23356727145cbf3fab9890d5837424d3cfeb14474"
+      }
+    },
+    "native_trial": {
+      "build_seconds": 1.754,
+      "python": "3.12.8",
+      "total_seconds": 51.593
+    },
+    "sizes": {
+      "canonical_program_bytes": 8773879,
+      "graph_json_bytes": 44108009,
+      "model_json_bytes": 14601339,
+      "raw_program_bytes": 9691367
+    }
+  },
+  "pin_checks": {
+    "owner_body_pins": 701,
+    "source_block_pins": 3476
+  },
+  "product_composition": [],
+  "recorded_at": "2026-10-14T18:47:41.582861+00:00",
+  "remaining_separate_decisions": [
+    "Original interpretation fidelity and independent v3 semantic review",
+    "Task sufficiency and accepted-result efficiency",
+    "Semantic acceptance and full calculus admission",
+    "Product acceptance, installed qualification and release"
+  ],
+  "schema_version": 1,
+  "semantic_graph_sha256": "b87bc539e366f6b71491dacaf1eeee78a103cf6bee6cc666414c91fd3686af90",
+  "source_inventory": [
+    {
+      "bytes": 5851,
+      "path": "a_c/.ai-workspace/tickets/active/T-002-v3-i3-representation.md",
+      "sha256": "c3380fe5a57ac08c081741d0318945e20dcf36143bb576ec03d18912cb313b68"
+    },
+    {
+      "bytes": 1267,
+      "path": "a_c/AGENTS.md",
+      "sha256": "41d4a657c76c82be21818a0c7eec131ca6970b9a0ce086733a3ba92af5aab42f"
+    },
+    {
+      "bytes": 417,
+      "path": "a_c/CLAUDE.md",
+      "sha256": "b75461f531e852b330f1d8eb2288fa23864e5b813c47aba27820a5d4fe7bebf0"
+    },
+    {
+      "bytes": 1839,
+      "path": "a_c/README.md",
+      "sha256": "cd3a037310c2bfbc314da0c2bd0ce482f3df9444927c56fe16afce89545c9bce"
+    },
+    {
+      "bytes": 8020,
+      "path": "a_c/build_tenants/graphify/README.md",
+      "sha256": "6d51eaa9cbcf89e86f74b3e7c15218c501554f7a76971e29096c4862b0219149"
+    },
+    {
+      "bytes": 49166,
+      "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    {
+      "bytes": 8829,
+      "path": "a_c/build_tenants/graphify/design/README.md",
+      "sha256": "50972dd5793d9bb17e4db2ff2d8f7989c3af3e7ebdbb56250fbfb05dedf654c2"
+    },
+    {
+      "bytes": 149,
+      "path": "a_c/build_tenants/graphify/mypy.ini",
+      "sha256": "2ebf1ac43e89df83b0cd42a01ea0a3f00ee5f1a82045281357369847fd91b461"
+    },
+    {
+      "bytes": 22990,
+      "path": "a_c/build_tenants/graphify/test_env/check_upstream.py",
+      "sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561"
+    },
+    {
+      "bytes": 14839,
+      "path": "a_c/build_tenants/graphify/test_env/fixture_support.py",
+      "sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6"
+    },
+    {
+      "bytes": 278,
+      "path": "a_c/build_tenants/graphify/test_env/requirements-qualification.txt",
+      "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5"
+    },
+    {
+      "bytes": 32150,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_graph.py",
+      "sha256": "406f07ad5c3944abe209a9aada1d18bcb94e283bef54a0a3167fdba9894e8ec7"
+    },
+    {
+      "bytes": 4505,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/DESIGN.md",
+      "sha256": "3c37c81c3352dfc6641199cb1f75ad112f8602361db1fd77cc842f1a8400e403"
+    },
+    {
+      "bytes": 10275,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/README.md",
+      "sha256": "0981af61586e130f66151489d1e509f9763c3e5b4e9053b39e4894b67e610dd4"
+    },
+    {
+      "bytes": 2051736,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/artifacts/graph.json.gz",
+      "sha256": "d93ffd33f7d6199f89b2ab99eb489f82b9f433995a2215978dae9641bbcd6c5b"
+    },
+    {
+      "bytes": 3787,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/artifacts/manifest.json",
+      "sha256": "4c4cc00caa6ddff6ab84378e67c9998dc237e3244939753cb42c1cf94d76bb9b"
+    },
+    {
+      "bytes": 1159246,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/artifacts/model.json.gz",
+      "sha256": "1c5fd2a953efcee145c3165c859680c838bb988b5c93c7eeaea5394c80a435a0"
+    },
+    {
+      "bytes": 334808,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/artifacts/selectors.json",
+      "sha256": "80f21cf97e9455d57fe2afd23356727145cbf3fab9890d5837424d3cfeb14474"
+    },
+    {
+      "bytes": 3311,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/REVIEW.md",
+      "sha256": "00498bf8c15dfca22e92f001172bbf59554b3b144ddd56d0e58bafd4debba430"
+    },
+    {
+      "bytes": 7275,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/actual-use.json",
+      "sha256": "ede850270ded4c315c32284ac1184151e265067cd1c08959c9432602cd568c7c"
+    },
+    {
+      "bytes": 4001,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/independent_corpus_probe.py",
+      "sha256": "1b21b94ddfce91818c49eebb944f9ed9c31d7d0298a0f951e1424b842f7addad"
+    },
+    {
+      "bytes": 3767,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/independent_scale_probe.py",
+      "sha256": "27e9f6aab92dedb84808bca1664d1199e309e5f167a8b63de5302e8bc359cb2e"
+    },
+    {
+      "bytes": 22277,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/native-graphify.json",
+      "sha256": "903ecac462225dbeb504d5273e1d07d71483ca40c2e886de9d8071b15563adef"
+    },
+    {
+      "bytes": 10462,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/evidence/native_graphify_trial.py",
+      "sha256": "be37065e100be88c7c5a3450fcaddf53d12bb16a6dd1c641bb2202c1e5cd4b9c"
+    },
+    {
+      "bytes": 3075652,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/input/candidate.tar.gz",
+      "sha256": "13aed5e6ba34955865c7de8099fce462bbb1affb790b6106376ab46a7da2be05"
+    },
+    {
+      "bytes": 16566,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/input/manifest.json",
+      "sha256": "9f71927ee90ef25081658016a85d2cc8f1a7b551e5874b46ceaa150619140f2e"
+    },
+    {
+      "bytes": 45717,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+      "sha256": "4f4ce6d51e9319187d1be514a3a1529376ea295c00199c2ebb978897b2cbc78a"
+    },
+    {
+      "bytes": 13162,
+      "path": "a_c/dogfood/stdo-v3-i3-c29b2be/test_representation.py",
+      "sha256": "34a3be21db51bc6acf9e854617cae482ff5f511fb27d83a2f5d2ed340146cbe2"
+    },
+    {
+      "bytes": 1848,
+      "path": "a_c/specification/GOALS.md",
+      "sha256": "f097982145a80ee8adc8be18c4bfec13bcd2cb28e99b5af64c930d2bb109c3a0"
+    },
+    {
+      "bytes": 697,
+      "path": "a_c/specification/INTENT.md",
+      "sha256": "c7023b8938c3ac105ad30b380921d9e94b988a7b795afaef71f81c12cfbcaf9f"
+    },
+    {
+      "bytes": 2830,
+      "path": "a_c/specification/PRODUCT.md",
+      "sha256": "7db5a9fbc92cbf8fab2612153d6c6d586bca7a610138c7ee1ed3041e50b8a9ea"
+    },
+    {
+      "bytes": 1898,
+      "path": "a_c/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "c1896b3d27c8445bfac02852a60927e481bbb1a1b0df7ecba84adadb86e086d2"
+    },
+    {
+      "bytes": 4033,
+      "path": "a_c/specification/requirements/README.md",
+      "sha256": "b4fb1648d6487fd925a57c57be77351e78d70f82908b927ab211901fdfcbc38f"
+    },
+    {
+      "bytes": 3237,
+      "path": "a_c/stdo_a_c.json",
+      "sha256": "3f28b55a95bd196d5522a9a15ca2a2c02842a5fb8c762b9600d3f65693f599da"
+    }
+  ],
+  "status": "passed-bounded-transport-and-actual-use",
+  "unit_and_typing_checks": [
+    {
+      "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "owner": "/root/ac_graphify_scale",
+      "strict_typing_files": 4,
+      "test_file_sha256": "406f07ad5c3944abe209a9aada1d18bcb94e283bef54a0a3167fdba9894e8ec7",
+      "tests_passed": 47
+    },
+    {
+      "builder_sha256": "4f4ce6d51e9319187d1be514a3a1529376ea295c00199c2ebb978897b2cbc78a",
+      "cli_check_seconds": 23.555,
+      "owner": "/root/v3_graphify_representation",
+      "strict_typing_files": 2,
+      "test_file_sha256": "34a3be21db51bc6acf9e854617cae482ff5f511fb27d83a2f5d2ed340146cbe2",
+      "tests_passed": 18,
+      "tests_seconds": 78.553
+    },
+    {
+      "file": "evidence/native_graphify_trial.py",
+      "owner": "/root",
+      "sha256": "be37065e100be88c7c5a3450fcaddf53d12bb16a6dd1c641bb2202c1e5cd4b9c",
+      "strict_typing_files": 1
+    }
+  ],
+  "v3_checkout_after": {
+    "changed_by_this_work": false,
+    "head": "c29b2be37f9a12e050478be97793927d99c01781",
+    "path": "/Users/jim/src/apps/specification_methodology-codex",
+    "porcelain": ""
+  }
+}

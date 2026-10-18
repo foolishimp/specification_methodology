@@ -1,0 +1,1776 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "F6 is the source's family for claims, evidence, assessment and acceptance, covering EVALUATION §§1–5. Its instance premises are reliance on exact-subject claims for promotion, closure or release; finite evidence potentially observing a weaker or different subject or basis; fallible constructors; and a decision owner at each reliance boundary. These are conditions of governed work, not commitments or consequences of finite capacity alone.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 75,
+          "quote": "They are conditions of the work\nthis family governs, not commitments, and do not follow from finite\ncapacity alone.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 73
+        }
+      ],
+      "key": "claims_evidence_assessment_acceptance",
+      "label": "Claims, evidence, assessment and acceptance family"
+    },
+    {
+      "conditions": [],
+      "definition": "A load-bearing claim concerns an exact subject, claimed property and governing basis, with a witness-to-claim relation, nearest excluded weaker property and falsifier. Assurance may concern an authoritative composite subject rather than a single carrier.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 82,
+          "quote": "a load-bearing claim names its exact subject, the property claimed, the governing basis, the relation between witness and claim, the nearest weaker property it excludes and its falsifier before a witness is selected",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 82
+        }
+      ],
+      "key": "exact_claim",
+      "label": "Exact claim and assurance boundary"
+    },
+    {
+      "conditions": [],
+      "definition": "The semantic basis consists of constitutional and accepted-design relations defining a claim's meaning; the evidence basis consists of exact artifacts, events, logs, tests and observations used to evaluate it; the state projection is a current view derived from admitted semantic and evidence bases.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 138,
+          "quote": "Three bases stay distinct (P6, P1): the semantic basis, the constitutional\nand accepted-design relations that define what a claim means; the evidence\nbasis, the exact artifacts, events, logs, tests and observations used to\nevaluate it; and the state projection, a current view derived from admitted\nsemantic and evidence bases.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 134
+        }
+      ],
+      "key": "semantic_evidence_projection_bases",
+      "label": "Semantic basis, evidence basis and state projection"
+    },
+    {
+      "conditions": [],
+      "definition": "Structural conformance decides closed syntax, types, identities, references, bases and mechanically decidable predicates. Semantic fidelity decides meaning and materiality. A checker ordinarily decides the structural subset; semantic or authority decisions require an exact lawful model-supplied decision contract.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 166,
+          "quote": "Structural conformance decides closed syntax, types, identities, references,\nbases and mechanically decidable predicates. Semantic fidelity decides\nmeaning and materiality. Structural success is evidence for semantic\nreview, not a substitute for it. A checker decides the structural subset; it claims a\nsemantic or authority subset only under an exact lawful decision contract\nsupplied by the model.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 161
+        }
+      ],
+      "key": "structural_conformance_semantic_fidelity",
+      "label": "Structural conformance and semantic fidelity"
+    },
+    {
+      "conditions": [],
+      "definition": "Independent assessment is assessment separate from construction, resting on authorship and evidence conditions. Constructor self-review remains construction output. EVALUATION defines what qualifies as independent; TICKETS owns required trigger boundaries and a governing basis may add boundaries.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 190,
+          "quote": "This section decides what counts as independent assessment. Which\nboundaries require it is a policy choice of the Spec Method, owned by\n[TICKETS §7 Execution and verification authority separation](TICKETS.md#execution-and-verification-authority-separation-up-007);\na governing basis may add boundaries.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 187
+        }
+      ],
+      "key": "independent_assessment",
+      "label": "Independent assessment"
+    },
+    {
+      "conditions": [],
+      "definition": "Author identity identifies the party responsible for the content of a realised subject. Actor identity identifies whoever performs an operation and is an identity, not an authority. Independence is assessed against authorship as well as evidence conditions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 224,
+          "quote": "Author identity is the party responsible for the content of a realised\nsubject. It is distinct from actor identity, whoever performs one\noperation, which is an identity and not an authority",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 217
+        }
+      ],
+      "key": "author_actor_identity",
+      "label": "Author identity and actor identity"
+    },
+    {
+      "conditions": [],
+      "definition": "A review return contains one core result per declared predicate actually evaluated, accompanying evidence and findings, uncertainty and invalidation conditions. A planned but unperformed predicate has no result; a recommendation is evidence rather than an applied disposition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 250,
+          "quote": "A review returns one core result\n([FOUNDATIONS §4, Results](FOUNDATIONS.md#results)) for each declared\npredicate it evaluated, with: the exact subject and basis, the evidence\nconsulted, the findings ranked by consequence, each finding's evidence and\nthe smallest bounded correction, the residual uncertainty, and the\ninvalidation conditions.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results",
+          "start_line": 244
+        }
+      ],
+      "key": "review_return",
+      "label": "Review result record"
+    },
+    {
+      "conditions": [
+        "A review returns findings with technical triage."
+      ],
+      "definition": "Technical triage is the assessor's evidence-bound assessment of each finding against the exact evaluated claim and basis. Severity grades consequence and is evaluation evidence. Priority, current-boundary effect and disposition belong to the decision owner. The adopting profile declares triage fields; the adopting Product binds scales.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 267,
+          "quote": "Where a review returns findings with technical triage, the triage is the\nassessor's evidence-bound assessment of each finding against the exact\nevaluated claim and basis. Severity, the assessor's grade of consequence,\nis evaluation evidence. Priority, the effect on the current promotion\nboundary and the disposition are the decision owner's",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 263
+        }
+      ],
+      "key": "technical_triage",
+      "label": "Technical triage and decision values"
+    },
+    {
+      "conditions": [],
+      "definition": "The review projection covers the five core values satisfied, falsified, indeterminate, out_of_frame and invalid_basis. Its payload classes complete, indeterminate and not_applicable classify triage only; they are neither new results nor dispositions, priorities or lifecycle states. Absence of an evaluated predicate's result is distinct from every core value.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 283,
+          "quote": "The projection of the finding-level triage payload is total over the core\nvalues of [FOUNDATIONS §4, Results](FOUNDATIONS.md#results). A predicate\nnot performed has no result and so no triage payload; the payload class\n`indeterminate` never stands for it. The payload classes `complete`,\n`indeterminate` and `not_applicable` classify the triage only; they are\nnot new results, dispositions, priorities or lifecycle states (P5, P1).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 278
+        }
+      ],
+      "key": "core_result_triage_projection",
+      "label": "Core result and triage payload domains"
+    },
+    {
+      "conditions": [],
+      "definition": "Acceptance is the decision owner's disposition over an unchanged evaluated subject, limited to the named instance and interval. Closure is satisfaction of a work item's stated closing condition. A human decision can be exercised directly or through an explicitly admitted bounded proxy.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 321,
+          "quote": "A work item closes by the condition it stated, not by a reviewer's approval;\na reviewer result is an input to closure, never the closure. Green labels,\ndocument counts, review counts and historical outcomes are not acceptance.\nA human decision may be exercised directly or through an explicitly admitted\nbounded proxy.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 317
+        }
+      ],
+      "key": "acceptance_and_closure",
+      "label": "Acceptance, closure and bounded proxy"
+    },
+    {
+      "conditions": [
+        "The subject is a successor."
+      ],
+      "definition": "The successor disposition record identifies the exact immutable predecessor cut and one semantic disposition for every predecessor claim capable of affecting the successor. It is acceptance evidence; an intentional removal records a decision of the current Product authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 338,
+          "quote": "Where the subject is a successor, its acceptance evidence includes the\nsuccessor disposition record of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)\n(STDO-UP-015), which states the law: the exact predecessor immutable cut\nthe successor evolves, and one semantic disposition for every predecessor\nclaim capable of affecting the successor.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 330
+        }
+      ],
+      "key": "successor_disposition_record",
+      "label": "Successor disposition record"
+    },
+    {
+      "conditions": [],
+      "definition": "A finding is a defect reported against the exact evaluated claim. Blocking current promotion is the decision owner's act over a finding. EVALUATION §5 owns the blocking rule; profiles and work carriers add only domain triggers.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 346,
+          "quote": "A finding is a defect a review reports against the exact claim it\nevaluated (§4). Blocking current promotion is the decision owner's act\nover that finding (§4, Result and triage projection). This section is the\none statement of when a finding can block; profiles and work carriers\nrefer to it and add only their domain triggers.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance%2FWhen%20a%20finding%20blocks%20promotion",
+          "start_line": 342
+        }
+      ],
+      "key": "finding_promotion_block",
+      "label": "Finding and promotion blocking"
+    },
+    {
+      "conditions": [],
+      "definition": "A realisation conforms to specification Σ when its interpreted behaviour satisfies Σ under a declared interpretation contract and independent judgment. Semantic conformance uses the governing semantic basis as Σ. Several realisations may conform without unique derivation or equality with an incumbent.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 393,
+          "quote": "A realisation aⱼ conforms to a specification Σ when its interpreted behaviour\nsatisfies Σ under a declared interpretation contract (P1) and an independent\njudgment (P6). Several realisations may conform to one Σ; sufficiency does\nnot require unique derivation or equality with an incumbent.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 388
+        }
+      ],
+      "key": "realisation_conformance",
+      "label": "Realisation conformance"
+    },
+    {
+      "conditions": [],
+      "definition": "The equivalence ladder is an unordered list of four independent claim kinds: conformance; semantic equivalence of realisations, meaning identical interpreted behaviour on a stated domain including behaviour outside Σ; computational equivalence, meaning the same computed function at equal cost for declared workloads on declared architecture H; and categorical equivalence of categories and maps. Concept equivalence across bounded contexts is a different subject. Preservation of identities and composition by a map is a further separate claim.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 410,
+          "quote": "Conformance, semantic equivalence, computational equivalence and\ncategorical equivalence are separate claims with separate evidence (P1,\nP6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 397
+        }
+      ],
+      "key": "equivalence_ladder",
+      "label": "Unordered equivalence claim kinds"
+    },
+    {
+      "conditions": [],
+      "definition": "Layered sufficiency means a competent actor can derive a conformant next layer from each layer. Reconstructability requires a correct reconstruction route for the claim's span, rather than execution at every use. Failure to derive diagnoses the upper layer as unclear, contradictory, underspecified, insufficiently concrete or decomposable, or polluted by accidental lower-layer detail.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 436,
+          "quote": "A specification arranged in layers is sufficient when\na competent actor can derive a conformant next layer from each layer; the\nderivation need not be unique, since different realisations may satisfy the\nsame upper layer, and the test is sufficiency, not determinism.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 428
+        }
+      ],
+      "key": "layered_sufficiency",
+      "label": "Layered sufficiency and reconstructability"
+    },
+    {
+      "conditions": [],
+      "definition": "A reconstruction return reports a task building or assessing a successor member against its predecessor under three separate heads: semantic conservation of a disposed predecessor claim's meaning, judged by reading both texts against the disposition; demonstrated reduction of a corresponding deciding path's cost on a declared measure with both traces and tradeoffs; and mere relocation between owners or carriers without changed meaning or a traced deciding-path change.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 480,
+          "quote": "Demonstrated\nreduction: a deciding path of the successor costs less than the same path\nin the predecessor on a declared measure, shown by the trace of both paths\nwith the declared tradeoffs. Mere relocation: text moved from one owner or\ncarrier to another without a change in meaning and without a traced\nchange in any deciding path.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FReturn%20of%20a%20reconstruction",
+          "start_line": 473
+        }
+      ],
+      "key": "reconstruction_return",
+      "label": "Conservation, reduction and relocation return"
+    },
+    {
+      "conditions": [],
+      "definition": "F7 covers EVALUATION §§6–7 and CONFORMANCE and concerns fitness of realisations, frames and the method for their claims. Its instance premises are multiple possible realisations, fallible construction relied on by other actors, and finite qualification cases run within declared envelopes. These are work conditions, not commitments or consequences of finite capacity alone. Its named actor-change premise permits reacquisition of declared sources but not private memory.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 499,
+          "quote": "They are conditions of\nthe work this family governs, not commitments, and do not follow from\nfinite capacity alone. P0's actor-change premise, that the actor of one\nstep need not be the actor of the next and may re-acquire declared sources\nbut not private memory, is cited by name.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 495
+        }
+      ],
+      "key": "conformance_equivalence_qualification",
+      "label": "Conformance, equivalence and qualification family"
+    },
+    {
+      "conditions": [],
+      "definition": "EVALUATION §7 is the document grouping for qualification of frames and of the method; the heading itself adds no procedure beyond its subordinate sections.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 545,
+          "quote": "## 7. Qualification of frames and of the method",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method",
+          "start_line": 545
+        }
+      ],
+      "key": "qualification_section",
+      "label": "Qualification section"
+    },
+    {
+      "conditions": [],
+      "definition": "Candidate-frame qualification is proportional to its claims and binds the exact frame revision, actor envelope, evaluation family, basis class and evidence conditions evaluated. Its minimum evaluation comprises decision, reconstruction, sensitivity, irrelevance, basis, authority, counterexample, capability and result-consumption tests.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 578,
+          "quote": "Qualification binds the exact frame revision, actor envelope, evaluation\nfamily, basis class and evidence conditions evaluated. It does not\ngeneralise to an unevaluated population by naming the frame generically\n(§1, the quantifier rule).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification",
+          "start_line": 575
+        }
+      ],
+      "key": "frame_qualification",
+      "label": "Frame qualification"
+    },
+    {
+      "conditions": [],
+      "definition": "Fit concerns whether an actor class can hold the frame within its envelope; context fit measures selected representation size against declared capacity. Adequate attention concerns actual operation of that frame and requires actual-use evidence for the declared class, tasks and conditions, assessed against source-derived expectations recorded before results are opened.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 591,
+          "quote": "Whether the actor class\noperates the frame adequately is adequate attention, and only actual-use\nevidence establishes it: actors of the declared class apply the frame to\nits declared tasks under its declared conditions, and the results are\njudged against expectations recorded from the governing sources before the\nresults are opened, by an assessor under §3 where the claim needs\nindependent assessment.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification",
+          "start_line": 585
+        }
+      ],
+      "key": "fit_and_adequate_attention",
+      "label": "Fit and adequate attention"
+    },
+    {
+      "conditions": [],
+      "definition": "Method self-qualification uses the ordinary qualification process, consuming the work boundary, construction and assessment relation and layered sufficiency. Its population is every claimed function and failure relation, with representative observations. Constructor, freeze, assessor, acceptance and release protocols are supplied by governing authority, not defined by this member.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 628,
+          "quote": "The constructor, freeze, assessor, acceptance and\nrelease protocols are supplied by the governing authority; this member\ndefines none of them.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 626
+        }
+      ],
+      "key": "method_self_qualification",
+      "label": "Method self-qualification"
+    },
+    {
+      "conditions": [],
+      "definition": "Named qualification operations are declare, activate, evaluate, conjoin, translate, audit_coverage and revise, alongside result consumption and material composition. They remain distinct populations; their meanings are owned by REFERENCE_FRAME §5, while this section specifies representative observations.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 632,
+          "quote": "The qualification population is every function and failure relation the\nmethod claims (REFERENCE_FRAME §5), each with its required representative\nobservations (P6):",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 630
+        }
+      ],
+      "key": "method_relation_population",
+      "label": "Method functions and failure relations"
+    },
+    {
+      "conditions": [],
+      "definition": "Derived guidance includes compressions, frame packets, skills and other method projections. Recoverability is a benchmark in which a fresh actor uses only published documents to recover governing relations, with independently judged fidelity and measured reconstruction cost against the rc.2 corpus baseline.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 695,
+          "quote": "For a selected activation, measure whether a fresh actor given\nonly the published documents recovers the governing relations with fidelity\njudged independently, and at what reconstruction cost, against the rc.2\ncorpus as baseline.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 690
+        }
+      ],
+      "key": "derived_guidance_recoverability",
+      "label": "Derived guidance and recoverability benchmark"
+    },
+    {
+      "conditions": [],
+      "definition": "The source-disposition register records asserted conservation and ownership routes: UP-001 to §1; UP-022 across §§1,3,6,7; UP-008/RF-007 to §2 with frame binding elsewhere; AC-018/019 generic separation in §2 with a_c bindings elsewhere; UP-007 independence in §3 and blocking in §5 with trigger/traceability ownership in TICKETS; RF-013 and frame/method qualification to §7; UP-013 interval, AC-014 and proxy applications to §5; UP-015 acceptance evidence to §5 with full law and values in RELEASE §9; Reconstruction Litmus generic law to §6 and chain diagnosis to SPEC_METHOD §2; ticket judgment continuity to TICKETS §7 and reuse to ACTIVATION §7; reviewer triage to §4 with Executive-specific bindings retained in EXECUTIVE_BASELINE. It records, rather than proves, predecessor conservation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 719,
+          "quote": "| Baseline reviewer result and triage projection | conserved; restated in §4 Result and triage projection with assessor and decision owner in place of the profile's Reviewer and Executive, over the core values of FOUNDATIONS §4 Results; the profile's triage fields and its steps are EXECUTIVE_BASELINE §5 and §12; row in the table below |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F8.%20Source%20dispositions",
+          "start_line": 719
+        }
+      ],
+      "key": "source_disposition_register",
+      "label": "Source conservation and ownership register"
+    },
+    {
+      "conditions": [],
+      "definition": "EXECUTIVE_BASELINE is an optional tier-3 operational profile mapping Executive, Worker, Reviewer and specialist frames onto tier-1 and tier-2 law. It owns only its added bindings: direct-entry additions, empirical revision boundary, frame grants/limits/prohibitions and allocation, specialist catalogue, engagement procedure, Worker work-result readings, and adoption/configuration/qualification/closure records. Imported objects retain their external owners.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "An operational\nprofile owns only its own bindings, the terms and choices it adds for its\noperation.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE",
+          "start_line": 7
+        }
+      ],
+      "key": "executive_baseline_profile",
+      "label": "Optional Executive Baseline profile"
+    },
+    {
+      "conditions": [],
+      "definition": "The Worker frame carries constructor responsibility, the Reviewer frame assessor responsibility, and the Executive frame coordinator responsibility, disposing as decision owner or admitted proxy within an existing grant. Names bind allocated responsibilities and grant no authority themselves.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 48,
+          "quote": "the Worker frame carries the constructor's, the Reviewer\nframe the assessor's, and the Executive frame is the configuration's\ncoordinator, which disposes as decision owner or its admitted proxy within\nthe grant existing authority admits. A frame name binds the responsibility\nthe configuration allocates to it, not a role imported by spelling, and\ngrants no authority by itself (P1, P6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE",
+          "start_line": 43
+        }
+      ],
+      "key": "executive_engagement_frames",
+      "label": "Executive, Worker and Reviewer mappings"
+    },
+    {
+      "conditions": [],
+      "definition": "The canonical compression is a represented flow from existing project authority, selected complete method basis, exact governed outcome/workspace basis, and known evaluations/dependencies/residuals to sufficient direct Worker activation or material coordination. Coordination locks outcome and basis, maintains a finite ready frontier, obtains Worker and applicable specialist evaluations with Reviewer only when required, returns closed results and applicable triage/conjunction, applies bounded decision authority and recording, updates basis/coverage/residuals/frontier, and repeats or stops.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 70,
+          "quote": "  -> a sufficient direct Worker activation, or coordination where material\n  -> when coordinated: Executive locks outcome and basis, holds a finite ready frontier\n  -> Worker and the applicable specialist evaluations; Reviewer only where required\n  -> closed results, technical triage where applicable, declared conjunction\n  -> existing bounded decision authority, result recording, next lawful action\n  -> updated basis, coverage, residuals and frontier\n  -> repeat or stop",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 64
+        }
+      ],
+      "key": "canonical_engagement_flow",
+      "label": "Canonical engagement flow"
+    },
+    {
+      "conditions": [],
+      "definition": "Twelve available specialist families are Product, Product Composition, Design, Design Component, Public Boundary, Entity, Operator, Owner, Effect, Reuse/Foundation, Install and Proof. They distinguish constitutional WHAT, structural HOW, identity, authority, effects, foundations, installed subjects and evidence. The four product testing frames are user acceptance, end to end, integration and unit, owned by ASSURANCE.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 92,
+          "quote": "The profile derives twelve generic specialist-frame families (§11):\nProduct, Product Composition, Design, Design Component, Public Boundary,\nEntity, Operator, Owner, Effect, Reuse/Foundation, Install and Proof.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 83
+        }
+      ],
+      "key": "specialist_and_testing_frames",
+      "label": "Specialist families and product testing frames"
+    },
+    {
+      "conditions": [],
+      "definition": "The profile's ownership map distinguishes pure frame principles owned by REFERENCE_FRAME, optional profile mappings owned by EXECUTIVE_BASELINE, Product binding owned by PRODUCT_DEFINITION §7, concrete Project Reference-Frame Basis owned by the adopting Product authority, and testing mappings owned by ASSURANCE. Inclusion in an admitted method cut makes the profile available; adoption is a separately accepted Product-owned basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 121,
+          "quote": "Three ownership layers stay distinct:\nREFERENCE_FRAME owns the pure frame principles; this member owns the\noptional Executive, Worker, Reviewer and specialist mappings; PRODUCT_DEFINITION\n§7 owns the Product-binding relation, and each adopting Product's authority\nowns its concrete Project Reference-Frame Basis. The testing-frame\nmappings this profile uses are ASSURANCE's.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary",
+          "start_line": 116
+        }
+      ],
+      "key": "profile_ownership_and_adoption",
+      "label": "Profile ownership, availability and adoption"
+    },
+    {
+      "conditions": [],
+      "definition": "Direct entry and material coordination are alternative engagement branches under ACTIVATION. In the selected executive configuration the direct frame is Worker (Writer) and the coordinating frame is Executive. The coordinated transition and handoffs apply only to the coordinated branch; direct work returns its closed result to declared work authority or an existing result carrier.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 164,
+          "quote": "The configuration that adds coordination where direct entry cannot cover\nthe material contexts, authority, capability or required independence is\nselected under\n[ACTIVATION §1 Configuration](ACTIVATION.md#configuration). Where the\nexecutive configuration is selected, the directly entering frame is Worker\n(Writer) and the coordinating frame Executive.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability",
+          "start_line": 157
+        }
+      ],
+      "key": "direct_and_coordinated_entry",
+      "label": "Direct and coordinated engagement"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": ["exact_claim"],
+      "conditions": ["A claim is load-bearing."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 82,
+          "quote": "without these it is evidence discovery, not proof. Packaging, syntax, compilation, presence, invocation or local behaviour never substitutes for a semantic, authority-bearing, installed, release or end-to-end claim because the weaker property is easier to measure",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 82
+        }
+      ],
+      "key": "claim_target_before_witness",
+      "statement": "Before selecting a witness, name the exact subject, property, governing basis, witness-to-claim relation, nearest excluded weaker property and falsifier. Without them the activity is evidence discovery rather than proof. Easier-to-measure packaging, syntax, compilation, presence, invocation or local behaviour cannot substitute for semantic, authority-bearing, installed, release or end-to-end claims.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["exact_claim"],
+      "conditions": ["An assurance surface supports promotion or closure."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 83,
+          "quote": "an assurance surface supporting promotion or closure binds the exact claimed subject and its authoritative composition relation",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 83
+        }
+      ],
+      "key": "composite_boundary_congruence",
+      "statement": "Bind the exact claimed subject and its authoritative composition relation. Single-file or single-carrier evidence establishes only that boundary; it cannot establish a multi-file or carrier-set claim. Decide cross-carrier satisfaction and conflict at the declared composite boundary, which is declared by the authority owning the subject and composition relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["exact_claim"],
+      "conditions": ["Mechanical enforcement is claimed."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 84,
+          "quote": "a planned or specification-only harness is planned evidence, not observed verification, and until both are observed the claim stays open or is downgraded to the planned property",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 84
+        }
+      ],
+      "key": "mechanical_enforcement_observation",
+      "statement": "Name an executable or reproducible predicate and a witness reachable through the declared ordinary assurance path. Until both are observed, keep the claim open or downgrade it to the planned property. A planned or specification-only harness is planned evidence. The project's assurance design owns the ordinary path; assessment occurs where the claim is relied on, with no separate external consumer asserted.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["exact_claim"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 85,
+          "quote": "a claim's quantifier, population and scope cannot exceed its evaluated evidence. Generalising a local defect or observation needs a declared inference relation, the comparable population, explicit counterexample treatment and governing evidence; later counterevidence invalidates every dependent verdict until the claim-evidence relation is superseded, withdrawn or requalified.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 85
+        }
+      ],
+      "key": "claim_quantifier_and_counterevidence",
+      "statement": "A claim's quantifier, population and scope cannot exceed evaluated evidence. Generalisation requires an author-declared inference relation and comparable population, explicit counterexample treatment and governing evidence. Later counterevidence invalidates every dependent verdict until the claim-evidence relation is superseded, withdrawn or requalified.",
+      "uncertainty": "The separately referenced §1 falsifier list is not supplied."
+    },
+    {
+      "applies_to_keys": ["semantic_evidence_projection_bases"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 145,
+          "quote": "Semantic law defines what an evaluation means;\nevidence supplies observations; the evaluator applies the declared\nrelation; decision authority disposes. One actor may lawfully perform\nseveral; the record keeps them distinguishable.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 138
+        }
+      ],
+      "key": "basis_and_role_separation",
+      "statement": "Keep the three bases and four roles distinguishable: semantic law defines evaluation meaning, evidence supplies observations, the evaluator applies the declared relation, and decision authority disposes. Preserve those distinctions in the record even where one actor lawfully performs several roles. EVALUATION owns the separation; RF-007 and AC-018 add only frame and a_c domain bindings.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["semantic_evidence_projection_bases"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 157,
+          "quote": "An evidence change can invalidate a verdict without any change of law.\nWhether a given change does so is decided by the reuse rule of\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), and where it\ndoes, the invalidation is mandatory and takes effect before reliance.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 147
+        }
+      ],
+      "key": "distinct_invalidation_cases",
+      "statement": "Evidence change can invalidate a verdict without changed law; ACTIVATION §7 decides whether it does, and applicable invalidation is mandatory before reliance. Projection change can invalidate a view without changing semantic truth; ACTIVATION §2 decides staleness. Semantic change requires lawful re-entry and invalidates affected downstream acceptance. A changed broad digest can conservatively invalidate a review but proves only representation change, not change of every semantic relation.",
+      "uncertainty": "The external reuse, staleness and semantic re-entry rules are not supplied in full."
+    },
+    {
+      "applies_to_keys": ["structural_conformance_semantic_fidelity", "exact_claim"],
+      "conditions": [],
+      "exceptions": [
+        "A checker may claim a semantic or authority subset under an exact lawful decision contract supplied by the model."
+      ],
+      "grounding": [
+        {
+          "end_line": 175,
+          "quote": "A valid parse, a valid map, a green test and a historical judgment each\nestablish exactly their own claim. Evidence bound to a basis other than\nthe evaluated one is excluded by basis; it is not admitted with a narrower\nscope",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 172
+        }
+      ],
+      "key": "structural_and_basis_claim_limits",
+      "statement": "Structural success supports semantic review but cannot substitute for it. Parse validity, map validity, green tests and historical judgments establish only their respective claims. Evidence bound to a different basis is excluded, not narrowed and admitted. AC-018 and AC-019 bind the checker rule to a_c records and validity conditions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["independent_assessment"],
+      "conditions": ["Promotion requires independent assessment."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 184,
+          "quote": "A constructor's self-review is construction output, not assessment. Where\npromotion needs independent assessment, the assessor evaluates the exact\nlive subject, authority paths, proof and installed state, not the\nconstructor's summary",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 180
+        }
+      ],
+      "key": "assessment_of_exact_live_subject",
+      "statement": "Evaluate the exact live subject, authority paths, proof and installed state rather than the constructor's summary. Self-review remains construction output and satisfies no independent-assessment requirement.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["independent_assessment", "method_self_qualification"],
+      "conditions": [],
+      "exceptions": [
+        "Outside method qualification, an immutable identity or equivalent exact-subject relation sufficient for the claim is permitted instead of the method-qualification pre-exposure freeze."
+      ],
+      "grounding": [
+        {
+          "end_line": 202,
+          "quote": "the subject is\nfrozen by identity before material reference exposure; elsewhere it is\nstabilised by an immutable identity or an equivalent exact-subject relation\nsufficient for the claimed assessment. The assessor records its\nexpectations from the governing source before opening the candidate; it\nreads the subject at that identity or relation, never a mutable working\ntree; it makes no repair; it does not assess its\nown authorship.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 193
+        }
+      ],
+      "key": "assessment_identity_and_exposure_protocol",
+      "statement": "Where method qualification applies, freeze identity before material reference exposure. Record source-derived expectations before opening the candidate; assess only the stabilised exact subject, never a mutable working tree; make no repairs and assess no own authorship. Constructor judgment cannot be reused as independent judgment. Every post-exposure revision is a declared intervention, either a method constituent with its own qualification boundary or a new qualification subject, and cannot retroactively pass the original frozen construction.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["independent_assessment", "review_return"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 211,
+          "quote": "Membership in a plan authenticates nothing,\nan unauthenticated result satisfies no required assessment, and a result\nbound to another subject satisfies no planned assessment",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 207
+        }
+      ],
+      "key": "assessment_authentication_provenance",
+      "statement": "Bind a returned assessment to producer, subject, basis and evidence to authenticate it. That binding establishes neither expected-answer assertion provenance nor run execution provenance, which are separately required. Plan membership authenticates nothing; unauthenticated results satisfy no required assessment, and wrong-subject results satisfy no planned assessment. No cryptographic or transport protocol is prescribed.",
+      "uncertainty": "The separately required provenance rules are owned by the unsupplied FOUNDATIONS §4."
+    },
+    {
+      "applies_to_keys": ["independent_assessment", "author_actor_identity"],
+      "conditions": [],
+      "exceptions": [
+        "Two activations of one model family can count as independent for a semantic judgment only as stated by the claim's governing-basis policy; silence defaults to non-independence."
+      ],
+      "grounding": [
+        {
+          "end_line": 240,
+          "quote": "Independence across actor families is declared, not assumed. Whether two\nactivations of one model family are independent for a semantic judgment is a\npolicy the governing basis states for the claim; the default where it is not\nstated is that they are not independent.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 237
+        }
+      ],
+      "key": "authorship_based_independence",
+      "statement": "A fresh context alone creates neither independence nor missing review authority. Author self-review cannot be relabelled independent. Received contributions retain their authorship wherever carried, and their author's reading supplies no independent acceptance. Independence across actor families must be declared rather than assumed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["review_return"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 259,
+          "quote": "A declared predicate the review planned and did\nnot evaluate has no result (FOUNDATIONS §4, Results). The review names it\nas not performed and reports no core value for it, neither\n`indeterminate` nor `falsified`",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results",
+          "start_line": 249
+        }
+      ],
+      "key": "review_record_and_unperformed_predicates",
+      "statement": "For each declared evaluated predicate return one core result with exact subject and basis, consulted evidence, findings ranked by consequence, each finding's evidence and smallest bounded correction, residual uncertainty and invalidation conditions. Name planned unevaluated predicates as not performed, with no core value—not indeterminate or falsified—preserving their distinction from undecided predicates and required coverage addressed by no planned assessment. A recommendation remains evidence and is never applied by the review. An untraceable finding is commentary.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["technical_triage", "core_result_triage_projection"],
+      "conditions": ["Technical triage accompanies findings."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 276,
+          "quote": "A recommended disposition\nis evidence for the decision owner: it is not a disposition, a\npriority or a boundary effect, and it is never adopted mechanically",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 271
+        }
+      ],
+      "key": "triage_decision_value_separation",
+      "statement": "Severity, priority, boundary effect and disposition remain distinct even under a Product-defined mapping. Recommended disposition is only evidence, never priority, boundary effect or disposition, and is never adopted mechanically. Apply the projection to any assessor/decision-owner configuration; EXECUTIVE_BASELINE retains Reviewer/Executive as its particular instance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["core_result_triage_projection"],
+      "conditions": ["The core result is satisfied or falsified."],
+      "exceptions": [
+        "For satisfied, another exact consumed result may supply a finding, making priority and boundary effect applicable through that other result."
+      ],
+      "grounding": [
+        {
+          "end_line": 288,
+          "quote": "| satisfied | an explicit no-finding state; triage `not_applicable`; evidence, residuals and invalidation stay present | priority and boundary effect are `not_applicable` to this result unless another exact consumed result supplies a finding |\n| falsified | one or more exact findings; triage `complete` where supported, keeping `indeterminate` fields where evidence cannot close them | apply the Product-owned priority and boundary policy without mapping severity mechanically to a disposition |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 287
+        }
+      ],
+      "key": "decided_result_triage",
+      "statement": "Satisfied has an explicit no-finding state and not_applicable triage while retaining evidence, residuals and invalidation; its priority and boundary effect are not_applicable subject to the stated other-result exception. Falsified has one or more exact findings, complete triage where supported and indeterminate fields where evidence is insufficient. Apply Product-owned priority and boundary policy without mechanically deriving disposition from severity.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["core_result_triage_projection"],
+      "conditions": ["The core result is indeterminate, out_of_frame or invalid_basis."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 291,
+          "quote": "| indeterminate | a partial finding or observation state; triage `indeterminate`; the exact evidence gaps and residual uncertainty | keep the uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or as a closed finding |\n| out_of_frame | the evaluated claim needs an undeclared material relation or evaluator capability; triage `indeterminate`; the missing relation or capability and the exact reconfiguration pressure are named | refine or reconfigure a capable activation and keep the claim unresolved; do not consume the result as satisfaction or falsification |\n| invalid_basis | a basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse to consume the result and return through the declared basis re-entry relation |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 289
+        }
+      ],
+      "key": "unresolved_and_invalid_result_consumption",
+      "statement": "Indeterminate carries partial findings/observations, indeterminate triage and exact evidence gaps/residuals; preserve uncertainty or reactivate capable evaluation, without consuming satisfaction or a closed finding. Out_of_frame identifies a missing material relation or evaluator capability and exact reconfiguration pressure, carries indeterminate triage, and requires refinement/reconfiguration while remaining unresolved, never satisfaction or falsification. Invalid_basis carries basis-failure evidence and repair pressure with not_applicable triage; refuse consumption and return through the declared basis re-entry relation. No performed result is assigned to an unperformed predicate, which also has no triage payload.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["technical_triage", "independent_assessment", "finding_promotion_block"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 302,
+          "quote": "An adjacent observation outside the evaluated claim does not replace the\nclaim-relative result. The assessor returns it separately, with triage\n`not_applicable` to that claim and the exact repricing or re-entry\npressure; the decision owner returns it to its declared owner without\ncreating a claim-relative block, or another review round, from its\nseverity alone (P6, P2).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 293
+        }
+      ],
+      "key": "adjacent_observation_and_assessor_return",
+      "statement": "Return observations outside the exact claim separately, preserving the claim-relative result, with not_applicable triage for that claim and exact repricing or re-entry pressure. The decision owner returns them to their declared owner; severity alone causes neither a claim-relative block nor another review round. The assessor returns to the decision owner rather than the constructor, and neither edits the candidate, directs repair nor authorises continuation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["acceptance_and_closure", "successor_disposition_record"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 338,
+          "quote": "A claim whose disposition is\nunresolved cannot be qualified and so cannot be accepted; how the record\nis evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).\nAn intentionally removed disposition is a decision of the current Product\nauthority, and its record is that decision (P6, P3, P4b).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 334
+        },
+        {
+          "end_line": 314,
+          "quote": "Acceptance is the decision owner's disposition over an unchanged subject;\nrecording it cannot widen it, and it exhausts only the instance and interval\nit names",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 312
+        }
+      ],
+      "key": "bounded_acceptance_and_successor_requirements",
+      "statement": "Acceptance must concern the unchanged evaluated subject and cannot be widened by recording; it exhausts only the named instance and interval. Closure follows the stated work-item condition, never reviewer approval, labels, counts or historical outcomes. Successor acceptance requires the disposition record for the exact predecessor cut and every potentially affecting predecessor claim; unresolved dispositions prohibit qualification and acceptance. Intentional removal is the current Product authority's decision, recorded as such. A proxy-excluded change re-enters at its owning relation.",
+      "uncertainty": "Proxy grant contents, absolute proxy exclusions and full successor-record evaluation are externally owned."
+    },
+    {
+      "applies_to_keys": ["finding_promotion_block"],
+      "conditions": ["A finding is considered for blocking current promotion."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 360,
+          "quote": "1. falsifies that claim;\n2. exposes competing or ambiguous authority on the claim's acceptance\n   path;\n3. violates applicable active authority, safety or retained accepted\n   behaviour; or\n4. establishes a material architectural decision with durable\n   consequences that forecloses an admitted Product outcome.\n\nThese conditions are necessary.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance%2FWhen%20a%20finding%20blocks%20promotion",
+          "start_line": 352
+        }
+      ],
+      "key": "promotion_block_necessary_conditions",
+      "statement": "A blocking finding must meet at least one condition: falsify the exact reviewed claim; expose competing or ambiguous authority on its acceptance path; violate applicable active authority, safety or retained accepted behaviour; or establish a material architectural decision whose durable consequences foreclose an admitted Product outcome. These are necessary conditions, not an automatic sufficient rule. A finding meeting none does not block; the verdict remains bounded by the exact claim and applicable hard stops.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["finding_promotion_block", "technical_triage"],
+      "conditions": [],
+      "exceptions": [
+        "A valid falsification of a mandatory claim under a non-waivable hard stop blocks regardless of priority or cutoff."
+      ],
+      "grounding": [
+        {
+          "end_line": 368,
+          "quote": "| a valid falsification of a mandatory claim governed by a non-waivable hard stop | the boundary blocks, whatever the assigned priority or the decision cutoff |\n| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the governed outcome or decision the work serves ([ACTIVATION §1, Intake](ACTIVATION.md#intake)), the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance%2FWhen%20a%20finding%20blocks%20promotion",
+          "start_line": 365
+        }
+      ],
+      "key": "promotion_block_sufficiency_and_cutoff",
+      "statement": "For other findings meeting a necessary condition, the decision owner decides blocking using the exact affected claim, served outcome or decision, applicable hard stops and Product-owned cutoff. Below cutoff no block follows mechanically, and accepted residuals remain explicit. Severity mechanically selects neither priority nor blocking; priority neither erases severity nor waives hard stops. EVALUATION sets no cutoff. An outside-claim observation alone cannot widen the subject, block it, or require a new ticket, artifact, review round or implementation increment.",
+      "uncertainty": "Actual hard stops and Product cutoff values are not supplied."
+    },
+    {
+      "applies_to_keys": ["realisation_conformance", "equivalence_ladder"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 426,
+          "quote": "A claim of categorical equivalence meets each item of the Formal fragment\nthat applies to it, as that section states them. This rung adds one\nrequirement of its own to those items: a quasi-inverse functor, and\nnatural isomorphisms between each composite of the functor with its\nquasi-inverse and the identity functor, on a stated domain.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 418
+        }
+      ],
+      "key": "equivalence_evidence_and_structure",
+      "statement": "No ladder rung implies another; each requires separate evidence. Conformance establishes neither outside-Σ identity of behaviour nor equal cost. For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H the claims remain distinct. Categorical equivalence must satisfy every applicable Formal-fragment item plus a quasi-inverse functor and natural isomorphisms from both composites to their respective identity functors on a stated domain. An analogy or matching result is insufficient, and map preservation of identities/composition is separately claimed. Never report evidence for one claim as another's result.",
+      "uncertainty": "The Formal-fragment obligations and definitions of 𝒜, ℐ and 𝒞_H are not supplied."
+    },
+    {
+      "applies_to_keys": ["layered_sufficiency"],
+      "conditions": [],
+      "exceptions": [
+        "An already accepted relation may reuse its exact current basis and sufficient evidence after applicability and invalidation checks."
+      ],
+      "grounding": [
+        {
+          "end_line": 444,
+          "quote": "A boundary that can be crossed\nonly by hiding a major unresolved ambiguity is not yet sufficient even if\nsome downstream artifact can be produced.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 434
+        }
+      ],
+      "key": "layered_reconstruction_limits",
+      "statement": "Every layer must permit a competent actor to derive a conformant next layer. Hiding a major unresolved ambiguity prevents sufficiency even when an artifact can be produced. Reconstructability requires a correct route, not repeated execution, grants no restart authority and excuses no stale success. The claim fixes the reconstruction span, so a selected local function need not recreate the whole subject. New material counterexamples still challenge the affected relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["realisation_conformance", "method_self_qualification"],
+      "conditions": ["A frozen construction is compared for semantic conformance or equivalence."],
+      "exceptions": [
+        "Equivalence to a separately held reference outcome is required only when the governing basis requires it."
+      ],
+      "grounding": [
+        {
+          "end_line": 459,
+          "quote": "A separately held expected or reference outcome, if one exists\nand is applicable, is optional evidence and explicitly non-authoritative;\nsemantic equivalence to it is required only where the governing basis\nrequires it.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 451
+        }
+      ],
+      "key": "comparison_after_freeze",
+      "statement": "Compare the frozen result against the mandatory governing semantic basis. An existing applicable reference outcome is optional non-authoritative evidence, subject to the basis-required-equivalence exception. A lawful alternative allowed by the basis passes. Subjective similarity is insufficient, and byte/structural identity, unique derivation, determinism and incumbent equality are not generic criteria. Construction outside the declared competence or configuration envelope cannot indict generic method sufficiency.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["reconstruction_return"],
+      "conditions": ["A task builds or assesses a successor member against its predecessor."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 482,
+          "quote": "Relocation reported as reduction, or\nconservation claimed from unchanged bytes, misreports the claim (§1, P1,\nP6). The three heads stay separate in the return as the rungs of the\nladder do above; a frame for a reconstruction task binds this\ndistinction.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FReturn%20of%20a%20reconstruction",
+          "start_line": 478
+        },
+        {
+          "end_line": 517,
+          "quote": "the reduction measure, its baselines and the traced paths: the candidate's design, declared before the trace",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 517
+        }
+      ],
+      "key": "reconstruction_heads_and_evidence",
+      "statement": "State semantic conservation, demonstrated reduction and mere relocation under separate heads with evidence for each; no byte or size measure establishes any head. Read both texts against the disposition for conservation; compare traces of corresponding deciding paths, declared measure and tradeoffs for reduction. The candidate design declares the measure, baselines and paths before tracing. A reconstruction frame binds these distinctions. Relocation-as-reduction and unchanged-bytes-as-conservation misreport claims.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["conformance_equivalence_qualification"],
+      "conditions": ["A conformance case or bounded-construction trial is evaluated."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 516,
+          "quote": "A run is not a pass: only an assessment by an independent assessor records one.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 515
+        }
+      ],
+      "key": "conformance_case_and_trial_requirements",
+      "statement": "A case names subject, mechanism, independently specified expected distinction and status describing what exists. Only independent assessment records a pass, requiring the expected distinction and no coerced success anywhere in the result. A case unable to run with its declared subject is recorded as not run, never hidden or assigned a core value. Before every bounded-construction trial declare per-actor context cap and total-work budget, count transferred context across every delegated actor, and keep acceptance criteria independent of the constructor. No pass is credited without running and assessing the case on the relevant revision.",
+      "uncertainty": "CONFORMANCE owns cases, required-basis-over-cap handling and probabilistic repetition policy; those details are not supplied."
+    },
+    {
+      "applies_to_keys": ["claims_evidence_assessment_acceptance", "conformance_equivalence_qualification", "source_disposition_register"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 130,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 129
+        },
+        {
+          "end_line": 543,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 542
+        },
+        {
+          "end_line": 732,
+          "quote": "each decides nothing and\nnames the rule that states each consequence.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F8.%20Source%20dispositions",
+          "start_line": 726
+        }
+      ],
+      "key": "family_tables_and_consumers_no_new_decisions",
+      "statement": "Family tables trace commitments, instance premises, consequences, rule owners and added policy choices; they decide nothing. Consumers apply owning rules without deciding anything beyond them. Source-disposition recording similarly decides nothing. CONFORMANCE's case lists, discriminator mappings and disposition records have their stated documentary roles, without an inferred transfer of rule ownership.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["frame_qualification"],
+      "conditions": ["A candidate frame is qualified."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 573,
+          "quote": "6. Authority test: does frame selection preserve semantic and decision\n   authority and the exact inherited operation authority for every\n   material construction, transformation, admission, publication or\n   mutation?",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification",
+          "start_line": 564
+        }
+      ],
+      "key": "frame_minimum_evaluation",
+      "statement": "At minimum evaluate: competent production of declared-algebra results for representative in-domain cases; fresh activation from the declared packet without hidden history; expected sensitivity to material changes; expected stability under excluded unrelated changes; invalidation or refusal for stale/mismatched/ambiguous basis; preservation of semantic, decision and exact inherited operation authority for every material construction/transformation/admission/publication/mutation; detection of claimed representative historical or constructed violations; actor-class ability to hold and operate within its envelope; and consumer use of a closed result without hidden frame context. Qualification is proportional to claims and does not generalise beyond the exact revision, envelope, evaluation family, basis class and evidence conditions evaluated.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["fit_and_adequate_attention", "frame_qualification"],
+      "conditions": [],
+      "exceptions": [
+        "Independent assessment of actual-use results is required where the claim requires it."
+      ],
+      "grounding": [
+        {
+          "end_line": 601,
+          "quote": "A size measurement, or any byte or token\nthreshold, establishes fit and nothing about attention; a frame that fits\nis not thereby adequately attended.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification",
+          "start_line": 591
+        }
+      ],
+      "key": "fit_does_not_qualify_attention",
+      "statement": "Evaluate fit and adequate attention separately. Context-size or byte/token thresholds establish only fit; other envelope dimensions follow RF-014. Attention requires actual-use evidence assessed against source-derived expectations recorded before opening results, and binds only the evaluated frame revision, actor class, tasks and conditions, never a universal attention score. Finite attention makes fit necessary but never sufficient for attention qualification. Time, spend and other limits come from the selected execution binding under ACTIVATION §6, not this test.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["method_self_qualification"],
+      "conditions": [],
+      "exceptions": [
+        "Pre-freeze withholding applies wherever earlier exposure would compromise reconstructive independence."
+      ],
+      "grounding": [
+        {
+          "end_line": 618,
+          "quote": "A fresh competent\nconstructor operates inside a declared capability, context and\nconfiguration envelope, using only the declared ordinary method and\nauthority surfaces and declared trial subjects. An independently\nauthorised evaluator has a declared governing basis and comparison\npredicate.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 608
+        }
+      ],
+      "key": "method_qualification_protocol",
+      "statement": "Use a fresh competent constructor within a declared capability/context/configuration envelope, only declared ordinary method and authority surfaces and trial subjects, and an independently authorised evaluator with declared governing basis and comparison predicate. Withhold material expected/reference outcomes, source exemplars, incumbent realisations, author memory and ad hoc rescue until freeze when earlier exposure would compromise reconstructive independence. Then compare the frozen result against the mandatory relation population under §6. Do not create a second qualification process.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["method_relation_population"],
+      "conditions": ["The named functions are within the method's claimed population."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 638,
+          "quote": "| `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority and residual boundary; missing authority or evaluation basis refuses |\n| `activate` | activation with an exact subject and basis and a capable actor succeeds; stale, ambiguous, topology-mismatched, unauthorised and capability-incompatible activations refuse or return the applicable closed pressure |\n| `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame` and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 636
+        }
+      ],
+      "key": "declare_activate_evaluate_observations",
+      "statement": "Required observations: declare derives a frame set from governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority and residual boundary, refusing missing authority or evaluation basis. Activate succeeds for an exact subject/basis and capable actor; stale, ambiguous, topology-mismatched, unauthorised or capability-incompatible activations refuse or return applicable closed pressure. Evaluate exercises satisfied, falsified, indeterminate, out_of_frame and invalid_basis, sensitivity to material changes and stability under established irrelevance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["method_relation_population"],
+      "conditions": ["The named functions are within the method's claimed population."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 640,
+          "quote": "| `conjoin` | compatible closed results decide under the declared rule; a result conflict returns `conflict`, mandatory indeterminacy `indeterminate`, and a basis mismatch `invalid_basis` (Stale results, [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)); under a veto or deferral the decision rule declares, `conjoin` returns the [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) outcome whose cause holds; none flattens frame meaning |\n| `translate` | preserved coordinates and provenance reach the target; declared loss stays explicit; identity, basis, authority or equality mismatch refuses |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 639
+        }
+      ],
+      "key": "conjoin_translate_observations",
+      "statement": "Conjoin must show compatible closed results deciding under the declared rule, conflict producing conflict, mandatory indeterminacy producing indeterminate and basis mismatch producing invalid_basis. Declared veto/deferral produces the REFERENCE_FRAME outcome whose cause holds, without flattening frame meaning. Translate must show preserved coordinates/provenance reaching the target, explicit declared loss, and refusal for identity, basis, authority or equality mismatch.",
+      "uncertainty": "The full conjunction outcome domain and veto/deferral rules are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": ["method_relation_population"],
+      "conditions": ["The named functions are within the method's claimed population."],
+      "exceptions": [
+        "A case not requiring material composition stays uncomposed."
+      ],
+      "grounding": [
+        {
+          "end_line": 644,
+          "quote": "| `audit_coverage` | evaluation, interaction, semantic, operation and decision authority, failure, capability and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 641
+        }
+      ],
+      "key": "coverage_revision_consumption_composition_observations",
+      "statement": "Audit_coverage maps evaluation, interaction, semantic/operation/decision authority, failure, capability and required independently activated or assurance-independent coverage to capable frames or explicit residuals; actor/artifact counts cannot close coverage. Revise shows historical failure, topology mutation, evidence change and capability change producing declared frame-set deltas and identifying every prior activation, result, conjunction and coverage claim requiring reevaluation. Result consumption demonstrates use of one closed result without hidden context or authority; insufficient output yields reconstructability failure. Cross-frame composition cases declare composition, material order, closure, failure and conservation of semantic/operation/decision authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["method_self_qualification", "method_relation_population"],
+      "conditions": [],
+      "exceptions": [
+        "Qualification may be staged."
+      ],
+      "grounding": [
+        {
+          "end_line": 657,
+          "quote": "One valid frame-set declaration and coverage result establishes only the\n`declare` and evaluated `audit_coverage` population; it proves activation,\nevaluation, conjunction, translation, revision, result consumption and\nmaterial composition by no implication.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 646
+        }
+      ],
+      "key": "qualification_population_and_open_branches",
+      "statement": "Qualify every claimed function and failure relation through representative positive, boundary and falsifying cases. Declaration plus evaluated audit coverage implies no other relation's qualification. Every verdict states exact evaluated functions, revisions, actor envelopes, basis classes, result branches and evidence populations. Unevaluated functions or branches remain open rather than inheriting a whole-method verdict. Prior exemplars may be optional post-freeze evidence, never mandatory targets unless the governing basis explicitly requires equivalence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["derived_guidance_recoverability"],
+      "conditions": ["Derived guidance changes or a native-use, mechanical or operational claim is made."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 668,
+          "quote": "Digest integrity and index generation establish identity and structure,\nnot semantic fidelity or usability. Mechanical and operational claims\nrequire their own executable observations, including the applicable\nworkload and operational assumptions of ACTIVATION §6; semantic agreement\ncannot substitute for those observations",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 664
+        }
+      ],
+      "key": "derived_guidance_qualification",
+      "statement": "Qualify changed guidance against source-derived expected behaviour, including affected permissions, exclusions and invalidators. Native-use claims require an ordinary actor applying the guidance through its declared entry and available context. Digest integrity/index generation establish only identity/structure. Mechanical and operational claims need their own executable observations with applicable workloads and operational assumptions; semantic agreement is no substitute.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["method_self_qualification"],
+      "conditions": ["Any listed falsifier occurs."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 687,
+          "quote": "The qualification law is false if constructor competence or its\ncapability, context or configuration envelope, or evaluator authority,\ngoverning basis or comparison predicate, is undeclared",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 670
+        }
+      ],
+      "key": "method_qualification_falsifiers",
+      "statement": "The source declares qualification law false when competence/envelope or evaluator authority/basis/predicate is undeclared; out-of-envelope construction indicts the method; supplemental method/authority input is undeclared; pre-freeze exposure to material reference/expected outcomes, exemplars, incumbents, memory or rescue compromises independence; comparison omits mandatory semantic basis, uses constructor instead of independently authorised evaluator authority, or self-adjusts after seeing results; a reference becomes authority; reference equivalence is demanded without basis requirement or omitted despite one; subjective similarity becomes proof; identity, unique derivation, determinism or incumbent equality replaces semantic conformance/equivalence; or a post-exposure revision is unclassified or retroactively passes the original construction.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["derived_guidance_recoverability", "fit_and_adequate_attention"],
+      "conditions": ["The recoverability benchmark is performed for a selected activation."],
+      "exceptions": ["Time and spend are measured where measurable."],
+      "grounding": [
+        {
+          "end_line": 702,
+          "quote": "A document set that requires private validator knowledge,\nwhole-corpus loading or a prior actor's memory fails the benchmark\nregardless of its content.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 697
+        }
+      ],
+      "key": "recoverability_measurement_and_failure",
+      "statement": "Give a fresh actor only published documents; independently judge recovered governing relations and measure reconstruction cost against rc.2. Measure transferred context under ACTIVATION §2 step 3 and measurable time/spend under the execution binding. Fidelity judgment is actual-use evidence; size is not. Private validator knowledge, required whole-corpus loading or prior actor memory fails the benchmark regardless of content. F27/F28 use this observable; F29/F30 report the same observation with task completed, material errors detected and cost.",
+      "uncertainty": "The matrix criteria and measurement procedures are referenced rather than fully defined here."
+    },
+    {
+      "applies_to_keys": ["source_disposition_register"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 736,
+          "quote": "New law in this member, with no rc.2 clause: the equivalence ladder (§6),\nthe separation of fit from adequate attention with its actual-use evidence\n(§7 Frame qualification) and the recoverability benchmark (§7 Method\nself-qualification)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F8.%20Source%20dispositions",
+          "start_line": 721
+        }
+      ],
+      "key": "source_disposition_novelty_and_loci",
+      "statement": "The source labels the equivalence ladder, fit/attention separation, recoverability benchmark and nondeciding F6/F7 trace tables new. It labels generalised blocking and five-row triage/adjacent-observation rules new tier-1 law while preserving Executive-specific predecessor instances. Author identity ownership moves from SPEC_METHOD §11 to EVALUATION §3. The no-result-for-unperformed rule remains FOUNDATIONS-owned. RF qualification anchors map to §7; SM proof-target, separation, UP-022 and reconstruction anchors map respectively to §1, §2, §§1/3/6/7 and §6 plus SPEC_METHOD §2. Five layer derivations/diagnoses remain in SPEC_METHOD; design-view coverage remains with the design profile. The recommended-disposition sentence reconciles recommendation with predecessor prohibition of reviewer priority/disposition.",
+      "uncertainty": "These are source-authored conservation and novelty assertions, not independently established conservation judgments."
+    },
+    {
+      "applies_to_keys": ["executive_baseline_profile", "executive_engagement_frames"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 38,
+          "quote": "and is provenance only; every predecessor row received here is restated in\nthis text, and nothing here depends on that cut to be applied.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE",
+          "start_line": 37
+        }
+      ],
+      "key": "profile_imports_and_provenance",
+      "statement": "The profile imports FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, SPEC_METHOD, PRODUCT_DEFINITION and ASSURANCE without redefining their objects. Frame objects/functions/activate outcomes remain REFERENCE_FRAME's; core algebra/conjunction FOUNDATIONS'; intake/admission/applicability/configuration/roles and step dispositions ACTIVATION's; independent assessment/review shape EVALUATION's; testing and assurance mechanics ASSURANCE's. Clauses name requiring P0–P6 principles. rc.2 anchor routes are provenance only, with received predecessor rows stated to be restated locally; names themselves confer no authority.",
+      "uncertainty": "Only the supplied introduction and §§1–3 are available, so the claim that all received rows are restated is not independently verified."
+    },
+    {
+      "applies_to_keys": ["executive_engagement_frames", "canonical_engagement_flow"],
+      "conditions": ["The executive configuration is used."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 81,
+          "quote": "The three frames are overlapping evaluation contexts. They are neither a\nhierarchy nor an actor topology (P6; RF-009). The Worker supplies the\ncandidate and never activates the Reviewer. The Reviewer evaluates and does\nnot implement.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 73
+        }
+      ],
+      "key": "engagement_authority_limits",
+      "statement": "Frames are overlapping evaluation contexts, neither hierarchy nor actor topology. Worker supplies candidates and never activates Reviewer; Reviewer evaluates without implementing. Executive applies only decision authority already granted by Product, Goals, requirements, accepted design, ticket, identity or release law. Worker carries only its admitted intake's construction/transformation authority. No label grants admission, publication, mutation or any other operation authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["specialist_and_testing_frames"],
+      "conditions": ["Frames are selected for an activation under the profile."],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 101,
+          "quote": "a\nbroader frame cannot make a module-owned law true, and any number of\nnarrower green frames cannot establish an unevaluated Product composition\nor user outcome",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 98
+        }
+      ],
+      "key": "frame_selection_and_evidence_altitude",
+      "statement": "Select only specialist families material to the exact evaluation and retain an explicit residual for each material family that cannot be covered. Families are available categories, not mandatory actors, stages, components, services, files or runtime types. Product testing frames activate inside the same conditionally selected engagement relation, adding no role, stage, authority or testing hierarchy. ASSURANCE owns evidence topology; broad frames cannot establish module-owned law and any number of narrower green frames cannot establish an unevaluated Product composition or user outcome.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_ownership_and_adoption", "executive_baseline_profile"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 110,
+          "quote": "The executive configuration is selected where it fits the task; it\nis not the method's default",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 104
+        },
+        {
+          "end_line": 151,
+          "quote": "Inclusion in an exact released cut or another admitted method basis makes\nthe profile available; it does not adopt it. Adoption requires a separately\naccepted Product-owned Project Reference-Frame Basis",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary",
+          "start_line": 147
+        }
+      ],
+      "key": "profile_adoption_and_no_implied_selection",
+      "statement": "Select the executive configuration where it fits; it is not the method default. Product authority adopts through a separately accepted Product-owned Project Reference-Frame Basis, and existing owning authority admits each decision. Released/admitted-cut inclusion only makes the profile available. Mutable authoring source, installed-file presence, prompts, summaries and commentary neither select nor adopt it. A local axioms file may carry the decision without becoming a constitutional owner.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_ownership_and_adoption"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 145,
+          "quote": "Every requirement of this profile is one of two kinds: an exact\napplication of a cited owning relation, or a condition for claiming\nadoption of this optional profile. Neither kind opens a second amendment\npath for the owning law. Where this profile conflicts with an owning\nclause, the owning clause controls and this profile requires revision",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary",
+          "start_line": 141
+        }
+      ],
+      "key": "profile_owner_precedence",
+      "statement": "The profile owns no execution protocol or Product binding. Each requirement is either an exact application of an owning relation or a condition of claiming optional-profile adoption. Neither creates an amendment path for owning law. An owning clause controls any conflict and requires profile revision.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["profile_ownership_and_adoption", "executive_baseline_profile"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 139,
+          "quote": "| capability and foundation selection before material generic construction | the design profile's capability-and-foundation selection law ([DESIGN_MODULE](DESIGN_MODULE.md)) | supplies the Worker's proportional reuse comparison; reuse is no authority transfer, and an assigned foundation role keeps its declared relation and owner |",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary",
+          "start_line": 133
+        }
+      ],
+      "key": "profile_ownership_matrix",
+      "statement": "Retain the matrix's allocations: REFERENCE_FRAME owns declaration/activation/outcomes/translation/coverage/revision; FOUNDATIONS owns core results/conjunction; ACTIVATION owns configuration/roles, intake, execution transition, checkpoint and continuation; EVALUATION owns independence, review shape, assurance-boundary and qualification constraints while TICKETS owns triggers and exact-verdict traceability. Design laws and ASSURANCE §§14–15 supply module-derived unit evidence, with §7 limiting claim/evidence altitude. Design capability/foundation law supplies proportional reuse comparison without authority transfer or changed foundation ownership. ASSURANCE and current Product/requirements/design/release owners determine testing claims, ordinary paths, supported interfaces, compositions, runnable subjects, harnessed/live modes and populations. Current Product/requirements/composition/design/identity/release/domain owners retain specialist-family authority without mandated architecture. Goals/Product/requirements/admitted work authority own work selection and growth; accepted design owns local structural choices; identity/project authority and proxy limits bind Executive identity/envelope; Product/release law retains direct acceptance where required.",
+      "uncertainty": "The referenced owning laws are not supplied in full."
+    },
+    {
+      "applies_to_keys": ["direct_and_coordinated_entry"],
+      "conditions": [],
+      "exceptions": [
+        "Where no independent assessment is required and no acceptance is reserved, a sufficient local outcome may finish as Writer with satisfied conditions recorded in the lawful carrier."
+      ],
+      "grounding": [
+        {
+          "end_line": 177,
+          "quote": "Where no\nindependent assessment is required and no acceptance is reserved, a\nsufficient local outcome may finish as Writer, recording its satisfied\nconditions in that carrier; a required assessment or owner decision stays\nrequired, and an insufficiency found during the work withholds the\ndependent effect and returns the question to its owner",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability",
+          "start_line": 169
+        }
+      ],
+      "key": "direct_entry_conditions_and_escalation",
+      "statement": "Add coordination under ACTIVATION when direct entry cannot cover material contexts, authority, capability or required independence; names alone create no review obligation. Keep execution-contract admission distinct from drafting and use the smallest lawful carrier selected under TICKETS. Required assessment and owner decisions remain required. Insufficiency withholds the dependent effect and returns the question to its owner.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": ["direct_and_coordinated_entry", "executive_engagement_frames"],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 193,
+          "quote": "- the direct route binds the same exact intake, operation territory,\n  applicable obligations, evidence, stop conditions and declared result\n  consumer as the coordinated route of §12; and\n- a direct Worker (Writer) gains no review, ticket, diagram recreation or\n  owner ceremony from using this profile.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability",
+          "start_line": 179
+        }
+      ],
+      "key": "branch_invariants_and_result_return",
+      "statement": "Direct and coordinated routes bind the same exact intake, operation territory, obligations, evidence, stop conditions and declared consumer. Profile use adds no review, ticket, diagram recreation or owner ceremony to direct Worker work. §§12–13 transitions/handoffs apply only when coordination is selected. Direct work returns a closed result to declared work authority or existing carrier using the same result algebra and operation/decision separation. Both branches use ACTIVATION applicability and valid computed facts, judgments and owner rulings under reuse law. Neither route changes the exact adopted Product basis or supplies missing authority.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": ["claims_evidence_assessment_acceptance", "exact_claim", "claim_target_before_witness", "composite_boundary_congruence", "mechanical_enforcement_observation", "claim_quantifier_and_counterevidence", "family_tables_and_consumers_no_new_decisions", "foundation_trace_and_consumers_unresolved"],
+      "reason": "Retains the F6 premises, claim laws, ownership limits and consumer role; unavailable foundational standing and linked consumer details remain explicit residuals.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance"
+    },
+    {
+      "decision": "residual",
+      "keys": ["semantic_evidence_projection_bases", "structural_conformance_semantic_fidelity", "basis_and_role_separation", "distinct_invalidation_cases", "structural_and_basis_claim_limits", "separation_permitted_variation", "external_evaluation_owner_rules"],
+      "reason": "Retains distinctions and invalidation modalities; external reuse, staleness, model and re-entry rules are not reconstructed.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation"
+    },
+    {
+      "decision": "retained",
+      "keys": ["independent_assessment", "author_actor_identity", "assessment_of_exact_live_subject", "assessment_identity_and_exposure_protocol", "assessment_authentication_provenance", "authorship_based_independence", "assessment_operational_latitude", "authorship_conditions_independence"],
+      "reason": "Retains exact-subject, independence, authentication, exposure and authorship rules without performing assessment.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment"
+    },
+    {
+      "decision": "retained",
+      "keys": ["review_return", "review_record_and_unperformed_predicates", "review_is_input_to_acceptance"],
+      "reason": "Retains record requirements and the distinction between evaluated results, unperformed predicates and recommendation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results"
+    },
+    {
+      "decision": "retained",
+      "keys": ["technical_triage", "core_result_triage_projection", "triage_decision_value_separation", "decided_result_triage", "unresolved_and_invalid_result_consumption", "adjacent_observation_and_assessor_return", "review_projects_triage"],
+      "reason": "Retains all five result/payload/consumption branches, no-result applicability, outside-claim return and decision separation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection"
+    },
+    {
+      "decision": "residual",
+      "keys": ["acceptance_and_closure", "successor_disposition_record", "bounded_acceptance_and_successor_requirements", "successor_record_conditions_acceptance", "acceptance_external_boundaries"],
+      "reason": "Retains bounded acceptance, closure, proxy re-entry and universal successor-record coverage; externally owned grant and disposition details remain unresolved.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance"
+    },
+    {
+      "decision": "retained",
+      "keys": ["finding_promotion_block", "promotion_block_necessary_conditions", "promotion_block_sufficiency_and_cutoff", "blocking_rule_limits_profile_triggers"],
+      "reason": "Retains necessary versus sufficient blocking conditions, non-waivable override, owner discretion and outside-claim limits.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance%2FWhen%20a%20finding%20blocks%20promotion"
+    },
+    {
+      "decision": "residual",
+      "keys": ["realisation_conformance", "equivalence_ladder", "layered_sufficiency", "equivalence_evidence_and_structure", "layered_reconstruction_limits", "comparison_after_freeze", "conforming_construction_latitude", "formal_fragment_unavailable"],
+      "reason": "Retains separate claim kinds, categorical additions, layered sufficiency and comparison conditions; the external formal fragment remains unresolved.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations"
+    },
+    {
+      "decision": "retained",
+      "keys": ["reconstruction_return", "reconstruction_heads_and_evidence"],
+      "reason": "Retains all three reconstruction heads, their separate evidence and prohibited byte/size substitutions.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FReturn%20of%20a%20reconstruction"
+    },
+    {
+      "decision": "residual",
+      "keys": ["conformance_equivalence_qualification", "conformance_case_and_trial_requirements", "family_tables_and_consumers_no_new_decisions", "reconstruction_heads_and_evidence", "qualification_trace_unresolved"],
+      "reason": "Retains F7 premises, cases, trials, added policy ownership and consumer limits; external case populations and trace discrepancies remain residual.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification"
+    },
+    {
+      "decision": "retained",
+      "keys": ["qualification_section"],
+      "reason": "Retains the heading's document-organising role without inventing additional obligations.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method"
+    },
+    {
+      "decision": "retained",
+      "keys": ["frame_qualification", "fit_and_adequate_attention", "frame_minimum_evaluation", "fit_does_not_qualify_attention"],
+      "reason": "Retains all nine minimum tests and the separate fit/attention evidence and scope requirements.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification"
+    },
+    {
+      "decision": "residual",
+      "keys": ["method_self_qualification", "method_relation_population", "derived_guidance_recoverability", "method_qualification_protocol", "declare_activate_evaluate_observations", "conjoin_translate_observations", "coverage_revision_consumption_composition_observations", "qualification_population_and_open_branches", "derived_guidance_qualification", "method_qualification_falsifiers", "recoverability_measurement_and_failure", "qualification_staging_and_reference_latitude", "method_qualification_consumes_layered_sufficiency", "method_operational_semantics_residual"],
+      "reason": "Retains protocols, all named function observations, coverage, falsifiers and benchmark; does not instantiate the externally defined operations.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification"
+    },
+    {
+      "decision": "residual",
+      "keys": ["source_disposition_register", "source_disposition_novelty_and_loci", "family_tables_and_consumers_no_new_decisions", "source_conservation_not_verified"],
+      "reason": "Retains source-authored conservation, novelty and ownership mappings as documentary claims; missing predecessor material prevents independent conservation interpretation beyond those claims.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F8.%20Source%20dispositions"
+    },
+    {
+      "decision": "retained",
+      "keys": ["executive_baseline_profile", "executive_engagement_frames", "profile_imports_and_provenance", "profile_binds_engagement_frames", "profile_imports_independent_assessment"],
+      "reason": "Retains the optional tier-3 role, owned bindings, imported owners and bounded responsibility allocation.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE"
+    },
+    {
+      "decision": "residual",
+      "keys": ["canonical_engagement_flow", "specialist_and_testing_frames", "engagement_authority_limits", "frame_selection_and_evidence_altitude", "profile_adoption_and_no_implied_selection", "profile_configuration_latitude", "canonical_flow_operational_residual"],
+      "reason": "Retains represented flow, optional families and authority limits; the flow is not executed or treated as a complete transition semantics.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression"
+    },
+    {
+      "decision": "residual",
+      "keys": ["profile_ownership_and_adoption", "profile_adoption_and_no_implied_selection", "profile_owner_precedence", "profile_ownership_matrix", "profile_external_bindings_unresolved"],
+      "reason": "Retains ownership matrix, precedence and adoption boundaries; unsupplied owner laws and concrete Product basis remain unresolved.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": ["direct_and_coordinated_entry", "direct_entry_conditions_and_escalation", "branch_invariants_and_result_return", "direct_entry_latitude"],
+      "reason": "Retains conditional coordination, direct completion, exact shared bindings, mandatory reservations and route-independent authority limits.",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "One actor may lawfully perform several semantic/evidence/evaluation/disposition roles if the record distinguishes them.",
+        "A broad digest change may conservatively invalidate a review; this is permitted, not mandatory."
+      ],
+      "applies_to_keys": ["semantic_evidence_projection_bases"],
+      "forbidden": [
+        "Treating representation change as proof that every semantic relation changed.",
+        "Collapsing the separate bases or roles."
+      ],
+      "grounding": [
+        {
+          "end_line": 157,
+          "quote": "A broad digest may conservatively\ninvalidate a review; it does not prove that every semantic relation\nchanged",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 155
+        }
+      ],
+      "key": "separation_permitted_variation"
+    },
+    {
+      "allowed": [
+        "The assessor may read the constructor's governing sources.",
+        "Shared mechanical evidence may be reused under the applicable reuse rule.",
+        "Outside method qualification, an equivalent sufficient exact-subject relation may stabilise the subject.",
+        "Actor type/count, review-round count, engine, prompt and orchestration are not prescribed by this law; configuration belongs to governing authority.",
+        "No cryptographic or transport protocol is prescribed for authentication binding."
+      ],
+      "applies_to_keys": ["independent_assessment"],
+      "forbidden": [
+        "Reusing the constructor's judgment as independent assessment.",
+        "Assessing a mutable working tree, repairing the candidate or assessing one's own authorship.",
+        "Relabelling a fresh-context self-review as independent.",
+        "Retroactively passing the original frozen construction through a post-exposure revision."
+      ],
+      "grounding": [
+        {
+          "end_line": 215,
+          "quote": "This law prescribes no actor type or count,\nreview-round count, engine, prompt or orchestration (UP-022).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 214
+        },
+        {
+          "end_line": 228,
+          "quote": "The assessor may read the same governing sources as the\nconstructor.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 227
+        }
+      ],
+      "key": "assessment_operational_latitude"
+    },
+    {
+      "allowed": [
+        "Several realisations and nonunique derivations may satisfy one specification.",
+        "A lawful alternative construction permitted by the basis passes.",
+        "An applicable separately held reference outcome may serve as optional evidence.",
+        "A specification may explicitly declare materially different admitted behaviours."
+      ],
+      "applies_to_keys": ["realisation_conformance", "layered_sufficiency", "equivalence_ladder"],
+      "forbidden": [
+        "Claiming decision-complete design while a weak specification admits materially different behaviours without declared latitude or repair.",
+        "Using subjective similarity as conformance or equivalence proof.",
+        "Requiring generic byte/structural identity, determinism, unique derivation or incumbent equality.",
+        "Using evidence for one equivalence rung as a result for another."
+      ],
+      "grounding": [
+        {
+          "end_line": 393,
+          "quote": "A weak Σ that\nadmits materially different behaviours either declares the latitude or is\nrepaired before a decision-complete design is claimed.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 391
+        }
+      ],
+      "key": "conforming_construction_latitude"
+    },
+    {
+      "allowed": [
+        "Qualification may be staged.",
+        "Prior exemplar frame sets or outcomes may serve as optional comparison evidence after freeze."
+      ],
+      "applies_to_keys": ["method_self_qualification"],
+      "forbidden": [
+        "Inheriting whole-method qualification for unevaluated functions or branches.",
+        "Making exemplars mandatory target answers unless the governing basis explicitly requires equivalence."
+      ],
+      "grounding": [
+        {
+          "end_line": 657,
+          "quote": "Qualification may\nbe staged, and every verdict states the exact functions, frame revisions,\nactor envelopes, basis classes, result branches and evidence populations\nevaluated; an unevaluated function or branch stays open rather than\ninheriting a whole-method verdict",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 650
+        }
+      ],
+      "key": "qualification_staging_and_reference_latitude"
+    },
+    {
+      "allowed": [
+        "A project may adopt this profile or define another frame configuration.",
+        "Select only specialist families material to the exact evaluation.",
+        "A local axioms file may carry an adoption decision."
+      ],
+      "applies_to_keys": ["executive_baseline_profile", "specialist_and_testing_frames", "profile_ownership_and_adoption"],
+      "forbidden": [
+        "Treating the executive configuration as the method default.",
+        "Treating available specialist families as mandatory actors or architecture.",
+        "Treating a decision-carrying file as a new constitutional owner.",
+        "Inferring operation authority from a frame label."
+      ],
+      "grounding": [
+        {
+          "end_line": 110,
+          "quote": "A project may adopt this profile or define another frame configuration\n(§16).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 103
+        }
+      ],
+      "key": "profile_configuration_latitude"
+    },
+    {
+      "allowed": [
+        "A sufficient local outcome may finish as Writer when neither independent assessment nor reserved acceptance applies, with satisfied conditions recorded in the lawful carrier.",
+        "Direct work may return its closed result to declared work authority or an existing result carrier."
+      ],
+      "applies_to_keys": ["direct_and_coordinated_entry"],
+      "forbidden": [
+        "Omitting an independently required assessment or owner decision.",
+        "Adding review, ticket, diagram recreation or owner ceremony merely from profile use.",
+        "Changing the adopted Product basis or inventing missing authority through route selection."
+      ],
+      "grounding": [
+        {
+          "end_line": 174,
+          "quote": "Where no\nindependent assessment is required and no acceptance is reserved, a\nsufficient local outcome may finish as Writer, recording its satisfied\nconditions in that carrier",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F3.%20Engagement%20applicability",
+          "start_line": 169
+        }
+      ],
+      "key": "direct_entry_latitude"
+    }
+  ],
+  "limitations": [
+    "This is interpretation of supplied subject data only. No assessment, acceptance, adoption, execution, qualification, conservation proof or completeness judgment is performed.",
+    "Only the supplied sections are interpreted. Full FOUNDATIONS, ACTIVATION, REFERENCE_FRAME, AXIOMATIC_CALCULUS, TICKETS, RELEASE, SPEC_METHOD, ASSURANCE, PRODUCT_DEFINITION, DESIGN_MODULE and CONFORMANCE rules, the predecessor corpus, frontier and later EXECUTIVE_BASELINE sections are unavailable.",
+    "Consumer lists and provenance routes are retained as ownership and discovery references in aggregate, rather than expanded into asserted cross-file semantic endpoints. Their exact source loci remain available through grounding.",
+    "The finite schema describes operational judgments, traversals, transformations and result mappings as data; it does not encode or execute their full operational semantics. No judgment, traversal or transformation population is authored.",
+    "The source's own conservation, novelty, tier and foundation-derivation assertions are retained as claims made by the source, without installing their authority.",
+    "Source references label successor conservation as F15 in one table and F19 in another; this discrepancy remains unresolved.",
+    "Unperformed evaluations, unresolved claims, out-of-frame evaluations, invalid bases, falsified claims, triage classes and acceptance decisions remain distinct."
+  ],
+  "relations": [
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 224,
+          "quote": "Authorship is one of the conditions on\nwhich the independence of an assessment rests; the evidence conditions are\nthe other",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+          "start_line": 221
+        }
+      ],
+      "key": "authorship_conditions_independence",
+      "kind": "conditions",
+      "meaning": "Authorship, distinguished from operation-performing identity, is an explicit condition of assessment independence alongside evidence conditions.",
+      "source_key": "author_actor_identity",
+      "target_key": "independent_assessment"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 258,
+          "quote": "It may recommend a disposition\n([ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition)), which is\nevidence only and never a disposition; it does not apply one.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results",
+          "start_line": 256
+        }
+      ],
+      "key": "review_is_input_to_acceptance",
+      "kind": "evidence_input",
+      "meaning": "A review provides evaluation evidence and may recommend a disposition; it does not itself apply acceptance or closure.",
+      "source_key": "review_return",
+      "target_key": "acceptance_and_closure"
+    },
+    {
+      "conditions": ["The review returns findings with technical triage."],
+      "exceptions": ["A predicate not performed has neither result nor triage payload."],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 283,
+          "quote": "The projection of the finding-level triage payload is total over the core\nvalues of [FOUNDATIONS §4, Results](FOUNDATIONS.md#results).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F4.%20Review%20results%2FResult%20and%20triage%20projection",
+          "start_line": 278
+        }
+      ],
+      "key": "review_projects_triage",
+      "kind": "constrains_projection",
+      "meaning": "The declared core-result projection constrains finding-level triage payload and consumption without making triage classes new core results.",
+      "source_key": "core_result_triage_projection",
+      "target_key": "technical_triage"
+    },
+    {
+      "conditions": ["The accepted subject is a successor."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 336,
+          "quote": "Where the subject is a successor, its acceptance evidence includes the\nsuccessor disposition record",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 330
+        }
+      ],
+      "key": "successor_record_conditions_acceptance",
+      "kind": "required_evidence",
+      "meaning": "The successor disposition record is required acceptance evidence; unresolved dispositions prevent qualification and acceptance.",
+      "source_key": "successor_disposition_record",
+      "target_key": "acceptance_and_closure"
+    },
+    {
+      "conditions": ["A profile or work carrier uses finding-based promotion blocking."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 346,
+          "quote": "This section is the\none statement of when a finding can block; profiles and work carriers\nrefer to it and add only their domain triggers.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance%2FWhen%20a%20finding%20blocks%20promotion",
+          "start_line": 344
+        }
+      ],
+      "key": "blocking_rule_limits_profile_triggers",
+      "kind": "governs_domain_binding",
+      "meaning": "The generic blocking rule governs the optional profile's blocking use; the profile may add domain triggers rather than a competing blocking law.",
+      "source_key": "finding_promotion_block",
+      "target_key": "executive_baseline_profile"
+    },
+    {
+      "conditions": ["Generic method sufficiency is qualified."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 608,
+          "quote": "Qualification\nof generic method sufficiency consumes the work boundary (FOUNDATIONS §2),\nthe construction and assessment relation of ACTIVATION §1 and the layered\nsufficiency of §6; it creates no second process.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 605
+        }
+      ],
+      "key": "method_qualification_consumes_layered_sufficiency",
+      "kind": "governing_prerequisite",
+      "meaning": "Layered sufficiency supplies an explicitly consumed rule of generic method qualification.",
+      "source_key": "layered_sufficiency",
+      "target_key": "method_self_qualification"
+    },
+    {
+      "conditions": ["This optional profile is selected and adopted under existing authority."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 48,
+          "quote": "A frame name binds the responsibility\nthe configuration allocates to it, not a role imported by spelling, and\ngrants no authority by itself",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE",
+          "start_line": 46
+        }
+      ],
+      "key": "profile_binds_engagement_frames",
+      "kind": "allocates_responsibilities",
+      "meaning": "The profile binds construction to Worker, assessment to Reviewer and coordination/bounded disposition to Executive; it does not create underlying authority.",
+      "source_key": "executive_baseline_profile",
+      "target_key": "executive_engagement_frames"
+    },
+    {
+      "conditions": ["Independent assessment is required in the selected profile configuration."],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 30,
+          "quote": "the\nindependent-assessment protocol and the review-result shape, including the\nresult and triage projection, are EVALUATION §3 and §4",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE",
+          "start_line": 28
+        }
+      ],
+      "key": "profile_imports_independent_assessment",
+      "kind": "imported_governing_rule",
+      "meaning": "The profile imports EVALUATION's independent-assessment protocol instead of defining another one.",
+      "source_key": "independent_assessment",
+      "target_key": "executive_baseline_profile"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Retain P0–P6 and named consumers as source-authored derivation and application references without reconstructing external axioms, proving derivations or fabricating cross-file nodes. P0 is cited with candidate-output and non-reacquirable-fact premises; P5 is described as derived from P0/P6 with an open-world premise, and P4b from P0/P2. Consumer references remain discovery routes, including exact-cut qualification, composite integration, frame/profile scope, independent review, triage, acceptance and successor conservation.",
+      "grounding": [
+        {
+          "end_line": 78,
+          "quote": "P0's premise that a step's output is a candidate until evaluated is cited\nby name. The standing of the consequences below is stated in\n[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 76
+        },
+        {
+          "end_line": 109,
+          "quote": "Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 107
+        }
+      ],
+      "key": "foundation_trace_and_consumers_unresolved",
+      "subject_key": "claims_evidence_assessment_acceptance",
+      "uncertainty": "Full foundational standing, §1 falsifiers and the linked consumer sections are not supplied. Trace columns and pillar numbers do not independently establish normative derivation."
+    },
+    {
+      "consequence": "Preserve conditional invalidation, mandatory force when applicable and the distinct basis/role rules without deciding any concrete verdict's reuse, view staleness or model validity.",
+      "grounding": [
+        {
+          "end_line": 153,
+          "quote": "Whether a given change does so is decided by the reuse rule of\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F2.%20Separation",
+          "start_line": 148
+        }
+      ],
+      "key": "external_evaluation_owner_rules",
+      "subject_key": "distinct_invalidation_cases",
+      "uncertainty": "ACTIVATION reuse/staleness rules, SPEC_METHOD semantic re-entry and RF/AC domain bindings are external dependencies, not fully supplied definitions."
+    },
+    {
+      "consequence": "No concrete proxy power, prohibited decision list, successor disposition vocabulary or record-evaluation result is inferred. Unresolved disposition remains a qualification and acceptance prohibition, not falsification.",
+      "grounding": [
+        {
+          "end_line": 325,
+          "quote": "What a proxy grant names is\n[IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)'s,\nand what a proxy can never decide is\n[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)';",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F5.%20Acceptance",
+          "start_line": 321
+        }
+      ],
+      "key": "acceptance_external_boundaries",
+      "subject_key": "acceptance_and_closure",
+      "uncertainty": "IDENTITY grant contents, FOUNDATIONS proxy limits and RELEASE §9's full record evaluation are unresolved external references."
+    },
+    {
+      "consequence": "Categorical-equivalence additions are retained, but no category, functor, span, structure-preservation proof or equivalence is instantiated or accepted.",
+      "grounding": [
+        {
+          "end_line": 415,
+          "quote": "FOUNDATIONS §4, Formal fragment, owns what a category or functor\nclaim must show and defines the symbols 𝒜, ℐ and 𝒞_H used here",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations",
+          "start_line": 412
+        }
+      ],
+      "key": "formal_fragment_unavailable",
+      "subject_key": "equivalence_ladder",
+      "uncertainty": "The full Formal fragment, its applicable items and its category symbols are not supplied. Their algebraic semantics exceed the descriptive claims retained here."
+    },
+    {
+      "consequence": "Keep F7's stated premises, minimum tests, case/trial requirements and consumer limits, but do not fabricate external cases, observation populations or reconciled family identity. The reference to 'last two rows' is retained as an imprecise locator rather than used to reassign owners.",
+      "grounding": [
+        {
+          "end_line": 517,
+          "quote": "the dispositions and the conservation reading: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F19)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 517
+        },
+        {
+          "end_line": 98,
+          "quote": "the disposition values and how the record is evaluated: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15)",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F1.%20Claims%2FFoundation%20to%20law%3A%20claims%2C%20evidence%2C%20assessment%20and%20acceptance",
+          "start_line": 98
+        },
+        {
+          "end_line": 522,
+          "quote": "CONFORMANCE §1 to §4 list the\ncases, which are the choices named in the last two rows",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F6.%20Conformance%20of%20realisations%2FFoundation%20to%20law%3A%20conformance%2C%20equivalence%20and%20qualification",
+          "start_line": 519
+        }
+      ],
+      "key": "qualification_trace_unresolved",
+      "subject_key": "conformance_equivalence_qualification",
+      "uncertainty": "The same RELEASE §9 is labelled F15 and F19 in supplied trace tables. Full foundational standing, consumer sections and CONFORMANCE cases are unavailable; the 'last two rows' locator does not straightforwardly match the final reconstruction row."
+    },
+    {
+      "consequence": "Preserve required observations, distinct result branches, refusals, uncertainty and qualification scope descriptively. No method function, conjunction, transformation, assessment, benchmark or release protocol is executed. The finite representation omits executable transitions, binding algorithms and quantitative measurements.",
+      "grounding": [
+        {
+          "end_line": 639,
+          "quote": "under a veto or deferral the decision rule declares, `conjoin` returns the [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) outcome whose cause holds; none flattens frame meaning",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 639
+        },
+        {
+          "end_line": 702,
+          "quote": "This is the observable for the matrix criteria F27 and F28; F29 and F30 are\nthe same observation reported with the task completed, the material errors\ndetected and the cost.",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FMethod%20self-qualification",
+          "start_line": 700
+        }
+      ],
+      "key": "method_operational_semantics_residual",
+      "subject_key": "method_relation_population",
+      "uncertainty": "Full operation domains, veto/deferral outcomes, matrix criteria, measurement procedures and governing-authority protocols are external or not executable within the five descriptive families."
+    },
+    {
+      "consequence": "Treat conserved/new labels, anchor mappings and the tenant frontier as documentary assertions and unresolved provenance routes. No predecessor conservation, successor acceptance or corpus-wide completeness is established.",
+      "grounding": [
+        {
+          "end_line": 716,
+          "quote": "its application to this corpus is the tenant [frontier](../frontier/PREDECESSOR_CLAIMS.md), which holds every predecessor row's disposition and locus",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F8.%20Source%20dispositions",
+          "start_line": 716
+        }
+      ],
+      "key": "source_conservation_not_verified",
+      "subject_key": "source_disposition_register",
+      "uncertainty": "The predecessor clauses, full current owner sections and referenced frontier are not supplied, so assertions such as 'conserved in full' cannot be independently compared here."
+    },
+    {
+      "consequence": "Keep the diagram as a source-described process with conditional branching and bounded authorities, without treating its arrows as an executed traversal, unconditional dependency or installed configuration. Detailed transitions and records remain external.",
+      "grounding": [
+        {
+          "end_line": 70,
+          "quote": "  -> updated basis, coverage, residuals and frontier\n  -> repeat or stop",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F1.%20Canonical%20compression",
+          "start_line": 69
+        }
+      ],
+      "key": "canonical_flow_operational_residual",
+      "subject_key": "canonical_engagement_flow",
+      "uncertainty": "Canonical arrows compress a workflow whose full transitions, specialist definitions and later handoffs are not supplied and cannot be operationally represented by these descriptive families."
+    },
+    {
+      "consequence": "Preserve owner precedence and conditional adoption while leaving actual grants, exact adopted Product basis, execution protocols, unit evidence routes, foundation selection and testing details unresolved. No profile selection or Product instantiation follows from interpreting the document.",
+      "grounding": [
+        {
+          "end_line": 151,
+          "quote": "Adoption requires a separately\naccepted Product-owned Project Reference-Frame Basis (PRODUCT_DEFINITION\n§7).",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F2.%20Status%20and%20authority%20boundary",
+          "start_line": 148
+        }
+      ],
+      "key": "profile_external_bindings_unresolved",
+      "subject_key": "profile_ownership_and_adoption",
+      "uncertainty": "The matrix cites external owning laws and a concrete Product-owned basis; neither those full laws nor an actual adopted basis is supplied."
+    }
+  ]
+}

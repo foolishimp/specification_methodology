@@ -1,0 +1,488 @@
+{
+  "changes": [],
+  "chunk": "chunk-bcd515f6c8df632f2fad",
+  "derived_answer_sha256": "e855da993482499732889ac1ce195d21e6de66d1feb56fdfb4e55384ae167cd3",
+  "derived_non_grounding_sha256": "8416f18435ce226d1663738ab2f8e8c4b965a64e7c00a2e8dc8a08aa4a2f1fcf",
+  "fd_elapsed_seconds": 0.047522957902401686,
+  "non_grounding_sha256": "8416f18435ce226d1663738ab2f8e8c4b965a64e7c00a2e8dc8a08aa4a2f1fcf",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "f39f7b995ba93b0fb4cc7f88d9a232d581a950ccc9ab2dc3c1fe860d98fb927e",
+    "original_attempt": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 9600,
+        "input_tokens": 67196,
+        "output_tokens": 58888,
+        "reasoning_output_tokens": 407
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/answer.json": "7deddd27e51205973c26ce43a20c72ff243d2ac90ade4eef67f440d17a0603ec",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/events.jsonl": "2f9ec5bdec0c73b33fb9c6e803bbe53412e35efb98666acd23c44159611d093f",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/invocation.json": "d7b68fdda593fa76923f005d90fdef625970c2e17c7175087caf36db0f8d8167",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/prompt.txt": "8eb3417cafd153ac017ccce68edf828f9cf88bdec1f180e92cf38e2c62876510",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/result.json": "fc5bb83670879d0cccc78a22ba9805f73b50be4c53588366c067b72da7e93921",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/usage.json": "c4ae41a9a558b03d297cc7f23b7ec50fd748439eab99c32cc83cca242282fe5e",
+      "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/validation.json": "05cb538a25d3a1ac603496774e37ccf639b4ed55985647ba0f9badd6dae25d6c",
+      "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+      "plan.json": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc",
+      "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+    },
+    "source_sections": [
+      {
+        "end_line": 432,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+        "path": "standards/UX.md",
+        "sha256": "c969056ff38725ae5383f11b21195916260c7eb7d22d3fba2c812104d8d35e11",
+        "start_line": 392
+      },
+      {
+        "end_line": 454,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+        "path": "standards/UX.md",
+        "sha256": "ddc9b00b44587177a595ef99df56950e0ecbbf39cbc4762f9e75bd6fe3b80442",
+        "start_line": 433
+      },
+      {
+        "end_line": 487,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+        "path": "standards/UX.md",
+        "sha256": "999415bc6594a1e5745e143db5ca6611d5292fddff458a02a6abca147f13e458",
+        "start_line": 455
+      },
+      {
+        "end_line": 509,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F9.%20View%20shape",
+        "path": "standards/UX.md",
+        "sha256": "dad116100cd8b6acd69471f43d2caac74d08228e00c5af9a58a6cd2cc8ce4a48",
+        "start_line": 488
+      },
+      {
+        "end_line": 534,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+        "path": "standards/UX.md",
+        "sha256": "ccb24ea4a4b0a702fbea1878d351c578ef0bbac147de5988bb1f509074e529ab",
+        "start_line": 510
+      },
+      {
+        "end_line": 556,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+        "path": "standards/UX.md",
+        "sha256": "305ab7a1555ad5f80f638f658df125ab7f317e75526d482827ab53dae2e8c31c",
+        "start_line": 535
+      },
+      {
+        "end_line": 580,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption",
+        "path": "standards/UX.md",
+        "sha256": "93d0510dad008c5ad6b7ec27926ae63a1d79bbf819c2aa607f90472959c8d3c4",
+        "start_line": 557
+      },
+      {
+        "end_line": 608,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+        "path": "standards/UX.md",
+        "sha256": "40d0636faf1bb51890202afa9cb52e75f1b94ceb3aae1a28cdf8636b7b14c27b",
+        "start_line": 581
+      },
+      {
+        "end_line": 674,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+        "path": "standards/UX.md",
+        "sha256": "d6cf58cb58f7839e5156ab5d3c469f5cae50ff9b649f29b34783577aae9c166f",
+        "start_line": 609
+      },
+      {
+        "end_line": 717,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+        "path": "standards/UX.md",
+        "sha256": "731d4f119956482a659247ba63bc0c3df692e71b08faf1ac61081fcbea7aaa5f",
+        "start_line": 675
+      },
+      {
+        "end_line": 748,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F14.%20Review%20questions",
+        "path": "standards/UX.md",
+        "sha256": "845d20fc0c3e4142ee40c36e09d2c25e6e0103e531b369577bc4aab0791f721e",
+        "start_line": 718
+      },
+      {
+        "end_line": 820,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+        "path": "standards/UX.md",
+        "sha256": "dc53de38e787dd665d86e363e8799830cecf352e53d0c5c35f45a606a0ac2f23",
+        "start_line": 749
+      },
+      {
+        "end_line": 871,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/UX.md#UX%2F16.%20Source%20dispositions",
+        "path": "standards/UX.md",
+        "sha256": "bb0a0b724664c576023f1e5e902334cc4818c93dfad81181795b28e3d5a2a2bc",
+        "start_line": 821
+      },
+      {
+        "end_line": 67,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "3e6fc7951ffdf65dcd7aad45b7d2ba98a72c8939f30e8b1e5a3ee4988df1babe",
+        "start_line": 1
+      },
+      {
+        "end_line": 92,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "19971badfb5c2baa730b430b5d0285137399e79159e56913b57a1dfacbb23198",
+        "start_line": 68
+      },
+      {
+        "end_line": 102,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FConstitutional%20intents",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f3534aeb4898bb3fe54f38180ada8f47146fdc15d789b830b1dd568d0289ed3a",
+        "start_line": 93
+      },
+      {
+        "end_line": 141,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FManifesto",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "b5e257d5762a34e025ea1d77b4e3c4f893c34fa822b7449ccaac693aea33d38a",
+        "start_line": 103
+      },
+      {
+        "end_line": 219,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "b46d84ad6d47fddfc36cf78491b7ed2271709913650a1a58859b160ac8143ab4",
+        "start_line": 142
+      },
+      {
+        "end_line": 271,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "d967ca4ae946bb93bdb3c91296ac1dc9e5f88cea794f1314feec07608588e207",
+        "start_line": 220
+      },
+      {
+        "end_line": 311,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "fa354e083782786a8e0f90caafd5126a35450b93badb27d53d944562daa253ee",
+        "start_line": 272
+      },
+      {
+        "end_line": 333,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "018660affafbb72087f7217c7ebecbd9cec4d2f14a3eaf87d4ffd559e14f3033",
+        "start_line": 312
+      },
+      {
+        "end_line": 349,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FObjectives",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "a76a4639bf6530d79cd75b723ae2d1c4f53d3d9c0a0440e00129bcad019ec843",
+        "start_line": 334
+      },
+      {
+        "end_line": 361,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FSingle%20truth%20surface",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "ca17bee4900007f49a0315d291255729686d8e434e4985bd70d9e41e18699803",
+        "start_line": 350
+      },
+      {
+        "end_line": 378,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FEvidence%20hierarchy",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "3af9418d49e4c3c8a058086a9b52103679aaaed79a03a93e03637eeacd482892",
+        "start_line": 362
+      },
+      {
+        "end_line": 400,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "294d70c7eaf24bd552f85ebf6d056b413f9d433ea561c04d6419a04639f237b7",
+        "start_line": 379
+      },
+      {
+        "end_line": 431,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEffective%20blanket",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "5a9c821c35d0d38117fa0960f60da2d1c62926a6bdcf6be0daf1ed202f52a7d0",
+        "start_line": 401
+      },
+      {
+        "end_line": 473,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FFour%20working%20refinements",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "84444e9fdac7206b879bc6da72ae3e21709fd4f3891ec5e3dd5e5a5ffbf5cea5",
+        "start_line": 432
+      },
+      {
+        "end_line": 510,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEpistemic%20status",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "d5a752ef66d9ad71ec6b7cfa3b7d9a57c2e512dc5d048aa317f84083a1c03685",
+        "start_line": 474
+      },
+      {
+        "end_line": 534,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FRelation%20to%20the%20design%20profile",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f614964e59b44b6f8bc065b7d04784b2996405b726d2604d28e18d157cd435a2",
+        "start_line": 511
+      },
+      {
+        "end_line": 596,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "c6014b073224ce42115842d30f9c7016dbbcd89d4acab773d0606d16555f9544",
+        "start_line": 535
+      },
+      {
+        "end_line": 650,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "85eb187e2282e5496e08eacf1b8d1976d617147e7c7e1bbe4743ac92d183d5c4",
+        "start_line": 597
+      },
+      {
+        "end_line": 720,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "8c9a9f5b34d738a2fd754f52b18188b04c869fde253c147f491de9942e01338b",
+        "start_line": 651
+      },
+      {
+        "end_line": 722,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "6dcb7a3c901cd72a300da31d1b892278b8907fce56e59a2824d641af1d75b405",
+        "start_line": 721
+      },
+      {
+        "end_line": 740,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FRepresentation%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "9addd07281b6f611a6b7cda1eec8f53931e1336f6eff08c34cd0c967b16dddf3",
+        "start_line": 723
+      },
+      {
+        "end_line": 773,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FMaterialisation%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "7864e59aeebd369eed6743fca8e40ee1dda8332eb6a6f28d127723dea5aabe0d",
+        "start_line": 741
+      },
+      {
+        "end_line": 788,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f48de858534f888e02eddcc2db76bcc29498810f29f469a4cf958d1adebcc0cd",
+        "start_line": 774
+      },
+      {
+        "end_line": 801,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FAttribute%20ledger%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "fcad57fa7162e212f1db094047259cdab74b1963d8cfbf42d87704aca8acdf0f",
+        "start_line": 789
+      },
+      {
+        "end_line": 808,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "2691c2edb77c48ee22960f9a26430efea2d0cf915143a0492291345139d1c2e9",
+        "start_line": 802
+      },
+      {
+        "end_line": 830,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FAdmissibility",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "cb836f45b82583dd7cc0782ceeb0a316c6b61149345925500970a3cb3f39d437",
+        "start_line": 809
+      },
+      {
+        "end_line": 860,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FDiscrimination",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "70863a9f07eb98a97deb12982ec27200080bf583bb55a11fe22e285ee7ec2203",
+        "start_line": 831
+      },
+      {
+        "end_line": 872,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FPublishing%20a%20cut",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "19388479f2e951976d473153ceafc8bd1415adffb2b9d58d27ecd6b1795a0daf",
+        "start_line": 861
+      },
+      {
+        "end_line": 887,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "61723b791c93f63a34a80bf102312e36a1ddc2d19dd4fbb152760017573029ff",
+        "start_line": 873
+      },
+      {
+        "end_line": 903,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FPaired%20evidence%20collection",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "7a984dbf52d21156fd7f64e9d1ecccd45e09515cab9fff738e80d4760a49b6a6",
+        "start_line": 888
+      },
+      {
+        "end_line": 919,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FIdentity-direction%20extraction",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f9037b791cf337918100bbf2d2a038fc9015d5652321076715d58aa4f77c1cc0",
+        "start_line": 904
+      },
+      {
+        "end_line": 944,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FVerification%20by%20treatment",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "2e34434fb354584da3e406fb0ad7a2aae8db79daa3e841b57e85d195c9d44ebd",
+        "start_line": 920
+      },
+      {
+        "end_line": 955,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "b3af932975e938564bea6e2fad139c1126c64651adc724beff7a7eb3667c3337",
+        "start_line": 945
+      },
+      {
+        "end_line": 972,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FNull-peer%20discrimination",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "e48612e0c62d1398a8229a5e8e876b0b13db4a2576992dbd59a432ab68760118",
+        "start_line": 956
+      },
+      {
+        "end_line": 998,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FOverlay%20publication",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "467e0036cae1070b4b25f09e3a2e1571a3decd73b89cbcaacda9009c1fe59b12",
+        "start_line": 973
+      },
+      {
+        "end_line": 1017,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FStorage%20shape",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "21b89c34ff17a6bcb8370e4428ce256a0911c9b1cd0d6b997aab7b3873e520e8",
+        "start_line": 999
+      },
+      {
+        "end_line": 1019,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "77bf5bed8c7d50c7b05aee48d4a47e3e9bbc5096741a345b886b3bb974d20e8f",
+        "start_line": 1018
+      },
+      {
+        "end_line": 1031,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FSaturation%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "038b2276b39fbd93351659e1395a3ade385b97d78ed7ba7763449176a5f16ee6",
+        "start_line": 1020
+      },
+      {
+        "end_line": 1044,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FComposition%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f1eaff0972457091fa06682dc372ee3bd0690c48bead605af70286df0a031aa2",
+        "start_line": 1032
+      },
+      {
+        "end_line": 1059,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FProjection%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "34f173e906ee57f3669c6bd3e2eed48c47d027a5df536d9f417eda0291f9fd3b",
+        "start_line": 1045
+      },
+      {
+        "end_line": 1061,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "a2fec624a65aa86e52ce5e45b6789ebde48f797bab63da4bb4b7a6a33f5d6117",
+        "start_line": 1060
+      },
+      {
+        "end_line": 1083,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FControl%20plane%20and%20data%20plane",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "96ff571995a97c5d04944bdf22c7d79121a065a6b3b8f6b8414e82cac1d1fb87",
+        "start_line": 1062
+      },
+      {
+        "end_line": 1104,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FProof%20law",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "7298df098c2069f6e248f526138f26a6098fec5aa1b0fb0e23aed1dda8c3b8b9",
+        "start_line": 1084
+      },
+      {
+        "end_line": 1123,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FWorld-model-driven%20development",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "46f90761f871553886a5b76501bea544cf5342c5160010816320653a70bcaece",
+        "start_line": 1105
+      },
+      {
+        "end_line": 1125,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "52326c2bfe8bfacc3a2c1dc21ee26c33649d7538df6a8fd61204cb5f7483b7de",
+        "start_line": 1124
+      },
+      {
+        "end_line": 1144,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FOutput",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "eb85c9c3c6c4e60a0a4a57cab16128a029ec7743c1ca30d7f0422d4112b7fe26",
+        "start_line": 1126
+      },
+      {
+        "end_line": 1163,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "587e6cfd2b0defd550f6bf9df31021a6c4d41ce5157ce5132c8d5bf63cfa5287",
+        "start_line": 1145
+      },
+      {
+        "end_line": 1247,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "f1895f4264fb13c92b48038c77901e4b9ce85e7b1a9b81cf6e164043b8f53761",
+        "start_line": 1164
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/answer.json": "7deddd27e51205973c26ce43a20c72ff243d2ac90ade4eef67f440d17a0603ec",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/events.jsonl": "2f9ec5bdec0c73b33fb9c6e803bbe53412e35efb98666acd23c44159611d093f",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/invocation.json": "d7b68fdda593fa76923f005d90fdef625970c2e17c7175087caf36db0f8d8167",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/prompt.txt": "8eb3417cafd153ac017ccce68edf828f9cf88bdec1f180e92cf38e2c62876510",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/result.json": "fc5bb83670879d0cccc78a22ba9805f73b50be4c53588366c067b72da7e93921",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-bcd515f6c8df632f2fad/attempt-001/usage.json": "c4ae41a9a558b03d297cc7f23b7ec50fd748439eab99c32cc83cca242282fe5e"
+  }
+}

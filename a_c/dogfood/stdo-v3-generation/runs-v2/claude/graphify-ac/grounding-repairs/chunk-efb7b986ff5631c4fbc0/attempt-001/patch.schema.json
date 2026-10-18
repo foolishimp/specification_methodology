@@ -1,0 +1,150 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "post_categories"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.6%20Product-specific%20semantics%20sit%20above%20the%20shared%20carrier",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7%20Manual%20walkthrough%20must%20still%20be%20lawful",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7B%20Real%20authority-path%20negative%20proof%20%28STDO-UP-010%29",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.8%20Cumulative%20environment%20law%20is%20mandatory",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.9%20Global%20convergence%20must%20be%20stable%20under%20zoom",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F12.%20Scenario%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F13.%20Installed-dev%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F14.%20Dogfooding%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F15.%20Release%20boundary",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F16.%20Failure%20pattern",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F17.%20Invocation%20rule",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FGeneral%20ODD%20product",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FWorld-model%20product",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F19.%20Ramp-up%20checklist",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F20.%20Canonical%20compression",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F1.%20Position",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F2.%20Boundary",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F4.%20Carrier%20identity",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F6.%20Structure",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F7.%20Discussion%20state%20and%20mutability",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F8.%20Posting%20rules",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F9.%20Ratification",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F10.%20Shared%20method%20adoption",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F11.%20Source%20dispositions",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F2.%20Required%20definition%20relations",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F3.%20Constitutional-set%20sufficiency",
+                  "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

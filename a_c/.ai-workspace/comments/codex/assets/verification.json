@@ -1,0 +1,105 @@
+{
+  "kind": "a_c.graphify.implementation-verification",
+  "schema_version": 1,
+  "claim": "bounded development candidate; no semantic acceptance, full-calculus admission or release",
+  "base_commit": "9549bf2754c8cdde3260762c1102a0d4654c6c1f",
+  "head_at_verification": "9549bf2754c8cdde3260762c1102a0d4654c6c1f",
+  "python_version": "3.12.8",
+  "composition": [],
+  "source_files_sha256": {
+    "AGENTS.md": "6885dff07f5fdad3b9f6ef644e57c5e0b260c94b29d9cbec5eb1a45f81950cec",
+    "CLAUDE.md": "173e037d779d554291496ebf2eeca3bed5ab3ebb8e27baad922cba408daf6c93",
+    "README.md": "1818bc63222caf3d24a298b47074013c72008d6914be08290ad0ca15cf011831",
+    "a_c/.ai-workspace/tickets/active/T-001-graphify-realization.md": "ae508e37c97158ab59a569d3fea66fd098bc23a8c0ce38abe7962a38b8245c53",
+    "a_c/.gitignore": "1c3ee05f4fcefaeb2fa601154466db6d7708d9e8c19c4329c37923dec51e277a",
+    "a_c/AGENTS.md": "41d4a657c76c82be21818a0c7eec131ca6970b9a0ce086733a3ba92af5aab42f",
+    "a_c/CLAUDE.md": "b75461f531e852b330f1d8eb2288fa23864e5b813c47aba27820a5d4fe7bebf0",
+    "a_c/README.md": "67221e027deacbc0e09ce56a39d0090649f9821bf2f664207cb5c052855b455c",
+    "a_c/build_tenants/README.md": "bac7c9e958c3ba4e150fe17e45c878e023341c3c00937b7b36dec3bef4716aa8",
+    "a_c/build_tenants/graphify/README.md": "c532d5e43def9e5e1ea3567cd82d0b1e1acb66b51afd6172f77e1c71d69b5cca",
+    "a_c/build_tenants/graphify/code/ac_graph.py": "e8d3fcaa26bf724186d05ba245fa621bfc87c8f75c5d9294795d619a9467e1bb",
+    "a_c/build_tenants/graphify/design/README.md": "1216ca4b08f7da8df0baceab66abf5b42db8ca700d6e6bfeb33805e04f65c3a5",
+    "a_c/build_tenants/graphify/examples/subject.md": "2adc1caa28b8da863cc23314a4138564fe0cce847d9f0eb8afcf5b938f6282b6",
+    "a_c/build_tenants/graphify/mypy.ini": "2ebf1ac43e89df83b0cd42a01ea0a3f00ee5f1a82045281357369847fd91b461",
+    "a_c/build_tenants/graphify/test_env/check_upstream.py": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561",
+    "a_c/build_tenants/graphify/test_env/fixture_support.py": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+    "a_c/build_tenants/graphify/test_env/fixtures/toy_model.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+    "a_c/build_tenants/graphify/test_env/requirements-qualification.txt": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5",
+    "a_c/build_tenants/graphify/test_env/test_ac_graph.py": "e92324f3ab16d8ece441471ab2f654efbbcb04ce8337c68304f159437c25708e",
+    "a_c/specification/GOALS.md": "769159f4f149108a4f72ad1821241c6fada5df80a0820f0ab48002c833f6bdc4",
+    "a_c/specification/INTENT.md": "c7023b8938c3ac105ad30b380921d9e94b988a7b795afaef71f81c12cfbcaf9f",
+    "a_c/specification/PRODUCT.md": "7db5a9fbc92cbf8fab2612153d6c6d586bca7a610138c7ee1ed3041e50b8a9ea",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "c1896b3d27c8445bfac02852a60927e481bbb1a1b0df7ecba84adadb86e086d2",
+    "a_c/specification/requirements/README.md": "b4fb1648d6487fd925a57c57be77351e78d70f82908b927ab211901fdfcbc38f",
+    "a_c/stdo_a_c.json": "3f28b55a95bd196d5522a9a15ca2a2c02842a5fb8c762b9600d3f65693f599da"
+  },
+  "checks": {
+    "product_definition_schema": {
+      "result": "passed",
+      "validator": "jsonschema4.23.0 Draft202012Validator + FormatChecker"
+    },
+    "installed_stdo_basis": {
+      "result": "passed",
+      "uri": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+    },
+    "unit_tests": {
+      "result": "passed",
+      "tests": 41,
+      "command": "python3 -m unittest discover -s a_c/build_tenants/graphify/test_env -p 'test_*.py' -q"
+    },
+    "strict_typing": {
+      "result": "passed",
+      "mypy": "1.15.0",
+      "files": 4,
+      "command": "../../.venv/bin/python -m mypy --config-file mypy.ini",
+      "cwd": "a_c/build_tenants/graphify"
+    },
+    "documented_cli": {
+      "result": "passed",
+      "operations": [
+        "materialize",
+        "decode",
+        "find",
+        "inspect",
+        "project"
+      ],
+      "exact_model_recovery": true,
+      "governing_records": 9,
+      "provenance_branch_excluded": true,
+      "residual_retained": true,
+      "insufficient_budget_exit": 2,
+      "partial_artifact_created": false
+    },
+    "independent_review": {
+      "reviewer": "/root/ac_contract_assessment",
+      "same_model_family": true,
+      "initial_codec_sha256": "fb91d53c39047f883ffce26b138fa145c27cc359a2f8d28cb8a05dd293b344fa",
+      "original_p2_findings": 3,
+      "repaired_findings": 3,
+      "targeted_reread": "satisfied",
+      "original_falsifiers_refused": 8,
+      "original_falsifiers_total": 8,
+      "new_targeted_tests": 7,
+      "product_acceptance": false
+    },
+    "actual_upstream": {
+      "result": "passed",
+      "report": "graphify-upstream.json",
+      "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+      "nodes": 282,
+      "edges": 372,
+      "native_query": "unresolved reading",
+      "fixture_discovery_only": true
+    }
+  },
+  "remaining_claims": [
+    "source interpretation fidelity",
+    "external evidence and issuer authentication",
+    "full AC-019 admission",
+    "transformation execution and delta validity",
+    "matched real-task usefulness and accepted-result cost",
+    "Product acceptance and release",
+    "downstream adoption"
+  ]
+}

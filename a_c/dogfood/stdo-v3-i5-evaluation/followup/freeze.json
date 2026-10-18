@@ -1,0 +1,66 @@
+{
+  "profile": "ac.eval.actual-use-pre-answer-freeze/1",
+  "frozen_at_utc": "2026-10-17T05:45:53.732421+00:00",
+  "primary_freeze_sha256": "3b006ab85d3c23b1a4e815682d5e912797b6fe25e8cab80fc2f7f5677c40c13a",
+  "files": {
+    "followup/PROTOCOL.md": {
+      "sha256": "830ce548f2f6c873f8386565bbb6c47b4a0278d055280d8e700a3779121a1b4c",
+      "bytes": 3226
+    },
+    "followup/schedule.json": {
+      "sha256": "7e3c58679661446f39557b875dbc6fe34275377db6bf7ca7089987599cabb039",
+      "bytes": 1089
+    },
+    "private/tasks.json": {
+      "sha256": "254ec532db5fc5f20cacef2e3bdd2d4e62b02db56a924f73bde542ca646d0e8c",
+      "bytes": 11391
+    },
+    "private/oracle.json": {
+      "sha256": "002f21861c3c8ada5aa5868667cbc0fce668517e6eeb13c1a8de0ee276ae9968",
+      "bytes": 344657
+    },
+    "tools/study_mcp.py": {
+      "sha256": "8b4e932c51dbb8bda96cacb86121c71b1231831dd6a28ad7a662418c63b041b2",
+      "bytes": 47491
+    },
+    "tools/run_actor.py": {
+      "sha256": "bbc3f085b07adec98e4dd2584cf2f6213f8b8eee89f27e488a0d48f3afbc5fef",
+      "bytes": 15757
+    },
+    "output.schema.json": {
+      "sha256": "a9d07b44679eb91b8b3b381c38a764ef805dc07b948a8f5639266b73c9f89a50",
+      "bytes": 1853
+    },
+    "baselines/codex/manifest.json": {
+      "sha256": "3250b5b49539c3d3fb8184108b9e2223d12b77926c4eb4ecfbeed204efdac2a3",
+      "bytes": 18951
+    },
+    "baselines/claude/manifest.json": {
+      "sha256": "e666b35ff704ba2b31d0090c74074bb96d4a40352707ea792c628a4d4c43eb97",
+      "bytes": 17104
+    },
+    "followup/runs/F01/prompt.txt": {
+      "sha256": "00bc3154a055b4fefbb921d975c1f4a38f780d18800c3f475b6933d79e572bfc",
+      "bytes": 3018
+    },
+    "followup/runs/F02/prompt.txt": {
+      "sha256": "4a4e5431b0fbf2037338936f43ac2e8cd822aeb5690f252203a803ba4d638b01",
+      "bytes": 3439
+    },
+    "followup/runs/F03/prompt.txt": {
+      "sha256": "304c17d70e4e61a21026b6c1b92518991e5f9d58b0d50713709387dcc21fd824",
+      "bytes": 3438
+    },
+    "followup/runs/F04/prompt.txt": {
+      "sha256": "5bbb3fe0671d964e55e9370d86340dfac749f1e7eca06da848f8c16d57a89910",
+      "bytes": 3019
+    }
+  },
+  "scope": "Exploratory prescribed-use repeats; no new independent questions or replacement of primary runs.",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "call_budget": 24,
+  "content_utf8_budget": 160000,
+  "wall_seconds": 720,
+  "mechanical_compliance": "successful nonempty graph_query; successful nonempty graph_select materialize=false; later successful read_source; exact isolation/resource envelope; relevance separate."
+}

@@ -1,0 +1,147 @@
+{
+  "tasks": [
+    {
+      "id": "L3",
+      "decision": "Reuse A within its established applicability relation. Reassess B. C cannot be cleared for reuse from the incomplete dependency view; widen reassessment or establish the missing coverage and applicability. G cannot be skipped. Reject the asserted 99% probability of Product correctness. For the bounded assurance-completion claim: P is satisfied; F is defeated by B's falsified required predicate while C's missing return remains visible; U is indeterminate.",
+      "justification": "FOUNDATIONS §4 distinguishes assertion justification from evidence-validity dependencies and permits retention through established applicability. This supports A, selects B because it executes changed L, and prevents treating C's absent dependency path as proof of non-influence. Mandatory gates remain applicable. The same owner distinguishes shared agreement from independent evidence and detection probability from Product correctness. Its result conjunction preserves failures and missing returns separately: complete valid support establishes P; B's counterexample defeats F without resolving C; C's dispatch receipt cannot complete U. Assessment does not itself constitute acceptance.",
+      "representation": {
+        "statement": "Evaluate whether the fixed required assurance for S1/B1 is complete, using applicable retained evidence together with current evidence for every required predicate and material join.",
+        "premises": [
+          "L changed, producing S1/B1. A, B and C passed previously on S0/B0.",
+          "A's supported analysis covers assertion, execution and reliance dependencies, establishes applicability to S1/B1 through preservation, and establishes that those dependencies are unaffected.",
+          "B executes L. C's dependency view contains no path from L, but its material dependency coverage is incomplete.",
+          "G is mandatory independently of change-based selection.",
+          "The two agreeing suites have different model-family authors but share an implementation-derived expected-output generator and the same old input observations. The miss rates 0.1 and 0.1 are nominal."
+        ],
+        "applicability": [
+          "A: its old passing evidence may support the preserved claim on S1/B1. Keep the evidence bound to S0/B0 and record the applicability relation; do not relabel it as a new execution.",
+          "B: execution of changed L puts B within change-impact reassessment. Its old pass alone does not establish current validity. This establishes an assessment obligation, not a present failure.",
+          "C: incomplete dependency coverage prevents justified exclusion. Obtain valid current evidence or establish adequate dependency coverage and a supported applicability relation. Neither non-influence nor failure follows from the stated graph.",
+          "G: change-based exclusion cannot discharge or waive this independent mandatory gate."
+        ],
+        "obligations": [
+          "Account for dependencies material to assertions, execution and evidence use; retain each result's subject, basis, predicate and provenance.",
+          "Obtain applicable assessment support for B and C and perform G. Selection or dispatch alone supplies no passing execution evidence.",
+          "Check the fixed required obligations, material joins and coherent basis relations separately from individual passing checks; preserve failures and missing-return or uncovered-coverage gaps.",
+          "For any numerical assurance claim, specify the violation event, evaluation conditions, population or uncertainty, calibrated likelihoods, prior information and shared causes. Multiplying marginal miss rates requires conditional independence under that model.",
+          "Leave acceptance to the decision owner at the applicable boundary."
+        ],
+        "exceptions": [
+          "Complete assurance does not require every execution to be fresh: A's valid retained evidence can contribute.",
+          "Different model families do not establish statistical independence. Shared implementation-derived expectations supply no independent justification of fidelity to the upstream obligation, and repeating old observations creates no new independent observation.",
+          "Even if the two 0.1 rates and conditional independence were justified, 1 - 0.1 × 0.1 would describe the chance of at least one detection under the specified violation conditions, not the probability that the whole Product is correct.",
+          "A missing C return is a planned assessment without an applicable closed result. It is neither a falsified nor an indeterminate component result."
+        ],
+        "result_mapping": [
+          "P — satisfied for the bounded claim. B and C have valid current passing evidence, G passes, A's applicability is established, and every fixed required obligation and material join has valid support. No assurance gap remains under these stipulated facts. Requiring a fresh execution of A would add an unsupported requirement.",
+          "F — B's required predicate is falsified by its admissible counterexample. The completion claim cannot hold. For the stated returns, falsified is the available non-satisfied returned value for the conjunction; C's missing return does not supply a competing indeterminate component. Preserve both the counterexample and C's missing-return gap. No result for G in F is stipulated.",
+          "U — indeterminate for the completion claim. A's retained applicability and the passing B and G results do not supply C's required result. A dispatch receipt establishes no passing assessment of C. Record C as a missing-return gap while retaining the composite's own indeterminate judgment; absence of a counterexample does not establish satisfaction.",
+          "P, F and U are separate followups. Passing evidence stipulated in P is not imported into F or U. No branch establishes universal Product correctness or constitutes the decision owner's acceptance."
+        ],
+        "residuals": [
+          "Initially: acquire B's reassessment, resolve C through current evidence or justified retention, and obtain G's result.",
+          "P: no further assurance evidence is missing within the stipulated fixed scope. Any acceptance disposition remains a separate decision.",
+          "F: preserve and diagnose B's counterexample, obtain C's return and any other outstanding required support, including G's unprovided status. A supported repair, reassessment or authorised obligation change must explicitly dispose of the failure; obtaining C's result alone cannot erase it.",
+          "U: acquire and assess C's applicable closed return and its contribution to the required coverage and joins. The receipt does not establish whether execution occurred or what its result would be.",
+          "Numerical Product confidence remains unresolved. Qualitative evidence may remain useful within its justified scope and governing policy."
+        ]
+      },
+      "sources": [
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #change-impact-and-evidence-reuse, lines 1409–1493",
+          "quote": "For each check t, let `D*(t)` cover\nthe transitive dependencies material to its assertion, execution and use\nof evidence."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #change-impact-and-evidence-reuse, lines 1409–1493",
+          "quote": "Excluding a check requires\nsupported coverage of its material dependencies and a reason the change\ncannot invalidate the intended reused claim; an absent edge is not\nevidence of non-influence."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #change-impact-and-evidence-reuse, lines 1409–1493",
+          "quote": "A mandatory\ngate, an assessment that the governing policy requires irrespective of\nselection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable\n(P5, P6)."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #change-impact-and-evidence-reuse, lines 1409–1493",
+          "quote": "The\noriginal evidence keeps its original subject; a new applicability\nrelation permits its use."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #change-impact-and-evidence-reuse, lines 1409–1493",
+          "quote": "The governing assurance can be established from applicable retained\nevidence together with new evidence; the completeness of that account is\ndistinct from the freshness of every execution."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #parallel-derivation-and-mutual-assurance, lines 1302–1356",
+          "quote": "Repeating the implementation's decision supplies no\nindependent justification of its fidelity to an upstream obligation."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #parallel-derivation-and-mutual-assurance, lines 1302–1356",
+          "quote": "Different actors,\nmodel families or codebases do not establish statistical independence."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #parallel-derivation-and-mutual-assurance, lines 1302–1356",
+          "quote": "Repeating\nevidence does not create a new independent observation."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #quantified-assurance, lines 1357–1408",
+          "quote": "Replacing\nthose terms with `P(M_i | V, Γ)` requires conditional independence under\nthe declared model. One minus the joint miss probability is the chance of\nat least one detection under those same conditions; it is not the\nprobability that the whole product is correct."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #quantified-assurance, lines 1357–1408",
+          "quote": "The formula supplies no missing likelihood or prior, and a\nnumerical posterior is no stronger than its model and evidence."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #results, lines 790–859",
+          "quote": "Only\n`satisfied` establishes the predicate. `falsified` establishes that the\npredicate fails and names the counterexample."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #conjunction-of-results, lines 1008–1130",
+          "quote": "a planned\nassessment without a closed result is never reported as uncovered or as an\n`indeterminate` component."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #conjunction-of-results, lines 1008–1130",
+          "quote": "A known failure and a gap of\neither kind survive every join."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #conjunction-of-results, lines 1008–1130",
+          "quote": "The conjunction is `satisfied` only when every mandatory\nresult is `satisfied` with valid applicable evidence, the declared basis\nrelations agree, and the second and third inputs are empty."
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #conjunction-of-results, lines 1008–1130",
+          "quote": "Where a mandatory result is\nnot `satisfied`, the conjunction\nreports a non-satisfied value chosen by its declared rule from those\nreturned; no universal order among the non-satisfied values exists"
+        },
+        {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "§4, #conjunction-of-results, lines 1008–1130",
+          "quote": "Where\nevery mandatory returned result is `satisfied`, the declared basis\nrelations agree and a gap remains, the conjunction reports\n`indeterminate`, because the results it holds cannot decide the composite\npredicate"
+        },
+        {
+          "path": "standards/EVALUATION.md",
+          "anchor": "§5, #5-acceptance, lines 310–385",
+          "quote": "Acceptance is the decision owner's disposition over an unchanged subject;\nrecording it cannot widen it, and it exhausts only the instance and interval\nit names"
+        }
+      ],
+      "unknowns": [
+        "Initially, B's current result and C's actual influence and current result are not established; C's incomplete dependency coverage does not decide them.",
+        "F supplies no current C return or G outcome. U supplies no current C return. These omissions do not erase F's known counterexample or establish failure in U.",
+        "The actual dependence, calibration, prior and likelihood information needed for numerical Product confidence is not supplied.",
+        "No decision-owner acceptance disposition is stipulated."
+      ]
+    }
+  ],
+  "limitations": [
+    "The positive conclusion is bounded to S1/B1, the fixed required obligations and material joins. It does not establish universal Product correctness, future applicability or acceptance."
+  ]
+}

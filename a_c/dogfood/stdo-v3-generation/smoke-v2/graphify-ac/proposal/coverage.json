@@ -1,0 +1,122 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 6,
+    "judgments": 0,
+    "latitude": 1,
+    "objects": 12,
+    "relations": 2,
+    "residuals": 3,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "graphify-ac",
+    "profile": "ac.generation.contract/1",
+    "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1"
+  },
+  "mode": "graphify-ac",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-932d3fe7d5ace96e56ac",
+      "dispositions": [
+        {
+          "decision": "retained",
+          "keys": [
+            "test_subject",
+            "test_subject_authority_boundary"
+          ],
+          "reason": "Retains the corpus's test-subject identity and its explicit exclusion of Product authorization and acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "deployment",
+            "independent_gate",
+            "current_passing_result",
+            "dispatch_receipt",
+            "deployment_gate_prerequisite",
+            "receipt_without_result_insufficient",
+            "deployment_requires_independent_gate",
+            "gate_qualification_unspecified"
+          ],
+          "reason": "Retains the necessary gate condition and receipt/result distinction, with unresolved qualification criteria recorded explicitly.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "old_passing_check",
+            "preservation_relation",
+            "dependency_coverage",
+            "dependent_reuse_claim",
+            "passing_check_reuse_prerequisite",
+            "incomplete_coverage_withholds_reuse",
+            "preservation_establishes_check_relevance",
+            "dependency_influence_unresolved",
+            "preservation_qualification_unspecified"
+          ],
+          "reason": "Retains both reuse prerequisites and the conditional requirement to preserve uncertainty and withhold the dependent claim; unresolved dependency and preservation meanings remain explicit.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "source_linked_representation",
+            "shape_check",
+            "semantic_acceptance",
+            "representation_acceptance_boundary",
+            "source_linked_layout_variation"
+          ],
+          "reason": "Retains expressly permitted layout variation, its preservation conditions, and the universal exclusion of semantic acceptance supplied by representation or shape checks.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation"
+        }
+      ],
+      "limitations": [
+        "This is interpretation of the four supplied sections only; it provides no semantic acceptance, execution, installed qualification, or completeness judgment.",
+        "The source provides general conditions, not concrete gate results, candidate/basis identities, preservation evidence, or dependency coverage determinations.",
+        "Positive criteria for semantic acceptance are outside the supplied source. Representation and shape checking cannot supply it.",
+        "The schema retains described operations and conditions as data; it does not perform deployment, check reuse, gate evaluation, or acceptance. No judgments, traversals, or transformations are instantiated.",
+        "Discovery containment edges add no governing authority. No external source or cross-chunk identity has been inferred."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 4,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "This is interpretation of the four supplied sections only; it provides no semantic acceptance, execution, installed qualification, or completeness judgment.",
+        "The source provides general conditions, not concrete gate results, candidate/basis identities, preservation evidence, or dependency coverage determinations.",
+        "Positive criteria for semantic acceptance are outside the supplied source. Representation and shape checking cannot supply it.",
+        "The schema retains described operations and conditions as data; it does not perform deployment, check reuse, gate evaluation, or acceptance. No judgments, traversals, or transformations are instantiated.",
+        "Discovery containment edges add no governing authority. No external source or cross-chunk identity has been inferred."
+      ],
+      "chunk": "chunk-932d3fe7d5ace96e56ac"
+    }
+  ]
+}

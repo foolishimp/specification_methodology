@@ -1,0 +1,43 @@
+{
+  "profile": "ac.generation.grounding-freeze/1",
+  "frozen_after_initial_drafts": true,
+  "frozen_before_normalization_artifacts": true,
+  "prior_freeze": "grounding-freeze-status.json records the withdrawn first snapshot; zero production normalizations under that snapshot.",
+  "frozen_generator_unchanged": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+  "review": {
+    "assessor": "/root/ac_generation_design",
+    "verdict": "no actionable defect for bounded use",
+    "evidence": "Root independently ran all19finalhelpertests with actual upstream; reviewer read final exact code delta and tests and consumed those results.",
+    "scope": "FD locator recovery and orchestration; no interpretation fidelity or acceptance judgment."
+  },
+  "files": {
+    "a_c/build_tenants/graphify/code/ac_grounding.py": {
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+      "bytes": 31297
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_grounding.py": {
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb",
+      "bytes": 19256
+    },
+    "a_c/build_tenants/graphify/design/grounding.md": {
+      "sha256": "929462b9a3e3af228349973cdf30d2967c307f659ac342e5f6c4ed56833269a6",
+      "bytes": 7755
+    },
+    "a_c/dogfood/stdo-v3-generation/coordinate_generation.py": {
+      "sha256": "025c30baca2646c392fff368ca656f74aaa97dc3872d7dc95746b703e4bf3708",
+      "bytes": 9050
+    },
+    "a_c/dogfood/stdo-v3-generation/GROUNDING-ADDENDUM.md": {
+      "sha256": "0f2cd0cde9cb4d9c0b5bb3b53dbef203d08288ef34a93d1924e691053b808c06",
+      "bytes": 2976
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/coordinator-review.json": {
+      "sha256": "025e27ed1d106a466b365b0810c8b7934ce2bc7443f9675a9d63f13641a0bc0c",
+      "bytes": 1121
+    },
+    "a_c/dogfood/stdo-v3-generation/evidence/grounding-tests-final.txt": {
+      "sha256": "39ff69f6ec73edd044f84c98c6ac25947b046223dfe07a9cfc669308ca120886",
+      "bytes": 3171
+    }
+  }
+}

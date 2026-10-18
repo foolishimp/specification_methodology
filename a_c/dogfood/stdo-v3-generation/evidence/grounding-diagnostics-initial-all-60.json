@@ -1,0 +1,484 @@
+{
+  "profile": "ac.generation.grounding-diagnostics/1",
+  "observed_at": "2026-10-18T06:02:15.009546+00:00",
+  "groups": [
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "schema_valid_initial_drafts_observed": 11,
+      "grounding_entries": 1463,
+      "classes": {
+        "strict_valid": 1462,
+        "unique_same_section_whitespace_or_range_recovery": 1
+      },
+      "failures": [
+        {
+          "chunk": "chunk-ba679cf25951c2115c4a",
+          "record_key": "historical_verification_requirements",
+          "field": "/constraints/23/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/IDENTITY_METHOD.md#Identity%20Method%2FDerivation%20Verification%20Material",
+          "answer_sha256": "6e761f010c73b6757426101e35faeb980f6f9709d688514255d412c9934ecc69"
+        }
+      ]
+    },
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "schema_valid_initial_drafts_observed": 10,
+      "grounding_entries": 1372,
+      "classes": {
+        "strict_valid": 1369,
+        "no_same_section_whitespace_equivalent_quote": 2,
+        "unique_same_section_whitespace_or_range_recovery": 1
+      },
+      "failures": [
+        {
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "record_key": "post_ticket_bounded_review",
+          "field": "/constraints/29/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11D.%20Post-Ticket%20Design%20Review%20Rule",
+          "answer_sha256": "bb2c87d59da4bcb8be75ddff921453578c007cbd224df2fef07ca57177f8cf02"
+        },
+        {
+          "chunk": "chunk-303ba21541c7795c1c8e",
+          "record_key": "declared_operator_and_regrouping",
+          "field": "/constraints/56/grounding/1",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20conjunction",
+          "answer_sha256": "bb2c87d59da4bcb8be75ddff921453578c007cbd224df2fef07ca57177f8cf02"
+        },
+        {
+          "chunk": "chunk-230eb1c5ee6232501303",
+          "record_key": "profile_triage_rules",
+          "field": "/constraints/29/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect",
+          "answer_sha256": "112ac2b43d44950ef19dd648de49ae1feaa2d92fc7679479d31e61d083a26503"
+        }
+      ]
+    },
+    {
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "schema_valid_initial_drafts_observed": 19,
+      "grounding_entries": 2349,
+      "classes": {
+        "strict_valid": 2325,
+        "unique_same_section_whitespace_or_range_recovery": 12,
+        "source_path_and_heading_match_but_subject_prefix_differs": 11,
+        "no_same_section_whitespace_equivalent_quote": 1
+      },
+      "failures": [
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "derived_surface",
+          "field": "/concepts/18/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "work_state_records_current_state",
+          "field": "/relations/8/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "configuration_external_distinctions",
+          "field": "/residuals/3/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+          "answer_sha256": "e731caa6643a59ad89529c2590062036652e7d6f3df3ecc0f0dc6d64ec46a086"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "subject_axiomatic_calculus",
+          "field": "/concepts/4/grounding/1",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "constraint_surface_use_conditions",
+          "field": "/constraints/32/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "surface_worker_variation",
+          "field": "/latitude/4/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "surface_support_kinds_unresolved",
+          "field": "/residuals/5/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "answer_sha256": "d1ede40a97b921b30bc82119acfa767f9c3da2fb47d84accd5dd512625661822"
+        },
+        {
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "record_key": "dominance_constrains_selection",
+          "field": "/relations/10/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "answer_sha256": "52a20750778ae0fea65616e0c0d7e2962e7050c9c32bcd673c715042edb26bd8"
+        },
+        {
+          "chunk": "chunk-d40baf1b4da50f62ae06",
+          "record_key": "python_typed_design_requirements",
+          "field": "/constraints/17/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+          "answer_sha256": "52a20750778ae0fea65616e0c0d7e2962e7050c9c32bcd673c715042edb26bd8"
+        },
+        {
+          "chunk": "chunk-4a7f4c1e75eb1b5cd9c3",
+          "record_key": "effect_edge",
+          "field": "/concepts/25/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F10.%20Realisation%20rules%2FEffect%20edge",
+          "answer_sha256": "343d5386821b0f01a75d83f5ce4d230df40de91ce146310be7c61b49f7e6ce6b"
+        },
+        {
+          "chunk": "chunk-8926f266bc1134f91eef",
+          "record_key": "frame_qualification_minimum_tests",
+          "field": "/constraints/24/grounding/1",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/EVALUATION.md#EVALUATION%2F7.%20Qualification%20of%20frames%20and%20of%20the%20method%2FFrame%20qualification",
+          "answer_sha256": "7ef2c4ff446e515ef95f7e874600ed86b6b7fbb60264423d598fa53a890191a0"
+        },
+        {
+          "chunk": "chunk-986113d13e5314b291c9",
+          "record_key": "executive_occupancy_latitude",
+          "field": "/latitude/2/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FExecutive",
+          "answer_sha256": "480bad44ba0fc9eaaad23c9b4e3e93794da2983336a5c25654d97e9254174dd7"
+        },
+        {
+          "chunk": "chunk-db82b95364ae94dad131",
+          "record_key": "frame_evidence_and_unexercised_capability_boundary",
+          "field": "/constraints/3/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "answer_sha256": "651beb1a3df44dcce532cb5ddff2d113d17310e0d421956078cc49af4effd39f"
+        },
+        {
+          "chunk": "chunk-db82b95364ae94dad131",
+          "record_key": "frame_evidence_and_unexercised_capability_boundary",
+          "field": "/constraints/3/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "answer_sha256": "651beb1a3df44dcce532cb5ddff2d113d17310e0d421956078cc49af4effd39f"
+        },
+        {
+          "chunk": "chunk-db82b95364ae94dad131",
+          "record_key": "conjunction_reported_value",
+          "field": "/constraints/7/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "answer_sha256": "651beb1a3df44dcce532cb5ddff2d113d17310e0d421956078cc49af4effd39f"
+        },
+        {
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "record_key": "environment_carries_function_inputs",
+          "field": "/relations/4/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "answer_sha256": "190f40b361e97c30fba4f72ae6bf373c6a9ab0e555a6dfc440df76d42422fe0a"
+        },
+        {
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "record_key": "manual_conformance_and_negative_proof",
+          "field": "/constraints/22/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffabde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "answer_sha256": "190f40b361e97c30fba4f72ae6bf373c6a9ab0e555a6dfc440df76d42422fe0a"
+        },
+        {
+          "chunk": "chunk-efb7b986ff5631c4fbc0",
+          "record_key": "post_categories",
+          "field": "/concepts/23/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+          "answer_sha256": "a4cf8397d0a7cb906ab1190e1cfc0b6c3514a8275ba85f942ddac6a11f7540cb"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "bootstrap_authority_split",
+          "field": "/constraints/20/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F12.%20Bootstrap",
+          "answer_sha256": "bf94a5a122259f98e06d5833ffcd042c62f1842533160b1bfa2a9f3208d2fbf8"
+        },
+        {
+          "chunk": "chunk-610ce314956c3315ed7b",
+          "record_key": "manifesto_commitments",
+          "field": "/constraints/31/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "answer_sha256": "13cad01608c99a7013b3bc075c08f729c9560360e5d224c9d7bde2d4648ac9e1"
+        },
+        {
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "record_key": "change_governance_family",
+          "field": "/concepts/0/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FFoundation%20to%20law%3A%20change%20management%20and%20ambiguity",
+          "answer_sha256": "1365db777093d7378ddd5801e154f5980949bf208b978d65f4026582bcf4ff57"
+        },
+        {
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "record_key": "intake_triage",
+          "field": "/concepts/1/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FUniversal%20intake%20triage",
+          "answer_sha256": "1365db777093d7378ddd5801e154f5980949bf208b978d65f4026582bcf4ff57"
+        },
+        {
+          "chunk": "chunk-bcd515f6c8df632f2fad",
+          "record_key": "publication_ledger",
+          "field": "/concepts/43/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law",
+          "answer_sha256": "d1c4f305cbb32dbf4b2fbc76f1a8e7a20b779d5a15fbe82d0f64cecbabe5bd86"
+        },
+        {
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "record_key": "common_design_surface",
+          "field": "/concepts/20/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design",
+          "answer_sha256": "cc0aa85b4a559af878aec9406e2866727c1d63b8007c5a6e09f4ec5cf3efa886"
+        }
+      ]
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "schema_valid_initial_drafts_observed": 19,
+      "grounding_entries": 2307,
+      "classes": {
+        "strict_valid": 2282,
+        "source_path_and_heading_match_but_subject_prefix_differs": 8,
+        "no_same_section_whitespace_equivalent_quote": 3,
+        "unique_same_section_whitespace_or_range_recovery": 14
+      },
+      "failures": [
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "reconfiguration_conservation",
+          "field": "/constraints/13/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "qualification_case_requirements",
+          "field": "/constraints/33/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-c9c7f894950a65621589",
+          "record_key": "work_state_external_continuations",
+          "field": "/residuals/10/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "answer_sha256": "4bae37e97eecd85eb081497403ee48cd9bf03bc2e79d9603361f004d80a2fec6"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "closed_result",
+          "field": "/concepts/4/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "resource_declaration_and_measurement",
+          "field": "/constraints/4/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-46fb339024ea1a82b45f",
+          "record_key": "assurance_family_external_dependencies",
+          "field": "/residuals/4/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "answer_sha256": "6f9895993799b5dcede3f999de21a19985eed49e7169b142cdde6a13dc605514"
+        },
+        {
+          "chunk": "chunk-d3ef7cd18b24cd303de7",
+          "record_key": "module_unit_proof",
+          "field": "/concepts/1/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "answer_sha256": "5e441fc12f0c59a84403fd4b9732eed47fec25c30b572f217e54149cff121b07"
+        },
+        {
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "record_key": "profile_misapplication",
+          "field": "/concepts/5/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F21.%20Anti-patterns",
+          "answer_sha256": "75b659e609c50270cf9d86e272f368c1a068cc304710268eea0dface650f2d99"
+        },
+        {
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "record_key": "pillar_and_pending_trace_semantics",
+          "field": "/constraints/37/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F3.%20Commitments%2FFoundation%20to%20law",
+          "answer_sha256": "75b659e609c50270cf9d86e272f368c1a068cc304710268eea0dface650f2d99"
+        },
+        {
+          "chunk": "chunk-2414d8d8612f850c1895",
+          "record_key": "categorical_demonstration_requirements",
+          "field": "/constraints/40/grounding/0",
+          "kind": "no_same_section_whitespace_equivalent_quote",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra",
+          "answer_sha256": "75b659e609c50270cf9d86e272f368c1a068cc304710268eea0dface650f2d99"
+        },
+        {
+          "chunk": "chunk-db82b95364ae94dad131",
+          "record_key": "evaluation_result",
+          "field": "/concepts/1/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "answer_sha256": "c4a143e1188b43f851a58e9fe7ae18e3283f297954da01b99bc1991ccad43804"
+        },
+        {
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "record_key": "identity_source_dispositions",
+          "field": "/concepts/15/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/IDENTITY.md#IDENTITY%2F13.%20Source%20dispositions",
+          "answer_sha256": "daba45752a04483b04e7e6b59a6ead7d228a78d3a71aa7203dcf36bf4870c863"
+        },
+        {
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "record_key": "odd_graph_function",
+          "field": "/concepts/24/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "answer_sha256": "daba45752a04483b04e7e6b59a6ead7d228a78d3a71aa7203dcf36bf4870c863"
+        },
+        {
+          "chunk": "chunk-caddb7dd9905a44febeb",
+          "record_key": "odd_builder_and_target_ownership",
+          "field": "/constraints/29/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+          "answer_sha256": "daba45752a04483b04e7e6b59a6ead7d228a78d3a71aa7203dcf36bf4870c863"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "cohort_update",
+          "field": "/concepts/1/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76b1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "manager_effect_result_mapping",
+          "field": "/constraints/5/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "manager_refusal_result_mapping",
+          "field": "/constraints/6/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "manager_result_predicate_separation",
+          "field": "/constraints/7/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "library_optional_tooling",
+          "field": "/latitude/3/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/README.md#Standards%20%28Claude%20tenant%20realisation%29%2FLibrary%20and%20installed%20basis",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-9b7e6f52849b98967974",
+          "record_key": "manager_external_contracts",
+          "field": "/residuals/0/grounding/1",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager%2FExplicit%20complete%20consumer%20update",
+          "answer_sha256": "2abd29d1ad49d85e98ac167ca5df22359f8a8e2bd5e9e9c7de1dd9f3c5567ce8"
+        },
+        {
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "record_key": "change_management_foundation_family",
+          "field": "/concepts/0/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FFoundation%20to%20law%3A%20change%20management%20and%20ambiguity",
+          "answer_sha256": "88e28ecdfa7b156a6e1f868ba34390c4098779e87f34fbf0ab9ea74e3d29fb7d"
+        },
+        {
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "record_key": "ticketing_comment",
+          "field": "/concepts/33/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FComments",
+          "answer_sha256": "88e28ecdfa7b156a6e1f868ba34390c4098779e87f34fbf0ab9ea74e3d29fb7d"
+        },
+        {
+          "chunk": "chunk-5a03e80d9db03efe45a2",
+          "record_key": "probabilistic_processing_actor_wording",
+          "field": "/residuals/2/grounding/0",
+          "kind": "unique_same_section_whitespace_or_range_recovery",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F5.%20Ambiguity%20governance%20and%20lifecycle",
+          "answer_sha256": "88e28ecdfa7b156a6e1f868ba34390c4098779e87f34fbf0ab9ea74e3d29fb7d"
+        },
+        {
+          "chunk": "chunk-e9bb857e768dcddc1e11",
+          "record_key": "occurrence",
+          "field": "/concepts/5/grounding/0",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity",
+          "answer_sha256": "6f96fb86c7f37914bafb4990741881ab9b8b158aed0ec3304ca940bd9b0dcdd9"
+        },
+        {
+          "chunk": "chunk-f1002ac9d6de2a2d89c1",
+          "record_key": "claude_bootstrap_template",
+          "field": "/concepts/9/grounding/2",
+          "kind": "source_path_and_heading_match_but_subject_prefix_differs",
+          "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap",
+          "answer_sha256": "9b851ba376695ae2ca1cac6de88ab9f9a7676fbc0e462d7d7e14714af201834f"
+        }
+      ]
+    }
+  ],
+  "claim": "Observed source-locator syntax/range/quotation classes only; these do not establish why a model made an error or whether its statement is faithful."
+}

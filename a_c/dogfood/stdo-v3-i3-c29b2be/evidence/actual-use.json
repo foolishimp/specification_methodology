@@ -1,0 +1,174 @@
+{
+  "claim": "actual CLI use through exact upstream-exported graph; no semantic acceptance or efficiency result",
+  "source_sha256": {
+    "a_c/dogfood/stdo-v3-i3-c29b2be/artifacts/manifest.json": "4c4cc00caa6ddff6ab84378e67c9998dc237e3244939753cb42c1cf94d76bb9b",
+    "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py": "4f4ce6d51e9319187d1be514a3a1529376ea295c00199c2ebb978897b2cbc78a",
+    "a_c/graphify-out/v3-i3-c29b2be/graph.json": "565cc9795f50e55827b0c53d60cc0bdc19d5e7713d59d4962c93dad77a69a1ab"
+  },
+  "status": "passed",
+  "trials": [
+    {
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+        "--graph",
+        "a_c/graphify-out/v3-i3-c29b2be/graph.json",
+        "select",
+        "WRITING_GUIDE.core-rule",
+        "--out",
+        "a_c/graphify-out/v3-i3-c29b2be/writing.json"
+      ],
+      "elapsed_seconds": 20.684,
+      "exit_code": 0,
+      "name": "writing",
+      "output": {
+        "bytes": 469327,
+        "path": "a_c/graphify-out/v3-i3-c29b2be/writing.json",
+        "sha256": "f8cb7becbaa5b0ee83dfc3b4cb1345b3008a9ae1e27f24a861f24b2a2b4538f1"
+      },
+      "stdout": {
+        "claim": "proposed lossless transport of the authored interpretation; no independent v3 semantic acceptance, carrier admission or release",
+        "clauses": 12,
+        "conditional_routes": 4,
+        "conditional_rule": "establish applicability externally; select target index additionally only when applicable; unknown applicability withholds dependent action",
+        "parent": {
+          "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+        },
+        "provenance_routes": 38,
+        "records": 13,
+        "residuals": 0,
+        "scope": "Apply the source-bound constraint WRITING_GUIDE.core-rule with its declared conditions, references and task inputs.",
+        "selector": "urn:codex-stdo3:iteration-3-r2:index:WRITING_GUIDE.core-rule",
+        "status": "selected-complete-required-view"
+      }
+    },
+    {
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+        "--graph",
+        "a_c/graphify-out/v3-i3-c29b2be/graph.json",
+        "select",
+        "RELEASE_METHOD.open-questions",
+        "--out",
+        "a_c/graphify-out/v3-i3-c29b2be/release-questions.json"
+      ],
+      "elapsed_seconds": 20.778,
+      "exit_code": 0,
+      "name": "release-questions",
+      "output": {
+        "bytes": 466688,
+        "path": "a_c/graphify-out/v3-i3-c29b2be/release-questions.json",
+        "sha256": "621e097cc0381d056b7929209570fa2c8c158e87644f7d1e2ebaf419c4518f4b"
+      },
+      "stdout": {
+        "claim": "proposed lossless transport of the authored interpretation; no independent v3 semantic acceptance, carrier admission or release",
+        "clauses": 11,
+        "conditional_routes": 4,
+        "conditional_rule": "establish applicability externally; select target index additionally only when applicable; unknown applicability withholds dependent action",
+        "parent": {
+          "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+        },
+        "provenance_routes": 37,
+        "records": 14,
+        "residuals": 2,
+        "scope": "Apply the source-bound definition data RELEASE_METHOD.open-questions with its declared conditions, references and task inputs.",
+        "selector": "urn:codex-stdo3:iteration-3-r2:index:RELEASE_METHOD.open-questions",
+        "status": "selected-complete-required-view"
+      }
+    },
+    {
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+        "--graph",
+        "a_c/graphify-out/v3-i3-c29b2be/graph.json",
+        "select",
+        "FOUNDATIONS.orthogonal-descriptions",
+        "--out",
+        "a_c/graphify-out/v3-i3-c29b2be/conditional.json"
+      ],
+      "conditional_checks": {
+        "routes": 3,
+        "target_indexes_promoted": false,
+        "unknown_applicability_retained": true
+      },
+      "elapsed_seconds": 20.762,
+      "exit_code": 0,
+      "name": "conditional",
+      "output": {
+        "bytes": 327186,
+        "path": "a_c/graphify-out/v3-i3-c29b2be/conditional.json",
+        "sha256": "576cd39b72a5651f32615fbf43c216373d65cf78438809c6c637eb0e48affca5"
+      },
+      "stdout": {
+        "claim": "proposed lossless transport of the authored interpretation; no independent v3 semantic acceptance, carrier admission or release",
+        "clauses": 7,
+        "conditional_routes": 3,
+        "conditional_rule": "establish applicability externally; select target index additionally only when applicable; unknown applicability withholds dependent action",
+        "parent": {
+          "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+        },
+        "provenance_routes": 18,
+        "records": 8,
+        "residuals": 0,
+        "scope": "Apply the source-bound definition data FOUNDATIONS.orthogonal-descriptions with its declared conditions, references and task inputs.",
+        "selector": "urn:codex-stdo3:iteration-3-r2:index:FOUNDATIONS.orthogonal-descriptions",
+        "status": "selected-complete-required-view"
+      }
+    },
+    {
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+        "--graph",
+        "a_c/graphify-out/v3-i3-c29b2be/graph.json",
+        "select",
+        "WRITING_GUIDE.core-rule",
+        "--budget",
+        "12"
+      ],
+      "elapsed_seconds": 20.815,
+      "exit_code": 2,
+      "name": "short-budget",
+      "stderr": {
+        "reason": "required closure needs 13 records; budget 12 refuses without truncation",
+        "status": "refusal"
+      }
+    },
+    {
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "a_c/dogfood/stdo-v3-i3-c29b2be/representation.py",
+        "--graph",
+        "a_c/graphify-out/v3-i3-c29b2be/graph.json",
+        "find",
+        "Every admitted fundamental record"
+      ],
+      "elapsed_seconds": 21.078,
+      "exit_code": 0,
+      "name": "find",
+      "stdout": {
+        "matches": [
+          {
+            "family": "objects",
+            "id": "urn:codex-stdo3:iteration-3-r2:clause:AXIOMATIC_CALCULUS.ac-001-closed-signature"
+          }
+        ],
+        "parent": {
+          "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+        },
+        "query": "Every admitted fundamental record",
+        "scope": "literal case-insensitive record content; no inference or ranking"
+      }
+    }
+  ]
+}

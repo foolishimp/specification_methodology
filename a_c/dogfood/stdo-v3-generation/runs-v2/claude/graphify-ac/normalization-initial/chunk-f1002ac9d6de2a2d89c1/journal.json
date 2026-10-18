@@ -1,0 +1,723 @@
+{
+  "changes": [],
+  "chunk": "chunk-f1002ac9d6de2a2d89c1",
+  "fd_elapsed_seconds": 0.06977337505668402,
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "da66ec15be8e795f728aa662d0143b8f2bc1aa29dd7c8474c444f990d0a0cbd0",
+    "original_attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+    "original_recorded_failure": "record[common_design_surface]/grounding/0: grounding names source outside chunk",
+    "original_status": "failed",
+    "original_strict_validation_error": "record[common_design_surface]/grounding/0: grounding names source outside chunk",
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 9600,
+        "input_tokens": 79557,
+        "output_tokens": 47031,
+        "reasoning_output_tokens": 707
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/answer.json": "cc0aa85b4a559af878aec9406e2866727c1d63b8007c5a6e09f4ec5cf3efa886",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/events.jsonl": "6b281cee44663acc5f5a8904b8e1d97c413ad352adfa02bf70171b9987691944",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/invocation.json": "fba21679acd2096538afc9fc9d9e8d81528b4e52ce9b4e51f50164f96bf3c2b1",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/prompt.txt": "20e6af1c41c152391bde7c3e479c82fdf4dd2cfab9925e1062440940f07462b4",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/result.json": "255bcfad83f2c438457a81e1ecaee0b23becbbcd7b207781a2f50bf36e9519ca",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/usage.json": "1c435468563e5d165042c47071ee1095c5a28baeaa1937ee5d1cf2d1819d43e0",
+      "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+      "plan.json": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+      "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+    },
+    "source_sections": [
+      {
+        "end_line": 1355,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F15.%20Source%20dispositions",
+        "path": "standards/WORLD_MODEL.md",
+        "sha256": "53f2f93d1cc9bcca0a6f1ca733f080009f30c2e6e95c831c6193bc704fe39a88",
+        "start_line": 1248
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "4b6c054b0d9d587f70137462b89dff625b18ad4e9e15278d987b25dd79f254fe",
+        "start_line": 1
+      },
+      {
+        "end_line": 23,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F1.%20Core%20rule",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "92c2293e8145136dba2b9f966ad53d7d44ac39184ffe8d075ec6a27bf539282d",
+        "start_line": 16
+      },
+      {
+        "end_line": 36,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F2.%20Style%20rules",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "4d5504a5b04f43781ee9c5096958629fcad57dce40261e50f2691e5baf606a46",
+        "start_line": 24
+      },
+      {
+        "end_line": 54,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F3.%20Habits%20to%20remove",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "aeb8a9763fe3ec3b8f3858908db4eacb7575f2db65289eb99517332236b59bf8",
+        "start_line": 37
+      },
+      {
+        "end_line": 63,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F4.%20Good%20prose",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "cf041ad4b2f15157330a99fd88091e7888a2cbf0e7da8a9f4333271bc79e295b",
+        "start_line": 55
+      },
+      {
+        "end_line": 74,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F5.%20Bad%20prose",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "2861617016c755d21d6f5b005b416bbb491bc25870a06698d549ec7062e1deba",
+        "start_line": 64
+      },
+      {
+        "end_line": 82,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F6.%20Tone%20and%20authority%20layer",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "a1e9c395153f9b04ebbe5a342b58a22cef71035e77b9f82a4fb6c9904b300e21",
+        "start_line": 75
+      },
+      {
+        "end_line": 100,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F7.%20Specification%20artifact%20practice",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "f599cb70b5f3f5a06f45cafe1a691dcb2d55bddb8400d903acee6c5e67fe97dd",
+        "start_line": 83
+      },
+      {
+        "end_line": 111,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F8.%20Layer%20checks",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "a6d72ae065c1b9839de6ce3bc938b3b5f2c467f9318c8f2b02c2e8876a52f0a0",
+        "start_line": 101
+      },
+      {
+        "end_line": 123,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F9.%20Current-surface%20writing",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "6420e0a21ae487d39092c5db98505e9ce0e5258581c147cd0cd67e6c7272578c",
+        "start_line": 112
+      },
+      {
+        "end_line": 145,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/WRITING_GUIDE.md#WRITING_GUIDE%2F10.%20Source%20dispositions",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "6a77c56e1c7fc2846c231dffe806fcedc0e5f46579a6ec4dbb415807270a79da",
+        "start_line": 124
+      },
+      {
+        "end_line": 246,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/installed-release-manifest.schema.json#preamble",
+        "path": "standards/schemas/installed-release-manifest.schema.json",
+        "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+        "start_line": 1
+      },
+      {
+        "end_line": 568,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/schemas/product-definition.schema.json#preamble",
+        "path": "standards/schemas/product-definition.schema.json",
+        "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+        "start_line": 1
+      },
+      {
+        "end_line": 1,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#preamble",
+        "path": "standards/templates/AGENTS_TEMPLATE.md",
+        "sha256": "603c53ea3fba80ddeda542cf39391e694b2506d19cf1f53f1cddcca7e087ec56",
+        "start_line": 1
+      },
+      {
+        "end_line": 20,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap",
+        "path": "standards/templates/AGENTS_TEMPLATE.md",
+        "sha256": "f66dc07f855dacd9fdce250176de8bd45e934bd30fd51e19cae753b7cd530708",
+        "start_line": 2
+      },
+      {
+        "end_line": 1,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#preamble",
+        "path": "standards/templates/CLAUDE_TEMPLATE.md",
+        "sha256": "603c53ea3fba80ddeda542cf39391e694b2506d19cf1f53f1cddcca7e087ec56",
+        "start_line": 1
+      },
+      {
+        "end_line": 20,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap",
+        "path": "standards/templates/CLAUDE_TEMPLATE.md",
+        "sha256": "f66dc07f855dacd9fdce250176de8bd45e934bd30fd51e19cae753b7cd530708",
+        "start_line": 2
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "94f72b6ce98ba434cd5913eb91d620606dbac6b9e83a45829ee1660cca1d3683",
+        "start_line": 1
+      },
+      {
+        "end_line": 12,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FPosition",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "41dd1341e464f33609861abd14b37a4feee880c6d0494f90047a988aff051479",
+        "start_line": 8
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FCurrent%20Goals",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "a9d4d44e29cfb34e05298e889658cb85de605d2b17d209bdd642ba2d3ca725bc",
+        "start_line": 13
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "4891215f25c5b6a3d72ac0823f51db984e9020a11a62f41770f4c92a55df7a4a",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FPurpose",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "5a7f168cca0a5fb0a1bce4e39b9b684928fa2bb5f9d4116c3c2fa2bbc4af4da8",
+        "start_line": 8
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FOutcomes",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "a06ffd99320cb8e6ef9249c014d065c6e0afd8a47527ea5b73ef42eeb349e7ee",
+        "start_line": 12
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FConstraints",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "ae41df74c645e2dbe2bc797edb1367be7493af4dfb2a3b1a37fe22789206fdef",
+        "start_line": 16
+      },
+      {
+        "end_line": 128,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble",
+        "path": "standards/templates/PRODUCT_DEFINITION_TEMPLATE.json",
+        "sha256": "84586b352660ff960188663fc21c2634e74c6fc61cba21e9c1a1e80190f92ef5",
+        "start_line": 1
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "554556bb2a1765209ddca8829f7b5ff0deb138f10166d7a70cf4a88d42831baa",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Position",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "79c8e89b53f3e4e4a2d0d9ceb851f82a0cd82dd8f34a963da06e4bf45fa5a40e",
+        "start_line": 8
+      },
+      {
+        "end_line": 24,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Terms",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "62f75679feb557c108dba4267bc9611d983fd1e5e6fb386ad0e97f4d88505c13",
+        "start_line": 12
+      },
+      {
+        "end_line": 29,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FGoal%20Model",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "32de1584e8ba90d4ed42edb354f950fba33dc0fef7fbc2b7c1360c8f6c90b384",
+        "start_line": 25
+      },
+      {
+        "end_line": 33,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20End%20State",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "f1e3dfd26a06c97b5347c9ed52f706968d741f6dc2c32575589790e4f4e93fe5",
+        "start_line": 30
+      },
+      {
+        "end_line": 37,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FCurrent%20Product%20Definition",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "70e6ba0be282d24e236b7083bfecccd214f4417b6a8c68ea6c904201c5cfa344",
+        "start_line": 34
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "7f6f6d48d2b1d09fa4b6f8d53d420f1e0748dd9bb619732f19b2a6e986bb990e",
+        "start_line": 1
+      },
+      {
+        "end_line": 16,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDeclaration%20And%20Authority",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "5faefc4c7d079a158387e2b29c666438a1f3f88522427ceda0a0e25ccffcca44",
+        "start_line": 9
+      },
+      {
+        "end_line": 28,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExact%20Method%20And%20Optional%20Profile%20Basis",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "afb0ed9342068fce2ff48049357eb04df0eea823fcb2071bfe8c8ab871df487b",
+        "start_line": 17
+      },
+      {
+        "end_line": 43,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FProduct-Role%20And%20Composition%20Map",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "a3ea8bdd442c580ba80e78c8e5229b29c59610bf107d193eac9a3e0091b92205",
+        "start_line": 29
+      },
+      {
+        "end_line": 63,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "1857e9823e451e7b8b9b4c7eb811ac91ea866cfa72f8aefafa6aacfcf20b82b5",
+        "start_line": 44
+      },
+      {
+        "end_line": 80,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FFrame%20Declarations%20And%20Actor%20Binding",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "90155fb3251c4b74a49182ba51b601175c8632bacc248d0b39b37cf7c7c59e25",
+        "start_line": 64
+      },
+      {
+        "end_line": 107,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "ed50afb07d50187401c33a237806ed09a74a779f161196efa5a4115f65a559ab",
+        "start_line": 81
+      },
+      {
+        "end_line": 131,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "ba0b3bc79c0815cef03ca1d829ba430be365476477283b96248e086bcfa4fb14",
+        "start_line": 108
+      },
+      {
+        "end_line": 158,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FActivation%20And%20Return%20Topology",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "343df5ac0ee8e63b85771635d4724c0f67059cca8bb000d53e1c11b0196823ff",
+        "start_line": 132
+      },
+      {
+        "end_line": 188,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "93db445c53e5026a01139dc79135b74696e6dd1d9e1cc1c71fad86b33fda1a09",
+        "start_line": 159
+      },
+      {
+        "end_line": 215,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDrift%20Locks%2C%20Invalidation%2C%20And%20Revision",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "2ef5d02662116dfd5ee652826e9b924ccb0328052550aa52a3c5cd24233112a1",
+        "start_line": 189
+      },
+      {
+        "end_line": 226,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "7a9005b39f1e9d37c05b14484366e97c374a8e07451a0765f96deda289437586",
+        "start_line": 216
+      },
+      {
+        "end_line": 17,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates",
+        "path": "standards/templates/README.md",
+        "sha256": "9e1cc27cc23b0a1c8c9f8bde075e1502d3a0e180a6d6dd40bb6ade77894a00bf",
+        "start_line": 1
+      },
+      {
+        "end_line": 125,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay",
+        "path": "standards/templates/README.md",
+        "sha256": "97a2b62fc80f093e8dc41657bee2b7f553f8391a10bcf88796592e29d43e61d5",
+        "start_line": 18
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "0022a2438324a6584d1c7b6283f90dbbe9721512858982f2772bce85e009b535",
+        "start_line": 1
+      },
+      {
+        "end_line": 26,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FStructure",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "c11b60c2c9878fccf381b25668f205c2d7a72449f1a287caeb3b2c313669d30b",
+        "start_line": 19
+      },
+      {
+        "end_line": 32,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FShared%20Surface",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "fafc3e4c2090d08f50e975f39a64ca1371288498f2a8eae9595a41a8e3ff0e85",
+        "start_line": 27
+      },
+      {
+        "end_line": 49,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FRegistry",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "df9cb28bf2b943ee9eb8abba3fb8a070b49af20728b2ce5a24e38cb5b3f3e481",
+        "start_line": 33
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces",
+        "path": "standards/templates/build_tenants/common/README_TEMPLATE.md",
+        "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+        "start_line": 1
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design",
+        "path": "standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+        "sha256": "285b638908f838c4a41edbe4f8c766fe6b2204e93a24b052b58dc7127d2acf16",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design%2FADRs",
+        "path": "standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+        "sha256": "eb978c19f1e16537ef6c6883326fdcc85622e8c4d57157d4a040c66b57870757",
+        "start_line": 7
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "721fb440b7cbdadc9b65b6934314af191d401c9bb34299aa47a8e5f6c56b6da6",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "6be472bcce264a5933f9e3bb4fbe3e19ad0c9538746325538910cb9d75620226",
+        "start_line": 12
+      },
+      {
+        "end_line": 21,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "12fa60a2100afa84ca8b350996d1a93eab3cbdbf6b2dc9d12439a08d06d6f1c3",
+        "start_line": 16
+      },
+      {
+        "end_line": 31,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "424658e398e60f538053edcfe617191c6f299f746fd3b6166bc4f77417f36c25",
+        "start_line": 22
+      },
+      {
+        "end_line": 35,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "626e190608df4425fbc1b89b6599d15f393e66955ae8d5f9eee45f0bb2fa8cb1",
+        "start_line": 32
+      },
+      {
+        "end_line": 38,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "2540f95add4f6e3b7a7a7fda021140b981e3e0a412998aea63e606e72c71a82d",
+        "start_line": 36
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "e53a6752d0a406e98818408e17cbdf46a1dcebe5a08187571f3fea98e9e410cd",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "c37716a8da00f3d2834ec0c2bc03e9824b301a515aea419e03f5417c6346eeed",
+        "start_line": 7
+      },
+      {
+        "end_line": 38,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FFile%20shape",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "6499853c360f7cb371ce9a25adccabcee38099069b1f1ba25831b9c18d5c3b3d",
+        "start_line": 20
+      },
+      {
+        "end_line": 42,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FBoundary%20rule",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "2689253c3c7ec81e35db340bf2cb94c513f617bee66cb63c187bfeab7a967780",
+        "start_line": 39
+      },
+      {
+        "end_line": 46,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FSupersession",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "18237dae5da4f1851f59759ad7b5b5c9526f8fb7b98770dc41e4bcc3b9b4b0d1",
+        "start_line": 43
+      },
+      {
+        "end_line": 49,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FOptional%20registry",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "6d309e797b63c2df7f0783218d6c64c5b8d0ddf79bd75889878546b25db22e54",
+        "start_line": 47
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/README_TEMPLATE.md#Tenant%20Root",
+        "path": "standards/templates/build_tenants/variant/README_TEMPLATE.md",
+        "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+        "start_line": 1
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "799c44b29ff18ef24f5c22bcc01104252eaf472237602b85dbdf54a774584ea1",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FAdopted%20Common%20Surfaces",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "e8dcd728c14cc5f1bde6ff4d8b072f55d8d2e6c26213012ceaed61cf05569feb",
+        "start_line": 9
+      },
+      {
+        "end_line": 29,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FADRs",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "b99ec077299399b35e8c993161c20dcc674a8b157460431074239178318d8926",
+        "start_line": 20
+      },
+      {
+        "end_line": 32,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FF_P%20Customization",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "3a7217893e5170a20a576332a928c7fe99680fd6ef0008f40792043bf8d2552f",
+        "start_line": 30
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "721fb440b7cbdadc9b65b6934314af191d401c9bb34299aa47a8e5f6c56b6da6",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "4dba0ecc31a71b81ab25fd81d4c18aa9fd83b8c276f69a88ac2ea83bed77c8c7",
+        "start_line": 12
+      },
+      {
+        "end_line": 21,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "12fa60a2100afa84ca8b350996d1a93eab3cbdbf6b2dc9d12439a08d06d6f1c3",
+        "start_line": 16
+      },
+      {
+        "end_line": 30,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "6e9ac36df0d2645ba71def4ef9df0034b2a9bcb654def56ea3223c54b6484b91",
+        "start_line": 22
+      },
+      {
+        "end_line": 34,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "49a4bf154c6a47a07120063230e2f6ba9c6ea3d59d030ac5fbd6bdfd6f09973b",
+        "start_line": 31
+      },
+      {
+        "end_line": 37,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "922ccb9d3d46db13b25abfd3bd2afae5046713cddaa71b0141060c7b58580030",
+        "start_line": 35
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "b1f2eba3d15f5799c8b08585a6283c40f8083cef95b0acdc89c4f2c4587e15ac",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "0ba5e8247c31165b9fd3a62b5e6f90ee982d8e1521f9138a028f30b553074194",
+        "start_line": 7
+      },
+      {
+        "end_line": 36,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FFile%20shape",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "e2b17ae7714e45dc9e2f1a19fda61fd9783f86d167f9865056938ab86b63a74e",
+        "start_line": 20
+      },
+      {
+        "end_line": 40,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FBoundary%20rule",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "d25502df28d669629f7326819bbd26f78c1aef9956da04ae8126b5631b11a6a1",
+        "start_line": 37
+      },
+      {
+        "end_line": 44,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FSupersession",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "18237dae5da4f1851f59759ad7b5b5c9526f8fb7b98770dc41e4bcc3b9b4b0d1",
+        "start_line": 41
+      },
+      {
+        "end_line": 47,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FOptional%20registry",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "6d309e797b63c2df7f0783218d6c64c5b8d0ddf79bd75889878546b25db22e54",
+        "start_line": 45
+      },
+      {
+        "end_line": 4,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "a9bf407b060c263a3140d378fcc2a711d46637cdc481b632f857d781cc9f30a5",
+        "start_line": 1
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FGoal",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "2328200c5e693b13eac48e6923ea51a5bc07ee68e25ead27d7573362d752c698",
+        "start_line": 5
+      },
+      {
+        "end_line": 12,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FRequirement%20Mapping",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "a65236201bb02dd62b8f44c9a8c1b9dff209781c1f8cd7323b437f6d5daafb64",
+        "start_line": 9
+      },
+      {
+        "end_line": 16,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FDesign%20Mapping",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "6c242c7695c245c555a2887e77692c57525bbee41797116485e7724537e97f46",
+        "start_line": 13
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FBoundaries",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "80bd27e9a335f666224d8c43f0922a1b01da428191eb714d4d2d702e5ff830de",
+        "start_line": 17
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization",
+        "path": "standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+        "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json#preamble",
+        "path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json",
+        "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+        "start_line": 1
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides",
+        "path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+        "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+        "start_line": 1
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/docs/README_TEMPLATE.md#Project%20Docs",
+        "path": "standards/templates/docs/README_TEMPLATE.md",
+        "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+        "start_line": 1
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements",
+        "path": "standards/templates/requirements/README_TEMPLATE.md",
+        "sha256": "6f66a7dfc9de652556ceca9f4e90dbaac79f9254bce2d518f8f51195407d09bc",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements%2FRules",
+        "path": "standards/templates/requirements/README_TEMPLATE.md",
+        "sha256": "dafbb2449a881a7e2626106ac48af7f8c7c45eab3f7ce0c50ebdcb132e64fa5b",
+        "start_line": 8
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements",
+        "path": "standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+        "sha256": "3c59439e004cf436c22b990d2aca7259d7f4724412cc085730a4506b30aac4eb",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements%2FREQ-PROJ-STARTER-001%20Replace%20me",
+        "path": "standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+        "sha256": "872092357c6940e5d4a0068ceae5d72e3712360435c6976079666cc3e17e48d8",
+        "start_line": 7
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "refusal": "/concepts/20/grounding/0: grounding names a section outside this exact source chunk",
+  "selected_original_attempt": "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001",
+  "status": "refused",
+  "unverified_original_pins": {
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/answer.json": "cc0aa85b4a559af878aec9406e2866727c1d63b8007c5a6e09f4ec5cf3efa886",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/events.jsonl": "6b281cee44663acc5f5a8904b8e1d97c413ad352adfa02bf70171b9987691944",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/invocation.json": "fba21679acd2096538afc9fc9d9e8d81528b4e52ce9b4e51f50164f96bf3c2b1",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/prompt.txt": "20e6af1c41c152391bde7c3e479c82fdf4dd2cfab9925e1062440940f07462b4",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/result.json": "255bcfad83f2c438457a81e1ecaee0b23becbbcd7b207781a2f50bf36e9519ca",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-f1002ac9d6de2a2d89c1/attempt-001/usage.json": "1c435468563e5d165042c47071ee1095c5a28baeaa1937ee5d1cf2d1819d43e0"
+  }
+}

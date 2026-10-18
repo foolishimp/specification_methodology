@@ -1,0 +1,1371 @@
+{
+  "profile": "ac.eval.blind-grades/1",
+  "candidate": "claude",
+  "assessor": "ac_eval_claude_grade",
+  "answers": [
+    {
+      "label": "8e306cbad408",
+      "tasks": [
+        {
+          "id": "L1",
+          "criteria": [
+            {
+              "id": "L1.1",
+              "grade": "met",
+              "answer_excerpt": "Method availability, Product adoption and actor activation are separate relations.",
+              "reason": "Separates the three relations and requires an authorized work instruction binding an exact actor/frame/subject; S001."
+            },
+            {
+              "id": "L1.2",
+              "grade": "partial",
+              "answer_excerpt": "Keep the durable Product-owned basis distinct from the execution-scoped activation.",
+              "reason": "Names Product ownership, authority, scope, grants, result relations and invalidation, but omits the locator entry's distinct non-adopting, non-authorizing role; S001."
+            },
+            {
+              "id": "L1.3",
+              "grade": "met",
+              "answer_excerpt": "Applicability predicate false on supported facts -> falsified for applicability",
+              "reason": "True applicability requires the separate evaluation; supported false applicability falsifies only applicability and excludes its obligation under cited authority; S002-S003."
+            },
+            {
+              "id": "L1.4",
+              "grade": "partial",
+              "answer_excerpt": "The excluded evaluation is not performed and receives no core result.",
+              "reason": "Correctly distinguishes exclusion from the obligation's own verdict, but does not distinguish satisfaction of an owner-declared nonapplication disjunction from satisfaction of the obligation; S003."
+            },
+            {
+              "id": "L1.5",
+              "grade": "met",
+              "answer_excerpt": "Keep the potentially required obligation in dependent coverage until evidence or the owning decision resolves it.",
+              "reason": "Names unresolved boundary membership, indeterminate/out_of_frame grounds, continued coverage and retained semantic judgment with evidence; S002-S003."
+            },
+            {
+              "id": "L1.6",
+              "grade": "met",
+              "answer_excerpt": "it cannot support a completion claim that skips evidence needed to audit, refactor or reconstruct the realised boundary.",
+              "reason": "Applies the adopted family within A, permits explicit partial scope and preserves the completion-evidence limit; S004-S005."
+            },
+            {
+              "id": "L1.7",
+              "grade": "met",
+              "answer_excerpt": "Actor names, frame names, available tools and listed evaluation families confer no additional authority.",
+              "reason": "Rejects naming/tool activation, preserves other applicable constraints and describes a proposed contract rather than an instance result; S002, S006."
+            },
+            {
+              "id": "L1.8",
+              "grade": "met",
+              "answer_excerpt": "unresolved stays in that required coverage.",
+              "reason": "Exact Product Definition §7 and ACTIVATION Applicability citations support ownership, activation and unresolved required coverage without broadening their scopes; S001-S003."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L1.F1",
+              "status": "absent",
+              "reason": "Availability is expressly separate from adoption/activation, and other applicable common constraints remain in force."
+            },
+            {
+              "id": "L1.F2",
+              "status": "absent",
+              "reason": "Unknown applicability remains unresolved; excluded evaluations explicitly have no core value."
+            },
+            {
+              "id": "L1.F3",
+              "status": "absent",
+              "reason": "No nonapplication disjunction is counted as proof of the obligation; skipped completion evidence is expressly disallowed."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "v3 validates these exact coordinates and quotes. Indices 0-1 decide authority/activation, 3-5 decide applicability and retained constraints, and 6 supports explicit partial adoption. Index 2 is valid optional-profile background and is not needed for a deciding claim.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L2",
+          "criteria": [
+            {
+              "id": "L2.1",
+              "grade": "met",
+              "answer_excerpt": "exact subject and basis, evidence, findings and bounded corrections where relevant, residual uncertainty and invalidation conditions.",
+              "reason": "The handoff retains predicate, domain outcome, exact coordinates, evidence, uncertainty and invalidation; S007-S008."
+            },
+            {
+              "id": "L2.2",
+              "grade": "partial",
+              "answer_excerpt": "Performed evaluation: satisfied means its declared predicate holds on the exact basis",
+              "reason": "Defines all five core values faithfully, but does not specify refinement question/cause identity or the once-only mapping and cause-preserving no-raise discipline; S007, S009-S010."
+            },
+            {
+              "id": "L2.3",
+              "grade": "met",
+              "answer_excerpt": "Unperformed evaluation -> no core value. Do not label the component indeterminate or falsified.",
+              "reason": "Separates nonperformance and absent/stale/wrong-subject planned returns from uncovered obligations; a witnessed falsification still returns alongside a missing assessment; S009, S011-S012."
+            },
+            {
+              "id": "L2.4",
+              "grade": "met",
+              "answer_excerpt": "Do not map them to completed effects or no effect.",
+              "reason": "Retains uncertain effects separately from failures, undecided claims and missing assessments through joins; S009, S013."
+            },
+            {
+              "id": "L2.5",
+              "grade": "met",
+              "answer_excerpt": "A satisfied availability result establishes neither fitness nor acceptance.",
+              "reason": "Declares distinct availability, criteria and owner-acceptance predicates, and cites acceptance as the owner's disposition over an unchanged subject; S014-S015."
+            },
+            {
+              "id": "L2.6",
+              "grade": "met",
+              "answer_excerpt": "Maintain three separate inputs: applicable closed returns; planned required assessments without an applicable closed return; required obligations outside the admitted coverage of planned assessments.",
+              "reason": "Models all three inputs and distinguishes stale held evidence from a newly performed invalid_basis evaluation; S011."
+            },
+            {
+              "id": "L2.7",
+              "grade": "met",
+              "answer_excerpt": "There is no universal ordering among non-satisfied core values.",
+              "reason": "Retains failures and both gap kinds, states all-pass/basis/gap cases and leaves mandatory sets, basis joins, conflict, authority and veto choices to the declared consumer rule; S016."
+            },
+            {
+              "id": "L2.8",
+              "grade": "met",
+              "answer_excerpt": "A known failure and a gap of\neither kind survive every join.",
+              "reason": "Exact Results and Conjunction citations cover predicate preservation, nonperformance, stale gaps, uncertain effects and non-universal ordering; S007, S016."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L2.F1",
+              "status": "absent",
+              "reason": "Wholly unperformed evaluations are expressly assigned no core value; indeterminate is reserved for performed undecidable evaluations or the composite."
+            },
+            {
+              "id": "L2.F2",
+              "status": "absent",
+              "reason": "Availability does not establish fitness or acceptance, and assessing an acceptance decision does not make it."
+            },
+            {
+              "id": "L2.F3",
+              "status": "absent",
+              "reason": "Expressly rejects universal non-satisfied ordering and stale-result relabeling; uncertain effects remain uncertain."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and support deciding handoff claims: distinct predicates, domain outcomes, no-result nonperformance, stale gaps, survival, declared ordering, uncertain effects and unchanged-subject owner acceptance.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L3",
+          "criteria": [
+            {
+              "id": "L3.1",
+              "grade": "met",
+              "answer_excerpt": "Retain S0/B0 provenance and the preservation justification; do not merely relabel the old pass.",
+              "reason": "Reuses A on its stipulated preservation relation without rerunning it or pretending the original evidence was executed on S1/B1; S017."
+            },
+            {
+              "id": "L3.2",
+              "grade": "met",
+              "answer_excerpt": "B's old pass has no established preservation to the changed execution dependency. Obtain current applicable evidence.",
+              "reason": "Requires current reassessment/support because B executes changed L; retains old outcomes as historical evidence rather than inferring current success or failure merely from changed coordinates; S017-S018."
+            },
+            {
+              "id": "L3.3",
+              "grade": "met",
+              "answer_excerpt": "An absent path in an incomplete dependency view does not establish unaffectedness.",
+              "reason": "C stays unresolved until supported preservation/dependency coverage or current evaluation is obtained; S018."
+            },
+            {
+              "id": "L3.4",
+              "grade": "met",
+              "answer_excerpt": "Execute and obtain G's applicable result.",
+              "reason": "Keeps independently mandatory G in the required assurance account despite selective testing and requires actual current evidence for fixed obligations and joins; S017-S018."
+            },
+            {
+              "id": "L3.5",
+              "grade": "partial",
+              "answer_excerpt": "The arithmetic 0.1 × 0.1 = 0.01 establishes neither the joint miss probability nor a 99% probability that the Product is correct.",
+              "reason": "Correctly rejects independence from model-family labels and shared oracle/observations and rejects Product correctness. It omits the conditional-independence factorization requirement and the specific distinction between detection probability and a Product-correctness posterior; S019-S020."
+            },
+            {
+              "id": "L3.6",
+              "grade": "met",
+              "answer_excerpt": "Do not invent further missing obligations.",
+              "reason": "P expressly satisfies the bounded account with retained A plus current B/C/G and all fixed coverage/joins; no Product acceptance is inferred; S017, S014."
+            },
+            {
+              "id": "L3.7",
+              "grade": "met",
+              "answer_excerpt": "C's missing current return remains a separate planned-assessment gap.",
+              "reason": "The bounded claim requires B; its admissible counterexample defeats that conjunct while the separate C gap survives. This does not impose a mixed-value universal precedence; S016."
+            },
+            {
+              "id": "L3.8",
+              "grade": "partial",
+              "answer_excerpt": "C's dispatch receipt supplies no applicable closed return.",
+              "reason": "U correctly yields an aggregate indeterminate and no invented C success/failure, but the citations omit the deciding change-impact/reuse and dependence owner sections; S009, S016, S019."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L3.F1",
+              "status": "absent",
+              "reason": "Rejects no-path preservation for C, restricts old evidence to supported applicability, and keeps G mandatory."
+            },
+            {
+              "id": "L3.F2",
+              "status": "absent",
+              "reason": "Rejects independence and the numerical Product-correctness conclusion; no replacement unsupported probability is asserted."
+            },
+            {
+              "id": "L3.F3",
+              "status": "absent",
+              "reason": "B's counterexample and C's gap survive; A need not be rerun and P is not Product acceptance or release."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "v3 validates every selected quote. They support coherent basis joins, stale-result exclusion, required applicability/results, upstream oracle authority, complete conjunction conditions, counterexample survival and acceptance limits. They do not supply the omitted impact/reuse or quantified-assurance law; index 3 is a valid generic necessary-condition limit, not needed for a deciding claim here.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L4",
+          "criteria": [
+            {
+              "id": "L4.1",
+              "grade": "met",
+              "answer_excerpt": "The present adoption covers A and its active implementation.",
+              "reason": "Preserves the exact adopted A boundary, material typed-schema change, existing-realisation derivation and active implementation; S004, S021."
+            },
+            {
+              "id": "L4.2",
+              "grade": "met",
+              "answer_excerpt": "Do not invent additional Ontology, IACS, projection or other gate defects: their adequacy is stipulated.",
+              "reason": "Retains the accepted complete Ontology, reconciled IACS and three-view evidence as supplied, while treating their conditional completion roles distinctly; S021."
+            },
+            {
+              "id": "L4.3",
+              "grade": "met",
+              "answer_excerpt": "Publish the reference-to-target derivation asset before claiming design-method completion for the changed boundary.",
+              "reason": "Requires both reference-to-target and three-view assets under the derivation trigger; published views do not substitute for the missing derivation asset; S021."
+            },
+            {
+              "id": "L4.4",
+              "grade": "met",
+              "answer_excerpt": "Helper-level tests do not discharge the specifically absent publication.",
+              "reason": "Requires a published module-derived lane for active implementation and does not elevate helper tests to that canonical proof lane or closure; S021-S022."
+            },
+            {
+              "id": "L4.5",
+              "grade": "met",
+              "answer_excerpt": "Present: falsified for the bounded design-completion/closure predicate.",
+              "reason": "Refuses completion for the two known missing required publications, retaining concrete defects rather than inventing uncertainty about the law; S021-S022."
+            },
+            {
+              "id": "L4.6",
+              "grade": "met",
+              "answer_excerpt": "P: satisfied for the bounded gate.",
+              "reason": "Accepts the stipulated positive evidence as sufficient for this bounded gate, without Product acceptance or release authorization; S021, S014."
+            },
+            {
+              "id": "L4.7",
+              "grade": "partial",
+              "answer_excerpt": "U: indeterminate for whether the design obligations apply to this changed service",
+              "reason": "Correctly names the old-boundary relation, retains potentially required coverage and seeks evidence/owner resolution. It does not expressly carry forward independently applicable generic obligations in U; S002."
+            },
+            {
+              "id": "L4.8",
+              "grade": "partial",
+              "answer_excerpt": "Silence in a bounded representation cannot exclude an obligation stated by its owner.",
+              "reason": "Recognizes partial interpretation and cites exact design and applicability/acceptance law. It does not state the full no-fully-encoded/G5-G13 limit or cite the ASSURANCE §15 module-proof owner; S021-S024."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L4.F1",
+              "status": "absent",
+              "reason": "Present completion is expressly falsified despite accepted Ontology/IACS/views and helper tests."
+            },
+            {
+              "id": "L4.F2",
+              "status": "absent",
+              "reason": "Initial adoption and supplied Ontology remain facts; U is unresolved and grants neither exclusion nor completion."
+            },
+            {
+              "id": "L4.F3",
+              "status": "absent",
+              "reason": "P satisfies the bounded gate and no branch automatically accepts or releases the Product or proves whole-method completeness."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and relevant to missing publications, partial-adoption limits, unresolved applicability, actual invalid-basis evaluations, bounded conjunction satisfaction and owner closure. No ASSURANCE §15 citation or exact representation-coverage owner citation is supplied.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        }
+      ]
+    },
+    {
+      "label": "d884f650311f",
+      "tasks": [
+        {
+          "id": "L1",
+          "criteria": [
+            {
+              "id": "L1.1",
+              "grade": "partial",
+              "answer_excerpt": "A work activation binds an actor and declared frame to the work item, exact subject/basis",
+              "reason": "Separates availability/adoption and bounds a work activation, but does not state that an exact authorized work instruction, distinct from durable adoption/grants, activates the bound frame; S001."
+            },
+            {
+              "id": "L1.2",
+              "grade": "partial",
+              "answer_excerpt": "D retains the selected method cut, Product adoption declaration, adopted boundary and rule family, and authoritative evaluation/scope declarations.",
+              "reason": "Retains a Product-owned durable input, but leaves its native declaration inventory unestablished and omits ownership of grants/result/invalidation law and the locator entry's non-authorizing role; S001."
+            },
+            {
+              "id": "L1.3",
+              "grade": "met",
+              "answer_excerpt": "applies(o)=false on supported facts: falsified for the applicability predicate",
+              "reason": "True requires the separate evaluation; supported false falsifies applicability and excludes only the cited obligation; S002-S003."
+            },
+            {
+              "id": "L1.4",
+              "grade": "partial",
+              "answer_excerpt": "The excluded evaluation has no result; exclusion is not satisfaction of that obligation.",
+              "reason": "Preserves no-result exclusion and unresolved required coverage, but omits the different predicate of a satisfied nonapplication disjunction; S003."
+            },
+            {
+              "id": "L1.5",
+              "grade": "met",
+              "answer_excerpt": "Record any residual semantic judgment and its supporting evidence as judgment.",
+              "reason": "Names the unresolved boundary premise, indeterminate/out_of_frame grounds, required coverage and withholding pending evidence or owning decision; S002-S003."
+            },
+            {
+              "id": "L1.6",
+              "grade": "met",
+              "answer_excerpt": "Apply the adopted rule family consistently, evaluating each conditional requirement on its own premises.",
+              "reason": "Uses the named partial boundary/family consistently and refuses completion that skips required reconstruction/audit evidence; S004-S005."
+            },
+            {
+              "id": "L1.7",
+              "grade": "met",
+              "answer_excerpt": "Keep all other applicable common constraints in force, including constraints detected by only one evaluation.",
+              "reason": "No tool/frame name activates work by itself; other common constraints remain and the representation is proposed rather than an instance certificate; S002, S006."
+            },
+            {
+              "id": "L1.8",
+              "grade": "partial",
+              "answer_excerpt": "The exact native requirements owned by PRODUCT_DEFINITION §7 and the complete activation-packet specification were not acquired.",
+              "reason": "Exact ACTIVATION applicability and design-adoption citations are supplied, but the requested Product adoption/frame-basis owner is expressly unacquired and uncited; S001-S003."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L1.F1",
+              "status": "absent",
+              "reason": "Explicitly separates profile availability from adoption and refuses role-name/tool activation; partial adoption preserves common constraints."
+            },
+            {
+              "id": "L1.F2",
+              "status": "absent",
+              "reason": "Unknown applicability is indeterminate/out_of_frame and remains required; excluded evaluations have no result."
+            },
+            {
+              "id": "L1.F3",
+              "status": "absent",
+              "reason": "No disjunctive nonapplication is treated as proof of an obligation, and skipped completion evidence is disallowed."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3. Index 0 supports availability/adoption; 2-4 support applicability and retained common/required coverage; 5-6 support design conditions and partial-adoption limits. Index 1 is valid role-configuration background. No Product Definition §7 citation is supplied.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Unacquired owner sections are identified where material; citations refer only to acquired documentary text.'",
+            "L1 states the exact native PRODUCT_DEFINITION §7 and complete activation-packet requirements 'were not acquired'. These are acquisition disclosures; no access condition is inferred."
+          ]
+        },
+        {
+          "id": "L2",
+          "criteria": [
+            {
+              "id": "L2.1",
+              "grade": "met",
+              "answer_excerpt": "Each result carries its evaluated predicate, exact subject and basis, original domain outcome, core value, supporting evidence, findings, residual uncertainty and invalidation conditions.",
+              "reason": "Binds handoffs to the exact predicate/subject/basis with domain outcome, evidence, uncertainty and invalidation retained; S007-S008."
+            },
+            {
+              "id": "L2.2",
+              "grade": "partial",
+              "answer_excerpt": "each refined outcome maps to exactly one core value without raising its standing.",
+              "reason": "Defines all five core grounds and no-raise mapping, but does not retain the question/cause identity for cause-split refinements; S007, S009-S010."
+            },
+            {
+              "id": "L2.3",
+              "grade": "met",
+              "answer_excerpt": "Not performed: no result, never indeterminate or falsified.",
+              "reason": "Distinguishes missing planned current returns from uncovered obligations, handles stale/wrong-subject returns as gaps, and retains a supported partial-evaluation counterexample without fabricating the missing part; S009, S011-S012."
+            },
+            {
+              "id": "L2.4",
+              "grade": "met",
+              "answer_excerpt": "Unknown effect completion cannot map to no effect or completion",
+              "reason": "Keeps possible unobserved effects separate from nonperformance, falsehood and undecidable claims; S009, S013."
+            },
+            {
+              "id": "L2.5",
+              "grade": "met",
+              "answer_excerpt": "Availability cannot map to fitness or acceptance.",
+              "reason": "Three predicates remain distinct, and the exact acceptance citation identifies the decision owner's disposition over an unchanged subject; S014-S015."
+            },
+            {
+              "id": "L2.6",
+              "grade": "met",
+              "answer_excerpt": "Declare required coverage R, planned assessments A and actual closed results C separately.",
+              "reason": "Preserves the three inputs and original historical bases; stale held evidence is not converted to a new invalid_basis return; S011."
+            },
+            {
+              "id": "L2.7",
+              "grade": "met",
+              "answer_excerpt": "The four nonsatisfied core values have no universal precedence among themselves.",
+              "reason": "Keeps known failures and both gap kinds, states basis-disagreement and all-pass-with-gap outcomes, and delegates mandatory/authority/conflict/veto choices to the consumer; S016."
+            },
+            {
+              "id": "L2.8",
+              "grade": "partial",
+              "answer_excerpt": "a conjunction decides only under a declared rule and transfers no contributor's semantic authority",
+              "reason": "Exact Results and its F3 summary citations support much of the contract, but the actual Conjunction of results owner section is not cited for its reported-value and consumer-rule details; S007, S016."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L2.F1",
+              "status": "absent",
+              "reason": "Nonperformance is expressly no core value; missing current returns enter as gaps rather than indeterminate children."
+            },
+            {
+              "id": "L2.F2",
+              "status": "absent",
+              "reason": "Availability cannot establish fitness/acceptance and a reviewer recommendation applies no owner disposition."
+            },
+            {
+              "id": "L2.F3",
+              "status": "absent",
+              "reason": "No universal ordering is imposed; stale results keep their bases and uncertain effects do not become no effect/completed."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and support distinct predicates, nonperformance, domain outcomes, stale-basis gaps, no-success-with-gaps, declared rule, partial-evaluation counterexamples, uncertain effects and owner acceptance. Indices 3-5 are the Results F3 table, not citations to the full Conjunction of results owner section.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L3",
+          "criteria": [
+            {
+              "id": "L3.1",
+              "grade": "met",
+              "answer_excerpt": "A: current reliance is supported by the stipulated preservation relation. Reuse does not pretend A was rerun.",
+              "reason": "Uses the supplied support for A, retaining historical S0/B0 outcomes and current preservation coordinates; S017."
+            },
+            {
+              "id": "L3.2",
+              "grade": "met",
+              "answer_excerpt": "An old pass remains a historical pass.",
+              "reason": "B executes changed L and needs current support; historical passing evidence is not relabeled as current passing or retroactively falsified solely by the basis change; S017-S018."
+            },
+            {
+              "id": "L3.3",
+              "grade": "met",
+              "answer_excerpt": "C: nonimpact and reuse are unresolved.",
+              "reason": "Incomplete dependency coverage prevents exclusion from the absent path; acquire material dependency/preservation support or current evidence; S018."
+            },
+            {
+              "id": "L3.4",
+              "grade": "met",
+              "answer_excerpt": "G: its applicability is stipulated; change-based selection cannot exclude it.",
+              "reason": "Keeps the independent mandatory gate and demands actual current assessment support rather than selection/dispatch alone; S017-S018."
+            },
+            {
+              "id": "L3.5",
+              "grade": "partial",
+              "answer_excerpt": "Different model-family labels do not establish independence of shared oracle or observation failures.",
+              "reason": "Rejects shared-cause independence and 99% Product correctness, but omits the conditional-independence factorization, detection-versus-correctness distinction and the useful scoped-regression versus upstream-fidelity account; S019-S020."
+            },
+            {
+              "id": "L3.6",
+              "grade": "met",
+              "answer_excerpt": "P: satisfied for the bounded completion predicate.",
+              "reason": "Combines supported A retention with current B/C/G and complete fixed obligations/joins; leaves acceptance/release separate and invents no gap; S017, S014."
+            },
+            {
+              "id": "L3.7",
+              "grade": "met",
+              "answer_excerpt": "F: falsified for the bounded conjunction requiring B's predicate.",
+              "reason": "Identifies the ordinary required conjunction being falsified by B while retaining C's separate gap, with no erasure or universal mixed-value ordering; S016."
+            },
+            {
+              "id": "L3.8",
+              "grade": "partial",
+              "answer_excerpt": "C remains a gap, not an indeterminate component result and not a failure.",
+              "reason": "U's aggregate indeterminate and missing-child distinction are correct. The deciding reuse/impact/dependence and full conjunction reported-value owner sections are not cited; S009, S016, S019."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L3.F1",
+              "status": "absent",
+              "reason": "C remains unresolved, B needs current support, A alone has stipulated preservation, and G cannot be skipped."
+            },
+            {
+              "id": "L3.F2",
+              "status": "absent",
+              "reason": "Independence and the 99% Product-correctness inference are expressly rejected."
+            },
+            {
+              "id": "L3.F3",
+              "status": "absent",
+              "reason": "F retains both B's failure and C's gap; A need not rerun, P is supported and no acceptance/release is inferred."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and relevant to required results, exact-basis scope, conjunction sufficiency, upstream oracle authority, gaps, actual partial-evaluation counterexamples and acceptance limits. They do not cite the detailed impact/reuse, dependence, quantified-assurance or full conjunction reported-value law.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "L3 says: 'The detailed dependency-reuse and probabilistic-assurance clauses were not acquired.' No access condition is inferred."
+          ]
+        },
+        {
+          "id": "L4",
+          "criteria": [
+            {
+              "id": "L4.1",
+              "grade": "met",
+              "answer_excerpt": "The baseline adoption covers A and its active implementation.",
+              "reason": "Uses exact adopted A scope and the stated material typed-schema/existing-realisation/active-implementation triggers; S004, S021."
+            },
+            {
+              "id": "L4.2",
+              "grade": "met",
+              "answer_excerpt": "The stipulated Ontology, IACS, three-view assets and other criteria are already supported; they need not be reopened.",
+              "reason": "Retains supplied Ontology and IACS completion rather than manufacturing missing premises or requiring a whole-method rewrite; S021."
+            },
+            {
+              "id": "L4.3",
+              "grade": "met",
+              "answer_excerpt": "Derivation from an existing realisation requires publication of both the reference-to-target derivation asset and the Ontology-derived three-view asset.",
+              "reason": "Recognizes the conjunctive publication requirement and that published views do not discharge the missing reference-to-target asset; S021."
+            },
+            {
+              "id": "L4.4",
+              "grade": "met",
+              "answer_excerpt": "the stipulated helper-only tests do not supply the absent lane.",
+              "reason": "Requires a justified published module-derived lane for active implementation and refuses helper-only proof as a substitute; S021-S022."
+            },
+            {
+              "id": "L4.5",
+              "grade": "met",
+              "answer_excerpt": "This is a supported failure, not merely insufficient knowledge.",
+              "reason": "Present completion is falsified by the two known applicable publication defects, without reopening supplied good evidence; S021-S022."
+            },
+            {
+              "id": "L4.6",
+              "grade": "met",
+              "answer_excerpt": "P: satisfied for that bounded predicate.",
+              "reason": "Accepts the stipulated publications and established criteria as closing the bounded gate, with acceptance and release still separate; S021, S014."
+            },
+            {
+              "id": "L4.7",
+              "grade": "partial",
+              "answer_excerpt": "The obligation remains in required coverage rather than being excluded.",
+              "reason": "U correctly withholds completion pending the old-boundary/current-service relation or owner resolution, but does not expressly retain independently applicable generic obligations in U; S002."
+            },
+            {
+              "id": "L4.8",
+              "grade": "partial",
+              "answer_excerpt": "Omission from a bounded representation does not exclude an applicable obligation.",
+              "reason": "Uses exact design owner and uncertainty/acceptance sources, but lacks the complete native coverage limits and the ASSURANCE §15 module-proof owner citation; S021-S024."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L4.F1",
+              "status": "absent",
+              "reason": "Present completion is falsified despite adequate Ontology/IACS/views/helper tests and representation silence."
+            },
+            {
+              "id": "L4.F2",
+              "status": "absent",
+              "reason": "Initial supplied adoption/Ontology are retained; U stays unresolved and grants no exclusion or completion."
+            },
+            {
+              "id": "L4.F3",
+              "status": "absent",
+              "reason": "P is satisfied for the bounded predicate; no Product acceptance, release or whole-method completeness follows."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and support missing derivation/lane publications, partial-adoption limits, unresolved applicability/current-basis limits and owner closure. No ASSURANCE §15 or exact native interpretation coverage citation is supplied.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "L4 says: 'Detailed module-derived test-lane criteria in ASSURANCE §15 were not acquired.' No access condition is inferred."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "30ea862615fa",
+      "tasks": [
+        {
+          "id": "L1",
+          "criteria": [
+            {
+              "id": "L1.1",
+              "grade": "met",
+              "answer_excerpt": "For each work activation, bind the exact subject and basis, admitted work contract, applicable frame, selected context, actor capability and authority.",
+              "reason": "Separates available profiles, Product adoption and exact work activation; the admitted work contract with actor/authority/subject coordinates supplies the work-specific instruction rather than adoption alone; S001."
+            },
+            {
+              "id": "L1.2",
+              "grade": "partial",
+              "answer_excerpt": "Bind the Product-owned accepted frame basis: exact frame law and optional profile basis, admitting authorities and scopes",
+              "reason": "Models ownership and scope/grant/result/invalidation contents of the durable declaration, but omits the separate locator entry's inability to adopt, contain the binding or create authority; S001."
+            },
+            {
+              "id": "L1.3",
+              "grade": "partial",
+              "answer_excerpt": "A change does not automatically trigger every conditionally applicable evaluation.",
+              "reason": "Requires condition-specific evaluations and supported exclusions, but never models the applicability evaluation's true/satisfied and false/falsified core results; S002-S003."
+            },
+            {
+              "id": "L1.4",
+              "grade": "partial",
+              "answer_excerpt": "An established inapplicability removes that conditional requirement from the work",
+              "reason": "Keeps exclusion apart from performed evaluations and records no-result nonperformance, but omits the distinction from a satisfied owner-declared nonapplication disjunction and the explicit falsified-applicability ground; S003."
+            },
+            {
+              "id": "L1.5",
+              "grade": "partial",
+              "answer_excerpt": "record design applicability as unresolved.",
+              "reason": "Preserves unknown membership, potentially required obligations and evidence/owner resolution. It omits indeterminate/out_of_frame grounds and explicit retention of residual semantic applicability judgment as judgment with evidence; S002-S003."
+            },
+            {
+              "id": "L1.6",
+              "grade": "met",
+              "answer_excerpt": "Apply adopted design rules consistently across the named boundary.",
+              "reason": "Uses the named partial family/boundary consistently and rejects completion through skipped audit/refactor/reconstruction evidence; S004-S005."
+            },
+            {
+              "id": "L1.7",
+              "grade": "met",
+              "answer_excerpt": "independently applicable common constraints retain their force.",
+              "reason": "Role/profile naming supplies no grant, common constraints persist outside adoption, and the proposed contract does not claim instance satisfaction or acceptance; S002, S006."
+            },
+            {
+              "id": "L1.8",
+              "grade": "partial",
+              "answer_excerpt": "A step exists only after its contract is admitted (§1, Admission) and its\nframe is activated on the exact subject and basis (§2).",
+              "reason": "v3 admits the Product Definition line-range citation. The answer still omits the deciding ACTIVATION Applicability owner section for the precise conditional exclusion/core rules; S001-S003."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L1.F1",
+              "status": "absent",
+              "reason": "Availability/adoption/activation are distinct; selecting an engagement profile grants nothing and common constraints remain."
+            },
+            {
+              "id": "L1.F2",
+              "status": "absent",
+              "reason": "Unknown boundary membership stays unresolved; no skipped evaluation is assigned a core result."
+            },
+            {
+              "id": "L1.F3",
+              "status": "absent",
+              "reason": "No satisfied nonapplication predicate is counted as the obligation's satisfaction, and skipped completion evidence is disallowed."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "All selected citations are strict-valid under v3, including index 1's standard en-dash line range. They support Product adoption/ownership, imported common obligations, role-name limits, admitted exact activation, unresolved-required-result blocking and partial-adoption evidence. None cites ACTIVATION Applicability's precise result/exclusion rules.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Its reported same-family fidelity evidence and repaired clauses were not independently re-read.'",
+            "Answer-level limitation says: 'Focused source cuts do not reproduce the full activation protocol, evidence-retention predicate or module-test specification'. These are acquisition/review disclosures; no access condition is inferred."
+          ]
+        },
+        {
+          "id": "L2",
+          "criteria": [
+            {
+              "id": "L2.1",
+              "grade": "met",
+              "answer_excerpt": "A closed handoff identifies frame and activation, subject, basis, evaluation, actor, evidence, verdict, residual uncertainty and invalidation conditions",
+              "reason": "Retains exact closed-result coordinates, predicate/domain outcome, evidence, residuals and invalidation; S007-S008."
+            },
+            {
+              "id": "L2.2",
+              "grade": "met",
+              "answer_excerpt": "Preserve the original outcome and cause.",
+              "reason": "Represents all five core values through predicate-specific availability, assessment, acceptance and effect refinements, retaining cause-specific mappings without promoting failed/undecided predicates; S007, S009-S010."
+            },
+            {
+              "id": "L2.3",
+              "grade": "met",
+              "answer_excerpt": "The missing component itself still has no result.",
+              "reason": "Separates wholly unperformed assessments, absent/stale/wrong-subject planned-return gaps and uncovered obligations, and retains sole supported falsification alongside an unexercised required assessment; S009, S011-S012."
+            },
+            {
+              "id": "L2.4",
+              "grade": "met",
+              "answer_excerpt": "A lost response or absent record establishes neither completed nor not_effected.",
+              "reason": "Keeps uncertain effect outcome and cessation residuals distinct from failed predicates and nonperformance, without no-effect/completion coercion; S009, S013."
+            },
+            {
+              "id": "L2.5",
+              "grade": "met",
+              "answer_excerpt": "only the decision owner's disposition supplies the acceptance result.",
+              "reason": "Names exact X/B availability, fitness and owner-bound acceptance separately; an assessing step's availability failure does not falsify candidate fitness and no absent disposition is invented; S014-S015."
+            },
+            {
+              "id": "L2.6",
+              "grade": "met",
+              "answer_excerpt": "Maintain three separate conjunction inputs: applicable closed returns; planned assessments without applicable closed returns; uncovered obligations R minus C.",
+              "reason": "Implements all three inputs and keeps stale held evidence on its original coordinates instead of relabeling it invalid_basis for the composite; S011."
+            },
+            {
+              "id": "L2.7",
+              "grade": "met",
+              "answer_excerpt": "No universal ordering among non-satisfied core values is supplied by the conjunction law.",
+              "reason": "Keeps failures and both gaps, requires valid all-pass support and coherent bases, states gap/basis outcomes and leaves all required consumer policy choices explicit; S016."
+            },
+            {
+              "id": "L2.8",
+              "grade": "partial",
+              "answer_excerpt": "The conjunction is `satisfied` only when every mandatory\nresult is `satisfied` with valid applicable evidence",
+              "reason": "Cites the exact Conjunction owner and ACTIVATION-owned refinements, preserving predicate meanings, but supplies no exact FOUNDATIONS Results owner citation for the core/refinement law requested by this criterion; S007, S016."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L2.F1",
+              "status": "absent",
+              "reason": "Unperformed criteria have no results; incomplete availability is explicitly a different predicate and not an indeterminate child."
+            },
+            {
+              "id": "L2.F2",
+              "status": "absent",
+              "reason": "Availability, fitness and owner disposition are separate, and no missing disposition is inferred."
+            },
+            {
+              "id": "L2.F3",
+              "status": "absent",
+              "reason": "Universal ordering is expressly rejected; stale held results are gaps and unobserved effects are not no effect/completed."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and relevant to exact closed handoffs, unperformed criteria, separate owner acceptance, stale gaps, survival, complete conjunctions, declared ordering and uncertain effects. The packet's exact owner passages and the additionally read allowed ACTIVATION Construction availability/Disposition/Effects text support the domain mappings; no contradictory mapping was found.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L3",
+          "criteria": [
+            {
+              "id": "L3.1",
+              "grade": "met",
+              "answer_excerpt": "Keep the original result and the preservation/application relation visible; do not describe retention as a new execution.",
+              "reason": "Reuses stipulated A applicability on S1/B1 while retaining the S0/B0 result as historical evidence; S017."
+            },
+            {
+              "id": "L3.2",
+              "grade": "met",
+              "answer_excerpt": "B is affected through its execution dependency on L and belongs in reassessment.",
+              "reason": "Requires B reassessment on current support and does not infer either truth or falsehood of the new claim merely from an invalid old reliance; original results remain historical; S017-S018."
+            },
+            {
+              "id": "L3.3",
+              "grade": "met",
+              "answer_excerpt": "incomplete coverage prevents the absent path from establishing non-influence.",
+              "reason": "Requires C's dependency/preservation argument or current reassessment, leaving dependent assurance unresolved meanwhile; S018."
+            },
+            {
+              "id": "L3.4",
+              "grade": "met",
+              "answer_excerpt": "G remains required regardless of which checks the change-based selection includes.",
+              "reason": "Includes mandatory G and demands actual current evidence for the complete fixed required account rather than allowing selection to waive it; S017-S018."
+            },
+            {
+              "id": "L3.5",
+              "grade": "partial",
+              "answer_excerpt": "Implementation-derived expectations can support regression or a stated local property but do not independently justify fidelity to upstream obligations.",
+              "reason": "Correctly accounts for shared oracle/observations, rejects independence from model families and rejects 99% Product correctness. It does not state the conditional-independence replacement rule or distinguish detection chance from correctness probability; S019-S020."
+            },
+            {
+              "id": "L3.6",
+              "grade": "met",
+              "answer_excerpt": "No additional gap is invented.",
+              "reason": "P uses retained applicable A plus actual B/C/G and all fixed obligations/joins to satisfy the bounded claim without accepting the Product; S017, S014."
+            },
+            {
+              "id": "L3.7",
+              "grade": "met",
+              "answer_excerpt": "Preserve C's missing current return as a planned-assessment gap",
+              "reason": "B is a required predicate of the defined bounded conjunction; its admissible counterexample falsifies that claim while C remains an independent missing slot, without a universal ordering claim; S016."
+            },
+            {
+              "id": "L3.8",
+              "grade": "met",
+              "answer_excerpt": "C has a missing-result gap, not an indeterminate component result.",
+              "reason": "U is explicitly aggregate indeterminate with no C evaluation inferred from dispatch. Exact reuse/dependency and conjunction sources now pass v3's line-range validation and support the deciding claims; S009, S016, S019."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L3.F1",
+              "status": "absent",
+              "reason": "C is not excluded on the absent path, B is reassessed, A retains only supported applicability and G remains mandatory."
+            },
+            {
+              "id": "L3.F2",
+              "status": "absent",
+              "reason": "Shared causes remain and neither independent miss rates nor a 99% Product-correctness probability are asserted."
+            },
+            {
+              "id": "L3.F3",
+              "status": "absent",
+              "reason": "F retains failure and gap, P uses A without a forced rerun, and bounded completion confers no Product acceptance."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3, including standard en-dash ranges at 0-2 and 4-5. They directly support material dependency coverage, absent-edge limits, mandatory gates, exact reuse, upstream-fidelity/shared-error limits, bounded assurance and the all-returned-passes-plus-gap rule. No quantified-assurance formula/conditional-factorization citation is provided.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L4",
+          "criteria": [
+            {
+              "id": "L4.1",
+              "grade": "met",
+              "answer_excerpt": "the adopted design boundary covers A and its active implementation",
+              "reason": "Preserves exact initial A adoption and the material typed-schema, derivation and active-implementation triggers; S004, S021."
+            },
+            {
+              "id": "L4.2",
+              "grade": "met",
+              "answer_excerpt": "those conditions are satisfied by the supplied facts.",
+              "reason": "Treats accepted complete Ontology, reconciled IACS and published views as supplied, while explaining their conditional completion role; S021."
+            },
+            {
+              "id": "L4.3",
+              "grade": "met",
+              "answer_excerpt": "Derivation from an existing realisation triggers publication of the reference-to-target derivation asset and Ontology-derived three-view asset.",
+              "reason": "Requires both assets and does not substitute given three-view publication for the missing reference-to-target derivation; S021."
+            },
+            {
+              "id": "L4.4",
+              "grade": "met",
+              "answer_excerpt": "Helper-level tests alone do not discharge that lane requirement.",
+              "reason": "Requires a justified module-derived proof lane, with a module-ownership/helper-shape source supporting why helper tests cannot close the boundary; S021-S022."
+            },
+            {
+              "id": "L4.5",
+              "grade": "met",
+              "answer_excerpt": "concrete unmet conditions, not merely uncertainty.",
+              "reason": "Initial completion is falsified by the two actual missing publications; stipulated adequate evidence elsewhere is not reopened; S021-S022."
+            },
+            {
+              "id": "L4.6",
+              "grade": "met",
+              "answer_excerpt": "P: satisfied for the stipulated bounded gate assessment.",
+              "reason": "Accepts all stipulated positive criteria as closing the bounded assessment and separately preserves formal owner disposition, Product acceptance and release; the extra design-verdict distinction is supported by the exact gate owner; S021, S014."
+            },
+            {
+              "id": "L4.7",
+              "grade": "partial",
+              "answer_excerpt": "establish the current adoption boundary and its relation to A, or obtain the responsible Product authority's resolution",
+              "reason": "U retains the unresolved boundary relation and withholds completion instead of inferring exclusion/current adoption. It does not expressly preserve independently applicable generic obligations in that variant; S002."
+            },
+            {
+              "id": "L4.8",
+              "grade": "partial",
+              "answer_excerpt": "absence from the partial representation supplies no exemption.",
+              "reason": "Recognizes incomplete interpretation and cites exact design and module-proof summary law, but omits the full 155/5/no-fully-encoded/G5-G13 coverage account, direct ASSURANCE §15 and ACTIVATION Applicability citations; S021-S024."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L4.F1",
+              "status": "absent",
+              "reason": "Present completion is false despite adequate supplied Ontology/IACS/views/helper tests and partial-view silence."
+            },
+            {
+              "id": "L4.F2",
+              "status": "absent",
+              "reason": "Initial supplied facts remain established; U's old-boundary relation is unresolved and provides no completion/exemption."
+            },
+            {
+              "id": "L4.F3",
+              "status": "absent",
+              "reason": "P is explicitly satisfied for the bounded assessment; the distinct formal owner disposition is source-supported and does not make the bounded P result undecidable."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3, including index 5's en-dash range. They support missing publications, module-owned rather than helper proof, separate design-owner acceptance, Product authority and stale-result limits. The summary at ASSURANCE Foundation-to-law supports the canonical proof claim but is not a direct §15 citation.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        }
+      ]
+    },
+    {
+      "label": "3d3de2c13794",
+      "tasks": [
+        {
+          "id": "L1",
+          "criteria": [
+            {
+              "id": "L1.1",
+              "grade": "partial",
+              "answer_excerpt": "Any execution requires an admitted grant and an actor configuration capable of evaluating the selected predicates.",
+              "reason": "Separates availability, Product adoption and bounded actor activation, but omits the distinct exact authorized work instruction that activates a bound frame; a durable grant/capability alone is not that instruction; S001."
+            },
+            {
+              "id": "L1.2",
+              "grade": "partial",
+              "answer_excerpt": "D denotes the Product-owned durable basis carrying the selected cut and adoption declaration.",
+              "reason": "Recognizes durable Product ownership but leaves the normative signature unverified, omitting declaration-owned grant/result/invalidation scope and the locator entry's non-authorizing role; S001."
+            },
+            {
+              "id": "L1.3",
+              "grade": "met",
+              "answer_excerpt": "W/A: design applicability is satisfied on the stipulated adoption and change facts",
+              "reason": "Requires conditional evaluations when their premises hold, and the quoted exact activation summary identifies falsified applicability as the exclusion ground; S002-S003."
+            },
+            {
+              "id": "L1.4",
+              "grade": "partial",
+              "answer_excerpt": "an excluded obligation, after a `falsified` applicability result, has no result and maps to no core value",
+              "reason": "Keeps excluded obligations apart from core results and preserves unresolved obligations. It does not model the distinct satisfied predicate of an owner-declared nonapplication disjunction; S003."
+            },
+            {
+              "id": "L1.5",
+              "grade": "partial",
+              "answer_excerpt": "applicability is indeterminate and dependent claims are withheld.",
+              "reason": "Preserves the unknown boundary relation, indeterminate/out_of_frame grounds, required obligation and evidence/authority resolution, but omits retention of residual semantic applicability judgment explicitly as judgment with evidence; S002-S003."
+            },
+            {
+              "id": "L1.6",
+              "grade": "met",
+              "answer_excerpt": "Narrow adoption does not license a design-completion claim that skips evidence needed to audit, refactor or reconstruct the adopted boundary.",
+              "reason": "Applies the named adopted rules to A and allows partial scope/family only with the stated evidence limit; S004-S005."
+            },
+            {
+              "id": "L1.7",
+              "grade": "met",
+              "answer_excerpt": "identify the applicable adopted rules and independently applicable common obligations",
+              "reason": "Naming/selecting the engagement profile grants no authority, common obligations persist, and the representation is proposed rather than an instance result; S002, S006."
+            },
+            {
+              "id": "L1.8",
+              "grade": "partial",
+              "answer_excerpt": "The complete requirements of PRODUCT_DEFINITION §7 for the durable collective reference-frame basis and the detailed activation contract were not acquired.",
+              "reason": "Valid design-adoption and ACTIVATION step-summary citations support parts of the contract, but the Product frame-basis owner and the precise Applicability owner section are not cited; S001-S003."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L1.F1",
+              "status": "absent",
+              "reason": "Availability is not adoption, adoption alone is not actor authority, and partial adoption leaves common obligations intact."
+            },
+            {
+              "id": "L1.F2",
+              "status": "absent",
+              "reason": "Unknown applicability remains indeterminate/out_of_frame; excluded obligations and unperformed evaluations have no core result."
+            },
+            {
+              "id": "L1.F3",
+              "status": "absent",
+              "reason": "No nonapplication disjunction is counted as the obligation holding, and required completion evidence cannot be skipped."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3. They support availability/adoption, partial scope, common profile imports, role-name limits, exact frame activation, unresolved premises, no-result exclusions and distinct predicate outcomes. The broad #1-the-step coordinate is valid but does not replace the absent Product §7 declaration/locator treatment.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "Answer-level limitation says: 'Detailed owner text for the durable Product frame basis, activation signature, preservation/reuse, quantified assurance and module-derived test-lane contract was not acquired within the payload envelope.'",
+            "L1 also states the complete Product Definition §7 and detailed activation contract 'were not acquired'. These disclose acquisition limits; no access condition is inferred."
+          ]
+        },
+        {
+          "id": "L2",
+          "criteria": [
+            {
+              "id": "L2.1",
+              "grade": "partial",
+              "answer_excerpt": "Each contribution identifies its evaluated predicate, subject, basis, evidence, original domain outcome and core value.",
+              "reason": "Preserves predicate/domain outcome and exact result coordinates, but lacks the complete handoff's residual-uncertainty/invalidation coordinates and frame/activation provenance; S007-S008."
+            },
+            {
+              "id": "L2.2",
+              "grade": "partial",
+              "answer_excerpt": "Each refined outcome maps to exactly one core value without increasing its standing.",
+              "reason": "All five core values and their grounds are stated faithfully with no-raise mappings, but cause/question identity for refinements is not retained; S007, S009-S010."
+            },
+            {
+              "id": "L2.3",
+              "grade": "met",
+              "answer_excerpt": "An evaluation not performed has no core value. It is not an indeterminate evaluation.",
+              "reason": "Separates absent/stale/wrong-subject planned returns from uncovered coverage and permits an actual counterexample to return despite another unperformed part; S009, S011-S012."
+            },
+            {
+              "id": "L2.4",
+              "grade": "met",
+              "answer_excerpt": "Unobserved effect completion remains unknown.",
+              "reason": "Keeps uncertain effects distinct from falsehood, undecided evaluations and nonperformance without completion/no-effect coercion; S009, S013."
+            },
+            {
+              "id": "L2.5",
+              "grade": "met",
+              "answer_excerpt": "An evaluator's assessment cannot substitute for the owner's acceptance.",
+              "reason": "Binds exact X/B availability, criteria fitness and mandate-bound owner acceptance as distinct predicates; neither an available candidate nor green assessment becomes the disposition; S014-S015."
+            },
+            {
+              "id": "L2.6",
+              "grade": "met",
+              "answer_excerpt": "Carry returned results, planned assessments without applicable closed returns, and uncovered required coverage separately.",
+              "reason": "Preserves all three conjunction inputs and retains stale prior results on their original bases rather than converting them to invalid_basis returns; S011."
+            },
+            {
+              "id": "L2.7",
+              "grade": "met",
+              "answer_excerpt": "When non-satisfied results coexist, the declared conjunction determines the reported value without deleting their causes.",
+              "reason": "Retains counterexamples and both gaps, declares mandatory/authority/conflict/basis/veto choices and states complete-pass, basis-disagreement and gap cases without imposing universal precedence; S016."
+            },
+            {
+              "id": "L2.8",
+              "grade": "partial",
+              "answer_excerpt": "the mandatory results, the handling of conflict and indeterminacy",
+              "reason": "The answer supplies exact Results and F3 summary citations, preserving their meanings, but does not cite the full Conjunction of results owner section for the detailed reported-value policy; S007, S016."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L2.F1",
+              "status": "absent",
+              "reason": "Wholly unperformed evaluations have no core value, and the composite's gap outcome does not fabricate a child result."
+            },
+            {
+              "id": "L2.F2",
+              "status": "absent",
+              "reason": "Availability and evaluator assessment expressly cannot substitute for owner acceptance."
+            },
+            {
+              "id": "L2.F3",
+              "status": "absent",
+              "reason": "Declared aggregation choices are retained; stale held results are not relabeled and unobserved effects stay unknown."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and relevant to predicate/domain preservation, separate availability/acceptance, nonperformance, failure/gap survival, stale basis gaps, no-success-with-gaps, consumer policy, partial counterexamples and uncertain effects. Indices 3-6 cite the Results F3 summary rather than the actual Conjunction section.",
+          "unsupported_claims": [],
+          "blinding_disclosures": []
+        },
+        {
+          "id": "L3",
+          "criteria": [
+            {
+              "id": "L3.1",
+              "grade": "met",
+              "answer_excerpt": "Old results remain evidence about S0/B0.",
+              "reason": "Retains A's historical result and relies on the stipulated current preservation relation, without requiring or inventing a fresh execution; S017."
+            },
+            {
+              "id": "L3.2",
+              "grade": "met",
+              "answer_excerpt": "Its old pass does not establish either current success or current failure.",
+              "reason": "Requires current B reevaluation or independently established preservation because B executes changed L; changed coordinates alone are not treated as a failure/equivalence proof; S017-S018."
+            },
+            {
+              "id": "L3.3",
+              "grade": "met",
+              "answer_excerpt": "The incomplete no-path view does not discharge this obligation.",
+              "reason": "C requires material dependency/preservation support or a valid current evaluation, leaving non-influence unresolved; S018."
+            },
+            {
+              "id": "L3.4",
+              "grade": "met",
+              "answer_excerpt": "change-based selection cannot remove the stipulated mandatory gate.",
+              "reason": "Requires actual current G support and complete fixed assurance obligations/joins rather than waiving G by selective testing; S017-S018."
+            },
+            {
+              "id": "L3.5",
+              "grade": "partial",
+              "answer_excerpt": "The supplied facts establish neither independent miss events nor a justified mapping from suite misses to Product correctness",
+              "reason": "Correctly rejects model-family/shared-cause independence and the 99% conclusion, but omits conditional-independence factorization, detection-probability versus correctness-posterior distinctions and the scoped-regression/upstream-fidelity account; S019-S020."
+            },
+            {
+              "id": "L3.6",
+              "grade": "met",
+              "answer_excerpt": "The bounded required-assurance claim is complete; no additional missing condition is invented.",
+              "reason": "P combines retained A applicability and current B/C/G with all required fixed coverage/joins, while keeping Product acceptance and release separate; S017, S014."
+            },
+            {
+              "id": "L3.7",
+              "grade": "met",
+              "answer_excerpt": "B's admissible counterexample defeats a required conjunct.",
+              "reason": "F names a required conjunct defeated by B and keeps C's no-result gap, rather than allowing a gap to erase the failure or importing a universal mixed-value ordering; S016."
+            },
+            {
+              "id": "L3.8",
+              "grade": "partial",
+              "answer_excerpt": "C itself is not assigned indeterminate merely because its return is absent.",
+              "reason": "U correctly reports aggregate indeterminate and no C result from dispatch. The citations omit deciding reuse/dependence owner law and the full conjunction reported-value rule; S009, S016, S019."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L3.F1",
+              "status": "absent",
+              "reason": "C is not declared unaffected, current B/C support is required, only A has stipulated preservation, and G remains mandatory."
+            },
+            {
+              "id": "L3.F2",
+              "status": "absent",
+              "reason": "The independence and 99% Product-correctness inferences are explicitly rejected."
+            },
+            {
+              "id": "L3.F3",
+              "status": "absent",
+              "reason": "F retains both B's failure and C's gap, P does not force rerunning A, and no bounded result supplies Product acceptance/release."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and support exact predicate/basis scope, evidence-sensitive verdicts, mandatory gap limits, sufficient partial counterexamples, missing-result gaps and availability/acceptance separation. They do not establish the omitted detailed reuse, influence/dependence or quantified-assurance law.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "L3 says: 'The detailed preservation/reuse and quantified-assurance owner sections were not acquired.' No access condition is inferred."
+          ]
+        },
+        {
+          "id": "L4",
+          "criteria": [
+            {
+              "id": "L4.1",
+              "grade": "met",
+              "answer_excerpt": "The present adoption covers A and its active implementation.",
+              "reason": "Uses the exact stipulated initial adopted A scope and material typed-schema, existing-realisation derivation and active-implementation triggers; S004, S021."
+            },
+            {
+              "id": "L4.2",
+              "grade": "met",
+              "answer_excerpt": "The supplied Ontology, IACS and three-view facts are accepted as stipulated",
+              "reason": "Retains all supplied positive Ontology/IACS evidence and explains the schema-change condition rather than inventing defects; S021."
+            },
+            {
+              "id": "L4.3",
+              "grade": "met",
+              "answer_excerpt": "Derivation from an existing realisation activates both reference-to-target and Ontology-derived three-view publication conditions.",
+              "reason": "Requires the missing derivation asset in addition to the already published views; S021."
+            },
+            {
+              "id": "L4.4",
+              "grade": "met",
+              "answer_excerpt": "Existing helper-level tests do not supply the explicitly absent published lane.",
+              "reason": "Requires a justified published module-derived lane for active implementation and does not treat helper-only tests as canonical module proof or closure; S021-S022."
+            },
+            {
+              "id": "L4.5",
+              "grade": "met",
+              "answer_excerpt": "the required publication conditions are known to be unmet.",
+              "reason": "Refuses initial completion with a supported falsified result because the two actual required publications are absent; S021-S022."
+            },
+            {
+              "id": "L4.6",
+              "grade": "met",
+              "answer_excerpt": "P — satisfied for the bounded gate",
+              "reason": "Accepts all stipulated positive P criteria as satisfying this gate, with owner disposition, Product acceptance and release kept separate; S021, S014."
+            },
+            {
+              "id": "L4.7",
+              "grade": "partial",
+              "answer_excerpt": "Withhold the dependent completion claim; do not convert unresolved applicability into exclusion or success.",
+              "reason": "U correctly names the old-record/current-service relation and seeks current evidence or authority resolution, but does not explicitly retain independently applicable generic obligations in U; S002."
+            },
+            {
+              "id": "L4.8",
+              "grade": "partial",
+              "answer_excerpt": "Its omissions are not waivers.",
+              "reason": "Correctly rejects representation silence and cites the design/current-basis/acceptance boundaries. It lacks the full explicit native coverage limits and a direct ASSURANCE §15 module-proof owner citation; S021-S024."
+            }
+          ],
+          "prohibitions": [
+            {
+              "id": "L4.F1",
+              "status": "absent",
+              "reason": "Present completion is falsified notwithstanding given Ontology/IACS/views/helper tests and representation silence."
+            },
+            {
+              "id": "L4.F2",
+              "status": "absent",
+              "reason": "Initial adoption/Ontology remain stipulated; U stays indeterminate and creates neither exclusion nor success."
+            },
+            {
+              "id": "L4.F3",
+              "status": "absent",
+              "reason": "P satisfies the bounded gate, and no branch supplies automatic owner/Product acceptance, release or whole-method completeness."
+            }
+          ],
+          "supporting_valid_citation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "citation_notes": "All selected citations are strict-valid in v3 and support IACS and publication triggers, partial-adoption evidence limits, unresolved applicability, current-basis limits, representation substitution limits and acceptance separation. The detailed module-proof owner §15 and exact representation-coverage owner are not cited.",
+          "unsupported_claims": [],
+          "blinding_disclosures": [
+            "L4 says: 'The detailed ASSURANCE §15 lane contract was not acquired.' No access condition is inferred."
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Semantic assessment is limited to the anonymous packet, its frozen oracle and allowed exact baseline sources. No condition, cost, workflow efficiency, whole-method fidelity or acceptance determination is made.",
+    "Source_passages was read in full. Allowed ACTIVATION Construction availability, Disposition and Effects and DESIGN_MODULE Gate and retrospective work were additionally read to check the extra domain mappings and owner-disposition claims.",
+    "Composite criteria are partial where the answer preserves a faithful subset but omits required semantic distinctions. Supported positive and negative stipulated branches receive credit; no material contradictory or unsupported scenario conclusion was identified.",
+    "Supporting citation indices were selected for semantic relevance and verified against citation-checks-v3.json (checker SHA-256 ece961e48937ba16aa44aa920c370ce7e4d747be4ac04148d03b368e3fd8ca0f). Standard dash variants and combined heading/line coordinates are not penalized.",
+    "Acquisition and review disclosures in the answers are recorded without inferring access conditions. Answer-level identity/checkpoint and previous-review statements are not independent evidence for semantic satisfaction."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "decision": "patch",
+  "limitations": [
+    "Only the three listed invalid grounding entries are repaired using supplied source text; authored statements remain unchanged.",
+    "These patches propose grounding interpretations and establish no semantic equivalence, completeness, acceptance, authority, qualification or execution."
+  ],
+  "patches": [
+    {
+      "family": "concepts",
+      "grounding_index": 0,
+      "reason": "Corrects the section-ID transcription error; the supplied section enumerates the thirty-two misapplications described by the unchanged definition.",
+      "record_key": "profile_misapplication",
+      "replacement": {
+        "end_line": 1721,
+        "quote": "The profile is misapplied when",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F21.%20Anti-patterns",
+        "start_line": 1721
+      }
+    },
+    {
+      "family": "constraints",
+      "grounding_index": 0,
+      "reason": "Restores the source's continuation indentation in the passage stating the Pillar cell's trace-only status; the supplied section also supports the unchanged contribution and pending-cell semantics.",
+      "record_key": "pillar_and_pending_trace_semantics",
+      "replacement": {
+        "end_line": 610,
+        "quote": "A Pillar cell is a trace, like the rest of the table: it is not\n  a premise, adds no standing to the row, owns no choice, and does not\n  claim that a pillar is an axiom or follows from finite capacity.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F3.%20Commitments%2FFoundation%20to%20law",
+        "start_line": 608
+      }
+    },
+    {
+      "family": "constraints",
+      "grounding_index": 0,
+      "reason": "Restores the source's capitalised opening and exact ending line for the hypothesis rule; the surrounding supplied passage supports the demonstration requirements under the unchanged applicability condition.",
+      "record_key": "categorical_demonstration_requirements",
+      "replacement": {
+        "end_line": 769,
+        "quote": "A\ncategorical statement without the demonstration it requires is a\nhypothesis: it is not law and is carried for falsification with §5.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra",
+        "start_line": 767
+      }
+    }
+  ],
+  "refusal_reason": ""
+}

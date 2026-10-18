@@ -1,0 +1,146 @@
+{
+  "stages": [
+    {
+      "completed_chunks": [
+        "chunk-932d3fe7d5ace96e56ac"
+      ],
+      "mode": "graphify",
+      "processed": [
+        {
+          "answer_sha256": "dc1062f567e6a74226f4e3d64d5f452d6485617a175507b3c924575fb21f8860",
+          "attempt": "actors/extract/chunk-932d3fe7d5ace96e56ac/attempt-001",
+          "chunk": "chunk-932d3fe7d5ace96e56ac",
+          "cli_exit_code": 0,
+          "cli_version": "codex-cli 0.162.1",
+          "elapsed_seconds": 41.85014787502587,
+          "events_sha256": "f9221ddc4a135e0e022186071ae6eb8b22feb71caff217582f19f2d702e4a537",
+          "failures": [],
+          "profile": "ac.generation.actor-result/1",
+          "schema_errors": [],
+          "settings": {
+            "model": "gpt-6-astra",
+            "model_reasoning_effort": "high",
+            "service_tier": "default"
+          },
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "unexpected_item_types": [],
+          "usage_events": [
+            {
+              "cache_write_input_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 17748,
+              "output_tokens": 1781,
+              "reasoning_output_tokens": 235
+            }
+          ],
+          "user_config_unchanged": true
+        }
+      ],
+      "profile": "ac.generation.stage/1",
+      "remaining_chunks": [],
+      "stage": "extract",
+      "status": "completed"
+    },
+    {
+      "counts": {
+        "communities": 4,
+        "graph_edges": 10,
+        "graph_nodes": 13,
+        "raw_semantic_edges": 6,
+        "raw_semantic_nodes": 10,
+        "structural_edges": 4,
+        "structural_nodes": 5
+      },
+      "elapsed_seconds": 0.038463833974674344,
+      "files": {
+        "coverage.json": "5c43843d68736a3d937c28f3d00e6a46e98788ca717174b84123910f400257f9",
+        "graph.json": "0e502d5bcaaf471ab8935059cd8dfe0edc1d1f62471206ce02916248f6c80335",
+        "structural.json": "8d43a6eef0e31fb805aa801ec2375e51100e8c607d7e11452cd7c677ee33cfac"
+      },
+      "profile": "ac.generation.discovery/1",
+      "status": "completed",
+      "upstream": {
+        "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+        "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+        "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+        "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+      }
+    },
+    {
+      "completed_chunks": [
+        "chunk-932d3fe7d5ace96e56ac"
+      ],
+      "mode": "graphify",
+      "processed": [
+        {
+          "answer_sha256": "ab030ba67ca594f148c2bd473926d584832620855b6a5b35cc89805ab0a21954",
+          "attempt": "actors/author/chunk-932d3fe7d5ace96e56ac/attempt-001",
+          "chunk": "chunk-932d3fe7d5ace96e56ac",
+          "cli_exit_code": 0,
+          "cli_version": "codex-cli 0.162.1",
+          "elapsed_seconds": 74.86519958311692,
+          "events_sha256": "03c67e9b304a664c526792280c5339088eba6352f55b6888d01efc7b8b4d2d93",
+          "failures": [],
+          "profile": "ac.generation.actor-result/1",
+          "schema_errors": [],
+          "settings": {
+            "model": "gpt-6-astra",
+            "model_reasoning_effort": "high",
+            "service_tier": "default"
+          },
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "unexpected_item_types": [],
+          "usage_events": [
+            {
+              "cache_write_input_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 19098,
+              "output_tokens": 5018,
+              "reasoning_output_tokens": 472
+            }
+          ],
+          "user_config_unchanged": true
+        }
+      ],
+      "profile": "ac.generation.stage/1",
+      "remaining_chunks": [],
+      "stage": "author",
+      "status": "completed"
+    },
+    {
+      "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed.",
+      "family_counts": {
+        "constraints": 4,
+        "judgments": 0,
+        "latitude": 1,
+        "objects": 10,
+        "relations": 5,
+        "residuals": 1,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "files": {
+        "carrier.json": "cf383c06bab3d39d541d0f6dfa2a0c3ef6b105a0f0143d5ca4cff42d50fce8c7",
+        "coverage.json": "36473b264f06cc5504790e3d71fa03f9e961539528c1ddd147cb8236b5807409",
+        "graph.json": "26e97b776ae5b400249acadb989eabb8fd93c6e50396748ce26ff316eb5302d6",
+        "model.json": "d96af828e9dbc07a1ed4f2bc1b5ede1ecf9d26631236061378e6d73f56f2f4cb"
+      },
+      "mode": "graphify",
+      "model_id": "urn:a-c:generation:0913e1a4293f6e4985fa71d0:model:f8b0a267b0e314d92f1fad3a",
+      "model_sha256": "28987332a3c72aef37cc79de10fa4655b115bc388909cf39a3212e2da374a823",
+      "processing_complete": true,
+      "profile": "ac.generation.proposal/1",
+      "status": "proposed",
+      "upstream_trial": {
+        "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+        "decoded_model_sha256": "28987332a3c72aef37cc79de10fa4655b115bc388909cf39a3212e2da374a823",
+        "edges": 468,
+        "nodes": 352
+      }
+    }
+  ]
+}

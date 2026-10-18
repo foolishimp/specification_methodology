@@ -1,0 +1,97 @@
+{
+  "new_fp_calls": 0,
+  "new_observations": [
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "attempt": "actors/author/chunk-3536e55742017ac9ca55/attempt-002",
+      "original_status": "completed",
+      "original_error": null,
+      "normalization": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-retry-002",
+        "chunks": [
+          {
+            "chunk": "chunk-3536e55742017ac9ca55",
+            "status": "validated_original",
+            "changes": 0,
+            "refusal": null,
+            "fd_elapsed_seconds": 0.06188874994404614
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.07985445903614163,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "attempt": "actors/author/chunk-3536e55742017ac9ca55/attempt-002",
+      "original_status": "completed",
+      "original_error": null,
+      "normalization": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-retry-002",
+        "chunks": [
+          {
+            "chunk": "chunk-3536e55742017ac9ca55",
+            "status": "validated_original",
+            "changes": 0,
+            "refusal": null,
+            "fd_elapsed_seconds": 0.03954608319327235
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.05123179196380079,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "attempt": "actors/author/chunk-8926f266bc1134f91eef/attempt-002",
+      "original_status": "completed",
+      "original_error": null,
+      "normalization": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-retry-002",
+        "chunks": [
+          {
+            "chunk": "chunk-8926f266bc1134f91eef",
+            "status": "validated_original",
+            "changes": 0,
+            "refusal": null,
+            "fd_elapsed_seconds": 0.04156820895150304
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.05600375006906688,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "attempt": "actors/author/chunk-986113d13e5314b291c9/attempt-002",
+      "original_status": "failed",
+      "original_error": "record[generic_specialist_family]/grounding/0: grounding names source outside chunk",
+      "normalization": {
+        "profile": "ac.generation.normalization-result/1",
+        "normalization_directory": "normalization-retry-002",
+        "chunks": [
+          {
+            "chunk": "chunk-986113d13e5314b291c9",
+            "status": "refused",
+            "changes": 0,
+            "refusal": "/concepts/3/grounding/0: grounding names a section outside this exact source chunk",
+            "fd_elapsed_seconds": 0.03529424988664687
+          }
+        ],
+        "new_fp_calls": 0,
+        "fd_elapsed_seconds": 0.046770374989137053,
+        "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance."
+      }
+    }
+  ]
+}

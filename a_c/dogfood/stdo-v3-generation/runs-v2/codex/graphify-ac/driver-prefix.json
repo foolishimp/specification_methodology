@@ -1,0 +1,85 @@
+{
+  "stages": [
+    {
+      "counts": {
+        "communities": 70,
+        "graph_edges": 937,
+        "graph_nodes": 877,
+        "raw_semantic_edges": 0,
+        "raw_semantic_nodes": 0,
+        "structural_edges": 947,
+        "structural_nodes": 877
+      },
+      "elapsed_seconds": 0.2638807501643896,
+      "files": {
+        "coverage.json": "d28897e7dc8e27b2ec3f5f0d3b15e71277cd30d97b6eed2716ed2ca2358263de",
+        "graph.json": "852d388d5e1e0235871e9ee557c0f54d5f7d4313b8be84d17ac4f839491d12bb",
+        "structural.json": "9045c97657c673b802042518df27c0ac3d76f839e03c9ab196dc56bfe8009a4f"
+      },
+      "mode": "graphify-ac",
+      "profile": "ac.generation.discovery/1",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "status": "completed",
+      "upstream": {
+        "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+        "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+        "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+        "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+      }
+    },
+    {
+      "completed_chunks": [
+        "chunk-cae356beaf4319d41f17"
+      ],
+      "mode": "graphify-ac",
+      "processed": [
+        {
+          "answer_sha256": "9a9594938ba7c68b754582a4104d623dd5f9ff4d6c604a58e7d05c372858f87a",
+          "attempt": "actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+          "chunk": "chunk-cae356beaf4319d41f17",
+          "cli_exit_code": 0,
+          "cli_version": "codex-cli 0.162.1",
+          "elapsed_seconds": 957.1050309590064,
+          "events_sha256": "db3b8459d42faa2910d94168af97f3395430474a230d2cfaac3a23bfafa186b0",
+          "failures": [],
+          "profile": "ac.generation.actor-result/1",
+          "schema_errors": [],
+          "settings": {
+            "model": "gpt-6-astra",
+            "model_reasoning_effort": "high",
+            "service_tier": "default"
+          },
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "timed_out": false,
+          "unexpected_item_types": [],
+          "usage_events": [
+            {
+              "cache_write_input_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 85894,
+              "output_tokens": 56124,
+              "reasoning_output_tokens": 688
+            }
+          ],
+          "user_config_unchanged": true
+        }
+      ],
+      "profile": "ac.generation.stage/1",
+      "remaining_chunks": [
+        "chunk-303ba21541c7795c1c8e",
+        "chunk-ba679cf25951c2115c4a",
+        "chunk-c3cf7984741066a344f7",
+        "chunk-d4711da9b03d12b52e08",
+        "chunk-3536e55742017ac9ca55",
+        "chunk-230eb1c5ee6232501303",
+        "chunk-6469845e54e28c586f83",
+        "chunk-dbe76be56335c8edb7bc",
+        "chunk-d3896cc85f64a611f9e9",
+        "chunk-78ad0cd4e2b82ebefd47"
+      ],
+      "stage": "author",
+      "status": "incomplete"
+    }
+  ]
+}

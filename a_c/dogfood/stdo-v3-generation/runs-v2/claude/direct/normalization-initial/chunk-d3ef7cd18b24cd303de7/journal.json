@@ -1,0 +1,437 @@
+{
+  "changes": [
+    {
+      "new": {
+        "end_line": 1043,
+        "quote": "Unit tests under the design profile are module-owned proof lanes. They\nderive from module ownership evidence, not from code shape alone.",
+        "start_line": 1042
+      },
+      "old": {
+        "end_line": 1044,
+        "quote": "Unit tests under the design profile are module-owned proof lanes. They\n derive from module ownership evidence, not from code shape alone.",
+        "start_line": 1042
+      },
+      "path": "/concepts/1/grounding/0",
+      "record_key": "module_unit_proof",
+      "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+      "witness": {
+        "normalized_end": 666,
+        "normalized_occurrence_count": 1,
+        "normalized_quote_sha256": "5e0e5582799928187c384ec03991ea9cb2f2285a1d94954a9d16c1d5affbf63b",
+        "normalized_start": 530,
+        "outer_whitespace_search_trimmed": false,
+        "section_character_end": 668,
+        "section_character_start": 532,
+        "section_sha256": "53240ef35a53cad208a1ef4c90b547af6ac4fbb975fbe7fd57f8d883cf101d15",
+        "word_boundaries_preserved": true
+      }
+    }
+  ],
+  "chunk": "chunk-d3ef7cd18b24cd303de7",
+  "derived_answer_sha256": "02f860f01cf4b15096486280dd146a9661e16b336b6215e3694019f3fe7ab845",
+  "derived_non_grounding_sha256": "1cdcedee9f345a52a7bd8979e069fbe4d89ba36149440dfc3903985424cc8a0c",
+  "fd_elapsed_seconds": 0.04146045818924904,
+  "non_grounding_sha256": "1cdcedee9f345a52a7bd8979e069fbe4d89ba36149440dfc3903985424cc8a0c",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "ed3d545af8c7346e57e7a0e1d97265cf4f05f1f1a3d00b67c190dca111a9a8db",
+    "original_attempt": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+    "original_recorded_failure": "record[module_unit_proof]/grounding/0: grounding quote is not exact source at declared range",
+    "original_status": "failed",
+    "original_strict_validation_error": "record[module_unit_proof]/grounding/0: grounding quote is not exact source at declared range",
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 69068,
+        "output_tokens": 39827,
+        "reasoning_output_tokens": 664
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/answer.json": "5e441fc12f0c59a84403fd4b9732eed47fec25c30b572f217e54149cff121b07",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/events.jsonl": "fc51957e446cfd46df7678f0b5d958a3fb85e3a59ba42e731a4f24239ae1abc4",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/invocation.json": "cd8e70852de0d4637193d42bf913ad469b1c5579972839c8a2232a7cd5facbb9",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/prompt.txt": "544beb61422a5d906bfb62f00492afba19a7592f43ea8cf46df3967aac2d6108",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/result.json": "ce5540bd3c048082244a43e6e422d32d0e6643e8733efcecdd9bbce8256d119a",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/usage.json": "15e0da887f06d4b1c346f91a5e90a6ecd3b811120243c442e1e07aa46aef35f6",
+      "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+      "plan.json": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc",
+      "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+    },
+    "source_sections": [
+      {
+        "end_line": 1031,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "f456e152a2a97cdf83c21e11e7dfaf8cc0a22da61effff404a0069f8e5e193b2",
+        "start_line": 938
+      },
+      {
+        "end_line": 1070,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "53240ef35a53cad208a1ef4c90b547af6ac4fbb975fbe7fd57f8d883cf101d15",
+        "start_line": 1032
+      },
+      {
+        "end_line": 1120,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "d4efc59681fad9e7ec252bde70c34ef2b31259c7bd58b2b04f374f428e7f8f78",
+        "start_line": 1071
+      },
+      {
+        "end_line": 1192,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "994be3cbbb7ef518e7c3bd980579fa54d2cf54ed1c45926a5100a0d3bbdf5212",
+        "start_line": 1121
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "04e5b50edb777ca60680a5ede2cbcb6ecaa760427685ef72fa00e252924503a7",
+        "start_line": 1
+      },
+      {
+        "end_line": 62,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "90d7d3a2db07c46cb7d9b3b6a42898d293dec301777d455b5feadae88ac9438d",
+        "start_line": 20
+      },
+      {
+        "end_line": 128,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0161356b5cb7b68f8f27c442d9090af7f76f2900d7cec06c0c29986d79b6d727",
+        "start_line": 63
+      },
+      {
+        "end_line": 146,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "8e19a8940c4c3f1b0422946781f6d54103198e8ead6f1ca58b0dc207165c294b",
+        "start_line": 129
+      },
+      {
+        "end_line": 217,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6b26242a8ede7dee1508b00a34b1186d22a4180578c7b309173e795004b3aa3a",
+        "start_line": 147
+      },
+      {
+        "end_line": 332,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "731d8f4fe0199da07944a637420ab992ceba0e340542f74df48ba0420837a6f5",
+        "start_line": 218
+      },
+      {
+        "end_line": 344,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "8c52e99935098ddf25e00d159ada065720a0cf4aadc00dfa90f76e5501ae8de9",
+        "start_line": 333
+      },
+      {
+        "end_line": 366,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FSemantic%20object",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "dd4b82be8ffe400199feaf153b08fc1eb8b439d48b73a6bc162f77a765aea499",
+        "start_line": 345
+      },
+      {
+        "end_line": 389,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FTyped%20relation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b0802549f935d2471d1c7886d5875e7a4cff88bc004b7ba456dfb243cf24aeda",
+        "start_line": 367
+      },
+      {
+        "end_line": 415,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FConstraint",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "059838c0501a0e654ab2ed6fc719e8d4f678be15772b6e16e6185812ca11a87e",
+        "start_line": 390
+      },
+      {
+        "end_line": 439,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FLatitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e63aa80f3cf30d38db710542d2c28ea2bb32b4efad76082b3aa3b5674d094247",
+        "start_line": 416
+      },
+      {
+        "end_line": 470,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6148d466eca9d064109b93d29855fe8a0b009b1b8c45015e6915f46012604973",
+        "start_line": 440
+      },
+      {
+        "end_line": 476,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cb0d54944e0087ee1773890c5623b0657e7023eb98086415caa59fe805752dc2",
+        "start_line": 471
+      },
+      {
+        "end_line": 485,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-001%20Closed%20signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "f4f0b0754326933ffed783b2117ac84656b76c92631ec53b86d323ba3ef135fa",
+        "start_line": 477
+      },
+      {
+        "end_line": 500,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-002%20Scoped%20identity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6af99f8cf4f06b4cd918e9034a42f7fb49239ffb546f61ed27de49147be1466e",
+        "start_line": 486
+      },
+      {
+        "end_line": 510,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-003%20Reference%20closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "7e1d858644cbd786c86ea4a274784bdca6838974ceb11c5a1c5750e2fc43721c",
+        "start_line": 501
+      },
+      {
+        "end_line": 517,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-004%20Relation%20typing",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "216da5a6e6e8b23478cd7c6004cb919b8db4b95ba9d28b4ea4c67bc492615c0c",
+        "start_line": 511
+      },
+      {
+        "end_line": 527,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-005%20Authority%20conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6eef896e94c93cad433ddd2b4c7bad8326c64bb38879185cb4b13d57c3c9cad8",
+        "start_line": 518
+      },
+      {
+        "end_line": 539,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-006%20Basis%20coherence",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "98ce772fea4eca57dc118a17e31bbedfacb85797fec209fa7cebea9e1d2abdeb",
+        "start_line": 528
+      },
+      {
+        "end_line": 639,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "f7479fe17f22c3247c3e132432058cd169beb7e2aea728d277994131fd54ebbb",
+        "start_line": 540
+      },
+      {
+        "end_line": 647,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-008%20Explicit%20latitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "df5ce31b5d22cd48eaee3d107776f8444b7ed6e8cdae199abc5816f8b8da3707",
+        "start_line": 640
+      },
+      {
+        "end_line": 654,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-009%20Residual%20conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cda897c453b0d99ffd6282fc114ce190b04c04fe1a3cacc3e711440838ca974a",
+        "start_line": 648
+      },
+      {
+        "end_line": 674,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0066771fe0af20705976eede0466ef7c2e7908c7982109f25dec10222ce6e31e",
+        "start_line": 655
+      },
+      {
+        "end_line": 695,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cadb15686598d21d3e9a609ea32aa86d53bb43a21852fbe66632df52ddf7e6ca",
+        "start_line": 675
+      },
+      {
+        "end_line": 704,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-012%20Overlay",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "12b58f17fe0df338e9931d21e1e5a64d02751b8a7a88f4caecfbe7f272643c92",
+        "start_line": 696
+      },
+      {
+        "end_line": 891,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "32ffbf982510892902ba8c0b227942e7c0cc9ae92b31f7d470e75289751b63e6",
+        "start_line": 705
+      },
+      {
+        "end_line": 920,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "4e94118dd53f7fada5036448cecec5c3ab63eb064e2a16ae8f72f36a37303dcf",
+        "start_line": 892
+      },
+      {
+        "end_line": 1010,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "beae05db9efc6a816e87145796aa9fe2566493f805999800d65cc12efcff89ea",
+        "start_line": 921
+      },
+      {
+        "end_line": 1022,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e956b0749f9ce1e28ca823a43151b9b18c75779fed98bcf30e95c8c59acfa5ef",
+        "start_line": 1011
+      },
+      {
+        "end_line": 1039,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e4d96701270b8a14ff20343db5348f712ff5efbd914e5a4112853742d4ad9b6d",
+        "start_line": 1023
+      },
+      {
+        "end_line": 1074,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "bdda6f6e8a8ec01986b11a401ec49492af65277321e9381fe4164c6ad2897136",
+        "start_line": 1040
+      },
+      {
+        "end_line": 1083,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "f2ef5e190562703ec5f4e5560460196692ce018204e8f98ce88e8cf7e6203d60",
+        "start_line": 1075
+      },
+      {
+        "end_line": 1095,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6b73002924c7c6d4860df94c9d2bcef7fb53b80eb81cfdf5aaa6fb1332708958",
+        "start_line": 1084
+      },
+      {
+        "end_line": 1115,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "7aaaafe552ccee7f4235ef6844158d298b3e1dab820596d51a7e54453f51c5b1",
+        "start_line": 1096
+      },
+      {
+        "end_line": 1149,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "2917bfb222ac2704b36f2ef6aedf077be91c46786d383c1e61669c1151deb017",
+        "start_line": 1116
+      },
+      {
+        "end_line": 1168,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "5b77dbabc560b054acd814358464741c5d67946fcc78da0a2aac9c8ac76a98f0",
+        "start_line": 1150
+      },
+      {
+        "end_line": 1278,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "f285b91d92b15720451afc7fc5389e992ba0e9ba5e4df66c91fe227bd8129557",
+        "start_line": 1169
+      },
+      {
+        "end_line": 1280,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "050cb67f56aed30837753fb6343789df09c7d6ff173e87cd376a4e494588194e",
+        "start_line": 1279
+      },
+      {
+        "end_line": 1289,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e91432735b6861fb2eb85e7c8ae57c1f7f6e89216e5b7434fd108a84b39d61d6",
+        "start_line": 1281
+      },
+      {
+        "end_line": 1299,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "5328d45a35662f8445883e4673db938a8d8805fbc301e745a298892c0cd78e8c",
+        "start_line": 1290
+      },
+      {
+        "end_line": 1384,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "99de27309308f56edffa209205f8847098bf04fd7762bf49e45d330011fbb68d",
+        "start_line": 1300
+      },
+      {
+        "end_line": 1399,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "08d003635838688e0178648f8df98897b5e13386b2c4cd94de359dd7fad5a809",
+        "start_line": 1385
+      },
+      {
+        "end_line": 1427,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "d0375dd2e0aaebaca8eead5915914c59f8b1fefd0993107033335118db0b06d2",
+        "start_line": 1400
+      },
+      {
+        "end_line": 1479,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F11.%20Source%20dispositions",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "f342679d5c163850885541c1c3f9d59f8fb636f3abed5aaabb7e3bedbc703507",
+        "start_line": 1428
+      },
+      {
+        "end_line": 41,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE",
+        "path": "standards/CONFORMANCE.md",
+        "sha256": "52224e7f37e0dfd5aac73c6c48dd850daa794deeb1c3f6085e89497b300f01e6",
+        "start_line": 1
+      },
+      {
+        "end_line": 62,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexamples%20from%20the%20builder%27s%20own%20history",
+        "path": "standards/CONFORMANCE.md",
+        "sha256": "0ff7a1b291753b014579c7bd8a5dc25801881dc63b21188a36437edf21b6e561",
+        "start_line": 42
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001",
+  "status": "derived_validated",
+  "unverified_original_pins": {
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/answer.json": "5e441fc12f0c59a84403fd4b9732eed47fec25c30b572f217e54149cff121b07",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/events.jsonl": "fc51957e446cfd46df7678f0b5d958a3fb85e3a59ba42e731a4f24239ae1abc4",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/invocation.json": "cd8e70852de0d4637193d42bf913ad469b1c5579972839c8a2232a7cd5facbb9",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/prompt.txt": "544beb61422a5d906bfb62f00492afba19a7592f43ea8cf46df3967aac2d6108",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/result.json": "ce5540bd3c048082244a43e6e422d32d0e6643e8733efcecdd9bbce8256d119a",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-d3ef7cd18b24cd303de7/attempt-001/usage.json": "15e0da887f06d4b1c346f91a5e90a6ecd3b811120243c442e1e07aa46aef35f6"
+  }
+}

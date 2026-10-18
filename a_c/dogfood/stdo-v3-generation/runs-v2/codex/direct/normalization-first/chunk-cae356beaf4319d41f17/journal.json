@@ -1,0 +1,558 @@
+{
+  "changes": [],
+  "chunk": "chunk-cae356beaf4319d41f17",
+  "derived_answer_sha256": "39d31eb2684c7fa001d4751a61ebb0674830b2be0da1f7f0bf6f2d033a8c4c15",
+  "derived_non_grounding_sha256": "e419ec61c870053ab607c6acd625bae435c8e7e3cf644e7808347d93806973cd",
+  "fd_elapsed_seconds": 0.03654995816759765,
+  "non_grounding_sha256": "e419ec61c870053ab607c6acd625bae435c8e7e3cf644e7808347d93806973cd",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "0381842628d807ef6fbf131065091f93acc9f5002a4584d9f70e087f6f1c8bd8",
+    "original_attempt": "actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 73344,
+        "input_tokens": 73513,
+        "output_tokens": 45739,
+        "reasoning_output_tokens": 868
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/answer.json": "bf09790a909b7f0540465ef6048b54b5078f709d2e9957c03b97ce2b7ec98575",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/events.jsonl": "fddaf9341a3ac8e069a5910c9119c0334a7f51ffeb26a766628c6553b09dea69",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/invocation.json": "1dca20d5d739b757a5c861294d0a4c52792c000aa015546f8bc345c1e63d5649",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/prompt.txt": "ae73a2c1388ab0e6401dd45d613e67d61412645a398091362994acd90f22a3b8",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/result.json": "e79e3ebb932da3c9b2f0f2ab3dd6651d37fba68e73136fe02f51d1db75ddc099",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/usage.json": "5a30471ecb1c0352a95d73c3bbc50957855ea19c2fbcfca7d5984698ebd00858",
+      "actors/author/chunk-cae356beaf4319d41f17/attempt-001/validation.json": "243462fc18004d351d6c7d70169e8fa73830127cdeb1c376074f8b44f0b1334a",
+      "chunks.json": "3561447df08d41e09678fe51cc593ffa7b863649ba7674284fa4e2a7784a71e8",
+      "plan.json": "97706f638ee2b59f146958c4bf6e8beecea8d03af4992eb9f02cc55098d7dc7a",
+      "source-manifest.json": "32a1c7c7970389881c9059a22e8f38fa61def25e1293c4d8033901d51c37918a"
+    },
+    "source_sections": [
+      {
+        "end_line": 2,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0c0ef922641cfc08c7b851d7dc71753e964abcd0ffab645af9a448415c9f020e",
+        "start_line": 1
+      },
+      {
+        "end_line": 68,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FPosition",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "a4048cfda5a30e269c703cb3bb4e685ef3ae23a4c87189889b9ecec0e2c26656",
+        "start_line": 3
+      },
+      {
+        "end_line": 128,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FDerivation%20Provenance",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "80ddc92604f694df31e85d938f6e6d23a5bc222082af3e5eec1567faa31c34ed",
+        "start_line": 69
+      },
+      {
+        "end_line": 144,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FScope",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0d77416979a5f149826be78f8108e1a9faa8c1524e17a6756e44ee3596c49664",
+        "start_line": 129
+      },
+      {
+        "end_line": 261,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FCore%20Signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "707fddee4ccec639dd6eaa08d528fc44082489282cfa7d835920e8ff04de6713",
+        "start_line": 145
+      },
+      {
+        "end_line": 272,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "efabe722feced118612d22d262d0f0332ec01bd27c1ed127487f3093ca41a5f6",
+        "start_line": 262
+      },
+      {
+        "end_line": 292,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FSemantic%20Object",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "28d2532cf61a0f9a17b6239a5b7fbbcac1d0667b6ec230f05a0f5e6814c055e0",
+        "start_line": 273
+      },
+      {
+        "end_line": 314,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FTyped%20Relation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "fd4cc36f27fa85ad5eb2e54e0295f3a9a08ad47fd3e87f00c7b789880ec30fde",
+        "start_line": 293
+      },
+      {
+        "end_line": 340,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FConstraint",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e67c63972cecfd2c027a96b0e149a7f831a2908b8b43a82bc07b5aa9c98c354d",
+        "start_line": 315
+      },
+      {
+        "end_line": 361,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FLatitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "414f991eb11ce237d1677d04c8be2763608eac561603288029bcbdecb3107e6f",
+        "start_line": 341
+      },
+      {
+        "end_line": 389,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTyped%20Records%2FResidual",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "fc9f4d33d180c2ba3213c6c449ada1f425bdc01fa810e98d23ae2f2f6a025081",
+        "start_line": 362
+      },
+      {
+        "end_line": 411,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "640a6fe4d997b0d7df5425bcee3e9c22dd43a7414f05374e2954fe7ad63940e1",
+        "start_line": 390
+      },
+      {
+        "end_line": 419,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-001%20Closed%20Signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "3fc5bc74c5ef8b0744acf1860eb57a673af9e412fd69f0c6f264b3cbafca1b02",
+        "start_line": 412
+      },
+      {
+        "end_line": 425,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-002%20Scoped%20Identity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "73442338a91e07c379112d038152a3201857fc84a177b9c4336c6215abdf33bd",
+        "start_line": 420
+      },
+      {
+        "end_line": 434,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-003%20Reference%20Closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6213fc33318938183a6a02646e817f34c9aef391ec58c47b43f78ddd5ce016ae",
+        "start_line": 426
+      },
+      {
+        "end_line": 440,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-004%20Relation%20Typing",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "8fe177b1abe10b0e64743dd1b64b5385bd65075d7b85c16904db3544c965e175",
+        "start_line": 435
+      },
+      {
+        "end_line": 449,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-005%20Authority%20Conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "09c1a0a274fd7be8cca1d508e5cc3705a00c33bcd3a168e8c0a3004432c80f63",
+        "start_line": 441
+      },
+      {
+        "end_line": 455,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-006%20Basis%20Coherence",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "dc4d9f495888a281d50232914cc0ac6f34bbc0cea4463aa81ea1e99cba2474ec",
+        "start_line": 450
+      },
+      {
+        "end_line": 505,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-007%20Constraint%20And%20Refusal",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "7c80af4c0ab187ff59daecb61fcc7237e473c17e3760ebaa55cdba970b5b5da7",
+        "start_line": 456
+      },
+      {
+        "end_line": 511,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-008%20Explicit%20Latitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b79200505a5cd4be38966efa62e2cb59ccf1a590bf83722e40222c906a7b9c96",
+        "start_line": 506
+      },
+      {
+        "end_line": 517,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-009%20Residual%20Conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "2e297c2c0ef019a72d323e8e2bce0e1c85c30c68a6f2d4815466fe1c201b00bf",
+        "start_line": 512
+      },
+      {
+        "end_line": 532,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-010%20Material%20Closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0d9f649a499d18e0423f5e73b2e160381905e3a8d139dfa615f4323a75fe4b1f",
+        "start_line": 518
+      },
+      {
+        "end_line": 547,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-011%20Projection",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "124fe7a11d61d8e1e61776378d0da06e342262efb91366498207d841fb3ab91f",
+        "start_line": 533
+      },
+      {
+        "end_line": 555,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-012%20Overlay",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "258b2741975d15118e5a2565bf9b3dda1acf92c14f43a670ffbe93e8c30391f9",
+        "start_line": 548
+      },
+      {
+        "end_line": 727,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-013%20Transformation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "96abae94db37a537aa4e79009e1f0647e5549b7a0b564af5757fa9badca5d5e3",
+        "start_line": 556
+      },
+      {
+        "end_line": 788,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FFundamental%20Laws%2FAC-014%20Judgment%20Separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "ae3173b30d38e176e9e690a568a0097acfa7053a0e26a46e257fb01d2244093e",
+        "start_line": 728
+      },
+      {
+        "end_line": 869,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "aa13a12966a1be9bc4851ee2c43ef1428fb14dae03a9243735595f202f1fa761",
+        "start_line": 789
+      },
+      {
+        "end_line": 875,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-015%20Functor%20Classification",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b069e0198a7c5a9d8669512f2d487305c77c9a49e364703fcdee77f06b01c263",
+        "start_line": 870
+      },
+      {
+        "end_line": 899,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FTraversals%20And%20Functor%20Kinds%2FAC-016%20Typed%20Composition",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cf272b987c352260e6f192d0899a34f8f5a275f8b6609583710529de6fb4f67d",
+        "start_line": 876
+      },
+      {
+        "end_line": 940,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "2ae260221a4b51e722282d8de5d20c7de6a51a4a6b7823389eacaac20927b013",
+        "start_line": 900
+      },
+      {
+        "end_line": 994,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-017%20Interpretation%20Fidelity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "7897c66f337e6196b0375cbe956a8edcb8ba2504e790b27e387f689fe3fa6e15",
+        "start_line": 941
+      },
+      {
+        "end_line": 1001,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-018%20Structural%20And%20Semantic%20Separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "623aaff063cd729d33b2c7bc194c448ca0d9298402126c108b95b0e4ab9d5f90",
+        "start_line": 995
+      },
+      {
+        "end_line": 1024,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FInterpretation%20And%20Models%2FAC-019%20Valid%20Model",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "8ed171963d2ce3f7475268423f44eb44eee62fad4b7165125a3b5e3f560c0906",
+        "start_line": 1002
+      },
+      {
+        "end_line": 1059,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "1baccb574e53fdcea776e368165edaa4289a4eb1b8d1477e002852265a3835fb",
+        "start_line": 1025
+      },
+      {
+        "end_line": 1075,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FSubject%20And%20Carrier%20Boundaries%2FAC-020%20Layer%20And%20Release%20Separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b9362e6f201eba2451eeb629a251b53d2cc87edbe100eb7777a0b71a1cb48e28",
+        "start_line": 1060
+      },
+      {
+        "end_line": 1171,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExact%20Calculus%20Identity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "413644984d365b80c3b4aaf1e7cded2403d95afd792cdf23e5b7dd2389fc3cbd",
+        "start_line": 1076
+      },
+      {
+        "end_line": 1179,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FApplication%20Boundary",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "fe7674ddd967d7d5009fa129dd58610e67e2e19f7d83f0fdbf805d1ad609631c",
+        "start_line": 1172
+      },
+      {
+        "end_line": 1187,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExternal%20Imports%20And%20Specializations",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "714598f4e8a701a5d51e765c3d21cdb1054ecefa8b1c6cc7247f33587e2e2cae",
+        "start_line": 1180
+      },
+      {
+        "end_line": 1201,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FExclusions",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "14f2d14663c079076622c81c4eabaaa09bcc3826a90ebf266f61fa2abce8a86e",
+        "start_line": 1188
+      },
+      {
+        "end_line": 1225,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/AXIOMATIC_CALCULUS.md#The%20STDO%20Axiomatic%20Calculus%20for%20Governed%20Symbolic%20Systems%2FConformance%20Obligations",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cdcb5724c37172afd759568d5677447dd14ed135af56fcd4c020760882f9cbb3",
+        "start_line": 1202
+      },
+      {
+        "end_line": 2,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "8ba030da7226e528e7a8aaa2f5779d36d1daf53cc0f4954d9037c1c128ce1578",
+        "start_line": 1
+      },
+      {
+        "end_line": 48,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2FGoverning%20Relations",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "706325a2b36f3beb3a634c85dbd0072ff8256282bdf7a39937a03ca08371003b",
+        "start_line": 3
+      },
+      {
+        "end_line": 120,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F1.%20Purpose",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "5ef923aa9a4fa065e1de1ae869334a4ec34dc6b10cdcbd20476e152e67330139",
+        "start_line": 49
+      },
+      {
+        "end_line": 141,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F2.%20Position",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "d4cb24ebd3fdcd6c8647933c46e905a10ce1a1f10fec09dc029d28d97f3f4809",
+        "start_line": 121
+      },
+      {
+        "end_line": 155,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3.%20Core%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "7a2ad9bfb7c0e9b672a39d1bb42b5fdeb966ea0670623ae82a7283f976b3204a",
+        "start_line": 142
+      },
+      {
+        "end_line": 191,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3A.%20ODD%20Alignment%20And%20Escalation%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "c0bbdc1e54ad3af4efd46414d1dfc99d7af3e375e7d413ed819790fe2187aba9",
+        "start_line": 156
+      },
+      {
+        "end_line": 201,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "4caf8a45ca484f157dcfda26745114d8d911bdd8e9c6e6f7518e717bfff50cd0",
+        "start_line": 192
+      },
+      {
+        "end_line": 220,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F1.%20Authority%20Seam%20Closure",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "b51a18ad2caccf5bbdc54f59d397c1cb327d7fee6c24d1508f9b8bd0f3cb8a43",
+        "start_line": 202
+      },
+      {
+        "end_line": 244,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F2.%20Essential%20Carrier%20Consolidation",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "796e51687ae2a30ec1257adc1ec6c8a78cbb60b60ccb8c1cb63360d574c196b3",
+        "start_line": 221
+      },
+      {
+        "end_line": 267,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Boundary%20Closure%20Evaluators%2F3.%20Enforcement%20After%20Proof",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "7aed1f79e0560ad3acc671d7a2bced64ba5cd147d85d71453ad182b719e7ff25",
+        "start_line": 245
+      },
+      {
+        "end_line": 291,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F3B.%20Ingress%20Collapse%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "4eb5059bab1183126113d4ed57a0e2d61eb45c8bb21a51a1803ece0cc4e1f04f",
+        "start_line": 268
+      },
+      {
+        "end_line": 336,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4.%20Functional%20Bias%20Without%20Language%20Mandate",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "38d74b28612fb457d4ec0dc66e9b7b1a708ea0bf6ea5a1aed3beb60bf0f1211f",
+        "start_line": 292
+      },
+      {
+        "end_line": 387,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4A.%20Python%20Typing%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "6a9e8b93096e45c5c7e2f11918a7bb689e6a3b7ee80cfbc90a341e582364a590",
+        "start_line": 337
+      },
+      {
+        "end_line": 428,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "c960d009c27c5ed1b229558e742fd42c101cc4e5b453c6acfbd6be71e0f7aa8b",
+        "start_line": 388
+      },
+      {
+        "end_line": 518,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FProportional%20Design%20Sequencing",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "3a566af751f16dde9e29b22449ad259fd3b25067e60b83e6cbe8da0cfb882f72",
+        "start_line": 429
+      },
+      {
+        "end_line": 567,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FDecision-Complete%20Symbolic%20Design",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "94c0b1ef0d3114003a6abdb13cc4c2209980703dd60de21bc047406530c60845",
+        "start_line": 519
+      },
+      {
+        "end_line": 613,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FBounded%20Frame%20Conservation%20%28%60STDO-UP-017%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "02beb16884085fb8c77d2a4c8741e254ea02127a83a7e2d4510cef73709a7e6d",
+        "start_line": 568
+      },
+      {
+        "end_line": 626,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FNative%20Constructability%20Before%20Design%20Acceptance%20%28%60STDO-UP-002%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "66e24448af5277d395c24781eef7a0bf63b8ac0d7370dbb203f15513cf7c08ff",
+        "start_line": 614
+      },
+      {
+        "end_line": 740,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FCapability%20And%20Foundation%20Selection%20%28%60STDO-UP-023%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "55f5612537400458a37f68da1142a7d8e5dd22fe6105c6f25ca94e61f7f89daa",
+        "start_line": 627
+      },
+      {
+        "end_line": 776,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FEntity%20And%20Lifecycle%20Completeness",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "b8d16ff9832d77b592c7b94d7f3b1573b2f909cce86e0b889acd5e7170b9f92f",
+        "start_line": 741
+      },
+      {
+        "end_line": 812,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAuthority%20Model",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "306efd48e50d5d2ed248a1368a8150ec758d0b00bbab8f4741fdfd1fc006f311",
+        "start_line": 777
+      },
+      {
+        "end_line": 886,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "0b57b281208d9884f2c430796e720f0d4695fcb6037952bb7a528af6afab99ce",
+        "start_line": 813
+      },
+      {
+        "end_line": 915,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FTransformation%20Admission%20Completeness%20%28%60STDO-UP-016%60%29%2FAdmission%20contract%20use",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "2d22a448db4f0d6f626b34fd3d5780a9af5d94e4e37f0ad582b5c3d925cd15a1",
+        "start_line": 887
+      },
+      {
+        "end_line": 955,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FAtomic%20Functions%20And%20Higher-Order%20Composition",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "ee5f87b88784ad8ab57ad7f6aff8ac5c3a2717d1254843019244a8cb3385951e",
+        "start_line": 916
+      },
+      {
+        "end_line": 981,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FPrime%20Semantic%20Atoms%20And%20Universal%20Domain",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "25776346b2907a7a91a2c7dc92b7f1dba49a1424000266a788b2af94ec9798bb",
+        "start_line": 956
+      },
+      {
+        "end_line": 1007,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FWhole-Family%20Prime%20Contraction",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "9d05532de7599f9747d243295926b9269cb4e63f8b2470c688c3652a6b83edbe",
+        "start_line": 982
+      },
+      {
+        "end_line": 1026,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FRecursive%20Prime%20And%20Root%20Conservation%20%28%60STDO-UP-003%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "2af367c8b783cd93e30e2b68dbfe49b09bd622cff864f7ce6b412f877e41a13d",
+        "start_line": 1008
+      },
+      {
+        "end_line": 1047,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F4B.%20Ontology-First%20Design%20Rule%2FOntology%20Projection%20Law",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "884afbdec93b05e91c0b82883094dc356751b1f426e506ae98f5c92cc72955fa",
+        "start_line": 1027
+      },
+      {
+        "end_line": 1118,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "958d4611b5bc26c84514a863467352069ad4b6eea3bce433e8a5e7858f325845",
+        "start_line": 1048
+      },
+      {
+        "end_line": 1130,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5.%20Prime%20Law%2FBoundary%20And%20Governance%20Cost%20%28%60STDO-UP-005%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "299982ddae0437f55872f1178013a28b8ad8f2e58a37e6448de54966c26d64e1",
+        "start_line": 1119
+      },
+      {
+        "end_line": 1186,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "d04a66e8fad05a023b34719aa26245d29e04b999c0f4a5c1c4e6304d4a2791a5",
+        "start_line": 1131
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-cae356beaf4319d41f17/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/answer.json": "bf09790a909b7f0540465ef6048b54b5078f709d2e9957c03b97ce2b7ec98575",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/events.jsonl": "fddaf9341a3ac8e069a5910c9119c0334a7f51ffeb26a766628c6553b09dea69",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/invocation.json": "1dca20d5d739b757a5c861294d0a4c52792c000aa015546f8bc345c1e63d5649",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/prompt.txt": "ae73a2c1388ab0e6401dd45d613e67d61412645a398091362994acd90f22a3b8",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/result.json": "e79e3ebb932da3c9b2f0f2ab3dd6651d37fba68e73136fe02f51d1db75ddc099",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-cae356beaf4319d41f17/attempt-001/usage.json": "5a30471ecb1c0352a95d73c3bbc50957855ea19c2fbcfca7d5984698ebd00858"
+  }
+}

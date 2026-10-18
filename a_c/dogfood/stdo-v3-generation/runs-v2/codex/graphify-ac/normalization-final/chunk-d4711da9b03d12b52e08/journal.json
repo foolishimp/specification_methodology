@@ -1,0 +1,460 @@
+{
+  "changes": [],
+  "chunk": "chunk-d4711da9b03d12b52e08",
+  "derived_answer_sha256": "47f0192b2b9486449aafb0e6b18e60e49f8548cb57acec95bbda43d2172717ef",
+  "derived_non_grounding_sha256": "633794a29ff54f64ac369a745d19036d75cc263a65e3b67d21515da6a4e87dff",
+  "fd_elapsed_seconds": 0.07492233393713832,
+  "non_grounding_sha256": "633794a29ff54f64ac369a745d19036d75cc263a65e3b67d21515da6a4e87dff",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "e33f2823a2df93631c5da1de6f77a45eff2c44bc7547c1f562b81cfe85cd8a20",
+    "original_attempt": "actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 75720,
+        "output_tokens": 52424,
+        "reasoning_output_tokens": 508
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/answer.json": "0eecd7f6c92653ad5179e47e83d196fb9fc538f6b0d606aeaf2629ea5ac73beb",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/events.jsonl": "622659a7b2a92a842601048788060aaca3e38b6fa5c36d5d1f4091f8e5072c4d",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/invocation.json": "7eefabd9e8ce49a1628802f4cc7a11540e0ca51f10a18f584d4ce0651bc0e34e",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/prompt.txt": "51a63565ccd88de4bfac403c344cb93eba8409d203ea041d2bb08d7de1127dcb",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/result.json": "3c0c1532f1c22ba9b3bf7ca184a768ed0de356c07ec350e836ee190f62d45d3b",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/usage.json": "2c1658b1f5b88ca4ea250153d4be163ff6163f2954a62ee511e74ebe5604ac21",
+      "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/validation.json": "b107344dfcf8e3fe0c7cafdbc77f844999425697aabb639fc9aa4d284863cc89",
+      "chunks.json": "3561447df08d41e09678fe51cc593ffa7b863649ba7674284fa4e2a7784a71e8",
+      "plan.json": "b0ef07f212c15b02a3fd2ba445fbe16cd26d42e8f3199401dce97aaec9c7b1b3",
+      "source-manifest.json": "32a1c7c7970389881c9059a22e8f38fa61def25e1293c4d8033901d51c37918a"
+    },
+    "source_sections": [
+      {
+        "end_line": 1014,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FHigh-Risk%20Separately%20Activated%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "385fa748e718afd5ef09d2d36db5764d78c2161c337aa7aecf928273480407d5",
+        "start_line": 1006
+      },
+      {
+        "end_line": 1050,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FOperational%20Full%20Coverage",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "d4bb68d8bf89072c460c7b620125182f5171468a37f7947c58b05e7119924016",
+        "start_line": 1015
+      },
+      {
+        "end_line": 1077,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCompleteness%20Boundary",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "0fb0ec6c4cc235a59b92bddefd3ab735e56fff446350a61e3a07ef6f1a266073",
+        "start_line": 1051
+      },
+      {
+        "end_line": 1079,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDiscovery%20And%20Revision",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "db5daaec214255f6c14ec6f7f556c3aca03b0134299891074cd7f3338711cfc5",
+        "start_line": 1078
+      },
+      {
+        "end_line": 1094,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDiscovery%20And%20Revision%2FMissing-Frame%20Signals",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "8b632a91743d44e6127310114073e9777f5fcae47f136463d8e17f3a4a814338",
+        "start_line": 1080
+      },
+      {
+        "end_line": 1109,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDiscovery%20And%20Revision%2FDiagnostic%20Order",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "066945f14587fed08a7d60e85da5a17a3eab0aeb47d60ab75ccf4829181fc9c6",
+        "start_line": 1095
+      },
+      {
+        "end_line": 1129,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDiscovery%20And%20Revision%2FRevision%20Actions",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "253cad1c498d3a54dc18db67bfe57abdfb5db5cb4ab7415577d70516747bb3c0",
+        "start_line": 1110
+      },
+      {
+        "end_line": 1149,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FAgentic%20Use",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "388c34fafd47d42d050d1ddf98bf81d4d5eccbca63b4cc2ac6f1c32da0738a64",
+        "start_line": 1130
+      },
+      {
+        "end_line": 1191,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FAgentic%20Use%2FMinimal%20Frame%20Activation%20Binding",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "7c6f6ebd07541d477476cf084f11a7558b7f0e39d4d57daa39b84ee1f9d06d7b",
+        "start_line": 1150
+      },
+      {
+        "end_line": 1300,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FAgentic%20Use%2FWorked%20Binding%3A%20Product-Chain%20Drift%20Evaluation",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "3e93a4b5a1a99c285c255918d80ccd3b375493b2269888fff907746ab322c727",
+        "start_line": 1192
+      },
+      {
+        "end_line": 1336,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FFrame%20Qualification",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "d5b0100975c42a358320a1f34f584429a568d8e8d1665df2617ad87b8cf93d9b",
+        "start_line": 1301
+      },
+      {
+        "end_line": 1376,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FFrame%20Qualification%2FMethod%20Self-Qualification",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "f13ea78853a994e67f9b3aa1f5ea4e28b1b34ed228aa8b19fd113a5371ba2853",
+        "start_line": 1337
+      },
+      {
+        "end_line": 1408,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FAnti-Patterns",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "f427969cadafe2cdb84d2f2c68b59ced9a75a99ad60e3a492204dce83a609658",
+        "start_line": 1377
+      },
+      {
+        "end_line": 1452,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMinimal%20Frame%20Declaration",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "2f69c04d18e28b5fa167d3709c85d6e4fe38ba18e52b598ae0e32bc52537f322",
+        "start_line": 1409
+      },
+      {
+        "end_line": 1487,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMinimal%20Frame-Set%20Declaration",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "aeffef79100848401fee8c71faafdfd00111ea9dfd05a7a3b99f4c851eca5ee0",
+        "start_line": 1453
+      },
+      {
+        "end_line": 1510,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMinimal%20Evaluation%20Result",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "eaebaacb017189629213da5deb6489bcd7ee6dc27524a4d1525c8b7e0e7ec0c0",
+        "start_line": 1488
+      },
+      {
+        "end_line": 1529,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FClosure",
+        "path": "standards/REFERENCE_FRAME_METHOD.md",
+        "sha256": "df3b5f669e782b47fe7f87440299e6db8be714e8cfc6fb6d7aaf4df6a7c1fb86",
+        "start_line": 1511
+      },
+      {
+        "end_line": 21,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "e2d0432e1e5a46ae9df464db06f85cd12cc98b45a8d5be9a2ff9f2162e618be2",
+        "start_line": 1
+      },
+      {
+        "end_line": 47,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FRelease-Publication%20Context",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "0a29a71a46251f51d6ad3c03805f67e72bbebf4aee6127e1a49f3bb4c20dd77b",
+        "start_line": 22
+      },
+      {
+        "end_line": 83,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FPosition",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "c389fb7e823cff73aced6c8817cd30ef581126a8ef4c0178e6ce94a510af36ac",
+        "start_line": 48
+      },
+      {
+        "end_line": 115,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FRelease%20Identities",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "22dcda4c970fd6afd3eb0fc3b6fb8cd3ec5e1a16e13bcefed3df33ca8240bb19",
+        "start_line": 84
+      },
+      {
+        "end_line": 147,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FProject-Qualified%20Git%20Refs",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "51a4af5409276f4f691a4a2bfb56d8e611a2c7aaed958a2dd445ad40782029ff",
+        "start_line": 116
+      },
+      {
+        "end_line": 174,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FProject-Subtree%20Release%20Identity",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "dd260ab2e2302175273d6b72d72c07e3006984204f02c84731c7e280502eee09",
+        "start_line": 148
+      },
+      {
+        "end_line": 196,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FHistorical%20Ref%20And%20Public-URI%20Conservation",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "f0721bb40e324ee19b91fdf6a66d85d8c0d94033ce1b99b216b9adc476843a8f",
+        "start_line": 175
+      },
+      {
+        "end_line": 210,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FPhases",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "7b51db6325cd40a6fba9d121cdbe2ac25a9e33307ce945c0e3b073a6f3b73245",
+        "start_line": 197
+      },
+      {
+        "end_line": 224,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FMutable%20Candidate%20Construction",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "3796f3a0ed9696fe3049e5c21608636dea8a619fd42a4b2c4ee26baa4dea712d",
+        "start_line": 211
+      },
+      {
+        "end_line": 274,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FImmutable%20RC%20Publication",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "b9511a87ab018e149af4a7d38dea76990cd45d211d0c051426317c2fc9093923",
+        "start_line": 225
+      },
+      {
+        "end_line": 330,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FExact-Cut%20Qualification",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "f31ec2bda6c1f2be2c67227714109286c98db235cfba2fdc47f5864fd5a6d1e0",
+        "start_line": 275
+      },
+      {
+        "end_line": 357,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FMonotonic%20Version-Line%20Advancement",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "4fccbe08296aafed722af2812f36c0e7414007c2f26d70c8b095e9a6a2f72bbe",
+        "start_line": 331
+      },
+      {
+        "end_line": 410,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FSelector%20And%20Consumer%20Adoption",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "82c43034b2c12e6fcbc76ad6ca7c97b9abee74519b514014821d98463e444694",
+        "start_line": 358
+      },
+      {
+        "end_line": 433,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FNaming",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "f80d95dbf45f54eb50deb028fe3de58ce8053a4839486ffe0fe3f84644e95f7a",
+        "start_line": 411
+      },
+      {
+        "end_line": 453,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FRelease-Scoped%20Assets",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "970479125bd1feb80c6721be806928ae8e6e5950e144140cab03f397c4f80d89",
+        "start_line": 434
+      },
+      {
+        "end_line": 507,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FCoordinated%20Release-Matched%20Asset%20Cohorts",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "afeb81918400f18d07c8770560458b63f3ec8976080c9ad0a487400b8e729316",
+        "start_line": 454
+      },
+      {
+        "end_line": 552,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FCoordinated%20Release-Matched%20Asset%20Cohorts%2FTwo-Commit%20Construction%20And%20One%20Publication%20Transaction",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "83c5608de39aa85bc921ff19350c8e1fceae41578b5588e19be5789a858bb5a6",
+        "start_line": 508
+      },
+      {
+        "end_line": 589,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FCoordinated%20Release-Matched%20Asset%20Cohorts%2FQualification%20And%20Recovery",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "7687670221b91fa376ff611693b177ddb94de5e2a58645c51cb2681ea7cdd3a6",
+        "start_line": 553
+      },
+      {
+        "end_line": 606,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FProduct%20Subject%20And%20Repository%20Carrier",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "6e523abdf0ac7b4cd290e493bd32080666b37192852bc60987e5103235bfa937",
+        "start_line": 590
+      },
+      {
+        "end_line": 629,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FAcceptance%20Criteria",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "c8ae0817ed9a31097c2d1fef9247a0e42db43c94ee9c75a171d3782563dcc828",
+        "start_line": 607
+      },
+      {
+        "end_line": 641,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FExternal%20Qualification%20Dependencies",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "e0d50d746a7145825383abb959690bfdcf6c6a7612d591b762425e49e8208da5",
+        "start_line": 630
+      },
+      {
+        "end_line": 702,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FSuccessor%20Baseline%20Conservation%20%28%60STDO-UP-015%60%29",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "4ba67eb9f600b448135e0b2f57cc92a0528bb9bd2dc89bdca082317af4ccfc02",
+        "start_line": 642
+      },
+      {
+        "end_line": 707,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/RELEASE_METHOD.md#Release%20Method%2FOpen%20Questions",
+        "path": "standards/RELEASE_METHOD.md",
+        "sha256": "474e2e1d1bbba1a561caceb4d74e557383474dbf6d44ff568c26dac298921b64",
+        "start_line": 703
+      },
+      {
+        "end_line": 40,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "b44ae5ea838f4e952f3ee187ad5b6fdb4bb73e723e42a76db56012af6d4199f4",
+        "start_line": 1
+      },
+      {
+        "end_line": 60,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod%20Families",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "d0a88eae0ad7891bb594a51ecf4a4f826f752d55a62235472bc762ebeaf7f687",
+        "start_line": 41
+      },
+      {
+        "end_line": 102,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCanonical%20Compression",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "f1fd6b535230080b95e20d2362ce85f81b504eaedd0d38ab4aae46cab5eff168",
+        "start_line": 61
+      },
+      {
+        "end_line": 121,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FPosition",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "bdb37e40f20ea675002230e72d6a76f7b12148115cfc99291574f596648f4d46",
+        "start_line": 103
+      },
+      {
+        "end_line": 143,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Method%20Identity",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "612fd70a177225787e1c106fc9f0b4ce23c45da9d0fd3550de3e0230ff3008ba",
+        "start_line": 122
+      },
+      {
+        "end_line": 186,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FProbabilistic%20Work%20Boundary",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "c4ae42574e2f624a8d09d63efe59c7ac9b7364309449e34dd2644bf2dd11db3d",
+        "start_line": 144
+      },
+      {
+        "end_line": 255,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRecursive%20Product%20Taxonomy",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "e3f3f5aa2438cc74bc6f32446f08478e48b451b604a726414d0fa9bf520d8e20",
+        "start_line": 187
+      },
+      {
+        "end_line": 288,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FManifesto",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "fdeb16aebb1f2ef47f4c72741ee59405ccf838de9773d6f350d543ca91495340",
+        "start_line": 256
+      },
+      {
+        "end_line": 314,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpec-Drivenness%20Litmus",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "d86cf39c88179c84b91f4aeed10b6e25cbf04a6fb1329b15b1177283305ce9bf",
+        "start_line": 289
+      },
+      {
+        "end_line": 360,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FProcess%20Constitution",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "5b638466c60e59d0aef6d5d67528e26d85789c11fa0af8bd1b344626ff6cac1f",
+        "start_line": 315
+      },
+      {
+        "end_line": 426,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "075567522bdd22a902b71fa24a9181f2f4a5285422062d4f27b9b797f1f6d102",
+        "start_line": 361
+      },
+      {
+        "end_line": 463,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FRequired%20Definition%20Relations",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "452ae3cd71b620d57c6725425afca46bf854ba56f7a4d918f264d64b2b8094df",
+        "start_line": 427
+      },
+      {
+        "end_line": 500,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FConstitutional-Set%20Sufficiency",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "a59f378a738bce7f590bea9f955e722416c0db034b0e15a3669a2be142659c7a",
+        "start_line": 464
+      },
+      {
+        "end_line": 627,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FShared%20Installed%20Release%20Basis%20And%20Toolchain%20Manager",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "88d6bf86e7d3fd6df320b7ab3023758e06116593626a0253ca6759439a00e2ac",
+        "start_line": 501
+      },
+      {
+        "end_line": 684,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FShared%20Installed%20Release%20Basis%20And%20Toolchain%20Manager%2FExplicit%20Complete%20Consumer%20Update",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "2a0635ca5bbde0bbe6c6962af39ca3ff5559cb12beb7c452741a6778550266cb",
+        "start_line": 628
+      },
+      {
+        "end_line": 782,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FBounded-Context%20Semantic%20Resolution",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "b8cb0a7e8a11af0defb72f5ed31f827cf7a54a194ecd2c8dab7bcc649b1a3f27",
+        "start_line": 685
+      },
+      {
+        "end_line": 815,
+        "id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FLocal%20Constitutional%20Binding",
+        "path": "standards/SPEC_METHOD.md",
+        "sha256": "89bb3f33e600483a20084248279642d3fb9f7f1008f6ba34178bd7dcb8840afb",
+        "start_line": 783
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-d4711da9b03d12b52e08/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/answer.json": "0eecd7f6c92653ad5179e47e83d196fb9fc538f6b0d606aeaf2629ea5ac73beb",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/events.jsonl": "622659a7b2a92a842601048788060aaca3e38b6fa5c36d5d1f4091f8e5072c4d",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/invocation.json": "7eefabd9e8ce49a1628802f4cc7a11540e0ca51f10a18f584d4ce0651bc0e34e",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/prompt.txt": "51a63565ccd88de4bfac403c344cb93eba8409d203ea041d2bb08d7de1127dcb",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/result.json": "3c0c1532f1c22ba9b3bf7ca184a768ed0de356c07ec350e836ee190f62d45d3b",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-d4711da9b03d12b52e08/attempt-001/usage.json": "2c1658b1f5b88ca4ea250153d4be163ff6163f2954a62ee511e74ebe5604ac21"
+  }
+}

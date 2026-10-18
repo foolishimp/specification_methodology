@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "case": "subject-hardlink",
+      "exit_code": 2,
+      "qualification_called": false,
+      "refusal": {
+        "error": "report output aliases an unchanged source or graph output",
+        "status": "refusal"
+      },
+      "status": "passed",
+      "victim_preserved_sha256": "5ed0a46e78c12ea784b5e1066769b8fceaa07b990bd58d587ff2685186242702"
+    },
+    {
+      "case": "graph-hardlink",
+      "exit_code": 2,
+      "qualification_called": false,
+      "refusal": {
+        "error": "report output aliases an unchanged source or graph output",
+        "status": "refusal"
+      },
+      "status": "passed",
+      "victim_preserved_sha256": "3371001b52a8f348556144f9cf2676c85f51e2f3c088492a4a203ceaed463901"
+    },
+    {
+      "case": "html-hardlink",
+      "exit_code": 2,
+      "qualification_called": false,
+      "refusal": {
+        "error": "report output aliases an unchanged source or graph output",
+        "status": "refusal"
+      },
+      "status": "passed",
+      "victim_preserved_sha256": "d326f9190a5da6a4c20e2f9ddd05072374633707a005e5f8297ef584b1fb74d9"
+    },
+    {
+      "case": "atomic-report-update",
+      "previous_hardlink_target_preserved": true,
+      "replacement_is_distinct_file": true,
+      "status": "passed"
+    }
+  ],
+  "helper_sha256": "116c18d5dac6f30c41e734656c5178e7386714b69f1d3098bead0b8f535717d1",
+  "scope": "temporary filesystem regression for report hardlink guards and atomic report replacement; no actual candidate mutation",
+  "status": "passed"
+}

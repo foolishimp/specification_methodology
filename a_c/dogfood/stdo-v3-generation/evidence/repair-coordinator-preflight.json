@@ -1,0 +1,41 @@
+{
+  "profile": "ac.generation.repair-coordinator-plan/1",
+  "created_at": "2026-10-18T03:37:59.032205+00:00",
+  "coordinator_sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7",
+  "selection_sha256": "29ab434f043d0469675e2f0ddc4cd3b75c3971d1f1e4ee1e225f65dd4d4411dc",
+  "code_pins": {
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+  },
+  "jobs": 4,
+  "timeout_seconds": 1200,
+  "selected": [
+    {
+      "selection": {
+        "candidate": "claude",
+        "mode": "graphify-ac",
+        "chunk": "chunk-c9c7f894950a65621589"
+      },
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-c9c7f894950a65621589/attempt-001"
+      },
+      "parent_proof_sha256": "d0e99412e3f5e9fc17e8fd0678706628166da7139de396057ccf462f0a96d7d8",
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "family": "author",
+          "attempt": "actors/author/chunk-c9c7f894950a65621589/attempt-001",
+          "invocation_recorded": true
+        }
+      ],
+      "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+      "prompt_sha256": "bd652e80d799a110dd123b0e8b01db783f5fce9463ae6b83872bfe56bfd0cfa3"
+    }
+  ],
+  "claim": "Conditional F_P evidence-selection repairs; original failures remain measured; no semantic equivalence or acceptance."
+}

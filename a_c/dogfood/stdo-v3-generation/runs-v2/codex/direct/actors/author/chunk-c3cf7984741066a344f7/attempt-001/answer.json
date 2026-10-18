@@ -1,0 +1,1146 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "ODD is a graph-native product-authoring method for GTL/ABG domain products. Its structural requirements include typed domain assets, named graph functions, a published catalog, an operative GTL module, ABG execution ownership, constructive evaluation, history-derived queries, and automation explainable through lawful manual traversal. It supplies product shape; each product supplies asset meanings, proof lanes and query overlays.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1846,
+          "quote":"ODD method is the graph-native product-authoring method for building GTL/ABG domain products.",
+          "section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F20.%20Canonical%20Compression",
+          "start_line":1846
+        },
+        {
+          "end_line":1473,
+          "quote":"- each product defines its own asset meanings, proof lanes, and query overlays",
+          "section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.6%20Product-Specific%20Semantics%20Sit%20Above%20The%20Shared%20Carrier",
+          "start_line":1473
+        }
+      ],
+      "key":"odd_method",
+      "label":"ODD method"
+    },
+    {
+      "conditions": ["Applies to every ODD product over GTL/ABG."],
+      "definition":"The method-level homeostasis loop carries intent lineage and model synthesis through observation to the next lawful action. Its four operative functions are synthesize_model, eval_gap, evaluate_next and evaluate_action.",
+      "exceptions":[],
+      "grounding":[{"end_line":868,"quote":"Every ODD product over GTL/ABG must preserve one constructive evaluation loop\nfrom intent lineage and model synthesis through observation to next lawful\naction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":862}],
+      "key":"constructive_evaluation_loop",
+      "label":"Constructive evaluation and yield loop"
+    },
+    {
+      "conditions":[],
+      "definition":"The selected Product outcome under STDO-UP-013 and any admitted bounded prerequisite or experiment basis supply the loop's external authority. They are preserved as exact references, not authored or enlarged by models, gaps, assurance, ledgers or projections.",
+      "exceptions":[],
+      "grounding":[{"end_line":874,"quote":"The selected Product outcome under `STDO-UP-013` is external authority for this\nloop.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":870}],
+      "key":"selected_product_basis",
+      "label":"Selected Product outcome and admitted bounded basis"
+    },
+    {
+      "conditions":[],
+      "definition":"Named loop carriers retain distinct meanings: IntentLineage is admitted source intent and lineage from human, imported source, prior product, intent engine or prior synthesized intent, backed by the ABG event log; ProductAssetModel is desired and known typed asset truth synthesized from lineage, prior model and admitted product truth, published through admitted events and product projections, not runtime fact or action authority; Worksite is the observable workspace, runtime archive, transform assets, product asset root, profile and file/process state; RuntimeEventLog is append-only admitted runtime fact; RuntimeProjection is replay-derived runtime state over that log and execution basis; ObservationSnapshot is read-only runtime truth plus construction-relevant worksite facts; GapPressureRow expresses missing, partial, blocked, waiting or ambiguous asset/evidence pressure relative to the model. TargetObligationBinding exactly binds pressure to selected outcome, admitted prerequisite/experiment basis, target assets, required roles, evidence and admissible graph outcomes. ActionCatalog publishes lawful functions, vectors, targets, inputs and eligible outcomes. PriorityProjection deterministically ranks bound lawful actions under visible policy. ConstructionIntent is the admitted selected action for one bounded graph invocation preserving binding authority references. AdmittedEvidence comprises admitted worker, process, product, execution, materialization, liveness and postflight evidence, not worker self-closure. EdgeFulfillmentLedger carries evidence and convergence for an edge attempt/version. NextActionProjection reads dispatch basis and current truth to select only lawful next graph action.",
+      "exceptions":[],
+      "grounding":[{"end_line":932,"quote":"The objects have these method-level meanings:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":913}],
+      "key":"loop_carriers",
+      "label":"Distinct constructive-loop carriers"
+    },
+    {
+      "conditions":[],
+      "definition":"NextActionBasis is a dispatch sum type, not a controller: initial_selection(IntentLineage, ProductAssetModel), or post_yield_resume, post_close_graph_continuation, post_retry, post_repair, post_reenter, post_reprice or post_block derived from an admitted EdgeClosureDecision. post_reprice records a constitutional re-entry request without action-selection authority.",
+      "exceptions":[],
+      "grounding":[{"end_line":926,"quote":"`post_reprice` records a re-entry request and carries no action-selection authority.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":926}],
+      "key":"next_action_basis",
+      "label":"NextActionBasis"
+    },
+    {
+      "conditions":[],
+      "definition":"The four function contracts are: synthesize_model(IntentLineage, prior ProductAssetModel, admitted product truth) returns ProductAssetModel; eval_gap(ProductAssetModel, RuntimeEventLog, RuntimeProjection, Worksite) returns ObservationSnapshot and GapPressureRow; evaluate_next(NextActionBasis, fresh eval_gap, TargetObligationBinding, ActionCatalog, Policy) returns PriorityProjection, NextActionProjection and selected_action; evaluate_action(ConstructionIntent, AdmittedEvidence, TargetObligationBinding, Policy) returns EdgeFulfillmentLedger and EdgeClosureDecision.",
+      "exceptions":[],
+      "grounding":[{"end_line":943,"quote":"The loop has one model synthesis function and three distinct evaluation\nfunctions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":934}],
+      "key":"loop_function_contracts",
+      "label":"Four distinct loop functions"
+    },
+    {
+      "conditions":[],
+      "definition":"EdgeClosureDecision is the replay-visible domain sum type close, yield, retry, repair, re-enter, reprice or block, carrying reproducible basis and reason references. Its predicate concerns lawful issuance for the subject, current basis and mandate; edge fitness and Product completion have separate predicates. Yield is a lawful iteration boundary preserving the current edge, admitted progress/waiting and replay-visible resume basis without adding a failure classification.",
+      "exceptions":[],
+      "grounding":[{"end_line":1205,"quote":"These are domain dispositions refining the shared\n[result algebra](FOUNDATIONS.md#result-algebra), not a competing verdict set.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1197},{"end_line":1246,"quote":"same edge or attempt remains lawful\nprogress or waiting state is admitted\nresume basis is replay-visible\nthe yield disposition adds no failure classification; retained assessments remain","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1242}],
+      "key":"edge_closure_decision",
+      "label":"Closure disposition and lawful yield"
+    },
+    {
+      "conditions":[],
+      "definition":"The governed work pair distinguishes mutable workspace W, immutable governed work ledger L, immutable ordering/replay event spine E and evaluator work Ev over a declared L snapshot. L records admitted callout basis, deltas, file references, digests, execution evidence, touched obligations, claims, evaluator inputs/outputs and admission status; it is not a workspace copy. Ledger attention is typed, immutable, lineage-constrained, policy-bounded and replayable, a structural analogy without transformer-attention dependency.",
+      "exceptions":[],
+      "grounding":[{"end_line":1007,"quote":"W = mutable workspace under construction\nL = immutable governed ledger of work over W\nE = immutable event log / replay spine\nEv = evaluator work over L","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":997},{"end_line":1056,"quote":"This is a structural analogy, not an implementation dependency on transformer\nattention.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1053}],
+      "key":"governed_work_pair",
+      "label":"Workspace, ledger, event spine and evaluator"
+    },
+    {
+      "conditions":[],
+      "definition":"Agentic conformance has two separate halves: an F_P real-work walkthrough proving the constitutional process followable and an F_D deterministic artifact-admission gate proving each produced act conforms. Method defect and agent error are provenance-bearing causal findings, not verdict aliases. SPEC_METHOD.md owns general constitutional process and TICKET_METHOD.md artifact admission.",
+      "exceptions":[],
+      "grounding":[{"end_line":1517,"quote":"Conformance has two halves: an F_P proof that the process is followable, and an F_D gate that admits the produced artifacts.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7A%20Conforming%20Agentic%20Development","start_line":1517}],
+      "key":"agentic_conformance",
+      "label":"Agentic walkthrough and artifact gate"
+    },
+    {
+      "conditions":[],
+      "definition":"A scenario is a graph-native proving surface, beyond test documentation. Declared scenarios and use cases are preferred sources of significant proving paths because they pressure feature intent and design decisions.",
+      "exceptions":[],
+      "grounding":[{"end_line":1655,"quote":"Scenarios are graph-native proving surfaces.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F12.%20Scenario%20Rule","start_line":1641}],
+      "key":"scenario_bundle",
+      "label":"Scenario bundle"
+    },
+    {
+      "conditions":[],
+      "definition":"Posts are the repository's commentary layer for analysis, criticism, proposed change, handoff and confidence repricing. They convey observations and proposals through the shared transformation library, may influence specification/design and do not themselves constitute constitutional truth; adoption remains an owning decision.",
+      "exceptions":[],
+      "grounding":[{"end_line":15,"quote":"Posts are not constitutional truth. They are working commentary that may later influence specification or design.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide","start_line":15}],
+      "key":"commentary_post",
+      "label":"Commentary post"
+    },
+    {
+      "conditions":[],
+      "definition":"Post categories are REVIEW for critique of code/spec/design/posts; STRATEGY for proposed technical or methodological direction; GAP for precise insufficiency/contradiction; SCHEMA for data/event/interface/contract shape; HANDOFF for bounded context or task-state transfer; MATRIX for explicit comparison of decision options. Discussion states are Draft (author shaping), Open (active published discussion) and Closed (concluded discussion).",
+      "exceptions":[],
+      "grounding":[{"end_line":100,"quote":"- `REVIEW` for critique of code, spec, design, or another post\n- `STRATEGY` for a proposed technical or methodological direction\n- `GAP` for a precise insufficiency or contradiction\n- `SCHEMA` for data model, event model, interface, or contract shape\n- `HANDOFF` for bounded transfer of context or task state\n- `MATRIX` for explicit decision comparison across options","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCategories","start_line":95},{"end_line":139,"quote":"- `Draft` for a post still being shaped by its author\n- `Open` for a post published into an active discussion\n- `Closed` for a post whose discussion has concluded","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FDiscussion%20State%20And%20Mutability","start_line":137}],
+      "key":"post_category_and_state",
+      "label":"Post categories and discussion states"
+    },
+    {
+      "conditions":[],
+      "definition":"The post base template has CATEGORY/Subject title; Author, ISO 8601 Date, Addresses, Status initially Draft and optional ISO 8601 Updated metadata; then Summary, Analysis and Recommended Action sections. MATRIX uses a central decision table instead of free prose.",
+      "exceptions":[],
+      "grounding":[{"end_line":127,"quote":"If `MATRIX` is used, the central section is a decision table rather than free prose.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FStructure","start_line":127},{"end_line":115,"quote":"**Author**: {agent}\n**Date**: {ISO 8601}\n**Addresses**: {artifact, issue, or boundary under discussion}\n**Status**: Draft\n**Updated**: {ISO 8601, optional}","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FStructure","start_line":111}],
+      "key":"post_template",
+      "label":"Post template"
+    },
+    {
+      "conditions":[],
+      "definition":"The Standards Library contains deciding methods, foundational contracts and non-deciding views. A complete cut includes declared projections, schemas, templates, frames and interaction assets. A selectable release has one complete immutable constitutional member set, exact cut identity, manifest and membership; source-line Product Definition identity and immutable Product/release identities retain distinct source-owned relations. Subordinate executable and interaction tooling retain separately declared responsibilities.",
+      "exceptions":[],
+      "grounding":[{"end_line":10,"quote":"A selectable\nrelease has one complete immutable constitutional member set with exact cut\nidentity, manifest and membership.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library","start_line":5}],
+      "key":"standards_library",
+      "label":"Standards Library and complete release cut"
+    },
+    {
+      "conditions":[],
+      "definition":"Foundations owns finite-capacity, interpretation, purpose, identity, typed-composition, total-handling and judgment/authority premises, the single result algebra, conjunction, workspace/context and configuration contracts. Transformation Library owns contract application, constraint surfaces, faithful projection and composition; Bind, Acquire, Transform, Evaluate, Conjoin and Dispose organize responsibilities. Domain instances bind predicates, policies and grants without copying rival generic law or acquiring runtime APIs.",
+      "exceptions":[],
+      "grounding":[{"end_line":27,"quote":"Bind, Acquire,\nTransform, Evaluate, Conjoin and Dispose organise these responsibilities.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FFoundations%20and%20shared%20library","start_line":24}],
+      "key":"shared_contract_owners",
+      "label":"Foundations and Transformation Library ownership"
+    },
+    {
+      "conditions":[],
+      "definition":"The owner directory locates: Axiomatic Calculus for carrier-neutral calculus; Reference Frame Method for generic declaration/evaluation/composition, with Spec owning bounded-context term resolution; Baseline for operational/specialist/Executive configurations; Spec for constitutional WHAT and lawful construction; Design Module Method for structural HOW, transformation admission and realization; Identity for scoped names/exact identities; ODD for graph-native domains; optional Traversal Occurrence Profile for application-neutral traversal; World Model for state/treatment/world-model claims; UX for UX realization; Ticket for work carriers/operating law; Release for exact cuts, conservation, publication and adoption, with Spec Product-definition routing and consumer adoption decisions; Posting/Writing for commentary/writing; Glossary for discovery and locator resolution.",
+      "exceptions":[],
+      "grounding":[{"end_line":81,"quote":"| Responsibility | Owning or locating member |","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FMethod%20owners","start_line":66}],
+      "key":"method_owner_directory",
+      "label":"Method-owner directory"
+    },
+    {
+      "conditions":["Human, agentic, deterministic, probabilistic, assurance and mixed work are covered where the governing Product or method permits them."],
+      "definition":"Reference Frame Method is a substrate-neutral engagement meta-method for finite actors constructing and using bounded reasoning/execution contexts over changing work. It owns frame declaration, activation, evaluation, basis, relation, result, coverage, revision and qualification in urn:stdo:bounded-context:reference-frame-evaluation under its exact publication basis. It consumes shared results, conjunction and workspace/context contracts; it does not define a runtime, workflow, application/profile, role mapping, Product frame-basis binding, domain Product, taxonomy, ontology, adoption relation or assurance implementation.",
+      "exceptions":[],
+      "grounding":[{"end_line":54,"quote":"This method governs how finite actors construct and use bounded reasoning or\nexecution contexts over a changing body of work.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FPosition","start_line":51}],
+      "key":"reference_frame_method",
+      "label":"Reference Frame Method"
+    },
+    {
+      "conditions":[],
+      "definition":"An evaluation is a declared question with known predicate, admissible evidence, decision authority and, for material action, operation authority. It may request judgment, prediction, construction, comparison, proof, refusal, classification or action recommendation. An evaluation family groups questions sharing the material-relation manifold, authority basis and result binding/refinement of the one core algebra; similar wording does not establish family identity.",
+      "exceptions":[],
+      "grounding":[{"end_line":132,"quote":"An evaluation family groups questions that require the same material relation\nmanifold, authority basis, and result binding or refinement of that one algebra.\nSimilar wording does not prove that two evaluations belong to the same family.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvaluation","start_line":130}],
+      "key":"frame_evaluation",
+      "label":"Evaluation and evaluation family"
+    },
+    {
+      "conditions":[],
+      "definition":"Workspace is the bounded material body reasoned over or acted upon, potentially including constitutional sources, assets, designs, implementations, tools, runtime state, evidence, history, external dependencies and human decisions. It is broader than a repository and distinct from an actor's acquired view.",
+      "exceptions":[],
+      "grounding":[{"end_line":145,"quote":"Observed state can defeat a stale summary; the summary cannot change the state.\nExternal effects require observations from their owning surfaces.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FWorkspace","start_line":144}],
+      "key":"frame_workspace",
+      "label":"Workspace in frame evaluation"
+    },
+    {
+      "conditions":[],
+      "definition":"Basis identifies the exact evaluated state, including every version, identity, time, topology, authority, configuration and evidence coordinate whose change can alter evaluation. It may be immutable or moving.",
+      "exceptions":[],
+      "grounding":[{"end_line":154,"quote":"A **basis** identifies the exact state against which an evaluation is made.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FBasis","start_line":149}],
+      "key":"frame_basis",
+      "label":"Evaluation basis"
+    },
+    {
+      "conditions":[],
+      "definition":"A relation is material relative to an evaluation when lawful change can change its result, invalidate its basis, alter admissible evidence or change who may perform or decide a material operation. The same relation may be irrelevant elsewhere.",
+      "exceptions":[],
+      "grounding":[{"end_line":164,"quote":"Materiality is evaluation-relative. A relation may be material in one frame and\nirrelevant in another.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial%20relation","start_line":163}],
+      "key":"material_relation",
+      "label":"Evaluation-relative material relation"
+    },
+    {
+      "conditions":[],
+      "definition":"Material-relation manifold is the finite jointly interpretable set of variables, entities, identities, states, relations, invariants, authorities, observations and exclusions needed by an evaluation family. It is a bounded relation space with potentially overlapping coordinate charts, without requiring geometric mathematics or a runtime manifold abstraction.",
+      "exceptions":[],
+      "grounding":[{"end_line":174,"quote":"`Manifold` names a bounded relation space with potentially overlapping\ncoordinate charts. It does not require geometric mathematics or a runtime\nmanifold abstraction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial-relation%20manifold","start_line":172}],
+      "key":"material_manifold",
+      "label":"Material-relation manifold"
+    },
+    {
+      "conditions":[],
+      "definition":"Coordinate is the complete local position for interpreting a value, event, decision, observation or action, including evaluation-required basis, identity, lineage, input, evidence and authority. Topology is the frame-visible relation structure at a basis among material entities, capabilities, authorities, lifecycle spaces, adjacencies and seams; it need not be the whole workspace topology.",
+      "exceptions":[],
+      "grounding":[{"end_line":181,"quote":"A **coordinate** is the complete local position from which a value, event,\ndecision, observation, or action is interpreted.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCoordinate","start_line":178},{"end_line":191,"quote":"**Topology** is the relation structure among the material entities,\ncapabilities, authorities, lifecycle state spaces, adjacencies, and seams\nvisible to a frame at one basis.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FTopology","start_line":188}],
+      "key":"frame_coordinates_topology",
+      "label":"Coordinates and topology"
+    },
+    {
+      "conditions":[],
+      "definition":"Evidence is the exact observation or artifact admitted for evaluation, carrying provenance, subject identity, basis and scope. Assertion provenance justifies the expected predicate; execution provenance identifies the acquired subject and result.",
+      "exceptions":[],
+      "grounding":[{"end_line":203,"quote":"**Evidence** is the exact observation or artifact admitted for an evaluation.\nEvidence carries provenance, subject identity, basis, and scope.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvidence","start_line":200}],
+      "key":"frame_evidence",
+      "label":"Frame evidence"
+    },
+    {
+      "conditions":[],
+      "definition":"Frame authority vocabulary separates human frame-set authority declaring/accepting the set; semantic owner of meaning; evaluation role permitted to evaluate; owner-issued operation grant for construction, transformation, admission, publication or mutation; decision role permitted to dispose results; and actor identity of the human, agent, tool or process doing work.",
+      "exceptions":[],
+      "grounding":[{"end_line":225,"quote":"- **semantic authority**: the owner of meaning for a material relation;\n- **evaluation authority**: the role permitted to perform an evaluation;","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FAuthority","start_line":218}],
+      "key":"frame_authority",
+      "label":"Frame authority kinds and actor identity"
+    },
+    {
+      "conditions":[],
+      "definition":"Frame disjointness is absence of shared material variables, coordinates, evidence or result dependencies for declared evaluations. Evaluation independence is separate activation without consuming or influencing another's unclosed working results, permitting shared subjects/manifolds and later conjunction of closed results. Assurance independence is claim-relative separation of authorship, evidence acquisition, reference exposure, actor and configuration as required by the governing assurance law.",
+      "exceptions":[],
+      "grounding":[{"end_line":254,"quote":"Disjoint frames need not be independently evaluated, and independently\nactivated evaluations need not be disjoint. The unqualified word\n`independent` does not establish any of these relations by itself.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FDisjointness%20And%20Independence","start_line":252}],
+      "key":"frame_independence",
+      "label":"Disjointness, evaluation independence and assurance independence"
+    },
+    {
+      "conditions":[],
+      "definition":"Capability envelope declares competence, context capacity, tools, access, applicable evaluation/assurance independence and configuration required for activation and evaluation. The same frame may fit one actor and fail to fit another.",
+      "exceptions":[],
+      "grounding":[{"end_line":264,"quote":"A **capability envelope** declares the competence, context capacity, tools,\naccess, applicable evaluation- or assurance-independence conditions, and\nconfiguration required to activate a frame and perform its evaluations.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCapability%20envelope","start_line":258}],
+      "key":"capability_envelope",
+      "label":"Actor capability envelope"
+    },
+    {
+      "conditions":[],
+      "definition":"A reference frame is a finite evaluation contract specifying attention, coordinates, authority, evidence and results for one evaluation family at a stated basis. Its optional formal description F=<Q,B,M,C,I,A,E,X,R,J,K,D> names evaluation family; workspace/topology basis; material manifold; coordinate/equality law; invariants; authority; admissible evidence/provenance; exclusions/prohibited assumptions; shared result algebra/refinements; invalidation/rechart conditions; capability envelope; and optional inter-frame dependencies, overlaps, inputs and outputs. The tuple is a relation specification, not a required schema or runtime carrier.",
+      "exceptions":[],
+      "grounding":[{"end_line":295,"quote":"This tuple specifies the relation. It is not a required schema or runtime\ncarrier.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FReference%20frame","start_line":294}],
+      "key":"reference_frame",
+      "label":"Reference frame"
+    },
+    {
+      "conditions":[],
+      "definition":"Activated frame binds a declaration to one exact evaluation, workspace subject, basis, actor and evidence-acquisition boundary. A reusable declaration is not evidence of a correct particular activation.",
+      "exceptions":[],
+      "grounding":[{"end_line":310,"quote":"An **activated frame** binds one frame declaration to an exact evaluation,\nworkspace subject, basis, actor, and evidence acquisition boundary. A reusable\nframe declaration is not evidence that a particular activation was correct.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActivated%20frame","start_line":308}],
+      "key":"activated_frame",
+      "label":"Activated frame"
+    },
+    {
+      "conditions":[],
+      "definition":"Frame set is the human-declared family available for a governed outcome/workspace, potentially including intentional overlaps, alternatives, specialists, broad exploration and separately activated assurance. Active frame configuration is the activations and declared result relations for one evaluation/decision, containing one or several disjoint, overlapping or composed frames. Neither a partition, tree, stack nor exhaustive ontology is required.",
+      "exceptions":[],
+      "grounding":[{"end_line":320,"quote":"A frame set is not required to be a partition, tree, stack, or exhaustive\nontology.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FFrame%20set","start_line":319},{"end_line":327,"quote":"An **active frame configuration** is the set of frame activations and declared\nresult relations used for one evaluation or decision.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActive%20frame%20configuration","start_line":324}],
+      "key":"frame_set_configuration",
+      "label":"Frame set and active configuration"
+    },
+    {
+      "conditions":[],
+      "definition":"A lens is a reusable question family across frame configurations, such as authority, capability/reuse, time, transport or proof. Roles allocate responsibility/authority, personas change approach/salience, abstractions hide/contract detail and components are subject parts. These can aid frames but none is a frame by identity alone; a component can span frames and a frame can span components.",
+      "exceptions":[],
+      "grounding":[{"end_line":337,"quote":"A lens becomes a frame only when it is instantiated with a bounded evaluation,\nbasis, material manifold, evidence, authorities, result algebra, and capability\nenvelope.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FLens","start_line":335},{"end_line":347,"quote":"Each may help construct or activate a frame. None is a reference frame by\nidentity alone. One component may appear in several frames, and one frame may\ncross several components.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FRole%2C%20persona%2C%20abstraction%2C%20and%20component","start_line":345}],
+      "key":"frame_aids",
+      "label":"Lenses, roles, personas, abstractions and components"
+    },
+    {
+      "conditions":[],
+      "definition":"Frame method functions are distinct relations: declare(human authority, workspace, outcome, practices, capabilities)->frame_set; activate(frame, evaluation, subject, basis, actor)->activated_frame or activation_refusal; evaluate(activated_frame, admissible evidence)->result+evidence+residuals; conjoin(decision rule, frame results)->core_result+retained_conflicts+residuals; translate(source frame, target frame, value/evidence, mapping)->translated_value or declared_loss or refusal; audit_coverage(workspace, outcome, evaluation inventory, frame set)->coverage_ledger; revise(frame set, new evidence, failures, capability/topology change)->proposed_frame_set_delta.",
+      "exceptions":[],
+      "grounding":[{"end_line":680,"quote":"These signatures describe method relations. They do not require callable\nsoftware interfaces.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMethod%20Functions","start_line":672}],
+      "key":"frame_method_functions",
+      "label":"Frame method relation signatures"
+    },
+    {
+      "conditions":[],
+      "definition":"The four distinct forms of joint frame participation are independently activated co-evaluation, result conjunction, evidence/coordinate translation and material composition. More general frame relations are disjoint (no shared material dependency), overlapping (shared variables/evidence/entities), complementary (different evaluations inform one decision), alternative (same claim under declared capability/evidence conditions), refinement (resolve an aggregated distinction), restriction (lawful domain subset), translated (declared coordinate map), temporally successive (changed basis), composed (one governed evaluation/action), and governing/subordinate (declared inherited constraints where real authority/decomposition exists).",
+      "exceptions":[],
+      "grounding":[{"end_line":775,"quote":"Frames participate together through four distinct relations.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction","start_line":775},{"end_line":864,"quote":"No one relation is the default universal frame topology. A project declares\nonly the relations needed for its evaluations and coverage claims.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FFrame%20Relations","start_line":863}],
+      "key":"frame_relation_types",
+      "label":"Joint participation and frame relation types"
+    },
+    {
+      "conditions":[],
+      "definition":"Coverage is relative to Coverage(W,G,B,E,S,T): workspace, governed outcome, exact basis, known evaluation inventory, declared frame set and time/immutable checkpoint. Material changes to any member may invalidate coverage. The coverage ledger minimally records exact evaluation, materiality provenance, subject/basis, selected capable frames, actor envelope, semantic authority, operation grant where effectful (otherwise none), decision authority, evidence/provenance, dependencies, coverage status and residual/exclusion/re-entry condition.",
+      "exceptions":[],
+      "grounding":[{"end_line":904,"quote":"Coverage(W, G, B, E, S, T)","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Basis","start_line":892},{"end_line":963,"quote":"The coverage ledger contains at least:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Ledger","start_line":948}],
+      "key":"coverage_record",
+      "label":"Coverage basis and ledger"
+    }
+  ],
+  "constraints":[
+    {
+      "applies_to_keys":["constructive_evaluation_loop","selected_product_basis"],
+      "conditions":[],
+      "exceptions":["Further material work requires another admitted basis after a terminal control condition."],
+      "grounding":[{"end_line":891,"quote":"These terminal conditions are control reasons, not completion verdicts.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":883}],
+      "key":"loop_scope_and_stop",
+      "statement":"Material selection stays within the exact selected outcome or admitted bounded prerequisite/experiment. Graph/edge closure is evidence toward, not Product/release acceptance. Select no further material work when the outcome is accepted, prerequisite discharged, experiment decision resolved, another admitted terminal condition reached, or governing basis/bound exhausted, rejected, withdrawn, superseded, repriced away or falsified. Reprice requests constitutional re-entry without performing repricing or choosing a successor outcome. Stop returns the selected outcome/bounded-task predicate: admissible completion evidence satisfies it; demonstrated unmet required condition falsifies it; exhaustion/withdrawal without deciding evidence leaves indeterminate; invalid evaluation basis or established scope/capability diagnosis retains its core value. Preserve stop reason, performance, effects and unresolved obligations, and assess stopping lawfulness separately. Neither stopping nor lawful no-action proves completion.",
+      "uncertainty":"The referenced core stop contract and STDO-UP-013 owner are not supplied."
+    },
+    {
+      "applies_to_keys":["loop_function_contracts","constructive_evaluation_loop"],
+      "conditions":[],
+      "exceptions":["Functions may share libraries, modules or actors without sharing authority."],
+      "grounding":[{"end_line":943,"quote":"They may share underlying libraries, but they must not share\nauthority:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":935},{"end_line":1130,"quote":"An invocation of one function exercising an operation reserved to another row\nfails A0, even when the functions share an implementation module or actor.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1128}],
+      "key":"loop_function_authority_separation",
+      "statement":"synthesize_model may update desired/known typed asset truth but must not observe Worksite, admit construction intent, select/invoke/close work. eval_gap compares model with observed reality and emits only observation and pressure, read-only, without admitting intent or choosing/invoking/closing work. evaluate_next binds/ranks published lawful actions matching gap and governing basis but does not admit intent or classify prior action; it consumes admitted closure classification. evaluate_action evaluates only the just-taken action, returning close/yield/retry/repair/re-enter/reprice/block without admitting intent, invoking work or selecting next action. Each invocation applies its declared inputs, output predicate and authority under Contract application. Designs, tickets, modules and proofs must name the particular function, not merely 'evaluator'.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["loop_carriers","loop_function_contracts"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":955,"quote":"A correctly observed missing\nasset can satisfy this characterization while its Product obligation remains\nunfulfilled.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":953}],
+      "key":"gap_characterization_result",
+      "statement":"Missing, partial, blocked, waiting and ambiguous are observed domain conditions, not verdict aliases. eval_gap assesses whether the pressure accurately characterizes asset/evidence X against model M at observation O: supporting observation satisfies; demonstrated mismatch falsifies; undecided support is indeterminate; invalid model/observation basis or established scope/capability shortfall uses the corresponding diagnosis. Preserve pressure, evidence, performance and uncertainty independently of Product obligation fulfillment.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["loop_carriers","selected_product_basis"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":970,"quote":"`ConstructionIntent` must cite the\nlineage, selected action, and `TargetObligationBinding` that preserve the exact\nselected Product outcome and any admitted bounded-basis refs.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":968},{"end_line":1081,"quote":"A broad edge cannot satisfy a specific product or evidence gap unless the\nbinding proves that edge is the lawful action for those exact assets.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1080}],
+      "key":"construction_intent_exact_binding",
+      "statement":"Source intent seeds the model; current construction intent is synthesized against model and observed gap and admitted in a distinct step after evaluate_next selects an already-published graph function/vector. Intent cannot invent graph actions. Before every constructive invocation bind current gap to exact assets and obligations through selected outcome reference, optional admitted prerequisite/experiment reference, pressure, targets, roles and evidence. ConstructionIntent cites lineage, selected action and binding preserving those exact authority references.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["governed_work_pair","loop_carriers"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1027,"quote":"Closure can only use W through L.\nEval can only judge W through L.\nEval only affects traversal after its own L/E admission.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1025},{"end_line":1062,"quote":"An evaluator may attend only to admitted ledger rows reachable through declared\nlineage, predecessor refs, target binding, policy, and the relevant event-log\ncursor.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1058}],
+      "key":"ledger_admission_and_attention",
+      "statement":"Filesystem, process output, logs, worker artifacts and product files are observations, gaining authority only through typed evidence admission and ledger/decision folding. F_P acts in W; admission records L; E orders/anchors entries with predecessor references; Ev reads a declared L snapshot and its output is F_P work admitted back into L/E before affecting closure, routing or traversal. Every closure-relevant F_P callout doing work needs admission. W changes need not satisfy contract; admitted L claims need not encompass all W. Evaluator attention is restricted to admitted rows reachable by declared lineage, predecessors, binding, policy and event cursor; outside workspace facts, prose, archives, summaries or controller memory are excluded. Corrections append or supersede, never rewrite governed history.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["governed_work_pair"],
+      "conditions":["Current observations contradict a previously admitted claim."],
+      "exceptions":[],
+      "grounding":[{"end_line":1040,"quote":"L cannot overrule contrary current observations of W.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1031}],
+      "key":"ledger_currentness_correction",
+      "statement":"The evidence-admission owner admits supported observation and affected currentness uncertainty into L/E under the existing evidence contract before dependent closure or selection. Consumers read through L; unresolved interpretation prevents reuse of the affected claim as current support. Recording observation supplies no verdict; admitted interpretation invalidates affected claims through the declared re-entry relation. Missing admission supplies no currentness proof and immutability cannot justify discarding contrary observation. Historical truth remains bound to its stated admitted basis.",
+      "uncertainty":"The declared re-entry relation and evidence contract are referenced but not fully supplied."
+    },
+    {
+      "applies_to_keys":["next_action_basis","loop_function_contracts"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1120,"quote":"`evaluate_next` must be total.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1091}],
+      "key":"next_selection_totality",
+      "statement":"evaluate_next ranks only published lawful catalog actions. An unpublished desired action yields typed no-action, never a broad executive graph/local-script fallback. initial_selection uses current model/gap/binding/catalog/policy. post_yield_resume resumes or yields the same edge using replay-visible resume truth without classifying failure. post_close_graph_continuation may select the next edge after closure or no action when graph-complete. For post_retry/post_repair/post_reenter/post_block: select a higher-priority lawful action if available; else follow the current edge if lawful; else reprice or block if authority missing; otherwise block with typed no-action. Default graph following remains an evaluate_next decision. Unresolved post_reprice must return typed no-action; work can be evaluated again only after separate lawful re-entry admits an exact outcome/bounded basis through new initial_selection or basis-bearing resume.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["edge_closure_decision","loop_carriers"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1158,"quote":"admissible reliance\nis not itself edge fitness, and a smaller post-action target cannot replace\nthe predicate.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1154},{"end_line":1178,"quote":"A false/open projection retains\nthe failed or unresolved result and its reason, rather than treating every\nopen edge as falsified.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1175}],
+      "key":"edge_closure_evidence",
+      "statement":"Raw artifacts, worker reports, process success or CLI summaries cannot close edges. Closure folds AdmittedEvidence into EdgeFulfillmentLedger and EdgeClosureDecision. evaluate_action applies Contract application to admitted-evidence reliance for the exact pre-action binding/evidence-set predicate and core conjunction over its obligations, retaining original domain assessments. The ledger records counts, obligation rows, materialization/liveness/admission references and edge_converged; convergence projects the complete closure predicate, never counts/liveness/artifact presence alone. True requires satisfied closure. False/open retains failure, uncertainty or diagnosis. Neither ledger nor closure disposition selects next action; evaluate_next uses admitted decision plus fresh gap truth.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["edge_closure_decision","loop_function_contracts"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1235,"quote":"Each result therefore has one verdict on its own\nexplicit predicate; the disposition determines permitted subsequent treatment.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1224}],
+      "key":"closure_selection_result_separation",
+      "statement":"Every closure disposition carries reproducible basis/reasons. Lawful-decision satisfaction requires F_D/ABG/product admission; an evaluator proposal supplies none. close requires satisfied complete closure; demonstrated obligation violation remains falsified under any other disposition, including yield. Undecided closure is indeterminate only absent deciding falsification, invalid basis or out-of-frame contribution under core conjunction. Unusable basis is invalid_basis; outside admitted action domain is out_of_frame. Unperformed evaluation is not_performed; unknown evaluation performance is unconfirmed; worker non-start/execution/effects are separate facts. Preserve predicates, original disposition, obligation assessments, performance, evidence, effects and reasons. Decision satisfaction can coexist with failed/unresolved fitness. Lawful typed no-action may satisfy selection but never Product completion. For closure/selection decisions, bound-authority and contract evidence satisfies, established violation falsifies, undecided mandate/support is indeterminate, and invalid interpretation or established scope/capability limit retains diagnosis. Labels alone cannot decide results or relabel obligation failure as Product success.",
+      "uncertainty":"Core legal performance/verdict pairs and conjunction details remain externally owned."
+    },
+    {
+      "applies_to_keys":["edge_closure_decision","loop_function_contracts"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1274,"quote":"Liveness observes activity, inactivity, process state, and interruption. It can\nsupport yield or liveness interruption. It cannot by itself declare semantic\nfailure, semantic closure, or requirement non-satisfaction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1255}],
+      "key":"yield_reentry_query_boundaries",
+      "statement":"Yield preserves lawful same-edge iteration with admitted progress/waiting and replay-visible resume; it is neither retry, block, timeout nor local CLI looping, and adds no failure classification to retained assessments. Liveness alone cannot establish semantic failure/closure/non-satisfaction. evaluate_action may issue conceptual repair/re-enter dispositions; evaluate_next alone selects published graph actions realizing them from admitted closure truth, not local string retry branches. Public queries/gaps views may render read-only gap, closure and next-action outputs but must not append events, invoke workers, admit intent, run evaluate_action or choose traversal themselves.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["constructive_evaluation_loop","loop_carriers","governed_work_pair"],
+      "conditions":[],
+      "exceptions":["Recovery need not acquire complete history or repeat still-valid evaluations."],
+      "grounding":[{"end_line":1307,"quote":"Resolve material unknown or partial\neffects before a dependent repeat. A lost invocation response supplies neither\n`not_started` nor `completed` evidence.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1305},{"end_line":1342,"quote":"A broken predecessor\nchain is non-replayable at the carrier level and therefore fails A13.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1341}],
+      "key":"loop_replay_and_causal_integrity",
+      "statement":"Every closure/selection is reproducible from runtime log, execution basis, event-backed lineage, model publication basis/events, exact outcome/bounded refs, gap, binding, catalog, admitted evidence, ledger, closure decision, next-action basis and visible policy; failure indicates hidden state. Every governing admitted/replay carrier carries causal predecessor references: outcome/bounded refs->binding; lineage->model->gap->binding->priority->selected NextActionProjection->ConstructionIntent->evidence->ledger->closure->NextActionBasis->post-action NextActionProjection. Observation is the model/runtime/worksite read boundary before gap. Both projection occurrences must be predecessor-reachable without external joins; selected intent preserves authority. Recovery applies workspace/context and resumed-action Contract application, acquiring sufficient reachable ledger, current basis and invalidators; current admission/replay reconstruct control and material unknown/partial effects are resolved before dependent repeat.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["constructive_evaluation_loop","odd_method"],
+      "conditions":[],
+      "exceptions":["Opaque internals may use local control flow solely to compute one bounded action's internal result."],
+      "grounding":[{"end_line":1366,"quote":"Once a refinement is\npublished as graph structure, it is governed by the loop recursively.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1356}],
+      "key":"recursive_refinement_and_ownership",
+      "statement":"When an outer vector is refined into published inner vectors, each inner boundary obeys all four functions with its own visible model, gap, binding, action, evidence, ledger, closure and next projection. Opaque implementation must not publish, dispatch, retry, repair, re-enter or close graph work as hidden control. ABG owns runtime truth, replay, graph-call lifecycle, actor/process supervision, continuation and re-entry mechanics; Product owns asset/catalog meaning, gap interpretation and priority policy. Design Module Method governs modules within that split without creating module-local eval_gap/evaluate_next/evaluate_action authorities.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["constructive_evaluation_loop","loop_function_contracts"],
+      "conditions":["A ticket, design, module or proof touches synthesis, evaluation, traversal, selection, intent, worker invocation, admission, fulfillment, liveness, closure, re-entry, query or live proof."],
+      "exceptions":["Unchanged accepted relations cite their accepted basis rather than being re-proven."],
+      "grounding":[{"end_line":1417,"quote":"The axiom family does not authorize\nhorizontal realization growth, create Product work, or widen the selected\noutcome.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1377},{"end_line":1464,"quote":"The implementation is correct only when the next work decision is derived from\nthat equation, `U` remains causally reachable through the target binding and\nconstruction intent, and no other path can decide what work happens next.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1462}],
+      "key":"one_constitutional_decision_path",
+      "statement":"Causally applicable axioms and the equation control acceptance for the selected outcome/affected published boundary. No CLI branch, prompt, postflight string, dossier, query, service or operator summary supplies a rival traversal decision, even with identical artifacts. Local checklists/test names/grep/notes cannot weaken this law; rival paths require lawful re-entry, retained closure blocker or separately bounded paydown under independently selected outcome/prerequisite. Dossiers, postflight/assurance reports, materialization manifests, liveness projections, summaries, worker prose, screen/PTY transcripts, prompt packages, harness targets, grep tests, CLI/query/service outputs are evidence/diagnostics/read context only. Admitted ledger/decision/projection chain governs conflicts, but contrary current observations still require re-observation/admission; absent chain means no constitutional closure/selection. The equation preserves U, projects lineage, synthesizes M0, obtains G0, binds B0, selects N0 from initial basis, separately admits intent and invocation evidence, evaluates A, refreshes M1/G1/B1, derives Q1 from A.decision and returns evaluate_next N1. Unresolved post_reprice returns typed no-action.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1478,"quote":"- structural GTL law\n- product-specific semantic law","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.6%20Product-Specific%20Semantics%20Sit%20Above%20The%20Shared%20Carrier","start_line":1477},{"end_line":1846,"quote":"Operative framework behavior must be built outcome-first: outcome traversals first, declarative GTL/ABG carrier structure second, and minimal imperative adapter code last.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F20.%20Canonical%20Compression","start_line":1846}],
+      "key":"odd_structural_domain_and_realization_order",
+      "statement":"Keep structural GTL law distinct from Product semantic law; one structural method may build many domains. Build operative framework behavior outcome-first: outcome traversals, then declarative GTL/ABG carriers, then minimal imperative adapters. Projection/query surfaces expose current state over constructive history; lawful manual traversal and deterministic artifact admission remain required.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1511,"quote":"Automation may make this faster, safer, or more repeatable. It may not invent a different process.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7%20Manual%20Walkthrough%20Must%20Still%20Be%20Lawful","start_line":1492}],
+      "key":"manual_automation_correspondence",
+      "statement":"Automation must remain true to manual walkthrough. Using only declared surfaces, an operator should identify current typed asset/node, next lawful vector and public graph-function carrier, required inputs/evaluators/output/environment, construct or assess the next asset/checkpoint and repeat to target-relative closure. The vector is constitutional transition contract; graph function is published constructive realization. Rendering prompts, scaffolding, selecting traversal, running workers, collecting evidence and assessing closure are lawful within this process. Unlawful automation skips undeclared nodes, fabricates authority, hides multiple constitutional transitions without declared refinement, depends on private implementation-carrier knowledge inappropriate to the installed Product, or merges installed-builder and target-Product authority in self-hosting. Inability to explain manual traversal means automation is not yet method-safe.",
+      "uncertainty":"Detailed §5.2/§5.3 and self-host owner contracts are outside the supplied excerpt."
+    },
+    {
+      "applies_to_keys":["agentic_conformance"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1558,"quote":"Compression is prompt input, never the deciding authority.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7A%20Conforming%20Agentic%20Development","start_line":1523}],
+      "key":"agentic_conformance_conditions",
+      "statement":"The F_P walkthrough executes real intake, smallest lawful re-entry, spec/requirement/design/ticket chain, constructive loop and closure proof using only minimal declared authority sufficient for each step with source references, not stale memory or wholesale hidden context. Declared context includes input/output contract, required context, role, evaluator regime and provenance. Work must have correct change-class, traceability and admission. A blocked step is a method defect only when a competent correctly configured actor using declared authority cannot decide because of owning ambiguity, missing step, contradiction or undecidable change-class; reprice that defect into its owner. Ignored authority, stale memory and bad reasoning are agent error, not by themselves method-defect evidence. The method predicate asks whether named owning clauses supply the required decidable step: demonstrated preventing defect falsifies, demonstrated decidability satisfies, undecided cause/insufficient evidence is indeterminate, unusable basis/outside scope retains diagnosis. Artifact refusal does not itself falsify method adequacy; actor error does not itself satisfy it. Record separate artifact/method performance, effects and causes. Runtime availability cannot establish process validity. Declared admission deterministically and fail-closed admits/rejects drafted classifications and artifacts, naming violated rules. Passing admission/walkthrough provides conformance evidence, never ratification or amendment by repeated use.",
+      "uncertainty":"SPEC_METHOD.md, TICKET_METHOD.md, §9 and constructor §11.1 are external dependencies here."
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["Negative proof concerns an ODD or graph-native boundary; the stated authority-chain identities apply where applicable."],
+      "exceptions":[],
+      "grounding":[{"end_line":1586,"quote":"It must not manufacture the refusal state, blocked\nevent, gap, or verdict that the system is supposed to derive.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7B%20Real%20Authority-Path%20Negative%20Proof%20%28%60STDO-UP-010%60%29","start_line":1563}],
+      "key":"real_authority_negative_proof",
+      "statement":"Exercise the supported Product authority path: identify supported entry/authority, invalidate the real authority-bearing input, exercise the path, prove refusal before prohibited effects and establish no successful legacy/fallback/reconstruction/parallel path. Source, packaged, installed and runtime absence remain separate claims. Where applicable the path is public entry->admitted GTL topology->named GraphFunction callable contract->implementation/plugin admitted seam->ABG traversal/event/continuation/replay truth->replay projection->typed Product outcome/continuation. CLI, SDK, service, adapter, plugin, fixture, query and projection cannot become rival controllers. Consumer owns concrete tests/evidence mechanism; this section owns the property to prove.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["A Product publishes graph functions."],
+      "exceptions":[],
+      "grounding":[{"end_line":1608,"quote":"Each retained `GraphFunction` should declare:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.8%20Cumulative%20Environment%20Law%20Is%20Mandatory","start_line":1594}],
+      "key":"cumulative_environment_law",
+      "statement":"Composition uses cumulative typed environment, not last-output-only feeding. Each retained GraphFunction should declare environment.requires/provides/carries. Later functions may require any available carried typed binding. At every consumer, Composition law applies to every material required binding, including bindings carried across intermediate functions; presence alone does not prove currentness, basis compatibility or operation authority. Publishing without this cumulative law is structurally wrong.",
+      "uncertainty":"The declaration is phrased 'should'; cumulative composition law itself is mandatory."
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["An outer public carrier is refined into inner executable structure, or current Product closure is claimed."],
+      "exceptions":["Authorized explicit deferral or repricing may change the applicable obligation set but does not realize the original requirement."],
+      "grounding":[{"end_line":1635,"quote":"Unknown applicability cannot remove required\ncoverage.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.9%20Global%20Convergence%20Must%20Be%20Stable%20Under%20Zoom","start_line":1632}],
+      "key":"zoom_stable_closure",
+      "statement":"Inner chain must close lawfully, coarse contract remain true after fold-back and zoomed/unzoomed views agree on outer open/closed state. Current live requirements lacking executable proof keep the carrier open until realized, explicitly deferred or explicitly repriced from the active branch. Preserve original assessment and exclusion owner disposition/support. Evaluate all still-applicable obligations and joins by core conjunction. Closed requires satisfied outer predicate plus owning closure decision; open retains actual falsified, indeterminate or diagnosed result. Unknown applicability cannot exclude coverage. Witnesses must be governed realized proof surfaces appropriate to requirement class; software commonly uses realized testcase or archived test evidence.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["scenario_bundle"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1655,"quote":"A scenario bundle should make clear:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F12.%20Scenario%20Rule","start_line":1645}],
+      "key":"scenario_proving_recommendation",
+      "statement":"A scenario bundle should identify feature/use-case boundary, pre-existing assets, expected vectors, significant paths and closing evidence. Declared scenarios/use cases are recommended as the best basis for selecting significant code/control paths the system must exercise.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["The Product has an installable development form."],
+      "exceptions":[],
+      "grounding":[{"end_line":1671,"quote":"Where the product has an installable development form, decisive proof runs against that installed development form in an isolated environment.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F13.%20Installed-Dev%20Rule","start_line":1661}],
+      "key":"installed_development_proof",
+      "statement":"Decisive proof runs against the installed development form in isolation. For graph-native ODD, the lane should exercise install, bootstrap, graph traversal, evidence collection and target-relative closure. Direct source checks remain useful but cannot replace installed-dev proof.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1691,"quote":"Where the product provides ODD framework behavior, it must build that behavior\nthrough ODD graph functions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F14.%20Dogfooding%20Rule","start_line":1679}],
+      "key":"dogfooding_modal_distinction",
+      "statement":"The Product should develop through its claimed graph-native method and increasingly describe/build itself with explicit assets, vectors, graph functions, scenarios and target-relative closure. When it provides ODD framework behavior, building that behavior through ODD graph functions is mandatory; publishing ODD-shaped artifacts after imperative execution has already decided work is prohibited.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1709,"quote":"Release version is not constitutional graph truth.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F15.%20Release%20Boundary","start_line":1697}],
+      "key":"release_graph_boundary",
+      "statement":"Release version belongs to release process/metadata. Graph-native method concerns current assets, vectors, closures and authority. Immutable RC publication, version-line selector advancement and exact-cut acceptance remain a separate process surface.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["An ODD conformance capability claim is assessed."],
+      "exceptions":[],
+      "grounding":[{"end_line":1735,"quote":"A failure blocks the corresponding conformance claim under its owner.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F16.%20Failure%20Pattern","start_line":1732}],
+      "key":"odd_failure_owner_routing",
+      "statement":"Apply Contract application to claimed capability, published boundary and causally applicable loop contracts. Failure families select owners, not another checklist: missing nodes/vectors/outer contract/carrier routes to Graph Model, Typed Assets, Graph Functions, Outcome-First Realization and GTL Module; hidden imperative execution/continuation to Outcome-First, ABG Continuation, Execution Audit and A0/four functions; unwalkable/ungated automation to Manual/Agentic Conformance; installed private knowledge/self-host merge to Product/Self-Host/Installed-Dev; omitted scenario paths/unsupported closure to Scenario/A6/Negative Proof; last-output composition/coarse-refined disagreement to Cumulative Environment/Global Convergence/A14; flattened yield to A4/A8/A9/A10; output-driven selection to Projection-Source Coherence/A4a/A7/A11/A12/A16. Failure blocks the corresponding owner claim. Unperformed/inconclusive proof retains its core result; grep/inventory cannot substitute for authority-path proof.",
+      "uncertainty":"Several listed owner sections precede the supplied ODD excerpt."
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["An agent or designer is instructed to build a Product using ODD_METHOD."],
+      "exceptions":["Read a Product-specific method when one exists."],
+      "grounding":[{"end_line":1777,"quote":"14. only then implement code, policy, and transport surfaces","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F17.%20Invocation%20Rule","start_line":1771}],
+      "key":"odd_invocation_sequence",
+      "statement":"Expected sequence: read Spec and preserve constitutional chain; read applicable Product method; read local Intent/Product/requirements/active designs; identify source-to-outcome semantics, typed assets and public graph functions; define machine-readable catalog; define/update GTL outer callable carriers/live boundaries; define scale-consistent coarse/inner/proof closure; audit affected runtime/plugin/worker/event/projection/assurance/closure/continuation authority; define complete constructive loop; define dispositions with lawful yield; define admitted-history query/projection and source coherence; only then implement code/policy/transport. Do not begin with imperative scripts and add GTL terminology, use graph functions as documentation wrappers or hide the real carrier in service code.",
+      "uncertainty":"This is a represented invocation sequence, not an instruction executed by this interpretation."
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["Starting cold in a concrete ODD Product."],
+      "exceptions":["World-model Products insert WORLD_MODEL_METHOD.md and include the proof lane."],
+      "grounding":[{"end_line":1783,"quote":"When starting cold in a concrete ODD product, use this order.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order","start_line":1783},{"end_line":1796,"quote":"3. the product's `stdo_<label>.json` definition","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FGeneral%20ODD%20Product","start_line":1789},{"end_line":1821,"quote":"- `ODD_METHOD.md` sets the structural expectation\n- the product-specific method sets the domain law\n- the local product surfaces set the current build line","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FWorld-Model%20Product","start_line":1814}],
+      "key":"odd_cold_start_order",
+      "statement":"General order is SPEC_METHOD, ODD_METHOD, Product stdo_<label>.json, applicable bound project reference-frame basis and authorized agent activation packet, bound Intent, bound Product definition, relevant bound requirements, active bound designs, then GTL/catalog/query surfaces. World-model order inserts WORLD_MODEL_METHOD after ODD_METHOD, uses relevant bound requirement families/current designs and ends with GTL/catalog/query/proof lane. ODD supplies structural expectation, Product method domain law and local surfaces current build line. Skipping order usually risks missing domain or realizing it through the wrong carrier; this is a tendency, not a universal result.",
+      "uncertainty":"The referenced Product-specific documents and binding packets are not supplied."
+    },
+    {
+      "applies_to_keys":["odd_method"],
+      "conditions":["Assessing sufficiency for cold ODD entry."],
+      "exceptions":[],
+      "grounding":[{"end_line":1840,"quote":"An unanswered required relation means the product\nis not yet sufficiently specified for that ODD entry; a glossary or generic\nrule packet cannot supply the actual subject.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F19.%20Ramp-Up%20Checklist","start_line":1838}],
+      "key":"odd_entry_sufficiency",
+      "statement":"A cold actor should readily recover semantic chain, typed assets, public functions/catalog/GTL, ABG/Product split and exact loop/dispositions/proof lane, acquiring actual local subjects and section-16 owners by cold-start route. Entry is sufficient only if material permits determining source coherence/drift refusal, execution containment, observation-action control, replay-visible yield, outer closure with missing inner proof and lawful agentic traversal with deterministic admission. Apply Contract application to that acquisition claim.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["commentary_post"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":44,"quote":"A concise sufficient reference can\ncarry that record; commentary cannot supply an absent decision.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FBoundary","start_line":26}],
+      "key":"commentary_boundary",
+      "statement":"Observations/claims retain basis and evidence remains separate from authority. Before publishing review/handoff, apply workspace/context to bound subject/basis and report judgments through complete core result, directly or by sufficient reference. Posts serve provisional, investigative, comparative, argumentative or unratified content. Live requirements, design decisions and active process law belong in applicable bound WHAT or ratified design surfaces, not posts.",
+      "uncertainty":"The F2/F6, workspace/context and complete-result owner texts are referenced, not fully supplied."
+    },
+    {
+      "applies_to_keys":["commentary_post"],
+      "conditions":[],
+      "exceptions":["The binding may designate a non-file carrier."],
+      "grounding":[{"end_line":67,"quote":"Posts live at the Product Definition Overlay's `ticketing.comments.root`\nbinding.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FLocation","start_line":50},{"end_line":87,"quote":"A\nnon-file carrier must preserve an equivalent stable post identity, publication\ntime, category, subject, author, discussion state, and supersession history.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCarrier%20Identity","start_line":85}],
+      "key":"post_carrier_identity",
+      "statement":"Use bound ticketing.comments.root; default local directory is .ai-workspace/comments/<agent>/, with <agent-id> an example. Local filenames use YYYYMMDDTHHMMSS_CATEGORY_SUBJECT.md; the supplied dated REVIEW filename is illustrative. Subject should be short, specific and stable for scanning. Non-file carriers preserve stable identity, publication time, category, subject, author, discussion state and supersession history. Carrier location/visibility never promotes commentary into ticket/Product/requirement/design truth.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["commentary_post","post_category_and_state","post_template"],
+      "conditions":[],
+      "exceptions":["Updated metadata is optional and useful updates are discretionary; edits to Closed posts are discouraged rather than absolutely forbidden."],
+      "grounding":[{"end_line":159,"quote":"Once a post is `Closed`, updating it is discouraged. Prefer a new post when a\nlater change would materially alter a closed conclusion, reopen an old dispute,\nor start a new bounded subject.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FDiscussion%20State%20And%20Mutability","start_line":153},{"end_line":171,"quote":"1. State whether the post describes current reality, target direction, or both.\n2. Separate findings from recommendations.\n3. Use exact file or requirement references when making claims.\n4. Do not present a post as if it were already ratified.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FPosting%20Rules","start_line":165}],
+      "key":"post_editing_and_claim_rules",
+      "statement":"Use declared categories, base template and explicit Status. Draft/Open posts are updated in place for the same bounded discussion, including corrections, replies, recommendations, confidence repricing and same-subject evidence; preserve original Date as first publication, adding/updating Updated when useful. Prefer new posts for materially changed closed conclusions, reopened disputes or new subjects; never stealth-rewrite closed history. State current/target/both, separate findings/recommendations, cite exact files/requirements and retain one bounded subject. Closed records remain commentary until content adoption.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["commentary_post"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":183,"quote":"A post becomes consequential only when its content is explicitly adopted into:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FRatification","start_line":177}],
+      "key":"post_explicit_adoption",
+      "statement":"Only explicit content adoption into a bound WHAT surface, ratified design or accepted implementation makes a post consequential; until then it is commentary, not law.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["commentary_post","standards_library"],
+      "conditions":["Reusable shared-method change or consumer adoption is involved."],
+      "exceptions":["Executable tools, runtimes, carrier schemas and assurance implementations require separate Product authorization."],
+      "grounding":[{"end_line":205,"quote":"This is authority causality, not a prescribed intake workflow or artifact set.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FShared%20Method%20Adoption%20And%20Propagation%20%28%60STDO-UP-012%60%29","start_line":200}],
+      "key":"shared_method_adoption_causality",
+      "statement":"Preserve incident/review evidence->shared-method intake->one owning standard->consistency and independent review->human-authority acceptance->one complete released STDO version->explicit consumer selection->consumer-owned realization/evidence. This authority causality does not prescribe workflow/artifacts. Accompanying a method lesson does not authorize executable/tool/runtime/schema/assurance inclusion. Other standards consume admitted law by reference; consumers select complete releases, not mixed members from different cuts.",
+      "uncertainty":"Concrete intake, review, authorization and release mechanisms are not specified here."
+    },
+    {
+      "applies_to_keys":["standards_library","method_owner_directory"],
+      "conditions":["Selecting source routes for an actual task."],
+      "exceptions":["Broader frames or the entire corpus are acquired only when material."],
+      "grounding":[{"end_line":62,"quote":"No view supplies universal task sufficiency or a\nwork, effect, admission or acceptance grant.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FChoose%20a%20task","start_line":61}],
+      "key":"library_task_routes",
+      "statement":"Start from actual-question owners and bind material inputs to selected Product, subject, outcome, evidence and existing grant; acquire domain mapping/adopted profile where needed and shared independence conditions where required. Intake/re-entry routes to Spec intake/classification plus Ticket carrier selection when admitting work; recovery to Foundations workspace/context and library work/recovery; evidence reuse to change-impact/contract currentness; fitness to bounded construction, assertions/observations and assurance provenance; result values/conjunction to Foundations plus domain refinement; candidate disposition to Spec construction/delegation/proportional disposition and judgment/authority. Frames assemble excerpts: Triage/Carrier, Work/Recovery, Evaluation/Conjunction, Member Construction/Assessment, Constitutional Derivation, Domain Binding and Release/Adoption cover their declared questions. Actual Product requirements/acceptance criteria remain required. Views identify owners/digests and require source re-entry for material omitted couplings, never granting universal sufficiency or authority.",
+      "uncertainty":"Linked task owners and frame contents outside supplied sections remain unresolved."
+    },
+    {
+      "applies_to_keys":["method_owner_directory","shared_contract_owners"],
+      "conditions":[],
+      "exceptions":["Traversal profile adoption is optional and binds exact signature and basis."],
+      "grounding":[{"end_line":97,"quote":"Each member's declared applicability and scope remain at that owner; this table\ndoes not reclassify a constitutional method as a guide or profile.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FMethod%20owners","start_line":83}],
+      "key":"method_owner_scope_preservation",
+      "statement":"Directory entries do not reclassify members or determine their applicability/scope. Calculus and optional Traversal retain signatures; Baseline retains adoption boundary and derived-profile owning determinations. Generic frame law differs from particular actor profiles. Glossary resolves locators while located owners decide meaning. Foundations/library premise and shared conditional contracts sit under Methodology Product authority; methods retain additional policies/grants. Formal calculus remains distinct from interpreted a_c subject models and mechanical encodings.",
+      "uncertainty":"Directory references establish stated roles, not the unseen owners' full law."
+    },
+    {
+      "applies_to_keys":["standards_library","constructive_evaluation_loop"],
+      "conditions":[],
+      "exceptions":["A local copy is operative only when explicitly bound and verified; it is not default."],
+      "grounding":[{"end_line":139,"quote":"Reading this\nsource package for assessment neither changes an operative Product basis nor\nestablishes an installed release.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FDistribution%20and%20entry","start_line":137}],
+      "key":"distribution_projection_and_basis",
+      "statement":"Compressions are digest-bound non-deciding read models: sufficient current views convey duties without acquiring owner authority; stale/insufficient views require exact-owner acquisition. Templates are starter Product Definition/specification/frame/agent realizations. Normative schemas define layout-neutral Product Definition Overlay and deterministic installed-release manifest. Plugin interaction assets route work without minting authority/workflow engines. Toolchain installs complete immutable cuts in shared versioned store and resolves logical release URIs without machine-local Product Definition paths. Consumer basis requires exact cut, Product Definition basis URI, manifest digest and member inventory; mutable heads/moving selectors and artifact presence supply neither basis replacement nor release/operation authority. Acquire sufficient responsibility frame, exact subject and material dependencies; owner controls result/independence/disposition use, and ODD retains evaluate_next. Frames are exact-byte/fidelity-bound members of complete cuts, not independently selectable versions. Method interpretation supplies encoded determinations/routes/residuals under its projection/re-entry contract; its document inventory differs from package inventory, owners decide meaning and checkers supply only declared evidence.",
+      "uncertainty":"Distribution schemas, manifests, frame packages and interpretation contracts are not supplied."
+    },
+    {
+      "applies_to_keys":["reference_frame_method","reference_frame","frame_set_configuration"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":45,"quote":"The reference frame is the atomic engagement unit. Frame-set selection,\nactivation, evaluation, conjunction, translation, coverage, and revision are\nseparate method functions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCanonical%20Compression","start_line":37},{"end_line":115,"quote":"Unknown and out-of-frame results are lawful pressure for reconfiguration.\n   They are not failed evaluations or implied acceptance.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCore%20Claims","start_line":112}],
+      "key":"finite_frame_engagement",
+      "statement":"No finite actor is presumed to hold the whole material workspace; context, attention, time and capability are bounded. Useful frames are finite and sufficient for declared evaluation families, whose questions determine attention. Activated frames bind family, exact workspace/topology, finite material relations/coordinates, invariants/authority, evidence/exclusions and capability and return satisfied/falsified/indeterminate/out_of_frame/invalid_basis. Human judgment, practice/history, outcome/workspace and capabilities inform declared sets, bounded evaluations, required conjunction/translation, coverage/residuals and empirical revision. Selection, activation, evaluation, conjunction, translation, coverage and revision remain separate. Atomic engagement does not imply semantic irreducibility or a universal relationship theory. Coverage is basis/time/outcome/inventory-relative; history and invisible violations inform improvement. Unknown/out-of-frame outcomes pressure reconfiguration without implying failed evaluation or acceptance.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame_method","reference_frame"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":92,"quote":"A same-spelled profile, Product, role, or runtime carrier is not\nimported by proximity or nominal match.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FPosition","start_line":86},{"end_line":304,"quote":"The binding may be expressed entirely in source-linked prose; representation\ncannot create, widen, or replace it.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FReference%20frame","start_line":303}],
+      "key":"frame_scope_and_binding",
+      "statement":"Frame law authority is scoped to its owned relations; other operations retain their grants. External specialization/import does not amend principles or import same-named Product/profile/runtime entities. A prompt, context packet, symbolic program or other representation is a projection of activation, not the frame itself. Binding requires every material coordinate to resolve to exact source, subject, basis, authority, evidence route, actor envelope, result relation and invalidator. Source-linked prose can express binding. Choosing partition/protocol/actor arrangement is a declared method choice; shared-library consumption does not impose an execution sequence.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_workspace","frame_basis","frame_coordinates_topology","frame_evidence"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":154,"quote":"A moving basis must declare how advancement\nis detected and when reevaluation is required.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FBasis","start_line":153},{"end_line":184,"quote":"Equal names, values, shapes, locations, or apparent topology positions do not\nestablish coordinate equality. Equality follows a declared relation.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCoordinate","start_line":183},{"end_line":196,"quote":"A state transition that changes any such relation is a topology mutation\nand may invalidate the frame's coordinates.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FTopology","start_line":195},{"end_line":210,"quote":"A sufficiently small frame or an authenticated observation alone\ndoes not establish a sound, complete decision on its predicate.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvidence","start_line":209},{"end_line":145,"quote":"External effects require observations from their owning surfaces.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FWorkspace","start_line":145}],
+      "key":"frame_material_state_evidence_rules",
+      "statement":"Observed workspace state can defeat stale summaries; summaries cannot change state and external effects require owning-surface observations. Moving bases declare advance detection and reevaluation conditions. Coordinate equality requires a declared relation, not matching names/values/shapes/locations/topological appearance. State-value changes preserve topology only if every material entity, relation, lifecycle, authority, capability, adjacency and seam is preserved; otherwise coordinates may invalidate. Available evidence alone creates neither semantic truth nor authority. Evidence reliance applies Construction assurance to predicate, observations and consuming decision, preserving assertion/execution provenance distinctions; small context/authentication alone does not prove decision soundness or completeness.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_authority","capability_envelope"],
+      "conditions":[],
+      "exceptions":["Human authority may act through explicitly admitted bounded proxy where governing identity/authority law permits; proxy and human identities remain distinct."],
+      "grounding":[{"end_line":235,"quote":"A read-only evaluation declares no operation authority. An effectful\nevaluation names the existing owner-issued operation grant it applies.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FAuthority","start_line":230},{"end_line":264,"quote":"Actor\ncapability may justify a different frame size or activation sequence. It cannot\nwaive an invariant or widen authority.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCapability%20envelope","start_line":262}],
+      "key":"frame_authority_capability_boundaries",
+      "statement":"Apply shared authority separation/conservation to declaration, selection, activation and execution. Read-only evaluation declares no operation grant; effectful evaluation names the existing owner-issued grant. Actor capability can justify frame size/sequence variation, never waive invariants or enlarge authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","activated_frame","frame_evaluation"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":381,"quote":"Every frame declares the evaluation family it supports. A frame with no\ndeclared evaluation family has no testable sufficiency boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-001%20Evaluation%20Relativity","start_line":374}],
+      "key":"evaluation_family_membership",
+      "statement":"Every frame declares its supported family. Activation establishes actual-question membership; availability in a set or similar task naming proves none. Outside-family questions need a suitable frame or applicable scoped result; renaming cannot preserve the original obligation.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["activated_frame","capability_envelope"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":388,"quote":"An activated frame contains a finite attention surface that fits the selected\nactor's declared capability envelope.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-002%20Finite%20Attention","start_line":385},{"end_line":526,"quote":"A fresh competent actor inside the declared capability envelope can reconstruct\nthe activated evaluation from the frame declaration, exact subject, basis, and\nadmissible inputs without undocumented conversational or historical context.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-013%20Reconstructable%20Activation","start_line":524}],
+      "key":"finite_reconstructable_activation",
+      "statement":"Activation attention must be finite and fit the declared actor envelope. A fresh competent actor inside it must reconstruct evaluation from declaration, exact subject/basis and admissible inputs. Requiring undeclared ambient memory, conversation/history or effectively global workspace context is not reconstructable.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["activated_frame","material_manifold","material_relation"],
+      "conditions":[],
+      "exceptions":["Known-relation sufficiency does not require proving absence of undiscovered relations."],
+      "grounding":[{"end_line":397,"quote":"An omitted material relation makes the activation insufficient.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-003%20Material%20Sufficiency","start_line":395},{"end_line":404,"quote":"exclude relations established irrelevant to that evaluation,\nretaining any material needed to establish irrelevance.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-004%20Irrelevance%20Exclusion","start_line":402}],
+      "key":"material_sufficiency_and_exclusion",
+      "statement":"Apply Contract application Support to family Q: all known material relations enter M or declared authoritative inputs; omission makes activation insufficient. Apply workspace/context to exclude established irrelevant relations while retaining evidence needed to establish irrelevance. Adjacency alone does not expand a frame.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_basis","frame_coordinates_topology","frame_evaluation"],
+      "conditions":["Evaluation or reuse at a potentially changed basis."],
+      "exceptions":["Basis advancement alone does not invalidate a historical result; other admissible evidence may decide a predicate despite stale support."],
+      "grounding":[{"end_line":420,"quote":"Stale supporting\nevidence under an interpretable governing basis instead follows\n[RF-012](#rf-012-closed-results): insufficient support leaves the predicate\n`indeterminate` unless other admissible evidence decides it.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-005%20Exact%20Basis%20And%20Coordinates","start_line":413},{"end_line":483,"quote":"A detected material topology mutation\ncauses reevaluation, frame revision, or recharting before the previous result\nis reused.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-011%20Topology%20Mutation%20And%20Recharting","start_line":481}],
+      "key":"exact_basis_reuse_and_rechart",
+      "statement":"Every result binds exact subject, basis, coordinates and evidence scope. Reuse applies change-impact/evidence-retention with declared currentness/equality. Stale, ambiguous or mismatched governing basis preventing predicate interpretation yields invalid_basis or requires resolved reactivation; stale support under interpretable basis yields indeterminate unless otherwise decided. Historical records remain original-basis-bound; new reliance requires owner-established applicability. Activation declares topology invalidators; detected material mutation requires reevaluation, revision or recharting before reuse.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_authority","reference_frame","frame_evaluation"],
+      "conditions":[],
+      "exceptions":["One actor may lawfully occupy several distinct authority roles."],
+      "grounding":[{"end_line":428,"quote":"Frame selection,\nactor assignment, available capability, evidence and implementation reachability\nare inputs to that application, not additional grant mechanisms.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-006%20Authority%20Conservation","start_line":426},{"end_line":437,"quote":"The declaration binds those distinct relations even\nwhen one actor lawfully occupies several.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-007%20Semantic%2C%20Evidence%2C%20And%20Verdict%20Separation","start_line":434}],
+      "key":"frame_authority_conservation",
+      "statement":"Bind every evaluation, operation and disposition to existing owner-issued scope/mandate. Selection, actor assignment, capability, evidence and implementation reachability grant nothing additional. Declarations distinguish semantic owner, observations, evaluator, operation grant and disposition mandate. Disposition consumes a closed evaluation through Dispose under owning decision conditions.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_set_configuration","frame_relation_types"],
+      "conditions":[],
+      "exceptions":["A consumer may align distinct structures where the governed subject warrants and declarations establish it."],
+      "grounding":[{"end_line":444,"quote":"Shared material\ndoes not establish identical meaning, basis, authority, or result.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-008%20Overlap%20Without%20Identity%20Collapse","start_line":441},{"end_line":459,"quote":"Functional decomposition, authority precedence, frame configuration, subject\ntopology, and evaluation dependency are distinct relation structures.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-009%20No%20Assumed%20Hierarchy","start_line":456}],
+      "key":"frame_overlap_and_hierarchy",
+      "statement":"Frames may share entities, variables, evidence and coordinates without collapsing meaning, basis, authority or results. Declare each used cross-frame equality/translation where needed. Configuration governs task allocation; role labels are neither exhaustive primitives nor prerequisites for every task. Parent/child exists only by declaration. Disjointness, overlap, refinement, restriction, translation, temporal succession, composition and governance do not establish a universal hierarchy; functional decomposition, authority precedence, configuration, subject topology and evaluation dependency cannot silently be equated.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_relation_types","frame_evaluation"],
+      "conditions":["The evaluation actually combines internal variables, transports values/evidence/coordinates or combines operations as one material execution."],
+      "exceptions":["Multiple frames may return closed results to a declared conjunction/decision without composing internal manifolds."],
+      "grounding":[{"end_line":476,"quote":"The latter obligation comes from the relation the consumer\nactually uses, not from the mere count of contributing frames.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-010%20Composition%20On%20Demand","start_line":475},{"end_line":838,"quote":"Composition is introduced only when the evaluation requires it. A possible\nfuture interaction does not require a general composition law in every frame.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FMaterial%20Composition","start_line":837}],
+      "key":"composition_on_actual_demand",
+      "statement":"Use core result conjunction for result relations. Additionally apply Composition law only to actual material joins, binding shared invariants, effect/decision order, closure/failure conditions and the declared outer execution/reasoning predicate through frame authority A, coordinates C and joins D. Frame count and possible future interactions do not themselves require internal composition.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_evaluation","activated_frame"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":520,"quote":"An activation attempt and the work it would authorize are different subjects.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-012%20Closed%20Results","start_line":495}],
+      "key":"closed_result_and_activation_distinction",
+      "statement":"Every evaluation returns the shared core result bound to exact frame, activation, subject, basis and predicate. Domain outcomes retain meaning and one explicit predicate-specific core mapping; missing required reason, unmapped label or unsupported mapping follows core missing-reason law. Activation refusal evaluates whether this frame may activate for actor/subject/basis: demonstrated failed admission condition, including known admission-preventing ambiguity, is falsified; unresolved admissibility/ambiguity existence is indeterminate. Capability/authority/basis/topology checked are not automatically defects of the check itself; only the check's own unusable basis/scope uses diagnosis. If downstream predicate is required, independently established diagnosis may report out_of_frame/invalid_basis with actual performance; otherwise its slot stays absent with observed performance. Refusal supplies no fabricated Worker return or counterexample to downstream fitness. Successful activation satisfies admission only; work stays not_performed until undertaken. Retain actual performance/effects, using unconfirmed when execution cannot be confirmed; absent return does not prove non-execution. Refinements cannot erase failure, uncertainty, refusal, non-performance or uncertain effects, nor turn candidate availability into fitness/acceptance/authority.",
+      "uncertainty":"The full core result, legal pairs and missing-reason rule are not supplied."
+    },
+    {
+      "applies_to_keys":["reference_frame","capability_envelope"],
+      "conditions":["Material manifold exceeds the actor's capability envelope."],
+      "exceptions":[],
+      "grounding":[{"end_line":533,"quote":"The actor may\nnot silently omit material relations to fit context.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-014%20Capability%20Fit","start_line":532}],
+      "key":"capability_fit_response",
+      "statement":"Adequacy includes usability. Human authority may choose another actor, refine the frame, sequence activations or supply lawful compression; silent omission of material relations is forbidden.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_evaluation","coverage_record"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":540,"quote":"Coverage and evaluation results retain known uncertainty. Unresolved relations,\nuncovered evaluations, contested evidence, and unknown capability remain\nexplicit. Absence of a recorded counterexample is not evidence of universal\ncompleteness.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-015%20Residual%20Uncertainty","start_line":537}],
+      "key":"frame_residual_retention",
+      "statement":"Keep known uncertainty, unresolved relations, uncovered evaluations, contested evidence and unknown capability explicit in coverage and results. No recorded counterexample does not establish universal completeness.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","frame_set_configuration"],
+      "conditions":["Compressing, merging or contracting frame declarations/views."],
+      "exceptions":["Intentional overlap remains useful for independent activations, different capability fit/evidence altitude or fault detection."],
+      "grounding":[{"end_line":563,"quote":"Frames\nare merged only when the merged frame preserves evaluation meaning, authority,\ncapability fit, and proportional reasoning cost.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-017%20Proportional%20Compression","start_line":561},{"end_line":578,"quote":"A frame set is not\ncontracted into a disjoint minimum merely because its material variables\noverlap.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FEngagement%20Atom%20And%20Semantic%20Prime","start_line":576}],
+      "key":"proportional_compression_and_atom_boundary",
+      "statement":"Declaration compression preserves material distinctions and failure detection across the whole declared family with capability fit. Views apply Faithful projection from owning declaration/current subject to actual Q, including Q's failure detections and fit. No unique minimum is required. Merge only preserving meaning, authority, fit and proportional reasoning cost. A frame is atomic only as bounded engagement: several semantic atoms may inhabit it and an atom may span frames. An adopting Prime/contraction law owns domain atoms; frame contraction instead requires equivalent evaluation relations without material differences in evidence, authority, fit, evaluation/assurance independence or failure detection.",
+      "uncertainty":"No adopting Prime law is supplied or assumed."
+    },
+    {
+      "applies_to_keys":["frame_set_configuration","frame_authority"],
+      "conditions":["Human authority declares an initial project frame set."],
+      "exceptions":["Bottom-up reconstruction and unique/minimal optimization are not required."],
+      "grounding":[{"end_line":603,"quote":"Human selection is a lawful source of method structure. It does not prove the\nselected set complete and does not grant the frames authority over the subject\nrelations they inspect.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration","start_line":601}],
+      "key":"human_frame_set_declaration",
+      "statement":"Human selection may use practice, failure modes, domain expertise, Product risk and available capabilities. Record governed workspace/outcome, known evaluation inventory, selected frames/envelopes, intentional overlap/separate checks, dependencies/translations, semantic/evaluation/material-operation/decision/acceptance authority, exclusions/residuals and revision conditions. Selection creates method structure, not completeness proof or authority over inspected relations.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_set_configuration","capability_envelope"],
+      "conditions":["Selecting a frame set for known material evaluations E(W,G)."],
+      "exceptions":["Human authority may accept a non-minimal set for material risk reduction or better actor fit."],
+      "grounding":[{"end_line":640,"quote":"These selection considerations create no universal resource ledger, benchmark,\nbudget or measurement gate.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration%2FFrame-Set%20Optimization","start_line":636}],
+      "key":"frame_set_coverage_selection",
+      "statement":"For every e in E(W,G), there must exist F in selected S and an available actor a satisfying K_F and capable(F,a,e). Account for context/competence, risk/consequence, acquisition/reasoning cost, evidence, useful independently activated overlap, translation/reconciliation cost, historical blind spots and reversibility. No algorithm is prescribed. Resource control applies only through explicitly selected frame and owner applicability/work scope, not a universal resource ledger/benchmark/budget/gate. Selection cannot waive applicable semantic, authority, evidence or independence constraints.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_method_functions"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":680,"quote":"A returned `decision` does not prove it is authorised or\ncorrect without that judgment.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMethod%20Functions","start_line":678}],
+      "key":"method_function_result_authority",
+      "statement":"Functions and the frame atom remain distinct and may be realized in any conforming form without callable APIs. Return values/refusals/decisions are domain outputs whose evaluated claims use RF-012 on exact predicates. Governing decision consumes results through Dispose under bound authority separately from conjunction verdict; bind finer mappings before consumption and do not infer authorization/correctness from a returned decision.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame","activated_frame"],
+      "conditions":["Establishing an evaluation basis."],
+      "exceptions":[],
+      "grounding":[{"end_line":692,"quote":"Bind the [reference-frame tuple](#reference-frame) to the governed outcome or\ndecision and actual workspace subject:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEstablish%20The%20Evaluation%20Basis","start_line":688}],
+      "key":"establish_frame_evaluation_basis",
+      "statement":"Bind tuple to governed outcome/decision and actual workspace subject: Q selects evaluation, B/C basis/coordinates, A authorities, K available actor envelope, J stale/out-of-scope conditions; declaration and material inputs supply remaining coordinates.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_evaluation","coverage_record"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":710,"quote":"Missing or ambiguous premises leave applicability unresolved, not\nfalse.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FApplicability%20And%20Required%20Results","start_line":700}],
+      "key":"frame_obligation_applicability",
+      "statement":"Owning evaluation/scope predicates determine exact-subject obligations from sufficient basis-bound facts. True requires applicable evaluation/result; false excludes only that obligation under cited authority; missing/ambiguous premises stay unresolved. Names/tools/listed families do not trigger activation alone. Retain residual semantic judgment/evidence rather than falsely computing it. Bind conjunction's required set including unresolved applicability; all other applicable constraints remain even if detected by one evaluation. Qualification distinguishes true/false/unknown premises, missing/wrong-subject results and sufficient positive results in finite fixtures; always skipping or activating fails that contract.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["activated_frame","frame_evaluation"],
+      "conditions":["An actor or assigning authority selects a frame/configuration."],
+      "exceptions":[],
+      "grounding":[{"end_line":733,"quote":"Work does not proceed through\nimplied context.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FSelect%20And%20Activate","start_line":732}],
+      "key":"select_and_activate_contract",
+      "statement":"Apply Contract application to activation for exact q/s/B/a: M/I/D supply support/preservation, C equality, A actual grants, E admissibility, J invalidators, K capability. RF-001 binds q to Q and thereby materiality; RF-002–004/013–014 govern sufficiency/fit, RF-017 acquired packet fidelity and shared currentness prior results/uncertain effects. General-purpose availability alone proves no fit. If no lawful frame/actor pair exists, return activation refusal; downstream out_of_frame requires separate establishment and cannot be fabricated from refusal.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_evaluation","frame_evidence"],
+      "conditions":[],
+      "exceptions":["Independent assessors may share valid mechanical evidence under declared independence conditions."],
+      "grounding":[{"end_line":740,"quote":"It records every assumption whose failure could change the\nresult.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEvaluate","start_line":739},{"end_line":753,"quote":"the consuming decision must recover the material result and\nprovenance without private working context.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReturn%20A%20Closed%20Result","start_line":746}],
+      "key":"evaluate_and_handoff_result",
+      "statement":"Apply declared invariants, evidence rules and predicate-bound RF-012 refinement, distinguishing semantic law, observation, inference and decision; record every result-material assumption. Return core record plus frame, activation, actor and J invalidation coordinates. Handoff applies Faithful projection so material result/provenance are recoverable without private context. Reuse applies change-impact/evidence retention and preserves revised predecessor/successor relations. Required independent assessment requires each assessor's sufficiently acquired evidence and own judgment despite permitted mechanical evidence sharing.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_set_configuration","frame_evaluation"],
+      "conditions":["An out_of_frame, invalid-basis, repeated indeterminate or incompatible result occurs."],
+      "exceptions":["Difficulty alone does not prove another frame is needed."],
+      "grounding":[{"end_line":769,"quote":"The disposition follows the cause.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReconfigure%20When%20Necessary","start_line":768}],
+      "key":"cause_sensitive_reconfiguration",
+      "statement":"Choose a cause-sensitive response: supply missing admissible evidence; select another actor within envelope; activate another frame; refine/extend declaration; revise set; change evaluation; or re-enter governing Product/method relation.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_independence","frame_relation_types"],
+      "conditions":["Several frames separately evaluate the same subject, especially for mutual assurance."],
+      "exceptions":["Subject, manifold or evidence sources may overlap."],
+      "grounding":[{"end_line":789,"quote":"Separate activations\nsatisfying the declared authorship conditions do not by themselves establish\nstatistical independence or validate a shared governing expectation.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FIndependently%20Activated%20Co-Evaluation","start_line":787}],
+      "key":"co_evaluation_independence",
+      "statement":"Separate activations return closed results without consuming/influencing one another's unclosed working results. This can serve assurance, differing evidence altitudes or failure perspectives. Mutual assurance applies parallel-assurance/provenance to selected paths and material shared causes; separate activation/authorship conditions alone prove neither statistical independence nor validity of shared expectations.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_relation_types","frame_evaluation"],
+      "conditions":["A decision rule conjoins closed frame results."],
+      "exceptions":[],
+      "grounding":[{"end_line":806,"quote":"the\ndecision rule cannot replace a required constraint with a count of agreeing\nframes or acquire a contributing frame's semantic authority.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FResult%20Conjunction","start_line":804}],
+      "key":"frame_result_conjunction",
+      "statement":"Before core conjunction bind mandatory results/material joins, routing of conflict/indeterminate contributions for reevaluation, required basis agreements, conjunction decision owner and veto/deferral permissions. Return coverage, conflicts and residuals. Agreement counts cannot replace required constraints or transfer contributors' semantic authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["frame_relation_types","frame_coordinates_topology","frame_evidence"],
+      "conditions":["Translating evidence or values between frames."],
+      "exceptions":["Expressly admitted loss may satisfy the target-use contract."],
+      "grounding":[{"end_line":827,"quote":"A coordinate mismatch established by a valid check is a\nfailed translation condition, not necessarily an invalid basis for the check.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FEvidence%20Or%20Coordinate%20Translation","start_line":824}],
+      "key":"translation_predicate_mapping",
+      "statement":"Apply Faithful projection from producer value/evidence to receiver evaluation, binding both coordinate/equality laws, refusal conditions, preservation, loss and provenance. Preserve translated_value/declared_loss/refusal and cause. For exact target-use predicate, supported preservation including permitted loss satisfies; demonstrated forbidden loss/equality/identity/basis-compatibility/authority violation falsifies; undecided preservation/loss permission is indeterminate. Only the evaluation's own scope/capability or unusable basis yields out_of_frame/invalid_basis. Missing causes follow RF-012. Preserve performance/effects; refusal does not establish the intended downstream target predicate.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["coverage_record","frame_set_configuration"],
+      "conditions":["Claiming workspace coverage."],
+      "exceptions":[],
+      "grounding":[{"end_line":885,"quote":"This separates\nthree claims: the inventory covers the selected scope, every applicable slot\nhas admissible support, and the supported results establish the governed\npredicate.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage","start_line":881}],
+      "key":"coverage_claim_separation",
+      "statement":"Coverage requires supported evaluation, interaction and authority coverage with residual boundary relative to governed outcome/exact current basis. Human frame-set authority selects inventory/required independence; no universal inventory follows from foundations. Determine applicability before consuming inventory results, then conjoin required predicates and material interactions. Distinguish inventory scope adequacy, admissible support for each applicable slot and satisfaction of governed predicate. A populated ledger or all received slots satisfied alone proves neither other claim; finite inventories cannot establish unknown completeness.",
+      "uncertainty":"The eight Operational Full Coverage criteria referenced here are beyond the supplied excerpt."
+    },
+    {
+      "applies_to_keys":["coverage_record"],
+      "conditions":[],
+      "exceptions":["Each listed source category contributes where applicable and material."],
+      "grounding":[{"end_line":926,"quote":"The coverage evaluator derives the known evaluation inventory from every\nmaterial available source, including where applicable:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FEvaluation%20Inventory","start_line":908}],
+      "key":"coverage_inventory_derivation",
+      "statement":"Derive inventory from every material available source: goals/intent/Product/requirements/accepted method; accepted design/Ontology/identities/lifecycles/authorities/algorithms; implementation capabilities and observable behavior; operational/release/security/safety/governance obligations; direct/indirect dependencies/seams; evidence/tests/scenarios/qualification/acceptance; historical tickets/check-ins/commentary/postmortems/incidents/rejections; long loops/resets/repeated repairs/rival paths; actor limits/invisible violations; applicable external laws/contracts/standards. Record provenance/materiality; artifact/file/operation/test counts and reachability do not prove coverage.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["coverage_record","frame_aids"],
+      "conditions":[],
+      "exceptions":["Listed dimensions are typical rather than an exhaustive mandatory frame inventory."],
+      "grounding":[{"end_line":944,"quote":"These are coverage lenses. They become frames only when separately instantiated\nas bounded evaluation families.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Dimensions","start_line":943}],
+      "key":"coverage_dimension_lenses",
+      "statement":"Audit uses cross-cutting lenses over inventory, typically outcome/capability, identity/authority, lifecycle/time, topology/seams, transport/representation, evidence/proof, change/failure/recovery/rollback, historical regression and actor/context fit. They become frames only through separate bounded-family instantiation.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["coverage_record"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":982,"quote":"No state is a fixed verdict: `covered` can conceal unsupported\ncapability, and an exclusion can be lawful, prohibited or unresolved.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Ledger","start_line":979}],
+      "key":"coverage_states_not_verdicts",
+      "statement":"Ledger states describe allocation/evidence, not underlying predicate truth: covered identifies capable frame/support; separately_covered adds separate activation/required independence; conditionally_covered names supported conditions; conflicted records conflicting coverage/results; uncovered lacks required coverage; unknown lacks evidence determining coverage; excluded_by_authority cites exact-scope owner exclusion. Operational Full Coverage evaluates these inputs. Labels supply no fixed verdict or grant; exclusions retain separate predicate-bound authority assessment and may be lawful, prohibited or unresolved.",
+      "uncertainty":"Operational Full Coverage is referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["coverage_record"],
+      "conditions":["Material interactions, evaluations, operations or historical failure cases are present."],
+      "exceptions":["Coverage case families apply where material."],
+      "grounding":[{"end_line":989,"quote":"Every material interaction is\ncovered by one frame, a declared conjunction, a translation, or a material\ncomposition evaluation.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FInteraction%20Coverage","start_line":987},{"end_line":997,"quote":"Every material evaluation identifies semantic and decision authority.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FAuthority%20Coverage","start_line":993},{"end_line":1004,"quote":"Historical\nfailures remain first-class coverage inputs until a declared frame detects or\nexcludes their recurrence.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FFailure%20Coverage","start_line":1002}],
+      "key":"interaction_authority_failure_coverage",
+      "statement":"Row coverage alone is insufficient when interactions can change governed outcome; cover every material interaction by a frame, conjunction, translation or composition evaluation. Every material evaluation identifies semantic/decision owners; every material operation identifies existing construction/transformation/admission/publication/mutation authority. Broad observation reach does not close a set with unresolved decision ownership or effectful ungranted paths. Cover material success, refusal, boundary, integration, recovery, reconstruction and competing-path cases. Historical failures remain inputs until a declared frame detects or excludes recurrence.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["reference_frame_method","reference_frame"],
+      "conditions":["Applying the source's conditional law-family table."],
+      "exceptions":[],
+      "grounding":[{"end_line":370,"quote":"Each row assumes a declared evaluation and the\nmaterial relations named in it; neither the evaluation nor its authority is\nderived from a resource limit.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws","start_line":354}],
+      "key":"frame_law_family_owner_conditions",
+      "statement":"F1–F6 standing remains at Foundations; table rows assume actual evaluation/material relations and do not derive authority from resource limits. Family/task owners select declaration/question; frame-set owners select actors/partitions, execution binding selects resource envelope without universal byte cap. Missing material relations cannot be replaced by ambient memory/easier questions; non-fitting acquisition needs granted response or explicit unresolved result. Subject owners supply equality; frames invalidators; Foundations currentness; domains rechart/observation mechanisms. Translation owners supply mapping/loss; existing owners grants. Configuration does not imply runtime, role inventory or unique optimum. Join owners supply translation/execution law and Foundations conjunction. Admission refusal/lost returns preserve downstream distinctions, counterevidence, performance/effects. Faithful projection owns fidelity, frames add family-wide failure detection/fit. Owners select applicable obligations and supported exclusions before coverage; received results do not define required population. Diagnose historical failures before adding frames; one successful activation does not qualify every family, actor or changed frame; adopting owner controls configuration/acceptance and unknown coverage stays open.",
+      "uncertainty":"Detailed later diagnostic, qualification and completeness sections named by this table are not supplied."
+    }
+  ],
+  "dispositions":[
+    {"decision":"residual","keys":["constructive_evaluation_loop","selected_product_basis","loop_carriers","next_action_basis","loop_function_contracts","edge_closure_decision","governed_work_pair","loop_scope_and_stop","loop_function_authority_separation","gap_characterization_result","construction_intent_exact_binding","ledger_admission_and_attention","ledger_currentness_correction","next_selection_totality","edge_closure_evidence","closure_selection_result_separation","yield_reentry_query_boundaries","loop_replay_and_causal_integrity","recursive_refinement_and_ownership","one_constitutional_decision_path","loop_implementation_latitude","bounded_fp_latitude","outcome_governs_loop","basis_dispatches_functions","closure_supplies_dispatch","ledger_constrains_loop","odd_external_contracts","represented_loop_operational_detail"],"reason":"Retains loop carriers, authority, predicates, conditions, equation, replay and refusal boundaries; external owners and non-executed operational semantics remain explicit residuals.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop"},
+    {"decision":"retained","keys":["odd_method","odd_structural_domain_and_realization_order"],"reason":"Retains structural/domain distinction and Product-owned meanings.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.6%20Product-Specific%20Semantics%20Sit%20Above%20The%20Shared%20Carrier"},
+    {"decision":"retained","keys":["manual_automation_correspondence"],"reason":"Retains manual sequence, recommendation modality and lawful/unlawful automation boundaries.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7%20Manual%20Walkthrough%20Must%20Still%20Be%20Lawful"},
+    {"decision":"retained","keys":["agentic_conformance","agentic_conformance_conditions"],"reason":"Retains walkthrough/admission separation, causal findings, result distinctions and non-ratification.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7A%20Conforming%20Agentic%20Development"},
+    {"decision":"retained","keys":["real_authority_negative_proof"],"reason":"Retains supported-path negative proof and distinct absence claims.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.7B%20Real%20Authority-Path%20Negative%20Proof%20%28%60STDO-UP-010%60%29"},
+    {"decision":"retained","keys":["cumulative_environment_law"],"reason":"Retains cumulative binding law, should modality and currentness/authority boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.8%20Cumulative%20Environment%20Law%20Is%20Mandatory"},
+    {"decision":"retained","keys":["zoom_stable_closure"],"reason":"Retains fold-back, coverage, authorized exclusions and lifecycle/verdict distinctions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.9%20Global%20Convergence%20Must%20Be%20Stable%20Under%20Zoom"},
+    {"decision":"retained","keys":["scenario_bundle","scenario_proving_recommendation"],"reason":"Retains scenario role and recommended contents/path selection.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F12.%20Scenario%20Rule"},
+    {"decision":"retained","keys":["installed_development_proof"],"reason":"Retains conditional decisive installed proof and recommended lane stages.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F13.%20Installed-Dev%20Rule"},
+    {"decision":"retained","keys":["dogfooding_modal_distinction"],"reason":"Distinguishes general dogfooding recommendation from mandatory framework realization.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F14.%20Dogfooding%20Rule"},
+    {"decision":"retained","keys":["release_graph_boundary"],"reason":"Retains release/graph process boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F15.%20Release%20Boundary"},
+    {"decision":"retained","keys":["odd_failure_owner_routing"],"reason":"Retains failure-family routes without inventing unseen owner law.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F16.%20Failure%20Pattern"},
+    {"decision":"retained","keys":["odd_invocation_sequence"],"reason":"Represents expected sequence and exclusions as source data.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F17.%20Invocation%20Rule"},
+    {"decision":"retained","keys":["odd_cold_start_order"],"reason":"Retains cold-start applicability.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order"},
+    {"decision":"retained","keys":["odd_cold_start_order"],"reason":"Retains general Product reading order.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FGeneral%20ODD%20Product"},
+    {"decision":"retained","keys":["odd_cold_start_order"],"reason":"Retains world-model variant, surface roles and non-universal risk prediction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F18.%20Cold-Start%20Reading%20Order%2FWorld-Model%20Product"},
+    {"decision":"retained","keys":["odd_entry_sufficiency"],"reason":"Retains entry sufficiency and unanswered-relation boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F19.%20Ramp-Up%20Checklist"},
+    {"decision":"retained","keys":["odd_method","odd_structural_domain_and_realization_order"],"reason":"Retains canonical requirements with detailed distinctions represented elsewhere locally.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F20.%20Canonical%20Compression"},
+    {"decision":"retained","keys":["commentary_post"],"reason":"Retains commentary purpose and adoption ownership.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide"},
+    {"decision":"retained","keys":["commentary_boundary"],"reason":"Retains basis/result requirements and live-law exclusion.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FBoundary"},
+    {"decision":"retained","keys":["post_carrier_identity","post_carrier_variation"],"reason":"Retains default binding, alternative carriers and authority invariance.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FLocation"},
+    {"decision":"retained","keys":["post_carrier_identity"],"reason":"Retains filename pattern, illustrative status and non-file equivalence.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCarrier%20Identity"},
+    {"decision":"retained","keys":["post_category_and_state"],"reason":"Retains all named categories and purposes.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FCategories"},
+    {"decision":"retained","keys":["post_template"],"reason":"Retains metadata, section roles, optional update and MATRIX exception without creating a post.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FStructure"},
+    {"decision":"retained","keys":["post_category_and_state","post_editing_and_claim_rules"],"reason":"Retains lifecycle meanings and non-absolute closed-edit discouragement.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FDiscussion%20State%20And%20Mutability"},
+    {"decision":"retained","keys":["post_editing_and_claim_rules"],"reason":"Retains all six posting rules.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FPosting%20Rules"},
+    {"decision":"retained","keys":["post_explicit_adoption"],"reason":"Retains explicit adoption boundary and eligible surfaces.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FRatification"},
+    {"decision":"retained","keys":["shared_method_adoption_causality"],"reason":"Retains authority causality, independent review, separate Product authorization and complete-release selection.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FShared%20Method%20Adoption%20And%20Propagation%20%28%60STDO-UP-012%60%29"},
+    {"decision":"retained","keys":["standards_library"],"reason":"Retains member populations, immutable-cut identity and separately owned tooling.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library"},
+    {"decision":"residual","keys":["shared_contract_owners","shared_owner_details_unavailable"],"reason":"Retains stated shared ownership while unresolved owner contracts remain explicit.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FFoundations%20and%20shared%20library"},
+    {"decision":"retained","keys":["library_task_routes"],"reason":"Retains conditional task routes and view sufficiency/grant limits.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FChoose%20a%20task"},
+    {"decision":"retained","keys":["method_owner_directory","method_owner_scope_preservation"],"reason":"Retains all directory roles and scope/adoption distinctions without importing unseen law.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FMethod%20owners"},
+    {"decision":"retained","keys":["distribution_projection_and_basis"],"reason":"Retains projection, template, schema, exact-basis, acquisition and interpretation boundaries.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FDistribution%20and%20entry"},
+    {"decision":"omitted","keys":[],"reason":"Only document title and blank line; document identity and substantive role are retained from Position, without inventing an additional rule.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method"},
+    {"decision":"retained","keys":["finite_frame_engagement"],"reason":"Retains finite actor premises, activation ingredients, results, lifecycle and atomic-engagement distinction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCanonical%20Compression"},
+    {"decision":"retained","keys":["reference_frame_method","frame_scope_and_binding","frame_representation_latitude"],"reason":"Retains applicability, bounded-context ownership and implementation neutrality.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FPosition"},
+    {"decision":"retained","keys":["finite_frame_engagement"],"reason":"Retains ten core claims without turning unknown or out-of-frame into failure/acceptance.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FCore%20Claims"},
+    {"decision":"omitted","keys":[],"reason":"Structural Definitions heading and blank line contain no separate definition; each supplied child is interpreted.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions"},
+    {"decision":"retained","keys":["frame_evaluation"],"reason":"Retains question types, authority and family-membership distinction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvaluation"},
+    {"decision":"retained","keys":["frame_workspace","frame_material_state_evidence_rules"],"reason":"Retains workspace breadth, view distinction and external observation ownership.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FWorkspace"},
+    {"decision":"retained","keys":["frame_basis","frame_material_state_evidence_rules"],"reason":"Retains exact-state basis and moving-basis obligations.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FBasis"},
+    {"decision":"retained","keys":["material_relation"],"reason":"Retains all materiality change criteria and evaluation relativity.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial%20relation"},
+    {"decision":"retained","keys":["material_manifold"],"reason":"Retains finite jointly interpretable relation space and non-geometric status.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FMaterial-relation%20manifold"},
+    {"decision":"retained","keys":["frame_coordinates_topology","frame_material_state_evidence_rules"],"reason":"Retains coordinate contents and declared equality requirement.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCoordinate"},
+    {"decision":"retained","keys":["frame_coordinates_topology","frame_material_state_evidence_rules"],"reason":"Retains frame-relative topology and material mutation criterion.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FTopology"},
+    {"decision":"retained","keys":["frame_evidence","frame_material_state_evidence_rules"],"reason":"Retains provenance, reliance and evidence/authority distinction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FEvidence"},
+    {"decision":"retained","keys":["frame_authority","frame_authority_capability_boundaries"],"reason":"Retains six distinct authority/identity roles and bounded proxy conditions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FAuthority"},
+    {"decision":"retained","keys":["frame_independence"],"reason":"Retains structural, procedural and claim-relative independence distinctions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FDisjointness%20And%20Independence"},
+    {"decision":"retained","keys":["capability_envelope","frame_authority_capability_boundaries"],"reason":"Retains envelope dimensions, actor-relative usability and invariant/authority limits.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FCapability%20envelope"},
+    {"decision":"retained","keys":["reference_frame","frame_scope_and_binding"],"reason":"Retains tuple meanings, optional D, binding and representation distinction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FReference%20frame"},
+    {"decision":"retained","keys":["activated_frame","activation_binds_declaration"],"reason":"Retains exact activation binding without inferring correctness from declaration.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActivated%20frame"},
+    {"decision":"retained","keys":["frame_set_configuration"],"reason":"Retains human-declared family and permitted non-partition forms.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FFrame%20set"},
+    {"decision":"retained","keys":["frame_set_configuration"],"reason":"Retains activations/result relations and disjoint/overlapping/composed configurations.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActive%20frame%20configuration"},
+    {"decision":"retained","keys":["frame_aids","lens_instantiation"],"reason":"Retains reusable question role and full frame-instantiation conditions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FLens"},
+    {"decision":"retained","keys":["frame_aids"],"reason":"Retains distinct role/persona/abstraction/component meanings and many-to-many frame relationship.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FRole%2C%20persona%2C%20abstraction%2C%20and%20component"},
+    {"decision":"residual","keys":["frame_law_family_owner_conditions","later_frame_owner_details"],"reason":"Retains conditional owner table; later diagnosis, qualification and coverage owners are unresolved references.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws"},
+    {"decision":"retained","keys":["evaluation_family_membership"],"reason":"Retains declared-family sufficiency boundary and actual membership requirement.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-001%20Evaluation%20Relativity"},
+    {"decision":"retained","keys":["finite_reconstructable_activation"],"reason":"Retains finite attention fit and hidden-context refusal boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-002%20Finite%20Attention"},
+    {"decision":"retained","keys":["material_sufficiency_and_exclusion"],"reason":"Retains all known material relations without universal undiscovered-relation proof.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-003%20Material%20Sufficiency"},
+    {"decision":"retained","keys":["material_sufficiency_and_exclusion"],"reason":"Retains established irrelevance and its supporting evidence.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-004%20Irrelevance%20Exclusion"},
+    {"decision":"retained","keys":["exact_basis_reuse_and_rechart"],"reason":"Retains governing-basis versus supporting-evidence distinctions and historical binding.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-005%20Exact%20Basis%20And%20Coordinates"},
+    {"decision":"retained","keys":["frame_authority_conservation"],"reason":"Retains existing-grant requirement and non-grant inputs.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-006%20Authority%20Conservation"},
+    {"decision":"retained","keys":["frame_authority_conservation"],"reason":"Retains semantic/evidence/evaluation/effect/disposition separation even under one actor.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-007%20Semantic%2C%20Evidence%2C%20And%20Verdict%20Separation"},
+    {"decision":"retained","keys":["frame_overlap_and_hierarchy"],"reason":"Retains overlap without identity collapse and declared equality/translation.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-008%20Overlap%20Without%20Identity%20Collapse"},
+    {"decision":"retained","keys":["frame_overlap_and_hierarchy"],"reason":"Retains optional hierarchy and distinct relation structures.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-009%20No%20Assumed%20Hierarchy"},
+    {"decision":"retained","keys":["composition_on_actual_demand"],"reason":"Retains conjunction versus material-composition triggers.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-010%20Composition%20On%20Demand"},
+    {"decision":"retained","keys":["exact_basis_reuse_and_rechart"],"reason":"Retains declared topology invalidators and pre-reuse response.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-011%20Topology%20Mutation%20And%20Recharting"},
+    {"decision":"retained","keys":["closed_result_and_activation_distinction"],"reason":"Retains predicate-specific refusal, downstream absence, performance/effects and domain-mapping boundaries.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-012%20Closed%20Results"},
+    {"decision":"retained","keys":["finite_reconstructable_activation"],"reason":"Retains fresh competent actor reconstruction requirement.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-013%20Reconstructable%20Activation"},
+    {"decision":"retained","keys":["capability_fit_response"],"reason":"Retains authorized fit responses and prohibition on silent omission.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-014%20Capability%20Fit"},
+    {"decision":"retained","keys":["frame_residual_retention"],"reason":"Retains explicit uncertainty and non-completeness boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-015%20Residual%20Uncertainty"},
+    {"decision":"retained","keys":["frame_representation_latitude"],"reason":"Retains all implementation-neutral exclusions without treating them as implementation prohibitions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-016%20Implementation%20Neutrality"},
+    {"decision":"retained","keys":["proportional_compression_and_atom_boundary"],"reason":"Retains whole-family fidelity, fit, overlap and merge conditions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-017%20Proportional%20Compression"},
+    {"decision":"retained","keys":["proportional_compression_and_atom_boundary"],"reason":"Retains engagement atom versus semantic Prime and conditional contraction law.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FEngagement%20Atom%20And%20Semantic%20Prime"},
+    {"decision":"retained","keys":["human_frame_set_declaration"],"reason":"Retains human selection sources, required declaration contents and authority/completeness limits.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration"},
+    {"decision":"retained","keys":["frame_set_coverage_selection"],"reason":"Retains quantified known-inventory coverage and non-universal optimization/resource controls.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FHuman%20Frame-Set%20Declaration%2FFrame-Set%20Optimization"},
+    {"decision":"residual","keys":["frame_method_functions","method_function_result_authority","frame_function_operational_detail"],"reason":"Retains all signatures as method relations, with executable composition and actual outcomes uninstantiated.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMethod%20Functions"},
+    {"decision":"omitted","keys":[],"reason":"Structural Engagement heading and blank line contain no independent operation; supplied child sections are retained.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement"},
+    {"decision":"retained","keys":["establish_frame_evaluation_basis"],"reason":"Retains actual-subject/outcome tuple binding.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEstablish%20The%20Evaluation%20Basis"},
+    {"decision":"retained","keys":["frame_obligation_applicability"],"reason":"Retains true/false/unknown applicability, required set and finite qualification cases.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FApplicability%20And%20Required%20Results"},
+    {"decision":"retained","keys":["select_and_activate_contract"],"reason":"Retains actual family/actor contract and non-fabricated downstream refusal diagnosis.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FSelect%20And%20Activate"},
+    {"decision":"retained","keys":["evaluate_and_handoff_result"],"reason":"Retains evidence/inference/decision separation and material assumptions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FEvaluate"},
+    {"decision":"retained","keys":["evaluate_and_handoff_result"],"reason":"Retains complete handoff, revised-result lineage and independent assessment conditions.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReturn%20A%20Closed%20Result"},
+    {"decision":"retained","keys":["cause_sensitive_reconfiguration"],"reason":"Retains triggers, seven responses and difficulty exception.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FEngagement%2FReconfigure%20When%20Necessary"},
+    {"decision":"retained","keys":["frame_relation_types"],"reason":"Retains four-way participation distinction.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction"},
+    {"decision":"retained","keys":["co_evaluation_independence"],"reason":"Retains independent activation and shared-cause limits.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FIndependently%20Activated%20Co-Evaluation"},
+    {"decision":"retained","keys":["frame_result_conjunction"],"reason":"Retains mandatory claims/joins, conflict routes and non-majoritarian result boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FResult%20Conjunction"},
+    {"decision":"retained","keys":["translation_predicate_mapping"],"reason":"Retains translation result distinctions, loss permission, valid-check mismatch and downstream limits.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FEvidence%20Or%20Coordinate%20Translation"},
+    {"decision":"retained","keys":["composition_on_actual_demand"],"reason":"Retains actual material composition contract and no speculative universal join requirement.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FUsing%20Frames%20In%20Conjunction%2FMaterial%20Composition"},
+    {"decision":"retained","keys":["frame_relation_types"],"reason":"Retains all named relation meanings and no default universal topology.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FFrame%20Relations"},
+    {"decision":"residual","keys":["coverage_claim_separation","operational_coverage_owner_missing"],"reason":"Retains coverage claim distinctions; referenced eight full-coverage criteria are unavailable.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage"},
+    {"decision":"retained","keys":["coverage_record"],"reason":"Retains exact six-coordinate coverage tuple and material invalidation.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Basis"},
+    {"decision":"retained","keys":["coverage_inventory_derivation"],"reason":"Retains every material source category, provenance and non-counting boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FEvaluation%20Inventory"},
+    {"decision":"retained","keys":["coverage_dimension_lenses"],"reason":"Retains typical dimensions as lenses rather than automatically activated frames.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Dimensions"},
+    {"decision":"residual","keys":["coverage_record","coverage_states_not_verdicts","operational_coverage_owner_missing"],"reason":"Retains fields and all coverage states; referenced evaluating predicate is unavailable.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Ledger"},
+    {"decision":"retained","keys":["interaction_authority_failure_coverage"],"reason":"Retains every material interaction coverage requirement and permitted forms.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FInteraction%20Coverage"},
+    {"decision":"retained","keys":["interaction_authority_failure_coverage"],"reason":"Retains semantic/decision/operation ownership requirements and unclosed boundaries.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FAuthority%20Coverage"},
+    {"decision":"retained","keys":["interaction_authority_failure_coverage"],"reason":"Retains material failure families and historical recurrence coverage.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FFailure%20Coverage"}
+  ],
+  "latitude":[
+    {
+      "allowed":["Different implementation carrier names preserving the stated authority shape.","Shared underlying libraries with separate function authority.","Opaque local computation within one bounded action."],
+      "applies_to_keys":["constructive_evaluation_loop","loop_function_contracts"],
+      "forbidden":["Changing the authority shape through carrier renaming.","Using shared implementation to exercise another function's authority.","Hidden graph dispatch, retry, repair, re-entry or closure inside opaque implementation."],
+      "grounding":[{"end_line":894,"quote":"Product implementations may use different\ncarrier names, but they must preserve this authority shape:","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":893},{"end_line":1357,"quote":"It may use local control flow to compute the action's\ninternal result, but it must not publish, dispatch, retry, repair, re-enter, or\nclose graph work as a hidden traversal controller.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1354}],
+      "key":"loop_implementation_latitude"
+    },
+    {
+      "allowed":["F_P inspection, discovery, reasoning, drafting, transformation and proposal within the bounded action."],
+      "applies_to_keys":["constructive_evaluation_loop","governed_work_pair"],
+      "forbidden":["F_P closing an edge, emitting runtime events, mutating ledgers or deciding re-entry."],
+      "grounding":[{"end_line":1137,"quote":"F_P may inspect, discover, reason, draft, transform, and propose within the\nbounded action. F_P must not close the edge, emit runtime events, mutate ledgers,\nor decide re-entry. F_D/ABG/product admission owns durable evidence and closure\ntruth.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1134}],
+      "key":"bounded_fp_latitude"
+    },
+    {
+      "allowed":["An existing project may bind another directory, repository resource, message board, API collection or Product-scoped query."],
+      "applies_to_keys":["commentary_post"],
+      "forbidden":["Using carrier location or visibility to turn commentary into ticket, Product, requirement or design truth."],
+      "grounding":[{"end_line":67,"quote":"An existing project may bind another directory, repository resource, message\nboard, API collection, or product-scoped query.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/POSTING_GUIDE.md#Posting%20Guide%2FLocation","start_line":63}],
+      "key":"post_carrier_variation"
+    },
+    {
+      "allowed":["Consumer-selected prose, structured data, prompt, design asset, typed carrier, runtime context or another conforming representation.","Any implementation preserving declared relations and observable outcomes; no frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or framework is required."],
+      "applies_to_keys":["reference_frame_method","reference_frame"],
+      "forbidden":["Treating a chosen representation as authority to create, widen or replace the bound frame."],
+      "grounding":[{"end_line":92,"quote":"A reference frame may be represented in prose,\nstructured data, a prompt, a design asset, a typed carrier, a runtime context,\nor another form selected by its consumer.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FPosition","start_line":89},{"end_line":547,"quote":"This method requires the declared relations and observable outcomes. It does\nnot require a frame runtime, universal carrier, registry, controller, prompt\nformat, repository layout, collaboration topology, worker count, or software\nframework.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws%2FRF-016%20Implementation%20Neutrality","start_line":544},{"end_line":304,"quote":"representation\ncannot create, widen, or replace it.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FReference%20frame","start_line":303}],
+      "key":"frame_representation_latitude"
+    }
+  ],
+  "limitations":[
+    "This is a source-linked F_P interpretation under the selected STDO 2.5.1-rc.2 basis, not semantic acceptance, execution, installed qualification or a completeness judgment.",
+    "No tools, external files, graph discovery, project instructions or external owner documents were consulted. References to absent owners preserve only meanings expressly stated by supplied source.",
+    "Foundations result algebra, conjunction, missing-reason/legal-pair rules, shared transformations, Product authorization, release and several ODD owner contracts remain unresolved external dependencies; their detailed algorithms and grants are not reconstructed.",
+    "Reference Frame Method is supplied only through Failure Coverage. Operational Full Coverage's eight criteria, later diagnostic/qualification/completeness sections and adopted domain Prime laws are not supplied.",
+    "Related named carriers and definitions are compacted into some catalogue concepts, retaining distinct meanings in text. Only selected explicit links are separate relation records; other authored chains, ordered operations and owner mappings remain textual concepts/constraints.",
+    "Judgments, traversals and transformations are not populated or executed. The supplied schema has no fields for those adapter-empty populations; source descriptions of them remain data with operational residuals.",
+    "Three heading-only Reference Frame sections are deliberately omitted as independent semantic records; their titles organize interpreted children. Formatting separators and illustrative filename instances are not treated as additional obligations.",
+    "Document/template interpretation creates no Product, post, frame activation, runtime result, authority grant or release basis."
+  ],
+  "relations":[
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":874,"quote":"The selected Product outcome under `STDO-UP-013` is external authority for this\nloop.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":870}],
+      "key":"outcome_governs_loop",
+      "kind":"external_authority_bound",
+      "meaning":"The exact selected outcome and admitted bounded bases constrain material selection through target binding; loop products cannot author or enlarge them.",
+      "source_key":"selected_product_basis",
+      "target_key":"constructive_evaluation_loop"
+    },
+    {
+      "conditions":["evaluate_next is invoked."],
+      "exceptions":["post_reprice supplies no selection grant and remains typed no-action until separately admitted re-entry."],
+      "governing":false,
+      "grounding":[{"end_line":926,"quote":"Dispatch basis for next-action evaluation. It is not a separate controller.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":926}],
+      "key":"basis_dispatches_functions",
+      "kind":"dispatch_input",
+      "meaning":"NextActionBasis identifies the evaluation case consumed by evaluate_next, without becoming an independent controller or authority grant.",
+      "source_key":"next_action_basis",
+      "target_key":"loop_function_contracts"
+    },
+    {
+      "conditions":["A post-action basis is formed from an admitted closure decision."],
+      "exceptions":["initial_selection is formed from lineage/model rather than prior closure."],
+      "governing":true,
+      "grounding":[{"end_line":1337,"quote":"The second `NextActionProjection` is the\npost-action projection produced from `NextActionBasis` plus fresh `eval_gap`\ntruth.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1335}],
+      "key":"closure_supplies_dispatch",
+      "kind":"admitted_causal_predecessor",
+      "meaning":"Admitted closure classification determines explicit post-action dispatch basis; next selection consumes it with fresh gap truth rather than reclassifying prior work.",
+      "source_key":"edge_closure_decision",
+      "target_key":"next_action_basis"
+    },
+    {
+      "conditions":["Facts and evaluator output have been admitted into L/E."],
+      "exceptions":["Contrary current observations require admission/currentness resolution; immutable history does not overrule them."],
+      "governing":true,
+      "grounding":[{"end_line":1017,"quote":"L/E constrain the next lawful F_P action in W.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1017}],
+      "key":"ledger_constrains_loop",
+      "kind":"admitted_evidence_dependency",
+      "meaning":"The admitted ledger/event spine constrains closure and subsequent action through declared snapshots and reachable evidence, without itself selecting action.",
+      "source_key":"governed_work_pair",
+      "target_key":"constructive_evaluation_loop"
+    },
+    {
+      "conditions":["Exact evaluation, subject, basis, actor and evidence-acquisition boundary are bound."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":310,"quote":"An **activated frame** binds one frame declaration to an exact evaluation,\nworkspace subject, basis, actor, and evidence acquisition boundary.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FActivated%20frame","start_line":308}],
+      "key":"activation_binds_declaration",
+      "kind":"exact_instantiation",
+      "meaning":"An activation binds a reusable declaration; this descriptive relation proves neither activation correctness nor work fitness.",
+      "source_key":"activated_frame",
+      "target_key":"reference_frame"
+    },
+    {
+      "conditions":["A lens is instantiated with bounded evaluation, basis, material manifold, evidence, authorities, result algebra and capability envelope."],
+      "exceptions":["Roles, personas, abstractions and components do not become frames by identity alone."],
+      "governing":false,
+      "grounding":[{"end_line":337,"quote":"A lens becomes a frame only when it is instantiated with a bounded evaluation,\nbasis, material manifold, evidence, authorities, result algebra, and capability\nenvelope.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FDefinitions%2FLens","start_line":335}],
+      "key":"lens_instantiation",
+      "kind":"conditional_frame_instantiation",
+      "meaning":"The lens member of frame aids can become a frame under full declared instantiation, without acquiring new authority through the relation.",
+      "source_key":"frame_aids",
+      "target_key":"reference_frame"
+    }
+  ],
+  "residuals":[
+    {
+      "consequence":"Retain stated local stop/result/authority requirements, but do not invent external grants, conjunction priorities, legal pairs, Product acceptance or re-entry mechanisms.",
+      "grounding":[{"end_line":888,"quote":"[core stop contract](FOUNDATIONS.md#result-algebra)","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":885},{"end_line":979,"quote":"applies [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":978}],
+      "key":"odd_external_contracts",
+      "subject_key":"constructive_evaluation_loop",
+      "uncertainty":"STDO-UP-013, Foundations, Transformation Library and several earlier ODD owner sections are not supplied; this excerpt gives uses, not their full definitions."
+    },
+    {
+      "consequence":"The equation, causal chains, sum dispatch and predicates are represented as source semantics only. No invocation, admission, replay, closure, traversal or proof is instantiated; executable state transitions and full n-ary operational bindings are not machine-realized by these five families.",
+      "grounding":[{"end_line":1439,"quote":"let Q1 = next_action_basis_from(A.decision)\nlet N1 = evaluate_next(Q1, G1, B1, ActionCatalog, Policy)\n\nreturn N1","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/ODD_METHOD.md#ODD%20Method%2F11.%20Core%20Law%2F11.5D%20Constructive%20Evaluation%20And%20Yield%20Loop","start_line":1436}],
+      "key":"represented_loop_operational_detail",
+      "subject_key":"one_constitutional_decision_path",
+      "uncertainty":"The finite author schema records the declared computational contract textually, without an executable operational semantics or actual Product-specific inputs."
+    },
+    {
+      "consequence":"Owner names and declared responsibilities are retained as references; complete core result handling, transformations, independent assessment, publication/adoption and configuration law require exact source re-entry rather than inferred endpoints.",
+      "grounding":[{"end_line":27,"quote":"Domain\ninstances bind their predicates, policies and grants; they do not copy a rival\ngeneric law or acquire a new runtime API.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/README.md#Standards%20Library%2FFoundations%20and%20shared%20library","start_line":25}],
+      "key":"shared_owner_details_unavailable",
+      "subject_key":"shared_contract_owners",
+      "uncertainty":"Most owner documents and frame assemblies named by the directory are outside the supplied source. Their roles are stated, but their full semantic contracts are unresolved."
+    },
+    {
+      "consequence":"Preserve conditional law-table statements without claiming qualification, completeness, a chosen diagnostic sequence or a complete later-method interpretation.",
+      "grounding":[{"end_line":370,"quote":"Diagnose the failed relation before adding a frame.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FReference%20Frame%20Laws","start_line":370}],
+      "key":"later_frame_owner_details",
+      "subject_key":"frame_law_family_owner_conditions",
+      "uncertainty":"Discovery And Revision, Diagnostic Order, Completeness Boundary, Frame Qualification, Method Self-Qualification and related later owners are referenced but not supplied."
+    },
+    {
+      "consequence":"All signatures and return alternatives remain meaningful data, including refused activation, translation loss/refusal, retained conflicts and proposed revision. No callable interfaces, judgments, transformations or activated configurations are created.",
+      "grounding":[{"end_line":680,"quote":"Their returned values, refusal words and decision\noutcomes are domain outputs; each evaluated claim about them uses RF-012's\nshared core result on its exact predicate.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FMethod%20Functions","start_line":673}],
+      "key":"frame_function_operational_detail",
+      "subject_key":"frame_method_functions",
+      "uncertainty":"The schema retains n-ary method signatures textually but does not encode their executable semantics, actual mappings, domain predicates or owner-issued grants."
+    },
+    {
+      "consequence":"Coverage states and separate inventory/support/outcome claims can be interpreted, but operational-full-coverage assessment cannot be reconstructed or asserted from this excerpt.",
+      "grounding":[{"end_line":877,"quote":"This method chooses the ledger vocabulary and eight criteria below.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage","start_line":875},{"end_line":982,"quote":"The [Operational Full Coverage](#operational-full-coverage) predicate evaluates\nthese inputs.","section_id":"repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/source/standards/REFERENCE_FRAME_METHOD.md#Reference%20Frame%20Method%2FWorkspace%20Coverage%2FCoverage%20Ledger","start_line":978}],
+      "key":"operational_coverage_owner_missing",
+      "subject_key":"coverage_record",
+      "uncertainty":"The supplied source stops before Operational Full Coverage and its eight criteria; no missing criteria are inferred from ledger state names."
+    }
+  ]
+}

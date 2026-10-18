@@ -1,0 +1,480 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "The supplied corpus is a test subject; it supplies neither Product authorization nor acceptance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3,
+          "quote": "This is a test subject, not a Product authorization or acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+          "start_line": 3
+        }
+      ],
+      "key": "test_subject",
+      "label": "Synthetic generation smoke corpus"
+    },
+    {
+      "conditions": [],
+      "definition": "The operation whose proceeding is subject to the required independent gate.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "deployment",
+      "label": "Deployment"
+    },
+    {
+      "conditions": [],
+      "definition": "The required independent gate governing whether deployment may proceed.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "the required independent gate",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "independent_gate",
+      "label": "Required independent gate"
+    },
+    {
+      "conditions": [],
+      "definition": "A gate result distinguished by passing status, currentness, and application to the exact candidate and basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "a current passing result on the exact candidate and basis",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "current_passing_result",
+      "label": "Current passing result"
+    },
+    {
+      "conditions": [],
+      "definition": "A receipt for dispatch, distinguished from a returned result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A dispatch receipt without a returned result does not satisfy the gate.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "dispatch_receipt",
+      "label": "Dispatch receipt"
+    },
+    {
+      "conditions": [],
+      "definition": "An earlier passing check whose reuse requires an applicable preservation relation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "old_passing_check",
+      "label": "Old passing check"
+    },
+    {
+      "conditions": [],
+      "definition": "A relation relevant to reuse by establishing a check's current relevance and covering its material dependencies.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "an applicable preservation relation establishes its current relevance and covers its material dependencies",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "preservation_relation",
+      "label": "Preservation relation"
+    },
+    {
+      "conditions": [],
+      "definition": "Coverage of dependencies, whose incompleteness limits what an absent dependency edge establishes about influence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "dependency_coverage",
+      "label": "Dependency coverage"
+    },
+    {
+      "conditions": [],
+      "definition": "A reuse claim dependent on the unresolved influence question described by the source.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "Preserve that uncertainty and withhold the dependent reuse claim.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "dependent_reuse_claim",
+      "label": "Dependent reuse claim"
+    },
+    {
+      "conditions": [],
+      "definition": "An authored source-linked record layout, with permitted variation subject to preservation of stated conditions and unresolved meaning.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "start_line": 15
+        }
+      ],
+      "key": "source_linked_representation",
+      "label": "Source-linked representation"
+    },
+    {
+      "conditions": [],
+      "definition": "A check of shape that supplies no semantic acceptance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "No representation or shape check supplies semantic acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "start_line": 15
+        }
+      ],
+      "key": "shape_check",
+      "label": "Shape check"
+    },
+    {
+      "conditions": [],
+      "definition": "An acceptance category that is not supplied by representation or shape checking; its positive criteria are not specified here.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "No representation or shape check supplies semantic acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "start_line": 15
+        }
+      ],
+      "key": "semantic_acceptance",
+      "label": "Semantic acceptance"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "test_subject"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 3,
+          "quote": "This is a test subject, not a Product authorization or acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus",
+          "start_line": 3
+        }
+      ],
+      "key": "test_subject_authority_boundary",
+      "statement": "The test subject must not be treated as Product authorization or acceptance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "deployment",
+        "independent_gate",
+        "current_passing_result"
+      ],
+      "conditions": [
+        "Deployment is to proceed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "deployment_gate_prerequisite",
+      "statement": "Deployment may proceed only if the required independent gate has a current passing result on the exact candidate and basis. This is a necessary condition, not a command to deploy or a statement that this condition alone suffices.",
+      "uncertainty": "The supplied source does not identify a particular gate, candidate, basis, or result."
+    },
+    {
+      "applies_to_keys": [
+        "dispatch_receipt",
+        "independent_gate"
+      ],
+      "conditions": [
+        "The dispatch receipt has no returned result."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A dispatch receipt without a returned result does not satisfy the gate.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "receipt_without_result_insufficient",
+      "statement": "A dispatch receipt without a returned result does not satisfy the gate; receipt alone cannot substitute for the required result.",
+      "uncertainty": "No returned result is supplied, and absence of a result is not classified as a failing result."
+    },
+    {
+      "applies_to_keys": [
+        "old_passing_check",
+        "preservation_relation"
+      ],
+      "conditions": [
+        "Reuse of an old passing check is proposed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "passing_check_reuse_prerequisite",
+      "statement": "Reuse requires an applicable preservation relation that both establishes the old passing check's current relevance and covers its material dependencies. Earlier passing status alone does not establish this prerequisite.",
+      "uncertainty": "No particular preservation relation, applicability determination, or material dependency set is supplied."
+    },
+    {
+      "applies_to_keys": [
+        "dependency_coverage",
+        "dependent_reuse_claim"
+      ],
+      "conditions": [
+        "A dependency edge is absent.",
+        "Dependency coverage is incomplete."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete. Preserve that uncertainty and withhold the dependent reuse claim.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "incomplete_coverage_withholds_reuse",
+      "statement": "An absent edge does not establish non-influence under incomplete dependency coverage. The uncertainty must be preserved and the dependent reuse claim withheld.",
+      "uncertainty": "Influence remains unresolved; neither influence nor non-influence follows from the stated absence."
+    },
+    {
+      "applies_to_keys": [
+        "source_linked_representation",
+        "shape_check",
+        "semantic_acceptance"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "No representation or shape check supplies semantic acceptance.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "start_line": 15
+        }
+      ],
+      "key": "representation_acceptance_boundary",
+      "statement": "No representation and no shape check supplies semantic acceptance.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "retained",
+      "keys": [
+        "test_subject",
+        "test_subject_authority_boundary"
+      ],
+      "reason": "Retains the corpus's test-subject identity and its explicit exclusion of Product authorization and acceptance.",
+      "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "deployment",
+        "independent_gate",
+        "current_passing_result",
+        "dispatch_receipt",
+        "deployment_gate_prerequisite",
+        "receipt_without_result_insufficient",
+        "deployment_requires_independent_gate",
+        "gate_qualification_unspecified"
+      ],
+      "reason": "Retains the necessary gate condition and receipt/result distinction, with unresolved qualification criteria recorded explicitly.",
+      "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "old_passing_check",
+        "preservation_relation",
+        "dependency_coverage",
+        "dependent_reuse_claim",
+        "passing_check_reuse_prerequisite",
+        "incomplete_coverage_withholds_reuse",
+        "preservation_establishes_check_relevance",
+        "dependency_influence_unresolved",
+        "preservation_qualification_unspecified"
+      ],
+      "reason": "Retains both reuse prerequisites and the conditional requirement to preserve uncertainty and withhold the dependent claim; unresolved dependency and preservation meanings remain explicit.",
+      "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "source_linked_representation",
+        "shape_check",
+        "semantic_acceptance",
+        "representation_acceptance_boundary",
+        "source_linked_layout_variation"
+      ],
+      "reason": "Retains expressly permitted layout variation, its preservation conditions, and the universal exclusion of semantic acceptance supplied by representation or shape checks.",
+      "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning."
+      ],
+      "applies_to_keys": [
+        "source_linked_representation"
+      ],
+      "forbidden": [
+        "Layout variation that fails to preserve stated conditions or unresolved meaning falls outside the expressed permission."
+      ],
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "An author may choose different source-linked record layouts while preserving the stated conditions and unresolved meaning.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FPermitted%20representation",
+          "start_line": 15
+        }
+      ],
+      "key": "source_linked_layout_variation"
+    }
+  ],
+  "limitations": [
+    "This is interpretation of the four supplied sections only; it provides no semantic acceptance, execution, installed qualification, or completeness judgment.",
+    "The source provides general conditions, not concrete gate results, candidate/basis identities, preservation evidence, or dependency coverage determinations.",
+    "Positive criteria for semantic acceptance are outside the supplied source. Representation and shape checking cannot supply it.",
+    "The schema retains described operations and conditions as data; it does not perform deployment, check reuse, gate evaluation, or acceptance. No judgments, traversals, or transformations are instantiated.",
+    "Discovery containment edges add no governing authority. No external source or cross-chunk identity has been inferred."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "Deployment is to proceed."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "A deployment may proceed only when the required independent gate has a current passing result on the exact candidate and basis.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "deployment_requires_independent_gate",
+      "kind": "requires",
+      "meaning": "Deployment depends on the required independent gate having a current passing result on the exact candidate and basis. The governing flag records this source-defined prerequisite, without granting runtime authority.",
+      "source_key": "deployment",
+      "target_key": "independent_gate"
+    },
+    {
+      "conditions": [
+        "The preservation relation is applicable.",
+        "The relation establishes the check's current relevance and covers its material dependencies."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An old passing check may be reused only when an applicable preservation relation establishes its current relevance and covers its material dependencies.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "preservation_establishes_check_relevance",
+      "kind": "establishes_relevance_and_covers_dependencies",
+      "meaning": "An applicable preservation relation establishes current relevance and covers material dependencies for an old passing check as a prerequisite to reuse; no actual relation instance or successful reuse is asserted.",
+      "source_key": "preservation_relation",
+      "target_key": "old_passing_check"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "The prerequisite can be represented, but this source alone cannot determine whether a particular deployment satisfies it.",
+      "grounding": [
+        {
+          "end_line": 7,
+          "quote": "the required independent gate has a current passing result on the exact candidate and basis",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FDeployment%20gate",
+          "start_line": 7
+        }
+      ],
+      "key": "gate_qualification_unspecified",
+      "subject_key": "deployment_gate_prerequisite",
+      "uncertainty": "The source does not specify how gate independence, result currentness, or exact candidate/basis correspondence is established."
+    },
+    {
+      "consequence": "Preserve the unresolved influence question and withhold the reuse claim dependent on it; withholding does not establish that the claim is false.",
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "An absent dependency edge does not establish non-influence when dependency coverage is incomplete. Preserve that uncertainty and withhold the dependent reuse claim.",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "dependency_influence_unresolved",
+      "subject_key": "dependency_coverage",
+      "uncertainty": "When coverage is incomplete, an absent edge leaves non-influence unestablished. The source supplies no concrete missing edge or influence determination."
+    },
+    {
+      "consequence": "No applicable preservation relation or qualified reuse can be inferred merely from the presence of an old passing check.",
+      "grounding": [
+        {
+          "end_line": 11,
+          "quote": "an applicable preservation relation establishes its current relevance and covers its material dependencies",
+          "section_id": "urn:a-c:generation:synthetic-smoke:20261018/source/rules.md#Synthetic%20generation%20smoke%20corpus%2FReuse%20and%20uncertainty",
+          "start_line": 11
+        }
+      ],
+      "key": "preservation_qualification_unspecified",
+      "subject_key": "preservation_relation",
+      "uncertainty": "The source leaves the preservation relation's form, applicability criteria, method of establishing current relevance, and material dependency coverage criteria unspecified."
+    }
+  ]
+}

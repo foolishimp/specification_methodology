@@ -1,0 +1,185 @@
+{
+  "carrier_identity": {
+    "model": {
+      "id": "urn:a-c:dogfood:stdo-v3-i5:claude:model:proposal:1",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "a434430546071851a8e1dbd2ade19261166db7debfb481d690adc1b2a9a78c5b"
+    },
+    "profile": "a_c.graphify.carrier/1",
+    "sha256": "67fddbcde74728d59bfa414b86bd8c30ea27cc94f7a36b03ef7348d9636c8f6d"
+  },
+  "checks": [
+    "actual upstream validates extraction",
+    "dedup=False actual builder preserves every node identity and occurrence edge",
+    "actual exporter/loader preserve every node identity and edge count",
+    "decoder recovers complete exact model after actual upstream processing",
+    "unseeded depth-zero native search retrieves expected authored wording",
+    "exact seed resolves and renders bounded native graph context"
+  ],
+  "claim": "bounded actual-upstream representation compatibility; no v3 semantic acceptance, calculus admission or efficiency claim",
+  "edges": 6414,
+  "exported_graph": {
+    "bytes": 11276154,
+    "path": "/Users/jim/src/apps/specification_methodology/a_c/graphify-out/v3-i5/claude/graph.json",
+    "sha256": "743ac89eb79b40dd9723c526d195e846b6215d0b64b443a323ed84ab68b7ca9d"
+  },
+  "family_counts": {
+    "constraints": 0,
+    "judgments": 0,
+    "latitude": 0,
+    "objects": 278,
+    "relations": 0,
+    "residuals": 0,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "model_identity": {
+    "id": "urn:a-c:dogfood:stdo-v3-i5:claude:model:proposal:1",
+    "profile": "a_c.graphify.model/1",
+    "sha256": "a434430546071851a8e1dbd2ade19261166db7debfb481d690adc1b2a9a78c5b"
+  },
+  "native_discovery": {
+    "claim": "bounded keyword retrieval only; not governing acquisition",
+    "depth": 0,
+    "expected_record": "urn:stdo-3:claude:i3:clause:pd-no-statistical-independence",
+    "explicit_seeds": false,
+    "query": "Different actors, model families or codebases do not establish statistical independence.",
+    "text": "Graph: graphify-out/v3-i5/claude/graph.json (4565 nodes) | Traversal: BFS depth=0 | Start: ['urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\\\"arguments\\\\\":[{\\\\\"ref\\\\\":\\\\\"urn:stdo-3:claude:i3:standing:consequence\\\\\",\\\\', 'urn:a-c:graph:record:182 urn:stdo-3:claude:i3:clause:markov-boundary-hypothesis {\"a_text\": \"That stronger claim, a statistical Markov boundary, is a hypothesis ([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as established, and a profile that uses such a construct states its epistemic status (P5).', 'urn:a-c:graph:record:217 urn:stdo-3:claude:i3:clause:qa-independence-needed {\"a_text\": \"Replacing those terms with `P(M_i | V, Γ)` requires conditional independence under the declared model.\\\\nmust\\\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\\\"arguments\\\\\":[{\\\\\"ref\\\\\":\\\\\"urn:stdo-3:claude:i3:stan', 'urn:a-c:graph:record:258 urn:stdo-3:claude:i3:concept:quantified-claim {\"a_text\": \"Quantified claim: a stated probability or confidence with its model, likelihoods, shared causes and calibration limits\", \"native_family\": \"symbols\", \"native_json\": \"{\\\\\"kind\\\\\":\\\\\"urn:stdo-3:claude:i3:vocabulary:kind:concept\\\\\",\\\\\"la', 'urn:a-c:graph:record:271 urn:stdo-3:claude:i3:frame-index:construction-and-assurance {\"a_text\": \"Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, what an assertion establishes, what agreement proves, what is retained'] | 5 nodes found\n\nNODE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:clause:pd-no-statistical-independence\", sort=\"\"urn:a-c:d...}]\nNODE urn:a-c:graph:record:182 urn:stdo-3:claude:i3:clause:markov-boundary-hypothesis {\"a_text\": \"That stronger claim, a statistical Markov boundary, is a hypothesis ([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as established, and a prof [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:clause:markov-boundary-hypothesis\", sort=\"\"urn:a-c:dogfo...}]\nNODE urn:a-c:graph:record:217 urn:stdo-3:claude:i3:clause:qa-independence-needed {\"a_text\": \"Replacing those terms with `P(M_i | V, Γ)` requires conditional independence under the declared model.\\nmust\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_ [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:clause:qa-independence-needed\", sort=\"\"urn:a-c:dogfood:s...}]\nNODE urn:a-c:graph:record:258 urn:stdo-3:claude:i3:concept:quantified-claim {\"a_text\": \"Quantified claim: a stated probability or confidence with its model, likelihoods, shared causes and calibration limits\", \"native_family\": \"symbols\", \"native_json\": \"{\\\"kind\\ [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:concept:quantified-claim\", sort=\"\"urn:a-c:dogfood:stdo-v...}]\nNODE urn:a-c:graph:record:271 urn:stdo-3:claude:i3:frame-index:construction-and-assurance {\"a_text\": \"Decide what a construction has established: the binding of A and Z, lawful but incomplete work, the four claims of recursive work, the four diagnosis causes, w [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:frame-index:construction-and-assura..., sort=\"\"urn:a-c:d...}]",
+    "token_budget": 2000
+  },
+  "nodes": 4565,
+  "observations": {
+    "build_seconds": 0.193,
+    "python": "3.12.8",
+    "total_seconds": 13.614
+  },
+  "seeded_query": {
+    "claim": "bounded structural context; not governing acquisition",
+    "depth": 2,
+    "seed": "urn:a-c:graph:record:205",
+    "text": "Graph: graphify-out/v3-i5/claude/graph.json (4565 nodes) | Traversal: BFS depth=2 | Start (given): ['urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\\\"arguments\\\\\":[{\\\\\"ref\\\\\":\\\\\"urn:stdo-3:claude:i3:standing:consequence\\\\\",\\\\'] | 21 nodes found\n\n[i] Complete answer over budget: all 21 nodes and 20 edges shown (~2112 tokens vs the requested ~2000-token budget). Edges are never dropped once every node fits, so this is already the full answer — raising --budget further will not shrink it. Narrow with context_filter=['call'] or use get_node for a specific symbol to reduce size instead.\n\nNODE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:stdo-3:claude:i3:clause:pd-no-statistical-independence\", sort=\"\"urn:a-c:d...}]\nNODE urn:a-c:graph:endpoint:2079 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1552 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1553 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1554 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1555 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1556 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1557 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1558 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1559 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1560 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1552 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1553 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1554 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1555 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1556 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1557 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1558 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1559 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1560 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:2079 [src=a_c://authored-model loc= community=None]\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1552\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1553\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1554\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1555\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1556\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1557\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1558\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1559\nEDGE urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a --reference-owner [EXTRACTED]--> urn:a-c:graph:occurrence:1560\nEDGE urn:a-c:graph:endpoint:2079 --reference-target [EXTRACTED]--> urn:a-c:graph:record:205 urn:stdo-3:claude:i3:clause:pd-no-statistical-independence {\"a_text\": \"Different actors, model families or codebases do not establish statistical independence.\\ndischarged-argument\", \"native_family\": \"clauses\", \"native_json\": \"{\\\"a\nEDGE urn:a-c:graph:occurrence:1554 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1554\nEDGE urn:a-c:graph:occurrence:1555 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1555\nEDGE urn:a-c:graph:occurrence:1552 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1552\nEDGE urn:a-c:graph:occurrence:1556 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1556\nEDGE urn:a-c:graph:occurrence:1557 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1557\nEDGE urn:a-c:graph:occurrence:1560 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1560\nEDGE urn:a-c:graph:occurrence:1558 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1558\nEDGE urn:a-c:graph:occurrence:1559 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1559\nEDGE urn:a-c:graph:occurrence:2079 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:2079\nEDGE urn:a-c:graph:occurrence:1553 --reference-slot [EXTRACTED]--> urn:a-c:graph:endpoint:1553",
+    "token_budget": 2000
+  },
+  "sources": {
+    "artifact_manifest": {
+      "bytes": 6458,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/artifacts/manifest.json",
+      "sha256": "bb6200b9ab01480de12b9c4c3370ba3d3337066a181b5cb206e3ee287e239685"
+    },
+    "boundary_helper": {
+      "bytes": 22990,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/check_upstream.py",
+      "sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561"
+    },
+    "carrier": {
+      "bytes": 2076453,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/artifacts/graph.json.gz",
+      "sha256": "1384f3ff93bd8663e362c1a39dab1275e9e37bfe9200366cb319cf75ddcb121a"
+    },
+    "codec": {
+      "bytes": 49166,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    "consumer_builder": {
+      "bytes": 37255,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/v3_graphify.py",
+      "sha256": "fea4cd7997d75dd8d8371fecf6a1317a6a96a8cb0d0328f0872d92fc453a7e9f"
+    },
+    "input_archive": {
+      "bytes": 1140873,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/input/candidate.tar.gz",
+      "sha256": "5d5243ecba4a0f8f2d0a5f6be3b2dd5123f248759195d9191bab2da1aa9812bb"
+    },
+    "input_builder": {
+      "bytes": 10134,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/prepare.py",
+      "sha256": "c65edcbba1329127f22be50a7db58136f9ac04dfae6ee9143e8ac1a73ee7d12b"
+    },
+    "input_manifest": {
+      "bytes": 52990,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/input/manifest.json",
+      "sha256": "d9a6dc3826270addc3d69e9db2e6c6733f5cc691659583a176a667ac1f61e412"
+    },
+    "model": {
+      "bytes": 1980126,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/artifacts/model.json.gz",
+      "sha256": "1c27abc3133a50729f5d61bb4a3291a02774466a71b9c57b7873ef4d77b6c7dd"
+    },
+    "selectors": {
+      "bytes": 7584,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/artifacts/selectors.json",
+      "sha256": "224ab544540ad5a579958727aed83fe93426cfc77aea35e5c7d9eb0fb258e0c8"
+    },
+    "subject": {
+      "bytes": 4219,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/stdo-v3-i5-claude/subject.json",
+      "sha256": "83734e81534da452a6447b237bd4ab36bcd929230c9a9aa08de60a19c799fd09"
+    },
+    "trial_helper": {
+      "bytes": 19889,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/dogfood/v3_graphify_upstream.py",
+      "sha256": "116c18d5dac6f30c41e734656c5178e7386714b69f1d3098bead0b8f535717d1"
+    }
+  },
+  "status": "passed",
+  "tamper_checks": [
+    {
+      "reason": "graph differs from complete semantic encoding",
+      "status": "refused",
+      "trial": "missing-occurrence"
+    },
+    {
+      "reason": "graph differs from complete semantic encoding",
+      "status": "refused",
+      "trial": "reversed-occurrence"
+    },
+    {
+      "reason": "graph differs from complete semantic encoding",
+      "status": "refused",
+      "trial": "search-identity"
+    },
+    {
+      "reason": "directed: carrier profile requires exact Boolean false",
+      "status": "refused",
+      "trial": "directed-profile"
+    }
+  ],
+  "tenant": "claude",
+  "upstream": {
+    "clean": true,
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "entrypoint_sha256": {
+      "graphify/build.py": "742075a82ec2797925a2e9d16d325b2e86a3e674eea04f06377f88bf7653fc17",
+      "graphify/export.py": "737cb97c5ca596f48a405a26e283140272b14d7ce5b63c89e6542ba8ac904e17",
+      "graphify/exporters/html.py": "9361da8b4aed616d52007acb747d5aade2ef7cf88c5e776d21e157a8a9e35eb0",
+      "graphify/paths.py": "529cf874f7a990d8f318c8ca343bffced5378a5cff74f31c36404dc609ee5855",
+      "graphify/serve.py": "5ed6d9b150aae093b2f7e3b8cd7a7d4b922d73f88829b4b3992a1399159520be",
+      "graphify/validate.py": "be068c6b2ff4e514f31663e0155a9d63f35096d154b98ab6c9c467a23febd6f7"
+    },
+    "packages": {
+      "networkx": "3.4.2",
+      "tree-sitter": "0.25.2"
+    },
+    "version": "0.9.90"
+  },
+  "visualization": {
+    "browser_dependency": "https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js (upstream integrity-pinned CDN)",
+    "build_network_calls": false,
+    "bytes": 45447,
+    "candidate_nodes": 31,
+    "claim": "official structural visualization of a declared view; no governing acquisition or semantic acceptance",
+    "complete_carrier_nodes": 4565,
+    "displayed_edges": 30,
+    "displayed_nodes": 31,
+    "exporter": "graphify.export.to_html; scope banner added by this helper",
+    "mode": "bounded",
+    "node_budget": 500,
+    "omitted_candidate_nodes": 0,
+    "path": "/Users/jim/src/apps/specification_methodology/a_c/graphify-out/v3-i5/claude/graph.html",
+    "radius_hops": 3,
+    "seed": "urn:a-c:graph:record:205",
+    "sha256": "f8b7d6ce7d0d85ddba04bdf41c618dd13f41c127b50a891dd36ce36fedc335e1",
+    "status": "written"
+  }
+}

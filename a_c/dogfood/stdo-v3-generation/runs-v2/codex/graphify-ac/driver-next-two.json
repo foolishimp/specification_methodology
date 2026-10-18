@@ -1,0 +1,88 @@
+{
+  "completed_chunks": [
+    "chunk-cae356beaf4319d41f17",
+    "chunk-303ba21541c7795c1c8e"
+  ],
+  "mode": "graphify-ac",
+  "processed": [
+    {
+      "answer_sha256": "bac999e3763b25752526de977e699dfeded9cf4cb2de297823ae45112aa6b37a",
+      "attempt": "actors/author/chunk-303ba21541c7795c1c8e/attempt-001",
+      "chunk": "chunk-303ba21541c7795c1c8e",
+      "cli_exit_code": 0,
+      "cli_version": "codex-cli 0.162.1",
+      "elapsed_seconds": 734.7156391250901,
+      "events_sha256": "a5ebef4aeed59f3fd9f0dd5295acdb33332830b0334cec7c60f251d6aa45a849",
+      "failures": [],
+      "profile": "ac.generation.actor-result/1",
+      "schema_errors": [],
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "high",
+        "service_tier": "default"
+      },
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false,
+      "unexpected_item_types": [],
+      "usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 77568,
+          "input_tokens": 77737,
+          "output_tokens": 40821,
+          "reasoning_output_tokens": 1224
+        }
+      ],
+      "user_config_unchanged": true
+    },
+    {
+      "answer_sha256": "6e761f010c73b6757426101e35faeb980f6f9709d688514255d412c9934ecc69",
+      "attempt": "actors/author/chunk-ba679cf25951c2115c4a/attempt-001",
+      "chunk": "chunk-ba679cf25951c2115c4a",
+      "cli_exit_code": 0,
+      "cli_version": "codex-cli 0.162.1",
+      "elapsed_seconds": 698.0317408340052,
+      "events_sha256": "3d87d86053c500dd46c036e3969bbad0aad027ee64df5cf6cdc571b284c42925",
+      "failures": [
+        "source_or_semantic_fragment_validation"
+      ],
+      "profile": "ac.generation.actor-result/1",
+      "schema_errors": [],
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "high",
+        "service_tier": "default"
+      },
+      "status": "failed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false,
+      "unexpected_item_types": [],
+      "usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 80768,
+          "input_tokens": 80896,
+          "output_tokens": 46325,
+          "reasoning_output_tokens": 780
+        }
+      ],
+      "user_config_unchanged": true,
+      "validation_error": "record[historical_verification_requirements]/grounding/0: grounding quote is not exact source at declared range"
+    }
+  ],
+  "profile": "ac.generation.stage/1",
+  "remaining_chunks": [
+    "chunk-ba679cf25951c2115c4a",
+    "chunk-c3cf7984741066a344f7",
+    "chunk-d4711da9b03d12b52e08",
+    "chunk-3536e55742017ac9ca55",
+    "chunk-230eb1c5ee6232501303",
+    "chunk-6469845e54e28c586f83",
+    "chunk-dbe76be56335c8edb7bc",
+    "chunk-d3896cc85f64a611f9e9",
+    "chunk-78ad0cd4e2b82ebefd47"
+  ],
+  "stage": "author",
+  "status": "incomplete"
+}

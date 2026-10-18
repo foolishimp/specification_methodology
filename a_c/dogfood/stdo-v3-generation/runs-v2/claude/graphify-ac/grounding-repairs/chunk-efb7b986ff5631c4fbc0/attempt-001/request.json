@@ -1,0 +1,439 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-efb7b986ff5631c4fbc0",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "section_id is outside the exact dispatched chunk",
+      "family": "concepts",
+      "grounding": {
+        "end_line": 89,
+        "quote": "- `REVIEW`: critique of code, specification, design or another post;\n- `STRATEGY`: a proposed technical or methodological direction;\n- `GAP`: a precise insufficiency or contradiction;\n- `SCHEMA`: the shape of a data model, event model, interface or contract;\n- `HANDOFF`: a bounded transfer of context or task state; and\n- `MATRIX`: an explicit comparison of options for a decision.",
+        "section_id": "repo://stdo-v3-generation/claude/9aee01ffa76bde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+        "start_line": 84
+      },
+      "grounding_index": 0,
+      "record_key": "post_categories",
+      "record_ordinal": 23
+    }
+  ],
+  "mode": "graphify-ac",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001"
+  },
+  "parent_answer_sha256": "18efbf943c5049389b4dd45e5c5ce0113259a9467b25475640414e6b19cdd1ff",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "3ecc28b667b31d73542dc3939443908153d56386ff4cce9e295aac39ab09a732",
+      "original_attempt": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001",
+      "original_recorded_failure": "record[post_categories]/grounding/0: grounding names source outside chunk",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[post_categories]/grounding/0: grounding names source outside chunk",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 12160,
+          "input_tokens": 75266,
+          "output_tokens": 47658,
+          "reasoning_output_tokens": 1034
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/answer.json": "a4cf8397d0a7cb906ab1190e1cfc0b6c3514a8275ba85f942ddac6a11f7540cb",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/events.jsonl": "3b902a2a214ecee8edb31360642f52836105fc20b09ffe81107e5927e437200a",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/invocation.json": "b07b73fbb344d5e7456f232af4c8331d4841d2e9233da1273949b0279cf5756b",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/prompt.txt": "54c34fdebc1c54ee37aed60d983c7f5f3b43d3724acd7e4caa4cfb925ec627f5",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/result.json": "cd048e27c35b5bf0f7ab9102e1931eae04c66fc724970e497e9e03582256d896",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001/usage.json": "69e369e114e0556788f088ed27b63b54318d0b225c98646f03867dc1b1257df5",
+        "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+        "plan.json": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+        "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+      },
+      "source_sections": [
+        {
+          "end_line": 592,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+          "path": "standards/ODD.md",
+          "sha256": "10385990267660db9250c586bd1ba957b0f3e68677c99171769ed3a3f9ae5c73",
+          "start_line": 585
+        },
+        {
+          "end_line": 598,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+          "path": "standards/ODD.md",
+          "sha256": "f314d162a109c7bcf298260d639c74086d889436c6c9a65e7c13f11a70bfcbfd",
+          "start_line": 593
+        },
+        {
+          "end_line": 605,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+          "path": "standards/ODD.md",
+          "sha256": "6258a99d9456748493286ec794243e571678c6bdc39ca891218a2dc61e2ac4cc",
+          "start_line": 599
+        },
+        {
+          "end_line": 610,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law",
+          "path": "standards/ODD.md",
+          "sha256": "735f30b1a3ee7238446bc061a35a3ecc07e3273605597094df2548eb8ee0af47",
+          "start_line": 606
+        },
+        {
+          "end_line": 618,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+          "path": "standards/ODD.md",
+          "sha256": "67f6f34f506bf046a63554ebc185f9e50cd580f9765ca61f8eaf4b4e679e0959",
+          "start_line": 611
+        },
+        {
+          "end_line": 626,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+          "path": "standards/ODD.md",
+          "sha256": "15ed83e3263199b633a715d178bb2c245979597c88a040f76e343fa1ecf17384",
+          "start_line": 619
+        },
+        {
+          "end_line": 653,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "path": "standards/ODD.md",
+          "sha256": "742e969953553f14391934a03b8b463db00c7cf5ed0034f7765baa96e55815b7",
+          "start_line": 627
+        },
+        {
+          "end_line": 660,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+          "path": "standards/ODD.md",
+          "sha256": "a04d8c2b4631520cf10a89baff903975337f23ce2371b6761ef37e5763c8a4e1",
+          "start_line": 654
+        },
+        {
+          "end_line": 673,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "path": "standards/ODD.md",
+          "sha256": "964b92714f40b6672e8392752b04ed735099b3bf4bce29144d13149476992398",
+          "start_line": 661
+        },
+        {
+          "end_line": 680,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+          "path": "standards/ODD.md",
+          "sha256": "76d244da224c9d6e8aceaf085477c5d83b4661b460d5937245d4d3a890897837",
+          "start_line": 674
+        },
+        {
+          "end_line": 701,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry",
+          "path": "standards/ODD.md",
+          "sha256": "2920ebee44386ee39b96a7581ec40c09b5c2d34e4cce2a84037a2c321e8349bb",
+          "start_line": 681
+        },
+        {
+          "end_line": 763,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "path": "standards/ODD.md",
+          "sha256": "4564618d35561cf23464cdaf983816ed06055db28d25675e0d6b8daa3f519a83",
+          "start_line": 702
+        },
+        {
+          "end_line": 784,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence",
+          "path": "standards/ODD.md",
+          "sha256": "65135a43364b47da1dbf8e163c12375488fe27a9e8609d52ceed6e2d1e5845c0",
+          "start_line": 764
+        },
+        {
+          "end_line": 1413,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "path": "standards/ODD.md",
+          "sha256": "909dfd5b47c30c8f647851e7637589d02db75f17206307e591e7a9a76c6041d2",
+          "start_line": 785
+        },
+        {
+          "end_line": 1421,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.6%20Product-specific%20semantics%20sit%20above%20the%20shared%20carrier",
+          "path": "standards/ODD.md",
+          "sha256": "15567e5f28db05b546a7ae9881b2e9077e99c374c4daf1726da663210d6485ff",
+          "start_line": 1414
+        },
+        {
+          "end_line": 1451,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7%20Manual%20walkthrough%20must%20still%20be%20lawful",
+          "path": "standards/ODD.md",
+          "sha256": "d9922a592a0546b46060e83de9b05958d36cb062fa6c2b5644fc2725e2e98294",
+          "start_line": 1422
+        },
+        {
+          "end_line": 1537,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "path": "standards/ODD.md",
+          "sha256": "4f63b02247c89580a6effaace6f6ae7ff415aa58a166c48b0926f615d84b85d6",
+          "start_line": 1452
+        },
+        {
+          "end_line": 1568,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7B%20Real%20authority-path%20negative%20proof%20%28STDO-UP-010%29",
+          "path": "standards/ODD.md",
+          "sha256": "a4882ab02e31d47f3671b3f4c58abb7e032b1e239751cc31c814a6f2bd4a09d1",
+          "start_line": 1538
+        },
+        {
+          "end_line": 1582,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.8%20Cumulative%20environment%20law%20is%20mandatory",
+          "path": "standards/ODD.md",
+          "sha256": "21ecd60683349e8eaa9880dbfc7e6cfd03b4299a4179dd31d3ce161e13c986d7",
+          "start_line": 1569
+        },
+        {
+          "end_line": 1598,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.9%20Global%20convergence%20must%20be%20stable%20under%20zoom",
+          "path": "standards/ODD.md",
+          "sha256": "64a945a62adbab600bb7633f57e4da71152fee81432e384874d2519ce0af359b",
+          "start_line": 1583
+        },
+        {
+          "end_line": 1612,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F12.%20Scenario%20rule",
+          "path": "standards/ODD.md",
+          "sha256": "082ab707a7081d07100fbee5a0f17806f35ab1faa1d3c4975812a24ebcae40c4",
+          "start_line": 1599
+        },
+        {
+          "end_line": 1623,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F13.%20Installed-dev%20rule",
+          "path": "standards/ODD.md",
+          "sha256": "e59d4783ba35b6fd804be4c31664a08c51ecce5026b0514fb01e1858d89be882",
+          "start_line": 1613
+        },
+        {
+          "end_line": 1634,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F14.%20Dogfooding%20rule",
+          "path": "standards/ODD.md",
+          "sha256": "a5ef1486b4012a12afc747af2d0333f73cc383ee42e46dd01cd9cf15e364998d",
+          "start_line": 1624
+        },
+        {
+          "end_line": 1643,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F15.%20Release%20boundary",
+          "path": "standards/ODD.md",
+          "sha256": "b880d26e61253f073e12068b8a77d34988b6de32bb97a5bddf8772d6e16715e8",
+          "start_line": 1635
+        },
+        {
+          "end_line": 1679,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F16.%20Failure%20pattern",
+          "path": "standards/ODD.md",
+          "sha256": "dee09db98f0db134ce07b0fad164cb090c0507de071b5b55bf947756d3d178b8",
+          "start_line": 1644
+        },
+        {
+          "end_line": 1714,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F17.%20Invocation%20rule",
+          "path": "standards/ODD.md",
+          "sha256": "3f24b1d897cd3899258894bf5dbdf0632eb463a1f195aba577b50e830a6dad08",
+          "start_line": 1680
+        },
+        {
+          "end_line": 1718,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order",
+          "path": "standards/ODD.md",
+          "sha256": "712c94da2c64fa7f37368f0ec1809dfc7b074a99260f68d7e185ba5e5ad5460b",
+          "start_line": 1715
+        },
+        {
+          "end_line": 1731,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FGeneral%20ODD%20product",
+          "path": "standards/ODD.md",
+          "sha256": "73e739cd9ea87e1bf79348d3cb9c8eb48a41ff86a225bd3b4cecb9a9b1a23abb",
+          "start_line": 1719
+        },
+        {
+          "end_line": 1751,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FWorld-model%20product",
+          "path": "standards/ODD.md",
+          "sha256": "f6a27292c937d584d2f1b8bb279483189242f464b3c3b97c51cd1cee8b66f14d",
+          "start_line": 1732
+        },
+        {
+          "end_line": 1781,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F19.%20Ramp-up%20checklist",
+          "path": "standards/ODD.md",
+          "sha256": "53957355e2770ddbe4d43cc429817c6d56cdfd57a5dc9d214a1b9f862a29fd0c",
+          "start_line": 1752
+        },
+        {
+          "end_line": 1807,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F20.%20Canonical%20compression",
+          "path": "standards/ODD.md",
+          "sha256": "55c1472a6c90e72adf52945612dde0d20ce5052ac817bac1b6904620d64d8a7c",
+          "start_line": 1782
+        },
+        {
+          "end_line": 1886,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions",
+          "path": "standards/ODD.md",
+          "sha256": "c72ade7ef54bfc34d6e1c0bae5bdb51606d740cfd12dda2f963a99cce0ee744f",
+          "start_line": 1808
+        },
+        {
+          "end_line": 18,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "c58b81ed1bc439fb1a1a7466c713669dc8cb946a01161539e7449aa2f21736fc",
+          "start_line": 1
+        },
+        {
+          "end_line": 32,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F1.%20Position",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "8138987290f2d420c7d41b790981ec15c40241da0669e0aa446b5814cc9a5b6b",
+          "start_line": 19
+        },
+        {
+          "end_line": 41,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F2.%20Boundary",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "bd7eab78d924bba1074a2667e16c30f488eb69506c59a1e1afb4f1800012512f",
+          "start_line": 33
+        },
+        {
+          "end_line": 59,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "3a350f2fc2d761686c72357420c4d00b0cb4763605fc759ec55884526d2f72c1",
+          "start_line": 42
+        },
+        {
+          "end_line": 79,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F4.%20Carrier%20identity",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "0c51ac73d6ee71680e310c3910fbcf1baa4a478cdbf1106ad47e586c2d3f5920",
+          "start_line": 60
+        },
+        {
+          "end_line": 90,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "c9d5bb93930439fa5274a308a2ae3b5dbc001cdfca2fb96c7a2c9d6801c2da62",
+          "start_line": 80
+        },
+        {
+          "end_line": 116,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F6.%20Structure",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "a4f2eee15c38738de7ddb524ee5ae54d7566875f7bcfdad9be1967f429b993d5",
+          "start_line": 91
+        },
+        {
+          "end_line": 141,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F7.%20Discussion%20state%20and%20mutability",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "b694783bf6862de93a699db852271dd94871aebe44c8c49c38e1abcc0576ab28",
+          "start_line": 117
+        },
+        {
+          "end_line": 155,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F8.%20Posting%20rules",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "f5ea0c72b519339c79cd9a6a43dbd7e4802a17dd9a666e20c0b91d36c684a334",
+          "start_line": 142
+        },
+        {
+          "end_line": 161,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F9.%20Ratification",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "2c1b8948cd4c3c42b14c28e0d72624b1b16bcfa0544a5fea21a371ebcbbc9ea2",
+          "start_line": 156
+        },
+        {
+          "end_line": 170,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F10.%20Shared%20method%20adoption",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "5bf684405175b31faa9ac119a17aab09c11091f53421cf4f2e69ea0e19275379",
+          "start_line": 162
+        },
+        {
+          "end_line": 192,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F11.%20Source%20dispositions",
+          "path": "standards/POSTING_GUIDE.md",
+          "sha256": "a00ff947de3c9c16fc90b83e36f4b81b81e966393c59c279b4dd6ec4af150431",
+          "start_line": 171
+        },
+        {
+          "end_line": 38,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "fc93fc9ae6252afab54876bf7985a802df2799a164b2551eea19f3d1b16efab2",
+          "start_line": 1
+        },
+        {
+          "end_line": 92,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "a9e78879dcbd393c64aa54c07236c21d5cc9c720fb65aeba064742d0765d6efa",
+          "start_line": 39
+        },
+        {
+          "end_line": 151,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "e083bc177fbf651ca33f6433f6feef9642dc34e5bd264c74f0e0f0bf791fcf6d",
+          "start_line": 93
+        },
+        {
+          "end_line": 193,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F2.%20Required%20definition%20relations",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "d34c8fa2c2eceaacfeef7d730db979ff5cd10f8fc48a28584e324db24448714f",
+          "start_line": 152
+        },
+        {
+          "end_line": 232,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F3.%20Constitutional-set%20sufficiency",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "854c2d04b9850f00ece01a22b3dde7b906b1b9fb51cbccc9d86ad6b5ff4e315a",
+          "start_line": 194
+        },
+        {
+          "end_line": 358,
+          "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "path": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "a3a758e37a620a63170e7f43d4d6189a76807fa323f84952e5c29a3163f8d2b1",
+          "start_line": 233
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-efb7b986ff5631c4fbc0/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "e6ffdb76485820bf86faf8b2de8bd97dbadde8cff1f624e8c1c1c56bcfbfb8ad",
+  "schema_sha256": "cd10547068343e822db5bad16e488fcea7910344e8bdbe603c45ff41b6fe6e63",
+  "source_chunk_sha256": "3ecc28b667b31d73542dc3939443908153d56386ff4cce9e295aac39ab09a732",
+  "source_plan_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+}

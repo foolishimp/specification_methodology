@@ -1,0 +1,93 @@
+{
+  "artifacts": {
+    "graph.json.gz": {
+      "bytes": 2051736,
+      "sha256": "d93ffd33f7d6199f89b2ab99eb489f82b9f433995a2215978dae9641bbcd6c5b"
+    },
+    "model.json.gz": {
+      "bytes": 1159246,
+      "sha256": "1c5fd2a953efcee145c3165c859680c838bb988b5c93c7eeaea5394c80a435a0"
+    },
+    "selectors.json": {
+      "bytes": 334808,
+      "sha256": "80f21cf97e9455d57fe2afd23356727145cbf3fab9890d5837424d3cfeb14474"
+    }
+  },
+  "builder": {
+    "path": "representation.py",
+    "sha256": "4f4ce6d51e9319187d1be514a3a1529376ea295c00199c2ebb978897b2cbc78a"
+  },
+  "claim": "proposed lossless transport of the authored interpretation; no independent v3 semantic acceptance, carrier admission or release",
+  "codec": {
+    "path": "build_tenants/graphify/code/ac_graph.py",
+    "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+  },
+  "counts": {
+    "clauses": 705,
+    "conditional_routes": 30,
+    "graph_links": 59550,
+    "graph_nodes": 41144,
+    "inline_contract_arguments": 410,
+    "provenance_routes": 2046,
+    "records": 1433,
+    "required_reference_occurrences": 7741,
+    "residuals": 2,
+    "selectors": 725,
+    "semantic_contracts_in_frozen_account": 37,
+    "typed_references": 19850
+  },
+  "input": {
+    "archive_sha256": "13aed5e6ba34955865c7de8099fce462bbb1affb790b6106376ab46a7da2be05",
+    "canonical_program_sha256": "7337088a3f82fa8b8614adde486abf1d0d62bae5df69093d20a5fca7ddb85a58",
+    "frozen_manifest_sha256": "9f71927ee90ef25081658016a85d2cc8f1a7b551e5874b46ceaa150619140f2e",
+    "package_commit": "ef5e514f5ffff4176b55ca687e56fe3c8b97efc1",
+    "package_tree": "3648bfc1a664ec8e7f93a686d7818461f4034cac",
+    "raw_program_sha256": "1fb7d06294717fa12cb3daad5dc5ec037446962a48f2a5b1214bd594948cd5c1",
+    "source_commit": "c29b2be37f9a12e050478be97793927d99c01781"
+  },
+  "kind": "a_c.v3-i3.graphify-representation",
+  "mapping_contract": {
+    "claim": "proposed lossless transport of the authored interpretation; no independent v3 semantic acceptance, carrier admission or release",
+    "clause_mapping": "original URI and ordered exact native payload; typed adjacent location/ref pairs govern",
+    "conditional_rule": "establish applicability externally; select target index additionally only when applicable; unknown applicability withholds dependent action",
+    "empty_populations": [
+      "relations",
+      "constraints",
+      "latitude",
+      "traversals",
+      "transformations",
+      "judgments"
+    ],
+    "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:mapping-contract:1",
+    "residual_mapping": "only original residuals; exact native payload and authored subject",
+    "route_mapping": "ordered exact native route payload; typed target and target_index never govern automatically",
+    "selector_mapping": "original URI, ordinal, payload and governing native roots",
+    "subject": "exact frozen native program, not a new interpretation of documentary STDO"
+  },
+  "model": {
+    "id": "urn:a-c:dogfood:stdo-v3-i3-c29b2be:model:proposal:1",
+    "profile": "a_c.graphify.model/1",
+    "sha256": "e488272cb5f01c623b9af970d066e118666218abaa1fd7aae0fe8708f162636a"
+  },
+  "pin_checks": {
+    "owner_body_pins": 701,
+    "source_block_pins": 3476
+  },
+  "schema_version": 1,
+  "selector_check": {
+    "claim": "exact equality with original native direct-reference closure for every selector; no interpretation-fidelity judgment",
+    "required_clause_closure": {
+      "max": 131,
+      "median": 18,
+      "min": 6
+    },
+    "selectors_compared": 725
+  },
+  "semantic_graph_sha256": "b87bc539e366f6b71491dacaf1eeee78a103cf6bee6cc666414c91fd3686af90",
+  "sizes": {
+    "canonical_program_bytes": 8773879,
+    "graph_json_bytes": 44108009,
+    "model_json_bytes": 14601339,
+    "raw_program_bytes": 9691367
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "changes": [],
+  "chunk": "chunk-20f415a0d8d3d04f90b0",
+  "derived_answer_sha256": "ee1147750eda2bbfa42cd8760473bc3f78c751c355b815f7019641945face5c0",
+  "derived_non_grounding_sha256": "ed9ce1fdce19ba33d9e3d3aefd1bb4b0c1594714bc907532b02ade57c8cde276",
+  "fd_elapsed_seconds": 0.07881487486883998,
+  "non_grounding_sha256": "ed9ce1fdce19ba33d9e3d3aefd1bb4b0c1594714bc907532b02ade57c8cde276",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "793b101f72ed3c19abbc5f2bae667e68fbfae660bc13154e4c9f8117495c60a0",
+    "original_attempt": "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 9600,
+        "input_tokens": 68324,
+        "output_tokens": 40603,
+        "reasoning_output_tokens": 976
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/answer.json": "8b250976894d1038f3b935618f668e011a98dfb4b4ccdd3e6fb1799405467c70",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/events.jsonl": "bbd4cf92a8073684e88cfac985f54773fc9bc329a3192eb561c7cae2f8bc939f",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/invocation.json": "ef7f79d66b11b35c94f51447e52e0ed8ec0ca4e18526fe82f9a7c03336380d9d",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/prompt.txt": "68fd7790bf3f31c87c9dd9b80f0dea257e255a9f23e8bc74a65e35e8a2135a81",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/result.json": "67d54ea19d5cfa48700e936210a2e1baf7d886cc1429af6f4933128c4c51dc4a",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/usage.json": "4758083a2fa841735fd7eba6cc303bb7206d3f43cbf06cdb8770ebe46791a726",
+      "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/validation.json": "fd6b5bb2243f4d0268861949cb7b155390119dc6cda794f42eff625c8b66a5f7",
+      "chunks.json": "10fecf4930b0c2a923a5bb09f0c02b227501d02bdc62c2bac5dc9dd51fbe9d4c",
+      "plan.json": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce",
+      "source-manifest.json": "2e82f80621a1f1b539892df2fe1bf800d7d4db73021790745ed485c5a693442b"
+    },
+    "source_sections": [
+      {
+        "end_line": 246,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F1.%20The%20frame%20as%20the%20engagement%20unit%2FFoundation%20to%20law",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "0ca834843954866f0f625c8d4688e84b3a108fc10aadcfbff7e2d7bf762efa65",
+        "start_line": 123
+      },
+      {
+        "end_line": 275,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F2.%20Core%20claims",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "3dc00c1c7a9ba7837648d0387d9d8bb8bfeb875c77f6c91c6da499e9ad5480e0",
+        "start_line": 247
+      },
+      {
+        "end_line": 280,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "90620bf3439416419b5047c818c4417129a8928321284b58d08b5ef7aa108daa",
+        "start_line": 276
+      },
+      {
+        "end_line": 286,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-001%20Evaluation%20relativity",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "26c6f9df1162d7fe143c070cfe8bfb04235b2d5375e236a9f46b304c4729a135",
+        "start_line": 281
+      },
+      {
+        "end_line": 300,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-002%20Finite%20attention",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "3e31bf856a42ae0a5fbc7ad618594fe0caae3a1025eb9734a9f410e6232c2449",
+        "start_line": 287
+      },
+      {
+        "end_line": 310,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-003%20Material%20sufficiency",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "fede4b803ef9c7865b0afec3b41b3aa2ad0ab352c932b580dd07f89f8f61f204",
+        "start_line": 301
+      },
+      {
+        "end_line": 317,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-004%20Irrelevance%20exclusion",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "116ab5b2dd939dd925de1bf37f8f291d3ca447af38272fc59be9359ae6325206",
+        "start_line": 311
+      },
+      {
+        "end_line": 325,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-005%20Exact%20basis%20and%20coordinates",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "55ffd182f98afe82445e92fa74b9fe72da223b52c5c912b97a225e1c0c8ab2cc",
+        "start_line": 318
+      },
+      {
+        "end_line": 335,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-006%20Authority%20conservation",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "1f32f8ef300405215224fd2b54bbc4213eb43a63f4145dc19b116f95870e487b",
+        "start_line": 326
+      },
+      {
+        "end_line": 346,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-007%20Semantic%2C%20evidence%20and%20verdict%20separation",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "3b67748b41d97188c004fa2d4a0ff3579fec46efcffcea1910384b2a7dc0db5e",
+        "start_line": 336
+      },
+      {
+        "end_line": 354,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-008%20Overlap%20without%20identity%20collapse",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "8db631fdbd1573f15554b5b6c140caa8a842cf34b419547a0d44026c2d5eda36",
+        "start_line": 347
+      },
+      {
+        "end_line": 375,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-009%20No%20assumed%20hierarchy",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "b355369951d7492534acce0f9d29a37600c6f4ab719ae5b2f54fb9c6ad164299",
+        "start_line": 355
+      },
+      {
+        "end_line": 385,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-010%20Composition%20on%20demand",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "6c76879bcf6d343fd555bdb959176cc0a7cc8352ba9f3925de3fd51d68337c69",
+        "start_line": 376
+      },
+      {
+        "end_line": 395,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-011%20Topology%20mutation%20and%20recharting",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "62e64e1d3e9ad4b2827f0b0acbb9fd413c55df406e249a575207b3ef9d5f31ec",
+        "start_line": 386
+      },
+      {
+        "end_line": 411,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-012%20Closed%20results",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "06df5c6c55c6d05b5600e5c342d3159650dee5aef284835da6b880d6db536684",
+        "start_line": 396
+      },
+      {
+        "end_line": 419,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-013%20Reconstructable%20activation",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "f02ec7616d91c7c8edc47d2792afaaf1fe506ec7cb55e4b50feb90f8b78a7c4d",
+        "start_line": 412
+      },
+      {
+        "end_line": 432,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-014%20Capability%20fit",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "ace894712b9ba1881d091ea29fe7244a2ac352eec2773c4a24e9e1b7846248eb",
+        "start_line": 420
+      },
+      {
+        "end_line": 440,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-015%20Residual%20uncertainty",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "83920270c4e353b978f0a54c799158a8a44029a90888c9910e90708fa358f46a",
+        "start_line": 433
+      },
+      {
+        "end_line": 447,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-016%20Implementation%20neutrality",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "c896c66999b84d7669a2a0d461e9db58de03d3c75eacaaeae6a375c6816599ef",
+        "start_line": 441
+      },
+      {
+        "end_line": 459,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FRF-017%20Proportional%20compression",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "4aedae81c61da2d23f88db827706246daadba2a1735bd7e6f36575b462706490",
+        "start_line": 448
+      },
+      {
+        "end_line": 473,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F3.%20Laws%2FEngagement%20atom%20and%20semantic%20atom",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "2e74da46f521ab771b6db0e039c6a236c173a0c5af076b6c1f0eb417cbb61c85",
+        "start_line": 460
+      },
+      {
+        "end_line": 495,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "0416bc542a6b49643120356d580dd936c8686f0229707c5d5bb19dbf8d829967",
+        "start_line": 474
+      },
+      {
+        "end_line": 524,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F4.%20Frame-set%20declaration%2FFrame-set%20selection",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "430392b8f4ad76217f2677ba8d887fbe21d7f55c599ebfe3f8765203d45bf353",
+        "start_line": 496
+      },
+      {
+        "end_line": 610,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F5.%20Method%20functions",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "b58e3c1212d9cf387b0f9215c0556256b7e23fcbc5c44bfc5be278581f7c4549",
+        "start_line": 525
+      },
+      {
+        "end_line": 615,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "c56bc0ca91a640a6d5b3581c996a786ca4da15889d8b7ce3485b1021a981b07f",
+        "start_line": 611
+      },
+      {
+        "end_line": 624,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FIndependently%20activated%20co-evaluation",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "2ca385e843fa67a3767d44d02a8e3c54d70f704b7b5cc0ca5fb9297d5a4f7924",
+        "start_line": 616
+      },
+      {
+        "end_line": 633,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FResult%20conjunction",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "1fbaf00cc06b18afe3b98c83f06c26f91daacd0ae05781b86fb0b82003e0fd03",
+        "start_line": 625
+      },
+      {
+        "end_line": 648,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FEvidence%20or%20coordinate%20translation",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "fefa419f7127eaa4a94f5893f143179a8ffc8564ebdbfbd544237d336e071911",
+        "start_line": 634
+      },
+      {
+        "end_line": 658,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F6.%20Frames%20in%20conjunction%2FMaterial%20composition",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "6e91e431e674bacfa75239e7cb42653d32306021067dae9257b59440941e6fe6",
+        "start_line": 649
+      },
+      {
+        "end_line": 683,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F7.%20Frame%20relations",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "54e20ff851c476f878b6c08c50af940ccb4a8ee4b2c390e6653cdcf240cbf5ce",
+        "start_line": 659
+      },
+      {
+        "end_line": 685,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "ce88b288270be2835823eb1b5bcf67729c19f4b6f5d971996676ac3cc4c28db0",
+        "start_line": 684
+      },
+      {
+        "end_line": 696,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20basis",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "3a2756d6f35fc35576873206c3f48ff6103f6e9c8848a0b9387a8b0e19f5b07c",
+        "start_line": 686
+      },
+      {
+        "end_line": 714,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FEvaluation%20inventory",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "654461e23bb91f04507ec8f5a940b90e6d2ecafd6ee8623c24e0395a4df60b15",
+        "start_line": 697
+      },
+      {
+        "end_line": 725,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20dimensions",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "c386e5262d7417c96ae9b65da9fd5daa6bcf5110d2c035b87131cba35c6a8a08",
+        "start_line": 715
+      },
+      {
+        "end_line": 783,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FCoverage%20ledger",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "11c26c05b07149fde2296822f4cb8058563580a247a9c07d5d93c9eaefbc967d",
+        "start_line": 726
+      },
+      {
+        "end_line": 791,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FInteraction%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "427e02eb5ab94b1c7168a90de91350281a34da0ca21a48274f65e8e9b38b93dd",
+        "start_line": 784
+      },
+      {
+        "end_line": 800,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FAuthority%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "7acd04a20bbf12b6301d38dfe89d4af595e37c9fff491a45d6ca2b8133c064f6",
+        "start_line": 792
+      },
+      {
+        "end_line": 807,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FFailure%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "a908f288524b2f59d45d87ea491c191834e275b207995fdf1575e0874a901cc9",
+        "start_line": 801
+      },
+      {
+        "end_line": 816,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FHigh-risk%20separately%20activated%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "a4d81a3e41a63d305f54d1b5e33e66c7dbc22f48086beab3ae33de45c143ab93",
+        "start_line": 808
+      },
+      {
+        "end_line": 839,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F8.%20Workspace%20coverage%2FOperational%20full%20coverage",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "6490be938e10550c51a24fbf5ea758c17642e134137e2f3ad4a16637a6b4d5f3",
+        "start_line": 817
+      },
+      {
+        "end_line": 860,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F9.%20Completeness%20boundary",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "4cd6f0dde5ec4f4c606691bc2ee0a2265962ed68e9a49410feff120fc3bd2e5e",
+        "start_line": 840
+      },
+      {
+        "end_line": 862,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "fec354d0d08a88a9032b11d256ed53546b0be6f524f85671517e822a5d52d846",
+        "start_line": 861
+      },
+      {
+        "end_line": 879,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FMissing-frame%20signals",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "32442dc3c8b9e9d7c99112ebdc6cad622ed26018c01a6afc6ed0c2aebd66ae30",
+        "start_line": 863
+      },
+      {
+        "end_line": 909,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FDiagnostic%20order",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "f2bd006c481a0d74be1c10693b7a5fd0020915bfb0dd50d8b8d70bb66283efde",
+        "start_line": 880
+      },
+      {
+        "end_line": 964,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F10.%20Discovery%20and%20revision%2FRevision%20actions",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "e56ac9fb013975451b1405ab9d20201baad826a0edea9b70a1f2b69131476e33",
+        "start_line": 910
+      },
+      {
+        "end_line": 991,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "fdab52767cf90eade684c752d231cf32a83e5e288cb86162eeca0fee5f9176b8",
+        "start_line": 965
+      },
+      {
+        "end_line": 1035,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F11.%20The%20activation%20packet%2FMinimal%20activation%20binding",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "2893886650da098b99d75be426b0e60944f275398c2168269465eeb14f97bb8e",
+        "start_line": 992
+      },
+      {
+        "end_line": 1070,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F12.%20Violations",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "517ea591fb84571de493299aed0e0b3574ad06632b0ab77528498696d4c05903",
+        "start_line": 1036
+      },
+      {
+        "end_line": 1077,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "47ef592b956ab0430767d2c28faac4b8dfe94a4a33b92a99956fa57ae5687904",
+        "start_line": 1071
+      },
+      {
+        "end_line": 1121,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame%20declaration",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "d1054f7d650cefe77b496fe7a9ac14c0354b140ace4f8358a22cda0be66afc5d",
+        "start_line": 1078
+      },
+      {
+        "end_line": 1156,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20frame-set%20declaration",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "ddeaecb7a10fca5ff6cc5644aacfeb0aff56bfbeb2aebd50c94a281b03ea2808",
+        "start_line": 1122
+      },
+      {
+        "end_line": 1182,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F13.%20Minimal%20declarations%2FMinimal%20evaluation%20result",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "d46c7e485c105aa9c019122b5f41c4ee4ab01eeea653350e3f4138dd8a54e276",
+        "start_line": 1157
+      },
+      {
+        "end_line": 1202,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F14.%20Closure",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "72fe6ac7981cafad7028af80a4999ffecfa1975a38c5b04f34212f4930c91239",
+        "start_line": 1183
+      },
+      {
+        "end_line": 1272,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/REFERENCE_FRAME.md#REFERENCE_FRAME%2F15.%20Source%20dispositions",
+        "path": "standards/REFERENCE_FRAME.md",
+        "sha256": "6e8acef6f1e57ace6e8582f1e47dc4522a0ba82992174cbe995d5b6ba993c534",
+        "start_line": 1203
+      },
+      {
+        "end_line": 34,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE",
+        "path": "standards/RELEASE.md",
+        "sha256": "1c2d43d15a553e7c999e6a614e717575769a765a36cb18b765747d79e60ee855",
+        "start_line": 1
+      },
+      {
+        "end_line": 93,
+        "id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position",
+        "path": "standards/RELEASE.md",
+        "sha256": "5f2e0b853e02cad00c97b7a72cbbb37caa74817beb572101fff8d504b5d165e7",
+        "start_line": 35
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/answer.json": "8b250976894d1038f3b935618f668e011a98dfb4b4ccdd3e6fb1799405467c70",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/events.jsonl": "bbd4cf92a8073684e88cfac985f54773fc9bc329a3192eb561c7cae2f8bc939f",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/invocation.json": "ef7f79d66b11b35c94f51447e52e0ed8ec0ca4e18526fe82f9a7c03336380d9d",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/prompt.txt": "68fd7790bf3f31c87c9dd9b80f0dea257e255a9f23e8bc74a65e35e8a2135a81",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/result.json": "67d54ea19d5cfa48700e936210a2e1baf7d886cc1429af6f4933128c4c51dc4a",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-20f415a0d8d3d04f90b0/attempt-001/usage.json": "4758083a2fa841735fd7eba6cc303bb7206d3f43cbf06cdb8770ebe46791a726"
+  }
+}
