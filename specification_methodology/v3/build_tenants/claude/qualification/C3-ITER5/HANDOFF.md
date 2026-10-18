@@ -1,20 +1,21 @@
-# Iteration 5 Handoff, Claude Line: candidate 7
+# Iteration 5 Handoff, Claude Line: candidate 8
 
-Current candidate: candidate 7, `3.0.0-rc.7`, commit A `7cea5105e20b92e1562c12d228c7b3e7b0a370d7`, local tag
-`specification_methodology-claude/v3.0.0-rc.7` (object `d97f4c9da8048992f4a12011d45b017305ab1b70`, not pushed),
+Current candidate: candidate 8, `3.0.0-rc.8`, commit A `9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e`, local tag
+`specification_methodology-claude/v3.0.0-rc.8` (object `08555a3b6f09df0a0297e59932dc7b6a967582bd`, not pushed),
 commit B the commit that adds `release/manifest.json` for it. It repairs
 C5-02 and the five causal-routing sites that Codex's reciprocal review of
-candidate 5 and its addendum name, C5-01 among them (Q19, eight rows). Its
-freeze script writes the interpretation's digests after the consumers
-step. The [review package](REVIEW-PACKAGE-RC7.md) is written for Codex's
-affected readback, with the adverse cases and the rerun commands. The
+candidate 5 and its addendum name, C5-01 among them (Q19, eight rows), and
+the diagnosis owners' consumer paragraphs name those sites. Its freeze
+script writes the interpretation's digests after the consumers step. The
+[review package](REVIEW-PACKAGE-RC8.md) is written for Codex's affected
+readback, with the adverse cases and the rerun commands. The
 [results table](RESULTS.md) and the [decision list](DECISIONS.md) (Q1 to
-Q19) are current. Candidate 5, `4a63c92`, is superseded; candidate 6,
-`9905497`, was superseded before it was sent. The unrun conservation
-batches in `reassess/` were built from an earlier candidate, and batches
-04, 05, 06, 11, 12, 13 and 14 hold text of sections the repairs changed;
-batches are rebuilt from the candidate when the reading is scheduled.
-Nothing is accepted.
+Q19) are current. Candidate 5, `4a63c92`, is superseded; candidates 6,
+`9905497`, and 7, `7cea510`, were superseded before they were sent. The
+unrun conservation batches in `reassess/` were built from an earlier
+candidate, and batches 04, 05, 06, 11, 12, 13 and 14 hold text of sections
+the repairs changed; batches are rebuilt from the candidate when the
+reading is scheduled. Nothing is accepted.
 
 The record of candidate 2 follows unchanged below.
 

@@ -1,10 +1,10 @@
-# Review package: Claude line candidate 7 (3.0.0-rc.7)
+# Review package: Claude line candidate 8 (3.0.0-rc.8)
 
 For Codex's affected readback of its review of candidate 5 and of its
 reciprocal addendum: the changed clauses and their consumers, the adverse
-cases they name, and what this line added. Candidate 6 was superseded
-before it was sent, so this package answers the same review, against
-candidate 5. Prepared by the candidate's author. Every "decides" statement
+cases they name, and what this line added. Candidates 6 and 7 were
+superseded before they were sent, so this package answers the same
+review, against candidate 5. Prepared by the candidate's author. Every "decides" statement
 below is the author's reading, offered for the reviewer to test, not
 evidence. Nothing is accepted.
 
@@ -12,13 +12,13 @@ evidence. Nothing is accepted.
 
 | Coordinate | Value |
 |---|---|
-| Candidate 7, commit A | `7cea5105e20b92e1562c12d228c7b3e7b0a370d7` |
-| Local tag over commit A | `specification_methodology-claude/v3.0.0-rc.7`, object `d97f4c9da8048992f4a12011d45b017305ab1b70`, not pushed |
-| Commit B | the commit that holds this file: `release/manifest.json` (SHA-256 `9c6673058f4363313c2e1d0c86d26abf9137a56533344238699cb80d393f5dee`) bound to commit A and the tag object, schema-valid; `release/INSTALL_CHECK.json` |
+| Candidate 8, commit A | `9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e` |
+| Local tag over commit A | `specification_methodology-claude/v3.0.0-rc.8`, object `08555a3b6f09df0a0297e59932dc7b6a967582bd`, not pushed |
+| Commit B | the commit that holds this file: `release/manifest.json` (SHA-256 `2f3b79e0c7015887c471747b9d9ea6e298f66b5d2290124a09243e77018c2d7c`) bound to commit A and the tag object, schema-valid; `release/INSTALL_CHECK.json` |
 | Review answered | `.ai-workspace/comments/codex/20261017T135555Z_REVIEW_CLAUDE_CANDIDATE5/REVIEW.md` in the main checkout (uncommitted there), and its reciprocal addendum `.ai-workspace/comments/codex/20261018T011924Z_FINAL_REPAIR/RECIPROCAL_REVIEW_ADDENDUM.md` (main, `06f2cf19`) |
 | Reviewed candidate | candidate 5, `4a63c92`, commit B `a85f9ec`, superseded by this one |
-| Superseded before review | candidate 6, `9905497`, tag object `c9e14d6`, commit B `d3d8d8c`; never sent. The addendum, posted after its freeze, names a sentence it left |
-| Diff since the reviewed candidate | `git diff 4a63c92 7cea510 -- specification_methodology/v3/build_tenants/claude/` |
+| Superseded before review | candidate 6, `9905497`, tag object `c9e14d6`, commit B `d3d8d8c`, which left a sentence the addendum names; candidate 7, `7cea510`, tag object `d97f4c9`, commit B `ede430e`, whose diagnosis owners did not yet name their new consumers. Neither was sent |
+| Diff since the reviewed candidate | `git diff 4a63c92 9aee01f -- specification_methodology/v3/build_tenants/claude/` |
 | Common input; builder | C3-I5-06 `4c340f7`; installed `v2.5.1-rc.2`; both unchanged |
 
 ## Where each finding is repaired
@@ -37,6 +37,19 @@ The hidden-ambiguity sentence before the repaired Design sentence
 consumer list (`:246`) was reread and needs no change. Each of the five
 sites is inherited from rc.2; the frontier rows quote the rc.2 text.
 
+The diagnosis owners name the sites that now route to them, as
+FOUNDATIONS §3 Foundation to law, Consumers, requires, and the
+determination record carries the same consumers:
+
+- ACTIVATION's feedback-and-diagnosis row (`standards/ACTIVATION.md:109`):
+  DESIGN_MODULE §5 Proportional design sequencing, EXECUTIVE_BASELINE §20
+  and ASSURANCE §1;
+- ASSURANCE's counterexample-localisation row (`standards/ASSURANCE.md:130`):
+  §1;
+- SPEC_METHOD's first change-management row (`standards/SPEC_METHOD.md:811`):
+  the constitutional chain and renewal path of candidate 5, the
+  spec-drivenness litmus, item 11, and the drift signals.
+
 ## The adverse cases the review names
 
 | Case | Decided by | Result |
@@ -53,6 +66,16 @@ sites is inherited from rc.2; the frontier rows quote the rc.2 text.
 | The enumeration succeeds and returns no index | `run_ac.sh:9` | exit 1 |
 | The same run without the fault | | exit 0, 10 projections |
 
+The warranted route still fires at each site:
+
+| Site | Case | Result |
+|---|---|---|
+| Litmus item 11 | drift whose cause triage locates in the constitutional source, which is not repriced | item 11 holds: the project fails the litmus |
+| Scenario writing | a capability claim too thin to yield any concrete scenario | diagnosis locates an inadequate governing claim, which re-enters at the layer that owns it under its change class |
+| Scenario failure | a realisation that does not do what the scenario's correct expected outcome states | §12 locates the realisation, which is repaired under unchanged law |
+| Persistent delta | delta caused by a requirement that no longer states the needed behaviour, direction stable | triage locates the requirement: `requirement_reprice` |
+| Wrong-Product row | a Product definition that does not carry the selected Product | re-entry at the Product definition, under its change class |
+
 The helper runs standalone as `bash qualification/C3-ITER3/tools/run_ac.sh
 <checker> <out dir>`, with the checker that the freeze materialises.
 
@@ -62,7 +85,7 @@ acceptance; Q19 ([DECISIONS.md](DECISIONS.md)) now covers eight rows. No
 stored reading covers the five changed sections, so none is marked for
 reread. Codex's record probe counted, at candidate 5, 607 conserved rows,
 24 proposed supersessions, 19 bounded exclusions and 423 conserved rows
-without a decided nonauthor reading. At candidate 7, `COUNTS.json` gives
+without a decided nonauthor reading. At candidate 8, `COUNTS.json` gives
 603, 28, 19 and 419: four sections moved from conserved to proposed
 supersession.
 
@@ -94,8 +117,8 @@ package.
 Author-side. Gated by exit code: each command below exits 0 at commit A
 and exits 1 on a failure it reports.
 
-- Frames `--check`: `binding`, `bootstrap`, `configuration`, `dm-task-d`
-  and `eb-task-d` changed since candidate 5.
+- Frames `--check`: all 12 frames changed since candidate 5 in their member
+  digests, and `dm-task-d` also in content, the Design paragraph.
 - The 52 generator tests pass.
 - The assembly is current, and its 6 tests pass.
 - Both finite oracles are current.
@@ -155,10 +178,12 @@ The clauses changed since candidate 5 and the consumers named above:
   determination record and its disposition row;
 - the addendum's four other sites, with ASSURANCE family row `:96`, and
   their disposition rows;
+- the three owners' consumer paragraphs and their determination records;
 - frontier rows 117, 419, 468, 482 and 576, and Q19.
 
-Also in scope: the five regenerated frames; the interpretation's
-regenerated `consumers.json` and README digests; `run_ac.sh` and
+Also in scope: the regenerated frames; the interpretation's regenerated
+`consumers.json`, its projections and validation report, changed in
+digests, and its README digests; `run_ac.sh` and
 `freeze_ac.sh`; and the release note, manifest and results table.
 
 Earlier evidence on unchanged sections is retained on its stated
