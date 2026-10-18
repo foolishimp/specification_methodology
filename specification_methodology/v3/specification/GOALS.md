@@ -4,6 +4,10 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+The owner selects construction of the standalone V3 `common/` candidate, with Codex holding the pen, under [T-003](../.ai-workspace/tickets/active/T-003-COMMON-standalone-v3-construction.md). The candidate takes the frozen Claude implementation and the unified enhancement register as construction inputs. It is complete in its own text; source history and decision records remain outside the package. The owner has authorised checkpoint commits and construction. Meaning changes remain proposed until their exact decisions and covering review are complete; release and adoption are not selected.
+
+### Earlier construction selections
+
 The product owner selects continuation of both lines toward v3.0.0 RC1: “ok i'm going to let you both continue to the RC1”. [RC1 continuation](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#rc1-continuation) records the Codex admission and dependency-ready repair, qualification and release preparation. This work-state selection preserves the ratified common requirements, independent tenant lines and exact acceptance/release conditions.
 
 GOAL-001: establish one common structure for the new release and review its foundations before any capability or document work. Achieved through C1.

@@ -1,0 +1,146 @@
+{
+  "source_A": "9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e",
+  "records_B": "1db13bfeb0675fc95de04aceccb214f5b76873fc",
+  "common": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "scratch": "/private/tmp/stdo-rc8-tools-xdpagqfa",
+  "checker_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+  "elapsed_seconds": 12.741,
+  "cases": [
+    {
+      "name": "freeze-positive-consumers-change",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-positive"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/positive/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 4.997,
+      "stdout_tail": ":claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:03e058478db63466c8bc6bb03b5e12512397c31f95498d3a1fe3c3fd0526727e\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:03e058478db63466c8bc6bb03b5e12512397c31f95498d3a1fe3c3fd0526727e\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\nHOLDS  identity-positive {\"expected\": {\"Executable\": \"5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\", \"Schema\": \"43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7\", \"Output-contract\": \"c12426\nHOLDS  identity-adverse {\"mismatches\": [\"Schema\"]}\nHOLDS  validate-positive {\"exit\": 0, \"status\": \"valid\", \"diagnostics\": 0, \"report_identical\": true, \"map_identical\": true}\nHOLDS  validate-adverse-duplicate-clause {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 2, \"stderr\": \"\"}\nHOLDS  validate-adverse-dangling-source {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 1, \"stderr\": \"\"}\nHOLDS  project-positive [[\"authority-kinds\", \"reference-only\", 0, true, \"\"], [\"authority-kinds\", \"materialized\", 0, true, \"\"], [\"construction-and-assurance\", \"reference-only\", 0, true, \"\"], [\"construction-and-assurance\", \"ma\nHOLDS  project-adverse-dropped-clause {\"dropped\": \"urn:stdo-3:claude:i3:clause:what-creates-no-authority\", \"exit\": 0, \"validate_status\": \"valid\", \"baseline_exists\": true, \"differs_from_fresh\": true, \"stderr\": \"\"}\nall hold: True elapsed 2.7\n{\"clauses\": 155, \"owners_unresolved\": 0, \"consumer_bindings\": 2538, \"clauses_without_consumer\": 0, \"read_support\": 0}\nREADME artifact table refreshed 16 files\n",
+      "stderr_tail": "",
+      "consumers_changed": true,
+      "consumers_old_pin": "a5ab74aa96038117a80bb3f86a20d0f6f9b275f08892784603a0fa197a5228ec",
+      "consumers_final_sha256": "b7bac09714e0cdf15dd01605d037cf166726d411fd5281675869c4d3e07f3651",
+      "consumers_final_pin": "b7bac09714e0cdf15dd01605d037cf166726d411fd5281675869c4d3e07f3651",
+      "pin_count": 16,
+      "pin_mismatches": [],
+      "projections": 10,
+      "controls_holds_all": true,
+      "controls_count": 7
+    },
+    {
+      "name": "enumeration-failure",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-positive/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/enum-failure"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/positive/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.541,
+      "stdout_tail": "",
+      "stderr_tail": "reviewer enumeration failure\nrun_ac.sh: no frame index enumerated (exit 37)\n",
+      "commands_log": "2026-10-18T02:26:46Z validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output /private/tmp/stdo-rc8-tools-xdpagqfa/enum-failure/validation-report.json --emit-map /private/tmp/stdo-rc8-tools-xdpagqfa/enum-failure/logical-constraint-map.json\nexit=0\nframe-index enumeration exit=37 indexes=none\n",
+      "projection_count": 0,
+      "real_validation_status": "valid",
+      "project_command_logged": false
+    },
+    {
+      "name": "enumeration-partial-failure",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-positive/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/enum-partial-failure"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/positive/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.513,
+      "stdout_tail": "",
+      "stderr_tail": "reviewer enumeration partial-failure\nrun_ac.sh: no frame index enumerated (exit 37)\n",
+      "commands_log": "2026-10-18T02:26:47Z validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output /private/tmp/stdo-rc8-tools-xdpagqfa/enum-partial-failure/validation-report.json --emit-map /private/tmp/stdo-rc8-tools-xdpagqfa/enum-partial-failure/logical-constraint-map.json\nexit=0\nframe-index enumeration exit=37 indexes=authority-kinds\n",
+      "projection_count": 0,
+      "real_validation_status": "valid",
+      "project_command_logged": false
+    },
+    {
+      "name": "enumeration-empty-success",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-positive/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/enum-empty-success"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/positive/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.511,
+      "stdout_tail": "",
+      "stderr_tail": "reviewer enumeration empty-success\nrun_ac.sh: no frame index enumerated (exit 0)\n",
+      "commands_log": "2026-10-18T02:26:48Z validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output /private/tmp/stdo-rc8-tools-xdpagqfa/enum-empty-success/validation-report.json --emit-map /private/tmp/stdo-rc8-tools-xdpagqfa/enum-empty-success/logical-constraint-map.json\nexit=0\nframe-index enumeration exit=0 indexes=none\n",
+      "projection_count": 0,
+      "real_validation_status": "valid",
+      "project_command_logged": false
+    },
+    {
+      "name": "freeze-enumeration-failure",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-enum-failure"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/complete-enum-failure/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.309,
+      "stdout_tail": "checker at /private/tmp/stdo-rc8-tools-xdpagqfa/freeze-enum-failure/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py sha256=5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\n",
+      "stderr_tail": "reviewer enumeration failure\nrun_ac.sh: no frame index enumerated (exit 37)\n",
+      "changed_tenant_artifacts": [],
+      "scratch_stale_projection_removed": true
+    },
+    {
+      "name": "freeze-control-failure",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc8-tools-xdpagqfa/freeze-control-failure"
+      ],
+      "cwd": "/private/tmp/stdo-rc8-tools-xdpagqfa/complete-control-failure/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 4.968,
+      "stdout_tail": "f95498d3a1fe3c3fd0526727e\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:03e058478db63466c8bc6bb03b5e12512397c31f95498d3a1fe3c3fd0526727e\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:03e058478db63466c8bc6bb03b5e12512397c31f95498d3a1fe3c3fd0526727e\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\nFAILS  identity-positive {\"expected\": {\"Executable\": \"5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\", \"Schema\": \"43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7\", \"Output-contract\": \"c12426\nHOLDS  identity-adverse {\"mismatches\": [\"Schema\"]}\nHOLDS  validate-positive {\"exit\": 0, \"status\": \"valid\", \"diagnostics\": 0, \"report_identical\": true, \"map_identical\": true}\nHOLDS  validate-adverse-duplicate-clause {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 2, \"stderr\": \"\"}\nHOLDS  validate-adverse-dangling-source {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 1, \"stderr\": \"\"}\nHOLDS  project-positive [[\"authority-kinds\", \"reference-only\", 0, true, \"\"], [\"authority-kinds\", \"materialized\", 0, true, \"\"], [\"construction-and-assurance\", \"reference-only\", 0, true, \"\"], [\"construction-and-assurance\", \"ma\nHOLDS  project-adverse-dropped-clause {\"dropped\": \"urn:stdo-3:claude:i3:clause:what-creates-no-authority\", \"exit\": 0, \"validate_status\": \"valid\", \"baseline_exists\": true, \"differs_from_fresh\": true, \"stderr\": \"\"}\nall hold: False elapsed 2.8\n",
+      "stderr_tail": "",
+      "changed_tenant_artifacts": [
+        "a_c/i3/checker-commands.log",
+        "a_c/i3/validation-report.json",
+        "qualification/C3-ITER5/returns/ac_controls.json"
+      ],
+      "consumers_not_reached": true,
+      "readme_not_refreshed": true,
+      "validation_copied": true,
+      "holds_all": false,
+      "failing_controls": [
+        "identity-positive"
+      ]
+    }
+  ],
+  "all_expected_exits": true,
+  "external_paid_calls": 0,
+  "limits": [
+    "Fault injection checks propagation, not checker semantic correctness.",
+    "Complete freeze is intentionally observed as sequential, not transactional.",
+    "verify_ai.sh changes cwd to the named peer repository for read-only Git reads; all writes stay in scratch.",
+    "No candidate, common, Git ref, native install or publication effects."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "kind": "stdo.exploratory-probe-adjudication",
+  "standing": "Bounded source-use observations; no acceptance, general performance or context-fit claim",
+  "adjudicator": "Parent reviewer, using EXPECTATIONS.json recorded before actors ran and candidate-specific source owners",
+  "protocols": {
+    "r1": "PROBE_PROTOCOL.json",
+    "r2": "PROBE_PROTOCOL_R2.json"
+  },
+  "disclosure": "Fixtures were selected after parent candidate inspection. All actors were fresh same-family contexts. R2 was a changed retrieval protocol with unchanged source and facts. No candidate result-shape preference was imposed.",
+  "r1": {
+    "claude": {
+      "disposition": "incomplete_acquisition",
+      "charged_source_bytes": 83207,
+      "byte_budget": 80000,
+      "elapsed_seconds": 37.3,
+      "report": "PROBE_CLAUDE_R1.md",
+      "limits": "Broad query emitted long rows and tool truncation; actual delivered bytes unmeasured. Partial fact-supported A/B and source-supported C statements are retained in the raw report. No aggregate correctness score assigned; method correctness failure not established."
+    },
+    "codex": {
+      "disposition": "complete_supported_for_these_cases",
+      "satisfied_distinctions": 13,
+      "expected_distinctions": 13,
+      "charged_source_bytes": 79858,
+      "elapsed_seconds": 104.02,
+      "report": "PROBE_CODEX_R1.md",
+      "limits": "One truncated excerpt charged in full and partially reread; host context uninstrumented."
+    }
+  },
+  "r2": {
+    "claude": {
+      "disposition": "complete_supported_for_these_cases",
+      "satisfied_distinctions": 13,
+      "expected_distinctions": 13,
+      "charged_source_bytes": 79951,
+      "max_chunk_bytes": 9569,
+      "elapsed_seconds": 141,
+      "report": "PROBE_CLAUDE_R2.md",
+      "limits": "Two overlarge proposed reads were blocked before emission and narrowed; cross-reference coverage not exhaustive."
+    },
+    "codex": {
+      "disposition": "complete_supported_for_these_cases",
+      "satisfied_distinctions": 13,
+      "expected_distinctions": 13,
+      "charged_source_bytes": 79454,
+      "max_chunk_bytes": 10542,
+      "elapsed_seconds": 108,
+      "report": "PROBE_CODEX_R2.md",
+      "limits": "Long rows required bounded ranges; 546 bytes remained."
+    }
+  },
+  "distinctions": [
+    {
+      "id": "A1",
+      "expected": "Separate observed failure from actual implementation disagreement",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:1272-1283; SPEC_METHOD.md:846-898,977-985",
+        "codex": "FOUNDATIONS.md:705-730; SPEC_METHOD.md:1473-1476,1490-1518,1600-1607"
+      }
+    },
+    {
+      "id": "A2",
+      "expected": "Locate decoder/observation cause",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:1272-1283; SPEC_METHOD.md:846-898,977-985",
+        "codex": "FOUNDATIONS.md:705-730; SPEC_METHOD.md:1473-1476,1490-1518,1600-1607"
+      }
+    },
+    {
+      "id": "A3",
+      "expected": "Repair within existing realization grant; no forced requirement/Intent change",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:1272-1283; SPEC_METHOD.md:846-898,977-985",
+        "codex": "FOUNDATIONS.md:705-730; SPEC_METHOD.md:1473-1476,1490-1518,1600-1607"
+      }
+    },
+    {
+      "id": "A4",
+      "expected": "Recheck supported observation and affected evidence",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:1272-1283; SPEC_METHOD.md:846-898,977-985",
+        "codex": "FOUNDATIONS.md:705-730; SPEC_METHOD.md:1473-1476,1490-1518,1600-1607"
+      }
+    },
+    {
+      "id": "B1",
+      "expected": "Reacquire actual external state; local summary does not prove no effect",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "ACTIVATION.md:1124-1162,1388-1395,1480-1501,1712-1738; FOUNDATIONS.md:1428-1437,1450-1470",
+        "codex": "FOUNDATIONS.md:393-419,435-459,833-886,899-920,936-958; TRANSFORMATION_LIBRARY.md:259-267"
+      }
+    },
+    {
+      "id": "B2",
+      "expected": "Preserve uncertain effect; no blind replay or duplicate shipment",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "ACTIVATION.md:1124-1162,1388-1395,1480-1501,1712-1738; FOUNDATIONS.md:1428-1437,1450-1470",
+        "codex": "FOUNDATIONS.md:393-419,435-459,833-886,899-920,936-958; TRANSFORMATION_LIBRARY.md:259-267"
+      }
+    },
+    {
+      "id": "B3",
+      "expected": "Retain authenticated arithmetic conclusion on supported unchanged validity dependencies",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "ACTIVATION.md:1124-1162,1388-1395,1480-1501,1712-1738; FOUNDATIONS.md:1428-1437,1450-1470",
+        "codex": "FOUNDATIONS.md:393-419,435-459,833-886,899-920,936-958; TRANSFORMATION_LIBRARY.md:259-267"
+      }
+    },
+    {
+      "id": "B4",
+      "expected": "Do unrelated authorized formatter work where no material dependency blocks",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "ACTIVATION.md:1124-1162,1388-1395,1480-1501,1712-1738; FOUNDATIONS.md:1428-1437,1450-1470",
+        "codex": "FOUNDATIONS.md:393-419,435-459,833-886,899-920,936-958; TRANSFORMATION_LIBRARY.md:259-267"
+      }
+    },
+    {
+      "id": "C1",
+      "expected": "Retain known failure; missing second assessment does not erase it",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:828-847,885-893,1068-1103; ACTIVATION.md:518-540,635-649; SPEC_METHOD.md:715-722,1798-1803",
+        "codex": "FOUNDATIONS.md:230-252,276-302,421-433,541-561,717-724,961-976,1046-1063; REFERENCE_FRAME_METHOD.md:542-547"
+      }
+    },
+    {
+      "id": "C2",
+      "expected": "Unperformed assessment is not fabricated evaluated indeterminate; keep residual/uncovered obligation",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:828-847,885-893,1068-1103; ACTIVATION.md:518-540,635-649; SPEC_METHOD.md:715-722,1798-1803",
+        "codex": "FOUNDATIONS.md:230-252,276-302,421-433,541-561,717-724,961-976,1046-1063; REFERENCE_FRAME_METHOD.md:542-547"
+      }
+    },
+    {
+      "id": "C3",
+      "expected": "No software artifact requirement for human-only binding",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:828-847,885-893,1068-1103; ACTIVATION.md:518-540,635-649; SPEC_METHOD.md:715-722,1798-1803",
+        "codex": "FOUNDATIONS.md:230-252,276-302,421-433,541-561,717-724,961-976,1046-1063; REFERENCE_FRAME_METHOD.md:542-547"
+      }
+    },
+    {
+      "id": "C4",
+      "expected": "No universal exactly-three-actor requirement; applicable independence remains",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:828-847,885-893,1068-1103; ACTIVATION.md:518-540,635-649; SPEC_METHOD.md:715-722,1798-1803",
+        "codex": "FOUNDATIONS.md:230-252,276-302,421-433,541-561,717-724,961-976,1046-1063; REFERENCE_FRAME_METHOD.md:542-547"
+      }
+    },
+    {
+      "id": "C5",
+      "expected": "Lawfulness/termination do not imply outcome satisfaction or release authority",
+      "claude_r2": "satisfied",
+      "codex_r2": "satisfied",
+      "codex_r1": "satisfied",
+      "evidence_r2": {
+        "claude": "FOUNDATIONS.md:828-847,885-893,1068-1103; ACTIVATION.md:518-540,635-649; SPEC_METHOD.md:715-722,1798-1803",
+        "codex": "FOUNDATIONS.md:230-252,276-302,421-433,541-561,717-724,961-976,1046-1063; REFERENCE_FRAME_METHOD.md:542-547"
+      }
+    }
+  ],
+  "interpretation": "Both candidates support all three cases under bounded retrieval. R1 records an adverse actor-query-source acquisition interaction for Claude, not a semantic counterexample. Single runs, nearly exhausted imposed source allowances, actor variance and uninstrumented host context preclude an efficiency ranking.",
+  "source_identity": "Parent separately authenticated pinned candidate identities; actors did not independently authenticate their supplied freeze identifiers."
+}

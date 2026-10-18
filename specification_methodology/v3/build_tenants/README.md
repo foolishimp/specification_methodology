@@ -8,6 +8,10 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 ## Current Task
 
+The owner admits a third concrete tenant, `common/`, under [T-003](../.ai-workspace/tickets/active/T-003-COMMON-standalone-v3-construction.md). Codex holds the pen for a standalone package based on the frozen Claude candidate and the unified enhancement register. Its construction records live outside the package in `.ai-workspace/common-build/`. This explicit tenant identity is distinct from the Product Definition's `how.common` shared references. Its branch, worktree, exact inputs, contribution limits and review conditions are bound by T-003. The two original candidate lines remain preserved.
+
+### Earlier admissions
+
 The product owner ratifies [C3-I5-06](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-5-ratification) at `4c340f7`. Codex begins its successor under [EC-CODEX-I5-01](../.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md#current-iteration-5-contract); Claude retains its separate admission boundary. Each tenant keeps its own preceding implementation and design, repairs supported findings, and evaluates useful peer contributions within the shared [work map](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-5-consolidated-work). Construction and [assurance](../specification/requirements/ASSURANCE.md) obligations are realized at each candidate's own owners and consumers. A common requirement alone repairs no implementation or accepts a member. Historical inputs and evidence retain their original subjects.
 
 I4 proceeds in three stages under [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-4-common-specification) and [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#iteration-4-staging):

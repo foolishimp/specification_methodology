@@ -1,0 +1,56 @@
+{
+  "replay_commands_successful": true,
+  "native_map_byte_identity": {
+    "codex_native_map_reproduction": true,
+    "claude_native_map_reproduction": true
+  },
+  "claude_regeneration_changed_files": [],
+  "claude_manifest_positive_controls": {
+    "namespace_and_subtree_only_normalized": [
+      "standards member-set digest does not reproduce"
+    ],
+    "plus_canonical_digest_normalized": []
+  },
+  "codex_regeneration": {
+    "program_byte_identical": true,
+    "frames_byte_identical": true,
+    "mapping_rows_identical": true,
+    "determinations": 709,
+    "clauses": 713,
+    "indexes": 733
+  },
+  "projection_calls_pass": true,
+  "projection_bytes": [
+    {
+      "candidate": "claude",
+      "task": "results",
+      "output_bytes": 35209
+    },
+    {
+      "candidate": "codex",
+      "task": "results",
+      "output_bytes": 298312
+    },
+    {
+      "candidate": "claude",
+      "task": "authority",
+      "output_bytes": 16247
+    },
+    {
+      "candidate": "codex",
+      "task": "authority",
+      "output_bytes": 1182585
+    },
+    {
+      "candidate": "claude",
+      "task": "reuse",
+      "output_bytes": 16675
+    },
+    {
+      "candidate": "codex",
+      "task": "reuse",
+      "output_bytes": 369562
+    }
+  ],
+  "limits": "Package, generation and carrier observations only; no complete semantic, actual-use, release-installation or native-trigger qualification."
+}

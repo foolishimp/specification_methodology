@@ -1,0 +1,253 @@
+{
+  "standing": "Historical causal evidence, not acceptance or a controlled model comparison",
+  "scope": "ROOT_CAUSE_SCOPE.json",
+  "git_excerpts": [
+    {
+      "claim": "Initial common source permits different organisation and distinguishes representation.",
+      "commit": "c91cc10b386539b301cd1a9717ec535afee50c23",
+      "path": "stdo_3/specification/PRODUCT.md",
+      "source_sha256": "ed294c227d35e858e987d2771ec0ec6b26ce9b1e46349a6a24bdf95ce35eba81",
+      "lines": [
+        5,
+        17
+      ],
+      "text": "5: ## Product Boundary\n6: \n7: STDO 3 is a specification methodology realised as documents. It defines purposeful construction and evaluation for actors with finite context, attention, time and capability.\n8: \n9: The structure distinguishes general foundations, Spec Method as one particular methodology, and optional domain profiles and operational realisations. Proposed algorithmic, informational and computational interpretations are orthogonal concerns.\n10: \n11: The source project owns one common WHAT. Codex and Claude are independent build tenants supplying HOW and documentary implementations. Their organisation, wording and encodings may differ while their accepted outputs satisfy the same common contract and independently specified expectations.\n12: \n13: The method semantics expressed by tenant documents are distinct from the common construction specification that governs those documents. A tenant design is not a replacement Product definition. a_c interpretations and tools retain separately owned dependency and proof identities.\n14: \n15: ABG, HoG and application workflow runtimes remain outside this Product. A worked application, Hello World or Data Mapper is an external example or test subject. Its particulars cannot become generic method functionality by precedent.\n16: \n17: ## Construction Authority"
+    },
+    {
+      "claim": "Claude initially selects seven-file contraction.",
+      "commit": "cc1d29d4686a617d128dcd37ac93281a5aa5003e",
+      "path": "stdo_3/build_tenants/claude/design/DOCUMENT_STRUCTURE.md",
+      "source_sha256": "dbba88c7a7f75ae60a3d0d0e21bcc63e54af44c4adf8cc3bf868aae943a0172d",
+      "lines": [
+        18,
+        40
+      ],
+      "text": "18: A finite actor, human or model, should recover from these documents what it\n19: needs to do bounded governed work with less interpretive reconstruction than\n20: the 2.5.1 corpus requires, and nothing the 2.5.1 corpus requires should be\n21: lost without an explicit disposition. Every clause therefore carries two\n22: things: the principle that requires it, and its disposition relative to the\n23: rc.2 clause it conserves, reframes or supersedes.\n24: \n25: ## Tiers and files\n26: \n27: | Tier | File | Carries | Requiring principles |\n28: |---|---|---|---|\n29: | 1 | [FOUNDATIONS.md](../standards/FOUNDATIONS.md) | ontology, the commitments as law, the algebra of composition and conservation, hypotheses | P0–P6 |\n30: | 1 | [CALCULUS.md](../standards/CALCULUS.md) | the bounded step: intake, context construction under an envelope, grant, output; the result algebra; totality dispositions; refinement; work state and restart; cost and proportionality; reuse | P0, P4b, P5 |\n31: | 1 | [EVALUATION.md](../standards/EVALUATION.md) | claims, evidence, independent assessment, review results, acceptance, conformance of realisations, method self-qualification and recoverability | P6, P1 |\n32: | 2 | [SPEC_METHOD.md](../standards/SPEC_METHOD.md) | the particular method: constitutional chain, one WHAT and tenant HOWs, outcome conservation, change classes and re-entry, activation roles, checkpoints, release lineage | P2 with the tier-1 documents |\n33: | 2 | [CONFORMANCE.md](../standards/CONFORMANCE.md) | the counterexample and trial cases the method must pass, with independently specified expectations | P6 |\n34: | 3 | [PROFILES.md](../standards/PROFILES.md) | how software design, graph execution, UX and world-model profiles import the core and what stays out of it | P0 boundary |\n35: | route | [README.md](../standards/README.md) | learn, apply, review and machine routes; document map | recoverability (derived from P0) |\n36: \n37: Seven files. The 2.5.1 corpus has 52 standards members; the contraction is\n38: by import and derivation, not by dropping obligations. Glossary and compressed\n39: views are derived from these files later, never authored separately.\n40: "
+    },
+    {
+      "claim": "Claude initially tests whole-corpus activation fit.",
+      "commit": "cc1d29d4686a617d128dcd37ac93281a5aa5003e",
+      "path": "stdo_3/build_tenants/claude/design/DOCUMENT_STRUCTURE.md",
+      "source_sha256": "dbba88c7a7f75ae60a3d0d0e21bcc63e54af44c4adf8cc3bf868aae943a0172d",
+      "lines": [
+        83,
+        94
+      ],
+      "text": "83: against the pinned Axiom Indexer subject; a conformance case run with the\n84: author withheld; an independent review reading the branch at a named commit.\n85: \n86: ## Cost\n87: \n88: Declared for this build pass: 150,000 generated tokens, 4 hours wall. Start\n89: 2026-10-11T09:35:30Z. Spend reported in `qualification/RETURNS.md` with wall\n90: time by `date -u`; token counters are unavailable on this host and are\n91: recorded as such. Selected because the pass's governed question is whether a\n92: whole-corpus draft fits one bounded activation."
+    },
+    {
+      "claim": "Codex initially combines shared-library design with separate Work/Evidence/Qualification owners.",
+      "commit": "353fe61697de19bfa1e9b69912c751fe6d318f17",
+      "path": "specification_methodology/v3/build_tenants/codex/design/BUILD_PLAN.md",
+      "source_sha256": "efe1285e5f7e88ce00fe9fea3678cdcc6be2797f94ae46afc0654d6c1d382ba0",
+      "lines": [
+        10,
+        68
+      ],
+      "text": "10: ## Library Before Instances\n11: \n12: Use one definition of each shared transformation family. An instance binds a\n13: purpose, subject, basis, required relations, responsibility and permitted effects.\n14: Different instances do not require different mechanisms merely because their\n15: names, inputs or owner roles differ. A new primitive is justified only by a\n16: material semantic, authority, effect or failure distinction that the existing\n17: definitions cannot express without losing the outer contract.\n18: \n19: | Shared family | Performed relation | Preserved distinctions |\n20: |---|---|---|\n21: | Bind | Recover the exact current work subject, governing contract, role and live authority. | Purpose, identity, state, evidence and permission. |\n22: | Acquire | Obtain sufficient material context or return unsupported acquisition/fit. | Source owner, exact selector, authenticity, availability, completeness and coupled invariants. |\n23: | Transform | Produce bounded output/effects inside an admitted contract. | Original input/producer, actual effects, output and unresolved conditions. |\n24: | Evaluate | Judge an exact predicate using sufficient admissible evidence. | Candidate, observation, judgment, assessor and required independence. |\n25: | Conjoin | Combine compatible applicable results without losing failures or coverage. | Original citations, known failures, uncovered requirements, incompatible basis and uncertainty. |\n26: | Dispose | Select the next already-authorized action from current state and result pressure. | Evaluation versus decision, repair owner, continuation, yield, stop and exhausted authority. |\n27: \n28: These are proposed library relations, not new runtime APIs or universal required\n29: serialized records. Bind/acquire/evaluate can involve I/O in a computational\n30: realization; informational contracts do not make those operations cost-free.\n31: Internal probabilistic solution strategy remains the worker's HOW. Pure helpers\n32: can be shared without combining semantic owners or independent assessments.\n33: \n34: Retain U (purpose), O (object/current state), κ (interpretation context), Σ\n35: (common WHAT), algorithmic descriptions, informational interpretations and\n36: computational realizations over architecture H as simultaneous views. They are\n37: not sequential development phases. Publish only the supported categorical\n38: fragment from C1; broader equivalence, hardware metrics, statistical Markov\n39: structure and HoG monadic binding remain separately scoped research claims.\n40: \n41: ## Proposed Canonical Document Owners\n42: \n43: Document names and grouping are Codex HOW. Common acceptance depends on behavior,\n44: not these filenames. The first thread creates only its necessary clauses and\n45: source routes. Later threads extend the same owners rather than starting another\n46: parallel rule set for each observation.\n47: \n48: | Planned tenant document | Owns | Imports instead of duplicating |\n49: |---|---|---|\n50: | standards/FOUNDATIONS.md | Interpretation, purpose, scoped objects, supported algebraic accounts and explicit open hypotheses. | Accepted C1 arguments and exact recovered source. |\n51: | standards/SPEC_METHOD.md | Intent/Product/common WHAT/HOW derivation, realization boundaries and composition obligations. | Foundations; domain-specific design profile; work/evidence contracts. |\n52: | standards/WORK_METHOD.md | Bound activation, sufficient context, execution/effect observation, current-state continuation and next-action disposition. | Evidence result algebra and governing WHAT/authority. |\n53: | standards/EVIDENCE_METHOD.md | Claim/evidence/assessment boundaries, authentication, applicable independence and truthful conjunction. | Scoped identity/basis; qualification acceptance contract. |\n54: | standards/QUALIFICATION_METHOD.md | Claim-appropriate actual-use evidence, operational claims, dependency, successor and release/adoption boundaries. | Work and evidence meanings; separately owned a_c mechanics. |\n55: | standards/profiles/ | Optional software design, graph execution, work records and world-model contracts. | Core obligations; each profile's domain-owned meaning. |\n56: \n57: Ticketing is a work-record realization when selected, not a prerequisite to every\n58: direct bounded action. Graph traversal supplies a computational realization;\n59: a graph's admitted validation can be reused on the same predicate and basis while\n60: dynamic input/binding admission stays current. Operational state and evidence\n61: ownership are selected by the profile; recovery does not require all history in\n62: working memory. A deployment/UAT fixture is a test subject, never a core feature.\n63: \n64: A published entry and responsibility views route a reader to these owners. A view\n65: may be a sufficient projection for its declared claim; it cannot become rival\n66: authority. RF-017 overlap stays when it supplies independent evaluation or a\n67: different necessary evidence/capability altitude. UP-014 contracts duplicated\n68: meaning and needless reconciliation, not every repeated explanation."
+    },
+    {
+      "claim": "Corrected common contract requires semantic conservation but permits own organisation.",
+      "commit": "353fe61697de19bfa1e9b69912c751fe6d318f17",
+      "path": "specification_methodology/v3/specification/PRODUCT.md",
+      "source_sha256": "50608a1899171a4ce76d6ae069a58fb7d59d88dc896735e7fa1c2caf244f3a03",
+      "lines": [
+        118,
+        138
+      ],
+      "text": "118: Status: PROPOSED on branch `common/c3-contract` for Jim's review. Nothing here is selected until he accepts it; the C3 checkpoint stays NOT_SELECTED in [GOALS](GOALS.md) until then. Where this section fixes C2 matters (acceptance criteria, audiences), it proposes them for the same decision.\n119: \n120: Outcome. Each tenant produces a candidate for the target version: its foundational axioms and the full predecessor corpus restated on them per the [standalone successor requirement](requirements/README.md#standalone-successor-requirement), with every row of [PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md) carrying one UP-015 disposition and a successor locus, and with projected reference frames as the activation unit. The predecessor cut stays immutable and operative as builder until a release decision; it is not a component of the successor.\n121: \n122: Frontier. The Executive holds `U0` = every `unresolved` row of PREDECESSOR_CLAIMS.md for the tenant, plus every evaluation the contract below requires that is not closed on the current basis. Each tenant declares its own member list and a map from every rc.2 member to the tenant members that receive it. The map is part of the tenant's frontier record and is reviewed with the first member.\n123: \n124: Tier obligations. A tenant's organisation and wording are its own; what each tier owes is common:\n125: \n126: | Tier | Owes | Receives from the predecessor |\n127: |---|---|---|\n128: | foundations | ontology, principles with standing, result algebra, the reference frame as a first-class object, bounded activation, work state, evidence and authority law | AXIOMATIC_CALCULUS, REFERENCE_FRAME_METHOD, IDENTITY_METHOD, the generic law of SPEC_METHOD and RELEASE_METHOD |\n129: | Spec Method | constitutional chain, requirements and design law, work carriers and triage, assurance and testing law, change classes and re-entry, release mechanics | SPEC_METHOD, TICKET_METHOD, DESIGN_MODULE_METHOD generic law, RELEASE_METHOD |\n130: | profiles | realisation law that imports the tiers above and restates its own predecessor member in full | ODD_METHOD, TRAVERSAL_OCCURRENCE_PROFILE, UX_METHOD, WORLD_MODEL_METHOD, DESIGN_MODULE_METHOD realisation law, STDO_REFERENCE_FRAME_BASELINE frame catalogues and Executive law |\n131: | guides | posting, writing, glossary | POSTING_GUIDE, WRITING_GUIDE, GLOSSARY_GUIDE |\n132: | packaging | manifest, schemas, templates, compressions or their successor, bootstrap, plugin | the non-standard members; disposition may stay `unresolved` during construction and must close before an RC cut |\n133: \n134: Activation unit. Each tenant publishes projected reference frames, one per selected task, from its restated corpus (a_c projections or an equivalent the tenant declares). A frame carries the clauses an actor needs for that task and nothing else. A frame, with its subject, is what any actor is activated on. Context is measured in bytes before the actor reads anything and recorded with the activation.\n135: \n136: Audiences and tasks (PROPOSED selection of the open owner decision). Audiences: a fresh model actor activated on one frame against a declared subject; a human method owner reading by route; the Writer, Reviewer and Executive actors constructing or assessing the successor itself. Assumed knowledge: none beyond the activated frame and the subject; during construction, the installed predecessor for source routes. Tasks: do a bounded piece of work; resume work another actor left; review work; decide acceptance or release; apply a profile; construct or assess a successor member.\n137: \n138: Executive loop. Existing authority is this contract and the ticket. The Executive selects the smallest dependency-ready set `M` from the frontier, normally one member or one declared cone, and activates one Writer per element with the UP-020 intake: exact outcome and checkpoint, the rows in scope, governing invariants, grant and write territory, evidence obligations, exclusions, stop and re-entry conditions, the context, wall and spend envelope, and the exact bounded action. The Writer returns one closed work result: `candidate_ready` with transition evidence (the restated text, its dispositions, its frames, its measured activations), `refused`, `incomplete` or `re_entry_requested`. The Executive evaluates the result, activates the Reviewer for every `candidate_ready` (independent review is required for every member), consumes the Reviewer's closed result, applies the disposition grant above, has the common pen ledger the decision in the ticket, and issues the next already-authorised activation. The Executive activation holds no write grant and never mutates ticket, candidate, common or worktree bytes; a same-actor role change is ledgered by the pen before the effect, and the actor is no longer Executive for that effect."
+    },
+    {
+      "claim": "Codex itself constrains writers to predecessor heading order, anchors and exclusive files.",
+      "commit": "9ad67fd14502981948b9dfaf86bef6fe2b48d34e",
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/GRANTS.md",
+      "source_sha256": "032a279abf25a050745d176e73114b1c9c9bb678f8d6bd5e0f573ff93f5bf010",
+      "lines": [
+        1,
+        15
+      ],
+      "text": "1: # Dependency-ready member grants\n2: \n3: Prospective until the first bounded foundations/library/recovery assessment closes. Governing intake is EXECUTION.md; frozen common basis is b83ed1c; first root foundation/library subject is 353fe61. Each group is a declared causal cone of related member restatements; its return reports each member separately. No Writer may mutate another group, shared candidate metadata, common files, tickets, peer realization or Git. Root's separately declared checkpoint Writer performs Git effects after closed returns.\n4: \n5: Every group preserves all predecessor section predicates, operational/refusal distinctions, requirements, examples where they carry meaning, identifiers and cross-member relations. Keep original heading order and anchors for explicit section mapping; compressed prose must retain each determination. Restate complete operative text inside the successor, grounded in its FOUNDATIONS and TRANSFORMATION_LIBRARY. Do not import predecessor law as operative fallback. Relative successor links replace predecessor paths. Stable STDO identifiers and historical subject identities remain unchanged. Profiles refine core meanings and acquire no generic authority.\n6: \n7: Do not claim categorical equivalence, universal algorithmic meaning, universal idempotence, automatic termination, fixed actor counts or new generic budgets. Do not generalize ABG/HoG/test particulars into Product functionality. No frontier row is removed/inapplicable without owning authority. Source and candidate uncertainty remain explicit.\n8: \n9: Acquire own installed members by exact immutable coordinate; read necessary common requirements and frozen root foundations/library, never Claude tenant or its reviews. Source-first independent reviewers receive installed deciding source plus the frozen candidate and original common expectations. A same-model-family author-independent subagent is not a different-family reviewer; default review is a fresh Claude CLI invocation.\n10: \n11: Each return identifies acquired UTF-8 bytes, start/end, files, section conservation account, semantic compromises or unresolved rows, focused checks and candidate_ready/refused/incomplete/re_entry_requested. The group envelopes and exact file lists are in GRANTS.json. A file grant is exclusive; requests to another owner return to Executive. A material requirement/authority contradiction stops affected work for re-entry, not a local reinterpretation."
+    },
+    {
+      "claim": "Codex successor preserves complete operative bodies verbatim with introductions.",
+      "commit": "97e348464b413f0820467413049f25741759d5a7",
+      "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/returns/specification.md",
+      "source_sha256": "1463a0b2aa33b458770624dd5c7e112af99b70870abaf463e50259457743d1d3",
+      "lines": [
+        77,
+        103
+      ],
+      "text": "77: \n78: Only these granted files were created:\n79: \n80: - `successor/standards/SPEC_METHOD.md`.\n81: - `successor/standards/DESIGN_MODULE_METHOD.md`.\n82: - `successor/standards/IDENTITY_METHOD.md`.\n83: - `qualification/C3/returns/specification.md`.\n84: \n85: The realization retains each admitted member's complete operative body verbatim\n86: and adds a member-specific introduction before its first section. Every\n87: original heading remains in the same order. The new introductions connect the\n88: member's premises and detailed duties to Foundations and Bind, Acquire,\n89: Transform, Evaluate, Conjoin and Dispose. They explain shared machinery without\n90: moving semantic ownership or creating a mandatory six-stage process. Detailed\n91: law remains in the owning member. All former source clauses are fully present\n92: inside the successor; predecessor coordinates below supply provenance only.\n93: \n94: | Member | Source bytes | Successor bytes | Assigned sections | Author proposal |\n95: |---|---:|---:|---:|---|\n96: | `SPEC_METHOD.md` | 157952 | 159387 | 79 | all `conserved`, pending independent review |\n97: | `DESIGN_MODULE_METHOD.md` | 121432 | 123019 | 62 | all `conserved`, pending independent review |\n98: | `IDENTITY_METHOD.md` | 11350 | 12626 | 23 | all `conserved`, pending independent review |\n99: \n100: The three successor members total **295032 bytes**. Introductions add 4298\n101: bytes; no operative clause, condition, example, identifier or section was\n102: contracted away. These authorship dispositions are proposals in this read\n103: model; the Executive's acceptance/disposition record is separate."
+    },
+    {
+      "claim": "Claude retires corpus-fit objective and chooses responsibilities for new members.",
+      "commit": "9ff18badc4bbe5456f344ee21527c221e94a8c49",
+      "path": "specification_methodology/v3/build_tenants/claude/design/DOCUMENT_STRUCTURE.md",
+      "source_sha256": "2c2f8d880b6293d20b72558d6a497aa3e85ea23ebe71a94da401f5a8dea3301c",
+      "lines": [
+        12,
+        58
+      ],
+      "text": "12: ## Purpose\n13: \n14: The candidate is the foundational axioms first, then the whole v2.5.1-rc.2\n15: corpus restated on them in this tenant's own text, complete and applicable\n16: with the predecessor no longer operative. Every frontier row receives one\n17: UP-015 disposition and, where conserved or superseded, a locus that\n18: resolves to the tenant's text.\n19: \n20: Two first-pass errors are retired. First, the governed question \"does a\n21: whole-corpus draft fit one bounded activation\" was a misunderstanding: the\n22: corpus is as large as the law requires; what fits an activation is a\n23: projected reference frame, never the corpus. Second, a route to the rc.2\n24: clause was treated as conservation (FOUNDATIONS §1: \"conserved: the rc.2\n25: clause governs unchanged; the route is given\"); under the standalone\n26: successor requirement a route is provenance and satisfies no disposition.\n27: The first-pass files are starting text where they already restate; each is\n28: rewritten at its member's activation; nothing is accepted by presence.\n29: \n30: ## Tiers and members\n31: \n32: Files are under `standards/` unless a path says otherwise. Obligations are\n33: PRODUCT's C3 tier table; the organisation is this tenant's. A member marked\n34: new exists only after its activation.\n35: \n36: ### Tier 1, foundations\n37: \n38: | Member | Owes | Why a member |\n39: |---|---|---|\n40: | FOUNDATIONS.md | ontology, P0–P6 as commitments with standing, composition and conservation algebra, hypotheses | keeps its role; repaired at member 1 (construction order) |\n41: | REFERENCE_FRAME.md, new | the frame as a first-class object: basis, manifold, envelope, frame, frame set, configuration, lens; RF-001 to RF-017; engagement; conjunction; coverage ledger; revision; qualification | the tier owes the frame as a first-class object; the first pass had no home for it; it is the law of the activation unit |\n42: | ACTIVATION.md, renamed from CALCULUS.md at member 1 | the bounded step: intake admitted first, activation on a projected frame under an envelope, grant, result algebra, totality, refinement, work state, restart, proportionality, reuse | the tier owes bounded activation and work state; the rename removes the collision with the a_c calculus |\n43: | AXIOMATIC_CALCULUS.md, new | the a_c theory in full: signature, typed records, AC-001 to AC-020, functor kinds, interpretation, exact identity, conformance obligations | the projection that produces every frame is defined here |\n44: | IDENTITY.md, new | scoped identity, uniqueness, type and stability, hierarchy, authority split, UP-004, parsing, version boundary | the tier receives IDENTITY_METHOD; cited too widely for a subsection |\n45: | EVALUATION.md | claims, evidence and authority law, independent assessment, review results, acceptance, conformance, qualification of the method | keeps its role; receives the generic evidence law and the reviewer-result law |\n46: \n47: ### Tier 2, Spec Method\n48: \n49: | Member | Owes | Why a member |\n50: |---|---|---|\n51: | SPEC_METHOD.md | the particular method: constitutional chain, process constitution, manifesto, litmus, ambiguity governance, requirement and design law, change classes and re-entry, migration, UP-012 to UP-014 | keeps its role; carries every SPEC_METHOD clause that is not generic |\n52: | PRODUCT_DEFINITION.md, new | the overlay and layout independence, STDO-SURFACE-001, bootstrap rule, a project's version boundary | a fifth of SPEC_METHOD; how one project binds to the method; the semantics the schemas and templates realise |\n53: | TICKETS.md, new | work carriers: ticket and sprint model, layout, authority, triage-first intake, closure by condition, migration, ticket shape | the tier owes carriers and triage; the first pass reduced 60 KB to one section |\n54: | ASSURANCE.md, new | evidence rules, verification layers, testing taxonomy, test authority, scenario bundles, path coverage, trace closure, the testing frame set, counterexample localisation, module-derived unit tests | the tier owes assurance and testing law; spread over three rc.2 members with no home |\n55: | RELEASE.md, new | release identities, qualified refs, phases, candidate, immutable RC, exact-cut qualification, monotonic advancement, selector adoption, naming, cohorts, UP-015 | the tier owes release mechanics; the first pass carried lineage only |\n56: | CONFORMANCE.md | the cases the method must pass, with independently specified expectations; the common discriminators | acceptance criterion 5 |\n57: \n58: ### Tier 3, profiles"
+    }
+  ],
+  "verified_user_messages": [
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 84679,
+      "timestamp_utc": "2026-10-11T09:34:54.868Z",
+      "role": "user",
+      "full_user_text_sha256": "b235d1b1f853e5a2a317448127fc2ce0ff57a0d58d02c73ae3a3232040dadf4e",
+      "selected_text": "❯ ok build it out stdo 3.0"
+    },
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 86031,
+      "timestamp_utc": "2026-10-11T14:25:49.510Z",
+      "role": "user",
+      "full_user_text_sha256": "d673577fa838893a9af52339502f7996ab88e237ce2d5355717581d2fc286eda",
+      "selected_text": "im going to bed, i authorise you finish the work to completetion you can continue to completing STDO 3.0 ready for review"
+    },
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 92186,
+      "timestamp_utc": "2026-10-13T07:00:31.055Z",
+      "role": "user",
+      "full_user_text_sha256": "ea49ddaba5ebb43d0fa414cc59b679666eb470d5b9f7cbc2f5cb0154eddf1a10",
+      "selected_text": "i expect to get a revised codex v3 but within the design of the original, this will give us one round of fixes for both the codex and claude implementations"
+    },
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 97439,
+      "timestamp_utc": "2026-10-13T23:24:27.449Z",
+      "role": "user",
+      "full_user_text_sha256": "22f7e2ec1e021899c1cd56f0eebd8578a9df685573d7273f197d01d3001e6cff",
+      "selected_text": "where as v2.5 evolved from constant usage and conceptual accumulation, v3 should be a clean reduction into core priniples learnt from 2.5"
+    },
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 97468,
+      "timestamp_utc": "2026-10-13T23:27:54.523Z",
+      "role": "user",
+      "full_user_text_sha256": "9a587b31f777b1ccc279d03b5cbb07333ce196920aa8e0013c3605acff969228",
+      "selected_text": "i thought that was implied if not out right stated"
+    },
+    {
+      "source": "/Users/jim/.codex-alt/sessions/2026/10/01/rollout-2026-10-01T17-07-51-01a0f64a-7a32-7d22-8945-1c393bcd5af9.jsonl",
+      "line": 97482,
+      "timestamp_utc": "2026-10-13T23:29:51.697Z",
+      "role": "user",
+      "full_user_text_sha256": "5ca03f60b7a0fdde11a51b9371c6c77b0cdb9598effe73fedfcfacb8546daf94",
+      "selected_text": "the steer i gave on what is on v3, the algebraic calculus the computational calculus are my reductions of what is essential"
+    },
+    {
+      "source": "/Users/jim/.claude/projects/-Users-jim/ae2d4e8a-aead-47fe-b5cc-fdd5abd6db7f.jsonl",
+      "line": 1550,
+      "timestamp_utc": "2026-10-11T09:34:43.652Z",
+      "role": "user",
+      "full_user_text_sha256": "ecd608581ad00f3107b6cdd4f6f6fedeab79ae42af546fb4f08aee2368936b68",
+      "selected_text": "ok build it out stdo 3.0"
+    },
+    {
+      "source": "/Users/jim/.claude/projects/-Users-jim/ae2d4e8a-aead-47fe-b5cc-fdd5abd6db7f.jsonl",
+      "line": 2516,
+      "timestamp_utc": "2026-10-11T14:25:45.754Z",
+      "role": "user",
+      "full_user_text_sha256": "d673577fa838893a9af52339502f7996ab88e237ce2d5355717581d2fc286eda",
+      "selected_text": "im going to bed, i authorise you finish the work to completetion you can continue to completing STDO 3.0 ready for review"
+    },
+    {
+      "source": "/Users/jim/.claude/projects/-Users-jim/ae2d4e8a-aead-47fe-b5cc-fdd5abd6db7f.jsonl",
+      "line": 4340,
+      "timestamp_utc": "2026-10-11T23:06:06.559Z",
+      "role": "user",
+      "full_user_text_sha256": "431cc783c0b44addb70c2c0e9f058824c26a4010c39ab97e988b6e11c4e65fb9",
+      "selected_text": "that goal is wrong - its a misunderstanding - the goal was to establish foundational axioms and then restate the full corpus, reference frames are the means to handle single activation"
+    }
+  ],
+  "findings": [
+    {
+      "finding": "No located initial prompt assigns Codex compactness and Claude structural separation.",
+      "standing": "Supported by common organisation freedom, identical bootstrap files and effectively identical launch/completion messages; full histories are not identical."
+    },
+    {
+      "finding": "Codex changed from separate Work/Evidence/Qualification owners to preserving sixteen predecessor bodies with stable anchors.",
+      "standing": "Direct implementation and Writer-grant evidence."
+    },
+    {
+      "finding": "Claude changed from whole-corpus fit and seven files to frame-level fit and explicit responsibility owners.",
+      "standing": "Direct user correction plus design and implementation evidence."
+    },
+    {
+      "finding": "Conservation confidence and narrow review repair reinforced Codex retained layout; later shared contracts factored behavior within it.",
+      "standing": "Contemporaneous author RCA corroborated by grants/commits; qualitative priority inference, no numerical weights."
+    },
+    {
+      "finding": "Later own-codebase synthesis preserved distinct architectural lineages.",
+      "standing": "Direct user instruction; occurred after the initial pivot."
+    },
+    {
+      "finding": "Late a_c exclusion affects current evaluation scope, not the cause of early file boundaries.",
+      "standing": "Chronology; this review does not assess representation quality."
+    }
+  ],
+  "additional_primary_loci": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/.ai-workspace/comments/codex/20261012T115039Z_REVIEW_C3_CONCEPTUAL_IMPROVEMENT_FEEDBACK.md",
+      "lines": [
+        35,
+        48
+      ],
+      "role": "Contemporaneous author root-cause explanation, not independent psychology"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md",
+      "lines": [
+        102,
+        112
+      ],
+      "role": "Executive approval of responsibility design"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/.ai-workspace/tickets/active/T-002-CLAUDE-c3-successor-construction.md",
+      "lines": [
+        138,
+        156
+      ],
+      "role": "Writer allocation and concrete new-member implementation"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/design/CROSS_SYNTHESIS.md",
+      "lines": [
+        46,
+        107
+      ],
+      "role": "Codex contributions to Claude structural tracing; independent-origin account would be false"
+    }
+  ],
+  "limits": [
+    "No numerical value-weight record found",
+    "No controlled prompt swap or model effect isolation",
+    "Author explanations are self-reports corroborated where possible",
+    "No claim that later corrected architecture still has every early defect",
+    "No source, candidate, prior report or Git changes"
+  ],
+  "candidate_state": {
+    "claude": {
+      "head": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "status_porcelain": ""
+    },
+    "codex": {
+      "head": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "status_porcelain": ""
+    }
+  },
+  "shared_initial_bootstrap": {
+    "commit": "c91cc10b",
+    "sha256_by_file": {
+      "AGENTS.md": "517b1e0efc08c3518fdd51d9befb7809fa93c060cb60d31c3bed80b0806535ae",
+      "CLAUDE.md": "517b1e0efc08c3518fdd51d9befb7809fa93c060cb60d31c3bed80b0806535ae"
+    },
+    "byte_identical": true
+  }
+}

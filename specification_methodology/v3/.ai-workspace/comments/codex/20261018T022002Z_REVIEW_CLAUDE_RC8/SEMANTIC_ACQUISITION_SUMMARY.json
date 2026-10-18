@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-10-18T02:29:12.230265+00:00",
+  "target_selected_source_bytes": 589824,
+  "original_target_selected_source_bytes": 393216,
+  "selected_source_bytes_instrumented": 512164,
+  "numbered_output_bytes_instrumented": 532836,
+  "initial_authority_bytes_not_instrumented_at_emission": {
+    "AGENTS.md": 2904,
+    "specification_methodology/v3/AGENTS.md": 4073,
+    "specification_methodology/v3/.ai-workspace/comments/codex/20261018T022002Z_REVIEW_CLAUDE_RC8/ACTIVATION_AND_EXPECTATIONS.md": 4199,
+    "4c340f7adec9f3c893e3e267b23e4cadeb357854:specification_methodology/v3/stdo_3.json": 5020
+  },
+  "instrumented_source_object_bytes_fetched_including_repeat_and_unpresented_search": 5884378,
+  "read_events": 56,
+  "truncated_presentations": [
+    {
+      "boundary": "combined common README, GOALS, INTENT, PRODUCT, frame basis, tenant README",
+      "source_bytes_emitted": 125890,
+      "inspection_claim": "Relevant common owners reacquired in bounded reads. No full inspection of omitted sections claimed."
+    },
+    {
+      "boundary": "five-member RC5-to-RC8 diff",
+      "source_bytes_emitted": 65819,
+      "inspection_claim": "Middle diff sections reacquired; affected live source clauses and owners read separately."
+    },
+    {
+      "boundary": "FOUNDATIONS lines 790-1007",
+      "source_bytes_emitted": 40668,
+      "inspection_claim": "Results owner lines 790-939 inspected; ending 920-942 reacquired. Unchanged result family consumer tables not claimed fully read."
+    }
+  ],
+  "measurement_limits": [
+    "Source byte counts are reader emission counts, not host-token or active-context measurements.",
+    "Search fetches exact objects but emits only selected matching source. Full fetched objects are not claimed inspected.",
+    "Tree names, command metadata, helper code, review drafts, installed verifier JSON and memory routing are outside the presented-source counter.",
+    "Initial instructions and Product Definition are recovered by exact byte size separately. Their first presentation was not instrumented.",
+    "Inherited context, host instructions, model charges and peak active retained context are uninstrumented."
+  ],
+  "external_paid_calls": 0
+}

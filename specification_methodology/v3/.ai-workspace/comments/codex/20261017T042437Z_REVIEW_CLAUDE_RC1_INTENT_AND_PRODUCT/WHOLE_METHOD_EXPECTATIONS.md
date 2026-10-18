@@ -1,0 +1,14 @@
+# Whole-method cases fixed before candidate prose acquisition
+
+The parent reads source as a whole-method Reviewer for this phase, with no candidate or Git effects. These cases derive from the common Intent and Product, not Claude's tests or return. Each is a static decision trace; none by itself establishes measured actual-use performance.
+
+1. A human team changes a lending process under a common loss/delay objective. Its required outcome stays fixed while the team chooses paper records and a peer arrangement. Trace definition, tenant binding, task entry, change and closure without silently requiring code, event sourcing or an Executive profile.
+2. A stopped task resumes with a stale summary and a workspace that contains valid unfinished work. An external effect has an unknown acknowledgment. Trace reacquisition, correction of the belief, preservation of valid work and observation before the dependent action; no universal reset or replay.
+3. Requirement A has an authenticated known failure. Required B has no completed assessment. Trace component and integrated results through disposition and delivery; retain failure, citations and missing coverage without greenwashing or losing the known diagnosis.
+4. Implementation and its generated tests share an incorrect interpretation of a requirement. Both pass. Trace the independent obligation/assertion/observation relation and external feedback needed to expose the shared error; agreement cannot promote fidelity by itself.
+5. A requirement, model or implementation changes. Trace diagnosis, owning re-entry, targeted reassessment and the stated validity of reused evidence; neither unchanged bytes nor an old green result alone establishes current sufficiency.
+6. A world model stores a count but omits reservations that alter future outcomes. Trace boundary and state-sufficiency claims without treating a bounded object as Markov by name. Follow the feedback into model repair rather than silently changing the required outcome.
+7. A compliant constructed candidate has no owner permission for acceptance. Trace assessment versus applied disposition and release. The result of successfully making an authorized decision must not overwrite the product predicate that decision concerns.
+8. A decomposition preserves each local contract but has a mismatched boundary or compounding approximation. Trace outer obligation, compatible composition and end-to-end adequacy separately from local success and lawful construction.
+
+Judgment considers whether the text supplies a coherent, usable rule for each step and its failure/re-entry paths. A new required ritual, unsupported domain prerequisite, circular referral or conflicting result mapping is material only when it changes a permitted decision or prevents the promised construction. Deferred encoding/compression/actual-use completion is reported separately under the owner's baseline scope.

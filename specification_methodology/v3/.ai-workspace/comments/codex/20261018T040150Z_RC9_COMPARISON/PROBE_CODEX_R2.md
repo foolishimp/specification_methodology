@@ -1,0 +1,23 @@
+**A — Decoder failure; no requirement/design re-entry warranted.** The scenario performed a comparison and reported failure, but its corrupted observation does not establish failure of `sum`. Given the stipulated actual return of 10, the arithmetic requirement holds for this case. The defective relation is the decoder’s observation fidelity. Inspect and repair that decoder within the existing grant, then reassess the affected observation and original case. Classify this as `realization_refactor`, explicitly preserving upstream meaning and structure. Preserve the original failure record; do not change the expected value to 1.
+
+Evidence: `FOUNDATIONS.md:705–730` separates actual behavior, observation acquisition and reported failure; `SPEC_METHOD.md:1490–1518` localizes supported causes; `SPEC_METHOD.md:1473–1476` permits realization-only re-entry; `SPEC_METHOD.md:1600–1607` requires upstream re-entry only for changed desired meaning or established governing insufficiency. One correct arithmetic case does not establish broader product completeness.
+
+**B — Resume from durable and external current state; shipment completion remains unknown.** Retain the authenticated sent-request receipt and missing return. The stale “none occurred” summary cannot override them. Observe shipping status through its owning interface before any dependent action. Dispatch proves neither shipment completion nor absence, and it does not establish performance of a distinct downstream evaluation.
+
+Retain the independent arithmetic evidence: the premise expressly covers unchanged function bytes, inputs **and every declared validity dependency**. Keep its original subject and evidence identity, with the supported applicability relation to the current claim. The formatter change and resumption boundary alone do not invalidate it. Edit the formatter within the grant and assess affected obligations; unrelated shipment uncertainty need not block that work.
+
+Barred: duplicate shipment, retry justified only by timeout or missing return, inventing idempotence, claiming no effect/completion without evidence, and treating the arithmetic result as proof of formatter correctness or satisfaction of additional mandatory gates.
+
+Evidence: `FOUNDATIONS.md:393–419`, `435–459` distinguishes performance, dispatch and effects; `899–920`, `936–958` governs reconstruction and uncertain-effect resumption; `833–886` governs dependency-based retention; `TRANSFORMATION_LIBRARY.md:259–267` preserves applicable work without granting repetition.
+
+**C — Composite falsified, with unfinished coverage explicitly retained.** The authenticated violation from the first required check falsifies the conjunction. The second check remains an **absent required judgment**, recording known `not_performed` and the reason “time expired”; do not fabricate a child assessment. Applying conjunction is performed, while that second component remains unperformed. The stipulated effect-free inspection supports `not_requested`; no release is authorized.
+
+Neither software code nor exactly three actors is required. Separate construction, assessment and disposition responsibilities do not prescribe separate people; any actual independence requirement still applies. Lawful stopping, lawful procedural completion and desired-outcome satisfaction are distinct. Exhausted time establishes neither completion nor impossibility.
+
+Next allowed action: report the falsification and outstanding check, preserving the evidence. Further inspection or repair requires the applicable continuing grant; release is barred.
+
+Evidence: `FOUNDATIONS.md:421–433`, `541–561` governs missing coverage and falsification precedence; `230–252` separates responsibilities from grants; `276–302` makes independence claim-relative without a prescribed reviewer count; `717–724` explicitly accommodates human checking; `961–976`, `1046–1063` separates lawfulness, completion and outcome; `REFERENCE_FRAME_METHOD.md:542–547` requires no software framework or worker count.
+
+Acquisition: README → named source owners → anchored heading discovery → bounded clauses. **79,454 UTF-8 source bytes**, including repeated headings, across **18 chunks**; largest **10,542 bytes**. Elapsed **108 seconds** (04:06:11–04:07:59 UTC). Host context uninstrumented.
+
+Limits and obstacles: no navigation failures; long law-table rows required bounded range retrieval. Only 546 source bytes remained. Freeze `5592168e26759f37e730aed12c030a6061709ec4` was supplied, not independently authenticated against working files. Actual product artifacts and shipping status were unavailable within this restricted exercise. These are test applications of the candidate text, not adoption or effect authority.

@@ -1,0 +1,508 @@
+{
+  "main_before": {
+    "head": "b8345fad7d4fb20df7e60c931f2047aaa6067e46",
+    "status": "?? a_c/.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md\n?? a_c/dogfood/stdo-v3-generation-rc9/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261015T013245Z_REVIEW_I3_C29B2BE_FEEDBACK_EVALUATION.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261015T023515Z_REVIEW_I3_ODD_BINDING_AND_PROJECTION_REPAIR.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T042437Z_REVIEW_CLAUDE_RC1_INTENT_AND_PRODUCT/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T050645Z_HANDOVER_RC1_CLAUDE_REVIEW.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T092019Z_REVIEW_CLAUDE_CANDIDATE3_FIXES/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T113147Z_EVALUATION_CLAUDE_ROOT_CAUSE_REVIEW/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T125000Z_REVIEW_CODEX_RC4/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T132252Z_HANDOVER_CODEX_V3_RC4.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T135555Z_REVIEW_CLAUDE_CANDIDATE5/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T022002Z_REVIEW_CLAUDE_RC8/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/\n"
+  },
+  "claude_loan_result": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/claude/20261018T082443Z_RESULT_LOAN_EVALUATION.md",
+    "sha256": "3c0f654ff17851fda71aa7e44aac810664e807c6c4e96f04313580ba02d67c02",
+    "result_commit": "e85c5189",
+    "corrected_commit": "b8345fad7d4fb20df7e60c931f2047aaa6067e46"
+  },
+  "claude_loan_plan": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/claude/20261018T070922Z_PLAN_LOAN_EVALUATION.md",
+    "sha256": "1a28140269fc777fc8ea834d5306515060dda0765a8fc473d238c01c261f19e6",
+    "commit": "10846eff"
+  },
+  "prior_codex_artifacts": {
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/FEATURE_INVENTORY.json": "c0e3868d921140dade7040d11c40500b5cdbe69bfe4c9cf77f6a254b9b58f9c3",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/PLAN.md": "a0db737173f4558ecaeffc1c935591f95ad095c9314cc029f39c7ecb36b5ae29",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/PROVENANCE.json": "e37d59cffd6d180d001d483fc8dc802f594aaf7f8112403e777de19e12249650",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/SCOPE.json": "750457f1e1be52dd8656e2f6125cf00ef2f88a8c82b98b22f6fc3e5eb5f852a0",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/VALIDATION.json": "37a61287902e5ec282b022a81ed85ba2fbb06db59597ebcb514defd2409e69c0"
+  },
+  "preserved_comparison_artifacts": {
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/ARTIFACT_VALIDATION.json": "00d46140b05586bcd4d692e7a7b1b0a51bdbddd805120a19505f072aec0e570a",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/ARTIFACT_VALIDATION_R2.json": "0f1b4d821c0d0ab5da8c8dc6cb69ff8bd2eac0957a025b3e47c0695f91e80043",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/END_STATE.json": "d306fefcef6585e76bfdb2797f8560f6c70bcb220ec35423dafda0f8bf836c80",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/EVIDENCE_MANIFEST.json": "1f2aeaac13d0aeb8a7d8eec6abcb99ba82d5842981e44ff12271c4e02f62f4c7",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/EVIDENCE_MANIFEST_R2.json": "c208152c5c9c042465604c5ecab52938407caf31bbe9082c9fc0c3a384a215d8",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/EXPECTATIONS.json": "0f49aad0a5f2a22cbf9717bc1a510f738f0de52afaa36d5f301a4483fd134a64",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PACKAGE_REVIEW.md": "73b2eeaf525459161b52973ef5d0f32feda650952383cac0c5aa3326b4f0e9e6",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_CLAUDE_R1.md": "23bb1655c27cf618681073ee2a11fc3ea01ae4d0921163209185e64f739fbfc7",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_CLAUDE_R2.md": "c18235b99ea8c39d364e74cbcf1771d0b1269a9bd6302390c9599a9ccb0482fa",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_CODEX_R1.md": "9e9d628ef802c753e31b2182b75dc60af1f7352b79c4bac7df4bdeefb508c97b",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_CODEX_R2.md": "6e28aa4a7a9a6b3a4da388ba732a698f65491377ecd4acb77b58334254ad5174",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_PROTOCOL.json": "bedfffa30070c5cabfb9a279acd1134034962f11b820e46d1e414555b624d1c9",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_PROTOCOL_R2.json": "7e7b9ee0bfcbe3e9936c7d69ea39ec9c8829da06f81f4a0f02c95e1f69059826",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/PROBE_RESULTS.json": "844c59f0c9dd56fb5f641b8caa09632e01fe1c3408246eaa76d04f5fb6168173",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/QUALIFICATION_REVIEW.md": "c16f092cb4fafbee30d4c7c6720803585190df789f3ef65c4a4968e90002c809",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/REPRODUCTION_SUMMARY.json": "46c55ccc83233d5eeada44aed40bbf13131b1d38d1769316a6e50ba617372ece",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/REVIEW.md": "5c8c5b01613e663193deda69c0497bffcac102e632af7954e61b6872d18748b9",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/REVIEW_R2.md": "4b1164ef9a13dbfbbde74694194170c75c59812a1ec88e51c05803188329a9e3",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/ROOT_CAUSE_EVIDENCE.json": "f1b96a5ff6927c3a8c2cfaf17db59bd75081c1a0bad323f04bcb707b898b538c",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/ROOT_CAUSE_MANIFEST.json": "76eb8b8e947ad308752cb005cbc2e8e473321235fdd858378cd7298206e54cb6",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/ROOT_CAUSE_SCOPE.json": "0b4a690dc5bc8feb27b35dba91da4eb0409ea6e5fe9a849ec005ecbc03d51e83",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/SCOPE.json": "d323ac800878b40d38c5492709ccbb70064d8468c3fdde4e6d870b4db053bbd0",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/SCOPE_R2.json": "d24943224818c8641c2e606cd3421be1febde197e40ad2f7c5a3e33ac5d9b7e3",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/SEMANTICS_REVIEW.md": "ab8e06a5b7287ccbad5f5009debd1dbf27c9e82acaf37ccbd6fb09dfa2ab6750",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/controls-results.json": "2310e18aac8131d13c2aa8a4ee4e09567738bd6d807fc0fc690174c43f4fe10a",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/controls.py": "f393e2ba549169dfef4a67b8775f6741c8ae52136c16ae588366a1a7edb81c1c",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/coordinates.json": "f48fbe7bf37145764009e80f81d0c7266f9bd60c6bf27a73db8bb9faa77224d6",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/projection-results.json": "67c77398c1143c72c104c08634d589966083a139e18d40052eaac21ffcab46ce",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/projections.py": "b7509c847400272632e015d99b8321e7889b4ea387026a12d473cf0f548054d4",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/replay-results.json": "6922f56dda46d399fde219993eb87f0174bd6d653d096c473b8cf5ac23dff19c",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/replay.py": "d015f843477889f7354546ab79cd0440876cb4b33520b3859f680b069f2ac1c8",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/reproduce.py": "3a56e7a15cb3ef31f5f401e8fff5dadea1d6847e0d61be69e7d46d75c0b8ec81",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/reproduced-controls-results.json": "2310e18aac8131d13c2aa8a4ee4e09567738bd6d807fc0fc690174c43f4fe10a",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/reproduced-projection-results.json": "6ac631587367b5b2389bc28e1574365b33e125d8882e04c3034dd665d6894965",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/reproduced-replay-results.json": "296ac7a219cb641626ba053ab28d12ae6c54c51bcb76fbaa204b2f92ba102674"
+  },
+  "builder_verification": {
+    "command": "stdo verify v2.5.1-rc.2 --manifest-sha256 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "exit_code": 0,
+    "valid": true,
+    "failures": []
+  },
+  "source_files": {
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/TRAVERSAL_OCCURRENCE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/TRAVERSAL_OCCURRENCE.md",
+      "sha256": "43f1e1c1f017eac71b76a48570b830949620c34118ab2ae570a95757c7f1fc2a",
+      "line_count": 1711,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/ACTIVATION.md",
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+      "line_count": 1838,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/TRAVERSAL_OCCURRENCE_PROFILE.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/TRAVERSAL_OCCURRENCE_PROFILE.md",
+      "sha256": "2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf",
+      "line_count": 1450,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/UX.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/UX.md",
+      "sha256": "8f30e0c5b54e307c43369c24cebd558acbbfabff6bdd1629c777577821d461ff",
+      "line_count": 871,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/UX_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/UX_METHOD.md",
+      "sha256": "6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d",
+      "line_count": 632,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/EXECUTIVE_BASELINE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/EXECUTIVE_BASELINE.md",
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+      "line_count": 1967,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/FOUNDATIONS.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/FOUNDATIONS.md",
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "line_count": 1614,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/STDO_REFERENCE_FRAME_BASELINE.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "sha256": "1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe",
+      "line_count": 2121,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/TICKETS.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/TICKETS.md",
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e",
+      "line_count": 1532,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/SPEC_METHOD.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/SPEC_METHOD.md",
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24",
+      "line_count": 2107,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/TICKET_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/TICKET_METHOD.md",
+      "sha256": "682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1",
+      "line_count": 1732,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/AXIOMATIC_CALCULUS.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a",
+      "line_count": 1479,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/AXIOMATIC_CALCULUS.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0",
+      "line_count": 1225,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/specification/requirements/README.md": {
+      "subject": "common",
+      "commit": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+      "path_from_checkout": "specification_methodology/v3/specification/requirements/README.md",
+      "sha256": "ad0b7eca928ed184d845e45781344cbc47934f73a4293411c2f0a25ed72b532d",
+      "line_count": 195,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/DESIGN_MODULE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/DESIGN_MODULE.md",
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+      "line_count": 2604,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/DESIGN_MODULE_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/DESIGN_MODULE_METHOD.md",
+      "sha256": "0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999",
+      "line_count": 2544,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/REFERENCE_FRAME.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/REFERENCE_FRAME.md",
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+      "line_count": 1272,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/REFERENCE_FRAME_METHOD.md",
+      "sha256": "41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01",
+      "line_count": 1529,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/EVALUATION.md",
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+      "line_count": 761,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/FOUNDATIONS.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/FOUNDATIONS.md",
+      "sha256": "2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e",
+      "line_count": 1122,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/specification/PRODUCT.md": {
+      "subject": "common",
+      "commit": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+      "path_from_checkout": "specification_methodology/v3/specification/PRODUCT.md",
+      "sha256": "4d6a43c25c58e76ea1283b1e2cacae5d40e3fba939681f188d99378bfadcc1d5",
+      "line_count": 437,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md",
+      "sha256": "ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3",
+      "line_count": 3502,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/README.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/README.md",
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede",
+      "line_count": 189,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/README.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/README.md",
+      "sha256": "bf66c98ad418e0a4e4f09a6987b3287d5a55e4454b2796c07d8c6317d5d93324",
+      "line_count": 139,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+      "sha256": "37a050355353599102468e318f4856b6d76958a157a590e356f3c89c6c6fc9ae",
+      "line_count": 1586,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/TRANSFORMATION_LIBRARY.md",
+      "sha256": "7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6",
+      "line_count": 488,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/release/check_install.py": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/release/check_install.py",
+      "sha256": "fa2e28f0065d48c3946da29d4d78cba3b7c2847ae28943131581bef6765bddc0",
+      "line_count": 65,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py",
+      "sha256": "c2ddbb2ce58d1e398901ce40abbde855fb9f75f564e63a4bb2e37eae98212386",
+      "line_count": 134,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/check_package.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/check_package.py",
+      "sha256": "36d388754a1d720ae6a5d9ed6eb8a253c2c71c6ca1fdf4ea579f699f5fc9a375",
+      "line_count": 53,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/check_artifacts.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/synthesis/check_artifacts.py",
+      "sha256": "6e94013a2f48f8b828370e7473aebbdec77e999967271d0df205f99796de0d00",
+      "line_count": 582,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/release/build_manifest.py": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/release/build_manifest.py",
+      "sha256": "4142c264a53b5bedfbcc18c5ac0fc97eb316b833710a0e0b0a712828ea9e9a4c",
+      "line_count": 37,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/context.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/context.py",
+      "sha256": "fbaec25851863483f5d0441f552a561195420b98c79d7cc3f4381980366df270",
+      "line_count": 82,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/GLOSSARY.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/GLOSSARY.md",
+      "sha256": "496698f9dcf445cb2717e0e5ba81b5393c108cb3cd561068d7e9681a3048fc30",
+      "line_count": 441,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/frontier_review.py": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/frontier_review.py",
+      "sha256": "4137db36826ad455cab06c4d0935636bdfdee99c19e89bcc1a1a27924e46d87e",
+      "line_count": 116,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/carry_conservation.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/carry_conservation.py",
+      "sha256": "70fff7c2cf5e595b0a96ba8b3543f73e8e1d290e6a045ad531b27f6744dd2e19",
+      "line_count": 508,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/RELEASE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/RELEASE.md",
+      "sha256": "212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101",
+      "line_count": 790,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/WORLD_MODEL.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/WORLD_MODEL.md",
+      "sha256": "96fe37b362f8bfbb0748af8a7a6eb2774a7d9796fbfa27eb66004ac0bfa75345",
+      "line_count": 1355,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/WORLD_MODEL_METHOD.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/WORLD_MODEL_METHOD.md",
+      "sha256": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f",
+      "line_count": 1540,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/check_distribution.py": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/qualification/C3/check_distribution.py",
+      "sha256": "755f01a144cf2542d2c65fb7616868cd43bf99d2282a6a1397791f8163dbbd0d",
+      "line_count": 218,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "sha256": "faf582b291a50eaaae3b14df2519fabbe6f1ef38c8275a4cb3f0cf0c5f82890e",
+      "line_count": 32,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "sha256": "4bf84ab3d433cb1bd5ee3ac1253f8d5b89b3df2dbcaf000e010ff6b0c2371495",
+      "line_count": 226,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "sha256": "8ae18a05be06c6f2ebc4407638f5e15968bd400572df6da165c991597e52af57",
+      "line_count": 41,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "sha256": "e7ca92dc949a04351a9aec902b1c77528769e942a017dfa81471b22ad771a0e2",
+      "line_count": 209,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/plugins/spec/references/PRODUCT_BASIS.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/plugins/spec/references/PRODUCT_BASIS.md",
+      "sha256": "4dcf0bb305732dcb280187804889426bd5abcd7188d9bb8df8b16af265a0b23f",
+      "line_count": 41,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/plugins/spec/references/REFRESH.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/plugins/spec/references/REFRESH.md",
+      "sha256": "44d529b045c963089cbe11505949511732d424f81ebb53e2033c84c4931ac739",
+      "line_count": 71,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/plugins/spec/references/GETTING_STARTED.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/plugins/spec/references/GETTING_STARTED.md",
+      "sha256": "36a2d57591d262eb90866baf5c1faa72532bfff7a620ebac3265448e98465265",
+      "line_count": 635,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+      "sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc",
+      "line_count": 63,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md",
+      "sha256": "90b9cbad8dbe62df02994de325a3a435ec737080e606a03c1ab440e33badf86e",
+      "line_count": 76,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/GETTING_STARTED.md": {
+      "subject": "donor",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/GETTING_STARTED.md",
+      "sha256": "5bf7cc2a0980c5817c6f033b0e6201a309027172a273a994b8f0e85761ec03ab",
+      "line_count": 634,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/ODD.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/ODD.md",
+      "sha256": "02cfbcf981434245d67c0713b3dd209e0d594d820a1565231b7450c875d72e3a",
+      "line_count": 1886,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/POSTING_GUIDE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/POSTING_GUIDE.md",
+      "sha256": "e784c72ab18d3386d4aa28f9eed43aef675d01f1a03ec8ec2bcc440f33edfb86",
+      "line_count": 192,
+      "matches_pin": true
+    },
+    "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/standards/WRITING_GUIDE.md": {
+      "subject": "base",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "path_from_checkout": "specification_methodology/v3/build_tenants/claude/standards/WRITING_GUIDE.md",
+      "sha256": "d2e3ece2f33ce2619f46c991b90e09550ab2b3e6ee54b2c655913cb668dad8fb",
+      "line_count": 145,
+      "matches_pin": true
+    }
+  },
+  "frontier_count_input": {
+    "path": "/Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude/frontier/REVIEW.json",
+    "sha256": "42d0854e98ddf999e17a0605dd008e5103f1f8878d773f3c1e40d293a48de9ec",
+    "counts": {
+      "conserved": 603,
+      "not": 19,
+      "superseded": 28
+    }
+  },
+  "main_precheckpoint_after": {
+    "head": "b8345fad7d4fb20df7e60c931f2047aaa6067e46",
+    "status": " M a_c/README.md\n M a_c/specification/GOALS.md\n?? a_c/.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md\n?? a_c/dogfood/stdo-v3-generation-rc9/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261015T013245Z_REVIEW_I3_C29B2BE_FEEDBACK_EVALUATION.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261015T023515Z_REVIEW_I3_ODD_BINDING_AND_PROJECTION_REPAIR.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T042437Z_REVIEW_CLAUDE_RC1_INTENT_AND_PRODUCT/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T050645Z_HANDOVER_RC1_CLAUDE_REVIEW.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T092019Z_REVIEW_CLAUDE_CANDIDATE3_FIXES/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T113147Z_EVALUATION_CLAUDE_ROOT_CAUSE_REVIEW/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T125000Z_REVIEW_CODEX_RC4/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T132252Z_HANDOVER_CODEX_V3_RC4.md\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261017T135555Z_REVIEW_CLAUDE_CANDIDATE5/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T022002Z_REVIEW_CLAUDE_RC8/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T040150Z_RC9_COMPARISON/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T064233Z_CLAUDE_BASE_CODEX_DONOR_PLAN/\n?? specification_methodology/v3/.ai-workspace/comments/codex/20261018T112914Z_LOAN_AGREEMENT_REVIEW/\n"
+  },
+  "concurrent_work_observation": {
+    "observed_during_review": true,
+    "head_unchanged": true,
+    "status_added": [
+      "M a_c/README.md",
+      "M a_c/specification/GOALS.md"
+    ],
+    "status_removed": [],
+    "scope": "Unrelated a_c work changed concurrently. This task wrote only its declared review directory; no a_c file was edited or reverted. Named candidate sources and prior reports passed their separate byte/pin checks."
+  }
+}

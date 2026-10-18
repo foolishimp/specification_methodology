@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-18T11:31:17.284635+00:00",
+  "kind": "stdo.loan-reconciliation-review",
+  "user_direction": "i want the loans agreed upon review the other agents list against yours",
+  "writer_role": "Review Writer for this review and its evidence only",
+  "write_territory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/comments/codex/20261018T112914Z_LOAN_AGREEMENT_REVIEW",
+  "allowed_new_files": [
+    "SCOPE.json",
+    "PROVENANCE.json",
+    "CROSSWALK.json",
+    "REVIEW.md",
+    "VALIDATION.json"
+  ],
+  "outcome": "Compare all 23 Claude loan IDs with all 14 Codex loan groups; record agreement, amendments, withdrawals and additions, with exact source reasons and scope of mutual agreement.",
+  "exclusions": [
+    "candidate edits",
+    "semantic acceptance",
+    "merge",
+    "release",
+    "push",
+    "a_c implementation and interpretation delivery",
+    "STDO Representation product",
+    "authority-compression delivery"
+  ],
+  "agreement_meaning": "Codex concurrence with a published Claude proposal establishes proposal-level overlap; an amendment or addition is not represented as already accepted by Claude or the Product owner.",
+  "basis": {
+    "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+    "builder_cut": "v2.5.1-rc.2",
+    "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "subjects": {
+    "base": {
+      "checkout": "/Users/jim/src/apps/specification_methodology-claude",
+      "commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "content_commit": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3"
+    },
+    "donor": {
+      "checkout": "/Users/jim/src/apps/specification_methodology-codex",
+      "commit": "c46e9f96381097245a6714164f03b72ad32116c0"
+    }
+  }
+}

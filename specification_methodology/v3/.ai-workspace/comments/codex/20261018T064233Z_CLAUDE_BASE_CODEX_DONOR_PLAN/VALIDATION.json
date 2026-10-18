@@ -1,0 +1,194 @@
+{
+  "created_utc": "2026-10-18T06:54:57.858852+00:00",
+  "kind": "donor-plan-artifact-validation",
+  "status": "pass",
+  "checks": [
+    {
+      "check": "all_declared_families_once",
+      "passed": true,
+      "details": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "check": "supplemental_surfaces",
+      "passed": true,
+      "details": {
+        "supplements": 12
+      }
+    },
+    {
+      "check": "every_row_has_sources_owner_risk_and_case",
+      "passed": true,
+      "details": {
+        "rows": 34
+      }
+    },
+    {
+      "check": "reference_paths_and_bounds",
+      "passed": true,
+      "details": {
+        "occurrences": 166,
+        "unique_files": 62,
+        "errors": []
+      }
+    },
+    {
+      "check": "referenced_files_match_frozen_commits",
+      "passed": true,
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "check": "base_head_and_clean_worktree",
+      "passed": true,
+      "details": {
+        "head": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+        "status": ""
+      }
+    },
+    {
+      "check": "base_standards_inventory_preserved",
+      "passed": true,
+      "details": {
+        "members": 23,
+        "changed": [],
+        "membership_delta": []
+      }
+    },
+    {
+      "check": "donor_head_and_clean_worktree",
+      "passed": true,
+      "details": {
+        "head": "c46e9f96381097245a6714164f03b72ad32116c0",
+        "status": ""
+      }
+    },
+    {
+      "check": "donor_standards_inventory_preserved",
+      "passed": true,
+      "details": {
+        "members": 18,
+        "changed": [],
+        "membership_delta": []
+      }
+    },
+    {
+      "check": "supporting_member_comparison_reproduced",
+      "passed": true,
+      "details": {
+        "templates": {
+          "base_members": 24,
+          "donor_members": 24,
+          "same_relative_paths": true,
+          "byte_identical": 14,
+          "different": 10
+        },
+        "schemas": {
+          "base_members": 2,
+          "donor_members": 2,
+          "same_relative_paths": true,
+          "byte_identical": 2,
+          "different": 0
+        },
+        "plugins": {
+          "base_members": 17,
+          "donor_members": 17,
+          "same_relative_paths": true,
+          "byte_identical": 6,
+          "different": 11
+        }
+      }
+    },
+    {
+      "check": "supporting_files_match_frozen_commits",
+      "passed": true,
+      "details": {
+        "files": 86
+      }
+    },
+    {
+      "check": "prior_comparison_preserved",
+      "passed": true,
+      "details": {
+        "files": 35,
+        "changed": []
+      }
+    },
+    {
+      "check": "main_head_and_other_status_preserved",
+      "passed": true,
+      "details": {
+        "head": "c48de7979b30af29199571dc748b677140dfb18e",
+        "outside_status_equal": true,
+        "limit": "Status preservation is not a byte snapshot of all unrelated dirty or untracked files. Only the declared output directory was written by this task."
+      }
+    },
+    {
+      "check": "plan_links_resolve",
+      "passed": true,
+      "details": {
+        "links": 74,
+        "errors": [],
+        "validation_link": "created by this validation pass"
+      }
+    },
+    {
+      "check": "writer_territory_contains_only_declared_artifacts",
+      "passed": true,
+      "details": [
+        "FEATURE_INVENTORY.json",
+        "PLAN.md",
+        "PROVENANCE.json",
+        "SCOPE.json",
+        "VALIDATION.json"
+      ]
+    }
+  ],
+  "artifact_sha256": {
+    "FEATURE_INVENTORY.json": "c0e3868d921140dade7040d11c40500b5cdbe69bfe4c9cf77f6a254b9b58f9c3",
+    "PLAN.md": "a0db737173f4558ecaeffc1c935591f95ad095c9314cc029f39c7ecb36b5ae29",
+    "PROVENANCE.json": "e37d59cffd6d180d001d483fc8dc802f594aaf7f8112403e777de19e12249650",
+    "SCOPE.json": "750457f1e1be52dd8656e2f6125cf00ef2f88a8c82b98b22f6fc3e5eb5f852a0"
+  },
+  "limitations": [
+    "Checks establish inventory coverage, source coordinates, hashes and artifact preservation; they do not qualify semantic correctness of proposed ports.",
+    "No candidate changes, implementation tests, native-host trials, release acceptance, merge or publication performed.",
+    "Discriminating cases in FEATURE_INVENTORY.json are prospective, not passed tests."
+  ],
+  "failed_checks": []
+}

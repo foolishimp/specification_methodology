@@ -1,0 +1,102 @@
+{
+  "source_A": "4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec",
+  "package_B": "a85f9ec98e43b942048a6c151aafd9662d2def90",
+  "scratch": "/private/tmp/stdo-rc5-failure-family-4ymenw2d",
+  "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+  "jsonschema_path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/jsonschema/__init__.py",
+  "cases": [
+    {
+      "name": "install-positive-correct-interpreter",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "release/check_install.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-correct"
+      ],
+      "exit": 0,
+      "expected_zero": true,
+      "expectation_holds": true,
+      "stdout_tail": "{\"kind\": \"claude-install-closure-and-bootstrap-check\", \"commit\": \"4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec\", \"installed_files\": 82, \"links_outside_package\": 15, \"links_with_missing_anchor\": 0, \"limits\": \"Built from git at the commit, with only the manifest-admitted files; no installer, toolchain manager or network was used; template validation is reported as found, not claimed.\"} {\"standards/templates/PRODUCT_DEFINITION_TEMPLATE.json\": {\"present\": true, \"parses\": true}, \"standards/schemas/product-definition.schema.json\": {\"present\": true, \"parses\": true}, \"schema_is_valid_json_schema\": true, \"template_against_schema\": \"2 errors as it stands (a fill-in template with placeholders; not a filled definition)\", \"template_first_errors\": [\"['constitution', 'stdo', 'basis', 'uri']: 'stdo://releases/REPLACE_WITH_IMMUTABLE_CUT/' does not match '^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\\\\\\\.[1-9][0\", \"['constitution', 'stdo', 'basis', 'manifest_sha256']: 'REPLACE_WITH_64_LOWERCASE_HEX_SHA256' does not match '^[0-9a-f]{64}$'\"]}\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-01/CASE-2.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-03-04/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-03-04/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-05/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/R-01/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/R-01/CASE.md\nOUTSIDE standards/README.md ../design/DOCUMENT_STRUCTURE.md\nOUTSIDE standards/README.md ../a_c/i3/README.md\nOUTSIDE standards/README.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/README.md ../a_c/i3/README.md\nOUTSIDE standards/README.md ../a_c/README.md\nOUTSIDE standards/RELEASE.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/EVALUATION.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/AXIOMATIC_CALCULUS.md X_v\nOUTSIDE standards/frames/ac-task-a.md X_v\n",
+      "stderr_tail": "",
+      "installed_files": 82,
+      "outside_links": 15,
+      "missing_anchors": 0
+    },
+    {
+      "name": "install-missing-bootstrap-correct-interpreter",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "release/check_install.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-missing-correct"
+      ],
+      "exit": 1,
+      "expected_zero": false,
+      "expectation_holds": true,
+      "stdout_tail": "",
+      "stderr_tail": "Traceback (most recent call last):\n  File \"/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/release/check_install.py\", line 48, in <module>\n    sch = json.load(open(os.path.join(out, 'standards/schemas/product-definition.schema.json')))\n                    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-missing-correct/standards/schemas/product-definition.schema.json'\n"
+    },
+    {
+      "name": "install-reported-missing-anchor",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "release/check_install.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-anchor-adverse"
+      ],
+      "exit": 1,
+      "expected_zero": false,
+      "expectation_holds": true,
+      "stdout_tail": "{\"kind\": \"claude-install-closure-and-bootstrap-check\", \"commit\": \"4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec\", \"installed_files\": 82, \"links_outside_package\": 15, \"links_with_missing_anchor\": 1, \"limits\": \"Built from git at the commit, with only the manifest-admitted files; no installer, toolchain manager or network was used; template validation is reported as found, not claimed.\"} {\"standards/templates/PRODUCT_DEFINITION_TEMPLATE.json\": {\"present\": true, \"parses\": true}, \"standards/schemas/product-definition.schema.json\": {\"present\": true, \"parses\": true}, \"schema_is_valid_json_schema\": true, \"template_against_schema\": \"2 errors as it stands (a fill-in template with placeholders; not a filled definition)\", \"template_first_errors\": [\"['constitution', 'stdo', 'basis', 'uri']: 'stdo://releases/REPLACE_WITH_IMMUTABLE_CUT/' does not match '^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\\\\\\\.[1-9][0\", \"['constitution', 'stdo', 'basis', 'manifest_sha256']: 'REPLACE_WITH_64_LOWERCASE_HEX_SHA256' does not match '^[0-9a-f]{64}$'\"]}\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-01/CASE-2.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-03-04/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-03-04/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/T-05/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/R-01/CASE.md\nOUTSIDE standards/CONFORMANCE.md ../qualification/cases/R-01/CASE.md\nOUTSIDE standards/README.md ../design/DOCUMENT_STRUCTURE.md\nOUTSIDE standards/README.md ../a_c/i3/README.md\nOUTSIDE standards/README.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/README.md ../a_c/i3/README.md\nOUTSIDE standards/README.md ../a_c/README.md\nOUTSIDE standards/RELEASE.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/EVALUATION.md ../frontier/PREDECESSOR_CLAIMS.md\nOUTSIDE standards/AXIOMATIC_CALCULUS.md X_v\nOUTSIDE standards/frames/ac-task-a.md X_v\nANCHOR standards/FOUNDATIONS.md #reviewer-absent-anchor\n",
+      "stderr_tail": "",
+      "missing_anchors": [
+        [
+          "standards/FOUNDATIONS.md",
+          "#reviewer-absent-anchor"
+        ]
+      ],
+      "fault_scope": "One read-only Git response gains an unresolved relative anchor; checker source unchanged."
+    },
+    {
+      "name": "run-ac-enumeration-failure-with-stale-output",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-positive/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration-stale"
+      ],
+      "exit": 0,
+      "expected_zero": false,
+      "expectation_holds": false,
+      "stdout_tail": "",
+      "stderr_tail": "reviewer-injected frame-index acquisition failure\n",
+      "stale_projection_retained": true,
+      "projection_names": [
+        "stale.json"
+      ],
+      "commands_log": "2026-10-17T14:07:04Z validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output /private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration-stale/validation-report.json --emit-map /private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration-stale/logical-constraint-map.json\nexit=0\n"
+    },
+    {
+      "name": "freeze-enumeration-failure-contained",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-enumeration-failure"
+      ],
+      "exit": 1,
+      "expected_zero": false,
+      "expectation_holds": true,
+      "stdout_tail": "checker at /private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-enumeration-failure/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py sha256=5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\n",
+      "stderr_tail": "reviewer-injected frame-index acquisition failure\ncp: /private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-enumeration-failure/out/projections/*.json: No such file or directory\n",
+      "stale_projection_removed": true,
+      "projection_count": 0,
+      "consumers_not_reached": true,
+      "program_sha256": "5fea30ce62bbc8eea3b1904712d47ae0feb23ac0d8d4b49174dc8c1ea74b3b22"
+    }
+  ],
+  "limits": [
+    "No claim that a real process interruption occurred; it is the supplied fault.",
+    "Initial install cases were unavailable because their interpreter lacked jsonschema.",
+    "Missing-anchor injection tests gate propagation, not package-byte authenticity."
+  ]
+}

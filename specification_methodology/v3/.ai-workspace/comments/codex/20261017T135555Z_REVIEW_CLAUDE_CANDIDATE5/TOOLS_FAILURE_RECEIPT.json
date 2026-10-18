@@ -1,0 +1,351 @@
+{
+  "source_A": "4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec",
+  "package_B": "a85f9ec98e43b942048a6c151aafd9662d2def90",
+  "common": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "scratch": "/private/tmp/stdo-rc5-failure-family-4ymenw2d",
+  "elapsed_seconds": 19.404,
+  "cases": [
+    {
+      "name": "links-positive",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/links.py",
+        "standards"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "bad 0 known false positives 0\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "links-missing-file-and-anchor",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/links.py",
+        "standards"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "MISSING OWNER.md absent.md\nANCHOR OWNER.md OWNER.md#absent\nbad 2 known false positives 0\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "links-exception-not-global",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/links.py",
+        "standards"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "MISSING OWNER.md X_v\nbad 1 known false positives 0\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "locus-positive",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/locus_check.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "loci 1 bad 0\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "locus-unresolved",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/locus_check.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.022,
+      "stdout_tail": "BAD 2 `OWNER.md#absent`\nloci 1 bad 1\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "frontier-positive-with-tenant-extra",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/frontier_check.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/common.md",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/frontier/PREDECESSOR_CLAIMS.md"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "common rows 1 tenant rows 2\nmissing from tenant 0 []\ntenant-only rows 1\n  3 ('Member', '#tenant-extra')\nduplicated common rows 0 []\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "frontier-missing",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/frontier_check.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/common.md",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/frontier/PREDECESSOR_CLAIMS.md"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.022,
+      "stdout_tail": "common rows 1 tenant rows 0\nmissing from tenant 1 [('Member', '#source')]\ntenant-only rows 0\nduplicated common rows 0 []\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "frontier-duplicate",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/frontier_check.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/common.md",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures/frontier/PREDECESSOR_CLAIMS.md"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/fixtures",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.023,
+      "stdout_tail": "common rows 1 tenant rows 2\nmissing from tenant 0 []\ntenant-only rows 0\nduplicated common rows 2 [(2, ('Member', '#source')), (3, ('Member', '#source'))]\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "frontier-review-positive",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/frontier_review.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.081,
+      "stdout_tail": "{\"modal_conversion\": 124, \"assessed\": 184, \"unresolved_predecessor_anchor\": 17, \"unresolved_successor_locus\": 0, \"proposed_replacement\": 24, \"by_disposition\": {\"conserved\": 607, \"not\": 19, \"superseded\": 24}} rows 650\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "frontier-review-unknown-predecessor",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/frontier_review.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.08,
+      "stdout_tail": "{\"modal_conversion\": 124, \"assessed\": 184, \"unresolved_predecessor_anchor\": 18, \"unresolved_successor_locus\": 0, \"proposed_replacement\": 24, \"by_disposition\": {\"conserved\": 607, \"not\": 19, \"superseded\": 24}} rows 650\nunexplained unresolved predecessor anchors ['README.md#reviewer-unknown-predecessor']\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "consumers-positive",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/consumers.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.123,
+      "stdout_tail": "{\"clauses\": 155, \"owners_unresolved\": 0, \"consumer_bindings\": 2422, \"clauses_without_consumer\": 0, \"read_support\": 0}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "consumers-unresolved-owner",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/consumers.py"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.121,
+      "stdout_tail": "{\"clauses\": 155, \"owners_unresolved\": 1, \"consumer_bindings\": 2412, \"clauses_without_consumer\": 1, \"read_support\": 0}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "freeze-positive",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-positive"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 5.715,
+      "stdout_tail": "56:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\nREADME artifact table unchanged 16 files\nHOLDS  identity-positive {\"expected\": {\"Executable\": \"5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\", \"Schema\": \"43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7\", \"Output-contract\": \"c12426\nHOLDS  identity-adverse {\"mismatches\": [\"Schema\"]}\nHOLDS  validate-positive {\"exit\": 0, \"status\": \"valid\", \"diagnostics\": 0, \"report_identical\": true, \"map_identical\": true}\nHOLDS  validate-adverse-duplicate-clause {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 2, \"stderr\": \"\"}\nHOLDS  validate-adverse-dangling-source {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 1, \"stderr\": \"\"}\nHOLDS  project-positive [[\"authority-kinds\", \"reference-only\", 0, true, \"\"], [\"authority-kinds\", \"materialized\", 0, true, \"\"], [\"construction-and-assurance\", \"reference-only\", 0, true, \"\"], [\"construction-and-assurance\", \"ma\nHOLDS  project-adverse-dropped-clause {\"dropped\": \"urn:stdo-3:claude:i3:clause:what-creates-no-authority\", \"exit\": 0, \"validate_status\": \"valid\", \"baseline_exists\": true, \"differs_from_fresh\": true, \"stderr\": \"\"}\nall hold: True elapsed 3.1\n{\"clauses\": 155, \"owners_unresolved\": 0, \"consumer_bindings\": 2422, \"clauses_without_consumer\": 0, \"read_support\": 0}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "freeze-forced-failed-control",
+      "command": [
+        "bash",
+        "qualification/C3-ITER4/tools/freeze_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-adverse"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 5.598,
+      "stdout_tail": "-3:claude:i3:frame-index:result-algebra-and-conjunction\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\n{\"diagnostics\":[],\"frame_index_refs\":[\"urn:stdo-3:claude:i3:frame-index:reuse-and-invalidation\"],\"kind\":\"axiom-indexer.projection-report\",\"map_sha256\":\"sha256:15962ee23625c4f61b153d8e4a8b2af86cb73f009d3f2bc04de849874ab06ce3\",\"program_uri\":\"urn:stdo-3:claude:i3:program\",\"schema_version\":1,\"status\":\"valid\"}\nREADME artifact table refreshed 16 files\nFAILS  identity-positive {\"expected\": {\"Executable\": \"5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8\", \"Schema\": \"43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7\", \"Output-contract\": \"c12426\nHOLDS  identity-adverse {\"mismatches\": [\"Schema\"]}\nHOLDS  validate-positive {\"exit\": 0, \"status\": \"valid\", \"diagnostics\": 0, \"report_identical\": true, \"map_identical\": true}\nHOLDS  validate-adverse-duplicate-clause {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 2, \"stderr\": \"\"}\nHOLDS  validate-adverse-dangling-source {\"exit\": 1, \"status\": \"invalid\", \"diagnostics\": 1, \"stderr\": \"\"}\nHOLDS  project-positive [[\"authority-kinds\", \"reference-only\", 0, true, \"\"], [\"authority-kinds\", \"materialized\", 0, true, \"\"], [\"construction-and-assurance\", \"reference-only\", 0, true, \"\"], [\"construction-and-assurance\", \"ma\nHOLDS  project-adverse-dropped-clause {\"dropped\": \"urn:stdo-3:claude:i3:clause:what-creates-no-authority\", \"exit\": 0, \"validate_status\": \"valid\", \"baseline_exists\": true, \"differs_from_fresh\": true, \"stderr\": \"\"}\nall hold: False elapsed 3.1\n",
+      "stderr_tail": "",
+      "consumers_not_reached": true,
+      "holds_all": false
+    },
+    {
+      "name": "controls-unknown-name",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/ac_controls.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/unknown-control"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 3.141,
+      "stdout_tail": "",
+      "stderr_tail": "refusal: AC_CONTROLS_FORCE_FAIL names no control: reviewer-control-does-not-exist\n",
+      "report_not_rewritten": true
+    },
+    {
+      "name": "run-ac-failed-validate",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/checker_stub.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/run-validate"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.31,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "name": "run-ac-failed-project",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/checker_stub.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/run-project"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.297,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "name": "run-ac-frame-enumeration-failure",
+      "command": [
+        "bash",
+        "qualification/C3-ITER3/tools/run_ac.sh",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/freeze-positive/axiom_indexer_v2.5.1-rc.2/build_tenants/core/code/ac.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 0,
+      "expectation_holds": false,
+      "elapsed_seconds": 0.615,
+      "stdout_tail": "",
+      "stderr_tail": "reviewer-injected frame-index acquisition failure\n",
+      "projection_count": 0,
+      "commands_log": "2026-10-17T14:04:22Z validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output /private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration/validation-report.json --emit-map /private/tmp/stdo-rc5-failure-family-4ymenw2d/run-enumeration/logical-constraint-map.json\nexit=0\n"
+    },
+    {
+      "name": "install-positive",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/release/check_install.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-positive"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 1,
+      "expectation_holds": false,
+      "elapsed_seconds": 1.272,
+      "stdout_tail": "",
+      "stderr_tail": "Traceback (most recent call last):\n  File \"/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/release/check_install.py\", line 47, in <module>\n    import jsonschema\nModuleNotFoundError: No module named 'jsonschema'\n"
+    },
+    {
+      "name": "install-missing-bootstrap-schema",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/release/check_install.py",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/install-adverse"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": false,
+      "exit": 1,
+      "expectation_holds": true,
+      "elapsed_seconds": 1.252,
+      "stdout_tail": "",
+      "stderr_tail": "Traceback (most recent call last):\n  File \"/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/release/check_install.py\", line 47, in <module>\n    import jsonschema\nModuleNotFoundError: No module named 'jsonschema'\n"
+    },
+    {
+      "name": "frames-current",
+      "command": [
+        "/usr/local/bin/python3",
+        "-I",
+        "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude/qualification/instruments/generate_frames.py",
+        "--check"
+      ],
+      "cwd": "/private/tmp/stdo-rc5-failure-family-4ymenw2d/snapshot/specification_methodology/v3/build_tenants/claude",
+      "expected_zero": true,
+      "exit": 0,
+      "expectation_holds": true,
+      "elapsed_seconds": 0.214,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    }
+  ],
+  "limits": [
+    "Synthetic fault controls test propagation, not checker semantics.",
+    "Install closure is materialization, not a native installer.",
+    "Expected report-only install links remain ungated.",
+    "No acceptance, semantic fidelity or active-context fit is inferred."
+  ]
+}

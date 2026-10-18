@@ -1,0 +1,132 @@
+[
+  {
+    "name": "claude_assemble_check",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "a_c/i3/tools/assemble.py",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.029,
+    "stdout": "current\n",
+    "stderr": ""
+  },
+  {
+    "name": "claude_frames_check",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "qualification/instruments/generate_frames.py",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.229,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "claude_build_fragments",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "a_c/i3/tools/build_fragments.py",
+      "--dispositions"
+    ],
+    "exit": 0,
+    "seconds": 0.062,
+    "stdout": "G1 27 clauses\nG2 20 clauses\nG3 17 clauses\nG4 2 clauses\nG14 89 clauses\n",
+    "stderr": ""
+  },
+  {
+    "name": "claude_assemble",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "a_c/i3/tools/assemble.py"
+    ],
+    "exit": 0,
+    "seconds": 0.031,
+    "stdout": "155 clauses, 0 residuals, 5 frame indexes written\n",
+    "stderr": ""
+  },
+  {
+    "name": "claude_regeneration_comparison",
+    "changed_files": []
+  },
+  {
+    "name": "claude_actual_materialization_verifier",
+    "files": 82,
+    "failures": [
+      "unexpected STDO Project Release Namespace",
+      "unexpected STDO Project Subtree root",
+      "standards member-set digest does not reproduce"
+    ],
+    "declared_member_set_sha256": "22d52c1c11130c0a7f014d4080a7576f939f22a7499b36857e2290e079a76177",
+    "required_member_set_sha256": "0d301189485014a35d3a873c98b4eab015d45afd257da64be593fb30bb75e3ae"
+  },
+  {
+    "name": "codex_published_bindings",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/stdo-rc9-package-2yi8m21l/codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/bindings.py",
+      "--theory-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2"
+    ],
+    "exit": 0,
+    "seconds": 0.039,
+    "stdout": "{\n  \"kind\": \"axiom-indexer.binding-set\",\n  \"schema_version\": 1,\n  \"bindings\": [\n    {\n      \"uri_prefix\": \"repo://codex-v3/successor/\",\n      \"path\": \"/private/tmp/stdo-rc9-package-2yi8m21l/codex/specification_methodology/v3/build_tenants/codex/successor\"\n    },\n    {\n      \"uri_prefix\": \"stdo://releases/v2.5.1-rc.2/\",\n      \"path\": \"/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2\"\n    }\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "name": "codex_native_validate",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/stdo-rc9-package-2yi8m21l/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/tmp/stdo-rc9-package-2yi8m21l/codex/specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+      "--bindings",
+      "/tmp/stdo-rc9-package-2yi8m21l/codex-bindings.json",
+      "--output",
+      "/tmp/stdo-rc9-package-2yi8m21l/codex-validation.json",
+      "--emit-map",
+      "/tmp/stdo-rc9-package-2yi8m21l/codex-map.json"
+    ],
+    "exit": 0,
+    "seconds": 6.115,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "codex_native_map_reproduction",
+    "same": true
+  },
+  {
+    "name": "claude_native_validate",
+    "command": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/tmp/stdo-rc9-package-2yi8m21l/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/tmp/stdo-rc9-package-2yi8m21l/claude/specification_methodology/v3/build_tenants/claude/a_c/i3/axiomatic-program.json",
+      "--bindings",
+      "/tmp/stdo-rc9-package-2yi8m21l/claude/specification_methodology/v3/build_tenants/claude/a_c/i3/bindings.json",
+      "--output",
+      "/tmp/stdo-rc9-package-2yi8m21l/claude-validation.json",
+      "--emit-map",
+      "/tmp/stdo-rc9-package-2yi8m21l/claude-map.json"
+    ],
+    "exit": 0,
+    "seconds": 0.167,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "claude_native_map_reproduction",
+    "same": true
+  }
+]

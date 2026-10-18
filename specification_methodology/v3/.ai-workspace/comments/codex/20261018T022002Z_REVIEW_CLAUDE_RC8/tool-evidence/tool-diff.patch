@@ -1,0 +1,62 @@
+diff --git a/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/run_ac.sh b/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/run_ac.sh
+index cb42d76b..e5be3e5b 100644
+--- a/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/run_ac.sh
++++ b/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER3/tools/run_ac.sh
+@@ -5,7 +5,9 @@ FAIL=0
+ run(){ echo "$(date -u +%FT%TZ) $*" >> $LOG; python3 -I "$AC" "$@"; rc=$?; echo "exit=$rc" >> $LOG; [ $rc -eq 0 ] || FAIL=1; }
+ run validate --program a_c/i3/axiomatic-program.json --bindings a_c/i3/bindings.json --output "$OUT/validation-report.json" --emit-map "$OUT/logical-constraint-map.json"
+ # every frame index the program declares, in program order (I5-05: the list is no longer fixed at four)
+-for ix in $(python3 -I -c "import json; print(' '.join(f['uri'].rsplit(':', 1)[-1] for f in json.load(open('a_c/i3/axiomatic-program.json'))['frame_indexes']))"); do
++IX=$(python3 -I -c "import json; print(' '.join(f['uri'].rsplit(':', 1)[-1] for f in json.load(open('a_c/i3/axiomatic-program.json'))['frame_indexes']))"); rc=$?
++if [ $rc -ne 0 ] || [ -z "$IX" ]; then echo "frame-index enumeration exit=$rc indexes=${IX:-none}" >> $LOG; echo "run_ac.sh: no frame index enumerated (exit $rc)" >&2; exit 1; fi  # a failed or empty enumeration fails the run
++for ix in $IX; do
+  for mode in reference-only materialized; do
+   run project --program a_c/i3/axiomatic-program.json --map "$OUT/logical-constraint-map.json" --bindings a_c/i3/bindings.json --frame-index urn:stdo-3:claude:i3:frame-index:$ix --mode $mode --output "$OUT/projections/projection-$ix-$mode.json"
+  done; done
+diff --git a/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/freeze_ac.sh b/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/freeze_ac.sh
+index 483dca4f..bb39cf91 100755
+--- a/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/freeze_ac.sh
++++ b/specification_methodology/v3/build_tenants/claude/qualification/C3-ITER4/tools/freeze_ac.sh
+@@ -1,7 +1,7 @@
+ #!/bin/bash
+ # Regenerate the a_c/i3 checker artifacts at the freeze: materialise the pinned checker, run validate and
+-# the eight projections, copy the outputs into a_c/i3, refresh the artifact digests in a_c/i3/README.md,
+-# then rerun the controls. Usage, from the tenant root: bash qualification/C3-ITER4/tools/freeze_ac.sh <scratch dir>
++# the projections, copy the outputs into a_c/i3, rerun the controls and the consumers step, then refresh the
++# artifact digests in a_c/i3/README.md. Usage, from the tenant root: bash qualification/C3-ITER4/tools/freeze_ac.sh <scratch dir>
+ set -eo pipefail  # a failed step or control fails the freeze; the pipes into tail hide no exit status
+ SP=$1; mkdir -p "$SP"
+ AI=$(bash qualification/C3-ITER3/tools/verify_ai.sh "$SP" | tail -1); AC="$AI/build_tenants/core/code/ac.py"
+@@ -11,6 +11,9 @@ cp "$SP/out/validation-report.json" a_c/i3/validation-report.json
+ cp "$SP/out/logical-constraint-map.json" a_c/i3/logical-constraint-map.json
+ cp "$SP/out"/projections/*.json a_c/i3/projections/
+ cp "$SP/out/commands.log" a_c/i3/checker-commands.log
++python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
++python3 -I qualification/C3-ITER4/tools/consumers.py
++# the artifact digests last, after consumers.py has regenerated consumers.json, so one run leaves no stale digest
+ python3 -I - <<'PY'
+ import hashlib, re
+ p='a_c/i3/README.md'; s=open(p).read()
+@@ -21,5 +24,3 @@ assert re.search(pat, s), 'artifact table not found'
+ new=re.sub(pat, r'\1'+rows+'\n', s, count=1)
+ open(p,'w').write(new); print('README artifact table', 'refreshed' if new!=s else 'unchanged', len(files), 'files')
+ PY
+-python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
+-python3 -I qualification/C3-ITER4/tools/consumers.py
+diff --git a/specification_methodology/v3/build_tenants/claude/release/build_manifest.py b/specification_methodology/v3/build_tenants/claude/release/build_manifest.py
+index 9b732885..ae31a9b3 100644
+--- a/specification_methodology/v3/build_tenants/claude/release/build_manifest.py
++++ b/specification_methodology/v3/build_tenants/claude/release/build_manifest.py
+@@ -16,10 +16,10 @@ std = [{'path': p, 'sha256': sha(blob('standards/' + p))} for p in files('standa
+ plug = [{'path': p, 'sha256': sha(blob('plugins/spec/' + p))} for p in files('plugins/spec')]
+ member_set = sha(''.join(f"{m['sha256']}  {m['path']}\n" for m in std).encode())
+ m = {'kind': 'stdo.installed-release-manifest', 'schema_version': 1,
+-     'release': {'cut': 'v3.0.0-rc.5', 'tag_object': tag, 'commit': commit, 'tree': git('rev-parse', f'{commit}^{{tree}}'),
++     'release': {'cut': 'v3.0.0-rc.8', 'tag_object': tag, 'commit': commit, 'tree': git('rev-parse', f'{commit}^{{tree}}'),
+                  'standards_tree': git('rev-parse', f'{commit}:{T}/standards'),
+                  'project_release_namespace': 'specification_methodology-claude',
+-                 'qualified_ref': 'refs/tags/specification_methodology-claude/v3.0.0-rc.5',
++                 'qualified_ref': 'refs/tags/specification_methodology-claude/v3.0.0-rc.8',
+                  'project_subtree_root': T, 'project_subtree_tree': git('rev-parse', f'{commit}:{T}')},
+      'standards': {'installed_root': 'standards', 'source_root': 'specification/standards', 'member_count': len(std),
+                    'member_set_sha256': member_set, 'members': std},
