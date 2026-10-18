@@ -4,7 +4,7 @@
 The Product package is [successor/](../successor/README.md).
 Earlier principles manuscripts and build plans are preserved as historical
 commentary outside the Product package. Current qualification and conservation
-records are in [qualification/C3/rc4/](../qualification/C3/rc4/integration/RETURN.md).
+records are reached through the [RC9 handoff](../qualification/C3/rc9/RETURN.md).
 The [I5 plan](../qualification/C3/iteration-5/PLAN.md) identifies the affected
 design, argument and consumer updates; the existing method structure supplies
 their starting design.

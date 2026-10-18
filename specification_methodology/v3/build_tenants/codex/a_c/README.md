@@ -10,16 +10,19 @@ questions remain scoped residuals. Mandatory support is acquired through native
 references; conditional support and provenance retain exact discoverable routes.
 An unresolved condition cannot authorize a dependent action.
 
-The [I5 interpretation generation record](../qualification/C3/iteration-5/interpretation/GENERATION.json)
-binds the current source and native checks. The [iteration-5 return](../qualification/C3/iteration-5/RETURN.md)
-owns the candidate's evidence and qualification limits. Its
+The [RC9 handoff](../qualification/C3/rc9/RETURN.md) binds the current package
+and its qualification limits. The native program and semantic account are
+unchanged from the [final repair generation](../qualification/C3/rc5/integration/interpretation/GENERATION.json);
+RC9 refreshes only documentary coordinates and verifies the
+[consumer identity](../qualification/C3/rc9/INTERPRETATION_IDENTITY.json).
+The historical I5
 [source-pair tool](../qualification/C3/iteration-5/tools/source_pair.py) exposes one
 authenticated source body beside its interpretation for review without copying
-all bodies into native values. Current [native checks](../qualification/C3/iteration-5/interpretation/NATIVE_CHECK.json)
-exercise the selected transformation, writing, recovery and assurance routes in
+all bodies into native values. Earlier [native checks](../qualification/C3/iteration-5/interpretation/NATIVE_CHECK.json)
+exercised the selected transformation, writing, recovery and assurance routes in
 both projection modes, cold binding and source-drift refusal.
 [Serialized cost](../qualification/C3/iteration-5/SERIALIZED_COST.json) separates
-current artifact sizes from qualification-reference factoring on identical
+that subject's artifact sizes from qualification-reference factoring on identical
 semantic input; neither measure supplies a practical-efficiency claim.
 
 The [I4 return](../qualification/C3/iteration-4/RETURN.md) and
