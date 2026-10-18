@@ -27,7 +27,8 @@ Borrow before the baseline:
 | Class | What | Items |
 |---|---|---|
 | owner decision | content that changes a rule Claude now states (10 rows): M1–M7 | 7 |
-| baseline loan | content that keeps Claude's meaning: owner pointers for reuse, the reviewer-defect authorship case, one procedure line: P1–P3 | 3 |
+| owner decision by the readers' reading; baseline loan on this session's | owner pointers for reuse after a change (3 rows): P1 | 1 |
+| baseline loan | content that keeps Claude's meaning: the reviewer-defect authorship case and one procedure line: P2, P3 | 2 |
 | baseline loan | routing and frames: a route and frame for reuse after a change, an intake frame, task rows that stop at the deciding subsection, a frame for each route, deciding head paragraphs, an admissibility route: R1–R6 | 6 |
 | baseline loan | gates and records: G1–G7 | 7 |
 
@@ -42,25 +43,37 @@ Defer to after the baseline:
 
 Do not borrow:
 
-- Codex's restatement of the core result law at each consumer (34 rows);
-- its release-label mapping;
+- Codex's restatement of the core result law at each consumer (33 rows);
+- its release-label mapping, which departs from the common input;
 - TRANSFORMATION_LIBRARY as a member or section;
 - the further forms listed under [Not to borrow](#not-to-borrow).
 
 Owner replacement decisions on the Claude line:
 
-- 28 superseded rows in Claude's `frontier/REVIEW.json` await the owner now:
-  Q1 9, Q2 4, Q19 8, and one each for Q3, Q4, Q5, Q6, Q7, Q9 and Q17. The
-  ten compressions of Q8 are outside that count.
-- The record repairs add 10 (rows where Claude's text already changes
-  meaning but its record says `conserved`). The meaning loans add 10. That
-  makes 48.
-- Four of Claude's own replacements (rows 93–96, questions Q2 and Q6) are
-  not required by the common input. Withdrawing them gives 44. Withdrawing
-  Q2 as a whole also withdraws its fourth row, giving 43.
-- If the covering reviewer finds that the P1 pointers change meaning, add 3.
+- 28 superseded rows in Claude's `frontier/REVIEW.json` await the owner
+  now. Claude's DECISIONS.md groups them by question:
+  - Q1, work-result values and the single result algebra: 9;
+  - Q19, re-entry of a constitutional gap and other observed failures: 8;
+  - Q2, who adopts a profile: 4;
+  - one each for Q3 (the Executive's diagnostic order), Q4 (who disposes
+    an assessed candidate), Q5 (the release selector), Q6 (the profile
+    population count), Q7 (the current-surface writing rule), Q9 (the
+    configuration record) and Q17 (ownership of the result algebra).
 
-Reader B's estimates for the RC9 scenarios:
+  The ten compressions of Q8 are outside that count.
+- The record repairs add 10: rows where Claude's text already changes
+  meaning but its record says `conserved`. The meaning loans M1–M7 add 10.
+  P1 adds 3 by the readers' reading. That makes 51.
+- Four of Claude's own replacements (rows 93–96, under Q2 and Q6) are not
+  required by the common input. Withdrawing them gives 47. Withdrawing Q2
+  as a whole also withdraws its fourth row, giving 46.
+- Three come off each figure if the covering reviewer accepts this
+  session's reading for P1 (FOUNDATIONS 1045–1049, ACTIVATION 1705–1716),
+  giving 48, 44 or 43. P2 adds 1 if the owner reads it as a new
+  permission.
+
+Reader B's estimates for the ten task scenarios of the RC9 comparison
+(S1–S10):
 
 - with R2 and R5, the S8 actor reads about 37 KB instead of 125,941 B, and
   the S9 actor about 46 KB instead of 100,071 B (Codex: 49,742 and 47,305);
@@ -70,9 +83,10 @@ Reader B's estimates for the RC9 scenarios:
 ## Method
 
 Each reader ran on Fable at maximum effort, one at a time, confined to its
-packet. A random key, sealed in the plan, labelled the lines A and B. The
-revealed key is A = Codex, B = Claude, and its recomputed seal matches
-`1c8089fb…`.
+packet. For A1 and A2, a random key sealed in the plan labelled the lines
+A and B. The revealed key is A = Codex, B = Claude, and its recomputed seal
+matches `1c8089fb…`. Reader B's brief named the receiving line R and the
+donor D by design, with tenant names scrubbed, so B knew the roles.
 
 - A1: the three shared causes, the 40 tagged rows and rows 74–97, in 107
   tool calls.
@@ -95,7 +109,8 @@ Each record carries the Cross-Synthesis fields:
 - the predecessor rows affected;
 - the common basis;
 - the frame bytes;
-- the evidence to check again.
+- the evidence to check again;
+- the material dependencies.
 
 The covering review for every loan is the Claude line's same-family
 nonauthor Reviewer; Codex's reading is supplementary.
@@ -130,6 +145,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
   each.
 - **Check again:** the Effects table keeps its three values; the S2 trace
   (an unknown external write).
+- **Depends on:** M2, whose outcome Msg family maps onto the Effects values
+  this loan amends; ACTIVATION §5, which reconciles uncertain effects.
 
 ### M2. UX commands carry unresolved effect outcomes (rows 69, 70, 71)
 
@@ -157,6 +174,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
 - **Frame bytes:** UX is copied into no frame.
 - **Check again:** the §15 mapping (`replay_passes`, `replay_fails`)
   accepts the new cases.
+- **Depends on:** M1, which amends the Effects values the Msg family maps
+  onto.
 
 ### M3. Reuse after a change: anti-pattern 11 (row 44)
 
@@ -174,6 +193,10 @@ nonauthor Reviewer; Codex's reading is supplementary.
 - **Meaning:** narrows a prohibition. 1 row.
 - **Frame bytes:** §21 is copied into no frame.
 - **Check again:** the S5 trace.
+- **Depends on:** P1, which states the same reuse law at RF-005 and in the
+  Executive Baseline; if the reviewer reverses P1, this wording follows
+  that decision. FOUNDATIONS §4 Change impact and evidence reuse and
+  ACTIVATION §7 stay the owners.
 
 ### M4. An event log only where the binding declares one (rows 60, 61)
 
@@ -193,6 +216,7 @@ nonauthor Reviewer; Codex's reading is supplementary.
 - **Meaning:** removes a recommendation that applies to every run. 2 rows.
 - **Frame bytes:** neither section is copied into a frame.
 - **Check again:** the human-process tenant case of the `binding` frame.
+- **Depends on:** SPEC_METHOD §11, which keeps the law.
 
 ### M5. The calculus consumes the core result owners (row 05)
 
@@ -207,6 +231,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
   FOUNDATIONS §4 (886–887, 1143–1144). Common PRODUCT 129 and README 162.
 - **Meaning:** changes the exclusive owner. 1 row.
 - **Frame bytes:** §1 is copied into no frame.
+- **Depends on:** the outcome mappings of AC-007 and AC-019, and the AC §8
+  identity record that binds the derivation account.
 
 ### M6. Repricing dispositions and the core (row 62)
 
@@ -230,6 +256,9 @@ nonauthor Reviewer; Codex's reading is supplementary.
   decides it.
 - **Meaning:** removes a stated exemption. 1 row.
 - **Frame bytes:** copied into `stale-summary`: about ±400 B.
+- **Depends on:** ACTIVATION §3 Disposition, which places the disposition of
+  an assessed candidate in the core. The adaptation must not make a second
+  owner for disposition results.
 
 ### M7. A design review routes its diagnosis to the owner (row 07)
 
@@ -246,6 +275,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
   owner.
 - **Meaning:** changes a consequence. 1 row.
 - **Frame bytes:** §11 is copied into no frame.
+- **Depends on:** the Feedback and diagnosis paragraph of ACTIVATION §1
+  Construction relation (278ff), which owns the four causes.
 
 ## Content that keeps Claude's meaning
 
@@ -287,6 +318,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
   - §18 is copied into no frame.
 - **Check again:** the S5 trace, and the RF §5 result tables (579, 588)
   under the same reading.
+- **Depends on:** M3, the same law at anti-pattern 11; ACTIVATION §7; and
+  FOUNDATIONS Change impact and evidence reuse and Stale results.
 
 ### P2. A reviewer who reports a defect is not its author (Reader B loan 7)
 
@@ -308,6 +341,7 @@ nonauthor Reviewer; Codex's reading is supplementary.
   `eb-task-d` and `member-build-assess`: about +450 B each.
 - **Check again:** anti-pattern 10 (EXECUTIVE_BASELINE 1740–1741, "edits or
   directs repair") stays consistent.
+- **Depends on:** the EVALUATION §3 independence conditions it refines.
 
 ### P3. The real-use procedure keeps the classification open (Reader B loan 5; S1)
 
@@ -322,6 +356,8 @@ nonauthor Reviewer; Codex's reading is supplementary.
 - **Frame bytes:** none.
 - **Check again:** line 892 ("The absence of a declared change class is
   process drift") stays true.
+- **Depends on:** SPEC_METHOD §4 Universal intake triage, which stays the
+  rule.
 
 ## Routing and frames (Reader B)
 
@@ -347,6 +383,11 @@ qualification under EVALUATION §7.
 - **Frame bytes:** the new frame is about 75–90 KB. A cheaper alternative
   extends `stale-summary` with change impact, test-case authority and
   ASSURANCE §3, for about +8 KB.
+- **Depends on:** Q13 in Claude's DECISIONS.md, which asks whether frames
+  excerpt the sections every frame binds or carry only their paraphrase.
+  R1 copies some bound sections, such as Construction relation and change
+  impact, as routes of one new frame. That fits either answer, but the
+  owner should see it before deciding Q13.
 
 ### R2. Task rows that stop at the deciding subsection
 
@@ -360,6 +401,9 @@ qualification under EVALUATION §7.
   Each row names subsection anchors and says that family tables are traces.
 - **Trace fixed:** S3 lands one hop short; S8 and S9 read whole sections.
 - **Frame bytes:** none.
+- **Depends on:** Q14, which puts the task-routed entry README to the
+  owner. R2 extends that entry, so adopting R2 presumes Q14 is answered
+  yes.
 
 ### R3. A frame for each route
 
@@ -369,6 +413,7 @@ qualification under EVALUATION §7.
   task serves it.
 - **Trace fixed:** S10.
 - **Frame bytes:** none.
+- **Depends on:** Q14, as for R2.
 
 ### R4. An intake and carrier frame
 
@@ -381,17 +426,22 @@ qualification under EVALUATION §7.
   Unlike Codex's frame, Claude's adds test-case authority and ambiguity.
 - **Trace fixed:** S1, S4 and S6, which took 13, 21 and 9 hops.
 - **Frame bytes:** the new frame is about 80–95 KB.
+- **Depends on:** Q13, as for R1.
 
 ### R5. Deciding head paragraphs
 
 - **Codex element:** FOUNDATIONS 626–634.
-- **Claude change:** before each of the F22, F2, F11 and F13 family tables,
-  a head paragraph that names which subsection decides which question.
+- **Claude change:** a head paragraph that names which subsection decides
+  which question. It goes before each of four family tables that open
+  their sections: FOUNDATIONS Assurance relations (F22), ACTIVATION §1
+  (F2), SPEC_METHOD §4 (F11) and TICKETS §5 (F13).
 - **Trace fixed:** S8 read the 9,693 B F22 table to reach a 3,616 B
   subsection. S1, S4 and S6 read the 18,774 B F11 table before the first
   rule.
 - **Frame bytes:** none, though digests change. Moving the tables instead is
   the owner's structural choice.
+- **Depends on:** R2. If the head paragraphs are declined, R2's rows must
+  land past the tables.
 
 ### R6. An admissibility route
 
@@ -399,6 +449,9 @@ qualification under EVALUATION §7.
 - **Claude change:** one README row to the six Claude owners.
 - **Trace fixed:** none.
 - **Frame bytes:** none.
+- **Depends on:** the owners Reader B names: ACTIVATION §1 Intake through
+  Applicability, §2, §4 and §7; FOUNDATIONS §2 Authority kinds and §4
+  Results.
 
 ## Gates and records (this session)
 
@@ -448,15 +501,16 @@ pins (Codex 32, Claude none) go with the after-baseline material.
 | | (b) Codex superseded over unchanged meaning: Claude stands | 06, 23, 24, 46, 57 | 5 |
 | | both changed; Claude's superseded child rows record its change: Claude stands | 36, 42, 47, 50, 53, 56, 59 | 7 |
 | | (c) Codex adds substance Claude lacks: loans M1–M7 | 05, 07, 44, 60, 61, 62, 67, 69, 70, 71 | 10 |
-| | Codex's change is decided by Claude's owners; borrow the pointer (P1) | 26, 55 (and 56's item 9) | 2 |
+| | (c) by the readers; on this session's reading, Claude's owners already decide it and Claude borrows a pointer (P1) | 26, 55 (and 56's item 9) | 2 |
 | | Codex adds substance tied to the interpretation: after the baseline | 02, 04, 64, 66, 68 | 5 |
-| | Codex restates what Claude derives from its owners, or departs from the common input: no loan | 03, 08, 09, 10, 13, 14, 15, 16, 17, 18, 21, 22, 28, 29, 30, 31, 33, 34, 35, 37, 38, 39, 41, 43, 45, 49, 51, 52, 54, 58, 63, 65, 72, 73 | 34 |
+| | (d) Codex's change departs from the common input: not borrowed ([Not to borrow](#not-to-borrow), item 2) | 29 | 1 |
+| | Codex restates what Claude derives from its owners: no loan | 03, 08, 09, 10, 13, 14, 15, 16, 17, 18, 21, 22, 28, 30, 31, 33, 34, 35, 37, 38, 39, 41, 43, 45, 49, 51, 52, 54, 58, 63, 65, 72, 73 | 33 |
 | Claude not applicable, Codex conserved (18) | (f) Claude's `not applicable` stands: 17 heading-only rows and one non-normative sentence | 74–91 | 18 |
 | Claude not applicable, Codex superseded (1) | (f) a non-normative example | 92 | 1 |
 | Claude superseded, Codex conserved (5) | (h) conservation suffices: Q2 adopter (93, 95, 96); Q6 count (94: Claude's derivation account still yields fourteen clauses) | 93, 94, 95, 96 | 4 |
 | | (g) Claude's replacement is needed: Q7. rc.2 bound the same surfaces at `shall` in SPEC_METHOD, and keeping the guide's `should` beside it would let two loci decide one question at different force (common README 150) | 97 | 1 |
 
-Outcomes (d) and (e) did not occur.
+Outcome (e) did not occur.
 
 ## After the baseline
 
@@ -488,7 +542,7 @@ Outcomes (d) and (e) did not occur.
 
 ## Not to borrow
 
-1. **Codex's restatement of the core at each consumer (34 rows).** Claude
+1. **Codex's restatement of the core at each consumer (33 rows).** Claude
    applies the core at these consumers by reference, and both readers found
    its text accurate and permitted. A restated copy is a second locus, and
    common README 150 requires such a locus to be a reference or a
@@ -540,10 +594,13 @@ Outcomes (d) and (e) did not occur.
 5. No frame copies ACTIVATION Construction relation, though every frame
    binds it. R1 and R4 carry it; otherwise add it to `bootstrap`
    (+9,851 B).
-6. No conformance check is recorded on this revision: L-4, L-19, L-26, L-27,
-   L-50 and R-01 (CONFORMANCE 224–240). After any routing or frame change
-   they need recording.
+6. No result is recorded on this revision for the CONFORMANCE checks of
+   routes and frames: L-4, L-19, L-26, L-27, L-50 and R-01 (CONFORMANCE
+   224–240). After any routing or frame change they need recording.
 7. Codex's readback of finding RC8-01 against candidate 9 is still open.
+8. DECISIONS.md at commit A still says "17 `superseded` rows in 9
+   questions". REVIEW.json has 28 rows in 10 questions, because Q17 and
+   Q19 added rows. The owner decides from that list.
 
 ## Frame bytes
 
@@ -568,8 +625,9 @@ unchanged. No frame passes 160,000 bytes.
 - **Same-family reading.** Every reader is a Claude-family model reading a
   Claude-authored line. There is no cross-family reading; the owner runs
   the Codex side.
-- **Weak blinding.** Member names and record styles still identify the
-  lines.
+- **Weak blinding.** For A1 and A2, member names and record styles still
+  identify the lines. Reader B knew which line was the receiving baseline
+  and which the donor; only tenant names were hidden from it.
 - **The child-row supplement reached only A2.** It was added after A1. This
   session checked A1's six carve-outs itself.
 - **A1 sampled four rows** (12, 65, 66 and 47) instead of reading them in
