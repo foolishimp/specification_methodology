@@ -1,0 +1,126 @@
+{
+  "kind": "stdo.rc1.changed-scope-check",
+  "schema_version": 1,
+  "source_commit": "ed940de64f787d05c919efd1a2c45c5e1ef31685",
+  "account_commit": "1553243d620fc0faf045b17dd98b9ed4ea8cea43",
+  "package_commit": "a485db611ab9af8cd6154f96b0e4ca6db6e5e605",
+  "writer_result": "satisfied",
+  "writer_checkpoints": [
+    "1553243d620fc0faf045b17dd98b9ed4ea8cea43",
+    "a485db611ab9af8cd6154f96b0e4ca6db6e5e605",
+    "ed940de64f787d05c919efd1a2c45c5e1ef31685"
+  ],
+  "changed_paths": [
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/ACCOUNT_INTEGRATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/ACCOUNT_PATCH.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/ACQUISITION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/BUILD.md",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/COMPRESSION_RECONCILIATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/CONSUMER_DISPOSITION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/CONSUMER_INTEGRATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/COORDINATE_RELOCATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/DETERMINATIONS.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/DISCRIMINATORS.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/FRAME_INPUTS.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/IDENTITY_BUILD.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/INPUTS.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/README.md",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/REUSE.md",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/interpretation/DEPENDENCY_VERIFICATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/interpretation/GENERATION.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/interpretation/QUALIFICATION_EQUIVALENCE.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/interpretation/bindings.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/interpretation/validation.json",
+    "specification_methodology/v3/build_tenants/codex/qualification/C3/rc1/integration/rc1.py",
+    "specification_methodology/v3/build_tenants/codex/successor/interpretation/MAPPING.json",
+    "specification_methodology/v3/build_tenants/codex/successor/interpretation/SOURCE_INVENTORY.json",
+    "specification_methodology/v3/build_tenants/codex/successor/interpretation/map.json",
+    "specification_methodology/v3/build_tenants/codex/successor/interpretation/program.json",
+    "specification_methodology/v3/build_tenants/codex/successor/interpretation/source-account.json",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/authority_compressions/spec_method.compressed.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/authority_compressions/stdo_bootstrap.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/authority_compressions/stdo_compressed.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/CONSTITUTIONAL_DERIVATION.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/DOMAIN_BINDING.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/MEMBER_CONSTRUCTION_ASSESSMENT.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/RELEASE_ADOPTION.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/frames/WORK_RECOVERY.md",
+    "specification_methodology/v3/build_tenants/codex/successor/standards/verification_material/DERIVATION_SOURCES.json"
+  ],
+  "historical_paths_preserved": true,
+  "determinations": 708,
+  "members": 90,
+  "native_validation": "passed",
+  "changed_owner": "SPEC_METHOD.construction-assessment-and-delegation",
+  "baseline_consumers_preserved": [
+    "STDO_REFERENCE_FRAME_BASELINE.complete-engagement-transition",
+    "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability"
+  ],
+  "changed_body_frames": [
+    "WORK_RECOVERY",
+    "TRIAGE_CARRIER",
+    "MEMBER_CONSTRUCTION_ASSESSMENT"
+  ],
+  "generic_binding_cases": {
+    "kind": "stdo.rc1.author-source-discriminators",
+    "source_basis": {
+      "common_commit": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+      "common_route": "requirements/README.md#build-tenant-binding-requirement",
+      "candidate_route": "standards/SPEC_METHOD.md#construction-assessment-and-delegation",
+      "interpretation_id": "SPEC_METHOD.construction-assessment-and-delegation"
+    },
+    "predicate": "Adequacy of the exact live realization subject supplied for required independent assessment; this is not the total acceptance predicate.",
+    "cases": [
+      {
+        "id": "human-performed-procedure",
+        "binding": "Human procedure with no software obligation",
+        "subject": "Exact performed procedure and material observations, selected binding, authority paths, proof, current installed process and required independent assessor",
+        "expected": "subject condition can be satisfied without software code",
+        "reason": "The common binding permits human processes; the repaired owner assesses the exact realization under that binding. Other evidence and authority conditions still apply."
+      },
+      {
+        "id": "software-stale-or-summary",
+        "binding": "Software implementation required",
+        "subject": "Constructor summary or stale software instead of the exact live code",
+        "expected": "subject condition not satisfied",
+        "reason": "Software is the selected realization; genericity does not remove exact live subject, proof or independence."
+      },
+      {
+        "id": "software-exact",
+        "binding": "Software implementation required",
+        "subject": "Exact live code with required authority, proof, current installed subject and independent assessment",
+        "expected": "subject condition can be satisfied",
+        "reason": "The permitted generic binding includes software and retains all original subject requirements."
+      },
+      {
+        "id": "mixed-code-only",
+        "binding": "Material human and software operations",
+        "subject": "Exact code but missing the material performed human operations",
+        "expected": "subject condition not satisfied",
+        "reason": "A partial software view does not supply the complete selected realization."
+      },
+      {
+        "id": "mixed-complete",
+        "binding": "Material human and software operations",
+        "subject": "Exact operations and observations for both parts, their composition, authority paths, proof, current subject and required independent assessment",
+        "expected": "subject condition can be satisfied",
+        "reason": "Assessment follows all material operations under the declared mixed binding."
+      },
+      {
+        "id": "required-independence-absent",
+        "binding": "Any admitted binding requiring independent promotion assessment",
+        "subject": "Constructor self-review only",
+        "expected": "required assessment condition not satisfied",
+        "reason": "The repair preserves claim independence and separate acceptance authority."
+      }
+    ],
+    "standing": "Writer logical evaluations derived from exact source; no real-world execution, independent oracle or qualification claim."
+  },
+  "conservation_rows": 691,
+  "affected_conservation_rows": 12,
+  "limits": [
+    "Writer construction check; neither independent assessment nor actual-use qualification.",
+    "Generic binding cases are source-derived logical evaluations, not claims that these real-world subjects were executed."
+  ]
+}

@@ -1,0 +1,23 @@
+SHARED ACTOR WRAPPER
+
+Perform the assigned task using the selected method frame, the case facts,
+and material available through the run manifest's declared routes.
+
+Return the requested artifact or decision, its supporting evidence locators,
+and your task result in the selected method's form.
+
+Allowed effects: response text and in-memory computation. No filesystem
+mutation, external communication, publishing, service invocation or paid
+tool call.
+
+Available sources:
+- run://TASK/frame — the selected candidate frame;
+- run://TASK/method/* — declared candidate owning-source dependencies;
+- case://TASK/* — the immutable case resources listed in this packet.
+
+Report the routes read, supplied bytes, cumulative acquired bytes including
+repeated reads, supported active-context bound, elapsed time and measured
+or unknown spend. Identify uninstrumented portions.
+
+Use only the supplied task and declared routes. End the activation when the
+task is complete or its admitted limit is reached.

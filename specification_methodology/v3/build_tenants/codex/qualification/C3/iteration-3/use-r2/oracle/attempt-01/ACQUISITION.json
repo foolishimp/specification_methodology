@@ -1,0 +1,61 @@
+{
+  "schema": "oracle-author-acquisition-v1",
+  "status": "aborted_context_contamination",
+  "started_at": "2026-10-14T10:36:04+00:00",
+  "ended_at": "2026-10-14T10:37:30.409405+00:00",
+  "elapsed_seconds": 86.409,
+  "host_context": "uninstrumented; full prompt and reasoning token counts unavailable",
+  "governing_basis": {
+    "version": "v2.5.1-rc.2",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "verified_in_this_context": false
+  },
+  "admission_commit": "f0783a987985f536d79f586d85eef97384f2115b",
+  "common_what_commit": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
+  "common_what_acquired": false,
+  "input_notation_note": "Literal B355aa8655cca9c6ba6cf5c414f9bea3032ae89fd did not resolve as a Git revision; bare 355aa8655cca9c6ba6cf5c414f9bea3032ae89fd resolved. Admission calls this common B.",
+  "sources": [
+    {
+      "path": "/Users/jim/src/apps/AGENTS.md",
+      "source": "working-tree routing",
+      "sha256": "abd68d0b412858965e007e44e30a432fa0e388f46a2978226a55ff93f05857f2",
+      "bytes": 8133,
+      "model_visible": "full text"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-codex/AGENTS.md",
+      "source": "working-tree routing",
+      "sha256": "d2cf79832c2d9abf4c41a36c856c7eb2078b1449c15eb7ff5b896ec7e20018f9",
+      "bytes": 2669,
+      "model_visible": "full text"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/AGENTS.md",
+      "source": "working-tree routing",
+      "sha256": "5badb756b5fb463e52717261e0917d2ae860292a45d08ef56a10ae01236fedf5",
+      "bytes": 3969,
+      "model_visible": "full text"
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/tickets/active/T-002-CODEX-c3-successor-construction.md",
+      "commit": "f0783a987985f536d79f586d85eef97384f2115b",
+      "sha256": "847855baba1a0f167f5d8b78d2bcda6e80b0412c395afb15dd9b28965e75583c",
+      "bytes": 57311,
+      "acquisition": "full blob acquired by extraction subprocess; model received numbered excerpt only",
+      "model_visible_line_range": [
+        106,
+        187
+      ],
+      "model_visible_excerpt_sha256": "f670c4755b3e0ba60051f55e5758b0dee8923aba5be0a49c773331c6ad596879",
+      "model_visible_excerpt_bytes": 15888,
+      "restriction_breach": "Excerpt extended beyond the oracle admission into prior Writer returns and historical review/author context."
+    }
+  ],
+  "git_effects": [],
+  "external_paid_calls": 0,
+  "peer_candidate_reads": [],
+  "candidate_file_reads": [],
+  "subdelegation": [],
+  "oracle_authored": false,
+  "disposition": "Fresh independent author required. This context must not supply the frozen neutral oracle."
+}

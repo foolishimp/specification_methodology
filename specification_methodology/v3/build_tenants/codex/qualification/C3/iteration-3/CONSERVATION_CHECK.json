@@ -1,0 +1,120 @@
+{
+  "valid": true,
+  "draft_valid": true,
+  "failures": [],
+  "row_count": 691,
+  "dispositions": {
+    "conserved": 622,
+    "not applicable": 1,
+    "superseded": 68
+  },
+  "draft_relations_accounted": 47,
+  "historical_changes": 34,
+  "carrying_loci": 740,
+  "source_members": 71,
+  "frozen": true,
+  "semantic_conservation": "indeterminate",
+  "owner_acceptance": "not_established",
+  "kind": "stdo.conservation-mechanical-check",
+  "map_sha256": "93157515bf7ff58a364dae5744c6642c25125e1887003e039f7145e4b993a37f",
+  "semantic_sha256": "1038f180758c2dedfdf143360f7c81da2b09ca85cc23cfa414d746eae90b557d",
+  "port_account_sha256": "b12ed6886c74219f672cc5137868d71ae7a5fa04c47fbb98265080869deb03af",
+  "negative_controls": [
+    {
+      "name": "duplicate stable row ID",
+      "expected_code": "row_identity",
+      "detected": true
+    },
+    {
+      "name": "missing secondary carrying anchor",
+      "expected_code": "carrying_locus",
+      "detected": true
+    },
+    {
+      "name": "supersession without its relation",
+      "expected_code": "replacement_relation",
+      "detected": true
+    },
+    {
+      "name": "author proposal promoted without owner decision",
+      "expected_code": "acceptance",
+      "detected": true
+    },
+    {
+      "name": "historical disposition change omitted",
+      "expected_code": "history",
+      "detected": true
+    },
+    {
+      "name": "unknown shared binding",
+      "expected_code": "binding_ref",
+      "detected": true
+    },
+    {
+      "name": "assessed row body digest changed",
+      "expected_code": "comparison_drift",
+      "detected": true
+    },
+    {
+      "name": "historical fact rewritten",
+      "expected_code": "historical_fact",
+      "detected": true
+    },
+    {
+      "name": "closure condition omitted",
+      "expected_code": "closure_coverage",
+      "detected": true
+    },
+    {
+      "name": "inspected changed row loses its comparison",
+      "expected_code": "repair_assessment",
+      "detected": true
+    },
+    {
+      "name": "port owner absent from affected conserved row",
+      "expected_code": "port_owner_carry",
+      "detected": true
+    },
+    {
+      "name": "invented shared replacement dependency",
+      "expected_code": "shared_replacement",
+      "detected": true
+    },
+    {
+      "name": "historical port section digest changed",
+      "expected_code": "port_coordinate_pin",
+      "detected": true
+    },
+    {
+      "name": "conserved port frontier disposition omitted",
+      "expected_code": "port_disposition",
+      "detected": true
+    },
+    {
+      "name": "author port comparison promoted to independent integration",
+      "expected_code": "port_standing",
+      "detected": true
+    },
+    {
+      "name": "port source redirected to unselected peer member",
+      "expected_code": "port_coordinate_scope",
+      "detected": true
+    },
+    {
+      "name": "frontier semantic drift with unchanged IDs",
+      "expected_code": "frontier",
+      "detected": true
+    },
+    {
+      "name": "section claim excludes descendant heading",
+      "expected_code": "section_granularity",
+      "detected": true
+    }
+  ],
+  "elapsed_seconds": 5.87,
+  "limits": [
+    "Coordinate, shape and preservation checks do not prove semantic conservation.",
+    "The 184 bounded author comparisons and five exact-source port comparisons do not establish independent row/source/port assessment or owner acceptance.",
+    "Draft validity permits pending frozen pins; --require-frozen checks current-source binding separately."
+  ]
+}

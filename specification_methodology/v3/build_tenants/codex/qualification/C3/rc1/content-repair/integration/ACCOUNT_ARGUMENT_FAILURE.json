@@ -1,0 +1,11 @@
+{
+  "operation": "account",
+  "source_commit": "2dfb60adca4369908379f3f3d1c6689b704365a3",
+  "documentary_output_commit": "3dca37d72b992f15e058159fe9087312d753ac02",
+  "result": "stopped_before_account_writes",
+  "error": "Changed argument row needs explicit consumer patch: DESIGN_MODULE_METHOD.8-totality-rule/core-contract-derivations",
+  "origin": "reconcile_account.rebind_argument_rows",
+  "reported_by": "parent Integration Writer",
+  "subsequent_phases_run": [],
+  "disposition": "Scan every current argument source_row after authored updates, then obtain explicit semantic disposition from the changed Foundations table owner before adding any dependent consumer patch."
+}

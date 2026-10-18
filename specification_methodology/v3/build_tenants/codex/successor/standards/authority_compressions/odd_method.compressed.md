@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/odd-method/v1
 source_ref: ../ODD_METHOD.md
-source_digest: 616a43eff236c7d71e5884372b9440c5ef60dc0bbe61b5acc1dbae1cbebadd70
+source_digest: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -26,6 +26,13 @@ capability roles
 and construction algebra do not select a repository, package, vendor, runtime
 implementation, or downstream Product. A consumer binds each concrete
 realization and immutable identity in its own authority surfaces.
+
+This graph-native specialization applies where adopted. Generic outcome-driven
+construction also operates through the shared bounded-construction, observation,
+evaluation, continuation and recovery contracts without adopting this graph
+profile. Within ODD, retain the distinct production, decision and effect
+predicates and the reason-sensitive mappings at the owning operations; graph
+labels do not introduce another result algebra.
 
 ## Boundary Compression
 

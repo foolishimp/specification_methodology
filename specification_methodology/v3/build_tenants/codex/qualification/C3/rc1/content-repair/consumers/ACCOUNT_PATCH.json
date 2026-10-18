@@ -1,0 +1,2414 @@
+{
+  "schema_version": "stdo.i5.authored-account-patch/v1",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "source_preimage": "73443dbc6e7c74b3a80e4375727b768ed2ba54d0",
+  "producer": "RC1-CONTENT-REPAIR-CONSUMERS",
+  "owner_paths": [
+    "standards/REFERENCE_FRAME_METHOD.md",
+    "standards/SPEC_METHOD.md",
+    "standards/TICKET_METHOD.md",
+    "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+    "standards/AXIOMATIC_CALCULUS.md",
+    "standards/DESIGN_MODULE_METHOD.md",
+    "standards/IDENTITY_METHOD.md"
+  ],
+  "updates": [
+    {
+      "id": "REFERENCE_FRAME_METHOD.core-claims",
+      "preimage_body_sha256": "a5c4ef2fc376cea42df1f0656bb20f1c7ee88deabc64e6c462df5facba034009",
+      "candidate_body_sha256": "cffd26de5e16ed9cfa2d89945cbda1a6da50cb08838a4d12436ed2422811af11",
+      "semantic_fields": {
+        "predicate": null,
+        "obligations": [
+          "Keep unknown/out-of-frame pressure distinct from failed predicates or acceptance; preserve historical failures, resets and invisible violations as revision evidence.",
+          "Frame selection and result use apply shared authority through RF-006; breadth and capability supply no new grant."
+        ],
+        "permissions_exceptions": [
+          "No unique partition, universal hierarchy or complete active workspace is presumed."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "adopted_premise",
+            "binding": "F1 selects the evaluation, F2 binds interpreted support, F3 distinguishes current subject/view, F4 preserves relations, F5 bounds actors, and F6 separates grants."
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Frame selection and result use apply shared authority through RF-006; breadth and capability supply no new grant."
+          }
+        ],
+        "result_mapping": {
+          "kind": "domain_definition_or_data",
+          "contract_ref": "core.shared_contracts.definition_data",
+          "predicate_binding": null,
+          "embedded_constraints": [
+            "Keep unknown/out-of-frame pressure distinct from failed predicates or acceptance; preserve historical failures, resets and invisible violations as revision evidence."
+          ]
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "cffd26de5e16ed9cfa2d89945cbda1a6da50cb08838a4d12436ed2422811af11",
+            "byte_start": 4326,
+            "byte_end": 5485,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.core-claims#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.core-claims#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "cffd26de5e16ed9cfa2d89945cbda1a6da50cb08838a4d12436ed2422811af11",
+            "source_byte_start": 4326,
+            "source_byte_end": 5485,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.evaluation",
+      "preimage_body_sha256": "eb45ced84f935885ee59606716bd053476d4a966281fb20c6dbd84e1b8014f2e",
+      "candidate_body_sha256": "7a576d0603ad1aa62bd38e89d24d4b8c13994d29b50c21faf24054df150fa98e",
+      "semantic_fields": {
+        "predicate": null,
+        "obligations": [
+          "A family groups questions sharing material manifold, authority basis and a binding or refinement of the one core result algebra; similar wording alone is insufficient.",
+          "Evaluation results use the single core algebra directly or a reason-sensitive refinement; family grouping uses that result binding, material manifold and authority basis."
+        ],
+        "permissions_exceptions": [],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "REFERENCE_FRAME_METHOD.rf-012-closed-results"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Evaluation results use the single core algebra directly or a reason-sensitive refinement; family grouping uses that result binding, material manifold and authority basis."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Evaluation results use the single core algebra directly or a reason-sensitive refinement; family grouping uses that result binding, material manifold and authority basis."
+          }
+        ],
+        "result_mapping": {
+          "kind": "domain_definition_or_data",
+          "contract_ref": "core.shared_contracts.definition_data",
+          "predicate_binding": null,
+          "embedded_constraints": [
+            "A family groups questions sharing material manifold, authority basis and a binding or refinement of the one core result algebra; similar wording alone is insufficient."
+          ]
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "7a576d0603ad1aa62bd38e89d24d4b8c13994d29b50c21faf24054df150fa98e",
+            "byte_start": 5501,
+            "byte_end": 6199,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.evaluation#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.evaluation#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "7a576d0603ad1aa62bd38e89d24d4b8c13994d29b50c21faf24054df150fa98e",
+            "source_byte_start": 5501,
+            "source_byte_end": 6199,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.authority",
+      "preimage_body_sha256": "bbe67cce4fb99ce3288074e3b7769429ceabfa009cf9362d4a5f80f3ea64dae2",
+      "candidate_body_sha256": "8c8f8eca254ed8a64fa0ba8614aab071e3549dbff63a39d82e9ea06784b36e56",
+      "semantic_fields": {
+        "predicate": null,
+        "obligations": [
+          "Apply Foundations Judgment and authority to frame declaration, selection, activation and execution. Read-only evaluation declares no operation authority; effectful evaluation names its existing owner-issued grant.",
+          "The local authority vocabulary supplies distinct frame relations; their grant conservation is applied from Foundations, retaining exact effect grants and bounded proxy identity."
+        ],
+        "permissions_exceptions": [
+          "Relations may coincide lawfully, never by default. Human authority may use an explicitly admitted bounded proxy where governing identity law permits; proxy and human-authority identities remain distinct."
+        ],
+        "dependencies": [
+          "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+            "kind": "contract_application",
+            "binding": "Preserve authentic owner/scope/basis and explicit proxy grant; no reconstruction from actor identity."
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "The local authority vocabulary supplies distinct frame relations; their grant conservation is applied from Foundations, retaining exact effect grants and bounded proxy identity."
+          }
+        ],
+        "result_mapping": {
+          "kind": "domain_definition_or_data",
+          "contract_ref": "core.shared_contracts.definition_data",
+          "predicate_binding": null,
+          "embedded_constraints": [
+            "A read-only evaluation declares no operation authority; an effectful one inherits its exact existing owner grant. Frame selection/activation/execution supplies no semantic, operation or decision grant."
+          ]
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "8c8f8eca254ed8a64fa0ba8614aab071e3549dbff63a39d82e9ea06784b36e56",
+            "byte_start": 9608,
+            "byte_end": 10789,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.authority#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.authority#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "8c8f8eca254ed8a64fa0ba8614aab071e3549dbff63a39d82e9ea06784b36e56",
+            "source_byte_start": 9608,
+            "source_byte_end": 10789,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates",
+      "preimage_body_sha256": "ba8dd44f11981a4a7a73e5fd412b0cd162c5d1b68d150daefe17fc7382e095e7",
+      "candidate_body_sha256": "2e69fb3c024ae2d4663ea6238a4164e2b191ce1dd230f62594d6f7b2d08b55d3",
+      "semantic_fields": {
+        "predicate": "The result binds exact subject, basis, coordinates and evidence scope under declared equality.",
+        "obligations": [
+          "The result binds exact subject, basis, coordinates and evidence scope under declared equality.",
+          "Retain exact result subject/basis/coordinates; attempted interpretation on an unusable governing basis returns invalid_basis or reactivates. Stale supporting evidence with interpretable law follows RF-012, not automatic invalid_basis. New reliance on a historical result needs established applicability; advancement alone does not invalidate the record."
+        ],
+        "permissions_exceptions": [
+          "Apparent equality is insufficient. Current-basis requirements and coordinate equality remain binding. Historical records retain original subjects; established applicability permits a new claim without an automatic rerun."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "REFERENCE_FRAME_METHOD.rf-012-closed-results"
+        ],
+        "dependency_relations": [
+          {
+            "id": "REFERENCE_FRAME_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Retain exact result subject/basis/coordinates; attempted interpretation on an unusable governing basis returns invalid_basis or reactivates. Stale supporting evidence with interpretable law follows RF-012, not automatic invalid_basis. New reliance on a historical result needs established applicability; advancement alone does not invalidate the record."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Retain exact result subject/basis/coordinates; attempted interpretation on an unusable governing basis returns invalid_basis or reactivates. Stale supporting evidence with interpretable law follows RF-012, not automatic invalid_basis. New reliance on a historical result needs established applicability; advancement alone does not invalidate the record."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates"
+          ],
+          "conditions": "Evaluate the exact predicate using its owning domain conditions. Source labels/data do not choose a core verdict; preserve actual performance, effects, reasons and separately admissible failure. This inventory adds no domain refinement.",
+          "standing": "shared_result_binding_domain_contract_retained"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "2e69fb3c024ae2d4663ea6238a4164e2b191ce1dd230f62594d6f7b2d08b55d3",
+            "byte_start": 24520,
+            "byte_end": 25584,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.rf-005-exact-basis-and-coordinates#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "2e69fb3c024ae2d4663ea6238a4164e2b191ce1dd230f62594d6f7b2d08b55d3",
+            "source_byte_start": 24520,
+            "source_byte_end": 25584,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-006-authority-conservation",
+      "preimage_body_sha256": "90fc845069a9acfd6db30c4396b8753531e2d317d88505075a8cc5f2fcdcecda",
+      "candidate_body_sha256": "96404ce1c304e59cd6188bc22d2de1380bae8bdeab12a5d00f1ea2f3966c5444",
+      "semantic_fields": {
+        "predicate": "The frame carries only admitted semantic, evaluation, operation and decision authority.",
+        "obligations": [
+          "Frame authority is an application of Foundations Judgment and authority to the local Authority vocabulary and actual owner-issued grants.",
+          "Apply shared authority conservation to each frame evaluation, operation and disposition grant; bind existing scope and mandate."
+        ],
+        "permissions_exceptions": [
+          "Selection, capability, actor identity and evidence shape mint no grant."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.judgment-and-authority",
+          "REFERENCE_FRAME_METHOD.authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "REFERENCE_FRAME_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared authority conservation to each frame evaluation, operation and disposition grant; bind existing scope and mandate."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared authority conservation to each frame evaluation, operation and disposition grant; bind existing scope and mandate."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "REFERENCE_FRAME_METHOD.rf-006-authority-conservation"
+          ],
+          "conditions": "Evaluate the exact predicate using its owning domain conditions. Source labels/data do not choose a core verdict; preserve actual performance, effects, reasons and separately admissible failure. This inventory adds no domain refinement.",
+          "standing": "shared_result_binding_domain_contract_retained"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "96404ce1c304e59cd6188bc22d2de1380bae8bdeab12a5d00f1ea2f3966c5444",
+            "byte_start": 25584,
+            "byte_end": 25999,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.rf-006-authority-conservation#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.rf-006-authority-conservation#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "96404ce1c304e59cd6188bc22d2de1380bae8bdeab12a5d00f1ea2f3966c5444",
+            "source_byte_start": 25584,
+            "source_byte_end": 25999,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation",
+      "preimage_body_sha256": "b1b2c7b4faba8b73c63efae5066c835637292f027632618917f0af7495db9404",
+      "candidate_body_sha256": "ff38a42a2581da37c0b320424f6b4da138ca1eb78b11c40d1c2c6bd5523ba7ff",
+      "semantic_fields": {
+        "predicate": "Meaning, observation, evaluation, operation grant and decision mandate retain distinguishable roles.",
+        "obligations": [
+          "Apply shared judgment separation and Dispose to the distinct frame relations; the domain owner supplies disposition conditions.",
+          "Bind semantic owner, observations, evaluator, operation grant and disposition mandate as distinct frame relations under Foundations; apply Dispose using domain decision conditions."
+        ],
+        "permissions_exceptions": [
+          "One actor can lawfully perform several roles without merging them."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.judgment-and-authority",
+          "TRANSFORMATION_LIBRARY.dispose"
+        ],
+        "dependency_relations": [
+          {
+            "id": "REFERENCE_FRAME_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Bind semantic owner, observations, evaluator, operation grant and disposition mandate as distinct frame relations under Foundations; apply Dispose using domain decision conditions."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.dispose",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Bind semantic owner, observations, evaluator, operation grant and disposition mandate as distinct frame relations under Foundations; apply Dispose using domain decision conditions."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation"
+          ],
+          "conditions": "Evaluate the exact predicate using its owning domain conditions. Source labels/data do not choose a core verdict; preserve actual performance, effects, reasons and separately admissible failure. This inventory adds no domain refinement.",
+          "standing": "shared_result_binding_domain_contract_retained"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "ff38a42a2581da37c0b320424f6b4da138ca1eb78b11c40d1c2c6bd5523ba7ff",
+            "byte_start": 25999,
+            "byte_end": 26500,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.rf-007-semantic-evidence-and-verdict-separation#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "ff38a42a2581da37c0b320424f6b4da138ca1eb78b11c40d1c2c6bd5523ba7ff",
+            "source_byte_start": 25999,
+            "source_byte_end": 26500,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "REFERENCE_FRAME_METHOD.return-a-closed-result",
+      "preimage_body_sha256": "e166f80742c24b6c80f7b5ce6846e1623fff9191a2cf681c68e914387c30a008",
+      "candidate_body_sha256": "cca953d7d806280a432ba5b3d528453617691a042071d032e0297aff6ab04b3b",
+      "semantic_fields": {
+        "predicate": "The consumer recovers material result/provenance without private working context, with frame, activation, actor and invalidation coordinates preserved.",
+        "obligations": [
+          "Bind the core record and maintain predecessor/successor relations when results are revised; test supported currentness before reuse.",
+          "Reuse follows Change impact; revised records retain predecessor/successor relation. Required independent frame evaluators may share mechanical evidence while each supplies its own sufficiently acquired evidence and judgment."
+        ],
+        "permissions_exceptions": [
+          "Independent evaluators may share valid mechanical evidence while independently acquiring and judging sufficient material under the actual independence rule."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.workspace-and-context",
+          "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+          "TRANSFORMATION_LIBRARY.faithful-projection",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.independent-assessment"
+        ],
+        "dependency_relations": [
+          {
+            "id": "REFERENCE_FRAME_METHOD.rf-012-closed-results",
+            "kind": "contract_application",
+            "binding": "Supply the exact evaluation result and required reason."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+            "kind": "contract_application",
+            "binding": "Preserve the consuming decision material result, provenance and uncertainty."
+          },
+          {
+            "id": "FOUNDATIONS.workspace-and-context",
+            "kind": "contract_application",
+            "binding": "Reuse only supported unchanged scope/basis/evidence/dependencies/independence."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Reuse follows Change impact; revised records retain predecessor/successor relation. Required independent frame evaluators may share mechanical evidence while each supplies its own sufficiently acquired evidence and judgment."
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Reuse follows Change impact; revised records retain predecessor/successor relation. Required independent frame evaluators may share mechanical evidence while each supplies its own sufficiently acquired evidence and judgment."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "this row predicate; embedded obligations retain their declared scope",
+          "embedded_constraints": []
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "cca953d7d806280a432ba5b3d528453617691a042071d032e0297aff6ab04b3b",
+            "byte_start": 40615,
+            "byte_end": 41371,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "REFERENCE_FRAME_METHOD.return-a-closed-result#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "REFERENCE_FRAME_METHOD.return-a-closed-result#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "cca953d7d806280a432ba5b3d528453617691a042071d032e0297aff6ab04b3b",
+            "source_byte_start": 40615,
+            "source_byte_end": 41371,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.construction-assessment-and-delegation",
+      "preimage_body_sha256": "32f178f219aa7540f45b5c892a3532c1fc39611552be47a3b3bd28e2eb5d5438",
+      "candidate_body_sha256": "b52541b394169a6e05c52c0fc4c7ef712dd93f59b757bd796f3d26208ac11639",
+      "semantic_fields": {
+        "predicate": "Constructor owns implementation/self-review; required independent assessor inspects the exact live realisation under its selected computational binding, authority paths, proof and installed subject. A declared bounded proxy can preserve/repair/reject/advance only within accepted meaning/design and already-authorized action.",
+        "obligations": [
+          "Product/requirements/authority/accepted-design change re-enters owning relation; direct human Product/release acceptance remains required where law says.",
+          "Direct capable Writer entry preserves admission, smallest carrier, assessment and reserved decisions; it is not self-acceptance elsewhere.",
+          "Record actual role transitions in existing carrier; resolve material operation/subject/territory/authority/validity change before effect; Executive mutation restriction persists.",
+          "Apply the shared independence owner to exact live-realisation assessment; preserve existing proxy scope, direct Writer entry, reserved decisions, role transitions and Executive mutation restrictions."
+        ],
+        "permissions_exceptions": [
+          "No actor count is prescribed; one actor can occupy roles across different claims preserving claim independence.",
+          "One capable context with existing exact work/operation grant may enter directly; coordination only when material context/authority/capability/independence needs it.",
+          "Existing grant may cover declared construction/status/checkpoint sequence; unchanged status transition needs no new grant/rehash or routine human ceremony."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.independent-assessment"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply the shared independence owner to exact live-realisation assessment; preserve existing proxy scope, direct Writer entry, reserved decisions, role transitions and Executive mutation restrictions."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Evaluate this exact scoped predicate using authenticated observations: established failure is falsified; complete admissible support is satisfied; undecided material conditions are indeterminate; an established scope or governing-interpretation defect gives out_of_frame or invalid_basis. Preserve actual performance, effects, unresolved coverage and original domain data. Operation or decision permission is a distinct claim.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "b52541b394169a6e05c52c0fc4c7ef712dd93f59b757bd796f3d26208ac11639",
+            "byte_start": 112375,
+            "byte_end": 114700,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.construction-assessment-and-delegation#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "SPEC_METHOD.construction-assessment-and-delegation#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "b52541b394169a6e05c52c0fc4c7ef712dd93f59b757bd796f3d26208ac11639",
+            "source_byte_start": 112375,
+            "source_byte_end": 114700,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.proportional-disposition",
+      "preimage_body_sha256": "778bc3ff7c9bfefa586b65c829bf5411fe00b947da6b921c514f587a352c92d3",
+      "candidate_body_sha256": "f10398a3910647edc4646db62a5212ca0049a4ff22f6969043be648af431464d",
+      "semantic_fields": {
+        "predicate": "Assess candidate closure of its declared cone and every affected governing relation separately from candidate availability and actual authority to apply a disposition.",
+        "obligations": [
+          "Governing-requirement coherence admits interpretation; candidate/design alignment is evaluated and contradictory design alone does not invalidate coherent requirements.",
+          "Remedy needs supported cause/authority; verdict alone neither chooses it nor prohibits useful granted repair.",
+          "Global correctness covers all affected global relations, not whole Product each action.",
+          "Repeated rejection at unchanged boundary requires reassessing altitude/cone/common components/design-vs-code/authority instead of unchanged iteration.",
+          "Apply Dispose to the separate mandate-bound decision; any proposed disposition lacking required reason/support stays non-deciding and yields indeterminate absent other deciding evidence. Retain independent counterevidence or scope/basis diagnosis; no automatic remedy follows."
+        ],
+        "permissions_exceptions": [
+          "No rejection-count threshold, review-round count or review state machine."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "TRANSFORMATION_LIBRARY.dispose"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "FOUNDATIONS.bounded-construction",
+            "kind": "source_reference"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.dispose",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply Dispose to the separate mandate-bound decision; any proposed disposition lacking required reason/support stays non-deciding and yields indeterminate absent other deciding evidence. Retain independent counterevidence or scope/basis diagnosis; no automatic remedy follows."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "accept proposal with complete preservation -> satisfied; local_repair counterexample -> falsified, inadequate proof -> indeterminate; re_enter because candidate cannot satisfy coherent contract -> falsified, unusable governing requirements -> invalid_basis; reject for violation/competing truth -> falsified. Proof defect may falsify proof but not candidate. Preserve original proposed remedy. Actual disposition has separate decision result; lawful rejection can satisfy decision law without candidate counterexample and never overwrites assessment. Any proposed disposition with missing required reason/support and no independently deciding evidence maps to indeterminate; its raw label supplies no deciding support, while independent counterevidence and scope/basis diagnosis retain their core standing.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "f10398a3910647edc4646db62a5212ca0049a4ff22f6969043be648af431464d",
+            "byte_start": 114700,
+            "byte_end": 118441,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.proportional-disposition#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "SPEC_METHOD.proportional-disposition#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "f10398a3910647edc4646db62a5212ca0049a4ff22f6969043be648af431464d",
+            "source_byte_start": 114700,
+            "source_byte_end": 118441,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/4"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+      "preimage_body_sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff",
+      "candidate_body_sha256": "61bd8747a442aac172ba5327abf16d8dd7a4452d419c12cebd4d40034e10d4f7",
+      "semantic_fields": {
+        "predicate": "Evidence identifies exact candidate/affected relations, changed realization and authority paths, retained/open seams, focused and required integration proof, explicit nonchanges, assessor proposed disposition and any separately applied decision; it remains a read model.",
+        "obligations": [
+          "For materially durable/reconstructable authority, destroy/exclude incidental process state and compare reconstructed semantic outcomes; same-process success alone is insufficient.",
+          "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it.",
+          "Transition evidence distinguishes assessor proposed disposition from any separately applied decision."
+        ],
+        "permissions_exceptions": [
+          "Consumer chooses representation; whole-candidate qualification is at its declared boundary or where affected risk, uncertain impact or a mandatory gate requires it."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.risk-and-assurance-selection",
+          "FOUNDATIONS.assertions-and-observations",
+          "SPEC_METHOD.proportional-disposition",
+          "TRANSFORMATION_LIBRARY.dispose"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          },
+          {
+            "id": "FOUNDATIONS.risk-and-assurance-selection",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "contract_application",
+            "binding": "Select focused proof from material assertion/execution impact and risk, including supported exclusions, new obligations and mandatory gates. Support the intended claim rather than a weaker cheap falsifier; retain justified evidence on its original subject and compare selection plus reassessment costs. Whole-candidate qualification remains at its boundary or where risk, unknown impact or a gate requires it."
+          },
+          {
+            "id": "SPEC_METHOD.proportional-disposition",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Transition evidence distinguishes assessor proposed disposition from any separately applied decision."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.dispose",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Transition evidence distinguishes assessor proposed disposition from any separately applied decision."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Evaluate this exact scoped predicate using authenticated observations: established failure is falsified; complete admissible support is satisfied; undecided material conditions are indeterminate; an established scope or governing-interpretation defect gives out_of_frame or invalid_basis. Preserve actual performance, effects, unresolved coverage and original domain data. Operation or decision permission is a distinct claim.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "61bd8747a442aac172ba5327abf16d8dd7a4452d419c12cebd4d40034e10d4f7",
+            "byte_start": 118441,
+            "byte_end": 120045,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.transition-evidence-and-proof-cadence#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "SPEC_METHOD.transition-evidence-and-proof-cadence#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "61bd8747a442aac172ba5327abf16d8dd7a4452d419c12cebd4d40034e10d4f7",
+            "source_byte_start": 118441,
+            "source_byte_end": 120045,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/2"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+      "preimage_body_sha256": "b2569f3f70ef4262868c0913e8aabc654253c6b0700f5acc759d4fc6b7754508",
+      "candidate_body_sha256": "474a3bbaf3f8d3522e2b08802e0b3e27a5b73e3c0eaa8ad17899dbda4d73f047",
+      "semantic_fields": {
+        "predicate": "Assurance covers the authoritative composite subject and exact claim population/quantifier; mechanical enforcement requires an executable/reproducible predicate and an observed witness through ordinary assurance, not planned harness presence.",
+        "obligations": [
+          "Generalization needs inference relation, comparable population, counterexample treatment and evidence; later counterevidence invalidates dependent verdicts until superseded/withdrawn/requalified.",
+          "Generic sufficiency trial uses fresh competent constructor inside declared capability/context/configuration using declared ordinary authority; independent authorized evaluator binds basis/comparison predicate.",
+          "Withhold material expected/reference outcomes, exemplars/incumbent realization, author memory and ad hoc rescue until frozen construction where earlier exposure compromises reconstructive independence.",
+          "After freeze compare to mandatory governing semantics; optional reference is non-authoritative, with equivalence only where basis requires it. Subjective similarity, byte/shape equality, determinism or incumbent match is not generic conformance.",
+          "Post-exposure revision is a declared intervention/new subject, never retroactive pass.",
+          "Changed guidance uses source-derived permissions/exclusions/invalidators; ordinary actor native use needs entry/context evidence. Integrity/index generation is not fidelity/usability; mechanical/operational claims need executable workload observations.",
+          "Apply generic independent assessment with UP-007 boundary/trace policy; preserve this qualification domain's capability, comparison, reference-exposure and freeze conditions."
+        ],
+        "permissions_exceptions": [
+          "Any lawful alternative may satisfy semantics; out-of-envelope construction cannot indict generic sufficiency.",
+          "No actor count/type, review-round, engine, prompt or orchestration is prescribed."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "SPEC_METHOD.probabilistic-work-boundary",
+          "SPEC_METHOD.reconstruction-litmus",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.independent-assessment",
+          "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.probabilistic-work-boundary",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.reconstruction-litmus",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply generic independent assessment with UP-007 boundary/trace policy; preserve this qualification domain's capability, comparison, reference-exposure and freeze conditions."
+          },
+          {
+            "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply generic independent assessment with UP-007 boundary/trace policy; preserve this qualification domain's capability, comparison, reference-exposure and freeze conditions."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Evaluate this exact scoped predicate using authenticated observations: established failure is falsified; complete admissible support is satisfied; undecided material conditions are indeterminate; an established scope or governing-interpretation defect gives out_of_frame or invalid_basis. Preserve actual performance, effects, unresolved coverage and original domain data. Operation or decision permission is a distinct claim.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "474a3bbaf3f8d3522e2b08802e0b3e27a5b73e3c0eaa8ad17899dbda4d73f047",
+            "byte_start": 148466,
+            "byte_end": 154135,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "474a3bbaf3f8d3522e2b08802e0b3e27a5b73e3c0eaa8ad17899dbda4d73f047",
+            "source_byte_start": 148466,
+            "source_byte_end": 154135,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/6"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SPEC_METHOD.method",
+      "preimage_body_sha256": "a47ac27e262a288f5b16c5edaacca093dd5de10e1e832f691e980f3e4e95ce42",
+      "candidate_body_sha256": "1be7659cd39af4bd359f371264b66633d59ee19cb37f53498fc683b2ecd193eb",
+      "semantic_fields": {
+        "predicate": "Triage/classify/re-enter and identify affected consistent span before implementation/repricing/release. Change only affected Goals/Intent/Product; decompose requirements, lawful design, scenarios/evidence, realization and observation while preserving reconstruction and ambiguity governance.",
+        "obligations": [
+          "When Design Method applies, co-evolution requires its co_evolution_admissible(B); otherwise accept smallest causally closed design set before retained implementation establishes unresolved/contradictory/non-equivalent relation.",
+          "Without Design Method, co-evolution allowed only with no unresolved material design decision; otherwise accept affected design before retained implementation establishes it. Reconcile design/implementation/applicable proof before promotion/closure.",
+          "Bootstrap resolves the Product definition, exact install, declared entrypoint and current Goals; derive bound Intent/Product and the sole live requirement authority at the Product-selected what locations. Individual requirements or grouped families are permitted; requirements/ is a default convention. Record major ambiguity before downstream realization.",
+          "Use-case gap is triaged first, then scenario is first substantive artifact. Constitutional insufficiency re-enters the class selected by Universal Intake Triage and reconciles its downstream span; Goals/Intent change only under their own triggers.",
+          "Every bug/test/release/operator intake follows same gate.",
+          "Construct the selected realization under its design/execution binding and reconcile realized behavior with applicable proof before promotion or closure; Code is the software case.",
+          "Observe realized state through declared evidence sources and compare against requirements. Events/projection/delta apply where selected; adequate direct observation remains lawful.",
+          "Constitutional gaps use the selected owning change class; stable-direction requirement gaps re-enter Requirements. New Intent is conditional on its direction/scope changing."
+        ],
+        "permissions_exceptions": [
+          "Prefer declarative problem/acceptance before imperative mechanism; ADR is one design form.",
+          "Unchanged upstream layers need no invented revision."
+        ],
+        "dependencies": [
+          "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+          "SPEC_METHOD.ambiguity-governance-rule",
+          "SPEC_METHOD.reconstruction-litmus",
+          "SPEC_METHOD.universal-intake-triage"
+        ],
+        "dependency_relations": [
+          {
+            "id": "SPEC_METHOD.universal-intake-triage",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.ambiguity-governance-rule",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.reconstruction-litmus",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "SPEC_METHOD.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "DESIGN_MODULE_METHOD.proportional-design-sequencing",
+            "kind": "conditional_contract_application",
+            "required_when": "Design Method applies to the affected realization"
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Evaluate this exact scoped predicate using authenticated observations: established failure is falsified; complete admissible support is satisfied; undecided material conditions are indeterminate; an established scope or governing-interpretation defect gives out_of_frame or invalid_basis. Preserve actual performance, effects, unresolved coverage and original domain data. Operation or decision permission is a distinct claim.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "1be7659cd39af4bd359f371264b66633d59ee19cb37f53498fc683b2ecd193eb",
+            "byte_start": 191225,
+            "byte_end": 196480,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "SPEC_METHOD.method#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "SPEC_METHOD.method#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "1be7659cd39af4bd359f371264b66633d59ee19cb37f53498fc683b2ecd193eb",
+            "source_byte_start": 191225,
+            "source_byte_end": 196480,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/7"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TICKET_METHOD.execution-contract-admission",
+      "preimage_body_sha256": "bcf5d5ba5560b7d2eccf8e8a2e85b83233a3fecba7cb71bc32934c61201f2c4f",
+      "candidate_body_sha256": "7af385061561805145a0d82ec1ed21c54635267b8708832304f19c4fef373a05",
+      "semantic_fields": {
+        "predicate": "Admissibility binds selected carrier, current upstream authority/basis, Product admission mechanism, contract identity, criteria and durable result surface; admission must be deterministic or an explicit exact human override, never self-certification by draft/status.",
+        "obligations": [
+          "Expected carrier states are drafted/admitted/rejected/superseded; admitted contract should be recorded and available for prompt/frame assembly and closure.",
+          "An override supplies its separate mandate-bound decision and leaves failed or missing admission evaluation intact.",
+          "Admission checks the cited growth basis but cannot admit/renew it; owning Goals work-wave authority or explicit bounded proxy must do that durably.",
+          "Execution-contract work grants apply shared authority conservation; contract admission still checks rather than admits or renews the owning Goals work-wave basis."
+        ],
+        "permissions_exceptions": [
+          "Declared carrier may realize recording in an event log."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+            "kind": "source_reference"
+          },
+          {
+            "id": "TICKET_METHOD.core-model",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Execution-contract work grants apply shared authority conservation; contract admission still checks rather than admits or renews the owning Goals work-wave basis."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Established admissibility satisfies; demonstrated admission violation (including defeated grant on interpretable basis) falsifies; missing deciding support is indeterminate; unusable governing coordinates invalid_basis; outside scope/capability out_of_frame. admitted with missing reason/support is indeterminate unless independent deciding evidence exists. Missing assessment stays absent; drafted/superseded are data. Override decision cannot convert missing/failing assessment to satisfaction or show execution/completion.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "7af385061561805145a0d82ec1ed21c54635267b8708832304f19c4fef373a05",
+            "byte_start": 38263,
+            "byte_end": 41459,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "TICKET_METHOD.execution-contract-admission#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TICKET_METHOD.execution-contract-admission#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "7af385061561805145a0d82ec1ed21c54635267b8708832304f19c4fef373a05",
+            "source_byte_start": 38263,
+            "source_byte_end": 41459,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+      "preimage_body_sha256": "3e04d5674da26db4082c7e5a13f8d1f953136715af88f4a7613760c6987c40e9",
+      "candidate_body_sha256": "360ded5bfca3d6facfaee18f58996b9001317719cfd6181bd5678ac74d2eb21e",
+      "semantic_fields": {
+        "predicate": "At UP-007 independent-review boundaries, apply Foundations Independent assessment with nonauthor authorship required; bind the exact subject/basis/scope/exclusions/evidence/verdict and unresolved findings in a durable carrier. UP-007 owns boundary, trace and promotion policy.",
+        "obligations": [
+          "Promotion/closure reliance needs the actual durable exact review verdict, not a statement, unbound summary or unavailable draft.",
+          "A finding blocks current promotion only if it falsifies the bounded claim, exposes competing/ambiguous acceptance authority, violates active authority/safety/retained accepted behavior, or establishes durable architecture foreclosing an admitted Product outcome.",
+          "Record direct/lawfully proxied human rulings before the next affected acceptance boundary with source wording separate from interpretation; opening a ticket alone does not satisfy the ruling.",
+          "Under UP-020 bind selected basis, affected relation, construction/assessment authority and re-entry; ticket/admission cannot widen it or replace live-surface assessment.",
+          "UP-007 binds nonauthor assessment as required at its independent-review boundaries, applying shared independence and authority law while retaining durable trace and promotion-blocking policy."
+        ],
+        "permissions_exceptions": [
+          "Independent review is not mandated for every local step.",
+          "Outside-boundary findings remain repricing input and alone create no wider subject/blocker/ticket/artifact/review/increment.",
+          "Existing ticket/comment/commit/qualification/release evidence suffices; no new carrier or ceremony required."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.configuration",
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "FOUNDATIONS.independent-assessment",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.configuration",
+            "kind": "contract_application"
+          },
+          {
+            "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument"
+          },
+          {
+            "id": "TICKET_METHOD.core-model",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "UP-007 binds nonauthor assessment as required at its independent-review boundaries, applying shared independence and authority law while retaining durable trace and promotion-blocking policy."
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "UP-007 binds nonauthor assessment as required at its independent-review boundaries, applying shared independence and authority law while retaining durable trace and promotion-blocking policy."
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_result",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "FOUNDATIONS.result-conjunction"
+          ],
+          "conditions": "Blocks-promotion/repricing-input classify relevance, not claim verdict. Evaluate actual promotion gate: known violated gate falsifies; unknown required evidence is indeterminate with scope/basis/coverage preserved. An outside-boundary finding does not establish satisfaction.",
+          "standing": "author_semantic_mapping_not_independently_qualified"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "360ded5bfca3d6facfaee18f58996b9001317719cfd6181bd5678ac74d2eb21e",
+            "byte_start": 41459,
+            "byte_end": 45027,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "360ded5bfca3d6facfaee18f58996b9001317719cfd6181bd5678ac74d2eb21e",
+            "source_byte_start": 41459,
+            "source_byte_end": 45027,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/4"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability",
+      "preimage_body_sha256": "903b38b82bca3edda0040327c42ef064eeee0b9da9bd3e335c6fe3a1f130be58",
+      "candidate_body_sha256": "537a047207654fe7a382b23e1e140c0cee5c196c3d7c472e1bfb2bc937eabc28",
+      "semantic_fields": {
+        "predicate": "Use direct Writer entry when one capable context has sufficient authority, intake and operation grant; coordinate only when material context, authority, capability or required independence cannot be covered by that activation.",
+        "obligations": [
+          "Bind exact intake, territory, applicable obligations, evidence, stop conditions and result consumer in either branch.",
+          "Keep drafting separate from admission; use the smallest lawful existing carrier and retain required assessment and reserved owner decisions.",
+          "Withhold a dependent effect on newly discovered insufficiency and return the affected question to its owner.",
+          "Apply known applicability and valid computed facts, judgments and owner rulings without recreating them.",
+          "Apply Foundations Configuration to actual operations, dependencies, capability and assurance; role availability alone does not require coordination. Apply Independent assessment to shared sources, authorship and evidence in the selected intake and grants.",
+          "Apply shared independence to source sharing, authorship and evidence in either direct or coordinated branch."
+        ],
+        "permissions_exceptions": [
+          "A sufficient local outcome may finish and record satisfied conditions as Writer when no required independent assessment or reserved acceptance applies.",
+          "No appointment, review, extra ticket, diagram recreation or owner ceremony follows merely from a frame label."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+          "SPEC_METHOD.construction-assessment-and-delegation",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "TICKET_METHOD.condition-based-closure-and-reuse",
+          "TICKET_METHOD.work-carrier-to-execution-rule",
+          "FOUNDATIONS.configuration",
+          "FOUNDATIONS.independent-assessment"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "SPEC_METHOD.construction-assessment-and-delegation",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TICKET_METHOD.condition-based-closure-and-reuse",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "required_when": "The adopted profile selects between a sufficient direct activation and coordination.",
+            "id": "FOUNDATIONS.configuration",
+            "kind": "required_deciding_contract"
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared independence to source sharing, authorship and evidence in either direct or coordinated branch."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "Use direct Writer entry when one capable context has sufficient authority, intake and operation grant; coordinate only when material context, authority, capability or required independence cannot be covered by that activation.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "537a047207654fe7a382b23e1e140c0cee5c196c3d7c472e1bfb2bc937eabc28",
+            "byte_start": 16032,
+            "byte_end": 18258,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.engagement-applicability#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "537a047207654fe7a382b23e1e140c0cee5c196c3d7c472e1bfb2bc937eabc28",
+            "source_byte_start": 16032,
+            "source_byte_end": 18258,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/5"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+      "preimage_body_sha256": "0a2ad3b1f367dc22e007bf508e629bbfbbbbbb77fbecf3b1e457640535c36670",
+      "candidate_body_sha256": "59c3447a1dd67ae877a61cf9ece9689262ff43aa1eced1b96e895281c22bc0c8",
+      "semantic_fields": {
+        "predicate": "Executive maintains a sufficient bounded current delivery view, activates the smallest dependency-ready capable set, consumes closed results, and selects only action already within its decision grant without performing implementation effects.",
+        "obligations": [
+          "Maintain outcome/basis, Product roles, evaluation inventory, dependencies, unresolved frontier, actor envelopes, mandate, triage policy and residuals.",
+          "Keep assurance-independent activations free from unclosed peer results; apply only declared conjunctions/translations and update affected support on change.",
+          "No candidate, Product or worktree mutation while Executive; a same-actor Worker/Writer transition is explicitly recorded with exact operation grant before effect.",
+          "End the attention loop only with every mandatory evaluation closed, governing-authority retention of claim-compatible residuals, or an applicable stop retaining all remaining obligations.",
+          "A closed falsification or stopped cycle does not satisfy Product outcome. Preserve stop predicate/cause, performance and effects.",
+          "If coordination itself does not fit, refine, obtain bounded evaluation or stop; never drop a material dependency.",
+          "Keep Reviewer severity, Executive priority, boundary effect, disposition and subsequent action distinct.",
+          "Return through declared D relations; lateral handoff, child completion, tool output and common actor identity supply no activation or continuation authority.",
+          "Derive U0 from applicable obligations and dependencies rather than visible returns; select M after supporting dependencies. Missing results, unknown applicability and uncertain material effects remain in the durable frontier while independent work may proceed under its own sufficient grant and evidence.",
+          "The attention cycle reassesses affected reliance after subject/basis change using the shared applicability owner; it does not automatically invalidate every historical result."
+        ],
+        "permissions_exceptions": [
+          "Ready activations may run in parallel; no scheduler/frame-engine implementation is required.",
+          "Valid closed results and source routes replace loading private evaluator context; recovery can reconstruct the delivery view from durable workspace."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.configuration",
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "STDO_REFERENCE_FRAME_BASELINE.event-driven-executive-attention",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+          "TRANSFORMATION_LIBRARY.recovery-law",
+          "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F3, F4, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "FOUNDATIONS.configuration",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.recovery-law",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.event-driven-executive-attention",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "required_when": "The selected coordinated engagement derives U0 or selects M from its applicable obligations and dependencies.",
+            "id": "REFERENCE_FRAME_METHOD.applicability-and-required-results",
+            "kind": "required_deciding_contract"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "The attention cycle reassesses affected reliance after subject/basis change using the shared applicability owner; it does not automatically invalidate every historical result."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "Executive maintains a sufficient bounded current delivery view, activates the smallest dependency-ready capable set, consumes closed results, and selects only action already within its decision grant without performing implementation effects.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "59c3447a1dd67ae877a61cf9ece9689262ff43aa1eced1b96e895281c22bc0c8",
+            "byte_start": 24076,
+            "byte_end": 29704,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "59c3447a1dd67ae877a61cf9ece9689262ff43aa1eced1b96e895281c22bc0c8",
+            "source_byte_start": 24076,
+            "source_byte_end": 29704,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/9"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame",
+      "preimage_body_sha256": "a068dcd28201ee6d9ba50bf286269475a7d1a8f7fba7e74cbc274a53aa5d9b6b",
+      "candidate_body_sha256": "517f20c9b7986a1b1b709d6cc035ad51db806b99c778fad18d617c1de4e33330",
+      "semantic_fields": {
+        "predicate": "The Executive declaration and activation bind the exact outcome/basis, capable decision envelope, current mandate and closed evidence while excluding implementation effects and unauthorized semantic reconstruction.",
+        "obligations": [
+          "Preserve every frame-element relation in the owned declaration.",
+          "Disposition stays exactly accept/local_repair/re_enter/reject under UP-020; authorize and no_action are not peer dispositions.",
+          "Priority and boundary effect remain projections, not frame verdicts or dispositions.",
+          "Unsupported technical evidence is re-evaluated or left uncertain, never silently rewritten.",
+          "The Executive invalidation coordinates feed shared applicability assessment; Product/work mandate and mutation exclusion remain explicit profile bindings."
+        ],
+        "permissions_exceptions": [],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "REFERENCE_FRAME_METHOD.minimal-frame-declaration",
+          "SPEC_METHOD.proportional-disposition",
+          "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.executive-attention-evaluation-and-action",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.proportional-disposition",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.minimal-frame-declaration",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "The Executive invalidation coordinates feed shared applicability assessment; Product/work mandate and mutation exclusion remain explicit profile bindings."
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "The Executive invalidation coordinates feed shared applicability assessment; Product/work mandate and mutation exclusion remain explicit profile bindings."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "The Executive declaration and activation bind the exact outcome/basis, capable decision envelope, current mandate and closed evidence while excluding implementation effects and unauthorized semantic reconstruction.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "517f20c9b7986a1b1b709d6cc035ad51db806b99c778fad18d617c1de4e33330",
+            "byte_start": 44887,
+            "byte_end": 48267,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.derived-executive-frame#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "517f20c9b7986a1b1b709d6cc035ad51db806b99c778fad18d617c1de4e33330",
+            "source_byte_start": 44887,
+            "source_byte_end": 48267,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/4"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.steel-thread-delivery",
+      "preimage_body_sha256": "975daa0ce2fd36cfccfe61bda4ce8a4e8360af5bc46cde69516bedb3a7ae8a84",
+      "candidate_body_sha256": "e409fd5ba361766b93188416eb9c5b948cf1b95ebbd98e0ebb8748c55dab0c32",
+      "semantic_fields": {
+        "predicate": "Establish or extend the smallest real runnable supported-entry-to-outcome composition early, choose increments by consequential uncertainty/dependency/reach/impact, and retain unexercised obligations.",
+        "obligations": [
+          "Use early end-to-end/integration evidence to settle exercised interfaces and concentrate work on unresolved obligations.",
+          "A passing thread covers only exercised relations/conditions; branches, combinations, refusal and recovery remain material proof obligations.",
+          "Use focused deterministic regression and judgment probes during construction; unit evidence stays module-owned.",
+          "Schedule substantial resource-intensive UAT near release or bounded-capability qualification. Reuse and reassessment apply Foundations Change impact to the intended steel-thread claim, preserving supported applicability and mandatory gates.",
+          "Qualified-result reuse applies shared applicability, affected reassessment and mandatory gates to the steel-thread claim; exact original evidence subject remains preserved."
+        ],
+        "permissions_exceptions": [
+          "An early focused user probe is appropriate for material outcome uncertainty.",
+          "Already settled construction is revisited when material counterevidence invalidates it."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F4, F5 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Qualified-result reuse applies shared applicability, affected reassessment and mandatory gates to the steel-thread claim; exact original evidence subject remains preserved."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "Establish or extend the smallest real runnable supported-entry-to-outcome composition early, choose increments by consequential uncertainty/dependency/reach/impact, and retain unexercised obligations.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "e409fd5ba361766b93188416eb9c5b948cf1b95ebbd98e0ebb8748c55dab0c32",
+            "byte_start": 48267,
+            "byte_end": 50208,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.steel-thread-delivery#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.steel-thread-delivery#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "e409fd5ba361766b93188416eb9c5b948cf1b95ebbd98e0ebb8748c55dab0c32",
+            "source_byte_start": 48267,
+            "source_byte_end": 50208,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/4"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-worker-frame",
+      "preimage_body_sha256": "97fbe3a344cd77dd263495db42e334916e76d50fdf8f075452ecebe56fd58b26",
+      "candidate_body_sha256": "c7413ea8e7a13bece283a259a26df6f2b47662d4d1795eb5130ba570cd7ad56e",
+      "semantic_fields": {
+        "predicate": "Worker constructs the exact authorized outcome through its smallest coherent causal cone, preserving affected relations and competing-path disposition within the inherited operation grant.",
+        "obligations": [
+          "Preserve every frame-element relation in the owned declaration.",
+          "Mutation requires exact subject and write territory; absent, ambiguous or exceeded grant refuses the effect.",
+          "Read scope covers the complete material causal cone within access grant even when write territory is narrower.",
+          "Return outside-territory repair to its owner; understanding creates no effect authority.",
+          "candidate_ready binds exact candidate/transition evidence and is not accept; green tests support only exercised semantics.",
+          "Worker effect grant applies shared authority with exact subject/write territory; its invalidation coordinates feed shared assessment of affected reliance."
+        ],
+        "permissions_exceptions": [],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.bounded-causal-construction",
+          "SPEC_METHOD.sufficient-execution-intake",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.work-result",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F4, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "SPEC_METHOD.sufficient-execution-intake",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.bounded-causal-construction",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.work-result",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Worker effect grant applies shared authority with exact subject/write territory; its invalidation coordinates feed shared assessment of affected reliance."
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Worker effect grant applies shared authority with exact subject/write territory; its invalidation coordinates feed shared assessment of affected reliance."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "Worker constructs the exact authorized outcome through its smallest coherent causal cone, preserving affected relations and competing-path disposition within the inherited operation grant.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "c7413ea8e7a13bece283a259a26df6f2b47662d4d1795eb5130ba570cd7ad56e",
+            "byte_start": 50208,
+            "byte_end": 53236,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.derived-worker-frame#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.derived-worker-frame#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "c7413ea8e7a13bece283a259a26df6f2b47662d4d1795eb5130ba570cd7ad56e",
+            "source_byte_start": 50208,
+            "source_byte_end": 53236,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/5"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+      "preimage_body_sha256": "b5e9f2ac18af32a6586f860b9bfe23826d9b633ac844a880170652e35952791b",
+      "candidate_body_sha256": "34f67a6cd75f26e8771ab74e0dd9eedab678594e31e4346b319ab659cfa75eae",
+      "semantic_fields": {
+        "predicate": "The activated nonauthor Reviewer evaluates the exact subject and material production/assurance semantics, returns a closed claim-relative result and supported technical triage, and performs no repair or decision effect.",
+        "obligations": [
+          "Preserve every frame-element relation in the owned declaration.",
+          "Acquire live material subject/evidence rather than substitute Worker narrative; inspect tests/fixtures/mutations/environments when they affect proof.",
+          "Bind each finding to violated property, supported entry/state, governing operating/threat model and credible causal path.",
+          "Apply supported-model conditions to retained guards as well as new findings; excluded threat alone gives no retention claim, and proposed wider threat model re-enters its owner.",
+          "Internal location does not prove trust; hypothetical hostility does not prove applicability; keep actual supported untrusted-input, mutable-state, authority and effect checks.",
+          "Cause, blast radius/workaround/repair risk unsupported inside the frame stay uncertain; a suggested repair becomes an obligation only through its owner.",
+          "Reviewer invalidation coordinates feed shared current reliance assessment. Reviewer supplies assessment; Executive in the coordinated branch exercises its bound decision mandate through Dispose."
+        ],
+        "permissions_exceptions": [
+          "Assessment is conditional, not universal review ceremony.",
+          "Reviewer may assess repair complexity without owning the repair; no second result/disposition family is introduced."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+          "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "TRANSFORMATION_LIBRARY.dispose"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.technical-triage-severity-priority-and-boundary-effect",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Reviewer invalidation coordinates feed shared current reliance assessment. Reviewer supplies assessment; Executive in the coordinated branch exercises its bound decision mandate through Dispose."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.dispose",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Reviewer invalidation coordinates feed shared current reliance assessment. Reviewer supplies assessment; Executive in the coordinated branch exercises its bound decision mandate through Dispose."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "The activated nonauthor Reviewer evaluates the exact subject and material production/assurance semantics, returns a closed claim-relative result and supported technical triage, and performs no repair or decision effect.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "34f67a6cd75f26e8771ab74e0dd9eedab678594e31e4346b319ab659cfa75eae",
+            "byte_start": 53236,
+            "byte_end": 57735,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "34f67a6cd75f26e8771ab74e0dd9eedab678594e31e4346b319ab659cfa75eae",
+            "source_byte_start": 53236,
+            "source_byte_end": 57735,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/6"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence",
+      "preimage_body_sha256": "10f3ea47d28832d830a6f4b6d46afe98603d1a61102caf56d0bc34ea43b2c9e3",
+      "candidate_body_sha256": "f79e322c8beef6f727cb09bc7c5156d979efd1975271ff61331714a7bff7d1fd",
+      "semantic_fields": {
+        "predicate": "Each actor/frame identity and activation grant remains distinct, and any required independent review uses a nonauthor on the exact traceable subject under its owning assurance conditions.",
+        "obligations": [
+          "Apply Foundations Independent assessment with UP-007 required-boundary and trace policy; activation records exact subject and verdict carrier.",
+          "UP-022 additionally supplies capability, configuration, comparison basis, exposure and freeze conditions for generic-method qualification.",
+          "Executive inspection/adjudication is not an additional independent Reviewer result merely because tools resemble review.",
+          "Apply shared independent assessment; UP-007 supplies required-boundary/trace policy and UP-022 adds qualification exposure/freeze conditions."
+        ],
+        "permissions_exceptions": [
+          "One actor may occupy several frames across activations when authority and claimed independence remain valid.",
+          "Humans, agents, deterministic tools and mixed actors are allowed; no actor count is prescribed."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.configuration",
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+          "FOUNDATIONS.independent-assessment"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F5, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "FOUNDATIONS.configuration",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TICKET_METHOD.execution-and-verification-authority-separation-stdo-up-007",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.independent-assessment",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared independent assessment; UP-007 supplies required-boundary/trace policy and UP-022 adds qualification exposure/freeze conditions."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "Each actor/frame identity and activation grant remains distinct, and any required independent review uses a nonauthor on the exact traceable subject under its owning assurance conditions.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "f79e322c8beef6f727cb09bc7c5156d979efd1975271ff61331714a7bff7d1fd",
+            "byte_start": 132759,
+            "byte_end": 133676,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.actor-binding-and-independence#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "f79e322c8beef6f727cb09bc7c5156d979efd1975271ff61331714a7bff7d1fd",
+            "source_byte_start": 132759,
+            "source_byte_end": 133676,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.profile-qualification",
+      "preimage_body_sha256": "cd85bc1b1e5f8cb25ba58f1e0c0871d370c201cf62bc20f791939f0a5f1bd426",
+      "candidate_body_sha256": "bc7bd93e4ab52d3e433c10191a42634d7ae0707ba88fd91915ee208930ad0467",
+      "semantic_fields": {
+        "predicate": "A representative source-linked trial discriminates the selected profile conditions on exact revisions, actor envelopes, result branches and populations without treating mechanical checks or a different method trial as semantic qualification.",
+        "obligations": [
+          "Apply the existing Frame Qualification and UP-022 protocol rather than create another qualification authority.",
+          "Bind both mechanical table/cardinality/hash/refusal checks and capable independent source-linked evaluation without substituting one for the other.",
+          "The source-numbered 26 conditions cover selection, activation refusal, reconstructable intake, exact effect grants, total work-result mapping, direct/no-review/review branches, exact evidence, invalidation, role separation, diagnosis, all test altitudes, path exclusion, owner-issued state, causal frontier, alternate configuration, generic family accounting, material seams and triage/priority separation.",
+          "Claims are limited to actual frame revisions, actor envelopes, branches and populations exercised.",
+          "The Executive trial consumes exact technical triage with the sufficient bounded delivery view and current MVP/release mandate, preserving severity, priority, frame result and promotion-boundary effect.",
+          "Qualification item 9 requires assessing changed-candidate/basis reliance under shared currentness; unsupported carryover cannot discharge current review."
+        ],
+        "permissions_exceptions": [
+          "A pure-method trial alone does not prove this profile; a profile trial does not prove the whole method function population."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "REFERENCE_FRAME_METHOD.frame-qualification",
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.work-result",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F4, F5 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.frame-qualification",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.work-result",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Qualification item 9 requires assessing changed-candidate/basis reliance under shared currentness; unsupported carryover cannot discharge current review."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "contract_ref": "core.shared_contracts.core_evaluation",
+          "predicate_binding": "A representative source-linked trial discriminates the selected profile conditions on exact revisions, actor envelopes, result branches and populations without treating mechanical checks or a different method trial as semantic qualification.",
+          "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+          "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "bc7bd93e4ab52d3e433c10191a42634d7ae0707ba88fd91915ee208930ad0467",
+            "byte_start": 133676,
+            "byte_end": 139362,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.profile-qualification#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.profile-qualification#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "bc7bd93e4ab52d3e433c10191a42634d7ae0707ba88fd91915ee208930ad0467",
+            "source_byte_start": 133676,
+            "source_byte_end": 139362,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/5"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AXIOMATIC_CALCULUS.ac-005-authority-conservation",
+      "preimage_body_sha256": "4483cca2c7496e05a17b0e42df1b7011f959385079eca1c4029e69d586262d80",
+      "candidate_body_sha256": "09c1a0a274fd7be8cca1d508e5cc3705a00c33bcd3a168e8c0a3004432c80f63",
+      "semantic_fields": {
+        "predicate": "Each calculus object and operation retains its declared semantic, operation, evaluation and decision authority.",
+        "obligations": [
+          "Each calculus object and operation applies Foundations Judgment and authority to its declared semantic, operation, evaluation and decision grants.",
+          "Apply shared authority conservation to every listed calculus record and operation; encoding, interpretation and transport carry existing grants."
+        ],
+        "permissions_exceptions": [
+          "Copying, interpretation, encoding, evaluation or transport grants no authority transfer."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "AXIOMATIC_CALCULUS.position",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared authority conservation to every listed calculus record and operation; encoding, interpretation and transport carry existing grants."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "AXIOMATIC_CALCULUS.ac-005-authority-conservation"
+          ],
+          "conditions": "Evaluate the exact predicate using its owning domain conditions. Source labels/data do not choose a core verdict; preserve actual performance, effects, reasons and separately admissible failure. This inventory adds no domain refinement.",
+          "standing": "shared_result_binding_domain_contract_retained"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "09c1a0a274fd7be8cca1d508e5cc3705a00c33bcd3a168e8c0a3004432c80f63",
+            "byte_start": 22897,
+            "byte_end": 23346,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "AXIOMATIC_CALCULUS.ac-005-authority-conservation#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "AXIOMATIC_CALCULUS.ac-005-authority-conservation#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "09c1a0a274fd7be8cca1d508e5cc3705a00c33bcd3a168e8c0a3004432c80f63",
+            "source_byte_start": 22897,
+            "source_byte_end": 23346,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DESIGN_MODULE_METHOD.authority-model",
+      "preimage_body_sha256": "f51f8b0b481fa2c4ff180317710cae97a3953f41cd3573478f0893cdc4bf4c19",
+      "candidate_body_sha256": "306efd48e50d5d2ed248a1368a8150ec758d0b00bbab8f4741fdfd1fc006f311",
+      "semantic_fields": {
+        "predicate": "Each boundary-crossing Ontology function/transition explicitly assigns proposer, evaluator, verifier, admitter, executor, projector and retirement ownership; composition cannot widen the admitted authority law.",
+        "obligations": [
+          "Distinguish actor from grant, capability from admitted authority, proposal from its later roles, attribution from permission and domain ownership from runtime effects.",
+          "Multiple roles share an owner only under explicit governing permission.",
+          "Apply Foundations Judgment and authority to composition, projections and downstream witnesses. Delegation, elevation, transfer or retirement additionally requires a named typed transition and owning admission boundary.",
+          "Apply shared authority to composition and its witnesses; retain the domain authority matrix and named typed admission transitions for delegation/elevation/transfer/retirement."
+        ],
+        "permissions_exceptions": [
+          "Pure subordinate helpers inherit their function envelope unless crossing a listed boundary."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "authority_contract"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation"
+          }
+        ],
+        "result_mapping": {
+          "kind": "predicate_bound_five_result",
+          "bound_predicate": "Each boundary-crossing Ontology function/transition explicitly assigns proposer, evaluator, verifier, admitter, executor, projector and retirement ownership; composition cannot widen the admitted authority law.",
+          "satisfied": "Admissible evidence establishes every applicable local obligation for this exact predicate; the named evaluation was performed and its required completion conditions hold.",
+          "falsified": "Admissible counterevidence defeats this exact predicate or an applicable local conjunct; keep known failure even if another conjunct is unresolved.",
+          "indeterminate": "Material evidence, applicability or a required domain reason is unresolved and no deciding counterevidence or supported scope/basis diagnosis decides this predicate.",
+          "out_of_frame": "This predicate falls outside the bound evaluation scope or capability; retain the wider obligation.",
+          "invalid_basis": "The exact subject, adopted governing basis or interpretation required for this predicate is established invalid.",
+          "performance": "Retain performed / not_performed / unconfirmed independently. Only performed may pair with satisfied. Independent counterevidence or a supported scope/basis diagnosis may support another verdict without inventing execution.",
+          "domain_and_effect_separation": "Preserve original qualified outcome and cause; do not map ready, accepted, yield, stop or refusal by label alone. Preserve not_requested / not_started / completed / partial / reverted / unknown effects at the actual observation boundary; unobserved material effects remain unknown.",
+          "coverage": "A missing required judgment remains an absent slot, not a fabricated child result. Unknown applicability cannot count as satisfied coverage."
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "306efd48e50d5d2ed248a1368a8150ec758d0b00bbab8f4741fdfd1fc006f311",
+            "byte_start": 40656,
+            "byte_end": 42297,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "DESIGN_MODULE_METHOD.authority-model#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "DESIGN_MODULE_METHOD.authority-model#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "306efd48e50d5d2ed248a1368a8150ec758d0b00bbab8f4741fdfd1fc006f311",
+            "source_byte_start": 40656,
+            "source_byte_end": 42297,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004",
+      "preimage_body_sha256": "e6b438cd81b0bcd261e38725ec540af64a70f8b1a3f90eb9682a38ca35f04f3e",
+      "candidate_body_sha256": "ce51dc371617696b8ceaf79eb23b8974bc0092f2e3c9f04df2be754fa0bb3f2d",
+      "semantic_fields": {
+        "predicate": "Composition or delegation carries or restricts the exact authority relation; a changed grant has an explicit owning decision.",
+        "obligations": [
+          "Composition and delegation apply Foundations Judgment and authority while carrying or restricting admitted authority. Silent scope widening, added roles, increased cardinality or changed kind remains prohibited; named authority changes require explicit decision and identifiable basis.",
+          "Apply shared authority to carriers while retaining scope/role/cardinality/kind preservation, explicit authority-change decisions and distinct bounded proxy identity."
+        ],
+        "permissions_exceptions": [
+          "A bounded admitted human proxy is permitted with its complete grant; proxy identity, independence and runtime authority remain distinct."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.identity-state-and-evidence",
+          "FOUNDATIONS.judgment-and-authority"
+        ],
+        "dependency_relations": [
+          {
+            "id": "IDENTITY_METHOD.governing-relations",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.identity-state-and-evidence",
+            "kind": "contract_application"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "required_when": "within the declared applicability",
+            "binding": "Apply shared authority to carriers while retaining scope/role/cardinality/kind preservation, explicit authority-change decisions and distinct bounded proxy identity."
+          }
+        ],
+        "result_mapping": {
+          "kind": "constraint_assessment",
+          "owner_refs": [
+            "FOUNDATIONS.result-algebra",
+            "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004"
+          ],
+          "conditions": "Evaluate the exact predicate using its owning domain conditions. Source labels/data do not choose a core verdict; preserve actual performance, effects, reasons and separately admissible failure. This inventory adds no domain refinement.",
+          "standing": "shared_result_binding_domain_contract_retained"
+        },
+        "source_clauses": [
+          {
+            "id": "rc1-consumer-binding",
+            "sha256": "ce51dc371617696b8ceaf79eb23b8974bc0092f2e3c9f04df2be754fa0bb3f2d",
+            "byte_start": 15321,
+            "byte_end": 16695,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "source_clause_ids": [
+          "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004#rc1-consumer-binding"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "IDENTITY_METHOD.authority-identity-and-conservation-stdo-up-004#rc1-consumer-binding",
+            "source_block_id": "rc1-consumer-binding",
+            "source_block_sha256": "ce51dc371617696b8ceaf79eb23b8974bc0092f2e3c9f04df2be754fa0bb3f2d",
+            "source_byte_start": 15321,
+            "source_byte_end": 16695,
+            "source_roles": [
+              "source_owned_body"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    }
+  ],
+  "new_rows": []
+}

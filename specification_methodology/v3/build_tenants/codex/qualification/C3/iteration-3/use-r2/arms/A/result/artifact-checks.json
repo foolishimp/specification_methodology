@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-14T13:07:40.035222+00:00",
+  "checks": [
+    {
+      "name": "six_tasks_and_21_cases_with_resolved_artifact_and_citation_links",
+      "passed": true,
+      "detail": {
+        "tasks": 6,
+        "cases": 21,
+        "citation_and_artifact_links": "resolved within result records"
+      }
+    },
+    {
+      "name": "all_nine_supplied_plan_outputs",
+      "passed": true,
+      "detail": {
+        "K1": {
+          "p": 5,
+          "q": 1,
+          "r": 5
+        },
+        "K2": {
+          "p": 0,
+          "q": 0,
+          "r": 0
+        },
+        "K3": {
+          "p": 5,
+          "q": 5,
+          "r": 5
+        }
+      }
+    },
+    {
+      "name": "multiplicity_negative_empty_and_large_integer_preservation",
+      "passed": true,
+      "detail": {
+        "equal_amounts": "8 retained; q gives 4",
+        "large_integer_expected": 2535301200456458802993406410751,
+        "empty": 0,
+        "negative": -3
+      }
+    },
+    {
+      "name": "invalid_identity_partitions_refused",
+      "passed": true,
+      "detail": {
+        "omitted": "refused",
+        "duplicate_with_same_numerical_total": "refused",
+        "foreign": "refused"
+      }
+    },
+    {
+      "name": "usable_CLI_and_noninteger_refusal",
+      "passed": true,
+      "detail": {
+        "valid_input_stdout": {
+          "total_cents": 5
+        },
+        "valid_exit": 0,
+        "noninteger_exit": 2,
+        "noninteger_error": {
+          "error": "cents must be an exact integer, excluding booleans"
+        }
+      }
+    },
+    {
+      "name": "current_index_hashes_and_concrete_local_artifacts",
+      "passed": true,
+      "detail": {
+        "index": {
+          "dataset_revision": "data-2",
+          "ids": [
+            "a",
+            "b",
+            "c"
+          ],
+          "complete": true
+        },
+        "index_sha256": "a648f1fec39630ae79944d74253af2bbc6a80d47ad62cfc95db3194d8b0e0f9d",
+        "label": "Maximum 1000 records",
+        "worker_count": 2
+      }
+    },
+    {
+      "name": "component_ledger_preserves_case_scoped_observations",
+      "passed": true,
+      "detail": {
+        "required_rows_per_case": 3,
+        "E1_adverse_and_wrong_subject_records": "preserved",
+        "E3_case_scope": [
+          "obs-45",
+          "obs-44",
+          "obs-43"
+        ]
+      }
+    }
+  ],
+  "passed": true,
+  "independence": "Constructor self-checks; no independent review or live Product qualification is claimed."
+}

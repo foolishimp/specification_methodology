@@ -1,0 +1,32 @@
+{
+  "result": "passed",
+  "source_preimage": "736e5e9283ac1f2a06ed6099aef503711e1f00a1",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "source_pins": [
+    {
+      "path": "standards/SPEC_METHOD.md",
+      "before_sha256": "86eff5fe5d40de263b90e9b30919885965af4b6a4d4f7e994b426fd14cc9a7b8",
+      "sha256": "30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0",
+      "bytes": 200811
+    },
+    {
+      "path": "standards/DESIGN_MODULE_METHOD.md",
+      "before_sha256": "300aaa56d6fd66e002c3a61919ddbbffa94d56bf01a035598fb519523f43f116",
+      "sha256": "2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec",
+      "bytes": 126984
+    }
+  ],
+  "patched_rows": 14,
+  "new_rows": [],
+  "coordinate_updates": 133,
+  "argument_row_coordinate_changes": 122,
+  "checks": [
+    "Frozen-account patch protocol, complete explicit changed-heading coverage, exact source-block pins, argument-row copies and coordinate relocation.",
+    "Source diff whitespace and trailing whitespace."
+  ],
+  "limits": [
+    "Other Writers changes are excluded: all other source is the frozen preimage.",
+    "This is coordinate/account integration, not semantic fidelity or candidate acceptance.",
+    "source_commit supplied to the pure integrator is the preimage solely for a nonpublished dry-run; the parent binds the actual successor source commit during integration."
+  ]
+}

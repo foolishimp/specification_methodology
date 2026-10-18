@@ -1,0 +1,25 @@
+{
+  "standing": "Affected native route availability, not actual-use qualification.",
+  "cases": [
+    {
+      "id": "drift-owner-and-consumer",
+      "indexes": [
+        "SPEC_METHOD.drift-signals"
+      ],
+      "required_clauses": [
+        "SPEC_METHOD.drift-signals",
+        "SPEC_METHOD.universal-intake-triage"
+      ]
+    },
+    {
+      "id": "bounded-totality-and-recovery",
+      "indexes": [
+        "DESIGN_MODULE_METHOD.8-totality-rule"
+      ],
+      "required_clauses": [
+        "DESIGN_MODULE_METHOD.8-totality-rule",
+        "FOUNDATIONS.bounded-construction"
+      ]
+    }
+  ]
+}

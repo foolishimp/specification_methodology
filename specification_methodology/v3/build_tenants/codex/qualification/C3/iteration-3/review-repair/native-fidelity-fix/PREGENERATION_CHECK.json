@@ -1,0 +1,86 @@
+{
+  "valid": true,
+  "preimage_commit": "aa063bd918267ff88f4c31fd24229e8198363f8d",
+  "generated_program_checked": false,
+  "account_sha256": "cb85385c6c074f4f47623bf29d5009bfe639bef109b2788e8846aa80f80f1b84",
+  "program_sha256": "c34f7b203045d839d83a2bbc5c70ffa696125e876cad956d87d8d52f88b4a756",
+  "checker_sha256": "930621e8716a0493a78615722d29cd91f1d19c915f0e0bfb3593c6e6ac352993",
+  "changed_determinations": [
+    "TRANSFORMATION_LIBRARY.composition-law"
+  ],
+  "compiler_occurrences": {
+    "reference_occurrences": 7738,
+    "acquisition_routes": 2081,
+    "inlined_contracts": 410
+  },
+  "separate_occurrence_traversal": {
+    "references": 7738,
+    "routes": 2081,
+    "inline_uses": 410,
+    "clauses": 705,
+    "outer_after_inline": 1118
+  },
+  "nested_and_repeated_scopes": "passed",
+  "previous_ODD_binding": "preserved",
+  "controls": [
+    {
+      "case": "original unqualified composition occurrences",
+      "result": "rejected",
+      "reason": "Missing explicit condition: design_declarations"
+    },
+    {
+      "case": "one repeated frame occurrence loses condition",
+      "result": "rejected",
+      "reason": "Missing explicit condition: frame_relations"
+    },
+    {
+      "case": "original unscoped program",
+      "result": "rejected",
+      "reason": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "case": "inline pointer incorrectly uses outer base",
+      "result": "rejected",
+      "reason": "Unresolved occurrence pointer: /premises/0"
+    },
+    {
+      "case": "undefined pointer base",
+      "result": "rejected",
+      "reason": "urn:codex-stdo3:iteration-3-r2:clause:UX_METHOD.1-position: missing or unknown occurrence scope"
+    },
+    {
+      "case": "pointer resolves but names another target",
+      "result": "rejected",
+      "reason": "urn:codex-stdo3:iteration-3-r2:clause:UX_METHOD.1-position: occurrence target mismatch at /id"
+    },
+    {
+      "case": "invalid pointer escape",
+      "result": "rejected",
+      "reason": "Unresolved occurrence pointer: /premises/~2"
+    },
+    {
+      "case": "negative array index",
+      "result": "rejected",
+      "reason": "Unresolved occurrence pointer: /premises/-1"
+    },
+    {
+      "case": "outer occurrence retains the preceding inline base",
+      "result": "rejected",
+      "reason": "Unresolved occurrence pointer: /argument/premise_owner"
+    },
+    {
+      "case": "missing adjacent typed target",
+      "result": "rejected",
+      "reason": "urn:codex-stdo3:iteration-3-r2:clause:UX_METHOD.1-position: occurrence lacks its adjacent typed target"
+    },
+    {
+      "case": "inline definition differs from its identity",
+      "result": "rejected",
+      "reason": "urn:codex-stdo3:iteration-3-r2:clause:UX_METHOD.1-position: inline definition differs from its account identity"
+    }
+  ],
+  "limits": [
+    "Author checks; independent semantic review and C3 acceptance remain open.",
+    "Applicability is retained, not evaluated; no fresh task-use evidence."
+  ]
+}

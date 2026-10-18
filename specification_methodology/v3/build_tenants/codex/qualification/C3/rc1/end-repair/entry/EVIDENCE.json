@@ -1,0 +1,126 @@
+{
+  "schema": "rc1-entry-author-evidence-v1",
+  "task": "RC1-ENTRY",
+  "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+  "files": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md",
+      "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+      "preimage_bytes": 8428,
+      "preimage_sha256": "13902bef25750b8f623a2f2210d2c6df867b474926d0617bc4d517e7e10763e4",
+      "candidate_bytes": 8314,
+      "candidate_sha256": "7d8b0cd7c5bd70999ad16810aaf782abb1ec7119343963f920f01df690a68abd"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/GETTING_STARTED.md",
+      "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+      "preimage_bytes": 27422,
+      "preimage_sha256": "adff97ad2ad7544d99f87eed79819b98bb7a53a4c13495a873b1652e36d50804",
+      "candidate_bytes": 27460,
+      "candidate_sha256": "5bf7cc2a0980c5817c6f033b0e6201a309027172a273a994b8f0e85761ec03ab"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md",
+      "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+      "preimage_bytes": 2920,
+      "preimage_sha256": "2b158034fdd0098640f335cf5557d308a6d9e0838350f56e1f3f2a532124f84a",
+      "candidate_bytes": 3063,
+      "candidate_sha256": "90b9cbad8dbe62df02994de325a3a435ec737080e606a03c1ab440e33badf86e"
+    }
+  ],
+  "checks": [
+    {
+      "id": "exact-scoped-replacements-skill",
+      "result": "pass",
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-work/SKILL.md",
+      "method": "Compare the complete live file with the pinned preimage after only the enumerated exact byte replacements.",
+      "replacement_count": 1
+    },
+    {
+      "id": "exact-scoped-replacements-getting_started",
+      "result": "pass",
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/GETTING_STARTED.md",
+      "method": "Compare the complete live file with the pinned preimage after only the enumerated exact byte replacements.",
+      "replacement_count": 2
+    },
+    {
+      "id": "exact-scoped-replacements-refresh",
+      "result": "pass",
+      "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md",
+      "method": "Compare the complete live file with the pinned preimage after only the enumerated exact byte replacements.",
+      "replacement_count": 2
+    },
+    {
+      "id": "proof-owner-routing",
+      "result": "pass",
+      "method": "Both entry carriers contain one identical explicit route to the complete verified-basis transition-evidence owner, including its material owner dependencies; the replaced partial cheapest-falsifier instructions are absent.",
+      "scope": "Local routing text only. The semantic preservation judgment follows the directly acquired complete owner clause; this is not an independent assessment."
+    },
+    {
+      "id": "refresh-registry-delta",
+      "result": "pass",
+      "previous_selectors": 22,
+      "candidate_selectors": 24,
+      "view_count": 7,
+      "method": "Parse selector rows and compare exact mapping: all previous rows retained; only two named existing members added; selector keys unique; view count is seven."
+    },
+    {
+      "id": "published-member-existence",
+      "result": "pass",
+      "method": "The directly read standards index publishes the exact two named frame paths; both member files exist at the pinned preimage and match live bytes. Only their existence/hash was inspected here, not all view contents.",
+      "members": [
+        {
+          "selector": "member-construction-assessment-view",
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/MEMBER_CONSTRUCTION_ASSESSMENT.md",
+          "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+          "bytes": 53764,
+          "sha256": "bb3f0fd727b6e39e0b2fbb1d40821881bad49861169e1a9f900942eff5b9a70d",
+          "live_equals_preimage": true,
+          "body_presented_to_model": false
+        },
+        {
+          "selector": "triage-carrier-view",
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/frames/TRIAGE_CARRIER.md",
+          "preimage_commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+          "bytes": 96659,
+          "sha256": "9fc7054445127a780fb01f10ab8be2605b7ab5e4f6ba451bef8630083560325b",
+          "live_equals_preimage": true,
+          "body_presented_to_model": false
+        }
+      ]
+    },
+    {
+      "id": "owners-unchanged",
+      "result": "pass",
+      "method": "Complete source owner/index bytes match the pinned preimage. Only their scoped clauses were acquired as reading evidence.",
+      "sources": [
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/SPEC_METHOD.md",
+          "commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+          "bytes": 198142,
+          "sha256": "d7c5e7d606ff61ecc9e70277c13ca9a99be764dfc970ef8d25e908ef2f8537c5",
+          "live_equals_preimage": true,
+          "body_presented_to_model": false
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/codex/successor/standards/README.md",
+          "commit": "c33c6aa660e58d885d691d0b83cd97b417d99b91",
+          "bytes": 8367,
+          "sha256": "b6eb16e712a5627329a58ddbb1bccb85929c980f86bab33eca8d4c3cdf91d920",
+          "live_equals_preimage": true,
+          "body_presented_to_model": false
+        }
+      ]
+    },
+    {
+      "id": "entry-contract-preservation",
+      "result": "pass",
+      "method": "Exact replacement checks preserve all remaining bytes in all three carriers, including Product basis selection, manual invocation references, refresh input/optional selector behavior, default/unknown-selector handling, proof breadth examples, and Worker effects/return boundaries. No all-view acquisition instruction was added."
+    }
+  ],
+  "limits": [
+    "Bounded author validation of the three changed entry carriers only.",
+    "No application execution, host invocation, generated package regeneration, independent assessment, qualification, or release conclusion.",
+    "References and registry existence do not by themselves prove the downstream packaged routing or claim."
+  ]
+}

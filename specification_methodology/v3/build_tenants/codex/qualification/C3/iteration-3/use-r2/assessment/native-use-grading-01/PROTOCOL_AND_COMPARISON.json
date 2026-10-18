@@ -1,0 +1,635 @@
+{
+  "activation": "I3-R2-MATCHED-USE-01",
+  "scope": "Initial six-task/21-case native use per arm; one context per arm, no feedback retry.",
+  "frozen_subjects": {
+    "A": {
+      "kind": "installed",
+      "basis": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+    },
+    "B": {
+      "kind": "frozen_source",
+      "commit": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6",
+      "prefix": "specification_methodology/v3/build_tenants/codex/successor/"
+    },
+    "C": {
+      "kind": "frozen_source",
+      "commit": "3aaa2f2cf0d6f24a734a33c258373a58feceaf87",
+      "prefix": "specification_methodology/v3/build_tenants/codex/successor/"
+    }
+  },
+  "subject_identity": {
+    "result_commit": "6627800d30b14cfb862d82709bf8ec5c86ca0401",
+    "oracle_sha256": "088aa6f69ff2c243a530deea11b23ab4d4901fd98cba254c78a8cca47526a461",
+    "task_packet_sha256": "d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559",
+    "source_manifest": "SOURCE_MANIFEST.json",
+    "result_hash_reconciliation": [
+      {
+        "arm": "A",
+        "artifact": "RETURN.md",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "acquisition-log.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "answers.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "artifact-checks.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "artifact-manifest.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "assessment-ledger.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "check_artifacts.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "construct_results.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "construction-derivation.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "current-index.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "domain-results.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "fixture-acquisition.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "intake-amendments.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "label-I1.txt",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "recovery-handoff-W1.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "recovery-handoff-W2.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "recovery-handoff-W3.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "release-adoption-memo.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "total-cents-output.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "total_cents.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "A",
+        "artifact": "worker-config-I3.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "I1-label.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "I3-config.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "RETURN.md",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "acquisition-record.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "answers.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "artifact-checks.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "artifact-manifest.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "assessment-ledger.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "check_artifacts.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "computed-totals.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "construction-assessment.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "current-index.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "domain-results.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "finalization-attempt.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "intake-records.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "method-citations.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "recovery-W1.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "recovery-W2.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "recovery-W3.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "release-adoption-memo.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "run-summary.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "B",
+        "artifact": "total_cents.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I1-label.txt",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I1-work-17-amendment.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I2-product-change-intake.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I3-config.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I3-work-18-amendment.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "I4-unresolved-intake.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "RETURN.md",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "acquisition-records.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "answers.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "artifact-checks.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "assessment-ledger.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "authoring-observations.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "check_artifacts.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "construction-derivation.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "current-index-W1.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "current-index-W2.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "current-index-W3.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "domain-results.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "fixtures.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "intake-decisions.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "recovery-handoff-W1.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "recovery-handoff-W2.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "recovery-handoff-W3.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "recovery-handoffs.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "release-adoption-decisions.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "release-adoption-table.md",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "source-citations.json",
+        "bytes_match": true,
+        "sha256_matches": true
+      },
+      {
+        "arm": "C",
+        "artifact": "total_cents.py",
+        "bytes_match": true,
+        "sha256_matches": true
+      }
+    ],
+    "dispatch_answers_and_return_hashes_match": true,
+    "method_citation_records_verified": 69,
+    "method_citation_limit": "Identity/range verification and selected semantic entry/result excerpts, not whole-source audit."
+  },
+  "protocol_finding": {
+    "bounded_trial_usable": true,
+    "reason": "Exact frozen subjects and packet agree; all 21 cases and required artifacts are present per arm; reported truncations were reacquired. No discovered unresolved event invalidates the fixed semantic comparison.",
+    "unestablished": "Full host context/exposure isolation cannot be proven from these persisted records. No claim that all tool or host activity is captured."
+  },
+  "observed_protocol_events": [
+    {
+      "arm": "A",
+      "event": "Combined task/source delivery and frame search output truncated. T3 and decisive frame ranges reacquired; final full task packet also programmatically parsed.",
+      "classification": "delivery/measurement limitation with reported recovery",
+      "effect_on_grade": "No fixed witness missing in final return. Programmatic parse does not establish model retention."
+    },
+    {
+      "arm": "A",
+      "event": "Six early local stdout byte counts missing; local acquisition log omits the later programmatic task read counted by harness.",
+      "classification": "actor local measurement incompleteness",
+      "effect_on_grade": "Harness successful emissions (23) supply the reported byte total; local unknowns remain unknown."
+    },
+    {
+      "arm": "B",
+      "event": "Mixed task and combined three-frame output truncated; task and decisive bounded sections reacquired.",
+      "classification": "delivery/measurement limitation with reported recovery",
+      "effect_on_grade": "No fixed witness missing in final return."
+    },
+    {
+      "arm": "B",
+      "event": "Administrative finalization JavaScript failed parsing before execution; corrected artifact notes were written. Four early local stdout counts incomplete.",
+      "classification": "authoring/measurement event, not method semantic defect",
+      "effect_on_grade": "No semantic trial feedback/retry or changed case is evidenced; use frozen harness byte totals."
+    },
+    {
+      "arm": "C",
+      "event": "Initial combined entry/task delivery truncated; all six tasks reacquired separately. One out-of-range source request failed before source emission; valid bounded ranges then acquired.",
+      "classification": "delivery and navigation event with recovery",
+      "effect_on_grade": "40 successful logger calls versus actor local 41 including the failed interval; failed call is not silently counted as acquired source."
+    },
+    {
+      "arm": "C",
+      "event": "Duplicate Delete/Add patch rejected without mutation; proper Update succeeded. Some early byte counts reconstructed and original task-all count unknown locally.",
+      "classification": "local authoring/measurement event, not method semantic defect",
+      "effect_on_grade": "No semantic feedback trial rerun; harness emissions supply bounded measurement."
+    },
+    {
+      "arm": "all",
+      "event": "The selected source package was applied through its reported ordinary entry under supplied synthetic authority. Native Product status/verify and real install/adopt/release operations were not exercised.",
+      "classification": "declared bounded protocol adaptation/scope",
+      "effect_on_grade": "The task tests use of the selected method under the supplied fixtures; it does not establish successful native deployment or a changed operative Product basis."
+    }
+  ],
+  "method_defects_established_by_this_trial": [],
+  "method_defect_limit": "No fixed assertion is contradicted. This negative finding does not establish absence of defects outside these witnesses, nor attribute every navigation/authoring event to method design.",
+  "metrics": {
+    "A": {
+      "successful_acquisition_calls": 23,
+      "total_emitted_bytes": 235739,
+      "method_navigation_and_content_emitted_bytes": 156413,
+      "task_emitted_bytes": 78127,
+      "metadata_emitted_bytes": 1199,
+      "read_content_bytes_including_repeats": 69960,
+      "source_io_bytes": 2360196,
+      "unique_source_files_opened": 50,
+      "unique_source_file_bytes": 1077921,
+      "summed_reader_seconds": 0.06713712494820356,
+      "acquisition_window_seconds": 738.90341
+    },
+    "B": {
+      "successful_acquisition_calls": 26,
+      "total_emitted_bytes": 339549,
+      "method_navigation_and_content_emitted_bytes": 258956,
+      "task_emitted_bytes": 79391,
+      "metadata_emitted_bytes": 1202,
+      "read_content_bytes_including_repeats": 227489,
+      "source_io_bytes": 1141547,
+      "unique_source_files_opened": 10,
+      "unique_source_file_bytes": 350148,
+      "summed_reader_seconds": 0.01386958290822804,
+      "acquisition_window_seconds": 241.898402
+    },
+    "C": {
+      "successful_acquisition_calls": 40,
+      "total_emitted_bytes": 284930,
+      "method_navigation_and_content_emitted_bytes": 199496,
+      "task_emitted_bytes": 83030,
+      "metadata_emitted_bytes": 2404,
+      "read_content_bytes_including_repeats": 163020,
+      "source_io_bytes": 1939851,
+      "unique_source_files_opened": 12,
+      "unique_source_file_bytes": 637222,
+      "summed_reader_seconds": 0.025143748382106423,
+      "acquisition_window_seconds": 917.032315
+    }
+  },
+  "C_differences": {
+    "C_vs_A": {
+      "total_emitted_bytes": {
+        "absolute": 49191,
+        "percent_of_baseline": 20.8667
+      },
+      "method_navigation_and_content_emitted_bytes": {
+        "absolute": 43083,
+        "percent_of_baseline": 27.5444
+      },
+      "successful_acquisition_calls": {
+        "absolute": 17,
+        "percent_of_baseline": 73.913
+      },
+      "task_emitted_bytes": {
+        "absolute": 4903,
+        "percent_of_baseline": 6.2757
+      }
+    },
+    "C_vs_B": {
+      "total_emitted_bytes": {
+        "absolute": -54619,
+        "percent_of_baseline": -16.0857
+      },
+      "method_navigation_and_content_emitted_bytes": {
+        "absolute": -59460,
+        "percent_of_baseline": -22.9614
+      },
+      "successful_acquisition_calls": {
+        "absolute": 14,
+        "percent_of_baseline": 53.8462
+      },
+      "task_emitted_bytes": {
+        "absolute": 3639,
+        "percent_of_baseline": 4.5836
+      }
+    }
+  },
+  "measurement_basis": {
+    "source": "harness/MEASUREMENTS.json at the frozen result commit",
+    "sha256": "2f8e1c86aec52c3ccbf3c9aa8c97b7cef3818b0a711ece5d88daceefdb1bb549",
+    "meaning": "Acquisition is successful reader output bytes, including navigation, metadata, task repetitions and method content. It is not retained model context, attention, tokens or spend.",
+    "source_io": "Files read/hash-checked internally by the logger, not bytes delivered to the actor.",
+    "raw_trace_limit": "Frozen measurement summary and result hashes reconciled; raw acquisition traces were not replayed or independently recounted by this assessment. The logger was never invoked.",
+    "failed_calls": "Successful emission count omits failed interval acquisition; C discloses one such call.",
+    "actor_local_totals": "Incomplete and differently bounded local counts remain disclosures; they do not replace harness emitted-byte totals.",
+    "harness_check": "CHECK.json covers disposable logger behavior only, not source semantics, actor correctness or complete host isolation."
+  },
+  "elapsed_disclosures": {
+    "A": {
+      "actor_reported_seconds": 961.173,
+      "start": "2026-10-14T12:54:11Z",
+      "end": "2026-10-14T13:10:12.173469Z"
+    },
+    "B": {
+      "actor_reported_seconds": 1240.113376,
+      "start": "2026-10-14T12:54:26Z",
+      "end": "2026-10-14T13:15:06Z"
+    },
+    "C": {
+      "actor_reported_seconds": 1191,
+      "start": "2026-10-14T12:58:00Z",
+      "end": "2026-10-14T13:17:51Z"
+    },
+    "limits": "Actor wall-time disclosures have different timestamp precision and include authoring. Acquisition windows are first-to-last logged read, not full task duration. Dispatch observations follow the tool call and are not host start times. No causal speed comparison is established."
+  },
+  "bounded_comparison": {
+    "semantic": "All three arms satisfy every fixed assertion, with positive and adverse controls preserved. These cases establish no semantic advantage for C over A or B.",
+    "C_vs_B": "C emits 54,619 fewer total acquisition bytes (16.09%) and 59,460 fewer method navigation/content bytes (22.96%) than B, with 14 more successful acquisition calls.",
+    "C_vs_A": "C emits 49,191 more total acquisition bytes (20.87%) and 43,083 more method navigation/content bytes (27.54%) than A, with 17 more successful acquisition calls.",
+    "other_costs": "Task reacquisition is also higher in C. Distinct source-file count, whole-file source IO, byte emissions, elapsed wall time and retained context are different measures. Neither fewer named source files nor fewer bytes proves structural elimination.",
+    "reconciliation": "All arms perform the required semantic reconciliation. The trial does not instrument its cognitive effort or isolate a source-design causal effect."
+  },
+  "calibration_limits": [
+    "One actor per arm, one initial context reused across all six tasks. The 21 cases are not 21 independent replications.",
+    "Same inherited model family; neither independent model populations nor cross-model generalization.",
+    "No random assignment or repeated sampling is available to estimate variance or causal effects.",
+    "Package identities are visible to the grader. Oracle contents were frozen before the actors; oracle author and grader are the same actor.",
+    "Synthetic grants and declared complete source observations simplify actual project intake, authority and recovery.",
+    "Expected unknowns are valid semantic outcomes, not unanswered cases; enum/layout/algorithm differences are not failures.",
+    "Missing-return performance may remain unconfirmed while required coverage stays open; absence alone does not prove nonexecution.",
+    "No memory-derived evidence, paid model call, broader candidate audit or repeated review round was added during grading.",
+    "No member acceptance, overall superiority, structural-reduction closure, categorical-thread result, real consumer adoption, installation or release claim follows."
+  ],
+  "optional_fields": "Own-source learning and fixture fields remain as supplied and are not extra grading requirements."
+}

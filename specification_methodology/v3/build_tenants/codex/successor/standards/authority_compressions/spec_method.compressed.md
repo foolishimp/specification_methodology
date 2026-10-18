@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/spec-method/v1
 source_ref: ../SPEC_METHOD.md
-source_digest: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
+source_digest: ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -27,10 +27,25 @@ select a downstream repository, package, vendor, Product, or concrete
 implementation. Constitutional examples therefore demonstrate enabled
 capabilities through neutral identities rather than consumer precedent.
 
-This asset projects `SPEC_METHOD.md` only. It is standalone for SPEC-owned
-decisions, including `STDO-UP-022`, but cannot close DMM-owned IACS revision.
-For that decision, route to the digest-current DMM source or compression, or to
-the aggregate STDO compression.
+This asset projects `SPEC_METHOD.md`. Its decisions consume the shared result,
+context and contract owners cited by that method. Acquire those owners whenever
+their conditions are material; this summary cannot replace them. DMM-owned IACS
+revision additionally requires the digest-current DMM source or sufficient
+projection.
+
+Common WHAT bounds admissible states, outcomes, constraints and evidence. Each
+build tenant binds those requirements to concrete operations, actors, effects,
+operational assumptions and observation through its design. Software, hardware,
+people and mixed processes are permitted bindings. Actor identity does not
+choose operation kind. Requirement-to-operation routes require their actual
+preservation evidence; an a_c structural check cannot supply it.
+
+Proof targets and test lanes apply Foundations' construction-assurance owner.
+Bind the expectation's source, interpreted predicate and necessary/sufficient
+relationship separately from the actual checker, subject, environment and
+observations. Test-class labels establish no independent failure causes;
+implementation-derived regression retains its local claim. Existing carriers
+may record shared derivations for a family of tests.
 
 ## Intake Triage Compression
 
@@ -40,6 +55,11 @@ the aggregate STDO compression.
   repair scope; duplicated analysis adds no evidence. Preserve uncertainty and
   required independence. Diagnosis neither grants effects nor requires changing
   sufficient law. See `SPEC_METHOD.md#universal-intake-triage`.
+- Bind current reality, required outcome, observations and prediction to
+  Foundations' bounded-construction diagnosis. Distinguish realisation,
+  requirement/design, prediction and observation gaps; unresolved alternatives
+  may need observation before repair. Severity and priority supply neither
+  cause nor mutation authority. A bug list projects the same work route.
 
 ## Recursive Product Taxonomy Compression
 
@@ -347,14 +367,17 @@ the aggregate STDO compression.
   state and effect boundaries retain their checks; scope changes need their
   owner and cannot be inferred from a test.
 - For probabilistic or agentic construction, execute one bounded causal cone
-  from a reconstruction-sufficient governing basis supplied by `STDO-UP-016`
-  through `STDO-UP-019`. Identify the affected relations, selected computational
+  from a reconstruction-sufficient governing basis. Where the Design Module
+  Method applies, `STDO-UP-016` through `STDO-UP-019` supply its construction
+  inputs. Otherwise use the selected generic intake, work and construction
+  contracts. Identify the affected relations, selected computational
   dispositions, delegated construction and assessment authority, and upstream
   re-entry conditions. Do not rely on dialogue, commentary, worker memory, or
   folklore as that basis.
 - The constructor owns bounded implementation and self-review. Where
-  independent assessment supports promotion, the assessor verifies the exact
-  live code, authority paths, proof, and installed subject. A constructor
+  independent assessment supports promotion, the assessor evaluates the exact
+  live realisation under the selected computational binding, its authority
+  paths, proof, and installed subject. A constructor
   summary is not independent evidence. This separates roles without prescribing
   actor count, model, prompt, tool, process topology, or orchestration runtime.
 - A bounded proxy may accept preservation, require local repair, reject a
@@ -362,17 +385,36 @@ the aggregate STDO compression.
   requirement, governing-authority, or accepted-design changes re-enter at
   their owner. Routine advancement needs no renewed human ceremony when the
   delegation and re-entry boundary are already accepted.
-- Assess a bounded candidate as `accept`, `local_repair`, `re_enter`, or
-  `reject`. Global correctness conserves every governing relation affected by
+- Assess the exact predicate that the candidate closes its declared cone and
+  preserves every affected governing relation. Return evidence, a core verdict
+  and a proposed disposition: `accept` maps to `satisfied` on complete
+  preservation support; `local_repair` maps
+  to `falsified` for a demonstrated defect or `indeterminate` for inadequate
+  proof; `re_enter` maps to `falsified` for a defeated candidate under an
+  interpretable contract or `invalid_basis` for an unusable governing basis;
+  `reject` maps to `falsified` for a governing-relation violation or undisposed
+  competing truth path. The core verdict does not choose a remedy or confer
+  acceptance authority. Only the bound decision authority applies the proposed
+  disposition; its separate decision result never overwrites the assessment.
+  A proposal without its required reason or support stays `indeterminate`
+  unless independently deciding evidence establishes another core result.
+  Retain the raw proposal and any deciding counterevidence, scope or basis
+  diagnosis; the label supplies no missing support.
+  Global correctness conserves every governing relation affected by
   the local action; unrelated incompleteness outside its causal cone is
   repricing input, not a blocker. Repeated rejection against one unchanged
   boundary triggers reassessment, not a candidate-count threshold or review
   state machine.
 - Transition evidence binds the exact candidate, affected relations, changed
   paths, authority-path disposition, focused and required integration proof,
-  remaining seams, non-changes, and assessor disposition. Use the cheapest proof
-  that can falsify the active relation and reserve whole-candidate qualification
-  for declared candidate boundaries unless risk requires it sooner.
+  remaining seams, non-changes, assessor proposed disposition and any separately
+  applied decision. Select focused proof
+  under Foundations' change-impact and assurance-risk relations: bind material
+  assertion/execution dependencies, justified exclusions, new cases and gates.
+  A weaker cheap falsifier cannot close a stronger claim. Combine applicable
+  retained evidence with actual reassessment; include selection costs.
+  Whole-candidate qualification remains at its declared boundary or where
+  risk, unknown impact or a mandatory gate requires it.
 - A materially durable or reconstructable authority claim is not proven by a
   same-process test when incidental process state is a plausible authority.
   Destroy or exclude that state and compare reconstructed semantic outcomes.

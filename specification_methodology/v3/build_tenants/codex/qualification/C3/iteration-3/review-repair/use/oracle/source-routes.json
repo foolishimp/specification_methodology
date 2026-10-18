@@ -1,0 +1,62 @@
+{
+  "protocol_id": "I3-six-task-v1",
+  "state": "candidate_routes_unbound",
+  "selection_rows_verbatim_from_protocol_table": [
+    {
+      "task": "T1",
+      "frame_family_for_selection": "Assessment and result combination",
+      "candidate_source_routes": "Result algebra; evidence binding; ownership/source fidelity",
+      "frame_route": "run://T1/frame",
+      "method_route_pattern": "run://T1/method/*",
+      "exact_candidate_bindings": null
+    },
+    {
+      "task": "T2",
+      "frame_family_for_selection": "Bounded construction",
+      "candidate_source_routes": "Generic transitions; construction contracts; results",
+      "frame_route": "run://T2/frame",
+      "method_route_pattern": "run://T2/method/*",
+      "exact_candidate_bindings": null
+    },
+    {
+      "task": "T3",
+      "frame_family_for_selection": "Typed domain/profile assessment",
+      "candidate_source_routes": "Typed composition; profile selection/binding; results",
+      "frame_route": "run://T3/frame",
+      "method_route_pattern": "run://T3/method/*",
+      "exact_candidate_bindings": null
+    },
+    {
+      "task": "T4",
+      "frame_family_for_selection": "Release/adoption decision",
+      "candidate_source_routes": "Exact release subjects; release authority; adoption",
+      "frame_route": "run://T4/frame",
+      "method_route_pattern": "run://T4/method/*",
+      "exact_candidate_bindings": null
+    },
+    {
+      "task": "T5",
+      "frame_family_for_selection": "Recovery/re-entry",
+      "candidate_source_routes": "Current-state acquisition; effect recovery; continuation; results",
+      "frame_route": "run://T5/frame",
+      "method_route_pattern": "run://T5/method/*",
+      "exact_candidate_bindings": null
+    },
+    {
+      "task": "T6",
+      "frame_family_for_selection": "Intake/carrier selection",
+      "candidate_source_routes": "Intake; change scope; work carriers; authority",
+      "frame_route": "run://T6/frame",
+      "method_route_pattern": "run://T6/method/*",
+      "exact_candidate_bindings": null
+    }
+  ],
+  "case_resource_bindings": {
+    "case://T5/workspace-current": "case-resources/T5/workspace-current.txt",
+    "case://T5/source-current": "case-resources/T5/source-current.txt",
+    "case://T5/submission-observation": "case-resources/T5/submission-observation.txt"
+  },
+  "binding_owner": "Parent separately frozen run manifest before execution",
+  "source_boundary": "Candidate source and declared material dependencies only; common specification, predecessor and oracle are outside actor task inputs.",
+  "T5_resource_exposure": "Declared acquisition routes only; not preloaded."
+}

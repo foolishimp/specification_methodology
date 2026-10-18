@@ -1,0 +1,68 @@
+{
+  "arm": "B",
+  "start_time_utc": "2026-10-14 12:54:26 UTC",
+  "end_time_utc": "2026-10-14 13:15:06 UTC",
+  "observed_elapsed_seconds": 1240.113376,
+  "tasks": 6,
+  "cases": 21,
+  "artifact_checks": {
+    "passed": 38,
+    "failed": 0,
+    "total": 38
+  },
+  "check_timestamp": "2026-10-14T13:11:29.159774+00:00",
+  "actual_check_command": "python3 -B /Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/use-r2/arms/B/result/check_artifacts.py",
+  "acquisition_accounting": {
+    "acquisition_calls": 26,
+    "reported_source_content_bytes_including_repeated_reads": 227489,
+    "known_or_reconstructed_stdout_bytes": 315626,
+    "unmeasured_early_raw_stdout_calls": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "caution": "Source content bytes and stdout JSON bytes are distinct metrics. The sums include repeated reads and emitted content from truncated deliveries. Missing early raw stdout counts mean the known stdout sum is not a complete local stdout total; the harness log owns exact full emitted-byte accounting."
+  },
+  "unique_fixture_owner_content_bytes": 8344,
+  "measurement_scope": "Observed elapsed time and acquisition bytes. Administrative construction/checking/hashing is separate from ordinary acquisition.",
+  "not_established": [
+    "retained context",
+    "model-token use",
+    "attention",
+    "total spend",
+    "universal resource fit"
+  ],
+  "delivery_limitations": [
+    {
+      "event": "Combined task all + PRODUCT_BASIS + standards index response",
+      "observed_tool_message": "Warning: truncated output (original token count: 12073)",
+      "recovery": "task T1 followed by standalone task all, which delivered all six casesets without truncation.",
+      "retained_context_claim": false
+    },
+    {
+      "event": "Combined full EVALUATION_CONJUNCTION, DOMAIN_BINDING and RELEASE_ADOPTION response",
+      "observed_tool_message": "Warning: truncated output (original token count: 28174)",
+      "recovery": "Acquired frame headings and bounded deciding intervals. Unneeded clipped whole-frame sections are not claimed as received.",
+      "retained_context_claim": false
+    }
+  ],
+  "administrative_failure_record": "finalization-attempt.json",
+  "protocol_observations": [
+    "All method and task source reads used the supplied arm-B acquisition command.",
+    "Two combined deliveries truncated; full task packet and needed bounded method intervals were reacquired.",
+    "Early raw stdout counts were not locally instrumented; reported content bytes and explicit reconstructions are distinguished.",
+    "No other arm, withheld oracle, prior answer, construction/review record, surrounding repository or external guidance was read.",
+    "No delegation, paid actor, external effects, Git or network operation occurred.",
+    "Only this result territory was written, apart from authorized harness acquisition logging.",
+    "One administrative finalization syntax failure was preserved and corrected before execution; no substantive reevaluation or external-feedback trial retry occurred."
+  ],
+  "preserved_limits": [
+    "Plan q and K1 counterexample retained; finite tests do not constitute categorical proof.",
+    "All failed, missing and mismatched fixture assessments/decisions remain explicit.",
+    "Recovery artifacts retain previous/partial progress, cached handoff and uncertain attempt journal.",
+    "W2 cannot retry; W3 proposes a submission only and still requires delivery evidence.",
+    "I2/I4 remain unadmitted with exact missing owner inputs.",
+    "Native installed Product verification and selected source adoption are not claimed."
+  ]
+}

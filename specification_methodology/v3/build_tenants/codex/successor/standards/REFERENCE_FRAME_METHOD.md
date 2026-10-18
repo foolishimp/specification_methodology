@@ -62,7 +62,9 @@ decide reconstructability and fit. Choosing a particular frame partition,
 evaluation protocol or actor arrangement remains a declared method choice.
 
 This member owns frame declaration, activation, evaluation, coverage and
-revision. It consumes the shared [result algebra](FOUNDATIONS.md#result-algebra),
+revision as foundations-tier frame law. Its authority vocabulary remains scoped
+to those relations; other operations retain their owning contracts' grants.
+It consumes the shared [result algebra](FOUNDATIONS.md#result-algebra),
 [conjunction](FOUNDATIONS.md#result-conjunction) and
 [workspace/context relation](FOUNDATIONS.md#workspace-and-context) at the
 deciding operations below. Its finer outcomes refine that algebra; they do not
@@ -105,9 +107,8 @@ controller, service, registry, graph, or frame engine is required.
    coordinate systems.
 7. Coverage is relative to a declared workspace, governed outcome, evaluation
    inventory, basis, and time.
-8. A frame selection or frame result cannot acquire semantic, operation, or
-   decision authority from its breadth, usefulness, actor, or implementation
-   technology.
+8. Frame selection and result use apply the shared
+   [authority contract](FOUNDATIONS.md#judgment-and-authority) through RF-006.
 9. Unknown and out-of-frame results are lawful pressure for reconfiguration.
    They are not failed evaluations or implied acceptance.
 10. Historical failures, resets, and invisible violations are evidence for
@@ -119,15 +120,16 @@ controller, service, registry, graph, or frame engine is required.
 
 ### Evaluation
 
-An **evaluation** is a declared question whose admissible result family,
-evidence basis, decision authority, and operation authority where it performs a
-material action are known. An evaluation may ask for a judgment, prediction,
-construction, comparison, proof, refusal, classification, or action
-recommendation.
+An **evaluation** is a declared question whose predicate, admissible evidence,
+decision authority, and operation authority where it performs a material action
+are known. Its results use the [core result algebra](FOUNDATIONS.md#result-algebra)
+directly or a declared reason-sensitive refinement under RF-012. An evaluation
+may ask for a judgment, prediction, construction, comparison, proof, refusal,
+classification, or action recommendation.
 
 An evaluation family groups questions that require the same material relation
-manifold, authority basis, and result algebra. Similar wording does not prove
-that two evaluations belong to the same family.
+manifold, authority basis, and result binding or refinement of that one algebra.
+Similar wording does not prove that two evaluations belong to the same family.
 
 ### Workspace
 
@@ -200,6 +202,13 @@ Evidence carries provenance, subject identity, basis, and scope. Evidence does
 not become semantic truth or decision authority merely because it is available
 inside a frame.
 
+For reliance on that evidence, bind
+[Construction assurance](FOUNDATIONS.md#construction-assurance) to the frame's
+predicate, observations and consuming decision. Assertion provenance justifies
+the expected predicate; execution provenance identifies the acquired subject
+and result. A sufficiently small frame or an authenticated observation alone
+does not establish a sound, complete decision on its predicate.
+
 ### Authority
 
 The method distinguishes:
@@ -215,11 +224,11 @@ The method distinguishes:
   dispose its result; and
 - **actor identity**: the human, agent, tool, or process performing work.
 
-These relations may coincide in a lawful case. They never collapse by default.
-Declaring, selecting, activating, or executing a frame does not grant semantic,
-operation, or decision authority. A read-only evaluation declares no operation
-authority. An effectful evaluation inherits the exact operation grant from its
-existing owner; the frame does not create that grant.
+These are the frame vocabulary used by
+[Judgment and authority](FOUNDATIONS.md#judgment-and-authority); apply that
+owner's separation and conservation to declaration, selection, activation and
+execution. A read-only evaluation declares no operation authority. An effectful
+evaluation names the existing owner-issued operation grant it applies.
 
 Human authority may act directly or through an explicitly admitted bounded
 proxy where the governing identity and authority law permits it. Proxy identity
@@ -341,10 +350,35 @@ cross several components.
 
 ## Reference Frame Laws
 
+The [F1–F6 commitments](FOUNDATIONS.md#foundational-commitments) have their
+standing at their owner. Each row assumes a declared evaluation and the
+material relations named in it; neither the evaluation nor its authority is
+derived from a resource limit. The linked rules decide the questions. Their
+arguments distinguish the pillar contribution from the additional frame policy.
+
+| Deciding family and consumer | Premises and pillar contribution | Conditional consequence | Additional choice and owner |
+|---|---|---|---|
+| [RF-001](#rf-001-evaluation-relativity), used by Select And Activate and Diagnostic Order | F1 selects a question; F2 requires its interpreted subject. Specification supplies the intended decision and reference frames its bounded evaluation family. | A frame's presence in a set cannot establish that it can decide this question. Activation binds the actual evaluation to the declared family before relying on its sufficiency. | The frame owner declares the family and its tuple; the task owner selects the actual question. Similar names do not establish inclusion. |
+| [RF-002–004](#rf-002-finite-attention) and [RF-013–014](#rf-013-reconstructable-activation), used by Select And Activate | F2/F3 distinguish current material state from its view; F5 bounds the actor. Reference frames contribute sufficient acquisition; world models and identity supply the bound subject. | A missing material relation cannot be replaced by ambient memory or an irrelevant easier question. If sufficient acquisition does not fit, the dependent evaluation needs a granted response or an explicit unresolved result. | This member selects family-relative sufficiency and reconstructability; frame-set authority selects the actor and partition. The execution binding selects its resource envelope, not a universal byte cap. |
+| [RF-005](#rf-005-exact-basis-and-coordinates) and [RF-011](#rf-011-topology-mutation-and-recharting), used by result reuse and Reconfigure When Necessary | F3 supplies scoped identity and changing topology; F2 restricts reliance to supported interpretation. Identity and evidence/correction contribute exact basis and invalidation. | Equal coordinates on a changed basis cannot preserve a judgment without its equality and applicability relation. A material topology change reopens the dependent claim before reuse. | Subject owners supply coordinate equality; the frame declares its invalidators. Foundations owns shared currentness; the domain selects recharting and observation mechanisms. |
+| [RF-006–008](#rf-006-authority-conservation), used by Evaluate and Evidence Or Coordinate Translation | F2/F4 preserve interpreted distinctions across a relation; F6 separates evidence and grants. Information and interpretation preserve meaning; evidence and authority preserve the permitted evaluator, effect and disposition. | Shared evidence or overlapping coordinates neither equate two meanings nor grant a new effect. An evaluation needs the actual relation and mandate it uses. | This member names frame authority kinds. Their existing owners supply the grants; a translation owner supplies its declared mapping and loss. |
+| [RF-009](#rf-009-no-assumed-hierarchy) and [RF-016](#rf-016-implementation-neutrality), used by Human Frame-Set Declaration, Frame-Set Optimization and Agentic Use | F4 supplies dependencies; F5 bounds capability; F6 bounds allocation authority. Reference frames distribute attention; computational execution supplies actor capability and communication conditions. | Functional decomposition, communication and authority do not become one hierarchy. One adequate frame or several may satisfy the same task while preserving required independence. | The frame-set owner selects its topology, representation and actor allocation under Foundations Configuration. No runtime, fixed role inventory or unique optimum follows. |
+| [RF-010](#rf-010-composition-on-demand), used by Using Frames In Conjunction | F4 requires preservation of the relation actually combined. Algebraic calculus contributes compatible joins; functional design separates internal execution from result consumption. | Closed results can be conjoined without merging internal manifolds. Transporting coordinates or combining execution requires the corresponding material composition contract. | This member selects composition on demand; the declared join owner supplies translation or execution law. Foundations owns result conjunction. |
+| [RF-012](#rf-012-closed-results) and [RF-015](#rf-015-residual-uncertainty), used by Return A Closed Result and Result Conjunction | F2/F6 bind evidence to its predicate; F5 admits incomplete work. Information preserves the claim; computational execution distinguishes performance and effects; evidence/correction retains failures and gaps. | Admission refusal cannot fabricate a downstream evaluation or erase independently supported counterevidence. A lost return leaves performance and effects at their supported standing. | Foundations owns verdicts, performance, effects and combination. This member binds activation and downstream predicates separately; a frame owns finer outcomes and the decision owner owns disposition. |
+| [RF-017](#rf-017-proportional-compression), used by acquired frame views | F2 preserves meaning; F4 preserves failure detection; F5 bounds usable context. Information/interpretation and axiomatic calculus supply faithful task views; reference frames supply the actual consumer. | A smaller view fails when it drops a material permission, failure or uncertainty. Useful overlap remains when it supports independent assessment or a different capability envelope. | Faithful projection owns the shared fidelity decision; this member adds family-wide failure detection and fit. The frame owner selects compression and justified overlap. |
+| [Applicability And Required Results](#applicability-and-required-results) and [Workspace Coverage](#workspace-coverage), used by engagement and coverage claims | F1 selects the governed outcome; F4 retains required predicates and joins; F2/F6 require support for exclusion. Specification supplies applicable obligations; algebraic calculus combines their results; evidence preserves uncovered scope. | An available family is not automatically required, while unknown applicability cannot exclude it. Received returns cannot determine the required set or prove complete coverage. | Owning predicates select obligations. This member chooses the coverage tuple, ledger and operational-full-coverage criteria; frame-set authority selects the declared inventory and justified exclusions. |
+| [Discovery And Revision](#discovery-and-revision), Completeness Boundary, Frame Qualification and Method Self-Qualification, used by diagnosis and closure | F2/F3 bind evidence to the actual subject; F4 preserves dependent claims; F5 limits the inspected population. Evidence/correction supplies counterexamples; reference frames supply bounded qualification and reconstruction. | A historical failure remains a diagnostic input, and one successful activation cannot qualify every family, actor or changed frame. Diagnose the failed relation before adding a frame. | This member selects diagnostic order and claim-scoped qualification tests. The adopting owner selects configuration and acceptance; unknown coverage remains open. |
+
 ### RF-001 Evaluation Relativity
 
 Every frame declares the evaluation family it supports. A frame with no
 declared evaluation family has no testable sufficiency boundary.
+
+An activation uses that declaration to establish that its actual question is
+in the family. Membership of the frame in an available frame set, or a similar
+task name, does not establish that relation. A question outside the declared
+family needs a suitable frame or the applicable scoped result; renaming the
+question does not preserve the original obligation.
 
 ### RF-002 Finite Attention
 
@@ -355,41 +389,52 @@ not reconstructable for that actor.
 
 ### RF-003 Material Sufficiency
 
-Every known relation whose lawful change can alter the evaluation result,
-basis validity, evidence sufficiency, operation authority, or decision
-authority appears in the frame or enters through a declared authoritative
-input.
-
-Omitting a material relation makes the frame insufficient. The method does not
-require proving that no undiscovered material relation exists.
+Apply [Contract application: Support](TRANSFORMATION_LIBRARY.md#contract-application)
+to the evaluation family `Q`: its known material relations, as defined by
+[Material relation](#material-relation), enter `M` or a declared authoritative
+input. An omitted material relation makes the activation insufficient. This
+known-relation boundary does not require proving that no undiscovered relation
+exists.
 
 ### RF-004 Irrelevance Exclusion
 
-Relations that cannot affect the declared evaluation remain outside active
-attention unless they are required to establish irrelevance. A frame does not
-expand merely because adjacent workspace material exists.
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) to `Q`'s
+attention surface: exclude relations established irrelevant to that evaluation,
+retaining any material needed to establish irrelevance. A frame does not expand
+merely because adjacent workspace material exists.
 
 ### RF-005 Exact Basis And Coordinates
 
 Every result binds its exact subject, basis, coordinates, and evidence scope.
-A stale, advanced, ambiguous, or mismatched basis returns `invalid_basis` or
-requires reactivation. Apparent equality does not substitute for declared
-coordinate equality.
+Apply [Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+to proposed reuse, with the frame's declared current-basis requirements and
+coordinate equality. An attempted evaluation whose stale, ambiguous or mismatched
+governing basis cannot support interpretation of its bound predicate returns
+`invalid_basis` or requires reactivation on a resolved basis. Stale supporting
+evidence under an interpretable governing basis instead follows
+[RF-012](#rf-012-closed-results): insufficient support leaves the predicate
+`indeterminate` unless other admissible evidence decides it. A basis advance is assessed against those
+requirements; it does not by itself invalidate a historical result. The original
+record stays bound to its original subject and basis, and reliance for a new
+claim needs the owner's established applicability relation. Apparent equality
+does not substitute for declared coordinate equality.
 
 ### RF-006 Authority Conservation
 
-A frame carries and applies admitted authority. It does not mint, widen,
-transfer, or reconstruct semantic, evaluation, operation, or decision authority
-from actor identity, available capability, evidence shape, implementation
-reachability, or frame selection.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+frame's [authority relations](#authority). Bind each evaluation, operation and
+disposition to its existing owner-issued scope and mandate. Frame selection,
+actor assignment, available capability, evidence and implementation reachability
+are inputs to that application, not additional grant mechanisms.
 
 ### RF-007 Semantic, Evidence, And Verdict Separation
 
-Semantic law defines what the evaluation means. Evidence supplies observations.
-The evaluator applies the declared relation. Where the evaluation performs a
-material operation, the existing operation owner supplies the exact grant.
-Decision authority disposes the result. A frame declaration keeps these roles
-distinguishable even when one actor lawfully performs several of them.
+Apply [Judgment and authority](FOUNDATIONS.md#judgment-and-authority) to the
+frame declaration's semantic owner, observations, evaluator, any operation grant
+and disposition mandate. The declaration binds those distinct relations even
+when one actor lawfully occupies several. A disposition consumes the closed
+evaluation through [Dispose](TRANSFORMATION_LIBRARY.md#dispose), with its domain
+conditions supplied by the owning decision contract.
 
 ### RF-008 Overlap Without Identity Collapse
 
@@ -422,6 +467,13 @@ operations as one material execution relation.
 
 Independently activated evaluations may instead return closed results to one
 declared conjunction or decision rule.
+
+Use [Result conjunction](FOUNDATIONS.md#result-conjunction) for the result
+relation. When the evaluation transports evidence or coordinates, or combines
+operations into one execution, apply
+[Composition law](TRANSFORMATION_LIBRARY.md#composition-law) to that material
+join as well. The latter obligation comes from the relation the consumer
+actually uses, not from the mere count of contributing frames.
 
 ### RF-011 Topology Mutation And Recharting
 
@@ -496,9 +548,13 @@ framework.
 
 ### RF-017 Proportional Compression
 
-A frame compresses accumulated practice when its declaration preserves the
-material distinctions and failure detections required by its evaluation family
-while fitting its capability envelope.
+A frame declaration compresses accumulated practice lawfully only when it
+preserves the material distinctions and failure detections required by its
+whole declared evaluation family, with adequate capability fit under RF-014.
+A frame view applies [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+from the owning declaration and material subject to the actor's evaluation
+`Q`. Its required distinctions include `Q`'s failure detections; its adequacy
+includes the capability fit in RF-014.
 
 Compression does not require a unique smallest frame. Intentional overlap is
 retained where it supplies independently activated evaluation, different
@@ -629,15 +685,11 @@ finer case mapping before its outcome is consumed.
 
 ### Establish The Evaluation Basis
 
-An engagement names:
-
-- the governed outcome or decision;
-- the exact workspace subject and basis;
-- the evaluation or evaluation family;
-- the applicable frame-set, semantic, evaluation, operation where material,
-  and decision authority;
-- the available actor capability envelopes; and
-- the conditions that make the result stale or out of scope.
+Bind the [reference-frame tuple](#reference-frame) to the governed outcome or
+decision and actual workspace subject: `Q` selects the evaluation, `B` and `C`
+its basis and coordinates, `A` the applicable authorities, `K` the available
+actor envelope, and `J` the stale or out-of-scope conditions. The declaration
+and material inputs supply the remaining tuple coordinates.
 
 ### Applicability And Required Results
 
@@ -650,30 +702,29 @@ false. A frame name, available tool or listed family is no activation trigger
 by itself. Where applicability needs residual semantic judgment, retain that
 judgment and its evidence rather than representing it as a computed fact.
 
-A required result that is absent, stale, bound to another subject/basis or
-incapable of establishing its claim cannot satisfy a dependent conjunction.
-Unresolved applicability withholds the dependent claim until sufficient
-evidence or the owning decision resolves it. Other applicable constraints
-remain in force even if only one evaluation detects them. Qualification of an
-applicability rule must distinguish true, false and unknown premises, required
-missing or wrong-subject results, and a sufficient positive result under a
-finite declared fixture; always skipping or always activating cannot satisfy
-those different expected outcomes.
+Use that applicability determination to bind the required set in
+[Result conjunction](#result-conjunction), including unresolved applicability.
+Other applicable constraints remain in force even if only one evaluation detects
+them. Qualification distinguishes true, false and unknown premises, missing or
+wrong-subject required results, and a sufficient positive result within a finite
+declared fixture; always skipping or always activating cannot meet that contract.
 
 ### Select And Activate
 
-The actor or assigning authority selects one frame or one declared active frame
-configuration capable of the evaluation. Activation binds each reusable frame
-declaration to the exact subject and basis. It loads the declared material
-relations and evidence sources rather than an undifferentiated workspace dump.
-
-Apply [workspace and context](FOUNDATIONS.md#workspace-and-context) before
-relying on a prior frame or summary. Reacquire changed material observations,
-reconcile stale beliefs, and retain only results whose validity conditions still
-hold. A fresh activation can continue from the current workspace after private
-context is discarded. Unknown effects use the core recovery condition in
-[Workspace and context](FOUNDATIONS.md#workspace-and-context). A grant to retry
-does not establish that repeating the effect is safe.
+The actor or assigning authority selects one frame or declared configuration.
+Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to “this frame may be activated for evaluation `q`, subject `s`, basis `B` and
+actor `a`”. The tuple binds the contract: `M`, `I` and `D` supply material
+support and preservation; `C` supplies equality; `A` supplies actual grants;
+`E` supplies admissible evidence; `J` supplies invalidators; and `K` supplies
+capability. RF-002 through RF-004 and RF-013/014 set frame sufficiency and fit.
+RF-001 binds `q` to the declared family `Q`; the same binding determines which
+relations are material under RF-003. An available general-purpose frame is
+therefore insufficient evidence of fit for a particular question. Inspect its
+actual family, material inputs and actor conditions under the shared contract.
+The acquired packet applies RF-017 to that declaration and current material
+subject. Prior results and uncertain effects use the shared contract's
+currentness rule.
 
 When no available frame and actor pairing can lawfully perform the evaluation,
 activation returns an RF-012 activation refusal. A separately established
@@ -690,18 +741,16 @@ result.
 
 ### Return A Closed Result
 
-The result identifies the frame and activation, subject, basis, predicate,
-actor, core verdict, original domain outcome, performance, known effects,
-evidence, residual uncertainty, and invalidation conditions.
-The frame's internal working context does not need to be transferred when its
-closed result and provenance are sufficient for the consuming decision.
-
-The consumer applies the core workspace/context validity rule before reuse.
-Preserve the predecessor/successor relation for revised results and any
-demonstrably independent surviving results. Required independent
-evaluations may share valid mechanical evidence but must still supply their
-own sufficiently acquired evidence and judgments under the declared
-independence conditions.
+Return RF-012's core record with frame, activation, actor and `J` invalidation
+coordinates. Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+to its handoff: the consuming decision must recover the material result and
+provenance without private working context. Result reuse applies
+[Change impact and evidence retention](FOUNDATIONS.md#change-impact-and-evidence-retention)
+and retains revised results' predecessor/successor relation. Apply
+[Independent assessment](FOUNDATIONS.md#independent-assessment) to required
+independent frame evaluations: they may share valid mechanical evidence while
+each assessor supplies its own sufficiently acquired evidence and judgment under
+the declared conditions.
 
 ### Reconfigure When Necessary
 
@@ -733,6 +782,12 @@ sources, but neither evaluation consumes or influences the other's unclosed
 working result. This is useful for assurance independence, different evidence
 altitudes, or distinct failure perspectives.
 
+For a mutual-assurance claim, apply
+[Parallel assurance and provenance](FOUNDATIONS.md#parallel-assurance-and-provenance)
+to the selected paths and their material shared causes. Separate activations
+satisfying the declared authorship conditions do not by themselves establish
+statistical independence or validate a shared governing expectation.
+
 ### Result Conjunction
 
 A declared decision rule consumes closed frame results through
@@ -745,26 +800,39 @@ binding states:
 - what decision authority owns the conjunction; and
 - whether any result may veto or defer the decision.
 
-The verdict is the core conjunction result; conflict annotates retained
-contradictory contributions and cannot downgrade an authenticated applicable
-falsification. Conjunction does not transfer the semantic authority of a contributing frame.
-The core rule retains both a known falsification and any uncovered required
-coverage. This consumer binds the mandatory claim set before aggregation and
-returns its coverage and residuals with the verdict. Counting agreeing frames
-cannot discharge another frame's applicable constraint.
+These parameters bind the mandatory claims and material joins before the core
+rule is applied. Its result carries coverage, conflicts and residuals; the
+decision rule cannot replace a required constraint with a count of agreeing
+frames or acquire a contributing frame's semantic authority.
 
 ### Evidence Or Coordinate Translation
 
-One frame supplies evidence or a value consumed inside another frame. The
-translation declares source and target coordinates, preserved meaning,
-accepted loss, provenance, equality law, and refusal conditions.
+Apply [Faithful projection](TRANSFORMATION_LIBRARY.md#faithful-projection)
+with the producing frame's value or evidence as source and the receiving
+frame's evaluation as consumer. Bind both `C` coordinate/equality laws and the
+translation's refusal conditions alongside the shared preservation, loss and
+provenance requirements.
+
+The returned `translated_value`, `declared_loss` or `refusal` is retained with
+its cause. Evaluate “this translation meets the bound target-use contract on
+these source/target coordinates”: supported preservation, including expressly
+admitted loss, maps to `satisfied`; an established forbidden loss, equality,
+identity, basis-compatibility or authority violation maps to `falsified`;
+undecided preservation or loss permission maps to `indeterminate`. If that
+evaluation itself lacks material scope/capability or a usable basis, the map is
+`out_of_frame` or `invalid_basis`, respectively. Missing causes use RF-012's
+missing-reason rule. A coordinate mismatch established by a valid check is a
+failed translation condition, not necessarily an invalid basis for the check.
+All cases preserve actual performance and effects; refusal does not establish
+the target predicate the untranslated evidence was intended to support.
 
 ### Material Composition
 
-Several frame-governed operations form one material execution or reasoning
-relation. The owning application declares the composition, shared invariants,
-effect or decision order where material, closure, failure, and semantic,
-operation, and decision-authority conservation.
+Apply [Composition law](TRANSFORMATION_LIBRARY.md#composition-law) to the
+frame-governed operations and the declared outer execution or reasoning
+predicate. The application binds shared invariants, material effect or decision
+order, closure and failure conditions, using each frame's `A`, `C` and `D`
+relations for authority, coordinates and joins.
 
 Composition is introduced only when the evaluation requires it. A possible
 future interaction does not require a general composition law in every frame.
@@ -798,6 +866,23 @@ only the relations needed for its evaluations and coverage claims.
 ---
 
 ## Workspace Coverage
+
+F1 requires coverage relative to a governed outcome; F2 and F3 require evidence
+on its exact current basis; F4 makes interactions material; F5 rules out
+inferring unknown completeness from a finite inventory; F6 reserves exclusion
+and disposition to their owners. Consequently a coverage claim needs supported
+evaluation, interaction and authority coverage plus its residual boundary.
+This method chooses the ledger vocabulary and eight criteria below. Human
+frame-set authority selects the inventory and required independence under the
+governing outcome; no foundation determines one universal inventory.
+
+Apply [Applicability And Required Results](#applicability-and-required-results)
+to the inventory before consuming its results. Apply Foundations conjunction
+to the resulting required predicates and material interactions. This separates
+three claims: the inventory covers the selected scope, every applicable slot
+has admissible support, and the supported results establish the governed
+predicate. A populated ledger or a satisfied result in every received slot
+alone establishes neither of the other claims.
 
 ### Coverage Basis
 
@@ -874,18 +959,27 @@ The coverage ledger contains at least:
 | decision authority | owner of disposition |
 | evidence | required observations and provenance |
 | dependencies | material frame or seam relations |
-| status | coverage disposition |
+| status | recorded coverage state used by the coverage predicate below |
 | residual | uncertainty, exclusion, or re-entry condition |
 
-The baseline coverage statuses are:
+The baseline coverage states describe the allocation/evidence record; they do
+not report whether the row's underlying evaluation predicate is true:
 
-- `covered`;
-- `separately_covered`;
-- `conditionally_covered`;
-- `conflicted`;
-- `uncovered`;
-- `unknown`; and
-- `excluded_by_authority`.
+| Recorded state | Input meaning |
+|---|---|
+| `covered` | a capable frame is identified with its coverage support |
+| `separately_covered` | such coverage is separately activated, with the required independence support |
+| `conditionally_covered` | coverage depends on named conditions whose support is recorded |
+| `conflicted` | named coverage or frame-result contributions conflict |
+| `uncovered` | a known evaluation lacks the required coverage |
+| `unknown` | evidence does not establish its coverage state |
+| `excluded_by_authority` | a cited owner decision excludes the evaluation within its exact scope |
+
+The [Operational Full Coverage](#operational-full-coverage) predicate evaluates
+these inputs. No state is a fixed verdict: `covered` can conceal unsupported
+capability, and an exclusion can be lawful, prohibited or unresolved. An
+exclusion decision's own authority result remains separately predicate-bound
+under the core decision rule; recording the state supplies no grant.
 
 ### Interaction Coverage
 
@@ -933,6 +1027,21 @@ A frame set has **operational full coverage** for its declared tuple when:
 6. no unresolved frame-result conflict is hidden by aggregation;
 7. excluded evaluations cite governing authority; and
 8. uncovered and unknown residuals are explicit and compatible with the claim.
+
+The exact predicate is “the declared frame set has operational full coverage
+for `Coverage(W, G, B, E, S, T)` under these eight criteria”. Evaluate each
+applicable criterion and required seam through RF-012, then use
+[core conjunction](FOUNDATIONS.md#result-conjunction). Supported satisfaction
+of every required criterion maps to `satisfied`; a demonstrated uncovered
+mandatory evaluation, unlawful exclusion or other defeated criterion maps to
+`falsified`; undecided truth of a required criterion, including whether a
+condition, conflict or residual is compatible with the claim, maps to
+`indeterminate` unless the core precedence preserves an established failure or
+diagnosis. An unusable evaluation basis maps to `invalid_basis`; material scope
+or capability outside the coverage evaluator's frame maps to `out_of_frame`.
+Missing causes or unsupported state labels use the core missing-reason rule.
+Retain the ledger, leaves, actual performance and effects. A successful audit
+can thus establish a falsified coverage claim; an absent audit remains absent.
 
 Operational full coverage is relative to its tuple. It is not a claim that no
 undiscovered evaluation exists.
@@ -1024,18 +1133,10 @@ An agent receives one activated frame or a declared active frame configuration,
 not an implied demand to reconstruct the complete workspace from ambient
 context.
 
-The minimum activation packet contains:
-
-- frame identity and revision;
-- evaluation and result algebra;
-- exact subject and basis;
-- material relations and applicable invariants;
-- semantic, evaluation, operation where material, and decision authority;
-- admissible evidence and tools;
-- capability and context envelope;
-- exclusions and prohibited assumptions;
-- declared frame dependencies or conjunction outputs; and
-- invalidation, stop, and reconfiguration conditions.
+The packet is the RF-017 projection of the bound frame tuple, its identity and
+revision, actual subject, admissible inputs/tools, and stop/reconfiguration
+conditions. [Select And Activate](#select-and-activate) decides sufficiency;
+the binding below exposes these coordinates in a carrier-neutral form.
 
 The agent may own internal reasoning and search where the governing method
 permits it. It returns through the declared result relation. Hidden internal
@@ -1057,7 +1158,7 @@ or another Product-selected carrier without changing the relation.
 
 ## Frame
 - declaration identity and revision:
-- exact evaluation and closed result algebra:
+- exact evaluation and applicable core-result predicate or declared refinement:
 
 ## Subject And Basis
 - exact subject or candidate identity:
@@ -1176,13 +1277,17 @@ universal Product profile and selects no implementation or representation.
   one closed result to urn:example:conjunction:product-change:7
 
 ## Stop And Change
-- invalidation:
+- affected reliance:
   any material subject, checkpoint, Product, dependency, contract, actor,
-  capability, evidence, authority, or topology change
+  capability, evidence, authority, or topology change reopens affected reliance;
+  the historical result retains its original subject and basis; reuse for a
+  new claim requires established applicability under RF-005
 - stop and re-entry:
-  invalid_basis on stale or substituted basis;
+  invalid_basis when the governing basis cannot interpret the bound predicate;
   out_of_frame on missing material scope;
-  indeterminate on unresolved evidence;
+  indeterminate when stale or unresolved supporting evidence leaves the
+  predicate undecidable under an interpretable governing basis, unless other
+  admissible evidence decides it;
   re-enter the owning Product or contract authority when meaning must change
 ```
 
@@ -1222,6 +1327,13 @@ Qualification binds the exact frame revision, actor envelope, evaluation
 family, basis class, and evidence conditions evaluated. It does not generalize
 to an unevaluated population by naming the frame generically.
 
+Apply [Workspace and context](FOUNDATIONS.md#workspace-and-context) when reusing
+that qualification after a source, task, actor or dependency change. Its
+capability evidence covers only the measured or supported envelope; successful
+task use does not measure unknown host context. Conversely, a byte count alone
+does not establish adequate attention to the selected task. These are separate
+claims under the same bound qualification, not interchangeable pass signals.
+
 ### Method Self-Qualification
 
 Qualification of this method uses the constructor, freeze, assessor,
@@ -1240,7 +1352,7 @@ method claims:
 | `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority, and residual boundary; missing authority or evaluation basis refuses |
 | `activate` | exact subject/basis and capable-actor activation succeeds; stale, ambiguous, topology-mismatched, unauthorized, and capability-incompatible activations refuse or return the applicable closed pressure |
 | `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame`, and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |
-| `conjoin` | compatible closed results decide under the declared rule; result conflict, basis mismatch, mandatory indeterminacy, and declared veto return conflict, indeterminate, or refusal without flattening frame meaning |
+| `conjoin` | exercise [core conjunction](FOUNDATIONS.md#result-conjunction): all required claims and joins satisfied; an authenticated applicable failure retained beside missing coverage; invalid composite or required basis; required out-of-frame contribution; and unresolved mandatory contribution. Conflict, veto and refusal remain predicate-bound evidence or decision annotations, never replacement verdicts; preserve the core precedence and every frame's meaning |
 | `translate` | preserved coordinates and provenance reach the target; declared loss remains explicit; identity, basis, authority, or equality mismatch refuses |
 | `audit_coverage` | evaluation, interaction, semantic/operation/decision authority, failure, capability, and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |
 | `revise` | historical failure, topology mutation, evidence change, and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction, and coverage claim requiring reevaluation |
@@ -1300,7 +1412,7 @@ claim:
 # Frame: <stable local identity>
 
 ## Evaluation Family
-<questions, predicates, and closed result algebra>
+<questions, predicates, and applicable core-result refinement>
 
 ## Subject And Basis
 <workspace boundary, exact identity, version/time/topology coordinates>

@@ -1,0 +1,57 @@
+{
+  "protocol_id": "I3-six-task-v1",
+  "shared_wrapper": "actor/shared-wrapper.txt",
+  "tasks": [
+    {
+      "id": "T1",
+      "packet": "actor/tasks/T1.txt",
+      "wrapper_and_packet_file_bytes": 2235,
+      "frame_route": "run://T1/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    },
+    {
+      "id": "T2",
+      "packet": "actor/tasks/T2.txt",
+      "wrapper_and_packet_file_bytes": 2153,
+      "frame_route": "run://T2/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    },
+    {
+      "id": "T3",
+      "packet": "actor/tasks/T3.txt",
+      "wrapper_and_packet_file_bytes": 2071,
+      "frame_route": "run://T3/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    },
+    {
+      "id": "T4",
+      "packet": "actor/tasks/T4.txt",
+      "wrapper_and_packet_file_bytes": 2125,
+      "frame_route": "run://T4/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    },
+    {
+      "id": "T5",
+      "packet": "actor/tasks/T5.txt",
+      "wrapper_and_packet_file_bytes": 1741,
+      "frame_route": "run://T5/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    },
+    {
+      "id": "T6",
+      "packet": "actor/tasks/T6.txt",
+      "wrapper_and_packet_file_bytes": 2044,
+      "frame_route": "run://T6/frame",
+      "case_resources_preloaded": false,
+      "actor_binding": null
+    }
+  ],
+  "byte_measurement_boundary": "UTF-8 file bytes of the shared wrapper plus this task packet only. Excludes candidate frame, host instructions, tool schemas, acquisition and all other runtime context. These counts do not establish active-context fit.",
+  "hidden_oracle": "I3-six-task-oracle-v1.md",
+  "oracle_exposure": "Assessor only; never actor input or an actor acquisition route."
+}

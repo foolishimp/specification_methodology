@@ -1,0 +1,73 @@
+{
+  "basis": "fc7e20a91bcae6c50075c97aec169c6e36f47109",
+  "operation": "pure_compression_replacement_preflight",
+  "result": "pass",
+  "rows": [
+    {
+      "path": "standards/authority_compressions/axiomatic_calculus.compressed.md",
+      "replacement_matches_in_order": [],
+      "source_sha256": "ed7f9723a38622d42ef0d09f56603b70bf9b1c4acdd5478d112b723d0076c70a",
+      "prepared_sha256": "ed7f9723a38622d42ef0d09f56603b70bf9b1c4acdd5478d112b723d0076c70a",
+      "would_change": false
+    },
+    {
+      "path": "standards/authority_compressions/design_module_method.compressed.md",
+      "replacement_matches_in_order": [],
+      "source_sha256": "deb1c8adb618693e040c9d1720769adefc30610b30f0a7b6c2a7b95c059c3871",
+      "prepared_sha256": "deb1c8adb618693e040c9d1720769adefc30610b30f0a7b6c2a7b95c059c3871",
+      "would_change": false
+    },
+    {
+      "path": "standards/authority_compressions/spec_method.compressed.md",
+      "replacement_matches_in_order": [
+        1,
+        1,
+        1
+      ],
+      "source_sha256": "d81af40d543f51e73fa9aa3b98a00924ca137a7690656c6d2aeb41292b689aaa",
+      "prepared_sha256": "55e231e39145b342dbb5d6b522504941d7c85bf025e6aab6b2837c9469793f1a",
+      "would_change": true
+    },
+    {
+      "path": "standards/authority_compressions/stdo_bootstrap.md",
+      "replacement_matches_in_order": [],
+      "source_sha256": "8f21267ef55fd388f9fbc9432dac0664b0b4d3c6c8057c4fe6507385c5e9e24d",
+      "prepared_sha256": "8f21267ef55fd388f9fbc9432dac0664b0b4d3c6c8057c4fe6507385c5e9e24d",
+      "would_change": false
+    },
+    {
+      "path": "standards/authority_compressions/ticket_method.compressed.md",
+      "replacement_matches_in_order": [
+        1
+      ],
+      "source_sha256": "2893ba6f3c0a11c74d86d830188caaab3ce5d1b6605b6e631fd6e1a136192137",
+      "prepared_sha256": "eb06e6861c3fd136be479596df887aea5694edecb9687a89592e144834566a51",
+      "would_change": true
+    },
+    {
+      "path": "standards/authority_compressions/stdo_compressed.md",
+      "replacement_matches_in_order": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_sha256": "74281463b15073207c9636a0b5a5087c0c5c7d7e219ab4e6fdfe218f470adcae",
+      "prepared_sha256": "62984885801425c4a00a5a7ca4b2fc4fb5b530e747ffeb97dc870092fb59835b",
+      "would_change": true
+    }
+  ],
+  "row_count": 6,
+  "replacement_count": 8,
+  "documentary_writes": [],
+  "changed_successor_files": [],
+  "correction": "Ticket selector now starts at A material invalidator within its existing paragraph; replacement starts at Apply with the existing paragraph prefix preserved.",
+  "adapter_change": "Check every authored compression replacement before any documentary write.",
+  "input_sha256": {
+    "integrate.py": "e6ab02af184207fcbb0ec17ed2e02852c76866a156ba79a9badd9d961490bd28",
+    "COMPRESSION_DECISIONS.json": "23c06b50019477ba4b64deef8964bf60ccba71a8cf8a00516e7c9edd40720137",
+    "SOURCE_FAILURE.json": "d4421ace0b6152385dd964279a5b1bd9b928d7fa49a41c86731c2483690dbb44",
+    "ENVIRONMENT_REPAIR.json": "4312ed62d9733088aed2d65cc1d72acfef5376d029169df5cd32cf51b0cabb16"
+  },
+  "standing": "Preparation only. Await corrected parent C_raw before source replay; original failed attempt is preserved."
+}

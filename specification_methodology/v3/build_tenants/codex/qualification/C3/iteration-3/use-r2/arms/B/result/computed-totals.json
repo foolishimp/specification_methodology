@@ -1,0 +1,38 @@
+{
+  "task_id": "T2",
+  "kind": "actual local execution",
+  "case_outputs": [
+    {
+      "case_id": "K1",
+      "expected_contract_total": 5,
+      "actual_outputs": {
+        "p": 5,
+        "q": 1,
+        "r": 5
+      },
+      "q_contract_conformance": false
+    },
+    {
+      "case_id": "K2",
+      "expected_contract_total": 0,
+      "actual_outputs": {
+        "p": 0,
+        "q": 0,
+        "r": 0
+      },
+      "q_contract_conformance": true
+    },
+    {
+      "case_id": "K3",
+      "expected_contract_total": 5,
+      "actual_outputs": {
+        "p": 5,
+        "q": 5,
+        "r": 5
+      },
+      "q_contract_conformance": true
+    }
+  ],
+  "selected_realization": "r",
+  "counterexample_preserved": "K1 q outputs 1; contract requires 5."
+}

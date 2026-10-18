@@ -1,0 +1,1071 @@
+{
+  "schema": "stdo.matched-native-use.oracle.v1",
+  "suite_id": "I3-R2-ORACLE-01-attempt-02",
+  "standing": "frozen independent working-test expectations; no candidate verdict or member acceptance",
+  "common_basis": "355aa8655cca9c6ba6cf5c414f9bea3032ae89fd",
+  "subject_boundary": "Six task families and the explicit cases below. This selected suite is not exhaustive proof of a package, common specification, interpretation, reduction claim, release or adoption.",
+  "actor_packet_delivery": "Deliver only ACTOR_TASKS.json plus the arm-specific activation/ordinary-entry binding. Keep ORACLE.json, acquisition/rationale and all expectations withheld until the actor result is frozen.",
+  "matched_conditions": {
+    "identical_task_bytes": true,
+    "identical_fixture_bytes": true,
+    "arm_specific_fields_only": [
+      "selected package immutable identity",
+      "supported ordinary entry and its routing",
+      "actor identity/configuration and result territory"
+    ],
+    "runner_requirements": [
+      "Verify the exact package subject and ordinary entry without giving supplemental answers.",
+      "Disclose supplied host context, prior participation and exposure.",
+      "Record all ordinary-path acquired material, repeated reads and measurements.",
+      "Do not provide missing package content from another arm.",
+      "Freeze each actor answer before revealing expectations or intervening.",
+      "Treat a rescue/revision or changed task as a new subject, not an unchanged retest."
+    ],
+    "not_verified_here": "Per-arm entries and package subjects are deliberately not inspected by this Author. Runner must bind them before activation; a missing route is a trial-validity fact, not permission to invent a path."
+  },
+  "tasks": [
+    {
+      "task_id": "T1",
+      "family": "evaluation/conjunction",
+      "request": "Construct a component ledger and one recommendation record for each case. Decide whether the required check set supports an approval recommendation, identify the standing of every check, and preserve the supporting observations. Explain what changed between cases.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "E.contract",
+            "owner": "Fixture Product owner",
+            "content": {
+              "subject": "urn:fixture:bundle:17",
+              "basis": "urn:fixture:requirements:4",
+              "required_checks": [
+                "checksum",
+                "retention",
+                "access"
+              ],
+              "recommendation_condition": "All three checks have applicable, authenticated successful assessments of this subject on this basis. Recommendation is separate from owner approval.",
+              "planned_assessments": [
+                "checksum",
+                "access"
+              ],
+              "review_authority": {
+                "checksum": "checker-a",
+                "retention": "checker-b",
+                "access": "checker-c"
+              },
+              "actor_grant": "Evaluate and construct a recommendation record. No actual owner approval or repair."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 536,
+            "content_sha256": "6811341d61218676cac1c6c38c7b925911e216ed2a44a9a37f72e8f9ad52c41c"
+          },
+          {
+            "source_id": "E.evidence",
+            "owner": "Fixture evidence registry",
+            "content": {
+              "authenticity": "Each record below is owner-issued by its named producer and cites the observation identified in evidence. Subject and basis must still be matched to the contract.",
+              "observations": {
+                "obs-41": "For subject 17, checksum expected aa11 but observed bb22.",
+                "obs-42": "For subject 16, access restriction was met.",
+                "obs-43": "For subject 17, access restriction is met.",
+                "obs-44": "For subject 17, retention duration is 30 days as required.",
+                "obs-45": "For subject 17 after the declared independent replacement observation, checksum expected aa11 and observed aa11."
+              }
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 570,
+            "content_sha256": "023f4caa0032a7e4b184e20877d5a5586d3d0a94e9b0a953c374a517c1d9024f"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "E1",
+            "returned_assessments": [
+              {
+                "check": "checksum",
+                "producer": "checker-a",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "failed",
+                "evidence": "obs-41"
+              },
+              {
+                "check": "access",
+                "producer": "checker-c",
+                "subject": "urn:fixture:bundle:16",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-42"
+              }
+            ],
+            "other_assessments": []
+          },
+          {
+            "case_id": "E2",
+            "returned_assessments": [
+              {
+                "check": "checksum",
+                "producer": "checker-a",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "failed",
+                "evidence": "obs-41"
+              },
+              {
+                "check": "access",
+                "producer": "checker-c",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-43"
+              }
+            ],
+            "other_assessments": [
+              {
+                "check": "retention",
+                "producer": "checker-b",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-44"
+              }
+            ]
+          },
+          {
+            "case_id": "E3",
+            "returned_assessments": [
+              {
+                "check": "checksum",
+                "producer": "checker-a",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-45"
+              },
+              {
+                "check": "access",
+                "producer": "checker-c",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-43"
+              }
+            ],
+            "other_assessments": [
+              {
+                "check": "retention",
+                "producer": "checker-b",
+                "subject": "urn:fixture:bundle:17",
+                "basis": "urn:fixture:requirements:4",
+                "judgement": "successful",
+                "evidence": "obs-44"
+              }
+            ]
+          }
+        ]
+      },
+      "required_artifact": "assessment-ledger.json or equivalent structured record, with one component row per required check and a case-level recommendation."
+    },
+    {
+      "task_id": "T2",
+      "family": "construction derivation",
+      "request": "Construct a complete small realization in pseudocode or runnable code, with its Intent → Product → Specification → Realisation trace and preservation argument. Evaluate plans p, q and r against the contract, compute their outputs on all three cases, and supply a concrete counterexample wherever a plan violates the contract. Make any partition precondition explicit. Do not claim a categorical proof unless you supply its required structure and laws.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "K.intent",
+            "owner": "Fixture outcome owner",
+            "content": "Obtain the exact total signed amount of every submitted record. Repeated equal amounts are separate records.",
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 110,
+            "content_sha256": "87891c0fcacad7d8a8ddfb05ae6762811abb711ff0eebfcf7273adc81980b97c"
+          },
+          {
+            "source_id": "K.product",
+            "owner": "Fixture Product owner",
+            "content": {
+              "input": "A finite list of records (unique record_id, signed integer cents).",
+              "output": "One exact integer total_cents.",
+              "boundary": "No submission, release or external effects. Algorithms, technology and sequential or parallel execution are choices.",
+              "identity": "Record identity is record_id; equality of cents does not identify records."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 338,
+            "content_sha256": "6314fd6bfc85685b998a452afde1f07af9dc71744c2f2e26e6a38b41be6bd4c8"
+          },
+          {
+            "source_id": "K.spec",
+            "owner": "Fixture requirement owner",
+            "content": {
+              "requirements": [
+                "Every input occurrence contributes exactly once.",
+                "The empty list produces 0.",
+                "Negative values subtract.",
+                "No approximation or overflow is admitted.",
+                "Any partition preserves all record IDs exactly once."
+              ],
+              "admitted_laws": [
+                "Integer addition is associative.",
+                "Integer addition is commutative.",
+                "0 is the additive identity."
+              ],
+              "number_model": "Mathematical integers; any implementation binding must preserve this model."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 436,
+            "content_sha256": "62f01bada052e878f34344843b15479199adf380d41730ec3d1f0ea5f0efc8fa"
+          },
+          {
+            "source_id": "K.plans",
+            "owner": "Fixture proposed-realization authors",
+            "content": {
+              "plan_p": "Partition by record identity; sum each partition; add partial sums.",
+              "plan_q": "Partition by record identity; replace equal cents values within each partition by one value; sum those distinct values; add partial sums.",
+              "plan_r": "Traverse the original list once and add each cents value to an accumulator initialized to zero."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 336,
+            "content_sha256": "de1d26edffc1c8ae2e643e2c525f40976d2f34c4c3889f7b5e079d726b1c32cc"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "K1",
+            "input": [
+              {
+                "record_id": "r1",
+                "cents": 4
+              },
+              {
+                "record_id": "r2",
+                "cents": 4
+              },
+              {
+                "record_id": "r3",
+                "cents": -3
+              }
+            ],
+            "partition_record_ids": [
+              [
+                "r1",
+                "r2"
+              ],
+              [
+                "r3"
+              ]
+            ]
+          },
+          {
+            "case_id": "K2",
+            "input": [],
+            "partition_record_ids": [
+              [],
+              []
+            ]
+          },
+          {
+            "case_id": "K3",
+            "input": [
+              {
+                "record_id": "r4",
+                "cents": 8
+              },
+              {
+                "record_id": "r5",
+                "cents": -8
+              },
+              {
+                "record_id": "r6",
+                "cents": 5
+              }
+            ],
+            "partition_record_ids": [
+              [
+                "r4"
+              ],
+              [
+                "r5",
+                "r6"
+              ]
+            ]
+          }
+        ]
+      },
+      "required_artifact": "A usable total-cents realization, three concrete output rows, and the bounded derivation/assessment."
+    },
+    {
+      "task_id": "T3",
+      "family": "domain binding",
+      "request": "Construct result records that retain each domain's predicate, original outcome and conditions while using the selected method's result contract. Decide whether D1, D2 and D4 can feed D.consumer. Assess the proposed adapter that changes only CandidateBundle's type name to AcceptedBundle because its fields have the same shape. For D3, determine what is established about the effect and what additional owner evidence a completion claim needs.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "D.archive",
+            "owner": "Archive owner",
+            "content": {
+              "ready": "The payload exists and structural validation passed. No semantic conformance assessment or acceptance decision is performed by this state transition.",
+              "export_type": "CandidateBundle"
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 193,
+            "content_sha256": "c688e1a2fa51fbfd00e52ee41870c70e6556303c374ded6ecefd8755c259d7de"
+          },
+          {
+            "source_id": "D.admission",
+            "owner": "Admission owner",
+            "content": {
+              "ready": "The payload exists, its conformance result is successful, and the named human owner has accepted this exact payload digest. All three conditions are required.",
+              "export_type": "AcceptedBundle",
+              "incomplete_record_rule": "A label without the required conditions does not supply them."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 290,
+            "content_sha256": "e9ccf3129f7af1a737e3719336f439799f655dcf8de4fc599efeb1085fff4252"
+          },
+          {
+            "source_id": "D.dispatch",
+            "owner": "Dispatch owner",
+            "content": {
+              "sent": "A request was issued. Completion depends on an owner receipt; a timeout supplies no completion observation.",
+              "no_effect_rule": "Only an authoritative no-effect observation establishes absence of effect."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 212,
+            "content_sha256": "d867fd032b6659e42361f1a48ef923c2f33415143bb678048d89e42ce0f7dca7"
+          },
+          {
+            "source_id": "D.consumer",
+            "owner": "Deployment owner",
+            "content": {
+              "input_type": "AcceptedBundle",
+              "acceptance_condition": "Payload digest equals certificate subject digest; certificate is issued by human owner dana with decision accept. Successful conformance must also be present.",
+              "actor_grant": "Construct normalized result records and decide input admissibility; no deployment."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 314,
+            "content_sha256": "9cf2a1d5dad39af62b857ca5f7e6eec4bc6e9ae519bfb103d96893d21560714c"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "D1",
+            "domain": "Archive",
+            "label": "ready",
+            "payload_digest": "sha256:payload-a",
+            "structural_validation": "passed",
+            "conformance": "not performed",
+            "certificate": null
+          },
+          {
+            "case_id": "D2",
+            "domain": "Admission",
+            "label": "ready",
+            "payload_digest": "sha256:payload-a",
+            "conformance": "successful",
+            "certificate": {
+              "subject_digest": "sha256:payload-a",
+              "issuer": "dana",
+              "decision": "accept"
+            }
+          },
+          {
+            "case_id": "D3",
+            "domain": "Dispatch",
+            "label": "sent",
+            "request_id": "dispatch-9",
+            "request_recorded": true,
+            "response": "timeout",
+            "owner_receipt": null
+          },
+          {
+            "case_id": "D4",
+            "domain": "Admission",
+            "label": "ready",
+            "payload_digest": "sha256:payload-a",
+            "conformance": "successful",
+            "certificate": {
+              "subject_digest": "sha256:payload-b",
+              "issuer": "dana",
+              "decision": "accept"
+            }
+          }
+        ]
+      },
+      "required_artifact": "Domain result/condition mapping and consumer-admissibility decisions with a concrete adapter counterexample."
+    },
+    {
+      "task_id": "T4",
+      "family": "release/adoption",
+      "request": "Construct a decision memo for every case identifying what release and consumer-selection actions the evidence and exact grants support. State the consumer's effective basis after the authorized decisions and distinguish the staging install from those decisions. Identify any exact missing or mismatched decision.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "L.product",
+            "owner": "Fixture release Product owner",
+            "content": {
+              "candidate": "release-7",
+              "manifest_digest": "sha256:manifest-seven",
+              "required_members": [
+                "method",
+                "guide"
+              ],
+              "release_rule": "Release requires successful exact-candidate member and integrated checks and the direct human release decision from remy for this candidate and manifest.",
+              "release_actor_grant": "Construct a release/adoption decision memo; no actual publication."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 367,
+            "content_sha256": "779646cb4da4881c234f70a491d55ba633415f7c1f65fc74fe31c709a34445bc"
+          },
+          {
+            "source_id": "L.consumer",
+            "owner": "Consumer Product owner",
+            "content": {
+              "consumer": "consumer-c",
+              "selected_basis": {
+                "release": "release-6",
+                "manifest_digest": "sha256:manifest-six"
+              },
+              "adoption_rule": "Only human owner arden may adopt a release for consumer-c, naming the release and manifest digest. Publication or installation alone does not change the selected basis."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 293,
+            "content_sha256": "bdc1266867f0db2cb3f09b6445de050ae2eaf1196a76cdf0992fff364cda508c"
+          },
+          {
+            "source_id": "L.evidence",
+            "owner": "Fixture release registry",
+            "content": {
+              "all_cases": "Member and integrated checks are successful, current and authenticated for release-7/manifest-seven. The release-7 files are present in a staging install. These observations are not release or adoption decisions.",
+              "decisions": "Every decision object shown below is authentic; whether it covers the required subject is still to be evaluated."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 355,
+            "content_sha256": "1b2f73a364547849e49a5f4c68069dc8644298f3a5ebade63e094b81c13ea505"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "L1",
+            "release_decision": null,
+            "adoption_decision": null
+          },
+          {
+            "case_id": "L2",
+            "release_decision": {
+              "issuer": "remy",
+              "release": "release-7",
+              "manifest_digest": "sha256:manifest-seven",
+              "decision": "release"
+            },
+            "adoption_decision": null
+          },
+          {
+            "case_id": "L3",
+            "release_decision": {
+              "issuer": "remy",
+              "release": "release-7",
+              "manifest_digest": "sha256:manifest-seven",
+              "decision": "release"
+            },
+            "adoption_decision": {
+              "issuer": "arden",
+              "consumer": "consumer-c",
+              "release": "release-7",
+              "manifest_digest": "sha256:manifest-seven",
+              "decision": "adopt"
+            }
+          },
+          {
+            "case_id": "L4",
+            "release_decision": {
+              "issuer": "remy",
+              "release": "release-7",
+              "manifest_digest": "sha256:manifest-seven",
+              "decision": "release"
+            },
+            "adoption_decision": {
+              "issuer": "arden",
+              "consumer": "consumer-c",
+              "release": "release-7",
+              "manifest_digest": "sha256:manifest-other",
+              "decision": "adopt"
+            }
+          }
+        ]
+      },
+      "required_artifact": "One case table containing release standing, permitted simulated action, consumer basis and supporting decision coordinates."
+    },
+    {
+      "task_id": "T5",
+      "family": "work recovery",
+      "request": "Resume the work into a durable handoff for each case. Produce the complete current index artifact, classify every retained artifact/result by applicability, reconcile the cached account with current owner observations, and decide the next notice action and the remaining destination obligations. Record performed local construction separately from proposed external effects.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "W.outcome",
+            "owner": "Fixture outcome owner",
+            "content": {
+              "destination": [
+                "Produce the index of current dataset record IDs, sorted ascending.",
+                "Retain a successful style assessment for the current style bytes.",
+                "Ensure one notice with transaction identity notice-44 has been delivered; at most one submission is allowed."
+              ],
+              "notice_payload": "Dataset processing has started.",
+              "dependencies": {
+                "index": [
+                  "dataset"
+                ],
+                "style_assessment": [
+                  "style_bytes"
+                ],
+                "notice_delivery": [
+                  "notice-44 owner observation"
+                ]
+              }
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 438,
+            "content_sha256": "6a81772b8867135d1c62a6082f45ebf8cd787b1c19118531853d28aac50d23de"
+          },
+          {
+            "source_id": "W.workspace",
+            "owner": "Fixture workspace owner",
+            "content": {
+              "current_dataset": {
+                "revision": "data-2",
+                "records": [
+                  {
+                    "id": "b"
+                  },
+                  {
+                    "id": "a"
+                  },
+                  {
+                    "id": "c"
+                  }
+                ]
+              },
+              "previous_dataset": {
+                "revision": "data-1",
+                "records": [
+                  {
+                    "id": "b"
+                  },
+                  {
+                    "id": "a"
+                  }
+                ]
+              },
+              "style_bytes_identity": "style-9",
+              "existing_index": {
+                "dataset_revision": "data-1",
+                "ids": [
+                  "a",
+                  "b"
+                ]
+              },
+              "partial_index": {
+                "dataset_revision": "data-2",
+                "ids": [
+                  "a",
+                  "b"
+                ],
+                "complete": false
+              },
+              "style_assessment": {
+                "subject": "style-9",
+                "result": "successful",
+                "evidence": "style-check-19"
+              },
+              "notice_attempt_journal": {
+                "transaction": "notice-44",
+                "entry": "attempt started; outcome was not durably recorded"
+              }
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 540,
+            "content_sha256": "e5f2f771afc733595c6ceb6b35cd956345d2111d1abaa5497fc2aac04fc918d6"
+          },
+          {
+            "source_id": "W.cached_handoff",
+            "owner": "Previous actor summary; non-authoritative account",
+            "content": {
+              "summary": "All local work is complete; current index has a,b; the notice was not sent.",
+              "basis": "data-1",
+              "created_before_current_observation": true
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 148,
+            "content_sha256": "92872ebe0785f076b8f1836b28147580cf789857fe601d2f9347a9d97801a51e"
+          },
+          {
+            "source_id": "W.recovery",
+            "owner": "Fixture operation owner",
+            "content": {
+              "observation_route": "Use the case's owner_projection for notice-44. It is the complete current owner answer for the declared transaction.",
+              "grant": "Complete the local index artifact, preserve applicable independent results, and propose one notice submission only when the owner projection establishes it has never been submitted. No actual external calls in this trial.",
+              "effect_contract": "No idempotent retry facility exists. Unknown completion/attempt state does not authorize another submission. A definitive never_submitted observation is authoritative under an exclusive lease; no concurrent submitting actor exists during this trial.",
+              "after_submission": "A permitted submission is not a delivery receipt; completion still needs a current owner delivery observation."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 774,
+            "content_sha256": "283e75c776c0b40ffe31b1d518cb2d0a1c648d48a9145c97164a289c0f4f4f5f"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "W1",
+            "owner_projection": {
+              "transaction": "notice-44",
+              "state": "delivered",
+              "receipt": "delivery-301",
+              "payload": "Dataset processing has started."
+            }
+          },
+          {
+            "case_id": "W2",
+            "owner_projection": {
+              "transaction": "notice-44",
+              "state": "unknown",
+              "reason": "The owner cannot establish whether the recorded attempt reached delivery."
+            }
+          },
+          {
+            "case_id": "W3",
+            "owner_projection": {
+              "transaction": "notice-44",
+              "state": "never_submitted",
+              "exclusive_lease": "lease-52",
+              "reason": "Owner reconciled the local attempt journal with its submission store and establishes no submission occurred."
+            }
+          }
+        ]
+      },
+      "required_artifact": "Current-index JSON and a recovery handoff for each case, retaining dependencies, evidence, next permitted action and unresolved work."
+    },
+    {
+      "task_id": "T6",
+      "family": "intake/carrier selection",
+      "request": "Triage every request, determine the earliest governing description that needs change, identify the existing authority/carrier or the exact missing input, and construct the smallest justified work record or amendment. For an authorized local case, include the concrete resulting label or configuration. Distinguish a required process step from an optional organizational choice and state why any additional carrier is necessary.",
+      "initial_fixture_state": {
+        "sources": [
+          {
+            "source_id": "I.product",
+            "owner": "Fixture Product owner",
+            "content": {
+              "maximum_export_records": 1000,
+              "worker_count_range": [
+                1,
+                4
+              ],
+              "required_export_behavior": "Export every admitted record exactly once; reject a batch above the maximum.",
+              "reserved_decisions": "Changing maximum_export_records requires Product owner priya's decision."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 260,
+            "content_sha256": "37bb67c64b3aecf9bdd3e6ed4c97264e523d6b4192f7ffe1819bbe1279b72d21"
+          },
+          {
+            "source_id": "I.design",
+            "owner": "Fixture accepted design owner",
+            "content": {
+              "ui_text": "The label displays the Product maximum; it owns no separate maximum.",
+              "worker_count": "A configurable integer from 1 through 4; selecting a value inside that range changes no Product or accepted design obligation."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 226,
+            "content_sha256": "fbf36e346644d4121568aa40e0ad55ebb528ca6375ce1afad48f1f9c64a23622"
+          },
+          {
+            "source_id": "I.work",
+            "owner": "Fixture work authority",
+            "content": {
+              "carrier_w17": {
+                "kind": "existing admitted work record",
+                "id": "work-17",
+                "outcome": "Correct the displayed maximum to match the Product.",
+                "grant": "Writer may change the label only and record its evidence in work-17.",
+                "assessment": "The exact displayed value is checked against I.product; no independent assessment is separately required for this local change."
+              },
+              "carrier_w18": {
+                "kind": "existing admitted work record",
+                "id": "work-18",
+                "outcome": "Run the admitted worker configuration at 2.",
+                "grant": "Writer may set worker_count to 2 and record evidence in work-18.",
+                "assessment": "Confirm value remains within I.product and I.design. No separate independent assessment is selected."
+              },
+              "capability": "One capable actor can hold every dependency of each local task. No optional coordination profile is selected.",
+              "carrier_policy": "These existing work records admit the exact actions stated. Their headings or file extensions supply no extra authority. New distinct work may be proposed through ordinary intake but is not already admitted."
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 1026,
+            "content_sha256": "55ff9e0e98dcade4a312989cf3a0eb1618576960d49370aac268ac8bda99d231"
+          },
+          {
+            "source_id": "I.observations",
+            "owner": "Fixture workspace owner",
+            "content": {
+              "displayed_label": "Maximum 100 records",
+              "worker_count": 1,
+              "performance_measurements": "No latency target or observed latency was supplied.",
+              "owner_routes": {
+                "Product change": "priya via Product decision record",
+                "missing outcome or work scope": "work owner via the request intake record"
+              }
+            },
+            "content_encoding": "UTF-8 canonical JSON: sorted keys, separators comma/colon, ensure_ascii=false; no terminal newline",
+            "content_bytes": 284,
+            "content_sha256": "25b8c550faeeedd744ff4a236b2203d960aad31b0cafd5f112e2f376f6d45b50"
+          }
+        ],
+        "cases": [
+          {
+            "case_id": "I1",
+            "request": "Make the displayed maximum match the Product.",
+            "selected_work": "work-17"
+          },
+          {
+            "case_id": "I2",
+            "request": "Make batches of 2000 records admissible.",
+            "selected_work": "work-17",
+            "additional_owner_decision": null
+          },
+          {
+            "case_id": "I3",
+            "request": "Set worker_count to 2.",
+            "selected_work": "work-18"
+          },
+          {
+            "case_id": "I4",
+            "request": "Make it fast enough.",
+            "selected_work": null,
+            "target_or_effect_grant": null
+          }
+        ]
+      },
+      "required_artifact": "Four bounded intake decisions/work-record amendments containing outcome, scope, authority, concrete result or unresolved dependency, evidence and re-entry destination."
+    }
+  ],
+  "expectations": [
+    {
+      "task_id": "T1",
+      "sources": [
+        "REQ#bounded-transitions-and-reference-frames",
+        "REQ#single-result-algebra-requirement",
+        "CONF#member-conformance"
+      ],
+      "rationale": "Plan membership does not authenticate evidence, missing coverage does not erase an authenticated failure, and all checks succeeding supports a different decision from the adverse cases.",
+      "assertions": [
+        {
+          "id": "T1.1",
+          "expected_semantics": "E1 withholds the approval recommendation; checksum remains a known failure.",
+          "required_witness": "Names obs-41 and its aa11/bb22 mismatch on subject 17."
+        },
+        {
+          "id": "T1.2",
+          "expected_semantics": "E1 access is not discharged by the returned successful judgement.",
+          "required_witness": "Names subject 16 versus target subject 17; planned membership is insufficient."
+        },
+        {
+          "id": "T1.3",
+          "expected_semantics": "E1 retention remains unperformed required coverage, separately from the checksum failure and wrong-subject access evidence.",
+          "required_witness": "Includes retention despite its absence from planned_assessments."
+        },
+        {
+          "id": "T1.4",
+          "expected_semantics": "E2 still withholds the recommendation because checksum failed, although retention and access are now supported.",
+          "required_witness": "Preserves obs-41 and recognizes obs-43/44."
+        },
+        {
+          "id": "T1.5",
+          "expected_semantics": "E3 supports an approval recommendation within the fixture grant; actual owner approval has not occurred.",
+          "required_witness": "All checks bound to subject 17/basis 4, with obs-43/44/45; no invented owner approval."
+        }
+      ],
+      "forbidden": [
+        "Promoting E1 or E2 to successful overall eligibility.",
+        "Erasing the checksum failure because another result is invalid or missing.",
+        "Treating retention as optional because it was not planned.",
+        "Blanket refusal in E3 without a specific additional supported dependency."
+      ],
+      "allowed_variation": [
+        "The package may report a case-level invalid basis, failure, or unresolved composite in E1 if all component distinctions survive and recommendation is withheld. Exact enum spelling is not graded."
+      ]
+    },
+    {
+      "task_id": "T2",
+      "sources": [
+        "INTENT#direction",
+        "PRODUCT#method-structure",
+        "REQ#categorical-demonstration-standard",
+        "REQ#build-tenant-binding-requirement",
+        "CONF#member-conformance"
+      ],
+      "rationale": "The task demands a working refinement whose obligations survive construction; a shape-preserving but meaning-changing rewrite loses duplicate occurrences.",
+      "assertions": [
+        {
+          "id": "T2.1",
+          "expected_semantics": "The delivered realization computes exact sum with empty identity 0 and all occurrences counted; it is usable from the given input contract.",
+          "required_witness": "Pseudocode/code distinguishes record_id from cents and uses exact arithmetic or explicitly enforces that binding."
+        },
+        {
+          "id": "T2.2",
+          "expected_semantics": "Plan p is lawful conditional on complete disjoint partition coverage; plan r is lawful.",
+          "required_witness": "Connects associativity/identity to partition-and-combine, and ties both realizations to every occurrence."
+        },
+        {
+          "id": "T2.3",
+          "expected_semantics": "Plan q is invalid for the full input contract.",
+          "required_witness": "K1: valid total 5; q yields 1 because the duplicate 4 is removed."
+        },
+        {
+          "id": "T2.4",
+          "expected_semantics": "All plans produce 0 in K2 and 5 in K3; agreement on those inputs does not rescue q.",
+          "required_witness": "Returns case outputs, including empty partitions and cancellation."
+        },
+        {
+          "id": "T2.5",
+          "expected_semantics": "The derivation distinguishes requirements, supplied arithmetic laws, and implementation choices.",
+          "required_witness": "Names the obligations preserved from each source; no inference that a successful example or schema proves universal preservation."
+        }
+      ],
+      "forbidden": [
+        "Treating duplicate amounts as one record.",
+        "Adding approximation or overflow tolerance.",
+        "Rejecting a lawful sequential plan solely for lacking parallelism, a graph runtime or a named coordination hierarchy.",
+        "Claiming general validity of q from K2/K3."
+      ],
+      "allowed_variation": [
+        "Any valid algorithm and representation passes. A category/functor claim is optional; if volunteered it must meet its own evidence boundary. No unique file or category decomposition is expected."
+      ]
+    },
+    {
+      "task_id": "T3",
+      "sources": [
+        "REQ#single-result-algebra-requirement",
+        "REQ#single-ownership-requirement",
+        "CONF#member-conformance"
+      ],
+      "rationale": "Domain labels are not results without predicates and meaning conditions. Candidate availability, successful assessment, acceptance and effect completion must remain distinguishable.",
+      "assertions": [
+        {
+          "id": "T3.1",
+          "expected_semantics": "D1 establishes candidate availability/structural validity, while semantic assessment was not performed and acceptance is absent. It cannot feed D.consumer.",
+          "required_witness": "Retains Archive domain meaning instead of mapping ready to general approval."
+        },
+        {
+          "id": "T3.2",
+          "expected_semantics": "D2 may feed D.consumer on the declared conditions.",
+          "required_witness": "Matches payload-a, successful conformance and dana's exact accept certificate."
+        },
+        {
+          "id": "T3.3",
+          "expected_semantics": "D4 cannot feed D.consumer despite its ready label and successful conformance.",
+          "required_witness": "Names payload-a versus certificate payload-b."
+        },
+        {
+          "id": "T3.4",
+          "expected_semantics": "D3 has an issued request with unknown completion; neither completed nor no effect is established.",
+          "required_witness": "Retains dispatch-9 and asks for the owner completion/no-effect observation, without pretending timeout answers it."
+        },
+        {
+          "id": "T3.5",
+          "expected_semantics": "The type-renaming adapter is insufficient.",
+          "required_witness": "D1 is the concrete same-shape input with absent acceptance; a lawful adaptation must obtain the required authority/evidence rather than rename fields."
+        }
+      ],
+      "forbidden": [
+        "Mapping not-performed semantic assessment to an undecidable performed assessment without retaining the distinction.",
+        "Mapping unknown dispatch completion to no effect or completion.",
+        "Inferring authority from type/field similarity.",
+        "Blanket rejection of D2."
+      ],
+      "allowed_variation": [
+        "Several core mappings may be available for different explicit predicates. Grade the predicate/outcome relation and preserved conditions, not a required core enum or encoding. No particular optional profile must be adopted."
+      ]
+    },
+    {
+      "task_id": "T4",
+      "sources": [
+        "PRODUCT#product-boundary",
+        "PRODUCT#source-project-construction",
+        "PRODUCT#construction-authority",
+        "REQ#single-result-algebra-requirement",
+        "CONF#construction-and-integrated-closure"
+      ],
+      "rationale": "Availability and successful assessment supply evidence, while release and adoption depend on distinct exact owner decisions.",
+      "assertions": [
+        {
+          "id": "T4.1",
+          "expected_semantics": "L1 does not support release or consumer adoption; consumer-c remains on release-6/manifest-six.",
+          "required_witness": "Names missing remy release decision despite green checks/staging install."
+        },
+        {
+          "id": "T4.2",
+          "expected_semantics": "L2 supports release-7 release, while consumer-c remains on release-6/manifest-six.",
+          "required_witness": "Distinguishes remy's authority from arden's adoption authority."
+        },
+        {
+          "id": "T4.3",
+          "expected_semantics": "L3 supports release and adoption; the resulting selected basis is release-7/manifest-seven.",
+          "required_witness": "Matches both exact subject decisions."
+        },
+        {
+          "id": "T4.4",
+          "expected_semantics": "L4 supports release but not this consumer adoption; selected basis remains release-6/manifest-six.",
+          "required_witness": "Names manifest-other versus manifest-seven; authentic issuer alone is insufficient."
+        },
+        {
+          "id": "T4.5",
+          "expected_semantics": "All conclusions stay within a simulated decision memo.",
+          "required_witness": "Does not report actual publication, installation stamping or consumer mutation as performed."
+        }
+      ],
+      "forbidden": [
+        "Treating staging presence or successful checks as human release acceptance.",
+        "Making release automatically update every consumer.",
+        "Accepting a wrong-manifest adoption record.",
+        "Blanket refusal of L3 despite the stated complete evidence and grants."
+      ],
+      "allowed_variation": [
+        "Status words and memo format are free. The fixture decides its human-authority requirement; this is not a universal demand for human intervention at every method transition."
+      ]
+    },
+    {
+      "task_id": "T5",
+      "sources": [
+        "INTENT#what-it-achieves",
+        "PRODUCT#construction-and-context-management",
+        "REQ#bounded-transitions-and-reference-frames",
+        "REQ#single-result-algebra-requirement",
+        "CONF#member-conformance"
+      ],
+      "rationale": "Reacquisition must use current persistent state. A changed dataset invalidates only dependent work; an interrupted request requires owner evidence rather than replay from private belief.",
+      "assertions": [
+        {
+          "id": "T5.1",
+          "expected_semantics": "The constructed current index is data-2 with ids a,b,c in order. The earlier complete index and partial output do not establish completion on data-2.",
+          "required_witness": "Produces the actual index artifact, naming the changed dependency and missing c."
+        },
+        {
+          "id": "T5.2",
+          "expected_semantics": "The style-9 result with style-check-19 remains applicable and is retained.",
+          "required_witness": "Its declared dependency is unchanged and independent of the dataset/notice."
+        },
+        {
+          "id": "T5.3",
+          "expected_semantics": "W1 consumes delivery-301, records delivery established and proposes no second submission.",
+          "required_witness": "Corrects the cached no-notice account using owner_projection."
+        },
+        {
+          "id": "T5.4",
+          "expected_semantics": "W2 retains unknown effect standing and does not propose resubmission; local index progress and style result remain usable.",
+          "required_witness": "Identifies the missing delivery/absence observation and holds the dependent completion claim."
+        },
+        {
+          "id": "T5.5",
+          "expected_semantics": "W3 permits one proposed submission under lease-52; it does not claim the notice delivered before a new delivery observation.",
+          "required_witness": "Uses definitive never_submitted evidence, the exact grant and after_submission condition."
+        }
+      ],
+      "forbidden": [
+        "Restarting or discarding the whole workspace solely because the actor is fresh.",
+        "Reusing the data-1 index as current.",
+        "Treating absent receipt or cached no-notice statement as no effect in W2.",
+        "Resubmitting W1 or W2.",
+        "Claiming W3 delivery completed by merely authorizing/proposing a submission."
+      ],
+      "allowed_variation": [
+        "Index and handoff layout are free. A conservative unresolved final outcome is valid where supported, but it must retain and construct permitted local progress. No complete-history replay is required by this fixture."
+      ]
+    },
+    {
+      "task_id": "T6",
+      "sources": [
+        "PRODUCT#method-structure",
+        "PRODUCT#construction-and-context-management",
+        "REQ#bounded-transitions-and-reference-frames",
+        "REQ#foundational-reduction-requirement",
+        "CONF#member-conformance"
+      ],
+      "rationale": "The same workspace can admit a local realization change while a different request needs its owning Product decision or a missing outcome/grant. Existing sufficient carriers and actor capability matter; a familiar role sequence supplies no authority.",
+      "assertions": [
+        {
+          "id": "T6.1",
+          "expected_semantics": "I1 is an authorized local correction: result Maximum 1000 records under work-17, with no Product change.",
+          "required_witness": "Names I.product as label owner and carries the label-only grant and check."
+        },
+        {
+          "id": "T6.2",
+          "expected_semantics": "I2 cannot proceed under work-17; the requested 2000 limit changes Product meaning and needs priya's decision at Product re-entry.",
+          "required_witness": "Names 1000-to-2000 conflict and the scope of work-17, without changing the requirement to pass."
+        },
+        {
+          "id": "T6.3",
+          "expected_semantics": "I3 can set worker_count to 2 under work-18 within accepted range 1..4.",
+          "required_witness": "Does not confuse a permitted configuration value with a new Product or design obligation."
+        },
+        {
+          "id": "T6.4",
+          "expected_semantics": "I4 remains unresolved for scope/effect execution: acquire the intended measurable outcome and an admitted work grant from the stated owner route.",
+          "required_witness": "Does not invent a latency target or interpret vague intent as a mutation grant; read-only intake remains available."
+        },
+        {
+          "id": "T6.5",
+          "expected_semantics": "I1/I3 use or adequately amend the existing admitted work records; additional mandatory ceremony is not inferred from labels alone.",
+          "required_witness": "If extra carrier/coordination is chosen, it is identified as a justified choice or cites an applicable actual method requirement, not an invented universal necessity."
+        }
+      ],
+      "forbidden": [
+        "Editing the Product maximum under a label-only grant.",
+        "Rejecting I3 solely because the configured number differs from current state.",
+        "Making unknown target/grant in I4 unrestricted permission.",
+        "Presenting the names Writer/Executive or a new ticket as the source of authority."
+      ],
+      "allowed_variation": [
+        "Change-class spellings and record format are not graded. Optional coordination or an additional carrier is not itself a semantic failure when justified and lawful; its acquisition/reconciliation cost remains reportable. Generic direct entry must remain possible for the sufficient local cases."
+      ]
+    }
+  ],
+  "grading": {
+    "two_separate_findings": [
+      "Trial validity: exact subject/entry, supplied context, exposure, authority and measurement conditions.",
+      "Task semantics: the assertions, concrete witnesses, forbidden outcomes and preserved uncertainties for each case."
+    ],
+    "semantic_rule": "A task semantically matches only if every assertion is met and no forbidden outcome occurs. Missing material output is unresolved, an explicit contrary decision is a mismatch. No aggregate score erases a known failure or missing task.",
+    "check_record": {
+      "assertion_id": "one of the frozen assertion IDs",
+      "result": "met | contradicted | not established",
+      "actor_evidence": "exact response location and quoted or faithfully extracted decision",
+      "basis": "fixture source and applicable selected-package clause",
+      "note": "semantic difference or remaining uncertainty"
+    },
+    "partial_credit": "Report met/contradicted/not-established counts only as coverage; there is no numerical pass threshold or implicit candidate acceptance.",
+    "labels": "Compare predicates, permissions, obligations, dependency distinctions and effects. Never require the oracle's names, result enum spellings, file layout, role inventory, profile, technology or internal algorithm.",
+    "positive_controls": "Blanket refusal does not pass cases with complete declared authority/evidence (E3, lawful construction plans, D2, L3, permitted local recovery and I1/I3).",
+    "uncertainty": "Keep unknown effect, unperformed evaluation, wrong-subject evidence, unsupported outcome/grant and known failure separate. A locally reasonable label cannot conceal a forbidden promotion.",
+    "route_absence": "An actor must report an absent supported method route. Its semantic result may be unresolved, but do not attribute that to candidate semantics until an authorized evaluator establishes the actual package/route and trial validity.",
+    "adjudication": "If an unanticipated lawful interpretation satisfies the supplied laws, retain it as an explicit ambiguity for independent adjudication. Do not rewrite this frozen oracle after seeing answers. A changed expectation requires a new suite identity and fresh trials.",
+    "comparison_limits": "Record acquisition, reconciliation and adverse differences against both comparison subjects separately. This oracle alone does not establish reduction or overall improvement."
+  },
+  "declared_choices_and_ambiguities": [
+    "The synthetic Product authorities and effect grants are explicit fixture assumptions, held constant for all arms. They do not stand in for real project authority.",
+    "No mandatory core-result spelling is selected. Different algebra presentations can preserve the same semantic decisions.",
+    "Construction permits exact serial or exact partitioned algorithms and any suitable carrier. No graph, category encoding or hierarchical actor arrangement is preferred.",
+    "Result composition may choose a case-level failure/invalid/unresolved label under the package law, but each authenticated failure and unmet obligation must survive.",
+    "I4 is intentionally missing an outcome and effect grant; requesting those is an expected unresolved work boundary, not missing hidden fixture text.",
+    "The grading assertions test these case decisions and actual constructed artifacts. They do not accept member-local or integrated candidate design."
+  ],
+  "author_owning_sources": {
+    "INTENT": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/INTENT.md",
+    "REQ": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/requirements/README.md",
+    "CONF": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/conformance/README.md",
+    "PRODUCT": "git:355aa8655cca9c6ba6cf5c414f9bea3032ae89fd:specification_methodology/v3/specification/PRODUCT.md",
+    "builder_author_process": [
+      "stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#minimal-frame-activation-binding",
+      "stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020",
+      "stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+      "stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#assurance-subject-acquisition-and-evaluation"
+    ]
+  },
+  "no_candidate_assessment": true,
+  "no_member_acceptance": true
+}

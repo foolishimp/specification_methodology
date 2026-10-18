@@ -1,0 +1,45 @@
+{
+  "schema": "stdo.matched-native-use.self-check.v1",
+  "checked_utc": "2026-10-14T10:51:58.024513+00:00",
+  "subject": "Author-owned oracle artifact consistency only; this is not independent candidate assessment.",
+  "checks": {
+    "json_parses": true,
+    "six_selected_families": true,
+    "identical_actor_and_oracle_tasks_and_fixtures": true,
+    "unique_case_and_assertion_ids": true,
+    "fixture_source_hashes_and_byte_counts_match": true,
+    "oracle_only_fields_absent_from_actor_packet": true,
+    "arithmetic_counterexample_recomputed": true,
+    "recovery_index_and_retained_style_dependency_checked": true,
+    "builder_manifest_and_selected_acquired_member_hashes_match": true,
+    "independent_case_evidence_catalogue_scope_explicit": true
+  },
+  "case_count": 21,
+  "assertion_count": 30,
+  "arithmetic_results": [
+    {
+      "case_id": "K1",
+      "p": 5,
+      "q": 1,
+      "r": 5
+    },
+    {
+      "case_id": "K2",
+      "p": 0,
+      "q": 0,
+      "r": 0
+    },
+    {
+      "case_id": "K3",
+      "p": 5,
+      "q": 5,
+      "r": 5
+    }
+  ],
+  "limits": [
+    "Self-check verifies artifact integrity and selected fixture calculations. It does not establish semantic oracle completeness or independence by itself.",
+    "No comparison actor has run within this activation. No package or candidate verdict is made."
+  ],
+  "suite_id": "I3-R2-ORACLE-01-attempt-02-r2",
+  "revision_note": "The source-scoping ambiguity found during self-review is corrected in the r2 subject; original artifacts are preserved in superseded-pre-delivery-r1."
+}

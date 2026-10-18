@@ -1,0 +1,35 @@
+{
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "rows": [
+    {
+      "path": "standards/authority_compressions/stdo_compressed.md",
+      "affected_source_sections": "STDO_REFERENCE_FRAME_BASELINE#reviewer-result-and-triage-projection; SPEC_METHOD#drift-signals; DESIGN_MODULE_METHOD#8-totality-rule",
+      "replacements": [
+        {
+          "before": "  Reviewer does not implement repairs, direct repair operations, apply an STDO\n  disposition, or authorize continuation. Executive",
+          "after": "  Reviewer does not edit the candidate, direct the repair, apply an STDO\n  disposition, or authorize continuation. Executive"
+        }
+      ],
+      "comparison": "The exact no-candidate-edit and no-repair-direction bars now match the Baseline owner, including a nonrepair edit with a separate write grant. Reporting required behavior and independent recheck remain permitted; those acts do not grant mutation. Other affected core/source rules retain their applicability."
+    },
+    {
+      "path": "standards/authority_compressions/spec_method.compressed.md",
+      "affected_source_sections": "SPEC_METHOD#drift-signals",
+      "replacements": [],
+      "comparison": "The body neither exhausts the permitted control responses nor substitutes an automatic reprice for intake. Its affected owning section preserves existing conditions; retain the body and refresh current source pins. This bounded author comparison supplies no new full-fidelity judgment."
+    },
+    {
+      "path": "standards/authority_compressions/design_module_method.compressed.md",
+      "affected_source_sections": "DESIGN_MODULE_METHOD#8-totality-rule",
+      "replacements": [],
+      "comparison": "The body neither exhausts the permitted control responses nor substitutes an automatic reprice for intake. Its affected owning section preserves existing conditions; retain the body and refresh current source pins. This bounded author comparison supplies no new full-fidelity judgment."
+    },
+    {
+      "path": "standards/authority_compressions/stdo_bootstrap.md",
+      "affected_source_sections": "SPEC_METHOD#drift-signals; DESIGN_MODULE_METHOD#8-totality-rule",
+      "replacements": [],
+      "comparison": "The body neither exhausts the permitted control responses nor substitutes an automatic reprice for intake. Its affected owning section preserves existing conditions; retain the body and refresh current source pins. This bounded author comparison supplies no new full-fidelity judgment."
+    }
+  ],
+  "standing": "Author comparison for final repair; independent readback follows the complete freeze."
+}

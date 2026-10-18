@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/design-module-method/v1
 source_ref: ../DESIGN_MODULE_METHOD.md
-source_digest: e7bad43a60fe283ee65c22bb6d0059937b70ab1cff78c5227faad8b360043018
+source_digest: 0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -14,6 +14,13 @@ stale_if_source_digest_changes: true
 # DESIGN_MODULE_METHOD Compressed Authority
 
 ## Governing Claim
+
+The member separates generic design-contract law selected by Spec from an
+adoptable realization profile. UP-016–019 and module-derived unit-proof law
+apply to their declared relations. Using that law does not adopt the remaining
+Ontology, Prime/IACS, functional-realization, diagram or language policies.
+The profile-specific chain below applies at the boundary that adopts it, with
+its source-owned conditions and exceptions.
 
 A design module derives one realization contract between requirements and code.
 Its accepted Ontology is the prior semantic-design authority for entities,
@@ -49,18 +56,27 @@ Implementation and tests cannot select or accept the affected semantic answer.
 The Ontology remains subordinate to constitutional `WHAT`. It may not invent
 product meaning.
 
-This asset projects `DESIGN_MODULE_METHOD.md` only. It is standalone for
-DMM-owned decisions, including IACS revision, but cannot close the SPEC-owned
-`STDO-UP-022` assurance decision. For that decision, route to the digest-current
-SPEC source or compression, or to the aggregate STDO compression.
+This asset projects `DESIGN_MODULE_METHOD.md`. Its decisions consume the shared
+result and contract owners cited by that method. Transformation admission
+consumes [Spec's enclosing-admission contract](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021),
+including its reason-sensitive result mapping and trust-boundary validation.
+Acquire material shared conditions and Spec-owned assurance obligations from
+their owners or sufficient projections. A local DMM summary cannot close them.
 
 Inside the SPEC-declared product-assurance bounded context, DMM owns the
 module-derived `Unit Test` concept and proof relation. Unit proof derives from
 module ownership and the accepted Ontology/design basis; it does not acquire
 Product-level UAT or acceptance authority.
 
-This rule applies only to the named boundary where the project adopts this
-method. A material semantic boundary changes identity, authority, lifecycle,
+That proof applies Foundations' assertion/observation and parallel-provenance
+relations to the accepted module obligations and the actual executed module.
+An ownership trace alone proves neither assertion fidelity nor observation
+adequacy. An implementation-discovered test needs justified re-expression
+against the module obligation before it supplies module closure; the existing
+carriers and adoption conditions remain.
+
+The Ontology realization profile applies to the named boundary where the
+project adopts it. A material semantic boundary changes identity, authority, lifecycle,
 public contract, externally observable Product meaning, cross-module topology,
 or accepted effect or closure law. The Ontology verdict may share the existing
 design pack and acceptance; it requires no extra document, ticket, or ceremony.
@@ -82,8 +98,11 @@ independent reason for the gate.
 Design/implementation bidirectionality carries evidence, counterexamples,
 falsification, and reconciliation, never reverse semantic authority.
 Implementation cannot select a missing semantic answer or rewrite upstream
-truth to legalize itself. Material semantic surprise gates the affected
-decision set; serial code repair does not establish design acceptance.
+truth to legalize itself. Established architectural ambiguity gates the
+affected decision set; serial code repair does not establish design acceptance.
+Repeated or cross-cutting surprises enter Universal Intake Triage. Its diagnosis
+selects a bounded design reframe when design is underconstrained and governing
+requirements remain sufficient; a surprise alone does not decide the cause.
 
 A design boundary is decision-complete only when its complete source-defined
 material-relation set—entities, identities, relationships, cardinalities,

@@ -1,0 +1,28 @@
+{
+  "kind": "stdo.i3-r3-conservation-pre-final-checks",
+  "preimage_hashes": {
+    "CONSERVATION.json": "ba889c03501f5487faade7e0e8e108f9b43b993bd6cb803489a1ae3fa4c43483",
+    "FRONTIER.json": "10337c7c6e9f1a32283c331d42b3c73f8159530b1aae20ca4b7e7eb527ad8a0d",
+    "PORT_ACCOUNT.json": "b12ed6886c74219f672cc5137868d71ae7a5fa04c47fbb98265080869deb03af",
+    "review-repair/conservation/RECONCILIATION.json": "2a80909de4fbbc6068bdf511e307b97c088c0c93df12765a5757b0228dcfbebe"
+  },
+  "deterministic_reconciliation": {
+    "exit_code": 0,
+    "four_outputs_byte_identical": true
+  },
+  "pending_frozen_pin_refusal": {
+    "exit_code": 1,
+    "draft_valid": true,
+    "valid": false,
+    "failure_codes": [
+      "source_freeze"
+    ]
+  },
+  "wrong_source_inventory_refusal": {
+    "source_commit": "2476713d315c00ac61d336a3281d67e4a384d4ce",
+    "exit_code": 1,
+    "reason": "Inventory must bind the exact complete frozen source commit"
+  },
+  "four_outputs_preserved": true,
+  "limits": "Reproducibility and guard behavior; no independent semantic or acceptance claim."
+}

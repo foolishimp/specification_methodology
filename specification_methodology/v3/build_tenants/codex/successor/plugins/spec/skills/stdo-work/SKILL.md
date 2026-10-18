@@ -17,8 +17,12 @@ verified selection; that selection grants no work or mutation authority.
 
 ## Acquire The Responsibility Frame
 
+Resolve the member and section routes below through Product Basis Selection’s
+**Acquire A Member From The Selected Basis** procedure. Their root is the
+verified basis, independent of the plugin installation location.
+
 After the exact Product basis is selected, resolve the selected cut's
-[standards index](../../../../standards/README.md) and the accepted Project
+`standards/README.md` and the accepted Project
 Reference-Frame Basis for the responsibility named by the task. This is read-only
 acquisition inside an already-authorized inspection scope. Effectful work still
 needs its separately admitted work contract; acquisition is not another admission
@@ -46,160 +50,88 @@ its owning definition in the selected frame.
 Read the selected frame and the actual subject. Follow material source and
 coupled-obligation references when the task needs them. The view alone makes no
 universal sufficiency claim and supplies no role, effect or decision grant.
+If symbolic acquisition is material, follow the selected package's
+`interpretation/README.md`. Verify its
+document-source inventory and declared encoding/checker basis before consuming
+a projection, and re-enter its named sources for unresolved conditions. An
+interpretation's structural validity does not establish permission or semantic
+fidelity. A source package selected as an assessment subject remains distinct
+from the actor's operative installed method basis.
 Do not load the corpus merely because it is present. If coupled material does
 not fit the capable activation, retain the unknown and use an already-authorized
 refinement, support or stop; do not silently reduce the required predicate.
 
 ## Classify From The Available Evidence
 
-Apply the selected basis's `SPEC_METHOD.md` intake and agentic-construction
-rules. Use declared source/worksite/proof tools to compute the affected owner
-and authority-layer routes, the complete relevant Public serialized membership
-and value delta, and accepted-design trace coverage. Bind their exact inputs,
-producer, output and freshness. A file diff alone is not a Public comparison;
-an existing trace is not a judgment of semantic sufficiency. Missing targets,
-serialization or trace mappings remain explicit unknowns. Do not invent a
-tool result or make the STDO distribution manager a worksite analyzer.
+Apply the selected basis's `standards/SPEC_METHOD.md#universal-intake-triage`
+and `standards/SPEC_METHOD.md#computed-classification-and-treatment`
+to this worksite and requested outcome. Those owners determine the classification
+and re-entry; this skill routes their application without another deciding table.
+Use declared source/worksite/proof tools for the complete relevant Public member
+and value delta, authority routes and accepted-design trace coverage. Missing
+tools, targets or mappings remain unknown. The distribution manager is not a
+worksite analyzer, and a file diff is not a complete Public comparison.
 
-Reuse applicable computed facts and recorded classification/materiality
-judgments from the existing work carrier. Check the question, subject, basis,
-support and revising observation; a different role alone does not require
-reclassification. Judge only the residual needed to select the smallest lawful
-path and record its basis once. An unresolved owner choice stays with its owner.
-Use one bounded discriminator when it can resolve a material unknown.
-
-Distinguish a failed candidate from a changed requested outcome. If a helper
-edit violates an unchanged Public requirement, reject or repair the candidate
-inside the existing grant. Re-enter the requirement owner when the selected
-outcome needs changed governing meaning. Candidate bytes cannot choose that
-outcome or enlarge the grant.
+Acquire the library's `standards/TRANSFORMATION_LIBRARY.md#contract-application`
+from the selected frame or its exact owner. Bind it to the intake predicate,
+current subject and actual grant. Reuse supported facts and owner judgments;
+a role change alone requires no new derivation. Judge only the residual needed
+to choose the lawful path. Keep a failed candidate distinct from a changed
+requested outcome. Repricing belongs to the owner of the missing meaning.
 
 ## Establish The Work Basis
 
-1. Establish applicable upstream work authority under the verified definition
-   and immutable basis. Without it, stop before
-   selecting a carrier; a ticket cannot substitute for that authority. Then
-   select the first applicable source for one run-scoped execution contract:
+Use `standards/TICKET_METHOD.md#work-carrier-to-execution-rule`
+and its `standards/TICKET_METHOD.md#execution-contract-admission`
+on the already-authorised work. The former selects a carrier by the obligation's
+lifetime; the latter binds the exact contract, admission mechanism, authority,
+result surface and evidence. Read the deciding clauses before a dependent effect
+when they are not already in the sufficient current frame.
 
-   - reuse an exact admitted durable ticket when it covers the work;
-   - otherwise require one authorized durable ticket only when work or an
-     obligation needs independent state beyond its admitted sprint or, outside
-     a sprint, beyond the current run;
-   - otherwise use the admitted sprint plus one manifest-local iteration entry
-     when the work ends by sprint close; or
-   - otherwise use an intake draft for work that ends in the current run.
+Continue on an exact existing instruction or admitted grant when it covers this
+contract. Record that binding once. Do not request the same permission again,
+self-admit from a draft, or invoke `stdo-ticket` merely because no ticket exists.
+An unavailable result surface or unresolved authority returns its actual cause
+before effect. An exact human override retains the original admission finding.
 
-   Do not invoke `stdo-ticket` automatically. Absence of a ticket neither
-   requires nor authorizes creating one.
-2. Bind the contract's current Goal or exact work instruction, `change_intent`,
-   change class, re-entry point, `target_truth`, relevant `superseded_truth`,
-   `closure_law`, governing requirement and accepted design, checkpoint,
-   affected relation set, write territory, evaluation criteria, non-closure
-   conditions, proof surface, and one Product-bound durable result/evidence
-   surface. If that result surface is unavailable or unauthorized, admission
-   must refuse.
-3. Validate and admit or reject that exact contract. Drafting, admission, and
-   execution may occur in the same invocation, but ticket presence, `active`
-   status, a generic work request, or the model's own draft cannot supply
-   admission. Continue only after deterministic admission or an exact human
-   override of the bounded contract. Record the Product-bound admitting
-   mechanism and authority, exact contract identity or digest, decision, and
-   evidence. If those coordinates are absent, return the missing authority and
-   stop.
-   Consume an existing exact owner instruction or admitted grant when it
-   already covers this contract; cite it instead of requesting the same
-   authorization again. Record the binding, not another approval round.
-4. Re-enter at the first changed layer and flow forward:
-
-   - requirement change: establish the successor/current requirement as the
-     sole operative truth; supersede or withdraw a published live domain
-     artifact instead of mutating it in place;
-   - design change: admit the structural decision before implementation relies
-     on it; or
-   - realization change: prove upstream Goals, Intent, Product, requirements,
-     and accepted design remain unchanged.
-5. If work discovers an obligation that needs state beyond its local carrier
-   boundary, do not claim closure or create a ticket without authority. Persist
-   it only when the current exact grant already includes ticket-state mutation
-   for that obligation. Otherwise retain it in the contract's named durable
-   result/evidence surface or an already-authorized enclosing carrier, mark
-   closure withheld, and return the required re-entry plus an explicit
-   `stdo-ticket` route without invoking it. A conversation return alone is not
-   durable evidence.
+Use the owner's treatment to re-enter and flow forward. A surviving obligation
+uses the contract's durable result surface or an already-authorised enclosing
+carrier. Creating or mutating a ticket requires its actual grant. If needed,
+return the explicit `stdo-ticket` route without invoking it automatically;
+a conversation return alone cannot discharge a durable recording duty.
 
 ## Construct And Prove
 
-Use the accepted Project Reference-Frame Basis to determine applicable
-evaluations, including those required by an affected owner. A known false
-condition omits that evaluation; an unknown condition needs a bounded
-resolution or explicit residual. Missing required results cannot count as
-satisfied. Availability of a frame does not require activating it.
+Apply `standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020`
+to the selected causal cone. Its construction, assessment and disposition
+predicates remain distinct. The accepted frame configuration determines the
+required evaluations and actor arrangement. Direct Writer entry needs no
+additional coordinator when one sufficient context and grant covers the work.
+Required independence still requires a capable independent actor.
 
-When that basis permits direct Writer use and one sufficient context/grant
-covers the outcome, construct directly without an additional Executive,
-Reviewer or durable ticket. Activate coordination for a material dependency,
-authority or context boundary. While occupying Executive, do not edit files or
-Git state; the same actor must first enter a separately bound Writer activation.
-An actual independence requirement still needs an independent capable actor.
-One exact Writer grant may cover its declared construction, status and checkpoint
-sequence. Record actual role transitions; unchanged status alone does not need
-a new activation or wholesale rehash. Refresh bindings on material change.
+A coordinating actor with no mutation grant changes explicitly to its bound
+Writer activation before effects. One exact Writer grant may cover the declared
+construction, status and checkpoint sequence; unchanged status does not require
+a new activation or wholesale rehash. Refresh material changed bindings.
 
-1. Work inside the smallest coherent causal cone and exact write territory.
-   Read material producers, consumers and owners across that cone within the
-   access grant; narrow write territory is not a narrower reasoning boundary.
-   Return cross-territory repairs to their owner.
-   Preserve solution space where variation cannot change a governed property.
-2. Implement and self-review the bounded change.
-3. Derive tests through:
+Construct within the granted write territory and inspect the material relations
+needed by the causal cone. Return cross-territory repairs to their owner.
+Select proof by applying
+`standards/SPEC_METHOD.md#transition-evidence-and-proof-cadence`
+from the verified basis, including its material owner dependencies, to the
+affected work and intended claim. Preserve failed and incomplete evidence.
 
-   ```text
-   work carrier -> triage -> re-entry -> requirement/design/module/closure law
-   ```
+Before a candidate return, use the governing contract's affected evidence and
+closure conditions. The library's shared application/result contracts retain
+uncertain effects, independent findings, material joins and unresolved coverage;
+they do not convert a review event into completion. Repricing records the actual
+consequence and treatment of affected obligations in the existing carrier.
+An undisclosed architectural change is not accepted by “continue”.
 
-4. Use the cheapest focused falsifier adequate for the claim. Add integration,
-   installed-development, harnessed sandbox, or live sandbox evidence only
-   where the Product claim requires it. A real probabilistic boundary requires
-   a live lane.
-5. Reconcile authority, design, implementation, tests, and displaced rival
-   paths before claiming a candidate.
-   Consume established facts while their exact subject, basis, scope,
-   provenance and validity apply. Function boundaries alone do not invalidate
-   them; mutation, rollback, authority/basis change and actual trust boundaries
-   retain their applicable checks. For material computational composition or
-   recurrence, inspect the complete path and its accumulated work under the
-   owning design and optional frame refinement. Qualify declared workloads and
-   operational assumptions rather than inferring adequacy from local green.
-   Retire superseded responsibility; retained mechanisms need a supported
-   obligation, owner, purpose, scope and cost, and temporary ones a removal
-   trigger. Audit affected test predicates against the supported operating and
-   threat model; an excluded threat cannot require a replacement guard.
-6. Return the exact candidate and stop at a delegated return boundary.
-   Product-owned decision authority, or an
-   authorized Executive when that profile is adopted, decides whether Product,
-   qualification, release, risk, or admitted-work law requires independence
-   and separately activates `stdo-review`.
-
-Keep reusable judgments and owner rulings in the existing carrier: exact
-question, subject/basis, supporting computed evidence, actor and authority,
-conclusion, scope, uncertainty and revising observation. Preserve the original
-owner ruling separately from interpretation. Invalidate the affected claim
-when its support changes; retain unrelated valid results. Reuse does not
-manufacture an owner ruling or satisfy required independent assessment.
-
-On repricing, retain, supersede, defer or withdraw each affected obligation with
-its owner/evidence links in this carrier. Present the short consequence delta;
-"continue" does not accept an undisclosed architectural change. An authorized
-preservation checkpoint can keep unfinished work with its predecessor,
-territory, concurrent-writer disposition and durable evidence; it claims no
-acceptance or publication.
-
-Evaluate closure as the conjunction of satisfied applicable obligations,
-valid supporting evidence, required judgments/rulings and absence of an active
-non-closure condition. A review event is not completion. Record a satisfied
-bounded result under the existing state-mutation grant; withhold only the
-affected claim when a condition is missing. Qualification, publication and
-consumer adoption retain their separate conditions.
+Return at a delegated boundary. The actor with current decision authority selects
+the next permitted action or activates `stdo-review` when its owning conditions
+require independent review. Qualification, publication and consumer adoption
+retain their separate predicates and grants.
 
 ## Return
 

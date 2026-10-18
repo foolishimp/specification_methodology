@@ -1,0 +1,499 @@
+{
+  "task_id": "T3",
+  "mapping_contract": "Map each qualified domain outcome using its owner-defined predicate and all stated conditions. Availability, conformance, acceptance and effect completion are separate predicates. The original label never supplies missing conditions.",
+  "cases": [
+    {
+      "case_id": "D1",
+      "original_record": {
+        "case_id": "D1",
+        "domain": "Archive",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "structural_validation": "passed",
+        "conformance": "not performed",
+        "certificate": null
+      },
+      "fixture_sources": [
+        "D.archive",
+        "D.admission",
+        "D.consumer"
+      ],
+      "method_citations": [
+        "result",
+        "typed_composition",
+        "admission_join",
+        "frame_conjunction"
+      ],
+      "results": [
+        {
+          "predicate": "Archive.ready: payload exists and structural validation passed",
+          "subject": "sha256:payload-a",
+          "basis": "D.archive",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "domain": "Archive",
+            "label": "ready",
+            "export_type": "CandidateBundle"
+          },
+          "evidence": [
+            "D1.payload_digest",
+            "D1.structural_validation",
+            "D.archive"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "Payload semantically conforms",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission",
+          "verdict": "indeterminate",
+          "performance": "not_performed",
+          "original_domain_outcome": {
+            "domain": "Archive",
+            "conformance": "not performed"
+          },
+          "evidence": [
+            "D1.conformance"
+          ],
+          "unresolved_obligations": [
+            "Obtain the required semantic conformance result."
+          ],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "The named owner accepted this exact payload digest",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission + D.consumer",
+          "verdict": "indeterminate",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "certificate": null,
+            "acceptance_transition": "not performed by Archive.ready"
+          },
+          "evidence": [
+            "D1.certificate",
+            "D.archive"
+          ],
+          "unresolved_obligations": [
+            "An authentic acceptance certificate from dana for payload-a is absent."
+          ],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        }
+      ],
+      "consumer_admissibility": {
+        "predicate": "This supplied record satisfies D.consumer input conditions",
+        "subject": "sha256:payload-a",
+        "basis": "D.consumer",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "admissible": false,
+          "reason": "CandidateBundle supplies neither successful conformance nor an exact dana acceptance certificate."
+        },
+        "evidence": [
+          "D1",
+          "D.archive",
+          "D.consumer"
+        ],
+        "unresolved_obligations": [
+          "Successful conformance and exact owner acceptance are required before feeding the consumer."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_action": "Retain CandidateBundle and return missing conditions; do not feed D.consumer or deploy.",
+      "dependencies": [
+        "D.archive defines ready locally.",
+        "D.consumer requires the accepted type and its conditions."
+      ],
+      "unresolved": [
+        "Semantic conformance remains unassessed.",
+        "Acceptance of payload-a is not established."
+      ]
+    },
+    {
+      "case_id": "D2",
+      "original_record": {
+        "case_id": "D2",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-a",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "fixture_sources": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "method_citations": [
+        "result",
+        "typed_composition",
+        "admission_join",
+        "frame_conjunction"
+      ],
+      "results": [
+        {
+          "predicate": "Admission.ready: payload exists, conformance succeeds and dana accepts this exact digest",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission + D.consumer",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "domain": "Admission",
+            "label": "ready",
+            "export_type": "AcceptedBundle",
+            "certificate": {
+              "subject_digest": "sha256:payload-a",
+              "issuer": "dana",
+              "decision": "accept"
+            }
+          },
+          "evidence": [
+            "D2.payload_digest",
+            "D2.conformance",
+            "D2.certificate"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "Payload semantically conforms",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "conformance": "successful"
+          },
+          "evidence": [
+            "D2.conformance"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "Dana accepted this exact payload digest",
+          "subject": "sha256:payload-a",
+          "basis": "D.consumer",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "decision": "accept",
+            "certificate": {
+              "subject_digest": "sha256:payload-a",
+              "issuer": "dana",
+              "decision": "accept"
+            }
+          },
+          "evidence": [
+            "D2.certificate"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        }
+      ],
+      "consumer_admissibility": {
+        "predicate": "This supplied record satisfies D.consumer input conditions",
+        "subject": "sha256:payload-a",
+        "basis": "D.consumer",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "admissible": true,
+          "type": "AcceptedBundle"
+        },
+        "evidence": [
+          "D2.payload_digest",
+          "D2.conformance",
+          "D2.certificate"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_action": "Record admissibility to D.consumer in the simulation; no deployment.",
+      "dependencies": [
+        "Certificate subject equals payload-a; issuer dana; decision accept.",
+        "Successful conformance present."
+      ],
+      "unresolved": []
+    },
+    {
+      "case_id": "D3",
+      "original_record": {
+        "case_id": "D3",
+        "domain": "Dispatch",
+        "label": "sent",
+        "request_id": "dispatch-9",
+        "request_recorded": true,
+        "response": "timeout",
+        "owner_receipt": null
+      },
+      "fixture_sources": [
+        "D.dispatch"
+      ],
+      "method_citations": [
+        "result",
+        "workspace",
+        "typed_composition"
+      ],
+      "results": [
+        {
+          "predicate": "Dispatch.sent: request dispatch-9 was issued",
+          "subject": "dispatch-9",
+          "basis": "D.dispatch",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "domain": "Dispatch",
+            "label": "sent",
+            "request_recorded": true,
+            "response": "timeout"
+          },
+          "evidence": [
+            "D3.request_recorded",
+            "D3.response",
+            "D.dispatch"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "The requested dispatch-9 operation at the dispatch owner's effect boundary.",
+            "observation": "unknown",
+            "known_part": "The request was issued.",
+            "unknown_part": "Whether the destination effect completed."
+          }
+        },
+        {
+          "predicate": "The dispatch-9 effect has completed",
+          "subject": "dispatch-9",
+          "basis": "D.dispatch",
+          "verdict": "indeterminate",
+          "performance": "unconfirmed",
+          "original_domain_outcome": {
+            "owner_receipt": null,
+            "response": "timeout"
+          },
+          "evidence": [
+            "D3.owner_receipt",
+            "D3.response"
+          ],
+          "unresolved_obligations": [
+            "An authoritative owner completion receipt for dispatch-9 and its bound effect is required."
+          ],
+          "effects": {
+            "boundary": "Completion of the effect requested by dispatch-9.",
+            "observation": "unknown"
+          }
+        }
+      ],
+      "consumer_admissibility": {
+        "applicable": false,
+        "reason": "D3 is a dispatch observation, not a bundle input candidate."
+      },
+      "permitted_action": "Return unknown effect completion and request the owner's bound receipt/reconciliation; the fixture grants no retry or deployment.",
+      "dependencies": [
+        "Only D.dispatch's owner receipt establishes completion.",
+        "Only an authoritative no-effect observation can establish effect absence."
+      ],
+      "unresolved": [
+        "Completion is unknown.",
+        "No authoritative no-effect observation is supplied."
+      ],
+      "completion_evidence_needed": "An authentic dispatch-owner receipt linked to dispatch-9, its exact requested effect/subject and current observation boundary, showing completed outcome. A no-effect observation would settle absence instead, not satisfy completion."
+    },
+    {
+      "case_id": "D4",
+      "original_record": {
+        "case_id": "D4",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-b",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "fixture_sources": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "method_citations": [
+        "result",
+        "typed_composition",
+        "admission_join",
+        "frame_conjunction"
+      ],
+      "results": [
+        {
+          "predicate": "Admission.ready: payload exists, conformance succeeds and dana accepts this exact digest",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission + D.consumer",
+          "verdict": "falsified",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "domain": "Admission",
+            "label": "ready",
+            "claimed_export_type": "AcceptedBundle",
+            "certificate": {
+              "subject_digest": "sha256:payload-b",
+              "issuer": "dana",
+              "decision": "accept"
+            }
+          },
+          "evidence": [
+            "D4.payload_digest",
+            "D4.certificate",
+            "D.admission"
+          ],
+          "unresolved_obligations": [
+            "The acceptance certificate is for payload-b; payload-a's required acceptance join fails."
+          ],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "Payload semantically conforms",
+          "subject": "sha256:payload-a",
+          "basis": "D.admission",
+          "verdict": "satisfied",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "conformance": "successful"
+          },
+          "evidence": [
+            "D4.conformance"
+          ],
+          "unresolved_obligations": [],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        },
+        {
+          "predicate": "The supplied certificate accepts the exact payload-a digest",
+          "subject": "sha256:payload-a",
+          "basis": "D.consumer",
+          "verdict": "falsified",
+          "performance": "performed",
+          "original_domain_outcome": {
+            "certificate": {
+              "subject_digest": "sha256:payload-b",
+              "issuer": "dana",
+              "decision": "accept"
+            },
+            "decision_scope": "payload-b"
+          },
+          "evidence": [
+            "D4.certificate",
+            "D4.payload_digest"
+          ],
+          "unresolved_obligations": [
+            "An authentic dana accept certificate for payload-a is required."
+          ],
+          "effects": {
+            "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+            "observation": "not_requested"
+          }
+        }
+      ],
+      "consumer_admissibility": {
+        "predicate": "This supplied record satisfies D.consumer input conditions",
+        "subject": "sha256:payload-a",
+        "basis": "D.consumer",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "admissible": false,
+          "reason": "Certificate subject digest payload-b differs from payload-a."
+        },
+        "evidence": [
+          "D4.certificate",
+          "D4.payload_digest",
+          "D.consumer"
+        ],
+        "unresolved_obligations": [
+          "Exact-subject acceptance is missing."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "permitted_action": "Refuse this input to D.consumer and retain the raw ready label and certificate; do not repair the certificate by relabelling.",
+      "dependencies": [
+        "Digest equality is a required semantic join, not a layout comparison.",
+        "D4's successful conformance remains independently usable."
+      ],
+      "unresolved": [
+        "Acceptance of payload-a is not established; the supplied decision concerns payload-b."
+      ]
+    }
+  ],
+  "adapter_assessment": {
+    "proposal": "Rename CandidateBundle to AcceptedBundle because fields have the same shape.",
+    "verdict": "falsified",
+    "performance": "performed",
+    "predicate": "This adapter preserves D.admission and D.consumer's preconditions, authority and exact-identity joins.",
+    "counterexample": {
+      "input": "D1",
+      "available": "payload-a exists and structural validation passed",
+      "missing": [
+        "semantic conformance success",
+        "dana's acceptance of payload-a"
+      ],
+      "renamed_output": "An AcceptedBundle label with those same missing conditions",
+      "consumer_result": "inadmissible"
+    },
+    "additional_witness": "D4 has the claimed ready label and a certificate, but its certificate names payload-b. A type name cannot repair that join either.",
+    "required_adapter": "Carry exact payload identity, successful conformance and an authentic matching dana certificate; validate all consumer conditions and return refusal/unresolved when any is absent or mismatched. Producing evidence and obtaining an owner decision require their actual grants.",
+    "source_citations": [
+      "D.archive",
+      "D.admission",
+      "D.consumer"
+    ],
+    "method_citations": [
+      "typed_composition",
+      "result",
+      "admission_join"
+    ]
+  },
+  "dependencies": [
+    "D.archive",
+    "D.admission",
+    "D.dispatch",
+    "D.consumer"
+  ],
+  "unresolved": "Per-case unknowns remain explicit; no deployment or owner decision is performed."
+}

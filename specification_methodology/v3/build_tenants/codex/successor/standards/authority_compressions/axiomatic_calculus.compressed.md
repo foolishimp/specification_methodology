@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/axiomatic-calculus/v1
 source_ref: ../AXIOMATIC_CALCULUS.md
-source_digest: 8e12cf05f173bf29c740e6a501ac1c477276a7c02f33e5b6502ef77f314b7c09
+source_digest: 16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -24,8 +24,11 @@ It makes no claim of universal applicability, logical completeness,
 consistency, decidability, soundness, or category-theoretic status except where
 separately proved for an exact scope.
 
-Exact predecessor STDO principles derive `a_c`; application to any subject is
-a separately owned downstream relation. Keep three governed layers distinct:
+The predecessor clauses record historical derivation provenance. The selected
+cut's F1–F6 commitments and shared laws supply operative premises; the calculus
+owns its additional signature, classifications and policy. Neither set of
+premises uniquely forces these choices. Application to a subject is separately
+owned. Keep three governed layers distinct:
 
 ```text
 a_c       = pure constitutional calculus
@@ -151,9 +154,13 @@ projection, overlay, transformation, and encoding.
   `domain_resolution`, `codomain_resolution`, `decision: equal`, and
   non-empty `evidence`. Both resolution tuples are exactly field-equal; missing,
   duplicate, extra, or differently resolved witnesses refuse.
-- A judgment points to an unchanged exact subject and binds kind, digest,
-  basis, evaluator, authority, decision, evidence, provenance, and time.
-  Judgment does not transform, reissue, or rename its subject.
+- A judgment points to an unchanged exact subject and carries the predicate,
+  core verdict, actual evaluation performance and observed effects, alongside
+  its kind, digest, basis, evaluator, authority, original domain decision,
+  evidence, provenance, residuals and time. Its exact closed signature and
+  reason-sensitive domain mapping are owned by AC-014. A domain decision is
+  not another verdict enum. Judgment does not transform, reissue, or rename
+  its subject.
 
 ## Traversal Functor Kinds
 
@@ -179,13 +186,11 @@ adjudication under an exact identity and grant; human presence grants no
 ambient authority.
 
 These generic identities are introduced by `a_c`. They are not imported from
-an equal-spelled graph, runtime, ODD, or application shorthand. Exact
-predecessor Reference Frame Position/Evaluation clauses supply probabilistic
-construction as a bounded evaluation class; `STDO-UP-020` supplies delegated
-probabilistic construction, exact candidate production, and
-construction-versus-assessment separation. The remaining derivation provenance
-supplies human-adjudication, authority, evidence, and refusal principles;
-nominal spelling supplies no import or equivalence.
+an equal-spelled graph, runtime, ODD, or application shorthand. Predecessor
+Reference Frame and `STDO-UP-020` clauses motivate the evaluation,
+construction, assessment and authority distinctions. The calculus selects the
+three kinds as its own policy; historical provenance is not a theorem forcing
+that inventory. Nominal spelling supplies no import or equivalence.
 
 Actor, executor, domain operation, and functor kind are distinct. Named
 operations such as `Interpret`, `Encode`, `Serialize`, and `Measure` are not

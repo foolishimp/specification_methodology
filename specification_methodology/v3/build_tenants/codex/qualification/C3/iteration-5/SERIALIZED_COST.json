@@ -1,0 +1,62 @@
+{
+  "kind": "stdo.i5.serialized-artifact-cost",
+  "measurement_script_sha256": "88fe49fb062267d3bd3db72b32a3d5ba5f8457f9a75a70c573f1158967e885b8",
+  "published_artifacts": {
+    "preceding_I4": {
+      "commit": "62318d3b0be35985a0397aa39daee0ec8836eabc",
+      "members": {
+        "source-account.json": {
+          "bytes": 6496353,
+          "sha256": "06c53fad38a8381d93e08a8668dbad121d1a504a7756a8246ae8c6b591fbc0b9"
+        },
+        "program.json": {
+          "bytes": 18050219,
+          "sha256": "3fafe4c17269fe84b985faa8a43b5f7e3fda4c4505b5b9ffd42dad3ac609bc70"
+        },
+        "map.json": {
+          "bytes": 18269126,
+          "sha256": "aaf09ccf45fafe6d05778a854f4c38b0161aaf3daa86edb818b6c2f2d34a31a0"
+        }
+      },
+      "total_bytes": 42815698
+    },
+    "current_I5": {
+      "commit": "b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5",
+      "members": {
+        "source-account.json": {
+          "bytes": 6699671,
+          "sha256": "f60bc6b31da51213305e352b8bdea6995b348601a1c38961c7764155c1bc2a9f"
+        },
+        "program.json": {
+          "bytes": 14385733,
+          "sha256": "952be5b4a599caa0ef6bb9cf2a2be23a56cde1dd441579b82690123c60711754"
+        },
+        "map.json": {
+          "bytes": 14601381,
+          "sha256": "e9e5049c46cd459ad01ed7f1b9aa58d10ba5b6e64e993a148b57465650f6c615"
+        }
+      },
+      "total_bytes": 35686785
+    }
+  },
+  "same_input_factoring": {
+    "receipt_commit": "fd450061c39a5fbb10625c99b64a52b518d1d00e",
+    "receipt_path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/interpretation/TOOLING_CHECK.json",
+    "receipt_sha256": "accf44de9d284584ae86e9045bc32c204f1f85c3d066a2c7136e583c4fbda8c7",
+    "semantic_input_commit": "62318d3b0be35985a0397aa39daee0ec8836eabc",
+    "semantic_account_sha256": "06c53fad38a8381d93e08a8668dbad121d1a504a7756a8246ae8c6b591fbc0b9",
+    "program_and_map_bytes": {
+      "expanded": 36319345,
+      "referenced": 28081901
+    },
+    "saved_bytes": 8237444,
+    "exact_expansion": true
+  },
+  "limits": [
+    "The fixed-I4 comparison isolates qualification-reference factoring.",
+    "Current-I5 totals also contain new obligations and metadata; they do not isolate the optimization.",
+    "The pinned native map format still copies the program clauses.",
+    "Serialized bytes are neither peak RSS nor retained context, attention or task-completion cost.",
+    "Native session cost, active host context and comparative practical efficiency remain unmeasured."
+  ]
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "case_id": "K1",
+    "input": [
+      {
+        "record_id": "r1",
+        "cents": 4
+      },
+      {
+        "record_id": "r2",
+        "cents": 4
+      },
+      {
+        "record_id": "r3",
+        "cents": -3
+      }
+    ],
+    "partition_record_ids": [
+      [
+        "r1",
+        "r2"
+      ],
+      [
+        "r3"
+      ]
+    ],
+    "required_total_cents": 5,
+    "outputs": {
+      "p": 5,
+      "q": 1,
+      "r": 5
+    },
+    "matches_this_case": {
+      "p": true,
+      "q": false,
+      "r": true
+    }
+  },
+  {
+    "case_id": "K2",
+    "input": [],
+    "partition_record_ids": [
+      [],
+      []
+    ],
+    "required_total_cents": 0,
+    "outputs": {
+      "p": 0,
+      "q": 0,
+      "r": 0
+    },
+    "matches_this_case": {
+      "p": true,
+      "q": true,
+      "r": true
+    }
+  },
+  {
+    "case_id": "K3",
+    "input": [
+      {
+        "record_id": "r4",
+        "cents": 8
+      },
+      {
+        "record_id": "r5",
+        "cents": -8
+      },
+      {
+        "record_id": "r6",
+        "cents": 5
+      }
+    ],
+    "partition_record_ids": [
+      [
+        "r4"
+      ],
+      [
+        "r5",
+        "r6"
+      ]
+    ],
+    "required_total_cents": 5,
+    "outputs": {
+      "p": 5,
+      "q": 5,
+      "r": 5
+    },
+    "matches_this_case": {
+      "p": true,
+      "q": true,
+      "r": true
+    }
+  }
+]

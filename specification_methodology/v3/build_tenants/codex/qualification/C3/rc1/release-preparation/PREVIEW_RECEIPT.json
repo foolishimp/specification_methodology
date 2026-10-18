@@ -1,0 +1,94 @@
+{
+  "byte_preservation": {
+    "all_exported_members_match_git_blobs": true,
+    "document_inventory_count": 81,
+    "document_inventory_failures": []
+  },
+  "effects": {
+    "dependency_acquisition": "Exact selected installed theory files and tagged checker blobs copied into scratch only",
+    "external_calls": false,
+    "git_mutations": false,
+    "installer_called": false,
+    "scratch_root": "/private/tmp/codex-rc1-review-bundle-d1b33480b4"
+  },
+  "excluded_by_existing_install_payload": [
+    "README.md",
+    "interpretation/FRAMES.md",
+    "interpretation/MAPPING.json",
+    "interpretation/README.md",
+    "interpretation/SIGNATURE.md",
+    "interpretation/SOURCE_INVENTORY.json",
+    "interpretation/bindings.py",
+    "interpretation/map.json",
+    "interpretation/program.json",
+    "interpretation/source-account.json"
+  ],
+  "existing_loader_probe": {
+    "manifest_construction_refusal": "Cut v3.0.0-rc.1 has no release note at releases/v3.0.0.md",
+    "original_frozen_layout": {
+      "refusal": "Cut v3.0.0-rc.1 must contain exactly one STDO project layout at specification/standards, specification_methodology/specification/standards or specification_methodology/v3/specification/standards; found none"
+    },
+    "plugin_member_count": 17,
+    "promoted_layout_selected_root": "specification_methodology/v3",
+    "standards_member_count": 62,
+    "standards_member_set_sha256": "8642127892820ef304ff58b23f33aa8148cf8ae9d7ebf1e0c4b1a083e7391acc"
+  },
+  "interpretation_probe": {
+    "cohort_program_and_source_binding_ready": false,
+    "encoding_theory": {
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "member": "standards/AXIOMATIC_CALCULUS.md",
+      "member_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "release_uri": "stdo://releases/v2.5.1-rc.2/"
+    },
+    "map_binds_program": true,
+    "map_intrinsic_digest_valid": true,
+    "program_uri": "urn:codex-stdo3:iteration-3-r2:program:method-determinations",
+    "source_basis": "repo://codex-v3/successor/",
+    "v3_cohort_route_refusals": [
+      "map: cross-cut STDO URI v2.5.1-rc.2; expected v3.0.0-rc.1",
+      "program: cross-cut STDO URI v2.5.1-rc.2; expected v3.0.0-rc.1"
+    ]
+  },
+  "kind": "codex.rc1-review-package-preview",
+  "limits": [
+    "This receipt applies only to its exact source_commit; a changed candidate requires an applicability check.",
+    "The filesystem adapter probes path selection, not a tagged Git acquisition.",
+    "No release note, tag, installed-manifest digest, acceptance or fresh install exists for this preview.",
+    "Interpretation fidelity and complete native usability are separate qualification obligations."
+  ],
+  "package": {
+    "member_count": 90,
+    "member_set_sha256": "97e0e15d3e71ca92813bf0aee4332968b5be7d45c5f10f2cbf0952e0a05e6c1c",
+    "path": "/private/tmp/codex-rc1-review-bundle-d1b33480b4/codex-rc1-review-package.tar.gz",
+    "sha256": "2381701ee02ed31fb49bdec35c4ce14bb3c9d599d9df7b004491bb5f62504e9d",
+    "uncompressed_member_bytes": 38626671
+  },
+  "plugin_versions": {
+    ".claude-plugin/plugin.json": "3.0.0-rc.1",
+    ".codex-plugin/plugin.json": "3.0.0-rc.1"
+  },
+  "proposed_cut_used_only_for_loader_probe": "v3.0.0-rc.1",
+  "repository": "/Users/jim/src/apps/specification_methodology-codex",
+  "review_bundle": {
+    "candidate_members": 90,
+    "checker_tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+    "dependency_members": 79,
+    "fresh_archive_binding_verified": true,
+    "installed_or_adopted": false,
+    "metadata_members": 3,
+    "path": "/private/tmp/codex-rc1-review-bundle-d1b33480b4/codex-rc1-review-bundle.tar.gz",
+    "runtime_bundled": false,
+    "sha256": "4cb4e442f6195859b53cceb728460bef22759f5aa3e662fa3eecfaaf90f3b4de"
+  },
+  "schema_version": 1,
+  "source_commit": "d1b33480b46f45bb46198a2f63ca197e84e40e55",
+  "source_path": "specification_methodology/v3/build_tenants/codex/successor",
+  "source_tree": "b16bc83c6b38fa838afe600f924dc1a751df7c06",
+  "status": "review_package_constructed_release_not_cut",
+  "tooling": {
+    "git_source_sha256": "53d4c7cd837c069a216935e140d6a8669213cde14c268ae9f2df01db93fcd8c4",
+    "manifest_sha256": "a97d4273baf6e16a165b695881e7b25f1b5735c558c111ab401be7093514f911",
+    "python": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python"
+  }
+}

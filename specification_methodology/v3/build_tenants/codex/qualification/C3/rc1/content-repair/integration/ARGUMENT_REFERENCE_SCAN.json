@@ -1,0 +1,701 @@
+{
+  "operation": "all_argument_source_row_reference_scan",
+  "source_commit": "2dfb60adca4369908379f3f3d1c6689b704365a3",
+  "prior_source_commit": "2e0c77b909a97648f8edd70981b9a426662df9cc",
+  "rows": 709,
+  "authored_updates": 40,
+  "authored_new_rows": 1,
+  "argument_references": 574,
+  "failed_references": 9,
+  "failures": [
+    {
+      "id": "DESIGN_MODULE_METHOD.8-totality-rule",
+      "owner": {
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "anchor": "8-totality-rule",
+        "start_line": 1996,
+        "end_line": 2020,
+        "body_sha256": "77758c592c2263bed08589bd37819e1f8ee1ee8604eec60cd95b9ff081850a51"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/DESIGN_MODULE_METHOD.md",
+            "anchor": "8-totality-rule",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/DESIGN_MODULE_METHOD.md",
+              "anchor": "8-totality-rule",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FOUNDATIONS.core-contract-derivations",
+      "owner": {
+        "path": "standards/FOUNDATIONS.md",
+        "anchor": "core-contract-derivations",
+        "start_line": 1023,
+        "end_line": 1053,
+        "body_sha256": "db7ba5f0f250115ffcba96ab9c8f15b368d43768c7ca795f5ebb8d19cd7406c7"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        9
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "agentic-construction-execution-stdo-up-020",
+        "start_line": 1816,
+        "end_line": 1853,
+        "body_sha256": "91149d68491756845f6f978c31a0903898587bc6ce1591f67e23d58ef6b33225"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        1
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "agentic-construction-execution-stdo-up-020",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.bounded-causal-construction",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "bounded-causal-construction",
+        "start_line": 1877,
+        "end_line": 1885,
+        "body_sha256": "6f49e1d1ab31943a526bf1b47d56d953d9b5e09bb158c992527b292f77efd684"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "bounded-causal-construction",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.checkpoint-continuation-progress-and-churn",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "checkpoint-continuation-progress-and-churn",
+        "start_line": 1999,
+        "end_line": 2037,
+        "body_sha256": "25659bbe3bf2415649c4afebb5840bbfc5024131377d6b0bcc14c1f042057033"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "checkpoint-continuation-progress-and-churn",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.construction-assessment-and-delegation",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "construction-assessment-and-delegation",
+        "start_line": 1886,
+        "end_line": 1923,
+        "body_sha256": "32f178f219aa7540f45b5c892a3532c1fc39611552be47a3b3bd28e2eb5d5438"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "construction-assessment-and-delegation",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.proportional-disposition",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "proportional-disposition",
+        "start_line": 1924,
+        "end_line": 1971,
+        "body_sha256": "778bc3ff7c9bfefa586b65c829bf5411fe00b947da6b921c514f587a352c92d3"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "proportional-disposition",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.sufficient-execution-intake",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "sufficient-execution-intake",
+        "start_line": 1854,
+        "end_line": 1876,
+        "body_sha256": "ab414b1c20bd7ffefeb81d59f2551401a27b0610e0ceec73a12e5877abda300d"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "sufficient-execution-intake",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SPEC_METHOD.transition-evidence-and-proof-cadence",
+      "owner": {
+        "path": "standards/SPEC_METHOD.md",
+        "anchor": "transition-evidence-and-proof-cadence",
+        "start_line": 1972,
+        "end_line": 1998,
+        "body_sha256": "9dd831e9880273c131f55bc4d627c0bb3d3d1297f7effd505fe41625dfe930ff"
+      },
+      "location": [
+        "argument",
+        "source_family_arguments",
+        0
+      ],
+      "original_semantic_binding": {
+        "family": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "declared_consumer_scope": "[Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule",
+        "premises": [
+          "F1",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "premise_and_pillar_argument": "F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control.",
+        "conditional_consequence": "Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached.",
+        "additional_policy_and_owner": "Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution.",
+        "source_row": {
+          "path": "standards/FOUNDATIONS.md",
+          "anchor": "core-contract-derivations",
+          "line": 1042,
+          "sha256": "799f4799dd2df307b65f66914bffe82d8c3fea5a51dbd6a58a712d1f153ccd25",
+          "hash_boundary": "Exact Markdown row including terminal newline."
+        },
+        "source_refs": [
+          {
+            "path": "standards/FOUNDATIONS.md",
+            "anchor": "core-contract-derivations",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency.",
+        "audit_consumer_loci": [
+          {
+            "path": "standards/SPEC_METHOD.md",
+            "anchor": "transition-evidence-and-proof-cadence",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ],
+        "consumer_scope_bindings": [
+          {
+            "declared_root": {
+              "path": "standards/SPEC_METHOD.md",
+              "anchor": "agentic-construction-execution-stdo-up-020",
+              "role": "provenance",
+              "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+            },
+            "binding_kind": "descendant_of_named_consumer",
+            "scope_condition": "This consequence applies only to the decision relation named in this row within the enclosing consumer. It does not derive every independent local policy or replace the consumer local argument.",
+            "source_evidence": "The source table names this owning/consuming scope.",
+            "role": "provenance",
+            "required_when": "Only when assessing this family argument, its applicability, consequence, conservation, coverage or fidelity against this consumer. This is not an unconditional operational dependency."
+          }
+        ]
+      },
+      "old_current_candidates": [
+        {
+          "old_line": 1042,
+          "old_text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; Design selects admitted control domains; actual grants bound repair, yield and termination. The foundation guarantees no universal solution. |",
+          "current_same_first_cell_rows": [
+            {
+              "line": 1110,
+              "text": "| [Bounded construction](#bounded-construction), applied by UP-020 and Design's totality rule | F1 supplies destination constraints; F3 supplies changing work; F4 conserves outer obligations; F5 bounds an activation. Specification refines the destination; outcome-driven development and functional design supply bounded transitions and control. | Refinement must preserve material joins. A truthful stop or useful discovery can occur without completing the destination; changing the destination cannot prove the old one reached. | Spec Method owns Product progress and re-entry; the selected control domain bounds handling and Design retains its totality preference. Actual grants bound continuation, repair, recovery, yield and termination. The foundation guarantees no universal solution. |"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "standing": "Read-only diagnostic. Same-first-cell current table candidates are observations, not accepted semantic replacements."
+}

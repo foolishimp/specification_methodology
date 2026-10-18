@@ -1,0 +1,1021 @@
+"""Compile the current determination account into a relocatable a_c.text draft.
+
+Freeze the documentary subject before generating these derived package members.
+Compilation preserves authored logic and omissions; it does not decide fidelity.
+The separately owned RC2 checker remains unchanged.
+"""
+import argparse
+import copy
+from collections import Counter
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import unicodedata
+
+HERE = Path(__file__).resolve().parent.parent
+TENANT = HERE.parents[2]
+PACKAGE = TENANT / "successor"
+OUTPUT = PACKAGE / "interpretation"
+ACCOUNT = HERE / "DETERMINATIONS.json"
+INSTALL = TENANT / "a_c/install/axiom_indexer-v2.5.1-rc.2"
+TOOL = INSTALL / "build_tenants/core/code/ac.py"
+COMMON_INPUT = "4c340f7adec9f3c893e3e267b23e4cadeb357854"
+THEORY_URI = "stdo://releases/v2.5.1-rc.2/"
+MANIFEST_SHA = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+THEORY_SHA = "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+TOOL_SHA = "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+URI = "repo://codex-v3/successor/"
+NS = "urn:codex-stdo3:iteration-3-r2:"
+VOCAB = URI + "interpretation/SIGNATURE.md#"
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def read(path):
+    return json.loads(path.read_text())
+
+
+def json_bytes(value):
+    return (json.dumps(value, indent=2, ensure_ascii=False) + "\n").encode()
+
+
+def text(value):
+    return value if isinstance(value, str) else json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+
+
+def slug(value):
+    value = unicodedata.normalize("NFC", re.sub(r"<[^>]*>", "", value).replace("`", "").lower())
+    return re.sub(r"\s", "-", re.sub(r"[^\w\-\s]", "", value))
+
+
+def original_source_uri(source):
+    path = source["path"]
+    if Path(path).is_absolute() or ".." in Path(path).parts or path.startswith("interpretation/"):
+        raise ValueError("Source account must bind a documentary package member: " + path)
+    anchor = source.get("anchor", "").lstrip("#")
+    return URI + path + ("#" + anchor if anchor else "")
+
+
+def native_slug(title):
+    """The exact fragment rule of the separately pinned RC2 checker."""
+    base = re.sub(r"[^\w\- ]", "", title.strip().lower(), flags=re.UNICODE)
+    return re.sub(r"[\s\-]+", "-", base).strip("-")
+
+
+def native_source_anchor(source, raw):
+    """Bind a carrier route to the same exact original heading and body.
+
+    Semantic/source identities are unchanged. The old checker collapses runs
+    of hyphens; the source account uses its normal Markdown owner coordinate.
+    Any alias collision or nonmatching coordinate refuses the adapter.
+    """
+    anchor = source.get('anchor', '').lstrip('#')
+    if not anchor:
+        return ''
+    lines = raw.decode('utf-8').splitlines(keepends=True)
+    headings, github_counts, native_counts = [], {}, {}
+    fenced = None
+    for lineno, line in enumerate(lines, 1):
+        fence = re.match(r'^\s{0,3}(`{3,}|~{3,})', line)
+        in_fence = fenced is not None
+        if fence:
+            mark = fence.group(1)
+            if fenced is None:
+                fenced = (mark[0], len(mark))
+            elif mark[0] == fenced[0] and len(mark) >= fenced[1]:
+                fenced = None
+        match = re.match(r'^#{1,6}\s+(.+?)\s*#*\s*$', line)
+        if not match:
+            continue
+        title = match.group(1)
+        native_base = native_slug(title)
+        n = native_counts.get(native_base, 0)
+        native_counts[native_base] = n + 1
+        native = native_base if n == 0 else native_base + '-' + str(n)
+        original = None
+        if not in_fence:
+            original_base = slug(title)
+            g = github_counts.get(original_base, 0)
+            github_counts[original_base] = g + 1
+            original = original_base if g == 0 else original_base + '-' + str(g)
+        headings.append({'line': lineno, 'original': original, 'native': native})
+    candidates = [h for h in headings if h['original'] == anchor]
+    if len(candidates) != 1:
+        raise ValueError('Ambiguous or nonmatching original source anchor: ' + source['path'] + '#' + anchor)
+    heading = candidates[0]
+    if source.get('start_line') and source['start_line'] != heading['line']:
+        raise ValueError('Source anchor and exact heading coordinate disagree: ' + source['path'] + '#' + anchor)
+    if sum(h['native'] == heading['native'] for h in headings) != 1:
+        raise ValueError('Ambiguous native source fragment: ' + source['path'] + '#' + heading['native'])
+    if source.get('body_sha256') and 'start_line' in source and 'end_line' in source:
+        body = ''.join(lines[source['start_line']-1:source['end_line']]).encode()
+        if sha(body) != source['body_sha256']:
+            raise ValueError('Source adapter body pin differs: ' + source['path'] + '#' + anchor)
+    return heading['native']
+
+
+def source_uri(source):
+    original_source_uri(source)  # Validate the original documentary route.
+    anchor = native_source_anchor(source, (PACKAGE / source['path']).read_bytes())
+    return URI + source['path'] + ('#' + anchor if anchor else '')
+
+
+def unit_frame(identifier):
+    heading = 'Unit ' + native_slug(identifier) + ' ' + sha(identifier.encode())[:12]
+    return heading, URI + 'interpretation/FRAMES.md#' + native_slug(heading)
+
+
+def sources(row):
+    return sorted({source_uri(s) for s in [row["owner"], *row.get("supporting_sources", [])]})
+
+
+def clause_id(identifier):
+    return NS + "clause:" + identifier
+
+
+def literal(role, value):
+    return {"role": VOCAB + role, "literal": value if value is None or isinstance(value, (str, int, float, bool)) else text(value)}
+
+
+def reference(role, value):
+    return {"role": VOCAB + role, "ref": value}
+
+
+def verify_dependencies(theory):
+    """Verify the exact selected copies before invoking their mechanics."""
+    if sha((theory / "manifest.json").read_bytes()) != MANIFEST_SHA or sha((theory / "standards/AXIOMATIC_CALCULUS.md").read_bytes()) != THEORY_SHA:
+        raise ValueError("Fixed encoding theory verification failed")
+    receipt = read(TENANT / "a_c/INSTALL_RECEIPT.json")
+    expected_identity = {"tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+        "commit": "9a9c479776ffd974fbcafcf48341980918209aef", "tree": "3a553ceb8db2e8de4ac779abdc2a2ceae5708c7d",
+        "subtree": "6dae168d0a258ca506f4d6b9d5cd0a0c835fb546"}
+    if receipt["identity"] != expected_identity:
+        raise ValueError("Checker receipt is not the selected immutable identity")
+    expected = {m["path"] for m in receipt["members"]}
+    actual = {str(p.relative_to(INSTALL)) for p in INSTALL.rglob("*") if p.is_file() or p.is_symlink()}
+    if actual != expected or len(expected) != 7:
+        raise ValueError("Installed checker membership has drifted")
+    for member in receipt["members"]:
+        path = INSTALL / member["path"]
+        data = os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
+        frozen = subprocess.check_output(["git", "show", expected_identity["commit"] + ":axiom_indexer/" + member["path"]], cwd=TENANT)
+        if path.is_symlink() != (member["type"] == "symlink") or sha(data) != member["sha256"] or data != frozen:
+            raise ValueError("Installed checker member differs: " + member["path"])
+    stream = "".join(m["sha256"] + "  " + m["type"] + "  " + m["path"] + "\n" for m in sorted(receipt["members"], key=lambda r: r["path"]))
+    if sha(stream.encode()) != "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1" or sha(TOOL.read_bytes()) != TOOL_SHA:
+        raise ValueError("Checker aggregate or executable differs")
+    return {"install_root": str(INSTALL), "member_count": len(expected), "identity": expected_identity,
+            "inventory_sha256": sha(stream.encode()), "executable_sha256": TOOL_SHA,
+            "theory_root": str(theory.resolve()), "theory_manifest_sha256": MANIFEST_SHA, "theory_member_sha256": THEORY_SHA}
+
+
+def documentary_inventory(commit, package=PACKAGE):
+    repo = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=TENANT, text=True).strip())
+    exact = subprocess.check_output(["git", "rev-parse", commit + "^{commit}"], cwd=repo, text=True).strip()
+    prefix = str(package.relative_to(repo))
+    names = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", exact, "--", prefix], cwd=repo, text=True).splitlines()
+    frozen = {n[len(prefix) + 1:]: n for n in names if not n[len(prefix) + 1:].startswith("interpretation/")}
+    actual = {str(p.relative_to(package)): p for p in package.rglob("*") if p.is_file() and not str(p.relative_to(package)).startswith("interpretation/")}
+    if set(frozen) != set(actual):
+        raise ValueError("Documentary subject membership differs from source freeze")
+    members = []
+    for name in sorted(frozen):
+        data = actual[name].read_bytes()
+        if actual[name].is_symlink() or data != subprocess.check_output(["git", "show", exact + ":" + frozen[name]], cwd=repo):
+            raise ValueError("Documentary member differs from source freeze: " + name)
+        members.append({"path": name, "sha256": sha(data), "bytes": len(data)})
+    return exact, members
+
+
+# These are the current semantic fields. Qualification history is not a second
+# constitutional surface. An unclassified field is an error, never silent loss.
+SEMANTIC_FIELDS = {
+    'id', 'family', 'representation_kind', 'owner', 'supporting_sources',
+    'predicate', 'definition', 'applicability', 'obligations',
+    'permissions_exceptions', 'dependencies', 'dependency_relations',
+    'result_mapping', 'argument', 'inputs', 'source_references', 'scope_refs',
+    'source_clause_ids', 'source_clauses', 'semantic_roles', 'source_clause_roles',
+    'signature_components', 'population_map', 'fields', 'closed_fields', 'tuple',
+    'states', 'concept_identities', 'contract_bindings', 'imported_concepts',
+    'translation', 'locator_meaning', 'state_classifier', 'decision_rule',
+    'function_contracts', 'causal_equation', 'compute_predicates', 'semantic_cut',
+    'effect_predicates',
+    'source_residuals',
+}
+EVIDENCE_FIELDS = {
+    'coverage_standing', 'interpretation_standing', 'proof_standing_ref',
+    'prior_standing', 'reduction', 'remaining_work_ref', 'source_excerpt',
+    'unrepresented_scope', 'consumers', 'family_ref', 'applicability_ref',
+    'unit_kind', 'owner_body_sha256', 'source_member_sha256',
+    'bounded_discriminator_projection', 'ready_row_repair',
+}
+# Exact metadata values only: modal standing such as external_required remains.
+CONSTRUCTION_STANDING = {
+    'author conditional argument; no independent entailment proof',
+    'author_semantic_mapping_not_independently_qualified',
+    'authored bounded definition binding', 'authored conditional support, not independent entailment proof',
+    'authored_bounded_definition_argument', 'authored_conditional_argument_account_not_independent_proof',
+    'authored_conditional_argument_not_independent_proof', 'conditional_source_argument_not_independent_proof',
+    'source_mapping_bound_not_independently_qualified',
+    'author_source_to_representation_mapping_not_fidelity_verdict',
+    'Author conditional argument; source-specific specialization and policy are explicit; independent entailment/fidelity judgment remains separate.',
+    'authored_conditional_argument_not_independent_entailment_proof',
+}
+LOCAL_REF_KEYS = {'value_ref', 'local_predicate_ref', 'local_binding_ref'}
+SHARED_REF_KEYS = {'contract_ref', 'evaluation_contract_ref', 'scope_ref', 'input_ref'}
+
+
+def semantic_projection(account):
+    """Separate current meaning from construction evidence, without grading it."""
+    if account.get('schema_version') != 'stdo.determinations.v1.4':
+        raise ValueError('A frozen consolidated v1.4 account is required')
+    exclusions = []
+
+    def clean(value, path):
+        if isinstance(value, list):
+            return [clean(v, path + '/' + str(i)) for i, v in enumerate(value)]
+        if not isinstance(value, dict):
+            return value
+        out = {}
+        for key, item in value.items():
+            location = path + '/' + key
+            if key == 'standing' and isinstance(item, str) and item in CONSTRUCTION_STANDING:
+                exclusions.append({'path': location, 'value': item, 'reason': 'construction qualification metadata'})
+            elif key == 'nonclaims' and item == 'Author construction only: no evidence that a real consumer instance satisfies these predicates.':
+                exclusions.append({'path': location, 'value': item, 'reason': 'construction qualification metadata'})
+            elif key == 'standing' and item == 'source-declared research pin only; companion not acquired or independently revalidated in this activation; later research changes do not amend this source':
+                out[key] = 'source-declared research pin only; later research changes do not amend this source'
+                exclusions.append({'path': location, 'value': item,
+                    'removed_text': 'companion not acquired or independently revalidated in this activation',
+                    'retained_value': out[key], 'reason': 'activation-specific acquisition record; required input and source policy retained'})
+            else:
+                out[key] = clean(item, location)
+        return out
+
+    rows = []
+    for row in account['determinations']:
+        extra = set(row) - SEMANTIC_FIELDS - EVIDENCE_FIELDS
+        if extra:
+            raise ValueError(row['id'] + ': unclassified account fields ' + ', '.join(sorted(extra)))
+        if row.get('unrepresented_scope') or row.get('remaining_work_ref'):
+            raise ValueError(row['id'] + ': unfinished construction cannot become a source residual')
+        current = {k: v for k, v in row.items() if k in SEMANTIC_FIELDS}
+        rows.append(clean(current, '/determinations/' + row['id']))
+    contracts = clean(account.get('semantic_contracts', {}), '/semantic_contracts')
+    return {'kind': 'stdo.current-semantic-account', 'schema_version': 1,
+            'determinations': sorted(rows, key=lambda r: r['id']),
+            'semantic_contracts': dict(sorted(contracts.items()))}, exclusions
+
+
+def local_value(row, path):
+    value = row
+    for component in path.split('.'):
+        if not isinstance(value, dict) or component not in value:
+            raise ValueError(row['id'] + ': unresolved local semantic field ' + path)
+        value = value[component]
+    return value
+
+
+def semantic_edges(value, ids, contracts, row=None):
+    """Resolve declared exact references; prose resemblance supplies no edge."""
+    edges = []
+
+    def walk(item, path=()):
+        if isinstance(item, dict):
+            for key, child in item.items():
+                walk(child, path + (key,))
+        elif isinstance(item, list):
+            for i, child in enumerate(item):
+                walk(child, path + (str(i),))
+        elif isinstance(item, str):
+            key = next((p for p in reversed(path) if not p.isdigit()), '')
+            pointer = '/' + '/'.join(p.replace('~', '~0').replace('/', '~1') for p in path)
+            if key in LOCAL_REF_KEYS:
+                if row is None:
+                    raise ValueError('Local field reference outside a determination: ' + item)
+                local_value(row, item)
+                return
+            if key in SHARED_REF_KEYS:
+                if item not in contracts:
+                    raise ValueError('Unresolved semantic contract: ' + item)
+                edges.append({'pointer': pointer, 'relation': 'shared-contract', 'target': contract_id(item)})
+            elif item in ids:
+                if path == ('id',):
+                    return
+                relation = 'semantic-reference'
+                if 'dependency_relations' in path:
+                    relation = 'declared-dependency-relation'
+                elif path and path[0] == 'dependencies':
+                    relation = 'declared-dependency'
+                elif path and path[0] == 'scope_refs':
+                    relation = 'scope-reference'
+                elif 'argument' in path or 'premises' in path:
+                    relation = 'argument-reference'
+                elif any(p in {'source_refs', 'source_references'} for p in path):
+                    relation = 'source-reference'
+                elif key in {'owner', 'owners', 'owner_refs', 'effect_owner', 'composition_owner', 'premise_owner'}:
+                    relation = 'governing-owner'
+                edges.append({'pointer': pointer, 'relation': relation, 'target': clause_id(item)})
+            elif re.fullmatch(r'F[1-6]', item) and ('argument' in path or 'premises' in path):
+                target = 'FOUNDATIONS.foundational-commitments'
+                if target not in ids:
+                    raise ValueError('Foundational premise owner absent')
+                edges.append({'pointer': pointer, 'relation': 'foundation-premise-owner', 'target': clause_id(target)})
+            elif path and path[0] == 'dependencies':
+                raise ValueError('Unresolved determination dependency: ' + item)
+            elif 'dependency_relations' in path and key in {'id', 'target', 'target_id'}:
+                raise ValueError('Unresolved typed dependency relation: ' + item)
+            elif key in {'owner_refs', 'source_references', 'source_refs', 'scope_refs', 'owner', 'owners', 'effect_owner', 'composition_owner', 'premise_owner', 'contract', 'id'} and re.match(r'^[A-Z][A-Z_]+\.', item):
+                raise ValueError('Unresolved owned semantic reference: ' + item)
+    walk(value)
+    return sorted(edges, key=lambda r: (r['pointer'], r['relation'], r['target']))
+
+
+def contract_id(identifier):
+    return NS + 'contract:' + identifier
+
+
+def acquisition_edges(value, ids, contracts, row=None):
+    """Classify exact relations without deciding their task applicability.
+
+    Native closure is unconditional. Conditional targets therefore remain exact
+    routes until a task establishes their condition and selects the target index.
+    Unclassified relations stay required; no relationship-name allowlist can
+    silently discard a material predicate dependency.
+    """
+    relations = value.get('dependency_relations', []) if isinstance(value, dict) else []
+    result = []
+    for edge in semantic_edges(value, ids, contracts, row):
+        edge = dict(edge, acquisition='required', qualification=None, qualification_pointer=None)
+        parts = edge['pointer'].strip('/').split('/')
+        enclosing, conditional, conditional_pointer, traversed = value, None, None, []
+        for part in parts:
+            if isinstance(enclosing, dict):
+                when = enclosing.get('required_when')
+                if when and when != 'within the declared applicability':
+                    conditional = enclosing
+                    conditional_pointer = '/' + '/'.join(traversed) if traversed else ''
+                enclosing = enclosing.get(part.replace('~1', '/').replace('~0', '~'))
+            elif isinstance(enclosing, list):
+                enclosing = enclosing[int(part)]
+            else:
+                break
+            traversed.append(part)
+        if any(p in {'source_refs', 'source_references'} for p in parts):
+            edge['acquisition'] = 'provenance'
+        elif parts[0] == 'dependencies':
+            target = edge['target'].removeprefix(NS + 'clause:')
+            matches = [i for i, rel in enumerate(relations) if rel.get('id') == target]
+            if matches:
+                # The complete typed occurrences determine acquisition. A flat
+                # duplicate must not turn their conditions into an always edge.
+                edge['acquisition'] = 'typed-duplicate'
+                edge['qualification'] = {'relation_pointers': ['/dependency_relations/' + str(i) for i in matches]}
+        elif parts[0] == 'dependency_relations':
+            rel = relations[int(parts[1])]
+            kind, when = rel.get('kind'), rel.get('required_when')
+            if kind in {'source_reference', 'source_provenance', 'illustrates', 'locator'}:
+                edge['acquisition'] = 'provenance'
+                edge['qualification'] = rel
+                edge['qualification_pointer'] = '/dependency_relations/' + parts[1]
+            elif when and when != 'within the declared applicability':
+                edge['acquisition'] = 'conditional'
+                edge['qualification'] = rel
+                edge['qualification_pointer'] = '/dependency_relations/' + parts[1]
+        elif conditional is not None:
+            edge['acquisition'] = 'conditional'
+            edge['qualification'] = conditional
+            edge['qualification_pointer'] = conditional_pointer
+        result.append(edge)
+    return result
+
+
+def source_contract_owners(current):
+    """Only declared owners establish shared authority; users do not become it."""
+    rows = {r['id']: r for r in current['determinations']}
+    contracts = current['semantic_contracts']
+    owners = {}
+    for key, value in contracts.items():
+        refs = {edge['target'].removeprefix(NS + 'clause:')
+                for edge in semantic_edges(value, set(rows), contracts)
+                if edge['relation'] == 'governing-owner' and edge['target'].startswith(NS + 'clause:')}
+        owners[key] = sorted(refs)
+    return owners
+
+
+def validate_account(current, package=PACKAGE):
+    rows = current.get('determinations')
+    if not isinstance(rows, list) or not rows:
+        raise ValueError('The current semantic account is absent or empty')
+    ids = {r['id'] for r in rows}
+    contracts = current.get('semantic_contracts', {})
+    if len(ids) != len(rows) or any(not re.fullmatch(r'[A-Za-z0-9_.:-]+', i) for i in ids):
+        raise ValueError('Duplicate or non-URI-safe determination identity')
+    if len({slug(i) for i in ids}) != len(ids):
+        raise ValueError('Determination names produce ambiguous frame anchors')
+    for row in rows:
+        kind = row['representation_kind']
+        if kind not in {'constraint', 'definition_data', 'consumer_binding', 'non_deciding_locator'}:
+            raise ValueError(row['id'] + ': unknown representation kind')
+        if kind == 'constraint' and not row.get('predicate'):
+            raise ValueError(row['id'] + ': constraint has no predicate')
+        if kind == 'definition_data' and not (row.get('definition') or row.get('predicate')):
+            raise ValueError(row['id'] + ': definition has no meaning')
+        if kind == 'consumer_binding' and not row.get('predicate') and not (row.get('definition') and row.get('dependencies')):
+            raise ValueError(row['id'] + ': consumer lacks predicate or defined dependency relation')
+        if kind == 'non_deciding_locator' and row.get('predicate'):
+            raise ValueError(row['id'] + ': locator asserts a deciding predicate')
+        if kind != 'non_deciding_locator':
+            for field in ('applicability', 'argument', 'result_mapping'):
+                if not row.get(field):
+                    raise ValueError(row['id'] + ': missing ' + field)
+        for source in [row['owner'], *row.get('supporting_sources', [])]:
+            source_uri(source)
+            path = package / source['path']
+            if not path.is_file() or path.is_symlink():
+                raise ValueError('Missing independent source member: ' + source['path'])
+            raw = path.read_bytes()
+            digest = source.get('member_sha256') or source.get('sha256')
+            if digest and sha(raw) != digest:
+                raise ValueError('Stale source member: ' + source['path'])
+            if source.get('unit_scope') == 'whole_member':
+                body = raw
+            elif 'start_line' in source and 'end_line' in source:
+                body = b''.join(raw.splitlines(keepends=True)[source['start_line']-1:source['end_line']])
+            else:
+                body = None
+            if body is not None and source.get('body_sha256') and sha(body) != source['body_sha256']:
+                raise ValueError('Stale source body: ' + row['id'])
+        raw = (package / row['owner']['path']).read_bytes()
+        block_ids = set()
+        for block in row.get('source_clauses', []):
+            if block['id'] in block_ids or sha(raw[block['byte_start']:block['byte_end']]) != block['sha256']:
+                raise ValueError('Stale or duplicate source block: ' + row['id'] + '#' + block['id'])
+            block_ids.add(block['id'])
+        for block_id in row.get('source_clause_ids', []):
+            local_block = block_id.removeprefix(row['id'] + '#')
+            if local_block not in block_ids:
+                raise ValueError('Unresolved source block: ' + row['id'] + '#' + block_id)
+        block_pins = {b['id']: b for b in row.get('source_clauses', [])}
+        for relation in row.get('source_clause_roles', []):
+            block = block_pins.get(relation['source_block_id'])
+            if not block or relation['source_clause_id'] != row['id'] + '#' + block['id'] or any(
+                relation[source_field] != block[pin_field]
+                for source_field, pin_field in [('source_block_sha256', 'sha256'), ('source_byte_start', 'byte_start'), ('source_byte_end', 'byte_end')]
+            ):
+                raise ValueError('Source-clause relation has stale or ambiguous coordinates: ' + row['id'])
+            for binding in relation['represented_at']:
+                pointer = binding['pointer']
+                if not isinstance(pointer, str) or not pointer.startswith('/'):
+                    raise ValueError('Invalid local representation pointer: ' + row['id'])
+                value = row
+                try:
+                    for part in pointer[1:].split('/'):
+                        part = part.replace('~1', '/').replace('~0', '~')
+                        value = value[int(part)] if isinstance(value, list) else value[part]
+                except (KeyError, IndexError, TypeError, ValueError):
+                    raise ValueError('Unresolved local representation pointer: ' + row['id'] + pointer)
+        semantic_edges(row, ids, contracts, row)
+        for residual in row.get('source_residuals', []):
+            if set(residual) != {'id', 'kind', 'detail', 'dependent_claim'} or not residual['id'] or not residual['detail'] or not residual['dependent_claim']:
+                raise ValueError(row['id'] + ': malformed source-owned residual')
+            if residual['kind'] not in {'ambiguity', 'conflict', 'omission', 'unresolved'}:
+                raise ValueError(row['id'] + ': unsupported source residual kind')
+    for key, contract in contracts.items():
+        if not re.fullmatch(r'[A-Za-z0-9_.:-]+', key):
+            raise ValueError('Invalid shared semantic identity: ' + key)
+        semantic_edges(contract, ids, contracts)
+    return rows
+
+
+def contract_sources(current):
+    """Bind shared meanings to declared owners, without consumer fan-out.
+
+    An ownerless shared abbreviation is inlined at each use by build_program;
+    it has no independent authority and no standalone native clause.
+    """
+    rows = {r['id']: r for r in current['determinations']}
+    return {key: sorted({uri for owner in owners for uri in sources(rows[owner])})
+            for key, owners in source_contract_owners(current).items()}
+
+
+def family_mappings(current):
+    groups = {}
+    for row in current['determinations']:
+        groups.setdefault(row['family'], []).append(row['id'])
+    return [{'family': family,
+             'index': NS + 'index:family:' + slug(family) + '-' + sha(family.encode())[:12],
+             'source_frame': URI + 'interpretation/FRAMES.md#' + native_slug('Family ' + native_slug(family) + ' ' + sha(family.encode())[:12]),
+             'source_unit_ids': sorted(roots)}
+            for family, roots in sorted(groups.items()) if len(roots) > 1]
+
+
+def resolve_pointer(value, pointer):
+    """Resolve an RFC 6901 pointer without accepting ambiguous list indexes."""
+    if not isinstance(pointer, str) or (pointer and not pointer.startswith('/')):
+        raise ValueError('Invalid occurrence pointer: ' + repr(pointer))
+    try:
+        for token in pointer.split('/')[1:]:
+            if re.search(r'~(?![01])', token):
+                raise ValueError('Invalid JSON Pointer escape')
+            key = token.replace('~1', '/').replace('~0', '~')
+            if isinstance(value, list):
+                if not re.fullmatch(r'0|[1-9][0-9]*', key):
+                    raise ValueError('Invalid JSON Pointer array index')
+                value = value[int(key)]
+            else:
+                value = value[key]
+    except (KeyError, IndexError, TypeError, ValueError) as error:
+        raise ValueError('Unresolved occurrence pointer: ' + pointer) from error
+    return value
+
+
+def validate_occurrences(program, contracts):
+    """Check the vocabulary's occurrence bases, pointers and typed targets.
+
+    The native checker intentionally does not interpret this vocabulary. Scopes
+    are clause-local: the sole semantic record, or an explicitly carried contract
+    definition identified before use. Returning from an inline definition never
+    changes another occurrence's base implicitly.
+    """
+    counts = Counter()
+    for clause in program['clauses']:
+        scopes = {}
+        arguments = clause['arguments']
+
+        def occurrence(record, target, relation):
+            if not isinstance(record, dict) or record.get('scope') not in scopes:
+                raise ValueError(clause['uri'] + ': missing or unknown occurrence scope')
+            value = resolve_pointer(scopes[record['scope']], record.get('pointer'))
+            if not isinstance(value, str):
+                raise ValueError(clause['uri'] + ': occurrence does not name a target')
+            expected = contract_id(value) if relation == 'shared-contract' else clause_id(value)
+            if relation == 'foundation-premise-owner' and re.fullmatch(r'F[1-6]', value):
+                expected = clause_id('FOUNDATIONS.foundational-commitments')
+            if target != expected:
+                raise ValueError(clause['uri'] + ': occurrence target mismatch at ' + record['pointer'])
+
+        for index, arg in enumerate(arguments):
+            role = arg['role'].removeprefix(VOCAB)
+            if role == 'semantic-record':
+                if index != 0 or scopes:
+                    raise ValueError(clause['uri'] + ': semantic record must be the sole root base')
+                scopes['semantic-record'] = json.loads(arg['literal'])
+            elif role == 'inlined-contract':
+                record = json.loads(arg['literal'])
+                identity = record['identity']
+                occurrence(record, identity, 'shared-contract')
+                key = identity.removeprefix(NS + 'contract:')
+                pointer = '/semantic_contracts/' + key.replace('~', '~0').replace('/', '~1')
+                if (key not in contracts or record['definition'] != contracts[key]
+                        or record['definition_pointer'] != pointer):
+                    raise ValueError(clause['uri'] + ': inline definition differs from its account identity')
+                if identity in scopes and scopes[identity] != record['definition']:
+                    raise ValueError(clause['uri'] + ': conflicting inline scope')
+                scopes[identity] = record['definition']
+                counts['inlined_contracts'] += 1
+            elif role == 'reference-location':
+                record = json.loads(arg['literal'])
+                if index + 1 == len(arguments) or 'ref' not in arguments[index + 1]:
+                    raise ValueError(clause['uri'] + ': occurrence lacks its adjacent typed target')
+                target_arg = arguments[index + 1]
+                occurrence(record, target_arg['ref'], target_arg['role'].removeprefix(VOCAB))
+                counts['reference_occurrences'] += 1
+            elif role == 'acquisition-route':
+                record = json.loads(arg['literal'])
+                occurrence(record, record['target'], record['relation'])
+                expand_qualification(record, scopes)
+                counts['acquisition_routes'] += 1
+            elif 'ref' in arg and (index == 0 or arguments[index - 1]['role'] != VOCAB + 'reference-location'):
+                raise ValueError(clause['uri'] + ': typed target lacks its occurrence')
+        if 'semantic-record' not in scopes:
+            raise ValueError(clause['uri'] + ': missing semantic record')
+    return dict(counts)
+
+
+def qualification_fields(edge, scope, compact):
+    """Reference only the exact qualification already carried in this scope."""
+    value = edge['qualification']
+    if value is None or not compact:
+        return {'qualification': value}
+    pointer = edge.get('qualification_pointer')
+    if pointer is None:
+        raise ValueError('Qualification has no exact source-record occurrence')
+    return {'qualification_ref': {'scope': scope, 'pointer': pointer,
+                                 'sha256': sha(text(value).encode())},
+            'required_when': value.get('required_when')}
+
+
+def expand_qualification(record, scopes):
+    """Recover a route's original complete qualification, refusing drift."""
+    if 'qualification_ref' not in record:
+        if 'qualification' not in record:
+            raise ValueError('Acquisition route lacks qualification standing')
+        return record['qualification']
+    ref = record['qualification_ref']
+    if ('qualification' in record or not isinstance(ref, dict)
+            or set(ref) != {'scope', 'pointer', 'sha256'}
+            or ref['scope'] != record.get('scope') or ref['scope'] not in scopes):
+        raise ValueError('Ambiguous or unavailable qualification scope')
+    value = resolve_pointer(scopes[ref['scope']], ref['pointer'])
+    if not isinstance(value, dict) or sha(text(value).encode()) != ref['sha256']:
+        raise ValueError('Qualification reference differs from its carried source')
+    if 'required_when' not in record or record['required_when'] != value.get('required_when'):
+        raise ValueError('Qualification condition differs from its carried source')
+    return value
+
+
+def expand_qualification_refs(program):
+    """Exact old-format expansion for comparison, never semantic evaluation."""
+    result = copy.deepcopy(program)
+    for clause in result['clauses']:
+        scopes = {}
+        for arg in clause['arguments']:
+            role = arg['role'].removeprefix(VOCAB)
+            if role == 'semantic-record':
+                scopes['semantic-record'] = json.loads(arg['literal'])
+            elif role == 'inlined-contract':
+                value = json.loads(arg['literal'])
+                scopes[value['identity']] = value['definition']
+            elif role == 'acquisition-route':
+                value = json.loads(arg['literal'])
+                qualification = expand_qualification(value, scopes)
+                if 'qualification_ref' in value:
+                    value.pop('qualification_ref')
+                    value.pop('required_when')
+                    value['qualification'] = qualification
+                    arg['literal'] = text(value)
+    return result
+
+
+def qualification_equivalence(compact, expanded):
+    recovered = expand_qualification_refs(compact)
+    if recovered != expanded:
+        raise ValueError('Qualification compaction changed an expanded program field')
+    counts = Counter()
+    for clause in compact['clauses']:
+        for arg in clause['arguments']:
+            if arg['role'] == VOCAB + 'acquisition-route':
+                value = json.loads(arg['literal'])
+                counts[value['acquisition']] += 1
+                counts['referenced_qualifications'] += 'qualification_ref' in value
+    return {'exact_expansion': True, 'route_classification_counts': dict(counts),
+            'compact_bytes': len(json_bytes(compact)), 'expanded_bytes': len(json_bytes(expanded)),
+            'expanded_sha256': sha(json_bytes(expanded)),
+            'limits': ['Exact serialization equivalence only; source fidelity and actual use remain separate.']}
+
+
+def build_program(current, compact_qualifications=True):
+    """Encode authored meanings and typed references without evaluating them."""
+    rows = current['determinations']
+    ids = {r['id'] for r in rows}
+    contracts = current['semantic_contracts']
+    shared_sources = contract_sources(current)
+    by_id = {r['id']: r for r in rows}
+    member_hashes = {path: sha((PACKAGE / path).read_bytes()) for path in {r['owner']['path'] for r in rows}}
+    owner_routes = {identifier: {'source': original_source_uri(r['owner']), 'native_source': source_uri(r['owner']),
+        'source_member_sha256': member_hashes[r['owner']['path']], 'source_body_sha256': r['owner'].get('body_sha256')}
+        for identifier, r in by_id.items()}
+    program = {'kind': 'axiom-indexer.axiomatic-program', 'schema_version': 1,
+        'uri': NS + 'program:method-determinations', 'calculus_ref': THEORY_URI + 'standards/AXIOMATIC_CALCULUS.md',
+        'source_basis': URI, 'frame_refs': [], 'vocabulary_refs': [], 'symbols': [], 'clauses': [], 'residuals': [], 'frame_indexes': []}
+    mapping, families = [], {}
+    frame_sections = ['# Interpretation Acquisition Frames\n\nSelect an index explicitly for the task. The checker closes always-required support; it does not evaluate predicates or supply task inputs. Each conditional route retains its condition and exact target index: establish applicability before dependent action, add an applicable target index, and retain an undecided condition as unresolved. Provenance routes remain discoverable without making their bodies prerequisites. These optional selectors impose no per-row evaluation, actor or execution partition. A family label is source-account grouping data, not an owner, transformation or complete activation contract.\n']
+
+    def arguments(value, row=None, inline_stack=(), scope='semantic-record'):
+        # One exact object literal keeps structure, order and local field refs.
+        # Paired pointer/ref arguments expose actual links to native closure.
+        args = [literal('semantic-record', value)]
+        for edge in acquisition_edges(value, ids, contracts, row):
+            target = edge['target']
+            if edge['acquisition'] == 'typed-duplicate':
+                # The original record preserves this occurrence; the typed
+                # relation exposes its exact required or conditional target.
+                continue
+            if target.startswith(NS + 'contract:'):
+                key = target.removeprefix(NS + 'contract:')
+                if not shared_sources[key]:
+                    if key in inline_stack:
+                        raise ValueError('Cyclic ownerless shared abbreviation: ' + key)
+                    args.append(literal('inlined-contract', {'scope': scope, 'pointer': edge['pointer'], 'identity': target,
+                        'definition_pointer': '/semantic_contracts/' + key.replace('~', '~0').replace('/', '~1'),
+                        'definition': contracts[key]}))
+                    # References inside an abbreviation keep their real owners.
+                    args.extend(arguments(contracts[key], inline_stack=inline_stack + (key,), scope=target)[1:])
+                    continue
+            if edge['acquisition'] == 'required':
+                args.extend([literal('reference-location', {'scope': scope, 'pointer': edge['pointer']}),
+                             reference(edge['relation'], target)])
+            else:
+                identifier = target.removeprefix(NS + 'clause:')
+                args.append(literal('acquisition-route', {
+                    'scope': scope, 'pointer': edge['pointer'], 'relation': edge['relation'], 'target': target,
+                    'acquisition': edge['acquisition'],
+                    **qualification_fields(edge, scope, compact_qualifications),
+                    'target_index': NS + 'index:' + identifier,
+                    **owner_routes[identifier],
+                    'unknown_applicability': 'unresolved; acquire required evidence and do not perform a dependent action until its governing condition is established'
+                        if edge['acquisition'] == 'conditional' else None}))
+        return args
+
+    for key, contract in sorted(contracts.items()):
+        if not shared_sources[key]:
+            continue
+        program['clauses'].append({'uri': contract_id(key), 'clause_type': 'relation',
+            'operator': VOCAB + 'shared-contract', 'arguments': arguments(contract),
+            'statement': 'Shared semantic contract ' + key, 'source_refs': shared_sources[key]})
+    for row in sorted(rows, key=lambda r: r['id']):
+        identifier, refs = row['id'], sources(row)
+        kind = row['representation_kind']
+        target = clause_id(identifier)
+        frame_heading, frame = unit_frame(identifier)
+        index = NS + 'index:' + identifier
+        is_constraint = kind == 'constraint' or (kind == 'consumer_binding' and bool(row.get('predicate')))
+        operator = 'requires' if is_constraint else ('locates' if kind == 'non_deciding_locator' else 'defines')
+        # Owner coordinates remain native source routes. Exact block pins stay
+        # with the semantic row so a local cN reference is usable after projection;
+        # source bodies remain only at their owners.
+        semantic = {k: v for k, v in row.items() if k not in {'owner', 'supporting_sources', 'family'}}
+        program['clauses'].append({'uri': target, 'clause_type': 'constraint' if is_constraint else 'relation',
+            'operator': VOCAB + operator, 'arguments': arguments(semantic, row),
+            'statement': ('Constraint ' if is_constraint else 'Relation ') + identifier, 'source_refs': refs})
+        for residual in row.get('source_residuals', []):
+            program['residuals'].append({'uri': NS + 'residual:' + identifier + ':' + residual['id'],
+                'kind': residual['kind'], 'subject_refs': [target],
+                'detail': residual['detail'] + '\nDependent claim: ' + residual['dependent_claim'],
+                're_entry_refs': refs, 'source_refs': refs})
+        families.setdefault(row['family'], []).append(target)
+        program['frame_refs'].append(frame)
+        program['frame_indexes'].append({'uri': index, 'frame_ref': frame,
+            'scope': 'Apply the source-bound ' + kind.replace('_', ' ') + ' ' + identifier + ' with its declared conditions, references and task inputs.',
+            'clause_refs': [target], 'residual_refs': [], 'source_refs': sorted(set(refs + [frame]))})
+        original_refs = sorted({original_source_uri(v) for v in [row['owner'], *row.get('supporting_sources', [])]})
+        frame_sections.append('## ' + frame_heading + '\n\nIndex: `' + index + '`.\n\n' + '\n'.join('- [' + ref.removeprefix(URI) + '](' + ref.replace(URI, '../') + ')' for ref in original_refs) + '\n')
+        mapping.append({'id': identifier, 'owner': row['owner'], 'source': original_source_uri(row['owner']),
+                        'native_source': source_uri(row['owner']), 'representation_kind': kind,
+                        'clause': target, 'index': index})
+    for family, roots in sorted(families.items()):
+        if len(roots) < 2:
+            continue  # The individual index already selects this exact root.
+        identity = slug(family) + '-' + sha(family.encode())[:12]
+        heading = 'Family ' + native_slug(family) + ' ' + sha(family.encode())[:12]
+        frame, index = URI + 'interpretation/FRAMES.md#' + native_slug(heading), NS + 'index:family:' + identity
+        program['frame_refs'].append(frame)
+        program['frame_indexes'].append({'uri': index, 'frame_ref': frame,
+            'scope': 'Acquire the declared ' + family + ' relations and their typed references for a separately bound task.',
+            'clause_refs': sorted(roots), 'residual_refs': [], 'source_refs': [frame]})
+        frame_sections.append('## ' + heading + '\n\nIndex: `' + index + '`. Select only when this family is material to the task.\n')
+    program['vocabulary_refs'] = sorted({a['role'] for c in program['clauses'] for a in c['arguments']} | {c['operator'] for c in program['clauses']})
+    program['frame_refs'] = sorted(set(program['frame_refs']))
+    for key in ('symbols', 'clauses', 'residuals', 'frame_indexes'):
+        program[key] = sorted(program[key], key=lambda r: r['uri'])
+        if len({r['uri'] for r in program[key]}) != len(program[key]):
+            raise ValueError('Duplicate generated ' + key + ' identity')
+    validate_occurrences(program, contracts)
+    return program, mapping, '\n'.join(frame_sections)
+
+
+SIGNATURE = '''# Method Interpretation Vocabulary
+
+The interpretation preserves source-owned meanings and their explicit relations.
+Structured semantic records use canonical JSON string literals because the a_c.text
+carrier accepts scalar literals. The record retains field names, list order,
+conditions, exceptions, local field references and result mappings. The native
+checker follows explicit references; it does not execute these meanings.
+
+## Requires
+
+The bound predicate has the declared applicability, obligations, permitted
+choices and exceptions, inputs and result relation together. A constraint is not
+a satisfied instance or a grant. Definitions embedded in it retain their type.
+
+## Defines
+
+The record declares data or a consumer-to-owner relation. A definition is not a
+Boolean verdict. Embedded obligations retain their declared scope; any assertion
+of conformance requires its own bound predicate and admissible evidence.
+
+## Locates
+
+The record names a non-deciding source location. A locator adds no requirement,
+permission, unknown task outcome or unfinished-construction obligation.
+
+## Shared contract
+
+The record defines a meaning reused through an exact contract identity. Each use
+retains its local binding and conditions. Reuse does not merge distinct owners.
+
+## Semantic record
+
+The literal is the exact current semantic object. Fields such as applicability,
+predicate, definition, argument, input contracts and result mapping keep their
+own meanings. Row-local source-block names resolve through the row's exact byte-range and
+digest pins against its source owner. Local field references select fields in
+the same row.
+Required future inputs are conditional contracts, not claims that the source is
+missing or that an actual task has an unknown result.
+
+## Reference location
+
+The literal encodes an object with scope and pointer. Scope is clause-local:
+semantic-record selects the clause's sole semantic record; a contract URI selects
+the exact definition registered by a preceding inlined-contract argument in that
+clause. Pointer is an RFC 6901 JSON Pointer relative to that explicit base.
+The next argument supplies its typed native target. Compilation checks that the
+pointer resolves and names that target. Scope never changes implicitly, including
+when an occurrence returns to the outer record after an inline definition.
+The pointer/ref pair distinguishes an occurrence, its target and its relation.
+
+## Acquisition route
+
+Scope and pointer select the occurrence by the Reference location rules.
+The record preserves an exact relation occurrence without making its target an
+unconditional acquisition dependency. A provenance route records correspondence,
+example or navigation. A flat dependency enumeration retains its named targets
+in the semantic record; its typed relation supplies acquisition and conditions
+without a second unconditional edge. A conditional route retains its source-owned
+condition, binding, target index and exact source coordinates. Establish the
+condition for the task: when applicable, select that target index in addition
+to the current index; when established inapplicable, retain the reason; when
+undecided, retain the unresolved obligation and withhold dependent action.
+Route presence establishes neither applicability nor satisfaction. Every target
+resolves during compilation even when its body is not selected.
+
+A qualification_ref carries scope, an RFC 6901 pointer and the SHA-256 of the
+canonical JSON object at that pointer. It selects the complete qualification
+already carried in the same clause's semantic record or registered inline
+definition. The separate required_when field exactly reproduces that object's
+condition, including null when absent. Resolve the reference before applying
+the route. A missing, changed or ambiguous qualification refuses acquisition;
+it cannot become unconditional permission. Literal qualification remains valid
+when null. Pointer storage preserves the complete object, not an approximation.
+
+## Inlined contract
+
+This exact shared abbreviation has no independently declared semantic owner.
+Its scope and pointer locate the use by the Reference location rules. Identity
+registers the carried definition as an explicit clause-local pointer base;
+definition_pointer locates that same definition in source-account.json.
+Repeated registrations of one identity must carry the same exact definition.
+Nested definitions declare their parent scope, and each later occurrence names
+its own scope. Its real references still acquire their owners.
+Inlining adds no owner, authority or instance truth. The complete set of users
+does not become a source dependency of every use.
+
+## Declared dependency
+
+The source account declares this dependency. Its typed dependency relation and
+local conditions determine why it is relevant; the link alone is not a premise.
+
+## Declared dependency relation
+
+The target belongs to the exact relation record at the referenced pointer.
+Its kind, scope and qualifications remain in that record. Governing conditions,
+refinements and provenance are not interchangeable relations.
+
+## Scope reference
+
+The target supplies the source-owned scope qualification attached to this row.
+Its actual applicability must be established for the task; following the link
+never establishes adoption or universal applicability.
+
+## Argument reference
+
+The target participates in the declared argument, with the premise kind,
+conditional consequence and additional policy retained. An argument reference
+neither proves entailment nor supplies instance evidence.
+
+## Source reference
+
+The target supplies source correspondence or provenance under the declared
+relation. Provenance does not confer governing authority or imply entailment.
+
+## Governing owner
+
+The named owner supplies only the meaning assigned to it by the local binding.
+A result owner does not supply task truth, disposition authority or performance.
+
+## Foundation premise owner
+
+The target owns the exact F1–F6 premise named at the pointer. The premise name and
+conditional argument remain in the record; finite capacity does not establish
+purpose, identity, composition or authority without their stated premises.
+
+## Semantic reference
+
+The exact target participates in the named local semantic relation. The record,
+not reference closure, determines its meaning and whether it governs an action.
+'''
+
+README = '''# Current Method Interpretation
+
+[program.json](program.json) expresses the current source-bound meanings in the
+[a_c.text vocabulary](SIGNATURE.md). Its [map](map.json) supports explicit
+[acquisition indexes](FRAMES.md). The [current semantic account](source-account.json)
+preserves source-body and block pins with the typed meanings; [MAPPING.json](MAPPING.json)
+connects each source unit and optional multi-root group to its index. The indexes
+are acquisition selectors, not required evaluations, actors or execution
+partitions. Family labels add no semantic owner or transformation. The mapping
+retains original owner coordinates separately from native checker routes; a
+carrier fragment must resolve uniquely to that same heading and body. These
+representations refer to
+the owning standards; they create no second authority for method law.
+
+Select an index for the actual task. Bind the subject, governing basis and
+applicability; acquire required observations, grants and source-owned conditions
+before dependent action. Definitions remain data, constraints require evidence,
+and a locator creates no deciding rule. A reference-only or materialized view
+preserves authored references without evaluating their truth or granting work.
+
+The native closure contains always-required support. Read each acquisition-route
+record in the selected result. Resolve qualification_ref within its declared
+clause-local scope and verify its digest and required_when before use. Conditional support retains the exact condition
+and target index: establish applicability, add an applicable target index with
+another --frame-index argument, or retain the unresolved obligation and withhold
+dependent action. Established non-applicability needs its reason. Provenance and
+example routes preserve exact discoverable sources without importing their
+bodies as prerequisites. Unknown applicability is not non-applicability.
+Ownerless shared abbreviations are carried inline at each source-bound use;
+they do not materialize every other consumer or create a new authority owner.
+
+## Representation coordinates
+
+[SOURCE_INVENTORY.json](SOURCE_INVENTORY.json) binds four distinct coordinates:
+
+- The encoding theory is the exact STDO v2.5.1-rc.2 Axiomatic Calculus member.
+- The subject interpretation is this program over the named documentary source.
+- The carrier is the a_c.text JSON structure and its vocabulary.
+- The checker is the separately verified Axiom Indexer RC2 implementation.
+
+The successor's AXIOMATIC_CALCULUS is part of the interpreted subject. It does not
+silently replace the encoding theory. The documentary inventory excludes this
+derived interpretation to avoid self-reference. Complete-package identity is
+bound by the package's external inventory.
+
+## Mechanical use
+
+Run from this package root with separately verified theory and checker installs:
+
+```sh
+python3 -B interpretation/bindings.py --theory-root /absolute/verified/rc2 > /absolute/work/bindings.json
+python3 -B /absolute/verified/axiom-indexer/build_tenants/core/code/ac.py project \\
+  --program interpretation/program.json --map interpretation/map.json \\
+  --bindings /absolute/work/bindings.json --frame-index '<index from FRAMES.md>' \\
+  --mode materialized --output /absolute/work/projection.json
+```
+
+Keep invocation outputs outside the package. The binding procedure verifies the
+exact theory and documentary pins. Map or source drift refuses projection;
+changed meaning requires source-owned repair and affected review.
+
+Validation establishes structure, reference closure and exact source observations.
+It does not execute predicates, prove completeness or fidelity, authenticate task
+inputs, grant an operation, accept a member or qualify a release.
+'''
+
+BINDINGS_SCRIPT = '''"""Emit invocation-local bindings after verifying supplied source and theory."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--package-root", type=Path, default=Path(__file__).resolve().parent.parent)
+    parser.add_argument("--theory-root", type=Path, required=True)
+    args = parser.parse_args()
+    package, theory = args.package_root.resolve(), args.theory_root.resolve()
+    inventory = json.loads((package / "interpretation/SOURCE_INVENTORY.json").read_text())
+    digest = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+    basis = inventory["encoding_theory"]
+    if digest(theory / "manifest.json") != basis["manifest_sha256"] or digest(theory / basis["member"]) != basis["member_sha256"]:
+        raise SystemExit("The supplied theory does not match the fixed encoding basis")
+    for row in inventory["document_members"]:
+        relative = Path(row["path"])
+        if relative.is_absolute() or ".." in relative.parts:
+            raise SystemExit("Unsafe documentary source coordinate")
+        path = package / relative
+        if not path.is_file() or path.is_symlink() or digest(path) != row["sha256"]:
+            raise SystemExit("Documentary subject drift: " + row["path"])
+    for name, key in (("program.json", "program_file_sha256"), ("source-account.json", "semantic_account_sha256"), ("SIGNATURE.md", "vocabulary_sha256"), ("FRAMES.md", "frames_sha256"), ("MAPPING.json", "mapping_sha256")):
+        path = package / "interpretation" / name
+        if not path.is_file() or path.is_symlink() or digest(path) != inventory["interpretation"][key]:
+            raise SystemExit("Interpretation carrier drift: " + name)
+    print(json.dumps({"kind": "axiom-indexer.binding-set", "schema_version": 1,
+        "bindings": [{"uri_prefix": "repo://codex-v3/successor/", "path": str(package)},
+                     {"uri_prefix": basis["release_uri"], "path": str(theory)}]}, indent=2))
+
+
+if __name__ == "__main__":
+    main()
+'''
+
+if __name__ == "__main__":
+    raise SystemExit("Use the I5 generate_interpretation.py wrapper with explicit freezes")

@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "checks": [
+    "section honors fenced headings and includes selected children only",
+    "repeated acquisition is counted twice at exact emitted and source-I/O boundaries",
+    "unselected and escaping paths refuse without emitting source",
+    "source identity drift refuses before successful acquisition logging",
+    "task byte drift refuses before use"
+  ],
+  "scope": "logger behavior in disposable fixtures; no actor, method correctness, security sandbox or complete host-context proof"
+}

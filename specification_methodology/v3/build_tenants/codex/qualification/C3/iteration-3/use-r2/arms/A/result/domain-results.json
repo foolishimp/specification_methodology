@@ -1,0 +1,351 @@
+{
+  "task_id": "T3",
+  "cases": [
+    {
+      "case_id": "D1",
+      "fixture_sources": [
+        "D.archive",
+        "D.consumer"
+      ],
+      "case_source": "task T3 / initial_fixture_state.cases[D1]",
+      "method_sources": [
+        "M.domain",
+        "M.results",
+        "M.conjunction",
+        "M.result_record"
+      ],
+      "dependencies": {
+        "domain_meaning": [
+          "D.archive"
+        ],
+        "consumer_admissibility": [
+          "D.consumer",
+          "successful conformance",
+          "exact digest acceptance certificate"
+        ]
+      },
+      "unresolved": [
+        "Semantic conformance of payload-a has not been assessed.",
+        "No dana acceptance certificate for payload-a is supplied."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "frame_identity": "A:T3:domain-predicate-evaluation:v1",
+      "activation_identity": "A:T3:D1",
+      "actor": "arm-A fresh bounded-use actor",
+      "basis": [
+        "D.archive",
+        "D.consumer"
+      ],
+      "semantic_owner": "Archive owner",
+      "decision_owner": "Deployment owner for consumer input; domain owner for domain semantics and effects",
+      "original_outcome": {
+        "domain": "Archive",
+        "label": "ready"
+      },
+      "observations": {
+        "case_id": "D1",
+        "domain": "Archive",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "structural_validation": "passed",
+        "conformance": "not performed",
+        "certificate": null
+      },
+      "domain_predicate": "The payload exists and structural validation passed. No semantic conformance assessment or acceptance decision is performed by this state transition.",
+      "consuming_decision": "D.consumer input admissibility",
+      "permitted_action": "Construct normalized result records and decide input admissibility; perform no deployment or dispatch.",
+      "subject": "sha256:payload-a",
+      "export_type": "CandidateBundle",
+      "domain_evaluation": {
+        "result": "satisfied",
+        "evaluated_predicate": "Payload exists and structural validation passed",
+        "conditions": {
+          "payload_exists": true,
+          "structural_validation_passed": true
+        }
+      },
+      "consumer_evaluation": {
+        "predicate": "Payload digest equals certificate subject digest; certificate is issued by human owner dana with decision accept. Successful conformance must also be present.",
+        "result": "falsified",
+        "admissible": false,
+        "conditions": {
+          "successful_conformance_present": false,
+          "exact_owner_acceptance_present": false
+        },
+        "inference": "Structural readiness supplies neither successful semantic conformance nor exact human acceptance."
+      },
+      "decision": "Retain Archive.ready as a satisfied archive predicate; refuse D.consumer input."
+    },
+    {
+      "case_id": "D2",
+      "fixture_sources": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "case_source": "task T3 / initial_fixture_state.cases[D2]",
+      "method_sources": [
+        "M.domain",
+        "M.results",
+        "M.conjunction",
+        "M.result_record"
+      ],
+      "dependencies": {
+        "domain_meaning": [
+          "D.admission"
+        ],
+        "consumer_admissibility": [
+          "D.consumer",
+          "successful conformance",
+          "exact digest acceptance certificate"
+        ]
+      },
+      "unresolved": [],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "frame_identity": "A:T3:domain-predicate-evaluation:v1",
+      "activation_identity": "A:T3:D2",
+      "actor": "arm-A fresh bounded-use actor",
+      "basis": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "semantic_owner": "Admission owner",
+      "decision_owner": "Deployment owner for consumer input; domain owner for domain semantics and effects",
+      "original_outcome": {
+        "domain": "Admission",
+        "label": "ready"
+      },
+      "observations": {
+        "case_id": "D2",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-a",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "domain_predicate": "The payload exists, its conformance result is successful, and the named human owner has accepted this exact payload digest. All three conditions are required.",
+      "consuming_decision": "D.consumer input admissibility",
+      "permitted_action": "Construct normalized result records and decide input admissibility; perform no deployment or dispatch.",
+      "subject": "sha256:payload-a",
+      "claimed_export_type": "AcceptedBundle",
+      "admissible_export_type": "AcceptedBundle",
+      "domain_evaluation": {
+        "result": "satisfied",
+        "evaluated_predicate": "The supplied Admission.ready record establishes all three required conditions for this exact payload",
+        "conditions": {
+          "payload_exists": true,
+          "successful_conformance_present": true,
+          "certificate_from_required_owner_with_accept": true,
+          "certificate_matches_payload_digest": true
+        }
+      },
+      "certificate_applicability": {
+        "result": "satisfied",
+        "certificate_subject": "sha256:payload-a",
+        "required_subject": "sha256:payload-a"
+      },
+      "consumer_evaluation": {
+        "predicate": "Payload digest equals certificate subject digest; certificate is issued by human owner dana with decision accept. Successful conformance must also be present.",
+        "result": "satisfied",
+        "admissible": true,
+        "conditions": {
+          "payload_exists": true,
+          "successful_conformance_present": true,
+          "certificate_from_required_owner_with_accept": true,
+          "certificate_matches_payload_digest": true
+        },
+        "inference": "All required conditions are present for payload-a."
+      },
+      "decision": "D2 can feed D.consumer under the supplied conditions."
+    },
+    {
+      "case_id": "D3",
+      "fixture_sources": [
+        "D.dispatch",
+        "D.consumer"
+      ],
+      "case_source": "task T3 / initial_fixture_state.cases[D3]",
+      "method_sources": [
+        "M.domain",
+        "M.results",
+        "M.conjunction",
+        "M.result_record"
+      ],
+      "dependencies": {
+        "request_issue": [
+          "D3.request_recorded",
+          "D.dispatch.sent"
+        ],
+        "completion": [
+          "current owner receipt for dispatch-9"
+        ],
+        "no_effect": [
+          "authoritative no-effect observation for dispatch-9"
+        ]
+      },
+      "unresolved": [
+        "The actual effect outcome and completion of dispatch-9 are unknown; owner_receipt is absent."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "frame_identity": "A:T3:domain-predicate-evaluation:v1",
+      "activation_identity": "A:T3:D3",
+      "actor": "arm-A fresh bounded-use actor",
+      "basis": [
+        "D.dispatch",
+        "D.consumer"
+      ],
+      "semantic_owner": "Dispatch owner",
+      "decision_owner": "Deployment owner for consumer input; domain owner for domain semantics and effects",
+      "original_outcome": {
+        "domain": "Dispatch",
+        "label": "sent"
+      },
+      "observations": {
+        "case_id": "D3",
+        "domain": "Dispatch",
+        "label": "sent",
+        "request_id": "dispatch-9",
+        "request_recorded": true,
+        "response": "timeout",
+        "owner_receipt": null
+      },
+      "domain_predicate": "A request was issued. Completion depends on an owner receipt; a timeout supplies no completion observation.",
+      "consuming_decision": "Dispatch completion claim",
+      "permitted_action": "Construct normalized result records and decide input admissibility; perform no deployment or dispatch.",
+      "subject": "dispatch-9",
+      "domain_evaluation": {
+        "predicate": "A request was issued",
+        "result": "satisfied",
+        "conditions": {
+          "request_recorded": true
+        }
+      },
+      "effect_evaluation": {
+        "request_issued": "established",
+        "completion": "indeterminate",
+        "absence_of_effect": "indeterminate",
+        "inference": "The timeout supplies no completion observation. It does not establish that the operation failed without effect, and it does not authorize repeating it.",
+        "completion_claim_requires": "A current authoritative Dispatch-owner receipt that identifies dispatch-9 and confirms the claimed completion/outcome. An authoritative no-effect observation would settle absence of effect instead, not successful completion."
+      },
+      "consumer_evaluation": {
+        "admissible": null,
+        "standing": "not a bundle-input question"
+      },
+      "decision": "Record sent as request issuance only; withhold completion and no-effect claims."
+    },
+    {
+      "case_id": "D4",
+      "fixture_sources": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "case_source": "task T3 / initial_fixture_state.cases[D4]",
+      "method_sources": [
+        "M.domain",
+        "M.results",
+        "M.conjunction",
+        "M.result_record"
+      ],
+      "dependencies": {
+        "domain_meaning": [
+          "D.admission"
+        ],
+        "consumer_admissibility": [
+          "D.consumer",
+          "successful conformance",
+          "exact digest acceptance certificate"
+        ]
+      },
+      "unresolved": [
+        "An acceptance certificate from dana with decision accept and subject_digest sha256:payload-a is missing. Whether dana has otherwise accepted payload-a is not established."
+      ],
+      "invalidation": "A change to this independent case, its named owner declarations, exact subject, basis, applicable evidence or grant invalidates only affected claims and their dependants.",
+      "frame_identity": "A:T3:domain-predicate-evaluation:v1",
+      "activation_identity": "A:T3:D4",
+      "actor": "arm-A fresh bounded-use actor",
+      "basis": [
+        "D.admission",
+        "D.consumer"
+      ],
+      "semantic_owner": "Admission owner",
+      "decision_owner": "Deployment owner for consumer input; domain owner for domain semantics and effects",
+      "original_outcome": {
+        "domain": "Admission",
+        "label": "ready"
+      },
+      "observations": {
+        "case_id": "D4",
+        "domain": "Admission",
+        "label": "ready",
+        "payload_digest": "sha256:payload-a",
+        "conformance": "successful",
+        "certificate": {
+          "subject_digest": "sha256:payload-b",
+          "issuer": "dana",
+          "decision": "accept"
+        }
+      },
+      "domain_predicate": "The payload exists, its conformance result is successful, and the named human owner has accepted this exact payload digest. All three conditions are required.",
+      "consuming_decision": "D.consumer input admissibility",
+      "permitted_action": "Construct normalized result records and decide input admissibility; perform no deployment or dispatch.",
+      "subject": "sha256:payload-a",
+      "claimed_export_type": "AcceptedBundle",
+      "admissible_export_type": null,
+      "domain_evaluation": {
+        "result": "falsified",
+        "evaluated_predicate": "The supplied Admission.ready record establishes all three required conditions for this exact payload",
+        "conditions": {
+          "payload_exists": true,
+          "successful_conformance_present": true,
+          "certificate_from_required_owner_with_accept": true,
+          "certificate_matches_payload_digest": false
+        }
+      },
+      "certificate_applicability": {
+        "result": "invalid_basis",
+        "certificate_subject": "sha256:payload-b",
+        "required_subject": "sha256:payload-a"
+      },
+      "consumer_evaluation": {
+        "predicate": "Payload digest equals certificate subject digest; certificate is issued by human owner dana with decision accept. Successful conformance must also be present.",
+        "result": "falsified",
+        "admissible": false,
+        "conditions": {
+          "payload_exists": true,
+          "successful_conformance_present": true,
+          "certificate_from_required_owner_with_accept": true,
+          "certificate_matches_payload_digest": false
+        },
+        "inference": "The certificate accepts payload-b, so it cannot establish acceptance of payload-a; the ready label cannot supply the missing exact condition."
+      },
+      "decision": "D4 cannot feed D.consumer. Preserve the original ready label as a claim whose exact-condition completeness is falsified."
+    }
+  ],
+  "adapter_assessment": {
+    "proposal": "Rename CandidateBundle to AcceptedBundle solely because its fields have the same shape.",
+    "disposition": "reject",
+    "counterexample": {
+      "case": "D1",
+      "payload_digest": "sha256:payload-a",
+      "structural_validation": "passed",
+      "conformance": "not performed",
+      "certificate": null,
+      "after_type_rename": "Fields are unchanged, so successful conformance and exact dana acceptance remain absent. D.consumer still refuses the value."
+    },
+    "reason": "Archive and Admission own different ready predicates. A type-name change, equal fields or equal spelling establishes neither the target conditions nor an owner-authorized semantic relation.",
+    "lawful_conversion_condition": "A directional conversion would retain source provenance, establish every Admission and consumer condition, cite the exact owner evidence, and refuse when any condition is missing or mismatched. Conversion cannot manufacture acceptance.",
+    "method_sources": [
+      "M.domain",
+      "M.results",
+      "M.conjunction"
+    ],
+    "fixture_sources": [
+      "D.archive",
+      "D.admission",
+      "D.consumer"
+    ]
+  }
+}

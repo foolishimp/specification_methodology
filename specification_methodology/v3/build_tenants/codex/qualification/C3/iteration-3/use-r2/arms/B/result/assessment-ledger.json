@@ -1,0 +1,494 @@
+{
+  "task_id": "T1",
+  "cases": [
+    {
+      "case_id": "E1",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "fixture_case_locator": "task T1 / cases[E1]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "applicability",
+        "frame_conjunction"
+      ],
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "failed",
+            "evidence": "obs-41"
+          },
+          "observation": "For subject 17, checksum expected aa11 but observed bb22.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "checksum check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "falsified",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "checksum",
+              "judgement": "failed"
+            },
+            "evidence": [
+              "obs-41",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [
+              "A successful checksum assessment on an authorized conforming candidate is needed before a positive recommendation."
+            ],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "assessment_location": null,
+          "supplied_assessment": null,
+          "observation": null,
+          "authenticity": null,
+          "coverage_standing": "uncovered_required_check_outside_initial_plan",
+          "target_evaluation_performance": "unconfirmed",
+          "required_result": null,
+          "contribution_diagnosis": null,
+          "absent_slot_reason": "No retention assessment is supplied in E1; its performance is unconfirmed. Required membership is E.contract.required_checks, not the shorter initial planned_assessments list."
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:16",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-42"
+          },
+          "observation": "For subject 16, access restriction was met.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "inadmissible_for_required_subject",
+          "target_evaluation_performance": "unconfirmed",
+          "required_result": null,
+          "contribution_diagnosis": {
+            "verdict": "invalid_basis",
+            "performance": "performed",
+            "reason": "The supplied access result is for bundle 16; the required subject is bundle 17. Its original success and observation remain valid only for the cited subject. This is a contribution-matching diagnosis, not a newly invented bundle-17 assessment."
+          },
+          "absent_slot_reason": "No applicable access result is supplied for bundle 17."
+        }
+      ],
+      "recommendation": {
+        "predicate": "All required checks have authenticated applicable successful assessments",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "recommend_approval": false,
+          "owner_approval": "not_made"
+        },
+        "evidence": [
+          "obs-41",
+          "obs-42"
+        ],
+        "unresolved_obligations": [
+          "Checksum has an authenticated failure (obs-41).",
+          "Retention required coverage has no supplied assessment and was omitted from the initial plan.",
+          "Access result for bundle 16 cannot cover bundle 17."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "initial_plan_assessment": "The initial plan omits required retention. It cannot reduce the required set. Each recommendation here explicitly binds all three E.contract.required_checks; E2/E3 consume checker-b's supplied exact retention result as an authenticated required-member contribution. No new execution or owner approval is inferred.",
+      "dependencies": [
+        "Exact subject and basis match E.contract.",
+        "Review producer matches E.contract.review_authority.",
+        "Only observations cited within this independent case may support it."
+      ],
+      "unresolved": [
+        "Checksum has an authenticated failure (obs-41).",
+        "Retention required coverage has no supplied assessment and was omitted from the initial plan.",
+        "Access result for bundle 16 cannot cover bundle 17."
+      ],
+      "permitted_action": "Return a negative recommendation and the retained failure/coverage facts; no repair is authorized.",
+      "change_from_prior_case": "Baseline independent case."
+    },
+    {
+      "case_id": "E2",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "fixture_case_locator": "task T1 / cases[E2]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "applicability",
+        "frame_conjunction"
+      ],
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "failed",
+            "evidence": "obs-41"
+          },
+          "observation": "For subject 17, checksum expected aa11 but observed bb22.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "checksum check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "falsified",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "checksum",
+              "judgement": "failed"
+            },
+            "evidence": [
+              "obs-41",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [
+              "A successful checksum assessment on an authorized conforming candidate is needed before a positive recommendation."
+            ],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "assessment_location": "other_assessments",
+          "supplied_assessment": {
+            "check": "retention",
+            "producer": "checker-b",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-44"
+          },
+          "observation": "For subject 17, retention duration is 30 days as required.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "retention check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "retention",
+              "judgement": "successful"
+            },
+            "evidence": [
+              "obs-44",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-43"
+          },
+          "observation": "For subject 17, access restriction is met.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "access check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "access",
+              "judgement": "successful"
+            },
+            "evidence": [
+              "obs-43",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        }
+      ],
+      "recommendation": {
+        "predicate": "All required checks have authenticated applicable successful assessments",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "falsified",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "recommend_approval": false,
+          "owner_approval": "not_made"
+        },
+        "evidence": [
+          "obs-41",
+          "obs-44",
+          "obs-43"
+        ],
+        "unresolved_obligations": [
+          "Checksum has an authenticated failure (obs-41)."
+        ],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "initial_plan_assessment": "The initial plan omits required retention. It cannot reduce the required set. Each recommendation here explicitly binds all three E.contract.required_checks; E2/E3 consume checker-b's supplied exact retention result as an authenticated required-member contribution. No new execution or owner approval is inferred.",
+      "dependencies": [
+        "Exact subject and basis match E.contract.",
+        "Review producer matches E.contract.review_authority.",
+        "Only observations cited within this independent case may support it."
+      ],
+      "unresolved": [
+        "Checksum has an authenticated failure (obs-41)."
+      ],
+      "permitted_action": "Return a negative recommendation and the retained failure/coverage facts; no repair is authorized.",
+      "change_from_prior_case": "Relative to E1, access now cites the correct subject (obs-43), and an authentic retention assessment (obs-44) is supplied outside the initial execution plan; checksum failure remains."
+    },
+    {
+      "case_id": "E3",
+      "fixture_sources": [
+        "E.contract",
+        "E.evidence"
+      ],
+      "fixture_case_locator": "task T1 / cases[E3]",
+      "method_citations": [
+        "result",
+        "conjunction",
+        "applicability",
+        "frame_conjunction"
+      ],
+      "components": [
+        {
+          "check": "checksum",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-a",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "checksum",
+            "producer": "checker-a",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-45"
+          },
+          "observation": "For subject 17 in a case that cites obs-45, checksum expected aa11 and observed aa11.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "checksum check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "checksum",
+              "judgement": "successful"
+            },
+            "evidence": [
+              "obs-45",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        },
+        {
+          "check": "retention",
+          "required": true,
+          "planned": false,
+          "required_producer": "checker-b",
+          "assessment_location": "other_assessments",
+          "supplied_assessment": {
+            "check": "retention",
+            "producer": "checker-b",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-44"
+          },
+          "observation": "For subject 17, retention duration is 30 days as required.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "retention check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "retention",
+              "judgement": "successful"
+            },
+            "evidence": [
+              "obs-44",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        },
+        {
+          "check": "access",
+          "required": true,
+          "planned": true,
+          "required_producer": "checker-c",
+          "assessment_location": "returned_assessments",
+          "supplied_assessment": {
+            "check": "access",
+            "producer": "checker-c",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "judgement": "successful",
+            "evidence": "obs-43"
+          },
+          "observation": "For subject 17, access restriction is met.",
+          "authenticity": "Owner-issued by named producer under E.evidence.",
+          "coverage_standing": "authenticated_applicable_result",
+          "target_evaluation_performance": "performed",
+          "required_result": {
+            "predicate": "access check succeeds",
+            "subject": "urn:fixture:bundle:17",
+            "basis": "urn:fixture:requirements:4",
+            "verdict": "satisfied",
+            "performance": "performed",
+            "original_domain_outcome": {
+              "check": "access",
+              "judgement": "successful"
+            },
+            "evidence": [
+              "obs-43",
+              "E.contract",
+              "E.evidence"
+            ],
+            "unresolved_obligations": [],
+            "effects": {
+              "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+              "observation": "not_requested"
+            }
+          },
+          "contribution_diagnosis": null,
+          "absent_slot_reason": null
+        }
+      ],
+      "recommendation": {
+        "predicate": "All required checks have authenticated applicable successful assessments",
+        "subject": "urn:fixture:bundle:17",
+        "basis": "urn:fixture:requirements:4",
+        "verdict": "satisfied",
+        "performance": "performed",
+        "original_domain_outcome": {
+          "recommend_approval": true,
+          "owner_approval": "not_made"
+        },
+        "evidence": [
+          "obs-45",
+          "obs-44",
+          "obs-43"
+        ],
+        "unresolved_obligations": [],
+        "effects": {
+          "boundary": "Synthetic assessment; actual external effects excluded by task packet.",
+          "observation": "not_requested"
+        }
+      },
+      "initial_plan_assessment": "The initial plan omits required retention. It cannot reduce the required set. Each recommendation here explicitly binds all three E.contract.required_checks; E2/E3 consume checker-b's supplied exact retention result as an authenticated required-member contribution. No new execution or owner approval is inferred.",
+      "dependencies": [
+        "Exact subject and basis match E.contract.",
+        "Review producer matches E.contract.review_authority.",
+        "Only observations cited within this independent case may support it."
+      ],
+      "unresolved": [],
+      "permitted_action": "Return an approval recommendation to the owner; make no owner decision.",
+      "change_from_prior_case": "Relative to E2, checksum now cites successful obs-45. E3 contains no obs-41; the fixture explicitly excludes uncited catalogue entries and other adverse evidence. All three required components are covered."
+    }
+  ],
+  "case_independence": "Comparisons describe differing fixture records; no evidence is carried across cases."
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "rc1-entry-source-acquisition-v1",
+  "activation_started_utc": "2026-10-17T03:34:36Z",
+  "recorded_utc": "2026-10-17T03:39:01.297868+00:00",
+  "boundary": "Source bytes presented for this bounded RC1-ENTRY activation. Hash/existence checks may process full files without presenting their bodies. Prior RC1-CONSUMERS activation is separate; inherited authority instructions were retained and current AGENTS byte identity was checked.",
+  "newly_presented_source_bytes": 46329,
+  "source_acquisition_entries": "ACQUIRED_SLICES.json",
+  "source_acquisition_entry_count": 6,
+  "readbacks": [
+    {
+      "kind": "author diff readback",
+      "bytes": 4238,
+      "sha256": "8090da452831e3c6ef15142eab7e8388dd243240f44a099c779fdb1c9faff3b0",
+      "accounting": "Conservatively count the complete diff envelope as repeated readback; it mixes previously acquired preimage text with the newly authored changes. It is not new external owner acquisition."
+    }
+  ],
+  "repeated_or_author_readback_bytes": 4238,
+  "total_presented_source_and_readback_bytes": 50567,
+  "metadata_output_excluded": "File hashes, existence/count check summaries, acquired-slice ledger readback and other bookkeeping contain no further source body acquisition.",
+  "inherited_instructions": "Applicable root/v3 AGENTS previously read; current c33c6aa6 equality hashes retained in return. No reread of peer worktree or held test expectations.",
+  "paid_calls": 0,
+  "subagents_spawned": 0,
+  "method": "Native local shell/Python read-only source acquisition plus patch authoring, exact byte comparisons, and hash/registry validation."
+}

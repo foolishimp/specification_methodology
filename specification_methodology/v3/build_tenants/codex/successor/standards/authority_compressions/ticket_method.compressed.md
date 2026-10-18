@@ -2,7 +2,7 @@
 kind: authority_compression_asset
 asset_ref: authority-compression://stdo/ticket-method/v1
 source_ref: ../TICKET_METHOD.md
-source_digest: a91012c780f94c8cc0df85dd6912116ef1ad4c47a4bc070526fd39de2fbb1094
+source_digest: 682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1
 compression_profile: prompt_authority_compact_v1
 target_prompt_families:
   - transform
@@ -21,7 +21,22 @@ superseded truth, closure law, non-closure conditions, proof, and admission
 state. Required carrier lifetime decides whether that contract derives from a
 durable ticket, a sprint-local entry, or an intake draft.
 
+Treatment, item compliance and sprint closure are distinct predicates.
+`accepted`, `local_paydown`, repricing and `remove` retain their qualified
+domain meanings; their labels alone do not choose a core verdict. Apply the
+reason-sensitive maps in [Sprint Close Classification](../TICKET_METHOD.md#sprint-close-review).
+Lawful closure with permitted durable debt does not establish repayment or
+item compliance. Missing assessment remains missing coverage.
+
 ## Carrier-Binding Compression
+
+Closure and reuse bind Foundations' change-impact and evidence-retention
+relation to the exact work claim. Combine applicable historical evidence with
+actual reassessment; selection is not execution. Preserve original subjects,
+known failures, unknown impact, newly uncovered obligations and mandatory gates.
+Test expectations need justified source interpretation separately from actual
+checker, subject, environment, observations and result. Shared derivations use
+existing carriers, without per-test tickets or duplicate ledgers.
 
 - The applicable `stdo_<label>.json` Product Definition Overlay locates
   `ticketing.goals`, the ticket root and backlog/active/completed lanes, the
@@ -121,10 +136,11 @@ durable ticket, a sprint-local entry, or an intake draft.
   question needs no invented J. Preserve original owner rulings and their
   conditions separately from interpretations; consume sufficient existing
   authority without asking for it again. Neither record creates authority.
-- Reuse valid support across roles and resumption. A material invalidator
-  revises affected claims; preserve unrelated support only where independence
-  is established. Shared C does not replace a required assessor's independent
-  acquisition and judgment. Use the existing carrier lifetime and proof route,
+- Reuse valid support across roles and resumption. Apply Foundations' change-impact
+  and evidence-retention owner to affected current reliance while retaining
+  original records on their original subjects. Shared C does not replace a
+  required assessor's own sufficient acquisition and judgment under the shared
+  independent-assessment conditions. Use the existing carrier lifetime and proof route,
   with no new judgment registry or ticket per decision.
 - Repricing dispositions each affected obligation as retained, superseded,
   deferred or withdrawn in the existing carrier with owner/evidence links.

@@ -1,0 +1,27 @@
+{
+  "schema": "stdo.scoped-author-checks.v1",
+  "result": "satisfied",
+  "scope": "Exact-source identity, selected-row structure and source-to-field pointer integrity only.",
+  "bindings_sha256": "639e5a1f7620754581f8b09d74f7227474cfbf2e4f0a93908ec4867e60791599",
+  "observed_account_sha256": "74b4140f328446ae60fd5a4a3ec17483264c1cef30086e391ebf8310e3d46044",
+  "selected_rows": 25,
+  "source_blocks": 107,
+  "resolved_semantic_field_pointers": 149,
+  "definition_rows": 7,
+  "declared_unfinished_source_ids": [],
+  "checks": [
+    "Frozen preimage digest and exact nonempty-unrepresented-scope selection",
+    "Integration-base identity plus D2 source and observed-preimage binding",
+    "Stable IDs, exact owner/body/member hashes and D1/D2 equality",
+    "Every original source block mapped exactly once with its exact hash and byte coordinates",
+    "Every block-to-field pointer resolves to nonempty authored semantic content",
+    "Explicit definition/predicate distinction, actual instance inputs and typed dependency resolution",
+    "Shared result-contract references resolve in the observed account",
+    "All 25 comparisons and declared completion/unfinished sets agree"
+  ],
+  "limitations": [
+    "Author checks are not independent fidelity, mathematical entailment or task-use qualification.",
+    "Pointer coverage does not prove that an authored statement preserves every source meaning.",
+    "No account/compiler/package generation, acceptance, release or paid actor execution was performed."
+  ]
+}

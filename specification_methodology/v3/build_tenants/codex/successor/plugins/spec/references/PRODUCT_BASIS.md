@@ -39,3 +39,25 @@ Zero definitions, multiple applicable definitions, failed verification, or any
 identity, path, basis, manifest, installation, or validity mismatch stops the
 calling skill before effects. Report the exact candidates or mismatch and the
 required re-entry; do not repair it implicitly.
+
+## Acquire A Member From The Selected Basis
+
+Member routes in a workflow skill, such as `standards/SPEC_METHOD.md`, are
+relative to the verified immutable basis URI returned above. They are not
+relative to the plugin installation or the current directory. Append the
+member path to that basis URI and resolve it with `stdo resolve <member-uri>`.
+Read the returned installed path. For a section route, separate the `#anchor`
+before resolution and then select that heading in the resolved member; the
+resolver accepts a member URI without a fragment.
+
+Check membership and the member digest against the verified manifest. A
+missing member or section remains unavailable on that basis. When a skill
+permits direct owning-source acquisition instead of an unavailable curated
+view, use the owners on the same verified basis. A nearby checkout, plugin
+copy, newer release or source candidate supplies no fallback authority.
+
+A source candidate explicitly selected for assessment has its own frozen
+package identity and member inventory. Acquire its routes from that declared
+assessment root and verify their pins separately. This selection does not
+replace the actor's installed governing basis. Publication and installation
+must supply their own verified member routes before an issued cut is used.

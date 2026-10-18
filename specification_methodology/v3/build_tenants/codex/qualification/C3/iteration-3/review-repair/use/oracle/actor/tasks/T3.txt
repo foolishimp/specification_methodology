@@ -1,0 +1,23 @@
+TASK: T3
+Subject: parcel capacity estimator handoff.
+
+The project has selected local domain contract MassHandling v2. No optional
+typed-graph or traversal-occurrence profile adoption is recorded.
+
+MassHandling v2:
+The estimator consumes NetMass<kg> for the current lot, supported by a
+current calibration certificate. Gross mass includes packaging. A gross
+reading may be converted only using that lot's approved tare record.
+
+Proposed inputs, all represented as {value: number}:
+- A: value=8; NetMass<kg>; lot L7; current certificate C7 is supplied.
+- B: value=8; GrossMass<kg>; lot L7; current certificate C7 is supplied;
+  no tare record or approved conversion is supplied.
+- C: value=7; NetMass<kg>; lot L8; calibration-certificate status unknown.
+
+Authority: assess compatibility and propose next actions.
+No measurements, conversions or estimator execution are authorised.
+
+Assess the proposal to pass all three objects unchanged to the estimator.
+Return a decision for each input, its domain meaning, and the result
+representation required by the selected method.

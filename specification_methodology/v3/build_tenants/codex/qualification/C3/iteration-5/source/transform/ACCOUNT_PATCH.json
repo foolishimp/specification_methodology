@@ -1,0 +1,2005 @@
+{
+  "schema_version": "stdo.i5.authored-account-patch/v1",
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "source_preimage": "11163991fd8525c98bdd94a36c71a2cfeb15a403",
+  "producer": "I5-WRITE-TRANSFORM",
+  "owner_paths": [
+    "standards/TRANSFORMATION_LIBRARY.md",
+    "standards/STDO_REFERENCE_FRAME_BASELINE.md"
+  ],
+  "updates": [
+    {
+      "id": "TRANSFORMATION_LIBRARY.contract-application",
+      "preimage_body_sha256": "59a48d959ca599d2da1edbe7c2b745aa2b9c09acaecf83420b762d5ba6fb19f4",
+      "candidate_body_sha256": "a3f94da04e2b5729bc14d4ad1b765f84e14066e49f97bf59671aa72e421a81dc",
+      "semantic_fields": {
+        "obligations": [
+          {
+            "conditions": {
+              "Binding": "Identify actual subject/intended predicate, governing interpretation, applicable policy and source/current-state coordinates; names/equal bytes alone confer neither identity, standing nor applicability.",
+              "Support": "Account for conditions and material dependencies that can change the determination. Inspect affected seams until governing obligations are covered or far-side independence is evidenced. Task boundaries, partial listings and no observed failure do not prove independence. Domain-owned completeness/sufficiency may not be silently narrowed.",
+              "Preservation": "Establish material input/output/cross-boundary relations under declared compatibility or translation, applying Foundations Preservation obligations to the claimed step/composition. Retain identity, meaning, lifecycle, producer/evidence coordinates, constraints, authority and effects. Lawful differences require the admitted instance relation; neither universal equality nor invented translation decides compatibility.",
+              "Authority": "Establish actual operation/decision grant for selected effect. Keep owners of meaning, evidence, operation and disposition distinct; code, source reference or satisfied judgment supplies no grant. Preserve required independence.",
+              "Currentness": "Acquire observations/concurrency/uncertain effects under Workspace and context, and apply Change impact and evidence retention to existing evidence. Supported changed dependencies reopen affected determination; unsupported currentness stays unresolved. Supported unchanged premises permit reuse without rechecking fixed graphs or every unchanged relation on every event.",
+              "Result": "Apply core result/conjunction to actual predicates; retain failures, absent coverage, basis/scope diagnoses, original outcomes, performance and effects. Unknown applicability is not non-applicability; other uncertainty cannot erase supported failure."
+            }
+          },
+          "Each consumer binds these conditions to its own decision and domain exceptions using existing dependency/authority evidence; do not create a second generic-rule owner. Exceptions must be named in owning policy; application cannot invent one.",
+          "Design admission binds its transition and complete enclosing relation; frame activation binds evaluation, subject, basis and actor. Both apply the six shared conditions while retaining different domain predicates. Reuse a supported condition through its validity route; a boundary crossing alone neither repeats proof nor permits omission of a changed dependency."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "FOUNDATIONS.workspace-and-context",
+          "TRANSFORMATION_LIBRARY.foundational-contract",
+          "FOUNDATIONS.preservation-obligations",
+          "FOUNDATIONS.change-impact-and-evidence-retention"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "8f4af6c8e527d49828a0bf0688dc793785b7bb99d0b891f908c5548b1781e427",
+            "roles": [
+              "obligation",
+              "result"
+            ],
+            "byte_start": 10398,
+            "byte_end": 10800
+          },
+          {
+            "id": "c2",
+            "sha256": "a51862890c6bff1c203f3254acbe2627adbe9939d8b49f69856c8196f02f73c4",
+            "roles": [
+              "scope",
+              "result"
+            ],
+            "byte_start": 10802,
+            "byte_end": 11068
+          },
+          {
+            "id": "c3",
+            "sha256": "c5a5d467d9b26e40f7d8070f5a398b56f36333db7033816ac0b4fb2dd4c4cdb7",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result",
+              "argument"
+            ],
+            "byte_start": 11070,
+            "byte_end": 13629
+          },
+          {
+            "id": "c4",
+            "sha256": "866bff0d841f522cb24067a4a84d9a9dbc2b68729aaa63353dc3572ecb81f564",
+            "roles": [
+              "obligation",
+              "scope",
+              "argument"
+            ],
+            "byte_start": 13631,
+            "byte_end": 14066
+          },
+          {
+            "id": "c5",
+            "sha256": "55a80ce4f791cab729bd2166d6a59ca994c955e84042b6ebd131b6cf95d4416d",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 14068,
+            "byte_end": 14521
+          },
+          {
+            "id": "body",
+            "sha256": "a3f94da04e2b5729bc14d4ad1b765f84e14066e49f97bf59671aa72e421a81dc",
+            "byte_start": 10374,
+            "byte_end": 15020,
+            "roles": [
+              "source_owned_body"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.workspace-and-context",
+            "kind": "contract_application",
+            "binding": "Owns currentness/reuse/observation/uncertain effects.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Actual predicate result and no authority promotion.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application",
+            "binding": "Required condition/coverage/failed-join composition.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+            "kind": "definition_dependency",
+            "binding": "Parameter meanings and conditional F1-F6 source-to-contract argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument",
+            "binding": "F1-F6 retain their source-owned premise meanings; only the named subset is used by the conditional argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.preservation-obligations",
+            "kind": "conditional_contract_application",
+            "binding": "Bind support for the instance's claimed step or composition.",
+            "required_when": "a preservation relation is material to application"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "conditional_contract_application",
+            "binding": "Establish applicability of existing evidence.",
+            "required_when": "application relies on retained evidence"
+          }
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.contract-application#c1",
+            "source_block_id": "c1",
+            "source_block_sha256": "8f4af6c8e527d49828a0bf0688dc793785b7bb99d0b891f908c5548b1781e427",
+            "source_byte_start": 10398,
+            "source_byte_end": 10800,
+            "source_roles": [
+              "obligation",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "D",
+                "pointer": "/definition/clauses/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.contract-application#c2",
+            "source_block_id": "c2",
+            "source_block_sha256": "a51862890c6bff1c203f3254acbe2627adbe9939d8b49f69856c8196f02f73c4",
+            "source_byte_start": 10802,
+            "source_byte_end": 11068,
+            "source_roles": [
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "D",
+                "pointer": "/definition/clauses/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.contract-application#c3",
+            "source_block_id": "c3",
+            "source_block_sha256": "c5a5d467d9b26e40f7d8070f5a398b56f36333db7033816ac0b4fb2dd4c4cdb7",
+            "source_byte_start": 11070,
+            "source_byte_end": 13629,
+            "source_roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result",
+              "argument"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.contract-application#c4",
+            "source_block_id": "c4",
+            "source_block_sha256": "866bff0d841f522cb24067a4a84d9a9dbc2b68729aaa63353dc3572ecb81f564",
+            "source_byte_start": 13631,
+            "source_byte_end": 14066,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "argument"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              },
+              {
+                "role": "P",
+                "pointer": "/permissions_exceptions/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.contract-application#c5",
+            "source_block_id": "c5",
+            "source_block_sha256": "55a80ce4f791cab729bd2166d6a59ca994c955e84042b6ebd131b6cf95d4416d",
+            "source_byte_start": 14068,
+            "source_byte_end": 14521,
+            "source_roles": [
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "R",
+                "pointer": "/result_mapping/rules/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.evaluate",
+      "preimage_body_sha256": "0676f26397fac0c0b703bfadba95beda83f396f5641ff564ffe530cf25efc476",
+      "candidate_body_sha256": "a25d597aca6bb431cf0a665bded6d452e72992e7db208b7a22abfc2d05cf0b18",
+      "semantic_fields": {
+        "obligations": [
+          "Apply the core algebra to exact predicate/subject/basis. Keep original domain outcome, performance, effect observations, citations and residual coverage. The domain evidence rule, including required independent authorship, decides that predicate and adds no parallel result algebra or new grant.",
+          "Apply Assertions and observations to the source obligation, interpreted required predicate, actual assertion and observation/checker basis. Establish the implication used for broader reliance, support actual acquisition, and preserve assertion derivation separately from execution provenance. Keep the original predicate and distinguish unresolved fidelity, unavailable observation and non-performance; source/execution authentication alone supplies no missing justification."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.judgment-and-authority",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.proportional-disposition",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+          "TRANSFORMATION_LIBRARY.foundational-contract",
+          "FOUNDATIONS.assertions-and-observations",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "050f226622a1b12073fd6bd6aaf308c74b9ebe091fbd3588d9d03318fc86d2b4",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result"
+            ],
+            "byte_start": 26751,
+            "byte_end": 27389
+          },
+          {
+            "id": "c2",
+            "sha256": "df9af56d18a22024cfea1aa327d2882853245d72d88f2bbe3603ce4d08e3baa4",
+            "roles": [
+              "result"
+            ],
+            "byte_start": 28181,
+            "byte_end": 28546
+          },
+          {
+            "id": "i5c1",
+            "sha256": "2feb81d14eab00517f4b6dd8c20690f4a79d32479bbddd6fc382ca976a2b4b32",
+            "byte_start": 27391,
+            "byte_end": 28179,
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Single predicate-bound evidence and performance/effect law.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "SPEC_METHOD.proportional-disposition",
+            "kind": "domain_specialization",
+            "binding": "Sole UP-020 reason-qualified assessment map, separate from applied decision.",
+            "required_when": "UP-020 assessment is selected"
+          },
+          {
+            "id": "FOUNDATIONS.judgment-and-authority",
+            "kind": "contract_application",
+            "binding": "Evaluation supplies no new grant; admitted domain decisions retain their own mandate.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.derived-reviewer-frame",
+            "kind": "domain_specialization",
+            "binding": "The adopted Baseline Reviewer has its profile-defined bounded evaluation grant; no decision grant follows from review access.",
+            "required_when": "Baseline Reviewer is adopted and lawfully activated"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument",
+            "binding": "F1-F6 retain their source-owned premise meanings; only the named subset is used by the conditional argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+            "kind": "governing_scope",
+            "binding": "Enclosing source scope and authority conditions govern this row; proximity creates no adoption.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "conditional_contract_application",
+            "binding": "Bind assertion strength, checker and actual observation support.",
+            "required_when": "an evaluation conclusion is relied on"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "conditional_contract_application",
+            "binding": "Retain justified assertion and actual execution provenance.",
+            "required_when": "an evaluation conclusion is relied on"
+          }
+        ],
+        "source_clause_ids": [
+          "TRANSFORMATION_LIBRARY.evaluate#c1",
+          "TRANSFORMATION_LIBRARY.evaluate#c2",
+          "TRANSFORMATION_LIBRARY.evaluate#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.evaluate#c1",
+            "source_block_id": "c1",
+            "source_block_sha256": "050f226622a1b12073fd6bd6aaf308c74b9ebe091fbd3588d9d03318fc86d2b4",
+            "source_byte_start": 26751,
+            "source_byte_end": 27389,
+            "source_roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/0"
+              },
+              {
+                "role": "P",
+                "pointer": "/permissions_exceptions/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.evaluate#c2",
+            "source_block_id": "c2",
+            "source_block_sha256": "df9af56d18a22024cfea1aa327d2882853245d72d88f2bbe3603ce4d08e3baa4",
+            "source_byte_start": 28181,
+            "source_byte_end": 28546,
+            "source_roles": [
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "R",
+                "pointer": "/result_mapping/rules/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.evaluate#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "2feb81d14eab00517f4b6dd8c20690f4a79d32479bbddd6fc382ca976a2b4b32",
+            "source_byte_start": 27391,
+            "source_byte_end": 28179,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.conjoin",
+      "preimage_body_sha256": "33a4c10e1b9d76d2a03a67c4eb1e9aed17c82ba430e86f297072f15910693e53",
+      "candidate_body_sha256": "927054c222b1c3a65482decfc040107563bd4bdcf8c84e42aef15e9c0c1a84bf",
+      "semantic_fields": {
+        "obligations": [
+          "Apply Result conjunction to the exact composite predicate, required coverage and joins. Authenticate contributors and preserve their predicates, original outcomes and evidence. Retain known failure and required uncovered coverage together; distinguish missing planned judgments from required coverage outside an authenticated plan.",
+          "For mutual assurance from compared or repeated evidence, apply Parallel assurance and provenance to shared causes/dependencies and Risk and assurance selection to quantitative confidence. Preserve the existing logical conjunction; multiple predicates from one execution are not independent observations."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-conjunction",
+          "TRANSFORMATION_LIBRARY.foundational-contract",
+          "FOUNDATIONS.parallel-assurance-and-provenance",
+          "FOUNDATIONS.risk-and-assurance-selection"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "031bd46c90681213100fac3dbad44cdbc4f992082102753796ec966270f91f24",
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "byte_start": 28559,
+            "byte_end": 29098
+          },
+          {
+            "id": "i5c1",
+            "sha256": "60d2ea73574774ea435e2894c6461087405ea78c50037cf7c957833caac5bf89",
+            "byte_start": 29100,
+            "byte_end": 29573,
+            "roles": [
+              "obligation",
+              "scope"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application",
+            "binding": "Owns authentication, verdict precedence, alternative operators and normalized effect composition.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument",
+            "binding": "F1-F6 retain their source-owned premise meanings; only the named subset is used by the conditional argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+            "kind": "governing_scope",
+            "binding": "Enclosing source scope and authority conditions govern this row; proximity creates no adoption.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "conditional_contract_application",
+            "binding": "Account for material shared causes in compared/repeated evidence.",
+            "required_when": "results supply mutual assurance"
+          },
+          {
+            "id": "FOUNDATIONS.risk-and-assurance-selection",
+            "kind": "conditional_contract_application",
+            "binding": "Support any claimed quantitative confidence.",
+            "required_when": "a quantitative confidence claim is made"
+          }
+        ],
+        "source_clause_ids": [
+          "TRANSFORMATION_LIBRARY.conjoin#c1",
+          "TRANSFORMATION_LIBRARY.conjoin#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.conjoin#c1",
+            "source_block_id": "c1",
+            "source_block_sha256": "031bd46c90681213100fac3dbad44cdbc4f992082102753796ec966270f91f24",
+            "source_byte_start": 28559,
+            "source_byte_end": 29098,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/0"
+              },
+              {
+                "role": "P",
+                "pointer": "/permissions_exceptions/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.conjoin#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "60d2ea73574774ea435e2894c6461087405ea78c50037cf7c957833caac5bf89",
+            "source_byte_start": 29100,
+            "source_byte_end": 29573,
+            "source_roles": [
+              "obligation",
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.composition-law",
+      "preimage_body_sha256": "1eba13c1f567ed588891e4d3e68031f257aab6f8fee9142e37a7cf585edc7107",
+      "candidate_body_sha256": "f35a4d67f3baf80fa554f1163ee872db013d7e585a1f2a63f75f637f5ec01008",
+      "semantic_fields": {
+        "obligations": [
+          "Apply Contract application to the outer predicate and all material joins. Bind which outputs satisfy which preconditions, allowed effects of each step and composite preservation relations. Local correctness cannot establish an unsupported join; distinct authorities remain distinct.",
+          "Evaluation results use core conjunction or an explicit alternative operator. Effect combination retains actual boundaries and observations. Regrouping, reordering and concurrent execution are distinct claims; associativity permits neither reordered effects nor concurrency. The computational binding supplies any additional independence/effect equations it relies on.",
+          "A categorical claim applies the complete Foundations Orthogonal descriptions demonstration standard. Contract preservation alone establishes no category, functor, categorical equivalence or proof of those claims.",
+          "Apply Preservation obligations to boundary properties, assumptions, transitions and the outer outcome. Bind initial/step/join/final support for this composition and separately support actual execution, branches, concurrency and external effects. Retain supported locals when outer support is unresolved; refinements/approximations use the same owner's preservation and complete-composition adequacy."
+        ],
+        "dependencies": [
+          "AXIOMATIC_CALCULUS.ac-016-typed-composition",
+          "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+          "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.orthogonal-descriptions",
+          "FOUNDATIONS.result-conjunction",
+          "REFERENCE_FRAME_METHOD.material-composition",
+          "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+          "TRANSFORMATION_LIBRARY.contract-application",
+          "TRANSFORMATION_LIBRARY.foundational-contract",
+          "FOUNDATIONS.preservation-obligations"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "07df46c11bb39d68c25f7b09e383954bcb6c8ab9310cad0551200890334e083a",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result"
+            ],
+            "byte_start": 31293,
+            "byte_end": 31738
+          },
+          {
+            "id": "c2",
+            "sha256": "21f2436e1d834977a69687e147092e0e4a808c368d0633cea0fdba48ad3e6f9f",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 32330,
+            "byte_end": 32969
+          },
+          {
+            "id": "c3",
+            "sha256": "094e68f90010e20c77915d4bc7efce93fbbf7b5edbb5582e1be1738d2b8e64f9",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 32971,
+            "byte_end": 33435
+          },
+          {
+            "id": "body",
+            "sha256": "f35a4d67f3baf80fa554f1163ee872db013d7e585a1f2a63f75f637f5ec01008",
+            "byte_start": 31274,
+            "byte_end": 33647,
+            "roles": [
+              "source_owned_body"
+            ]
+          },
+          {
+            "id": "i5c1",
+            "sha256": "ac8d5fc92e47a771275732f90022c4193eae15d686f27e9e931c220b4a1495d3",
+            "byte_start": 31740,
+            "byte_end": 32328,
+            "roles": [
+              "obligation",
+              "scope",
+              "latitude"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "TRANSFORMATION_LIBRARY.contract-application",
+            "kind": "contract_application",
+            "binding": "Outer predicate and material-join admissibility.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application",
+            "binding": "Evaluation-result operator and effect combination.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.orthogonal-descriptions",
+            "kind": "contract_application",
+            "binding": "Conditional categorical demonstration.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "DESIGN_MODULE_METHOD.transformation-admission-completeness-stdo-up-016",
+            "kind": "domain_specialization",
+            "binding": "Design declarations only.",
+            "required_when": "design composition"
+          },
+          {
+            "id": "DESIGN_MODULE_METHOD.bounded-frame-conservation-stdo-up-017",
+            "kind": "domain_specialization",
+            "binding": "Design affected-frame preservation only.",
+            "required_when": "design composition"
+          },
+          {
+            "id": "SPEC_METHOD.complete-enclosing-relation-admission-stdo-up-021",
+            "kind": "domain_specialization",
+            "binding": "Complete-transition admission/semantic commit only.",
+            "required_when": "consequential admission"
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.material-composition",
+            "kind": "domain_specialization",
+            "binding": "Frame relation binding.",
+            "required_when": "frame-governed composition"
+          },
+          {
+            "id": "AXIOMATIC_CALCULUS.ac-016-typed-composition",
+            "kind": "domain_specialization",
+            "binding": "Exact calculus traversal paths.",
+            "required_when": "a_c composition"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument",
+            "binding": "F1-F6 retain their source-owned premise meanings; only the named subset is used by the conditional argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+            "kind": "governing_scope",
+            "binding": "Enclosing source scope and authority conditions govern this row; proximity creates no adoption.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.orthogonal-descriptions",
+            "kind": "conditional_contract_application",
+            "required_when": "a categorical claim is made"
+          },
+          {
+            "id": "FOUNDATIONS.preservation-obligations",
+            "kind": "conditional_contract_application",
+            "binding": "Bind the actual composite's preservation premises and execution conformance.",
+            "required_when": "a step or outer composition claim is made"
+          }
+        ],
+        "source_clause_ids": [
+          "TRANSFORMATION_LIBRARY.composition-law#c1",
+          "TRANSFORMATION_LIBRARY.composition-law#c2",
+          "TRANSFORMATION_LIBRARY.composition-law#c3",
+          "TRANSFORMATION_LIBRARY.composition-law#body",
+          "TRANSFORMATION_LIBRARY.composition-law#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.composition-law#c1",
+            "source_block_id": "c1",
+            "source_block_sha256": "07df46c11bb39d68c25f7b09e383954bcb6c8ab9310cad0551200890334e083a",
+            "source_byte_start": 31293,
+            "source_byte_end": 31738,
+            "source_roles": [
+              "obligation",
+              "latitude",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/0"
+              },
+              {
+                "role": "P",
+                "pointer": "/permissions_exceptions/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.composition-law#c2",
+            "source_block_id": "c2",
+            "source_block_sha256": "21f2436e1d834977a69687e147092e0e4a808c368d0633cea0fdba48ad3e6f9f",
+            "source_byte_start": 32330,
+            "source_byte_end": 32969,
+            "source_roles": [
+              "declaration"
+            ],
+            "represented_at": [
+              {
+                "role": "D",
+                "pointer": "/definition/clauses/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.composition-law#c3",
+            "source_block_id": "c3",
+            "source_block_sha256": "094e68f90010e20c77915d4bc7efce93fbbf7b5edbb5582e1be1738d2b8e64f9",
+            "source_byte_start": 32971,
+            "source_byte_end": 33435,
+            "source_roles": [
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.composition-law#body",
+            "source_block_id": "body",
+            "source_block_sha256": "f35a4d67f3baf80fa554f1163ee872db013d7e585a1f2a63f75f637f5ec01008",
+            "source_byte_start": 31274,
+            "source_byte_end": 33647,
+            "source_roles": [
+              "declaration"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/2"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.composition-law#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "ac8d5fc92e47a771275732f90022c4193eae15d686f27e9e931c220b4a1495d3",
+            "source_byte_start": 31740,
+            "source_byte_end": 32328,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "latitude"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TRANSFORMATION_LIBRARY.recovery-law",
+      "preimage_body_sha256": "540c3e17637f6d6da5aa894bfd22e6beb22f416862764fdcb15e67e5e7c563eb",
+      "candidate_body_sha256": "b67bc726f20dd327afe6ba25795f2a7522887a4f6f403c0c35d1ddd320338e34",
+      "semantic_fields": {
+        "obligations": [
+          "Apply Workspace/context before the next dependent action: bind current work identity, observe changed material state, retain applicable work, reconsider affected support and preserve unknown effects until sufficiently observed/reconciled. Context is replaceable; workspace survives the actor.",
+          "Bounded construction owns progress, stop, total handling and the causal-change condition for retry. Spec owns Product progress/re-entry, Ticket owns carrier use, and adopted profiles retain additional recovery duties.",
+          "Select assurance from applicable retained evidence and required reassessment. A selected proof must falsify the affected relation and meet required independence; apply UP-014 inside Risk and assurance selection, accounting for acquisition, impact-analysis and assessment costs. For private-state-independent continuity, exclude that state and compare reconstruction with current reality; a same-context exercise does not establish it.",
+          "Apply Change impact and evidence retention to observed change, assertion justification and material execution/validity dependencies. Establish historical evidence applicability while retaining its old subject; keep unknown impact, new cases, gates, failures and uncovered obligations. Selection itself produces no new execution result."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.bounded-construction",
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.workspace-and-context",
+          "SPEC_METHOD.computed-classification-and-treatment",
+          "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+          "TICKET_METHOD.work-carrier-to-execution-rule",
+          "TRANSFORMATION_LIBRARY.foundational-contract",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.risk-and-assurance-selection"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "e6f2e923dd681118ba4acfed12aeabb143a83b6b711317014c39f5b351e252f5",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 33663,
+            "byte_end": 34029
+          },
+          {
+            "id": "c2",
+            "sha256": "20931e70cbbd961f79c57a6be953bf6a4eebe698602865b48f0af7c9156babd2",
+            "roles": [
+              "obligation",
+              "scope"
+            ],
+            "byte_start": 34031,
+            "byte_end": 34581
+          },
+          {
+            "id": "c3",
+            "sha256": "b03cacf90792b043ad10d3803379bce8fdc2d64511de32a4ccc669a25e8809a0",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 35122,
+            "byte_end": 35784
+          },
+          {
+            "id": "i5c1",
+            "sha256": "be366bed351a4275339c69a87e9aa11d3ebd682079f53eaf6ca56654d5b19c79",
+            "byte_start": 34583,
+            "byte_end": 35120,
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.workspace-and-context",
+            "kind": "contract_application",
+            "binding": "Current-state acquisition/reuse/effect reconciliation.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.bounded-construction",
+            "kind": "contract_application",
+            "binding": "Progress/stop/total handling and causal-change retry condition.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TICKET_METHOD.work-carrier-to-execution-rule",
+            "kind": "contract_application",
+            "binding": "Carrier and persistent obligation continuity.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "SPEC_METHOD.computed-classification-and-treatment",
+            "kind": "contract_application",
+            "binding": "Product-specific affected-support and owning-layer re-entry.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "SPEC_METHOD.proportional-method-and-delivery-stdo-up-014",
+            "kind": "contract_application",
+            "binding": "Adequate proof cost selection.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "conditional_foundation_argument",
+            "binding": "F1-F6 retain their source-owned premise meanings; only the named subset is used by the conditional argument.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.foundational-contract",
+            "kind": "governing_scope",
+            "binding": "Enclosing source scope and authority conditions govern this row; proximity creates no adoption.",
+            "required_when": "within the declared applicability"
+          },
+          {
+            "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+            "kind": "conditional_contract_application",
+            "binding": "Bind change impact and retained historical support before reuse.",
+            "required_when": "recovery relies on earlier evidence or observed changed support"
+          },
+          {
+            "id": "FOUNDATIONS.risk-and-assurance-selection",
+            "kind": "conditional_contract_application",
+            "binding": "Constrain recovery proof and total-cost selection by required assurance.",
+            "required_when": "recovery assurance is selected"
+          }
+        ],
+        "source_clause_ids": [
+          "TRANSFORMATION_LIBRARY.recovery-law#c1",
+          "TRANSFORMATION_LIBRARY.recovery-law#c2",
+          "TRANSFORMATION_LIBRARY.recovery-law#c3",
+          "TRANSFORMATION_LIBRARY.recovery-law#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.recovery-law#c1",
+            "source_block_id": "c1",
+            "source_block_sha256": "e6f2e923dd681118ba4acfed12aeabb143a83b6b711317014c39f5b351e252f5",
+            "source_byte_start": 33663,
+            "source_byte_end": 34029,
+            "source_roles": [
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.recovery-law#c2",
+            "source_block_id": "c2",
+            "source_block_sha256": "20931e70cbbd961f79c57a6be953bf6a4eebe698602865b48f0af7c9156babd2",
+            "source_byte_start": 34031,
+            "source_byte_end": 34581,
+            "source_roles": [
+              "obligation",
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              },
+              {
+                "role": "P",
+                "pointer": "/permissions_exceptions/0"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.recovery-law#c3",
+            "source_block_id": "c3",
+            "source_block_sha256": "b03cacf90792b043ad10d3803379bce8fdc2d64511de32a4ccc669a25e8809a0",
+            "source_byte_start": 35122,
+            "source_byte_end": 35784,
+            "source_roles": [
+              "obligation"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/2"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "TRANSFORMATION_LIBRARY.recovery-law#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "be366bed351a4275339c69a87e9aa11d3ebd682079f53eaf6ca56654d5b19c79",
+            "source_byte_start": 34583,
+            "source_byte_end": 35120,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+      "preimage_body_sha256": "b02a6a0bd7da28e326536d8ffeba54dcd812ea1cde663a45606375a29db3f10b",
+      "candidate_body_sha256": "6b69d4d6c732ca9a5488ef6d6801e07d8bcb7e2f31f6f999d8d5b56beb2f6d07",
+      "semantic_fields": {
+        "obligations": [
+          "User acceptance concerns a supported user outcome; end-to-end the full runnable causal realization; integration a material participant boundary and interactions; unit a module-owned law.",
+          "Runner type and label select no frame; each testing instance is declared under its actual claim.",
+          "Where the generic set is adopted, testing supplies congruent evidence to Proof frames without making Proof an aggregate-green hierarchy.",
+          "Unit internal combinatorial complexity scales evidence size/strategy, not eligibility of its owned law.",
+          "Apply Construction assurance to each selected testing claim, binding the requirement/refinement source, asserted predicate, observation basis and required assurance. Existing adoption, ordinary-path and exact-subject conditions remain; no new archetype or mandatory actor follows."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+          "SPEC_METHOD.test-authority-rule",
+          "SPEC_METHOD.testing-strategy-taxonomy",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+          "FOUNDATIONS.construction-assurance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "0f974bb07ecb7f9d06a29c689e1f493c4d9cf5693f33061dc61ed76292dfcee6",
+            "roles": [
+              "obligation",
+              "argument"
+            ],
+            "byte_start": 68116,
+            "byte_end": 68689
+          },
+          {
+            "id": "c2",
+            "sha256": "22c764a6accc6df84f322a12c027a636567e143c7d445d332e54234d87095d57",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 68691,
+            "byte_end": 68964
+          },
+          {
+            "id": "c3",
+            "sha256": "babd456e5aec0940976ef5fc1ba8bd9b82828f2fc0b3017f99cc971b4e07b8d2",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 68966,
+            "byte_end": 69261
+          },
+          {
+            "id": "c4",
+            "sha256": "2474a42dfccda5471a36383954ae3e307005af829e0c468ed93eaf504c06aa1c",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 69263,
+            "byte_end": 69320
+          },
+          {
+            "id": "c5",
+            "sha256": "f1f995b8990676f495417518c97e4eb8bae752876e0313fb8ba581b8e975c90f",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 69322,
+            "byte_end": 69795
+          },
+          {
+            "id": "c6",
+            "sha256": "51f3dc57627acfc2bd0bc7207aff6aa9b8875d62ddeaf05895526764338669eb",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 69797,
+            "byte_end": 70047
+          },
+          {
+            "id": "i5c1",
+            "sha256": "f3656496577713f8801d33d1f3ebb66503ed4fbca35b434bb540402181453f88",
+            "byte_start": 70049,
+            "byte_end": 70434,
+            "roles": [
+              "obligation",
+              "scope",
+              "latitude"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F2, F3, F4, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "SPEC_METHOD.testing-strategy-taxonomy",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.test-authority-rule",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "SPEC_METHOD.assurance-boundary-congruence-and-method-qualification-stdo-up-022",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.construction-assurance",
+            "kind": "conditional_contract_application",
+            "binding": "Apply the common assurance owner to each declared testing claim.",
+            "required_when": "the testing frame is adopted and selected"
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c1",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c2",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c3",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c4",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c5",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#c6",
+          "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "f3656496577713f8801d33d1f3ebb66503ed4fbca35b434bb540402181453f88",
+            "source_byte_start": 70049,
+            "source_byte_end": 70434,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "latitude"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/4"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index",
+      "preimage_body_sha256": "debba4da7ab3cabf4901f070c66ee5774f3a4b18812d7593db54a67109296777",
+      "candidate_body_sha256": "417e7ef7766f6736fd0174743ea7f284fe69fef41c7fca38b99c4a85bab9cb1f",
+      "semantic_fields": {
+        "obligations": [
+          "Index value by congruence, material dimensions, covered interaction strength, exact authoritative path, oracle independence/precision, realistic fault sensitivity, reproducibility and residual/invalidation coordinates.",
+          "Unit dimensions stay module-bounded; broader interfaces compose authority/state/configuration/failure/recovery, so evidence value concerns interactions actually discriminated. Interaction coverage is not a probability or statistical-independence claim.",
+          "Material Product factors include user capability, operation/composition, selected owner/implementation/dependency, lifecycle/persisted state, version/configuration, continuation/retry/recovery, refusal/malformed/partial/competing paths, fresh-process/replay/migration and user-visible projection.",
+          "Pairwise or other covering reduction requires a basis that omitted higher-order combinations cannot change the claim or retains them as residuals.",
+          "High-consequence authority, persistence, concurrency, recovery, migration and historically fragile relations normally require explicit higher-strength cases.",
+          "Code visitation is diagnostic only; it cannot establish semantic combinations, path selection, user outcomes or rival-path absence.",
+          "Admitted work authority selects testing assurance under Risk and assurance selection, binding failure consequences, coverage, uncertainty and action/acceptance conditions. Cost includes acquisition, impact analysis, execution and assessment with estimates distinct from measurements. Numeric confidence uses supported probability/dependence/calibration, not this index or test count."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "REFERENCE_FRAME_METHOD.interaction-coverage",
+          "STDO_REFERENCE_FRAME_BASELINE.material-combinatorial-complexity",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "FOUNDATIONS.risk-and-assurance-selection"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "1bb5f8395bfdfdfc120307a1f991867b278fa437d7f5b81baf987cd6c276b459",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83257,
+            "byte_end": 83454
+          },
+          {
+            "id": "c2",
+            "sha256": "463ea950d6849266ea2a7a6287225b951d82cfa5a6db4582dca81fe38784eaab",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83456,
+            "byte_end": 83514
+          },
+          {
+            "id": "c3",
+            "sha256": "07e9a522bf9178c125133a06034e9863e68a95dac75e9d5b11f3c27366700fa7",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 83516,
+            "byte_end": 83983
+          },
+          {
+            "id": "c4",
+            "sha256": "1c0270a22b89a819d285b3f940c08202b2d32faca5d50442e3cb172d9e010a09",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 83985,
+            "byte_end": 84200
+          },
+          {
+            "id": "c5",
+            "sha256": "4a2070e2c9e033536d86cc59a72051a6b232b9a3362df25ac1de0efbcc530e7c",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 84202,
+            "byte_end": 84540
+          },
+          {
+            "id": "c6",
+            "sha256": "dac2454256f995fc1ab5382fb79bc512a3e3a6af4700c4a0dd0297ee9769e93e",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 84542,
+            "byte_end": 85034
+          },
+          {
+            "id": "c7",
+            "sha256": "a726a8a6a1ee834b296bd403e0cf30a6068f3589a84c05c0acdae472f08902fc",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 85036,
+            "byte_end": 85078
+          },
+          {
+            "id": "c8",
+            "sha256": "f8f1317f0ba50201bd5e0f517cf75d3af898f1760acd2fdfa1b4fbf9cf41e432",
+            "roles": [
+              "obligation"
+            ],
+            "byte_start": 85080,
+            "byte_end": 85540
+          },
+          {
+            "id": "c9",
+            "sha256": "757543c3677a82eb5770a12948e83fade6c66493997f18cd62ad02ab059bd9b5",
+            "roles": [
+              "scope",
+              "argument"
+            ],
+            "byte_start": 85542,
+            "byte_end": 85989
+          },
+          {
+            "id": "c10",
+            "sha256": "96b440140488346ad50956c8ab7c75bb1add2a4c95a4656c4cadf14b8d5f3374",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 85991,
+            "byte_end": 86211
+          },
+          {
+            "id": "i5c1",
+            "sha256": "bdcf5ba31d20821bf6c10f78a2c84e91e236b349f44a5e2e6ec94199a07c69cf",
+            "byte_start": 86213,
+            "byte_end": 86793,
+            "roles": [
+              "obligation",
+              "scope"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F4, F5 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.interaction-coverage",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.material-combinatorial-complexity",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.risk-and-assurance-selection",
+            "kind": "conditional_contract_application",
+            "binding": "Select testing assurance and support any numeric confidence within its risk model.",
+            "required_when": "testing strategy or numeric confidence is selected"
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c1",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c2",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c3",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c4",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c5",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c6",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c7",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c8",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c9",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c10",
+          "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#c6",
+            "source_block_id": "c6",
+            "source_block_sha256": "dac2454256f995fc1ab5382fb79bc512a3e3a6af4700c4a0dd0297ee9769e93e",
+            "source_byte_start": 84542,
+            "source_byte_end": 85034,
+            "source_roles": [
+              "declaration"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/1"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.combinatorial-coverage-and-testing-value-index#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "bdcf5ba31d20821bf6c10f78a2c84e91e236b349f44a5e2e6ec94199a07c69cf",
+            "source_byte_start": 86213,
+            "source_byte_end": 86793,
+            "source_roles": [
+              "obligation",
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/6"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+      "preimage_body_sha256": "ed63ca4d3189dc454f0e1a1d417ba34b97e023ff6609b7d993a9981cf5d166be",
+      "candidate_body_sha256": "7d45243ffafafb575934d2b02f354ebdf2e3ef595093a076bce6dfcb4f20e42e",
+      "semantic_fields": {
+        "obligations": [
+          "UAT owns user-outcome evidence, E2E the complete authoritative runnable path, integration actual participant composition and unit module-owned laws.",
+          "UAT alone can leave path singularity open; E2E can leave user populations/combinations open; integration/unit cannot replace either broader claim.",
+          "When all are required, conflicts or missing results remain visible to disposition.",
+          "For mutual assurance, apply Parallel assurance and provenance to each justified requirement/refinement assertion path and actual execution. Retain shared fixtures, tools, observations, interpretations and received contributions; overlapping claims from one run are not independent observations. Keep existing logical conjunction, failures, missing claims and required assessment authorship."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction",
+          "REFERENCE_FRAME_METHOD.using-frames-in-conjunction",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "675478d1aa2919fa22532a2cb4b97e4a83acd22c6650fd252c1bc808cfbdd812",
+            "roles": [
+              "latitude"
+            ],
+            "byte_start": 89357,
+            "byte_end": 89744
+          },
+          {
+            "id": "c2",
+            "sha256": "e5d746d81bec7fba21a922c4d04c89fa9b4ebf2784183951ef5a56fe6842bb8b",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 89746,
+            "byte_end": 89785
+          },
+          {
+            "id": "c3",
+            "sha256": "77df55fc2223acd52d4766874587842e4f32b6064403c1000e711496fbdc8058",
+            "roles": [
+              "declaration"
+            ],
+            "byte_start": 89787,
+            "byte_end": 90109
+          },
+          {
+            "id": "c4",
+            "sha256": "6f62b0aeed843eca182cc05940d626dbcd53f439eb84f27cc3497103f7521b5a",
+            "roles": [
+              "obligation",
+              "latitude",
+              "scope"
+            ],
+            "byte_start": 90111,
+            "byte_end": 90509
+          },
+          {
+            "id": "i5c1",
+            "sha256": "46ad4c4c300429c2139952d03a341ac46556229d0faed48e842a97eb9db94331",
+            "byte_start": 90511,
+            "byte_end": 91141,
+            "roles": [
+              "obligation",
+              "scope"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F1, F2, F4 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "FOUNDATIONS.result-conjunction",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "REFERENCE_FRAME_METHOD.using-frames-in-conjunction",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "conditional_contract_application",
+            "binding": "Account for provenance and shared failure causes without changing conjunction.",
+            "required_when": "testing results supply mutual assurance"
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#c1",
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#c2",
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#c3",
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#c4",
+          "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "46ad4c4c300429c2139952d03a341ac46556229d0faed48e842a97eb9db94331",
+            "source_byte_start": 90511,
+            "source_byte_end": 91141,
+            "source_roles": [
+              "obligation",
+              "scope"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation",
+      "preimage_body_sha256": "c9464f19cdca98fadd99b4876b211641e94b187c5a02c1ca4d92177b1d362fd6",
+      "candidate_body_sha256": "1b75a795f1598f438758c29835fc8ba80683f9d06388b22a752f7c7f24fc9e9c",
+      "semantic_fields": {
+        "obligations": [
+          "Separate subject acquisition from expected relations derived from Product, requirements and accepted design.",
+          "Use exact owner surface/validator/projection/receipt/reconstruction selectors and faithful observation transport.",
+          "A harness, fixture, expected-value builder, proof script, assurance evaluator or Reviewer cannot construct parallel owner state from raw payloads, events, logs, filenames, labels or implementation fragments.",
+          "Generic byte/digest/order/equality/membership/completeness/conjunction checks may evaluate owner-issued evidence but may not mint owner carriers, select authoritative history/path, interpret lifecycle/admission or supply runtime fallback.",
+          "A missing owner projection remains an assurance/design gap.",
+          "Apply Assertions and observations to the oracle and actual subject: state target predicate, scope and justified relation to the requirement/refinement. A narrower assertion supports only its actual conclusion; choose the required acceptable relation without assuming equal valid outputs. Support real observation/checker conformance and material discriminations; retain missing support and the original core predicate instead of promoting a reported pass/failure.",
+          "Retain assertion and execution provenance separately in existing source/test/evidence bindings through Parallel assurance and provenance. A common derivation may serve a declared family; implementation-derived checks retain local/regression use but do not meet this profile's independent upstream-oracle condition by repeating implementation answers."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "TRANSFORMATION_LIBRARY.acquire",
+          "TRANSFORMATION_LIBRARY.evaluate",
+          "TRANSFORMATION_LIBRARY.faithful-projection",
+          "FOUNDATIONS.assertions-and-observations",
+          "FOUNDATIONS.parallel-assurance-and-provenance"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "da60d0be27f0805e0b240ee345de8a999b971e7eaedfd914becb792c1d52b394",
+            "roles": [
+              "scope"
+            ],
+            "byte_start": 91192,
+            "byte_end": 91766
+          },
+          {
+            "id": "body",
+            "sha256": "1b75a795f1598f438758c29835fc8ba80683f9d06388b22a752f7c7f24fc9e9c",
+            "byte_start": 91143,
+            "byte_end": 93650,
+            "roles": [
+              "source_owned_body"
+            ]
+          },
+          {
+            "id": "i5c1",
+            "sha256": "51addf79375c1023bb92976e7aab71743490e61cae2ab4acdf4cb8922f6ba309",
+            "byte_start": 92488,
+            "byte_end": 93171,
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ]
+          },
+          {
+            "id": "i5c2",
+            "sha256": "7fe5288a35394cc32e688114dfae49a0e2c5bb6bbc8df58acc48c547f577836e",
+            "byte_start": 93173,
+            "byte_end": 93648,
+            "roles": [
+              "obligation",
+              "latitude"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.acquire",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.evaluate",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.faithful-projection",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.assertions-and-observations",
+            "kind": "conditional_contract_application",
+            "binding": "Justify the oracle's source relation and actual acquired observation.",
+            "required_when": "an assertion result supports this claim"
+          },
+          {
+            "id": "FOUNDATIONS.parallel-assurance-and-provenance",
+            "kind": "conditional_contract_application",
+            "binding": "Keep expected-predicate derivation and actual execution provenance distinct.",
+            "required_when": "assertion/execution evidence is relied on"
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#c1",
+          "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#body",
+          "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#i5c1",
+          "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#i5c2"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "51addf79375c1023bb92976e7aab71743490e61cae2ab4acdf4cb8922f6ba309",
+            "source_byte_start": 92488,
+            "source_byte_end": 93171,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/5"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          },
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation#i5c2",
+            "source_block_id": "i5c2",
+            "source_block_sha256": "7fe5288a35394cc32e688114dfae49a0e2c5bb6bbc8df58acc48c547f577836e",
+            "source_byte_start": 93173,
+            "source_byte_end": 93648,
+            "source_roles": [
+              "obligation",
+              "latitude"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/6"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    },
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization",
+      "preimage_body_sha256": "e347d1de2a77972ce3a66009ac2c54e684630d6b2e9c4f0ce83d1aec3393e93b",
+      "candidate_body_sha256": "9e41740dbbf48120aba1b602a01197eb39f28d135ea493aa68dcddc7291e4972",
+      "semantic_fields": {
+        "obligations": [
+          "Retain unique locus, jointly necessary incomparable loci, unresolved alternative frontiers or indeterminate evidence as actually supported.",
+          "Earliest means causally minimal, not first log/clock occurrence.",
+          "Use the supported frontier for existing owning-layer re-entry without adding repair authority.",
+          "Before using an observed test failure against a broader obligation, establish that relation through Evaluate; otherwise retain the actual bounded result and unresolved assertion/observation support. Diagnostic work keeps Spec's owner and a test label supplies no cause, repair class or authority."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.foundational-commitments",
+          "FOUNDATIONS.result-algebra",
+          "SPEC_METHOD.counterexample-localization",
+          "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "TRANSFORMATION_LIBRARY.evaluate"
+        ],
+        "source_clauses": [
+          {
+            "id": "c1",
+            "sha256": "b6b182eef8c7a180968146c5d114944e7b871b97ff3ede7547f14e634681f81e",
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "byte_start": 95267,
+            "byte_end": 95849
+          },
+          {
+            "id": "i5c1",
+            "sha256": "01643ac1d819dfed8631fb3582acf7643c16d6dfe99251b89573f9731f062a07",
+            "byte_start": 95851,
+            "byte_end": 96218,
+            "roles": [
+              "obligation",
+              "scope",
+              "result"
+            ]
+          }
+        ],
+        "dependency_relations": [
+          {
+            "id": "FOUNDATIONS.foundational-commitments",
+            "kind": "foundational_premise",
+            "binding": "Use only F2, F3, F4, F6 for the conditional argument below; profile choices remain additional policy."
+          },
+          {
+            "id": "SPEC_METHOD.counterexample-localization",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "FOUNDATIONS.result-algebra",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+            "kind": "contract_application",
+            "binding": "Apply the named owning contract to this row subject and scope; neither reference nor profile adoption transfers its authority."
+          },
+          {
+            "id": "TRANSFORMATION_LIBRARY.evaluate",
+            "kind": "conditional_contract_application",
+            "binding": "Establish whether the observed test failure defeats the broader claimed obligation.",
+            "required_when": "test failure is used as a counterexample to that broader obligation"
+          }
+        ],
+        "source_clause_ids": [
+          "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization#c1",
+          "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization#i5c1"
+        ],
+        "source_clause_roles": [
+          {
+            "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.counterexample-localization#i5c1",
+            "source_block_id": "i5c1",
+            "source_block_sha256": "01643ac1d819dfed8631fb3582acf7643c16d6dfe99251b89573f9731f062a07",
+            "source_byte_start": 95851,
+            "source_byte_end": 96218,
+            "source_roles": [
+              "obligation",
+              "scope",
+              "result"
+            ],
+            "represented_at": [
+              {
+                "role": "O",
+                "pointer": "/obligations/3"
+              }
+            ],
+            "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+          }
+        ]
+      }
+    }
+  ],
+  "new_rows": [
+    {
+      "id": "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse",
+      "family": "Testing Reassessment And Evidence Reuse",
+      "owner": {
+        "path": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+        "anchor": "testing-reassessment-and-evidence-reuse",
+        "start_line": 1262,
+        "end_line": 1286,
+        "body_sha256": "91fa1f3a0756eeec74e576309e670eaa98f719b1099a0af374a00a5eb7bab2e7"
+      },
+      "coverage_standing": "bounded_author_binding",
+      "representation_kind": "consumer_binding",
+      "family_ref": "standards/STDO_REFERENCE_FRAME_BASELINE.md",
+      "unit_kind": "contract_binding",
+      "interpretation_standing": "bounded_semantic_binding",
+      "predicate": "The adopted testing assessment covers affected/new obligations and gates while retaining only evidence applicable to the new subject and basis.",
+      "applicability": "An adopted Baseline testing claim undergoes a material subject/basis/dependency change, reassessment, recovery or evidence reuse.",
+      "obligations": [
+        "Apply Change impact and evidence retention to the selected claim/change; distinguish assertion-source justification from implementation, fixture/data, instrument, tool, environment and other validity dependencies. Use conservative impact/exclusion conditions; unknown influence cannot drop work, new uncovered obligations require assessment and mandatory gates remain.",
+        "Keep old execution subjects and establish the new applicability relation. Add actual reassessment while preserving failed, indeterminate and unperformed conditions. Selection supplies no execution evidence; changed requirements revise expectations through owners, and implementation/environment corrections revisit affected execution/integration under applicable obligations.",
+        "Select assessment strategy within required assurance/risk and total selection/execution costs. Retain residual combinations and counterexamples in the existing account; broader testing remains available where impact/policy requires it."
+      ],
+      "permissions_exceptions": [
+        "Supported unaffected evidence need not be re-executed solely because another dependency changed. No fixed full-suite cadence or independent test ledger is added."
+      ],
+      "dependencies": [
+        "FOUNDATIONS.change-impact-and-evidence-retention",
+        "FOUNDATIONS.risk-and-assurance-selection",
+        "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+        "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+        "FOUNDATIONS.result-algebra"
+      ],
+      "dependency_relations": [
+        {
+          "id": "FOUNDATIONS.change-impact-and-evidence-retention",
+          "kind": "conditional_contract_application",
+          "binding": "Apply the single dependency, impact, exclusion and retention owner.",
+          "required_when": "within the declared adopted testing applicability"
+        },
+        {
+          "id": "FOUNDATIONS.risk-and-assurance-selection",
+          "kind": "conditional_contract_application",
+          "binding": "Preserve required assurance and risk while selecting cost-effective assessment.",
+          "required_when": "within the declared adopted testing applicability"
+        },
+        {
+          "id": "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary",
+          "kind": "conditional_contract_application",
+          "binding": "Preserve optional profile adoption and existing authority.",
+          "required_when": "within the declared adopted testing applicability"
+        },
+        {
+          "id": "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+          "kind": "conditional_contract_application",
+          "binding": "Bind the actual testing claim, subject, population and required evidence.",
+          "required_when": "within the declared adopted testing applicability"
+        },
+        {
+          "id": "FOUNDATIONS.result-algebra",
+          "kind": "conditional_contract_application",
+          "binding": "Preserve original verdict, performance and effect distinctions.",
+          "required_when": "within the declared adopted testing applicability"
+        }
+      ],
+      "inputs": [
+        {
+          "description": "Selected testing claim, exact old/new subject and basis, actual change and material assertion/execution/validity dependencies.",
+          "required_when": "Assessing changed applicability or selecting reassessment.",
+          "standing": "required_at_instance_not_missing_source"
+        },
+        {
+          "description": "Original execution evidence, failures and unresolved coverage, with support for retained applicability and actual new assessment.",
+          "required_when": "Relying on retained or reassessed evidence.",
+          "standing": "required_at_instance_not_missing_source"
+        },
+        {
+          "description": "Required assurance, risk policy, mandatory gates and relevant selection/execution costs.",
+          "required_when": "Selecting the reassessment strategy.",
+          "standing": "required_at_instance_not_missing_source"
+        }
+      ],
+      "consumers": [
+        "STDO_REFERENCE_FRAME_BASELINE.derived-product-testing-frame-set",
+        "STDO_REFERENCE_FRAME_BASELINE.testing-evidence-composition",
+        "STDO_REFERENCE_FRAME_BASELINE.assurance-subject-acquisition-and-evaluation"
+      ],
+      "scope_refs": [
+        "STDO_REFERENCE_FRAME_BASELINE.status-and-authority-boundary"
+      ],
+      "source_references": [],
+      "result_mapping": {
+        "kind": "constraint_assessment",
+        "contract_ref": "core.shared_contracts.core_evaluation",
+        "predicate_binding": "The adopted testing assessment covers affected/new obligations and gates while retaining only evidence applicable to the new subject and basis.",
+        "original_outcome_meaning": "The assessed policy/condition is this row predicate; any role, inventory, workflow or action label remains payload, not an extra verdict.",
+        "performance_and_effects": "Preserve actual evaluation performance and observed effects under FOUNDATIONS.result-algebra.",
+        "evaluation_contract_ref": "core.shared_contracts.core_evaluation",
+        "owner_refs": [
+          "FOUNDATIONS.result-algebra",
+          "FOUNDATIONS.result-conjunction"
+        ]
+      },
+      "argument": {
+        "premises": [
+          {
+            "id": "F2",
+            "kind": "foundational_premise",
+            "owner": "FOUNDATIONS.foundational-commitments"
+          },
+          {
+            "id": "F3",
+            "kind": "foundational_premise",
+            "owner": "FOUNDATIONS.foundational-commitments"
+          },
+          {
+            "id": "F4",
+            "kind": "foundational_premise",
+            "owner": "FOUNDATIONS.foundational-commitments"
+          },
+          {
+            "id": "F5",
+            "kind": "foundational_premise",
+            "owner": "FOUNDATIONS.foundational-commitments"
+          },
+          {
+            "id": "F6",
+            "kind": "foundational_premise",
+            "owner": "FOUNDATIONS.foundational-commitments"
+          }
+        ],
+        "conditional_consequence": "On this adopted testing claim, changed validity dependencies require affected reassessment without erasing independently applicable evidence, known failures or required coverage.",
+        "policy_choices": [
+          "The adopting Product and existing mandate choose testing scope, gates, risk policy and strategy; Foundations owns the shared impact and retention relation."
+        ],
+        "source_refs": [
+          "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse",
+          "FOUNDATIONS.change-impact-and-evidence-retention",
+          "FOUNDATIONS.risk-and-assurance-selection"
+        ],
+        "clause_arguments": [],
+        "source_family_arguments": [],
+        "standing": "authored_conditional_argument_not_independent_entailment_proof"
+      },
+      "source_clauses": [
+        {
+          "id": "c1",
+          "byte_start": 93695,
+          "byte_end": 94303,
+          "sha256": "a29c8780878868b28fb0273d32693b905b0ca5d5c6d98b28e3fcd0742a7f842a",
+          "roles": [
+            "obligation",
+            "scope"
+          ]
+        },
+        {
+          "id": "c2",
+          "byte_start": 94305,
+          "byte_end": 94766,
+          "sha256": "70be933166cdf3fcce93cb7fd0bca92c92af99081b2f627cfb9b18be8f67b1c8",
+          "roles": [
+            "obligation",
+            "scope"
+          ]
+        },
+        {
+          "id": "c3",
+          "byte_start": 94768,
+          "byte_end": 95233,
+          "sha256": "6395b8e3cd5a1f697f51fe61a388ff02fb268515392451f79f3cd87767a273fe",
+          "roles": [
+            "obligation",
+            "scope",
+            "latitude"
+          ]
+        }
+      ],
+      "source_clause_ids": [
+        "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c1",
+        "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c2",
+        "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c3"
+      ],
+      "source_clause_roles": [
+        {
+          "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c1",
+          "source_block_id": "c1",
+          "source_block_sha256": "a29c8780878868b28fb0273d32693b905b0ca5d5c6d98b28e3fcd0742a7f842a",
+          "source_byte_start": 93695,
+          "source_byte_end": 94303,
+          "source_roles": [
+            "obligation",
+            "scope"
+          ],
+          "represented_at": [
+            {
+              "role": "O",
+              "pointer": "/obligations/0"
+            }
+          ],
+          "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+        },
+        {
+          "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c2",
+          "source_block_id": "c2",
+          "source_block_sha256": "70be933166cdf3fcce93cb7fd0bca92c92af99081b2f627cfb9b18be8f67b1c8",
+          "source_byte_start": 94305,
+          "source_byte_end": 94766,
+          "source_roles": [
+            "obligation",
+            "scope"
+          ],
+          "represented_at": [
+            {
+              "role": "O",
+              "pointer": "/obligations/1"
+            }
+          ],
+          "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+        },
+        {
+          "source_clause_id": "STDO_REFERENCE_FRAME_BASELINE.testing-reassessment-and-evidence-reuse#c3",
+          "source_block_id": "c3",
+          "source_block_sha256": "6395b8e3cd5a1f697f51fe61a388ff02fb268515392451f79f3cd87767a273fe",
+          "source_byte_start": 94768,
+          "source_byte_end": 95233,
+          "source_roles": [
+            "obligation",
+            "scope",
+            "latitude"
+          ],
+          "represented_at": [
+            {
+              "role": "O",
+              "pointer": "/obligations/2"
+            },
+            {
+              "role": "P",
+              "pointer": "/permissions_exceptions/0"
+            }
+          ],
+          "standing": "author_source_to_representation_mapping_not_fidelity_verdict"
+        }
+      ]
+    }
+  ]
+}

@@ -14,36 +14,34 @@ lifecycle. [ODD Method](ODD_METHOD.md) and
 [World Model Method](WORLD_MODEL_METHOD.md) retain their separate selected
 carrier and domain meanings.
 
-The premises are an adopted interactive surface, admitted Product contracts,
-observable state transitions and externally consequential effects. Identity,
-authority and [workspace/context separation](FOUNDATIONS.md#workspace-and-context)
-require the view and an actor's understanding to remain distinguishable from
-the current owning state. Compatible composition requires a state change to
-preserve its governing Product obligations.
+Within its adopted surface, apply
+[Contract application](TRANSFORMATION_LIBRARY.md#contract-application) at the
+typed input, command-dispatch, replay and closure boundaries. Bind the exact
+Product contracts, State/Msg/Update/Cmd/Sub algebras, current owning state,
+evidence and actual effect/decision grants. Emitting a command supplies no
+Product-truth or runtime-continuation authority.
 
-This profile additionally chooses the Elm process model: State, Msg, pure
-Update, pure View and Cmd/Sub interpreted at a declared effect membrane. That
-model is a domain policy, not a consequence of finite attention alone. It
-remains constitutional within adoption, while language,
-framework and concrete stack choices remain in the project design. A
-product-truth-changing message resolves an admitted typed Product carrier;
-view-local ephemera retain their limited scope and unmount test.
+The arguments below use [F1–F6](FOUNDATIONS.md#foundational-commitments)
+within the surface governed by this profile. The Product supplies admitted
+truth and action contracts; the UX renders that truth, requests changes and
+receives data across seams it may not control. Stacks offer different state and
+effect mechanisms. Those instance conditions motivate explicit contracts but
+do not derive TEA, an accessibility standard or one implementation stack.
 
-| Shared operation | UX deciding consumer |
-|---|---|
-| Bind | Declare the covered surface, adopted method, State/Msg/Update/Cmd/Sub algebras, shared AssetSurface or equivalent typed contracts, runtime ownership, stack justification and any bounded exemption. |
-| Acquire | Derive State from the admitted typed contracts, import shared types and runtime-validate every untrusted or out-of-process payload before it enters UX state. Inputs to a View remain explicitly declared. |
-| Transform | Pure Update describes State transitions and Cmd values; pure View projects State. The declared runtime membrane interprets effects and returns success or failure Msg values, preserving deterministic replay correlations. |
-| Evaluate | Executable Msg replay checks initial and final State, ordered Cmd values and typed effect outcomes with injected deterministic values. Render/effect discipline, admitted carriers, accessibility and exemption predicates retain the exact closure rules below. |
-| Conjoin | The covered module satisfies applicable Design Module and UX law together. Shared front-end/back-end contracts, replay evidence and product-meaningful interaction families remain sufficient across the declared surface. |
-| Dispose | The sprint-close forensic walkthrough classifies findings under its complete six-class list below, including accepted. Existing competent owners act on those findings only under their own grants. Escrow defers selected local proof during iteration and retains method-closure obligations. |
+| Determination and consuming law | Conditional argument | Additional UX policy and owner |
+|---|---|---|
+| Adoption, ambiguity and scaffolds: [1A](#1a-constitutional-authority-rule), [4A](#4a-process-model-without-language-or-framework-mandate), [13A](#13a-scaffold-and-exemption-law) | Specification ownership binds the governed surface and its purpose (F1/F6). Evidence of a working prototype does not authorize an exception or establish release fitness. An ambiguous case therefore retains the existing authority rule; adopting a stack cannot silently settle its unresolved meaning. | This member chooses TEA within adoption, default covered surfaces and its exact ambiguity exits. An ambiguity exemption uses the design module under 1A; a scaffold exemption uses the design module or ticket under 13A, retaining permitted operations, visible standing, retirement and non-closure conditions. Project realization choices remain within those conditions. |
+| State transition and projection: [process model](#4-process-model--elm-architecture), [state transition](#5-state-transition-law), [continuation](#8-ux-twin-of-odd-115a--view-does-not-own-continuation) | Information and interpretation distinguish owning state from its view (F2/F3); functional design composes transitions over declared inputs (F4). If losing a supposedly local value changes Product behavior, the view is carrying a material state relation that its projection contract does not own. | This member chooses pure `Update` and `View`, runtime-owned `State`, and the unmount discriminator. Product-meaningful state uses the typed reducer; genuinely view-local ephemera retain their stated permission. |
+| Commands and observed effects: [state transition](#5-state-transition-law), [effect membrane](#6-effect-membrane-rule) | Computational execution binding distinguishes the command value, dispatch and observed effect. Persistent reality and finite observation (F3/F5) permit lost or partial outcomes, while authority still binds the actual operation (F6). A failure response after dispatch cannot prove no mutation or authorize a blind repeat. | This member chooses typed `Cmd`/`Sub`, a declared interpreter membrane, typed outcome `Msg` cases and deterministic correlation. Shared currentness/effect law decides the observed state and dependent recovery; the membrane acquires no business-continuation authority. |
+| Product carrier and ingress: [3A](#3a-ux-projection-and-constructive-carrier-boundary), [AssetSurface](#7-assetsurface-binding-rule), [type sharing](#10-type-sharing-rule) | Information and typed composition require compatible meaning at the front/back-end seam (F2/F4); an emitted message cannot grant the operation it names (F6). Consequently a UI-local shape or handler cannot replace an absent Product carrier, and untrusted input cannot become admitted state solely by a compile-time type assertion. | This member chooses shared AssetSurface or named equivalents, one-to-one action bindings or faithful explicit projections, and runtime validation at its declared seams. The Product owns the action contract; the project chooses the schema and interpreter mechanisms. |
+| Replay proof: [8A](#8a-msg-replay-proof-requirement) | Evidence supports the exact interaction predicate (F1/F2/F6). Functional transitions can be assessed from declared State, ordered Msg/Cmd and deterministic inputs; hidden view state prevents that reconstruction. Faithfully replaying an unknown-effect message establishes the trace relation, not completion of the underlying effect. | This member requires executable proof per product-meaningful interaction family and defines its fixtures, ordered outputs and excluded hidden dependencies. A pure projection may use the declared no-effect proof. Core conjunction retains failed families and missing required coverage. |
+| Accessibility: [minimum](#11-accessibility-minimum) | Purpose identifies the public capability being exposed (F1), and authority governs its exceptions (F6). That scope distinguishes a public Product surface from a recorded internal debug exemption; a screenshot alone cannot establish interaction obligations. | This member chooses the accessibility minimum and recommended web default. Projects may add stricter refinements. These concrete duties are domain policy, not theorems of finite attention or consequences of passing Msg replay. |
+| Sprint escrow: [13B](#13b-ux-sprint-compliance-escrow) | Finite work can defer selected proof under an admitted bound (F1/F5), while evidence and authority preserve what remains unproved and who may dispose it (F3/F6). A permitted escrow treatment therefore cannot turn a deferred interaction obligation into completed UX proof. | UX owns the escrow allow/deny boundaries and forensic walkthrough; Ticket owns sprint-close classification and eligibility. Product UX closure still requires its applicable proof. |
 
-The replay and closure consumers below use the shared
+Applicable Design Module and UX obligations
+conjoin at their actual closure consumer using the shared
 [result record](FOUNDATIONS.md#result-algebra) and
-[result conjunction](FOUNDATIONS.md#result-conjunction). The bindings preserve
-the process model and scoped authority without a new UI stack mandate or
-six-stage UX workflow. UX commands do not
-acquire runtime continuation or product-truth authority merely by being emitted.
+[result conjunction](FOUNDATIONS.md#result-conjunction).
 
 <!-- STDO3_PROFILE_BINDING_END -->
 
@@ -206,8 +204,10 @@ Each `Cmd` declaration names:
 - the effect kind
 - the typed input payload
 - the admitted carrier or external boundary it targets
-- the success `Msg` emitted back to the reducer
-- the failure `Msg` emitted back to the reducer
+- the typed outcome `Msg` family returned to the reducer, including every
+  observed or unresolved effect case possible under the command contract (§6)
+- the reason and observation carried by each case; a success/failure label alone
+  does not establish completion or absence of effects
 - any deterministic correlation key required for replay
 
 The reducer is pure. It does not perform I/O, log to side channels, or mutate global state. Effects scheduled by `Cmd` are interpreted by the runtime at the effect membrane (see §6).
@@ -241,8 +241,11 @@ The membrane has one job: interpret declared `Cmd` values. It is not where logic
 Effect returns distinguish each shared effect state the command can produce
 as typed `Msg` cases under its contract, including observed non-start and
 reversal where applicable. The method result
-records the corresponding shared effect state; it does not replace the UX
-domain's message algebra. A failed response after dispatch can mean `unknown`
+records the corresponding shared effect state under the single
+[effect observation law](FOUNDATIONS.md#result-algebra); it does not replace
+the UX domain's message algebra. The command binding relates each qualified
+message to that observation boundary and evidence, preserving missing-reason
+and unknown cases rather than guessing from a message name. A failed response after dispatch can mean `unknown`
 effects, not proof of no mutation. Before a dependent repeat, the declared
 recovery command observes the actual owning state. Reconstructed UI context or
 an old success message cannot override that observation. This applies
@@ -303,7 +306,8 @@ A replay proof includes:
 - an ordered `Msg` log
 - the expected final `State`
 - the expected ordered `Cmd` values
-- the success and failure `Msg` values returned by interpreted `Cmd`s
+- the typed outcome `Msg` values returned by interpreted `Cmd`s, including
+  unresolved effects wherever admitted by the interaction contract
 - injected deterministic values for time, randomness, generated ids, and
   external payloads
 
@@ -320,8 +324,12 @@ For a pure projection-only surface, the replay proof may be a no-effect proof:
 Each replay assessment returns the shared
 [result record](FOUNDATIONS.md#result-algebra) on the exact interaction-family
 predicate, preserving the original test outcome and observed command/effect
-trace. A demonstrated expected-state or command mismatch, or a demonstrated dependency on
-any source excluded by this replay contract, is `falsified`; a
+trace. Evidence of the expected final State, ordered Cmds and typed returns
+under the declared replay conditions satisfies that replay predicate.
+A replay can correctly reproduce an unknown-effect Msg without establishing
+completion of the underlying effect. A demonstrated expected-state or command
+mismatch, or a demonstrated dependency on any source excluded by this replay
+contract, is `falsified`; a
 proof not run retains `not_performed` and cannot satisfy the predicate.
 Missing decisive trace is `indeterminate`; an unusable fixture or governing
 basis is `invalid_basis`; an interaction outside the declared assessment domain
@@ -501,34 +509,25 @@ trustworthy than review. Valid close triggers include:
 UX sprint close is a forensic walkthrough. The walkthrough reviews each changed
 screen, state, and product-meaningful interaction against the cited authority.
 
-Each finding is classified as:
-
-- `accepted`: compliant with this method and the cited design
-- `local_paydown`: local UX debt remains and is captured by a paydown ticket
-- `design_reframe`: design authority must change
-- `requirement_reprice`: requirement authority must change
-- `product_reprice`: product definition must change
-- `remove`: the change should be backed out or kept out of closure
-
-These are domain dispositions on the assessed UX claim. Report each through
-the shared [result record](FOUNDATIONS.md#result-algebra), keeping its cited
-design, exact compliance predicate, evidence and residuals. `accepted` maps to
-`satisfied` only for that compliance predicate. A known violation remains
-`falsified` when its disposition is `local_paydown`, `design_reframe`, a reprice
-or `remove`; an unresolved assessment remains `indeterminate` with that
-disposition rather than acquiring compliance by being assigned a ticket.
-Basis and scope failures retain `invalid_basis` or `out_of_frame`. The owner
-who may accept, reprice or remove work remains bound by the existing grant.
+Classify each finding under
+[Ticket Sprint Close Review](TICKET_METHOD.md#sprint-close-review), which owns
+the six treatment classes and their reason-sensitive assessment/decision
+bindings. The UX item-compliance predicate is "this changed screen, state or
+product-meaningful interaction meets the applicable UX Method and cited design
+obligations at this basis." Bind its current surface, adopted scope,
+applicability/exemption evidence and the exact obligations to that owner's
+map. Apply [Contract application](TRANSFORMATION_LIBRARY.md#contract-application)
+to the admissibility of this assessment and support; assess UX compliance
+separately. The treatment and its competent decision authority cannot replace
+that assessment. Retain the actual failure, uncertainty, performance and
+effects, including when a local paydown or removal treatment is lawful.
 
 Sprint-close eligibility and product UX method closure are separate predicates.
-The former may permit a declared local paydown under its governing policy;
-the latter conjoins its applicable proof and accessibility results through
-[core conjunction](FOUNDATIONS.md#result-conjunction). An authorised recorded
-exemption is the supported applicability judgment that removes only its
-exempted obligation; no absent exemption is a missing mandatory result.
-Sprint-close
-eligibility is not a conjunct of that method-closure predicate and supplies no
-evidence that the debt is resolved.
+The former admits local paydown only under its stated policy. The latter
+requires its applicable replay and accessibility proof through core conjunction.
+A recorded authorised exemption decides only its named applicability; an
+unrecorded exemption supplies no such evidence. Closing the sprint establishes
+neither discharge of paydown nor method closure.
 
 The sprint may close with explicit local paydown tickets only where the debt is
 local to UX realization and the governing method allows follow-up. It may not

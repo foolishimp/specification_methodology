@@ -1,0 +1,40 @@
+{
+  "attempt": 3,
+  "utc": "2026-10-14T12:45:52.645896+00:00",
+  "state": "unstarted_superseded_preparation",
+  "reason": "Conversion review requires a metadata-only current-surface successor before actor acquisition; task packet and withheld oracle remain unchanged.",
+  "observations": "All three result directories empty; no acquisition logs exist. No trial actor has started.",
+  "preserved_at": "preparation-attempt-03-unstarted",
+  "arms": [
+    {
+      "arm": "A",
+      "activation_sha256": "32a1a7f6c673da9c72389748731719a2d218a8fcd3ad919c232ca00cce93e1f0",
+      "members": 71,
+      "source": {
+        "kind": "installed",
+        "basis": "stdo://releases/v2.5.1-rc.2/",
+        "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+      }
+    },
+    {
+      "arm": "B",
+      "activation_sha256": "c1bef8c08cb94c1339f1a5f9461e1c7331de10904c10e841f84c8124952ef30c",
+      "members": 80,
+      "source": {
+        "kind": "frozen_source",
+        "commit": "3ad1fca31dc93ba0847bbbbf308312a554daa1f6",
+        "prefix": "specification_methodology/v3/build_tenants/codex/successor/"
+      }
+    },
+    {
+      "arm": "C",
+      "activation_sha256": "cf1514e57c9e7dd79474c3ff2ef0dd46a2237be5893f793e52074c32367a2d60",
+      "members": 89,
+      "source": {
+        "kind": "frozen_source",
+        "commit": "b6ae34502fdc9eb6d8289db2db16d84650d2d2b2",
+        "prefix": "specification_methodology/v3/build_tenants/codex/successor/"
+      }
+    }
+  ]
+}

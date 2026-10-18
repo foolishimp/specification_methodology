@@ -1,0 +1,196 @@
+{
+  "kind": "stdo.i5.tooling-check",
+  "valid": true,
+  "common_input": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+  "inputs_sha256": "adf261eab210a830b06845368bb8e4b211e290ae91afb2d0a4ec5534f7e6fe9d",
+  "dependency_verification": {
+    "install_root": "/Users/jim/src/apps/specification_methodology-codex/specification_methodology/v3/build_tenants/codex/a_c/install/axiom_indexer-v2.5.1-rc.2",
+    "member_count": 7,
+    "identity": {
+      "tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+      "commit": "9a9c479776ffd974fbcafcf48341980918209aef",
+      "tree": "3a553ceb8db2e8de4ac779abdc2a2ceae5708c7d",
+      "subtree": "6dae168d0a258ca506f4d6b9d5cd0a0c835fb546"
+    },
+    "inventory_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "executable_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+    "theory_root": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2",
+    "theory_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "theory_member_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "tool_sha256": {
+    "account_protocol.py": "3bdb1c01107c952a4970bcc6452448b86cc4e5052771d14b8b10ca1c8317cf12",
+    "build_interpretation.py": "a35bcb325fa683600e7c82d72746a3b17e5ffd51a398342c51f6ffd98cf458fe",
+    "check_interpretation.py": "6984f7228c220c51423b347f1796976834c5635c15231ce39fd3ab3b6b1d710c",
+    "check_package.py": "36d388754a1d720ae6a5d9ed6eb8a253c2c71c6ca1fdf4ea579f699f5fc9a375",
+    "check_tooling.py": "023453a06d039cdac4b52b5157b96a00c5894dbc814edf62ff62f03bc48ca0a3",
+    "context.py": "fbaec25851863483f5d0441f552a561195420b98c79d7cc3f4381980366df270",
+    "generate_interpretation.py": "4be34c806478c27193919d62ad46d3e2940dde93074ce005343c548111d21cd8",
+    "prepare_views.py": "c7f95a4cff4606c82a3abb85a01cc6f6f5d65dbe3014c6cc2996c4c5a138d374",
+    "reconcile_account.py": "14498359d1de6c73e0afdb32e93c646258c79ccd87d9f41cf11c7c90d718570f",
+    "refresh_identity.py": "924f300a86236bff9cc9426abf5399a9d2014607184f06589e95cdac76616381",
+    "source_pair.py": "ae9cef9e587333995bb4c362873635cc442ec6976e4547b99d87c9a0177df882"
+  },
+  "integration_cases": [
+    {
+      "case": "authored changed section and explicit new row",
+      "result": "passed"
+    },
+    {
+      "case": "changed source without an authored patch",
+      "result": "refused",
+      "reason": "Changed owned source has no authored patch: FIXTURE.rule"
+    },
+    {
+      "case": "new heading without an authored new determination",
+      "result": "refused",
+      "reason": "New source heading has no authored determination: standards/FIXTURE.md#added-rule"
+    },
+    {
+      "case": "two producers patch one owner",
+      "result": "refused",
+      "reason": "Overlapping authored row: FIXTURE.rule"
+    },
+    {
+      "case": "stale current source pin",
+      "result": "refused",
+      "reason": "Authored source preimage/current pin differs: FIXTURE.rule"
+    },
+    {
+      "case": "stale source preimage",
+      "result": "refused",
+      "reason": "Authored source preimage/current pin differs: FIXTURE.rule"
+    },
+    {
+      "case": "changed source block silently coarsened or relabelled",
+      "result": "refused",
+      "reason": "Changed or ambiguous block needs authored replacement: FIXTURE.rule#c1"
+    },
+    {
+      "case": "patch outside producer owner territory",
+      "result": "refused",
+      "reason": "Update escapes producer owner territory: FIXTURE.rule"
+    },
+    {
+      "case": "new row collides with the preserved I4 identity",
+      "result": "refused",
+      "reason": "Duplicate authored new identity: FIXTURE.rule"
+    },
+    {
+      "case": "unclassified field silently discarded",
+      "result": "refused",
+      "reason": "Unknown or identity-changing authored fields: FIXTURE.rule"
+    },
+    {
+      "case": "another common basis",
+      "result": "refused",
+      "reason": "Patch basis differs: common_input"
+    }
+  ],
+  "qualification": {
+    "frozen_I4_commit": "62318d3b0be35985a0397aa39daee0ec8836eabc",
+    "source_account_sha256": "06c53fad38a8381d93e08a8668dbad121d1a504a7756a8246ae8c6b591fbc0b9",
+    "original_program_sha256": "3fafe4c17269fe84b985faa8a43b5f7e3fda4c4505b5b9ffd42dad3ac609bc70",
+    "expanded_matches_original_program": true,
+    "equivalence": {
+      "exact_expansion": true,
+      "route_classification_counts": {
+        "provenance": 2393,
+        "referenced_qualifications": 1684,
+        "conditional": 1612
+      },
+      "compact_bytes": 13931497,
+      "expanded_bytes": 18050219,
+      "expanded_sha256": "3fafe4c17269fe84b985faa8a43b5f7e3fda4c4505b5b9ffd42dad3ac609bc70",
+      "limits": [
+        "Exact serialization equivalence only; source fidelity and actual use remain separate."
+      ]
+    },
+    "negative_controls": [
+      {
+        "case": "missing qualification source pointer",
+        "result": "refused",
+        "reason": "Unresolved occurrence pointer: /not-present"
+      },
+      {
+        "case": "stale qualification digest",
+        "result": "refused",
+        "reason": "Qualification reference differs from its carried source"
+      },
+      {
+        "case": "condition changed into permission",
+        "result": "refused",
+        "reason": "Qualification condition differs from its carried source"
+      },
+      {
+        "case": "qualification base changed",
+        "result": "refused",
+        "reason": "Ambiguous or unavailable qualification scope"
+      },
+      {
+        "case": "conditional acquisition changed to required",
+        "result": "refused",
+        "reason": "Qualification compaction changed an expanded program field"
+      },
+      {
+        "case": "route qualification dropped",
+        "result": "refused",
+        "reason": "Acquisition route lacks qualification standing"
+      }
+    ],
+    "same_semantic_input_costs": {
+      "expanded": {
+        "program": {
+          "pretty_json_utf8_bytes": 18050219,
+          "compact_utf8_bytes": 17118325
+        },
+        "map": {
+          "pretty_json_utf8_bytes": 19308606,
+          "compact_utf8_bytes": 18269125
+        },
+        "actual_program_file_bytes": 18050219,
+        "actual_native_map_file_bytes": 18269126,
+        "clause_array": {
+          "pretty_json_utf8_bytes": 17208648,
+          "compact_utf8_bytes": 16520479
+        },
+        "native_validation": "passed",
+        "native_map_clause_copy": true
+      },
+      "referenced": {
+        "program": {
+          "pretty_json_utf8_bytes": 13931497,
+          "compact_utf8_bytes": 12999603
+        },
+        "map": {
+          "pretty_json_utf8_bytes": 15189884,
+          "compact_utf8_bytes": 14150403
+        },
+        "actual_program_file_bytes": 13931497,
+        "actual_native_map_file_bytes": 14150404,
+        "clause_array": {
+          "pretty_json_utf8_bytes": 13089926,
+          "compact_utf8_bytes": 12401757
+        },
+        "native_validation": "passed",
+        "native_map_clause_copy": true
+      }
+    },
+    "native_acquisition": {
+      "selector": "TRANSFORMATION_LIBRARY.workrecovery-specialization",
+      "bytes": 1432305,
+      "occurrences": {
+        "reference_occurrences": 321,
+        "acquisition_routes": 251,
+        "inlined_contracts": 7
+      }
+    },
+    "limits": [
+      "Identical frozen I4 semantic input; costs isolate the selected representation change.",
+      "Serialized and compact JSON sizes are not process memory, retained context or task efficiency.",
+      "Native structure and exact expansion do not establish source fidelity or I5 coverage."
+    ]
+  },
+  "elapsed_seconds": 191.34631637495477,
+  "current_I5_generation": "not performed; frozen core and consumer returns required"
+}

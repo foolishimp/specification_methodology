@@ -10,12 +10,12 @@ source_refs:
   - ../RELEASE_METHOD.md
   - ../schemas/product-definition.schema.json
 source_digests:
-  FOUNDATIONS.md: e4235919224a4e76f03761d649068426186403bd6012ded94467fac0cdd1293b
-  TRANSFORMATION_LIBRARY.md: 4cf72d036c9abdeb9cd2a037eb5e9e699be32bb018f2b29db49e678b4ffddecd
-  SPEC_METHOD.md: d89c4c7d5c579a0c3d99b4056e35202167e820579a90b13d8fc26fe852a6f4ae
-  REFERENCE_FRAME_METHOD.md: 7faacabca274367b40ea2e7486fab597a41162e1fe5d9b5f1cabed467babb213
-  STDO_REFERENCE_FRAME_BASELINE.md: 3e42ef02d525f9dbc9c9d45b51490a7c7de335128aa6bc327338b716f90df4ca
-  RELEASE_METHOD.md: 6149280a25a1b2de88620b533a217f91bb238884238e7e86c63e126cab583ede
+  FOUNDATIONS.md: 2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e
+  TRANSFORMATION_LIBRARY.md: 7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6
+  SPEC_METHOD.md: ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3
+  REFERENCE_FRAME_METHOD.md: 41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01
+  STDO_REFERENCE_FRAME_BASELINE.md: 1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe
+  RELEASE_METHOD.md: be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
 compression_profile: discovery_bootstrap_v1
 target_prompt_families:
@@ -32,9 +32,18 @@ retaining original outcomes, performance and effect observations.
 [Current workspace acquisition](../FOUNDATIONS.md#workspace-and-context)
 governs context reconstruction and conditional reuse.
 
+[Bounded construction](../FOUNDATIONS.md#bounded-construction) binds current
+reality, required outcome and lawful feedback; lawful steps alone do not prove
+arrival. When relying on tests, observations or prior results, acquire the
+applicable [construction-assurance relation](../FOUNDATIONS.md#construction-assurance):
+preservation at joins, assertion/observation justification, provenance and
+shared causes, risk, or change impact and evidence retention. Source identity,
+a pass label and a selected test list supply none of those missing arguments.
+
 
 The [Foundations](../FOUNDATIONS.md) and [Transformation Library](../TRANSFORMATION_LIBRARY.md)
-organise shared premises and transformation families. Detailed owners retain
+own shared result, context, configuration and conditional transformation
+contracts. Detailed owners retain
 their exact applicability, result refinements and operation grants. Use a sufficient
 reference frame for the selected claim; these names supply no compulsory
 stages, new record schema or automatic authority.

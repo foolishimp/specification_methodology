@@ -1,0 +1,158 @@
+{
+  "kind": "stdo.delivery-selector-authored-account-patch",
+  "schema_version": 1,
+  "activation": "I4-DELIVERY-SELECTOR",
+  "source_preimage": "cd19955505a0350b5d9b0f19d00c89e6d1810aa6",
+  "account_preimage": {
+    "commit": "199c6d29bc02590a8b7f252043fc43223c09808d",
+    "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-3/DETERMINATIONS.json",
+    "sha256": "cb85385c6c074f4f47623bf29d5009bfe639bef109b2788e8846aa80f80f1b84",
+    "unchanged_at_source_preimage": true
+  },
+  "standing": "author_input_not_independent_fidelity_or_acceptance",
+  "source_pins": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/standards/IDENTITY_METHOD.md",
+      "preimage_sha256": "61a9125424b9c70106ebb181001a99e85cf21f88e1b3be9b1186b8d95ec8319c",
+      "sha256": "30e5fda712f0feb9128b8c379b37a4a079c7a5e64cfa6b832c80c13b28df1c7c",
+      "preimage_bytes": 22995,
+      "bytes": 23441
+    }
+  ],
+  "canonical_owner_pins": [
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/standards/RELEASE_METHOD.md",
+      "anchor": "release-identities",
+      "heading": "Release Identities",
+      "start_byte": 9598,
+      "end_byte": 11326,
+      "start_line": 84,
+      "end_line": 115,
+      "body_sha256": "22dcda4c970fd6afd3eb0fc3b6fb8cd3ec5e1a16e13bcefed3df33ca8240bb19",
+      "bytes": 1728
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/codex/successor/standards/RELEASE_METHOD.md",
+      "anchor": "selector-and-consumer-adoption",
+      "heading": "Selector And Consumer Adoption",
+      "start_byte": 24400,
+      "end_byte": 27228,
+      "start_line": 358,
+      "end_line": 410,
+      "body_sha256": "82c43034b2c12e6fcbc76ad6ca7c97b9abee74519b514014821d98463e444694",
+      "bytes": 2828
+    }
+  ],
+  "patches": [
+    {
+      "id": "IDENTITY_METHOD.release-version-boundary",
+      "path": "specification_methodology/v3/build_tenants/codex/successor/standards/IDENTITY_METHOD.md",
+      "heading": "Release Version Boundary",
+      "anchor": "release-version-boundary",
+      "change_kind": "canonical_release_owner_correction",
+      "new_decision_scope": false,
+      "predicate_or_result_change": true,
+      "result_mapping_change": false,
+      "preimage_body_sha256": "fb43da187d10d07b00f100b906762057e90977ab65858359bf642c6d8e8a8bce",
+      "body_sha256": "10a881e60c38299128fad514d07e91a9ef9d2d87fb2d06b339dcf8d98eb5498e",
+      "body_hash_rule": "UTF-8 bytes from the heading start through all content and blank/separator lines before the next heading; heading included.",
+      "source_range": {
+        "start_byte": 20467,
+        "end_byte": 21553,
+        "start_line": 430,
+        "end_line": 460,
+        "body_sha256": "10a881e60c38299128fad514d07e91a9ef9d2d87fb2d06b339dcf8d98eb5498e",
+        "bytes": 1086
+      },
+      "semantic_fields": {
+        "predicate": "Object identity, immutable release identity, publication coordinates and mutable selectors remain distinct. A version-line selector names the highest-ordinal published immutable RC cut for its project/version line independently of acceptance, and selector movement does not change a consumer's operative basis.",
+        "obligations": [
+          "Object identity, immutable release identity, publication coordinates and mutable selectors remain distinct.",
+          "Interpret the mutable version-line selector under Release Method as highest-ordinal published immutable RC, not latest-accepted.",
+          "Keep the cut's acceptance separate from publication-selected discovery; moving the selector does not adopt a new consumer basis.",
+          "Consumer adoption is the explicit transition owned by the consumer's governing authority under Release Method."
+        ],
+        "dependencies": [
+          "FOUNDATIONS.identity-state-and-evidence",
+          "RELEASE_METHOD.release-identities",
+          "RELEASE_METHOD.selector-and-consumer-adoption"
+        ],
+        "dependency_relations": [
+          {
+            "id": "IDENTITY_METHOD.governing-relations",
+            "kind": "governing_scope"
+          },
+          {
+            "id": "FOUNDATIONS.identity-state-and-evidence",
+            "kind": "contract_application"
+          },
+          {
+            "id": "RELEASE_METHOD.release-identities",
+            "kind": "contract_application",
+            "binding": "Release Method owns the immutable cut and highest-published version-line selector identities consumed by this identity boundary.",
+            "required_when": "the selected task determines release identities or a version-line selector target"
+          },
+          {
+            "id": "RELEASE_METHOD.selector-and-consumer-adoption",
+            "kind": "contract_application",
+            "binding": "Release Method owns the distinction between publication discovery, exact consumer basis and explicit consumer adoption.",
+            "required_when": "the selected task determines selector meaning or reliance on consumer adoption"
+          }
+        ],
+        "argument": {
+          "premises": [
+            {
+              "kind": "source_argument",
+              "id": "IDENTITY_METHOD.governing-relations",
+              "standing": "conditional_source_argument_not_independent_proof"
+            }
+          ],
+          "conditional_consequence": "Object identity, immutable cut identity and discovery selectors denote different subjects. Identity consumes Release Method's publication-selected target and separate adoption relation; cut acceptance cannot substitute for publication when determining the selector, and discovery cannot change the consumer's exact basis.",
+          "policy_choices": [
+            "The highest-ordinal published selector target and explicit consumer-adoption transition are Release Method policies. Identity consumes those owners and introduces no alternative selector policy."
+          ],
+          "source_refs": [
+            "IDENTITY_METHOD.release-version-boundary",
+            "IDENTITY_METHOD.governing-relations",
+            "RELEASE_METHOD.release-identities",
+            "RELEASE_METHOD.selector-and-consumer-adoption"
+          ],
+          "standing": "source_owned_policy_with_conditional_argument_route",
+          "policy_owner_rule": "The referenced source argument identifies separately owned choices; a permission, exception or corollary in the local row is not thereby an additional policy choice."
+        }
+      },
+      "preserve_existing_fields": [
+        "permissions_exceptions",
+        "result_mapping",
+        "representation_kind",
+        "applicability",
+        "consumers"
+      ],
+      "source_pin_action": "Refresh the member pin and changed heading/source-clause spans at the integrated freeze. The old declaration block containing latest-accepted is superseded by this owner-corrected meaning; add the final publication/acceptance/adoption paragraph with its actual declaration/obligation roles.",
+      "acquisition_binding": "The two added Release owner dependencies are genuine conditions for applying this release identity boundary; they are not a consumer inventory. Their required_when values restrict the selected release/selector/adoption task. No family-table consumer fan-out is added."
+    }
+  ],
+  "affected_dependencies": [
+    {
+      "id": "IDENTITY_METHOD.governing-relations",
+      "action": "Its I4 family row for Release Version Boundary already assigns exact identities and selector/adoption mechanics to Release. Preserve its argument and source_refs-only consumer provenance; refresh the member pin and verify the formerly contradictory consumer at the new source hash."
+    },
+    {
+      "id": "FOUNDATIONS.identity-state-and-evidence",
+      "action": "Its existing consumer/provenance route to the identity boundary retains meaning; no foundation predicate or authority changes. Reuse only with the updated subject binding."
+    },
+    {
+      "id": "RELEASE_METHOD.release-identities",
+      "action": "Canonical owner unchanged; consume its pinned exact subject and highest-published selector identity."
+    },
+    {
+      "id": "RELEASE_METHOD.selector-and-consumer-adoption",
+      "action": "Canonical owner unchanged; consume its separation of discovery, exact basis and explicit adoption."
+    }
+  ],
+  "integration_limits": [
+    "No current account, generated interpretation, frame, compression or Release source is modified.",
+    "Preserve the earlier closed source/delivery artifacts and their historical source pins.",
+    "Interpretation/source-block integration and independent frozen readback remain with their assigned owners."
+  ]
+}

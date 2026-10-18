@@ -1,0 +1,34 @@
+TASK: T1
+Subject: Workshop Reporting Method r6 and report Q6.
+
+Specimen owner clause H6:
+"A report may be distributed after checksum integrity, reader access and
+empty-section handling have each been checked successfully for that report
+revision."
+
+Specimen consumer D6:
+"After checksum success, mark the report distributable."
+
+These specimen clauses are the subject being assessed.
+
+Report Q6 includes an annex designated staff-only.
+
+Assessment plan:
+- A-access: producer P1; intended subject Q6; basis H6.
+- A-checksum: producer P2; intended subject Q6; basis H6.
+
+Returned records:
+- R-access: producer P1; subject Q6; basis H6; outcome "failed";
+  evidence E-access: an unauthenticated public reader retrieved Q6's
+  staff-only annex.
+- R-checksum: producer P2; subject Q5; basis H5; outcome "passed";
+  evidence E-checksum: all checksums matched for Q5.
+
+Empty-section handling is required by H6. It is outside the two planned
+assessments above, and no observation or assessment of it is supplied.
+
+Authority: assess these clauses and records; propose a disposition.
+No distribution authority.
+
+Review the owner/consumer relationship, assess the supplied findings, and
+decide what these records establish about distributing Q6.

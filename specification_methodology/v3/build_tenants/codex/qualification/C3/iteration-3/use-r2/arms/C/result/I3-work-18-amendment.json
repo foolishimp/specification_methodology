@@ -1,0 +1,97 @@
+{
+  "case_id": "I3",
+  "artifact": "I3-work-18-amendment.json",
+  "request": "Set worker_count to 2.",
+  "outcome": "Run the admitted worker configuration at 2.",
+  "classification": "realization_refactor",
+  "earliest_governing_description_needing_change": "Realisation: worker_count configuration.",
+  "upstream_determination": "2 is in the allowed integer range 1..4. I.design explicitly permits choosing a value in this range without changing Product or accepted design.",
+  "authority_traversal": [
+    "I3.selected_work -> I.work.carrier_w18/work-18",
+    "worker_count -> I.design.worker_count -> I.product.worker_count_range=[1,4]"
+  ],
+  "complete_relevant_delta": {
+    "member": "worker_count",
+    "before": 1,
+    "after": 2,
+    "added_members": [],
+    "removed_members": [],
+    "other_changed_values": [],
+    "universe_source": "I.work exact configuration grant and I.design complete local relation."
+  },
+  "accepted_design_coverage": {
+    "standing": "covered",
+    "source": "I.design.worker_count",
+    "reason": "Integer configuration choice 2 is inside accepted range; no structural design change."
+  },
+  "carrier": {
+    "action": "Reuse existing admitted work-18 and record this evidence amendment.",
+    "additional_carrier_required": false,
+    "reason": "The exact admitted outcome, setting and evidence are already covered."
+  },
+  "execution_contract": {
+    "identity": "fixture:work-18:case-I3:worker-count-2",
+    "source": "I.work.carrier_w18",
+    "admission_mechanism": "Existing owner-issued admitted work record; requested setting exactly matches its grant.",
+    "admission_authority": "Fixture work authority",
+    "admission_result": "admitted existing grant applies",
+    "evidence": [
+      "I.work.carrier_w18",
+      "I3"
+    ],
+    "scope": [
+      "worker_count"
+    ],
+    "permitted_effect": "Construct simulated configuration worker_count=2 and record evidence.",
+    "durable_result_surface": "I3-work-18-amendment.json in authorized result territory; simulation of work-18 evidence amendment."
+  },
+  "result": {
+    "worker_count": 2,
+    "artifact": "I3-config.json",
+    "actual_local_construction": true,
+    "live_product_modified": false
+  },
+  "assessment": {
+    "predicate": "Selected worker_count is 2 and remains in the accepted integer interval 1..4.",
+    "verdict": "satisfied",
+    "performance": "performed",
+    "qualified_domain_outcome": "bounded configuration applied",
+    "evidence": "Generated configuration has integer 2; 1 <= 2 <= 4, as declared by both Product and accepted design.",
+    "effects": {
+      "boundary": "Local synthetic configuration artifact",
+      "state": "completed"
+    }
+  },
+  "required_process": [
+    "Triage as permitted local configuration.",
+    "Bind work-18's exact grant.",
+    "Construct setting and verify admitted range.",
+    "Record result in existing work evidence."
+  ],
+  "optional_organization": "No new ticket, design reframe, Executive activation or independent assessment is selected.",
+  "reentry_destination": "Realisation/configuration and evidence under work-18.",
+  "dependencies": [
+    "I.product.worker_count_range",
+    "I.design.worker_count",
+    "I.work.carrier_w18",
+    "I.observations.worker_count"
+  ],
+  "unresolved": [],
+  "fixture_citations": [
+    "I.product",
+    "I.design",
+    "I.work",
+    "I.observations",
+    "I3"
+  ],
+  "method_citations": [
+    "M.triage",
+    "M.treatment",
+    "M.carrier",
+    "M.admission",
+    "M.execution",
+    "M.configuration",
+    "M.closure"
+  ]
+}
+

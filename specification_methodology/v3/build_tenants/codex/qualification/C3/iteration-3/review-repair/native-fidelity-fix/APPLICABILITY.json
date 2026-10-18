@@ -1,0 +1,42 @@
+{
+  "preimage_commit": "aa063bd918267ff88f4c31fd24229e8198363f8d",
+  "package_commit": "d490dd62d8c1a99e57eec5d1f9caca477f02edd2",
+  "document_source_commit": "2476713d315c00ac61d336a3281d67e4a384d4ce",
+  "documentary_members_unchanged": 80,
+  "changed_package_members": [
+    "interpretation/SIGNATURE.md",
+    "interpretation/SOURCE_INVENTORY.json",
+    "interpretation/map.json",
+    "interpretation/program.json",
+    "interpretation/source-account.json"
+  ],
+  "conservation_preserved": {
+    "CONSERVATION.json": "93157515bf7ff58a364dae5744c6642c25125e1887003e039f7145e4b993a37f",
+    "FRONTIER.json": "3a002d3ad5f8f5e3b473dd93737bb9c521eebe2b96f43e9316777e9eda0dd4ea",
+    "PORT_ACCOUNT.json": "b12ed6886c74219f672cc5137868d71ae7a5fa04c47fbb98265080869deb03af"
+  },
+  "historical_evidence": [
+    {
+      "path": "review-repair/use",
+      "git_object": "bfdd2ac77fc0758eec91385c0aac300551e93996",
+      "unchanged": true
+    },
+    {
+      "path": "review-repair/odd-binding-fix",
+      "git_object": "10d73c1f0cf59e2aefe68fa4297a176182b80970",
+      "unchanged": true
+    },
+    {
+      "path": "review-repair/interpretation/T1_EVALUATE_CONJOIN.materialized.json",
+      "git_object": "c3042faa65607561ffee4c6a4d0c774f04db6a25",
+      "unchanged": true
+    },
+    {
+      "path": "review-repair/interpretation/T1_EVALUATE_CONJOIN.reference-only.json",
+      "git_object": "68486e1c4ebd904ad2ef971ceb185e8467481227",
+      "unchanged": true
+    }
+  ],
+  "reuse_scope": "Historical evidence remains on its original subjects. Explicit pointer scopes change native exports; the conditional repair deliberately changes composition and AC-013 closures. No old task result or byte measurement is relabelled as a current use or efficiency trial. Documentary rules and the earlier ODD binding are unchanged.",
+  "owner_decisions": "Full interpretation fidelity, conservation, frame qualification, integrated reduction, 68 proposed replacements, member and owner acceptance remain open."
+}

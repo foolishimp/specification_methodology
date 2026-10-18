@@ -42,8 +42,10 @@ registry and stops. With neither, load `SPEC_METHOD.md`.
 | `constitutional-derivation-view` | `frames/CONSTITUTIONAL_DERIVATION.md` |
 | `domain-binding-view` | `frames/DOMAIN_BINDING.md` |
 | `release-adoption-view` | `frames/RELEASE_ADOPTION.md` |
+| `member-construction-assessment-view` | `frames/MEMBER_CONSTRUCTION_ASSESSMENT.md` |
+| `triage-carrier-view` | `frames/TRIAGE_CARRIER.md` |
 
-The five views project bounded source clauses. They are not a Project
+The seven views project bounded source clauses. They are not a Project
 Reference-Frame Basis, a grant or an independently selectable method version.
 
 ## Procedure

@@ -1,0 +1,26 @@
+{
+  "id": "DEL-SELECTOR-01",
+  "kind": "hypothetical_semantic_counterexample",
+  "subject": "One project and version line with accepted rc.1 and published, unaccepted rc.2",
+  "published_cuts": [
+    {
+      "rc_ordinal": 1,
+      "accepted": true
+    },
+    {
+      "rc_ordinal": 2,
+      "accepted": false
+    }
+  ],
+  "consumer_exact_basis_ordinal": 1,
+  "old_identity_latest_accepted_target": 1,
+  "canonical_release_and_repaired_identity_target": 2,
+  "consumer_exact_basis_after_selector_movement": 1,
+  "reason": "Publication determines the highest-ordinal selector target. Acceptance does not select it, and publication/selector movement does not authorize or perform consumer adoption.",
+  "source_refs": [
+    "IDENTITY_METHOD.release-version-boundary",
+    "RELEASE_METHOD.release-identities",
+    "RELEASE_METHOD.selector-and-consumer-adoption"
+  ],
+  "standing": "author_constructed_counterexample_for_independent_readback; no runtime publication_or_adoption_trial"
+}

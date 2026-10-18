@@ -1,0 +1,55 @@
+{
+  "kind": "stdo.rc1.author-source-discriminators",
+  "source_basis": {
+    "common_commit": "4c340f7adec9f3c893e3e267b23e4cadeb357854",
+    "common_route": "requirements/README.md#build-tenant-binding-requirement",
+    "candidate_route": "standards/SPEC_METHOD.md#construction-assessment-and-delegation",
+    "interpretation_id": "SPEC_METHOD.construction-assessment-and-delegation"
+  },
+  "predicate": "Adequacy of the exact live realization subject supplied for required independent assessment; this is not the total acceptance predicate.",
+  "cases": [
+    {
+      "id": "human-performed-procedure",
+      "binding": "Human procedure with no software obligation",
+      "subject": "Exact performed procedure and material observations, selected binding, authority paths, proof, current installed process and required independent assessor",
+      "expected": "subject condition can be satisfied without software code",
+      "reason": "The common binding permits human processes; the repaired owner assesses the exact realization under that binding. Other evidence and authority conditions still apply."
+    },
+    {
+      "id": "software-stale-or-summary",
+      "binding": "Software implementation required",
+      "subject": "Constructor summary or stale software instead of the exact live code",
+      "expected": "subject condition not satisfied",
+      "reason": "Software is the selected realization; genericity does not remove exact live subject, proof or independence."
+    },
+    {
+      "id": "software-exact",
+      "binding": "Software implementation required",
+      "subject": "Exact live code with required authority, proof, current installed subject and independent assessment",
+      "expected": "subject condition can be satisfied",
+      "reason": "The permitted generic binding includes software and retains all original subject requirements."
+    },
+    {
+      "id": "mixed-code-only",
+      "binding": "Material human and software operations",
+      "subject": "Exact code but missing the material performed human operations",
+      "expected": "subject condition not satisfied",
+      "reason": "A partial software view does not supply the complete selected realization."
+    },
+    {
+      "id": "mixed-complete",
+      "binding": "Material human and software operations",
+      "subject": "Exact operations and observations for both parts, their composition, authority paths, proof, current subject and required independent assessment",
+      "expected": "subject condition can be satisfied",
+      "reason": "Assessment follows all material operations under the declared mixed binding."
+    },
+    {
+      "id": "required-independence-absent",
+      "binding": "Any admitted binding requiring independent promotion assessment",
+      "subject": "Constructor self-review only",
+      "expected": "required assessment condition not satisfied",
+      "reason": "The repair preserves claim independence and separate acceptance authority."
+    }
+  ],
+  "standing": "Writer logical evaluations derived from exact source; no real-world execution, independent oracle or qualification claim."
+}

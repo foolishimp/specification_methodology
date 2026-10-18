@@ -1,0 +1,548 @@
+{
+  "kind": "authored_account_patch_proposal",
+  "producer": "RC1-CONSUMERS",
+  "source_commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+  "account_commit": "57f711d964cd4eac8ed8523460cecc68bcaa63fb",
+  "account_path": "specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/DETERMINATIONS.json",
+  "required_patch": {
+    "filename": "INVERSE_PROJECTION_PATCH.json",
+    "sha256": "f38b157f7b86ac3fd41094362dc160e75e905b3a04d5709bafe2c05e3a5d2895"
+  },
+  "purpose": "Five explicit procedure calls missing from the authored dependency graph; reciprocal consumers are updated in the same selected transaction.",
+  "boundary": "Separate Executive disposition before integration; source-supported author proposal, not acceptance or qualification.",
+  "limits": [
+    "No other source links become dependencies.",
+    "These calls preserve existing workflow selection, read-only acquisition, refusal and effect boundaries.",
+    "The existing broad workflow applicability for the manual-only Claude adapter is not widened by this edge; its source remains manual-only."
+  ],
+  "updates": [
+    {
+      "id": "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+      "field": "dependencies",
+      "preimage_present": true,
+      "preimage": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection"
+      ],
+      "replacement": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before routing or answering",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-help/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3052,
+            "start_line": 1,
+            "end_line": 61,
+            "body_sha256": "3a77b5a010f4a30debce45e4b6cd846bc84a135358c0d7369178a9512d693ee2"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before routing or\nanswering. Continue into Product-specific routing only from its exactly-one\nverified selection; on a stop result, return only read-only re-entry or setup\nguidance. This skill remains read-only.",
+          "quote_byte_start": 409,
+          "quote_byte_end": 691,
+          "quote_sha256": "781576c32245f3a780579ba8068d29db68c9f6286cedb2b12cf3a0446fa46613",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+      "field": "dependencies",
+      "preimage_present": true,
+      "preimage": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection"
+      ],
+      "replacement": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before activating review",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-review/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 4578,
+            "start_line": 1,
+            "end_line": 84,
+            "body_sha256": "99f3d12012c7c3a39fc6ac5b80f4cc54c40d2709c536ec17a535647608ecf4db"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.\nContinue only from its exactly-one verified selection. This skill remains\nread-only.",
+          "quote_byte_start": 516,
+          "quote_byte_end": 697,
+          "quote_sha256": "c97528f42b032efc4a3de4327557c01eebdcc56a76c9bbf815321c085b616a65",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+      "field": "dependencies",
+      "preimage_present": true,
+      "preimage": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection"
+      ],
+      "replacement": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before reporting status",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-status/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3712,
+            "start_line": 1,
+            "end_line": 67,
+            "body_sha256": "eef2081ec8a3db8a4f76db6408aa563c34c26b1e65e24417967956cc65655678"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before reporting status.\nContinue only from its exactly-one verified selection. This skill remains\nread-only.",
+          "quote_byte_start": 542,
+          "quote_byte_end": 722,
+          "quote_sha256": "49b9b311283a932774ad630491939b9b6fd9bc449e2dc3318b5219026dd136b0",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+      "field": "dependencies",
+      "preimage_present": true,
+      "preimage": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection"
+      ],
+      "replacement": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "CARRIER.plugins.spec.references.PRODUCT_BASIS.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before proposing or mutating ticket state",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-ticket/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 4772,
+            "start_line": 1,
+            "end_line": 86,
+            "body_sha256": "419f12c3339e70ab3c02aa391e619463ebd20f2602287e1028a91bfe2cdeff85"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before proposing or\nmutating ticket state. Continue only from its exactly-one verified selection;\nthat selection grants no ticket-state authority.",
+          "quote_byte_start": 403,
+          "quote_byte_end": 620,
+          "quote_sha256": "6639178e21b5a7cda1bd4594ce41fb44c3bc3046199f7819e2884ac7cdccaf5f",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+      "field": "dependencies",
+      "preimage_present": true,
+      "preimage": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection"
+      ],
+      "replacement": [
+        "FOUNDATIONS.identity-state-and-evidence",
+        "FOUNDATIONS.judgment-and-authority",
+        "FOUNDATIONS.result-algebra",
+        "SPEC_METHOD.agentic-construction-execution-stdo-up-020",
+        "SPEC_METHOD.shared-installed-release-basis-and-toolchain-manager",
+        "SPEC_METHOD.stdo-product-definition-overlay-and-layout-independence",
+        "TICKET_METHOD.execution-contract-admission",
+        "TICKET_METHOD.work-carrier-to-execution-rule",
+        "TRANSFORMATION_LIBRARY.faithful-projection",
+        "CARRIER.plugins.spec.references.REFRESH.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.REFRESH.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly invokes the manual-only /spec:refresh adapter; disable-model-invocation is true.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "manual-only refresh invocation",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/claude-skills/refresh/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 501,
+            "start_line": 1,
+            "end_line": 15,
+            "body_sha256": "a501d0d6df6e6736a33180d876f8c83a157f5f0248f195d1687bce876f3a2b79"
+          },
+          "quote": "Read and follow\n[`../../references/REFRESH.md`](../../references/REFRESH.md) completely.",
+          "quote_byte_start": 253,
+          "quote_byte_end": 341,
+          "quote_sha256": "f696b252eb4011bba211b5420672f9a379938615cd94857e048afa31ce3a3313",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 2920,
+            "start_line": 1,
+            "end_line": 74,
+            "body_sha256": "2b158034fdd0098640f335cf5557d308a6d9e0838350f56e1f3f2a532124f84a"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+      "field": "consumers",
+      "preimage_present": true,
+      "preimage": [
+        "CARRIER.plugins.spec.skills.stdo-work.SKILL.md"
+      ],
+      "replacement": [
+        "CARRIER.plugins.spec.skills.stdo-work.SKILL.md",
+        "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+        "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+        "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+        "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-help.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before routing or answering",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-help/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3052,
+            "start_line": 1,
+            "end_line": 61,
+            "body_sha256": "3a77b5a010f4a30debce45e4b6cd846bc84a135358c0d7369178a9512d693ee2"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before routing or\nanswering. Continue into Product-specific routing only from its exactly-one\nverified selection; on a stop result, return only read-only re-entry or setup\nguidance. This skill remains read-only.",
+          "quote_byte_start": 409,
+          "quote_byte_end": 691,
+          "quote_sha256": "781576c32245f3a780579ba8068d29db68c9f6286cedb2b12cf3a0446fa46613",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        },
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-review.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before activating review",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-review/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 4578,
+            "start_line": 1,
+            "end_line": 84,
+            "body_sha256": "99f3d12012c7c3a39fc6ac5b80f4cc54c40d2709c536ec17a535647608ecf4db"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.\nContinue only from its exactly-one verified selection. This skill remains\nread-only.",
+          "quote_byte_start": 516,
+          "quote_byte_end": 697,
+          "quote_sha256": "c97528f42b032efc4a3de4327557c01eebdcc56a76c9bbf815321c085b616a65",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        },
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-status.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before reporting status",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-status/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3712,
+            "start_line": 1,
+            "end_line": 67,
+            "body_sha256": "eef2081ec8a3db8a4f76db6408aa563c34c26b1e65e24417967956cc65655678"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before reporting status.\nContinue only from its exactly-one verified selection. This skill remains\nread-only.",
+          "quote_byte_start": 542,
+          "quote_byte_end": 722,
+          "quote_sha256": "49b9b311283a932774ad630491939b9b6fd9bc449e2dc3318b5219026dd136b0",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        },
+        {
+          "consumer_id": "CARRIER.plugins.spec.skills.stdo-ticket.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.PRODUCT_BASIS.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "before proposing or mutating ticket state",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/skills/stdo-ticket/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 4772,
+            "start_line": 1,
+            "end_line": 86,
+            "body_sha256": "419f12c3339e70ab3c02aa391e619463ebd20f2602287e1028a91bfe2cdeff85"
+          },
+          "quote": "Read and apply\n[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before proposing or\nmutating ticket state. Continue only from its exactly-one verified selection;\nthat selection grants no ticket-state authority.",
+          "quote_byte_start": 403,
+          "quote_byte_end": 620,
+          "quote_sha256": "6639178e21b5a7cda1bd4594ce41fb44c3bc3046199f7819e2884ac7cdccaf5f",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/PRODUCT_BASIS.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 3516,
+            "start_line": 1,
+            "end_line": 63,
+            "body_sha256": "448430aec482d1ae1dabac6a9f0b8b2880f4eaea0f04332306bc9c0f6eff77fc"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    },
+    {
+      "id": "CARRIER.plugins.spec.references.REFRESH.md",
+      "field": "consumers",
+      "preimage_present": true,
+      "preimage": [],
+      "replacement": [
+        "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md"
+      ],
+      "evidence": [
+        {
+          "consumer_id": "CARRIER.plugins.spec.claude-skills.refresh.SKILL.md",
+          "owner_id": "CARRIER.plugins.spec.references.REFRESH.md",
+          "relation": "required_procedure_call_within_selected_workflow",
+          "modal_force": "Required after this workflow is selected; no general workflow invocation or effect authority is created.",
+          "required_when": "The user explicitly invokes the manual-only /spec:refresh adapter; disable-model-invocation is true.",
+          "existing_account_applicability": "The user explicitly selects this STDO workflow or its stated governed-task trigger applies.",
+          "operation_boundary": "manual-only refresh invocation",
+          "provenance_only": false,
+          "source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/claude-skills/refresh/SKILL.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 501,
+            "start_line": 1,
+            "end_line": 15,
+            "body_sha256": "a501d0d6df6e6736a33180d876f8c83a157f5f0248f195d1687bce876f3a2b79"
+          },
+          "quote": "Read and follow\n[`../../references/REFRESH.md`](../../references/REFRESH.md) completely.",
+          "quote_byte_start": 253,
+          "quote_byte_end": 341,
+          "quote_sha256": "f696b252eb4011bba211b5420672f9a379938615cd94857e048afa31ce3a3313",
+          "owner_source": {
+            "commit": "5fd3b789ef6e0039f722676cdd0126113c745a11",
+            "path": "specification_methodology/v3/build_tenants/codex/successor/plugins/spec/references/REFRESH.md",
+            "anchor": "",
+            "byte_start": 0,
+            "byte_end": 2920,
+            "start_line": 1,
+            "end_line": 74,
+            "body_sha256": "2b158034fdd0098640f335cf5557d308a6d9e0838350f56e1f3f2a532124f84a"
+          },
+          "applicability_preservation": "The consumer row already binds this workflow applicability. Its mandatory call is inside that existing boundary; the owner procedure supplies its own stops and read-only limits."
+        }
+      ]
+    }
+  ]
+}

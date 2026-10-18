@@ -1,0 +1,98 @@
+{
+  "source_commit": "6627800d30b14cfb862d82709bf8ec5c86ca0401",
+  "actor_packet_sha256": "d6f7bcba133228ae74c3b54f0055696da191fb697b5151070049566c3baaa559",
+  "task2_cases": [
+    {
+      "case_id": "K1",
+      "input": [
+        {
+          "record_id": "r1",
+          "cents": 4
+        },
+        {
+          "record_id": "r2",
+          "cents": 4
+        },
+        {
+          "record_id": "r3",
+          "cents": -3
+        }
+      ],
+      "partition_record_ids": [
+        [
+          "r1",
+          "r2"
+        ],
+        [
+          "r3"
+        ]
+      ]
+    },
+    {
+      "case_id": "K2",
+      "input": [],
+      "partition_record_ids": [
+        [],
+        []
+      ]
+    },
+    {
+      "case_id": "K3",
+      "input": [
+        {
+          "record_id": "r4",
+          "cents": 8
+        },
+        {
+          "record_id": "r5",
+          "cents": -8
+        },
+        {
+          "record_id": "r6",
+          "cents": 5
+        }
+      ],
+      "partition_record_ids": [
+        [
+          "r4"
+        ],
+        [
+          "r5",
+          "r6"
+        ]
+      ]
+    }
+  ],
+  "task2_expected": [
+    {
+      "case_id": "K1",
+      "p": 5,
+      "q": 1,
+      "r": 5
+    },
+    {
+      "case_id": "K2",
+      "p": 0,
+      "q": 0,
+      "r": 0
+    },
+    {
+      "case_id": "K3",
+      "p": 5,
+      "q": 5,
+      "r": 5
+    }
+  ],
+  "recovery_expected": {
+    "dataset_revision": "data-2",
+    "ids": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  "intake_expected": {
+    "label": "Maximum 1000 records",
+    "worker_count": 2
+  }
+}
