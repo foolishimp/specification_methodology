@@ -27,9 +27,11 @@ Three groups of text defects block freeze. None needs a meaning decision.
 
 Freeze also needs owner decisions. Codex's list carries A1's reach, Q13/Q14,
 rows 93–96, the ten disputed rows, P1's class and the covering review. Four
-of Codex's standalone adaptations change meaning or need acceptance and are
-on no decision list: SC2, SC3 and SC5 (D1–D3), and SC4 (D4). Freeze needs
-both: the blockers fixed and those decisions closed.
+of Codex's standalone adaptations change meaning or need acceptance, and the
+handoff's decision list omits them: SC2, SC3 and SC5 (D1–D3), and SC4 (D4).
+SC2 and SC5 carry row-level `STANDALONE:` decisions in the conservation
+record; SC3 and SC4 carry none. Freeze needs both: the blockers fixed and
+those decisions closed.
 
 Every mechanical claim Codex made reproduced. The two gaps I report in its
 records tooling go beyond what it claimed. They are not reproduction
@@ -68,6 +70,7 @@ failures.
 | Installed verification | my own materialisation of all 81 files; the canonical member-set digest recomputed | `[]`. It catches one-byte changes to a standards member, a plugin member and the release note, and an altered set digest |
 | Tooling unit tests | `unittest discover` | 29 of 29 pass |
 | Frames | owner and section digests recomputed; excerpts compared | 12 frames bind current owners; 195 section digests match; excerpts exact; largest 141,858 B, under the 160,000 B cap |
+| Frame regeneration | all 12 frames deleted from a scratch copy; Codex's `generate_frames.py` rerun | byte-identical package: all 81 files, including the frames and `FRAME_INPUTS.json` |
 | Links | every Markdown link and anchor | 0 broken; B had 13. Two notation false positives (`F_K[v](X_v)`) |
 
 One control passed when a defect was planted: the sentence "law carried
@@ -129,6 +132,27 @@ heading match shows where a change is, not that it stays inside its item's
 scope. I read the hunks of the items that carry findings below (P1, P2, M3,
 A1).
 
+The dismissed set could hide a lost obligation, so I searched it for modal
+force (must, never, only, requires, cannot, may not):
+
+- 23 deleted tables:
+  - 21 are Source dispositions tables. The conservation record accounts for
+    each of their rows among its 705 identities.
+  - One is CONFORMANCE §5's old table, now SC3's full distinctions.
+  - One is the README frames table, which was rewritten.
+- 35 deleted blocks: appendix text, release-note history, or law that is
+  still present or re-expressed by a registered item. ACTIVATION §1's
+  delegated-worker paragraph is still present. TICKETS' repricing paragraph
+  is M6, AXIOMATIC_CALCULUS §8 is SC2, and the recoverability benchmark is
+  SC4.
+- 19 word-level deletions: provenance notes. Three of them, in the
+  DESIGN_MODULE, UX and WORLD_MODEL leads, also said that "the
+  predecessor's 'must' is written in the indicative". SPEC_METHOD §2's
+  present-tense rule and RELEASE §9 ("indicative wording can state a binding
+  law") carry that reading.
+
+No lost obligation found.
+
 ### Records
 
 - 19 truncated `not` values are restored with their reasons. None is a
@@ -149,11 +173,16 @@ A1).
 
 ### Side checks
 
+- File lists: B and common hold the same 81 paths. No file was dropped or
+  added.
 - `2e7fa0f6` adds 143 files under `comments/codex/`, the ticket and two
   construction files. It edits GOALS, `stdo_3.json` and
   `build_tenants/README.md`, which T-003 line 31 grants.
 - Neither `2e7fa0f6` nor `156ac5af` changes any file under
   `comments/claude/`.
+- I checked the scope of the 143 review files, not their bytes. I have no
+  earlier hash record of my own to compare them with. I did not use Codex's
+  `REVIEW_CHECKPOINT.json` instead, because it is the author's own record.
 
 ## As standalone work
 
@@ -181,8 +210,8 @@ matches are host-adapter names in the plugin. What remains is below.
     `stdo://releases/v<version>-rc.<n>/`.
   - RELEASE.md:276–279: acceptance is a verdict over the exact RC, "rather
     than a second carrier".
-- The product-definition schema's release-URI pattern also requires the
-  `-rc.<n>` form.
+- The product-definition schema's `stdoReleaseUri` pattern also requires
+  the `-rc.<n>` form. I checked this in both packages.
 
 B's TRAVERSAL_OCCURRENCE (line 1580) admitted only the RC form. The stable
 form arrived with SC2: both passages sit in rows carrying `STANDALONE:`
@@ -190,8 +219,8 @@ decisions.
 
 Repair: restore the RC-only URI in both members, and drop "stable release"
 or route release standing to RELEASE §8. This is needed whatever the owner
-decides on SC2. The cold reader found this contradiction unprompted as a
-contradiction between owners (see below).
+decides on SC2. The cold reader also reported it as a contradiction between
+owners, answering a task that asked whether the owners agree (see below).
 
 ### B2. Pointers to removed appendices (blocks)
 
@@ -246,6 +275,13 @@ example ACTIVATION's "carried from the common construction requirement" and
   superseded") and templates/README.md:21–29 ("retain their revision-2
   meaning"). ACTIVATION §2 says "a `stdo://` route in this section is
   provenance only", but the section now holds no such route.
+
+### Self-application
+
+B2, B3 and the Q10 marker (Minor) break the package's own SPEC_METHOD §2
+Specification surface rule: "material that is no longer live is deleted,
+superseded or moved to commentary". RELEASE §10 "Open questions" states
+current open questions in the present tense, which that rule permits.
 
 ### Material defects
 
@@ -373,7 +409,7 @@ Results:
     between `realization_refactor` and "not a substantive change".
     SPEC_METHOD §4 could name it.
 - Release and calculus identity are where standalone use fails.
-  - B1 was found unprompted.
+  - The reader reported B1 as a contradiction between owners.
   - The reader could not settle how a `principle_refs` entry is formed.
     AXIOMATIC_CALCULUS §8's "semantic-address URI" has no written rule.
     Some derivation items, such as table rows and a paragraph, have no
