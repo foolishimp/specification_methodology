@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-jim-src-apps-specification-methodology/0818967d-061f-47a6-9924-2d7ac25b59f8/scratchpad/verify/codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py", line 134, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/claude-501/-Users-jim-src-apps-specification-methodology/0818967d-061f-47a6-9924-2d7ac25b59f8/scratchpad/verify/codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py", line 106, in main
+    changes = compare(args.source_commit, True)
+  File "/private/tmp/claude-501/-Users-jim-src-apps-specification-methodology/0818967d-061f-47a6-9924-2d7ac25b59f8/scratchpad/verify/codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py", line 68, in compare
+    expected = expected_binding(source_commit) if rebound else {}
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-jim-src-apps-specification-methodology/0818967d-061f-47a6-9924-2d7ac25b59f8/scratchpad/verify/codex/specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/package.py", line 50, in expected_binding
+    commit, members = build.documentary_inventory(source_commit)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-jim-src-apps-specification-methodology/0818967d-061f-47a6-9924-2d7ac25b59f8/scratchpad/verify/codex/specification_methodology/v3/build_tenants/codex/qualification/C3/iteration-5/tools/build_interpretation.py", line 191, in documentary_inventory
+    raise ValueError("Documentary member differs from source freeze: " + name)
+ValueError: Documentary member differs from source freeze: standards/UX_METHOD.md
