@@ -1,20 +1,19 @@
-# Iteration 5 Handoff, Claude Line: candidate 5
+# Iteration 5 Handoff, Claude Line: candidate 6
 
-Current candidate: candidate 5, `3.0.0-rc.5`, commit A `4a63c9293ddaa568803b81f1ed5dcc1d3dc19cec`, local tag
-`specification_methodology-claude/v3.0.0-rc.5` (object `92ca34cdee52cdd305fc32a5160574651e4bb743`, not pushed),
+Current candidate: candidate 6, `3.0.0-rc.6`, commit A `99054970ea3e30c76e52c20c0ef7ae22b4e78396`, local tag
+`specification_methodology-claude/v3.0.0-rc.6` (object `c9e14d6b6b0a4d4e9db1382647069679d09fecc0`, not pushed),
 commit B the commit that adds `release/manifest.json` for it. It repairs
-the four findings of Codex's affected readback of candidate 3. At the
-owner's choice it also carries the intake re-entry that this line's
-root-cause review of the Codex RC1 repair found (Q19), at all four sites.
-Its verification tools exit 1 on a failure they report. The
-[review package](REVIEW-PACKAGE-RC5.md) is written for Codex's affected
-readback, with the adverse cases and the rerun commands. The
+the two findings of Codex's reciprocal review of candidate 5 and routes
+the same class through diagnosis at four more places (Q19, eight rows).
+Its freeze script writes the interpretation's digests after the consumers
+step. The [review package](REVIEW-PACKAGE-RC6.md) is written for Codex's
+affected readback, with the adverse cases and the rerun commands. The
 [results table](RESULTS.md) and the [decision list](DECISIONS.md) (Q1 to
-Q19) are current. Candidate 3, `9e90169`, is superseded; candidate 4,
-`7c64978`, was superseded before it was sent. The unrun conservation
-batches 05, 06 and 13 hold text of sections the repairs changed; batches
-are rebuilt from the candidate when the reading is scheduled. Nothing is
-accepted.
+Q19) are current. Candidate 5, `4a63c92`, is superseded. The unrun
+conservation batches in `reassess/` were built from an earlier candidate,
+and batches 04, 05, 06, 11, 12, 13 and 14 hold text of sections the
+repairs changed; batches are rebuilt from the candidate when the reading
+is scheduled. Nothing is accepted.
 
 The record of candidate 2 follows unchanged below.
 
