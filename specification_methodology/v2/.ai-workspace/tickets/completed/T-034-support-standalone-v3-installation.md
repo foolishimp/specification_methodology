@@ -2,11 +2,12 @@
 
 - id: T-034
 - type: feature
-- status: active
-- review_status: pending
+- status: completed
+- review_status: satisfied
 - change_class: implementation_refinement
 - re_entry_point: design/TOOLCHAIN_MANAGER.md
 - created_at: 2026-10-19
+- completed_at: 2026-10-19
 - owner: specification_methodology
 - pen_holder: codex
 - work_authorization: direct owner request to update the installer for V3 while the common candidate is reviewed
@@ -65,4 +66,20 @@ the implementation. A separate nonauthor review will evaluate the frozen diff.
 
 ## State
 
-Construction started. Review, test results, and executable update remain open.
+Completed within the authorized distribution-mechanics scope. The nonauthor
+review returned `satisfied` with no material findings at `4d5de9aa`;
+Executive consumed that bounded result and the passing regression evidence,
+then activated the already-authorized Writer integration and executable update.
+The implementation is on main as `1a37ee9f` and `79fa6edb`, and local `stdo`
+reports `0.1.5`.
+
+All 179 regression tests pass. Source and installed CLI replays reproduce all
+81 common package payloads through a real annotated temporary Git tag.
+Historical manifest identity remains exact, all eleven installed code modules
+match the reviewed source, dependency versions are unchanged, and all 807
+existing shared-store files are byte-identical. The
+[result and evidence](../../comments/codex/20261019T034_v3_installer/RESULT.md)
+retain subjects, commands, review, initial diagnostic failure and final results.
+
+No method release, semantic candidate acceptance, real consumer migration,
+remote publication, a_c or Representation work is claimed or selected.
