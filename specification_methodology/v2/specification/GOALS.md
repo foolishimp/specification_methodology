@@ -41,6 +41,8 @@ migration. The separately selected source refinement below preserves the release
 
 ## Selected Work
 
+- [T-034](../.ai-workspace/tickets/active/T-034-support-standalone-v3-installation.md) implements standalone V3 package installation in the existing toolchain. The common candidate remains under independent review; a_c, Representation, publication, and actual consumer adoption are outside this work.
+
 - [T-033](../.ai-workspace/tickets/completed/T-033-release-stdo-251-rc2-triage-triangulation.md) completes triage triangulation and the published, freshly verified RC2 cohort through targeted semantic revision, mechanical rebinding and bounded qualification. Preserve existing authority and proportionality; external consumer adoption is unselected.
 
 - [T-032](../.ai-workspace/tickets/completed/T-032-prepare-stdo-251-rc1.md) completes the independent STDO 2.5.1 RC1 matched-cohort release. [The release result](../.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md) records shared postmortem refinements, accepted T-031 carry-forward, exact publication and retained Representation native limitations. T-288 and ABI delivery supply no dependency; external consumer adoption remains unselected.

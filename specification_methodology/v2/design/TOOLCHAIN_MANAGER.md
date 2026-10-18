@@ -47,10 +47,11 @@ exact basis.
   ambiguous and refuse. Channel resolution selects the qualified successor;
   direct logical-cut reacquisition keeps the historical ref when an identical
   preserving alias also exists, so an installed historical manifest does not
-  drift. A cut contains
-  STDO either at the historical repository root or at the exact monorepo prefix
-  `specification_methodology/`, never both. Physical nested paths are projected
-  back to project-relative logical source paths before manifest construction.
+  drift. A cut selects exactly one source layout: `specification/standards`
+  below the historical repository root, `specification_methodology/`, or the
+  cut's major-version root `specification_methodology/v<major>/`. V3 also
+  supports the standalone package described below. Physical paths are projected
+  back to canonical logical source paths before manifest construction.
 - `manifest.py` derives the exact tag, commit, trees, standards inventory,
   canonical member-set digest, member bytes, license, release note, and plugin
   payload admitted to an installation. A qualified shared-source cut also
@@ -72,6 +73,34 @@ exact basis.
   view and the verified STDO inventory to the same checks.
 - `cli.py` exposes singular and fleet operations without creating another
   authority surface.
+
+## Standalone V3 Package
+
+For a V3 cut, the published project root may instead contain `standards/`,
+`plugins/spec/`, `LICENSE`, and `release/release-note.md`. The project root is
+exactly `specification_methodology/v3/`. Build tenants are not searched or
+selected. If both `standards/` and `specification/standards/` exist there, or
+another recognized project layout competes, acquisition refuses. Missing
+required package members refuse; the adapter does not fall back to another
+layout's release note. The existing optional plugin rule remains unchanged.
+
+The adapter maps `standards/<member>` to logical
+`specification/standards/<member>` and the package release note to logical
+`releases/v<line>.md`. Installed paths and the canonical path-sensitive
+standards digest recipe remain unchanged. The recorded project and standards
+trees are the actual Git trees of the selected physical package. The manifest
+schema and all historical manifest bytes remain unchanged. A physical layout
+does not supply release authority: acquisition still requires an exact annotated
+immutable cut and validates any expected manifest digest.
+
+Basic install, manifest, verify, resolve, sync, adopt, and bootstrap operations
+have no a_c or Representation prerequisite. The separately selected
+`cohort-update` operation retains its existing contract. A V2-to-V3 consumer
+migration must explicitly review entrypoints and other selected routes;
+adoption still changes only the exact basis and `$schema`. Schema validation
+does not establish that every declared locator resolves. The
+[V3 installation guide](../V3_INSTALLATION.md) identifies the changed built-in
+entrypoints without introducing automatic route rewriting.
 
 ## Store
 

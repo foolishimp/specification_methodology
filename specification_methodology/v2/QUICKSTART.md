@@ -32,10 +32,10 @@ frozen history.
 From the Specification Stack repository root while developing the manager:
 
 ```sh
-pipx install --force ./specification_methodology
+pipx install --force ./specification_methodology/v2
 ```
 
-When already inside the `specification_methodology/` project directory, use
+When already inside the `specification_methodology/v2/` toolchain directory, use
 `pipx install --force .`. The explicit replacement prevents an older manager
 from remaining active when the selected cut needs newer ref-resolution
 behavior.
