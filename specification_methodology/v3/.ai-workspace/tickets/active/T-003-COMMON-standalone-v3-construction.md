@@ -77,3 +77,7 @@ Targeted failure controls accompany the adopted gates. Existing useful task rout
 Owner: A1 reach across four additional passages; Q13 frame-excerpt tradeoff; Q14 task-routed entry; Q2/Q6 rows 93-96; remaining exact replacement decisions; covering reviewer assignment. Reviewer: P1 class. No total replacement count is endorsed while those classifications are unresolved.
 
 Completion of construction requires a fully local package, a complete register return, reproducible mechanical verification and explicit residuals. Release readiness additionally requires current semantic and actual-use evidence on the frozen candidate, independent review over the material contribution set, owner replacement decisions and release acceptance. A green package checker establishes only its declared mechanical properties.
+
+## Construction progress
+
+The initial owner checkpoint is `2e7fa0f6`. The [construction return](../../common-build/BUILD.md) and [28-item register](../../common-build/REGISTER.json) record the prepared candidate and the decisions that remain open. The candidate is isolated on `tenant/common/standalone-v3`; this progress record accepts none of its proposed replacements.

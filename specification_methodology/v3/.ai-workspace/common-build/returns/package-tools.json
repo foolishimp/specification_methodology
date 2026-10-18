@@ -1,0 +1,97 @@
+{
+  "actor": "Codex common_package_writer; material author, not independent reviewer",
+  "artifact_sha256": {
+    "returns/package-final-check.json": "9fdd2dd6c298cfdf52ba57c4387bec901af3d3531a5aafbee73e7c7b28c4e32a",
+    "returns/package-final-freeze.json": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050",
+    "returns/package-final-run.json": "92e0fb9d45bfedd02973c68432be5c30468345da9104377d2a6eadef9270439f",
+    "returns/package-preliminary-check.json": "3b9488902526395c539c5c7d7dc0f598da3453fc95e8961018451935a2dc6f98",
+    "returns/package-preliminary-freeze.json": "8a8de2c2de47ea5a2c04e76b97e373f86a5efb7d3fb7d4b22e56508972e6c81e",
+    "returns/package-preliminary-run.json": "800f0174397b1cf42bd434a923d8c4db068f934fd1eee17e7a81603e106c606f",
+    "returns/package-tests.json": "209d7921aa7a3c8c900c746f338d54d31353ad8c5ee9c41ae97dcdca93910ae1",
+    "tools/.gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "tools/README.md": "64d87697324c918cdc5b600d618b052b12f36d936f19ac3c4932370984539cbf",
+    "tools/package_tools.py": "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac",
+    "tools/tests/test_package_tools.py": "963569e190f849b357979065c3d6c45cf32bf1f668a839cb8f4a71540e5f979a"
+  },
+  "contract": "T-003-COMMON-standalone-v3-construction",
+  "effect_territory": [
+    ".ai-workspace/common-build/tools/",
+    ".ai-workspace/common-build/returns/package-*"
+  ],
+  "items": {
+    "A3": "Canonical standards digest and installed-manifest serialization; explicit pinned V3 coordinates and strict unchanged full-package materialization.",
+    "G1": "Complete physical membership, directory inventory, per-file bytes/digests and externally pinned frozen inventory; no implicit coordinate exceptions.",
+    "G2": "Scoped standalone publication metadata policy preserves templates, attribution, examples and generic method law.",
+    "G3": "Strict JSON parsing and local Markdown/declared-JSON path/anchor checks; explicit rejection of every symlink and special entry.",
+    "G4": "Single standard-library checker; pinned inline launcher authenticates the exact bytes before execution; no project helper imports.",
+    "G5": "Visible advisory ownership signals with source line and structural context; no automatic semantic failure."
+  },
+  "kind": "stdo.common-build-writer-return",
+  "limits": [
+    "No candidate edits, Git/index mutation, tag, install, selector or remote effect performed by this Writer. Preliminary and final integrated candidate freezes/checks were explicitly requested by the construction pen.",
+    "No semantic qualification, independent review, owner replacement decision or acceptance is established by these mechanical gates.",
+    "Reference parsing covers documented forms; prose, unlinked code paths, generated-project routes, custom Markdown extensions, general JSON-schema conformance and frame fidelity need separate checks/review.",
+    "The trusted interpreter/standard library and separate installed verifier are explicit dependencies; the checker does not authenticate its own launcher or the external runtime.",
+    "Supplied release coordinates are checked for shape/consistency, not attested against Git objects; materialization creates no release ref."
+  ],
+  "pending_integration": [
+    "Construction pen checkpoints the first build and supplies explicit construction/staging coordinates.",
+    "Materialize the exact final frozen candidate and capture schema/canonical-JSON/installed-verifier proof.",
+    "Preserve distinction between staging materialization and actual release-shaped source installation."
+  ],
+  "recorded_at": "2026-10-18T15:54:31.916545+00:00",
+  "result": "tooling_ready; final_integrated_mechanical_check_passed",
+  "verification": {
+    "failed": 0,
+    "final_candidate": {
+      "advisory_count": 9,
+      "checked_local_references": 5846,
+      "failures": [],
+      "freeze": "returns/package-final-freeze.json",
+      "inventory_sha256": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050",
+      "members": 81,
+      "owner_requested": true,
+      "parsed_json": 7,
+      "receipt": "returns/package-final-check.json",
+      "run": "returns/package-final-run.json",
+      "standing": "authored mechanical final check; frozen bytes only; semantic acceptance and release remain separate",
+      "valid": true
+    },
+    "installed_toolchain": {
+      "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "manifest_module": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/manifest.py",
+      "observed_manifest_module_sha256": "a97d4273baf6e16a165b695881e7b25f1b5735c558c111ab401be7093514f911",
+      "schema": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/schemas/installed-release-manifest.schema.json",
+      "schema_sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+      "scope": "Observed development-tool identity for fixture schema/materialization tests; not authentication of the entire interpreter or toolchain dependency closure.",
+      "version": "0.1.4"
+    },
+    "passed": 29,
+    "preliminary_candidate": {
+      "advisory_count": 9,
+      "checked_local_references": 5845,
+      "failures": [
+        {
+          "check": "reference",
+          "location": "line 1209",
+          "message": "missing or unsupported local anchor: PROFILES.md#2-odd",
+          "path": "standards/ACTIVATION.md",
+          "target": "PROFILES.md#2-odd"
+        }
+      ],
+      "freeze": "returns/package-preliminary-freeze.json",
+      "inventory_sha256": "8a8de2c2de47ea5a2c04e76b97e373f86a5efb7d3fb7d4b22e56508972e6c81e",
+      "members": 81,
+      "owner_requested": true,
+      "parsed_json": 7,
+      "receipt": "returns/package-preliminary-check.json",
+      "run": "returns/package-preliminary-run.json",
+      "standing": "authored mechanical preliminary check; frozen bytes only; later changes need a new inventory",
+      "valid": false
+    },
+    "receipt": "returns/package-tests.json",
+    "scope": "Disposable fixtures only. Installed manifest schema validation, canonical JSON equality and actual verify_materialization positive control pass; incorrect standards/ digest is rejected.",
+    "tamper_control": "A syntactically valid altered checker attempts a side effect before ordinary imports; trusted inline launcher rejects its digest before execution and marker remains absent.",
+    "targeted_tests": 29
+  }
+}
