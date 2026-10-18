@@ -447,9 +447,18 @@ class GitSnapshot:
                     "/".join(part for part in layout if part) for layout in values
                 )
 
+            found = ", ".join(
+                (root or "legacy root")
+                + (
+                    " (standalone standards)"
+                    if standards == _PACKAGE_STANDARDS_ROOT
+                    else ""
+                )
+                for root, standards in candidates
+            )
             raise StdoError(
                 f"Cut {self.cut} must contain exactly one STDO project layout at "
-                f"{paths(layouts)}; found {paths(candidates) or 'none'}"
+                f"{paths(layouts)}; found {found or 'none'}"
             )
         return candidates[0]
 
