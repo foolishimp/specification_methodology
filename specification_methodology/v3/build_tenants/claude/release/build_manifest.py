@@ -16,10 +16,10 @@ std = [{'path': p, 'sha256': sha(blob('standards/' + p))} for p in files('standa
 plug = [{'path': p, 'sha256': sha(blob('plugins/spec/' + p))} for p in files('plugins/spec')]
 member_set = sha(''.join(f"{m['sha256']}  {m['path']}\n" for m in std).encode())
 m = {'kind': 'stdo.installed-release-manifest', 'schema_version': 1,
-     'release': {'cut': 'v3.0.0-rc.6', 'tag_object': tag, 'commit': commit, 'tree': git('rev-parse', f'{commit}^{{tree}}'),
+     'release': {'cut': 'v3.0.0-rc.7', 'tag_object': tag, 'commit': commit, 'tree': git('rev-parse', f'{commit}^{{tree}}'),
                  'standards_tree': git('rev-parse', f'{commit}:{T}/standards'),
                  'project_release_namespace': 'specification_methodology-claude',
-                 'qualified_ref': 'refs/tags/specification_methodology-claude/v3.0.0-rc.6',
+                 'qualified_ref': 'refs/tags/specification_methodology-claude/v3.0.0-rc.7',
                  'project_subtree_root': T, 'project_subtree_tree': git('rev-parse', f'{commit}:{T}')},
      'standards': {'installed_root': 'standards', 'source_root': 'specification/standards', 'member_count': len(std),
                    'member_set_sha256': member_set, 'members': std},

@@ -1,7 +1,7 @@
-# STDO 3.0.0 RC6, Claude line candidate
+# STDO 3.0.0 RC7, Claude line candidate
 
-Release note of the Claude line's sixth release-candidate cut of the STDO
-Specification Methodology, version line 3.0.0, candidate 6. It is
+Release note of the Claude line's seventh release-candidate cut of the STDO
+Specification Methodology, version line 3.0.0, candidate 7. It is
 reconciled to the exact subject it ships with: the freeze commit on
 `tenant/claude/c3-synthesis` (commit A of RELEASE §7's two-commit
 construction) that holds this file. The cut is not published: the local
@@ -13,13 +13,14 @@ below is read from the record (`qualification/C3-ITER5/COUNTS.json`).
 
 ## Identity and refs
 
-- Version line `3.0.0`, candidate `rc.6`; local tag
-  `specification_methodology-claude/v3.0.0-rc.6` over commit A. Candidates
+- Version line `3.0.0`, candidate `rc.7`; local tag
+  `specification_methodology-claude/v3.0.0-rc.7` over commit A. Candidates
   1, 2, 3 and 5 stay immutable at `af3b8b7`, `ba882bc`, `9e90169` and
   `4a63c92` with their tags `specification_methodology-claude/v3.0.0-rc.1`,
   `-rc.2`, `-rc.3` and `-rc.5`. Candidate 4, `7c64978` with its tag `-rc.4`
   and manifest commit `336b264`, was superseded before review by
-  candidate 5.
+  candidate 5. Candidate 6, `9905497` with its tag `-rc.6` and manifest
+  commit `d3d8d8c`, was superseded before review by candidate 7.
 - Project subtree root `specification_methodology/v3/build_tenants/claude`.
 - Common input: C3-I5-06 at `4c340f7`; last reviewed candidate on this
   line: candidate 5, `4a63c92`.
@@ -44,10 +45,13 @@ accepted on source by this line:
   its frame-index enumeration fails or returns no index.
 
 The same class at four more places, which this line's review of Codex RC4
-named and Codex repaired in its own line: the eleventh spec-drivenness
-condition, the persistent-delta drift signal, ASSURANCE's scenario-failure
-sentence and the first failure-classification row each decided a cause or
-a re-entry from the symptom alone. Each now routes through diagnosis, under
+named and Codex's reciprocal addendum (main `06f2cf19`) confirmed: the
+eleventh spec-drivenness condition, the persistent-delta drift signal,
+ASSURANCE's scenario-writing and scenario-failure sentences and the first
+failure-classification row each decided a cause or a re-entry from the
+symptom alone. The addendum also named the scenario-writing sentence, which
+took a capability for which no scenario can be written as not yet real;
+candidate 6 had left it. Each now routes through diagnosis, under
 SPEC_METHOD §4 Universal intake triage, ASSURANCE §12 Counterexample
 localisation or ACTIVATION §1 Feedback and diagnosis. With C5-01 this adds
 four proposed supersessions and extends the drift-signals row, all pending
@@ -151,7 +155,7 @@ authority compressions out of scope for the baseline.
 
 ## Plugin inventory
 
-`plugins/spec`, 17 files, version label `3.0.0-rc.6` in both plugin
+`plugins/spec`, 17 files, version label `3.0.0-rc.7` in both plugin
 manifests, digests in `release/manifest.json`.
 
 ## Manager inventory
