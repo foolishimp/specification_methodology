@@ -5,7 +5,7 @@ Author: Dimitar Popov.
 STDO governs purposeful construction through specification, typed composition,
 bounded evaluation and authorized disposition.
 
-`3.0.0-rc.4` is this package's unaccepted, unpublished candidate target; its
+`3.0.0-rc.5` is this package's unaccepted, unpublished candidate target; its
 manifest version does not identify an issued release cut.
 
 The [standards library](standards/README.md) is the method entry. Its

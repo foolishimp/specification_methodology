@@ -3039,9 +3039,11 @@ meaning choices; the labels and default scaffold do not determine a verdict.
   surface has been misclassified.
 - If a live constitutional artifact is corrected by in-place mutation rather
   than supersession or withdrawal, constitutional history has been corrupted.
-- If a real use case reveals a gap not expressible in current requirements,
-  intake selects the owning layer whose meaning must change. Missing
-  requirement meaning does not establish a direction or scope change.
+- If a realization patch is treated as closing a real use-case gap whose
+  required meaning is absent from current requirements, the governing gap
+  remains unresolved. Intake selects the owning layer whose meaning must
+  change; missing requirement meaning does not establish a direction or scope
+  change.
 
 Trace closure is stricter than documentation completeness. It is the rule that
 closes the constitution over realized behavior.

@@ -2000,8 +2000,8 @@ Convenience is not sufficient justification.
 ## 8. Totality Rule
 
 Semantic functions should be total, or as close as the language and problem
-allow. Bind their admitted input domain, intended result and permitted repair,
-re-entry, refusal, yielding or termination under
+allow. Bind their admitted input domain, intended result and permitted
+continuation, repair, recovery, re-entry, refusal, yielding or termination under
 [Contract application](TRANSFORMATION_LIBRARY.md#contract-application) and
 [bounded construction](FOUNDATIONS.md#bounded-construction). The method-boundary
 return uses the core result record with the original domain outcome.
