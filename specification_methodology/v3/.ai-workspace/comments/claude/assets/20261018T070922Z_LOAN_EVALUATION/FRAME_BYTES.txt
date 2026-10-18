@@ -1,0 +1,127 @@
+frame headroom (bytes under 160,000):
+  configuration           144806  headroom   15194
+  eb-task-d               116381  headroom   43619
+  rf-task-a               116249  headroom   43751
+  traversal-task-f        106373  headroom   53627
+  dm-task-d               102884  headroom   57116
+  rf-task-b               100925  headroom   59075
+  binding                  99846  headroom   60154
+  stale-summary            95744  headroom   64256
+  bootstrap                86163  headroom   73837
+  member-build-assess      81857  headroom   78143
+  ac-task-a                70993  headroom   89007
+  acceptance-release       61987  headroom   98013
+
+owner sections copied into frames: 112
+  ACTIVATION.md#2-context-construction-under-an-envelope: bootstrap, configuration, stale-summary
+  ACTIVATION.md#5-work-state-and-restart: stale-summary
+  ACTIVATION.md#7-closed-result-and-reuse: configuration, eb-task-d, rf-task-a, rf-task-b, stale-summary
+  ACTIVATION.md#admission: bootstrap
+  ACTIVATION.md#admission-and-activation: rf-task-a
+  ACTIVATION.md#configuration: configuration
+  ACTIVATION.md#construction-availability: configuration, eb-task-d, stale-summary
+  ACTIVATION.md#disposition: acceptance-release, dm-task-d, eb-task-d, rf-task-a
+  ACTIVATION.md#effects: binding, configuration, stale-summary, traversal-task-f
+  ACTIVATION.md#intake: bootstrap, configuration
+  ACTIVATION.md#roles-and-delegation: configuration
+  ACTIVATION.md#transitions: configuration, stale-summary
+  ASSURANCE.md#10-testing-evidence-composition: eb-task-d
+  ASSURANCE.md#foundation-to-law-assurance-and-testing: eb-task-d
+  AXIOMATIC_CALCULUS.md#2-signature: ac-task-a
+  AXIOMATIC_CALCULUS.md#3-typed-records: ac-task-a
+  AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-002-scoped-identity: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-003-reference-closure: ac-task-a, traversal-task-f
+  AXIOMATIC_CALCULUS.md#ac-004-relation-typing: traversal-task-f
+  AXIOMATIC_CALCULUS.md#ac-005-authority-conservation: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-006-basis-coherence: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal: ac-task-a, traversal-task-f
+  AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-009-residual-conservation: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-013-transformation: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-014-judgment-separation: ac-task-a
+  AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation: binding
+  AXIOMATIC_CALCULUS.md#ac-019-valid-model: binding
+  AXIOMATIC_CALCULUS.md#foundation-to-law: ac-task-a, binding, traversal-task-f
+  CONFORMANCE.md#5-coverage-of-the-common-discriminators: member-build-assess
+  DESIGN_MODULE.md#5-ontology-first-design: dm-task-d
+  DESIGN_MODULE.md#7-ontology-and-three-view-design-gate: dm-task-d
+  DESIGN_MODULE.md#foundation-to-law: dm-task-d
+  EVALUATION.md#2-separation: binding
+  EVALUATION.md#3-independent-assessment: binding, configuration, eb-task-d, member-build-assess
+  EVALUATION.md#4-review-results: acceptance-release, eb-task-d, member-build-assess
+  EVALUATION.md#5-acceptance: acceptance-release
+  EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance: acceptance-release, binding, configuration, eb-task-d, member-build-assess, rf-task-a
+  EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification: acceptance-release, binding, configuration, eb-task-d, member-build-assess, rf-task-a
+  EVALUATION.md#frame-qualification: configuration, rf-task-a
+  EXECUTIVE_BASELINE.md#12-complete-engagement-transition: eb-task-d
+  EXECUTIVE_BASELINE.md#17-actor-binding-and-independence: eb-task-d
+  EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action: eb-task-d
+  EXECUTIVE_BASELINE.md#executive: eb-task-d
+  EXECUTIVE_BASELINE.md#foundation-to-law: configuration, eb-task-d
+  EXECUTIVE_BASELINE.md#reviewer: eb-task-d
+  EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect: eb-task-d
+  EXECUTIVE_BASELINE.md#the-executive-configuration: configuration, eb-task-d
+  EXECUTIVE_BASELINE.md#work-result: eb-task-d
+  FOUNDATIONS.md#2-ontology: binding, rf-task-a, rf-task-b
+  FOUNDATIONS.md#authority-kinds: ac-task-a, bootstrap, configuration, member-build-assess
+  FOUNDATIONS.md#conjunction-of-results: ac-task-a, acceptance-release, binding, configuration, dm-task-d, eb-task-d, rf-task-a, rf-task-b, stale-summary, traversal-task-f
+  FOUNDATIONS.md#disjointness-and-independence: configuration
+  FOUNDATIONS.md#foundation-to-law: member-build-assess
+  FOUNDATIONS.md#imports-between-members: member-build-assess
+  FOUNDATIONS.md#product-lineage-objects: bootstrap
+  FOUNDATIONS.md#results: ac-task-a, acceptance-release, binding, bootstrap, configuration, dm-task-d, eb-task-d, member-build-assess, rf-task-a, rf-task-b, stale-summary, traversal-task-f
+  FOUNDATIONS.md#the-frame-tuple: bootstrap
+  PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary: bootstrap
+  PRODUCT_DEFINITION.md#2-required-definition-relations: bootstrap
+  PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition: bootstrap
+  PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method: bootstrap
+  REFERENCE_FRAME.md#10-discovery-and-revision: rf-task-b
+  REFERENCE_FRAME.md#11-the-activation-packet: bootstrap, configuration, rf-task-a
+  REFERENCE_FRAME.md#4-frame-set-declaration: rf-task-b
+  REFERENCE_FRAME.md#5-method-functions: rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#6-frames-in-conjunction: rf-task-b
+  REFERENCE_FRAME.md#7-frame-relations: rf-task-a
+  REFERENCE_FRAME.md#8-workspace-coverage: rf-task-b
+  REFERENCE_FRAME.md#foundation-to-law: bootstrap, configuration, rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#minimal-evaluation-result: rf-task-a
+  REFERENCE_FRAME.md#minimal-frame-declaration: rf-task-a
+  REFERENCE_FRAME.md#rf-001-evaluation-relativity: rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#rf-002-finite-attention: configuration, rf-task-a
+  REFERENCE_FRAME.md#rf-003-material-sufficiency: rf-task-a
+  REFERENCE_FRAME.md#rf-004-irrelevance-exclusion: rf-task-a
+  REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates: rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#rf-006-authority-conservation: rf-task-a
+  REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation: rf-task-a
+  REFERENCE_FRAME.md#rf-008-overlap-without-identity-collapse: rf-task-b
+  REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy: configuration
+  REFERENCE_FRAME.md#rf-010-composition-on-demand: rf-task-b
+  REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting: rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#rf-012-closed-results: configuration, rf-task-a, rf-task-b
+  REFERENCE_FRAME.md#rf-013-reconstructable-activation: rf-task-a
+  REFERENCE_FRAME.md#rf-014-capability-fit: configuration, rf-task-a
+  REFERENCE_FRAME.md#rf-015-residual-uncertainty: rf-task-a, rf-task-b
+  RELEASE.md#8-acceptance: acceptance-release
+  RELEASE.md#9-successor-baseline-conservation-stdo-up-015: acceptance-release, member-build-assess
+  RELEASE.md#foundation-to-law-release-and-successor-conservation: acceptance-release, member-build-assess
+  SPEC_METHOD.md#11-build-tenant-binding: binding
+  SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle: binding
+  SPEC_METHOD.md#canonical-statement: bootstrap
+  SPEC_METHOD.md#change-classes: dm-task-d
+  SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding: binding, bootstrap
+  SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity: binding, dm-task-d
+  TICKETS.md#condition-based-closure-and-reuse: acceptance-release, stale-summary
+  TICKETS.md#execution-and-verification-authority-separation-up-007: stale-summary
+  TICKETS.md#foundation-to-law-work-carriers: acceptance-release, stale-summary
+  TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009: stale-summary
+  TICKETS.md#recorded-judgment-and-owner-ruling-continuity: stale-summary
+  TRAVERSAL_OCCURRENCE.md#authority-and-adoption: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#closed-event-kind-population: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#closed-relation-families: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#foundation-to-law: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation: traversal-task-f
+  TRAVERSAL_OCCURRENCE.md#occurrence-identity: traversal-task-f
