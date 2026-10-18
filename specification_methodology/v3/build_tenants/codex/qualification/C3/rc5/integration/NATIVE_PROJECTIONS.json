@@ -1,0 +1,37 @@
+{
+  "package_commit": "5a5b5ad80f0ba4b56b83aadd42ac130de53ba803",
+  "cases": [
+    {
+      "case": "drift-owner-and-consumer",
+      "indexes": [
+        "SPEC_METHOD.drift-signals"
+      ],
+      "mode": "materialized",
+      "required_clauses_present": [
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.drift-signals",
+        "urn:codex-stdo3:iteration-3-r2:clause:SPEC_METHOD.universal-intake-triage"
+      ],
+      "clause_count": 28,
+      "output_bytes": 1390004,
+      "output_sha256": "76d4778e9c6d01b32ff366ed4259ac583af31eb3e696258638ada70897dc060c",
+      "standing": "Mechanical native route availability; applicability and semantic fidelity remain separate."
+    },
+    {
+      "case": "bounded-totality-and-recovery",
+      "indexes": [
+        "DESIGN_MODULE_METHOD.8-totality-rule"
+      ],
+      "mode": "materialized",
+      "required_clauses_present": [
+        "urn:codex-stdo3:iteration-3-r2:clause:DESIGN_MODULE_METHOD.8-totality-rule",
+        "urn:codex-stdo3:iteration-3-r2:clause:FOUNDATIONS.bounded-construction"
+      ],
+      "clause_count": 26,
+      "output_bytes": 1556760,
+      "output_sha256": "a2bff7012bc7462e4be9f11a2022711817fe6a24958920ee0e9b95ab2e89ffcb",
+      "standing": "Mechanical native route availability; applicability and semantic fidelity remain separate."
+    }
+  ],
+  "replay": "Use the frozen package program/map and bindings.py with PROJECTION_CASES.json indexes; output may remain in scratch.",
+  "standing": "Two changed-route projections; no fresh actor actual-use or whole-interpretation qualification."
+}

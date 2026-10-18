@@ -34,5 +34,12 @@ values from `COORDINATES.json` after the return is complete:
 `FINAL_THEORY_ROOT` is the exact installed v2.5.1-rc.2 theory root at the
 manifest digest in `INPUTS.json`. Reproduce in a disposable copy beginning at
 the authored-input commit; `source` refuses already-replaced compression
-preimages. Native projection cases establish route availability only. Semantic
-readback, complete qualification and owner acceptance have separate subjects.
+preimages. Compare the generated documentary members with the source freeze,
+then use that source commit for the account operation. The source freeze also
+contains the final interpretation-input amendment. Use the account commit for
+generation and the package commit for verification; compare each output with
+its recorded successor before moving to that next frozen tree. Do not run the
+sequence over a later tree while claiming the initial preimage.
+
+Native projection cases establish route availability only. Semantic readback,
+complete qualification and owner acceptance have separate subjects.
