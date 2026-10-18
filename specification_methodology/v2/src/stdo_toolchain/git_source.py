@@ -18,6 +18,7 @@ _VERSION_RE = re.compile(r"^(?!.*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*$")
 _LEGACY_PROJECT_ROOT = ""
 _MONOREPO_PROJECT_ROOT = "specification_methodology"
 _STANDARDS_ROOT = "specification/standards"
+_PACKAGE_STANDARDS_ROOT = "standards"
 _PROJECT_RELEASE_NAMESPACE = "specification_methodology"
 
 
@@ -323,6 +324,7 @@ class GitSnapshot:
         self.project_root = ""
         self.project_tree = ""
         self.project_release_namespace = ""
+        self._standards_root = _STANDARDS_ROOT
 
     def __enter__(self) -> "GitSnapshot":
         self._temporary = tempfile.TemporaryDirectory(prefix="stdo-git-")
@@ -353,7 +355,7 @@ class GitSnapshot:
             self.tag_object = self._text(["rev-parse", self.ref]).strip()
             self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
             self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
-            self.project_root = self._detect_project_root()
+            self.project_root, self._standards_root = self._detect_project_layout()
             self.project_tree = (
                 self.tree
                 if not self.project_root
@@ -415,32 +417,39 @@ class GitSnapshot:
         major = version.split(".", 1)[0]
         return f"{_MONOREPO_PROJECT_ROOT}/v{major}"
 
-    def _detect_project_root(self) -> str:
+    def _detect_project_layout(self) -> tuple[str, str]:
         versioned_root = self._versioned_project_root()
+        layouts = [
+            (root, _STANDARDS_ROOT)
+            for root in (
+                _LEGACY_PROJECT_ROOT,
+                _MONOREPO_PROJECT_ROOT,
+                versioned_root,
+            )
+        ]
+        # V3 may publish its standalone package directly at the version root.
+        # Build tenants are construction subjects, never release candidates
+        # selected implicitly by the installer. Older cuts keep their layouts.
+        if versioned_root == f"{_MONOREPO_PROJECT_ROOT}/v3":
+            layouts.append((versioned_root, _PACKAGE_STANDARDS_ROOT))
         candidates = []
-        for project_root in (
-            _LEGACY_PROJECT_ROOT,
-            _MONOREPO_PROJECT_ROOT,
-            versioned_root,
-        ):
+        for project_root, standards_root in layouts:
             standards_path = "/".join(
-                part for part in (project_root, _STANDARDS_ROOT) if part
+                part for part in (project_root, standards_root) if part
             )
             if self._repository_object_type(standards_path) == "tree":
-                candidates.append(project_root)
+                candidates.append((project_root, standards_root))
 
         if len(candidates) != 1:
-            found = (
-                "none"
-                if not candidates
-                else ", ".join(root or "legacy root" for root in candidates)
-            )
+
+            def paths(values: list[tuple[str, str]]) -> str:
+                return ", ".join(
+                    "/".join(part for part in layout if part) for layout in values
+                )
+
             raise StdoError(
                 f"Cut {self.cut} must contain exactly one STDO project layout at "
-                f"{_STANDARDS_ROOT}, "
-                f"{_MONOREPO_PROJECT_ROOT}/{_STANDARDS_ROOT} or "
-                f"{versioned_root}/{_STANDARDS_ROOT}; "
-                f"found {found}"
+                f"{paths(layouts)}; found {paths(candidates) or 'none'}"
             )
         return candidates[0]
 
@@ -451,6 +460,17 @@ class GitSnapshot:
             or any(part in {"", ".", ".."} for part in logical_path.split("/"))
         ):
             raise StdoError(f"Unsafe logical STDO path: {logical_path!r}")
+        if self._standards_root == _PACKAGE_STANDARDS_ROOT:
+            # The manifest and its path-sensitive digest retain their canonical
+            # logical coordinates; only Git acquisition uses physical paths.
+            if logical_path == _STANDARDS_ROOT or logical_path.startswith(
+                f"{_STANDARDS_ROOT}/"
+            ):
+                logical_path = (
+                    _PACKAGE_STANDARDS_ROOT + logical_path[len(_STANDARDS_ROOT) :]
+                )
+            elif logical_path == f"releases/{self.cut.rsplit('-rc.', 1)[0]}.md":
+                logical_path = "release/release-note.md"
         return "/".join(part for part in (self.project_root, logical_path) if part)
 
     def list_files(self, root: str) -> list[str]:
@@ -466,18 +486,13 @@ class GitSnapshot:
                 repository_root,
             ]
         )
-        prefix = f"{self.project_root}/" if self.project_root else ""
         logical_paths = []
         for path in output.split("\0"):
             if not path:
                 continue
-            if prefix:
-                if not path.startswith(prefix):
-                    raise StdoError(
-                        f"Git member escaped selected STDO project root: {path}"
-                    )
-                path = path[len(prefix) :]
-            logical_paths.append(path)
+            if path != repository_root and not path.startswith(f"{repository_root}/"):
+                raise StdoError(f"Git member escaped requested STDO root: {path}")
+            logical_paths.append(root + path[len(repository_root) :])
         return sorted(logical_paths)
 
     def read_file(self, path: str) -> bytes:

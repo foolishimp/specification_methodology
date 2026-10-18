@@ -43,15 +43,15 @@ During development from a Specification Stack checkout, install the manager
 itself with an isolated Python application installer:
 
 ```sh
-pipx install --force ./specification_methodology
+pipx install --force ./specification_methodology/v2
 ```
 
-When already inside the `specification_methodology/` project directory, use
+When already inside the `specification_methodology/v2/` toolchain directory, use
 `pipx install --force .`. The explicit replacement avoids leaving an older
 manager in place when a qualified cut requires newer ref-resolution behavior.
 
 To install a released manager, select its qualified immutable ref from the
-[release records](releases/). The [cohort record](../stack_release.json) locates
+[release records](releases/). The [cohort record](../../stack_release.json) locates
 the selected release and its matching assets. Use that exact ref:
 
 ```sh
@@ -68,6 +68,12 @@ stdo install "$STDO_CUT"
 stdo list
 stdo resolve "stdo://releases/${STDO_CUT}/standards/SPEC_METHOD.md"
 ```
+
+The current toolchain, `0.1.5`, also supports a standalone V3 package at the
+published `specification_methodology/v3/` root. See
+[V3 installation](V3_INSTALLATION.md) for the package contract, exact-cut
+commands, and consumer migration boundary. V3 candidate review and publication
+remain separate from this installer capability.
 
 For a governed project, use `stdo sync --definition stdo_default.json` to
 materialize the exact basis already pinned by that definition. Use the following
