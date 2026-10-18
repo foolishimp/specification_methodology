@@ -1,0 +1,439 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-04c54946fcb35842a633/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-04c54946fcb35842a633",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "concepts",
+      "grounding": {
+        "end_line": 1873,
+        "quote": "the execution binding identifies:",
+        "section_id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FSufficient%20Execution%20Intake",
+        "start_line": 1866
+      },
+      "grounding_index": 0,
+      "record_key": "execution_binding",
+      "record_ordinal": 19
+    }
+  ],
+  "mode": "graphify-ac",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-04c54946fcb35842a633/attempt-001"
+  },
+  "parent_answer_sha256": "b85dee5f0f88655ff631463dd2b9cfa1a76c09f75618e2ba4c8a0f9a7f13b480",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "cced3f8e2b99c5e20b21f7f4df3433881bffd55bffb2d276acbeaa66a1644a3e",
+      "original_attempt": "actors/author/chunk-04c54946fcb35842a633/attempt-001",
+      "original_recorded_failure": "record[execution_binding]/grounding/0: grounding quote is not exact source at declared range",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[execution_binding]/grounding/0: grounding quote is not exact source at declared range",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 74794,
+          "output_tokens": 42000,
+          "reasoning_output_tokens": 1034
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/answer.json": "59ab6ba8697776e194d6d46c36d06e88f102d4614a79255e88653752d1f4cee2",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/events.jsonl": "3dd5c65621c8b772efaf31c54f7990437e134eadcd08d9fd6fda9a7a44b84b02",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/invocation.json": "7ed011b68cadae88d496d27b7653a45250b5e52e46331f7f842d6a90f994a4ce",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/prompt.txt": "d56a2600836e784fa0cd91051ee83fe3a0d5baef8103ea0751a636d1d9530b5d",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/result.json": "3a2e3d5f7c0bbb44af37ac32d7424e6cc356f65ad562e1e1a05ef8ba7cb77e7f",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-04c54946fcb35842a633/attempt-001/usage.json": "4f8ed895d7d5d6a0e199a5a76781bd4187d4dcb7b4e0ae3ea8492cb0f31f039a",
+        "chunks.json": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488",
+        "plan.json": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42",
+        "source-manifest.json": "8b5356c859a5906c5715e8ec85036fb0568890311f708397a3ea91c724f5d067"
+      },
+      "source_sections": [
+        {
+          "end_line": 901,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FCollective%20Reference-Frame%20Basis",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "839822b536cdf08a67e5e79c4cd96201ac80984e2eaf9eeca497c3644cf9ce1f",
+          "start_line": 816
+        },
+        {
+          "end_line": 965,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FWHAT%2C%20HOW%2C%20And%20Work%20Carriers",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5d7cffa32406f52e5e8666960bf15e8ab48a33e2ae6a15a718559b68466ce15c",
+          "start_line": 902
+        },
+        {
+          "end_line": 1022,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FRecursive%20Discovery%20And%20Explicit%20Composition",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "2a44a60738aeaca7eb52c0f134ddce1b648b50e680bedcb64ed27f647bad10e7",
+          "start_line": 966
+        },
+        {
+          "end_line": 1045,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSTDO%20Product%20Definition%20Overlay%20And%20Layout%20Independence%2FSemantic-Resolution%20Conformance%20Cases",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ba351cb77a052382d297e2de1ca64842affe6ccf1f11ccfd244e50a627a1110b",
+          "start_line": 1023
+        },
+        {
+          "end_line": 1089,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FOne%20Constitutional%20Surface%20And%20Version%20Boundary%20%28%60STDO-SURFACE-001%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "97e0ea8b3330e41194706de7d7c2eb6c2e2a818392a7f41b745b9e10ab0cb0db",
+          "start_line": 1046
+        },
+        {
+          "end_line": 1163,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FConstitutional%20Chain",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b13e8b60b4497e98a1f896b5968230c9a417f80fa4011025f43a8a8e04bbdb30",
+          "start_line": 1090
+        },
+        {
+          "end_line": 1222,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSprint%20Execution%20Boundary",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8492e010f45a68bd4fb98b3eb57dd79272b1082fba598319113349a6afa76365",
+          "start_line": 1164
+        },
+        {
+          "end_line": 1331,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAmbiguity%20Governance%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "7eadbb609046b3fc85721a2bb6af9686d0d4903a9b95bc32ce8b4597047f3258",
+          "start_line": 1223
+        },
+        {
+          "end_line": 1380,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FOperational%20Lifecycle%20Sufficiency%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "d8b16f8d7708e5a0ea2dccf3898d1a2774e4a63ba1ae6a148b63cbd53e0bee5c",
+          "start_line": 1332
+        },
+        {
+          "end_line": 1385,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FChange%20Management%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "9c972160e81ac4ebb4e837924fcc71b8fe8baff175e66a284f3b8274340c0c78",
+          "start_line": 1381
+        },
+        {
+          "end_line": 1479,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FChange%20Management%20Rule%2FUniversal%20Intake%20Triage",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8634138a51a54417ef0c147a2673c72ceb406744da59a693b52bace9f51a5c81",
+          "start_line": 1386
+        },
+        {
+          "end_line": 1524,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FChange%20Management%20Rule%2FCounterexample%20Localization",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "2619ce8ee5be1d32b43541f4f0633f9732bf1e0bf02b799f664c45880827b0ff",
+          "start_line": 1480
+        },
+        {
+          "end_line": 1624,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FChange%20Management%20Rule%2FComputed%20Classification%20And%20Treatment",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b16ed62991024fdd9562b75c506f72c08b0e95365bcb38ec50594975dbaf2a0e",
+          "start_line": 1525
+        },
+        {
+          "end_line": 1654,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FConsistency%20Gate%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "3fce71188d6e9963bf38e974b3d59698bbc49a38d38968fd2ce57e52fe18af9a",
+          "start_line": 1625
+        },
+        {
+          "end_line": 1742,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FProduct%20Outcome%20Conservation%20%28%60STDO-UP-013%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "43c26307ad5da3d85eb567bd405278400207a9b3863788c0f1dbe68109447a4e",
+          "start_line": 1655
+        },
+        {
+          "end_line": 1823,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FProportional%20Method%20And%20Delivery%20%28%60STDO-UP-014%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "1aaf200fdb13452ba3b699181164882ce0a9d82eb6316bb05064bcc46ac13f95",
+          "start_line": 1743
+        },
+        {
+          "end_line": 1861,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "91149d68491756845f6f978c31a0903898587bc6ce1591f67e23d58ef6b33225",
+          "start_line": 1824
+        },
+        {
+          "end_line": 1884,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FSufficient%20Execution%20Intake",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ab414b1c20bd7ffefeb81d59f2551401a27b0610e0ceec73a12e5877abda300d",
+          "start_line": 1862
+        },
+        {
+          "end_line": 1893,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FBounded%20Causal%20Construction",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "6f49e1d1ab31943a526bf1b47d56d953d9b5e09bb158c992527b292f77efd684",
+          "start_line": 1885
+        },
+        {
+          "end_line": 1932,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FConstruction%2C%20Assessment%2C%20And%20Delegation",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b52541b394169a6e05c52c0fc4c7ef712dd93f59b757bd796f3d26208ac11639",
+          "start_line": 1894
+        },
+        {
+          "end_line": 1984,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FProportional%20Disposition",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "f10398a3910647edc4646db62a5212ca0049a4ff22f6969043be648af431464d",
+          "start_line": 1933
+        },
+        {
+          "end_line": 2012,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FTransition%20Evidence%20And%20Proof%20Cadence",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "61bd8747a442aac172ba5327abf16d8dd7a4452d419c12cebd4d40034e10d4f7",
+          "start_line": 1985
+        },
+        {
+          "end_line": 2051,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FAgentic%20Construction%20Execution%20%28%60STDO-UP-020%60%29%2FCheckpoint%2C%20Continuation%2C%20Progress%2C%20And%20Churn",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "25659bbe3bf2415649c4afebb5840bbfc5024131377d6b0bcc14c1f042057033",
+          "start_line": 2013
+        },
+        {
+          "end_line": 2142,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FComplete%20Enclosing-Relation%20Admission%20%28%60STDO-UP-021%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "1a262c851cbe808f040a3a052cef9de7aa6a125932ad627d077a66f24bd9a5f5",
+          "start_line": 2052
+        },
+        {
+          "end_line": 2178,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FComplete%20Enclosing-Relation%20Admission%20%28%60STDO-UP-021%60%29%2FStanding%20Structural%20Qualification",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "0f3d706685c3b600adefd2162835f304ca5a84f5248afe50cad54afd9f6d2aff",
+          "start_line": 2143
+        },
+        {
+          "end_line": 2218,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "cc58ec4238ae357b09d4167cb1580e4db16eea53afaa8625a7031edbf378cdb7",
+          "start_line": 2179
+        },
+        {
+          "end_line": 2294,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FConstitutional%20Migration%20Options",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "9a8a901c4d597652b7905e227dde18e1e6453f82a0dcea521e82e1d0f82e2fb0",
+          "start_line": 2219
+        },
+        {
+          "end_line": 2309,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FWhat%20Counts%20As%20A%20Core%20Interface",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "7cd2333665223f11564fd32315617704b0520bfc36a77f036b234f74781e56ce",
+          "start_line": 2295
+        },
+        {
+          "end_line": 2333,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FRequired%20Migration%20Protocol",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "c3f3f3a010f586aea20bb6f1330fa9800a515a45178d8f4ed35fbab4db645fb1",
+          "start_line": 2310
+        },
+        {
+          "end_line": 2352,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FBridge%20Prohibition",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8895e657d6cb3eb83f85d8fe1cd1311ae9602cf4de4c1df10fa0793369a16a28",
+          "start_line": 2334
+        },
+        {
+          "end_line": 2362,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FProjection%20Discipline",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "e5b09cac639434aa8b97eafb869f7654c25ca250a5233ca4c2a218b9653acdbc",
+          "start_line": 2353
+        },
+        {
+          "end_line": 2383,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FInside-Out%20First%20Sequencing",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "806b495fc28fae3c29659314c92bc6f1bfa6f937e986b6ee84742913e6315ce3",
+          "start_line": 2363
+        },
+        {
+          "end_line": 2412,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FHard-Break%20Discipline",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "0eeb2db5bb8c424db52cabd231389520f87c5a3068ee2ff1eace7a67d98e3f60",
+          "start_line": 2384
+        },
+        {
+          "end_line": 2429,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FProof-Last%20Rule%20For%20Core%20Interface%20Changes",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "61fe824964f5007c814701bf8773dad8fde8d0701f6c337c3f7cc97440365f8b",
+          "start_line": 2413
+        },
+        {
+          "end_line": 2462,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FCore%20Interface%20Migration%20Rule%2FClosure%20Criterion",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "53b9596be4364cb5f1d19bcedc7d04fa51c5bedde8d05b3d31dd336f18fd9365",
+          "start_line": 2430
+        },
+        {
+          "end_line": 2475,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRelease%20Version%20Boundary",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b2c5d9ca41d44326b6f79c046f763e06b2f32037205221dfac71b95cf9718e2d",
+          "start_line": 2463
+        },
+        {
+          "end_line": 2492,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FEvidence%20Rules",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "3fd4dc3d53d3ec955331322459657ead1bc74fbd6f8126625a00f5ef5d46bf4d",
+          "start_line": 2476
+        },
+        {
+          "end_line": 2511,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FEvidence%20Rules%2FProof%20Target%20Identity%20And%20Adequacy%20%28%60STDO-UP-001%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "460083b50d542aea8cf4e6671578f39eb72d02d7997e69e8697ffbb43c4bfdf9",
+          "start_line": 2493
+        },
+        {
+          "end_line": 2529,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FEvidence%20Rules%2FSemantic%2C%20Evidence%2C%20And%20Projection%20Separation%20%28%60STDO-UP-008%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "08db409890056690f058c10fdcea0e110110fd178fa729d422f4c4ebdda3f915",
+          "start_line": 2512
+        },
+        {
+          "end_line": 2621,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FEvidence%20Rules%2FAssurance-Boundary%20Congruence%20And%20Method%20Qualification%20%28%60STDO-UP-022%60%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "474a3bbaf3f8d3522e2b08802e0b3e27a5b73e3c0eaa8ad17899dbda4d73f047",
+          "start_line": 2530
+        },
+        {
+          "end_line": 2646,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FVerification%20Layers",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "9345d66539474d7fb357b9c7c7b0970412df1e75e07b26921698077ebaed7da6",
+          "start_line": 2622
+        },
+        {
+          "end_line": 2757,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTesting%20Strategy%20Taxonomy",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ec86b62234d44950751bf4e1f3e9d8a58c8b5b066e01f44d333b1b5810c7d14c",
+          "start_line": 2647
+        },
+        {
+          "end_line": 2785,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTesting%20Strategy%20Taxonomy%2FFixture%20And%20Proof%20Portability%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5007edc04df8cd7380823eb328a04fb543bc10cf98575e68889b43b9dae5def4",
+          "start_line": 2758
+        },
+        {
+          "end_line": 2798,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTest%20Authority%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "42f72acb1296c9abc8b59761d80fa4ea475d71fb0a8dffcb31485b8aceb0064c",
+          "start_line": 2786
+        },
+        {
+          "end_line": 2823,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FScenario%20Bundle%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8ec74ed9e0a47dca2360c53d4bed88eda0edee8ed4a9b2dad47ef4053ee13a6f",
+          "start_line": 2799
+        },
+        {
+          "end_line": 2842,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FInstalled%20Dev%20Proof%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "fb8e792de3cd6dfe3cf3084d53baa4aaf538dbc367783510efb77540b4851d54",
+          "start_line": 2824
+        },
+        {
+          "end_line": 2863,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSignificant%20Path%20Coverage%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "d3385f7a185f8fdc123326e212d6e54e59377ba6227280da3477dce7ea8fabad",
+          "start_line": 2843
+        },
+        {
+          "end_line": 2888,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRequirement%20Categories",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "bfc29fb5fb2945408e52d77def912541eb35ddcac3bccf1c1faa4282b714a621",
+          "start_line": 2864
+        },
+        {
+          "end_line": 2928,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FReconstruction%20Litmus",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b7280a35572aabe072475244212b192256a8c63f9011564f8164aacbca4b6378",
+          "start_line": 2889
+        },
+        {
+          "end_line": 2947,
+          "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FDesign%20Rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "8868d9d57244d50cc457072118e82f518b4f672c66407c788ead26c57c8469ae",
+          "start_line": 2929
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-04c54946fcb35842a633/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "0a59d8a6ed502784522d766f76e0883f3da6ffe68af3dfd7276faf607b7d704e",
+  "schema_sha256": "e304bd0e8ccb396e3d5325972e956fb95da1d9abfc9dcfc8d308bc53e31bb4fb",
+  "source_chunk_sha256": "cced3f8e2b99c5e20b21f7f4df3433881bffd55bffb2d276acbeaa66a1644a3e",
+  "source_plan_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42"
+}

@@ -1,0 +1,46 @@
+{
+  "decision": "patch",
+  "limitations": [
+    "Repairs are limited to the three listed grounding entries and the supplied source.",
+    "These proposed grounding repairs do not establish semantic equivalence, completeness, acceptance, authority, qualification or execution."
+  ],
+  "patches": [
+    {
+      "family": "concepts",
+      "grounding_index": 0,
+      "reason": "Removes the extra space after the newline and pinpoints the source's core-value statement within its supported close-review definition.",
+      "record_key": "sprint_close_review",
+      "replacement": {
+        "end_line": 301,
+        "quote": "Each classification\ntakes exactly one core value",
+        "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review",
+        "start_line": 300
+      }
+    },
+    {
+      "family": "constraints",
+      "grounding_index": 0,
+      "reason": "Corrects the section identity and pinpoints the explicit withholding rule; the section supports the unchanged closure conditions and exception.",
+      "record_key": "work_claim_closure_condition",
+      "replacement": {
+        "end_line": 1185,
+        "quote": "A mandatory obligation whose applicability is\nunknown, or whose evidence is insufficient, withholds the dependent claim;\nevidence presence alone is not satisfaction.",
+        "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+        "start_line": 1183
+      }
+    },
+    {
+      "family": "constraints",
+      "grounding_index": 0,
+      "reason": "Corrects the section identity and pinpoints invalidation before reliance; the surrounding paragraph supports the stated invalidators, reuse condition and unrelated-observation exception.",
+      "record_key": "claim_reuse_condition",
+      "replacement": {
+        "end_line": 1209,
+        "quote": "each\ninvalidates the affected claim and its dependent results before further\nreliance.",
+        "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+        "start_line": 1207
+      }
+    }
+  ],
+  "refusal_reason": ""
+}

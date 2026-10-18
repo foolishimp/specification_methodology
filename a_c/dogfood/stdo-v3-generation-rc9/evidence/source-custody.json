@@ -1,0 +1,123 @@
+{
+  "profile": "ac.generation.source-custody/1",
+  "work_grant": "T-006-rc9-rebuild-comparison",
+  "acquisition": "Exact immutable Git blobs; no tenant worktree input and no Git mutation.",
+  "excluded_artifact_custody": "Original admitted artifacts are hashed only for candidate identity checks; they are absent from semantic generation corpora.",
+  "clean_cut_observation": {
+    "resolved_at_utc": "2026-10-18 07:30:30 UTC",
+    "reobserved_at_utc": "2026-10-18 07:33:05 UTC",
+    "method": "git status --porcelain=v1 --untracked-files=normal; git rev-parse HEAD",
+    "worktrees": {
+      "codex": {
+        "path": "/Users/jim/src/apps/specification_methodology-codex",
+        "branch": "tenant/codex/c3-iteration-5",
+        "head": "c46e9f96381097245a6714164f03b72ad32116c0",
+        "porcelain_status": "",
+        "clean": true
+      },
+      "claude": {
+        "path": "/Users/jim/src/apps/specification_methodology-claude",
+        "branch": "tenant/claude/c3-synthesis",
+        "head": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+        "porcelain_status": "",
+        "clean": true
+      }
+    }
+  },
+  "baseline_checkpoint": "efae9c749275838029a871863f0b3ce7d7aba8b6",
+  "subjects": {
+    "codex": {
+      "revision": "5592168e26759f37e730aed12c030a6061709ec4",
+      "checkpoint": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "source_root": "specification_methodology/v3/build_tenants/codex/successor/",
+      "checkpoint_is_descendant": true,
+      "source_equivalence_roots": [
+        "specification_methodology/v3/build_tenants/codex/successor/"
+      ],
+      "source_equivalent_at_checkpoint": true,
+      "candidate_manifest": {
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/CANDIDATE.json",
+        "revision": "c46e9f96381097245a6714164f03b72ad32116c0",
+        "sha256": "f6dbe1eae401f109e24946f5cdda72721070c8e9a3f82e9b035f704694e053fb"
+      },
+      "standing": "Unaccepted candidate; source acquisition grants no methodology or semantic acceptance.",
+      "candidate_members": {
+        "verified_members": 90,
+        "verified_bytes": 38958677,
+        "all_digests_match": true
+      },
+      "source_commit": "bb04f40fa559bf56b10e548b8d35cc2b13f989e4",
+      "retained_semantic_construction_source": "91b06ebbecc3c0ac3eab4838e94f4544b076a217",
+      "retained_semantic_construction_account": "2bcc60c7bbe0696051771541e8b84880040cc51f",
+      "coordinates_record": {
+        "path": "specification_methodology/v3/build_tenants/codex/qualification/C3/rc9/COORDINATES.json",
+        "revision": "c46e9f96381097245a6714164f03b72ad32116c0",
+        "sha256": "60c788777e83d267d6f65788b22b0dbfad02368b928612f186d9519606834799"
+      },
+      "package_tree": "2809172f7c594377b366e2e148147c2d53cecfc2",
+      "selected_input": {
+        "manifest_path": "corpora/codex/manifest.json",
+        "manifest_sha256": "1352228a4933c72f62c7f62590dc98bdededc237589a981c0b09e36d404d2363",
+        "file_count": 44,
+        "total_bytes": 1269082,
+        "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+        "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1"
+      }
+    },
+    "claude": {
+      "revision": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "checkpoint": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "source_root": "specification_methodology/v3/build_tenants/claude/",
+      "checkpoint_is_descendant": true,
+      "source_equivalence_roots": [
+        "specification_methodology/v3/build_tenants/claude/standards/",
+        "specification_methodology/v3/build_tenants/claude/plugins/"
+      ],
+      "source_equivalent_at_checkpoint": true,
+      "candidate_manifest": {
+        "path": "specification_methodology/v3/build_tenants/claude/release/manifest.json",
+        "revision": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+        "sha256": "7c612a6b433e0941f3f6e64ea7ce00e2556998da2ea26082c3c9287ce1ca9eed"
+      },
+      "standing": "Unaccepted candidate; source acquisition grants no methodology or semantic acceptance.",
+      "standards_members": {
+        "verified_members": 62,
+        "verified_bytes": 3435620,
+        "all_digests_match": true
+      },
+      "plugin_members": {
+        "verified_members": 17,
+        "verified_bytes": 77032,
+        "all_digests_match": true
+      },
+      "standards_member_set_sha256": "22d52c1c11130c0a7f014d4080a7576f939f22a7499b36857e2290e079a76177",
+      "other_admitted_members": {
+        "license": {
+          "path": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "matches": true
+        },
+        "release_note": {
+          "path": "release/release-note.md",
+          "bytes": 10095,
+          "sha256": "d39412b61fa9372b699058a9f8070b16390be1586ae45717d47c922c15d8d1c0",
+          "matches": true
+        }
+      },
+      "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+      "tag_object": "ac905d6e4009a32e8d72a9d3df03807ec2d40c9a",
+      "qualified_ref": "refs/tags/specification_methodology-claude/v3.0.0-rc.9",
+      "tag_ref_role": "Historical locator only; verification uses the exact tag object, not a mutable ref.",
+      "selected_input": {
+        "manifest_path": "corpora/claude/manifest.json",
+        "manifest_sha256": "3733fbb9c41734769a3c1f38e2e3a5b455505f6467a58ef88bae043f16866ab4",
+        "file_count": 49,
+        "total_bytes": 2147989,
+        "input_corpus_sha256": "14b59f4e6e94a3fb0e81b6a1425d7be22b8287d1a0456610f38466707ae280a5",
+        "content_inventory_sha256": "9120191479ac6e73c1c2c915f2135581cbc6b922b3c259035c1300820d8e42bb"
+      }
+    }
+  },
+  "limits": "Custody and source selection only; no semantic completeness, fidelity, acceptance, adoption or release claim."
+}

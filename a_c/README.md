@@ -18,7 +18,17 @@ project does not create a competing definition of `a_c`.
 This is a development candidate, with no Product acceptance or release claim.
 See the tenant README for runnable commands and the bounded qualification claim.
 
-The completed source-first creation increment is
+The completed RC9 rebuild is
+[T-006](.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md):
+[four fresh representations](dogfood/stdo-v3-generation-rc9/README.md) use
+the same implementation and settings as the preserved earlier study. The
+[older/newer comparison index](dogfood/stdo-v3-generation-rc9/COMPARISON.md)
+provides eight Graphify/direct models across Codex and Claude source cuts.
+Codex RC9's selected source equals RC5; Claude RC9 changes two owner files.
+The new builds pass their mechanical checks; their semantic assessment and
+the planned comparison tests remain separate work.
+
+The earlier source-first creation increment is
 [T-005](.ai-workspace/tickets/active/T-005-source-first-graphify-generation.md):
 the [new Graphify representations and direct baselines](dogfood/stdo-v3-generation/README.md)
 were generated from frozen Codex RC5 and Claude RC8 owner source. F_P is inside
@@ -40,7 +50,7 @@ The [implementation record](.ai-workspace/comments/codex/20261015_AC_GRAPHIFY_IM
 retains the initial frozen candidate's review, verification and qualification
 boundaries. The consumer trial below records the current bounded codec repairs.
 
-The [two current V3 Graphify versions](dogfood/stdo-v3-i5/README.md) separately
+The [two I5 V3 Graphify versions](dogfood/stdo-v3-i5/README.md) separately
 represent the completed Codex and Claude candidates selected on 2026-10-17.
 They retain each line's authored coverage, complete selector closures and frozen
 source custody, with actual Graphify graph/browser outputs. The candidate

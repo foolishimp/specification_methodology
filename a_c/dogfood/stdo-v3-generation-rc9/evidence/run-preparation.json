@@ -1,0 +1,116 @@
+{
+  "claim": "Preparation and custody only; no actors or semantic assessments.",
+  "initial_selected_calls": 60,
+  "old_code_assets_settings_equal": true,
+  "ordering": "For each source chunk index, Codex then Claude; Graphify then direct for each. Retained explicit schedule, not randomized.",
+  "prepared_at": "2026-10-18T07:35:30.752192+00:00",
+  "profile": "ac.generation.rc9-preparation/1",
+  "runs": [
+    {
+      "candidate": "codex",
+      "chunks_sha256": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488",
+      "discovery": {
+        "counts": {
+          "communities": 70,
+          "graph_edges": 937,
+          "graph_nodes": 877,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 947,
+          "structural_nodes": 877
+        },
+        "elapsed_seconds": 0.32250270806252956,
+        "files": {
+          "coverage.json": "f5f1d131db31e07a0b849a8a4068599091123fc8b112f2565254e4e364cdd833",
+          "graph.json": "852d388d5e1e0235871e9ee557c0f54d5f7d4313b8be84d17ac4f839491d12bb",
+          "structural.json": "6fadd66778c5cfa653377d4bd461d49198267554245da0506fcfdfe11cd54051"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "mode": "graphify-ac",
+      "old_new_files_identical": true,
+      "old_new_partition_equal_ignoring_subject_coordinates": true,
+      "plan_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42",
+      "planned_chunks": 11,
+      "source_bytes": 1269082,
+      "source_chars": 1268259,
+      "source_files": 44
+    },
+    {
+      "candidate": "codex",
+      "chunks_sha256": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488",
+      "discovery": null,
+      "mode": "direct",
+      "old_new_files_identical": true,
+      "old_new_partition_equal_ignoring_subject_coordinates": true,
+      "plan_sha256": "f30c33db4ba32a3369b570ae9d47ab4954508a0dd7bfdccacf9f43ae132b63cf",
+      "planned_chunks": 11,
+      "source_bytes": 1269082,
+      "source_chars": 1268259,
+      "source_files": 44
+    },
+    {
+      "candidate": "claude",
+      "chunks_sha256": "4a6e857c7526f4a63c2229f18cb0ad34c18809ed2071f92c4a848da66dff38d8",
+      "discovery": {
+        "counts": {
+          "communities": 78,
+          "graph_edges": 1142,
+          "graph_nodes": 897,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 1162,
+          "structural_nodes": 897
+        },
+        "elapsed_seconds": 0.3138637919910252,
+        "files": {
+          "coverage.json": "767f4066e618c91516490d2ce2fe052b15564e8d0544570f75f9941fb30a5d4c",
+          "graph.json": "36dda5accccfd3a591c58593971f2a10bcc723da7394cfebf483c126f4f09a25",
+          "structural.json": "23cd6d036d97cf8ff44f433a0040ebb4398b2e93d6ce40f2b6b4c564b58f8086"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "mode": "graphify-ac",
+      "old_new_files_identical": false,
+      "old_new_partition_equal_ignoring_subject_coordinates": false,
+      "plan_sha256": "2e68b3d1c78721548b6af7c1100ddd95f6c9903a8ab1a4f864595b9b866719c0",
+      "planned_chunks": 19,
+      "source_bytes": 2147989,
+      "source_chars": 2141709,
+      "source_files": 49
+    },
+    {
+      "candidate": "claude",
+      "chunks_sha256": "4a6e857c7526f4a63c2229f18cb0ad34c18809ed2071f92c4a848da66dff38d8",
+      "discovery": null,
+      "mode": "direct",
+      "old_new_files_identical": false,
+      "old_new_partition_equal_ignoring_subject_coordinates": false,
+      "plan_sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749",
+      "planned_chunks": 19,
+      "source_bytes": 2147989,
+      "source_chars": 2141709,
+      "source_files": 49
+    }
+  ],
+  "upstream_preparation_notice": "Pinned Graphify emitted its documented cross-project stat-index warning when two fresh discovery roots were prepared in one Python process. Each graph and stat index is retained in its own root. No source or semantic actor cache is reused. This notice concerns extraction fast-path caching, not a claim about model fidelity.",
+  "within_candidate_source_partitions_equal": true
+}

@@ -1,0 +1,2309 @@
+{
+  "concepts": [
+    {
+      "conditions": [
+        "A new or materially changed realisation boundary is governed by a design profile."
+      ],
+      "definition": "The canonical design-to-module evidence route has a semantic-derivation chain: constitutional WHAT and owning requirements → accepted ontology, declared carrier inventory, target design and domain/sequence/state evidence → implementation and module-derived unit tests → reconciliation and acceptance → promotion and design-method closure. Its separate feedback chain runs from implementation and unit tests through evidence, counterexamples or falsification input to affected ontology or design relations.",
+      "exceptions": [
+        "An unchanged realization_refactor cites the accepted relation and proves no material semantic-boundary delta instead of recreating evidence."
+      ],
+      "grounding": [
+        {
+          "end_line": 960,
+          "quote": "constitutional WHAT and owning requirements\n  -> accepted ontology, the carrier inventory the design declares,\n     target design, and the design's domain, sequence and state evidence\n  -> implementation and module-derived unit tests\n  -> reconciliation and acceptance\n  -> promotion and design-method closure\n\nimplementation and module-derived unit tests\n  -> evidence, counterexample or falsification input\n  -> affected ontology or design relation",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 950
+        }
+      ],
+      "key": "design_module_evidence_route",
+      "label": "Design-to-module evidence route"
+    },
+    {
+      "conditions": [
+        "Within the product-assurance bounded context and under the design profile."
+      ],
+      "definition": "Module-derived unit tests are module-owned proof lanes derived from module ownership evidence. Realisation authority belongs to the design profile; Product-level UAT and acceptance meaning belong to Product authority. Module-owned unit tests are authoritative for module proof, while integration, scenario and sandbox lanes remain downstream proof families.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1046,
+          "quote": "Unit tests under the design profile are module-owned proof lanes. They\nderive from module ownership evidence, not from code shape alone.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1045
+        }
+      ],
+      "key": "module_unit_proof",
+      "label": "Module-derived unit proof"
+    },
+    {
+      "conditions": [
+        "For every designed module, function, application surface, runtime surface, plugin surface, public interface, data surface, and published function or module of a profile."
+      ],
+      "definition": "Lifecycle confirmation detects ambiguity about ultimate intended use at a realisation boundary. It consumes the operational lifecycle chain owned by SPEC_METHOD §2 without redefining its phases. It is neither a release plan nor a replacement for RELEASE.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1085,
+          "quote": "The\ncanonical operational lifecycle chain is SPEC_METHOD §2 Operational\nlifecycle sufficiency; this section consumes that chain and does not\nredefine its phases. The checklist is not a release plan and does not\nreplace RELEASE; it is an ambiguity detector for ultimate intended use.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+          "start_line": 1081
+        }
+      ],
+      "key": "module_lifecycle_confirmation",
+      "label": "Module lifecycle confirmation"
+    },
+    {
+      "conditions": [],
+      "definition": "ASSURANCE's source ledger records received rc.2 SPEC_METHOD, STDO_REFERENCE_FRAME_BASELINE and DESIGN_MODULE_METHOD rows and their successor loci. Routes are provenance only; rows are asserted to be restated locally. Ticket test-case authority is routed to TICKETS §10. Profile terms are generalised: Ontology→ontology; IACS→declared carrier inventory; three-view evidence→domain/sequence/state evidence; co_evolution_admissible(B) and decision_complete(B)→design co-evolution condition and decision-complete; graph function or GTL module→published profile function/module; this method→design profile; agentic execution relation→ACTIVATION §1; RELEASE_METHOD→RELEASE. DESIGN_MODULE owns the object bindings. Predecessor must is rendered indicatively, while should, may and minimum retain force.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1146,
+          "quote": "The predecessor's \"must\"\nis written in the indicative; \"should\", \"may\" and \"minimum\" keep their\nforce.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions",
+          "start_line": 1144
+        }
+      ],
+      "key": "assurance_source_ledger",
+      "label": "Assurance source-disposition ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "The subject's Tier-1 AXIOMATIC_CALCULUS member owns the domain-specific, carrier-neutral STDO Axiomatic Calculus for Governed Symbolic Systems, a_c, with stable concept identity urn:stdo:concept:axiomatic-calculus:a-c and bounded context urn:stdo:bounded-context:axiomatic-calculus. It owns position, signature, records, AC-001–AC-020, traversals, functor kinds, models, layers, identity, application boundaries, imports, exclusions and conformance. It consumes FOUNDATIONS ontology and core results without redefining them. These are descriptions of the subject calculus, not authority exercised by this interpretation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 12,
+          "quote": "Consumes the ontology of\n[FOUNDATIONS §2](FOUNDATIONS.md) (subject, representation, interpretation,\ncontext, object, claim, evidence, judgment, authority, residual, basis,\nmaterial) and the core result algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it states laws over\nthose objects and defines none of them a second time.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+          "start_line": 7
+        },
+        {
+          "end_line": 29,
+          "quote": "Its stable\nconcept identity is `urn:stdo:concept:axiomatic-calculus:a-c`. This member\nowns that concept in the bounded context\n`urn:stdo:bounded-context:axiomatic-calculus`. Both identifiers are\ndeclared identities and do not change with the carrier or the directory\nthat publishes them (P3; rc.2 #position).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 24
+        }
+      ],
+      "key": "subject_axiomatic_calculus",
+      "label": "Subject a_c calculus"
+    },
+    {
+      "conditions": [],
+      "definition": "The derivation account identifies nine recurring commitment families and successor owners: scoped identity/authority conservation—FOUNDATIONS §2; bounded-context meaning/cross-context relations—FOUNDATIONS §2; bounded probabilistic construction—P0, FOUNDATIONS §2 and ACTIVATION §1; delegated construction, exact candidates and construction/assessment separation—ACTIVATION §1 and EVALUATION §3; ambiguity, human adjudication and hard stops—ACTIVATION §4; exact-basis evaluation, evidence/verdict separation and closed results—REFERENCE_FRAME RF-005/006/007 and FOUNDATIONS §4 restating RF-012; constitutional derivation/re-entry—SPEC_METHOD §1/§4; finite closure, projection, residuals and capability fit—REFERENCE_FRAME §3 and AC-010/011; singular released authority—SPEC_METHOD §6 and PRODUCT_DEFINITION at activation. Predecessor clause routes record derivation rather than application prerequisites.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 70,
+          "quote": "The calculus contracts recurring commitments the method already\nestablishes. In this corpus each is law in a member of this candidate, so\napplying the calculus needs no predecessor clause; the rc.2 clause family\nfrom which this edition derived each one is listed beside it as the\nderivation account that the identity record of §8 binds (P6; rc.2\n#derivation-provenance):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 65
+        }
+      ],
+      "key": "calculus_derivation_account",
+      "label": "Calculus derivation account"
+    },
+    {
+      "conditions": [],
+      "definition": "Material family F9's foundation-to-law table distinguishes consequences from added choices and their owners. Its additional instance premises are: finite models represent governed symbolic systems; exact subjects, models and optional carriers are separately identified; some predicates are mechanical while others require bounded probabilistic construction or human adjudication. P1/P2/P3/P4a/P6 are marked independent, P0 recovered, P4b derived from P0/P2, and P5 derived from P0/P6. Added choices include calculus name/context/identity, eight record kinds and shapes, signature domains/kinds, composite-basis relations, refusal-cause precedence, latitude/disposition ownership, closure seeds/relation families, overlay/transformation ownership, functor permissions/application topology, interpretation and decision contracts, Product status, identity canonicalisation and issuance, application imports, projection checking contracts, and minimum conformance coverage. The table and consumer list explain dependency and ownership without deciding beyond owning rules.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 161,
+          "quote": "Instance premises,\nwhich the commitments do not supply:\n\n- (i) a governed symbolic system is represented by a finite model whose\n  records stand for its objects, relations, constraints, residuals,\n  traversals, transformations and judgments;\n- (ii) a model is interpreted from an exact subject and may be encoded in\n  a carrier, and subject, model and carrier are separately identified;\n- (iii) some predicates over a model are decided mechanically, and others\n  need bounded probabilistic construction or explicit human adjudication.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 152
+        }
+      ],
+      "key": "foundation_law_map",
+      "label": "F9 foundation-to-law and consumer map"
+    },
+    {
+      "conditions": [],
+      "definition": "Sigma=(RecordKind, Sort, RelationKind, ConstraintKind, ResidualKind, FunctorKind, JudgmentKind, StopKind). Each member is a finite closed identity set for one model family. RecordKind_ac fixes eight identities under urn:stdo:concept:axiomatic-calculus:record-kind: with suffixes semantic-object, typed-relation, constraint, latitude, residual, traversal, transformation and judgment. The signature defines every sort/family's fields and value domains, identity-field reference domains/cardinalities, relation endpoint sorts, constraint subject/predicate domains, residual subject/uncertainty/consequence/re-entry domains, judgment input/output/evidence/stop contracts, and allowed traversal functor kinds.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 232,
+          "quote": "Sigma = (\n  RecordKind,\n  Sort,\n  RelationKind,\n  ConstraintKind,\n  ResidualKind,\n  FunctorKind,\n  JudgmentKind,\n  StopKind\n)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 223
+        }
+      ],
+      "key": "calculus_signature",
+      "label": "Closed model-family signature"
+    },
+    {
+      "conditions": [],
+      "definition": "The abstract exact-basis model is M_b=(b,I,O,E,C,L,X,V,T,J). Population_M maps the eight core kinds respectively to finite semantic objects, directed relations, constitutional constraints, latitude, residuals, traversals, transformations and judgments. Local_M is their disjoint union; I=Local_M disjoint_union External_M. RefDomain_Sigma(record_kind,field) supplies cardinality, allowed local record kinds, semantic-object sorts, external target kinds and required basis relation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 306,
+          "quote": "`Population_M` is a total function over `RecordKind_ac`. Every population\nis finite, every fundamental record belongs to exactly one population, and\nrecord identities are unique across their disjoint union.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 296
+        }
+      ],
+      "key": "axiomatic_model",
+      "label": "Exact-basis axiomatic model"
+    },
+    {
+      "conditions": [],
+      "definition": "SemanticObject has exactly id, sort, context, owner, scope, basis, value. id/sort/context/owner/basis are identities; scope is the closed governed domain; value is sort-defined carrier-neutral content or an exact-content reference. It carries FOUNDATIONS' Object, scoped identity through id/owner/sort, and boundary through scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 365,
+          "quote": "`id`, `sort`, `context`, `owner` and `basis` are identities. `scope` is\nthe closed governed domain. `value` is sort-defined carrier-neutral content\nor a reference to exact content. A semantic object is an Object of\nFOUNDATIONS §2 whose scoped identity is carried by `id`, `owner` and\n`sort` and whose boundary is `scope`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FSemantic%20object",
+          "start_line": 361
+        }
+      ],
+      "key": "semantic_object_record",
+      "label": "SemanticObject record"
+    },
+    {
+      "conditions": [],
+      "definition": "TypedRelation has exactly id, kind, source, target, context, owner, scope, basis, qualifiers. Endpoints resolve into I. qualifiers is a closed kind-specific record containing signature-required direction, cardinality, preservation, loss, inverse, invalidation or other semantics.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 388,
+          "quote": "`source` and `target` resolve to members of `I`. `qualifiers` is the\nclosed kind-specific record declaring direction, cardinality,\npreservation, loss, inverse, invalidation or other relation semantics\nrequired by the signature.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FTyped%20relation",
+          "start_line": 385
+        }
+      ],
+      "key": "typed_relation_record",
+      "label": "TypedRelation record"
+    },
+    {
+      "conditions": [],
+      "definition": "Constraint has exactly id, kind, applies_to, predicate, context, owner, scope, basis, judgment_kind, latitude_ref, refusal. kind resolves one declared ConstraintKind and judgment_kind one declared JudgmentKind. The signature owns predicate language and judgment semantics; a non-deterministically-decidable predicate states its required probabilistic or human judgment kind instead of claiming machine proof.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 414,
+          "quote": "`kind` resolves one declared `ConstraintKind`; `judgment_kind` resolves\none declared `JudgmentKind`. The owning signature defines the predicate\nlanguage and how its result is judged. A predicate that is not\ndeterministically decidable states the required probabilistic or human\njudgment kind rather than pretending to be a machine proof (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FConstraint",
+          "start_line": 410
+        }
+      ],
+      "key": "constraint_record",
+      "label": "Constraint record"
+    },
+    {
+      "conditions": [],
+      "definition": "Latitude is an explicit permission set inside a constraint boundary, with fields id, applies_to, allowed_variation, forbidden_variation, context, owner, scope, basis, invalidation. Silence grants no latitude, and permission cannot exceed owner, scope, basis or invalidation law.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 438,
+          "quote": "Silence is not latitude. Latitude grants no authority beyond its owner,\nscope, basis and invalidation law, an instance of\n[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What\ncreates no authority (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FLatitude",
+          "start_line": 435
+        }
+      ],
+      "key": "latitude_record",
+      "label": "Latitude record"
+    },
+    {
+      "conditions": [],
+      "definition": "Residual is first-class uncertainty content with fields id, subject, kind, uncertainty, consequence, context, owner, scope, basis, re_entry, invalidation. It carries FOUNDATIONS' Residual. kind resolves one declared ResidualKind; the signature defines lawful subject, uncertainty, consequence, re-entry and invalidation domains. Undeclared kinds or values refuse structural admission.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 469,
+          "quote": "`kind` resolves one declared `ResidualKind`. The owning signature defines\nits lawful subject, uncertainty, consequence, re-entry and invalidation\ndomains. An undeclared residual kind or value refuses structural admission\n(P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual",
+          "start_line": 466
+        }
+      ],
+      "key": "residual_record",
+      "label": "Residual record"
+    },
+    {
+      "conditions": [
+        "M, seed set Z and exact dependency relation family R are supplied."
+      ],
+      "definition": "Material closure is closure_R(M,Z)=lfp(lambda Q: Z union required_R(M,Q)), the least lawful record closure under R. It makes no claim to globally minimal prose, bytes, tokens, cost or cognitive effort.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 671,
+          "quote": "Least\nclosure means least lawful record closure under `R`; it does not claim\nglobally minimal prose, bytes, tokens, cost or cognitive effort.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure",
+          "start_line": 669
+        }
+      ],
+      "key": "material_closure",
+      "label": "Material closure"
+    },
+    {
+      "conditions": [],
+      "definition": "project(M,Z,R) returns (M_Z,Boundary_Z), gap or refusal. A projection selects a view without changing selected meaning; M_Z contains material closure, and Boundary_Z records excluded, external, unresolved, translated and invalidation-sensitive seams. It is a reference, not a new semantic owner. ACTIVATION §2 applies it to step context, and every projected corpus frame is such a projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 688,
+          "quote": "`M_Z` contains the material closure of `Z`, so a projection's `gap` or\n`refusal` is that of the closure it contains or of the model it acts on:\n`gap` or `refusal(basis)` (AC-007). `Boundary_Z` records excluded,\nexternal, unresolved, translated and invalidation-sensitive seams. A\nprojection is not a new semantic owner.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+          "start_line": 684
+        }
+      ],
+      "key": "model_projection",
+      "label": "Model projection"
+    },
+    {
+      "conditions": [],
+      "definition": "A transformation specialises one exact traversal and bears an operation. Its record fields are id, traversal, domain_model, codomain_model, context, owner, scope, basis, operation_authority, preconditions, preservation_relation, preserved, introduced, removed, external_preserved, external_introduced, external_removed, external_resolution_witnesses, residuals, evidence, provenance, stop_states, invalidation, re_entry. T[t](M_b,inputs) returns proposed successor M_b_prime*, hold, gap or refusal; this description does not instantiate or apply a transformation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 709,
+          "quote": "A transformation is an operation-bearing specialisation of one exact\ntraversal record `v` (§5). Its record is (P4b, P3; rc.2\n#ac-013-transformation):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 707
+        }
+      ],
+      "key": "transformation_record",
+      "label": "Transformation contract"
+    },
+    {
+      "conditions": [],
+      "definition": "A judgment is a model record pointing to an unchanged subject, with fields id, kind, subject, subject_digest, context, owner, scope, basis, evaluator, authority, decision, evidence, provenance, decided_at. This describes the record kind and issues no judgment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 896,
+          "quote": "A judgment points to an unchanged subject; it is the Judgment of\nFOUNDATIONS §2 carried as a model record (P6; rc.2\n#ac-014-judgment-separation):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation",
+          "start_line": 894
+        }
+      ],
+      "key": "judgment_record",
+      "label": "Judgment record"
+    },
+    {
+      "conditions": [],
+      "definition": "A traversal is a typed contract v with fields id, domain, codomain, context, owner, scope, basis, preconditions, postconditions, authority, evidence, provenance, stop_states. F_K[v](X_v) returns typed result Y_v or a value of closed stop algebra Omega_v. Same-spelled runtime/profile/realisation terms neither import nor specialise this concept without an owner-authorised declared binding.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 947,
+          "quote": "The traversal record is this member's own concept. A same-spelled term\nowned by a profile, a realisation or a runtime is not imported by nominal\nequality and does not specialise this record except through a declared\nbinding under that owner's authority (§9; P3, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line": 944
+        }
+      ],
+      "key": "traversal_contract",
+      "label": "Traversal contract"
+    },
+    {
+      "conditions": [],
+      "definition": "Three generic functor kinds have identities urn:stdo:concept:axiomatic-calculus:f-d, :f-p and :f-h. F_D classifies deterministic evaluation/proof of declared properties, returns a judgment and does not perform judged domain construction. F_P classifies bounded probabilistic interpretation, construction or proposal under an exact contract; usefulness or repeatability confers no semantic, admission, acceptance or closure authority. F_H classifies explicit human adjudication under exact identity, grant, subject, basis and decision contract; human presence confers no ambient authority. Actor, executor, domain operation and kind are distinct; Encode/Interpret/Serialize/Measure are not kind aliases. Shared kind does not imply shared traversal identity or semantics. The name asserts no categorical functor; categorical claims require the FOUNDATIONS Formal fragment demonstration.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 997,
+          "quote": "- `F_D` classifies deterministic evaluation or proof over declared\n  properties. It returns a judgment and does not perform the domain\n  construction being judged (P6).\n- `F_P` classifies bounded probabilistic interpretation, construction or\n  proposal under an exact traversal contract. Its result has no semantic,\n  admission, acceptance or closure authority merely because it is useful\n  or repeatable (P6, P0; instance premise (iii) of §1 Foundation to law).\n- `F_H` classifies explicit human adjudication under an exact identity,\n  authority grant, subject, basis and decision contract. Human presence\n  grants no ambient authority (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line": 988
+        }
+      ],
+      "key": "generic_functor_kinds",
+      "label": "F_D, F_P and F_H"
+    },
+    {
+      "conditions": [],
+      "definition": "Interpret_a_c(subject_basis,signature,interpretation_contract) returns proposed model M_subject*, hold, gap or refusal. The star denotes absence of applicable semantic acceptance. The contract declares exact calculus basis; exact subject identity, inventory, bytes or semantic addresses; signature and compatible extension; mappings to all applicable populations; interpreter identity/capability/provenance/stops; structural evaluation contract; semantic selection/acceptance authority; source re-entry and invalidation rules. Stops map by cause under AC-007.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1055,
+          "quote": "The stops `hold`, `gap` and `refusal` take their core values under AC-007\nby their causes. The trailing `*` marks a proposed model that has not\nreceived the\napplicable semantic acceptance judgment. The interpretation contract is\nthe Interpretation of FOUNDATIONS §2 made exact for one subject and one\nsignature.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line": 1050
+        }
+      ],
+      "key": "subject_interpretation",
+      "label": "Exact-subject interpretation"
+    },
+    {
+      "conditions": [],
+      "definition": "The three layers are a_c (pure calculus), a_c.X (subject X interpreted as a model), and a_c.X.C (accepted model encoded in carrier C). M_X=Interpret_a_c(X); J_X=Accept_X(M_X) yields accepted or refuse; Encode_C(M_X,J_X) requires accepted; deterministic F_D[v_carrier_admission] judges G_C against Profile_C and CarrierBasis_C and yields admitted or refuse. The admitted encoding evidence is (G_C,J_X,D_C).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1133,
+          "quote": "M_X = Interpret_a_c(X)\nJ_X = Accept_X(M_X) -> accepted | refuse\nG_C = Encode_C(M_X, J_X) where J_X = accepted\nD_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)\n      -> admitted | refuse",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line": 1129
+        }
+      ],
+      "key": "governed_calculus_layers",
+      "label": "Calculus, interpreted-model and encoded-carrier layers"
+    },
+    {
+      "conditions": [],
+      "definition": "AxiomaticCalculusBasis is an external post-publication identity record, distinct from the stable concept identity. Its exact shape has kind='stdo.axiomatic-calculus-basis', schema_version=1, concept_identity='urn:stdo:concept:axiomatic-calculus:a-c'; derivation_basis has immutable absolute predecessor release_uri, manifest_sha256 and non-empty absolute semantic-address principle_refs; publication_basis has immutable absolute successor release_uri, manifest_sha256, member_uri and member_sha256. Digests have 'sha256:' plus 64 lowercase hex characters. Identity is urn:stdo:axiomatic-calculus-basis:sha256: plus sha256(JCS(record)).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1175,
+          "quote": "The stable concept identity does not identify one immutable calculus\nedition. An exact released calculus basis is an external record created\nafter the publication bytes exist. It keeps the predecessor authority from\nwhich the edition was derived distinct from the successor carrier that\npublishes it (P3, P6; rc.2 #exact-calculus-identity):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line": 1171
+        }
+      ],
+      "key": "calculus_basis_identity",
+      "label": "AxiomaticCalculusBasis"
+    },
+    {
+      "conditions": [],
+      "definition": "The application-boundary, imports and exclusions section groups the generic calculus's limits, downstream-owned bindings, task constraint surfaces and excluded roles; its heading adds no independent operational rule.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1279,
+          "quote": "## 9. Application boundary, imports and exclusions",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions",
+          "start_line": 1279
+        }
+      ],
+      "key": "application_boundary_section",
+      "label": "Application boundary, imports and exclusions"
+    },
+    {
+      "conditions": [
+        "A declared subject and work boundary identify a task."
+      ],
+      "definition": "A constraint surface is project(M_subject,Z,R), where task subject/work boundary supply Z and the task declares R. It carries objects/meanings, predicates/dependencies, admissible operations, required results, latitude, retained authority, evidence and unresolved conditions. Objects come from semantic objects with identity/provenance; dependencies from constraints and typed relations; operations from traversals/transformations; results from judgment kinds and core mappings; evidence from judgments and evidence/provenance/basis; uncertainty from residuals and Boundary_Z. Shared premises are single records; closure imposes neither tree structure nor execution order.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1315,
+          "quote": "An interpretation of a subject in `a_c` (§6) yields the constraint surface\nof a task by projection. The task's declared subject and work boundary\nare the seed set `Z`, with the dependency relation family `R` the task\ndeclares, and the surface is `project(M_subject, Z, R)` (AC-011) over the\nmaterial closure of AC-010. Its parts come from the records of this\nmember:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1310
+        }
+      ],
+      "key": "task_constraint_surface",
+      "label": "Task constraint surface"
+    },
+    {
+      "conditions": [],
+      "definition": "The calculus source ledger claims conservation of predecessor position, provenance, scope, signature, typed records, AC-001–AC-020, traversal/model/layer/identity/application/import/exclusion/conformance clauses at their named successor loci. It marks the predecessor fundamental-laws heading inapplicable because that predecessor heading had no claim text, while disposing its children individually. It records generalisation of graph/ODD/GTL-specific language, the correction of the resolved-address-array field from derivation_basis.release_uri to principle_refs, added core-result mappings and refusal precedence, stop-refinement rules, distinction from step incomplete, identity issuance after release bytes, and new task constraint-surface law. These are provenance assertions, not independently verified equivalence or acceptance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1433,
+          "quote": "Rows received by this member. Anchors are into rc.2\nAXIOMATIC_CALCULUS.md; a locus is a section of this file unless another\nmember is named. Every row is restated in this member's own text; a route\nis provenance only.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F11.%20Source%20dispositions",
+          "start_line": 1430
+        }
+      ],
+      "key": "calculus_source_ledger",
+      "label": "Calculus source-disposition ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "Tier-2 CONFORMANCE owns cases required before corpus qualification and a qualification map from common discriminators to sections, cases and logical-review checks. A discriminator is a situation whose expected distinction separates a conforming from a defective corpus. The external construction specification owns expected distinctions. A case names subject, mechanism, independently specified expected distinction and status. Status records fixture design, fresh-constructor runs or independent assessment; it is not a result, and a run is not a pass.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 22,
+          "quote": "A case names its subject, the mechanism under test, the independently\nspecified expected distinction, and its status. A status names what\nexists: a fixture designed, runs by a fresh constructor, or an assessment\nby an independent assessor under EVALUATION §3 and §7. A status is a record\nof what exists, not a result. A run is not a pass; only an assessment\nrecords one.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line": 17
+        }
+      ],
+      "key": "conformance_case_framework",
+      "label": "Conformance cases and qualification map"
+    },
+    {
+      "conditions": [],
+      "definition": "Twelve builder-history cases report failure classes observed with rc.2 and predecessors; every supplied case has status not run. C-01: capability-fit activation without allowance, ACTIVATION §6; C-02: 40 proven-labelled rows with literal PENDING data, EVALUATION §2/§4; C-03: eight from-scratch restarts repeating a method defect, ACTIVATION §5; C-04: unchanged-basis rederivation at every handoff, ACTIVATION §7/FOUNDATIONS §4; C-05: parsing 504.8 MB to select 182 entries, ACTIVATION §2; C-06: 2.4 GB report called model spend, ACTIVATION §6; C-07: changed provider permissions before activation, ACTIVATION §1; C-08: engine completeness with regressed Product outcome, SPEC_METHOD §3; C-09: kernel deciding worker-owned matters, ODD §5/FOUNDATIONS work boundary; C-10: fixture simplified around kernel bug, SPEC_METHOD §4; C-11: reviewer-signoff closure despite unmet condition, EVALUATION §5; C-12: only ticket/column/filename findings, ACTIVATION §6.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 46,
+          "quote": "These are failure classes observed while building with the rc.2 method and\nits predecessors, as reported in the common inputs. Each names the mechanism\nthat must catch it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexamples%20from%20the%20builder%27s%20own%20history",
+          "start_line": 44
+        }
+      ],
+      "key": "builder_history_cases",
+      "label": "Builder-history counterexample cases"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "design_module_evidence_route"
+      ],
+      "conditions": [
+        "A design-profile-governed boundary is new or materially changed."
+      ],
+      "exceptions": [
+        "For an unchanged realization_refactor, cite the accepted relation and prove no material semantic-boundary delta without recreating evidence."
+      ],
+      "grounding": [
+        {
+          "end_line": 977,
+          "quote": "Where the design is not decision-complete, the relation is\ndesign-gated at the smallest causally closed affected decision set and\nretained implementation follows its acceptance. An unchanged\n`realization_refactor` (SPEC_METHOD §4 Change classes) cites the accepted\nrelation and proves no material semantic-boundary delta; it does not\nrecreate the evidence (P2, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 972
+        }
+      ],
+      "key": "design_route_authority_and_gates",
+      "statement": "Expected results carry assertion provenance from semantic derivation; executions carry execution provenance from feedback. Agreement can share an error; disagreement requires diagnosis. Feedback cannot select or accept the affected semantic answer. Design retains structural HOW. If design is not decision-complete, gate the smallest causally closed affected decision set and retain implementation only following its acceptance. For probabilistic/agentic construction, ACTIVATION §1 governs accepted-design handoff through bounded construction, assessment, disposition, checkpoint and continuation; the profile supplies governing-frame, transformation-admission, invariant-reconstruction, computational-realisation and module evidence, without creating another execution protocol.",
+      "uncertainty": "The external profile's decision-completeness and co-evolution predicates and ACTIVATION protocol are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "design_module_evidence_route",
+        "module_unit_proof"
+      ],
+      "conditions": [
+        "A claim of complete design-to-module evidence is made."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 999,
+          "quote": "- the final implementation is traceable to the accepted ontology;\n- the final implementation is traceable to design and module boundary\n  assets;\n- unit tests are traceable to module ownership, not only to helper\n  layout;\n- implementation-first discoveries are reconciled into the ontology and\n  the design's domain, sequence and state evidence before promotion or\n  closure; and\n- implementation may not compensate for an unrealised declared\n  constructor by introducing a hidden controller or alternative authority\n  path.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 989
+        }
+      ],
+      "key": "design_evidence_completeness",
+      "statement": "Final implementation must trace to accepted ontology and design/module-boundary assets; unit tests must trace to module ownership, not only helpers. Reconcile implementation-first discoveries into ontology and domain/sequence/state evidence before promotion or closure. No hidden controller or alternative authority path may compensate for an unrealised declared constructor. Closure proof is re-expressed against module ownership, and module boundaries provide a shared audit cut without outranking constitutional truth or ratified design. The minimum chain is constitutional WHAT → accepted ontology → target design → target module assets and ontology-derived carrier inventory → accepted domain/sequence/state projections with axiom evaluation → implementation → unit tests from the same ontology and boundary. With a reference realisation it becomes WHAT → reference design → accepted target ontology and reference-to-ontology mapping → target design mapping → target module assets/inventory → accepted projections with axiom evaluation → implementation and tests from the same ontology. Jumping from design or code to tests without reconstructing the module boundary is too weak a proof surface.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "module_unit_proof"
+      ],
+      "conditions": [
+        "Unit tests are under the design profile."
+      ],
+      "exceptions": [
+        "Helper-level tests are permitted, but cannot be canonical module-boundary proof."
+      ],
+      "grounding": [
+        {
+          "end_line": 1055,
+          "quote": "A unit\ntest should be traceable to (P6, P2):\n\n- the accepted ontology and the applicable entity, lifecycle, authority,\n  function, effect or projection law;\n- the governing module design;\n- the active carrier inventory the design declares, or an equivalent\n  carrier inventory;\n- the module-bounded domain, sequence and state projections; and\n- the requirement families the module owns.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1046
+        }
+      ],
+      "key": "module_unit_test_proof_rule",
+      "statement": "A unit test should trace to accepted ontology and applicable entity/lifecycle/authority/function/effect/projection law; governing module design; active or equivalent carrier inventory; module-bounded domain/sequence/state projections; and owned requirement families. This is a recommendation, not a strengthened must. Primary authorship must not follow helper boundaries, private-method layout, incidental branches, temporary decomposition or mock convenience hiding the real contract. The required question is what the module owns and what proof that ownership requires. Transitional slice-gating tests cannot replace module-derived unit proof. A module with code and no module-derived unit lane is not closure-ready. Product UAT and acceptance authority remain outside the profile's realisation authority; §7 owns the unit frame's precise claim limits.",
+      "uncertainty": "The referenced unit frame and product-assurance bounded-context definitions are absent."
+    },
+    {
+      "applies_to_keys": [
+        "module_lifecycle_confirmation"
+      ],
+      "conditions": [
+        "For each governed boundary under the design profile."
+      ],
+      "exceptions": [
+        "A phase may be declared not applicable with a reason."
+      ],
+      "grounding": [
+        {
+          "end_line": 1112,
+          "quote": "Each lifecycle phase takes one of the three answers that\n[SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency)\nowns, applied here to design evidence: answered by the active design,\nrequirement, release, deployment or telemetry surface; declared not\napplicable with a reason; or recorded as a named `Gap:` or `Unanswered:`\nitem, which in design evidence also names its owning follow-up. A phase\nlist without answers, not-applicable reasons or named gaps is not\ndesign-method evidence (P5, P6). The three are declared states of the\ndesign evidence for a phase under that section, not result values; a\nnamed gap is a residual\n([FOUNDATIONS §2](FOUNDATIONS.md#2-ontology)) that remains until its\nowning follow-up disposes it (P4b, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+          "start_line": 1101
+        }
+      ],
+      "key": "lifecycle_evidence_and_closure",
+      "statement": "Confirm lifecycle signal at the realisation boundary before design-method closure. Design evidence must state or point to upstream intent/requirement authority; build/realisation; assurance/proof; release/packaging; deployment/install; live use/invocation; observed telemetry/projection/monitoring; retirement/revocation/supersession/decommission; and lifecycle decision owner/source truth/authority boundary. Every phase is answered by an active owning surface, reasoned not-applicable, or a named Gap:/Unanswered: with owning follow-up. A bare phase list is not evidence; these are evidence states, not result values, and a gap persists until disposed. Implementation proves only within its authority: code, tests, artifacts and fixtures may confirm a declared lifecycle claim but cannot invent authority. Missing release/deployment/live-use/telemetry/retirement truth permits proceeding only with an explicitly governed gap; closure cannot rely on local convention, implementation precedent, mutable runtime state, prompt prose or test-only fixture behaviour.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "assurance_source_ledger"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "The verification-layer scenario revisions are proposed and pending Product-owner acceptance."
+      ],
+      "grounding": [
+        {
+          "end_line": 1175,
+          "quote": "| #interface-integration-claim-boundaries | conserved; four claims; stated in the terms of FOUNDATIONS §4: an unselected claim has no result and is uncovered coverage in the usability conjunction, and an unknown material condition keeps its dependent claim's result from `satisfied`, naming the condition | §13 Claim boundaries |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions",
+          "start_line": 1175
+        }
+      ],
+      "key": "assurance_ledger_distinctions",
+      "statement": "The proposed scenario revision treats unwritable scenarios as unverified operational meaning, not proof of unreal capability; failure means observed/expected disagreement, and actual-behaviour disagreement only with supported observation binding. Diagnosis may locate error in realisation, governing claim, expected outcome or observation as evidence permits. The ledger claims conservation of taxonomy's two authorities, sandbox-only UAT, harnessed/live modes and necessary-not-sufficient distinction; portability, test authority, scenario bundle, installed proof and significant paths; testing topology, terms and frame set; four eleven-element frames; eight coverage-index terms and nine Product factors; legitimate paths, evidence composition and acquisition; twelve-element interface frame, four claims, six obligations and ten qualification cases; and §§14–16. Tier-2 availability adopts no frame: selection stays with governing configuration/work authority. Localisation maps unique locus or joint set to satisfied for its named predicate, unresolved alternatives or indeterminate form to indeterminate. Unselected claims have no result and uncovered usability coverage; unknown material conditions prevent dependent satisfied results. Claim records carry a core result or scope-selection reason, not an owner disposition. Family tables distinguish derived rules from owned choices and decide nothing beyond named rules; §13/§16 readings add no rule of their own.",
+      "uncertainty": "Conservation claims for unavailable predecessors and successor §§1–13 cannot be independently checked here."
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Universal applicability, completeness, consistency, decidability, soundness or categorical status may be claimed only where an exact separately identified proof establishes it for a declared fragment, model or relation; categorical status additionally requires the referenced Formal fragment demonstration."
+      ],
+      "grounding": [
+        {
+          "end_line": 44,
+          "quote": "`a_c` claims no universal applicability, logical completeness,\nconsistency, decidability, soundness or category-theoretic status except\nwhere an exact, separately identified proof establishes that claim for a\ndeclared fragment, model or relation; for category-theoretic status that\nproof is the demonstration of\n[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 39
+        }
+      ],
+      "key": "calculus_position_limits",
+      "statement": "The calculus is separately identifiable and derived from principles; its definitions depend on no derivation-source layout, selected subject interpretation, carrier, provider, runtime or repository topology. Derivation from predecessor principles, interpretation of exact subject X, and encoding of a_c.X with exact accepted semantic judgment J_X and carrier C are distinct relations. Layers have separate identities/proof boundaries. Interpretation and encoding cannot redefine the calculus, and a layer becomes a released Product only through separately authorised Product acceptance and release.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus",
+        "calculus_derivation_account"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 123,
+          "quote": "The routes above identify derivation clause families in this authoring\nsource. Issuance of an exact `AxiomaticCalculusBasis` (§8) resolves and\nrecords their absolute predecessor-cut semantic addresses under\n`derivation_basis.principle_refs`. The mutable authoring routes are not\nthemselves the digest-bound derivation references (P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 119
+        },
+        {
+          "end_line": 18,
+          "quote": "Routes\nare provenance only; nothing here depends on that cut to be applied.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+          "start_line": 17
+        }
+      ],
+      "key": "provenance_not_application_authority",
+      "statement": "Within the subject's selected complete cut, this member's definitions/laws alone govern a_c meaning; consumers need no implicit method representation, carrier or downstream implementation. Each clause names its requiring P0–P6 principle. rc.2 routes name the predecessor release/member as provenance only. Basis issuance resolves derivation addresses into principle_refs; mutable routes are not digest-bound references. Generic F_D/F_P/F_H are locally introduced, not imported from same-spelled runtime/profile/application terms; nominal equality creates no identity, import or equivalence. Derivation is one-way: models, carriers, proof tools and successful applications cannot amend principles or calculus.",
+      "uncertainty": "Predecessor clauses and the complete selected cut are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 145,
+          "quote": "`a_c` does not choose the subject vocabulary, decide which source\ndeclarations are material, supply semantic acceptance, select a carrier,\nexecute a model or prove that one interpretation is uniquely correct (P2,\nP6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+          "start_line": 142
+        }
+      ],
+      "key": "calculus_scope_boundary",
+      "statement": "a_c governs symbolic-model form: identities and typed objects, exact relation endpoints, explicit constraints/latitude/residuals, typed traversals/judgments, closure/projection/overlay/transformation behaviour, subject preservation and separation of structural, semantic and authority claims. It neither chooses vocabulary/materiality nor supplies semantic acceptance, selects a carrier, executes a model or proves unique interpretation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_law_map"
+      ],
+      "conditions": [
+        "A consumer applies a mapped rule."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 216,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).\n\n§11 records where each predecessor claim is carried and decides nothing.\nThe table is new in this corpus. Purpose and material relation: an actor\nstarted on this member sees which rules of the calculus follow from the\nfoundations and which are choices, with the owner of each choice, so no\nchoice is presented as derived (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 209
+        }
+      ],
+      "key": "foundation_consumer_boundaries",
+      "statement": "Consumer references do not enlarge a rule's decisions. The table separates owning-signature/application/Product choices from derived consequences. In particular IDENTITY's lead applies no AC-002 rule; generic authority/basis rules have their own consumers; FOUNDATIONS' latitude citation and EVALUATION §5's AC-014 citation are provenance only; RELEASE imports layers/identity but applies no rule of them; profile binding and ACTIVATION specialised-contract conditions are their owners' own rules. TRAVERSAL_OCCURRENCE's Projection and F_D/F_P/F_H shorthands remain distinct from calculus identities, and its conformance obligations are its own. The listed consumers retain their exact locus-specific roles; no blanket import or governing edge follows from a citation.",
+      "uncertainty": "Most consumer sections and the FOUNDATIONS consequence-standing convention are outside the supplied source."
+    },
+    {
+      "applies_to_keys": [
+        "calculus_signature",
+        "axiomatic_model"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "A population may be empty only if the selected signature does not require a member of that kind."
+      ],
+      "grounding": [
+        {
+          "end_line": 306,
+          "quote": "A hidden record,\nan unpopulated extra record family, an identity occurring in two\npopulations, or an identity in `I` with neither one local record nor one\nlawful external resolution refuses the model. A population may be empty\nonly when the selected signature does not require a member of that record\nkind (P3, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 301
+        }
+      ],
+      "key": "signature_population_and_reference_contract",
+      "statement": "Every signature imports all eight core identities unchanged. Specialisation may define fields/domains/admissible kinds but cannot remove, rename, shadow or silently add a family; another fundamental family needs an explicit compatible calculus extension, never a subject sort. Unknown fields/kinds require a new signature or compatible extension. Populations are total, finite, disjoint, with globally unique record identities. Every external identity has one signature-declared domain and exact resolution relation. Hidden records, extra unpopulated families, duplicates and unresolved identity-universe membership refuse. Every scalar or collection identity reference is checked by RefDomain_Sigma for cardinality, exact family, semantic sort and basis relation; external resolution uses exactly one target kind and cannot also resolve locally. Missing domains, wrong families/sorts, ambiguity and dangling external identities refuse structural admission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 343,
+          "quote": "A traversal, transformation or\njudgment is not placed in `O` merely by reifying its name as a semantic\nobject. A subject model may independently represent the concept of a\nrecord kind, but that representation does not satisfy the core population\nlaw (P3, P1; rc.2 #typed-records).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records",
+          "start_line": 339
+        }
+      ],
+      "key": "record_kind_reification_boundary",
+      "statement": "SemanticObject, TypedRelation, Constraint, Latitude and Residual populate O/E/C/L/X; traversal, transformation and judgment records populate V/T/J. Representing the concept of a record kind as a semantic object does not place an actual traversal/transformation/judgment in O or satisfy its core population obligation.",
+      "uncertainty": "The present author schema describes these kinds but does not instantiate V, T or J."
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus",
+        "axiomatic_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 475,
+          "quote": "The objects these laws govern are the records of §2, §3 and §5 and the\nontology of FOUNDATIONS §2; where a law names identity, authority, basis\nor residual, the definition is FOUNDATIONS' and the law is this member's.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws",
+          "start_line": 473
+        }
+      ],
+      "key": "fundamental_law_definition_ownership",
+      "statement": "Fundamental laws govern §2/§3/§5 records and FOUNDATIONS §2 ontology. Definitions of identity, authority, basis and residual remain FOUNDATIONS-owned; laws over them belong to the calculus member.",
+      "uncertainty": "FOUNDATIONS' full definitions are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "calculus_signature"
+      ],
+      "conditions": [
+        "Admission is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 484,
+          "quote": "Every admitted object, relation, constraint, latitude, residual,\ntraversal, transformation specialisation and judgment belongs to one\ndeclared signature. Every fundamental record also occurs exactly once in\nthe total `Population_M` function under its declared `RecordKind_ac`.\nMissing, duplicate, shadowed or unknown record kinds and populations fail\nclosed (P3, P5; rc.2 #ac-001-closed-signature).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-001%20Closed%20signature",
+          "start_line": 479
+        }
+      ],
+      "key": "closed_signature_rule",
+      "statement": "Every admitted record belongs to one declared signature and occurs exactly once in total Population_M under its core kind. Missing, duplicate, shadowed or unknown kinds/populations fail closed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "semantic_object_record"
+      ],
+      "conditions": [
+        "For every identity in I."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 499,
+          "quote": "So an identity resolves one member under one type,\ncontext, owner, scope and basis. That equal representations do not\nestablish equal meaning is FOUNDATIONS §2, Representation. The `a_c`\nbinding beside it: equal spelling, payload equality, position in any\nstructure and carrier equality do not establish semantic identity (P3;\nrc.2 #ac-002-scoped-identity).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-002%20Scoped%20identity",
+          "start_line": 494
+        }
+      ],
+      "key": "scoped_identity_rule",
+      "statement": "Identity resolves one member under one type, context, owner, scope and basis. Owner maps to authority, type to kind, resolved member to denoted value; context/scope/basis are additional required calculus coordinates. Equal spelling, payload, structural position or carrier does not establish semantic identity.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "An identity is referenced."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 509,
+          "quote": "Every referenced identity resolves exactly once in the applicable model or\nthrough one explicit external relation. Resolution uses the exact\n`RefDomain_Sigma(source_record_kind, field)` declaration across the\nmodel's record populations. Dangling, duplicate, wrong-record-kind,\nwrong-sort, wrong-basis, locally-and-externally ambiguous or\nundeclared-field references refuse structural admission (P3, P5; rc.2\n#ac-003-reference-closure).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-003%20Reference%20closure",
+          "start_line": 503
+        }
+      ],
+      "key": "reference_closure_rule",
+      "statement": "Resolve every reference exactly once locally or through one explicit external relation using its exact source-kind/field RefDomain_Sigma declaration. Dangling, duplicate, wrong-kind, wrong-sort, wrong-basis, local/external ambiguous and undeclared-field references refuse structural admission. AC-007's cause classification still distinguishes basis-only mismatch from constraint violation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "typed_relation_record"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Direction is not material where the kind explicitly declares symmetry."
+      ],
+      "grounding": [
+        {
+          "end_line": 516,
+          "quote": "A relation is lawful only when its kind admits the exact source and target\nsorts and all required qualifiers are present. Direction is material\nunless the relation kind explicitly declares symmetry (P4a, P3; rc.2\n#ac-004-relation-typing).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-004%20Relation%20typing",
+          "start_line": 513
+        }
+      ],
+      "key": "relation_typing_rule",
+      "statement": "A lawful relation's kind admits its exact endpoint sorts and all required qualifiers; direction is material unless explicitly symmetric.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "model_projection"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 526,
+          "quote": "Objects, relations, constraints, latitude, residuals, traversals,\ntransformations, projections and judgments retain their declared semantic,\noperation, evaluation and decision authority (the kinds of\n[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)). What\ncreates no authority is listed there; in `a_c` its instances are copying,\ninterpreting, encoding, evaluating and transporting a record, none of\nwhich transfers authority (P6, P4b; rc.2 #ac-005-authority-conservation).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-005%20Authority%20conservation",
+          "start_line": 520
+        }
+      ],
+      "key": "authority_conservation_rule",
+      "statement": "All listed record kinds and projections retain declared semantic, operation, evaluation and decision authority. Copying, interpreting, encoding, evaluating and transporting records transfer no authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "judgment_record"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Mixed bases require an explicitly owned composite-basis record."
+      ],
+      "grounding": [
+        {
+          "end_line": 538,
+          "quote": "This law binds the same rule to every fundamental record and model\nof `a_c`: each binds an exact basis, the composite-basis relation of a\nmixed basis is an explicitly owned record, and individually valid\ncoordinates do not create a coherent composite basis by proximity (P6, P3;\nrc.2 #ac-006-basis-coherence).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-006%20Basis%20coherence",
+          "start_line": 534
+        }
+      ],
+      "key": "basis_coherence_rule",
+      "statement": "Every result, fundamental record and model binds its exact basis. Individually valid coordinates do not become a coherent composite by proximity; the mixed-basis relation is explicit and owned. RF-005 owns the result rule and FOUNDATIONS owns Basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constraint_record",
+        "judgment_record"
+      ],
+      "conditions": [
+        "A constraint judgment is performed for the predicate that its predicate holds for its governed subject on the exact basis."
+      ],
+      "exceptions": [
+        "An unperformed judgment has no result; it is not indeterminate."
+      ],
+      "grounding": [
+        {
+          "end_line": 572,
+          "quote": "A missing result is no value of this refinement: a judgment that was not\nperformed has no closed result, is never `indeterminate`, and enters every\nconjunction over it as a planned assessment without a closed result\n(FOUNDATIONS §4 Results, Not performed).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+          "start_line": 569
+        }
+      ],
+      "key": "constraint_result_mapping",
+      "statement": "Each constraint names subject, predicate, judgment kind, latitude and refusal. Its result is one core value or a declared refinement mapping each value exactly once without raising standing. Holds→satisfied requires establishment on exact basis; failed→falsified names its defeating counterexample; indeterminate names evidence needed to decide; out-of-scope→out_of_frame names the undeclared relation needed beyond applies_to/context/scope and its owner where supplied; invalid basis→invalid_basis names basis repair. Failed, missing, indeterminate, out-of-scope and invalid-basis outcomes cannot be coerced to satisfied. Missing results enter conjunction as planned assessments without closed results.",
+      "uncertainty": "The full external core conjunction algebra is not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "material_closure",
+        "model_projection",
+        "transformation_record",
+        "subject_interpretation"
+      ],
+      "conditions": [
+        "Closure, projection, structural admission, transformation or interpretation is applied."
+      ],
+      "exceptions": [
+        "An unapplied operation has no outcome."
+      ],
+      "grounding": [
+        {
+          "end_line": 590,
+          "quote": "| `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |\n| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model's closed population, and an external reference whose declared resolution has been evaluated and yields no target |\n| `refusal(constraint)` | falsified | every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample |\n| `refusal(basis)` | invalid_basis | the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+          "start_line": 587
+        }
+      ],
+      "key": "operation_outcome_mapping",
+      "statement": "For 'the operation yields its declared result on the exact basis': returned declared result→satisfied, establishing proposal availability but never proposal acceptance/admission; hold→indeterminate when needed evidence/observation/disposition is not admitted, with deciding acquisition named; gap→invalid_basis only while a declared resolution remains undecided; refusal(constraint)→falsified for demonstrated law/signature violations or refusals naming no basis condition; refusal(basis)→invalid_basis for basis conditions without such demonstrated violation. A refusal names its condition, admits no refused record/model/carrier, and silently drops nothing. Evaluated-to-no-target references are dangling and refuse rather than gap. Stop gap is a closed invalid_basis result, distinct from the absence-of-result gap of conjunction.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "constraint_record",
+        "model_projection"
+      ],
+      "conditions": [
+        "A refusal's cause is classified."
+      ],
+      "exceptions": [
+        "A basis mismatch, including inside a record, qualifier or wrong-basis reference, is always a basis condition rather than a signature-constraint violation."
+      ],
+      "grounding": [
+        {
+          "end_line": 607,
+          "quote": "A refusal that names a demonstrated violation of a declared\nlaw or constraint by the record, model, carrier, transformation or\napplication under judgment is `refusal(constraint)`, whatever condition of\nthe basis it also names. The basis condition is recorded with the refusal\nand reported beside it as its own `invalid_basis` result, which names the\nbasis repair and answers the predicate of the evaluation that the\ncondition leaves without a supporting basis, never the operation-outcome\npredicate that the refusal answers\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),\nPredicates travel). A refusal that names only conditions of the basis is\n`refusal(basis)`. A violation inside an input that the operation acts on\nas its basis is a condition of the basis for that operation, not a\nviolation by what it judges, as the projection below shows.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+          "start_line": 595
+        }
+      ],
+      "key": "refusal_cause_precedence",
+      "statement": "Cause is part of a refusal's value. A demonstrated violation by the judged object takes refusal(constraint) even alongside a basis condition; record the latter separately as invalid_basis for its own unsupported-evaluation predicate, naming repair. Do not hide known failure or discard its counterexample in joins. A defect inside an input used as basis is a basis condition for that operation. Thus AC-001 violation is constraint refusal when admitting the model and basis refusal when projecting over it. Mixed-basis mismatches alone always produce refusal(basis), even if the signature declares the basis relation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "latitude_record",
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "Two values differ."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 646,
+          "quote": "Two values may differ lawfully only through an applicable latitude record\nor transformation relation. An implementation preference, a probabilistic\nchoice or a human presence is not implicit latitude. FOUNDATIONS §4 states\nthe same rule for any two values; this law is its form over `L` and `T`\n(P6, P1; rc.2 #ac-008-explicit-latitude).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-008%20Explicit%20latitude",
+          "start_line": 642
+        }
+      ],
+      "key": "explicit_latitude_rule",
+      "statement": "Lawful difference requires an applicable latitude record or transformation relation. Implementation preference, probabilistic choice and human presence supply no implicit permission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "residual_record",
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "Material uncertainty, omission, translation loss, unresolved boundary or unproven relation exists."
+      ],
+      "exceptions": [
+        "An authorised disposition creates an exact successor model."
+      ],
+      "grounding": [
+        {
+          "end_line": 653,
+          "quote": "Every material uncertainty, omission, translation loss, unresolved\nboundary or unproven relation remains in `X` until an authorised\ndisposition creates an exact successor model. Absence from a projection is\nnot resolution (P4b; rc.2 #ac-009-residual-conservation).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-009%20Residual%20conservation",
+          "start_line": 650
+        },
+        {
+          "end_line": 464,
+          "quote": "Projection, compression, interpretation or encoding cannot erase a\nresidual. It remains represented, is explicitly dispositioned by competent\nauthority, or causes refusal (P4b, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual",
+          "start_line": 462
+        }
+      ],
+      "key": "residual_conservation_rule",
+      "statement": "Material residuals remain in X until authorised disposition to an exact successor. Projection/compression/interpretation/encoding cannot erase them; retain them, obtain competent disposition or refuse. Projection absence is not resolution.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "material_closure",
+        "model_projection"
+      ],
+      "conditions": [
+        "A closure or projection result is sought."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 669,
+          "quote": "The result is defined only when `Z`, `R`, required-edge semantics, basis\nand scope are exact and the fixed point is finite and unique. Failure to\nestablish those conditions returns a gap or refusal: `gap` where a\ncondition is unresolved on the basis, otherwise `refusal(basis)`, because\neach condition bears on the basis the closure acts on (AC-007).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure",
+          "start_line": 665
+        },
+        {
+          "end_line": 692,
+          "quote": "It is a reference, so the rule\nthat no reference trims a required member to fit a carrier or budget,\nstated at [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Reference versus\nbody, applies to it: here the required members are those of the material\nclosure of `Z`, and a capability budget is one such budget.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+          "start_line": 688
+        }
+      ],
+      "key": "closure_projection_definedness",
+      "statement": "Closure is defined only for exact Z, R, required-edge semantics, basis and scope with finite unique fixed point. Failure gives gap if a condition is unresolved on basis, otherwise refusal(basis). Projection inherits gap/refusal(basis) from contained closure or input model. Never trim a required closure member to fit carrier, token/capability or other budget.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model",
+        "typed_relation_record"
+      ],
+      "conditions": [
+        "An overlay or semantic-resolution relation is represented."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 703,
+          "quote": "An overlay adds explicit records to one or more declared `Population_M`\nfamilies of a basis model. It does not mutate the basis. Override,\ndisambiguation, equivalence, specialisation or translation exists only as\na typed relation with exact authority, direction, scope, basis,\npreservation, loss, refusal and invalidation semantics (P3, P6; rc.2\n#ac-012-overlay).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-012%20Overlay",
+          "start_line": 698
+        }
+      ],
+      "key": "overlay_nonmutation_rule",
+      "statement": "An overlay adds explicit records to declared populations without mutating basis. Override, disambiguation, equivalence, specialisation and translation require typed relations with exact authority, direction, scope, basis, preservation, loss, refusal and invalidation semantics.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "transformation_record",
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "A transformation is proposed or applied."
+      ],
+      "exceptions": [
+        "Cross-basis/signature migration requires a separately identified specialisation with exact composite-basis and compatible signature-extension relations naming both sides."
+      ],
+      "grounding": [
+        {
+          "end_line": 751,
+          "quote": "`domain_model` and `codomain_model` resolve exact content identities of\nthe complete input and proposed successor models. Each model identity\ncommits to its exact calculus basis, signature identity, complete finite\n`Population_M`, complete `External_M`, exact external-resolution map and\nselected model-content identity under the owning identity law. A mutable\nlocator, a model-family name, a partial projection or a population digest\nwithout the exact model identity refuses (P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 745
+        }
+      ],
+      "key": "transformation_identity_and_basis",
+      "statement": "t.traversal resolves one exact v; context, owner, scope, basis, operation authority, evidence, provenance and stops equal or lawfully restrict v, otherwise refuse. Domain/codomain are complete exact model identities committing to calculus basis, signature, all populations, External_M, resolution map and selected content identity; mutable locators, family names, partial projections or population digests alone refuse. Ordinary transformations require equal domain/codomain/t/traversal bases and equal model signatures. Migration cannot preserve an identity whose basis or kind changes: remove it and introduce its successor, with continuity only through the exact migration relation. preservation_relation is exact typed equality binding both models/bases, comparison domain, direction, authority, scope, evidence and equality law; semantic equivalence can relate removed/introduced identities but cannot justify preserved membership.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "transformation_record"
+      ],
+      "conditions": [
+        "Local-record preservation is claimed."
+      ],
+      "exceptions": [
+        "If abstract records lack one shared canonical byte grammar, exact typed preservation equality is the alternative proof."
+      ],
+      "grounding": [
+        {
+          "end_line": 807,
+          "quote": "Local_b       = P_t disjoint_union R_t\nLocal_b_prime = P_t disjoint_union N_t\nN_t intersect Local_b = empty\nR_t intersect Local_b_prime = empty",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 804
+        }
+      ],
+      "key": "transformation_local_delta",
+      "statement": "Prove Local_b=P_t disjoint_union R_t; Local_b_prime=P_t disjoint_union N_t; N_t intersects input in empty; R_t intersects successor in empty. Every input identity is classified exactly once. Preserved records keep kind, identity, context, owner, scope and basis and are byte-identical under one exact canonical grammar or equal under the exact preservation relation where no shared grammar exists. Changed fields/basis/kind, nominal identifier equality, equivalence or unbound preserved-meaning assertions refuse preserved membership. Removed identities are absent from successor; introduced identities are absent from input and carry complete lawful records in exactly one successor population. No silent dropping, retaining or duplication.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "transformation_record",
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "External-resolution coordinates or transformation output are represented."
+      ],
+      "exceptions": [
+        "A material residual may leave the successor only with exact authorised disposition in transformation evidence."
+      ],
+      "grounding": [
+        {
+          "end_line": 875,
+          "quote": "Material residuals remain in the successor residual set unless an exact\nauthorised disposition is included in the transformation evidence.\nFailure to establish any model identity, basis, population, local or\nexternal partition, equality, external-resolution witness, residual or\ncodomain equation refuses (P4b, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 871
+        }
+      ],
+      "key": "transformation_external_delta_and_result",
+      "statement": "For each external identity, exactly one exact Resolution_M tuple contains external_identity, reference_domain, external_target_kind, resolved_target_identity, basis_relation, resolution_basis and evidence_identity. This is a model coordinate, not a ninth record family; missing/ambiguous/extra tuples refuse. Prove E_b=EP_t disjoint_union ER_t; E_b_prime=EP_t disjoint_union EN_t; EN_t intersects E_b in empty; ER_t intersects E_b_prime in empty. Each and only each EP_t member has exactly one witness naming the resolution, both models, both resolutions, decision equal and evidence; tuples are exactly field-equal. Nominal external equality, equivalent/changed target, changed target kind/domain/basis relation/resolution basis or missing witness cannot preserve. Removed tuples exist only in input; introduced only in successor. Changed resolution is removal plus introduction, even with unchanged external identity, with continuity separately declared. Failure of identity, basis, population, partition, equality, witness, residual or codomain equations refuses. t declares every allowed mutation; input stays unchanged; proposed successor neither accepts nor admits itself; stops map by AC-007 cause.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "judgment_record"
+      ],
+      "conditions": [
+        "A judgment is issued or promotion claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 919,
+          "quote": "Issuing a judgment does not transform, rewrite, reissue or rename its\nsubject. Promotion is an explicit relation between the unchanged subject\nand its admission or acceptance judgment (P6, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation",
+          "start_line": 917
+        }
+      ],
+      "key": "judgment_subject_separation",
+      "statement": "Judgment issuance cannot transform, rewrite, reissue or rename its subject. Promotion is a separate explicit relation from unchanged subject to admission/acceptance judgment.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "traversal_contract",
+        "generic_functor_kinds"
+      ],
+      "conditions": [
+        "A traversal stop or refinement is declared."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 983,
+          "quote": "Each refined value, whether the stop contract or a\n`stop_states` declares it, names its parent value and its cause and maps\nto its parent's core value: a value refined from `hold` to indeterminate,\nfrom `gap` or `refusal(basis)` to invalid_basis, and from\n`refusal(constraint)` to falsified. No refined value takes `satisfied`. A\ndifferent core value needs a different parent value, which only the member\nthat owns the parent declares; for these four stops that member is this\none. Neither the stop contract nor a traversal's `stop_states` raises a\nresult's standing (P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line": 975
+        }
+      ],
+      "key": "traversal_stop_refinement",
+      "statement": "Omega_v refines the core without adding core values. Every stop maps exactly once and never to satisfied. Signature stop contracts declare additional values and may refine by cause; traversal stop_states binds its exact mapping and may further refine. Every refinement names parent/cause and retains the parent's core: hold→indeterminate; gap/refusal(basis)→invalid_basis; refusal(constraint)→falsified. Changing core requires a different parent declared only by its owner; neither level may raise standing or turn violated constraints into undecided evidence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "traversal_contract",
+        "generic_functor_kinds"
+      ],
+      "conditions": [
+        "A functor application is represented."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1021,
+          "quote": "Every functor application binds exactly one functor kind and one traversal\nidentity. Applying any `F_*` kind without the bracketed traversal identity\n`[v]` is incomplete (P3; rc.2 #ac-015-functor-classification). Such an\napplication violates this law, and its outcome is `refusal(constraint)`\nunder AC-007; this sense of incomplete is not the construction-availability\nvalue `incomplete` of a step\n([ACTIVATION §3](ACTIVATION.md#construction-availability)). Purpose and\nmaterial relation: an application without its traversal has one core\nvalue, and the shared word does not let it be read as a step's stop (P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification",
+          "start_line": 1013
+        }
+      ],
+      "key": "functor_application_binding",
+      "statement": "Every application binds exactly one kind and traversal identity. An F_* application without [v] violates AC-015 and yields refusal(constraint), hence falsified under its operation predicate. Its descriptive incompleteness is distinct from ACTIVATION's construction-availability incomplete value.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "traversal_contract",
+        "generic_functor_kinds"
+      ],
+      "conditions": [
+        "Two traversals are composed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1038,
+          "quote": "Composition retains both traversal identities, intermediate results,\njudgments, evidence, authority, provenance and stop states. It cannot\nflatten probabilistic proposal, deterministic evaluation and human\ndecision into one undifferentiated operation. `a_c` prescribes no\nuniversal `F_P -> F_D -> F_H` sequence; each application owns its lawful\ntopology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+          "start_line": 1033
+        }
+      ],
+      "key": "typed_composition_rule",
+      "statement": "F_K2[w] compose F_K1[v] is lawful only if the first result type and judgment satisfy the second's exact domain/preconditions. Retain both identities and all intermediate results, judgments, evidence, authority, provenance and stops. Do not flatten proposal/evaluation/human decision. No universal F_P→F_D→F_H order is prescribed; application owns lawful topology.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "subject_interpretation",
+        "axiomatic_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1073,
+          "quote": "The proposed model `M_subject*` does not become accepted through\nconstruction. Structural evaluation can prove closed shape, reference\ntyping, identity derivation and basis coherence. It cannot prove that\nprobabilistic semantic selection retained every material subject meaning.\nSemantic acceptance remains a separately recorded authority judgment (P6,\nP1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line": 1068
+        }
+      ],
+      "key": "interpretation_is_proposal",
+      "statement": "Construction does not accept a proposed model. Structural evaluation may prove closed shape, reference typing, identity derivation and basis coherence, but cannot prove probabilistic selection retained all material meaning. Semantic acceptance is a separately recorded authority judgment.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "subject_interpretation",
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "A model record is admitted or a source declaration is evaluated."
+      ],
+      "exceptions": [
+        "Competently authorised model-local content is explicitly identified as such."
+      ],
+      "grounding": [
+        {
+          "end_line": 1082,
+          "quote": "Every admitted model record maps to exact subject provenance or is\nexplicitly identified as model-local content under competent authority.\nEvery evaluated subject declaration has a retained, omitted, residual,\ninapplicable or refused disposition. Interpretation cannot treat absence\nas immateriality without a recorded basis and authority (P1, P4b, P6; rc.2\n#ac-017-interpretation-fidelity).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity",
+          "start_line": 1077
+        }
+      ],
+      "key": "interpretation_fidelity_rule",
+      "statement": "Each admitted record has exact source provenance or explicit authorised model-local standing. Every evaluated declaration has retained, omitted, residual, inapplicable or refused disposition. Absence cannot imply immateriality without recorded basis and authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "subject_interpretation",
+        "axiomatic_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1094,
+          "quote": "The separation of structural conformance from semantic fidelity, and the\nrule that structural success is evidence for semantic review and no\nsubstitute for it, are [EVALUATION §2](EVALUATION.md#2-separation)'s,\nwhich owns them for every review. This law binds them to `a_c`: the\nstructural conformance of a model covers its closed syntax, types,\nidentities, references, bases and mechanically decidable predicates, and\nthe semantic fidelity of an interpretation covers its meaning and\nmateriality (P1, P6; rc.2\n#ac-018-structural-and-semantic-separation).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+          "start_line": 1086
+        }
+      ],
+      "key": "structural_semantic_separation",
+      "statement": "Structural conformance concerns closed syntax, types, identities, references, bases and mechanically decidable predicates; semantic fidelity concerns meaning/materiality. Structural success supports but cannot replace semantic review. EVALUATION §2 owns the general separation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiomatic_model"
+      ],
+      "conditions": [
+        "Validity M_b satisfies a_c[Sigma] is claimed."
+      ],
+      "exceptions": [
+        "A generic checker may claim semantic/authority subsets only if the model supplies an exact lawful decision contract."
+      ],
+      "grounding": [
+        {
+          "end_line": 1114,
+          "quote": "A checker may decide the structural subset. No generic checker may claim\nthe semantic or authority subset unless the model supplies an exact lawful\ndecision contract for it (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+          "start_line": 1112
+        }
+      ],
+      "key": "valid_model_requirements",
+      "statement": "Validity requires resolving Sigma and exact calculus basis; every record satisfying AC-001–009; every claimed closure/projection/overlay/transformation/judgment/composition satisfying its law; fidelity and residual dispositions binding exact subject; distinct structural evaluation and semantic acceptance both present where claimed; and resolving all evidence, provenance, invalidation and re-entry coordinates. Checkers may decide structural subsets, subject to the stated semantic/authority exception.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "governed_calculus_layers",
+        "judgment_record"
+      ],
+      "conditions": [
+        "An accepted interpretation or admitted encoding is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1145,
+          "quote": "`J_X` is an external semantic-acceptance judgment over unchanged `M_X`.\nEncoding requires `J_X.decision = accepted` and exact equality between the\njudgment subject identity and digest and `M_X`; hold or refusal cannot be\nencoded. `D_C` is a judgment over unchanged carrier bytes; it is not a\ntransformed carrier. The admitted encoding evidence relation is the exact\ntriple `(G_C, J_X, D_C)`; neither judgment enters the identity of its\nsubject (P6, P3). Each judgment answers its own predicate, that `M_X` is\naccepted and that the carrier bytes are admitted: `accepted` and\n`admitted` map to satisfied, a hold maps as AC-007's `hold`, and `refuse`\nis a `refusal` that takes its core value under AC-007 by its cause (P5,",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line": 1136
+        }
+      ],
+      "key": "encoding_acceptance_precondition",
+      "statement": "Encoding requires external J_X accepted over unchanged M_X with exactly matching subject identity and digest; hold/refusal cannot be encoded. D_C judges unchanged carrier bytes and transforms nothing. Neither judgment enters subject identity. Their respective predicates remain separate: accepted/admitted map to satisfied, hold to indeterminate and refuse by AC-007 cause. Admitted encoding retains exact triple (G_C,J_X,D_C).",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "governed_calculus_layers"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1167,
+          "quote": "An encoding failure does not change `a_c.X`. An interpretation failure\ndoes not change `a_c`. A downstream success cannot ratify an upstream\nlayer or basis. None of these layers is automatically an independently\nreleased Product. The external authority that selects and releases one\nowns that Product status. SPEC_METHOD §6 applies this law to release\nlineage.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation",
+          "start_line": 1162
+        }
+      ],
+      "key": "layer_release_separation",
+      "statement": "Each layer has independent content identity, judgments, supersession and proof obligations. Calculus qualification evaluates coherence against all declared laws; interpreted model proves exact-subject fidelity; encoded carrier proves faithful canonical encoding of accepted model. Encoding failure changes no interpreted model; interpretation failure changes no calculus; downstream success ratifies no upstream layer/basis. Product release status belongs only to the separately selecting/releasing external authority.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "calculus_basis_identity",
+        "governed_calculus_layers"
+      ],
+      "conditions": [
+        "Exact released or downstream identity is issued."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1218,
+          "quote": "`publication_basis` binds the distinct immutable successor carrier and\nthis member's exact bytes. Its member URI resolves inside its release URI.\nThe record is external because this member cannot contain its own final\nbyte digest. Same-release references that cite this calculus are\npublication or cross-context relations, not derivation provenance (P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line": 1214
+        }
+      ],
+      "key": "calculus_identity_construction",
+      "statement": "Use RFC 8785 JCS; reject duplicate object names before canonicalisation. principle_refs is duplicate-free, sorted by ascending unsigned UTF-16 code units, and contains the complete finite set of derivation clauses resolving inside one exact accepted predecessor cut, without hard-coded member count; recompute on changed derivation account. Derivation cannot depend on publication carrier or identity being created. Publication binds a distinct immutable successor and exact member bytes, with member URI inside release URI; same-release citations are publication/cross-context, not derivation. Interpreted identity binds at least exact calculus identity, exact subject basis, exact interpretation contract, selected content identity and semantic-selection ledger identity/digest. Its acceptance is external pair (a_c.X,J_X). Encoded identity binds at least exact interpreted identity, carrier Product/cut, encoding profile and canonical content identity. Mechanically verify accepted judgment against unchanged model and retain it externally; admission is triple (a_c.X.C,J_X,D_C). Product acceptance/release also point to unchanged identities. Owning Product controls downstream grammar/issuance but may not omit upstream identities or substitute mutable locators.",
+      "uncertainty": "No released identity instance is issued or reconstructed here."
+    },
+    {
+      "applies_to_keys": [
+        "calculus_basis_identity",
+        "subject_axiomatic_calculus"
+      ],
+      "conditions": [
+        "This subject edition's identity or a released-edition dependency is asserted."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1270,
+          "quote": "This authoring text is a source project surface. It is neither the\nidentity-bearing release of this edition nor the identity-bearing source\nof any released calculus edition: a dependency on a released edition\nbinds that edition's identity under this section, with its release,\nmanifest digest and member digest, and never an authoring text (P3, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line": 1266
+        }
+      ],
+      "key": "authoring_release_identity_boundary",
+      "statement": "This corpus's basis is issued only at its own release under RELEASE and AC-020 after bytes exist, never from authoring text. The cited predecessor stdo://releases/v2.5.1-rc.2/, manifest 3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782 and member digest cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d are derivation provenance, not this candidate edition's identity; concept identity remains unchanged.",
+      "uncertainty": "The successor release record and exact predecessor clauses are unavailable."
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus",
+        "application_boundary_section"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1288,
+          "quote": "This member defines the generic relations `a_c.X` and `a_c.X.C`. It\nselects, constructs, accepts or releases no concrete interpretation or\ncarrier. A downstream authority owns its exact subject population,\ninterpretation, carrier, judgments and Product or release status. The\ndownstream identity is never embedded back into the calculus or its\npublication basis (P2, P6; rc.2 #application-boundary).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary",
+          "start_line": 1283
+        }
+      ],
+      "key": "downstream_application_ownership",
+      "statement": "Generic a_c.X/a_c.X.C relations select, construct, accept and release no concrete interpretation/carrier. Downstream authority owns subject population, interpretation, carrier, judgments and Product/release status. Downstream identity is never embedded back into calculus or publication basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "task_constraint_surface"
+      ],
+      "conditions": [
+        "A constraint surface is used."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1345,
+          "quote": "2. **Unresolved blocks.** A residual, a `hold`, a `gap` or an external\n   predicate not yet established keeps its source and its required\n   acquisition, and it blocks every operation and result that depends on\n   it until its premise is established. A missing premise or an omitted\n   obligation never becomes permission or a satisfied result (AC-007,\n   AC-009).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1340
+        }
+      ],
+      "key": "constraint_surface_use_conditions",
+      "statement": "Keep each element's standing as premise, consequence, owned policy, observation or unresolved claim; preferences are not obligations. Preserve the source's formal-support category: a formula is not discharged, and externally assessed predicates retain source/scope/evidence. Residuals, hold, gap and unestablished external predicates retain acquisition routes and block every dependent operation/result until established. Missing premises/omissions grant no permission or success. Surfaces provide routes/constraints, not observations, effect grants or task context; acquire these from workspace and selected authoritative inputs under ACTIVATION §2, retaining workspace as reacquisition basis. Bind exact subject separately from calculus basis/signature; other subject bytes or unestablished basis produce refusal(basis)/invalid_basis. A changed permission/obligation is a fidelity defect repaired at source or faulty derivation; approximate views declare adequacy relation and end-to-end bound. Structural validity, semantic fidelity and actual-use task sufficiency are separate claims; mechanical projection needs a separately selected checking contract; none grants operation/acceptance authority. Downstream owner selects current interpretation; ordinary entry uses its exact current version with limits and marks earlier versions historical. Surface construction itself selects/constructs/accepts no interpretation.",
+      "uncertainty": "The five formal-support categories and full acquisition/qualification contracts are external."
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1398,
+          "quote": "- a representation or compression of its derivation source;\n- a selected semantic model of any subject;\n- a carrier profile or carrier instance;\n- an executable language, interpreter, compiler implementation or\n  runtime;\n- a deterministic semantic assessor or theorem prover;\n- a required storage topology of any shape;\n- an ontology of any domain;\n- an authority registry; or\n- a claim that all governed systems share one vocabulary or relation set.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions",
+          "start_line": 1389
+        }
+      ],
+      "key": "calculus_exclusions",
+      "statement": "a_c is not derivation-source representation/compression, a selected subject model, carrier profile/instance, executable language/interpreter/compiler/runtime, deterministic semantic assessor/theorem prover, required storage topology, domain ontology, authority registry, or assertion of universal vocabulary/relation sets.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "subject_axiomatic_calculus"
+      ],
+      "conditions": [
+        "Review or qualification of this member is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1426,
+          "quote": "No example, checker, model or carrier can qualify a law outside the exact\nclaim it evaluates (P6; EVALUATION §1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+          "start_line": 1425
+        }
+      ],
+      "key": "calculus_conformance_minimum",
+      "statement": "Cover at least: closed signature/core kinds/populations/fields/value and reference domains; well-typed positive/refusal examples for every law; identity uniqueness and cross-context collisions; closure/projection/overlay/transformation/composition including exact model identities, partitions, basis equality and byte-or-typed equality preservation refusals; separation of operations/kinds/actors/judgments; residual/authority conservation through interpretation/encoding; exact basis identity reconstruction; direct-coordinate/cross-family/wrong-family/duplicate-family/dangling-reference refusal cases for every family; derivation/publication reconstruction with cyclic and same-carrier counterexamples; and one neutral toy model exposing any hidden source/profile/carrier dependency. No artifact or checker qualifies a law beyond its exact evaluated claim.",
+      "uncertainty": "No review or qualification is performed by this interpretation."
+    },
+    {
+      "applies_to_keys": [
+        "conformance_case_framework",
+        "builder_history_cases"
+      ],
+      "conditions": [
+        "A conformance pass or qualification is claimed."
+      ],
+      "exceptions": [
+        "A case impossible to run with its declared subject is recorded not run with no result."
+      ],
+      "grounding": [
+        {
+          "end_line": 31,
+          "quote": "A case passes when the expected distinction is observed and no coerced\nsuccess appears anywhere in the result\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed): the\nassessment returns a core value for that predicate, and the case passes\nonly when the value is `satisfied`. A case that cannot be run with the\ndeclared subject is a planned evaluation that was not performed: it has no\nresult ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed),\nand it is recorded as not run, never hidden.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line": 24
+        }
+      ],
+      "key": "conformance_pass_and_acquisition",
+      "statement": "Pass requires independent assessment returning satisfied for observed expected distinction with no coerced success anywhere. Run/status is not pass/result; unperformed cases have no result and remain visibly not run. Qualification reviewers acquire the external construction specification beside §5 because §5 names situations/checks but does not restate expected distinctions; adopting Product rules do not depend on §5. satisfied/falsified/indeterminate/out_of_frame/invalid_basis are imported core values; re_enter, re_entry_requested(authority), not_effected and completion_unknown are ACTIVATION refinements, not newly defined values here.",
+      "uncertainty": "The external expected-distinction specification and refinement mappings are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "builder_history_cases"
+      ],
+      "conditions": [
+        "The corresponding C-01 through C-12 case is assessed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 61,
+          "quote": "| C-10 Scenario patched around a framework defect | a fixture simplified to dodge a kernel bug | SPEC_METHOD §4 | owner triage before repair; the framework is fixed, the fixture restored | not run |\n| C-11 Closure by approval | a work item closed on reviewer sign-off with its stated condition unmet | EVALUATION §5 | closure follows the stated condition; the reviewer result is input only | not run |\n| C-12 Carrier churn as findings | a review whose findings are all ticket, column and filename matters | ACTIVATION §6 | findings are judged by ambiguity removed; carrier findings are costed as churn | not run |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexamples%20from%20the%20builder%27s%20own%20history",
+          "start_line": 59
+        }
+      ],
+      "key": "builder_case_expected_distinctions",
+      "statement": "C-01 refuses or records missing allowance and reports spend/unavailability. C-02 reads underlying PENDING data and returns falsified for rows rather than satisfied for labels. C-03 justifies why retained-work repair is insufficient, locates/reprices the owning-layer defect instead of rerunning it. C-04 counts per-handoff reads/derivations and replaces repetition with applicable reuse. C-05 declares exact-identity selective acquisition, counts transferred context and never trims required members. C-06 separates report volume from model traffic. C-07 names operational variables and returns invalid_basis before effects upon change. C-08 judges progress only against selected outcome, which evidence cannot enlarge. C-09 declares the work boundary and returns re_enter at the owning relation for misallocation. C-10 performs owner triage before repair, fixes framework and restores fixture. C-11 closes only on the stated condition; reviewer result is input. C-12 judges findings by ambiguity removed and costs carrier-only findings as churn. These are expected distinctions, not observed outcomes; all cases remain not run.",
+      "uncertainty": "Mechanism sections and reported common-input histories are not supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "design_module_evidence_route",
+        "design_route_authority_and_gates",
+        "design_evidence_completeness",
+        "design_to_unit_proof_derivation",
+        "unit_proof_design_feedback",
+        "design_route_variation",
+        "design_profile_dependencies"
+      ],
+      "reason": "Retains both evidence chains, gates, authority boundaries and completeness requirements; external profile and execution definitions remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "module_unit_proof",
+        "module_unit_test_proof_rule",
+        "unit_test_variation",
+        "unit_frame_dependency"
+      ],
+      "reason": "Retains modal traceability, ownership, proof primacy and closure boundary; exact unit-frame limits are external.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "module_lifecycle_confirmation",
+        "lifecycle_evidence_and_closure",
+        "lifecycle_chain_dependency"
+      ],
+      "reason": "Retains universal surface coverage, checklist, evidence states and governed-gap closure limits; phase definitions remain external.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "assurance_source_ledger",
+        "assurance_ledger_distinctions",
+        "assurance_ledger_external_rows"
+      ],
+      "reason": "Retains provenance claims, terminology mappings, pending revision and result distinctions; unavailable conservation targets cannot be checked.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "subject_axiomatic_calculus",
+        "provenance_not_application_authority",
+        "foundations_dependencies"
+      ],
+      "reason": "Retains member ownership and provenance-only routes; imported ontology and core algebra are not supplied in full.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "subject_axiomatic_calculus",
+        "calculus_position_limits"
+      ],
+      "reason": "Retains stable identities, independence, proof-limited claims and separate derivation/application layers.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "calculus_derivation_account",
+        "provenance_not_application_authority"
+      ],
+      "reason": "Retains the nine commitment families, one-way derivation, identity non-equivalence and exact-address issuance distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "calculus_scope_boundary"
+      ],
+      "reason": "Retains the model-form scope and excluded semantic/execution choices.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "foundation_law_map",
+        "foundation_consumer_boundaries",
+        "foundation_consumer_map_limits"
+      ],
+      "reason": "Retains premise standing, added-choice ownership and consumer limits; fine-grained external consumer and pillar mappings remain source-linked residual detail.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "calculus_signature",
+        "axiomatic_model",
+        "signature_population_and_reference_contract",
+        "model_signature_binding",
+        "signature_and_carrier_variation"
+      ],
+      "reason": "Retains the abstract signature, eight populations, exact reference domains, refusal boundaries and conditional carrier freedom.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "record_kind_reification_boundary",
+        "author_schema_population_limit"
+      ],
+      "reason": "Retains the distinction between concepts of record kinds and actual core records; this schema does not instantiate traversal/transformation/judgment populations.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "semantic_object_record"
+      ],
+      "reason": "Retains exact field inventory, identity coordinates and scope/value meanings.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FSemantic%20object"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "typed_relation_record"
+      ],
+      "reason": "Retains exact fields, identity endpoints and closed qualifier semantics.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FTyped%20relation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "constraint_record"
+      ],
+      "reason": "Retains exact fields, declared kinds and non-mechanical judgment distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FConstraint"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "latitude_record"
+      ],
+      "reason": "Retains permission-set shape and authority limits.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FLatitude"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "residual_record",
+        "residual_conservation_rule"
+      ],
+      "reason": "Retains residual shape, domain refusal and non-erasure requirements.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "fundamental_law_definition_ownership"
+      ],
+      "reason": "Retains actual successor text assigning definition and law ownership; predecessor heading-only disposition is not applied to this section.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "closed_signature_rule"
+      ],
+      "reason": "Retains exact-one signature/population requirement and fail-closed cases.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-001%20Closed%20signature"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "scoped_identity_rule"
+      ],
+      "reason": "Retains required coordinates and prohibition on identity inference from representation equality.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-002%20Scoped%20identity"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "reference_closure_rule"
+      ],
+      "reason": "Retains exact resolution and every listed reference refusal class.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-003%20Reference%20closure"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "relation_typing_rule"
+      ],
+      "reason": "Retains endpoint sorts, qualifiers, direction and explicit symmetry exception.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-004%20Relation%20typing"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "authority_conservation_rule"
+      ],
+      "reason": "Retains authority kinds and five non-transferring operations.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-005%20Authority%20conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "basis_coherence_rule"
+      ],
+      "reason": "Retains exact basis and explicitly owned composite requirement.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-006%20Basis%20coherence"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "constraint_result_mapping",
+        "operation_outcome_mapping",
+        "refusal_cause_precedence"
+      ],
+      "reason": "Retains both named-predicate mappings, missing-result distinction, gap/dangling distinction and basis/violation precedence without applying them.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "explicit_latitude_rule"
+      ],
+      "reason": "Retains explicit lawful-difference requirement and forbidden implicit permissions.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-008%20Explicit%20latitude"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "residual_conservation_rule"
+      ],
+      "reason": "Retains all listed material residual classes and exact-successor disposition condition.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-009%20Residual%20conservation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "material_closure",
+        "closure_projection_definedness"
+      ],
+      "reason": "Retains least-fixed-point meaning, exact-input conditions, finite uniqueness and cause-specific stops.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "model_projection",
+        "closure_projection_definedness",
+        "projection_requires_closure"
+      ],
+      "reason": "Retains selected meaning, closure, seams, no new ownership and no budget trimming.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "overlay_nonmutation_rule"
+      ],
+      "reason": "Retains additive overlay and exact typed semantic-resolution requirements.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-012%20Overlay"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "transformation_record",
+        "transformation_identity_and_basis",
+        "transformation_local_delta",
+        "transformation_external_delta_and_result",
+        "transformation_specialises_traversal",
+        "operational_contract_representation_limit"
+      ],
+      "reason": "Retains transformation shape, complete local/external accounting, witness requirements and proposal boundary as data; no executable transformation or proof object is instantiated.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "judgment_record",
+        "judgment_subject_separation"
+      ],
+      "reason": "Retains record shape, unchanged subject and distinct promotion relation without issuing judgment.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "traversal_contract",
+        "generic_functor_kinds",
+        "traversal_stop_refinement"
+      ],
+      "reason": "Retains traversal shape, distinct kinds, exact stop refinement and non-categorical/authority boundaries.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "functor_application_binding"
+      ],
+      "reason": "Retains one-kind/one-traversal requirement and distinguishes refusal from step incomplete.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "typed_composition_rule"
+      ],
+      "reason": "Retains composition preconditions, intermediate facts and absence of universal kind sequence.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "subject_interpretation",
+        "interpretation_is_proposal"
+      ],
+      "reason": "Retains exact contract inventory, proposal/stops and separate acceptance.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "interpretation_fidelity_rule"
+      ],
+      "reason": "Retains provenance/model-local alternatives and five dispositions without inferring immateriality from absence.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "structural_semantic_separation"
+      ],
+      "reason": "Retains structural/semantic domains and non-substitution.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "valid_model_requirements"
+      ],
+      "reason": "Retains all six validity prerequisites and bounded checker exception; asserts no validity judgment.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "governed_calculus_layers",
+        "encoding_acceptance_precondition"
+      ],
+      "reason": "Retains three layers, unchanged-subject judgments, accepted-encoding gate and evidence triple.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "layer_release_separation"
+      ],
+      "reason": "Retains independent identity/proof/release obligations and non-ratification across layers.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "calculus_basis_identity",
+        "calculus_identity_construction",
+        "authoring_release_identity_boundary",
+        "release_basis_unissued"
+      ],
+      "reason": "Retains record shape, canonical identity recipe and downstream coordinates; no successor release instance is supplied or issued.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "application_boundary_section"
+      ],
+      "reason": "Retains heading as document organisation without inventing an independent rule.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "downstream_application_ownership"
+      ],
+      "reason": "Retains downstream ownership and no back-embedding or concrete selection by calculus.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "external_application_variation"
+      ],
+      "reason": "Retains conditional application-owned imports/translation/specialisation and their external status.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "task_constraint_surface",
+        "constraint_surface_use_conditions",
+        "constraint_surface_projection",
+        "worker_strategy_latitude",
+        "constraint_surface_external_support"
+      ],
+      "reason": "Retains surface parts and all six use conditions; full formal-support, acquisition and qualification definitions are external.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "calculus_exclusions"
+      ],
+      "reason": "Retains every listed excluded role and universality claim.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "calculus_conformance_minimum"
+      ],
+      "reason": "Retains ten minimum coverage obligations and exact-claim qualification boundary.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "calculus_source_ledger",
+        "calculus_ledger_comparison_limit"
+      ],
+      "reason": "Retains conservation/change assertions as provenance, including new laws and field correction; predecessor equivalence is not independently established.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F11.%20Source%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "conformance_case_framework",
+        "conformance_pass_and_acquisition",
+        "conformance_external_specification"
+      ],
+      "reason": "Retains case/status/result distinctions and qualification acquisition requirement; external discriminator specification and result refinements remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "builder_history_cases",
+        "builder_case_expected_distinctions"
+      ],
+      "reason": "Retains all twelve subjects, mechanisms, expected distinctions and not-run statuses without asserting execution or pass.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexamples%20from%20the%20builder%27s%20own%20history"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "When the design's co-evolution condition holds, semantic derivation and evidence feedback may proceed together while design retains structural HOW.",
+        "Unit tests may be discovered from implementation behaviour, provided closure proof is re-expressed against module ownership."
+      ],
+      "applies_to_keys": [
+        "design_module_evidence_route",
+        "module_unit_proof"
+      ],
+      "forbidden": [
+        "Co-evolution granting implementation semantic authority.",
+        "Feedback selecting or accepting the affected semantic answer."
+      ],
+      "grounding": [
+        {
+          "end_line": 972,
+          "quote": "When the\ndesign's co-evolution condition holds, the two chains may proceed together\nwithout making implementation semantic authority; design still owns the\nstructural HOW.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 969
+        },
+        {
+          "end_line": 1003,
+          "quote": "Unit tests may be discovered from implementation behaviour, but the\nclosure proof is re-expressed against module ownership rather than code\nhelper shape.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 1001
+        }
+      ],
+      "key": "design_route_variation"
+    },
+    {
+      "allowed": [
+        "Helper-level tests may exist.",
+        "Transitional slice-gating tests may exist.",
+        "The recommended carrier-inventory trace may use an equivalent inventory."
+      ],
+      "applies_to_keys": [
+        "module_unit_proof"
+      ],
+      "forbidden": [
+        "Helper tests becoming canonical proof for a module boundary.",
+        "Transitional slice tests replacing module-derived unit proof."
+      ],
+      "grounding": [
+        {
+          "end_line": 1064,
+          "quote": "This does not prohibit helper-level tests; it prohibits\nhelper-level tests from becoming the canonical proof surface for a module\nboundary (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1062
+        },
+        {
+          "end_line": 1069,
+          "quote": "transitional slice-gating tests may exist, but they do not\nreplace module-derived unit proof.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1068
+        }
+      ],
+      "key": "unit_test_variation"
+    },
+    {
+      "allowed": [
+        "Model-family signatures specialise core fields, value/reference domains and admissible kinds.",
+        "A carrier may use records, tables, terms, clauses, code or any representation only if its encoding profile proves every tuple relation preserved or explicitly refused."
+      ],
+      "applies_to_keys": [
+        "calculus_signature",
+        "axiomatic_model"
+      ],
+      "forbidden": [
+        "Removing, renaming, shadowing or silently adding a core family.",
+        "Treating an extra subject sort as a new fundamental family.",
+        "Using an alternative carrier without the required preservation/refusal proof."
+      ],
+      "grounding": [
+        {
+          "end_line": 254,
+          "quote": "Every `a_c` signature imports those identities unchanged. A model-family\nsignature specialises their fields, value domains, reference domains and\nadmissible kinds; it does not remove, rename, shadow or silently add a\ncore record family. Another fundamental record family requires an explicit\ncompatible calculus extension, never an extra subject sort (P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 250
+        },
+        {
+          "end_line": 331,
+          "quote": "The tuple is abstract. A carrier may use records, tables, terms, clauses,\ncode or any other representation only when its encoding profile proves\nthat every tuple relation is preserved or explicitly refused (P1, P4b).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 329
+        }
+      ],
+      "key": "signature_and_carrier_variation"
+    },
+    {
+      "allowed": [
+        "An application may declare a typed import, translation or specialisation under its own exact authority, context, basis, scope, preservation, loss, refusal and invalidation law."
+      ],
+      "applies_to_keys": [
+        "subject_axiomatic_calculus",
+        "application_boundary_section"
+      ],
+      "forbidden": [
+        "Such a downstream relation changing a_c.",
+        "Application usefulness causing a relation to enter the calculus member."
+      ],
+      "grounding": [
+        {
+          "end_line": 1298,
+          "quote": "An application may declare a typed import, translation or specialisation\nof an `a_c` concept under that application's own exact authority, context,\nbasis, scope, preservation, loss, refusal and invalidation law. Such a\nrelation is external to the calculus. It neither changes `a_c` nor enters\nthis member by being useful to an application (P6, P2; rc.2\n#external-imports-and-specializations). PROFILES §1 states the same\nrule from the profile's side as the declared-binding rule.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+          "start_line": 1292
+        }
+      ],
+      "key": "external_application_variation"
+    },
+    {
+      "allowed": [
+        "What no obligation fixes and an explicit latitude admits is the worker's choice.",
+        "Internal solution strategy remains unconstrained beyond the surface's obligations."
+      ],
+      "applies_to_keys": [
+        "task_constraint_surface"
+      ],
+      "forbidden": [
+        "Reading a preference as an obligation.",
+        "Reading a missing premise or omitted obligation as permission."
+      ],
+      "grounding": [
+        {
+          "end_line": 1308,
+          "quote": "It constrains the work without\nprescribing the worker's internal solution strategy beyond those\nobligations (P2, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1306
+        },
+        {
+          "end_line": 1323,
+          "quote": "| permitted freedom | the latitude records (AC-008); what no obligation fixes and a latitude admits is the worker's choice |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1323
+        }
+      ],
+      "key": "worker_strategy_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source interpretation proposal only. It supplies no semantic acceptance, execution, installed qualification, proof of fidelity or completeness judgment.",
+    "The subject's candidate calculus, including new refusal mappings and constraint-surface law, is interpreted as data and is not substituted for the workflow's selected published STDO 2.5.1-rc.2 basis.",
+    "Only supplied sections were interpreted. External FOUNDATIONS, DESIGN_MODULE, ACTIVATION, SPEC_METHOD, EVALUATION, REFERENCE_FRAME, RELEASE, IDENTITY, PROFILES, TICKETS, PRODUCT_DEFINITION, EXECUTIVE_BASELINE, ODD, TRAVERSAL_OCCURRENCE and WORLD_MODEL loci remain unresolved beyond statements quoted or described in supplied source.",
+    "The five active families describe source-defined judgments, traversals, transformations, identities and proof obligations without instantiating or executing those records. The adapter's judgment, traversal and transformation populations remain empty; this output is not asserted to satisfy the subject calculus's full population law.",
+    "Foundation-to-law premise/consequence and consumer tables are compactly represented. Their exact row-to-pillar and all individual consumer-locus links are preserved for source re-entry as a residual rather than fully materialised as local typed edges.",
+    "Source-disposition ledgers assert predecessor conservation and change. Missing predecessor and successor sections prevent independent equivalence checking; proposed scenario revisions remain pending rather than accepted.",
+    "Graph discovery contributed no normative authority or invented external endpoints. No confidence score, citation, shared label or connectivity was treated as acceptance or governing dependency.",
+    "All supplied builder-history cases retain not-run status; no pass, failure observation or mechanism execution is inferred."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "A new or materially changed boundary is governed by the design profile."
+      ],
+      "exceptions": [
+        "Unchanged realization_refactor reuses the accepted relation and proves no semantic-boundary delta."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 954,
+          "quote": "constitutional WHAT and owning requirements\n  -> accepted ontology, the carrier inventory the design declares,\n     target design, and the design's domain, sequence and state evidence\n  -> implementation and module-derived unit tests\n  -> reconciliation and acceptance",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 950
+        }
+      ],
+      "key": "design_to_unit_proof_derivation",
+      "kind": "semantic_derivation",
+      "meaning": "The accepted ontology/design/module basis supplies semantic derivation and assertion provenance for implementation and module-derived unit proof; governing denotes that explicit source dependency only.",
+      "source_key": "design_module_evidence_route",
+      "target_key": "module_unit_proof"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 963,
+          "quote": "implementation and module-derived unit tests\n  -> evidence, counterexample or falsification input\n  -> affected ontology or design relation\n```\n\nThe first chain is semantic derivation. The second is evidence feedback\nand cannot select or accept the affected semantic answer (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 957
+        }
+      ],
+      "key": "unit_proof_design_feedback",
+      "kind": "evidence_feedback",
+      "meaning": "Implementation and unit proof feed evidence/counterexamples/falsification to affected ontology/design relations without selecting or accepting semantic answers.",
+      "source_key": "module_unit_proof",
+      "target_key": "design_module_evidence_route"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 306,
+          "quote": "A population may be empty\nonly when the selected signature does not require a member of that record\nkind (P3, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+          "start_line": 304
+        }
+      ],
+      "key": "model_signature_binding",
+      "kind": "governed_by_signature",
+      "meaning": "The selected signature governs a model's finite populations, member requirements, domains and exact reference-resolution contract.",
+      "source_key": "axiomatic_model",
+      "target_key": "calculus_signature"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 686,
+          "quote": "`M_Z` contains the material closure of `Z`, so a projection's `gap` or\n`refusal` is that of the closure it contains or of the model it acts on:\n`gap` or `refusal(basis)` (AC-007).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+          "start_line": 684
+        }
+      ],
+      "key": "projection_requires_closure",
+      "kind": "requires_material_closure",
+      "meaning": "A projection must contain the material closure and inherits its unresolved or invalid-basis stops.",
+      "source_key": "model_projection",
+      "target_key": "material_closure"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 743,
+          "quote": "`t.traversal` resolves one `v`; its context, owner, scope, basis,\noperation authority, evidence, provenance and stop contract equal or\nlawfully restrict the corresponding traversal coordinates. A broader or\nmismatched coordinate refuses (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 740
+        }
+      ],
+      "key": "transformation_specialises_traversal",
+      "kind": "contract_specialisation",
+      "meaning": "Every transformation binds one exact traversal and may only equal or lawfully restrict its specified coordinates.",
+      "source_key": "transformation_record",
+      "target_key": "traversal_contract"
+    },
+    {
+      "conditions": [
+        "Task subject/work boundary and dependency relation family are declared."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1314,
+          "quote": "The task's declared subject and work boundary\nare the seed set `Z`, with the dependency relation family `R` the task\ndeclares, and the surface is `project(M_subject, Z, R)` (AC-011) over the\nmaterial closure of AC-010.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1311
+        }
+      ],
+      "key": "constraint_surface_projection",
+      "kind": "derived_by_projection",
+      "meaning": "A task constraint surface is the specified model projection over task material closure, subject to projection's preservation and boundary requirements.",
+      "source_key": "task_constraint_surface",
+      "target_key": "model_projection"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Preserve the conditional route and external owner references; do not decide co-evolution, decision completeness, refactor eligibility or execution admissibility.",
+      "grounding": [
+        {
+          "end_line": 947,
+          "quote": "For a new or materially changed realisation boundary governed by a design\nprofile (DESIGN_MODULE, tier 3, whose binding of the objects named here is\ndeclared in that profile), the canonical evidence relation is (P6, P4b;\nprovenance rc.2\nDESIGN_MODULE_METHOD #6a-design-to-module-to-implementation-unit-tests-evidence-route):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 943
+        }
+      ],
+      "key": "design_profile_dependencies",
+      "subject_key": "design_module_evidence_route",
+      "uncertainty": "DESIGN_MODULE bindings, co-evolution/decision-completeness definitions, SPEC_METHOD change classification, FOUNDATIONS parallel derivation and ACTIVATION §1 are referenced but not supplied."
+    },
+    {
+      "consequence": "Do not extend module-proof authority to Product acceptance or invent the exact claims a unit lane closes.",
+      "grounding": [
+        {
+          "end_line": 1072,
+          "quote": "What such a lane claims, and what it never closes, is\nthe unit frame of §7.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1071
+        }
+      ],
+      "key": "unit_frame_dependency",
+      "subject_key": "module_unit_proof",
+      "uncertainty": "ASSURANCE §2 and §7's unit-frame claim limits are absent."
+    },
+    {
+      "consequence": "Retain the nine evidence items and three evidence states without reconstructing or redefining external lifecycle phases.",
+      "grounding": [
+        {
+          "end_line": 1085,
+          "quote": "The\ncanonical operational lifecycle chain is SPEC_METHOD §2 Operational\nlifecycle sufficiency; this section consumes that chain and does not\nredefine its phases.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+          "start_line": 1081
+        }
+      ],
+      "key": "lifecycle_chain_dependency",
+      "subject_key": "module_lifecycle_confirmation",
+      "uncertainty": "The canonical lifecycle chain, RELEASE obligations and competent gap-disposition definitions are external."
+    },
+    {
+      "consequence": "Ledger conservation, element counts and successor routes remain source assertions; scenario supersession remains proposed/pending. No missing frame elements, laws or acceptance are fabricated.",
+      "grounding": [
+        {
+          "end_line": 1129,
+          "quote": "Rows received by this member. In the first table anchors are into rc.2\nSPEC_METHOD.md; in the second, into rc.2 STDO_REFERENCE_FRAME_BASELINE.md;\nin the third, into rc.2 DESIGN_MODULE_METHOD.md. A locus is a section of\nthis file. Every row is restated in this member's own text; a route is",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F17.%20Source%20dispositions",
+          "start_line": 1126
+        }
+      ],
+      "key": "assurance_ledger_external_rows",
+      "subject_key": "assurance_source_ledger",
+      "uncertainty": "Predecessor tables and most successor §§1–13, TICKETS §10, EVALUATION mappings and EXECUTIVE_BASELINE §1/§11 are unavailable. Exact eight-index/nine-factor lists, eleven/twelve-element frames, six obligations and ten qualification cases cannot be reconstructed from counts."
+    },
+    {
+      "consequence": "Keep imported meaning/ownership and local rules distinct; do not infer complete ontology, categorical proof requirements or conjunction behaviour beyond supplied statements.",
+      "grounding": [
+        {
+          "end_line": 12,
+          "quote": "and the core result algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it states laws over\nthose objects and defines none of them a second time.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+          "start_line": 10
+        }
+      ],
+      "key": "foundations_dependencies",
+      "subject_key": "subject_axiomatic_calculus",
+      "uncertainty": "FOUNDATIONS §§1–4, IDENTITY's full scoped-identity law and RF-005's complete basis contract are not included."
+    },
+    {
+      "consequence": "The exact source table remains necessary for each premise-to-consequence/pillar assignment and consumer-locus relation; connectivity is not promoted into additional normative dependencies.",
+      "grounding": [
+        {
+          "end_line": 187,
+          "quote": "Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 185
+        }
+      ],
+      "key": "foundation_consumer_map_limits",
+      "subject_key": "foundation_law_map",
+      "uncertainty": "The compact schema does not materialise all nineteen table rows' premise/pillar assignments or every consumer edge. External ODD, WORLD_MODEL, TRAVERSAL_OCCURRENCE, PRODUCT_DEFINITION, SPEC_METHOD, ACTIVATION, PROFILES, CONFORMANCE and RELEASE endpoints are unresolved. The supplied table, rather than invented endpoint concepts, retains their exact locus-specific details."
+    },
+    {
+      "consequence": "Descriptions of traversal/transformation/judgment kinds do not satisfy the subject's V/T/J population obligations, and no conformance to that full record schema is asserted.",
+      "grounding": [
+        {
+          "end_line": 343,
+          "quote": "A subject model may independently represent the concept of a\nrecord kind, but that representation does not satisfy the core population\nlaw (P3, P1; rc.2 #typed-records).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records",
+          "start_line": 341
+        }
+      ],
+      "key": "author_schema_population_limit",
+      "subject_key": "record_kind_reification_boundary",
+      "uncertainty": "The requested five-family author schema cannot instantiate all eight subject-defined fundamental populations or their full identity-bearing field structures."
+    },
+    {
+      "consequence": "Retain exact equations, witness shapes and failure boundaries textually; no actual model identities, equality witnesses, partition proofs, mutations or proposed successor are produced.",
+      "grounding": [
+        {
+          "end_line": 887,
+          "quote": "The exact transformation identity `t` declares every mutation it may\nperform. The input model remains unchanged; `M_b_prime*` is a proposed\nsuccessor. A proposed successor does not accept or admit itself (P6). The\nstops `hold`, `gap` and `refusal` take their core values under AC-007 by\ntheir causes.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+          "start_line": 883
+        }
+      ],
+      "key": "operational_contract_representation_limit",
+      "subject_key": "transformation_record",
+      "uncertainty": "Operational application, complete proof witnesses and source-defined typed field domains are described rather than instantiated by this finite schema."
+    },
+    {
+      "consequence": "Do not treat this authoring text or the selected predecessor digest as an issued identity of the candidate successor.",
+      "grounding": [
+        {
+          "end_line": 1266,
+          "quote": "Binding of this edition. The identity of this corpus's calculus is bound\nat its own release and nowhere earlier: the `AxiomaticCalculusBasis` for\nthis member is issued under the tier-2\n[RELEASE](RELEASE.md) member and under AC-020, after the release bytes exist, with\n`publication_basis` naming that release and this member's bytes in it and\n`derivation_basis` naming the predecessor cut and the derivation account\nof §1.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line": 1260
+        }
+      ],
+      "key": "release_basis_unissued",
+      "subject_key": "calculus_basis_identity",
+      "uncertainty": "No successor release URI, manifest, full member bytes or issued AxiomaticCalculusBasis instance is supplied; absolute predecessor principle references also remain unacquired."
+    },
+    {
+      "consequence": "Preserve support standing and external acquisition/qualification prerequisites without claiming a checked, sufficient or current executable task surface.",
+      "grounding": [
+        {
+          "end_line": 1339,
+          "quote": "An element of the\n   construction or assurance relations also keeps the kind of support\n   the interpretation records for it, one of the five that\n   [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)\n   distinguishes: a stated formula is not read as discharged, and an\n   externally assessed predicate keeps the source, scope and evidence\n   that establish it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line": 1333
+        }
+      ],
+      "key": "constraint_surface_external_support",
+      "subject_key": "task_constraint_surface",
+      "uncertainty": "The five formal-support kinds, approximation adequacy/end-to-end-bound definitions, ACTIVATION acquisition protocol and EVALUATION actual-use qualification are not fully supplied."
+    },
+    {
+      "consequence": "Treat conserved/tightened/new labels as authored comparison claims. Retain new refusal precedence, gap restriction and constraint surfaces as subject changes, not amendments to the workflow's published basis.",
+      "grounding": [
+        {
+          "end_line": 1479,
+          "quote": "New law in §9, with no rc.2 clause: Constraint surfaces, which states how\nan interpretation yields the constraint surface of a task; it states its\npurpose and material relation where it is written.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F11.%20Source%20dispositions",
+          "start_line": 1477
+        }
+      ],
+      "key": "calculus_ledger_comparison_limit",
+      "subject_key": "calculus_source_ledger",
+      "uncertainty": "The actual predecessor clauses are absent, so conservation, generalisation without loss and field-correction-not-law-change claims cannot be independently established."
+    },
+    {
+      "consequence": "No qualification map completeness or absent discriminator expectations can be inferred; the supplied cases' explicit expectations remain usable as source data only.",
+      "grounding": [
+        {
+          "end_line": 15,
+          "quote": "The common discriminators and their expected distinctions\nare owned by the specification that governs this corpus's construction,\n`specification/conformance/README.md` of the source project that\nconstructs it, which is not part of this package. §5 names each\ndiscriminator's situation and the sections and checks that exercise it; it\ndoes not restate the expected distinctions. §5 is therefore a\nqualification surface: a reviewer who qualifies this corpus acquires that\nspecification beside it, and no rule an adopting Product applies depends\non §5 (P6, P2).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line": 7
+        }
+      ],
+      "key": "conformance_external_specification",
+      "subject_key": "conformance_case_framework",
+      "uncertainty": "The governing specification/conformance/README.md, CONFORMANCE §§2–5, EVALUATION independent-assessment requirements and ACTIVATION refinement mappings are not supplied."
+    }
+  ]
+}

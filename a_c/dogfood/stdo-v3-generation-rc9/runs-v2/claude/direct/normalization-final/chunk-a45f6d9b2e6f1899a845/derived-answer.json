@@ -1,0 +1,1853 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "The single core result domain for performed evaluations: satisfied means the declared predicate holds on the exact basis; falsified means a declared counterexample defeats it; indeterminate means available admissible evidence cannot decide; out_of_frame means an undeclared material relation or capability is required; invalid_basis means the subject or basis cannot support evaluation. Non-performance is absence of a result, not a sixth value. Result standing concerns what a result establishes and differs from commitment standing.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 801,
+          "quote": "| `satisfied` | the declared predicate holds on the exact basis |\n| `falsified` | a declared counterexample defeats it |\n| `indeterminate` | the available admissible evidence cannot decide it |\n| `out_of_frame` | the evaluation requires an undeclared material relation or capability |\n| `invalid_basis` | the subject or basis cannot support the evaluation |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 797
+        }
+      ],
+      "key": "core_result_algebra",
+      "label": "Core result algebra"
+    },
+    {
+      "conditions": [],
+      "definition": "An owner-defined finer outcome domain, naming its question and mapping predicate, whose values each map to exactly one core value. Further refinement can split a parent value by cause while retaining the parent's core value and meaning ownership.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 865,
+          "quote": "Refinements. A member, profile or adopting Product that needs finer\noutcomes defines a refinement. The refinement names the question it\nanswers and the predicate its mapping is for, and maps every refined value\nto exactly one core value.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 862
+        }
+      ],
+      "key": "result_refinement",
+      "label": "Result refinement"
+    },
+    {
+      "conditions": [],
+      "definition": "Three separate result predicates: availability asserts that a step produced a candidate; assessment asserts that it meets declared criteria; acceptance asserts that the decision owner accepts it at its boundary.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 889,
+          "quote": "Availability, assessment and acceptance are separate results, each with its\nown predicate: that a step produced a candidate; that the candidate meets\nits declared criteria; and that the\n[decision owner](ACTIVATION.md#roles-and-delegation) accepts it at its\nboundary.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 885
+        }
+      ],
+      "key": "candidate_result_predicates",
+      "label": "Availability, assessment and acceptance"
+    },
+    {
+      "conditions": [],
+      "definition": "Combination into one result for a composite predicate, including component claims, decisions over evaluations, and outer contracts of composed steps. Its three distinct inputs are returned closed results, planned assessments lacking applicable closed results, and required coverage addressed by no planned assessment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1014,
+          "quote": "Conjunction combines results into one result for a composite predicate: a\nclaim made of component claims, a decision over several evaluations, or\nthe outer contract of composed steps. It is defined here once, over the\ncore. A member or profile that combines results applies this rule and\ndeclares only the choices it leaves open (P4a, P4b, P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1010
+        }
+      ],
+      "key": "result_conjunction",
+      "label": "Conjunction of results"
+    },
+    {
+      "conditions": [
+        "The relevant instance premises are a construction with intake-bound governing basis and material assumptions Γ, a declared case domain Ω, and a checker with declared observations and admitted evaluation relation."
+      ],
+      "definition": "The shared source owner for preservation, assertion, provenance, quantified-assurance, reuse and formal-representation obligations linking construction with supporting assertions, observations and evidence. Its family table distinguishes commitments, situation-specific premises, consequences, policy choices and their owners.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1141,
+          "quote": "The relations below connect construction to the assertions, observations\nand evidence that support claims about it. They are the shared owner for\nthe preservation, assertion, provenance, quantified-assurance, reuse and\nformal-representation obligations in this corpus; ACTIVATION §1, §4, §5 and §7, EVALUATION §1 and §3,\nASSURANCE §3, §10, §11 and §14, RELEASE §8 and §9, SPEC_METHOD §4 and\nthe a_c interpretation apply them and state no second relation (P6). They are law\ncarried from the common assurance requirement. A tenant chooses its\nrepresentation and execution within these obligations. The notation\nstates proof obligations; writing an implication does not discharge it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssurance%20relations",
+          "start_line": 1133
+        }
+      ],
+      "key": "assurance_relations",
+      "label": "Assurance relations"
+    },
+    {
+      "conditions": [],
+      "definition": "A construction binds starting state A and required outcome Z under governing basis and material assumptions Γ. For a sequence, X_i is the state or trace domain, F_i ⊆ X_i × X_(i+1) the declared transition relation, and P_i the property retained or established at boundary i. Z includes required effects and trace properties where material.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1189,
+          "quote": "For a sequence of transformations, let `X_i` be the state or trace domain\nat boundary i, `F_i ⊆ X_i × X_(i+1)` the declared transition relation, and\n`P_i` the property to retain or establish there. A claimed preservation\nstep has the form:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction",
+          "start_line": 1186
+        }
+      ],
+      "key": "construction_preservation",
+      "label": "Preservation through construction"
+    },
+    {
+      "conditions": [],
+      "definition": "For selected source obligation r, Q_r = interpret(r, Γ, Ω) is its required predicate over declared cases Ω. An assertion targets q_t and declares whether it expresses the full obligation, a necessary condition, a sufficient condition, or a member of a stated sufficient conjunction.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1236,
+          "quote": "For a selected source obligation r, let `Q_r = interpret(r, Γ, Ω)` be its\nrequired predicate over the declared domain Ω of cases. The interpretation\nretains the obligation's scope, conditions, exceptions and permitted\nalternatives. A source identifier or digest authenticates the selected\ntext; it does not prove the interpretation faithful (P1, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1232
+        }
+      ],
+      "key": "source_obligation_assertion",
+      "label": "Source obligation and assertion predicate"
+    },
+    {
+      "conditions": [],
+      "definition": "A checker has observation map π: Ω → O and admitted evaluation relation T ⊆ O × R, with R the core result algebra. A deterministic checker is a functional special case; human or probabilistic checkers may admit different conclusions for the same observations. sat and fal abbreviate judgments about q_t, not execution states.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1258,
+          "quote": "Let `π: Ω → O` describe the observations available to a checker and\n`T ⊆ O × R` its admitted evaluation relation, where R is the core result\nalgebra of Results above. A deterministic checker is a functional special\ncase. A human or probabilistic checker can admit different conclusions on\nthe same observations; a universal soundness claim covers all admitted\nconclusions, not a favourable selected run. `indeterminate` is the core\njudgment whose admissible evidence cannot decide the predicate (Results).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1252
+        }
+      ],
+      "key": "observation_checker",
+      "label": "Observation and admitted checker relation"
+    },
+    {
+      "conditions": [],
+      "definition": "Assertion provenance comprises owning obligation, interpretation, assumptions, derivation and shared dependencies. Execution provenance comprises actual checker, exact subject, applicable environment, inputs, observations and result. Authentication binds a returned assessment to producer, subject, basis and evidence and is a third, distinct matter.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1323,
+          "quote": "An expected result or acceptance predicate has assertion provenance: the\nowning obligation, its interpretation, assumptions, derivation and shared\ndependencies, which give it meaning. An execution has execution\nprovenance: the actual checker, exact subject, applicable environment,\ninputs, observations and result. Both are needed for the claims they\nsupport; execution records alone cannot establish that the expected\nanswer follows from the requirement. Authentication of a returned\nassessment, which binds a result to its producer, subject, basis and\nevidence ([EVALUATION §3](EVALUATION.md#3-independent-assessment)), is a\nthird thing and establishes neither provenance (P6, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance",
+          "start_line": 1314
+        }
+      ],
+      "key": "assurance_provenance",
+      "label": "Assertion provenance, execution provenance and authentication"
+    },
+    {
+      "conditions": [
+        "Compared constructions or assertions are independently justified within their stated scope."
+      ],
+      "definition": "Mutual assurance compares constructions or assertions derived along different paths from a common obligation. Requirement-derived assertions check applicable requirement conditions; refinement-derived assertions check more detailed obligations in the realisation. Acceptance and build-level tests are possible instances, not prescribed stage names or test classes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1312,
+          "quote": "Construction and assurance can follow different paths from a common\nobligation. For `requirement → refinement → realisation`, assertions\nderived from the requirement check its applicable conditions in the\nrealisation; assertions derived from the refinement check its more\ndetailed obligations there. Acceptance tests and build-level tests can\ninstantiate these paths\n([ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route)); the\nroles identify the selected sources and subject in this example and\nprescribe no stage names or test classes (P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance",
+          "start_line": 1304
+        }
+      ],
+      "key": "mutual_assurance",
+      "label": "Parallel derivation and mutual assurance"
+    },
+    {
+      "conditions": [
+        "Quantified assurance is claimed."
+      ],
+      "definition": "An assurance model over a specified population or uncertainty, prior information, likelihoods, shared causes and calibration limits. V denotes a specified violation event, E an evidence event, and M_i a check's miss of V under specified evaluation conditions. Probabilities concern the declared model and events, not automatic truth of the whole Product.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1370,
+          "quote": "Where quantified assurance is claimed, its model states the population or\nuncertainty being modelled, prior information, likelihoods, shared causes\nand calibration limits. For a specified violation event V and evidence\nevent E:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance",
+          "start_line": 1367
+        }
+      ],
+      "key": "quantified_assurance",
+      "label": "Quantified assurance"
+    },
+    {
+      "conditions": [],
+      "definition": "Change-sensitive assurance distinguishes assertion-justification dependencies from evidence-validity dependencies affecting behaviour, conclusion or applicability. Δ is a change in material facts or dependencies, including invalidated assumptions; I(Δ) conservatively covers changed facts and affected dependents; D*(t) covers transitive dependencies material to check t's assertion, execution and evidence use. Candidate reassessment selection is S_Δ = {t : D*(t) intersects I(Δ)}.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1425,
+          "quote": "S_Δ = { t : D*(t) intersects I(Δ) }.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1425
+        },
+        {
+          "end_line": 1416,
+          "quote": "Assertion justification and evidence validity are related but distinct\ndependency relations. The former explains why a check expresses an\nobligation. The latter identifies what can affect the check's behaviour,\nconclusion or applicability: implementation, shared libraries, data,\ninstruments, environments and governing assumptions. A\nrequirements-to-test link alone is not a complete impact model (P3, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1411
+        }
+      ],
+      "key": "evidence_reuse",
+      "label": "Change impact and evidence reuse"
+    },
+    {
+      "conditions": [],
+      "definition": "The candidate's a_c interpretation and projected views represent material obligations and dependencies while distinguishing stated formula, discharged mathematical argument, mechanically checked structure, externally assessed predicate, and execution evidence. This is a representation of support kinds, not evidence that any obligation has been discharged.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1504,
+          "quote": "views that project it. It distinguishes five kinds of support for a statement: a\nstated formula, a discharged mathematical argument, mechanically checked\nstructure, an externally assessed predicate, and evidence from execution.\nAn external predicate retains the source, scope and evidence required to\nestablish it; an arbitrary truth label does not discharge the obligation.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FFormal%20representation",
+          "start_line": 1500
+        }
+      ],
+      "key": "formal_support",
+      "label": "Formal representation and kinds of support"
+    },
+    {
+      "conditions": [],
+      "definition": "Claims carried for falsification, explicitly not law: categorical equivalence of 𝒜 and ℐ under some reformulation; universal algorithmic capture of meaning; the statistical Markov boundary with candidate status; traversal composition laws of any runtime.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1536,
+          "quote": "Not law; carried for falsification: categorical equivalence of 𝒜 and ℐ under\nsome reformulation; universal algorithmic capture of meaning; the statistical\nMarkov boundary (candidate status under\n[WORLD_MODEL §4](WORLD_MODEL.md#epistemic-status); provenance\n[WORLD_MODEL_METHOD](stdo://releases/v2.5.1-rc.2/standards/WORLD_MODEL_METHOD.md#epistemic-status-of-the-construct));\ntraversal composition laws of any runtime.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F5.%20Hypotheses",
+          "start_line": 1531
+        }
+      ],
+      "key": "foundational_hypotheses",
+      "label": "Foundational hypotheses"
+    },
+    {
+      "conditions": [],
+      "definition": "The subject's historical disposition register, not this interpretation's dispositions. It claims conservation and gives restatement loci: AC position/provenance/scope → AXIOMATIC_CALCULUS §1; signature and five typed records → §§2–3; AC-001 through AC-014 → §4; traversals, AC-015–016 → §5; interpretation/models, AC-017–019 → §6; subject/carrier boundaries, AC-020 → §7; exact identity → §8; application/import/specialization/exclusion/conformance → §§9–10. RF definitions → FOUNDATIONS §2; RF-001–017 and associated frame machinery → REFERENCE_FRAME; engagement and qualifications → ACTIVATION §§1–4,7 and EVALUATION §7. UP-001,004,008,022 are consumed by EVALUATION, with UP-004 restated in IDENTITY §6; UP-013 → SPEC_METHOD §3; UP-014 → ACTIVATION §6 and SPEC_METHOD §8; UP-005 → DESIGN_MODULE §6 and ACTIVATION §6; UP-015 → RELEASE §9 and EVALUATION §5; UP-016,018,019,023 → DESIGN_MODULE §§5,7 with general admission/intake/shared-machinery owners; UP-017 → DESIGN_MODULE §5 and ACTIVATION §§1,4; UP-021 → ACTIVATION §4; UP-020 → ACTIVATION §§1,3,5,7. Release identities → FOUNDATIONS §2 and RELEASE §2; scoped identity → FOUNDATIONS Object and IDENTITY §2. SM work boundary → FOUNDATIONS §2/§3 P0; recursive taxonomy → §2; semantic import → §2 Imports and PRODUCT_DEFINITION §5; ambiguity → SPEC_METHOD §5 and ACTIVATION §§3–4. ODD, DESIGN_MODULE, UX and WORLD_MODEL profile laws remain in their respective members, indexed by PROFILES §§2–5, with nothing imported into tier 1.",
+      "exceptions": [
+        "AC Fundamental Laws and RF #definitions are classified by the source as headings with no claim text; their children are handled separately."
+      ],
+      "grounding": [
+        {
+          "end_line": 1546,
+          "quote": "| AC-007 | conserved; restated in AXIOMATIC_CALCULUS §4 as a law over constraints using the core result algebra of §4 Results, where its no-coercion rule is restated; AXIOMATIC_CALCULUS AC-007 maps the outcomes of a constraint's judgment into §4 Results value by value for a named predicate, and the outcomes of the member's operations by cause |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions",
+          "start_line": 1546
+        },
+        {
+          "end_line": 1573,
+          "quote": "| ODD, DESIGN_MODULE, UX, WORLD_MODEL profile law | conserved; restated in full in the ODD, DESIGN_MODULE, UX and WORLD_MODEL members, which dispose their rows and are indexed in PROFILES §2 to §5; nothing imported into tier 1. P0 names among its sources the refinement of ACTIVATION §4, which generalises ODD's graph functions |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions",
+          "start_line": 1573
+        }
+      ],
+      "key": "source_disposition_register",
+      "label": "Source's predecessor-clause disposition register"
+    },
+    {
+      "conditions": [],
+      "definition": "A non-deciding locator guide from indexed spellings to the current corpus clauses that declare bounded contexts and own concepts. It realises the glossary named by PRODUCT_DEFINITION §5 and adds no law. Routes written rc.2 #anchor point into stdo://releases/v2.5.1-rc.2/standards/GLOSSARY_GUIDE.md solely as provenance, not an application dependency.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 10,
+          "quote": "Guide. A non-deciding locator index from indexed spellings to the clauses\nof this corpus that declare their bounded contexts and own their concepts.\nIt realises the glossary that\n[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)\nnames and adds nothing to that law. Every clause names the principle that\nrequires it (P0 to P6, FOUNDATIONS §3). A route written `rc.2 #anchor` is\ninto `stdo://releases/v2.5.1-rc.2/standards/GLOSSARY_GUIDE.md` and is\nprovenance only; nothing here depends on that cut to be applied.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY",
+          "start_line": 3
+        }
+      ],
+      "key": "glossary_guide",
+      "label": "Glossary guide"
+    },
+    {
+      "conditions": [],
+      "definition": "An index row normally records spelling, the bounded-context identity declared by the cited owner, and the exact owning concept clause. The §17 alternative records a multiply-used label, a locator for that occurrence, and its owner. The owning clause plus selected complete basis identifies candidate meaning; the occurrence supplies governed scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 29,
+          "quote": "Each row records an indexed spelling, the bounded-context identity\ndeclared by the cited owning clause, and the exact owning concept clause.\n§17 uses a second row form for a label that several clauses use: the\nlabel, a locator naming where that use occurs, and the owning clause. The\nlocator only says where to look; it defines nothing and declares no\ncontext, which the owning clause supplies;\n§2 states how a row records a concept that a context holds by import, and\na concept whose member declares no bounded context for it.\nThe owning clause together with the selected basis identifies the candidate meaning;\nthe occurrence being resolved still supplies its own governed scope (P1,",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F1.%20Index%20contract",
+          "start_line": 20
+        }
+      ],
+      "key": "glossary_row",
+      "label": "Glossary row"
+    },
+    {
+      "conditions": [],
+      "definition": "A locator points to a current-corpus defining section. Its relation clause can identify an import declaration or owner relation, or merely locate another relation-bearing clause. Concepts outside every bounded context declared by their member use that member as source context and are indexed that way in §16. The index itself defines no relation or context.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 64,
+          "quote": "A concept defined outside every bounded context its member declares has\nthat member as its source context\n([FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members)).\n§16 indexes those concepts with the member in place of a bounded-context\nidentity. Such a row declares no context, and a context holds one of those\nconcepts only by its own import (P1, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F2.%20Locator%20law",
+          "start_line": 59
+        }
+      ],
+      "key": "glossary_locator",
+      "label": "Glossary locator and relation clause"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:method-identity, declared by SPEC_METHOD.md#method-identity. STDO and the O pillar symbol both point to that owning clause; O additionally locates ODD.md#1-position as a relation clause. These are indexed uses, not definitions or an assertion that the two terms are identical.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 86,
+          "quote": "| `STDO` | `urn:stdo:bounded-context:method-identity` | [`SPEC_METHOD.md#method-identity`](SPEC_METHOD.md#method-identity) | none |\n| `O` pillar symbol | `urn:stdo:bounded-context:method-identity` | [`SPEC_METHOD.md#method-identity`](SPEC_METHOD.md#method-identity) | [`ODD.md#1-position`](ODD.md#1-position) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F3.%20Method%20identity",
+          "start_line": 85
+        }
+      ],
+      "key": "method_identity_locators",
+      "label": "Method identity locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:axiomatic-calculus, declared at AXIOMATIC_CALCULUS.md#1-position. Within that file: a_c/Axiomatic Calculus/STDO Axiomatic Calculus for Governed Symbolic Systems → #1-position; a_c Signature and a_c Model → #2-signature, Model also relates to #6-interpretation-and-models; Semantic Object, Typed Relation, Constraint, Latitude and Residual → their same-named anchors; Judgment → #ac-014-judgment-separation; Functor Kind/F_D/F_P/F_H → #5-traversals-and-functor-kinds; Material Closure → #ac-010-material-closure; Projection → #ac-011-projection; Interpretation → #6-interpretation-and-models; Axiomatic Calculus Basis → #8-calculus-identity. Operation outcomes declared result, hold, gap, refusal(constraint), refusal(basis) are located at #ac-007-constraint-and-refusal with relation routes to traversals and FOUNDATIONS.md#results. The index supplies no outcome mappings or operational definitions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 95,
+          "quote": "| `a_c`; `Axiomatic Calculus`; `STDO Axiomatic Calculus for Governed Symbolic Systems` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#1-position`](AXIOMATIC_CALCULUS.md#1-position) | none |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F4.%20Axiomatic%20calculus",
+          "start_line": 95
+        },
+        {
+          "end_line": 109,
+          "quote": "| operation outcome: declared result; `hold`; `gap`; `refusal(constraint)`; `refusal(basis)` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds); [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F4.%20Axiomatic%20calculus",
+          "start_line": 109
+        }
+      ],
+      "key": "axiomatic_calculus_locators",
+      "label": "Axiomatic calculus locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:semantic-resolution, declared by PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution. That clause owns the indexed Term, Concept Reference, Bounded Context, Semantic Address, Semantic Translation, Semantic Equivalence and Semantic Disambiguation. Semantic Import instead points to FOUNDATIONS.md#imports-between-members as owner, with PRODUCT_DEFINITION §5 as its application between bounded contexts.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 123,
+          "quote": "| `Semantic Import` | `urn:stdo:bounded-context:semantic-resolution` | [`FOUNDATIONS.md#imports-between-members`](FOUNDATIONS.md#imports-between-members) | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution), which applies the import between bounded contexts |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F5.%20Semantic%20resolution",
+          "start_line": 123
+        }
+      ],
+      "key": "semantic_resolution_locators",
+      "label": "Semantic resolution locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:product-definition-routing, declared by PRODUCT_DEFINITION §1. In PRODUCT_DEFINITION.md, #1-overlay-and-layout-independence owns STDO Product Definition Overlay, Definition Root, Definition Label and Product-Definition Identity; #3-constitutional-set-sufficiency owns Constitutional Set; #7-collective-reference-frame-basis owns Project Reference-Frame Basis and Agent Frame Activation, relating respectively to REFERENCE_FRAME #4-frame-set-declaration and #11-the-activation-packet; #4-shared-installed-release-basis-and-toolchain-manager owns Installed Release Basis, Adoption Plan, Fleet Adoption Plan and STDO Toolchain Manager. Adoption Plan also points to RELEASE.md#4-selector-and-consumer-adoption.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 144,
+          "quote": "| `Adoption Plan` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager`](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager) | [`RELEASE.md#4-selector-and-consumer-adoption`](RELEASE.md#4-selector-and-consumer-adoption) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F6.%20Product-definition%20routing",
+          "start_line": 144
+        }
+      ],
+      "key": "product_definition_routing_locators",
+      "label": "Product-definition routing locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:release-publication, declared by RELEASE.md#1-context-and-position. RELEASE.md#2-release-identities owns indexed Project Release Namespace, Project Subtree, Candidate Source, RC Branch, Immutable RC Cut, Version-Line Selector and Release Branch. Project Subtree additionally locates #project-subtree-release-identity; Candidate Source, Immutable RC Cut and Version-Line Selector additionally locate FOUNDATIONS.md#product-lineage-objects.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 157,
+          "quote": "| `Candidate Source` | `urn:stdo:bounded-context:release-publication` | [`RELEASE.md#2-release-identities`](RELEASE.md#2-release-identities) | [`FOUNDATIONS.md#product-lineage-objects`](FOUNDATIONS.md#product-lineage-objects) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F7.%20Release%20publication",
+          "start_line": 157
+        }
+      ],
+      "key": "release_publication_locators",
+      "label": "Release publication locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:reference-frame-evaluation, declared by REFERENCE_FRAME §1. Its cited import declaration holds owner-retained FOUNDATIONS frame/ontology objects, authority kinds, disjointness, frame tuple, results and conjunction; ACTIVATION steps, refinements and closed results; and EVALUATION qualification. FOUNDATIONS #frame-objects owns Reference Frame/Frame, Activated Frame, Evaluation, Evaluation Family, Workspace, Material-Relation Manifold, Coordinate, Topology, Capability Envelope, Frame Set, Active Frame Configuration, Lens and Role/Persona/Abstraction/Component; #the-frame-tuple owns Frame Tuple; #authority-kinds owns Actor Identity; #results owns Result Algebra, the five core values, non-performance and refinement/parent/child rules; #conjunction-of-results owns conjunction, declared decision rule and composition of results. REFERENCE_FRAME owns Frame Declaration (#minimal-frame-declaration), Frame-Set Declaration (#4-frame-set-declaration), Activation Packet (#11-the-activation-packet), Engagement Atom/Semantic Atom (#engagement-atom-and-semantic-atom), Communication (#rf-009-no-assumed-hierarchy), method-function outcomes (#5-method-functions), and Coverage Ledger/statuses (#coverage-ledger). ACTIVATION owns size measurement (§2), admission/activation, construction availability, disposition, ambiguity outcomes, effects and Closed Result (§7). EXECUTIVE_BASELINE #11-derived-generic-specialist-frame-set owns the Product and Owner specialist frame families. Additional relation routes locate PRODUCT_DEFINITION §7, SPEC_METHOD §11 and ambiguity governance, frame declaration/activation/translation/result laws, ACTIVATION configuration and step, and AXIOMATIC_CALCULUS AC-007.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 175,
+          "quote": "holds in the context the frame objects, ontology objects, authority kinds,\ndisjointness and frame tuple of FOUNDATIONS §2, the core results and their\nconjunction of FOUNDATIONS §4, the step with its result refinements and\nthe closed result of ACTIVATION §1 to §3 and §7, and the qualification of\nEVALUATION §7, each kept by its owner. A row for an imported concept cites\nits owning section as owning concept clause and the import declaration as\nrelation clause (§2; P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation",
+          "start_line": 169
+        }
+      ],
+      "key": "reference_frame_locators",
+      "label": "Reference-frame evaluation locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Indexed outcome vocabularies in the reference-frame context: activate has activated_frame and activation_refusal(capability/authority/basis); conjoin has decision(holds), decision(fails), conflict, indeterminate; translate has translated_value, declared_loss and refusal(condition/authority/basis). Coverage statuses are covered, separately_covered, excluded_by_authority, conditionally_covered, conflicted, uncovered, unknown. Admission/activation has activated, admission_refused(authority/basis), closure_unresolved; construction availability has candidate_ready, refused, incomplete, re_entry_requested(authority/basis); disposition has accept, local_repair, re_enter, reject; ambiguity has resolved, carried, escalated, blocked; effects have completed, not_effected, completion_unknown. These are located domain vocabularies, not interchangeable states or newly inferred mappings to the core.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 192,
+          "quote": "| `activate` outcome: `activated_frame`; `activation_refusal(capability)`; `activation_refusal(authority)`; `activation_refusal(basis)` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |\n| `conjoin` outcome: `decision(holds)`; `decision(fails)`; `conflict`; `indeterminate` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`FOUNDATIONS.md#conjunction-of-results`](FOUNDATIONS.md#conjunction-of-results) |\n| `translate` outcome: `translated_value`; `declared_loss`; `refusal(condition)`; `refusal(authority)`; `refusal(basis)` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`REFERENCE_FRAME.md#evidence-or-coordinate-translation`](REFERENCE_FRAME.md#evidence-or-coordinate-translation) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation",
+          "start_line": 190
+        },
+        {
+          "end_line": 205,
+          "quote": "| effects: `completed`; `not_effected`; `completion_unknown` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#effects`](ACTIVATION.md#effects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation",
+          "start_line": 205
+        }
+      ],
+      "key": "reference_frame_outcome_vocabulary",
+      "label": "Indexed reference-frame outcome domains"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:build-tenancy, declared by PRODUCT_DEFINITION.md#8-what-how-and-work-carriers. SPEC_METHOD.md#11-build-tenant-binding owns Build Tenant, Build-Tenant Binding, Calculus Binding, Execution Binding, Requirements Calculus, Computational Calculus, Execution Environment, Author Identity and Operation Kind; PRODUCT_DEFINITION §8 is their relation clause, with FOUNDATIONS #authority-kinds additionally cited for Author Identity/Operation Kind. PRODUCT_DEFINITION §8 owns Build Tenancy/Multi-Build-Tenancy, Tenant Registry and Common Build-Tenant Surface. TICKETS.md#multi-build-tenant-independence owns Multi-Build-Tenant Work Item, related through PRODUCT_DEFINITION §8.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 217,
+          "quote": "(P3). §8 names the build tenant, the realisation relation and the terms of\nthe build-tenant binding as concepts of the context owned in SPEC_METHOD\n§11, and the multi-build-tenant work item as owned in TICKETS §4; their rows\ncite those owners and name §8 as relation clause (§2; P1, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F9.%20Build%20tenancy",
+          "start_line": 214
+        }
+      ],
+      "key": "build_tenancy_locators",
+      "label": "Build tenancy locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:recursive-product-taxonomy, declared and owned by FOUNDATIONS.md#product-lineage-objects. Indexed terms are Substrate, Development Product, Source Project, Release Cut, Product, Install, Artifact and Product Definition. Additional relation clauses are WORLD_MODEL.md#builder-project-specialisation for Source Project, RELEASE.md#2-release-identities for Release Cut, and PRODUCT_DEFINITION.md#1-overlay-and-layout-independence for Product Definition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 241,
+          "quote": "| `Source Project` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`FOUNDATIONS.md#product-lineage-objects`](FOUNDATIONS.md#product-lineage-objects) | [`WORLD_MODEL.md#builder-project-specialisation`](WORLD_MODEL.md#builder-project-specialisation) |\n| `Release Cut` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`FOUNDATIONS.md#product-lineage-objects`](FOUNDATIONS.md#product-lineage-objects) | [`RELEASE.md#2-release-identities`](RELEASE.md#2-release-identities) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F10.%20Recursive%20product",
+          "start_line": 240
+        }
+      ],
+      "key": "recursive_product_locators",
+      "label": "Recursive product locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:product-assurance, declared by ASSURANCE.md#2-testing-strategy-taxonomy. That clause owns Design/Module Conformance Test, UAT/Acceptance Test, Sandbox Test, Harnessed Sandbox UAT and Live Sandbox UAT. Unit Test instead points to ASSURANCE.md#15-module-derived-unit-tests, with DESIGN_MODULE.md#9-module-taxonomy as relation clause.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 256,
+          "quote": "| `Unit Test` | `urn:stdo:bounded-context:product-assurance` | [`ASSURANCE.md#15-module-derived-unit-tests`](ASSURANCE.md#15-module-derived-unit-tests) | [`DESIGN_MODULE.md#9-module-taxonomy`](DESIGN_MODULE.md#9-module-taxonomy) |\n| `UAT`; `Acceptance Test` | `urn:stdo:bounded-context:product-assurance` | [`ASSURANCE.md#2-testing-strategy-taxonomy`](ASSURANCE.md#2-testing-strategy-taxonomy) | none |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F11.%20Product%20assurance",
+          "start_line": 255
+        }
+      ],
+      "key": "product_assurance_locators",
+      "label": "Product assurance locators"
+    },
+    {
+      "conditions": [],
+      "definition": "Locator group for urn:stdo:bounded-context:ambiguity-governance. SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle declares the context and owns both Lawful Probabilistic Processing and Human Adjudication. Neither row supplies a relation clause or operational permission.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 270,
+          "quote": "| `Lawful Probabilistic Processing` | `urn:stdo:bounded-context:ambiguity-governance` | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) | none |\n| `Human Adjudication` | `urn:stdo:bounded-context:ambiguity-governance` | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) | none |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F12.%20Ambiguity%20governance",
+          "start_line": 269
+        }
+      ],
+      "key": "ambiguity_governance_locators",
+      "label": "Ambiguity governance locators"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "core_result_algebra"
+      ],
+      "conditions": [
+        "An evaluation was performed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 816,
+          "quote": "Recording. A result records its core value together with the predicate\nevaluated and the original domain outcome, which is the refined value\nwhere a refinement produced it. A mapping into the core never owns domain\nmeaning: the member, profile or adopting Product that defines the refined\nvalue keeps it, and a consumer that needs the domain distinction reads the\ndomain outcome, never the core value alone (P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 811
+        }
+      ],
+      "key": "result_totality_and_recording",
+      "statement": "Every performed evaluation returns exactly one core value directly or through refinement. Constraint, judgment, frame, stop, work-step and effect results use this same core or a mapped refinement. Each result records its predicate and original domain outcome beside its core value. Domain meaning remains with its definer; consumers needing a domain distinction must read that outcome. No combination may hide failure, undecidability, non-performance or uncertain effects behind success.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "core_result_algebra",
+        "result_refinement"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 826,
+          "quote": "Only\n`satisfied` establishes the predicate. `falsified` establishes that the\npredicate fails and names the counterexample. `indeterminate`,\n`out_of_frame` and `invalid_basis` establish neither, and each names what\nwould decide: the evidence, the missing relation or capability with its\nowner where the subject gives one, or the basis repair. By support for the\npredicate, `satisfied` stands above each other value, and the other four\nare not ordered among themselves.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 819
+        },
+        {
+          "end_line": 838,
+          "quote": "- an effect whose completion is unknown never maps to no effect or to\n  completed.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 837
+        }
+      ],
+      "key": "standing_and_noncoercion",
+      "statement": "Only satisfied establishes its predicate; falsified establishes failure and names the counterexample. The other three establish neither and name deciding evidence, missing relation/capability and its owner where supplied, or basis repair. Satisfied is above the other four only in support for the predicate; those four have no mutual standing order. No refinement or mapping raises standing: failure or undecidability cannot become success, unknown effect completion cannot become no effect or completed. Failed, indeterminate, out-of-frame, out-of-scope and invalid-basis outcomes keep their declared-algebra outcomes rather than becoming satisfied. An unperformed required or planned evaluation has no closed result, maps to no core value, and cannot be reported as performed; missing results enter conjunction as the appropriate gap.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_refinement"
+      ],
+      "conditions": [
+        "A refinement or further cause-based split is defined."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 879,
+          "quote": "A further\nrefinement, by a member, profile, project or adopting Product, may split a\nrefined value by cause. The parent-value rule governs every such split:\neach child value names its parent value and its cause and keeps its\nparent's core value; a child that needs a different core value needs a\ndifferent parent value, which only the owner of the parent declares; and\nno child takes `satisfied` from a parent that is not `satisfied`. No\nfurther refinement raises a result's standing (P5, P6, P1). Purpose and\nmaterial relation: a consumer that reads a parent value reads the same\ncore value from each of its children, so a split by cause adds a domain\ndistinction and never changes what the parent establishes (P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 869
+        }
+      ],
+      "key": "refinement_mapping_requirements",
+      "statement": "Name the refinement's question and mapping predicate, map every value exactly once, add no core value, and keep indeterminate, out_of_frame and invalid_basis explicit. If cause would determine different core values, include cause in the refined value. Every child names parent and cause and preserves the parent's core value; changing that value requires a different parent declared only by the parent owner. Each defining member, profile or adopting Product states its mapping locally; ACTIVATION §3 is identified as owner of admission, activation and step refinements.",
+      "uncertainty": "The referenced domain mappings are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "core_result_algebra"
+      ],
+      "conditions": [
+        "Classifying an evaluation against the activated frame's declarations and the step's exercised capabilities."
+      ],
+      "exceptions": [
+        "A claim can simultaneously have lawful out_of_frame and indeterminate grounds; the returned result names its chosen value and ground.",
+        "Failure to exercise a required declared capability does not prevent a result supported by a sufficient evaluation or applicable judgment without that capability."
+      ],
+      "grounding": [
+        {
+          "end_line": 919,
+          "quote": "Where the\n  claim also depends on an undeclared relation or capability,\n  `out_of_frame` and `indeterminate` each have a lawful ground; the result\n  names the value it returns and that ground, and this boundary excludes\n  neither (P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 915
+        },
+        {
+          "end_line": 939,
+          "quote": "The evaluation's result and the step's stop state answer different\n  questions, so the step's stop value never becomes the evaluation's\n  result.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 937
+        }
+      ],
+      "key": "frame_evidence_nonperformance_boundary",
+      "statement": "Out_of_frame is grounded in a required undeclared material relation/capability, independently of exercise; it names the missing item, supplied owner and reconfiguration pressure. A result-material undefined term is such an undeclared relation because its meaning can alter the result without entering through a declared input. Indeterminate names the evidence needed to decide. An unexercised declared capability has no value of its own: sufficient evaluation or applicable judgment can still return a closed result with evidence, verdict and uncertainty, including falsification by A in A-and-B. Otherwise the evaluation is unperformed, construction availability carries incomplete, and work state carries the unexercised capability as residual. In either case unexercised B has no result and remains a planned-assessment gap; any known failure A survives. Step stop state never substitutes for evaluation result.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "candidate_result_predicates"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 891,
+          "quote": "A step having produced a candidate never maps to the candidate's\nfitness or acceptance, and acceptance is never inferred from a successful\nstep",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 889
+        }
+      ],
+      "key": "candidate_predicate_separation",
+      "statement": "Candidate production establishes neither fitness nor acceptance. Availability, assessment and owner disposition remain distinct even when a disposition consumes the first two. A successful step, decision(holds), passing matrix, produced pack or work-result value does not by itself establish the separate assessment, acceptance or verdict. Acceptance boundaries and accepting authority belong to the referenced decision owner.",
+      "uncertainty": "The owner-specific acceptance and disposition rules are external to the supplied sections."
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1037,
+          "quote": "Gaps. A conjunction with any item in the second or third input is never\n`satisfied`. Its record names which kind of gap it has, not performed,\nuncovered or both, and each item. An uncovered obligation is never\nreported as satisfied or as an omitted planned assessment; a planned\nassessment without a closed result is never reported as uncovered or as an\n`indeterminate` component.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1032
+        }
+      ],
+      "key": "conjunction_inputs_and_gaps",
+      "statement": "Keep returned closed results with predicate/domain outcome separate from planned assessments without applicable closed results and from uncovered obligations R minus C. The second input includes unperformed, absent, stale, wrong-subject, wrong-basis or claim-incapable results; the third is required coverage addressed by no plan. Either gap prevents satisfied. Record each item and whether its kind is not performed, uncovered or both; never turn uncovered obligations into satisfied or omitted planned assessments, nor missing planned results into uncovered or indeterminate components.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction"
+      ],
+      "conditions": [
+        "Applicability of a held or newly performed result is assessed against the component basis required by the composite."
+      ],
+      "exceptions": [
+        "A stale, advanced, ambiguous or mismatched evaluation may be reactivated on the current basis instead of returning invalid_basis."
+      ],
+      "grounding": [
+        {
+          "end_line": 1056,
+          "quote": "- a component whose only held result is stale has no closed result\n  applicable to the composite: on the basis the composite requires, its\n  evaluation was not performed. It is a planned assessment without a\n  closed result, in the second input, and a gap. Its stale value is\n  neither counted as a returned result nor relabelled `invalid_basis` for\n  the composite, and it stays in the record with its own basis;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1051
+        }
+      ],
+      "key": "stale_result_applicability",
+      "statement": "An evaluation performed on an unsupported stale, advanced, ambiguous or mismatched subject/basis returns invalid_basis for its own predicate, and that returned value is retained. A component held only on another or superseded basis has no applicable evaluation on the required basis: it is a gap, with its stale result recorded on the original basis, neither counted nor relabelled invalid_basis. Stale satisfied never supports the composite. Basis disagreement concerns only returned results individually bound to required component bases that fail a declared agreement or coherent-join relation. Do not answer one stale component both as a gap and invalid_basis; the composite has one reported value.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction"
+      ],
+      "conditions": [
+        "Results or conjunctions are joined."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1078,
+          "quote": "Survival. Every known failure (a `falsified` result with its\ncounterexample), every planned assessment without a closed result and\nevery uncovered obligation is carried with the composite and survives every\njoin: combining conjunctions takes the union of known failures and of\nplanned assessments without a closed result, and recomputes uncovered\ncoverage over the combined obligations. A known failure and a gap of\neither kind survive every join. Common agreement among contributors\ncannot discard a constraint or a material counterexample that only one\ncontributor found. A missing, wrong-subject, conflicted or indeterminate\nmandatory result stays unresolved under the declared rule, and aggregate\nsatisfied status cannot replace it (P4b, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1068
+        }
+      ],
+      "key": "join_survival_and_predicates",
+      "statement": "Carry every known falsification with counterexample, planned-assessment gap and uncovered obligation through every join. Union known failures and missing planned assessments and recompute uncovered coverage over combined obligations. Agreement cannot discard a constraint or a material counterexample found by one contributor. Missing, wrong-subject, conflicted or indeterminate mandatory results remain unresolved and cannot be replaced by aggregate satisfied status. Every component keeps its predicate and domain outcome; uncertain effects, failures and undecided claims remain distinct, and satisfied for one predicate never counts for another.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1105,
+          "quote": "Where\nevery mandatory result",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1104
+        }
+      ],
+      "key": "conjunction_reported_value",
+      "statement": "Satisfied is possible only with every mandatory result satisfied on valid applicable evidence, agreeing declared basis relations and no gaps; a material counterexample to a mandatory constraint also precludes success. If a mandatory result is non-satisfied, the declared rule chooses a non-satisfied value from returned values; there is no universal order. If every mandatory returned result is satisfied but declared basis relations disagree, report invalid_basis and retain gaps by kind. If every mandatory returned result is satisfied, bases agree and a gap remains, report indeterminate for the composite itself, retaining gap kinds without converting them to component results. Retain every nonmandatory falsified result with its predicate. With all mandatory results satisfied, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies the composite whoever found it; absent such a counterexample, use the declared rule over mandatory results.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1118,
+          "quote": "The declared rule. A conjunction declares which results are mandatory; how\nconflict and indeterminacy are handled; which basis relations must agree,\nresults on different bases combining only under a declared coherent\ncomposite basis (§2, Basis); which decision authority owns the\nconjunction; how results that are not mandatory count; and whether any\nresult may veto or defer the decision.\nConjunction does not transfer the semantic authority of a contributing\nevaluation (P6, P4a).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1111
+        }
+      ],
+      "key": "declared_conjunction_rule",
+      "statement": "Declare mandatory results, handling of conflict and indeterminacy, required basis relations, owning decision authority, treatment of nonmandatory results, and any veto or deferral. Different bases combine only under a declared coherent composite basis. Conjunction transfers no contributor's semantic authority. A member or profile may declare only the choices the common rule leaves open.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "result_conjunction",
+        "construction_preservation"
+      ],
+      "conditions": [
+        "Steps are composed under typed composition."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1125,
+          "quote": "Composition of results. The result of composed steps for the outer\npredicate is the conjunction of the steps' results, with the outer\ncontract's obligations as the required coverage. That each step returned\n`satisfied` supports the outer predicate only where the refinement's\npremises hold ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement),\nRefinement).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1120
+        },
+        {
+          "end_line": 967,
+          "quote": "composed steps exist only under typed composition; the composite carries both steps' step-produced facts, and its result for the outer predicate is the conjunction over the outer contract's obligations",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 967
+        }
+      ],
+      "key": "composed_result_obligations",
+      "statement": "Typed step composition requires compatible preconditions, effects, results and authority, retains both steps' produced facts, and uses the outer contract's obligations as required coverage for conjunction. All steps being satisfied supports the outer predicate only under the applicable refinement premises. Combining frame results need not compose frames or establish a categorical join; required composition laws must be stated.",
+      "uncertainty": "ACTIVATION refinement and RF-010 conditions are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "core_result_algebra",
+        "construction_preservation",
+        "formal_support"
+      ],
+      "conditions": [
+        "The relevant result-family situation applies."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 962,
+          "quote": "for an evaluation that depends on a concept imported from another member, a missing source meaning, adoption or authority binding is a relation the frame does not declare, and a changed member or basis whose applicability is not re-established cannot support the evaluation",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 962
+        },
+        {
+          "end_line": 972,
+          "quote": "a categorical claim is established only with its demonstration, and without it is a hypothesis",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 972
+        }
+      ],
+      "key": "result_family_auxiliary_laws",
+      "statement": "For imported concepts, missing source meaning, adoption or authority binding grounds out_of_frame; changed member/basis applicability not re-established cannot support evaluation. Every transformation records preserved, introduced and removed material, external witnesses and residuals; no fact is lost unrecorded. A reference substitutes for a body only when it supports the same consuming decision; shortfall is a residual, never success, and carrier/budget limits cannot trim required members. Values differ lawfully only through a declared relation, not preference, probabilistic choice or human presence. Similar computation can propose shared machinery but establishes no identity or authority; each instance retains responsibility and binding. Categorical claims require demonstrations or remain hypotheses. These are subject-stated laws, not executed transformations or established proofs here.",
+      "uncertainty": "The detailed transformation fields, categorical demonstration requirements, import declarations and accepted-design conditions reside in referenced sections outside the supplied text."
+    },
+    {
+      "applies_to_keys": [
+        "core_result_algebra",
+        "result_conjunction",
+        "candidate_result_predicates"
+      ],
+      "conditions": [
+        "A cited consumer applies a Results family rule."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1006,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 1005
+        },
+        {
+          "end_line": 994,
+          "quote": "where a refusal keeps its predicate and `refusal(basis)` is a closed result, not a gap",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 994
+        }
+      ],
+      "key": "result_consumer_boundaries",
+      "statement": "The named consumer loci apply owned rules without adding decisions. RF-012, AC-007 and review results apply the core and add only mapped refinements. Consumers preserve local vocabulary, residuals, re-entry law, classifications and predicates beside core values, including not-applicable versus meeting-an-axiom distinctions. Unrun cases on the current revision, clean skips, unresolved release dispositions, unevaluated applicable axioms and unrun verification have no result. Unselected claims and uncovered ledger rows are uncovered coverage, not falsified components. refusal(basis) is a closed result, not a gap; partial_effect residuals survive joins. A failed run falsifies only that run's predicate. A stale held result is a gap, whereas a performed stale-tuple audit can return invalid_basis for its own predicate. Work completion requires every applicable obligation; the cited usability claim requires all four results and explicit conjunction. A contraction records total projection-to-accepted-atom mapping; intentional omission/flattening declares accepted loss and a failure condition. Applicable equivalence/functor/structure-preservation claims require their demonstrations.",
+      "uncertainty": "Consumer-specific definitions, the identity of the four usability results, and demonstration criteria are external; their asserted application roles are retained without reconstructing those bodies."
+    },
+    {
+      "applies_to_keys": [
+        "assurance_relations"
+      ],
+      "conditions": [
+        "A family rule's stated instance premises apply."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1149,
+          "quote": "Its instance premises are: (a) a construction\nwith the governing basis bound at intake under ACTIVATION §1 and the\nmaterial assumptions, together written Γ here; (b) a declared domain Ω of cases, each with the inputs,\nbehaviour and environment material to an obligation; (c) a checker with\ndeclared observations and an admitted evaluation relation. They are\nconditions of the situations the family governs, not commitments.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssurance%20relations",
+          "start_line": 1144
+        }
+      ],
+      "key": "assurance_family_scope_and_owners",
+      "statement": "The six assurance subsections share one owner and their consumers introduce no second relation or additional decision. Instance premises are situational conditions, not commitments. Step-law owners choose approximate adequacy/bounds; construction-design owners choose concurrency/branch/external-effect composition laws; obligation owner and assessor activation choose Ω and interpretation; assessment-frame owner chooses T and π; strategy owner chooses compared paths; admitted work authority under the Product chooses risk policy/threshold; realisation chooses dependency representation/selection model; RELEASE §8 and Product own mandatory gates; tenant a_c design under AXIOMATIC_CALCULUS chooses carrier/checker/projections. Writing a proof obligation does not discharge it. A failing scenario supports actual-behaviour disagreement only with supported observation binding; unsupported numerical confidence remains unresolved. The interpretation recording support kinds is described as a derived view, not a consumer of the formal-representation rule.",
+      "uncertainty": "Commitment definitions and referenced owner bodies are not supplied; their table attributions are source claims."
+    },
+    {
+      "applies_to_keys": [
+        "construction_preservation"
+      ],
+      "conditions": [
+        "A preservation step is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1192,
+          "quote": "For all x, x':  P_i(x) and F_i(x, x')  implies  P_(i+1)(x').",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction",
+          "start_line": 1192
+        }
+      ],
+      "key": "preservation_step_obligation",
+      "statement": "State boundary domains, transition relation and property, with the universally quantified obligation: for all x,x', P_i(x) and F_i(x,x') imply P_(i+1)(x'). Account for outcomes, effects and assumptions material to the claim. A successful-completion-only relation establishes nothing about refusal, failure, interruption or unknown effects; those retain their result, authority and recovery contracts. Actual execution's conformance to F_i is a separate obligation.",
+      "uncertainty": "No particular transition is supplied or proved; referenced recovery and authority contracts remain external."
+    },
+    {
+      "applies_to_keys": [
+        "construction_preservation"
+      ],
+      "conditions": [
+        "An end-to-end construction claim is made."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1210,
+          "quote": "An end-to-end argument establishes the initial condition, each step's\napplicable premises, compatibility at each composition boundary, and the\nconnection from the final property to Z. The preceding postcondition\nmust establish the next precondition, or the missing condition must be\nacquired and justified. Concurrency, alternative branches and external effects\nrequire their applicable composition law; a sequential drawing does not\nestablish one. Local success alone establishes neither composition\ncompatibility nor Z. Preservation is distinct from progress, termination\nand the availability of a suitable next step (P4a, P2, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction",
+          "start_line": 1202
+        }
+      ],
+      "key": "end_to_end_preservation",
+      "statement": "Establish the initial condition, each applicable step premise, every boundary's compatibility and final-property connection to Z. A preceding postcondition must establish the next precondition, or the missing condition must be acquired and justified. Concurrency, alternatives and external effects require their applicable composition laws; sequential drawings and local successes establish neither those laws nor Z. Preservation does not establish progress, termination or availability of a suitable next step.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "construction_preservation"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1219,
+          "quote": "Exact transformations preserve the declared meaning. Approximate\ntransformations state their adequacy relation and an established bound\nfor the complete composition; local tolerances cannot be assumed to add or\nto remain unchanged. [ACTIVATION §4 Refinement](ACTIVATION.md#refinement),\nExact and approximate steps, owns the per-step law and applies this\nobligation to refinement steps. A\nchange to the governing outcome or meaning follows its owner and the\nsuccessor rules of SPEC_METHOD §4 and RELEASE §9 (P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction",
+          "start_line": 1212
+        }
+      ],
+      "key": "exact_approximate_and_account_preservation",
+      "statement": "Exact transformations preserve declared meaning. Approximate ones state adequacy relation and an established complete-composition bound; local tolerances cannot be assumed additive or unchanged. Governing outcome/meaning changes follow their owner and successor rules. The algorithmic account states required operation, informational account retained meaning/distinctions, and computational binding realised work/observations. Claims across accounts identify maps and preservation obligations; human, machine or mixed execution alone discharges none. Commuting-diagram, functor and equivalence claims require categorical demonstration.",
+      "uncertainty": "Per-step refinement, successor rules and the complete categorical demonstration specification are external."
+    },
+    {
+      "applies_to_keys": [
+        "source_obligation_assertion"
+      ],
+      "conditions": [
+        "An assertion interprets or claims to establish a source obligation under Γ and Ω."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1250,
+          "quote": "Q_r implies q_t                   : q_t is a necessary condition of Q_r.\nq_t implies Q_r                   : establishing q_t is sufficient for Q_r.\n(q_1 and ... and q_n) implies Q_r : the stated conjunction is sufficient.\n```\n\nThese implications are conditional on Γ and Ω. Passing a check of a\nnecessary condition does not establish the full obligation. A conjunction\nrequires its own coverage and compatibility argument; a collection of\npassing tests does not supply it by its count (P1, P6, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1242
+        }
+      ],
+      "key": "assertion_fidelity_and_direction",
+      "statement": "Retain source scope, conditions, exceptions and permitted alternatives; identifier/digest authentication does not prove interpretive fidelity. Declare the assertion's breadth and implication direction: Q_r ⇒ q_t is necessary, q_t ⇒ Q_r sufficient, and conjunction(q_1…q_n) ⇒ Q_r collectively sufficient, all conditional on Γ and Ω. Passing a necessary condition establishes no full obligation. Sufficient conjunction claims require their own coverage and compatibility arguments, not a count of passing tests.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "observation_checker",
+        "source_obligation_assertion"
+      ],
+      "conditions": [
+        "A checker soundness or source-satisfaction claim is made."
+      ],
+      "exceptions": [
+        "A relation admitting sound satisfied and indeterminate conclusions need not always decide.",
+        "A restricted deterministic model retains its restricted scope."
+      ],
+      "grounding": [
+        {
+          "end_line": 1269,
+          "quote": "For every s in Ω:\n  (π(s), sat) in T  implies  q_t(s).\n  (π(s), fal) in T  implies  not q_t(s).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1267
+        }
+      ],
+      "key": "checker_soundness_and_binding",
+      "statement": "Universal soundness covers every admitted conclusion for every s in Ω: (π(s),sat) ∈ T implies q_t(s), and (π(s),fal) ∈ T implies not q_t(s). Identify support and unresolved parts of each claimed direction; the actual checker needs its own conformance account. Until oracle fidelity is established, observed passes and failures remain observations, not established satisfaction or falsification of the source obligation. Support actual acquisition of the facts represented by π; an ideal observation map proves no instrument/actor/execution fidelity. T alone supplies no probabilities; probabilistic claims require a declared distribution. Indeterminate remains distinct from non-performance and unresolved work/coverage states.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "observation_checker"
+      ],
+      "conditions": [
+        "A checker claims always to decide q_t correctly using π alone."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1300,
+          "quote": "If two admissible cases have the same observation but opposite truth\nvalues, that observation cannot support a sound complete decision between\nthem; further evidence, a justified narrower scope or an indeterminate\njudgment is required. In a classical set model this condition permits a\npredicate on the image of π; it establishes neither an executable decision\nprocedure nor its cost. Unknown effects and unavailable observations\nretain their distinctions from falsehood and from an evaluation that was\nnot performed (Results) (P3, P1, P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1293
+        }
+      ],
+      "key": "observation_sufficiency",
+      "statement": "Require ∀s,s'∈Ω: π(s)=π(s') ⇒ q_t(s)=q_t(s'). Indistinguishable admissible cases with opposite truth values require further evidence, justified scope narrowing or indeterminate; they cannot support sound complete decision from those observations. In a classical set model, the condition permits a predicate on image(π), but proves neither executable decision procedure nor cost. Unknown effects and unavailable observations are not falsehood or non-performance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "assurance_provenance",
+        "mutual_assurance"
+      ],
+      "conditions": [
+        "Assurance claims use derivations, executions or comparisons."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1344,
+          "quote": "Assurance accounts for\nshared specifications, interpretations, tools, fixtures, observations,\ncopied material and other material failure causes. Different actors,\nmodel families or codebases do not establish statistical independence.\nPorting retains authorship and common dependencies (EVALUATION §3 and the\nCross-Synthesis rule of the Product that owns this corpus). Repeating\nevidence does not create a new independent observation.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance",
+          "start_line": 1338
+        }
+      ],
+      "key": "provenance_and_mutual_assurance_limits",
+      "statement": "Both assertion and execution provenance are needed for their respective claims; execution records cannot justify the expected answer, and authentication establishes neither provenance. Implementation-derived tests may support regression/local properties, but repeating implementation decisions supplies no independent upstream-fidelity justification. A shorter assertion path's inspectability/executability requires support and guarantees no correctness, coverage or independence. Distinct valid implementations may differ within an acceptable relation, so equality need not be the oracle. Agreement permits correctness or shared error; disagreement requires diagnosis and identifies no faulty party alone. Account for all material shared causes, preserve ported authorship/dependencies, and do not infer independence from different actors, model families, codebases or repeated evidence. Agreement with an incorrect common model cannot validate it against reality; governing expectations require purpose and externally owned observations, while corrections preserve counterexamples and follow change authority.",
+      "uncertainty": "Cross-Synthesis, diagnosis and change-authority details are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "quantified_assurance"
+      ],
+      "conditions": [
+        "A numerical assurance claim is made."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1381,
+          "quote": "P(V | E, Γ) =\n  P(E | V, Γ) P(V | Γ)\n  / [P(E | V, Γ) P(V | Γ) + P(E | not V, Γ) P(not V | Γ)].\n```\n\nThe denominator must be nonzero. E can include agreement, disagreement or other\nobservations; its likelihood under both faulty and non-faulty conditions\nmatters. The formula supplies no missing likelihood or prior, and a\nnumerical posterior is no stronger than its model and evidence.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance",
+          "start_line": 1373
+        }
+      ],
+      "key": "quantified_model_requirements",
+      "statement": "State population/uncertainty, priors, likelihoods, shared causes and calibration limits. The stated Bayesian posterior is P(E|V,Γ)P(V|Γ) divided by P(E|V,Γ)P(V|Γ)+P(E|not V,Γ)P(not V|Γ), requiring nonzero denominator. E may be agreement, disagreement or other observations; both faulty and nonfaulty likelihoods matter. The equation supplies no missing prior/likelihood and adds no strength beyond model/evidence. Calibration by samples or injected defects supports only its justified relation to operational failures. Unsupported numeric confidence stays unresolved.",
+      "uncertainty": "No numerical inputs, model calibration or posterior are supplied."
+    },
+    {
+      "applies_to_keys": [
+        "quantified_assurance"
+      ],
+      "conditions": [
+        "Joint miss or detection probability is claimed."
+      ],
+      "exceptions": [
+        "Zero-probability prefixes must be handled without inventing undefined conditional probabilities."
+      ],
+      "grounding": [
+        {
+          "end_line": 1399,
+          "quote": "Conditional terms require defined conditioning events; zero-probability\nprefixes are handled without inventing a conditional value. Replacing\nthose terms with `P(M_i | V, Γ)` requires conditional independence under\nthe declared model. One minus the joint miss probability is the chance of\nat least one detection under those same conditions; it is not the\nprobability that the whole product is correct. Agreement does not\nnecessarily increase confidence when shared causes or new information\nchange the model (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance",
+          "start_line": 1392
+        }
+      ],
+      "key": "joint_miss_and_detection",
+      "statement": "Use the exact conditional factorization P(M_1 and … and M_n|V,Γ)=product_i P(M_i|V,Γ,M_1,…,M_(i−1)) with defined conditioning events. Replacing the factors by P(M_i|V,Γ) requires conditional independence in the declared model. One minus joint miss probability means at least one detection under the same conditions, not whole-product correctness. Agreement need not increase confidence when shared causes or new information change the model.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "quantified_assurance"
+      ],
+      "conditions": [
+        "An assurance strategy is selected."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1365,
+          "quote": "Risk model. The actor exercising the admitted work authority selects the required\nassurance for the stated risk, obligations and resource limits. That\nselection identifies material failure consequences, coverage and\nuncertainty, and the conditions for action or acceptance. Additional\nevidence can strengthen a claim only within its applicability and\ndependence account; neither a test count nor an assumed preference for more checks\nsubstitutes for that account (P6, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance",
+          "start_line": 1359
+        }
+      ],
+      "key": "risk_based_assurance_selection",
+      "statement": "The actor exercising admitted work authority selects required assurance for stated risk, obligations and resources, identifying failure consequences, coverage, uncertainty and action/acceptance conditions. More evidence strengthens claims only within applicability/dependence accounting, never by test count or preference alone. Qualitative evidence and stated limits remain usable under governing policy; there is no universal probability threshold or requirement to estimate every test. A cheaper plan cannot waive safety, authority or acceptance conditions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "evidence_reuse"
+      ],
+      "conditions": [
+        "Selecting checks or excluding them after change Δ."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1437,
+          "quote": "The representation of these dependencies is the tenant's choice; no\nexhaustive graph database is required. Excluding a check requires\nsupported coverage of its material dependencies and a reason the change\ncannot invalidate the intended reused claim; an absent edge is not\nevidence of non-influence. Unknown impact widens reassessment or leaves\nthe dependent assurance unresolved. New obligations or cases create\nassessment work even when no existing check covers them. A mandatory\ngate, an assessment that the governing policy requires irrespective of\nselection ([RELEASE §8](RELEASE.md#8-acceptance)), remains applicable\n(P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1428
+        }
+      ],
+      "key": "change_selection_requirements",
+      "statement": "Cover changed facts, affected dependents and material transitive assertion/execution/evidence-use dependencies conservatively. Exclusion requires supported dependency coverage and a reason the change cannot invalidate the reused claim; absent edges prove no non-influence. Unknown impact widens reassessment or leaves dependent assurance unresolved. New obligations/cases require assessment even without existing checks. Reassessment includes S_Δ, new obligations and all applicable mandatory gates. Selection produces no execution evidence, and failed/indeterminate results retain standing.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "evidence_reuse"
+      ],
+      "conditions": [
+        "Existing evidence is proposed for a new subject and basis."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1460,
+          "quote": "Retention establishes the material validity conditions on the new\nsubject: the claim and its scope still apply, its assertion and\nobservation basis remain justified, and the affected dependencies are\nunchanged or covered by an established preservation relation. The\noriginal evidence keeps its original subject; a new applicability\nrelation permits its use. A changed hash alone establishes neither\ninvalidity nor equivalence. A corrected run is not an unchanged independent\ntest of the correction: the corrected subject carries its own evidence.\nKnown failures, unresolved coverage and their\ncitations remain visible until a supported repair, a reassessment or an\nauthorised change of obligation disposes of them (P3, P4b, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1450
+        }
+      ],
+      "key": "evidence_retention_conditions",
+      "statement": "E_new = retain_applicable(E_old,new_subject,new_basis) union E_reassessed. Retention establishes continuing claim/scope applicability, justified assertion and observation bases, and unchanged dependencies or established preservation. Original evidence retains original subject; a new applicability relation permits reuse. Hash change alone establishes neither invalidity nor equivalence. A corrected run supplies evidence for its corrected subject, not an unchanged independent test of its correction. Known failures, unresolved coverage and citations remain visible until supported repair, reassessment or authorized obligation change disposes of them.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "evidence_reuse"
+      ],
+      "conditions": [
+        "Requirements, refinements, realisation or assurance selection change, or recovery occurs."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1470,
+          "quote": "If a governing requirement changes, dependent expectations may need\nauthorised revision as well as new execution. A correction in a\nrefinement revisits the affected obligations and their links to both the\nrequirement and the realisation. A correction in the realisation\nreassesses the affected implementation and integration under the\nstill-applicable obligations. These are semantic dependency boundaries,\nnot file or directory boundaries. Recovery reacquires current reality and\ninvalidates affected claims; it need not erase valid work or rerun every\ncheck ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)) (P3, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1462
+        },
+        {
+          "end_line": 1492,
+          "quote": "its three\ninvalidators are kinds of change Δ, and a closed result is affected when\nits `D*(t)` meets `I(Δ)` (P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1490
+        }
+      ],
+      "key": "reassessment_recovery_and_cost",
+      "statement": "Requirement changes may need authorized expectation revision and new execution; refinement corrections revisit affected obligations and links to requirement/realisation; realisation corrections reassess affected implementation/integration under still-applicable obligations. These are semantic, not directory boundaries. Recovery reacquires reality and invalidates affected claims without requiring erasure of valid work or rerunning all checks. Assurance completeness can combine applicable retained and new evidence and differs from universal execution freshness. Optimize impact-analysis, acquisition, execution and assessment costs together, distinguishing predictions from measurements, within required assurance/risk/gates. Cheap uncovered selections are insufficient. Broad/uncertain impact, changed selection model, release rules or missed dependencies can justify wider testing; full suites remain available, may have gaps and have no universal cadence. Failures require diagnosis and authorized response; the next action may gather evidence before repair is justified. Closed-result/handoff invalidation applies the D*(t)–I(Δ) intersection rule.",
+      "uncertainty": "The three ACTIVATION §7 invalidators and governing gate policies are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "formal_support"
+      ],
+      "conditions": [
+        "Representing or demonstrating the candidate's assurance obligations."
+      ],
+      "exceptions": [
+        "An unproved universal claim may remain unresolved while bounded construction and assurance proceed where governing conditions permit."
+      ],
+      "grounding": [
+        {
+          "end_line": 1522,
+          "quote": "Mathematical proof, exhaustive checks of a finite model, sampled tests and\nobserved use retain their distinct scopes. Finite examples do not prove\nthe universal implications above. An unproved universal claim can remain\nunresolved while bounded construction and assurance proceed where their\ngoverning conditions permit them (P5, P6).\n\nThe existing member and integrated criteria assess these owners and their\nconsumers ([EVALUATION §6](EVALUATION.md#6-conformance-of-realisations)).\nSource semantics, formal fidelity and actual use retain their separate\nevidence; these obligations create no seventh criterion and do not make\neach test a theorem-proving exercise (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FFormal%20representation",
+          "start_line": 1512
+        }
+      ],
+      "key": "formal_support_boundaries",
+      "statement": "Represent material obligations/dependencies under the Product's constraint-surface fidelity rule through AXIOMATIC_CALCULUS and acquired views, preserving all five support kinds. External predicates retain source, scope and required evidence; arbitrary truth labels discharge nothing. Demonstrate applicable positive, negative and unresolved conformance cases including weak assertions, insufficient observations, shared error and change selections that retain valid or invalidate affected evidence. Mathematical proof, exhaustive finite-model checks, samples and observed use keep distinct scopes; finite examples prove no universal implication. Existing member/integrated criteria assess owners/consumers; source semantics, formal fidelity and actual use require separate evidence. No seventh criterion or per-test theorem-proving duty is created.",
+      "uncertainty": "The Product fidelity rule, acquired views, conformance cases and assessment criteria are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "source_disposition_register"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1583,
+          "quote": "New law with no predecessor row, each part stating its purpose and\nmaterial relation where it stands: the opening paragraph of §3 and the\nstanding column of its table; §3 Foundation to law, with the family table\nformat, its Pillar column, instance premises, the standing of the\nconsequences and the index of families; the family F3 table at the end of §4 Results; in §4\nFormal fragment, arrow equality, associativity, the representation in a_c\nand the evidence class, which the AC Traversals And Functor Kinds row\nabove names; and §2 Accounts of a construction, an added choice whose\nowner is the Intent of the Product that owns this corpus.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions",
+          "start_line": 1575
+        }
+      ],
+      "key": "source_disposition_status_distinctions",
+      "statement": "Retain the register's distinctions between claimed conservation, implied tightenings, new law, generalization, ownership and heading-only inapplicability. It calls undefined-term and unexercised-capability rules rc.2-implied tightenings; identifies standing/no-raise, non-performance separation, predicate/domain recording, candidate-result separation and refinement/parent rules as new Results law; and identifies conjunction inputs/gaps/travelling predicates/reported-value cases/nonmandatory handling/stale-result separation as new conjunction detail. Other newly identified material includes foundation-to-law tables and standing, categorical arrow equality/associativity/a_c representation/evidence class, Product-Intent-owned construction accounts, import declaration contents/forms/source-context/result grounds, and consolidated authority non-grants/proxy limit. Exact calculus identity law is distinguished from its release-issued record instance; commitment standing is not a release disposition; H1 remains hypothesis. RF definition children are mapped individually to frame objects, Basis, Material, Evidence, Authority kinds, disjointness/independence and frame tuple. The SM work boundary is claimed to conserve six declared parts, worker ownership of internal HOW, evidence and authority boundaries while generalizing the profile's one-traversal binding; recursive taxonomy is claimed to conserve eight objects, six governing rules, compiler analogy and load-bearing claim.",
+      "uncertainty": "Historical conservation and implication claims are recorded as source assertions, not verified against absent predecessor or successor bodies."
+    },
+    {
+      "applies_to_keys": [
+        "glossary_guide",
+        "glossary_row"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 18,
+          "quote": "This member contains no semantic definition. It declares no bounded\ncontext, concept, import, translation, equivalence, disambiguation or\nauthority. It is a non-deciding index into the clauses that own those\nmeanings in the selected complete STDO basis (P6, P1; rc.2\n#index-contract).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F1.%20Index%20contract",
+          "start_line": 14
+        },
+        {
+          "end_line": 38,
+          "quote": "Repeated spellings in different rows are intentional. Equal spelling,\nnearness in this index, a heading, or inclusion in this member creates no\nidentity, inheritance, import, equivalence or authority (P1, P3, P6).\nResolution follows\n[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution);\nthis index supplies no fallback decision (P1, P5).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F1.%20Index%20contract",
+          "start_line": 33
+        }
+      ],
+      "key": "glossary_nondeciding_contract",
+      "statement": "The glossary supplies no semantic definitions, bounded contexts, concepts, imports, translations, equivalences, disambiguations or authority. Unresolvable context or owner makes a row invalid, and the index cannot repair it. Equal spelling, adjacency, headings and inclusion create no identity, inheritance, import, equivalence or authority; repeated spellings are intentional. Meaning resolution follows PRODUCT_DEFINITION §5, with no glossary fallback decision. Locators only identify where to look; occurrences retain their governed scopes.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "glossary_locator",
+        "glossary_row"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Predecessor routes appear only in §17 as provenance."
+      ],
+      "grounding": [
+        {
+          "end_line": 57,
+          "quote": "the row cites the defining section as owning concept clause and names the\ndeclaration or owner relation in its relation clause (P1, P3). Otherwise\nthe relation clause, where given, points to a clause that relates the\nconcept to another member or context; the index states no relation itself\n(P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F2.%20Locator%20law",
+          "start_line": 53
+        }
+      ],
+      "key": "locator_ownership_rules",
+      "statement": "Every locus is a current-corpus clause; each section names its context-declaring clause. The owning concept clause is the defining section, owning in its own text or under its member's context-ownership statement. For externally defined concepts held by declared import or owner relation, cite the defining section as owner and that declaration/relation separately. Otherwise a relation clause merely points to another relation-bearing clause and asserts none itself. A concept outside all its member's declared contexts uses the member as source context; another context holds it only through its own import. A term with no owning clause is invalid and is not carried as a row.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "glossary_guide",
+        "glossary_locator"
+      ],
+      "conditions": [
+        "A derived surface or projected frame relies on this index to locate meaning."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 76,
+          "quote": "Index watch. A derived surface or projected frame that relies on this\nindex to locate meaning watches it through the index's path and digest,\nrecorded separately from the deciding sources it was derived from. Locator\ndrift in this index then makes that surface or frame stale\n([PRODUCT_DEFINITION §11](PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary),\nstaleness binding), and the watch does not make this index an owner of\nmeaning (P3, P6; provenance rc.2 authority_compressions/README.md, a claim\nno rc.2 body states).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F2.%20Locator%20law",
+          "start_line": 69
+        }
+      ],
+      "key": "index_watch_staleness",
+      "statement": "Watch the index by path and digest separately from deciding sources. Locator drift makes the dependent surface/frame stale under the cited staleness binding, without making the glossary a meaning owner. The source explicitly attributes provenance to rc.2 authority_compressions/README.md and says no rc.2 body states this claim.",
+      "uncertainty": "The referenced staleness-binding details are not supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "core_result_algebra",
+        "result_refinement",
+        "candidate_result_predicates",
+        "result_totality_and_recording",
+        "standing_and_noncoercion",
+        "refinement_mapping_requirements",
+        "frame_evidence_nonperformance_boundary",
+        "candidate_predicate_separation",
+        "result_family_auxiliary_laws",
+        "result_consumer_boundaries",
+        "composed_result_obligations",
+        "refinement_maps_to_core",
+        "result_policy_latitude",
+        "foundation_external_dependencies"
+      ],
+      "reason": "Retains core values, standing, refinements, boundaries, family consequences and consumer limitations; referenced owner definitions and demonstrations remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "result_conjunction",
+        "conjunction_inputs_and_gaps",
+        "stale_result_applicability",
+        "join_survival_and_predicates",
+        "conjunction_reported_value",
+        "declared_conjunction_rule",
+        "composed_result_obligations",
+        "conjunction_uses_core",
+        "composition_uses_conjunction",
+        "reported_value_grounding_residual"
+      ],
+      "reason": "Retains conjunction inputs, cases, authority boundary and composition conditions; the reported-value record requires the exact source re-entry quote retained in its residual.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "assurance_relations",
+        "assurance_family_scope_and_owners",
+        "assurance_representation_latitude",
+        "foundation_external_dependencies"
+      ],
+      "reason": "Retains family scope, instance premises, owner choices and consumer boundaries; external commitments and owner clauses are not reconstructed.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssurance%20relations"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "construction_preservation",
+        "preservation_step_obligation",
+        "end_to_end_preservation",
+        "exact_approximate_and_account_preservation",
+        "formal_operational_detail"
+      ],
+      "reason": "Retains preservation formulas and end-to-end, approximation and account-crossing obligations as data; no preservation proof or transformation is performed.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "source_obligation_assertion",
+        "observation_checker",
+        "assertion_fidelity_and_direction",
+        "checker_soundness_and_binding",
+        "observation_sufficiency",
+        "checker_assesses_assertion"
+      ],
+      "reason": "Retains implication directions, scope, soundness quantifiers, observation sufficiency and the limits of observed outcomes.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "assurance_provenance",
+        "mutual_assurance",
+        "provenance_and_mutual_assurance_limits",
+        "mutual_assurance_requires_provenance",
+        "provenance_recording_latitude"
+      ],
+      "reason": "Retains derivation paths, provenance distinctions, independence limits, diagnosis and authorized correction boundaries.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "quantified_assurance",
+        "quantified_model_requirements",
+        "joint_miss_and_detection",
+        "risk_based_assurance_selection",
+        "quantified_assurance_latitude"
+      ],
+      "reason": "Retains conditional probability formulas, definedness, independence, calibration, policy and non-waiver conditions without calculating probabilities.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "evidence_reuse",
+        "change_selection_requirements",
+        "evidence_retention_conditions",
+        "reassessment_recovery_and_cost",
+        "reuse_preservation_dependency",
+        "reassessment_latitude"
+      ],
+      "reason": "Retains selection, evidence retention, semantic impact, recovery, costs and mandatory-gate boundaries.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "formal_support",
+        "formal_support_boundaries",
+        "formal_operational_detail"
+      ],
+      "reason": "Retains support classes and demonstration obligations while explicitly leaving external conformance and proof machinery unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FFormal%20representation"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "foundational_hypotheses",
+        "hypothesis_denotation_residual"
+      ],
+      "reason": "Retains all four hypotheses as non-law claims for falsification; the named categories and external Markov construct are not defined here.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F5.%20Hypotheses"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "source_disposition_register",
+        "source_disposition_status_distinctions",
+        "historical_conservation_residual"
+      ],
+      "reason": "Retains the subject's disposition and ownership map, distinguishing conservation claims, additions, tightenings and heading-only cases without verifying absent documents.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "glossary_guide"
+      ],
+      "reason": "Retains the guide's non-deciding role and provenance-only predecessor routes.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "glossary_row",
+        "glossary_nondeciding_contract",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains the index contract and invalid-row boundary; owner resolution requires externally supplied meaning clauses.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F1.%20Index%20contract"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "glossary_locator",
+        "locator_ownership_rules",
+        "index_watch_staleness",
+        "glossary_row_uses_locator"
+      ],
+      "reason": "Retains locus, source-context, import-owner and index-watch requirements without assigning semantic authority to the index.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F2.%20Locator%20law"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "method_identity_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains both indexed uses and exact owner/relation routes; their external meanings remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F3.%20Method%20identity"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "axiomatic_calculus_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains calculus spellings, owning anchors and outcome vocabularies as locator data, without importing an unsupplied calculus or refusal mapping.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F4.%20Axiomatic%20calculus"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "semantic_resolution_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains semantic-resolution routes and the distinct Semantic Import owner/application route; semantic definitions are external.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F5.%20Semantic%20resolution"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "product_definition_routing_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains all indexed routing entities and owner/relation loci; no installation or adoption semantics are inferred.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F6.%20Product-definition%20routing"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "release_publication_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains release-publication names and routes without defining release identities from their labels.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F7.%20Release%20publication"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "reference_frame_locators",
+        "reference_frame_outcome_vocabulary",
+        "frame_index_locates_results",
+        "frame_index_locates_conjunction",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains imported-owner distinctions, indexed entities and separate outcome vocabularies; only explicitly supplied Results and Conjunction bodies are interpreted beyond locator status.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "build_tenancy_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains build-context ownership distinctions and routes without instantiating tenants, bindings or work items.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F9.%20Build%20tenancy"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "recursive_product_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains the eight indexed taxonomy names and explicit relation routes; the owning taxonomy is outside the supplied sections.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F10.%20Recursive%20product"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "product_assurance_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains test-category locators and the distinct Unit Test owner; no test-class semantics are inferred.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F11.%20Product%20assurance"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "ambiguity_governance_locators",
+        "glossary_external_meanings"
+      ],
+      "reason": "Retains both ambiguity-governance spellings and their common owner route; no adjudication or probabilistic-processing authority is inferred.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F12.%20Ambiguity%20governance"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "Members, profiles and adopting Products may define finer outcomes with explicit mappings; projects may further split values by cause.",
+        "A conjunction-applying member/profile declares its non-satisfied reporting choice, mandatory inputs, conflicts, basis relations, nonmandatory treatment and veto/deferral within the common rule.",
+        "Where both missing declaration and insufficient evidence have lawful grounds, return either out_of_frame or indeterminate with the chosen ground."
+      ],
+      "applies_to_keys": [
+        "result_refinement",
+        "result_conjunction",
+        "core_result_algebra"
+      ],
+      "forbidden": [
+        "Add a core value, leave a refined outcome unmapped, raise result standing, or change a child's core value without a different parent declared by the parent owner.",
+        "Treat non-performance as a core value or infer a universal ordering among non-satisfied values."
+      ],
+      "grounding": [
+        {
+          "end_line": 875,
+          "quote": "The parent-value rule governs every such split:\neach child value names its parent value and its cause and keeps its\nparent's core value; a child that needs a different core value needs a\ndifferent parent value, which only the owner of the parent declares; and\nno child takes `satisfied` from a parent that is not `satisfied`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 871
+        }
+      ],
+      "key": "result_policy_latitude"
+    },
+    {
+      "allowed": [
+        "A tenant chooses representation and execution within the assurance obligations.",
+        "The designated owners choose approximate adequacy/bounds, construction composition laws, domain/interpretation, checker relation/observations, comparison paths, risk policy and implementation carriers."
+      ],
+      "applies_to_keys": [
+        "assurance_relations",
+        "formal_support"
+      ],
+      "forbidden": [
+        "Treat notation as proof discharge or use representation choice to bypass shared assurance obligations."
+      ],
+      "grounding": [
+        {
+          "end_line": 1141,
+          "quote": "A tenant chooses its\nrepresentation and execution within these obligations. The notation\nstates proof obligations; writing an implication does not discharge it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssurance%20relations",
+          "start_line": 1139
+        }
+      ],
+      "key": "assurance_representation_latitude"
+    },
+    {
+      "allowed": [
+        "Recover provenance relationships from existing sources, bindings and evidence carriers.",
+        "Record shared derivations once and apply them to a declared family.",
+        "Use implementation-derived tests for regression or stated local properties.",
+        "Use distinct valid outputs within the same acceptable relation."
+      ],
+      "applies_to_keys": [
+        "assurance_provenance",
+        "mutual_assurance"
+      ],
+      "forbidden": [
+        "Infer independent upstream justification merely from repeating an implementation's decision.",
+        "Infer correctness, coverage or independence merely from a shorter assertion path."
+      ],
+      "grounding": [
+        {
+          "end_line": 1355,
+          "quote": "These relationships are recoverable from the existing sources, bindings\nand evidence carriers. Shared derivations can be recorded once and applied\nto a declared family. No new per-test document, parallel ledger, fixed\nnumber of reviewers or prescribed provenance format is required (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance",
+          "start_line": 1352
+        }
+      ],
+      "key": "provenance_recording_latitude"
+    },
+    {
+      "allowed": [
+        "Use qualitative evidence and stated limits under governing policy.",
+        "Choose risk-policy thresholds through the admitted authority; the member imposes no universal threshold.",
+        "Omit per-test probability estimates where none are required."
+      ],
+      "applies_to_keys": [
+        "quantified_assurance"
+      ],
+      "forbidden": [
+        "Waive required safety, authority or acceptance conditions for cheaper assurance.",
+        "Promote unsupported numerical confidence to an established estimate."
+      ],
+      "grounding": [
+        {
+          "end_line": 1407,
+          "quote": "Unsupported numeric\nconfidence remains unresolved; qualitative evidence and stated limits\nremain usable within the governing policy. No universal probability\nthreshold is imposed and no probability estimate is required for every\ntest. Required safety, authority and acceptance conditions cannot be\nwaived by a cheaper assurance plan (P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FQuantified%20assurance",
+          "start_line": 1402
+        }
+      ],
+      "key": "quantified_assurance_latitude"
+    },
+    {
+      "allowed": [
+        "Choose dependency representation without an exhaustive graph database.",
+        "Retain evidence whose new applicability is established.",
+        "Widen reassessment for uncertain impact or leave dependent assurance unresolved.",
+        "Run a full suite where justified; recovery need not erase valid work or rerun all checks.",
+        "Acquire diagnostic evidence before repair is justified."
+      ],
+      "applies_to_keys": [
+        "evidence_reuse"
+      ],
+      "forbidden": [
+        "Infer non-influence from absent dependency edges.",
+        "Optimize away required coverage or separately required gates.",
+        "Treat selection as execution evidence or full-suite execution as automatically gap-free."
+      ],
+      "grounding": [
+        {
+          "end_line": 1489,
+          "quote": "full-suite execution remains available and may itself have\ncoverage gaps. No universal full-suite cadence follows, and no\noptimisation removes a separately required gate. Failures enter diagnosis\nand an authorised response\n([ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation));\nthe next selected action may acquire evidence before any repair is\njustified.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1483
+        }
+      ],
+      "key": "reassessment_latitude"
+    }
+  ],
+  "limitations": [
+    "This is source interpretation only. No semantic acceptance, execution, installed qualification, historical conservation verification or completeness judgment is asserted.",
+    "The supplied JSON schema has no judgment, traversal or transformation populations. Source descriptions of those operations are retained as concepts, constraints and residuals; no operation instances or proof results are created.",
+    "Referenced owner clauses, predecessor bodies, P0–P6 definitions, detailed acceptance/recovery rules, conformance cases and most glossary target definitions are absent. Their source-stated ownership and locator roles are retained without fabricated endpoints or meanings.",
+    "Glossary rows are grouped by declared context as locator records. Grouping does not merge their indexed concepts, infer identity from spelling, or turn relation-clause links into semantic dependencies.",
+    "Family and consumer tables are compressed into their material consequences, choices, ownership boundaries and source re-entry links. The full row-by-row pillar/provenance and consumer-locus enumeration is not separately materialized as a graph.",
+    "The reported-value constraint includes an erroneous grounding fragment; its exact applicable source quotation is retained in reported_value_grounding_residual. That defect limits direct grounding fidelity of that constraint."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "A refined outcome is returned for its named mapping predicate."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 865,
+          "quote": "The refinement names the question it\nanswers and the predicate its mapping is for, and maps every refined value\nto exactly one core value.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 863
+        }
+      ],
+      "key": "refinement_maps_to_core",
+      "kind": "total_single_valued_mapping",
+      "meaning": "Every refined value maps exactly once to the core while its definer retains domain meaning; the relation governs mappings in the subject, not this workflow's authority.",
+      "source_key": "result_refinement",
+      "target_key": "core_result_algebra"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1014,
+          "quote": "It is defined here once, over the\ncore. A member or profile that combines results applies this rule and\ndeclares only the choices it leaves open",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1012
+        }
+      ],
+      "key": "conjunction_uses_core",
+      "kind": "result_domain_dependency",
+      "meaning": "Conjunction is defined over the one core algebra and reports a core value under its declared rule while retaining gaps separately.",
+      "source_key": "result_conjunction",
+      "target_key": "core_result_algebra"
+    },
+    {
+      "conditions": [
+        "Typed steps are composed and the applicable refinement premises hold."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1124,
+          "quote": "The result of composed steps for the outer\npredicate is the conjunction of the steps' results, with the outer\ncontract's obligations as the required coverage. That each step returned\n`satisfied` supports the outer predicate only where the refinement's\npremises hold",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1120
+        }
+      ],
+      "key": "composition_uses_conjunction",
+      "kind": "outer_result_dependency",
+      "meaning": "Composed construction uses conjunction for its outer predicate, with outer-contract obligations furnishing required coverage.",
+      "source_key": "construction_preservation",
+      "target_key": "result_conjunction"
+    },
+    {
+      "conditions": [
+        "The checker assesses the assertion predicate q_t over Γ and Ω."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1269,
+          "quote": "For every s in Ω:\n  (π(s), sat) in T  implies  q_t(s).\n  (π(s), fal) in T  implies  not q_t(s).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssertions%20and%20observation",
+          "start_line": 1267
+        }
+      ],
+      "key": "checker_assesses_assertion",
+      "kind": "soundness_obligation",
+      "meaning": "Every admitted satisfied/falsified checker conclusion must respectively support truth/falsity of its actual assertion predicate, not automatically the broader source obligation.",
+      "source_key": "observation_checker",
+      "target_key": "source_obligation_assertion"
+    },
+    {
+      "conditions": [
+        "A comparison supports an assurance claim."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1319,
+          "quote": "Both are needed for the claims they\nsupport; execution records alone cannot establish that the expected",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FParallel%20derivation%20and%20mutual%20assurance",
+          "start_line": 1318
+        }
+      ],
+      "key": "mutual_assurance_requires_provenance",
+      "kind": "justification_dependency",
+      "meaning": "Mutual assurance requires the distinct assertion and execution provenance appropriate to its claims and retains shared dependencies affecting independence.",
+      "source_key": "mutual_assurance",
+      "target_key": "assurance_provenance"
+    },
+    {
+      "conditions": [
+        "Affected dependencies changed and evidence retention relies on preservation."
+      ],
+      "exceptions": [
+        "Unchanged dependencies can satisfy this part of retention without a new preservation relation."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1453,
+          "quote": "the affected dependencies are\nunchanged or covered by an established preservation relation.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FChange%20impact%20and%20evidence%20reuse",
+          "start_line": 1452
+        }
+      ],
+      "key": "reuse_preservation_dependency",
+      "kind": "conditional_validity_dependency",
+      "meaning": "Retention over changed dependencies requires an established preservation relation alongside continued claim, assertion and observation applicability.",
+      "source_key": "evidence_reuse",
+      "target_key": "construction_preservation"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 57,
+          "quote": "the relation clause, where given, points to a clause that relates the\nconcept to another member or context; the index states no relation itself\n(P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F2.%20Locator%20law",
+          "start_line": 55
+        }
+      ],
+      "key": "glossary_row_uses_locator",
+      "kind": "locator_structure",
+      "meaning": "A row's owner and relation fields locate clauses; the link creates no semantic relation, import or authority.",
+      "source_key": "glossary_row",
+      "target_key": "glossary_locator"
+    },
+    {
+      "conditions": [
+        "The named reference-frame context uses its cited import declaration."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 195,
+          "quote": "| `Result Algebra`; core result algebra | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results); [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation",
+          "start_line": 195
+        }
+      ],
+      "key": "frame_index_locates_results",
+      "kind": "owning_clause_locator",
+      "meaning": "The index explicitly locates the supplied FOUNDATIONS Results section as owner of the context's imported core algebra; the glossary link itself is non-governing.",
+      "source_key": "reference_frame_locators",
+      "target_key": "core_result_algebra"
+    },
+    {
+      "conditions": [
+        "The named reference-frame context uses its cited import declaration."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 199,
+          "quote": "| conjunction of results; declared decision rule; composition of results | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#conjunction-of-results`](FOUNDATIONS.md#conjunction-of-results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#result-conjunction`](REFERENCE_FRAME.md#result-conjunction) |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F8.%20Reference-frame%20evaluation",
+          "start_line": 199
+        }
+      ],
+      "key": "frame_index_locates_conjunction",
+      "kind": "owning_clause_locator",
+      "meaning": "The index names the supplied conjunction section as owner and separately points to the context import and application clause; this locator creates no authority.",
+      "source_key": "reference_frame_locators",
+      "target_key": "result_conjunction"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Treat foundation-to-law derivations, consumer applications and owner assignments as source-stated relationships. Do not reconstruct missing commitment definitions, refinement mappings, acceptance authority, categorical proofs, gates or recovery contracts from their links.",
+      "grounding": [
+        {
+          "end_line": 947,
+          "quote": "a reader of §4 sees which\ncommitments each result rule rests on and which choices it adds, with their\nowners (P6, P2). Instance premises, which the commitments do not supply:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+          "start_line": 945
+        },
+        {
+          "end_line": 1159,
+          "quote": "mandatory gates: RELEASE §8 and the adopting Product",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FAssurance%20relations",
+          "start_line": 1159
+        }
+      ],
+      "key": "foundation_external_dependencies",
+      "subject_key": "assurance_relations",
+      "uncertainty": "P0–P6 and the external member/profile/Product bodies are not supplied. Exact table provenance, pillar annotations and the complete consumer-locus enumeration remain source-reentry detail rather than a fully materialized dependency graph."
+    },
+    {
+      "consequence": "Use this exact quotation for source re-entry to the reported-value cases; the malformed quote in conjunction_reported_value is not evidence.",
+      "grounding": [
+        {
+          "end_line": 1105,
+          "quote": "Where\nevery mandatory result",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1104
+        },
+        {
+          "end_line": 1105,
+          "quote": "Where\nevery mandatory result",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1104
+        },
+        {
+          "end_line": 1109,
+          "quote": "every mandatory result is `satisfied`, the declared basis relations agree\nand no gap remains, a material counterexample to a mandatory constraint\nfalsifies the conjunction whichever contributor found it, and without one\nthe conjunction's value is the one its declared rule gives over the\nmandatory results.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+          "start_line": 1105
+        }
+      ],
+      "key": "reported_value_grounding_residual",
+      "subject_key": "conjunction_reported_value",
+      "uncertainty": "The reported-value constraint's initial grounding fragment is malformed; the final grounding entry here is the exact source text for its final branch."
+    },
+    {
+      "consequence": "Preserve formulas and operation descriptions as obligations, not discharged proofs, executable models, traversals, transformation instances or runtime authority. Full verification requires the external owner rules and actual proof/execution evidence.",
+      "grounding": [
+        {
+          "end_line": 1200,
+          "quote": "The real execution's conformance to\nthe relation is a separate obligation (P4a, P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FPreservation%20through%20construction",
+          "start_line": 1199
+        },
+        {
+          "end_line": 1506,
+          "quote": "No particular proof assistant, probability library or execution engine is\nselected (P1, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FFormal%20representation",
+          "start_line": 1505
+        }
+      ],
+      "key": "formal_operational_detail",
+      "subject_key": "formal_support",
+      "uncertainty": "The finite record families express quantified implications and support distinctions textually but do not encode operational proof checking, actual observations, execution conformance, transformation deltas or the unsupplied conformance demonstrations."
+    },
+    {
+      "consequence": "Retain hypothesis status and the stated falsification purpose; do not infer categorical equivalence, universal capture, a validated Markov boundary or runtime composition laws.",
+      "grounding": [
+        {
+          "end_line": 1533,
+          "quote": "Not law; carried for falsification: categorical equivalence of 𝒜 and ℐ under\nsome reformulation; universal algorithmic capture of meaning; the statistical\nMarkov boundary (candidate status under",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F5.%20Hypotheses",
+          "start_line": 1531
+        }
+      ],
+      "key": "hypothesis_denotation_residual",
+      "subject_key": "foundational_hypotheses",
+      "uncertainty": "The categories 𝒜 and ℐ, the proposed reformulation and the external WORLD_MODEL epistemic-status construct are not defined in the supplied sections."
+    },
+    {
+      "consequence": "Read conserved, tightened, new, generalized and inapplicable as the subject's authored historical dispositions. They do not establish equivalence of releases, successful migration, qualification or fidelity of the present interpretation.",
+      "grounding": [
+        {
+          "end_line": 1558,
+          "quote": "two clauses there are tightenings that rc.2 implies and does not state",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions",
+          "start_line": 1558
+        },
+        {
+          "end_line": 1599,
+          "quote": "the six relations, the no-collapse rule, the frame-grants-nothing rule, the operation-grant rule and the proxy sentence, with its trigger, are restated",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F6.%20Source%20dispositions",
+          "start_line": 1599
+        }
+      ],
+      "key": "historical_conservation_residual",
+      "subject_key": "source_disposition_register",
+      "uncertainty": "The predecessor clauses, most restatement loci, detailed authority relations/proxy trigger, work-boundary parts and taxonomy governing rules are not included. Their conservation cannot be independently established from the register."
+    },
+    {
+      "consequence": "Keep grouped glossary entries as bounded locator data, including distinct spellings and owner/relation routes. Do not manufacture external definitions, resolve identity by label matching, infer outcome mappings, or treat unresolved locators as resolved semantic imports.",
+      "grounding": [
+        {
+          "end_line": 31,
+          "quote": "A row whose context or owning clause does not resolve is invalid, and\nthis index cannot repair it (P5, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/GLOSSARY.md#GLOSSARY%2F1.%20Index%20contract",
+          "start_line": 30
+        }
+      ],
+      "key": "glossary_external_meanings",
+      "subject_key": "glossary_row",
+      "uncertainty": "Most cited owning definitions, context declarations and import/application bodies are outside the supplied source. Their absence here leaves meaning unresolved; it does not establish that the source corpus's rows are invalid. Grouped locator concepts preserve the named routes but do not materialize each indexed term and every external endpoint as separate semantic entities."
+    }
+  ]
+}

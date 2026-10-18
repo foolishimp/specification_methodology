@@ -1,0 +1,2126 @@
+{
+  "profile": "ac.generation.results/2",
+  "runs": [
+    {
+      "candidate": "codex",
+      "subject": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/",
+      "mode": "graphify-ac",
+      "plan_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42",
+      "planned_chunks": 11,
+      "validated_author_chunks": 8,
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "attempts": [
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-04c54946fcb35842a633/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-04c54946fcb35842a633",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 775.8706395421177,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[execution_binding]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "3a2e3d5f7c0bbb44af37ac32d7424e6cc356f65ad562e1e1a05ef8ba7cb77e7f"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 636.0847269578371,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "section dispositions do not cover exact supplied sections",
+          "result_sha256": "f6894b9af8d0e2ea4dc5d0503b45715a5cd81ab681296b745aed4cdfd18d1a2f"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-002",
+          "stage": "author",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 890.8385527920909,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[bootstrap_authority_split]/grounding/1: grounding line range escapes supplied section",
+          "result_sha256": "f64af50a6567cf8c2820e09a48120042a0b6868decb7475218e6a5a545f9426c"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-48c8602bbc635459c199/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-48c8602bbc635459c199",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 808.3355834158137,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "3392c1b0fca1cd1c6133451f049fb551f66759975149f66f50657085864814f8"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-52d35a790cf09bd6915b",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 940.5876892497763,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "6c459d52d20f8fe7baf438a38fe6fac82bd66fca948dde52b4dfcdb56609dea9"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-5388e5cbf37adbb7783f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-5388e5cbf37adbb7783f",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 807.8871984160505,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "d5c19ad8698359a0c82c14735bc07d26b503b4b0904015798065143cf12b44a9"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-7114ca912bc40939c01c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7114ca912bc40939c01c",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 796.1766578329261,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[closure_reuse_external_contract]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "2a119064c14365c41f5e7001cf5b313887c699d27af70ea10c291e6a46fc6629"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-931587c917804f0954c8/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-931587c917804f0954c8",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 879.8617957502138,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "80747cea0c4642000ab3a6a125ff1b77af6429d76a938a8623a06b227e981c5e"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-9595471dbe055bfa37e6",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 822.1056760421488,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "8fdbab93080ff5216d4972202e3a4ffd9eac914268b74a6310c19a6086878dd4"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-cbb9a537d86d3d2b50fa/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-cbb9a537d86d3d2b50fa",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 851.5566493340302,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "70c11788791b41158c249207d4061fb44c8171ea3289eaab6670667381c04ed3"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-d28d39d236504a816f0e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d28d39d236504a816f0e",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 696.1251979998779,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "971ddd7173ee8f4017d04681d617cb0d2622b13d244f8a62052fa3cdd5fef057"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/actors/author/chunk-f5b7995777165639582f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f5b7995777165639582f",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 940.9071936248802,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "6ee5cd08433d0b58216ce9fcde49591857d08ecfbad99a119334f8d7ec8ee77b"
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/grounding-repairs/chunk-04c54946fcb35842a633/attempt-001/actor",
+          "stage": "grounding-repair",
+          "chunk": "chunk-04c54946fcb35842a633",
+          "status": "completed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 25.747366624884307,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "a6a93600d014ce16508273ba3148646e7f3bb0020067383026b870d8c005b2d2",
+          "repair_journal": {
+            "actor_pins": {
+              "actor/answer.json": "f1ffa9b30624b4672c834100539962d55961eabf3336317139cfe6a970cfb781",
+              "actor/events.jsonl": "079254edc245ac9f89abec2819041103a3117b8c46b53f4536f2be861599bced",
+              "actor/invocation.json": "ada840a8edf2a763a9665054f9f4391f0c9881e70b01046cca8270fab4b2305a",
+              "actor/prompt.txt": "0a59d8a6ed502784522d766f76e0883f3da6ffe68af3dfd7276faf607b7d704e",
+              "actor/result.json": "a6a93600d014ce16508273ba3148646e7f3bb0020067383026b870d8c005b2d2",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "b910e588215a8ea50e683bb2d911c9f69d3c6a4158a2168c5007022d8ad87602"
+            },
+            "chunk": "chunk-04c54946fcb35842a633",
+            "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+            "code_pins": {
+              "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+              "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+              "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+              "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+              "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+              "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+            },
+            "derived_answer_sha256": "0cb672700997dad4dc7240e40c188b8f6d5ac65aea5ebaad5f74084e4a7d4c8d",
+            "derived_meaning_sha256": "fa5c7c0d053fe90021f94275e3107be59769c1ed856b8f1d4cbe39a4724307ad",
+            "elapsed_seconds": 31.300524208927527,
+            "parent_meaning_sha256": "fa5c7c0d053fe90021f94275e3107be59769c1ed856b8f1d4cbe39a4724307ad",
+            "profile": "a_c.grounding.f-p-repair/1",
+            "remaining_invalid_grounding_entries": [],
+            "request_sha256": "8862473a0c6e0743ae7cf6c7900f5fada04daaf89b0cb284d551720987463198",
+            "status": "complete_patch",
+            "strict_validation_error": null,
+            "unverified_actor_pins": {
+              "actor/answer.json": "f1ffa9b30624b4672c834100539962d55961eabf3336317139cfe6a970cfb781",
+              "actor/events.jsonl": "079254edc245ac9f89abec2819041103a3117b8c46b53f4536f2be861599bced",
+              "actor/invocation.json": "ada840a8edf2a763a9665054f9f4391f0c9881e70b01046cca8270fab4b2305a",
+              "actor/prompt.txt": "0a59d8a6ed502784522d766f76e0883f3da6ffe68af3dfd7276faf607b7d704e",
+              "actor/result.json": "a6a93600d014ce16508273ba3148646e7f3bb0020067383026b870d8c005b2d2",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "b910e588215a8ea50e683bb2d911c9f69d3c6a4158a2168c5007022d8ad87602"
+            },
+            "usage_events": [
+              {
+                "cache_write_input_tokens": 0,
+                "cached_input_tokens": 0,
+                "input_tokens": 119201,
+                "output_tokens": 398,
+                "reasoning_output_tokens": 96
+              }
+            ]
+          }
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/grounding-repairs/chunk-0f88fa57ee5ba9a3267c/attempt-001/actor",
+          "stage": "grounding-repair",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "completed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 24.82193245808594,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "f5b4b9d92545215ad751e12ee247c658499237dba515401436a235700814479d",
+          "repair_journal": {
+            "actor_pins": {
+              "actor/answer.json": "1914ef660371b1c901af7316522384bc8e3d41803cd4f3c1d50dffa3c9f7b04c",
+              "actor/events.jsonl": "39aa4fa0b2036073893bba78ff9592c026ccecc215d0ba16a30ece0b01b72c9d",
+              "actor/invocation.json": "34f29ef58ee8e9c6537f080777045ec5bfe8accfce4a8bdfc42569a7f0147484",
+              "actor/prompt.txt": "c123ccc0ac5f2c37e91d6d0ab0a207ea4a45e9317c029961964b0bc51085b337",
+              "actor/result.json": "f5b4b9d92545215ad751e12ee247c658499237dba515401436a235700814479d",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "2b090e0e458ab3542bb4ca79f658ae93624084c6926a64e1a56fb331db848565"
+            },
+            "chunk": "chunk-0f88fa57ee5ba9a3267c",
+            "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+            "code_pins": {
+              "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+              "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+              "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+              "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+              "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+              "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+            },
+            "derived_answer_sha256": "cf5120e22b8c6f1fb422db6835b6ffd8fda440a40d62aa7e328512f2c298e2f8",
+            "derived_meaning_sha256": "f97c50cbc7c59f06cf7230aff5658529afc75f7eb2755359eca71f60dab26f67",
+            "elapsed_seconds": 30.560153458965942,
+            "parent_meaning_sha256": "f97c50cbc7c59f06cf7230aff5658529afc75f7eb2755359eca71f60dab26f67",
+            "profile": "a_c.grounding.f-p-repair/1",
+            "remaining_invalid_grounding_entries": [],
+            "request_sha256": "ca1a881c3fe828ccf4368511e0ade0f0d9bad85383fe45b9a9d8ef70f9f19c77",
+            "status": "complete_patch",
+            "strict_validation_error": null,
+            "unverified_actor_pins": {
+              "actor/answer.json": "1914ef660371b1c901af7316522384bc8e3d41803cd4f3c1d50dffa3c9f7b04c",
+              "actor/events.jsonl": "39aa4fa0b2036073893bba78ff9592c026ccecc215d0ba16a30ece0b01b72c9d",
+              "actor/invocation.json": "34f29ef58ee8e9c6537f080777045ec5bfe8accfce4a8bdfc42569a7f0147484",
+              "actor/prompt.txt": "c123ccc0ac5f2c37e91d6d0ab0a207ea4a45e9317c029961964b0bc51085b337",
+              "actor/result.json": "f5b4b9d92545215ad751e12ee247c658499237dba515401436a235700814479d",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "2b090e0e458ab3542bb4ca79f658ae93624084c6926a64e1a56fb331db848565"
+            },
+            "usage_events": [
+              {
+                "cache_write_input_tokens": 0,
+                "cached_input_tokens": 0,
+                "input_tokens": 126820,
+                "output_tokens": 350,
+                "reasoning_output_tokens": 92
+              }
+            ]
+          }
+        }
+      ],
+      "attempt_count": 14,
+      "strict_first_attempt_states": {
+        "failed": 3,
+        "completed": 8
+      },
+      "strict_first_attempt_validated": 8,
+      "fp_repair_calls": 2,
+      "attempts_with_usage": 14,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 1203589,
+        "cached_input_tokens": 201344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 590113,
+        "reasoning_output_tokens": 9878
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 14,
+        "cached_input_tokens": 14,
+        "cache_write_input_tokens": 14,
+        "output_tokens": 14,
+        "reasoning_output_tokens": 14
+      },
+      "sum_recorded_actor_seconds": 9896.906860040734,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-04c54946fcb35842a633/journal.json",
+          "sha256": "be05476a740c9a621edb2089f63c82cfae5055aaceeb71ad34e2f470728989a7",
+          "chunk": "chunk-04c54946fcb35842a633",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[execution_binding]/concepts/19/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-04c54946fcb35842a633/attempt-001",
+          "fd_elapsed_seconds": 0.46317187510430813,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-0f88fa57ee5ba9a3267c/journal.json",
+          "sha256": "37c58d47f5b1968e384886dedb807fc35bb569114b401256f17fa267490aaa56",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[bootstrap_authority_split]/constraints/11/grounding/1: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-002",
+          "fd_elapsed_seconds": 0.35119945905171335,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-48c8602bbc635459c199/journal.json",
+          "sha256": "0f9625f196f6492389c227182e506735d65d169c978e73fa34f23dc291e3e16f",
+          "chunk": "chunk-48c8602bbc635459c199",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-48c8602bbc635459c199/attempt-001",
+          "fd_elapsed_seconds": 0.5638911249116063,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-52d35a790cf09bd6915b/journal.json",
+          "sha256": "503ef15a2fc0dcba665e80a7d1ec9b1abb37575d74d7c7ca504756abf30d1bf9",
+          "chunk": "chunk-52d35a790cf09bd6915b",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+          "fd_elapsed_seconds": 0.44448549998924136,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-5388e5cbf37adbb7783f/journal.json",
+          "sha256": "0f78e17eedf896e90f2533975633330f4c84cb99e33c0625e5b5b01b99426f44",
+          "chunk": "chunk-5388e5cbf37adbb7783f",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-5388e5cbf37adbb7783f/attempt-001",
+          "fd_elapsed_seconds": 0.3634937908500433,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-7114ca912bc40939c01c/journal.json",
+          "sha256": "69ff6fdd18221215dd5907d84437ac2c4cde81d545ab60f8a94dafafdc958045",
+          "chunk": "chunk-7114ca912bc40939c01c",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7114ca912bc40939c01c/attempt-001",
+          "fd_elapsed_seconds": 0.3624248330015689,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-931587c917804f0954c8/journal.json",
+          "sha256": "2c3745e8f4b5e2e952b09b716fab87bfa11a1b9a275321528b9e600e2fbffdca",
+          "chunk": "chunk-931587c917804f0954c8",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-931587c917804f0954c8/attempt-001",
+          "fd_elapsed_seconds": 0.5311109160538763,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-9595471dbe055bfa37e6/journal.json",
+          "sha256": "1c989365f2e3c4a8b7c7fe9c4771b934e351be052c5f1a1b5bfe78730e7b0e68",
+          "chunk": "chunk-9595471dbe055bfa37e6",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+          "fd_elapsed_seconds": 0.6094718328677118,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-cbb9a537d86d3d2b50fa/journal.json",
+          "sha256": "07b262a2eea4a57ce43b4f8179be2336fa676c1a3035e2eddba02d540c8cc5d1",
+          "chunk": "chunk-cbb9a537d86d3d2b50fa",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-cbb9a537d86d3d2b50fa/attempt-001",
+          "fd_elapsed_seconds": 0.5656594999600202,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-d28d39d236504a816f0e/journal.json",
+          "sha256": "fc21f7f71e43f4e37bee9bf2c1007354543b1602142810a4b391edf530afa1b0",
+          "chunk": "chunk-d28d39d236504a816f0e",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d28d39d236504a816f0e/attempt-001",
+          "fd_elapsed_seconds": 0.5071272498462349,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/graphify-ac/normalization-final/chunk-f5b7995777165639582f/journal.json",
+          "sha256": "9cbcef53fd627cdc185c7d973f410b263e81f78d98e12d0b27c08ec1ff81fb4d",
+          "chunk": "chunk-f5b7995777165639582f",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-f5b7995777165639582f/attempt-001",
+          "fd_elapsed_seconds": 0.5654662090819329,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 5.327502290718257,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": {
+        "counts": {
+          "communities": 70,
+          "graph_edges": 937,
+          "graph_nodes": 877,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 947,
+          "structural_nodes": 877
+        },
+        "elapsed_seconds": 0.32250270806252956,
+        "files": {
+          "coverage.json": "f5f1d131db31e07a0b849a8a4068599091123fc8b112f2565254e4e364cdd833",
+          "graph.json": "852d388d5e1e0235871e9ee557c0f54d5f7d4313b8be84d17ac4f839491d12bb",
+          "structural.json": "6fadd66778c5cfa653377d4bd461d49198267554245da0506fcfdfe11cd54051"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "proposal": {
+        "claim": "New proposal; non-grounding statement bytes preserved. Semantic equivalence, fidelity and acceptance unassessed.",
+        "family_counts": {
+          "constraints": 680,
+          "judgments": 0,
+          "latitude": 78,
+          "objects": 446,
+          "relations": 85,
+          "residuals": 111,
+          "transformations": 0,
+          "traversals": 0
+        },
+        "fd_assembly_elapsed_seconds": 653.441712875152,
+        "files": {
+          "carrier.json": "934ee0b3eb9a7465c7e8a907e0cf0ed7695c28ab8529b8b61dea7aae6e35a317",
+          "coverage.json": "df5ef0779e07395328cc49d3e820b0373fc40aaf0fb2369d1ed245be33f03c5c",
+          "graph.json": "a8bc964be6ccccaf45d822666ab412bf3b29c9b321732e33f724ef432be81a28",
+          "model.json": "de15780ae8447deb8f3e90ad17ffd88cc09a5ecc75af9db403d73db4142d66e2"
+        },
+        "model_id": "urn:a-c:generation:5f4077a90aa67a8a5d55259f:model:5974d56f42714ae7a43b0036",
+        "model_sha256": "176112842f82c831d262733997346e0b50ab9a1ebf79b023194c931ef7652726",
+        "processing_complete": true,
+        "profile": "a_c.grounding.f-p-repair/1",
+        "status": "proposed",
+        "upstream_trial": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "edges": 34596,
+          "model_sha256": "176112842f82c831d262733997346e0b50ab9a1ebf79b023194c931ef7652726",
+          "nodes": 25344
+        }
+      },
+      "proposal_path": "runs-v2/codex/graphify-ac/repaired-proposal",
+      "proposal_file_bytes": {
+        "model.json": 5560108,
+        "carrier.json": 30293675,
+        "result.json": 1234,
+        "graph.json": 26573428,
+        "coverage.json": 429490
+      },
+      "state": "proposed"
+    },
+    {
+      "candidate": "codex",
+      "subject": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/",
+      "mode": "direct",
+      "plan_sha256": "f30c33db4ba32a3369b570ae9d47ab4954508a0dd7bfdccacf9f43ae132b63cf",
+      "planned_chunks": 11,
+      "validated_author_chunks": 9,
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "attempts": [
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-04c54946fcb35842a633/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-04c54946fcb35842a633",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 879.5457460840698,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[method_qualification]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "7b58cf24756fadfbb26fb4166bf20e0c202b5d0fd0dcb3a9cf452fedb2e0c2c3"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 821.2662272909656,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "7aaf8aa0be43ce07a7bd703629d92e1d7eeb0019d1ecd39c13dd61b8173f5c6c"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-48c8602bbc635459c199/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-48c8602bbc635459c199",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 982.0834325840697,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "0b7ccc33374aa3a4f963131e0ff991a500d1435744e2d0b0bfc9ab64e71bcddb"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-52d35a790cf09bd6915b",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 895.4556463749614,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "731802dd3abd597bc1c75a0caa1c2da9e7ff9630a361b0fff3a38a0c90b40703"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-5388e5cbf37adbb7783f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-5388e5cbf37adbb7783f",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 815.6943570000585,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[testing_claims]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "67176e2976331e0567a1b24e2c2086c3766618f2387f43f746d73f7a4b23998b"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-7114ca912bc40939c01c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7114ca912bc40939c01c",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 803.9979637090582,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "bf14b4225012bc3d461a3b6f6d7bb8c2ac95dbcb277f904637e6154a3f885cb5"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-931587c917804f0954c8/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-931587c917804f0954c8",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 750.4755901249591,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "a0c9d6a3862e8c2781ac98eed8858c9b46d1b1b1fc5fb7cfcf2a8811ea3362a7"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-9595471dbe055bfa37e6",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 924.0320975829381,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "7370444d37a66706ceb87772eaea23347223c010a4ee7807e5323b75103ce46f"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-cbb9a537d86d3d2b50fa/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-cbb9a537d86d3d2b50fa",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 888.6756924591027,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "a2d2649cbe114cd51f6385620b5d062e2b677459717959b6758eac28953a3875"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-d28d39d236504a816f0e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-d28d39d236504a816f0e",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 1064.2213940420188,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "8f578bfb35e53d850985dd92dc0a7291047e5d87a4a95d539d0ac033e8866773"
+        },
+        {
+          "path": "runs-v2/codex/direct/actors/author/chunk-f5b7995777165639582f/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f5b7995777165639582f",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 804.3599046671297,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "fe78a7fbfc3341d0371e7c1718371ebc9c1b80577a15485bd64d02a4bb33b0a7"
+        }
+      ],
+      "attempt_count": 11,
+      "strict_first_attempt_states": {
+        "failed": 2,
+        "completed": 9
+      },
+      "strict_first_attempt_validated": 9,
+      "fp_repair_calls": 0,
+      "attempts_with_usage": 11,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 786238,
+        "cached_input_tokens": 125184,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 544286,
+        "reasoning_output_tokens": 9316
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 11,
+        "cached_input_tokens": 11,
+        "cache_write_input_tokens": 11,
+        "output_tokens": 11,
+        "reasoning_output_tokens": 11
+      },
+      "sum_recorded_actor_seconds": 9629.808051919332,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-04c54946fcb35842a633/journal.json",
+          "sha256": "64970e2c21e5820c006fecd8282cd87a42cfd1509c7cc2355fdc4c5689f83ecc",
+          "chunk": "chunk-04c54946fcb35842a633",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-04c54946fcb35842a633/attempt-001",
+          "fd_elapsed_seconds": 0.9584802919998765,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-0f88fa57ee5ba9a3267c/journal.json",
+          "sha256": "f5b444259780c65204b19c7eb5cac623ea95bec641802e10f867afd39c72b0be",
+          "chunk": "chunk-0f88fa57ee5ba9a3267c",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-001",
+          "fd_elapsed_seconds": 0.387333249906078,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-48c8602bbc635459c199/journal.json",
+          "sha256": "ead70e824c9359c02e6feff22a004516d2e6a05aa7777b670d2e29cda66d6501",
+          "chunk": "chunk-48c8602bbc635459c199",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-48c8602bbc635459c199/attempt-001",
+          "fd_elapsed_seconds": 0.3465738750528544,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-52d35a790cf09bd6915b/journal.json",
+          "sha256": "e1e0646f0663a6fedc276cf1b9a86345671b86d045679d19fd7cca6433841321",
+          "chunk": "chunk-52d35a790cf09bd6915b",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+          "fd_elapsed_seconds": 0.548649791162461,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-5388e5cbf37adbb7783f/journal.json",
+          "sha256": "0216b179bd92e24b3bd1387833cd898b69f056b054766489122eb6eb1ec61721",
+          "chunk": "chunk-5388e5cbf37adbb7783f",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-5388e5cbf37adbb7783f/attempt-001",
+          "fd_elapsed_seconds": 0.233635124983266,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-7114ca912bc40939c01c/journal.json",
+          "sha256": "5a03b9d82cc536e0ae58d39e2e54b95eb7d237f1d6a531d75c73ac49fb87eeef",
+          "chunk": "chunk-7114ca912bc40939c01c",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7114ca912bc40939c01c/attempt-001",
+          "fd_elapsed_seconds": 0.3736039169598371,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-931587c917804f0954c8/journal.json",
+          "sha256": "9569518e53a4dd8d4f3de7fed49f78688eb229d36d2e4ee8f8f2d99cf72bd825",
+          "chunk": "chunk-931587c917804f0954c8",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-931587c917804f0954c8/attempt-001",
+          "fd_elapsed_seconds": 0.7794813751243055,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-9595471dbe055bfa37e6/journal.json",
+          "sha256": "f145c207c91f56537faf9914785c29ffe49068458b9869e8420398e7f226aebe",
+          "chunk": "chunk-9595471dbe055bfa37e6",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+          "fd_elapsed_seconds": 0.34739358397200704,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-cbb9a537d86d3d2b50fa/journal.json",
+          "sha256": "c072482bcf967ff56b61d805291cd69816cb82da9121b85c1ac50c77b408748e",
+          "chunk": "chunk-cbb9a537d86d3d2b50fa",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-cbb9a537d86d3d2b50fa/attempt-001",
+          "fd_elapsed_seconds": 0.39700941694900393,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-d28d39d236504a816f0e/journal.json",
+          "sha256": "667e598b0440f02d10164978bfd9fea2e2032dce84d621411b2c02e1bc10c378",
+          "chunk": "chunk-d28d39d236504a816f0e",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-d28d39d236504a816f0e/attempt-001",
+          "fd_elapsed_seconds": 0.6800899999216199,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/codex/direct/normalization-final/chunk-f5b7995777165639582f/journal.json",
+          "sha256": "763648f97abe7236ea69cbe656ca87a2240bc5486c102f7997fbb548ceb8c6e9",
+          "chunk": "chunk-f5b7995777165639582f",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-f5b7995777165639582f/attempt-001",
+          "fd_elapsed_seconds": 0.4919545839074999,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 5.544205209938809,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": null,
+      "proposal": {
+        "claim": "New proposal; non-grounding statement bytes preserved. Semantic equivalence, fidelity and acceptance unassessed.",
+        "family_counts": {
+          "constraints": 672,
+          "judgments": 0,
+          "latitude": 79,
+          "objects": 412,
+          "relations": 83,
+          "residuals": 95,
+          "transformations": 0,
+          "traversals": 0
+        },
+        "fd_assembly_elapsed_seconds": 43.01755366590805,
+        "files": {
+          "carrier.json": "3834237e730bd51ed497d4bb976482195bd4468e9acdd01054ef1de02c64b9db",
+          "coverage.json": "7c46d4a33ba18606f83c13f78704814d03d2063eebdd843f5b45f6dd9897fb1d",
+          "model.json": "c05a057f3f287563268bb5029371512509ccbfb941381b59951698b902f866f6"
+        },
+        "model_id": "urn:a-c:generation:5f4077a90aa67a8a5d55259f:model:4971b48fbb5909f3175b6ef8",
+        "model_sha256": "3556011888ddd3f4cdc275d5b18b8c504b03345174afb8e810d7c67bb149d282",
+        "processing_complete": true,
+        "profile": "a_c.grounding.f-p-repair/1",
+        "status": "proposed",
+        "upstream_trial": null
+      },
+      "proposal_path": "runs-v2/codex/direct/repaired-proposal",
+      "proposal_file_bytes": {
+        "model.json": 5504192,
+        "carrier.json": 29530101,
+        "result.json": 962,
+        "coverage.json": 431320
+      },
+      "state": "proposed"
+    },
+    {
+      "candidate": "claude",
+      "subject": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/",
+      "mode": "graphify-ac",
+      "plan_sha256": "2e68b3d1c78721548b6af7c1100ddd95f6c9903a8ab1a4f864595b9b866719c0",
+      "planned_chunks": 19,
+      "validated_author_chunks": 10,
+      "source_files": 49,
+      "source_bytes": 2147989,
+      "attempts": [
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-051f11a84e90d3b70585/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-051f11a84e90d3b70585",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 816.0206758331042,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[world_model_external_basis_gap]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "4097a3a446e5c5cad1d58517af27b1b066c6d54f4e1e3a755cee85a85e9524eb"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-07d713f3fe97651953cd/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-07d713f3fe97651953cd",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 533.8760082500521,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[categorical_demonstration_requirements]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "37e8354c838247fd6e017cdc83325f292d5cefae4a3780f1e5fe96ab3cc102bc"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-0d5b33224d3dc096213c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-0d5b33224d3dc096213c",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 537.9652987909503,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[conformant_realisation_latitude]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "cd9c3dbd08f4097f853497d7606f64d36f813bf0a01ecff0bab88be0a3de7237"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-11915055138d5bb7e07a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-11915055138d5bb7e07a",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 627.4082452079747,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "597632dd5de97d715441df4f40e91b5b995129038cdf7e1cd2f80c44a4467487"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-2156e7a08b28ec235c6a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-2156e7a08b28ec235c6a",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 845.0229324160609,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[carrier_consolidation]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "35e65171ac027d40890b0d2c0ace09db6f0eff9d7235c63bc057703aa84a9c8a"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-281be21d533eef53353b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-281be21d533eef53353b",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 463.1365308749955,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "6ca03fdfc4e3a915069bfd3f4689d71b90641ab1a7550b88551326cd41a35c03"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-504f3af0f5641e8b3237/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-504f3af0f5641e8b3237",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 768.1459941661451,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[reuse_and_promotion_external_law]/grounding/1: grounding quote is not exact source at declared range",
+          "result_sha256": "2df1b887ffee85b90298166b9eef101ece28c2791a502e5ade3103c2c58fd3e2"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-58454451fc2286d6fe25/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-58454451fc2286d6fe25",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 877.0070401248522,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "4c2361f8a7a2d08fa994caf749a4f336dbe314a8306884158be8dc85bad047e1"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-6cfd71b2e91e6f322c7e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-6cfd71b2e91e6f322c7e",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 919.2349456250668,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "eec7084e7db54dc98877126068a048482d3a7b98a1dddaa76a81dce1ef603a73"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-7c11484f3cb700e2ca71/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7c11484f3cb700e2ca71",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 675.9762023750227,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[effect_result_mapping]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "76aaae4158ada109d2d0c105d97bda77404ed1d39012ea5dc414bf2ea8913192"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-7c41f4c3b86720cb16cf/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7c41f4c3b86720cb16cf",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 748.7217547909822,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "47c22f0ed18cc5d7961def2ea2df80f8a4c137ed569003e3bb6f94fbb1cb46e2"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-830f83d0bcd5d07c80b4/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-830f83d0bcd5d07c80b4",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 687.772057125112,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "d4d3dac695cebeab2e6d8cd15787c201854af1e923738602adaf2d938acf275c"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-85bc32276d750275ebb0",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 619.9590769999195,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "9608615fe25163a89ce731aed3f4ad13d84f3e43d68c2ee7637f3f8ee6abb180"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-887569773fe3a6b0d1da/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-887569773fe3a6b0d1da",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 647.9728558340576,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[structural_qualification_case_requirements]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "c57c5e0ccc8583e6220e220d018fda43ef92fb6e1744d9bbff708da369dfe992"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-a45f6d9b2e6f1899a845/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a45f6d9b2e6f1899a845",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 689.2265954581089,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[candidate_result_predicates]/grounding/1: grounding quote is not exact source at declared range",
+          "result_sha256": "66cc83fbdb15f59147b2c852a72c020d204a5496d77da544e9b0f29e5ef71d26"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-a74115f618a07b70b651/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a74115f618a07b70b651",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 817.0267980408389,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "8a92128c71df1f95ae1eb2d4480edfee0ec9c721cd10bb69d8811de15550feff"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-a972742b5f73a73ad154/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a972742b5f73a73ad154",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 742.3995682911482,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "30e2374c7d65728690ef14d93b27e2fb40d60b5c7e9f6f94cb4f52dddca15d6a"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-dd11899387b5a16bf253/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-dd11899387b5a16bf253",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 704.9646261669695,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[calculus_reuse_and_account_mapping]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "9b6c0db354ca71d3e3ccdab297f9742af30654dd5cb7134567bcf0ecc0ae9de6"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/actors/author/chunk-f41da38f499b2dabd47c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f41da38f499b2dabd47c",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 834.197925832821,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "6c27594108c9e1797bc6572546599947ceace0680fe71d8594ea055223945b10"
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/grounding-repairs/chunk-887569773fe3a6b0d1da/attempt-001/actor",
+          "stage": "grounding-repair",
+          "chunk": "chunk-887569773fe3a6b0d1da",
+          "status": "completed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 34.638695209054276,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "d026adc7753037012d1468eb0aec5327298f18918b5f485b2c86365819c9f179",
+          "repair_journal": {
+            "actor_pins": {
+              "actor/answer.json": "8f650ebf41d27b9d03f90840bdeb085839cbc4f703e1ca02cc15fa965f6ac439",
+              "actor/events.jsonl": "f3d2910f2d81b6723d29d26dab56eaacda746531f05301c18c4a7bc8c7d83912",
+              "actor/invocation.json": "7ea69bfc8ce8949914bb5755c77839a3f75eac7b09e2c7dbf21b5d98258bd4b1",
+              "actor/prompt.txt": "fd6e0e18264837987e0e642f95a9832c13840b8bc8172c39916d50cd53856920",
+              "actor/result.json": "d026adc7753037012d1468eb0aec5327298f18918b5f485b2c86365819c9f179",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "a8493280e46ec2e60618622b20cec1ba761d2aded7a9936f7d7085b0cc161b71"
+            },
+            "chunk": "chunk-887569773fe3a6b0d1da",
+            "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+            "code_pins": {
+              "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+              "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+              "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+              "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+              "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+              "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+            },
+            "derived_answer_sha256": "2190515f616ecedc828f0df4b9a13423e3916fd2268ff5a8d3f3724757e1033d",
+            "derived_meaning_sha256": "2f7cad5443cd4c65fcac837f542516b7a518fd4c0d52497c3c90cb90d14816e1",
+            "elapsed_seconds": 40.20654408307746,
+            "parent_meaning_sha256": "2f7cad5443cd4c65fcac837f542516b7a518fd4c0d52497c3c90cb90d14816e1",
+            "profile": "a_c.grounding.f-p-repair/1",
+            "remaining_invalid_grounding_entries": [],
+            "request_sha256": "91d98b47f8f1c8259f07fb80aa98edf52c5e56f91fe5d61372eeba9eb1f44013",
+            "status": "complete_patch",
+            "strict_validation_error": null,
+            "unverified_actor_pins": {
+              "actor/answer.json": "8f650ebf41d27b9d03f90840bdeb085839cbc4f703e1ca02cc15fa965f6ac439",
+              "actor/events.jsonl": "f3d2910f2d81b6723d29d26dab56eaacda746531f05301c18c4a7bc8c7d83912",
+              "actor/invocation.json": "7ea69bfc8ce8949914bb5755c77839a3f75eac7b09e2c7dbf21b5d98258bd4b1",
+              "actor/prompt.txt": "fd6e0e18264837987e0e642f95a9832c13840b8bc8172c39916d50cd53856920",
+              "actor/result.json": "d026adc7753037012d1468eb0aec5327298f18918b5f485b2c86365819c9f179",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "a8493280e46ec2e60618622b20cec1ba761d2aded7a9936f7d7085b0cc161b71"
+            },
+            "usage_events": [
+              {
+                "cache_write_input_tokens": 0,
+                "cached_input_tokens": 0,
+                "input_tokens": 93507,
+                "output_tokens": 718,
+                "reasoning_output_tokens": 142
+              }
+            ]
+          }
+        }
+      ],
+      "attempt_count": 20,
+      "strict_first_attempt_states": {
+        "failed": 9,
+        "completed": 10
+      },
+      "strict_first_attempt_validated": 10,
+      "fp_repair_calls": 1,
+      "attempts_with_usage": 20,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 1435637,
+        "cached_input_tokens": 560768,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 764514,
+        "reasoning_output_tokens": 15987
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 20,
+        "cached_input_tokens": 20,
+        "cache_write_input_tokens": 20,
+        "output_tokens": 20,
+        "reasoning_output_tokens": 20
+      },
+      "sum_recorded_actor_seconds": 13590.673827413237,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-051f11a84e90d3b70585/journal.json",
+          "sha256": "aec7174f94b835bef12ec0ee5735466d0bf3256777f8bc083f07910313bac96a",
+          "chunk": "chunk-051f11a84e90d3b70585",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-051f11a84e90d3b70585/attempt-001",
+          "fd_elapsed_seconds": 0.5413577500730753,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-07d713f3fe97651953cd/journal.json",
+          "sha256": "44021fb041881fa38842f43fac1e1ed1de3b161ce6870a29c868ca4ff0749027",
+          "chunk": "chunk-07d713f3fe97651953cd",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-07d713f3fe97651953cd/attempt-001",
+          "fd_elapsed_seconds": 0.4941768329590559,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-0d5b33224d3dc096213c/journal.json",
+          "sha256": "93b9ae83fae154c42ee34a986ced049aae3ba1f4a695bdb6f0b0f8829041733d",
+          "chunk": "chunk-0d5b33224d3dc096213c",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-0d5b33224d3dc096213c/attempt-001",
+          "fd_elapsed_seconds": 0.5053387919906527,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-11915055138d5bb7e07a/journal.json",
+          "sha256": "66d56adf4533d6ee1dbf9f15f7686889d607364062e692d0cf82a2715e83509e",
+          "chunk": "chunk-11915055138d5bb7e07a",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-11915055138d5bb7e07a/attempt-001",
+          "fd_elapsed_seconds": 0.5411669169552624,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-2156e7a08b28ec235c6a/journal.json",
+          "sha256": "2fc74365b03fb6a162d78112c7170b9a7e22ce2d430b0883092f79c947ef280a",
+          "chunk": "chunk-2156e7a08b28ec235c6a",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-2156e7a08b28ec235c6a/attempt-001",
+          "fd_elapsed_seconds": 0.47550450009293854,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-281be21d533eef53353b/journal.json",
+          "sha256": "332a62f97aa43ccc6312ca1620e08bdfc2b9f6104e18a18f6fd3044fa0ca6716",
+          "chunk": "chunk-281be21d533eef53353b",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-281be21d533eef53353b/attempt-001",
+          "fd_elapsed_seconds": 0.42513045808300376,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-504f3af0f5641e8b3237/journal.json",
+          "sha256": "dd63fd055fd508f771e53d1eda667017aae907fdcc2f75b260ebb1d7c357f580",
+          "chunk": "chunk-504f3af0f5641e8b3237",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-504f3af0f5641e8b3237/attempt-001",
+          "fd_elapsed_seconds": 0.3726408330257982,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-58454451fc2286d6fe25/journal.json",
+          "sha256": "85165132f1309458514a9071c3f95f6ffa2c5e23978a2d21bae05ab4bb133e01",
+          "chunk": "chunk-58454451fc2286d6fe25",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-58454451fc2286d6fe25/attempt-001",
+          "fd_elapsed_seconds": 0.5074496672023088,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-6cfd71b2e91e6f322c7e/journal.json",
+          "sha256": "950154a7dc3e6f5f502b78c323817e53a7d1f250d853fd5266aa476aee21e85e",
+          "chunk": "chunk-6cfd71b2e91e6f322c7e",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-6cfd71b2e91e6f322c7e/attempt-001",
+          "fd_elapsed_seconds": 0.40629712492227554,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-7c11484f3cb700e2ca71/journal.json",
+          "sha256": "2a696992ccecd195eff4b72b820fc8938ace11e4b3e86910888c823c0000aa83",
+          "chunk": "chunk-7c11484f3cb700e2ca71",
+          "status": "derived_validated",
+          "changes": 3,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7c11484f3cb700e2ca71/attempt-001",
+          "fd_elapsed_seconds": 0.503484166925773,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-7c41f4c3b86720cb16cf/journal.json",
+          "sha256": "1ca86adf4a3724af253d43d82518c4c46f67f8674863bfdd99fb561083c02282",
+          "chunk": "chunk-7c41f4c3b86720cb16cf",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7c41f4c3b86720cb16cf/attempt-001",
+          "fd_elapsed_seconds": 0.5256418748758733,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-830f83d0bcd5d07c80b4/journal.json",
+          "sha256": "f0f67e313fb7aaf90fb0243c970870980d4b63be34eebeda7b9a30e6ce0e2554",
+          "chunk": "chunk-830f83d0bcd5d07c80b4",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-830f83d0bcd5d07c80b4/attempt-001",
+          "fd_elapsed_seconds": 0.9112033750861883,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-85bc32276d750275ebb0/journal.json",
+          "sha256": "c817abea2d72626f9912478400aa74921ea6920e5ab0cd7fed91a52ab89eadb1",
+          "chunk": "chunk-85bc32276d750275ebb0",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+          "fd_elapsed_seconds": 0.753762291977182,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-887569773fe3a6b0d1da/journal.json",
+          "sha256": "c7bf602c0178734636b47e27b40be3475f6eaa26bebe61e18930d5cc1ebac7cb",
+          "chunk": "chunk-887569773fe3a6b0d1da",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[structural_qualification_case_requirements]/constraints/39/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-887569773fe3a6b0d1da/attempt-001",
+          "fd_elapsed_seconds": 0.3956608329899609,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-a45f6d9b2e6f1899a845/journal.json",
+          "sha256": "7def1502ab8f5f260531d319db769f73755d49176adb77f45c8de2c8702546f2",
+          "chunk": "chunk-a45f6d9b2e6f1899a845",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-a45f6d9b2e6f1899a845/attempt-001",
+          "fd_elapsed_seconds": 0.46683791698887944,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-a74115f618a07b70b651/journal.json",
+          "sha256": "c2b8066806f353afc8968b16ff14a48d489e2867dd1e46ed7138ae5a6799802f",
+          "chunk": "chunk-a74115f618a07b70b651",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-a74115f618a07b70b651/attempt-001",
+          "fd_elapsed_seconds": 0.4485164999496192,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-a972742b5f73a73ad154/journal.json",
+          "sha256": "26cd26fac9abb2c4f78ace14aac5d230238879a3e871c74ad7a45d04c86a6e77",
+          "chunk": "chunk-a972742b5f73a73ad154",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-a972742b5f73a73ad154/attempt-001",
+          "fd_elapsed_seconds": 0.38077170797623694,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-dd11899387b5a16bf253/journal.json",
+          "sha256": "08da6b74039aee75f6cb7d8f81c1a12ecfdb1df0ac023c735a89f939424b6514",
+          "chunk": "chunk-dd11899387b5a16bf253",
+          "status": "derived_validated",
+          "changes": 2,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-dd11899387b5a16bf253/attempt-001",
+          "fd_elapsed_seconds": 0.9708450410980731,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/graphify-ac/normalization-final/chunk-f41da38f499b2dabd47c/journal.json",
+          "sha256": "2b0ef815f8c8ca5f1dfed35a4b82c23a9c26b17ad4fb6fa7a86bdb49addcf89b",
+          "chunk": "chunk-f41da38f499b2dabd47c",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-f41da38f499b2dabd47c/attempt-001",
+          "fd_elapsed_seconds": 0.687526874942705,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 10.313313458114862,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": {
+        "counts": {
+          "communities": 78,
+          "graph_edges": 1142,
+          "graph_nodes": 897,
+          "raw_semantic_edges": 0,
+          "raw_semantic_nodes": 0,
+          "structural_edges": 1162,
+          "structural_nodes": 897
+        },
+        "elapsed_seconds": 0.3138637919910252,
+        "files": {
+          "coverage.json": "767f4066e618c91516490d2ce2fe052b15564e8d0544570f75f9941fb30a5d4c",
+          "graph.json": "36dda5accccfd3a591c58593971f2a10bcc723da7394cfebf483c126f4f09a25",
+          "structural.json": "23cd6d036d97cf8ff44f433a0040ebb4398b2e93d6ce40f2b6b4c564b58f8086"
+        },
+        "mode": "graphify-ac",
+        "profile": "ac.generation.discovery/1",
+        "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+        "status": "completed",
+        "upstream": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+          "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+          "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-upstream-a5j5b4z4"
+        }
+      },
+      "proposal": {
+        "claim": "New proposal; non-grounding statement bytes preserved. Semantic equivalence, fidelity and acceptance unassessed.",
+        "family_counts": {
+          "constraints": 836,
+          "judgments": 0,
+          "latitude": 130,
+          "objects": 688,
+          "relations": 185,
+          "residuals": 160,
+          "transformations": 0,
+          "traversals": 0
+        },
+        "fd_assembly_elapsed_seconds": 398.89858629205264,
+        "files": {
+          "carrier.json": "aeb054c06fe8a7a7a67461c2af67d9fd451812cac8ab04c76d3d864756e9b105",
+          "coverage.json": "47ff10ec95e9b6d29c55b83fd01469c51677609ab38519a7290b3cf00aa79c20",
+          "graph.json": "24d0caf954e71e5b9522a105f1d575f291a7975012bcce0fcf9fb226d8c58f47",
+          "model.json": "3ca709a001fc187daf567552c0b03a722ca5fffc33757aee3e4a2ad023bf4e23"
+        },
+        "model_id": "urn:a-c:generation:63c64519947babe1e3fec509:model:6f9a1e4ce6866cc526b451e6",
+        "model_sha256": "e20e72c82dae63daed0f64d59577ea14db8764c9c56ffb04a00cdda12dcecbd9",
+        "processing_complete": true,
+        "profile": "a_c.grounding.f-p-repair/1",
+        "status": "proposed",
+        "upstream_trial": {
+          "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+          "edges": 49806,
+          "model_sha256": "e20e72c82dae63daed0f64d59577ea14db8764c9c56ffb04a00cdda12dcecbd9",
+          "nodes": 36192
+        }
+      },
+      "proposal_path": "runs-v2/claude/graphify-ac/repaired-proposal",
+      "proposal_file_bytes": {
+        "model.json": 7293337,
+        "carrier.json": 42491698,
+        "result.json": 1238,
+        "graph.json": 37172325,
+        "coverage.json": 500699
+      },
+      "state": "proposed"
+    },
+    {
+      "candidate": "claude",
+      "subject": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/",
+      "mode": "direct",
+      "plan_sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749",
+      "planned_chunks": 19,
+      "validated_author_chunks": 10,
+      "source_files": 49,
+      "source_bytes": 2147989,
+      "attempts": [
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-051f11a84e90d3b70585/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-051f11a84e90d3b70585",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 769.51581837493,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[ux_surface]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "a07348bb27ddfc40f35567dad2c458b2051f8827a7a81c75f550ddb6d672347f"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-07d713f3fe97651953cd/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-07d713f3fe97651953cd",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 688.2392467500176,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[baseline_actor_binding]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "054064885b827bc75687e8f7e2ccd6e5d68b683b53e28b68c49f3a4780ef5ba9"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-0d5b33224d3dc096213c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-0d5b33224d3dc096213c",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 695.7224178749602,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "35698f82acf711d3c125e9796f9c5821becf72d42a3e5407b51e734b48d1590a"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-11915055138d5bb7e07a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-11915055138d5bb7e07a",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 682.2140501670074,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "81bcb157ca38b6c57af711f39ff824831058befebc082563c2d7ff97a12aaa2e"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-2156e7a08b28ec235c6a/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-2156e7a08b28ec235c6a",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 811.3343701669946,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[architectural_carriers]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "ab6ce6aa71028ac97292873527bd18f45ff53493440b3f7e356c4389d6b43970"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-281be21d533eef53353b/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-281be21d533eef53353b",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 697.7902924579103,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "1e00ea07bc1f712b3d04dd025f91ca2b6339432bcff5aef3f4ef45ed08909915"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-504f3af0f5641e8b3237/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-504f3af0f5641e8b3237",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 704.4537653331645,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[design_module_profile]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "d22defa028e022a06744db94ab0897c710b9efb4c1758be5b5c3aca79d42029e"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-58454451fc2286d6fe25/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-58454451fc2286d6fe25",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 918.0194606250152,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[product_basis_and_bootstrap_schema]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "2113b7b2095e495e0a1ad998168b8db1d413d0b6c3cd3ad77a2084060a842685"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-6cfd71b2e91e6f322c7e/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-6cfd71b2e91e6f322c7e",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 877.2683067920152,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "1077b55f2eb806c390e5117be865ed95172daa3f577b4094d3b54133f22dba74"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-7c11484f3cb700e2ca71/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7c11484f3cb700e2ca71",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 586.0540121248923,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[manager_effect_result_mapping]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "27adc55417ecf8ee59e6ad0743ba5c1a44104a0dbedfbd76bf5ca302490cac21"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-7c41f4c3b86720cb16cf/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-7c41f4c3b86720cb16cf",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 782.5086847080383,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "0793b2a5c96aca4175ebb17999b5cf3439159e5b111930a87b7bfd782432376b"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-830f83d0bcd5d07c80b4/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-830f83d0bcd5d07c80b4",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 772.7835937908385,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "3bcac02494771edec9f8d380a2517e5c1a9ff005f24912f113d5c73869c1d5ea"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-85bc32276d750275ebb0",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 707.0101624168456,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "d3d858a0df42cad8c10ff21c20ebf87c145bc78506e06a277bda51fc4db753b8"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-887569773fe3a6b0d1da/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-887569773fe3a6b0d1da",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 828.1893426249735,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "a3b227fec625cca6963fae23e54ff10f765f0bdca1da3ec8681adc6837dc650c"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-a45f6d9b2e6f1899a845/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a45f6d9b2e6f1899a845",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 521.3790315829683,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[conjunction_reported_value]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "4b637acbe32c563ed1a2a0cf0d264a3e26cbeddc28df18ce3139f3ed2052b7e6"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-a74115f618a07b70b651/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a74115f618a07b70b651",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 464.63502770802006,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[sprint_close_review]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "094b24c0b17150dbe23bad4ee1ac9a1c0edeb6dfa25efaf9294d438972a42d79"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-a972742b5f73a73ad154/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-a972742b5f73a73ad154",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 806.1329089170322,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "4454004955415bcc7e0af059726e71e4977f97ab84e59a8ca8fa5ba0457b7273"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-dd11899387b5a16bf253/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-dd11899387b5a16bf253",
+          "status": "failed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 577.0012831250206,
+          "failures": [
+            "source_or_semantic_fragment_validation"
+          ],
+          "validation_error": "record[foundation_change_family]/grounding/0: grounding quote is not exact source at declared range",
+          "result_sha256": "8a19bcf6eeb82d08f8e3aa7188dd686087a81e4adfbf57848a2eb1f6b09e2416"
+        },
+        {
+          "path": "runs-v2/claude/direct/actors/author/chunk-f41da38f499b2dabd47c/attempt-001",
+          "stage": "author",
+          "chunk": "chunk-f41da38f499b2dabd47c",
+          "status": "completed",
+          "validated": true,
+          "usage_reported": true,
+          "elapsed_seconds": 701.4355444170069,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "0a7c2af178fd94e56f0f261d2a04bc58df7f679663e8f21239ecad1a59c4092e"
+        },
+        {
+          "path": "runs-v2/claude/direct/grounding-repairs/chunk-58454451fc2286d6fe25/attempt-001/actor",
+          "stage": "grounding-repair",
+          "chunk": "chunk-58454451fc2286d6fe25",
+          "status": "completed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 16.54435541597195,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "47619d1a16f93a3543b5fe70c23911fe4a7874e08cab3ef4fb0ba7ec058c8c7d",
+          "repair_journal": {
+            "actor_pins": {
+              "actor/answer.json": "394e45c8c3b424487406ff57639fe31c12860a8e1030f92ce94e5dce76fd4247",
+              "actor/events.jsonl": "9632b3c4e2bb529822d68a36719f6718741755f90bdd8cd4c49287c23cc4105d",
+              "actor/invocation.json": "730d3907fa0d208bb4a26420a7c66c7618b1ad99bddd6a3db933596d60452849",
+              "actor/prompt.txt": "ed57000ed2e71c05339fa76c29a828d5b0d13f6464221c67c1b01121d5553ac8",
+              "actor/result.json": "47619d1a16f93a3543b5fe70c23911fe4a7874e08cab3ef4fb0ba7ec058c8c7d",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "d6b7709dcf420eaa7fa23dd636f03af2ca6485c0b59987d26dc1329686901e1d"
+            },
+            "chunk": "chunk-58454451fc2286d6fe25",
+            "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+            "code_pins": {
+              "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+              "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+              "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+              "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+              "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+              "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+            },
+            "derived_answer_sha256": "53bc657923abec4f20781489c104c1dc89bd5f00bb05aa2cb667d072c2444907",
+            "derived_meaning_sha256": "7d82111b341e93fca3a99601a126091b049ff90f0bdfe3c581c5e232a16ef5a6",
+            "elapsed_seconds": 19.261170291807503,
+            "parent_meaning_sha256": "7d82111b341e93fca3a99601a126091b049ff90f0bdfe3c581c5e232a16ef5a6",
+            "profile": "a_c.grounding.f-p-repair/1",
+            "remaining_invalid_grounding_entries": [],
+            "request_sha256": "22fc89a2255e62b439664d9651c27bff7852ae0138524d7af69736f4749244a6",
+            "status": "complete_patch",
+            "strict_validation_error": null,
+            "unverified_actor_pins": {
+              "actor/answer.json": "394e45c8c3b424487406ff57639fe31c12860a8e1030f92ce94e5dce76fd4247",
+              "actor/events.jsonl": "9632b3c4e2bb529822d68a36719f6718741755f90bdd8cd4c49287c23cc4105d",
+              "actor/invocation.json": "730d3907fa0d208bb4a26420a7c66c7618b1ad99bddd6a3db933596d60452849",
+              "actor/prompt.txt": "ed57000ed2e71c05339fa76c29a828d5b0d13f6464221c67c1b01121d5553ac8",
+              "actor/result.json": "47619d1a16f93a3543b5fe70c23911fe4a7874e08cab3ef4fb0ba7ec058c8c7d",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "d6b7709dcf420eaa7fa23dd636f03af2ca6485c0b59987d26dc1329686901e1d"
+            },
+            "usage_events": [
+              {
+                "cache_write_input_tokens": 0,
+                "cached_input_tokens": 0,
+                "input_tokens": 121268,
+                "output_tokens": 283,
+                "reasoning_output_tokens": 47
+              }
+            ]
+          }
+        },
+        {
+          "path": "runs-v2/claude/direct/grounding-repairs/chunk-a74115f618a07b70b651/attempt-001/actor",
+          "stage": "grounding-repair",
+          "chunk": "chunk-a74115f618a07b70b651",
+          "status": "completed",
+          "validated": false,
+          "usage_reported": true,
+          "elapsed_seconds": 46.22159145819023,
+          "failures": [],
+          "validation_error": null,
+          "result_sha256": "face9d8283067ae686161278af1cd001a622617cdb0019ded31e7743704ecd74",
+          "repair_journal": {
+            "actor_pins": {
+              "actor/answer.json": "a375ca54d24b675b5987f627ddd67c4ed8280d45a0d135909f01f5cc90f452b4",
+              "actor/events.jsonl": "edca20ffc33a3c933e327fd422493505667d9fcfb17e33e54af0b0324e08845c",
+              "actor/invocation.json": "bcff19c41704b872890449c770f6c155b16e82a9125e964120e3fb9697ef373e",
+              "actor/prompt.txt": "e0c4c079aecffa743719a8b3b7c4396e5339fc4ba270f9cdbf01aa23d32f7396",
+              "actor/result.json": "face9d8283067ae686161278af1cd001a622617cdb0019ded31e7743704ecd74",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "448d05b461d16693f4f79eecd9c076ad272698bd7457ffc2e7b781dfc44e6729"
+            },
+            "chunk": "chunk-a74115f618a07b70b651",
+            "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+            "code_pins": {
+              "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+              "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+              "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+              "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+              "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+              "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+            },
+            "derived_answer_sha256": "af19946b6de252af9ad3f078788017e71c05e4f334da3a03921dd4da6a20d9b9",
+            "derived_meaning_sha256": "61e3af7aedd0ac26bb385f957351d02a46d8f24d7ab03c9625f135438904f08b",
+            "elapsed_seconds": 51.787650167010725,
+            "parent_meaning_sha256": "61e3af7aedd0ac26bb385f957351d02a46d8f24d7ab03c9625f135438904f08b",
+            "profile": "a_c.grounding.f-p-repair/1",
+            "remaining_invalid_grounding_entries": [],
+            "request_sha256": "f3e3f9e93c608fe6550409961d428e508bc6c55fbbf8acf4978ede28c61d97b8",
+            "status": "complete_patch",
+            "strict_validation_error": null,
+            "unverified_actor_pins": {
+              "actor/answer.json": "a375ca54d24b675b5987f627ddd67c4ed8280d45a0d135909f01f5cc90f452b4",
+              "actor/events.jsonl": "edca20ffc33a3c933e327fd422493505667d9fcfb17e33e54af0b0324e08845c",
+              "actor/invocation.json": "bcff19c41704b872890449c770f6c155b16e82a9125e964120e3fb9697ef373e",
+              "actor/prompt.txt": "e0c4c079aecffa743719a8b3b7c4396e5339fc4ba270f9cdbf01aa23d32f7396",
+              "actor/result.json": "face9d8283067ae686161278af1cd001a622617cdb0019ded31e7743704ecd74",
+              "actor/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "actor/usage.json": "448d05b461d16693f4f79eecd9c076ad272698bd7457ffc2e7b781dfc44e6729"
+            },
+            "usage_events": [
+              {
+                "cache_write_input_tokens": 0,
+                "cached_input_tokens": 0,
+                "input_tokens": 99186,
+                "output_tokens": 1177,
+                "reasoning_output_tokens": 497
+              }
+            ]
+          }
+        }
+      ],
+      "attempt_count": 21,
+      "strict_first_attempt_states": {
+        "failed": 9,
+        "completed": 10
+      },
+      "strict_first_attempt_validated": 10,
+      "fp_repair_calls": 2,
+      "attempts_with_usage": 21,
+      "attempts_without_usage": 0,
+      "reported_usage_totals": {
+        "input_tokens": 1389559,
+        "cached_input_tokens": 279808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 746907,
+        "reasoning_output_tokens": 16664
+      },
+      "reported_usage_field_event_counts": {
+        "input_tokens": 21,
+        "cached_input_tokens": 21,
+        "cache_write_input_tokens": 21,
+        "output_tokens": 21,
+        "reasoning_output_tokens": 21
+      },
+      "sum_recorded_actor_seconds": 13654.453266831813,
+      "timing_scope": "Sum of completed actor elapsed intervals, including failed attempts; not concurrent wall time.",
+      "normalization_journals": [
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-051f11a84e90d3b70585/journal.json",
+          "sha256": "605ac99600de06e53d8e631b72622379951ec4ac66aa89ef8dee8c98ead87404",
+          "chunk": "chunk-051f11a84e90d3b70585",
+          "status": "derived_validated",
+          "changes": 2,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-051f11a84e90d3b70585/attempt-001",
+          "fd_elapsed_seconds": 0.25649504200555384,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-07d713f3fe97651953cd/journal.json",
+          "sha256": "cc503a7e68bf8fb45c2e4728beb89364d986b905b24e1844cd5c4b984927dfee",
+          "chunk": "chunk-07d713f3fe97651953cd",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-07d713f3fe97651953cd/attempt-001",
+          "fd_elapsed_seconds": 0.32355775008909404,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-0d5b33224d3dc096213c/journal.json",
+          "sha256": "e7e2b569421c00bc31d0912079dc920dd6cfe04d7351a406aaadd722f64f18da",
+          "chunk": "chunk-0d5b33224d3dc096213c",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-0d5b33224d3dc096213c/attempt-001",
+          "fd_elapsed_seconds": 0.22266625007614493,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-11915055138d5bb7e07a/journal.json",
+          "sha256": "ce3a9c9caa7c6b9e700c11cecf531240f36bb151e894a42d08c2e9b012fe8135",
+          "chunk": "chunk-11915055138d5bb7e07a",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-11915055138d5bb7e07a/attempt-001",
+          "fd_elapsed_seconds": 0.28676262497901917,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-2156e7a08b28ec235c6a/journal.json",
+          "sha256": "57410ef9a3f0a7ee17f1e25bbd84774ca9b179704f99529a3f8163949eb3fc9d",
+          "chunk": "chunk-2156e7a08b28ec235c6a",
+          "status": "derived_validated",
+          "changes": 3,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-2156e7a08b28ec235c6a/attempt-001",
+          "fd_elapsed_seconds": 0.45942579209804535,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-281be21d533eef53353b/journal.json",
+          "sha256": "fa0ecf3a864446b0f7ab592284d7d30b5dc1fac97108daee5a4f487ef97257eb",
+          "chunk": "chunk-281be21d533eef53353b",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-281be21d533eef53353b/attempt-001",
+          "fd_elapsed_seconds": 0.2683853330090642,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-504f3af0f5641e8b3237/journal.json",
+          "sha256": "98fe1ec5958b0b317f42d714555fd91db759a023b1ac652692fbf94e9ab30703",
+          "chunk": "chunk-504f3af0f5641e8b3237",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-504f3af0f5641e8b3237/attempt-001",
+          "fd_elapsed_seconds": 0.2929279590025544,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-58454451fc2286d6fe25/journal.json",
+          "sha256": "75503121ab47cecf7e7ee7a0312ca6bbd6108e19f2f5bf392baf9ff0d32a798c",
+          "chunk": "chunk-58454451fc2286d6fe25",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "record[product_basis_and_bootstrap_schema]/constraints/13/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "original_attempt": "actors/author/chunk-58454451fc2286d6fe25/attempt-001",
+          "fd_elapsed_seconds": 0.21073470800183713,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-6cfd71b2e91e6f322c7e/journal.json",
+          "sha256": "66676ddb70a712e9bbf2c91a90d10db629d7efad45e70634e82377c151d994e4",
+          "chunk": "chunk-6cfd71b2e91e6f322c7e",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-6cfd71b2e91e6f322c7e/attempt-001",
+          "fd_elapsed_seconds": 0.33204866596497595,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-7c11484f3cb700e2ca71/journal.json",
+          "sha256": "70645297a0e9618acbe52bb3bd34b754789500475f18c9202ade9237f46a1a3a",
+          "chunk": "chunk-7c11484f3cb700e2ca71",
+          "status": "derived_validated",
+          "changes": 1,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7c11484f3cb700e2ca71/attempt-001",
+          "fd_elapsed_seconds": 0.25317016686312854,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-7c41f4c3b86720cb16cf/journal.json",
+          "sha256": "ffdf5e8cf3c4eb4fc4e7b50898986e7e41b759a3159f599f0e65974bf20727f7",
+          "chunk": "chunk-7c41f4c3b86720cb16cf",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-7c41f4c3b86720cb16cf/attempt-001",
+          "fd_elapsed_seconds": 0.33776987507008016,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-830f83d0bcd5d07c80b4/journal.json",
+          "sha256": "07794b6260617ec71e2f4b1e94fa24333fd354cc22818afc7cd3b85d6100f78b",
+          "chunk": "chunk-830f83d0bcd5d07c80b4",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-830f83d0bcd5d07c80b4/attempt-001",
+          "fd_elapsed_seconds": 0.3049366660416126,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-85bc32276d750275ebb0/journal.json",
+          "sha256": "dbb770371d1b43de2474795a8a8a41dc1a59d9603e88809254fc7caf4f4a8c6b",
+          "chunk": "chunk-85bc32276d750275ebb0",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+          "fd_elapsed_seconds": 0.29810287500731647,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-887569773fe3a6b0d1da/journal.json",
+          "sha256": "090b8ae9ec8b1c954df84d5d26ab7da90443ff88b4968126144d465e9b285931",
+          "chunk": "chunk-887569773fe3a6b0d1da",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-887569773fe3a6b0d1da/attempt-001",
+          "fd_elapsed_seconds": 0.21540570887736976,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-a45f6d9b2e6f1899a845/journal.json",
+          "sha256": "c3313b9ddc1e056818621b8d624af448ab1eca4f1f71920f4cfb24f7d176e265",
+          "chunk": "chunk-a45f6d9b2e6f1899a845",
+          "status": "derived_validated",
+          "changes": 3,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-a45f6d9b2e6f1899a845/attempt-001",
+          "fd_elapsed_seconds": 0.2823390830308199,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-a74115f618a07b70b651/journal.json",
+          "sha256": "f28d94ed99b33754a98e4d7fb2388489690a85b452931003864acdd1e38ff6b5",
+          "chunk": "chunk-a74115f618a07b70b651",
+          "status": "refused",
+          "changes": 0,
+          "refusal": "/constraints/33/grounding/0: grounding names a section outside this exact source chunk",
+          "original_attempt": "actors/author/chunk-a74115f618a07b70b651/attempt-001",
+          "fd_elapsed_seconds": 0.18663954199291766,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-a972742b5f73a73ad154/journal.json",
+          "sha256": "ccbed43a9f606ffe11a8b62d613dae2918cdb9bd125dd1b0582b0f1ee907c4e9",
+          "chunk": "chunk-a972742b5f73a73ad154",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-a972742b5f73a73ad154/attempt-001",
+          "fd_elapsed_seconds": 0.29785887501202524,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-dd11899387b5a16bf253/journal.json",
+          "sha256": "27d405713774ead198c0c3a2135ef1a0f8fc1974d21417229d9f54a2db96177e",
+          "chunk": "chunk-dd11899387b5a16bf253",
+          "status": "derived_validated",
+          "changes": 2,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-dd11899387b5a16bf253/attempt-001",
+          "fd_elapsed_seconds": 0.24945391691289842,
+          "new_fp_calls": 0
+        },
+        {
+          "path": "runs-v2/claude/direct/normalization-final/chunk-f41da38f499b2dabd47c/journal.json",
+          "sha256": "c21f6cb42593b7a3aff458d9cec188939e25db8661e1e34f382ca433e2ce7388",
+          "chunk": "chunk-f41da38f499b2dabd47c",
+          "status": "validated_original",
+          "changes": 0,
+          "refusal": null,
+          "original_attempt": "actors/author/chunk-f41da38f499b2dabd47c/attempt-001",
+          "fd_elapsed_seconds": 0.32493566698394716,
+          "new_fp_calls": 0
+        }
+      ],
+      "sum_recorded_normalization_seconds": 5.403616501018405,
+      "normalization_timing_scope": "Sum of recorded journal-creation intervals, including refusals; unrecorded verification/orchestration/engineering time is not claimed.",
+      "normalization_scope": "Separate F_D source-locator recovery; original failures and usage remain in attempt totals.",
+      "discovery": null,
+      "proposal": {
+        "claim": "New proposal; non-grounding statement bytes preserved. Semantic equivalence, fidelity and acceptance unassessed.",
+        "family_counts": {
+          "constraints": 853,
+          "judgments": 0,
+          "latitude": 121,
+          "objects": 658,
+          "relations": 180,
+          "residuals": 168,
+          "transformations": 0,
+          "traversals": 0
+        },
+        "fd_assembly_elapsed_seconds": 80.35946508310735,
+        "files": {
+          "carrier.json": "c30df87f036ea346be053f95e0562d85e5f6eef42764f3efc9fbf6f53677c29a",
+          "coverage.json": "c15ceca00f85434ddcf1da95e5a90304202ac6a62775903e995df4e11fa4d1c9",
+          "model.json": "bf12529fc3359c3d0a6238c6214693e022d665f1148a1543f7add2ac2b150704"
+        },
+        "model_id": "urn:a-c:generation:63c64519947babe1e3fec509:model:acb523c25ab7ce983045db1b",
+        "model_sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111",
+        "processing_complete": true,
+        "profile": "a_c.grounding.f-p-repair/1",
+        "status": "proposed",
+        "upstream_trial": null
+      },
+      "proposal_path": "runs-v2/claude/direct/repaired-proposal",
+      "proposal_file_bytes": {
+        "model.json": 7211409,
+        "carrier.json": 42007914,
+        "result.json": 965,
+        "coverage.json": 495950
+      },
+      "state": "proposed"
+    }
+  ],
+  "claim_boundary": [
+    "All retained source-generation attempts are included, including failures and repairs.",
+    "Unreported usage remains unknown; totals cover reported counters only.",
+    "Reasoning is reported separately and is not added to output tokens again.",
+    "Cached input subtraction is not a billing formula; no dollars are inferred.",
+    "Synthetic smokes, engineering, oracle and assessment costs are separate.",
+    "Supported mechanical grounding recovery creates no new F_P usage and does not erase strict first-pass failures.",
+    "Conditional F_P grounding repairs are counted as model calls, including their failed outcomes and usage; unchanged statement bytes do not prove equivalence.",
+    "A complete structural proposal does not establish semantic fidelity or owner acceptance.",
+    "One repeat per treatment/candidate does not establish a population timing effect."
+  ]
+}

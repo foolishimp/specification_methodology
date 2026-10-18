@@ -1,0 +1,681 @@
+{
+  "profile": "ac.generation.comparison-inputs/1",
+  "older_checkpoint": "efae9c749275838029a871863f0b3ce7d7aba8b6",
+  "operating_basis": "STDO v2.5.1-rc.2; V3 candidates are subject data.",
+  "implementation": {
+    "runner_sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "assets": {
+      "author.schema.json": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+      "author.txt": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+      "extraction.schema.json": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+      "isolation.txt": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+      "requirements.txt": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+    },
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "chunk_chars": 120000,
+    "graph_chars": 40000
+  },
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "cells": [
+    {
+      "cell": "older-codex-graphify-ac",
+      "period": "older",
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "candidate_version": "3.0.0-rc.5",
+      "revision": "5a5b5ad80f0ba4b56b83aadd42ac130de53ba803",
+      "custody_checkpoint": "87512593de6ec60660f2ad9e040241d67a4108d7",
+      "subject_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation/corpora/codex/manifest.json",
+        "file_sha256": "57b00f719a18b422ab59409f2aa009387a7860b7b4cd0c789bb5f71d2c01dff1"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation/corpora/codex/source",
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+      "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1",
+      "planned_chunks": 11,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/graphify-ac/plan.json",
+        "file_sha256": "b0ef07f212c15b02a3fd2ba445fbe16cd26d42e8f3199401dce97aaec9c7b1b3"
+      },
+      "model_canonical_sha256": "50971f14f3014e025407efe0d0ad8de57f79fe8e74c5c5afe055aecf7dc878e5",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/graphify-ac/repaired-proposal/carrier.json",
+          "file_sha256": "c683fda27fbde001c875de661a284f21605f671d404d40d6be3031905fdc5fcf",
+          "bytes": 29237507
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/graphify-ac/repaired-proposal/coverage.json",
+          "file_sha256": "901f5a01e54b9959ee6244982f2163d67b40bfd62b9b93a3096184791f1eb3a0",
+          "bytes": 427103
+        },
+        "graph.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/graphify-ac/repaired-proposal/graph.json",
+          "file_sha256": "9f9cae68576543241cd749bd8c72fae2816edfaeda799f14e54dc0d217c05e1c",
+          "bytes": 25627515
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/graphify-ac/repaired-proposal/model.json",
+          "file_sha256": "3e5266f3e854e33533a33cd62c34dd003c496414b418e6532b683e8737447fe8",
+          "bytes": 5486526
+        }
+      },
+      "family_counts": {
+        "constraints": 647,
+        "judgments": 0,
+        "latitude": 71,
+        "objects": 439,
+        "relations": 89,
+        "residuals": 94,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 12,
+        "calls_by_stage": {
+          "author": 12
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 955101,
+          "cached_input_tokens": 339584,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 585828,
+          "reasoning_output_tokens": 10808
+        },
+        "sum_recorded_actor_seconds": 10095.109338585753,
+        "fd_discovery_seconds": 0.2638807501643896,
+        "fd_assembly_seconds": 74.00318875000812
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation/results.json",
+        "file_sha256": "395714ac1a1762b865fa9f059c500ca1e6886bfe450887ae97cfeec7eb65c74d"
+      },
+      "semantic_assessment": "Older bounded source-fidelity assessment only; see its retained scope.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "older-codex-direct",
+      "period": "older",
+      "candidate": "codex",
+      "mode": "direct",
+      "semantic_extraction_profile": "a_c.direct.source-authoring/1",
+      "candidate_version": "3.0.0-rc.5",
+      "revision": "5a5b5ad80f0ba4b56b83aadd42ac130de53ba803",
+      "custody_checkpoint": "87512593de6ec60660f2ad9e040241d67a4108d7",
+      "subject_id": "repo://stdo-v3-generation/codex/5a5b5ad80f0ba4b56b83aadd42ac130de53ba803/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation/corpora/codex/manifest.json",
+        "file_sha256": "57b00f719a18b422ab59409f2aa009387a7860b7b4cd0c789bb5f71d2c01dff1"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation/corpora/codex/source",
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+      "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1",
+      "planned_chunks": 11,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/direct/plan.json",
+        "file_sha256": "97706f638ee2b59f146958c4bf6e8beecea8d03af4992eb9f02cc55098d7dc7a"
+      },
+      "model_canonical_sha256": "649d9e19a7b7949501a4e55cb173663b2e87a2e61c3df04ddc87354e801dcf78",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/direct/repaired-proposal/carrier.json",
+          "file_sha256": "2d010cb5c1b41c90632c67ad91e5d68072a09a0fdecf53232a67c12fef07f660",
+          "bytes": 29559119
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/direct/repaired-proposal/coverage.json",
+          "file_sha256": "55efbec7c41ba3ba6dcc96cdc2a320f3df8fd56e252925e8ac41b5dcc7d8566f",
+          "bytes": 431354
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/codex/direct/repaired-proposal/model.json",
+          "file_sha256": "622e48dbbd80e9501aea163d3e27075723d2614a6a0f6ea3d4c2c05817dcfff9",
+          "bytes": 5525857
+        }
+      },
+      "family_counts": {
+        "constraints": 663,
+        "judgments": 0,
+        "latitude": 64,
+        "objects": 390,
+        "relations": 100,
+        "residuals": 110,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 13,
+        "calls_by_stage": {
+          "author": 12,
+          "grounding-repair": 1
+        },
+        "attempts_without_usage": 1,
+        "reported_usage_totals": {
+          "input_tokens": 894586,
+          "cached_input_tokens": 205440,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 555175,
+          "reasoning_output_tokens": 10397
+        },
+        "sum_recorded_actor_seconds": 10591.534330250695,
+        "fd_discovery_seconds": null,
+        "fd_assembly_seconds": 5.73847420909442
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation/results.json",
+        "file_sha256": "395714ac1a1762b865fa9f059c500ca1e6886bfe450887ae97cfeec7eb65c74d"
+      },
+      "semantic_assessment": "Older bounded source-fidelity assessment only; see its retained scope.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "older-claude-graphify-ac",
+      "period": "older",
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "candidate_version": "3.0.0-rc.8",
+      "revision": "9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e",
+      "custody_checkpoint": "1db13bfeb0675fc95de04aceccb214f5b76873fc",
+      "subject_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation/corpora/claude/manifest.json",
+        "file_sha256": "eb17b723c293aa49224a2b427a9104c8685cc9f185699910adce6a18a826eb56"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation/corpora/claude/source",
+      "source_files": 49,
+      "source_bytes": 2147228,
+      "input_corpus_sha256": "80bf7998bd73fe50a39cd39b4f5e2e0f10461960fd168b69708e7564ce94b3a6",
+      "content_inventory_sha256": "df33030ffd430b3ec0015691dc4cb77f37efa47ec6cf034a20d056c325513911",
+      "planned_chunks": 19,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/graphify-ac/plan.json",
+        "file_sha256": "f2a7df1eee4924eb42325d4c141621cd471c4c98c6b4a0e74d4c3cd139df11ce"
+      },
+      "model_canonical_sha256": "95bd38e3ca11127c8c57cbcd55edcf0b2fdc001f723a4df1e3917351b006a973",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/graphify-ac/repaired-proposal/carrier.json",
+          "file_sha256": "3e4477e6943e9a9f96fb7d0f28dc22f91adea600e89dea5395b3405485134e38",
+          "bytes": 42816330
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/graphify-ac/repaired-proposal/coverage.json",
+          "file_sha256": "bbb9e0d7ae31e026604a5fd7926ff914b5ee7877ee60f92a998dd0ba5fe21fc1",
+          "bytes": 493064
+        },
+        "graph.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/graphify-ac/repaired-proposal/graph.json",
+          "file_sha256": "41cfe151b111372d66d63b94b0a0001db1b60f8eab9c13a9dfbc37a5ab438ef2",
+          "bytes": 37478089
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/graphify-ac/repaired-proposal/model.json",
+          "file_sha256": "7d264dd8b39062d8095832869b38f837ed7673bf72c6cd902353cbb75fb1b501",
+          "bytes": 7318529
+        }
+      },
+      "family_counts": {
+        "constraints": 838,
+        "judgments": 0,
+        "latitude": 131,
+        "objects": 704,
+        "relations": 182,
+        "residuals": 175,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 30,
+        "calls_by_stage": {
+          "author": 19,
+          "grounding-repair": 11
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 2531742,
+          "cached_input_tokens": 251648,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 777599,
+          "reasoning_output_tokens": 16435
+        },
+        "sum_recorded_actor_seconds": 13379.636439913884,
+        "fd_discovery_seconds": 0.3330299579538405,
+        "fd_assembly_seconds": 129.74107087496668
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation/results.json",
+        "file_sha256": "395714ac1a1762b865fa9f059c500ca1e6886bfe450887ae97cfeec7eb65c74d"
+      },
+      "semantic_assessment": "Older bounded source-fidelity assessment only; see its retained scope.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "older-claude-direct",
+      "period": "older",
+      "candidate": "claude",
+      "mode": "direct",
+      "semantic_extraction_profile": "a_c.direct.source-authoring/1",
+      "candidate_version": "3.0.0-rc.8",
+      "revision": "9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e",
+      "custody_checkpoint": "1db13bfeb0675fc95de04aceccb214f5b76873fc",
+      "subject_id": "repo://stdo-v3-generation/claude/9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation/corpora/claude/manifest.json",
+        "file_sha256": "eb17b723c293aa49224a2b427a9104c8685cc9f185699910adce6a18a826eb56"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation/corpora/claude/source",
+      "source_files": 49,
+      "source_bytes": 2147228,
+      "input_corpus_sha256": "80bf7998bd73fe50a39cd39b4f5e2e0f10461960fd168b69708e7564ce94b3a6",
+      "content_inventory_sha256": "df33030ffd430b3ec0015691dc4cb77f37efa47ec6cf034a20d056c325513911",
+      "planned_chunks": 19,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/direct/plan.json",
+        "file_sha256": "005cba285ff45759afddd7418264acc6fcd348800969bf4cbe377dc6bf1c21bc"
+      },
+      "model_canonical_sha256": "1f7a4079d4615fc21e0503e6f0393d448b3f1c126bbb70a0203ed8816eaffecd",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/direct/repaired-proposal/carrier.json",
+          "file_sha256": "5d4592c32a8db950273dde0acf0d546c9c0181652959fe5bd71be94eaccdc3fe",
+          "bytes": 41574594
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/direct/repaired-proposal/coverage.json",
+          "file_sha256": "497258dba2bd234f0f163c6e9c92f74900b137f8e445aaee95019ff3f8f32e3f",
+          "bytes": 487476
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation/runs-v2/claude/direct/repaired-proposal/model.json",
+          "file_sha256": "961bf12b878c3b2c43235f10f2ce3e9972c1614a1f0d28e10f9f342c3543c986",
+          "bytes": 7196485
+        }
+      },
+      "family_counts": {
+        "constraints": 833,
+        "judgments": 0,
+        "latitude": 124,
+        "objects": 638,
+        "relations": 169,
+        "residuals": 176,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 30,
+        "calls_by_stage": {
+          "author": 21,
+          "grounding-repair": 9
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 2129152,
+          "cached_input_tokens": 286848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 850259,
+          "reasoning_output_tokens": 18711
+        },
+        "sum_recorded_actor_seconds": 15059.415357750375,
+        "fd_discovery_seconds": null,
+        "fd_assembly_seconds": 8.248843458015472
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation/results.json",
+        "file_sha256": "395714ac1a1762b865fa9f059c500ca1e6886bfe450887ae97cfeec7eb65c74d"
+      },
+      "semantic_assessment": "Older bounded source-fidelity assessment only; see its retained scope.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "newer-codex-graphify-ac",
+      "period": "newer",
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "candidate_version": "3.0.0-rc.9",
+      "revision": "5592168e26759f37e730aed12c030a6061709ec4",
+      "custody_checkpoint": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "subject_id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/manifest.json",
+        "file_sha256": "1352228a4933c72f62c7f62590dc98bdededc237589a981c0b09e36d404d2363"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source",
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+      "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1",
+      "planned_chunks": 11,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/plan.json",
+        "file_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42"
+      },
+      "model_canonical_sha256": "176112842f82c831d262733997346e0b50ab9a1ebf79b023194c931ef7652726",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/repaired-proposal/carrier.json",
+          "file_sha256": "934ee0b3eb9a7465c7e8a907e0cf0ed7695c28ab8529b8b61dea7aae6e35a317",
+          "bytes": 30293675
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/repaired-proposal/coverage.json",
+          "file_sha256": "df5ef0779e07395328cc49d3e820b0373fc40aaf0fb2369d1ed245be33f03c5c",
+          "bytes": 429490
+        },
+        "graph.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/repaired-proposal/graph.json",
+          "file_sha256": "a8bc964be6ccccaf45d822666ab412bf3b29c9b321732e33f724ef432be81a28",
+          "bytes": 26573428
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/repaired-proposal/model.json",
+          "file_sha256": "de15780ae8447deb8f3e90ad17ffd88cc09a5ecc75af9db403d73db4142d66e2",
+          "bytes": 5560108
+        }
+      },
+      "family_counts": {
+        "constraints": 680,
+        "judgments": 0,
+        "latitude": 78,
+        "objects": 446,
+        "relations": 85,
+        "residuals": 111,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 14,
+        "calls_by_stage": {
+          "author": 12,
+          "grounding-repair": 2
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 1203589,
+          "cached_input_tokens": 201344,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 590113,
+          "reasoning_output_tokens": 9878
+        },
+        "sum_recorded_actor_seconds": 9896.906860040734,
+        "fd_discovery_seconds": 0.32250270806252956,
+        "fd_assembly_seconds": 653.441712875152
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/results.json",
+        "file_sha256": "cbd27d5df3d5e222e7774550f6f97dc18d2afd3f35ab0bd40ad49c7d3adea909"
+      },
+      "semantic_assessment": "Not performed for this rebuild; no inherited old grades.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "newer-codex-direct",
+      "period": "newer",
+      "candidate": "codex",
+      "mode": "direct",
+      "semantic_extraction_profile": "a_c.direct.source-authoring/1",
+      "candidate_version": "3.0.0-rc.9",
+      "revision": "5592168e26759f37e730aed12c030a6061709ec4",
+      "custody_checkpoint": "c46e9f96381097245a6714164f03b72ad32116c0",
+      "subject_id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/manifest.json",
+        "file_sha256": "1352228a4933c72f62c7f62590dc98bdededc237589a981c0b09e36d404d2363"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source",
+      "source_files": 44,
+      "source_bytes": 1269082,
+      "input_corpus_sha256": "201f8ae53c20c085d5eceb8acd31ec8403564d1333e244e185cf6b9a4eb97f3d",
+      "content_inventory_sha256": "9b9139486778d66cf02488f8956acfff38084dd8ef03c416a0b7fdd4a6d065c1",
+      "planned_chunks": 11,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/plan.json",
+        "file_sha256": "f30c33db4ba32a3369b570ae9d47ab4954508a0dd7bfdccacf9f43ae132b63cf"
+      },
+      "model_canonical_sha256": "3556011888ddd3f4cdc275d5b18b8c504b03345174afb8e810d7c67bb149d282",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/repaired-proposal/carrier.json",
+          "file_sha256": "3834237e730bd51ed497d4bb976482195bd4468e9acdd01054ef1de02c64b9db",
+          "bytes": 29530101
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/repaired-proposal/coverage.json",
+          "file_sha256": "7c46d4a33ba18606f83c13f78704814d03d2063eebdd843f5b45f6dd9897fb1d",
+          "bytes": 431320
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/repaired-proposal/model.json",
+          "file_sha256": "c05a057f3f287563268bb5029371512509ccbfb941381b59951698b902f866f6",
+          "bytes": 5504192
+        }
+      },
+      "family_counts": {
+        "constraints": 672,
+        "judgments": 0,
+        "latitude": 79,
+        "objects": 412,
+        "relations": 83,
+        "residuals": 95,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 11,
+        "calls_by_stage": {
+          "author": 11
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 786238,
+          "cached_input_tokens": 125184,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 544286,
+          "reasoning_output_tokens": 9316
+        },
+        "sum_recorded_actor_seconds": 9629.808051919332,
+        "fd_discovery_seconds": null,
+        "fd_assembly_seconds": 43.01755366590805
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/results.json",
+        "file_sha256": "cbd27d5df3d5e222e7774550f6f97dc18d2afd3f35ab0bd40ad49c7d3adea909"
+      },
+      "semantic_assessment": "Not performed for this rebuild; no inherited old grades.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "newer-claude-graphify-ac",
+      "period": "newer",
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "semantic_extraction_profile": "a_c.graphify.source-semantic-extraction/1",
+      "candidate_version": "3.0.0-rc.9",
+      "revision": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "custody_checkpoint": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "subject_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/manifest.json",
+        "file_sha256": "3733fbb9c41734769a3c1f38e2e3a5b455505f6467a58ef88bae043f16866ab4"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source",
+      "source_files": 49,
+      "source_bytes": 2147989,
+      "input_corpus_sha256": "14b59f4e6e94a3fb0e81b6a1425d7be22b8287d1a0456610f38466707ae280a5",
+      "content_inventory_sha256": "9120191479ac6e73c1c2c915f2135581cbc6b922b3c259035c1300820d8e42bb",
+      "planned_chunks": 19,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/plan.json",
+        "file_sha256": "2e68b3d1c78721548b6af7c1100ddd95f6c9903a8ab1a4f864595b9b866719c0"
+      },
+      "model_canonical_sha256": "e20e72c82dae63daed0f64d59577ea14db8764c9c56ffb04a00cdda12dcecbd9",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/repaired-proposal/carrier.json",
+          "file_sha256": "aeb054c06fe8a7a7a67461c2af67d9fd451812cac8ab04c76d3d864756e9b105",
+          "bytes": 42491698
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/repaired-proposal/coverage.json",
+          "file_sha256": "47ff10ec95e9b6d29c55b83fd01469c51677609ab38519a7290b3cf00aa79c20",
+          "bytes": 500699
+        },
+        "graph.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/repaired-proposal/graph.json",
+          "file_sha256": "24d0caf954e71e5b9522a105f1d575f291a7975012bcce0fcf9fb226d8c58f47",
+          "bytes": 37172325
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/repaired-proposal/model.json",
+          "file_sha256": "3ca709a001fc187daf567552c0b03a722ca5fffc33757aee3e4a2ad023bf4e23",
+          "bytes": 7293337
+        }
+      },
+      "family_counts": {
+        "constraints": 836,
+        "judgments": 0,
+        "latitude": 130,
+        "objects": 688,
+        "relations": 185,
+        "residuals": 160,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 20,
+        "calls_by_stage": {
+          "author": 19,
+          "grounding-repair": 1
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 1435637,
+          "cached_input_tokens": 560768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 764514,
+          "reasoning_output_tokens": 15987
+        },
+        "sum_recorded_actor_seconds": 13590.673827413237,
+        "fd_discovery_seconds": 0.3138637919910252,
+        "fd_assembly_seconds": 398.89858629205264
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/results.json",
+        "file_sha256": "cbd27d5df3d5e222e7774550f6f97dc18d2afd3f35ab0bd40ad49c7d3adea909"
+      },
+      "semantic_assessment": "Not performed for this rebuild; no inherited old grades.",
+      "comparison_tests": "not run"
+    },
+    {
+      "cell": "newer-claude-direct",
+      "period": "newer",
+      "candidate": "claude",
+      "mode": "direct",
+      "semantic_extraction_profile": "a_c.direct.source-authoring/1",
+      "candidate_version": "3.0.0-rc.9",
+      "revision": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "custody_checkpoint": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "subject_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/",
+      "source_manifest": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/manifest.json",
+        "file_sha256": "3733fbb9c41734769a3c1f38e2e3a5b455505f6467a58ef88bae043f16866ab4"
+      },
+      "source_directory": "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source",
+      "source_files": 49,
+      "source_bytes": 2147989,
+      "input_corpus_sha256": "14b59f4e6e94a3fb0e81b6a1425d7be22b8287d1a0456610f38466707ae280a5",
+      "content_inventory_sha256": "9120191479ac6e73c1c2c915f2135581cbc6b922b3c259035c1300820d8e42bb",
+      "planned_chunks": 19,
+      "plan": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/plan.json",
+        "file_sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749"
+      },
+      "model_canonical_sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111",
+      "artifacts": {
+        "carrier.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/repaired-proposal/carrier.json",
+          "file_sha256": "c30df87f036ea346be053f95e0562d85e5f6eef42764f3efc9fbf6f53677c29a",
+          "bytes": 42007914
+        },
+        "coverage.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/repaired-proposal/coverage.json",
+          "file_sha256": "c15ceca00f85434ddcf1da95e5a90304202ac6a62775903e995df4e11fa4d1c9",
+          "bytes": 495950
+        },
+        "model.json": {
+          "path": "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/repaired-proposal/model.json",
+          "file_sha256": "bf12529fc3359c3d0a6238c6214693e022d665f1148a1543f7add2ac2b150704",
+          "bytes": 7211409
+        }
+      },
+      "family_counts": {
+        "constraints": 853,
+        "judgments": 0,
+        "latitude": 121,
+        "objects": 658,
+        "relations": 180,
+        "residuals": 168,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "build_resources": {
+        "attempt_count": 21,
+        "calls_by_stage": {
+          "author": 19,
+          "grounding-repair": 2
+        },
+        "attempts_without_usage": 0,
+        "reported_usage_totals": {
+          "input_tokens": 1389559,
+          "cached_input_tokens": 279808,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 746907,
+          "reasoning_output_tokens": 16664
+        },
+        "sum_recorded_actor_seconds": 13654.453266831813,
+        "fd_discovery_seconds": null,
+        "fd_assembly_seconds": 80.35946508310735
+      },
+      "results": {
+        "path": "a_c/dogfood/stdo-v3-generation-rc9/results.json",
+        "file_sha256": "cbd27d5df3d5e222e7774550f6f97dc18d2afd3f35ab0bd40ad49c7d3adea909"
+      },
+      "semantic_assessment": "Not performed for this rebuild; no inherited old grades.",
+      "comparison_tests": "not run"
+    }
+  ],
+  "source_delta": {
+    "path": "a_c/dogfood/stdo-v3-generation-rc9/evidence/source-delta.json",
+    "file_sha256": "e66f4081dca1a92b9c0039c3718ecce0b16180f3ff182c045c53e7ea7151c90b"
+  },
+  "comparison_tests": "not run",
+  "limits": [
+    "Codex newer source bytes equal older source bytes; subject coordinates and fresh generation differ.",
+    "Claude changes two selected owner files and some chunk boundaries; no single causal effect is isolated.",
+    "All source actors use the same model and settings; Codex/Claude label source corpora, not model families.",
+    "Build resources include retained failures and repairs; missing usage is unknown, not zero.",
+    "Summed actor seconds are not concurrent wall time or total accepted-result cost; cache counters do not establish billing.",
+    "Documentary grounding and carrier recovery do not establish semantic fidelity, operational conformance or acceptance.",
+    "The descriptive profile has no authored traversals, transformations or judgments.",
+    "One generation per cell and unequal cache histories support no general performance conclusion."
+  ]
+}

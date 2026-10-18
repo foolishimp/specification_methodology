@@ -1,0 +1,86 @@
+{
+  "profile": "ac.generation.rc9-assembly-execution/1",
+  "runs": [
+    {
+      "candidate": "codex",
+      "mode": "graphify-ac",
+      "returncode": 0,
+      "elapsed_wall_seconds": 654.6773284168448,
+      "stdout_sha256": "67570239a6ef8991772825d5e74e408f981ef47607a2a32c738b5caefcf16e6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model_canonical_sha256": "176112842f82c831d262733997346e0b50ab9a1ebf79b023194c931ef7652726",
+      "family_counts": {
+        "constraints": 680,
+        "judgments": 0,
+        "latitude": 78,
+        "objects": 446,
+        "relations": 85,
+        "residuals": 111,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "proposal_result_sha256": "67570239a6ef8991772825d5e74e408f981ef47607a2a32c738b5caefcf16e6c"
+    },
+    {
+      "candidate": "codex",
+      "mode": "direct",
+      "returncode": 0,
+      "elapsed_wall_seconds": 43.48763491609134,
+      "stdout_sha256": "2eb690399599c4faf957c99b7c3ffaf9fb95fbde6b64dc15826bfe01263a851e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model_canonical_sha256": "3556011888ddd3f4cdc275d5b18b8c504b03345174afb8e810d7c67bb149d282",
+      "family_counts": {
+        "constraints": 672,
+        "judgments": 0,
+        "latitude": 79,
+        "objects": 412,
+        "relations": 83,
+        "residuals": 95,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "proposal_result_sha256": "2eb690399599c4faf957c99b7c3ffaf9fb95fbde6b64dc15826bfe01263a851e"
+    },
+    {
+      "candidate": "claude",
+      "mode": "graphify-ac",
+      "returncode": 0,
+      "elapsed_wall_seconds": 400.3582414169796,
+      "stdout_sha256": "7a1660dcd91b6e8aefb7e5995e5f6ae9d75eecadf183a4d376b41e91b24450e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model_canonical_sha256": "e20e72c82dae63daed0f64d59577ea14db8764c9c56ffb04a00cdda12dcecbd9",
+      "family_counts": {
+        "constraints": 836,
+        "judgments": 0,
+        "latitude": 130,
+        "objects": 688,
+        "relations": 185,
+        "residuals": 160,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "proposal_result_sha256": "7a1660dcd91b6e8aefb7e5995e5f6ae9d75eecadf183a4d376b41e91b24450e3"
+    },
+    {
+      "candidate": "claude",
+      "mode": "direct",
+      "returncode": 0,
+      "elapsed_wall_seconds": 81.66495045786723,
+      "stdout_sha256": "6be2164a2e7b69d9fdb6545961ff9b9a1d6d526f3d6cc30b923582ff5f2fc416",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model_canonical_sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111",
+      "family_counts": {
+        "constraints": 853,
+        "judgments": 0,
+        "latitude": 121,
+        "objects": 658,
+        "relations": 180,
+        "residuals": 168,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "proposal_result_sha256": "6be2164a2e7b69d9fdb6545961ff9b9a1d6d526f3d6cc30b923582ff5f2fc416"
+    }
+  ],
+  "scope": "Native validation/recovery for all four models and actual pinned Graphify recovery for assisted models. Processing completeness only; semantic fidelity/acceptance unassessed."
+}

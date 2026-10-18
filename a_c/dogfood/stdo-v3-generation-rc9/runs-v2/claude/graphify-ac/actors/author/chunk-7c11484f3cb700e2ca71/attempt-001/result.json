@@ -1,0 +1,32 @@
+{
+  "answer_sha256": "88192a63fccbe86b8fdbd7b877d9c3f54ef5db9eaf7cfc646bd5c43f2bfb437f",
+  "cli_exit_code": 0,
+  "cli_version": "codex-cli 0.162.1",
+  "elapsed_seconds": 675.9762023750227,
+  "events_sha256": "5dad8384e028556bfac396c5e67f75ade751f72284f4d0c6ed111da0e4c93b58",
+  "failures": [
+    "source_or_semantic_fragment_validation"
+  ],
+  "profile": "ac.generation.actor-result/1",
+  "schema_errors": [],
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "high",
+    "service_tier": "default"
+  },
+  "status": "failed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timed_out": false,
+  "unexpected_item_types": [],
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 60637,
+      "output_tokens": 31533,
+      "reasoning_output_tokens": 1034
+    }
+  ],
+  "user_config_unchanged": true,
+  "validation_error": "record[effect_result_mapping]/grounding/0: grounding quote is not exact source at declared range"
+}

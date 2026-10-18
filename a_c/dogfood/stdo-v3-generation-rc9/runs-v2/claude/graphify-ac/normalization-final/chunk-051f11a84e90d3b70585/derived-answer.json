@@ -1,0 +1,3179 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "A product interaction surface whose product-truth actions require admitted typed carriers, whose state transitions use declared messages and a reducer, and whose view projects state.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 397,
+          "quote": "a UX surface binds\nto one or more AssetSurface contracts as its data source and action\ntarget",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 395
+        }
+      ],
+      "key": "ux_surface",
+      "label": "UX surface"
+    },
+    {
+      "conditions": [],
+      "definition": "AssetSurface contract, or the equivalent typed contract named by the design module when AssetSurface contracts are not published; the shared ground truth for front-end data and product actions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 416,
+          "quote": "If the product does not publish AssetSurface\ncontracts, the design module names the equivalent typed contract and\napplies the same binding law to that contract.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 413
+        }
+      ],
+      "key": "ux_typed_contract",
+      "label": "Admitted UX typed contract"
+    },
+    {
+      "conditions": [],
+      "definition": "The declared State, Msg, Update, Cmd and Sub shapes of a UX surface. Msg actions interpreted by the reducer carry state transitions; a multi-step state machine belongs in State with explicit phase-transition messages.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 451,
+          "quote": "that machine\nbelongs in the reducer as part of State, with explicit Msg transitions\nbetween phases",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+          "start_line": 448
+        },
+        {
+          "end_line": 568,
+          "quote": "declaring the State, Msg, Update, Cmd and Sub shapes for each UX\n   surface in the design module before implementation;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 567
+        }
+      ],
+      "key": "ux_process_shapes",
+      "label": "UX process shapes"
+    },
+    {
+      "conditions": [],
+      "definition": "Executable reproduction of UX behavior from its recorded Msg work state; replay is resumption from that log and supplies evidence against hidden view continuation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 465,
+          "quote": "the Msg log is the surface's recorded work\nstate, and replay is resumption from it",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 460
+        }
+      ],
+      "key": "msg_replay_proof",
+      "label": "Msg-replay proof"
+    },
+    {
+      "conditions": [],
+      "definition": "A pure function from typed state to a typed view tree, with the constitutional signature State → ViewTree.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 491,
+          "quote": "A view is a pure function from typed state to a view tree",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F9.%20View%20shape",
+          "start_line": 490
+        }
+      ],
+      "key": "ux_view",
+      "label": "View"
+    },
+    {
+      "conditions": [],
+      "definition": "UX-consumed types imported from a shared front-end/back-end contract module; a typed-schema mechanism supplies both compile-time types and runtime validators.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 515,
+          "quote": "UX-consumed types come from the shared front-end and back-end contract",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 512
+        }
+      ],
+      "key": "ux_shared_types",
+      "label": "Shared UX types"
+    },
+    {
+      "conditions": [],
+      "definition": "Declarations of semantic structure, equivalent keyboard navigation, dynamic focus management, custom-element annotations and contrast at the project's declared standard.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 548,
+          "quote": "colour contrast at the project's declared accessibility standard (WCAG\n  AA is the recommended default for web).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 547
+        }
+      ],
+      "key": "ux_accessibility",
+      "label": "Accessibility minimum"
+    },
+    {
+      "conditions": [],
+      "definition": "Per-project adoption by product authority, documented in UX-related design modules, including its selected surface scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 560,
+          "quote": "Product authority adopts this profile for a project",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 559
+        }
+      ],
+      "key": "ux_adoption",
+      "label": "UX profile adoption"
+    },
+    {
+      "conditions": [],
+      "definition": "A scaffold, prototype, debug pane or temporary proof surface that may receive a recorded, bounded exemption; exemption is a scope, not a result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 595,
+          "quote": "A scaffold, prototype, debug pane or temporary proof surface may be\nexempt only when the design module or ticket records",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+          "start_line": 594
+        }
+      ],
+      "key": "ux_scaffold",
+      "label": "UX scaffold exemption"
+    },
+    {
+      "conditions": [],
+      "definition": "A short UX iteration window that may defer eligible local compliance proof for cost reasons, followed by forensic close review and classified findings.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 619,
+          "quote": "A UX sprint may defer local UX\ncompliance proof during a short iteration window when per-change proof\ncost is higher than expected correction cost.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 616
+        }
+      ],
+      "key": "ux_sprint",
+      "label": "UX sprint compliance escrow"
+    },
+    {
+      "conditions": [],
+      "definition": "Review of a UX surface against the profile and its design-module basis, including fourteen recommended questions and explicit violation patterns.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 721,
+          "quote": "A UX surface review under this profile should answer",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F14.%20Review%20questions",
+          "start_line": 720
+        }
+      ],
+      "key": "ux_review",
+      "label": "UX surface review"
+    },
+    {
+      "conditions": [],
+      "definition": "Four distinct predicate-indexed result domains: surface review, replay proof, closure obligations and carrier admission. Refined results map to exactly one core value without raising standing or transferring satisfaction between predicates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 758,
+          "quote": "The predicate travels with\nthe value, so a `satisfied` for one predicate never counts toward another",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 754
+        }
+      ],
+      "key": "ux_result_domains",
+      "label": "UX result refinements"
+    },
+    {
+      "conditions": [],
+      "definition": "A provenance inventory of received rc.2 UX_METHOD rows, their claimed conservation and current loci; routes themselves supply no governing content.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 826,
+          "quote": "Every conserved row is restated in this member's own text; a route\nis provenance only.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F16.%20Source%20dispositions",
+          "start_line": 825
+        }
+      ],
+      "key": "ux_source_inventory",
+      "label": "UX source dispositions"
+    },
+    {
+      "conditions": [],
+      "definition": "Optional tier-3 profile for constructing governed semantic layers over sovereign sources and publishing bounded world-model artifacts. Its own ledgers, cuts, overlays, treatments and projections are not identically spelled calculus records.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 5,
+          "quote": "Tier 3. An optional profile for world-model construction: building a\ngoverned semantic layer over sovereign source systems and publishing\nbounded world-model artifacts.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+          "start_line": 3
+        },
+        {
+          "end_line": 158,
+          "quote": "profile's ledgers, cuts, overlays, treatments and projections are its own\nconcepts and are not the calculus's records of similar name by spelling.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 157
+        }
+      ],
+      "key": "world_model_profile",
+      "label": "WORLD_MODEL profile"
+    },
+    {
+      "conditions": [],
+      "definition": "A governed, derived semantic layer over existing source systems, descriptive before generative, externalising expert domain understanding into inspectable, versioned, machine-reasonable domain truth.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 319,
+          "quote": "A world model is a governed semantic layer built over existing source\nsystems. It is descriptive before it is generative",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is",
+          "start_line": 314
+        },
+        {
+          "end_line": 91,
+          "quote": "The profile builds inspectable, versioned, machine-reasonable domain truth",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position",
+          "start_line": 90
+        }
+      ],
+      "key": "world_model",
+      "label": "World model"
+    },
+    {
+      "conditions": [],
+      "definition": "Systems enacting bounded domain function through code paths, events, records, APIs, schedules, configuration, documents and downstream obligations; they remain sovereign for operational truth.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 78,
+          "quote": "source systems enact domain function and remain sovereign for\n  operational truth;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position",
+          "start_line": 77
+        }
+      ],
+      "key": "source_system",
+      "label": "Sovereign source system"
+    },
+    {
+      "conditions": [],
+      "definition": "A coherent functional surface defined by inputs, changes, ownership, guarantees, outputs and adjacent-domain reliance, rather than a loose vocabulary.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 545,
+          "quote": "A domain is defined by coherent\nfunction: what enters, what changes, what is owned, what is guaranteed,\nwhat leaves, and what adjacent domains can rely on",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims",
+          "start_line": 542
+        }
+      ],
+      "key": "domain",
+      "label": "Domain"
+    },
+    {
+      "conditions": [],
+      "definition": "The primary published semantic unit: a bounded, identity-bearing, evidence-backed immutable cut of a recovered entity projected from its attribute ledger, carrying identity, boundary, authority, state, evidence, treatment, covariance and ambiguity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 645,
+          "quote": "Entity Cut. The primary published semantic unit: an identity-bearing,\nbounded, evidence-backed cut of a recovered entity, projected from the\nattribute ledger",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 640
+        }
+      ],
+      "key": "entity_cut",
+      "label": "Entity Cut"
+    },
+    {
+      "conditions": [],
+      "definition": "An append-only ordered record of qualified attribute claims over stable object identity, including potentially observed or derived values, interpreted meanings, rules, relations, provenance, authority and effective, observed and publication coordinates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 610,
+          "quote": "an append-only ordered record of qualified attribute claims over a stable object identity",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 610
+        }
+      ],
+      "key": "attribute_ledger",
+      "label": "Attribute Ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "The governed basis qualifying a traced observation as an accepted semantic claim, distinguishing lawful world-model truth from raw observation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 609,
+          "quote": "the governed basis on which a traced source observation is accepted as a qualified semantic claim",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 609
+        }
+      ],
+      "key": "assurance",
+      "label": "Assurance"
+    },
+    {
+      "conditions": [],
+      "definition": "A stable self-bounding pattern in a constraint structure, reasoned about through an effective blanket. Its proposed topology is substrate-neutral across biological systems, language traces, learned representations and institutional systems; this remains a candidate theoretical construct.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 390,
+          "quote": "a stable self-bounding pattern in a constraint structure whose internal\nstate can be reasoned about through its effective blanket.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct",
+          "start_line": 384
+        }
+      ],
+      "key": "markov_object",
+      "label": "Markov Object"
+    },
+    {
+      "conditions": [
+        "A declared representation space supports the geometric reading."
+      ],
+      "definition": "A low-rank projection along which object identity survives treatment. Attribute bases supply distributed evidence for it, not a crisp member-column partition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 423,
+          "quote": "the effective blanket is a low-rank projection in the representation\n  space along which object identity is preserved under treatment;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEffective%20blanket",
+          "start_line": 418
+        }
+      ],
+      "key": "effective_blanket",
+      "label": "Effective blanket"
+    },
+    {
+      "conditions": [
+        "A declared representation space exists."
+      ],
+      "definition": "Optional geometric overlay attached to an entity cut, adding an identity direction, projection support and applicable effective coordinate, with distributed evidence and verification. Its absence does not weaken the entity cut.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 613,
+          "quote": "an optional geometric overlay on an entity cut, admissible only where a declared representation space exists",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 613
+        }
+      ],
+      "key": "markov_overlay",
+      "label": "Markov-Object Overlay"
+    },
+    {
+      "conditions": [],
+      "definition": "The declared and versioned learned representation, embedding over ledger claims or equivalent metric space in which identity is a geometric direction; it is part of the overlay's interpretive basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 886,
+          "quote": "The declared\nrepresentation space is part of the overlay: an identity direction is\nuninterpretable without the space it lives in",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction",
+          "start_line": 883
+        }
+      ],
+      "key": "representation_space",
+      "label": "Representation space"
+    },
+    {
+      "conditions": [],
+      "definition": "A low-rank geometric combination over attribute columns derived from paired evidence, canonically the across-context mean offset d(object) = μ(evidence_object) − μ(evidence_null).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 910,
+          "quote": "`d(object) = μ(evidence_object) − μ(evidence_null)`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FIdentity-direction%20extraction",
+          "start_line": 910
+        }
+      ],
+      "key": "identity_direction",
+      "label": "Identity direction"
+    },
+    {
+      "conditions": [],
+      "definition": "A structurally similar instance lacking the candidate's identity content, observed in the same contexts for paired evidence and discrimination.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 896,
+          "quote": "a null-peer instance: a structurally similar thing that lacks the\n  candidate's identity content, observed in the same contexts;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FPaired%20evidence%20collection",
+          "start_line": 895
+        }
+      ],
+      "key": "null_peer",
+      "label": "Null peer"
+    },
+    {
+      "conditions": [
+        "The candidate appears in multiple contexts."
+      ],
+      "definition": "Core is attribute evidence whose identity-direction contribution is stable across ≥ N of N contexts; coat is context-selected evidence of reinterpretation. Both are evidence: core carries identity and coat carries treatment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 954,
+          "quote": "The core carries\nidentity; the coat carries treatment. The coat to core ratio is a\ncharacterisation, not a quality metric",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition",
+          "start_line": 952
+        }
+      ],
+      "key": "core_and_coat",
+      "label": "Core and coat"
+    },
+    {
+      "conditions": [],
+      "definition": "Probabilistic correspondence, confidence, ranking, ambiguity, anomaly and treatment-suggestion surfaces over governed meaning, distinct from accepted semantic truth and published object identity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 590,
+          "quote": "That overlay may\ninclude correspondence candidates; confidence and ranking; ambiguity\nregisters; anomaly and surprise signals; and candidate mappings or\ntreatment suggestions.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims",
+          "start_line": 587
+        }
+      ],
+      "key": "epistemic_overlay",
+      "label": "Epistemic overlay"
+    },
+    {
+      "conditions": [],
+      "definition": "A published immutable world-model output built by a Builder Project; durable semantic publication unit.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 606,
+          "quote": "a published immutable world-model output built by a builder project",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 606
+        }
+      ],
+      "key": "published_domain_artifact",
+      "label": "Published Domain Artifact"
+    },
+    {
+      "conditions": [],
+      "definition": "A bounded published slice within a Published Domain Artifact.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 607,
+          "quote": "a bounded published slice inside a published domain artifact",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 607
+        }
+      ],
+      "key": "fragment",
+      "label": "Fragment"
+    },
+    {
+      "conditions": [],
+      "definition": "A higher-order model formed by referencing and stitching published artifacts while preserving their identity, version and local authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 618,
+          "quote": "a higher-order world model built by referencing and stitching published domain artifacts while preserving their identity, version and local authority",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 618
+        }
+      ],
+      "key": "composed_world_model",
+      "label": "Composed World Model"
+    },
+    {
+      "conditions": [],
+      "definition": "A semantic reinterpretation between domains, treated as a refinement or rewrite step with declared preserved structure, changed meaning, loss, surplus and ambiguity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 614,
+          "quote": "a semantic reinterpretation from one domain into another",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 614
+        }
+      ],
+      "key": "treatment_surface",
+      "label": "Treatment Surface"
+    },
+    {
+      "conditions": [],
+      "definition": "A declared relation showing how changes in one object correspond to changes in another.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 615,
+          "quote": "a declared relation showing how changes in one object correspond to changes in another",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 615
+        }
+      ],
+      "key": "covariance_edge",
+      "label": "Covariance Edge"
+    },
+    {
+      "conditions": [],
+      "definition": "The interpret-back contract for a treatment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 616,
+          "quote": "the interpret-back contract for a treatment",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 616
+        }
+      ],
+      "key": "adjoint_mapping",
+      "label": "Adjoint Mapping"
+    },
+    {
+      "conditions": [],
+      "definition": "A changing value list, code set or classification whose time-dependent semantics govern object interpretation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 617,
+          "quote": "a changing value list, code set or classification set whose semantics matter for object interpretation",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 617
+        }
+      ],
+      "key": "temporal_reference_artifact",
+      "label": "Temporal Reference Artifact"
+    },
+    {
+      "conditions": [],
+      "definition": "A user-facing or downstream artifact derived from the semantic kernel, including tables, schemas, APIs, mapping documents and covariant transforms; it is not semantic authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 619,
+          "quote": "a user-facing or downstream-facing artifact derived from the semantic kernel",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 619
+        }
+      ],
+      "key": "world_model_projection",
+      "label": "Projection"
+    },
+    {
+      "conditions": [],
+      "definition": "Optional downstream query or traversal surface over published artifacts and composed models, without constitutional publication authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 620,
+          "quote": "an optional downstream serving surface that makes published domain artifacts or composed world models queryable or traversable without becoming the constitutional publication authority",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 620
+        }
+      ],
+      "key": "query_plane",
+      "label": "Query Plane"
+    },
+    {
+      "conditions": [],
+      "definition": "Record of immutable published domain-artifact cuts and object projections, distinguished from the attribute ledger of qualified claims. Git supplies this publication ledger in the initial lane.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 786,
+          "quote": "the publication ledger records immutable published cuts of domain\nartifacts and object projections.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law",
+          "start_line": 785
+        }
+      ],
+      "key": "publication_ledger",
+      "label": "Publication ledger"
+    },
+    {
+      "conditions": [],
+      "definition": "A world-model builder application.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 604,
+          "quote": "a world-model builder application",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 604
+        }
+      ],
+      "key": "builder_app",
+      "label": "App"
+    },
+    {
+      "conditions": [],
+      "definition": "The profile-owned urn:stdo:concept:world-model:builder-project: a mutable Source Project specialised for a world-model builder application, owning its source inputs, settings and publication lane.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 294,
+          "quote": "the workspace is configured for a\n  world-model builder application and owns its source inputs, settings\n  and publication lane; it may use an installed builder Product as\n  substrate;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation",
+          "start_line": 291
+        }
+      ],
+      "key": "builder_project",
+      "label": "Builder Project"
+    },
+    {
+      "conditions": [],
+      "definition": "FOUNDATIONS-owned urn:stdo:concept:recursive-product-taxonomy:source-project, imported unchanged as a mutable workspace building the next release cut.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 267,
+          "quote": "Source Project retains the\n  mutable-workspace-building-the-next-release-cut meaning;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 266
+        }
+      ],
+      "key": "source_project",
+      "label": "Source Project"
+    },
+    {
+      "conditions": [],
+      "definition": "FOUNDATIONS-owned urn:stdo:concept:recursive-product-taxonomy:product, retaining released immutable-thing meaning; a builder or runtime may be a Product.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 264,
+          "quote": "Product retains the released immutable-thing meaning; a builder or\n  runtime may be one such Product;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 263
+        }
+      ],
+      "key": "product",
+      "label": "Product"
+    },
+    {
+      "conditions": [],
+      "definition": "FOUNDATIONS-owned urn:stdo:concept:recursive-product-taxonomy:install, retaining stamped-workspace-instance meaning.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 265,
+          "quote": "Install retains the stamped-workspace-instance meaning;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 265
+        }
+      ],
+      "key": "install",
+      "label": "Install"
+    },
+    {
+      "conditions": [],
+      "definition": "FOUNDATIONS-owned urn:stdo:concept:recursive-product-taxonomy:artifact, retaining published-output meaning.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 268,
+          "quote": "Artifact retains the published-output meaning;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 268
+        }
+      ],
+      "key": "artifact",
+      "label": "Artifact"
+    },
+    {
+      "conditions": [],
+      "definition": "The product-definition document surface of a mutable Source Project, distinct from the released Product artifact.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 270,
+          "quote": "`PRODUCT.md` remains the product-definition surface of a mutable Source\n  Project, not the released Product artifact itself.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 269
+        }
+      ],
+      "key": "product_definition_document",
+      "label": "PRODUCT.md"
+    },
+    {
+      "conditions": [],
+      "definition": "Loose shorthand for something treated as real in the institutional operating model, useful during observation, extraction, review and discussion; weaker than Markov Object. Generic usage ordinarily denotes the published entity cut unless a looser candidate or intermediate is explicitly named.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 608,
+          "quote": "a generic shorthand for something treated as real in the institutional operating model; intentionally weaker than Markov Object",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 608
+        },
+        {
+          "end_line": 319,
+          "quote": "Generic references to a \"world-model object\" are\nshorthand for this unit unless the text explicitly names a looser\ncandidate or intermediate surface.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is",
+          "start_line": 317
+        }
+      ],
+      "key": "world_model_object",
+      "label": "World Model Object"
+    },
+    {
+      "conditions": [],
+      "definition": "F21's account of premises, imported families, consequences, policy choices and owners. It imports F2 transitions/refinement, F3 results, F8 identity, F9 a_c and F12 project-method binding. Its instance premises are adopted domain assumptions, not deductions from foundations.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 161,
+          "quote": "Its instance premises hold where world-model work is done under this\nprofile; they are adopted with it and do not follow from the foundations",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 159
+        }
+      ],
+      "key": "world_model_foundation_map",
+      "label": "World-model foundation-to-law map"
+    },
+    {
+      "conditions": [],
+      "definition": "Fourteen-stage source-defined process: observe, trace, extract, assure, ledger, bound, materialise, relate, publish, compose, optionally align, project, optionally compile, optionally serve/query.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 654,
+          "quote": "The profile proceeds through these stages",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow",
+          "start_line": 653
+        }
+      ],
+      "key": "world_model_flow",
+      "label": "World-model construction flow"
+    },
+    {
+      "conditions": [],
+      "definition": "Semantic control consists of published artifacts, composed models, treatments, covariance, adjoints and epistemic overlays; the high-volume data plane consists of deterministic executable artifacts compiled from accepted understanding.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1075,
+          "quote": "This is a plane split, not a truth split; the semantic truth\nsurface remains the published world-model layer",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FControl%20plane%20and%20data%20plane",
+          "start_line": 1073
+        }
+      ],
+      "key": "world_model_planes",
+      "label": "Control and data planes"
+    },
+    {
+      "conditions": [],
+      "definition": "Preferred practical adoption wedge: comprehend a bounded source slice, publish a fragment, stitch an adjacent fragment, answer a painful incumbent-pipeline question, and emit conventional and covariant outputs side by side.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1094,
+          "quote": "5. emit both conventional and covariant outputs side by side.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FProof%20law",
+          "start_line": 1094
+        }
+      ],
+      "key": "world_model_proof_wedge",
+      "label": "Practical proof wedge"
+    },
+    {
+      "conditions": [],
+      "definition": "Development parallel to spec-driven development: usually descriptive world models may project application surfaces without duplicating semantic authorship, while specifications are usually normative.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1111,
+          "quote": "Specifications are usually normative; world models are usually\ndescriptive.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FWorld-model-driven%20development",
+          "start_line": 1108
+        }
+      ],
+      "key": "world_model_development",
+      "label": "World-model-driven development"
+    },
+    {
+      "conditions": [],
+      "definition": "Candidate research evidence from constraint_emergence_ontology, markov_object_research/empirical_results.md, using GPT-2 + SAEs; pinned at commit 2da7871bf48d3144e4e83d5e8a336671251a6c76 and SHA-256 269b5c008bc9fa20283cef63bf2daca373af86b2cf495182753671a5b203b3dd.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1162,
+          "quote": "It is\nresearch evidence, not constitutional authority; a later revision of that\nprogram does not amend this profile",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces",
+          "start_line": 1160
+        }
+      ],
+      "key": "markov_research_companion",
+      "label": "Pinned Markov empirical companion"
+    },
+    {
+      "conditions": [],
+      "definition": "Seven distinct predicate-indexed refinements: cut admissibility, direction acceptance, overlay publication, overlay storage, null-peer discrimination, promotion-gate run and saturation. Values map to one core result without raising standing or transferring satisfaction to a different predicate.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1173,
+          "quote": "Each refinement names\nthe question it answers and the predicate its mapping is for, and maps\neach of its values to exactly one core value.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile",
+          "start_line": 1167
+        }
+      ],
+      "key": "world_model_result_domains",
+      "label": "World-model result refinements"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "ux_surface",
+        "ux_typed_contract"
+      ],
+      "conditions": [
+        "The product publishes typed asset surfaces under its design and the graph-execution carrier law; otherwise the design names an equivalent typed contract and applies the same law."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 409,
+          "quote": "writes from the surface go through the AssetSurface action registry,\n  not through direct file or service calls.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 408
+        }
+      ],
+      "key": "ux_binding_requirements",
+      "statement": "Bind one or more contracts as data source and action target. Derive State from projections without UX redeclaration of asset shape. Product-truth-changing Msg variants map one-to-one to action-registry entries or wrap them through a documented projection with no hidden semantic change. UX-local Msg variants serve only view-local concerns such as open/closed, sorting and filter input. Selection emits Context or equivalent updates consistent with the selection contract. Writes use the action registry, never direct file/service calls. Absence of an admitted contract blocks product-truth-changing actions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_surface",
+        "ux_typed_contract"
+      ],
+      "conditions": [
+        "A prompt concerns UI or operator-surface work."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 428,
+          "quote": "If the prompt cannot identify that\ncarrier and action path, the correct result is a block or re-entry, not\nlocal UI invention",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 426
+        }
+      ],
+      "key": "ux_prompt_carrier_boundary",
+      "statement": "The prompt must carry task-needed UX law using a current derived surface/projected frame where one serves the task, otherwise the deciding sections, rather than requiring raw-member rediscovery. If UI behavior changes product truth, name its admitted carrier and action path; inability to do so requires block or re-entry. The stated provenance of this prompt claim is an rc.2 compression, not an rc.2 body; prompt construction is assigned to ACTIVATION §2.",
+      "uncertainty": "ACTIVATION acquisition rules and the referenced compression are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "ux_view",
+        "ux_process_shapes"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 446,
+          "quote": "- decide on its own what the next state will be after a user event;\n- chain several state updates locally without emitting them as separate\n  Msg values;\n- carry hidden inter-event state in refs, closures or module-level\n  variables.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+          "start_line": 442
+        }
+      ],
+      "key": "ux_continuation_ownership",
+      "statement": "In graph execution the runtime owns continuation and the product is a cooperative bounded-step subsystem. The UX view owns no state continuation: declared Msg actions flow through the reducer; the view cannot independently choose next state, chain updates without separate Msg values or hide inter-event state. Any multi-step local machine belongs in reducer State with explicit phase messages and a pure phase projection. Inability to replay behavior from its Msg log against empty State indicates leaked continuation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "msg_replay_proof",
+        "ux_surface"
+      ],
+      "conditions": [
+        "A product UX surface claims closure under the profile."
+      ],
+      "exceptions": [
+        "An explicit recorded exemption covers the obligation, as specified in the supplied closure rules."
+      ],
+      "grounding": [
+        {
+          "end_line": 474,
+          "quote": "- an initial State fixture;\n- an ordered Msg log;\n- the expected final State;\n- the expected ordered Cmd values;\n- the success and failure Msg values returned by interpreted Cmds;\n- injected deterministic values for time, randomness, generated ids and\n  external payloads.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 468
+        },
+        {
+          "end_line": 673,
+          "quote": "unless an\nexplicit exemption is recorded.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 671
+        }
+      ],
+      "key": "replay_proof_obligation",
+      "statement": "Every surface carries at least one executable proof per product-meaningful interaction family before closure. Include initial State, ordered Msg log, expected final State, expected ordered Cmd values, both success/failure Msg returns and deterministic time, randomness, IDs and external payloads. Correctness depending on unrepresented DOM state; mutable refs, modules, closures, timers or effect-handler memory; network/file results bypassing typed Msg; or view-local state affecting product behavior after unmount or replay fails the proof.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_view"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Out-of-render mutation is excepted from the stated §6 violation only when part of the declared effect membrane, such as a design-named platform handle for imperative interop."
+      ],
+      "grounding": [
+        {
+          "end_line": 508,
+          "quote": "violates §6 unless the mutation is part of the declared effect membrane,\nfor example a platform handle for imperative interop already named in the\ndesign module",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F9.%20View%20shape",
+          "start_line": 506
+        }
+      ],
+      "key": "view_purity_requirements",
+      "statement": "Accept typed state/props/context, return a typed tree, declare consumed inputs, capture no mutable state across renders, read no undeclared sources and have no side effects in the body. Dependence on out-of-render mutation, including an effect-written ref read during render, violates the stated membrane rule subject to its recorded exception.",
+      "uncertainty": "The full §6 effect-membrane law is outside the supplied sections."
+    },
+    {
+      "applies_to_keys": [
+        "ux_shared_types",
+        "ux_surface"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 519,
+          "quote": "Runtime validation is mandatory at every untrusted or out-of-process seam",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 517
+        }
+      ],
+      "key": "type_sharing_and_ingress_validation",
+      "statement": "Import shared back-end shapes rather than redeclaring or shadowing them. The shared module is typically the same package or a dedicated contracts package, not obligatorily either layout. Runtime validation is mandatory at every untrusted or out-of-process seam, including HTTP/RPC, MCP, files, websocket/event streams, agent/worker outputs, and URL/storage/clipboard/browser payloads. One typed-schema definition supplies both compile-time types and runtime validators; compile-time TypeScript alone is insufficient. This upgrades the cited DESIGN_MODULE ingress preference to an obligation at these seams.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_accessibility",
+        "ux_surface"
+      ],
+      "conditions": [
+        "The surface is the public face of a product capability."
+      ],
+      "exceptions": [
+        "Accessibility is optional for internal-only debug surfaces with the exemption recorded in the design module."
+      ],
+      "grounding": [
+        {
+          "end_line": 555,
+          "quote": "Accessibility is not optional for product capabilities. It is optional\nfor internal-only debug surfaces, and the design module records the\nexemption",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 550
+        }
+      ],
+      "key": "accessibility_declarations",
+      "statement": "Declare semantic structure or platform equivalents; keyboard/platform navigation for every pointer action; focus management on dynamic changes; annotations for custom interactive elements without native equivalents; and contrast at the declared project standard. WCAG AA is a recommended web default, not an unconditional mandate. Projects with stricter obligations author a local refinement and cite it from design modules.",
+      "uncertainty": "Later sections mention recorded exemptions more broadly; their authorization is not fully specified here."
+    },
+    {
+      "applies_to_keys": [
+        "ux_adoption",
+        "ux_process_shapes"
+      ],
+      "conditions": [
+        "Product authority adopts the profile for a project."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 575,
+          "quote": "9. noting any §9 view-shape or §6 effect-membrane exemptions explicitly.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 575
+        }
+      ],
+      "key": "ux_adoption_record",
+      "statement": "Record all nine items: profile name in UX design modules; realisation stack with justification; irreducible architectural carrier set and required structural carrier diagram; State/Msg/Update/Cmd/Sub shapes per surface before implementation; consumed/emitted AssetSurface or equivalent bindings; membrane mechanism and interpreted Cmd algebra; executable replay-proof surface; required accessibility refinement; and explicit view-shape/membrane exemptions. Record any partial surface scope.",
+      "uncertainty": "The structural diagram and carrier-set requirements refer to unsupplied DESIGN_MODULE §§6–7."
+    },
+    {
+      "applies_to_keys": [
+        "ux_scaffold",
+        "ux_surface"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "A scaffold, prototype, debug pane or temporary proof surface may be exempt only with the specified design-module or ticket record."
+      ],
+      "grounding": [
+        {
+          "end_line": 592,
+          "quote": "- it is reachable from the product shell;\n- it is used as proof for a ticket, requirement, design module, release or\n  review;\n- it can mutate product truth;\n- it can spawn, attach, resume or dispatch work;\n- it can change Context, selection authority, closure, continuation,\n  evidence or provenance.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+          "start_line": 586
+        }
+      ],
+      "key": "scaffold_governance_and_exemption",
+      "statement": "Any one trigger establishes default governance: product-shell reachability; use as ticket/requirement/design/release/review proof; mutation of product truth; spawning/attaching/resuming/dispatching work; or changing Context, selection authority, closure, continuation, evidence or provenance. Exemption records scope, permitted operations, forbidden or bounded mutation, a visible user-facing scaffold/debug label, superseding authoritative surface, retirement condition and owning ticket, and a non-closure condition preventing release while the scaffold remains. Exempt scaffolds cannot accumulate into production: retire, reprice into governed UX, or keep outside product closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_sprint"
+      ],
+      "conditions": [
+        "A short iteration window has per-change proof cost greater than expected correction cost."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 645,
+          "quote": "the work\nexits the UX sprint path through standalone repricing or sprint\nsupersession.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 642
+        }
+      ],
+      "key": "ux_sprint_boundary",
+      "statement": "Local compliance proof may be deferred as cost optimization without weakening the process model. If non-escrowable work appears, record the finding and exit by standalone repricing or sprint supersession; UX still cannot become a hidden constructive carrier. The sprint should close when further iteration is more expensive or less trustworthy than review. Valid triggers include timebox expiry, too many changed states for casual review, obsolete screenshots/walkthrough evidence, interaction changes beyond polish, and reviewer uncertainty requiring reconciliation.",
+      "uncertainty": "Generic escrow and close mechanics remain owned by TICKETS §3 and SPEC_METHOD §4."
+    },
+    {
+      "applies_to_keys": [
+        "ux_sprint",
+        "ux_surface"
+      ],
+      "conditions": [
+        "A UX sprint reaches close review."
+      ],
+      "exceptions": [
+        "Local paydown tickets may remain only for UX-realisation-local debt where the governing method permits follow-up.",
+        "A recorded explicit exemption may cover a closure obligation."
+      ],
+      "grounding": [
+        {
+          "end_line": 668,
+          "quote": "It may not close while product-truth carrier gaps, hidden\nstate continuation or authority drift remain unclassified",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 667
+        }
+      ],
+      "key": "ux_sprint_close_review",
+      "statement": "Forensically review every changed screen, state and product-meaningful interaction against cited authority. Each finding receives accepted, local_paydown, design_reframe, requirement_reprice, product_reprice or remove. Accepted means compliance with this profile and cited design; local_paydown means local UX debt in a paydown ticket. Unclassified carrier gaps, hidden continuation or authority drift forbid sprint closure. Product-surface closure still requires replay proofs and accessibility obligations; iteration can defer but cannot erase them.",
+      "uncertainty": "The remaining four close-classification definitions and governing follow-up permissions are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "ux_surface",
+        "ux_review",
+        "ux_sprint"
+      ],
+      "conditions": [
+        "Any listed failure occurs."
+      ],
+      "exceptions": [
+        "Recorded scope and specifically stated membrane/exemption conditions remain applicable."
+      ],
+      "grounding": [
+        {
+          "end_line": 716,
+          "quote": "Any of these is a violation of this profile. Repeated violations are not\nnormalised by usage; they are repaired or the surface is repriced",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+          "start_line": 714
+        }
+      ],
+      "key": "ux_failure_patterns",
+      "statement": "Each is a violation: render-body/prop/context mutation; product-meaningful state in local cells; effect-handler branching that decides transitions; view-owned multi-step machines; render reads of mutable refs outside the membrane; local shadow/redeclaration of back-end types; selection/action file/network writes bypassing AssetSurface action; unrecorded view-shape exemptions; public accessibility omitted without recorded exemption; two-way binding without typed Msg that bypasses the reducer; imperative effect-handler logic that should be Cmd; failed empty-State Msg replay; truth-changing messages without admitted carrier, graph function, runtime command or typed contract; unvalidated external data entering State; reachable/mutating/proof scaffolds lacking the exemption record; ADRs/conventions/existing patterns weakening the profile; or sprint closure with deferred proof, accessibility, carrier, scaffold or authority debt unclassified or un-ticketed. Repetition does not normalize violations: repair or reprice.",
+      "uncertainty": "The explicit equivalent-contract binding rule is retained alongside the AssetSurface wording."
+    },
+    {
+      "applies_to_keys": [
+        "ux_review"
+      ],
+      "conditions": [
+        "A surface is reviewed under this profile."
+      ],
+      "exceptions": [
+        "The sprint-close question applies if a UX sprint was used."
+      ],
+      "grounding": [
+        {
+          "end_line": 747,
+          "quote": "If any of these cannot be answered, the design module is incomplete",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F14.%20Review%20questions",
+          "start_line": 746
+        }
+      ],
+      "key": "ux_review_questions",
+      "statement": "Review should answer: State/Msg/Update; Cmd/Sub algebra; contract bindings; admitted carriers for truth-changing messages; membrane and interpreted Cmds; provable view purity; replay proof; shared type imports; out-of-process runtime validation before State; documented view/membrane/accessibility/scaffold/debug exemptions; chosen stack preserving the Elm model; continuation under user replay; required carrier set and diagram in the design module; and classification of every deferred proof/accessibility/carrier/scaffold/authority finding at sprint close. Any unanswerable question makes the design module incomplete; this does not by itself assert a behavioral counterexample.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_result_domains"
+      ],
+      "conditions": [
+        "Evaluating surface compliance on its exact basis."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 776,
+          "quote": "| surface review | `design_module_incomplete` | invalid_basis | no counterexample of `violation` is found, and a §14 review question cannot be answered from the design module, so the design module, on which the review rests, cannot support the evaluation; the value names the unanswered question |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 776
+        }
+      ],
+      "key": "ux_surface_result_mapping",
+      "statement": "compliant → satisfied requires §§4–10 under inspection, no §13 pattern, and every §14 question answered from the design module. This provisionally uses the stricter of conflicting §4 compliance tests pending the product owner's ruling; the question-answer basis condition is additional to both tests. violation → falsified for a failure pattern, a realisation rejected by §4, or a failed §§4–10 rule, naming the counterexample. design_module_incomplete → invalid_basis only when no violation counterexample is found and a question is unanswerable, naming it.",
+      "uncertainty": "The conflicting §§4–8 versus §§4–10 tests remain unresolved by the source."
+    },
+    {
+      "applies_to_keys": [
+        "ux_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Closure obligations are evaluated where product-surface closure is claimed; in an open sprint deferred obligations are escrow, not a closure claim.",
+        "Recorded exemptions may cover closure obligations."
+      ],
+      "grounding": [
+        {
+          "end_line": 780,
+          "quote": "Inside an open UX sprint closure is not claimed, and a deferred obligation is escrow under §12",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 780
+        }
+      ],
+      "key": "ux_proof_closure_carrier_results",
+      "statement": "replay_passes → satisfied when deterministic replay reproduces expected final State and ordered Cmds with no forbidden correctness dependency; replay_fails → falsified for divergence or such dependency, naming it. closure_obligations_met → satisfied when every meaningful interaction family has proof and accessibility declarations are carried, or an exemption covers the obligation; closure_unproven → falsified for an uncovered missing proof/declaration, naming it. carrier_admitted → satisfied when every truth-changing message/action maps to an admitted carrier and binds an AssetSurface where published, otherwise the design-named equivalent contract; carrier_missing → falsified for an action without admitted carrier/typed contract, naming it.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ux_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 801,
+          "quote": "A reprice or a scoped exemption, the other\ntwo exits of §1 Authority, is a re-entry or a scope recorded in the\ndesign module, not a value of this section",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 799
+        }
+      ],
+      "key": "ux_result_fallback_and_stops",
+      "statement": "When no refined value applies, use indeterminate for evidence unable to decide, naming needed evidence; out_of_frame for undeclared required relation/capability; invalid_basis for other unsupported subject/basis. Ambiguity applies the stricter fixed interpretation and never alone yields compliant; if a depended-on term is undefined and no stricter interpretation is fixed, return out_of_frame naming term and owner. Missing carrier yields carrier_missing for admission and violation for review; a dependent construction stops re_entry_requested(authority), naming carrier, design owner and re-entry to author the carrier or reprice the requirement. This carrier block is not ACTIVATION's ambiguity blocked; design_module_incomplete is not construction incomplete. Exempt scaffolds are scopes; evaluations outside them proceed. Repricing/exemption and six sprint-close classes are not UX result values.",
+      "uncertainty": "External construction-result mappings are referenced, not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "ux_source_inventory"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 844,
+          "quote": "Three clauses have no predecessor row and are new: the declared binding of\nTICKETS §3's escrow terms (lead); the refinements of the core result\nalgebra (§15), which FOUNDATIONS §4 Results requires of a profile with its\nown result vocabulary; and the family table (§1 Foundation to law)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F16.%20Source%20dispositions",
+          "start_line": 840
+        }
+      ],
+      "key": "ux_provenance_translation",
+      "statement": "The inventory reports conservation rather than proving it. It renames UX_METHOD/this method to profile; DESIGN_MODULE_METHOD, SPEC_METHOD and TICKET_METHOD to DESIGN_MODULE, SPEC_METHOD and TICKETS; ODD_METHOD to graph-execution ODD while retaining graph function/ABG; WORLD_MODEL_METHOD to WORLD_MODEL; and method compliance/violation/closure to profile equivalents. AssetSurface/workorder remain product-published or admitted carrier names. Sections 4–10 retain numbers; predecessor 12 becomes §4 discretion, 13/13A/13B become §12 and subsections, 14 becomes §13, 15 becomes §14, 8A becomes §8 proof. New clauses are escrow-term binding, result refinements and foundation-family table. The listed predecessor anchors route position, authority, role/composition, carrier boundary, process, transition, membrane, binding, continuation, proof, view, types, accessibility, discretion, adoption/scaffolds/escrow, failures, review, relationships, non-goals and canonical compression to current loci.",
+      "uncertainty": "Several routed loci and all predecessor bodies are outside this supplied cut."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_profile"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 66,
+          "quote": "The predecessor's \"must\" is written in the\nindicative; its \"should\", \"may\", \"preferred\", \"optional\", \"mandatory\",\n\"at minimum\", \"at least\", \"usually\", \"sufficient\" and \"lawful\" keep their\nforce.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+          "start_line": 60
+        }
+      ],
+      "key": "world_model_import_and_modal_boundary",
+      "statement": "The profile imports FOUNDATIONS, ACTIVATION, EVALUATION, IDENTITY, SPEC_METHOD, PRODUCT_DEFINITION, RELEASE and TICKETS under PROFILES §1 without redefining their objects. Object/Authority/Basis and lineage belong to FOUNDATIONS, scoped identity to IDENTITY, cross-context relations/carrier to PRODUCT_DEFINITION §5, core results to FOUNDATIONS §4, step refinements to ACTIVATION §3, and statistical Markov boundary to a FOUNDATIONS §5 hypothesis. ODD is the graph-execution profile. Each clause names its P0–P6 principle. Indicative text carries predecessor must-force; should/may/preferred/optional/mandatory/minimum/least/usually/sufficient/lawful retain their distinctions. rc.2 routes are provenance only, not required predecessor re-entry.",
+      "uncertainty": "Imported definitions beyond the local descriptions are unavailable."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_profile",
+        "world_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 101,
+          "quote": "World-model work has two constitutional intents: build published domain\nartifacts; and compose those artifacts into higher-order world models",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FConstitutional%20intents",
+          "start_line": 95
+        }
+      ],
+      "key": "world_model_constitutional_intents",
+      "statement": "Building published domain artifacts and composing them into higher-order models define the two constitutional intents. Query, traversal and serving are important delivery concerns but do not define this identity; a later dedicated plane does not change the two intents.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 140,
+          "quote": "If these claims do not hold, the work is not genuinely\nworld-model-driven",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FManifesto",
+          "start_line": 139
+        }
+      ],
+      "key": "world_model_manifesto",
+      "statement": "Observe before standardising and comprehend enacted semantics before schemas. Treat domains as bounded function, data as contextual evidence, and recover experts' implicit objects/boundaries/states/transitions/treatments/reference artifacts. Materialise governed conceptual understanding rather than detached metadata. Ground probabilistic cross-domain reasoning first; fully qualify names before deeper transformation. Model change as treatment/covariance/adjoint interpretation. Publish immutable explicitly superseded cuts; compose without erasing local authority. Keep probabilistic correspondence in governed epistemic overlays and compile accepted meaning for volume. Projections remain derived conveniences; generation follows descriptive grounding. Failure of these commitments means the work is not world-model-driven.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_foundation_map"
+      ],
+      "conditions": [
+        "World-model work is adopted under this profile."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 172,
+          "quote": "- I4: some builders work over a representation space in which identity is\n  a geometric direction.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 171
+        }
+      ],
+      "key": "foundation_premises_and_ownership",
+      "statement": "Instance assumptions are I1 sovereign enacted source truth with no replacement; I2 records lack self-contained meaning while people already commit to objects; I3 probabilistic correspondence proposals and deterministic-volume delivery; I4 some representation spaces express identity direction. The table distinguishes independent P1/P2/P3/P4a/P6, P4b derived from P0/P2 with non-reacquirable step facts, P5 derived from P0/P6 with open-world premise, and recovered P0. Its eleven consequence families concern semantic truth; identity-bearing discriminated cuts; append-only evidence/publication; treatment/projection; owned imports/specialisation; candidate standing; space-bound verified directions; control/data split; bounded saturation/federated composition; practical wedge; and predicate-specific results. Profile choices include intents, manifesto, evidence order, eight cut surfaces/three values, initial Git lane, treatment fields/API-before-schema preference, Builder specialisation, candidate vocabulary/refinements/research pin, direction methods/verification/publication/storage choices, plane split, preferred mesh, wedge and seven results. Builder projects choose discrimination techniques; consumers choose carriers/layouts/schemas/storage; external owners retain taxonomy, treatment licensing/adequacy and statistical hypothesis.",
+      "uncertainty": "This preserves the table's attributed derivation and choice distinction, without proving its deductions."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_foundation_map"
+      ],
+      "conditions": [
+        "A listed consumer applies a foundation-map rule."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 218,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 217
+        }
+      ],
+      "key": "foundation_consumer_boundary",
+      "statement": "Consumers do not expand owning-section decisions. The table's application routes cover: semantic truth → evidence gathering/materialisation/planes; entity cuts → primary units/refinements/status/discovery/sparse publication/materialisation/geometric verification/results; ledgers → immutable Markov cuts/overlay supersession; treatments → relate/project stages; lineage → Builder unit; candidate status → CONFORMANCE discriminator 12/FOUNDATIONS hypothesis/effective blanket/Markov theory/verification/gate results; overlay construction → refinements/units/geometric materialisation/direction-publication-storage-null-peer results; saturation/composition → refinements/flow/admissibility/saturation results. Plane split, wedge and result rows identify no separate rule consumer. ODD/UX defer semantics; GLOSSARY locates but decides nothing; output and source-disposition inventories decide nothing. The uncited opening/units/output sections apply existing consequences rather than supply additional table derivations.",
+      "uncertainty": "Several consumer loci and all external consumer bodies are absent; connectivity does not establish new normative dependencies."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_profile"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 239,
+          "quote": "The two\ncompose; they do not compete",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 238
+        }
+      ],
+      "key": "world_model_role_boundary",
+      "statement": "SPEC_METHOD owns general process constitution; WORLD_MODEL refines it for observation and bounded artifact publication and is primary within urn:stdo:bounded-context:world-model under the selected complete basis. Products may declare narrower owned contexts without changing this one by proximity. Where a product is both graph-native and world-model-driven, graph execution governs execution shape, traversal and product-authoring structure, while WORLD_MODEL governs semantics, publication and composition.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "source_project",
+        "product",
+        "install",
+        "artifact"
+      ],
+      "conditions": [
+        "The selected complete method basis supports the declared import from recursive-product-taxonomy into world-model."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 261,
+          "quote": "the relation expands applicability into the target context and\nmints no alias or new semantic owner",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+          "start_line": 260
+        }
+      ],
+      "key": "lineage_import_preservation",
+      "statement": "Exactly the four listed URNs are imported unchanged; source and target references use the same identity, retain FOUNDATIONS ownership and expand applicability only. No same-spelled other concept is imported, no alias is minted and GLOSSARY only locates meanings. Changes to either context, a cited concept or taxonomy clause, or the selected basis invalidate the import until reevaluation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "builder_project",
+        "source_project",
+        "product",
+        "install"
+      ],
+      "conditions": [
+        "World-model construction under this profile on a selected complete release containing both source and target clauses."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 308,
+          "quote": "a change to either concept or context, the\n  selected method basis, the builder configuration relation, or the\n  governed scope invalidates the translation until the owning authorities\n  reevaluate it",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation",
+          "start_line": 305
+        }
+      ],
+      "key": "builder_specialisation_boundary",
+      "statement": "The relation is source-to-target specialisation only: no inverse, equivalence, unchanged import, alias or claim that every Source Project is a Builder Project. Preserve mutable next-release workspace meaning and distinction from Release Cut/Product/Install/Artifact, narrowing to configured builder inputs/settings/publication lane. Exclude general projects outside that configuration; installed Product or Install cannot substitute for Builder Project. FOUNDATIONS retains source ownership and this profile owns only the target. The clause is the normative relation carrier; changes to concepts, contexts, basis, configuration relation or scope invalidate it until owner reevaluation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 332,
+          "quote": "A world model is not a replacement system of record; a central monolith\nthat erases local semantics; a generic catalog entry; a copied data\nwarehouse; or a schema registry pretending to be comprehension",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is",
+          "start_line": 330
+        }
+      ],
+      "key": "world_model_explanatory_scope",
+      "statement": "A world model should expose real objects in context, coherent boundaries, material states/transitions, supporting evidence, governing classifications, adjacent reinterpretations, covariance and preserved/changed/aggregated/delayed/lost meaning. It cannot be a replacement record system, semantics-erasing monolith, generic catalog entry, copied warehouse or schema registry masquerading as comprehension.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 339,
+          "quote": "The profile should produce world models that are bounded, inspectable,\nchallengeable, evidence-backed, versioned, composable,\nprojection-capable and machine-reasonable",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FObjectives",
+          "start_line": 336
+        }
+      ],
+      "key": "world_model_objectives",
+      "statement": "Models should be bounded, inspectable, challengeable, evidence-backed, versioned, composable, projection-capable and machine-reasonable. Working adoption should make answerable the record's object, defining boundary, supporting evidence, locally authoritative source, downstream meaning-changing treatment, relation of differently treated objects, contemporaneous value/classification list, and why a downstream figure is or is not explainable upstream.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model",
+        "epistemic_overlay",
+        "query_plane",
+        "world_model_projection"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 360,
+          "quote": "Those surfaces may be\nimportant; they do not create a second truth surface",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FSingle%20truth%20surface",
+          "start_line": 359
+        }
+      ],
+      "key": "single_semantic_truth_surface",
+      "statement": "The published semantic layer alone is constitutional semantic truth: domain artifacts, fragments, entity cuts, explicit treatments/covariance/adjoints/temporal references and models composed by reference. Epistemic overlays, query planes, mapping reports and compiled execution artifacts remain downstream/supporting, however important; this does not displace source-system operational sovereignty.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model",
+        "source_system"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 377,
+          "quote": "The profile therefore never depends on code\navailability as a prerequisite for comprehension",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FEvidence%20hierarchy",
+          "start_line": 376
+        }
+      ],
+      "key": "evidence_preference_order",
+      "statement": "Work from strongest available explanation. Preferred order is realised behavior plus emitted records/events; available code/rules/configuration; interfaces/schemas; large-scale observation; documentation/catalogs/operator testimony. Code is high fidelity when available, but realised behavior is broader for proprietary, partially visible or output-intelligible systems. Code availability is never a prerequisite.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_object",
+        "effective_blanket",
+        "markov_overlay"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "These working refinements are not entity-cut admissibility conditions."
+      ],
+      "grounding": [
+        {
+          "end_line": 472,
+          "quote": "They constrain the construct and overlays built on it. They are not\nadmissibility conditions for entity cuts, which §9 governs",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FFour%20working%20refinements",
+          "start_line": 471
+        }
+      ],
+      "key": "markov_working_refinements",
+      "statement": "Adopt four pinned candidate-evidence readings, not formal closure: (1) exp 17 supports geometric identity-axis boundaries; column membership leaks under bypass and identity survival under treatment is the test; (2) every fixed attribute basis senses/fragments identity, so overlays expose the axis rather than only a profile and schemas are evidence, not ontology; (3) exps 15/16 make semantic invariant identity, not core size, diagnostic—sparse invariant objects can be lawful while rich clusters without contextual invariance are not; (4) exp 18 treats identity as DC/mean offset from a null peer rather than dominant variance, excluding principal-component/maximum-variance identity constructions. The pinned companion fixes the adopted reading despite later recuts.",
+      "uncertainty": "The empirical basis is reported by the source but not independently present."
+    },
+    {
+      "applies_to_keys": [
+        "markov_object",
+        "markov_overlay",
+        "entity_cut"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 497,
+          "quote": "The gate stands\nwhere it is; it has not been met and is not relocated to accommodate the\nnegative result",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEpistemic%20status",
+          "start_line": 495
+        }
+      ],
+      "key": "markov_candidate_standing",
+      "statement": "The construct is load-bearing working vocabulary at candidate standing. Adoption need not await complete empirical research; formally dependent commitments remain revisable working commitments. Promotion requires direction-native conditional independence: given identity projection, residual variation in remaining components should be target-independent under plausible treatments. Both the reported test and multilayer successor failed their predicates; the gate remains unchanged. Construct and overlays inherit candidate standing, not certified blanket status. Entity cuts instead stand on their own admissibility; candidates not meeting it remain candidates, published cuts do not inherit Markov candidate status. Tooling should default to candidate-class publication and reserve formally closed kinds for real gate-backed cuts.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_object",
+        "world_model_profile"
+      ],
+      "conditions": [
+        "A Markov object is read as a candidate identity-bearing cut."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 533,
+          "quote": "This profile does not make the empirical Markov-object program a\nprerequisite for all design work.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FRelation%20to%20the%20design%20profile",
+          "start_line": 529
+        }
+      ],
+      "key": "markov_design_framing",
+      "statement": "Good software boundary design should prefer the smallest lawful carrier set preserving real authority; subordinate payloads unless independently authoritative; resistance to promotion of sensed fragments into unnecessary peer objects; and strongly typed semantic boundaries rather than fuzzy, reconstructive or controller-owned cuts. This is one theoretical framing, not an empirical prerequisite for design. DESIGN_MODULE owns engineering law valid outside world-model products.",
+      "uncertainty": "The cited DESIGN_MODULE theoretical framing is not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "world_model",
+        "source_system",
+        "domain",
+        "treatment_surface",
+        "temporal_reference_artifact",
+        "epistemic_overlay"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 565,
+          "quote": "Every treatment declares preserved structure,\nchanged meaning, loss, surplus and ambiguity",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims",
+          "start_line": 556
+        }
+      ],
+      "key": "world_model_core_semantic_rules",
+      "statement": "Source systems retain operational truth; data is constrained-function evidence and invalid as isolated meaning. World models externalise experts' implicit understanding. Every cross-domain treatment declares preserved structure, changed meaning, loss, surplus and ambiguity; ACTIVATION refinement supplies preservation/licensing law, and changed meaning requires an approximate step with adequacy relation. Fully qualified naming is mandatory under scoped identity. Changing value lists/classifications are governed temporal artifacts. API/schema contracts are useful projections, not highest semantic authority. Canonical cuts should stay semantic and bounded; probability belongs to uncertainty/ranking/anomaly/alignment overlays, not object identity. Accepted treatments, artifacts and deterministic execution remain distinct from probabilistic overlays.",
+      "uncertainty": "Treatment licensing and adequacy definitions are imported from an unsupplied section."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_flow",
+        "attribute_ledger",
+        "entity_cut"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Align, compile and serve/query are optional stages under their stated delivery conditions."
+      ],
+      "grounding": [
+        {
+          "end_line": 677,
+          "quote": "The ledger is append-only: new understanding is recorded as new\n   qualified claims and later object cuts, not by mutating prior accepted\n   entries in place.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow",
+          "start_line": 675
+        }
+      ],
+      "key": "world_model_flow_requirements",
+      "statement": "Observe strongest available sources; tracing should support concrete source-span/field/locator/code-path/record re-entry. Extract reviewable inventories and object/event/lifecycle/treatment/authority candidates plus ambiguities, not yet a world model. Assurance should expose claim, observed/derived/interpreted/composed status, supporting surfaces, aspect-specific authority and gaps. Append accepted qualified claims without mutating earlier entries. Bound by function/authority/state/adjacency, rejecting schema-first or vocabulary-cluster modelling. Materialise bounded, distinguishable evidence-backed cuts; sparse publication is lawful. Relate with treatments/covariance/adjoints/temporal references. Publish immutable cuts, with Git/filesystem sufficient at low volume. Compose recursively, inspectably and boundedly without erasing authority. Optional alignment produces epistemic, not yet semantic-truth outputs. Project tables/schema/API/event contracts, mapping documents, transform specifications/covariant transforms/tests/app scaffolds as applicable. Optional real-execution compilation is governed by accepted understanding; scale should use deterministic artifacts rather than per-row inference. Optional serving requires justified delivery needs and may remain filesystem-first or move to a query plane.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_cut",
+        "markov_overlay",
+        "effective_blanket"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Outside a declared geometric representation space the law is discharged semantically under entity-cut construction."
+      ],
+      "grounding": [
+        {
+          "end_line": 739,
+          "quote": "Outside such a space the same law is\ndischarged semantically under §9",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FRepresentation%20law",
+          "start_line": 738
+        }
+      ],
+      "key": "entity_representation_law",
+      "statement": "Every published entity cut is prompt-sufficient for reasoning; at minimum it should visibly expose its eight semantic surfaces. Explicit blanket means the boundary where identity survives adjacent-domain reinterpretation, not member-column enumeration. Schemas evidence identity rather than constitute it; the boundary test is interventional. Where a representation space exists the boundary is a low-rank identity-preserving projection and an overlay should expose both distributed evidence and identity-recovering projection.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_cut",
+        "attribute_ledger",
+        "assurance",
+        "published_domain_artifact"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 772,
+          "quote": "No object attribute\nshould exist without ledger support; no ledger entry should exist without\nassurance; no assurance should exist without traceable source",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FMaterialisation%20law",
+          "start_line": 770
+        }
+      ],
+      "key": "materialisation_traceability",
+      "statement": "Materialised cuts are builder artifacts and canonical object-level semantic truth, not raw source-emitted objects or mutable operational truth. Domain artifacts should be versioned and explicitly superseded. The chain is source → tracing → assurance → attribute ledger → entity cut. A cut immutably selects one bounded identity/boundary and accompanies evidence plus acceptance basis; one ledger state may support many identity/boundary/context selections, and records of selection do not equate ledger and cut. Every accepted attribute should be recoverable through its cut, ledger entries, assurance and traced source; no unsupported link should exist. Geometric selections additionally invoke overlay construction.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "publication_ledger",
+        "attribute_ledger",
+        "query_plane"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 787,
+          "quote": "Both should remain append-only and\nreplayable",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law",
+          "start_line": 786
+        }
+      ],
+      "key": "publication_plane_rule",
+      "statement": "Published truth should be immutable per cut, diff-reviewable, evidence-traceable and explicitly superseded rather than overwritten. Initial filesystem/Git publication is sufficient; a later database is a query complement, not publication authority. Publication ledger and attribute ledger remain distinct and both should be append-only and replayable; independent supplied flow/cut laws impose explicit immutability and append-only obligations.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "attribute_ledger"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 800,
+          "quote": "The profile does not assume one source per attribute; it\nassumes one lawful claim record per accepted attribute fact",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FAttribute%20ledger%20law",
+          "start_line": 799
+        }
+      ],
+      "key": "attribute_claim_record_rule",
+      "statement": "The ledger is the immediate semantic source of cuts. Each entry should be fully qualified and may contain values/quantities, rules, classifications, topology/relations, provenance/authority and effective/observed/publication coordinates. One or more evidence sources may support it, such as policy documents, code invariants/derivations and observed data. The cardinality requirement is one lawful claim record per accepted attribute fact, not one source per attribute.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "builder_project",
+        "entity_cut"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 807,
+          "quote": "Entities are recovered, not invented. A builder project constructs an\nentity cut by trawling authoritative source surfaces for the boundaries\nthe operating model already commits to, then qualifying them into\npublished truth",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction",
+          "start_line": 804
+        }
+      ],
+      "key": "entity_recovery_rule",
+      "statement": "Construct cuts by recovering already-committed operating-model boundaries from authoritative source surfaces and qualifying them; builders do not invent institutional entities. Looser starting candidates converge to entity cuts or are explicitly left as non-object artifacts such as treatments, covariance edges or temporal references.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_cut"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 822,
+          "quote": "\"Explicit\" admits three lawful values on every surface: a stated value,\nstated absence, or stated non-applicability with its reason.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FAdmissibility",
+          "start_line": 818
+        }
+      ],
+      "key": "entity_cut_admissibility",
+      "statement": "The whole constitutional test is eight explicit, traceable surfaces—identity, boundary, authority, state, evidence, treatment, covariance, ambiguity—discriminated from plausible alternatives at evidence altitude proportional to the claim. It prescribes what holds, not a mandatory technique. Every surface admits a stated value, stated absence, or reasoned non-applicability; absence of adjacent treatment must not provoke invented treatment. Sparse, unique, historical, single-context, inaccessible or regulated entities remain publishable when the test holds and residual ambiguity is declared. Missing comparison populations, repeated contexts or intervention permission are stated evidence-altitude bounds, not publication bans.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_cut"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 859,
+          "quote": "Boundary is interventional in character, not structural.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FDiscrimination",
+          "start_line": 856
+        }
+      ],
+      "key": "entity_discrimination_strength",
+      "statement": "State why this boundary rather than a nearby one treated differently; stronger claims require stronger discrimination. Semantic adjoint round-trip corresponds to geometric boundary discrimination. Where intervention is possible, interventional evidence discriminates more strongly than declarations and the cut should state its evidence kind. A field-set-only boundary is a weaker claim than specified identity-preserving reinterpretations and should be read accordingly.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_cut"
+      ],
+      "conditions": [
+        "An entity cut is published."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 871,
+          "quote": "Cuts are immutable: revising\nidentity or boundary produces a new cut that supersedes the prior one",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FPublishing%20a%20cut",
+          "start_line": 867
+        }
+      ],
+      "key": "entity_cut_publication",
+      "statement": "Publish all eight admissibility surfaces visibly and traceably with their lawful explicit values and record the discrimination basis. Identity/boundary revision creates a new superseding immutable cut. Consumer storage form is free only while all required surfaces survive.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_overlay",
+        "representation_space",
+        "identity_direction"
+      ],
+      "conditions": [
+        "The builder operates in a declared representation space where identity is geometric."
+      ],
+      "exceptions": [
+        "This specialisation is not required for ordinary institutional recovery."
+      ],
+      "grounding": [
+        {
+          "end_line": 886,
+          "quote": "directions computed in\ndifferent spaces do not compose",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction",
+          "start_line": 885
+        }
+      ],
+      "key": "overlay_construction_scope",
+      "statement": "Use the directional interventional procedure as both construction steps and minimum stored publication structure. Include the representation space in the overlay; directions are uninterpretable without it and cannot compose across different spaces.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_overlay",
+        "attribute_ledger",
+        "null_peer"
+      ],
+      "conditions": [
+        "The geometric overlay construction law applies."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 899,
+          "quote": "paired ledger entries covering `(candidate, context)` and\n  `(null, context)`, so identity-carrying signal can be separated from\n  context-carrying signal.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FPaired%20evidence%20collection",
+          "start_line": 897
+        }
+      ],
+      "key": "overlay_paired_evidence",
+      "statement": "Collect candidate ledger evidence across multiple instantiated contexts and at least one identity-lacking structurally similar null peer in the same contexts; pair candidate/context and null/context entries to separate identity from context signal. Entries remain distributed raw evidence and are not the object.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "identity_direction",
+        "markov_overlay"
+      ],
+      "conditions": [
+        "A candidate identity direction is evaluated for acceptance/publication."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 943,
+          "quote": "Passing this battery establishes that a direction is verified for\npublication under this profile; it does not establish a formally closed\nMarkov blanket",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FVerification%20by%20treatment",
+          "start_line": 941
+        }
+      ],
+      "key": "direction_verification_requirement",
+      "statement": "Accept only if projection preserves identity under held-out treatments and at least one acceptable verification is recorded: α-sweep x − α·d showing expected identity shift and saturation on held-out contexts; transplant x + α·d into null peers showing acquisition; or overwriting attributes outside projection support while identity survives. No acceptable verification leaves a candidate, not an accepted overlay; publishing it violates Representation law. Its entity cut remains lawful without the overlay. Verification for publication is distinct from formally closed conditional independence, which the reported empirical program did not establish.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "core_and_coat",
+        "markov_overlay"
+      ],
+      "conditions": [
+        "Candidates appear in multiple contexts."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 951,
+          "quote": "decompose the attribute\nevidence into an invariant core, the attributes whose contribution to the\nidentity direction is stable across ≥ N of N contexts, and a context\ncoat",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition",
+          "start_line": 947
+        }
+      ],
+      "key": "core_coat_decomposition_rule",
+      "statement": "Decompose evidence into the all-N-context stable identity-contribution core and context-selected treatment coat. Keep both as evidence and treat coat/core ratio as characterization, not quality.",
+      "uncertainty": "N and the stability criterion are not operationally specified in the supplied text."
+    },
+    {
+      "applies_to_keys": [
+        "markov_object",
+        "null_peer",
+        "identity_direction"
+      ],
+      "conditions": [
+        "Before publication under the Markov-object overlay construction law."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 970,
+          "quote": "Failure on the uniqueness and transfer tests means the cluster is not yet\na lawful Markov object",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FNull-peer%20discrimination",
+          "start_line": 969
+        }
+      ],
+      "key": "null_peer_discrimination_rule",
+      "statement": "Compare accepted candidates with null peers to distinguish object from incidental cluster. Similar core-size ranges are expected and acceptable, not diagnostic. Identity-loaded core attributes should be unique among peers and identity transfer should be cleaner than a random diagonal. The result mapping makes either uniqueness or transfer failure not_yet_lawful, even with internally consistent invariants.",
+      "uncertainty": "The source supplies no quantitative uniqueness/clean-transfer threshold."
+    },
+    {
+      "applies_to_keys": [
+        "markov_overlay",
+        "representation_space"
+      ],
+      "conditions": [
+        "An overlay is published."
+      ],
+      "exceptions": [
+        "The effective α coordinate is included where applicable."
+      ],
+      "grounding": [
+        {
+          "end_line": 997,
+          "quote": "A change of representation space changes every direction expressed in it\nand is therefore a supersession even when no ledger entry changed. Prior\noverlays are never mutated in place",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FOverlay%20publication",
+          "start_line": 995
+        }
+      ],
+      "key": "overlay_publication_surfaces",
+      "statement": "Expose at minimum declared/versioned space and attribute basis; identity projection/vector or equivalent; ledger-traced core/coat evidence; verification treatments/outcomes/held-out contexts; identity-preserving projection support; null peers tested and acceptance/rejection; and applicable α. Overlays are immutable projections. Revised direction due to new contexts/evidence/refit creates a superseding overlay; a space change itself supersedes every expressed direction even without ledger changes.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_overlay"
+      ],
+      "conditions": [
+        "An overlay is stored."
+      ],
+      "exceptions": [
+        "The supersession record names a predecessor if any."
+      ],
+      "grounding": [
+        {
+          "end_line": 1016,
+          "quote": "A storage layout that loses any of these surfaces is not a lawful\nMarkov-object storage layout.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FStorage%20shape",
+          "start_line": 1013
+        }
+      ],
+      "key": "overlay_storage_package",
+      "statement": "Store a package attached to its entity cut, not merely a table row or membership list: space/version; direction/projection support; distributed ledger evidence pointers; treatment/context/outcome verification trace; acceptance provenance/authority and assurance; and supersession record. Loss of any surface is unlawful. Downstream query/projection conveniences cannot substitute for this package.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "attribute_ledger",
+        "builder_project"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1030,
+          "quote": "Sparse first\npublication remains lawful (§9 Admissibility); silent unsupported\nattribute creation does not",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FSaturation%20law",
+          "start_line": 1028
+        }
+      ],
+      "key": "saturation_conditions",
+      "statement": "Builders may iterate a bounded source-object set until judged sufficiently saturated: materially important attributes have traceable support, remaining gaps are explicit ambiguities, and the cut is stable enough to publish and supersede later. Sparse first publication remains lawful; silent unsupported attributes do not.",
+      "uncertainty": "Sufficient importance and publication stability are bounded judgments, not numerical thresholds supplied here."
+    },
+    {
+      "applies_to_keys": [
+        "composed_world_model",
+        "published_domain_artifact"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1043,
+          "quote": "profile-level mesh law should be ratified only\nonce the reusable node and edge model is stable",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FComposition%20law",
+          "start_line": 1042
+        }
+      ],
+      "key": "composition_preservation",
+      "statement": "Build local published artifacts/cuts before stitching, not a central monolith first. Composition preserves fragment authority, bounded-context meaning, treatment semantics, declared loss and ambiguity; higher-order models do not erase constituents. A federated mesh is preferred over flattening. Developing topology may stay product-local; profile mesh law should await stable reusable nodes/edges.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_projection",
+        "query_plane"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1058,
+          "quote": "the preferred structural order is\n`world model -> API contract -> schema contract`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FProjection%20law",
+          "start_line": 1054
+        }
+      ],
+      "key": "projection_traceability_and_priority",
+      "statement": "The semantic kernel remains primary. All projections should trace to governing objects, evidence, treatments, covariance, adjoints and applicable temporal references. Tables/schemas/APIs/mapping documents/covariant transforms publish the same kernel. World model → API contract → schema contract is preferred because APIs usually carry more business semantics. Query/traversal may be first-class delivery without becoming constitutional core.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_planes",
+        "epistemic_overlay"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1082,
+          "quote": "They should not be the\nrow-by-row execution engine for large-scale data movement when the\nsemantic understanding has already been accepted and can be compiled",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FControl%20plane%20and%20data%20plane",
+          "start_line": 1079
+        }
+      ],
+      "key": "probabilistic_control_deterministic_execution",
+      "statement": "Semantic artifacts carry truth, epistemic overlays probabilistic correspondence/uncertainty, compiled artifacts deterministic runtime behavior. LLMs and other probabilistic systems primarily belong on the control plane and should aid comprehension, candidate alignment, ambiguity reduction and ranking. Once accepted meaning can be compiled, they should not drive large-scale movement row by row. The plane split introduces no second semantic truth.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_proof_wedge"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1103,
+          "quote": "Where the line is mature enough, the proof should\nalso show that accepted semantic understanding can be compiled into\ndeterministic executable pipelines without losing the traceability and\nchallengeability of the governing world model",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FProof%20law",
+          "start_line": 1100
+        }
+      ],
+      "key": "practical_proof_obligation",
+      "statement": "Adoption should not wait to win standardisation. The preferred five-step wedge is incremental capture, not immediate centralized convergence. Its practical proof is one semantic substrate producing both expected legacy artifacts and richer covariant outputs. Mature lines should additionally demonstrate deterministic compilation preserving traceability and challengeability.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_development"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1122,
+          "quote": "Use\nnormative application specs where the problem is primarily user\ninteraction, workflow choice, non-domain behaviour, or operational policy\nbeyond the domain semantics themselves.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FWorld-model-driven%20development",
+          "start_line": 1117
+        }
+      ],
+      "key": "development_substrate_selection",
+      "statement": "Preferred chain: world model → epistemic correspondence overlay → deterministic compiled artifacts → implementation. Simpler lines may use world model → application projections → implementation. Use normative application specifications for primarily user interaction, workflow choice, non-domain behavior or extra-domain operational policy; use world-model semantics where software mainly interfaces with stable domain reality. A sufficiently well-formed model can project large application portions without semantic re-authoring.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_profile"
+      ],
+      "conditions": [
+        "The profile is working."
+      ],
+      "exceptions": [
+        "Inspectable Markov overlays occur where representation space is selected; compiled execution artifacts occur where real volume requires them."
+      ],
+      "grounding": [
+        {
+          "end_line": 1143,
+          "quote": "- a basis for AI reasoning over real institutional meaning.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FOutput",
+          "start_line": 1143
+        }
+      ],
+      "key": "world_model_expected_outputs",
+      "statement": "Expected outputs are durable published artifacts, composed models, primary entity cuts, applicable inspectable Markov overlays, explicit treatment/covariance semantics, grounded epistemic correspondence overlays, temporal references, familiar projections, volume-appropriate deterministic artifacts and a basis for AI reasoning over institutional meaning. This is an output description, not a returned evaluation result.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "markov_research_companion",
+        "world_model_profile"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1151,
+          "quote": "SPEC_METHOD, the constitutional specification\nmethod; RELEASE, the method for publishing immutable cuts and promoting\nversion-line selectors for installed consumer bases; TICKETS, the method\nfor turning discovery into bounded execution work",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces",
+          "start_line": 1148
+        }
+      ],
+      "key": "companion_roles_and_status",
+      "statement": "SPEC_METHOD supplies constitutional specification method, RELEASE immutable-cut publication and installed-base version-selector promotion, and TICKETS bounded discovery work. The pinned empirical companion reports geometric-reading evidence from experiment 08 onward and failed promotion predicates in experiment 20 and its multilayer successor. It is research evidence, not constitutional authority; later research revisions do not amend the profile.",
+      "uncertainty": "Companion content is not supplied for direct examination."
+    },
+    {
+      "applies_to_keys": [
+        "world_model_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1194,
+          "quote": "| cut admissibility | `discrimination_undecided` | indeterminate | no counterexample of `cut_inadmissible` is found, and the admissible evidence cannot decide the discrimination the cut itself claims at its stated altitude; the value names the evidence that would decide |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile",
+          "start_line": 1194
+        }
+      ],
+      "key": "cut_and_direction_result_mapping",
+      "statement": "Cut predicate: all eight surfaces explicit, traceable and proportionally discriminated. cut_admissible → satisfied for lawful surface values including reasoned non-applicability and declared sparse evidence bounds/residual ambiguity; cut_inadmissible → falsified for a missing lawful value, untraceability or evidence of an undiscriminated plausible alternative, naming it; discrimination_undecided → indeterminate only with no counterexample and evidence unable to decide the cut's own altitude-specific claim, naming needed evidence. Direction predicate: admissible extraction, held-out identity preservation and recorded acceptable verification. direction_verified → satisfied requires admissible extraction in declared space, at least one acceptable recorded verification and no recorded identity loss; extraction_inadmissible → falsified for PCA/maximum variance regardless of verification; verification_failed → falsified for admissible extraction with recorded identity loss; verification_inconclusive → indeterminate for admissible extraction in declared space with a run deciding neither preservation nor loss, naming deciding treatment/verification; representation_space_invalid → invalid_basis only absent extraction/verification counterexamples, where no space is declared or cross-space directions are composed.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1207,
+          "quote": "| promotion gate | `gate_not_met` | falsified | the run does not meet the test's predicate; it is the counterexample for that run only, and the construct's standing is unchanged |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile",
+          "start_line": 1207
+        }
+      ],
+      "key": "overlay_gate_saturation_result_mapping",
+      "statement": "Publication predicate is recorded acceptable direction verification: published_verified → satisfied; published_unverified → falsified for publishing without it. Storage predicate is retention of six package surfaces: storage_retained → satisfied; storage_lossy → falsified naming the lost surface. Null-peer predicate is both uniqueness and cleaner-than-random transfer: null_peer_discriminated → satisfied; not_yet_lawful → falsified if either fails, naming it. Gate predicate belongs to a particular conditional-independence run: gate_met → satisfied; gate_not_met → falsified for that run only without changing construct standing. Saturation predicate is supported material attributes, explicit remaining ambiguity and publication-stable cut: saturated → satisfied carrying gaps as residuals; not_saturated → falsified naming a failed condition such as unsupported attribute or silent gap.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "world_model_result_domains",
+        "identity_direction"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "The no-result rule for unrun verification applies only when neither extraction_inadmissible nor representation_space_invalid grounds hold."
+      ],
+      "grounding": [
+        {
+          "end_line": 1225,
+          "quote": "a candidate direction whose\nverification has not been run has no result for direction acceptance",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile",
+          "start_line": 1220
+        }
+      ],
+      "key": "world_model_result_fallback_and_unrun",
+      "statement": "When no refined value applies, core indeterminate names deciding evidence unavailable to the evaluation; out_of_frame names an undeclared needed relation/capability; invalid_basis covers other unsupported subjects/bases. Unrun verification is no direction-acceptance result at all, never indeterminate or another core value; direction stays candidate. In conjunctions it is a planned assessment without closed result if planned, otherwise uncovered coverage. A construction step stopped without needed verification ends incomplete for construction's candidate-available predicate and retains verification as a work-state residual; publication remains published_unverified. Lawful stated absence/non-applicability are surface values, not non-satisfied results. Candidate/established are construct standings; candidate-class/formally closed are publication kinds, not results. Failed gate runs do not falsify the construct.",
+      "uncertainty": "External core conjunction and construction mappings are referenced but not independently supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "ux_surface",
+        "ux_typed_contract",
+        "ux_binding_requirements",
+        "ux_prompt_carrier_boundary",
+        "ux_binds_contract",
+        "ux_external_law_gap"
+      ],
+      "reason": "Retains binding and prompt boundaries; imported acquisition and carrier law remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_process_shapes",
+        "ux_continuation_ownership"
+      ],
+      "reason": "Retains continuation ownership, prohibitions, reducer placement and replay diagnostic.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "msg_replay_proof",
+        "replay_proof_obligation",
+        "projection_only_replay_latitude"
+      ],
+      "reason": "Retains quantified proof obligation, contents, failure dependencies and no-effect option.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_view",
+        "view_purity_requirements",
+        "view_implementation_latitude"
+      ],
+      "reason": "Retains pure-view requirements, recorded implementation choices and membrane exception.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F9.%20View%20shape"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_shared_types",
+        "type_sharing_and_ingress_validation",
+        "ux_type_latitude"
+      ],
+      "reason": "Retains shared types, every-seam validation and local choices.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F10.%20Type%20sharing"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "ux_accessibility",
+        "accessibility_declarations",
+        "accessibility_exemption_scope_gap"
+      ],
+      "reason": "Retains minimum and modal distinctions while exposing wider-exemption authorization uncertainty.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_adoption",
+        "ux_process_shapes",
+        "ux_adoption_record",
+        "ux_adoption_scope_latitude"
+      ],
+      "reason": "Retains all nine adoption record items and per-surface scope option.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_scaffold",
+        "scaffold_governance_and_exemption"
+      ],
+      "reason": "Retains any-trigger governance, seven exemption items and three scaffold exits.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_sprint",
+        "ux_sprint_boundary",
+        "ux_sprint_close_review",
+        "ux_escrow_latitude",
+        "replay_proof_obligation"
+      ],
+      "reason": "Retains cost condition, escrow boundaries, recommended triggers, classifications and closure obligations.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_failure_patterns"
+      ],
+      "reason": "Retains all seventeen violation triggers and repair/reprice boundary.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F13.%20Failure%20patterns"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ux_review",
+        "ux_review_questions"
+      ],
+      "reason": "Retains fourteen should-answer questions and incomplete-basis consequence.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F14.%20Review%20questions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "ux_result_domains",
+        "ux_surface_result_mapping",
+        "ux_proof_closure_carrier_results",
+        "ux_result_fallback_and_stops",
+        "ux_compliance_test_disagreement"
+      ],
+      "reason": "Retains all refined/core mappings and stop distinctions; preserves the owner's unresolved compliance-test choice.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "ux_source_inventory",
+        "ux_provenance_translation",
+        "ux_inventory_missing_loci"
+      ],
+      "reason": "Retains provenance, renamings and conservation claims without reconstructing absent predecessor/current bodies.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F16.%20Source%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "world_model_profile",
+        "world_model_import_and_modal_boundary",
+        "entity_cut_foundational_binding",
+        "world_model_external_basis_gap"
+      ],
+      "reason": "Retains optional profile, imports, modal convention and explicit binding; external foundational semantics remain bounded references.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model",
+        "source_system"
+      ],
+      "reason": "Retains enacted-source sovereignty, derived semantic-layer purpose and domain-truth character.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_constitutional_intents",
+        "query_plane_latitude"
+      ],
+      "reason": "Retains the two intents and optional downstream delivery-plane distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FConstitutional%20intents"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_manifesto"
+      ],
+      "reason": "Retains all manifesto commitments and descriptive-before-generative boundary.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FManifesto"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "world_model_profile",
+        "world_model_foundation_map",
+        "foundation_premises_and_ownership",
+        "foundation_consumer_boundary",
+        "foundation_map_nonproof_residual"
+      ],
+      "reason": "Retains attributed premises, consequences, owners and consumer limits; no proof or unseen consumer content is reconstructed.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "source_project",
+        "product",
+        "install",
+        "artifact",
+        "product_definition_document",
+        "world_model_role_boundary",
+        "lineage_import_preservation"
+      ],
+      "reason": "Retains method role split, context ownership and exact identity-preserving imports.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "builder_project",
+        "builder_specialisation_boundary",
+        "source_project_specialises_builder"
+      ],
+      "reason": "Retains one-way specialisation, ownership, exclusions, basis and invalidation.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model",
+        "world_model_object",
+        "world_model_explanatory_scope"
+      ],
+      "reason": "Retains definition, shorthand exception, recommended explanatory content and exclusions.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_objectives"
+      ],
+      "reason": "Retains desired properties and eight should-be-answerable questions at recommendation force.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FObjectives"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "single_semantic_truth_surface"
+      ],
+      "reason": "Retains semantic truth membership and downstream non-authority.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FSingle%20truth%20surface"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "evidence_preference_order"
+      ],
+      "reason": "Retains preferred ordering, availability conditions and no-code-prerequisite boundary.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F3.%20What%20a%20world%20model%20is%2FEvidence%20hierarchy"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "markov_object"
+      ],
+      "reason": "Retains the substrate-neutral theoretical construct as a working claim rather than established fact.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "effective_blanket",
+        "blanket_evidence_distinction"
+      ],
+      "reason": "Retains distributed partial alignment, geometric reading and candidate evidence distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEffective%20blanket"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "markov_working_refinements"
+      ],
+      "reason": "Retains four candidate findings, experimental associations, pin and entity-cut non-applicability.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FFour%20working%20refinements"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "markov_candidate_standing",
+        "overlay_inherits_candidate_standing"
+      ],
+      "reason": "Retains failed promotion gate, candidate inheritance, independent cut admissibility and tooling recommendation.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEpistemic%20status"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "markov_design_framing"
+      ],
+      "reason": "Retains conditional design preferences and absence of empirical prerequisite for general design.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FRelation%20to%20the%20design%20profile"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "domain",
+        "epistemic_overlay",
+        "world_model_core_semantic_rules"
+      ],
+      "reason": "Retains all core semantic claims, treatment declarations, naming and overlay boundaries.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F5.%20Core%20claims"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_cut",
+        "attribute_ledger",
+        "assurance",
+        "markov_overlay",
+        "published_domain_artifact",
+        "fragment",
+        "composed_world_model",
+        "treatment_surface",
+        "covariance_edge",
+        "adjoint_mapping",
+        "temporal_reference_artifact",
+        "world_model_projection",
+        "query_plane",
+        "builder_app",
+        "world_model_object",
+        "overlay_attached_to_cut",
+        "adjoint_interprets_treatment",
+        "composition_references_artifacts"
+      ],
+      "reason": "Retains every named unit and the distinction between recovered cut, theoretical object and optional overlay.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "world_model_flow",
+        "world_model_flow_requirements",
+        "source_workflow_nonexecution"
+      ],
+      "reason": "Retains ordered stages and conditions as data; finite-schema process description is not execution.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow"
+    },
+    {
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Heading and blank line only; substantive representation/publication laws are separately supplied and retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_representation_law"
+      ],
+      "reason": "Retains prompt sufficiency, interventional boundary and geometric/semantic applicability distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FRepresentation%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "materialisation_traceability",
+        "cut_projects_ledger"
+      ],
+      "reason": "Retains source/semantic truth split, many cuts per ledger state and recommended provenance chain.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FMaterialisation%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "publication_ledger",
+        "publication_plane_rule"
+      ],
+      "reason": "Retains publication recommendations, initial Git sufficiency and ledger/query distinctions.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FPublication%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "attribute_claim_record_rule"
+      ],
+      "reason": "Retains claim qualification, optional evidence multiplicity and one-record-per-accepted-fact cardinality.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FAttribute%20ledger%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_recovery_rule"
+      ],
+      "reason": "Retains recovery from already-committed authoritative boundaries.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_cut_admissibility"
+      ],
+      "reason": "Retains whole test, three lawful surface values, sparse publication and evidence-altitude limits.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FAdmissibility"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_discrimination_strength",
+        "discrimination_technique_latitude"
+      ],
+      "reason": "Retains proportional discrimination and optional non-exhaustive methods without making intervention mandatory.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FDiscrimination"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_cut_publication",
+        "cut_storage_latitude"
+      ],
+      "reason": "Retains visible surfaces, immutable supersession and consumer realization freedom.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FPublishing%20a%20cut"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "representation_space",
+        "overlay_construction_scope",
+        "direction_bound_to_space"
+      ],
+      "reason": "Retains geometric-only specialisation and prohibition on cross-space composition.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "null_peer",
+        "overlay_paired_evidence"
+      ],
+      "reason": "Retains multiple-context and at-least-one-null-peer paired evidence requirements.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FPaired%20evidence%20collection"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "identity_direction",
+        "direction_extraction_latitude"
+      ],
+      "reason": "Retains mean-offset formula, admissible supervised variants and excluded variance methods.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FIdentity-direction%20extraction"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "direction_verification_requirement"
+      ],
+      "reason": "Retains held-out verification, three methods, unverified publication violation and formal-closure distinction.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FVerification%20by%20treatment"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "core_and_coat",
+        "core_coat_decomposition_rule",
+        "geometric_threshold_gap"
+      ],
+      "reason": "Retains all-context core/coat distinction and non-quality ratio; numerical stability procedure is unspecified.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "null_peer_discrimination_rule",
+        "geometric_threshold_gap"
+      ],
+      "reason": "Retains size non-diagnosticity and uniqueness/transfer tests while exposing unspecified thresholds.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FNull-peer%20discrimination"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "overlay_publication_surfaces"
+      ],
+      "reason": "Retains seven visible fields, applicable coordinate and refit-triggered immutable supersession.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FOverlay%20publication"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "overlay_storage_package"
+      ],
+      "reason": "Retains all six stored surfaces and prohibition on downstream substitutions.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FStorage%20shape"
+    },
+    {
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Heading and blank line only; its three substantive laws are retained separately.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "saturation_conditions"
+      ],
+      "reason": "Retains bounded iteration permission, three saturation conditions and sparse-publication boundary.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FSaturation%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "composition_preservation"
+      ],
+      "reason": "Retains local-first composition, preserved semantics/authority and mesh preference with ratification condition.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FComposition%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "projection_traceability_and_priority",
+        "projection_downstream_of_model"
+      ],
+      "reason": "Retains traceability recommendation, preferred API/schema ordering and delivery/core separation.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FProjection%20law"
+    },
+    {
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Heading and blank line only; planes, proof and development subsections carry retained content.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_planes",
+        "probabilistic_control_deterministic_execution"
+      ],
+      "reason": "Retains plane membership, single truth and conditional recommendation against per-row probabilistic execution.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FControl%20plane%20and%20data%20plane"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_proof_wedge",
+        "practical_proof_obligation"
+      ],
+      "reason": "Retains preferred five-step wedge and maturity-conditioned compilation demonstration.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FProof%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_development",
+        "development_substrate_selection"
+      ],
+      "reason": "Retains normative/descriptive usual distinction, two development paths and applicability selection.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F12.%20Planes%2C%20proof%20and%20development%2FWorld-model-driven%20development"
+    },
+    {
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Heading and blank line only; output and companion subsections are retained separately.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_expected_outputs"
+      ],
+      "reason": "Retains all output categories with conditional overlay/volume applicability.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FOutput"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "markov_research_companion",
+        "companion_roles_and_status",
+        "empirical_companion_unavailable"
+      ],
+      "reason": "Retains exact research pin, reported experiments and evidence-only status; companion contents remain unavailable.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "world_model_result_domains",
+        "cut_and_direction_result_mapping",
+        "overlay_gate_saturation_result_mapping",
+        "world_model_result_fallback_and_unrun"
+      ],
+      "reason": "Retains all seven result domains, counterexample precedence, fallback values and no-result/unperformed distinction without evaluating any case.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F14.%20Results%20of%20this%20profile"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "For a pure projection-only surface, a no-effect proof consisting of Msg log, final State and empty Cmd sequence."
+      ],
+      "applies_to_keys": [
+        "msg_replay_proof"
+      ],
+      "forbidden": [
+        "Extending this special form to a surface with effects merely to omit required proof content."
+      ],
+      "grounding": [
+        {
+          "end_line": 486,
+          "quote": "For a pure projection-only surface, the replay proof may be a no-effect\nproof: a Msg log plus the final State and an empty Cmd sequence",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 485
+        }
+      ],
+      "key": "projection_only_replay_latitude"
+    },
+    {
+      "allowed": [
+        "Function, function component, template, server-rendered handler, signal-derived expression or other framework shape, selected and recorded in the design module."
+      ],
+      "applies_to_keys": [
+        "ux_view"
+      ],
+      "forbidden": [
+        "Using stack choice to discard State → ViewTree purity or body side-effect prohibition."
+      ],
+      "grounding": [
+        {
+          "end_line": 504,
+          "quote": "Whether the implementation expresses this as a function, a function\ncomponent, a template, a server-rendered handler, a signal-derived\nexpression or another framework-specific shape is a stack decision\nrecorded in the design module.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F9.%20View%20shape",
+          "start_line": 499
+        }
+      ],
+      "key": "view_implementation_latitude"
+    },
+    {
+      "allowed": [
+        "Project-local choice of typed-schema mechanism.",
+        "UX-local types for view-local draft form state, sort enums and filter strings."
+      ],
+      "applies_to_keys": [
+        "ux_shared_types"
+      ],
+      "forbidden": [
+        "Shadowing back-end types.",
+        "Treating compile-time TypeScript alone as seam validation."
+      ],
+      "grounding": [
+        {
+          "end_line": 533,
+          "quote": "the mechanism choice is project-local. Compile-time\nTypeScript alone is not sufficient at these seams (P6, P1). UX-local types\nare allowed for view-local concerns: form input draft state, sort order\nenums, filter strings. UX-local types do not shadow back-end types",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 530
+        }
+      ],
+      "key": "ux_type_latitude"
+    },
+    {
+      "allowed": [
+        "Project adoption restricted to some UX surfaces, such as production UI but not internal debug tools, with scope recorded in the design module."
+      ],
+      "applies_to_keys": [
+        "ux_adoption"
+      ],
+      "forbidden": [],
+      "grounding": [
+        {
+          "end_line": 579,
+          "quote": "A project may adopt this profile only for some\nUX surfaces, for example the production UI but not internal debug tools,\nwith the scope recorded in the design module",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 577
+        }
+      ],
+      "key": "ux_adoption_scope_latitude"
+    },
+    {
+      "allowed": [
+        "Under the short-window cost condition: screenshot/walkthrough capture; visual review; copy/spacing/density/layout cleanup; accessibility review/remediation; meaningful-family replay-proof updates; design wording cleanup; trace cleanup between changed UX states and authority."
+      ],
+      "applies_to_keys": [
+        "ux_sprint"
+      ],
+      "forbidden": [
+        "Escrowing truth-changing Msg variants lacking admitted carriers; new/changed AssetSurface or equivalent product contracts; meaning-changing navigation/information architecture/selection authority; runtime/governance/closure/continuation/lineage/provenance/evidence semantics; release criteria or method law."
+      ],
+      "grounding": [
+        {
+          "end_line": 640,
+          "quote": "A UX sprint may not escrow (P6):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 631
+        },
+        {
+          "end_line": 629,
+          "quote": "A UX sprint may escrow (P2, P4b):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 621
+        }
+      ],
+      "key": "ux_escrow_latitude"
+    },
+    {
+      "allowed": [
+        "Later realisation of query, traversal and serving through a dedicated plane without changing the two constitutional intents."
+      ],
+      "applies_to_keys": [
+        "query_plane",
+        "world_model_profile"
+      ],
+      "forbidden": [
+        "Treating those delivery concerns as defining the profile's constitutional identity."
+      ],
+      "grounding": [
+        {
+          "end_line": 101,
+          "quote": "Those concerns may later be\nrealised through a dedicated query or serving plane without changing the\ntwo core intents",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FConstitutional%20intents",
+          "start_line": 99
+        }
+      ],
+      "key": "query_plane_latitude"
+    },
+    {
+      "allowed": [
+        "Nonmandatory, nonexhaustive techniques: cross-context invariance where multiple contexts exist; structurally similar null-peer comparison; adjacent treatment/adjoint round-trip preserving identity; transplant requirements for a neighbor; coat stripping with contextual variation preserving identity and identity-claim variation breaking it."
+      ],
+      "applies_to_keys": [
+        "entity_cut"
+      ],
+      "forbidden": [
+        "Treating any listed technique as universally mandatory or the list as exhaustive."
+      ],
+      "grounding": [
+        {
+          "end_line": 837,
+          "quote": "Techniques\nthat serve this, none of them mandatory and none of them exhaustive:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FDiscrimination",
+          "start_line": 836
+        }
+      ],
+      "key": "discrimination_technique_latitude"
+    },
+    {
+      "allowed": [
+        "Consumer-selected concrete carriers, layouts, schemas and storage topology, preserving published semantic surfaces."
+      ],
+      "applies_to_keys": [
+        "entity_cut"
+      ],
+      "forbidden": [
+        "Losing required published surfaces through storage-form choice.",
+        "Revising identity or boundary in place instead of superseding."
+      ],
+      "grounding": [
+        {
+          "end_line": 871,
+          "quote": "Concrete carriers, layouts, schemas and storage topology are\nconsumer realisation; this profile requires that the published surfaces\nsurvive and does not select the form they are stored in",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F9.%20Entity%20cut%20construction%2FPublishing%20a%20cut",
+          "start_line": 869
+        }
+      ],
+      "key": "cut_storage_latitude"
+    },
+    {
+      "allowed": [
+        "Canonical across-context mean offset.",
+        "Supervised linear discriminant, logistic-regression normal or difference-in-conditional-means when targeting mean offset rather than within-class variance."
+      ],
+      "applies_to_keys": [
+        "identity_direction"
+      ],
+      "forbidden": [
+        "Principal-component or maximum-variance construction as identity direction.",
+        "Equating the geometric combination with a single attribute column."
+      ],
+      "grounding": [
+        {
+          "end_line": 918,
+          "quote": "Supervised variants (linear discriminant,\nlogistic-regression normal, difference-in-conditional-means) are\nadmissible when they target mean offset rather than within-class\nvariance.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FIdentity-direction%20extraction",
+          "start_line": 912
+        }
+      ],
+      "key": "direction_extraction_latitude"
+    }
+  ],
+  "limitations": [
+    "This is source interpretation only: no semantic acceptance, case evaluation, execution, installed qualification, Product instantiation or completeness judgment is claimed.",
+    "Only embedded source text was used. Graph discovery confidence and external nodes establish no authority or additional endpoints.",
+    "Four heading-only sections were omitted explicitly; their substantive subsections were retained.",
+    "UX §§1–6, external foundational/method definitions, predecessor bodies, WORLD_MODEL §15 and pinned research contents are not supplied. Their locally stated roles are retained without importing unseen rules.",
+    "The source leaves the UX compliance-test disagreement to the product owner. Public-accessibility exemption authorization and several geometric thresholds remain unresolved.",
+    "Named source judgments, transformations, traversals and ordered procedures are represented as descriptive concepts and constraints. No executable judgment/traversal/transformation population or proof trace is created.",
+    "The foundation table and source-disposition inventory are compressed as attributed claims and ownership/routing descriptions; they do not independently verify derivation, conservation or referenced consumer behavior.",
+    "The reported failed Markov promotion experiments remain source assertions. Candidate standing, verified publication, lawful entity cuts, absent verification and falsified run predicates are kept distinct."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "AssetSurface contracts are published; otherwise the same binding applies to a design-named equivalent typed contract."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 397,
+          "quote": "a UX surface binds\nto one or more AssetSurface contracts as its data source and action\ntarget",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 395
+        }
+      ],
+      "key": "ux_binds_contract",
+      "kind": "typed_carrier_binding",
+      "meaning": "The surface consumes data and emits product actions through the contract subject to the binding requirements; the contract is shared semantic ground truth.",
+      "source_key": "ux_surface",
+      "target_key": "ux_typed_contract"
+    },
+    {
+      "conditions": [
+        "World-model publication under this profile; admissible change is treatment across adjacent domains."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 56,
+          "quote": "Direction: profile to tier 1;\npreserved meaning: identity is declared and survives admissible change,\nand the boundary carries its own proof; narrowed scope: world-model\npublication under this profile",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+          "start_line": 51
+        }
+      ],
+      "key": "entity_cut_foundational_binding",
+      "kind": "profile_specialisation_binding",
+      "meaning": "The profile binds its published entity-cut admissibility to the locally described tier-1 Object and P3 boundary-proof meaning. Declared identity survives admissible change and boundary carries proof; changing §9, Object or P3 requires reevaluation. The external tier-1 endpoint is represented only through this description, not fabricated as a fully defined local concept.",
+      "source_key": "world_model_profile",
+      "target_key": "entity_cut"
+    },
+    {
+      "conditions": [
+        "The selected complete release contains both clauses and the project has the specified world-model builder configuration."
+      ],
+      "exceptions": [
+        "General Source Projects outside the narrowed configuration are excluded."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 290,
+          "quote": "direction: source to target only; no inverse, equivalence, or\n  assertion that every Source Project is a Builder Project;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports%2FBuilder%20Project%20specialisation",
+          "start_line": 287
+        }
+      ],
+      "key": "source_project_specialises_builder",
+      "kind": "directional_semantic_specialisation",
+      "meaning": "Source Project is directionally translated into the narrower Builder Project while preserving mutable next-release workspace meaning; ownership, scope, exclusions and lifecycle follow the specialisation boundary.",
+      "source_key": "source_project",
+      "target_key": "builder_project"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 423,
+          "quote": "the attribute basis is evidence for that projection; the projection is\n  not a column-membership predicate;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEffective%20blanket",
+          "start_line": 420
+        }
+      ],
+      "key": "blanket_evidence_distinction",
+      "kind": "geometric_characterisation",
+      "meaning": "The effective blanket characterises the Markov construct geometrically: any attribute basis distributes identity with partial alignment, and apparent nonmember overwrites can leak identity transfer. Reported direction-level behavioral evidence supports a candidate reading, not formal conditional-independence closure.",
+      "source_key": "effective_blanket",
+      "target_key": "markov_object"
+    },
+    {
+      "conditions": [],
+      "exceptions": [
+        "Entity-cut standing does not inherit this candidate status."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 505,
+          "quote": "A\npublished Markov-object overlay is a candidate-class overlay of a\ncandidate construct, not a certified blanket of a formally established\nobject.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F4.%20The%20Markov-object%20construct%2FEpistemic%20status",
+          "start_line": 499
+        }
+      ],
+      "key": "overlay_inherits_candidate_standing",
+      "kind": "standing_inheritance",
+      "meaning": "Overlays built on the construct inherit candidate-class standing; publication verification does not establish a formally closed blanket.",
+      "source_key": "markov_object",
+      "target_key": "markov_overlay"
+    },
+    {
+      "conditions": [
+        "A declared representation space exists and the overlay meets its construction law."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 613,
+          "quote": "the overlay strengthens an entity cut, and its absence does not weaken one",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 613
+        }
+      ],
+      "key": "overlay_attached_to_cut",
+      "kind": "optional_geometric_enrichment",
+      "meaning": "The overlay enriches its entity cut without being a prerequisite to that cut's lawful publication.",
+      "source_key": "markov_overlay",
+      "target_key": "entity_cut"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 616,
+          "quote": "the interpret-back contract for a treatment",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 616
+        }
+      ],
+      "key": "adjoint_interprets_treatment",
+      "kind": "interpret_back_contract",
+      "meaning": "The adjoint supplies interpretation back from the treatment; this does not assert exact invertibility or semantic equivalence.",
+      "source_key": "adjoint_mapping",
+      "target_key": "treatment_surface"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 618,
+          "quote": "built by referencing and stitching published domain artifacts while preserving their identity, version and local authority",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F6.%20Units",
+          "start_line": 618
+        }
+      ],
+      "key": "composition_references_artifacts",
+      "kind": "authority_preserving_composition",
+      "meaning": "Higher-order models reference and stitch published artifacts while retaining constituent identity, version and local authority.",
+      "source_key": "composed_world_model",
+      "target_key": "published_domain_artifact"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 765,
+          "quote": "A single ledger state can support many different cuts at\ndifferent identities, boundaries and context scopes; the cut records\nwhich selection was taken, not that the ledger is the cut",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F8.%20Representation%20and%20publication%2FMaterialisation%20law",
+          "start_line": 763
+        }
+      ],
+      "key": "cut_projects_ledger",
+      "kind": "immutable_semantic_projection",
+      "meaning": "The cut selects bounded identity and boundary over ledger evidence with its acceptance basis; one ledger state supports multiple cuts and is not identical to any one cut.",
+      "source_key": "entity_cut",
+      "target_key": "attribute_ledger"
+    },
+    {
+      "conditions": [
+        "A geometric identity direction is constructed."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 886,
+          "quote": "an identity direction is\nuninterpretable without the space it lives in, and directions computed in\ndifferent spaces do not compose",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction",
+          "start_line": 884
+        }
+      ],
+      "key": "direction_bound_to_space",
+      "kind": "interpretive_basis_dependency",
+      "meaning": "A direction is bound to its declared representation space and cannot compose with directions in different spaces.",
+      "source_key": "identity_direction",
+      "target_key": "representation_space"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1048,
+          "quote": "Projection is downstream convenience, not semantic authority; the\nsemantic kernel remains primary",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F11.%20Saturation%2C%20composition%20and%20projection%2FProjection%20law",
+          "start_line": 1047
+        }
+      ],
+      "key": "projection_downstream_of_model",
+      "kind": "derived_semantic_dependency",
+      "meaning": "Projection derives from the model's semantic kernel and does not acquire co-equal semantic authority.",
+      "source_key": "world_model_projection",
+      "target_key": "world_model"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Only the locally expressed prompt/carrier boundary is retained; no external acquisition procedure, runtime command taxonomy or authority policy is inferred.",
+      "grounding": [
+        {
+          "end_line": 431,
+          "quote": "prompt construction is\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 430
+        }
+      ],
+      "key": "ux_external_law_gap",
+      "subject_key": "ux_prompt_carrier_boundary",
+      "uncertainty": "ACTIVATION §2, graph-execution carrier law, UX §§1–6 and the cited rc.2 compression are not supplied; local references cannot establish their full semantics."
+    },
+    {
+      "consequence": "Retain the source's provisional stricter mapping and unresolved owner ruling without declaring either compliance test finally authoritative.",
+      "grounding": [
+        {
+          "end_line": 774,
+          "quote": "The choice between them is pending the product owner's ruling and is not settled by this mapping",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 774
+        }
+      ],
+      "key": "ux_compliance_test_disagreement",
+      "subject_key": "ux_surface_result_mapping",
+      "uncertainty": "The source reports conflicting §§4–8 and §§4–10 compliance tests and explicitly leaves their choice pending."
+    },
+    {
+      "consequence": "A recorded exemption is represented as a source condition, not as invented permission for arbitrary public-capability exemptions.",
+      "grounding": [
+        {
+          "end_line": 552,
+          "quote": "Accessibility is not optional for product capabilities. It is optional\nfor internal-only debug surfaces, and the design module records the\nexemption",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 550
+        }
+      ],
+      "key": "accessibility_exemption_scope_gap",
+      "subject_key": "accessibility_declarations",
+      "uncertainty": "§11 explicitly permits internal-debug exemption while later failure/closure rules refer more broadly to recorded exemptions; the supplied text does not fully identify authority and eligibility for those broader cases."
+    },
+    {
+      "consequence": "Conservation counts and routes remain provenance claims; omitted bodies such as authority, transition, membrane, relationships and non-goals are not reconstructed from counts.",
+      "grounding": [
+        {
+          "end_line": 870,
+          "quote": "| #17-non-goals | conserved; the six non-goals and their product-local home | §2 Non-goals |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/UX.md#UX%2F16.%20Source%20dispositions",
+          "start_line": 870
+        }
+      ],
+      "key": "ux_inventory_missing_loci",
+      "subject_key": "ux_source_inventory",
+      "uncertainty": "The source inventory names conservation of detailed rules in current and predecessor sections absent from this cut; neither their full content nor conservation can be established here."
+    },
+    {
+      "consequence": "Imported roles, local identity descriptions and explicitly stated binding conditions are retained without inventing full external concept definitions, relation endpoints or applicability proofs.",
+      "grounding": [
+        {
+          "end_line": 34,
+          "quote": "the\nstatistical Markov boundary a hypothesis of FOUNDATIONS §5.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL",
+          "start_line": 33
+        }
+      ],
+      "key": "world_model_external_basis_gap",
+      "subject_key": "world_model_import_and_modal_boundary",
+      "uncertainty": "FOUNDATIONS, ACTIVATION, PROFILES, IDENTITY, SPEC_METHOD, EVALUATION, PRODUCT_DEFINITION, RELEASE, TICKETS and their selected complete basis are referred to but not supplied as source bodies."
+    },
+    {
+      "consequence": "The finite interpretation retains attributed consequence families and owner boundaries but supplies no deduction proof, executable consumer traversal or normative content for unseen loci.",
+      "grounding": [
+        {
+          "end_line": 199,
+          "quote": "no choice is presented as derived and no\ncandidate construct as established",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 198
+        }
+      ],
+      "key": "foundation_map_nonproof_residual",
+      "subject_key": "world_model_foundation_map",
+      "uncertainty": "The source's premise-to-consequence table and consumer lists describe authored dependencies; their foundational proofs, several local targets and external CONFORMANCE/GLOSSARY consumers lie beyond the supplied material."
+    },
+    {
+      "consequence": "Stage order, conditionality and obligations are descriptive records only; assurance, acceptance, ledger mutation, publication, evaluation and compilation have not occurred.",
+      "grounding": [
+        {
+          "end_line": 674,
+          "quote": "5. Ledger. Write the accepted qualified claims into the attribute ledger.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F7.%20Flow",
+          "start_line": 674
+        }
+      ],
+      "key": "source_workflow_nonexecution",
+      "subject_key": "world_model_flow",
+      "uncertainty": "This schema cannot encode or execute a full operational workflow, transformation proof, assessment lifecycle or restart state; those source meanings are retained textually without operational claims."
+    },
+    {
+      "consequence": "Preserve ≥ N of N, uniqueness and relative transfer language without fabricating thresholds, choosing contexts or asserting any candidate meets the tests.",
+      "grounding": [
+        {
+          "end_line": 950,
+          "quote": "stable across ≥ N of N contexts",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FCore%20and%20coat%20decomposition",
+          "start_line": 949
+        },
+        {
+          "end_line": 967,
+          "quote": "does the candidate's identity direction transfer more cleanly than a\n  random diagonal in the representation? It should.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F10.%20Markov-object%20overlay%20construction%2FNull-peer%20discrimination",
+          "start_line": 966
+        }
+      ],
+      "key": "geometric_threshold_gap",
+      "subject_key": "core_coat_decomposition_rule",
+      "uncertainty": "N, stability tolerance, uniqueness measurement, random-diagonal comparison design and cleaner-transfer thresholds are not specified."
+    },
+    {
+      "consequence": "The exact pin and reported negative gate outcomes remain source-linked reports; no independent validation or promotion result is claimed.",
+      "grounding": [
+        {
+          "end_line": 1160,
+          "quote": "The program is bound at commit\n`2da7871bf48d3144e4e83d5e8a336671251a6c76`, document SHA-256\n`269b5c008bc9fa20283cef63bf2daca373af86b2cf495182753671a5b203b3dd`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F13.%20Output%20and%20companion%20surfaces%2FCompanion%20surfaces",
+          "start_line": 1158
+        }
+      ],
+      "key": "empirical_companion_unavailable",
+      "subject_key": "markov_research_companion",
+      "uncertainty": "The pinned empirical document, measurements and experimental procedures are not embedded, so the claimed candidate support and failed tests cannot be inspected beyond this report."
+    }
+  ]
+}

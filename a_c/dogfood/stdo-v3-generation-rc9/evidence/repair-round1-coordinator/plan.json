@@ -1,0 +1,134 @@
+{
+  "claim": "Conditional F_P evidence-selection repairs; original failures remain measured; no semantic equivalence or acceptance.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+    "grounding": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "coordinator_sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7",
+  "created_at": "2026-10-18T11:13:39.733595+00:00",
+  "jobs": 4,
+  "profile": "ac.generation.repair-coordinator-plan/1",
+  "selected": [
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-04c54946fcb35842a633/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-04c54946fcb35842a633/attempt-001"
+      },
+      "parent_proof_sha256": "27e1d3913175b04509c1febfe0e0aa62fabdc503d32c1b47d5210fa252a09402",
+      "prompt_sha256": "0a59d8a6ed502784522d766f76e0883f3da6ffe68af3dfd7276faf607b7d704e",
+      "selection": {
+        "candidate": "codex",
+        "chunk": "chunk-04c54946fcb35842a633",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        },
+        {
+          "attempt": "actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-002",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-0f88fa57ee5ba9a3267c/attempt-002"
+      },
+      "parent_proof_sha256": "a3cb7bf3a0b52f52271036782743d896af455eab1ac0c75be9db96e14e170ece",
+      "prompt_sha256": "c123ccc0ac5f2c37e91d6d0ab0a207ea4a45e9317c029961964b0bc51085b337",
+      "selection": {
+        "candidate": "codex",
+        "chunk": "chunk-0f88fa57ee5ba9a3267c",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-887569773fe3a6b0d1da/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-887569773fe3a6b0d1da/attempt-001"
+      },
+      "parent_proof_sha256": "38f3abceb42d09987236b2ddb5d67e6013c4005564f429c2ef8ed5a8a8d9d863",
+      "prompt_sha256": "fd6e0e18264837987e0e642f95a9832c13840b8bc8172c39916d50cd53856920",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-887569773fe3a6b0d1da",
+        "mode": "graphify-ac"
+      },
+      "source_plan_sha256": "2e68b3d1c78721548b6af7c1100ddd95f6c9903a8ab1a4f864595b9b866719c0"
+    },
+    {
+      "invalid_groundings": 3,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-a74115f618a07b70b651/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-a74115f618a07b70b651/attempt-001"
+      },
+      "parent_proof_sha256": "9dd88f2f7ded82454aedc2077c6a84c3cf330ba53de5c33b26cfa94fff61895a",
+      "prompt_sha256": "e0c4c079aecffa743719a8b3b7c4396e5339fc4ba270f9cdbf01aa23d32f7396",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-a74115f618a07b70b651",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749"
+    },
+    {
+      "invalid_groundings": 1,
+      "inventory": [
+        {
+          "attempt": "actors/author/chunk-58454451fc2286d6fe25/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        }
+      ],
+      "parent": {
+        "kind": "author",
+        "path": "actors/author/chunk-58454451fc2286d6fe25/attempt-001"
+      },
+      "parent_proof_sha256": "63bd2845b7d5f15dd79e09e235428bf6becf317df79308b0d0cd3f09a876cfa2",
+      "prompt_sha256": "ed57000ed2e71c05339fa76c29a828d5b0d13f6464221c67c1b01121d5553ac8",
+      "selection": {
+        "candidate": "claude",
+        "chunk": "chunk-58454451fc2286d6fe25",
+        "mode": "direct"
+      },
+      "source_plan_sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749"
+    }
+  ],
+  "selection_sha256": "c95bb5c6135901b78382e634ea3e04a5c333ab1cca8c00476df4bc978819fc6e",
+  "timeout_seconds": 1200
+}

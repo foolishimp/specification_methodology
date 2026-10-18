@@ -1,0 +1,148 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "claim_reuse_condition",
+              "sprint_close_review",
+              "work_claim_closure_condition"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FOne%20durable%20record%20per%20ticket",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FMulti-build-tenant%20independence",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FRequired%20fields",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTypes",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FInside-out%20sequencing",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FUpward%20propagation%20check",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTriage%20metadata",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FEvaluation%20criteria%20and%20non-closure%20conditions",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FBounded-context%20term%20binding",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FStrategy%20requirements",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMulti-build-tenant%20review",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FReview%20disambiguation",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMixed-state%20negative%20proof",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TICKETS.md#TICKETS%2F10.%20Source%20dispositions",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+                  "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,873 @@
+{
+  "changes": [],
+  "chunk": "chunk-9595471dbe055bfa37e6",
+  "derived_answer_sha256": "46d380547c18c3f6ad5e2347b26aa923a27ba761006b91b65b9506982afd75fb",
+  "derived_non_grounding_sha256": "eb5d377ef5e9346829978e730898a05cb37a40672b1144a599e62c72b9ddbb5f",
+  "fd_elapsed_seconds": 0.6094718328677118,
+  "non_grounding_sha256": "eb5d377ef5e9346829978e730898a05cb37a40672b1144a599e62c72b9ddbb5f",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "db45cd95211206112ec8a552733e33c695c9d79cbcc89d0e42a0ca97b33302a5",
+    "original_attempt": "actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 14848,
+        "input_tokens": 87360,
+        "output_tokens": 51471,
+        "reasoning_output_tokens": 415
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/answer.json": "9bb3436c78512243dadfba832acf512f039afabe805647303f8a4ce55a28d167",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/events.jsonl": "f5d8d133f98740f73e66b90634f61bd86ffc5de75388774e99c2b89f77667587",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/invocation.json": "ad8a2a8b8da8db420472148671883709c043386875a27541d3c8c9c433e56421",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/prompt.txt": "9e3af52b04859f416385dda394c19d1189f79b6d125609ad8e23951522d27ace",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/result.json": "8fdbab93080ff5216d4972202e3a4ffd9eac914268b74a6310c19a6086878dd4",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/usage.json": "f841f6ea0974845c24c7c6270967ca801457836b56f413ebe6c85aaab45f2d70",
+      "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/validation.json": "4233999aa90fd1f8099fe3d8aaa907d97c009843bde101b5f6cab4b9c1c0a28f",
+      "chunks.json": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488",
+      "plan.json": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42",
+      "source-manifest.json": "8b5356c859a5906c5715e8ec85036fb0568890311f708397a3ea91c724f5d067"
+    },
+    "source_sections": [
+      {
+        "end_line": 1050,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FPublication%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "80a7f12425f724d05b9033b2cddc33143ffd10370f29cc6bd32bace4cc66e719",
+        "start_line": 1022
+      },
+      {
+        "end_line": 1074,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FAttribute%20Ledger%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "e216154e64e118027ad508ea5131b10d2272043bd9d4a8721338a1f28857483c",
+        "start_line": 1051
+      },
+      {
+        "end_line": 1080,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FEntity%20Cut%20Construction%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "5b74e65a2d3af9d6aa627f48ec582d357ac0d3860a723a2043eda0e82d32833b",
+        "start_line": 1075
+      },
+      {
+        "end_line": 1112,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FEntity%20Cut%20Construction%20Law%2FAdmissibility",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "a4fb72635b06b01b0949b4ed8bb72beabb55cff1910fed7c2282b4245dfd1db1",
+        "start_line": 1081
+      },
+      {
+        "end_line": 1143,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FEntity%20Cut%20Construction%20Law%2FDiscrimination",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "092586757923f05265ead972ee140ce95629091ecb5ff3c8630b1dc7082a9fb5",
+        "start_line": 1113
+      },
+      {
+        "end_line": 1157,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FEntity%20Cut%20Construction%20Law%2FPublication",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "683fe4e7f7300966cbbc7385e1e7cdaede5047b73bff80a6772c85831a35e623",
+        "start_line": 1144
+      },
+      {
+        "end_line": 1174,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "43098698ebf3259ca4677097cd38793dafae0f1767405bffb61135008fb0c226",
+        "start_line": 1158
+      },
+      {
+        "end_line": 1189,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F1.%20Paired%20Evidence%20Collection",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "a89cc5cdb045f6d1ca8110d8fee6d19dd8978e96971769808c1d74b542efa822",
+        "start_line": 1175
+      },
+      {
+        "end_line": 1208,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F2.%20Identity-Direction%20Extraction",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "8e751991edba0c615b7b82ae115db1785ce6f18ac366bb1ec349e589968b96e8",
+        "start_line": 1190
+      },
+      {
+        "end_line": 1244,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F3.%20Verification%20By%20Treatment",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "f71e28a576a87e1f7cf1fce06ff2e5a80ec08ffdf48ed8a9f99b70a8d25f6dfe",
+        "start_line": 1209
+      },
+      {
+        "end_line": 1258,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F4.%20Core%20And%20Coat%20Decomposition",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "bc8a17f8a566b30da215941bd80a05d8cbda708353ea4359721289da78d83774",
+        "start_line": 1245
+      },
+      {
+        "end_line": 1285,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F5.%20Null-Peer%20Discrimination",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "296273ceadc54dd10efc6475de6783f95379a62a96223a006ce976eff0a279eb",
+        "start_line": 1259
+      },
+      {
+        "end_line": 1310,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F6.%20Overlay%20Publication",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "687b68ab8f0a19618c75bd68f4ed71e3c653e10ee049109be26b2de82253ea30",
+        "start_line": 1286
+      },
+      {
+        "end_line": 1330,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMarkov%20Object%20Construction%20Law%2F7.%20Storage%20Shape",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "c990ffc7c2d2771019cdcd39676b2f31b3682e41495995862bf219ad7573bc6b",
+        "start_line": 1311
+      },
+      {
+        "end_line": 1349,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FSaturation%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "6fbeb991263de8a1f8335f8d71465bbfc1dd33cc3f6b40cfaa1b90e75f5b0dd1",
+        "start_line": 1331
+      },
+      {
+        "end_line": 1373,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FComposition%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "a2a8cea04688570f3c2f7da8caf8243fa43c3dd7fd6462b83af2e995f0c71436",
+        "start_line": 1350
+      },
+      {
+        "end_line": 1394,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FProjection%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "1579c89734d5c09571c8f427369de5b5f96d8d3b8129baa3340b4688de9ef746",
+        "start_line": 1374
+      },
+      {
+        "end_line": 1443,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FControl%20Plane%20And%20Data%20Plane",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "4d9e512021899b6cb11b2695cd1fe243750d9134728c75b3962d4889f3472ba4",
+        "start_line": 1395
+      },
+      {
+        "end_line": 1471,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FProof%20Law",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "833dff44c40d289c0e3ddeaada8f8415c031441f266bced2166a30708c2a9adf",
+        "start_line": 1444
+      },
+      {
+        "end_line": 1503,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FWorld-Model-Driven%20Development",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "24e929da16aa65c88fef1dc608acfd4ee0166389f9f600a5494540216423d8e6",
+        "start_line": 1472
+      },
+      {
+        "end_line": 1523,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FMethod%20Output",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "b937df1839b693b4fef149ffdf0b7b0e3b766ed0af2708338e69dd495252752e",
+        "start_line": 1504
+      },
+      {
+        "end_line": 1540,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WORLD_MODEL_METHOD.md#World%20Model%20Method%2FCompanion%20Surfaces",
+        "path": "standards/WORLD_MODEL_METHOD.md",
+        "sha256": "532e52c15d0bcf4aced50ec58a569f45548fb4026753f41e1cea5879916fdba1",
+        "start_line": 1524
+      },
+      {
+        "end_line": 4,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "a2ba779f3c65e9941cdab8e8ab4e6290d38b40e48f6659e428daa13a680f4c28",
+        "start_line": 1
+      },
+      {
+        "end_line": 12,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FCore%20Rule",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "516dc3bd6d7a1cf504e5e518e75002f3dc27bef27c9addafa19c5e9ff604582b",
+        "start_line": 5
+      },
+      {
+        "end_line": 24,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FStyle%20Rules",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "6aa9d5af42379b02d31ad29780e73795b4b6117762e28147ae665a870927602c",
+        "start_line": 13
+      },
+      {
+        "end_line": 42,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FRemove%20These%20Habits",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "f66d8ddd4d1c45619b5e6bbb5f00e31649bdc67f25b20eb6cd81b2a7190cc5a9",
+        "start_line": 25
+      },
+      {
+        "end_line": 56,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FGood%20Prose",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "d75c7e1a9d3786cdf8384af89e4ef27b0fc762d7155810ef8f43635aedba8801",
+        "start_line": 43
+      },
+      {
+        "end_line": 68,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FBad%20Prose",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "abe0545d4d490327e32ac2522b2a129befb68c6623142e947049d0d39893f99c",
+        "start_line": 57
+      },
+      {
+        "end_line": 82,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FMethod%20Alignment",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "bbd704efaf9604f0fe40522e398c73c335335f2c2ba143dee21920a44467a792",
+        "start_line": 69
+      },
+      {
+        "end_line": 99,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FSpecification%20Artifact%20Practice",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "a9e202927689d4cd2ba40255019bbb0f430b750fb0628d3c039e639f7e5150be",
+        "start_line": 83
+      },
+      {
+        "end_line": 122,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FPractical%20Layer%20Checks",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "d4e4b8513900d2b66bca62b2bc46e1a868bab77d62bd2268df2832e5a75e2788",
+        "start_line": 100
+      },
+      {
+        "end_line": 146,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/WRITING_GUIDE.md#Writing%20Guide%2FCurrent-Surface%20Writing",
+        "path": "standards/WRITING_GUIDE.md",
+        "sha256": "1775ee2810566b0fb6a369c6be34ab38a5240143093097cdf40ccbc8ca7095c3",
+        "start_line": 123
+      },
+      {
+        "end_line": 246,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/schemas/installed-release-manifest.schema.json#preamble",
+        "path": "standards/schemas/installed-release-manifest.schema.json",
+        "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+        "start_line": 1
+      },
+      {
+        "end_line": 568,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/schemas/product-definition.schema.json#preamble",
+        "path": "standards/schemas/product-definition.schema.json",
+        "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf",
+        "start_line": 1
+      },
+      {
+        "end_line": 1,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/AGENTS_TEMPLATE.md#preamble",
+        "path": "standards/templates/AGENTS_TEMPLATE.md",
+        "sha256": "603c53ea3fba80ddeda542cf39391e694b2506d19cf1f53f1cddcca7e087ec56",
+        "start_line": 1
+      },
+      {
+        "end_line": 20,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/AGENTS_TEMPLATE.md#STDO%20Bootstrap",
+        "path": "standards/templates/AGENTS_TEMPLATE.md",
+        "sha256": "f66dc07f855dacd9fdce250176de8bd45e934bd30fd51e19cae753b7cd530708",
+        "start_line": 2
+      },
+      {
+        "end_line": 1,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/CLAUDE_TEMPLATE.md#preamble",
+        "path": "standards/templates/CLAUDE_TEMPLATE.md",
+        "sha256": "603c53ea3fba80ddeda542cf39391e694b2506d19cf1f53f1cddcca7e087ec56",
+        "start_line": 1
+      },
+      {
+        "end_line": 20,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/CLAUDE_TEMPLATE.md#STDO%20Bootstrap",
+        "path": "standards/templates/CLAUDE_TEMPLATE.md",
+        "sha256": "f66dc07f855dacd9fdce250176de8bd45e934bd30fd51e19cae753b7cd530708",
+        "start_line": 2
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "94f72b6ce98ba434cd5913eb91d620606dbac6b9e83a45829ee1660cca1d3683",
+        "start_line": 1
+      },
+      {
+        "end_line": 12,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FPosition",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "41dd1341e464f33609861abd14b37a4feee880c6d0494f90047a988aff051479",
+        "start_line": 8
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/GOALS_TEMPLATE.md#Project%20Goals%2FCurrent%20Goals",
+        "path": "standards/templates/GOALS_TEMPLATE.md",
+        "sha256": "a9d4d44e29cfb34e05298e889658cb85de605d2b17d209bdd642ba2d3ca725bc",
+        "start_line": 13
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "4891215f25c5b6a3d72ac0823f51db984e9020a11a62f41770f4c92a55df7a4a",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FPurpose",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "5a7f168cca0a5fb0a1bce4e39b9b684928fa2bb5f9d4116c3c2fa2bbc4af4da8",
+        "start_line": 8
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FOutcomes",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "a06ffd99320cb8e6ef9249c014d065c6e0afd8a47527ea5b73ef42eeb349e7ee",
+        "start_line": 12
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/INTENT_TEMPLATE.md#Project%20Intent%2FConstraints",
+        "path": "standards/templates/INTENT_TEMPLATE.md",
+        "sha256": "ae41df74c645e2dbe2bc797edb1367be7493af4dfb2a3b1a37fe22789206fdef",
+        "start_line": 16
+      },
+      {
+        "end_line": 128,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json#preamble",
+        "path": "standards/templates/PRODUCT_DEFINITION_TEMPLATE.json",
+        "sha256": "e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34",
+        "start_line": 1
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "554556bb2a1765209ddca8829f7b5ff0deb138f10166d7a70cf4a88d42831baa",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Position",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "79c8e89b53f3e4e4a2d0d9ceb851f82a0cd82dd8f34a963da06e4bf45fa5a40e",
+        "start_line": 8
+      },
+      {
+        "end_line": 24,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20Terms",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "62f75679feb557c108dba4267bc9611d983fd1e5e6fb386ad0e97f4d88505c13",
+        "start_line": 12
+      },
+      {
+        "end_line": 29,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FGoal%20Model",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "32de1584e8ba90d4ed42edb354f950fba33dc0fef7fbc2b7c1360c8f6c90b384",
+        "start_line": 25
+      },
+      {
+        "end_line": 33,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FProduct%20End%20State",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "f1e3dfd26a06c97b5347c9ed52f706968d741f6dc2c32575589790e4f4e93fe5",
+        "start_line": 30
+      },
+      {
+        "end_line": 37,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PRODUCT_TEMPLATE.md#Project%20Product%2FCurrent%20Product%20Definition",
+        "path": "standards/templates/PRODUCT_TEMPLATE.md",
+        "sha256": "70e6ba0be282d24e236b7083bfecccd214f4417b6a8c68ea6c904201c5cfa344",
+        "start_line": 34
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "e31277cb5e591c4099c9f409744883836578c32ac926fc33fbd6d65495f10c92",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDeclaration%20And%20Authority",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "5faefc4c7d079a158387e2b29c666438a1f3f88522427ceda0a0e25ccffcca44",
+        "start_line": 8
+      },
+      {
+        "end_line": 27,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExact%20Method%20And%20Optional%20Profile%20Basis",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "038ccad2d7ebcc692c0a86b4493373180c3ddef1f1ba231f8f7e88db82905256",
+        "start_line": 16
+      },
+      {
+        "end_line": 42,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FProduct-Role%20And%20Composition%20Map",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "a3ea8bdd442c580ba80e78c8e5229b29c59610bf107d193eac9a3e0091b92205",
+        "start_line": 28
+      },
+      {
+        "end_line": 62,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FEvaluation%20Inventory",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "5ad05e502f241dfa8e28cc093f37d47032123007cfb18e934dd928b750179269",
+        "start_line": 43
+      },
+      {
+        "end_line": 80,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FFrame%20Declarations%20And%20Actor%20Binding",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "4aa4390075d85cb15217f252751702fab8a0231775c7b770ee7d7b4c8a6df0ee",
+        "start_line": 63
+      },
+      {
+        "end_line": 104,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FTechnical%20Triage%20And%20Promotion%20Policy",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "cc5d77e9ab14ea1fdc3eea0368afda418484b42de0fb758d9e60b573514359ac",
+        "start_line": 81
+      },
+      {
+        "end_line": 125,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "7363c5a1e651e1b4e6ce77cdb19d02c1e8e7cc06fc05d7fda20da94cab06a029",
+        "start_line": 105
+      },
+      {
+        "end_line": 151,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FActivation%20And%20Return%20Topology",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "e28974f69cb82ff09f7c56b55be085bd253e90e89f0d68849950819d9e67bf44",
+        "start_line": 126
+      },
+      {
+        "end_line": 175,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FCoverage%20And%20Residuals",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "dca763258d3fa4abe9a0fea281c7ee040fc2cf0ae43a144de74af2faf993bf1c",
+        "start_line": 152
+      },
+      {
+        "end_line": 200,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FDrift%20Locks%2C%20Invalidation%2C%20And%20Revision",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "2a3e3aa565c4e6d2cb71634259681f282fc31a82f3a2e35a32d4d490551a1043",
+        "start_line": 176
+      },
+      {
+        "end_line": 209,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#Project%20Reference-Frame%20Basis%2FSource%20Re-Entry",
+        "path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+        "sha256": "3008040a74c73c63f8df2d82de9598f2e80e9aff280479f5e7316c2a3e56521d",
+        "start_line": 201
+      },
+      {
+        "end_line": 17,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/README.md#Standards%20Templates",
+        "path": "standards/templates/README.md",
+        "sha256": "9e1cc27cc23b0a1c8c9f8bde075e1502d3a0e180a6d6dd40bb6ade77894a00bf",
+        "start_line": 1
+      },
+      {
+        "end_line": 123,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/README.md#Standards%20Templates%2FProduct%20Definition%20Overlay",
+        "path": "standards/templates/README.md",
+        "sha256": "f026793bf77cf7ee8b719c90c8a63f72e71a828088dd20b4c5fa80dbbda35e8d",
+        "start_line": 18
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "0022a2438324a6584d1c7b6283f90dbbe9721512858982f2772bce85e009b535",
+        "start_line": 1
+      },
+      {
+        "end_line": 26,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FStructure",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "c11b60c2c9878fccf381b25668f205c2d7a72449f1a287caeb3b2c313669d30b",
+        "start_line": 19
+      },
+      {
+        "end_line": 32,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FShared%20Surface",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "fafc3e4c2090d08f50e975f39a64ca1371288498f2a8eae9595a41a8e3ff0e85",
+        "start_line": 27
+      },
+      {
+        "end_line": 49,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md#Tenant%20Registry%2FRegistry",
+        "path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+        "sha256": "df9cb28bf2b943ee9eb8abba3fb8a070b49af20728b2ce5a24e38cb5b3f3e481",
+        "start_line": 33
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/README_TEMPLATE.md#Common%20Build-Tenant%20Surfaces",
+        "path": "standards/templates/build_tenants/common/README_TEMPLATE.md",
+        "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8",
+        "start_line": 1
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design",
+        "path": "standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+        "sha256": "285b638908f838c4a41edbe4f8c766fe6b2204e93a24b052b58dc7127d2acf16",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md#Common%20Tenant%20Design%2FADRs",
+        "path": "standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+        "sha256": "326488739ed73364846d65886c1e8b0c7d4457ba1247ec2cf16e23e7deedfb24",
+        "start_line": 7
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "721fb440b7cbdadc9b65b6934314af191d401c9bb34299aa47a8e5f6c56b6da6",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "6be472bcce264a5933f9e3bb4fbe3e19ad0c9538746325538910cb9d75620226",
+        "start_line": 12
+      },
+      {
+        "end_line": 21,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "bef6df3884b5f8fe23cf884f96b34963979f382fd76ca64973b7f6c880405412",
+        "start_line": 16
+      },
+      {
+        "end_line": 31,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "424658e398e60f538053edcfe617191c6f299f746fd3b6166bc4f77417f36c25",
+        "start_line": 22
+      },
+      {
+        "end_line": 35,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "626e190608df4425fbc1b89b6599d15f393e66955ae8d5f9eee45f0bb2fa8cb1",
+        "start_line": 32
+      },
+      {
+        "end_line": 38,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+        "path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "47628cdf614830327c2d3322af753f1ee4dc1517683a1c64008bd9acace99787",
+        "start_line": 36
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "0f63489101e68912a71e78017c090928350413aee11d4476a1eb24108a6b6181",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FWhen%20to%20write%20a%20cross-tenant%20ADR",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "1a2b9012730b7672f23b93fc027585d8a58efc57e557d31c91df934e65db33c0",
+        "start_line": 7
+      },
+      {
+        "end_line": 38,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FFile%20shape",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "ebfc2940f02f8c56a85a5beebfa4dc8f4c84c104235dc5c7121f6180a2c47caf",
+        "start_line": 20
+      },
+      {
+        "end_line": 42,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FBoundary%20rule",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "14e6218622da40bd7ab2e287b0ab67617d12fdac58877cc8a9d300c7afca7d5f",
+        "start_line": 39
+      },
+      {
+        "end_line": 46,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FSupersession",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "11973b593958112733da2b6a5bb91210680936e48205b431323129ee249babf0",
+        "start_line": 43
+      },
+      {
+        "end_line": 49,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md#Common%20Tenant%20ADRs%2FOptional%20registry",
+        "path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+        "sha256": "6d309e797b63c2df7f0783218d6c64c5b8d0ddf79bd75889878546b25db22e54",
+        "start_line": 47
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/README_TEMPLATE.md#Tenant%20Root",
+        "path": "standards/templates/build_tenants/variant/README_TEMPLATE.md",
+        "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96",
+        "start_line": 1
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "799c44b29ff18ef24f5c22bcc01104252eaf472237602b85dbdf54a774584ea1",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FAdopted%20Common%20Surfaces",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "e8dcd728c14cc5f1bde6ff4d8b072f55d8d2e6c26213012ceaed61cf05569feb",
+        "start_line": 9
+      },
+      {
+        "end_line": 28,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FComputational%20Binding",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "0b9d93c8e4cb949e672cc7b0ecfaa004139e788f21ed35499bdae8b4ec431b62",
+        "start_line": 20
+      },
+      {
+        "end_line": 38,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FADRs",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "59bf183ab95c9774856745a20ec2cecab7e0ad8fb1d0fc8514fd35673e6d4a6b",
+        "start_line": 29
+      },
+      {
+        "end_line": 41,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md#Tenant%20Design%2FF_P%20Customization",
+        "path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+        "sha256": "3a7217893e5170a20a576332a928c7fe99680fd6ef0008f40792043bf8d2552f",
+        "start_line": 39
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "721fb440b7cbdadc9b65b6934314af191d401c9bb34299aa47a8e5f6c56b6da6",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FContext",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "4dba0ecc31a71b81ab25fd81d4c18aa9fd83b8c276f69a88ac2ea83bed77c8c7",
+        "start_line": 12
+      },
+      {
+        "end_line": 21,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FDecision",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "bef6df3884b5f8fe23cf884f96b34963979f382fd76ca64973b7f6c880405412",
+        "start_line": 16
+      },
+      {
+        "end_line": 30,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FConsequences",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "6e9ac36df0d2645ba71def4ef9df0034b2a9bcb654def56ea3223c54b6484b91",
+        "start_line": 22
+      },
+      {
+        "end_line": 34,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FAlternatives%20Considered",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "49a4bf154c6a47a07120063230e2f6ba9c6ea3d59d030ac5fbd6bdfd6f09973b",
+        "start_line": 31
+      },
+      {
+        "end_line": 37,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md#ADR-%3Clocal-id%3E%20%3CShort%20Decision%20Title%3E%2FNotes",
+        "path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+        "sha256": "0fa68f9abd6716e49f2dc8acb012990eeb075a91dbf88b2625e803a5681ccc57",
+        "start_line": 35
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "53b9cd18737af098fcc4a0a097575afddd604fd393b29ea8062ab1117faac4f0",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FWhen%20to%20write%20a%20tenant-local%20ADR",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "53e21f717f5e86ac6508ce3c061c8506d0fd0b5339f9b3a982b5728aad303fa7",
+        "start_line": 7
+      },
+      {
+        "end_line": 36,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FFile%20shape",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "d200d12f966bbaa02879b4d5e7679e20880244c89943afd72f69c4055476d508",
+        "start_line": 20
+      },
+      {
+        "end_line": 40,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FBoundary%20rule",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "d25502df28d669629f7326819bbd26f78c1aef9956da04ae8126b5631b11a6a1",
+        "start_line": 37
+      },
+      {
+        "end_line": 44,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FSupersession",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "11973b593958112733da2b6a5bb91210680936e48205b431323129ee249babf0",
+        "start_line": 41
+      },
+      {
+        "end_line": 47,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md#Tenant%20ADRs%2FOptional%20registry",
+        "path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+        "sha256": "6d309e797b63c2df7f0783218d6c64c5b8d0ddf79bd75889878546b25db22e54",
+        "start_line": 45
+      },
+      {
+        "end_line": 4,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "a9bf407b060c263a3140d378fcc2a711d46637cdc481b632f857d781cc9f30a5",
+        "start_line": 1
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FGoal",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "2328200c5e693b13eac48e6923ea51a5bc07ee68e25ead27d7573362d752c698",
+        "start_line": 5
+      },
+      {
+        "end_line": 12,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FRequirement%20Mapping",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "a65236201bb02dd62b8f44c9a8c1b9dff209781c1f8cd7323b437f6d5daafb64",
+        "start_line": 9
+      },
+      {
+        "end_line": 16,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FDesign%20Mapping",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "6c242c7695c245c555a2887e77692c57525bbee41797116485e7724537e97f46",
+        "start_line": 13
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md#Tenant%20F_P%20Customization%20Intent%2FBoundaries",
+        "path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+        "sha256": "80bd27e9a335f666224d8c43f0922a1b01da428191eb714d4d2d702e5ff830de",
+        "start_line": 17
+      },
+      {
+        "end_line": 8,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md#Tenant%20F_P%20Customization",
+        "path": "standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+        "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json#preamble",
+        "path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json",
+        "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4",
+        "start_line": 1
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md#Tenant%20Edge%20Overrides",
+        "path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+        "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991",
+        "start_line": 1
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/docs/README_TEMPLATE.md#Project%20Docs",
+        "path": "standards/templates/docs/README_TEMPLATE.md",
+        "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f",
+        "start_line": 1
+      },
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements",
+        "path": "standards/templates/requirements/README_TEMPLATE.md",
+        "sha256": "6f66a7dfc9de652556ceca9f4e90dbaac79f9254bce2d518f8f51195407d09bc",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/requirements/README_TEMPLATE.md#Project%20Requirements%2FRules",
+        "path": "standards/templates/requirements/README_TEMPLATE.md",
+        "sha256": "dafbb2449a881a7e2626106ac48af7f8c7c45eab3f7ce0c50ebdcb132e64fa5b",
+        "start_line": 8
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements",
+        "path": "standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+        "sha256": "3c59439e004cf436c22b990d2aca7259d7f4724412cc085730a4506b30aac4eb",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md#Starter%20Requirements%2FREQ-PROJ-STARTER-001%20%E2%80%94%20Replace%20me",
+        "path": "standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+        "sha256": "af4aef8ac78239947725ebac13a2f154da688ae7abaee0ff186220114311f22a",
+        "start_line": 7
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-9595471dbe055bfa37e6/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/answer.json": "9bb3436c78512243dadfba832acf512f039afabe805647303f8a4ce55a28d167",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/events.jsonl": "f5d8d133f98740f73e66b90634f61bd86ffc5de75388774e99c2b89f77667587",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/invocation.json": "ad8a2a8b8da8db420472148671883709c043386875a27541d3c8c9c433e56421",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/prompt.txt": "9e3af52b04859f416385dda394c19d1189f79b6d125609ad8e23951522d27ace",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/result.json": "8fdbab93080ff5216d4972202e3a4ffd9eac914268b74a6310c19a6086878dd4",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-9595471dbe055bfa37e6/attempt-001/usage.json": "f841f6ea0974845c24c7c6270967ca801457836b56f413ebe6c85aaab45f2d70"
+  }
+}

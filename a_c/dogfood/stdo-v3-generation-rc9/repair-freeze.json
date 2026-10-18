@@ -1,0 +1,93 @@
+{
+  "before_any_repair_actor": true,
+  "call_limits": {
+    "combined_author_and_repair_per_chunk": 3,
+    "concurrent_calls": 4,
+    "timeout_seconds": 1200
+  },
+  "fd_helper_freeze": "freeze-v2.json",
+  "files": {
+    "a_c/build_tenants/graphify/code/ac_generate.py": {
+      "bytes": 69523,
+      "sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479"
+    },
+    "a_c/build_tenants/graphify/code/ac_graph.py": {
+      "bytes": 49166,
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    "a_c/build_tenants/graphify/code/ac_grounding.py": {
+      "bytes": 31297,
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd"
+    },
+    "a_c/build_tenants/graphify/code/ac_repair.py": {
+      "bytes": 36708,
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.schema.json": {
+      "bytes": 11148,
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.txt": {
+      "bytes": 4240,
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+    },
+    "a_c/build_tenants/graphify/code/generation/extraction.schema.json": {
+      "bytes": 4818,
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+    },
+    "a_c/build_tenants/graphify/code/generation/isolation.txt": {
+      "bytes": 696,
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+    },
+    "a_c/build_tenants/graphify/code/generation/requirements.txt": {
+      "bytes": 214,
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/patch.schema.json": {
+      "bytes": 2037,
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/repair.txt": {
+      "bytes": 2231,
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+    },
+    "a_c/build_tenants/graphify/design/grounding.md": {
+      "bytes": 7755,
+      "sha256": "929462b9a3e3af228349973cdf30d2967c307f659ac342e5f6c4ed56833269a6"
+    },
+    "a_c/build_tenants/graphify/design/grounding_repair.md": {
+      "bytes": 8660,
+      "sha256": "6d91d36d908a30d18d8b092a0728c0dbe0d2156575d30738f4b623144a675a3a"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_grounding.py": {
+      "bytes": 19256,
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_repair.py": {
+      "bytes": 16130,
+      "sha256": "a0097ae36ce732fd84fdeaef21707acb4566bdbcc78faa5231fda4fdabacae18"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/PROTOCOL.md": {
+      "bytes": 4969,
+      "sha256": "c1638b4433f0f4f8e1a93d4c8ca9d2ebea8240f53e0ba5c6874e87ecd6338f05"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/coordinate_repairs.py": {
+      "bytes": 8072,
+      "sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/freeze-v2.json": {
+      "bytes": 103923,
+      "sha256": "66510c4329b5ce11fb44ce0c88ed8e089367398527e3479a72651f00302de69b"
+    }
+  },
+  "original_generation_freeze": "freeze-v2.json",
+  "profile": "ac.generation.fp-repair-freeze/1",
+  "schedule": [
+    "All initial authors close",
+    "Mechanically required fresh author retries close before repair reservations",
+    "Final F_D normalization",
+    "Explicit F_P repairs under shared three-call limit",
+    "Native and actual pinned Graphify assembly"
+  ],
+  "scope": "Same checkpointed repair code and contract; no oracle feedback, equivalence or acceptance claim."
+}

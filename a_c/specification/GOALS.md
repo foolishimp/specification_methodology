@@ -1,5 +1,15 @@
 # Goals
 
+The completed comparison-preparation increment is
+[T-006](../.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md):
+[fresh Codex/Claude RC9 representations](../dogfood/stdo-v3-generation-rc9/README.md)
+use the checkpointed implementation and settings, preserving the entire older
+study at `efae9c74`. The [eight-model index](../dogfood/stdo-v3-generation-rc9/COMPARISON.md)
+binds older/newer source cuts, both Graphify/direct paths and exact artifact
+identities. All new input chunks and carriers pass mechanical verification.
+Their semantic evaluation and the owner's planned overall-performance tests
+have not been performed. No acceptance or release claim is added.
+
 The completed source-creation increment is
 [T-005](../.ai-workspace/tickets/active/T-005-source-first-graphify-generation.md):
 the [Graphify/F_P workflow and four new representations](../dogfood/stdo-v3-generation/README.md)

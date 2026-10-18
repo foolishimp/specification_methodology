@@ -1,0 +1,49 @@
+{
+  "profile": "ac.generation.rc9-nonauthor-resource-audit/1",
+  "assessor": "/root/ac_generation_design",
+  "verdict": "No actionable defect found.",
+  "closed_at": "2026-10-18T11:41:28.815059+00:00",
+  "files": {
+    "results.json": "cbd27d5df3d5e222e7774550f6f97dc18d2afd3f35ab0bd40ad49c7d3adea909",
+    "comparison.json": "8713c1e59f1f6b50152bcc9709eb305c855fff3b3963d2a2f9fb3a29ea5622c7",
+    "COMPARISON.md": "00791c48585fb12523d7503963108efe7584a07bde44fbab506a453417f2aa28"
+  },
+  "verified": {
+    "new_calls": 66,
+    "initial_authors": 60,
+    "fresh_author_retries": 1,
+    "grounding_repairs": 5,
+    "new_calls_without_usage": 0,
+    "final_normalization_states": {
+      "validated_original": 37,
+      "derived_validated": 18,
+      "refused_then_fp_repaired": 5
+    },
+    "fd_changed_groundings": 27,
+    "max_concurrent_calls": 4,
+    "max_combined_calls_per_chunk": 3,
+    "authors_closed_before_repairs": true,
+    "new_proposal_files": 14,
+    "old_proposal_files": 14,
+    "canonical_model_source_bindings": 8,
+    "indexed_rows": 8,
+    "freeze_pin_records": 444,
+    "selected_source_files_verified_against_git": 93,
+    "old_study_and_shared_implementation_unchanged": true,
+    "old_unknown_usage_timeout_preserved": true
+  },
+  "new_reported_usage_totals": {
+    "input_tokens": 4815023,
+    "cached_input_tokens": 1167104,
+    "output_tokens": 2645820,
+    "reasoning_output_tokens": 51845
+  },
+  "scope": "Independent reconstruction of raw calls, source/candidate custody, budgets, phase barriers, normalization, file/canonical hashes, assembly metadata and index/report cells. No writes, actors, retests or semantic grading.",
+  "limits": [
+    "Old fidelity grades do not qualify new source-bound models.",
+    "New semantic assessment and planned comparison tests remain unperformed.",
+    "Actor times are summed intervals, not concurrent wall time or accepted-result cost.",
+    "Cache counters and tokens do not establish billing; reasoning is not added to output twice.",
+    "One generation per cell and changing subject coordinates do not establish general performance effects."
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "changes": [],
+  "chunk": "chunk-52d35a790cf09bd6915b",
+  "derived_answer_sha256": "7ff8f9ccf3603d999393f209ae1a11af6480e93f67e25247dc6c765bad928a4a",
+  "derived_non_grounding_sha256": "8782291f0398a3b5689850f19578fd306d9076de0a16fc5ca6443feab3b91bc8",
+  "fd_elapsed_seconds": 0.44448549998924136,
+  "non_grounding_sha256": "8782291f0398a3b5689850f19578fd306d9076de0a16fc5ca6443feab3b91bc8",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "d7f6b07d1a7d68a6461a647f87d503f89939b37eff6eaca3688b1c9bb37a27bf",
+    "original_attempt": "actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 77846,
+        "output_tokens": 51536,
+        "reasoning_output_tokens": 1034
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/answer.json": "50082f33712123754d7c095861f751e5ceb33562cff32c595d49d9b7113e08a6",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/events.jsonl": "3cd129d856e1f009f38ab8d211ea35417bd14ffdb7b14507083ebd92d0ce09e1",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/invocation.json": "d458f174159aa4628df7a7a3c412f2b4027244d96bef4af77125695cd22f3323",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/prompt.txt": "b3050fef39e21694142ad44254348b1f1206b3ddab971301c1e826e6b23062ba",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/result.json": "6c459d52d20f8fe7baf438a38fe6fac82bd66fca948dde52b4dfcdb56609dea9",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/usage.json": "6a6ccd94d3cc49f504d803b2d906418cd210da01408e6bd13780bcc29e352d99",
+      "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/validation.json": "caac3898c37cf67d430c97ab21cc1cac45cd22dc852231b196eb2692e0ede275",
+      "chunks.json": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488",
+      "plan.json": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42",
+      "source-manifest.json": "8b5356c859a5906c5715e8ec85036fb0568890311f708397a3ea91c724f5d067"
+    },
+    "source_sections": [
+      {
+        "end_line": 1205,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5A.%20Irreducible%20Architectural%20Carrier%20Set%20Rule%2FIACS%20Revision%20Obligation",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "d377a2cebe6031fbde23dcd412209d7e711beafd40910cbc9a370c0f7519e367",
+        "start_line": 1187
+      },
+      {
+        "end_line": 1240,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5B.%20Promotion%20Test",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "19c8d9c18c65d283f110278ee4026872e2860cd7bb4a5f2d71958625302947bd",
+        "start_line": 1206
+      },
+      {
+        "end_line": 1273,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5C.%20Boundary%20Inflation%20Prohibition",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "181ceb7ae00fffe5eddb89b7c1d821c2f88cfeb31a09d1585f99703240f0610a",
+        "start_line": 1241
+      },
+      {
+        "end_line": 1317,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5D.%20Reference-Derived%20Module%20Design%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "3c5ce65c0dbde936e97f67199cd0290ff55b6d88e0c967b0e5878b9266b45590",
+        "start_line": 1274
+      },
+      {
+        "end_line": 1348,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "1a2ffe7d0e39c75d898f235fd7b3f85d75fe891fe2161b567c67f1c841b711f3",
+        "start_line": 1318
+      },
+      {
+        "end_line": 1368,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FOntology%20evidence",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "11e0b5dfc1ee329ca5a0de6a654008bb65af0733cdbbc31fa8e930a4e72a92e5",
+        "start_line": 1349
+      },
+      {
+        "end_line": 1417,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FInvariant%20Reconstruction%20Sufficiency%20%28%60STDO-UP-018%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "3518295d8118bd6590ad154e8eca9ef67a4fdb437bf647310523fe0557174f41",
+        "start_line": 1369
+      },
+      {
+        "end_line": 1456,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FDomain%20model",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "9474af2051095b78240dad87fa187f211200387420ad1c77739d8f4e76c5291c",
+        "start_line": 1418
+      },
+      {
+        "end_line": 1474,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FSequence%20model",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "1eec0af43109a7f84860e70cf799182f61503f7cf902e3a8f736495489e0533a",
+        "start_line": 1457
+      },
+      {
+        "end_line": 1486,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FState%20model",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "c641a018d6e8cbbe1be75424b3b59f3724a0b39956e282ecdb35b2c1f9eee76d",
+        "start_line": 1475
+      },
+      {
+        "end_line": 1549,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FCross-view%20axiom%20evaluation",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "7aa686ede350eb28b63e4783b76a868dec9366bcf674e111d45c84af5836c1c4",
+        "start_line": 1487
+      },
+      {
+        "end_line": 1602,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FGate%20and%20retrospective%20work",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "f49c422b3328939ec81fcdbca43e6891eae1725c8b2b106381beabf14978a79a",
+        "start_line": 1550
+      },
+      {
+        "end_line": 1710,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5E.%20Ontology%20And%20Three-View%20Behavioral%20Design%20Gate%2FComputational%20Realization%20Projection%20%28%60STDO-UP-019%60%29",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "a3a2dbc194b5cf4ee749684da05822314206e2b5132cf18ee53a15ffd379b2c0",
+        "start_line": 1603
+      },
+      {
+        "end_line": 1749,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F5F.%20Theoretical%20Framing%20For%20Boundary%20Law",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "93e874dc9b173aa19fce5783cbb8ddfb878bf36001ac160567f724b74ed49768",
+        "start_line": 1711
+      },
+      {
+        "end_line": 1787,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6.%20Design%20Module%20Taxonomy",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "4c005aae913ece8ee2e3833030cb57c255dbc9ab9d632289370401e626e476ab",
+        "start_line": 1750
+      },
+      {
+        "end_line": 1864,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6A.%20Design%20To%20Module%20To%20%28Implementation%2C%20Unit%20Tests%29%20Evidence%20Route",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "64ff51fd476b5709451fca7e39467a495aa3ddb2077b99aa92731d3593207a04",
+        "start_line": 1788
+      },
+      {
+        "end_line": 1928,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6B.%20Module-Derived%20Unit%20Test%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "7f8c015bb19f2429fb76cadfb8f5ec78903b28792fa93eace97e92d2704783f3",
+        "start_line": 1865
+      },
+      {
+        "end_line": 1978,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F6C.%20Module%20Lifecycle%20Confirmation%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "3c10f3bd2a561ec4fffb8751586d49802606c0978a77fbfa01a78103defd5b24",
+        "start_line": 1929
+      },
+      {
+        "end_line": 1999,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F7.%20Immutable%20Carrier%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "8149abe738dbf43dc19e98d7f8c287de46230875d4313881751eb4cfb6fdd9cf",
+        "start_line": 1979
+      },
+      {
+        "end_line": 2024,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F8.%20Totality%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "1f09ba5bcc7266d26d8d18e92b4c271130f6e2f261d72a3f1ae069001c9b84a0",
+        "start_line": 2000
+      },
+      {
+        "end_line": 2059,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F9.%20Effect-Edge%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "89b37590da5c12c18450e514141a88ad93077452d21ebbd68d3ffdd04dc1dfd9",
+        "start_line": 2025
+      },
+      {
+        "end_line": 2071,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F10.%20No%20Semantic%20Center%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "f153a7094ee211bc1208b0b4cc91780786ed01a56d60bbbe1b1f359552eb2077",
+        "start_line": 2060
+      },
+      {
+        "end_line": 2095,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11.%20Coupling%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "2758cba92854f69e4f5fade845aa5aa2e397fdb120e180c88ec10db666379a7f",
+        "start_line": 2072
+      },
+      {
+        "end_line": 2149,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11A.%20Governance%2FStrategy%20Separation%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "6bcb17060dc9c5dcb69ec3352eaabfcb5e0e2b7f20b593462656513fd38e01dd",
+        "start_line": 2096
+      },
+      {
+        "end_line": 2206,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11B.%20Opportunistic%20Optimization%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "eb06a136d473e163a345cb81ebc288316a81b699ac1aa47d40ef1b58d848b6b8",
+        "start_line": 2150
+      },
+      {
+        "end_line": 2271,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11C.%20Recurrence%20Extraction%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "894779f4b043bbf73b51a63afbc6ddbda1752cab25e3b79fa073c66f01b0dd35",
+        "start_line": 2207
+      },
+      {
+        "end_line": 2342,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F11D.%20Post-Ticket%20Design%20Review%20Rule",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "e47af96428a946a00be824b83d02fea382ae6ebc090a38fdcb521e885dc4066a",
+        "start_line": 2272
+      },
+      {
+        "end_line": 2355,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F12.%20Interface%20Bleed%20Prohibition",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "ffc71d4a3e8acbe501c12e9687e67245e17e91d6ff1be23f1c8625bd9d39f252",
+        "start_line": 2343
+      },
+      {
+        "end_line": 2376,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F13.%20Proxy%20Interface%20Prohibition",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "253efd3850624092449f77e6617cf4fa13a2e42c008e2d581523a6dace4d56bc",
+        "start_line": 2356
+      },
+      {
+        "end_line": 2404,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F14.%20Design%20Review%20Questions",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "7efa2d7ba9948398a3ccbecf3069a540909e523ee5b203720cde743d2487bec7",
+        "start_line": 2377
+      },
+      {
+        "end_line": 2433,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F14A.%20Functional%20Realization%20Review%20Checklist",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "21b9d8fe0eb3ea56256cd73520e1d3ed00ae3eb1ed097a70a44378b54c17c568",
+        "start_line": 2405
+      },
+      {
+        "end_line": 2486,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F15.%20Adoption%20Guidance",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "5dcee6e66887d76dc8ba52246e2f4622f7528ba9c87063a76a1b76348183925e",
+        "start_line": 2434
+      },
+      {
+        "end_line": 2528,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F16.%20Relationship%20To%20Other%20Method%20Surfaces",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "bf6bfdc0ab4f19effaaa701cb01981c7e3dadf27a7f83ee906b21c6980290c7a",
+        "start_line": 2487
+      },
+      {
+        "end_line": 2544,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/DESIGN_MODULE_METHOD.md#Design%20Module%20Method%2F17.%20Non-Goals",
+        "path": "standards/DESIGN_MODULE_METHOD.md",
+        "sha256": "14851fa889eea786c7109ac7fa460b39de25b4f0652ac834ac553cca68e74267",
+        "start_line": 2529
+      },
+      {
+        "end_line": 16,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "cd3c5603dce3c724a68bcc10e25fed6b6984069b8a45000cb562a7e0ff552fef",
+        "start_line": 1
+      },
+      {
+        "end_line": 54,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FPremises%20and%20standing",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "b1762d12f12638e341fc14bd5e371b66ffe510f69d857fd6ae076056f1b41ed7",
+        "start_line": 17
+      },
+      {
+        "end_line": 96,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FFoundational%20commitments",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "e63d38cbbad66411ce0762c790a360c6affb91612fecf1a8f4d9ffcf7965e947",
+        "start_line": 55
+      },
+      {
+        "end_line": 118,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FInterpretation%20and%20representation",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "47059d5f84481effc700fd0f62b5be512e088b7431ea35ca4c5f566cfd18384d",
+        "start_line": 97
+      },
+      {
+        "end_line": 130,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FPurpose%20and%20interfaces",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "3853dc3f15acd3a10bc293c2290011456a8671731e7dc44da5982ad61a4b3f66",
+        "start_line": 119
+      },
+      {
+        "end_line": 146,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FIdentity%2C%20state%20and%20evidence",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "75cb6039048950167637c24cca9c03cfc1fdb393c79113b088b86b5feb76893b",
+        "start_line": 131
+      },
+      {
+        "end_line": 182,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FReference-only%20semantic%20imports",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "eacb8c39918672c3da2752616f0f4778040b72f79d85adc780b8b95c40ff037f",
+        "start_line": 147
+      },
+      {
+        "end_line": 200,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FTyped%20composition%20and%20conservation",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "bf92d796d66c86b9ee95ae933f03e02d017cedefff89fae69186be7b87459550",
+        "start_line": 183
+      },
+      {
+        "end_line": 229,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FFinite%20capacity%20and%20total%20handling",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "959b52abe4752f85fffe08962050f0840ed5f11b7d2f4fe7ce84bb1c7a22baab",
+        "start_line": 201
+      },
+      {
+        "end_line": 275,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FJudgment%20and%20authority",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "53106fcaf42268dc3026bd360633329543be986d60d1bfa79ca9180e5ea758c2",
+        "start_line": 230
+      },
+      {
+        "end_line": 303,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FJudgment%20and%20authority%2FIndependent%20assessment",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "e81b21909b3ad276ad958bfe5dd90ba7d544f6e24c5b1b93d10b11bf63d939ae",
+        "start_line": 276
+      },
+      {
+        "end_line": 341,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FOrthogonal%20descriptions",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "55eb0b6f18d5820b3f1fbf9bdef16a2d3e3e1d64025020ec0381b16ab827bc49",
+        "start_line": 304
+      },
+      {
+        "end_line": 350,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FCanonical%20transformations",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "6a65e803df6212dc6535253b2a760c3093eb8d3a4b67fc053a749613890f4c5b",
+        "start_line": 342
+      },
+      {
+        "end_line": 364,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20and%20use",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "416ce34a84f38d4dec9556125b2cfaffb0fe39ab1c3da79de35dfd63e0136b96",
+        "start_line": 351
+      },
+      {
+        "end_line": 495,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20algebra",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "011ede48f05af806c251fa60d803af4819491b70e6e4c5ecbe0e89b00aea423f",
+        "start_line": 365
+      },
+      {
+        "end_line": 623,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FResult%20conjunction",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "e2fc7bc28a6ff223f77a951d85f20fa32f8e187b0ec1d28dd07bab3a95cea7f6",
+        "start_line": 496
+      },
+      {
+        "end_line": 635,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "253cd8b96aa2dae389bcb3425d38f1a136b1b1eef4b9b0352590ea0b861d7825",
+        "start_line": 624
+      },
+      {
+        "end_line": 678,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FPreservation%20obligations",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "588e163a97a7abd21c56f580e4d708a1ad9ae8bb1a358b50197f0545b0f49679",
+        "start_line": 636
+      },
+      {
+        "end_line": 745,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FAssertions%20and%20observations",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "9ad8d2aa86a508e40acc6b5f3a7412221795953bff32cace0cf614e0a3e405b0",
+        "start_line": 679
+      },
+      {
+        "end_line": 782,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FParallel%20assurance%20and%20provenance",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "0be6913628f4d1bfb0683f6561ca7b9ac71383d76e3bfc83f1f336d5d6568623",
+        "start_line": 746
+      },
+      {
+        "end_line": 832,
+        "id": "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/FOUNDATIONS.md#STDO%20Foundations%2FConstruction%20assurance%2FRisk%20and%20assurance%20selection",
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "83de6757d9c5336cc0c20337349dfbba40f867cdd288878ddfc500bd825a5e03",
+        "start_line": 783
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-52d35a790cf09bd6915b/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/answer.json": "50082f33712123754d7c095861f751e5ceb33562cff32c595d49d9b7113e08a6",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/events.jsonl": "3cd129d856e1f009f38ab8d211ea35417bd14ffdb7b14507083ebd92d0ce09e1",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/invocation.json": "d458f174159aa4628df7a7a3c412f2b4027244d96bef4af77125695cd22f3323",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/prompt.txt": "b3050fef39e21694142ad44254348b1f1206b3ddab971301c1e826e6b23062ba",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/result.json": "6c459d52d20f8fe7baf438a38fe6fac82bd66fca948dde52b4dfcdb56609dea9",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-52d35a790cf09bd6915b/attempt-001/usage.json": "6a6ccd94d3cc49f504d803b2d906418cd210da01408e6bd13780bcc29e352d99"
+  }
+}

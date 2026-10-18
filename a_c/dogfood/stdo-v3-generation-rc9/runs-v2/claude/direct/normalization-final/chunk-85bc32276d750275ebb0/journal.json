@@ -1,0 +1,285 @@
+{
+  "changes": [],
+  "chunk": "chunk-85bc32276d750275ebb0",
+  "derived_answer_sha256": "9bee95f97a9295f3a285ceda80778dbcb517c5e8d76fdf9decb0d08c1822f29d",
+  "derived_non_grounding_sha256": "5b30d87528c620071e6aa8ff044301c32b24522eda858085d15626573b051907",
+  "fd_elapsed_seconds": 0.29810287500731647,
+  "non_grounding_sha256": "5b30d87528c620071e6aa8ff044301c32b24522eda858085d15626573b051907",
+  "normalizer_sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+  "original_evidence": {
+    "chunk_sha256": "9e721373d4da00d526b935bca34787afad7768421b3495ad7aad1b4a1c46f9ee",
+    "original_attempt": "actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 55935,
+        "output_tokens": 36797,
+        "reasoning_output_tokens": 1034
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/answer.json": "6e98220c8ed26f89263a41d8a22e5c298241fdd2f0ad4cd3af85efabc1ae0d3a",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/events.jsonl": "be6f678d14e777325ff0d7fad826dc38620098741d475148747700cc0a6e4a86",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/invocation.json": "065ad0c8a9b625e41b02b6b18bb9dbc46ce860fe88d671da1d730163501a7e3d",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/prompt.txt": "e40bcc19db2cf4207c204f9373cfbdcd3abb4f7c42bbbb78f5e7f959d0a73f97",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/result.json": "d3d858a0df42cad8c10ff21c20ebf87c145bc78506e06a277bda51fc4db753b8",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/usage.json": "56cb60dbb3c2538f9dbcc67d2d0d35778dbfafefc6f38ebe78c5099b07f1db8c",
+      "actors/author/chunk-85bc32276d750275ebb0/attempt-001/validation.json": "3cea423250453544a4da8e57cfb7eb47c5e4f583bf98f96ae526dd8d8e792600",
+      "chunks.json": "4a6e857c7526f4a63c2229f18cb0ad34c18809ed2071f92c4a848da66dff38d8",
+      "plan.json": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749",
+      "source-manifest.json": "2d1976f42c7dfe7d0d1052f327f0aea9db782f61f5c49b3130c193c283bb6193"
+    },
+    "source_sections": [
+      {
+        "end_line": 1527,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "86cba8d88ab6e72a761c81485a6f02ae45c38772e53ad036954134499dbd3577",
+        "start_line": 1467
+      },
+      {
+        "end_line": 1637,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "ee8933fa3e3235fac42dadc6358d02c6f695a74ed0de686b4fdac1d7bf0f11a0",
+        "start_line": 1528
+      },
+      {
+        "end_line": 1691,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "6c119387be07f1c60af53179cf321498aef3c24e4f1664a096fe798900c948d5",
+        "start_line": 1638
+      },
+      {
+        "end_line": 1759,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "22e3df63cc80452a0751b2c87718043cc5141a1cf5e311b9bbfd3f9ef6e90884",
+        "start_line": 1692
+      },
+      {
+        "end_line": 1781,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "0a616d40daf1224c55eabf93c018683646951118e923d594834c42981cd95701",
+        "start_line": 1760
+      },
+      {
+        "end_line": 1838,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ACTIVATION.md#ACTIVATION%2F8.%20Source%20dispositions",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "a2e2719a0b90f34404072f13e13e06f4603c1908e05bfc6545ddb6a60cfaa6d0",
+        "start_line": 1782
+      },
+      {
+        "end_line": 37,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "05b24735cbe79f2b704cbc8bcef71fb1f1eb66abc8bc62fec97bbd9cc82fb662",
+        "start_line": 1
+      },
+      {
+        "end_line": 78,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "77ee2776c867e76b52217fb410fb7860dd410207ad161395a83f81a0af9a4f87",
+        "start_line": 38
+      },
+      {
+        "end_line": 140,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ccc82dee06e21ac78ad36af509d4dd22a6c53d10bef355d0331c37a3b9f53441",
+        "start_line": 79
+      },
+      {
+        "end_line": 222,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "88f43b555e1b72134b27f362db2e949655df477ba600a8a54aa3100c4fe476a2",
+        "start_line": 141
+      },
+      {
+        "end_line": 243,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "691b6fbc37478e1f721ebb50eebe2e5e7a7f33531669d5ff8719983fe0f80df0",
+        "start_line": 223
+      },
+      {
+        "end_line": 262,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ae0c2da0b26eec482e35702eb80fe8373caf7dbe750dc013f1b0553c215f8fd8",
+        "start_line": 244
+      },
+      {
+        "end_line": 282,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "38d723aa6ce315f68a7bf4101cc8d1a5edf07dbe79f85585b1410318ce724294",
+        "start_line": 263
+      },
+      {
+        "end_line": 295,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F5.%20Installed%20dev%20proof",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "1053b306f69de3ef2f6077f2dfc61ed6af4e39ff5b423b39d7dc9ac2f5d0fae2",
+        "start_line": 283
+      },
+      {
+        "end_line": 314,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "540ed064291a07db46908b3342d2b30f6ca000a62f0270b146c530440b5a7c38",
+        "start_line": 296
+      },
+      {
+        "end_line": 316,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "2c2f542f0543999afdff0d5fc7e9fe9b90ce9b82f91923bbfd8eacc06f7da98c",
+        "start_line": 315
+      },
+      {
+        "end_line": 348,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "a425151010f8ddeda567e38e5ee2b94639a11b7e9dcda98fd5362b66ee22d2f8",
+        "start_line": 317
+      },
+      {
+        "end_line": 408,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "12df5bb11e6b3768d63664b6f41a8a47dda930360bbd8dcd20a7308f20708708",
+        "start_line": 349
+      },
+      {
+        "end_line": 440,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "8f0d2518b3b14dabc8746de0d2b840e455b5f946cf187cee41e362b27980cae3",
+        "start_line": 409
+      },
+      {
+        "end_line": 463,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "db344455e2715a7e1d418cf57da5fa06458d470093cb5e1fd34884e05c0516b5",
+        "start_line": 441
+      },
+      {
+        "end_line": 486,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "4a2713990e8335f183a2f517e7cee04ed92b051cd349de0c27482db863105f3b",
+        "start_line": 464
+      },
+      {
+        "end_line": 533,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "d5c27854144efceca7e30636edc2bf64529d920dbfcfa258e9dd420ca732159f",
+        "start_line": 487
+      },
+      {
+        "end_line": 595,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "639b409ca2e62066ce96688e8ae78cd1870416b4bbbbbfd8c6680a34ccbc8807",
+        "start_line": 534
+      },
+      {
+        "end_line": 646,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "e8a04409769849eeb7d4496a50c9a6453fcb168ce0567cdd274f657afb9d54a2",
+        "start_line": 596
+      },
+      {
+        "end_line": 679,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F10.%20Testing%20evidence%20composition",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ada816682ad979416d45bb0c4f2f42c695003a7fb185f93c896258e24cfa89de",
+        "start_line": 647
+      },
+      {
+        "end_line": 714,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "f1ad90260c9419445bc02ca30cfd8f90ebf0d38fa5cbaecd8a6e24b1d57cdc3b",
+        "start_line": 680
+      },
+      {
+        "end_line": 756,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F12.%20Counterexample%20localisation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "700e1009e4cd4b18593db9e102513d802deb0c7b5215e01d8199797ff0113f49",
+        "start_line": 715
+      },
+      {
+        "end_line": 785,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "99ac7e032fb64179fab3a7300dc52047beb99a03bbccee2edcd99cd658d3f550",
+        "start_line": 757
+      },
+      {
+        "end_line": 811,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "a5355cf8e42dcfe71ecb1c8c4c6e266c623936f5ddacb1832b52943ee8fb752e",
+        "start_line": 786
+      },
+      {
+        "end_line": 896,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "6fea249263961cf1b11ac77ac7d550dce47b53ab953fcca20ddc645d8fe86c08",
+        "start_line": 812
+      },
+      {
+        "end_line": 920,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ef587f3cf6777d8b2d393c6f6f9db4241a00797616034646fb407644bfe42a85",
+        "start_line": 897
+      },
+      {
+        "end_line": 940,
+        "id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FQualification",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "2a588ebbe72bf03846c0566a783c37100d10006a229ae5f4e09a69cf37ef75a0",
+        "start_line": 921
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-85bc32276d750275ebb0/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/answer.json": "6e98220c8ed26f89263a41d8a22e5c298241fdd2f0ad4cd3af85efabc1ae0d3a",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/events.jsonl": "be6f678d14e777325ff0d7fad826dc38620098741d475148747700cc0a6e4a86",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/invocation.json": "065ad0c8a9b625e41b02b6b18bb9dbc46ce860fe88d671da1d730163501a7e3d",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/prompt.txt": "e40bcc19db2cf4207c204f9373cfbdcd3abb4f7c42bbbb78f5e7f959d0a73f97",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/result.json": "d3d858a0df42cad8c10ff21c20ebf87c145bc78506e06a277bda51fc4db753b8",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-85bc32276d750275ebb0/attempt-001/usage.json": "56cb60dbb3c2538f9dbcc67d2d0d35778dbfafefc6f38ebe78c5099b07f1db8c"
+  }
+}

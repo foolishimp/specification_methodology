@@ -1,0 +1,3316 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "The runtime role owning traversal, dispatch, actor invocation, process supervision, graph-call realisation, runtime facts, runtime event emission and replay, frames, continuations, retry and correction control, closure folds over runtime truth, re-entry after publication, lineage and provenance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 591,
+          "quote": "ABG owns traversal; dispatch; actor invocation; process supervision;\ngraph-call realisation; runtime facts; runtime event emission and replay;\nframes; continuations; retry and correction control; closure folds over\nruntime truth; re-entry after publish boundaries; lineage and provenance\n(P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+          "start_line": 587
+        }
+      ],
+      "key": "abg",
+      "label": "ABG"
+    },
+    {
+      "conditions": [],
+      "definition": "Domain product owning domain asset meaning, graph-function meaning, the published function catalogue, policy overlays, domain query projections, and domain closure and gap interpretation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 597,
+          "quote": "The ODD product owns domain asset meaning, graph-function meaning, the\npublished function catalogue, policy overlays, domain query projections,\nand closure and gap interpretation for its domain (P6, P1).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+          "start_line": 595
+        }
+      ],
+      "key": "odd_product",
+      "label": "ODD product"
+    },
+    {
+      "conditions": [],
+      "definition": "Service and query surfaces whose possible responsibilities include transport, sessions, routing, browser-safe projection and APIs, without runtime or continuation ownership.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 603,
+          "quote": "Service or query layers may own transport, sessions, routing,\nbrowser-safe projection and API surfaces. They own neither runtime truth\nnor continuation truth.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+          "start_line": 601
+        }
+      ],
+      "key": "service_query_layers",
+      "label": "Query and service layers"
+    },
+    {
+      "conditions": [],
+      "definition": "Explicit typed assets or nodes within typed domain boundaries; asset_surface identifies a real produced or consumed asset boundary.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 617,
+          "quote": "Concrete assets must bind explicitly into\ntyped domain boundaries. Where an asset is a real produced or consumed boundary,\nits `asset_surface` is declared (P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+          "start_line": 615
+        }
+      ],
+      "key": "typed_assets",
+      "label": "Typed assets and nodes"
+    },
+    {
+      "conditions": [],
+      "definition": "Named constructive program, or lawful composition of such programs, carrying an operative constructive step.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 622,
+          "quote": "Every operative constructive step is carried by one named `GraphFunction`\nor one lawful graph-function composition.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+          "start_line": 621
+        }
+      ],
+      "key": "graph_function",
+      "label": "GraphFunction"
+    },
+    {
+      "conditions": [],
+      "definition": "Pre-implementation declaration of governed movement: source and target asset types; edge traversal or graph-function name; closure or evaluation, lineage, and ambiguity or gap obligations; allowed F_D, F_P and F_H bindings.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 639,
+          "quote": "An outcome traversal declares the governed movement before\nimplementation: source asset type; target asset type; edge traversal or\ngraph-function name; closure or evaluation obligation; lineage obligation;\nambiguity or gap obligation; allowed `F_D`, `F_P` and `F_H` bindings.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "start_line": 636
+        }
+      ],
+      "key": "outcome_traversal",
+      "label": "Outcome traversal"
+    },
+    {
+      "conditions": [],
+      "definition": "Machine-readable publication of retained functions, distinct from a callable surface existing only in prose or prompt memory.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 659,
+          "quote": "The live line must publish a machine-readable function catalogue. At\nminimum each retained function should expose its name, inputs, outputs,\nintent, and public or helper role.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+          "start_line": 656
+        }
+      ],
+      "key": "function_catalogue",
+      "label": "Function catalogue"
+    },
+    {
+      "conditions": [],
+      "definition": "Operative publication surface for public graph-function carriers, traversed graphs, typed nodes and vectors, and bound semantic jobs or equivalent outer callable contracts.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 666,
+          "quote": "The product must publish the public graph-function carriers, the graph or\ngraphs those carriers traverse, typed node and vector surfaces, and the\nsemantic jobs or equivalent outer callable contracts bound to the public\ncarrier.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "start_line": 663
+        }
+      ],
+      "key": "gtl_module",
+      "label": "GTL module"
+    },
+    {
+      "conditions": [],
+      "definition": "Review proving a unique execution authority for an affected traversal, including inspection of implementation surfaces rather than produced artifacts alone.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 711,
+          "quote": "The audit must prove that exactly one execution authority exists for the\naffected traversal.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 710
+        }
+      ],
+      "key": "execution_authority_audit",
+      "label": "Execution-authority audit"
+    },
+    {
+      "conditions": [
+        "ODD product over GTL/ABG"
+      ],
+      "definition": "One constructive homeostasis loop from intent lineage and model synthesis through observation to lawful next action. Its four named functions are synthesize_model, eval_gap, evaluate_next and evaluate_action. It corrects toward required conditions without guaranteeing convergence or those conditions' adequacy.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 796,
+          "quote": "it corrects towards the required conditions as observations arrive,\nguarantees neither convergence nor the adequacy of those conditions, and\nits diagnoses distinguish the four causes named there (P2, P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 794
+        }
+      ],
+      "key": "constructive_evaluation_loop",
+      "label": "Constructive evaluation and yield loop"
+    },
+    {
+      "conditions": [],
+      "definition": "Selected Product outcome and any separately admitted bounded prerequisite or experiment basis; external authority constraining the loop, not authored, selected or enlarged by models, gaps, assurance, ledgers or projections.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 805,
+          "quote": "Product models, gaps, assurance, ledgers and\nprojections may interpret that outcome but cannot author, select or\nenlarge it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 800
+        }
+      ],
+      "key": "selected_product_outcome",
+      "label": "Selected Product outcome and bounded basis"
+    },
+    {
+      "conditions": [],
+      "definition": "Admitted source intent with lineage references from a human, imported source, prior product, intent engine or prior synthesized construction intent; ABG event-log truth that seeds the model without inventing graph actions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 840,
+          "quote": "Admitted source intent and its lineage refs: human, imported source, prior product, intent engine, or prior synthesized construction intent.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 840
+        }
+      ],
+      "key": "intent_lineage",
+      "label": "IntentLineage"
+    },
+    {
+      "conditions": [],
+      "definition": "Desired and known typed asset model synthesized from intent lineage, prior model and admitted product truth; product-owned model truth published through admitted events and product projection references, without runtime-fact or action authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 841,
+          "quote": "Desired and known typed asset model synthesized from intent lineage, prior model, and admitted product truth.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 841
+        }
+      ],
+      "key": "product_asset_model",
+      "label": "ProductAssetModel"
+    },
+    {
+      "conditions": [],
+      "definition": "Observable workspace, runtime archive, transform assets, product asset root, profile and file/process state. W is the mutable construction workspace; observation alone is not authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 842,
+          "quote": "Current workspace, runtime archive, transform assets, product asset root, profile, and observed file or process state.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 842
+        }
+      ],
+      "key": "worksite",
+      "label": "Worksite"
+    },
+    {
+      "conditions": [],
+      "definition": "Append-only admitted runtime facts constituting ABG runtime truth; the immutable event/replay spine orders and anchors ledger entries using predecessor references.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 843,
+          "quote": "| `RuntimeEventLog` | Append-only admitted runtime facts. | ABG runtime truth. |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 843
+        }
+      ],
+      "key": "runtime_event_log",
+      "label": "RuntimeEventLog"
+    },
+    {
+      "conditions": [],
+      "definition": "ABG projection truth: replay-derived current runtime state over event log and execution basis.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 844,
+          "quote": "Replay-derived current runtime state over event log and execution basis.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 844
+        }
+      ],
+      "key": "runtime_projection",
+      "label": "RuntimeProjection"
+    },
+    {
+      "conditions": [],
+      "definition": "Read-only runtime truth plus construction-relevant worksite facts, carried by an ABG evaluator with product domain rows.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 845,
+          "quote": "Read-only view of runtime truth plus worksite facts relevant to construction.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 845
+        }
+      ],
+      "key": "observation_snapshot",
+      "label": "ObservationSnapshot"
+    },
+    {
+      "conditions": [],
+      "definition": "Typed product-domain pressure over admitted observations of missing, partial, blocked, waiting or ambiguous assets and evidence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 846,
+          "quote": "Typed pressure over missing, partial, blocked, waiting, or ambiguous assets and evidence.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 846
+        }
+      ],
+      "key": "gap_pressure",
+      "label": "GapPressureRow"
+    },
+    {
+      "conditions": [],
+      "definition": "Exact product-domain binding from gap pressure to selected Product outcome, any admitted prerequisite/experiment basis, target assets, required roles, evidence references and admissible graph outcomes, over GTL/ABG action authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 847,
+          "quote": "Exact binding from gap pressure to the selected Product outcome, any admitted prerequisite or experiment basis, target assets, required roles, evidence refs, and admissible graph outcomes.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 847
+        }
+      ],
+      "key": "target_obligation_binding",
+      "label": "TargetObligationBinding"
+    },
+    {
+      "conditions": [],
+      "definition": "GTL/product publication consumed by ABG, naming lawful graph functions, vectors, targets, inputs and eligible outcomes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 848,
+          "quote": "Published lawful graph actions: graph functions, vectors, targets, inputs, and eligible outcomes.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 848
+        }
+      ],
+      "key": "action_catalog",
+      "label": "ActionCatalog"
+    },
+    {
+      "conditions": [],
+      "definition": "Dispatch sum type: initial_selection, post_yield_resume, post_close_graph_continuation, post_retry, post_repair, post_reenter, post_reprice or post_block. It is not another controller; post_reprice records a re-entry request without selection authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 849,
+          "quote": "`initial_selection`, `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 849
+        }
+      ],
+      "key": "next_action_basis",
+      "label": "NextActionBasis"
+    },
+    {
+      "conditions": [],
+      "definition": "Deterministic ranking of bound lawful actions under visible policy, using an ABG evaluator kernel and product policy.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 850,
+          "quote": "Deterministic ranking over bound lawful actions under visible policy.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 850
+        }
+      ],
+      "key": "priority_projection",
+      "label": "PriorityProjection"
+    },
+    {
+      "conditions": [],
+      "definition": "ABG-admitted selected action for one bounded graph invocation, preserving outcome/bounded-basis references through its target binding.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 851,
+          "quote": "Admitted selected action for one bounded graph invocation, preserving the selected outcome or admitted bounded-basis refs carried by its target binding.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 851
+        }
+      ],
+      "key": "construction_intent",
+      "label": "ConstructionIntent"
+    },
+    {
+      "conditions": [],
+      "definition": "Worker, process, product, execution, materialization, liveness and postflight evidence admitted through ABG/product admission; worker self-closure is excluded.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 852,
+          "quote": "Admitted worker, process, product, execution, materialization, liveness, and postflight evidence.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 852
+        }
+      ],
+      "key": "admitted_evidence",
+      "label": "AdmittedEvidence"
+    },
+    {
+      "conditions": [],
+      "definition": "Closure evidence and convergence for one edge attempt/version: counts, obligation rows, materialization, liveness and admission references, and edge_converged. It does not select actions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 853,
+          "quote": "Evidence and convergence carrier for one edge attempt or version.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 853
+        }
+      ],
+      "key": "edge_fulfillment_ledger",
+      "label": "EdgeFulfillmentLedger"
+    },
+    {
+      "conditions": [],
+      "definition": "Closed seven-decision vocabulary over the ledger: close, yield, retry, repair, re-enter, reprice, block. Cause refinements add no decisions. Each decision is replay-visible with reproducible basis and reason references.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 854,
+          "quote": "Sum type over the ledger: close, yield, retry, repair, re-enter, reprice, block.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 854
+        }
+      ],
+      "key": "edge_closure_decision",
+      "label": "EdgeClosureDecision"
+    },
+    {
+      "conditions": [],
+      "definition": "ABG next-action evaluation read model with product policy, observing NextActionBasis and current truth to select a graph action only when lawful.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 855,
+          "quote": "Read model that observes `NextActionBasis` plus current truth and selects a next graph action only when lawful.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 855
+        }
+      ],
+      "key": "next_action_projection",
+      "label": "NextActionProjection"
+    },
+    {
+      "conditions": [],
+      "definition": "Model synthesis from event-log-backed IntentLineage, prior ProductAssetModel and admitted product truth, producing ProductAssetModel.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 863,
+          "quote": "`IntentLineage + prior ProductAssetModel + admitted product truth`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 863
+        }
+      ],
+      "key": "synthesize_model",
+      "label": "synthesize_model"
+    },
+    {
+      "conditions": [],
+      "definition": "Read-only comparison of ProductAssetModel with RuntimeEventLog, RuntimeProjection and Worksite, producing ObservationSnapshot and GapPressureRow.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 864,
+          "quote": "`ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 864
+        }
+      ],
+      "key": "eval_gap",
+      "label": "eval_gap"
+    },
+    {
+      "conditions": [],
+      "definition": "Total next-action selection from NextActionBasis, fresh eval_gap, TargetObligationBinding, ActionCatalog and Policy; produces PriorityProjection, NextActionProjection and selected_action, or a typed no-action with its own core result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 865,
+          "quote": "`NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 865
+        }
+      ],
+      "key": "evaluate_next",
+      "label": "evaluate_next"
+    },
+    {
+      "conditions": [],
+      "definition": "Evaluation of the action just taken from ConstructionIntent, AdmittedEvidence, TargetObligationBinding and Policy, producing EdgeFulfillmentLedger and EdgeClosureDecision.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 866,
+          "quote": "`ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 866
+        }
+      ],
+      "key": "evaluate_action",
+      "label": "evaluate_action"
+    },
+    {
+      "conditions": [],
+      "definition": "Source-described core values satisfied, falsified, indeterminate, out_of_frame and invalid_basis, kept predicate-specific. Edge fulfilment, action availability, candidate acceptance and lawful next-action selectability are distinct predicates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1134,
+          "quote": "The bounded action it judges has its own step result\nunder [ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)\nfor \"a candidate is available\", and neither value counts toward the\nother's predicate",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1130
+        }
+      ],
+      "key": "loop_result_domains",
+      "label": "Loop result domains"
+    },
+    {
+      "conditions": [],
+      "definition": "Two-part conformance: F_P walkthrough proving that the constitutional process can be followed on real work, and deterministic F_D admission of each produced artifact. Neither constitutes ratification.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1463,
+          "quote": "Conformance has two halves: an F_P proof that the process can be followed,\nand an F_D gate that admits the produced artifacts (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1462
+        }
+      ],
+      "key": "agentic_conformance",
+      "label": "Conforming agentic development"
+    },
+    {
+      "conditions": [],
+      "definition": "Cumulative typed environment of a graph-function composition, allowing later functions to require any available carried typed binding rather than only the immediately preceding output.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1577,
+          "quote": "A later function may\nrequire any typed binding available in the cumulative carried\nenvironment, not only the immediately previous output (P4a, P4b).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.8%20Cumulative%20environment%20law%20is%20mandatory",
+          "start_line": 1575
+        }
+      ],
+      "key": "cumulative_environment",
+      "label": "Cumulative typed environment"
+    },
+    {
+      "conditions": [],
+      "definition": "Graph-native proving surface whose declared scenarios and use cases pressure feature intent and design decisions and are described as the best source of significant code/control proving paths.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1602,
+          "quote": "Scenarios are graph-native proving surfaces, not only test\ndocumentation.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F12.%20Scenario%20rule",
+          "start_line": 1601
+        }
+      ],
+      "key": "scenario_bundle",
+      "label": "Scenario bundle"
+    },
+    {
+      "conditions": [],
+      "definition": "ODD member's derived summary of its graph-native product-authoring method, citing same-digest sections 1, 2, 11.1–11.5D, 11.7 and 11.7A; owns no determination.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1804,
+          "quote": "Its sources are §1, §2, §11.1 to §11.5D, §11.7 and §11.7A of\nthis member at the same digest, and it owns no determination. Where it and\na source section differ, the source section decides",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F20.%20Canonical%20compression",
+          "start_line": 1802
+        }
+      ],
+      "key": "odd_canonical_compression",
+      "label": "ODD canonical compression"
+    },
+    {
+      "conditions": [],
+      "definition": "Successor provenance account claiming conservation of all 48 received rc.2 ODD_METHOD rows under STDO-UP-015, with predecessor modal force, exact formal blocks/tables and rewritten prose. Renamings, indicative restatements of imperatives, labelled axiom paragraphs and British prose spelling retain identifiers. It lists seven new clauses: bounded-step and refinement bindings; roles versus functor kinds; closure and audit result mappings; foundation family table; compression's non-determining derived status.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1815,
+          "quote": "Rows of rc.2 ODD_METHOD.md received by this member, all 48 under\nSTDO-UP-015. Anchors are into rc.2 ODD_METHOD.md; a locus is a section of\nthis file. Every conserved row is restated in this member's own text at\nthe predecessor's modal force; a route is provenance only.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions",
+          "start_line": 1810
+        }
+      ],
+      "key": "odd_source_dispositions",
+      "label": "ODD successor source dispositions"
+    },
+    {
+      "conditions": [],
+      "definition": "Guide owning project commentary purposes, authority boundaries, carriers, identity, categories, structure, discussion state, posting rules and ratification. It consumes rather than defines PRODUCT_DEFINITION's comment binding, TICKETS' work carriers, SPEC_METHOD's authority surfaces and EVALUATION's claims/evidence. rc.2 routes are provenance only.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 6,
+          "quote": "Guide. Owns the commentary layer of a governed project: what a post is\nfor, its boundary with authority, where posts live, their identity,\ncategories and structure, their discussion state, the posting rules and\nratification.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE",
+          "start_line": 3
+        }
+      ],
+      "key": "posting_guide",
+      "label": "POSTING_GUIDE"
+    },
+    {
+      "conditions": [],
+      "definition": "Working commentary for analysis, criticism, proposed changes, handoff and repricing confidence; may influence later specification or design, but is not constitutional truth.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 31,
+          "quote": "A post is not constitutional truth. It is working commentary, and it may\nlater influence specification or design (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F1.%20Position",
+          "start_line": 30
+        }
+      ],
+      "key": "post",
+      "label": "Post"
+    },
+    {
+      "conditions": [],
+      "definition": "Commentary carrier bound by ticketing.comments.root; default local-file location .ai-workspace/comments/<agent>/, exemplified by <agent-id>.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 46,
+          "quote": "Posts live at the location the product definition binds as\n`ticketing.comments.root` (P6, P3; rc.2 #location).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location",
+          "start_line": 44
+        }
+      ],
+      "key": "post_carrier",
+      "label": "Post carrier"
+    },
+    {
+      "conditions": [],
+      "definition": "Six-category domain: REVIEW critiques code/specification/design/posts; STRATEGY proposes technical or methodological direction; GAP identifies precise insufficiency/contradiction; SCHEMA specifies data/event/interface/contract shape; HANDOFF transfers bounded context/task state; MATRIX compares decision options explicitly.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 89,
+          "quote": "- `REVIEW`: critique of code, specification, design or another post;\n- `STRATEGY`: a proposed technical or methodological direction;\n- `GAP`: a precise insufficiency or contradiction;\n- `SCHEMA`: the shape of a data model, event model, interface or contract;\n- `HANDOFF`: a bounded transfer of context or task state; and\n- `MATRIX`: an explicit comparison of options for a decision.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+          "start_line": 84
+        }
+      ],
+      "key": "post_categories",
+      "label": "Post categories"
+    },
+    {
+      "conditions": [],
+      "definition": "Base post template: CATEGORY and Subject title; Author; ISO 8601 Date; Addresses artifact/issue/boundary; Status initially Draft; optional ISO 8601 Updated; Summary, Analysis and Recommended Action sections. MATRIX uses a central decision table.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 111,
+          "quote": "# {CATEGORY}: {Subject}\n\n**Author**: {agent}\n**Date**: {ISO 8601}\n**Addresses**: {artifact, issue, or boundary under discussion}\n**Status**: Draft\n**Updated**: {ISO 8601, optional}\n\n## Summary\n{short summary}\n\n## Analysis\n{main content}\n\n## Recommended Action\n{next step}",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F6.%20Structure",
+          "start_line": 96
+        }
+      ],
+      "key": "post_template",
+      "label": "Post base shape"
+    },
+    {
+      "conditions": [],
+      "definition": "Draft means still being shaped by the author; Open means published into active discussion; Closed means discussion concluded. These are commentary states, not ratification states.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 125,
+          "quote": "- `Draft`: the author is still shaping the post;\n- `Open`: the post is published into an active discussion; and\n- `Closed`: the discussion has concluded.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F7.%20Discussion%20state%20and%20mutability",
+          "start_line": 123
+        }
+      ],
+      "key": "post_discussion_state",
+      "label": "Post discussion state"
+    },
+    {
+      "conditions": [],
+      "definition": "Provenance table claiming conservation of nine predecessor posting-guide rows: boundary, location, identity, categories, structure, mutability, posting rules, ratification and shared-method adoption. It records same-force indicative headings, introductory material restated in Position, British authorisation spelling, and adoption law moved to SPEC_METHOD §6.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 180,
+          "quote": "Every\nconserved row is restated in the receiving member's own text; a route is\nprovenance only.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F11.%20Source%20dispositions",
+          "start_line": 174
+        }
+      ],
+      "key": "posting_source_dispositions",
+      "label": "Posting-guide source dispositions"
+    },
+    {
+      "conditions": [],
+      "definition": "Tier-2 owner of project method binding: definition overlay and relations; constitutional sufficiency; installed basis and manager; semantic resolution and local bindings; collective reference frames; WHAT/HOW/work carriers; explicit discovery/composition; conformance, version boundary and bootstrap. Its bounded contexts are product-definition-routing, semantic-resolution and build-tenancy. It adds no tier-1 definitions; its schemas, templates, filenames, fields and commands are Product interoperability shapes, not profile terms.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 30,
+          "quote": "The schemas, templates, filenames, manifest\nfields and commands named here are this Product's own realisation shapes,\naccepted as interoperability boundaries under §11; they are not profile\nterms.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION",
+          "start_line": 25
+        }
+      ],
+      "key": "product_definition_member",
+      "label": "PRODUCT_DEFINITION member"
+    },
+    {
+      "conditions": [],
+      "definition": "JSON locator and relation overlay for one distinct current product WHAT in urn:stdo:bounded-context:product-definition-routing under the selected complete STDO basis. It does not own referenced content. Conventional filename stdo_<label>.json; single-definition source-project default stdo_default.json.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 55,
+          "quote": "Every product defined under this method publishes one JSON definition for\neach distinct current product WHAT.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 49
+        }
+      ],
+      "key": "product_definition_overlay",
+      "label": "Product definition overlay"
+    },
+    {
+      "conditions": [],
+      "definition": "Stable lowercase local discovery label using ASCII letters, digits, hyphens or underscores, unique only within the directory's definitions; not Product identity.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 60,
+          "quote": "The suffix `<label>` is the Definition Label: a stable lowercase local\ndiscovery label of ASCII letters, digits, hyphens or underscores, unique\nonly among the definitions in the same directory. It is not Product\nidentity.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 57
+        }
+      ],
+      "key": "definition_label",
+      "label": "Definition Label"
+    },
+    {
+      "conditions": [],
+      "definition": "product.definition_id URI: stable identity of a mutable continuing WHAT definition line, unique in the discovered workspace definition set, distinct from immutable Product and release identities.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 64,
+          "quote": "The `product.definition_id` URI inside the definition is the\nProduct-Definition Identity: the stable identity of the mutable\nproduct-definition line, unique within the discovered workspace definition\nset.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 60
+        }
+      ],
+      "key": "product_definition_identity",
+      "label": "Product-Definition Identity"
+    },
+    {
+      "conditions": [],
+      "definition": "Normative schemas/product-definition.schema.json and single fill-in templates/PRODUCT_DEFINITION_TEMPLATE.json realise an accepted STDO-SURFACE-001 interoperability boundary for identity, location, relation and discovery fields, without becoming another semantic owner.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 90,
+          "quote": "The normative schema is `schemas/product-definition.schema.json`; the\nsingle fill-in form is `templates/PRODUCT_DEFINITION_TEMPLATE.json`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 85
+        }
+      ],
+      "key": "product_definition_interoperability",
+      "label": "Product-definition schema and template"
+    },
+    {
+      "conditions": [],
+      "definition": "F12 traces project-binding consequences from commitments plus instance premises: own authorities, chosen layout, shared workspace, recurring terms and released method. P0 is recovered; P1, P2, P3 and P6 independent; P5 derives from P0/P6 with open-world premise; P4b derives from P0/P2 with non-reacquirable step facts. The table traces but does not own imports law, records added choices and their owners, and supplies ten consumer-route lists without extending owning law.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 111,
+          "quote": "the table traces that rule in its sixth row, whose rule column names that\nsection, and owns none of it.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 109
+        },
+        {
+          "end_line": 149,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 149
+        }
+      ],
+      "key": "project_binding_family",
+      "label": "F12 project-binding family"
+    },
+    {
+      "conditions": [],
+      "definition": "Complete selected governing-document set for a product, without prescribed file count, collectively making axioms, ontology, epistemology, taxonomy and semantics recoverable for the governed scope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 199,
+          "quote": "A Constitutional Set is the complete set of governing documents selected\nfor a product, not a prescribed number of files.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F3.%20Constitutional-set%20sufficiency",
+          "start_line": 196
+        }
+      ],
+      "key": "constitutional_set",
+      "label": "Constitutional Set"
+    },
+    {
+      "conditions": [],
+      "definition": "Pair of immutable stdo://releases/<cut>/ URI and installed-manifest SHA-256. URI identifies an immutable annotated RC cut; deterministic manifest binds tag object, commit, tree, standards subtree/inventory/member bytes and admitted auxiliaries. Manifest schema is schemas/installed-release-manifest.schema.json; manifest is transport/integrity evidence, not constitution.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 240,
+          "quote": "(immutable stdo://releases/<cut>/ URI, installed-manifest SHA-256)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 240
+        }
+      ],
+      "key": "installed_release_basis",
+      "label": "Installed Release Basis"
+    },
+    {
+      "conditions": [],
+      "definition": "Read-only deterministic acceptance object binding current Product Definition identity and bytes/current basis to one resolved immutable target cut, annotated tag object, commit, tree and manifest digest. Its SHA-256 is an operator-presentable token; possession alone grants no authority and mismatch identifies a changed mutation subject.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 256,
+          "quote": "Its SHA-256 is the\noperator-presentable acceptance token. Possession of the token alone grants\nno authority; a mismatch proves that the presented subject is no longer the\nsubject being mutated",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 253
+        }
+      ],
+      "key": "adoption_plan",
+      "label": "Adoption Plan"
+    },
+    {
+      "conditions": [],
+      "definition": "Acceptance object binding an authorised fleet root and complete ordered set of per-definition adoption-plan digests, under the same law as individual plans.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 258,
+          "quote": "A Fleet Adoption Plan binds an authorised\nfleet root and the complete ordered set of per-definition plan digests\nunder the same law.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 256
+        }
+      ],
+      "key": "fleet_adoption_plan",
+      "label": "Fleet Adoption Plan"
+    },
+    {
+      "conditions": [],
+      "definition": "Bounded executable realisation installing each immutable cut once in a shared versioned store, resolving logical URIs to verified bytes, inventorying/verifying complete distributions, synchronising selected bases, planning explicitly accepted adoption, managing marker-bounded agent bootstrap and applying operations to explicitly discovered fleets.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 279,
+          "quote": "- installs each immutable cut once in a shared, versioned release store;\n- resolves logical `stdo://releases/...` URIs to verified installed bytes;\n- inventories and verifies complete installed distributions;",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 270
+        }
+      ],
+      "key": "stdo_toolchain_manager",
+      "label": "STDO Toolchain Manager"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 609,
+          "quote": "An ODD product is built correctly only when every clause of this section\nholds (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law",
+          "start_line": 608
+        }
+      ],
+      "key": "core_law_all_clauses",
+      "statement": "Correct ODD construction requires every core-law clause to hold; this is a necessary-condition claim, not a correctness judgment about any product.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "typed_assets"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 617,
+          "quote": "The product works over explicit typed assets or typed nodes. It does not\nwork over one hidden project blob, one giant mutable workspace object or one\nundocumented service payload.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+          "start_line": 613
+        }
+      ],
+      "key": "explicit_typed_boundaries",
+      "statement": "Work must use explicit typed assets/nodes, not a hidden project blob, giant mutable workspace object or undocumented payload. Concrete assets must bind explicitly to typed domain boundaries; every real produced/consumed asset boundary declares asset_surface.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "graph_function",
+        "odd_product"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 625,
+          "quote": "The real carrier is never left\ninside orchestration loops, bespoke Python pipeline runners, controller\nscripts, or service methods that only happen to call GTL-adjacent helpers",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+          "start_line": 622
+        }
+      ],
+      "key": "named_constructive_carrier",
+      "statement": "Every operative constructive step requires one named GraphFunction or lawful composition. Its real carrier cannot remain in orchestration loops, bespoke Python pipelines, controllers or service methods merely calling GTL-adjacent helpers.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "outcome_traversal",
+        "gtl_module"
+      ],
+      "conditions": [
+        "Building operative framework behaviour"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 634,
+          "quote": "The required order is: declare the outcome\ntraversal over typed assets; publish the declarative GTL/ABG carrier\nstructure; implement only the minimal imperative adapter code that remains\nnecessary",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "start_line": 631
+        }
+      ],
+      "key": "outcome_first_order",
+      "statement": "The profile's compute unit, edge traversal, must build its operative framework: first declare outcome traversal, then publish GTL graph functions, typed nodes, vectors, operator/evaluator bindings, carrier schemas, policy/projection/lineage-ledger declarations, then implement only remaining necessary minimal imperative adapters. Imperative-first behaviour later described in GTL is ODD-shaped but not yet ODD-built.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "function_catalogue"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 659,
+          "quote": "At\nminimum each retained function should expose its name, inputs, outputs,\nintent, and public or helper role. A callable surface that exists only in\nprose or in prompt memory leaves the product under-built (P6, P3).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+          "start_line": 656
+        }
+      ],
+      "key": "catalogue_publication",
+      "statement": "The live line must publish a machine-readable catalogue. At minimum every retained function should expose name, inputs, outputs, intent and public/helper role. Prose-only or prompt-memory-only callable surfaces leave the product under-built.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "gtl_module",
+        "graph_function"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 672,
+          "quote": "Where a public carrier refines into inner executable structure, the live\ntraversal boundaries are published explicitly through lawful GTL boundary\nsurfaces such as `RefinementBoundary` or `CandidateFamily`. The outer\npublic carrier remains the callable contract",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "start_line": 669
+        }
+      ],
+      "key": "public_carrier_contract",
+      "statement": "Publish public carriers, their graphs, typed node/vector surfaces and bound semantic jobs or equivalent outer contracts. Never bind callers directly to hidden inner vectors. Refinement into inner executable structure requires explicitly published lawful GTL traversal boundaries, for example RefinementBoundary or CandidateFamily; the outer carrier remains callable.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "service_query_layers",
+        "runtime_projection"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 679,
+          "quote": "Visible current state is a projection and does not replace runtime truth.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+          "start_line": 676
+        }
+      ],
+      "key": "current_state_projection_boundary",
+      "statement": "Visible current state projects constructive history and cannot replace runtime truth. Query overlays must not redefine ABG runtime facts.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "abg"
+      ],
+      "conditions": [
+        "ODD application over GTL/ABG"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 695,
+          "quote": "The product must not own a hidden\ncontinuation loop; carry multi-step controller memory across publish\nboundaries; infer later steps locally instead of re-entering through ABG;\ntreat public `next` and explicit graph-function continuation as rival\nauthorities inside one controller; or build product-local orchestration\nthat in effect replaces ABG",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry",
+          "start_line": 690
+        }
+      ],
+      "key": "cooperative_continuation_boundary",
+      "statement": "The application is a cooperative subsystem. ABG owns continuation, publication-boundary re-entry, graph-call lifecycle and declared-graph step selection. Hidden loops, multi-step memory across publish boundaries, local inference of later steps, rival public-next/explicit-continuation authorities and replacement orchestration are forbidden. Tenant-local replacement of ABG continuation is a different architecture, even if artifacts are ODD-shaped.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "execution_authority_audit",
+        "odd_product",
+        "abg"
+      ],
+      "conditions": [
+        "Changing runtime, start/iterate, worker transport, actor invocation, process supervision, plugin dispatch, event projection, closure, assurance, retry or continuation semantics"
+      ],
+      "exceptions": [
+        "A different realisation is lawful only under explicitly ratified, non-overlapping runtime scope."
+      ],
+      "grounding": [
+        {
+          "end_line": 715,
+          "quote": "must include an execution-authority audit before activation and closure",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 707
+        },
+        {
+          "end_line": 715,
+          "quote": "A\ndifferent realisation is lawful only under an explicitly ratified,\nnon-overlapping runtime scope",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 713
+        }
+      ],
+      "key": "execution_audit_trigger_and_uniqueness",
+      "statement": "Audit before activation and closure must prove exactly one execution authority for the affected traversal: the consumer-bound ABG realisation, including when that very realisation is under change.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "execution_authority_audit",
+        "abg",
+        "odd_product"
+      ],
+      "conditions": [
+        "An execution-authority audit is required"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 725,
+          "quote": "The audit must inventory at least these surfaces (P6):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 717
+        }
+      ],
+      "key": "execution_audit_inventory",
+      "statement": "Inventory at least: (1) traversal/vector advance owned by ABG, product declaring functions/vectors/assets/domain policy, with no local next-step runner; (2) actor/process supervision owned by ABG, product supplying bindings/prompts/payload/evidence adapters, with no spawn/spawnSync/exec/timeout/kill/stdout/stderr supervision outside its seam; (3) retry/correction/continuation/re-entry owned by ABG, product publishing bounded outputs and returning control, with no local retries/controller memory/hidden next; (4) runtime event emission/append/replay/projection owned by ABG, product mapping evidence to admitted payloads, with no bypassing append/ledger mutation/reconstruction; (5) closure/assurance owned by ABG with product policy/gain inputs, product supplying interpretation/evaluators/gaps/weights, with no worker self-report or postflight directly closing runtime units. Include language/tenant-appropriate code, call-graph or static review and name evidence excluding hidden authority; artifact review alone is insufficient.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "abg",
+        "execution_authority_audit"
+      ],
+      "conditions": [
+        "Audited surfaces admit consequential entity transformation"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 740,
+          "quote": "ABG's broader execution, supervision, retry and projection authority\ncontinues to derive from this profile and is not thereby reclassified as\nadmission authority.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 735
+        }
+      ],
+      "key": "admission_execution_distinction",
+      "statement": "ABG admission is the graph-native specialisation of transformation admission completeness owned by ACTIVATION §4, with predecessor restatement in DESIGN_MODULE and rc.2 provenance. This does not reclassify broader execution/supervision/retry/projection authority. F_P and F_H project candidate-producer and human-adjudication roles through the profile's §5 bindings to SPEC_METHOD §5.",
+      "uncertainty": "Referenced admission and role-owning sections are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "execution_authority_audit"
+      ],
+      "conditions": [
+        "Any listed violation is present"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 762,
+          "quote": "When any is present, the product may be useful but is not currently\nODD-correct over GTL/ABG (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 761
+        }
+      ],
+      "key": "hidden_authority_prevents_closure",
+      "statement": "Each independently prevents closure: downstream start/iterate loop for an ABG traversal; worker supervision outside the ABG actor seam; retry/continuation/re-entry state outside ABG; runtime-event append or ledger mutation without ABG admission; plugin output carrying next-vector/closure/actor/process/runtime-event authority instead of evidence or policy input; or two controllers able to claim one traversal. Usefulness does not restore current ODD correctness.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "service_query_layers",
+        "function_catalogue",
+        "gtl_module"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 783,
+          "quote": "Name equality is not enough.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence",
+          "start_line": 779
+        },
+        {
+          "end_line": 777,
+          "quote": "domain query overlays must fail\nclosed when the carrier they describe is missing, stale or structurally\ndivergent",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence",
+          "start_line": 775
+        }
+      ],
+      "key": "projection_source_coherence",
+      "statement": "Read models must stay downstream of admitted carrier/runtime/event/source truth without alternate authority. Catalogue views reconcile to admitted GTL/public carriers; asset ownership/start-target views derive from or structurally compare against exposed carriers; runtime views derive from ABG facts/events/replay/projection. Domain overlays fail closed on missing, stale or structurally divergent carriers. Same names with differing inputs, outputs, vectors, declarations, ownership or closure law remain different truth surfaces until reconciliation. Negative projection proof must test structural drift as well as missing truth.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "selected_product_outcome",
+        "evaluate_next"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Further material work requires another admitted basis after any terminal or invalidating condition."
+      ],
+      "grounding": [
+        {
+          "end_line": 814,
+          "quote": "The loop selects no further material work without another admitted basis\nonce the selected outcome is accepted; an admitted prerequisite is\ndischarged; an admitted experiment's stated decision is resolved; another\nadmitted terminal condition is reached; or its governing basis or bound\nis exhausted, rejected, withdrawn, superseded, repriced away or\nfalsified.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 807
+        }
+      ],
+      "key": "outcome_conservation_and_stop",
+      "statement": "Every GTL/ABG ODD product preserves one loop. Material selection stays within selected outcome or admitted bounded prerequisite/experiment. Stop selection when outcome is accepted, prerequisite discharged, experiment decision resolved, another admitted terminal reached, or basis/bound exhausted, rejected, withdrawn, superseded, repriced away or falsified. Reprice requests constitutional re-entry; it neither performs repricing nor chooses a successor outcome. Edge/graph closure is evidence toward Product acceptance, never Product or release acceptance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "synthesize_model",
+        "eval_gap",
+        "evaluate_next",
+        "evaluate_action"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1069,
+          "quote": "A module that lets one of these\nfunctions exercise another's authority creates a rival control surface\nand violates A0",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1067
+        }
+      ],
+      "key": "evaluation_function_separation",
+      "statement": "Shared libraries are allowed, shared authority is not. synthesize_model may update desired/known model truth only from admitted lineage/prior model/product truth, and cannot observe worksite, select/admit/invoke/close work. eval_gap emits observations/pressure only and cannot select/admit/invoke/close work. evaluate_action folds admitted action evidence to ledger/decision only, never selecting next action. evaluate_next binds obligations/ranks published lawful actions/publishes projection, never admitting intent or deciding prior closure/yield/failure/repair except by consuming admitted closure decisions. Designs, tickets, code modules and proofs must identify which of the four functions they implement/consume; 'evaluator' alone is insufficient.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "construction_intent",
+        "target_obligation_binding",
+        "evaluate_next"
+      ],
+      "conditions": [
+        "Every constructive action, before invocation"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 883,
+          "quote": "`ConstructionIntent` must cite the lineage, the\nselected action and the `TargetObligationBinding` that preserve the exact\nselected Product outcome and any admitted bounded-basis refs",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 881
+        },
+        {
+          "end_line": 983,
+          "quote": "A broad edge cannot satisfy a specific product or evidence gap unless the\nbinding proves that edge is the lawful action for those exact assets",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 981
+        }
+      ],
+      "key": "exact_target_and_intent_admission",
+      "statement": "Bind current gap to exact outcome, optional admitted prerequisite/experiment, target assets, roles and evidence before invocation. A broad edge requires proof of lawfulness for those exact assets. Current intent is synthesized against model/gap, then separately admitted after evaluate_next selects an already-published function/vector. It must cite lineage, selected action and target binding preserving exact authority references; intent cannot invent unpublished actions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "worksite",
+        "edge_fulfillment_ledger",
+        "runtime_event_log",
+        "admitted_evidence"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 947,
+          "quote": "W can change without being true.\nL can be true without being the whole W.\nClosure can only use W through L.\nEval can only judge W through L.\nEval only affects traversal after its own L/E admission.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 943
+        }
+      ],
+      "key": "governed_workspace_ledger_pair",
+      "statement": "Files, process output, screen logs, worker artifacts and product files are observations; authority requires typed evidence admission and ledger/decision fold. W is mutable; L is immutable admitted closure-relevant trace, not a workspace copy: callout basis, deltas, file refs/digests, execution evidence, touched obligations, claims, evaluator inputs/outputs and admission status. F_P acts in W; admission records L; immutable E orders/anchors entries; evaluator judges a declared L snapshot, never ambient W; evaluator output is F_P work admitted into L/E before closure/routing/traversal effect. Every closure-relevant working F_P callout needs admission. Corrections append or supersede, never rewrite history.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "edge_fulfillment_ledger",
+        "evaluate_action"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 969,
+          "quote": "An evaluator may attend only to admitted ledger rows reachable through\ndeclared lineage, predecessor refs, target binding, policy and the\nrelevant event-log cursor.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 962
+        }
+      ],
+      "key": "ledger_attention_and_evidence",
+      "statement": "Ledger attention is a structural analogy, not a transformer implementation dependency: typed, immutable, lineage-constrained, policy-bounded and replayable. Evaluator attention is restricted to admitted rows reachable through declared lineage, predecessor refs, target binding, policy and event cursor; outside workspace facts/prose/archives/summaries/controller memory are excluded. Raw artifacts, worker reports, process success and CLI summaries cannot close edges; closure folds admitted evidence through ledger to decision. The ledger records evidence/convergence, never selects actions.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "evaluate_next",
+        "next_action_basis",
+        "action_catalog",
+        "loop_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Graph-complete empty selection after close makes no refusal or selection determination; it is invocational data."
+      ],
+      "grounding": [
+        {
+          "end_line": 1017,
+          "quote": "On `post_reprice`, `evaluate_next` must return a typed no-action\ndisposition while constitutional re-entry stays unresolved.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1010
+        },
+        {
+          "end_line": 1007,
+          "quote": "if higher-priority lawful action exists:\n  select it\nelse if current graph edge remains lawful:\n  follow the graph\nelse if authority is missing:\n  reprice or block\nelse:\n  block with typed no-action disposition",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1000
+        }
+      ],
+      "key": "next_action_totality",
+      "statement": "Rank only published lawful actions bound to the gap and governing basis; unpublished desired work returns typed no-action, never broad executive graph/local-script fallback. initial_selection uses current model/gap/binding/catalogue/policy. post_yield_resume resumes or yields the same edge from replay-visible truth without failure classification. post_close_graph_continuation may select next edge or no action if complete. post_retry/post_repair/post_reenter/post_block use ordered choice: higher-priority lawful action; otherwise lawful current edge; otherwise missing authority gives reprice or block; otherwise block typed no-action. Unresolved post_reprice gives no_action(undeclared), naming missing outcome/bound and needed re-entry; re-evaluation requires separately admitted exact outcome/bounded basis supplied by new initial_selection or basis-bearing resume. Default graph following remains an explicit evaluation decision.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "evaluate_next",
+        "loop_result_domains",
+        "edge_closure_decision"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "An earlier result can stand for a no-action only if it decided the same predicate on the current basis."
+      ],
+      "grounding": [
+        {
+          "end_line": 1044,
+          "quote": "| `no_action(undeclared)` | out_of_frame | the gap needs an action that the admitted catalogue does not publish, or a relation, capability or authority that no admitted basis declares (A3); the value names what is missing and its owner, as for `block(undeclared)` |\n| `no_action(basis)` | invalid_basis | no published action is lawful on the current bound outcome, catalogue and policy, which cannot support the gap, as for `block(basis)` |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1043
+        }
+      ],
+      "key": "selection_result_distinctions",
+      "statement": "Selected invocation is data, not a core-result value. Each typed no-action independently answers whether a published lawful action can be selected for the current gap on the exact basis: undeclared action/relation/capability/authority maps to out_of_frame and names missing item/owner; an unsupporting current bound outcome/catalogue/policy maps to invalid_basis. Domain no-action remains beside core value. Prior closure results remain evidence for selection, never its result or predicate contribution. Rule-branch reprice/block are selection no-actions, not evaluate_action closure decisions. Producing a projection establishes availability only; graph-complete empty selection leaves close's edge value intact.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "edge_closure_decision",
+        "loop_result_domains"
+      ],
+      "conditions": [
+        "Result predicate: the edge's obligations are fulfilled on the exact basis"
+      ],
+      "exceptions": [
+        "For re-enter/block with both undeclared and unsupporting-basis causes, record both and take the basis value."
+      ],
+      "grounding": [
+        {
+          "end_line": 1179,
+          "quote": "| `close` | satisfied | the ledger's admitted evidence fulfils the edge's obligations on the exact basis |",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1169
+        },
+        {
+          "end_line": 1165,
+          "quote": "A decision with both causes records both and takes the\n  `basis` value",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1162
+        }
+      ],
+      "key": "closure_result_mapping",
+      "statement": "Every cause-refined decision maps exactly once and adds no core value: close→satisfied from fulfilled ledger obligations; yield→indeterminate while lawful progress/waiting is admitted with deciding resume basis and no failure; retry(defeated)→falsified when admissible counterevidence defeats this attempt while same action stays lawful; every other retry→retry(undecided)→indeterminate, naming deciding re-attempt, including liveness interruption alone; repair(implementation)→falsified from admitted failing obligation; every other repair→repair(proof)→indeterminate naming repaired proof. Both repairs require coherent governing relation/basis/target and a local defect making same-edge repair lawful. re-enter(undeclared)→out_of_frame for needed upstream/relation change requiring undeclared relation/capability/authority, naming it/owner; re-enter(basis)→invalid_basis for other unsupporting basis, including stale/substituted/unrepairable. reprice→out_of_frame for undeclared selected outcome/bound, naming it, owner and requested constitutional re-entry. block(undeclared)→out_of_frame and block(basis)→invalid_basis when the just-taken action leaves the edge unable to proceed for the corresponding cause. Basis/reason references reproduce every decision; domain vocabulary remains beside its core value.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "edge_closure_decision",
+        "loop_result_domains"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1198,
+          "quote": "A closure decision is not a disposition and is never recorded\nas one, and no disposition is a closure decision: `repair` is not\n`local_repair`, and `re-enter` is not `re_enter`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1186
+        }
+      ],
+      "key": "closure_acceptance_nonidentity",
+      "statement": "Closure decisions answer edge fulfilment, not ACTIVATION accept/local_repair/re_enter/reject candidate-boundary acceptance. Edge closure is acceptance evidence only. repair(proof)=indeterminate differs from local_repair=falsified; re-enter(undeclared)=out_of_frame differs from re_enter=invalid_basis; neither counts toward the other's predicate. In ODD §§11.5D,16,19 'disposition' denotes closure decisions or typed selection no-actions, never ACTIVATION dispositions; §21 denotes RELEASE §9 successor dispositions.",
+      "uncertainty": "Full acceptance and successor-disposition laws are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "edge_closure_decision",
+        "evaluate_next",
+        "evaluate_action"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1227,
+          "quote": "Liveness observes activity,\ninactivity, process state and interruption. It can support yield or a\nliveness interruption; it cannot by itself declare semantic failure,\nsemantic closure or requirement non-satisfaction",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1224
+        }
+      ],
+      "key": "yield_liveness_reentry",
+      "statement": "Yield requires same lawful edge/attempt, admitted progress/waiting, replay-visible resume basis and return of control without failure classification; it is neither retry, block, timeout nor local CLI loop. Liveness alone cannot decide semantic failure/closure/non-satisfaction. evaluate_action may issue repair/re-enter conceptually; evaluate_next selects their published graph realisation from admitted closure truth, not string-based local retry branches.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "service_query_layers"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1240,
+          "quote": "It must not append events, invoke workers, admit intent, run\n`evaluate_action` or choose traversal by itself",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1239
+        }
+      ],
+      "key": "single_loop_and_query_boundary",
+      "statement": "There is one traversal-consequence computational surface. CLI branches, prompts, postflight strings, gap-dossier action lists, query/service/operator summaries cannot rival it. Public queries/gaps views may render gap pressure, closure decisions and next-action projections read-only, but cannot append events, invoke workers, admit intent, run evaluate_action or independently choose traversal.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "edge_closure_decision",
+        "next_action_projection"
+      ],
+      "conditions": [
+        "Every closure decision and next-action selection"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1262,
+          "quote": "If replay cannot reproduce the decision, the implementation has created\nhidden state",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1261
+        },
+        {
+          "end_line": 1296,
+          "quote": "A13a requires that each governing carrier or projection carry the predecessor refs\nthat make reproduction reachable without external joins.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1293
+        }
+      ],
+      "key": "replay_and_causal_reachability",
+      "statement": "Reproduce decisions from RuntimeEventLog, execution basis, event-backed IntentLineage, model publication basis/event refs, exact outcome/bounded-basis refs, gap, target binding, catalogue, admitted evidence, ledger, closure decision, NextActionBasis and visible policy refs. Every governing admitted/replay-derived carrier/projection must carry causal predecessor references, not require external joins. Outcome/bounded basis reaches target binding; lineage→model→gap→binding→priority→selected-action projection→intent→evidence→ledger→decision→next-action basis→post-action projection. Intent preserves authority references; post-action projection also uses fresh gap truth. Broken chains fail carrier replayability and A13; unreproducible decisions imply hidden state.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "graph_function",
+        "abg",
+        "odd_product"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Intentionally opaque internals of one bounded action may use local control flow to compute that action's internal result."
+      ],
+      "grounding": [
+        {
+          "end_line": 1308,
+          "quote": "Once a refinement is published as graph structure,\nthe loop governs it recursively",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1307
+        }
+      ],
+      "key": "recursive_loop_and_method_ownership",
+      "statement": "Each published inner-vector boundary obeys all four functions with its own visible model/gap/binding/action/evidence/ledger/closure/next projection. Opaque internals cannot publish, dispatch, retry, repair, re-enter or close graph work as hidden controllers. ABG retains runtime/event replay/lifecycle/supervision/continuation/re-entry; product retains asset/catalogue meaning, gaps and priority policy. DESIGN_MODULE tier-3 realisation law operates inside this split and cannot fragment eval_gap/evaluate_next/evaluate_action into module-local decision authorities.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "selected_product_outcome"
+      ],
+      "conditions": [
+        "Ticket, design, code or proof touches any of the four functions, traversal, gap evaluation, action selection, intent, invocation, admission, fulfilment, liveness, closure, re-entry, public query or live proof"
+      ],
+      "exceptions": [
+        "Unchanged accepted relations cite their accepted basis and are not proved again."
+      ],
+      "grounding": [
+        {
+          "end_line": 1329,
+          "quote": "the causally\napplicable members of this axiom set and the constitutional equation below\nare the controlling acceptance constraints for the selected Product\noutcome and the affected published boundary.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1323
+        }
+      ],
+      "key": "constitutional_loop_override",
+      "statement": "Causally applicable axioms/equation control acceptance at the selected outcome and affected published boundary; they create no Product work, horizontal growth or scope widening. Local closure wording, test names, grep checks, CLI summaries and implementation notes cannot weaken them. A local checklist with a rival consequence path is not constitutionally complete: request lawful re-entry, retain closure blocker, or admit separately bounded paydown under independently selected outcome/prerequisite. Dossiers, postflight/assurance reports, materialization manifests, liveness projections, run summaries, worker prose, screen/PTY transcripts, prompts, harness targets, grep tests, CLI/query/service output provide evidence/diagnostics/read context only; never independently close/select/route retry, repair or re-entry. Admitted ledger/decision/projection chain wins conflicts; absent chain means no constitutional closure or selection.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constructive_evaluation_loop",
+        "construction_intent",
+        "selected_product_outcome"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Unresolved post_reprice without separately admitted constitutional basis returns typed no-action pending re-entry."
+      ],
+      "grounding": [
+        {
+          "end_line": 1412,
+          "quote": "The implementation is correct only when the next work decision is derived\nfrom that equation, `U` stays causally reachable through the target\nbinding and the construction intent, and no other path can decide what\nwork happens next",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1409
+        }
+      ],
+      "key": "constitutional_equation_dependency",
+      "statement": "The described equation sets U=(outcome, optional bounded basis); projects lineage from event log; synthesizes M0; observes G0; binds U/gap/catalogue/obligations as B0; creates initial Q0 and evaluates N0; separately admits intent using lineage/B0/selected action/projection; invokes and admits evidence; evaluates action A; resynthesizes M1 from lineage/M0/admitted truth; obtains fresh G1 and B1 with U; derives Q1 from A.decision; evaluates and returns N1. A contains ledger and one of seven closure decisions; Q1 is one of seven post-action bases. Correctness requires decisions derive from this equation, U remain causally reachable through binding/intent, and no competing next-work path.",
+      "uncertainty": "The equation is interpreted as source-defined dependency structure, not executed."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "gtl_module"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1420,
+          "quote": "This profile gives the product shape, not the domain semantics.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.6%20Product-specific%20semantics%20sit%20above%20the%20shared%20carrier",
+          "start_line": 1416
+        }
+      ],
+      "key": "structural_domain_separation",
+      "statement": "Shared ODD structure can realise many domains; each product defines its asset meanings, proof lanes and query overlays. Structural GTL law and product-specific semantic law must remain distinct.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "graph_function"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1425,
+          "quote": "Automation must stay true for a manual walkthrough. A human operator using\nonly the declared authority surfaces should be able to",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7%20Manual%20walkthrough%20must%20still%20be%20lawful",
+          "start_line": 1424
+        }
+      ],
+      "key": "manual_walkthrough_fidelity",
+      "statement": "Automation must preserve manual process. Using declared authority alone, a human should identify current typed asset/state; next lawful vector (constitutional transition contract) and public graph function (constructive program); required inputs/evaluators/output/environment; construct or assess produced asset/checkpoint; repeat to target-relative closure. Automation may improve speed/safety/repeatability through prompts, scaffolding, selection, workers, evidence and closure assessment, but cannot skip undeclared nodes, fabricate authority, hide multiple transitions without declared refinement, depend on implementation knowledge unavailable to installed products, or merge installed builder/development-product authority in self-host work. An unexplained manual traversal makes automation not yet method-safe.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "agentic_conformance"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1491,
+          "quote": "Compression is prompt input and never the deciding authority",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1482
+        }
+      ],
+      "key": "agentic_packet_and_walkthrough",
+      "statement": "An F_P coder follows the constitutional process end-to-end on real work using declared surfaces: intake triage, smallest lawful re-entry, specification→requirement→design→ticket chain, constructive loop and closure proof. Context includes input/output contract, required context, role, evaluator regime and provenance; ODD adds the smallest sufficient declared authority packet with source refs. Memory/hidden wholesale context cannot substitute. Compression is prompt input, never deciding authority; general-method derived frames may orient precedence/re-entry/traceability, but product behaviour must come from current product authority packet. Admission enforces conformity rather than enlarging agent context.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "agentic_conformance"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1505,
+          "quote": "An agent that ignored the declared authority, relied on stale memory or\nreasoned badly has produced agent error, not a method defect.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1502
+        },
+        {
+          "end_line": 1524,
+          "quote": "the declared admission gates it deterministically,\nfail-closed and naming the violated rule",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1522
+        }
+      ],
+      "key": "agentic_defect_admission_ratification",
+      "statement": "Produced work must have correct change class, traceability and admission. A stuck walkthrough is a method defect only when a competent correctly configured agent using declared authority cannot decide because an owning surface is ambiguous, missing a step, contradictory or has undecidable change class; reprice that defect into its owner. Ignored authority, stale memory or bad reasoning are agent errors. Admission rejects malformed artifacts either way. Runtime-independent walkthrough proves followability; API load/flaky transport conflate availability with validity and cannot prove process soundness. SPEC_METHOD/TICKETS own artifact criteria; all agentic artifacts pass deterministic fail-closed F_D admission naming violated rules. Passed admission/completed walkthrough are evidence, never ratification; usage cannot amend shared method or constitutionalise grey work.",
+      "uncertainty": "Referenced artifact and shared-method-change rules are unavailable."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "execution_authority_audit"
+      ],
+      "conditions": [
+        "Negative proof of an ODD or graph-native boundary"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1550,
+          "quote": "Closure-grade negative evidence identifies the supported entry and the\ngoverning authority; invalidates the real authority-bearing input;\nexercises the supported path; proves refusal before the prohibited\neffect; and establishes that no legacy, fallback, reconstruction or\nparallel path succeeds.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7B%20Real%20authority-path%20negative%20proof%20%28STDO-UP-010%29",
+          "start_line": 1545
+        }
+      ],
+      "key": "real_authority_negative_proof",
+      "statement": "Exercise the supported Product authority path; do not manufacture expected refusal/blocked-event/gap/verdict. Closure-grade evidence names entry/authority, invalidates actual authority-bearing input, exercises path, proves refusal before prohibited effect and excludes successful legacy/fallback/reconstruction/parallel paths. Source, packaged, installed and runtime absence are separate claims. Where identities apply, path is public entry→admitted GTL composition owning topology→named GraphFunction contract→implementation/plugin only at admitted seam→ABG traversal/event/continuation/replay truth→replay projection→typed Product outcome/continuation. CLI/SDK/service/adapter/plugin/fixture/query/projection cannot rival traversal authority. Consumer owns concrete evidence mechanism; this section owns its required property.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "graph_function",
+        "cumulative_environment"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1581,
+          "quote": "Each retained `GraphFunction` should declare `environment.requires`,\n`environment.provides` and `environment.carries`.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.8%20Cumulative%20environment%20law%20is%20mandatory",
+          "start_line": 1574
+        }
+      ],
+      "key": "cumulative_environment_law",
+      "statement": "Composition requires cumulative typed environment law, not last-output-only wiring. Each retained function should declare environment.requires/provides/carries. Publishing functions without this law is graph-shaped but structurally wrong; the declaration recommendation remains 'should'.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "graph_function",
+        "odd_product"
+      ],
+      "conditions": [
+        "Outer public carrier is refined into inner executable structure; or current product closure is claimed"
+      ],
+      "exceptions": [
+        "A live requirement without executable witness may leave the active branch through explicit deferral or explicit repricing."
+      ],
+      "grounding": [
+        {
+          "end_line": 1597,
+          "quote": "the refined inner chain must close\nlawfully; the enclosing coarse contract must also stay true after\nfold-back; and zoomed and unzoomed views must agree on whether the\nenclosing carrier is open or closed",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.9%20Global%20convergence%20must%20be%20stable%20under%20zoom",
+          "start_line": 1586
+        }
+      ],
+      "key": "closure_stable_under_zoom",
+      "statement": "Local green arcs are insufficient: inner chains close lawfully, coarse contract remains true after fold-back, and zoomed/unzoomed closure agrees. Live current requirements missing executable proof keep enclosing carrier open until realised, deferred or repriced out. Software usually needs realised testcase or archived test evidence, but required witness is a governed realised proof surface appropriate to requirement class, not universally one test format.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "scenario_bundle"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1606,
+          "quote": "A scenario bundle should make clear which feature or\nuse-case boundary is exercised; which assets are expected to exist before\nthe scenario starts; which vectors are expected to be traversed; which\nsignificant paths are expected to be exercised; and what evidence closes\nthe scenario",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F12.%20Scenario%20rule",
+          "start_line": 1602
+        }
+      ],
+      "key": "scenario_proof_expectations",
+      "statement": "Scenario bundles should identify exercised feature/use-case boundary, prerequisite assets, expected vectors, significant paths and closing evidence. Declared scenarios/use cases are preferred sources for selecting significant paths the system must exercise.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [
+        "Product has an installable development form"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1622,
+          "quote": "Where the product has an installable development form, decisive proof\nruns against that installed development form in an isolated environment.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F13.%20Installed-dev%20rule",
+          "start_line": 1615
+        }
+      ],
+      "key": "installed_development_proof",
+      "statement": "Decisive proof runs against installed development form in isolation. A graph-native proving lane should exercise install, bootstrap, traversal, evidence collection and target-relative closure. Useful direct-source checks cannot replace this proof. ASSURANCE §5 owns the bound rule.",
+      "uncertainty": "ASSURANCE §5 is referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "graph_function"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1633,
+          "quote": "The product should be developed through the same graph-native method it\nclaims to provide. Where the product provides ODD framework behaviour, it\nmust build that behaviour through ODD graph functions",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F14.%20Dogfooding%20rule",
+          "start_line": 1626
+        }
+      ],
+      "key": "dogfooding_modal_split",
+      "statement": "Product development should use its claimed graph-native method and increasingly explicit assets/vectors/functions/scenarios/closure. When providing ODD framework behaviour, it must build that behaviour through ODD functions and must not publish ODD-shaped artifacts only after imperative execution decided work. General dogfooding recommendations and conditional framework obligations remain distinct.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1642,
+          "quote": "A release version is not constitutional graph truth; it belongs to the\nrelease process and release metadata.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F15.%20Release%20boundary",
+          "start_line": 1637
+        }
+      ],
+      "key": "release_graph_boundary",
+      "statement": "Current assets/vectors/closures/authority belong to graph-native method; release versions, immutable RC publication, version-line selector advancement and exact-cut acceptance remain the separate RELEASE process surface.",
+      "uncertainty": "RELEASE's full process is not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [
+        "Any enumerated failure pattern holds"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1646,
+          "quote": "This profile is violated when any of these holds (P6):",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F16.%20Failure%20pattern",
+          "start_line": 1646
+        }
+      ],
+      "key": "odd_failure_patterns",
+      "statement": "Any of fifteen patterns violates the profile: claimed step lacking node/vector; function lacking outer contract; automation unexplainable manually; installed product requiring authoring knowledge absent from clean target; scenarios unable to name significant paths; closure without target-relative evidence; last-output wiring bypassing cumulative environment; zoom closure disagreement; imperative transition without published outcome contract; orchestration-first/GTL-later framework; imperative closure/continuation/semantic movement/lineage outside declared owners; hidden product/plugin execution authority; yield flattened into retry/block/timeout/local waiting/CLI loop instead of replay-visible closure decision; query/gap/postflight/service/operator summary deciding work outside loop; or constitutional process unwalkable by coder from declared authority, or artifact accepted without deterministic admission.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [
+        "An agent/designer is told 'using ODD, build this product'"
+      ],
+      "exceptions": [
+        "Read a product-specific method only if one exists."
+      ],
+      "grounding": [
+        {
+          "end_line": 1683,
+          "quote": "When an agent or designer is told `using ODD, build this product`, the\nexpected sequence is",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F17.%20Invocation%20rule",
+          "start_line": 1682
+        }
+      ],
+      "key": "odd_invocation_sequence",
+      "statement": "Expected order: read SPEC_METHOD preserving chain; product method if present; local Intent/Product/relevant requirements/active design; identify source-to-outcome semantic chain; typed domain assets; public carriers; define machine-readable catalogue; define/update GTL outer contracts/live boundaries; establish coarse/refined/proof closure agreement; complete affected-surface execution audit; define lineage→model→observation→binding→selection→evidence→ledger→decision→next-projection loop; define closure vocabulary including lawful yield; define coherent history-based query/projection lane; only then implement code/policy/transport. Imperative scripts followed by GTL wording, documentation-wrapper graph functions and hidden service carriers are excluded.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "conditions": [
+        "Starting cold in a concrete ODD product"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1717,
+          "quote": "Starting cold in a concrete ODD product, read in the order below (P1, P2).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order",
+          "start_line": 1717
+        },
+        {
+          "end_line": 1730,
+          "quote": "9. the GTL module, function catalogue and query surfaces.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FGeneral%20ODD%20product",
+          "start_line": 1730
+        },
+        {
+          "end_line": 1750,
+          "quote": "product-specific method sets the domain law, and the local product\nsurfaces set the current build line.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FWorld-model%20product",
+          "start_line": 1747
+        }
+      ],
+      "key": "cold_start_orders",
+      "statement": "General order: SPEC_METHOD; ODD profile; stdo_<label>.json; applicable bound project frame basis and authorised activation packet; bound Intent; bound Product; relevant bound requirements; active bound design; GTL/catalogue/query. World-model order inserts WORLD_MODEL after ODD, then definition, frame basis/packet, Intent, Product, requirement families, current design, finally GTL/catalogue/query/proof lane. Profile sets structure, product method domain law, local surfaces current build. Skipping order usually loses domain or uses wrong carrier; this is a tendency, not universal certainty.",
+      "uncertainty": "Referenced reading materials and concrete project bindings are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "odd_product",
+        "agentic_conformance"
+      ],
+      "conditions": [
+        "LLM ramps into an ODD product"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1754,
+          "quote": "An LLM ramping into an ODD product should quickly answer",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F19.%20Ramp-up%20checklist",
+          "start_line": 1754
+        }
+      ],
+      "key": "ramp_up_expectations",
+      "statement": "Should quickly identify semantic chain, typed assets, public functions, machine-readable catalogue, GTL module, ABG/product split, query lane, each projection's admitted source and structural-drift refusal, evidence excluding escaped execution authority, constructive loop, closure vocabulary/replay-visible yield, capability proof surfaces, outer carriers held open by missing requirement proofs despite green inner lanes, and agentic declared-authority followability plus deterministic artifact admission. Failure to answer quickly means insufficiently ODD-shaped under this checklist.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 40,
+          "quote": "Use a post when the content is provisional, investigative, comparative,\nargumentative or not yet ratified",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F2.%20Boundary",
+          "start_line": 35
+        }
+      ],
+      "key": "post_content_boundary",
+      "statement": "Use posts for provisional, investigative, comparative, argumentative or unratified content; not live requirements, live design decisions or active process law, whose homes are applicable bound WHAT or ratified design surfaces.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post",
+        "post_carrier"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 78,
+          "quote": "A carrier that is not a file must preserve an equivalent stable post\nidentity, publication time, category, subject, author, discussion state\nand supersession history",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F4.%20Carrier%20identity",
+          "start_line": 76
+        }
+      ],
+      "key": "post_identity_requirements",
+      "statement": "Default local-file names use YYYYMMDDTHHMMSS_CATEGORY_SUBJECT.md, illustrated by 20260327T120000_REVIEW_bootloader-boundary.md. Subject should be short, specific and stable for scanning. Non-file carriers must preserve equivalent stable identity, publication time, category, subject, author, discussion state and supersession history.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post",
+        "post_categories",
+        "post_template"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "MATRIX central content is a decision table rather than free prose."
+      ],
+      "grounding": [
+        {
+          "end_line": 82,
+          "quote": "A post takes one of these categories",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories",
+          "start_line": 82
+        },
+        {
+          "end_line": 115,
+          "quote": "In a `MATRIX` post the central section is a decision table rather than\nfree prose",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F6.%20Structure",
+          "start_line": 114
+        }
+      ],
+      "key": "post_category_and_shape",
+      "statement": "Every post takes one of the six declared categories and uses the declared base shape, preserving optional Updated and the MATRIX variation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post",
+        "post_discussion_state"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Updated is added or revised when useful; updating Closed is discouraged, not absolutely prohibited."
+      ],
+      "grounding": [
+        {
+          "end_line": 136,
+          "quote": "Updating a `Closed` post is discouraged. Prefer a new post when a later\nchange would materially alter a closed conclusion, reopen an old\ndispute or start a new bounded subject",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F7.%20Discussion%20state%20and%20mutability",
+          "start_line": 134
+        }
+      ],
+      "key": "post_mutability_and_history",
+      "statement": "Status must expose discussion state. Draft/Open posts are updated in place for the same bounded discussion: corrections, replies, refined recommendations, confidence repricing or new same-subject evidence. Open updates retain original Date as first publication time and optionally useful Updated. Prefer a new post for materially changed closed conclusions, reopened disputes or new subjects. Closed remains a stable commentary record until adoption into bound WHAT, ratified design or accepted implementation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "An open post may be revised in place; closed posts should normally be superseded, not invariably."
+      ],
+      "grounding": [
+        {
+          "end_line": 152,
+          "quote": "1. State whether the post describes current reality, target direction or\n   both (P1).\n2. Keep findings separate from recommendations (P6).\n3. Make claims with exact file or requirement references (P3, P6).\n4. Do not present a post as if it were already ratified (P6).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F8.%20Posting%20rules",
+          "start_line": 144
+        }
+      ],
+      "key": "posting_rules",
+      "statement": "State current reality, target direction or both; separate findings/recommendations; give exact file/requirement references for claims; never present commentary as already ratified; never stealth-rewrite closed history; keep one bounded subject. Normal closed-history handling is supersession by a new post.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "post"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 160,
+          "quote": "A post becomes consequential only when its content is explicitly adopted\ninto a bound WHAT surface, ratified design or accepted implementation.\nUntil then it is commentary, not law",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F9.%20Ratification",
+          "start_line": 158
+        },
+        {
+          "end_line": 169,
+          "quote": "A post that carries such evidence or proposes such a change does not\nadopt it (§9)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F10.%20Shared%20method%20adoption",
+          "start_line": 167
+        }
+      ],
+      "key": "post_adoption_boundary",
+      "statement": "Consequential standing requires explicit content adoption into bound WHAT, ratified design or accepted implementation. Discussion closure, evidence posting or proposing reusable method change does not adopt it. STDO-UP-012's incident/review-to-consumer adoption law is owned once by SPEC_METHOD §6.",
+      "uncertainty": "The full shared-method adoption law is outside supplied source."
+    },
+    {
+      "applies_to_keys": [
+        "product_definition_overlay",
+        "product_definition_identity",
+        "definition_label",
+        "product_definition_interoperability"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "Multiple files in a directory are allowed only for multiple distinct current product WHATs."
+      ],
+      "grounding": [
+        {
+          "end_line": 77,
+          "quote": "A URI locator, filename, path or\ndisplay label cannot mint or widen identity authority",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 76
+        }
+      ],
+      "key": "definition_cardinality_identity_location",
+      "statement": "Publish one JSON definition per distinct current WHAT; several build tenants for the same WHAT are entries in that one definition, never extra files. Definition identity may persist across releases, each retaining own Product/release identity; fork/replacement/independently governed WHAT requires another definition_id. Definition/Product/context/tenant URIs are non-self-authorising and remain under IDENTITY and owning authorities. Directory is definition root; relative URIs resolve against definition retrieval URI; product.source_project may point there or elsewhere. Proximity grants no authority. Schema/template standardise only locating/relating/discovering identities, never referenced semantic content.",
+      "uncertainty": "IDENTITY and the full STDO-SURFACE-001 section are not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "project_binding_family",
+        "product_definition_overlay"
+      ],
+      "conditions": [
+        "Relevant F12 instance premises hold"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 124,
+          "quote": "By P5 an ambiguous selection is no selection, so discovery selects exactly one applicable definition for a scope or fails closed",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 116
+        },
+        {
+          "end_line": 121,
+          "quote": "profile availability, Product adoption and activation for one actor and subject are distinct relations",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 121
+        }
+      ],
+      "key": "project_binding_family_consequences",
+      "statement": "F12 consequences: bind existing project surfaces without restructuring or copying their content; keep definition/Product/release/tenant/project identities separate; infer no inheritance/composition from location; discover exactly one applicable definition or fail closed and verify explicit composition identity; complete selected documents recover needed meaning without derived entrypoint narrowing or design ontology invention; select/verify one complete immutable release, change only on exact-plan owner acceptance and retain/recover prior state on unverifiability; material terms resolve to exactly one concept under explicit context/basis, zero/multiple fail closed, cross-context meaning requires owner-authorised relation and scoped candidate/owner declarations; imports refer to owner without redefinition/loss/authority gain, bind coordinates and re-establish applicability after changes, report missing source/adoption/authority before reliance; finite actors engage through Product-admitted frame basis, separate availability/adoption/activation and frame/actor/lineage identities, definition records no agent/activation/temporary configuration; independently locate WHAT/realisations/work, registry identifies tenants, goals own work wave, tickets state, comments commentary; members govern together as one released version with one law owner, derived clauses preserve conditions/digests and stale on change, matching digest proves identity not fidelity; bootstrap copies selected-release template, binds existing surfaces, creates no competing method root, and may start requirements from any legitimate constitutional input.",
+      "uncertainty": "Full owning sections and consumer loci are not supplied; these are table-stated consequences, not reconstruction of those sections."
+    },
+    {
+      "applies_to_keys": [
+        "project_binding_family",
+        "product_definition_member"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 124,
+          "quote": "any widening of Product scope to an executable tool, runtime or realisation: separate explicit human authorisation",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 123
+        }
+      ],
+      "key": "project_binding_choice_ownership",
+      "statement": "F12 identifies member choices, not consequences supplied by commitments: JSON/filename/label/schema/template/relation fields; composition fields/conformance checks; five sufficiency dimensions; manager/store/commands/hash/bootstrap markers/prune list; semantic address/resolution order/non-import relation kinds/carrier coordinates/conformance cases; WHAT/HOW/ticketing fields and projected registry; scaffold/layout/bootstrap order as defaults, not path law. FOUNDATIONS owns import declaration contents/forms; ACTIVATION owns generic staleness; named local authority owns local axioms/overrides/disambiguations; Product authority alone adopts profiles/configurations/frame sets/grants; each tenant design owns its WHAT binding. Members-together release policy is this member's. Executable-tool/runtime/realisation scope widening needs separate explicit human authorisation. F12 consumers apply owning rules without additional determinations; §13 dispositions decide nothing.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_definition_overlay"
+      ],
+      "conditions": [
+        "Every product definition"
+      ],
+      "exceptions": [
+        "product.bounded_context may be null when no separate enclosing context is claimed; sprint bindings are optional; shared realisation surfaces are included when present."
+      ],
+      "grounding": [
+        {
+          "end_line": 180,
+          "quote": "Each definition contains",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F2.%20Required%20definition%20relations",
+          "start_line": 154
+        }
+      ],
+      "key": "required_definition_fields",
+      "statement": "Required map: product stable definition identity/name/source-project locator/explicit context-or-null; constitution.stdo source repository/mutable discovery selector/exact installed basis and deterministic manifest digest; additional_authorities containing every non-STDO constitutional set; basis-qualified entrypoints; agent_bootstrap entrypoint and marker-managed instruction targets; local_constitution axioms/overrides/disambiguations with owner/target/basis/scope and applicable context-qualified resolution; one or more accepted reference_frame_bases with admitting authorities/scopes; what current Intent/Product/specification; how shared surfaces and one or more independent tenants; ticketing Goals/tickets/comments/optional sprints; explicit composition relations; $schema locator and kind=stdo.product-definition.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "product_definition_overlay"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 192,
+          "quote": "The overlay owns this locator and relation map; the referenced documents\nown their content. Repeating source truth inside the JSON creates a rival\nauthority and is non-conformant",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F2.%20Required%20definition%20relations",
+          "start_line": 182
+        }
+      ],
+      "key": "overlay_content_and_context_boundary",
+      "statement": "JSON repetition of referenced source truth is non-conformant rival authority. product.bounded_context describes only enclosing context of own WHAT, not an exhaustive namespace registry; it cannot flatten subordinate/peer/composed/tenant/user/runtime contexts. Their owners retain definitions, and every local disambiguation names its exact applicable context.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "constitutional_set",
+        "product_definition_overlay",
+        "installed_release_basis"
+      ],
+      "conditions": [],
+      "exceptions": [
+        "One document may cover several dimensions, and one dimension may span several owning documents."
+      ],
+      "grounding": [
+        {
+          "end_line": 224,
+          "quote": "The STDO basis identifies one complete\nimmutable RC cut and its exact installed-release manifest, never a\nhand-selected subset.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F3.%20Constitutional-set%20sufficiency",
+          "start_line": 219
+        }
+      ],
+      "key": "constitutional_sufficiency_dimensions",
+      "statement": "Selected set must recover axioms (starting truths/invariants/refusals), ontology (real kinds/identities/relations/boundaries/lifecycle), epistemology (knowledge/acceptability/evidence/observation/uncertainty/falsification/decision authority), taxonomy (category distinctions), and semantics (terms/relations/states/operations/outcomes). These are set-level dimensions, not filenames/folders/partitions. constitution.stdo.basis locates complete immutable cut/exact manifest, additional_authorities every additional set/source, entrypoints each their resolving basis. Navigation cannot narrow/replace constitution. Product meaning ontology belongs in or is cited by bound WHAT; accepted boundary-design ontology remains derived semantic-design authority and cannot invent missing Product meaning.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "adoption_plan",
+        "fleet_adoption_plan"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 265,
+          "quote": "The canonical bytes are UTF-8\nJSON with recursively sorted object keys, two-space indentation, LF line\nendings and one final LF. Fleet order is deterministic discovery-path\norder.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 261
+        }
+      ],
+      "key": "adoption_plan_hashing",
+      "statement": "Hash acceptance object only, excluding local installation status and machine-local paths. Canonical representation is UTF-8 JSON, recursively sorted object keys, two-space indentation, LF endings and one final LF. Fleet order is deterministic discovery-path order, making digests independently reproducible rather than session tokens.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "installed_release_basis",
+        "product_definition_overlay"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 292,
+          "quote": "Every manager-owned component from the\nconfigured store root downward is a physical directory or regular file of\nits declared type",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 286
+        },
+        {
+          "end_line": 299,
+          "quote": "`constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`\nare the sole authored STDO selection for that Product Definition",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 298
+        }
+      ],
+      "key": "release_store_and_selection_integrity",
+      "statement": "Registry maps logical URIs to paths/digests but owns neither selection nor meaning. Every manager-owned component from configured root down must be physical directory/regular file of declared type; symlinks, junctions, reparse points, devices, sockets and other special/redirection entries fail closed. Inventory includes directories and all entry types, rejects anything not derived from manifest exact paths, never follows unmanifested aliases. Source repository is transport; mutable stdo://channels/<version> selector is discovery under RELEASE, not operative authority. Only basis.uri plus basis.manifest_sha256 author STDO selection.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "adoption_plan",
+        "fleet_adoption_plan"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 321,
+          "quote": "mutating `adopt` requires that exact prior plan digest as explicit\n  acceptance",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 311
+        }
+      ],
+      "key": "manager_command_boundaries",
+      "statement": "install admits explicitly named immutable cut without definition changes; sync installs/verifies only already-selected exact basis without consulting selector; adopt --dry-run resolves annotated selector/RC and presents cut/tag/commit/tree/manifest/current-definition byte digest/plan digest without mutation; mutating adopt requires explicit exact prior digest acceptance, re-derives before installation, installs only bound target, rechecks definition bytes and atomically changes only basis and basis-relative schema locator, refusing any drift. status/verify/list/manifest/resolve are read-only toward definitions. Fleet adoption presents/requires aggregate digest acceptance over every plan; all fleet writes need explicit whole-selection authorisation and infer no nesting-based composition/inheritance.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "installed_release_basis"
+      ],
+      "conditions": [
+        "Any enumerated invalid condition"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 332,
+          "quote": "Missing cuts, moved immutable tags, tag-to-commit mismatch, manifest-digest\nmismatch, missing, extra or changed installed members, ambiguous Product\nDefinition discovery, unaccepted or stale adoption plans, URI escape,\nphysical store redirection, undeclared filesystem entry types and malformed\nbootstrap markers fail closed",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 323
+        }
+      ],
+      "key": "manager_fail_closed_conditions",
+      "statement": "Fail closed on missing cuts, moved immutable tags, tag/commit mismatch, manifest mismatch, missing/extra/changed installed members, ambiguous definitions, unaccepted/stale plans, URI escape, store redirection, undeclared entry types or malformed bootstrap markers. Parse every stdo: schema locator before loading, with case-insensitive scheme semantics; it must name the basis's same immutable cut. Spelling variations, caches, registries, source checkouts, version aliases, schemas and agent files cannot silently replace selected basis.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "product_definition_overlay"
+      ],
+      "conditions": [
+        "Managing constitution.agent_bootstrap targets"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 347,
+          "quote": "Exactly one correctly ordered marker span may be replaced;\nthe bytes before and after it, trailing whitespace included, stay\nproject-owned and byte-identical, and appending a new span preserves all\nexisting bytes as an exact prefix.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 342
+        }
+      ],
+      "key": "bootstrap_marker_boundary",
+      "statement": "Bootstrap embeds no other constitution: one basis-qualified entrypoint and small manager-owned marked discovery blocks in declared local instruction targets, such as AGENTS.md/CLAUDE.md. Targets are portable relative paths against product.source_project; absolute paths, parent traversal, redirected components or boundary escape fail closed. Fleet confines resolved projects to authorised root and preflights every target before any write. Replace exactly one correctly ordered span while preserving all outside bytes including trailing whitespace; new-span append preserves every existing byte as exact prefix. Bootstrap routes to applicable definition/exact basis/owners, never restates or overrides them.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "product_definition_overlay"
+      ],
+      "conditions": [
+        "Recursive fleet discovery"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 357,
+          "quote": "These exclusions are discovery law, not evidence\nthat an excluded tree lacks another independently governed Product",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 355
+        }
+      ],
+      "key": "fleet_discovery_exclusions",
+      "statement": "Prune exact directory names .git, .hg, .svn, .bzr, .venv, venv, node_modules, vendor, site-packages, build, dist, out, target, .gradle, .tox, .nox, .cache, .ruff_cache, .mypy_cache, .pytest_cache, __pycache__, .genesis and .stdo. Discovered definitions cannot themselves be symlinks. Pruning does not establish absence of independently governed Products inside excluded trees.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "retained",
+      "keys": [
+        "abg"
+      ],
+      "reason": "Runtime ownership retained as source-described role.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "odd_product"
+      ],
+      "reason": "Domain ownership retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "service_query_layers",
+        "service_layer_latitude"
+      ],
+      "reason": "Possible responsibilities and excluded truth ownership retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "core_law_all_clauses"
+      ],
+      "reason": "Universal necessary condition retained without certification.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "typed_assets",
+        "explicit_typed_boundaries"
+      ],
+      "reason": "Typed boundary and conditional surface declaration retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "graph_function",
+        "named_constructive_carrier"
+      ],
+      "reason": "Constructive carrier requirement and exclusions retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "outcome_traversal",
+        "outcome_first_order",
+        "imperative_adapter_latitude"
+      ],
+      "reason": "Construction order, declared content and imperative boundary retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "function_catalogue",
+        "catalogue_publication"
+      ],
+      "reason": "Must-publish and should-expose modalities distinguished.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "gtl_module",
+        "public_carrier_contract",
+        "gtl_publishes_graph_functions"
+      ],
+      "reason": "Publication and refinement contract retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "current_state_projection_boundary",
+        "query_overlay_latitude"
+      ],
+      "reason": "Projection meaning and permitted overlays retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "cooperative_continuation_boundary",
+        "bounded_product_step_latitude",
+        "abg_controls_product_continuation"
+      ],
+      "reason": "Cooperative application authority and drift boundary retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "execution_authority_audit",
+        "execution_audit_trigger_and_uniqueness",
+        "execution_audit_inventory",
+        "admission_execution_distinction",
+        "hidden_authority_prevents_closure",
+        "odd_external_authority_references"
+      ],
+      "reason": "Audit law retained; external admission/role owners remain unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "projection_source_coherence",
+        "projection_processing_latitude"
+      ],
+      "reason": "Structural rather than nominal coherence and refusal conditions retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "constructive_evaluation_loop",
+        "selected_product_outcome",
+        "intent_lineage",
+        "product_asset_model",
+        "worksite",
+        "runtime_event_log",
+        "runtime_projection",
+        "observation_snapshot",
+        "gap_pressure",
+        "target_obligation_binding",
+        "action_catalog",
+        "next_action_basis",
+        "priority_projection",
+        "construction_intent",
+        "admitted_evidence",
+        "edge_fulfillment_ledger",
+        "edge_closure_decision",
+        "next_action_projection",
+        "synthesize_model",
+        "eval_gap",
+        "evaluate_next",
+        "evaluate_action",
+        "loop_result_domains",
+        "outcome_conservation_and_stop",
+        "evaluation_function_separation",
+        "exact_target_and_intent_admission",
+        "governed_workspace_ledger_pair",
+        "ledger_attention_and_evidence",
+        "next_action_totality",
+        "selection_result_distinctions",
+        "closure_result_mapping",
+        "closure_acceptance_nonidentity",
+        "yield_liveness_reentry",
+        "single_loop_and_query_boundary",
+        "replay_and_causal_reachability",
+        "recursive_loop_and_method_ownership",
+        "constitutional_loop_override",
+        "constitutional_equation_dependency",
+        "loop_implementation_latitude",
+        "fp_bounded_freedom",
+        "outcome_governs_loop",
+        "synthesis_produces_model",
+        "gap_evaluation_observes_worksite",
+        "action_evaluation_produces_closure",
+        "next_evaluation_consumes_closure",
+        "ledger_folds_evidence",
+        "loop_external_semantics",
+        "loop_operational_representation",
+        "no_action_dual_cause_uncertainty"
+      ],
+      "reason": "Carriers, function boundaries, axioms, causal order and result distinctions retained as data; external diagnoses and executable semantics remain residual.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "structural_domain_separation"
+      ],
+      "reason": "Domain ownership and structural law separation retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.6%20Product-specific%20semantics%20sit%20above%20the%20shared%20carrier"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "manual_walkthrough_fidelity"
+      ],
+      "reason": "Walkthrough recommendation, automation obligations and exclusions retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7%20Manual%20walkthrough%20must%20still%20be%20lawful"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "agentic_conformance",
+        "agentic_packet_and_walkthrough",
+        "agentic_defect_admission_ratification",
+        "agentic_external_rules"
+      ],
+      "reason": "Conformance split and error distinctions retained; unavailable governing rules identified.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "real_authority_negative_proof"
+      ],
+      "reason": "Negative-proof property, conditional supported path and ownership retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7B%20Real%20authority-path%20negative%20proof%20%28STDO-UP-010%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "cumulative_environment",
+        "cumulative_environment_law"
+      ],
+      "reason": "Mandatory composition law and softer field-declaration modality retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.8%20Cumulative%20environment%20law%20is%20mandatory"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "closure_stable_under_zoom"
+      ],
+      "reason": "Refinement closure, proof-class awareness and explicit deferral/repricing retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.9%20Global%20convergence%20must%20be%20stable%20under%20zoom"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "scenario_bundle",
+        "scenario_proof_expectations"
+      ],
+      "reason": "Scenario role and recommendations retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F12.%20Scenario%20rule"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "installed_development_proof"
+      ],
+      "reason": "Conditional installed-proof rule retained with external owner acknowledged.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F13.%20Installed-dev%20rule"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "dogfooding_modal_split"
+      ],
+      "reason": "Recommendation and framework-specific obligation distinguished.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F14.%20Dogfooding%20rule"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "release_graph_boundary"
+      ],
+      "reason": "Release process separation retained without importing release procedure.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F15.%20Release%20boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "odd_failure_patterns"
+      ],
+      "reason": "All fifteen independently sufficient violation patterns retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F16.%20Failure%20pattern"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "odd_invocation_sequence"
+      ],
+      "reason": "Fourteen-step expected sequence interpreted without invoking it.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F17.%20Invocation%20rule"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "cold_start_orders"
+      ],
+      "reason": "Cold-start applicability retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "cold_start_orders"
+      ],
+      "reason": "Nine-step general reading order retained as subject data.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FGeneral%20ODD%20product"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "cold_start_orders"
+      ],
+      "reason": "Ten-step specialised order and qualified consequence retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F18.%20Cold-start%20reading%20order%2FWorld-model%20product"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ramp_up_expectations"
+      ],
+      "reason": "Fourteen readiness questions retained without answering for a concrete product.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F19.%20Ramp-up%20checklist"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "odd_canonical_compression",
+        "compression_subordinate_to_sources"
+      ],
+      "reason": "Summary role and source precedence retained; substantive rules represented in their owning supplied sections.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F20.%20Canonical%20compression"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "odd_source_dispositions",
+        "odd_predecessor_conservation_unverified"
+      ],
+      "reason": "Provenance claims retained; predecessor conservation and omitted loci cannot be independently verified.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "posting_guide",
+        "posting_external_and_predecessor_dependencies"
+      ],
+      "reason": "Guide ownership and imported dependencies retained without reconstructing their owners.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post"
+      ],
+      "reason": "Commentary purposes and nonconstitutional status retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F1.%20Position"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_content_boundary"
+      ],
+      "reason": "Appropriate and excluded content classes retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F2.%20Boundary"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_carrier",
+        "post_carrier_variation",
+        "definition_locates_comments"
+      ],
+      "reason": "Bound location, alternatives and authority boundary retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_identity_requirements"
+      ],
+      "reason": "File pattern, recommendation and non-file equivalence retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F4.%20Carrier%20identity"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_categories",
+        "post_category_and_shape"
+      ],
+      "reason": "Six categories and their meanings retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F5.%20Categories"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_template",
+        "post_category_and_shape"
+      ],
+      "reason": "Template interpreted as template; no post instantiated.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F6.%20Structure"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_discussion_state",
+        "post_mutability_and_history"
+      ],
+      "reason": "State meanings, update conditions and nonabsolute closed-post guidance retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F7.%20Discussion%20state%20and%20mutability"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "posting_rules"
+      ],
+      "reason": "Six posting rules retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F8.%20Posting%20rules"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "post_adoption_boundary"
+      ],
+      "reason": "Explicit adoption prerequisite retained without ratification.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F9.%20Ratification"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "post_adoption_boundary",
+        "posting_external_and_predecessor_dependencies"
+      ],
+      "reason": "Evidence/proposal does not adopt; external owner remains unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F10.%20Shared%20method%20adoption"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "posting_source_dispositions",
+        "posting_external_and_predecessor_dependencies"
+      ],
+      "reason": "Nine conservation claims retained as claims; predecessor comparison unavailable.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F11.%20Source%20dispositions"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "product_definition_member",
+        "product_definition_external_dependencies"
+      ],
+      "reason": "Member ownership, tiers, contexts and consumed-owner boundaries retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "product_definition_overlay",
+        "definition_label",
+        "product_definition_identity",
+        "product_definition_interoperability",
+        "definition_cardinality_identity_location",
+        "definition_uses_interoperability_shape",
+        "definition_identity_carried_by_overlay"
+      ],
+      "reason": "Overlay cardinality, identity distinctions, resolution and schema/template roles retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "project_binding_family",
+        "project_binding_family_consequences",
+        "project_binding_choice_ownership",
+        "family_consumer_routes_unresolved"
+      ],
+      "reason": "Ten rows' premises, consequences and choice ownership retained; detailed external consumer applicability remains unresolved.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "required_definition_fields",
+        "overlay_content_and_context_boundary"
+      ],
+      "reason": "Required map, cardinalities, nullable context and nonflattening boundary retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F2.%20Required%20definition%20relations"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "constitutional_set",
+        "constitutional_sufficiency_dimensions"
+      ],
+      "reason": "Set-level sufficiency and navigation/design authority boundaries retained.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F3.%20Constitutional-set%20sufficiency"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "installed_release_basis",
+        "adoption_plan",
+        "fleet_adoption_plan",
+        "stdo_toolchain_manager",
+        "adoption_plan_hashing",
+        "release_store_and_selection_integrity",
+        "manager_command_boundaries",
+        "manager_fail_closed_conditions",
+        "bootstrap_marker_boundary",
+        "fleet_discovery_exclusions",
+        "release_store_location_latitude",
+        "definition_selects_installed_basis",
+        "fleet_aggregates_adoption_plans",
+        "manager_realisation_not_executed"
+      ],
+      "reason": "Basis, plans, command/refusal/physical-store/bootstrap/discovery laws retained descriptively; schemas and operational enforcement are not instantiated.",
+      "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "Own transport, sessions, routing, browser-safe projections and APIs."
+      ],
+      "applies_to_keys": [
+        "service_query_layers"
+      ],
+      "forbidden": [
+        "Own runtime or continuation truth.",
+        "Hide the real constructive carrier behind the word service."
+      ],
+      "grounding": [
+        {
+          "end_line": 604,
+          "quote": "The real constructive carrier is never hidden\nbehind the word service",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+          "start_line": 603
+        }
+      ],
+      "key": "service_layer_latitude"
+    },
+    {
+      "allowed": [
+        "Minimal necessary imperative adapters transporting/persisting facts: file/network IO, CLI/API transport, event persistence, runtime invocation, projection rendering and tool execution already admitted by declared traversal."
+      ],
+      "applies_to_keys": [
+        "outcome_traversal",
+        "odd_product"
+      ],
+      "forbidden": [
+        "Imperative ownership of domain meaning, semantic target movement, step selection, closure semantics, lineage truth or constructive workflow truth."
+      ],
+      "grounding": [
+        {
+          "end_line": 650,
+          "quote": "Imperative adapter code is lawful only where it transports or persists\nfacts",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "start_line": 645
+        }
+      ],
+      "key": "imperative_adapter_latitude"
+    },
+    {
+      "allowed": [
+        "Expose asset views, catalogue views, checkpoint overlays, provenance overlays and domain explainability overlays."
+      ],
+      "applies_to_keys": [
+        "service_query_layers"
+      ],
+      "forbidden": [
+        "Redefine ABG runtime facts."
+      ],
+      "grounding": [
+        {
+          "end_line": 679,
+          "quote": "The ODD query lane may expose asset views, function catalogue views,\ncheckpoint overlays, provenance overlays and domain-specific\nexplainability overlays",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+          "start_line": 677
+        }
+      ],
+      "key": "query_overlay_latitude"
+    },
+    {
+      "allowed": [
+        "Publish typed assets/evidence; execute one admitted bounded constructive step; publish downstream read models/domain overlays; return control to ABG."
+      ],
+      "applies_to_keys": [
+        "odd_product"
+      ],
+      "forbidden": [
+        "Replace ABG continuation through local orchestration."
+      ],
+      "grounding": [
+        {
+          "end_line": 690,
+          "quote": "The product may publish typed assets and evidence, execute one admitted\nbounded constructive step, publish downstream read models or domain\noverlays, and return control to ABG.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry",
+          "start_line": 688
+        }
+      ],
+      "key": "bounded_product_step_latitude"
+    },
+    {
+      "allowed": [
+        "Summarise, index, filter or render admitted carrier/runtime/event/source truth."
+      ],
+      "applies_to_keys": [
+        "service_query_layers"
+      ],
+      "forbidden": [
+        "Reconstruct alternate authority beside admitted carrier."
+      ],
+      "grounding": [
+        {
+          "end_line": 769,
+          "quote": "They may summarise, index,\nfilter or render that truth; they must not reconstruct an alternate\nauthority surface beside the admitted carrier",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5C%20Projection-source%20coherence",
+          "start_line": 767
+        }
+      ],
+      "key": "projection_processing_latitude"
+    },
+    {
+      "allowed": [
+        "Use different carrier names while preserving authority shape.",
+        "Share libraries among four functions without sharing authority.",
+        "Use local control flow inside an intentionally opaque bounded action to compute its internal result."
+      ],
+      "applies_to_keys": [
+        "constructive_evaluation_loop"
+      ],
+      "forbidden": [
+        "Use opaque internals as hidden graph controllers.",
+        "Transfer one function's authority to another."
+      ],
+      "grounding": [
+        {
+          "end_line": 817,
+          "quote": "Implementations may use other carrier\nnames but must keep this authority shape",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 816
+        }
+      ],
+      "key": "loop_implementation_latitude"
+    },
+    {
+      "allowed": [
+        "F_P may inspect, discover, reason, draft, transform and propose within its bounded action."
+      ],
+      "applies_to_keys": [
+        "constructive_evaluation_loop"
+      ],
+      "forbidden": [
+        "F_P closing edges, emitting runtime events, mutating ledgers or deciding re-entry.",
+        "Giving an F_P worker an F_D-authored semantic extraction recipe when the edge requires F_P judgment."
+      ],
+      "grounding": [
+        {
+          "end_line": 1078,
+          "quote": "F_P may inspect, discover, reason, draft,\ntransform and propose within the bounded action. F_P must not close the\nedge, emit runtime events, mutate ledgers or decide re-entry.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1071
+        }
+      ],
+      "key": "fp_bounded_freedom"
+    },
+    {
+      "allowed": [
+        "Existing project may bind another directory, repository resource, message board, API collection or product-scoped query instead of default local path."
+      ],
+      "applies_to_keys": [
+        "post_carrier",
+        "post"
+      ],
+      "forbidden": [
+        "Carrier substitution losing commentary/authority distinction.",
+        "Location or visibility turning commentary into ticket, Product, requirement or design truth."
+      ],
+      "grounding": [
+        {
+          "end_line": 58,
+          "quote": "An existing project may bind another directory, a repository resource, a\nmessage board, an API collection or a product-scoped query instead.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location",
+          "start_line": 54
+        }
+      ],
+      "key": "post_carrier_variation"
+    },
+    {
+      "allowed": [
+        "Store at any machine-local path.",
+        "Several definitions on one machine concurrently select different installed cuts.",
+        "Consumer repository without project-local standards copy or prescribed folder layout."
+      ],
+      "applies_to_keys": [
+        "stdo_toolchain_manager",
+        "product_definition_overlay"
+      ],
+      "forbidden": [
+        "Store/registry claiming Product selection or method meaning.",
+        "Physical redirection or unmanifested aliases within manager-owned store."
+      ],
+      "grounding": [
+        {
+          "end_line": 286,
+          "quote": "The store may live at any machine-local path.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 281
+        }
+      ],
+      "key": "release_store_location_latitude"
+    }
+  ],
+  "limitations": [
+    "This is source interpretation only: no semantic acceptance, execution, Product instantiation, installed qualification or completeness judgment is asserted.",
+    "Only supplied source sections were interpreted. Graphify nodes and links outside them remain discovery leads; confidence and connectivity confer no authority.",
+    "Referenced FOUNDATIONS, ACTIVATION, SPEC_METHOD, TICKETS, RELEASE, ASSURANCE, IDENTITY, REFERENCE_FRAME, PROFILES, DESIGN_MODULE, WORLD_MODEL and other owning bodies are not supplied in full. Their meanings are not fabricated from link labels.",
+    "The source's calculus, F_P/F_D/F_H roles, core-result mappings, authority claims and approval requirements are subject data, not governing instructions for this interpretation.",
+    "Judgments, traversals and transformations are not added to the author schema; their adapter populations remain empty. Source-described operational semantics are expressed as concepts and constraints, with execution/proof detail retained as residual.",
+    "Predecessor conservation, same-digest fidelity and cross-member consumer applicability are reported as source claims rather than independently verified facts.",
+    "Repetitive laws and provenance-table rows are compacted by meaning. External consumer-route inventories and predecessor row-by-row verification remain residual rather than receiving fabricated graph endpoints.",
+    "No concrete product, selected outcome, authority packet, ledger, release bytes, schema document, adoption plan, fleet or accepted artifact is supplied; no such instance is assessed."
+  ],
+  "relations": [
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 666,
+          "quote": "The product must publish the public graph-function carriers",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "start_line": 663
+        }
+      ],
+      "key": "gtl_publishes_graph_functions",
+      "kind": "operative_publication",
+      "meaning": "The GTL module is the required operative publication surface of public graph-function carriers.",
+      "source_key": "gtl_module",
+      "target_key": "graph_function"
+    },
+    {
+      "conditions": [
+        "ODD application over GTL/ABG"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 686,
+          "quote": "ABG owns continuation authority, re-entry after\npublish boundaries, the graph-call lifecycle, and step selection over the\ndeclared graph",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5A%20ABG%20owns%20continuation%20and%20re-entry",
+          "start_line": 684
+        }
+      ],
+      "key": "abg_controls_product_continuation",
+      "kind": "continuation_authority",
+      "meaning": "ABG controls continuation and re-entry of the cooperative product subsystem.",
+      "source_key": "abg",
+      "target_key": "odd_product"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 800,
+          "quote": "The selected Product outcome under STDO-UP-013\n([SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation)) is external\nauthority for this loop.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 798
+        }
+      ],
+      "key": "outcome_governs_loop",
+      "kind": "external_scope_authority",
+      "meaning": "Selected outcome and admitted bounded basis constrain material work; the loop cannot author or enlarge them.",
+      "source_key": "selected_product_outcome",
+      "target_key": "constructive_evaluation_loop"
+    },
+    {
+      "conditions": [
+        "Inputs are admitted lineage, prior model and admitted product truth"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 863,
+          "quote": "It may update desired and known typed asset truth.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 863
+        }
+      ],
+      "key": "synthesis_produces_model",
+      "kind": "typed_output",
+      "meaning": "synthesize_model produces ProductAssetModel within its exclusive model-synthesis boundary.",
+      "source_key": "synthesize_model",
+      "target_key": "product_asset_model"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 864,
+          "quote": "It compares desired model truth to observed reality",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 864
+        }
+      ],
+      "key": "gap_evaluation_observes_worksite",
+      "kind": "read_only_observation",
+      "meaning": "eval_gap observes worksite facts alongside runtime/model inputs; observation does not grant worksite authority.",
+      "source_key": "eval_gap",
+      "target_key": "worksite"
+    },
+    {
+      "conditions": [
+        "Action just taken has admitted evidence and bound obligations/policy"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 866,
+          "quote": "It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 866
+        }
+      ],
+      "key": "action_evaluation_produces_closure",
+      "kind": "exclusive_decision_output",
+      "meaning": "evaluate_action produces the closure decision for the preceding action, not its successor invocation.",
+      "source_key": "evaluate_action",
+      "target_key": "edge_closure_decision"
+    },
+    {
+      "conditions": [
+        "Post-action next evaluation"
+      ],
+      "exceptions": [
+        "Initial selection has no prior closure-decision requirement."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1104,
+          "quote": "Action selection belongs to\n`evaluate_next` over `EdgeClosureDecision` plus fresh `eval_gap` truth",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1102
+        }
+      ],
+      "key": "next_evaluation_consumes_closure",
+      "kind": "admitted_decision_dependency",
+      "meaning": "evaluate_next consumes admitted closure truth through explicit post-action basis plus fresh gap truth; it does not remake the closure judgment.",
+      "source_key": "evaluate_next",
+      "target_key": "edge_closure_decision"
+    },
+    {
+      "conditions": [
+        "Evidence has been admitted"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1087,
+          "quote": "AdmittedEvidence\n-> EdgeFulfillmentLedger\n-> EdgeClosureDecision",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1085
+        }
+      ],
+      "key": "ledger_folds_evidence",
+      "kind": "closure_evidence_dependency",
+      "meaning": "Admitted evidence enters the ledger before closure decision; raw presence is insufficient.",
+      "source_key": "admitted_evidence",
+      "target_key": "edge_fulfillment_ledger"
+    },
+    {
+      "conditions": [
+        "Compression and source differ"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1804,
+          "quote": "Where it and\na source section differ, the source section decides",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F20.%20Canonical%20compression",
+          "start_line": 1803
+        }
+      ],
+      "key": "compression_subordinate_to_sources",
+      "kind": "derived_summary_nonownership",
+      "meaning": "The canonical compression describes the ODD product method without acquiring determination; owning source sections prevail.",
+      "source_key": "odd_canonical_compression",
+      "target_key": "odd_product"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 45,
+          "quote": "Posts live at the location the product definition binds as\n`ticketing.comments.root`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F3.%20Location",
+          "start_line": 44
+        }
+      ],
+      "key": "definition_locates_comments",
+      "kind": "locator_binding",
+      "meaning": "Product definition locates the post carrier; location transfers no commentary or constitutional authority.",
+      "source_key": "product_definition_overlay",
+      "target_key": "post_carrier"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 46,
+          "quote": "The JSON schema named below\nrealises the accepted interoperability shape of the overlay and is not a\nsecond semantic owner",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 44
+        }
+      ],
+      "key": "definition_uses_interoperability_shape",
+      "kind": "interoperability_realisation",
+      "meaning": "Schema and template realise the overlay shape without owning its semantics.",
+      "source_key": "product_definition_interoperability",
+      "target_key": "product_definition_overlay"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 64,
+          "quote": "It identifies one continuing WHAT definition, not one immutable\nreleased Product",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence",
+          "start_line": 63
+        }
+      ],
+      "key": "definition_identity_carried_by_overlay",
+      "kind": "identity_carrier",
+      "meaning": "The overlay carries the continuing definition-line identity, not release identity or self-authorisation.",
+      "source_key": "product_definition_overlay",
+      "target_key": "product_definition_identity"
+    },
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 299,
+          "quote": "`constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`\nare the sole authored STDO selection for that Product Definition",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 298
+        }
+      ],
+      "key": "definition_selects_installed_basis",
+      "kind": "exact_basis_selection",
+      "meaning": "Definition's exact URI/digest pair supplies its authored STDO selection; mutable selectors do not.",
+      "source_key": "product_definition_overlay",
+      "target_key": "installed_release_basis"
+    },
+    {
+      "conditions": [
+        "Explicitly authorised fleet root and complete ordered discovered selection"
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 258,
+          "quote": "the complete ordered set of per-definition plan digests",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 257
+        }
+      ],
+      "key": "fleet_aggregates_adoption_plans",
+      "kind": "whole_selection_acceptance_binding",
+      "meaning": "Fleet plan binds all ordered per-definition digests; acceptance is aggregate and does not arise from directory nesting.",
+      "source_key": "fleet_adoption_plan",
+      "target_key": "adoption_plan"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Preserve local execution/admission distinction and provenance routes, but do not infer the missing transformation admission, candidate-producer or human-adjudication semantics.",
+      "grounding": [
+        {
+          "end_line": 740,
+          "quote": "whose admission semantics\n[ACTIVATION §4](ACTIVATION.md#complete-enclosing-relation-admission) owns",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5B%20Execution%20authority%20audit",
+          "start_line": 729
+        }
+      ],
+      "key": "odd_external_authority_references",
+      "subject_key": "admission_execution_distinction",
+      "uncertainty": "ACTIVATION §4, DESIGN_MODULE's restatement, rc.2 UP-016 and ODD §5/SPEC_METHOD §5 are referenced but absent; principle P0–P6 bodies are also absent."
+    },
+    {
+      "consequence": "Retain stated local mappings and role boundaries only; do not supply the four diagnoses or equate subject F_P/F_D/F_H with calculus functor kinds.",
+      "grounding": [
+        {
+          "end_line": 796,
+          "quote": "its diagnoses distinguish the four causes named there",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 796
+        },
+        {
+          "end_line": 1078,
+          "quote": "authority_compressions/design_module_method.compressed.md, a claim no\nrc.2 body states",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1077
+        }
+      ],
+      "key": "loop_external_semantics",
+      "subject_key": "constructive_evaluation_loop",
+      "uncertainty": "ACTIVATION diagnosis/availability/disposition, FOUNDATIONS result algebra, SPEC_METHOD outcome conservation and DESIGN_MODULE/PROFILES ownership are only partially restated. The extraction-recipe claim explicitly comes from predecessor compression rather than an rc.2 body."
+    },
+    {
+      "consequence": "Order, inputs, output domains, guards and authority limits are retained descriptively; no executable evaluator, admission, traversal, replay, judgment or transformation proof is produced.",
+      "grounding": [
+        {
+          "end_line": 1387,
+          "quote": "let I = admit_construction_intent(L, B0, N0.selected_action, N0.next_action_projection)\nlet E = admit_evidence(invoke(I))\nlet A = evaluate_action(I, E, B0, Policy)",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1377
+        }
+      ],
+      "key": "loop_operational_representation",
+      "subject_key": "constitutional_equation_dependency",
+      "uncertainty": "The finite five-family representation cannot instantiate the equation, typed sum elimination, event ordering, ledger admission, causal reachability or proof obligations. The equation presents selected_action admission linearly while other paragraphs require guarded typed no-action outcomes; runtime handling of that branch is not specified here."
+    },
+    {
+      "consequence": "Do not silently generalise closure's combined-cause precedence to every no-action; retain the explicit no-action mappings and reprice rule.",
+      "grounding": [
+        {
+          "end_line": 1044,
+          "quote": "as for `block(basis)`",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+          "start_line": 1044
+        }
+      ],
+      "key": "no_action_dual_cause_uncertainty",
+      "subject_key": "selection_result_distinctions",
+      "uncertainty": "No-action causes reference block analogies, but an explicit mixed-cause rule is stated directly only for re-enter/block. The extent of that analogy is unresolved."
+    },
+    {
+      "consequence": "Keep packet minimality, F_P/F_D split, deterministic admission and non-ratification without inventing the absent acceptance criteria.",
+      "grounding": [
+        {
+          "end_line": 1520,
+          "quote": "This profile does not declare the artifact rules again",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1516
+        },
+        {
+          "end_line": 1491,
+          "quote": "authority_compressions/spec_method.compressed.md, a claim no rc.2 body\nstates",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.7A%20Conforming%20agentic%20development",
+          "start_line": 1490
+        }
+      ],
+      "key": "agentic_external_rules",
+      "subject_key": "agentic_conformance",
+      "uncertainty": "SPEC_METHOD, TICKETS, ACTIVATION acquisition/standalone law and ODD §9 are absent. The general-method projected-frame limit has explicitly compression-only rc.2 provenance."
+    },
+    {
+      "consequence": "Treat 'conserved', exact-block retention, all-48 coverage and sole successor home claims as provenance assertions, not verified conservation. Preserve no authority from routes.",
+      "grounding": [
+        {
+          "end_line": 1874,
+          "quote": "this section is UP-010's only successor home",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions",
+          "start_line": 1873
+        },
+        {
+          "end_line": 1869,
+          "quote": "conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/ODD.md#ODD%2F21.%20Source%20dispositions",
+          "start_line": 1869
+        }
+      ],
+      "key": "odd_predecessor_conservation_unverified",
+      "subject_key": "odd_source_dispositions",
+      "uncertainty": "Predecessor ODD_METHOD and successor §§1–9/early §10 are absent. Their rows refer to role expansions, URNs, consumer bindings, library classes, ten illustrative node names, directional specialisations, audit mappings and reference-frame routing not reconstructible from this chunk. Table narrative additionally calls no-action and disposition distinctions new within its closure-mapping discussion."
+    },
+    {
+      "consequence": "Preserve commentary boundary and owner routes; do not infer shared-method adoption machinery or verify predecessor conservation.",
+      "grounding": [
+        {
+          "end_line": 17,
+          "quote": "defines none of them.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE",
+          "start_line": 11
+        },
+        {
+          "end_line": 166,
+          "quote": "[SPEC_METHOD §6](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012).",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F10.%20Shared%20method%20adoption",
+          "start_line": 166
+        },
+        {
+          "end_line": 192,
+          "quote": "the member map places the law in SPEC_METHOD, where it is restated in full",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/POSTING_GUIDE.md#POSTING_GUIDE%2F11.%20Source%20dispositions",
+          "start_line": 192
+        }
+      ],
+      "key": "posting_external_and_predecessor_dependencies",
+      "subject_key": "posting_guide",
+      "uncertainty": "Full PRODUCT_DEFINITION §8, TICKETS, SPEC_METHOD, EVALUATION and predecessor POSTING_GUIDE are absent."
+    },
+    {
+      "consequence": "Interpret this member's stated ownership/import boundaries and supplied opening rules only, without reconstructing downstream sections or treating shape acceptance as a current qualification.",
+      "grounding": [
+        {
+          "end_line": 17,
+          "quote": "adds no\ndefinition to tier 1.",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION",
+          "start_line": 16
+        }
+      ],
+      "key": "product_definition_external_dependencies",
+      "subject_key": "product_definition_member",
+      "uncertainty": "Consumed tier-1 definitions, generic WHAT/HOW law, product lineage, tenant binding, release/testing/identity law, full §§5–13 and the remainder of §4 are not supplied; source claims about predecessor restatement cannot be checked."
+    },
+    {
+      "consequence": "Retain ten-row consequences, added-choice ownership and consumer non-expansion rule. Consumer links remain routes rather than invented local semantic endpoints or verified imports.",
+      "grounding": [
+        {
+          "end_line": 136,
+          "quote": "Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F1.%20Overlay%20and%20layout%20independence%2FFoundation%20to%20law%3A%20binding%20a%20project%20to%20the%20method",
+          "start_line": 134
+        }
+      ],
+      "key": "family_consumer_routes_unresolved",
+      "subject_key": "project_binding_family",
+      "uncertainty": "The detailed consumer inventories at lines 138–147 span SPEC_METHOD, ODD, TICKETS, RELEASE, EXECUTIVE_BASELINE, EVALUATION, WORLD_MODEL, GLOSSARY, PROFILES, REFERENCE_FRAME, CONFORMANCE, DESIGN_MODULE, TRAVERSAL_OCCURRENCE, UX, ASSURANCE and unsupplied local sections. Their applicability and stated absence of other consumers cannot be verified from this chunk."
+    },
+    {
+      "consequence": "Retain precise command, hashing, acceptance, filesystem and marker laws descriptively; no install, mutation, acceptance, URI resolution or fleet discovery occurs.",
+      "grounding": [
+        {
+          "end_line": 268,
+          "quote": "The STDO Toolchain Manager is the bounded executable realisation",
+          "section_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F4.%20Shared%20installed%20release%20basis%20and%20toolchain%20manager",
+          "start_line": 267
+        }
+      ],
+      "key": "manager_realisation_not_executed",
+      "subject_key": "stdo_toolchain_manager",
+      "uncertainty": "Manifest/schema payloads, exact marker syntax, concrete plans, installed bytes and the explicit complete consumer-update subsection are absent. Finite declarative records do not implement atomicity, path verification, plan acceptance or byte preservation."
+    }
+  ]
+}

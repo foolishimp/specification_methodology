@@ -1,0 +1,150 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "bootstrap_authority_split"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRenewal%20Path",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FOwnership",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDownstream%20Closure",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTrace%20Closure%20And%20Anti-Drift%20Rule%2FDrift%20Signals",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLive%20Surface%20Immutability",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FFundamental%20Migration%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FTransformation%20Wave%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FLegacy%20Classification%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FRequirement%20Classification%20Rules",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FSpecification%20Surface%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FBootstrap%20Rule",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FMethod",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/SPEC_METHOD.md#Spec-Driven%20Homeostatic%20Methodology%2FADR%20Conventions%2FADR%20Folder%20Convention",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FCanonical%20Compression",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FStatus%20And%20Authority%20Boundary",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEngagement%20Applicability",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FEmpirical%20Revision%20Boundary",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FEngagement%20frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FSpecialist%20frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FGeneric%20specialist-frame%20family",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FTesting%20frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FAuthoritative%20Product%20path",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FMaterial%20combinatorial%20complexity",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FProfile%20Terms%2FExecutive",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FEvent-Driven%20Executive%20Attention",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExecutive%20Drift%20Locks",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FProduct-Chain%20Basis",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWorker",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FReviewer",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FTechnical%20triage%2C%20severity%2C%20priority%2C%20and%20boundary%20effect",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FWork%20result",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FExact%20candidate",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FExecutive%20Attention%2C%20Evaluation%2C%20And%20Action%2FBaseline-adoption%20projection",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FNon-Hierarchical%20Frame%20Configuration",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Executive%20Frame%2FSteel-Thread%20Delivery",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Worker%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Reviewer%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Generic%20Specialist%20Frame%20Set",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20User-Acceptance%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20End-To-End%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Integration%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FDerived%20Unit-Test%20Frame",
+                  "repo://stdo-v3-generation-rc9/codex/5592168e26759f37e730aed12c030a6061709ec4/source/standards/STDO_REFERENCE_FRAME_BASELINE.md#STDO%20Reference%20Frame%20Baseline%2FDerived%20Product%20Testing%20Frame%20Set%2FCombinatorial%20Coverage%20And%20Testing-Value%20Index"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,1737 @@
+{
+  "call_limits": {
+    "combined_author_and_repair_per_chunk": 3,
+    "concurrent_calls": 4,
+    "timeout_seconds": 1200
+  },
+  "claim": "Exact source, implementation, treatment settings and preparation custody; no generated semantic assessment or acceptance.",
+  "common_frozen_files_equal_to_checkpoint": 15,
+  "current_version_checkpoint": "efae9c749275838029a871863f0b3ce7d7aba8b6",
+  "files": {
+    "a_c/build_tenants/graphify/code/ac_generate.py": {
+      "bytes": 69523,
+      "sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479"
+    },
+    "a_c/build_tenants/graphify/code/ac_graph.py": {
+      "bytes": 49166,
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    "a_c/build_tenants/graphify/code/ac_grounding.py": {
+      "bytes": 31297,
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd"
+    },
+    "a_c/build_tenants/graphify/code/ac_repair.py": {
+      "bytes": 36708,
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.schema.json": {
+      "bytes": 11148,
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.txt": {
+      "bytes": 4240,
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+    },
+    "a_c/build_tenants/graphify/code/generation/extraction.schema.json": {
+      "bytes": 4818,
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+    },
+    "a_c/build_tenants/graphify/code/generation/isolation.txt": {
+      "bytes": 696,
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+    },
+    "a_c/build_tenants/graphify/code/generation/requirements.txt": {
+      "bytes": 214,
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/patch.schema.json": {
+      "bytes": 2037,
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+    },
+    "a_c/build_tenants/graphify/code/grounding_repair/repair.txt": {
+      "bytes": 2231,
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+    },
+    "a_c/build_tenants/graphify/design/grounding.md": {
+      "bytes": 7755,
+      "sha256": "929462b9a3e3af228349973cdf30d2967c307f659ac342e5f6c4ed56833269a6"
+    },
+    "a_c/build_tenants/graphify/design/grounding_repair.md": {
+      "bytes": 8660,
+      "sha256": "6d91d36d908a30d18d8b092a0728c0dbe0d2156575d30738f4b623144a675a3a"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_grounding.py": {
+      "bytes": 19256,
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_repair.py": {
+      "bytes": 16130,
+      "sha256": "a0097ae36ce732fd84fdeaef21707acb4566bdbcc78faa5231fda4fdabacae18"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/PROTOCOL.md": {
+      "bytes": 4969,
+      "sha256": "c1638b4433f0f4f8e1a93d4c8ca9d2ebea8240f53e0ba5c6874e87ecd6338f05"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/coordinate_generation.py": {
+      "bytes": 9050,
+      "sha256": "025c30baca2646c392fff368ca656f74aaa97dc3872d7dc95746b703e4bf3708"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/coordinate_repairs.py": {
+      "bytes": 8072,
+      "sha256": "5fe400c39221f815833c9c8b6819850b34e78b3ba936031b55f029e8f89349d7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/manifest.json": {
+      "bytes": 13561,
+      "sha256": "3733fbb9c41734769a3c1f38e2e3a5b455505f6467a58ef88bae043f16866ab4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ACTIVATION.md": {
+      "bytes": 156518,
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ASSURANCE.md": {
+      "bytes": 98521,
+      "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 94172,
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/CONFORMANCE.md": {
+      "bytes": 37462,
+      "sha256": "f16fabea2f110773bf3e1fde22defbc3e911219e707826421061c5490a357335"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/DESIGN_MODULE.md": {
+      "bytes": 200271,
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/EVALUATION.md": {
+      "bytes": 93992,
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/EXECUTIVE_BASELINE.md": {
+      "bytes": 178680,
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/FOUNDATIONS.md": {
+      "bytes": 146255,
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/GLOSSARY.md": {
+      "bytes": 54201,
+      "sha256": "496698f9dcf445cb2717e0e5ba81b5393c108cb3cd561068d7e9681a3048fc30"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/IDENTITY.md": {
+      "bytes": 36568,
+      "sha256": "03138d49f7d915288ff066390107ae760227781b1fc0f35ac051e95eac2872b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ODD.md": {
+      "bytes": 132832,
+      "sha256": "02cfbcf981434245d67c0713b3dd209e0d594d820a1565231b7450c875d72e3a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/POSTING_GUIDE.md": {
+      "bytes": 8031,
+      "sha256": "e784c72ab18d3386d4aa28f9eed43aef675d01f1a03ec8ec2bcc440f33edfb86"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/PRODUCT_DEFINITION.md": {
+      "bytes": 83015,
+      "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/PROFILES.md": {
+      "bytes": 10312,
+      "sha256": "35ddddef9610af326c81c4b8543915f27407fdc9a638a874879b3a2c60720ee0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/README.md": {
+      "bytes": 28087,
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/REFERENCE_FRAME.md": {
+      "bytes": 111611,
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/RELEASE.md": {
+      "bytes": 62484,
+      "sha256": "212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/SPEC_METHOD.md": {
+      "bytes": 167323,
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/TICKETS.md": {
+      "bytes": 104228,
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/TRAVERSAL_OCCURRENCE.md": {
+      "bytes": 110495,
+      "sha256": "43f1e1c1f017eac71b76a48570b830949620c34118ab2ae570a95757c7f1fc2a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/UX.md": {
+      "bytes": 63067,
+      "sha256": "8f30e0c5b54e307c43369c24cebd558acbbfabff6bdd1629c777577821d461ff"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/WORLD_MODEL.md": {
+      "bytes": 99881,
+      "sha256": "96fe37b362f8bfbb0748af8a7a6eb2774a7d9796fbfa27eb66004ac0bfa75345"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/WRITING_GUIDE.md": {
+      "bytes": 5870,
+      "sha256": "d2e3ece2f33ce2619f46c991b90e09550ab2b3e6ee54b2c655913cb668dad8fb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3517,
+      "sha256": "84586b352660ff960188663fc21c2634e74c6fc61cba21e9c1a1e80190f92ef5"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 10623,
+      "sha256": "4bf84ab3d433cb1bd5ee3ac1253f8d5b89b3df2dbcaf000e010ff6b0c2371495"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/README.md": {
+      "bytes": 6649,
+      "sha256": "596bbde76eb6b5906e9f9c8ce90e985e31bcc29e3719761e409d778b82c4dcdd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 754,
+      "sha256": "bfe738647de2010be9571b3f330ee249d4a644f679ce2430312fbd57d5c08d33"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2002,
+      "sha256": "467c02cebf87d393ee7239cc1c80d66eda9485bb251097ef8e87dc7368e19089"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3279,
+      "sha256": "cb1084ed83594af1f6a6a4103d11b0daa1c13af4c199d2baf95d100db31969e8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1240,
+      "sha256": "faf582b291a50eaaae3b14df2519fabbe6f1ef38c8275a4cb3f0cf0c5f82890e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1687,
+      "sha256": "e2f820c3a7b2ed1ae8b97c96706e83ee7cb086e8bef93427813e394cb2ea0929"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2889,
+      "sha256": "96c415caa86d9e6e5190c97f99f7fd36ae04a075e5c6da51594024728a562aa2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 363,
+      "sha256": "86165ef6955f5f56e096c23bb4bf07b155c75de76060d3e248fcc48b14218077"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/manifest.json": {
+      "bytes": 13078,
+      "sha256": "1352228a4933c72f62c7f62590dc98bdededc237589a981c0b09e36d404d2363"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 57552,
+      "sha256": "16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/DESIGN_MODULE_METHOD.md": {
+      "bytes": 127008,
+      "sha256": "0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/FOUNDATIONS.md": {
+      "bytes": 85448,
+      "sha256": "2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/GLOSSARY_GUIDE.md": {
+      "bytes": 23252,
+      "sha256": "9332a68e51caaeeb089e21de98d52279f05cbbe1c0cf12659f74a59d8e9709ab"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/IDENTITY_METHOD.md": {
+      "bytes": 23451,
+      "sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/ODD_METHOD.md": {
+      "bytes": 90389,
+      "sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/POSTING_GUIDE.md": {
+      "bytes": 5717,
+      "sha256": "a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/README.md": {
+      "bytes": 10542,
+      "sha256": "bf66c98ad418e0a4e4f09a6987b3287d5a55e4454b2796c07d8c6317d5d93324"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/REFERENCE_FRAME_METHOD.md": {
+      "bytes": 75399,
+      "sha256": "41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/RELEASE_METHOD.md": {
+      "bytes": 43529,
+      "sha256": "be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/SPEC_METHOD.md": {
+      "bytes": 200904,
+      "sha256": "ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/STDO_REFERENCE_FRAME_BASELINE.md": {
+      "bytes": 154727,
+      "sha256": "1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/TICKET_METHOD.md": {
+      "bytes": 80581,
+      "sha256": "682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/TRANSFORMATION_LIBRARY.md": {
+      "bytes": 37191,
+      "sha256": "7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/TRAVERSAL_OCCURRENCE_PROFILE.md": {
+      "bytes": 83968,
+      "sha256": "2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/UX_METHOD.md": {
+      "bytes": 37237,
+      "sha256": "6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/WORLD_MODEL_METHOD.md": {
+      "bytes": 64522,
+      "sha256": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/WRITING_GUIDE.md": {
+      "bytes": 4205,
+      "sha256": "284c155448284e995b6eb2f98ee5d47b43f1d1c11a37896175ba743d2f229c0f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3556,
+      "sha256": "e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 9582,
+      "sha256": "e7ca92dc949a04351a9aec902b1c77528769e942a017dfa81471b22ad771a0e2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/README.md": {
+      "bytes": 6598,
+      "sha256": "6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 779,
+      "sha256": "7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2008,
+      "sha256": "07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3190,
+      "sha256": "57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1747,
+      "sha256": "8ae18a05be06c6f2ebc4407638f5e15968bd400572df6da165c991597e52af57"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1693,
+      "sha256": "d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2830,
+      "sha256": "ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/corpora/codex/source/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 367,
+      "sha256": "67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/evidence/environment.json": {
+      "bytes": 1529,
+      "sha256": "d9df4a47b879693880b6bdbbe00765dd7a0c55159102ed948a012f9c6663d105"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/evidence/initial-selection.json": {
+      "bytes": 7211,
+      "sha256": "e2d4792950b858e9f7b6fd8aa433494b89a08d553f86813d6fe23273b45b4d28"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/evidence/run-preparation.json": {
+      "bytes": 5205,
+      "sha256": "658dabc9b694c118ce80117d47e30aca99a69f1a2327d4a574c01c578d3c90ce"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/evidence/source-custody.json": {
+      "bytes": 5857,
+      "sha256": "e11c4bfab63614451d5e4cff0dadc66c2d2a38fa8c84414ce688aad681248c2b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/evidence/source-delta.json": {
+      "bytes": 67985,
+      "sha256": "e66f4081dca1a92b9c0039c3718ecce0b16180f3ff182c045c53e7ea7151c90b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/freeze_sources.py": {
+      "bytes": 22495,
+      "sha256": "7db0ed0b2da3452256f7e1150b4b2d1693dafe3d8ad93a801abd4b7923daa294"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/plan_repairs.py": {
+      "bytes": 5639,
+      "sha256": "52bd1e8697aac675064ce459de1799e5f080203f77eefb4347c6c8e8ebfeb45d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/actor-settings.json": {
+      "bytes": 158,
+      "sha256": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/chunks.json": {
+      "bytes": 2571706,
+      "sha256": "4a6e857c7526f4a63c2229f18cb0ad34c18809ed2071f92c4a848da66dff38d8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/ACTIVATION.md": {
+      "bytes": 156518,
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/ASSURANCE.md": {
+      "bytes": 98521,
+      "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 94172,
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/CONFORMANCE.md": {
+      "bytes": 37462,
+      "sha256": "f16fabea2f110773bf3e1fde22defbc3e911219e707826421061c5490a357335"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/DESIGN_MODULE.md": {
+      "bytes": 200271,
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/EVALUATION.md": {
+      "bytes": 93992,
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/EXECUTIVE_BASELINE.md": {
+      "bytes": 178680,
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/FOUNDATIONS.md": {
+      "bytes": 146255,
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/GLOSSARY.md": {
+      "bytes": 54201,
+      "sha256": "496698f9dcf445cb2717e0e5ba81b5393c108cb3cd561068d7e9681a3048fc30"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/IDENTITY.md": {
+      "bytes": 36568,
+      "sha256": "03138d49f7d915288ff066390107ae760227781b1fc0f35ac051e95eac2872b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/ODD.md": {
+      "bytes": 132832,
+      "sha256": "02cfbcf981434245d67c0713b3dd209e0d594d820a1565231b7450c875d72e3a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/POSTING_GUIDE.md": {
+      "bytes": 8031,
+      "sha256": "e784c72ab18d3386d4aa28f9eed43aef675d01f1a03ec8ec2bcc440f33edfb86"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/PRODUCT_DEFINITION.md": {
+      "bytes": 83015,
+      "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/PROFILES.md": {
+      "bytes": 10312,
+      "sha256": "35ddddef9610af326c81c4b8543915f27407fdc9a638a874879b3a2c60720ee0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/README.md": {
+      "bytes": 28087,
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/REFERENCE_FRAME.md": {
+      "bytes": 111611,
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/RELEASE.md": {
+      "bytes": 62484,
+      "sha256": "212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/SPEC_METHOD.md": {
+      "bytes": 167323,
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/TICKETS.md": {
+      "bytes": 104228,
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/TRAVERSAL_OCCURRENCE.md": {
+      "bytes": 110495,
+      "sha256": "43f1e1c1f017eac71b76a48570b830949620c34118ab2ae570a95757c7f1fc2a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/UX.md": {
+      "bytes": 63067,
+      "sha256": "8f30e0c5b54e307c43369c24cebd558acbbfabff6bdd1629c777577821d461ff"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/WORLD_MODEL.md": {
+      "bytes": 99881,
+      "sha256": "96fe37b362f8bfbb0748af8a7a6eb2774a7d9796fbfa27eb66004ac0bfa75345"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/WRITING_GUIDE.md": {
+      "bytes": 5870,
+      "sha256": "d2e3ece2f33ce2619f46c991b90e09550ab2b3e6ee54b2c655913cb668dad8fb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3517,
+      "sha256": "84586b352660ff960188663fc21c2634e74c6fc61cba21e9c1a1e80190f92ef5"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 10623,
+      "sha256": "4bf84ab3d433cb1bd5ee3ac1253f8d5b89b3df2dbcaf000e010ff6b0c2371495"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/README.md": {
+      "bytes": 6649,
+      "sha256": "596bbde76eb6b5906e9f9c8ce90e985e31bcc29e3719761e409d778b82c4dcdd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 754,
+      "sha256": "bfe738647de2010be9571b3f330ee249d4a644f679ce2430312fbd57d5c08d33"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2002,
+      "sha256": "467c02cebf87d393ee7239cc1c80d66eda9485bb251097ef8e87dc7368e19089"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3279,
+      "sha256": "cb1084ed83594af1f6a6a4103d11b0daa1c13af4c199d2baf95d100db31969e8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1240,
+      "sha256": "faf582b291a50eaaae3b14df2519fabbe6f1ef38c8275a4cb3f0cf0c5f82890e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1687,
+      "sha256": "e2f820c3a7b2ed1ae8b97c96706e83ee7cb086e8bef93427813e394cb2ea0929"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2889,
+      "sha256": "96c415caa86d9e6e5190c97f99f7fd36ae04a075e5c6da51594024728a562aa2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/corpus/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 363,
+      "sha256": "86165ef6955f5f56e096c23bb4bf07b155c75de76060d3e248fcc48b14218077"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/plan.json": {
+      "bytes": 12148,
+      "sha256": "79229ddc297cd9dc49df6eb4565e605805d4c43a7edb25edb3f69f3cb61ad749"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/source-manifest.json": {
+      "bytes": 13561,
+      "sha256": "2d1976f42c7dfe7d0d1052f327f0aea9db782f61f5c49b3130c193c283bb6193"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/actor-settings.json": {
+      "bytes": 158,
+      "sha256": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/chunks.json": {
+      "bytes": 2571706,
+      "sha256": "4a6e857c7526f4a63c2229f18cb0ad34c18809ed2071f92c4a848da66dff38d8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/ACTIVATION.md": {
+      "bytes": 156518,
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/ASSURANCE.md": {
+      "bytes": 98521,
+      "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 94172,
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/CONFORMANCE.md": {
+      "bytes": 37462,
+      "sha256": "f16fabea2f110773bf3e1fde22defbc3e911219e707826421061c5490a357335"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/DESIGN_MODULE.md": {
+      "bytes": 200271,
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/EVALUATION.md": {
+      "bytes": 93992,
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/EXECUTIVE_BASELINE.md": {
+      "bytes": 178680,
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/FOUNDATIONS.md": {
+      "bytes": 146255,
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/GLOSSARY.md": {
+      "bytes": 54201,
+      "sha256": "496698f9dcf445cb2717e0e5ba81b5393c108cb3cd561068d7e9681a3048fc30"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/IDENTITY.md": {
+      "bytes": 36568,
+      "sha256": "03138d49f7d915288ff066390107ae760227781b1fc0f35ac051e95eac2872b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/ODD.md": {
+      "bytes": 132832,
+      "sha256": "02cfbcf981434245d67c0713b3dd209e0d594d820a1565231b7450c875d72e3a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/POSTING_GUIDE.md": {
+      "bytes": 8031,
+      "sha256": "e784c72ab18d3386d4aa28f9eed43aef675d01f1a03ec8ec2bcc440f33edfb86"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/PRODUCT_DEFINITION.md": {
+      "bytes": 83015,
+      "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/PROFILES.md": {
+      "bytes": 10312,
+      "sha256": "35ddddef9610af326c81c4b8543915f27407fdc9a638a874879b3a2c60720ee0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/README.md": {
+      "bytes": 28087,
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/REFERENCE_FRAME.md": {
+      "bytes": 111611,
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/RELEASE.md": {
+      "bytes": 62484,
+      "sha256": "212e41cb0df528f61a4ba978a567db2d5695618989ed8edc889c387407e82101"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/SPEC_METHOD.md": {
+      "bytes": 167323,
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/TICKETS.md": {
+      "bytes": 104228,
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/TRAVERSAL_OCCURRENCE.md": {
+      "bytes": 110495,
+      "sha256": "43f1e1c1f017eac71b76a48570b830949620c34118ab2ae570a95757c7f1fc2a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/UX.md": {
+      "bytes": 63067,
+      "sha256": "8f30e0c5b54e307c43369c24cebd558acbbfabff6bdd1629c777577821d461ff"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/WORLD_MODEL.md": {
+      "bytes": 99881,
+      "sha256": "96fe37b362f8bfbb0748af8a7a6eb2774a7d9796fbfa27eb66004ac0bfa75345"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/WRITING_GUIDE.md": {
+      "bytes": 5870,
+      "sha256": "d2e3ece2f33ce2619f46c991b90e09550ab2b3e6ee54b2c655913cb668dad8fb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3517,
+      "sha256": "84586b352660ff960188663fc21c2634e74c6fc61cba21e9c1a1e80190f92ef5"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 10623,
+      "sha256": "4bf84ab3d433cb1bd5ee3ac1253f8d5b89b3df2dbcaf000e010ff6b0c2371495"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/README.md": {
+      "bytes": 6649,
+      "sha256": "596bbde76eb6b5906e9f9c8ce90e985e31bcc29e3719761e409d778b82c4dcdd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 754,
+      "sha256": "bfe738647de2010be9571b3f330ee249d4a644f679ce2430312fbd57d5c08d33"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2002,
+      "sha256": "467c02cebf87d393ee7239cc1c80d66eda9485bb251097ef8e87dc7368e19089"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3279,
+      "sha256": "cb1084ed83594af1f6a6a4103d11b0daa1c13af4c199d2baf95d100db31969e8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1240,
+      "sha256": "faf582b291a50eaaae3b14df2519fabbe6f1ef38c8275a4cb3f0cf0c5f82890e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1687,
+      "sha256": "e2f820c3a7b2ed1ae8b97c96706e83ee7cb086e8bef93427813e394cb2ea0929"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2889,
+      "sha256": "96c415caa86d9e6e5190c97f99f7fd36ae04a075e5c6da51594024728a562aa2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/corpus/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 363,
+      "sha256": "86165ef6955f5f56e096c23bb4bf07b155c75de76060d3e248fcc48b14218077"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/coverage.json": {
+      "bytes": 331815,
+      "sha256": "767f4066e618c91516490d2ce2fe052b15564e8d0544570f75f9941fb30a5d4c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graph.json": {
+      "bytes": 561474,
+      "sha256": "36dda5accccfd3a591c58593971f2a10bcc723da7394cfebf483c126f4f09a25"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0782a3f0eb1e4057f4d1a7abb96586415a7d52692962bf1cf9da4ee5c64689b5.json": {
+      "bytes": 1149,
+      "sha256": "829cce2915270827c2adafab92c6e3f63096b20a7e2ef56ff42246da2e0cef99"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0aaca7cdf42fdf60cd7a660ad2262ba24b90276db789d1db9fb7cae0fac0102b.json": {
+      "bytes": 3652,
+      "sha256": "6ddd35bb01fb098653803f7acee58ba6aebbb311caf46bb9c2ae2920a2b89763"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0d7000d2b1d0141f167ae5893ca470ae35e245b1df135f9c22168a897c8c7ba7.json": {
+      "bytes": 28677,
+      "sha256": "ff2a9c748a19f82f371f68a8ed792ed1c3fe45a59826193671b0144045c894b5"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1ba970b92ac48bfb75f58359cba17eb45d2673986e2057f6999e29f659daeadb.json": {
+      "bytes": 22340,
+      "sha256": "1b169d14ab581a441d5dfd85caecd64761a42ce725377ec082c338ea6b383032"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1c53f687786d8bb1aab82cc5747851d65be4ac15a43b904234e1dafaf52e6246.json": {
+      "bytes": 1091,
+      "sha256": "647783467bf31295ac934f561aee07cfc51056563f64432ca07e5f3de8413a72"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1e87938eca49add5ecd413347509fbc117f4a9bbcf4398690794ce538dd50530.json": {
+      "bytes": 2431,
+      "sha256": "3200c6659c282eb08accc5ec2c1dce49ce01cffb010528fbac34d1a24750af2a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1f26ff55e6718fd5ffd0006195d533e48ac3b7e3e9d73bca38bf62cb5dbde581.json": {
+      "bytes": 34902,
+      "sha256": "07f144b192765381f5def5ff0df5cb14999035bf8eb6307f785b3beb8735647d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/20bf32dcdbf058e34927383df1cfa0f4d0f986348b5da0452d137bfe58ccb800.json": {
+      "bytes": 1713,
+      "sha256": "42d31bab2c4a4508c10b19921ba0ca29a6ef0f2a5a1560063b050be952f1de58"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/2173ee317c61b6c5dd4ef34d3447b493e8a2bdd65d07aef1ad6acf60046dee26.json": {
+      "bytes": 76265,
+      "sha256": "6ef6be09d81158322735d5688d5ac853d246b9c6e4d94a62823a13dc0dcdd00f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/222b0d3171cf878d529b4286e4c3f3ff0d47fc1516a49538c08e2c2bf9f5d69f.json": {
+      "bytes": 1887,
+      "sha256": "a1c596ac918b9558378c7f68b49807ba97693d2cbf3a268aefd8af04133b56ce"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/23102bb2ac11e87ba9729e34af820e2399897141358f73ebee4c6a32d96f38fc.json": {
+      "bytes": 6004,
+      "sha256": "70c661ea066edb1adb4a97e58f995a29445f64b4479e3bd3f1a9424895489fcc"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/23c12c9c58aab20ed5beb0df5a32d0ecec38f3a89cef0698a67208565bfc8b62.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/281ab20e1b35ef46cfb0162b176d025b1d94e4816b60ac6ceb0f0473c34b52ae.json": {
+      "bytes": 75825,
+      "sha256": "f58a13b2ec406bb8e49b75931edc7aa642465a5da30dde44d00d616c980b1947"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/326130cc06aad9f48c915bd4af0a0045b91968b32ad08e58165b36fc1d45c714.json": {
+      "bytes": 23791,
+      "sha256": "f156835a7b69298dce05cf6630cf9aa2b0883ea67277f846894adf89dbffeac7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/35fc68a9dc3dcb42e0c1a84e285feb33052c059b29f8f8825b4fd3afc95db41d.json": {
+      "bytes": 4342,
+      "sha256": "9085ffab7079a338e00f9ad2f55914301e7cdbb1eac414e882119f101581830f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/45e00ea297cefd89540ea9e554477c3ba13686b2c95f7e596be7f07853673f5a.json": {
+      "bytes": 11047,
+      "sha256": "5c9532cebc8857562cc3a73422ccd76a0a0e34e2d8085c58e1841660fd67b01e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/46ce2a5bf2a80fee245dc594a0713fbd8603c75c1f84367cda9f75ac4ea1c750.json": {
+      "bytes": 5981,
+      "sha256": "1396667a61f4f459f78d99f8c82a635ff3e0b6996b589f9414dbdb0c83283bdb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/480ccc873d84a3122561eca0f13b9ada2ec298a9904f7348160df4897e46369f.json": {
+      "bytes": 62906,
+      "sha256": "9b70e251a37ccc49527df59c9923728192c54b904cb391cddbda0fadae716444"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/48b5f0898b46af6a9a58300c605d479c8caab5ea7cc6bd86e52a5715dbdae1d9.json": {
+      "bytes": 21333,
+      "sha256": "76a25ae80e12e57cccdbea3621db2a27aebff2b27ecd0b1b800e3b01cb543d37"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/54ce7489f5a539c393b7cf4182710d2ad6926a8cc83781cd3fbf41216a74bc5b.json": {
+      "bytes": 5462,
+      "sha256": "96047d2f87b668ec384d43bd3b0f47db1cf9d06a812dce83f7de3d8a5e972fd4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/64963d1b3fae08f1700e48c1e04b83d4af440cff66282d72528a9654c2869025.json": {
+      "bytes": 47157,
+      "sha256": "f6bb4453b892863de139d0838a493375fd736a804a1ebddbe8a223624ca33227"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/6c38b4e23b9a2c6fb4b79d8863a0a1f3ba41a4cda282ac7e024ec4627eba8e34.json": {
+      "bytes": 55263,
+      "sha256": "7dab049740c5e5a3ca4cea6dda501967a03f79ec6155c6935d51ea2738f06bdd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/6fcaecf51d72640af320bdfd755501a74d8c49ee23cc5bf611ded5baded33c96.json": {
+      "bytes": 62307,
+      "sha256": "838fcd8311549a43e52efbf83c4f9dbda63fadf1d4aceb9de45a4e4dc040e5fb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/71599eb91716164d144ceb2cda891485e2309b1399199186de0af8ef1b789373.json": {
+      "bytes": 49473,
+      "sha256": "75478e618fb9a6367b4bb38c017a11790a6a2033316c521ac1852fc3012f891f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/7ad83c6d91231d261bfec99ff6480f633d1020a659ec94442d4cd44b4e1c53c1.json": {
+      "bytes": 6508,
+      "sha256": "b32450117e88353e712a5632ef174bd085e164076e5961651a214598706a5510"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/7dde4fb1695e41856bca6fa63813f2218994bee3183ca0cc0d0e8627a5c4c4f9.json": {
+      "bytes": 36924,
+      "sha256": "27b9afbb7139892447087c01a3c8ccaf726094720579e1c5b2923635485873e4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/80e60280662f3dd8fcfb0b02ffce037c2aeb14e089f200c7b22cc43153cee33e.json": {
+      "bytes": 1796,
+      "sha256": "da5ccec3e5cc9b0d9190c2e5e6403a1cb9f0d4a18ead3d64e43d9c5201e88561"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/8850186ce396e401682bebf9febe98d3643cca44efdb7483ffcc5f8b0625352b.json": {
+      "bytes": 3981,
+      "sha256": "73b1f69a32385ba7b9b0fdd7f5e7a03dd54909b7c7f4208b6560b5c94a34d656"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a01245375703d9a772c168cb0c2cac27af3f6e339ac783f5e1013f4da6772a6c.json": {
+      "bytes": 1026,
+      "sha256": "89f08e7d6bf3552c7071176a7a20d76c8ec652c9dda15cc4b243d0b8767dfaab"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a1684c260b9f38a134d5563f640c2243df86e0663a161e34475fb066b5f77647.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a27aaefe6d173664d44a9886a50f2c42655a9af583be57f6044eb64a19f157e9.json": {
+      "bytes": 45834,
+      "sha256": "df9456c4c34b4ea77b62cc179bcb6bd6560d3ef425102630e26f998f398afaed"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a284b6443c00bd0d70bd3306bca887dc7a07ed595259bbf7cc03d5b24826e286.json": {
+      "bytes": 5643,
+      "sha256": "dfbb79f400bd8adaa6bc2b3b84a5d4cce9a17f6f750afccebc71f6c9b94bdff6"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a92ac19ca15dd22b2d54a7538418716fe806a51dd8e806e04e6c0c3b1d2ab81c.json": {
+      "bytes": 5696,
+      "sha256": "7e7dc40c3a98bd321269c2b1a5ff63bf7f34877af5715978677c5fddeab17ca3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/ab8606c9108ef8350b599756ed67cdd0bee4344f943a708b9274b96d3cb06c46.json": {
+      "bytes": 48557,
+      "sha256": "020cad2c5b1c366fc05eae5c9a95989a41b9993ec8ab83f59f8affbbc81cfda5"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/aca160562fd5f3664ee8669165f37dee1fa59b4eed53e788c099e72c2344928d.json": {
+      "bytes": 1149,
+      "sha256": "285723b5d5eee3059d7b5b1499d37ac2740938e1ec324ce933afca5162647918"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/b3c04eb4a366231ec50a0201f7d3fc53084f65fa2119f21039823149ee938a8f.json": {
+      "bytes": 7629,
+      "sha256": "a99f2bb01623118ec6df6f40a7369caeba5111808f696054853208103af0c47e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/b574515b1d354ea5f5eb50423ac769b4ebfd2bc4fd66e4d9985f79762df7811d.json": {
+      "bytes": 982,
+      "sha256": "0f510fbd729f35c12996ca6074c844589de13fcd2ee047c64c58ed30b41ec31a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/c2060fb318722172e69879a45065b5819b5152c528645676b8c6011912a271e7.json": {
+      "bytes": 19353,
+      "sha256": "497173cdfe63fb5a12edeb30287516034b3d4d36f573aa8a5597e5c3649e7c5d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/c5a9bccdcfbcbda177baa9c7a70605ec2d0c31a634c97ddfc9f68e33022c85de.json": {
+      "bytes": 14234,
+      "sha256": "efaf4fcd06dbe4ee66fb30f658d8558b61d00988d6afd8250f232ea7c94615e9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/c5d2ac374385dece97aa7f652c5adebb3d5a5a40645fce4758529a6d0724d15e.json": {
+      "bytes": 5658,
+      "sha256": "5b047da1816462f043aeabe38fe0bfd18be51cc187d74e48b9ecb123586e406a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/c752440bbbcc24d6fde7ec18ec176a264547371c08cbd2ddb7ff7874326905b1.json": {
+      "bytes": 156475,
+      "sha256": "358143df005a9adc899fab3b8223fd85318f551c51c7510adc41830a0ad4bdcd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cc1fdb5344972be023d4da1c197650b6464a68d8a4184e8076928253fca4959c.json": {
+      "bytes": 1187,
+      "sha256": "695895a5665426b029f1640987e8cdd4d146d3c67aa31da98014274fff294ebe"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cc81621e72d8e0313d877563b394f36eb6f6b1ae10e24e7949b3aeb0c0ec8269.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cea19b49fba44fc6c202235e7810d8ba6c925dfd7029458e5fc6ebe5fa7da6b0.json": {
+      "bytes": 866,
+      "sha256": "0b1ef39aeab5c063d6820e1a4a5428d2f5fad12a9c6d31df435abbfc07ea1d28"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/d0cd778defc57f1992fe9171e8859ab27b2897b4c34cd7dae34f612f4b4cfd37.json": {
+      "bytes": 27543,
+      "sha256": "2dbc24a30f695cdddf65ebb39b6618c9d526ee37a6ac10b7ec00166f7996a5ca"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/d6fe6e1e1698bfc5b94e8f188851f6bf4041cf4b07526f96fb6b47ec9ee3aa16.json": {
+      "bytes": 3117,
+      "sha256": "caba84f8412957f46851be8f2b99b1a2442d605c9bd7e450259757ba7b842aa2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/d83ed12a55fde5894a0053b3d39c859f21e02e5a5858b99725c8310b12abf2c9.json": {
+      "bytes": 11251,
+      "sha256": "70030d583ce730fa36415c5d456554bb78a2570d8e55069ab515a9632134212b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/e95ac9151e81a63489725b2c2fda85e4751ee430282ab10f5706470228f3ec0c.json": {
+      "bytes": 20384,
+      "sha256": "3f3df04d0bcc1a03b929cec55a0583814eaf95aa2cf7d003d795c98e35af45d3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/ff7e0955f96a2e5c3a6d95a17d7be7b82f1683e1324729a333f8c0784b410f54.json": {
+      "bytes": 12149,
+      "sha256": "82cd8648b001f96f4cad4f934ba091a56ecc543720e9c5cf9dbc68eda176a82d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/graphify-out/cache/stat-index.json": {
+      "bytes": 12218,
+      "sha256": "d5168945f0f899c355d27c9cd4a242022ea9612672d5e5e182fc4b20cd2e4955"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/result.json": {
+      "bytes": 1047,
+      "sha256": "81880ba20625931084997dd8b5fa051d036f2a6c19257999324dc4ecd15bb108"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/discovery/structural.json": {
+      "bytes": 646847,
+      "sha256": "23cd6d036d97cf8ff44f433a0040ebb4398b2e93d6ce40f2b6b4c564b58f8086"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/plan.json": {
+      "bytes": 12488,
+      "sha256": "2e68b3d1c78721548b6af7c1100ddd95f6c9903a8ab1a4f864595b9b866719c0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/claude/graphify-ac/source-manifest.json": {
+      "bytes": 13561,
+      "sha256": "2d1976f42c7dfe7d0d1052f327f0aea9db782f61f5c49b3130c193c283bb6193"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/actor-settings.json": {
+      "bytes": 158,
+      "sha256": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/chunks.json": {
+      "bytes": 1707107,
+      "sha256": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 57552,
+      "sha256": "16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/DESIGN_MODULE_METHOD.md": {
+      "bytes": 127008,
+      "sha256": "0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/FOUNDATIONS.md": {
+      "bytes": 85448,
+      "sha256": "2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/GLOSSARY_GUIDE.md": {
+      "bytes": 23252,
+      "sha256": "9332a68e51caaeeb089e21de98d52279f05cbbe1c0cf12659f74a59d8e9709ab"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/IDENTITY_METHOD.md": {
+      "bytes": 23451,
+      "sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/ODD_METHOD.md": {
+      "bytes": 90389,
+      "sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/POSTING_GUIDE.md": {
+      "bytes": 5717,
+      "sha256": "a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/README.md": {
+      "bytes": 10542,
+      "sha256": "bf66c98ad418e0a4e4f09a6987b3287d5a55e4454b2796c07d8c6317d5d93324"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/REFERENCE_FRAME_METHOD.md": {
+      "bytes": 75399,
+      "sha256": "41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/RELEASE_METHOD.md": {
+      "bytes": 43529,
+      "sha256": "be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/SPEC_METHOD.md": {
+      "bytes": 200904,
+      "sha256": "ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/STDO_REFERENCE_FRAME_BASELINE.md": {
+      "bytes": 154727,
+      "sha256": "1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/TICKET_METHOD.md": {
+      "bytes": 80581,
+      "sha256": "682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/TRANSFORMATION_LIBRARY.md": {
+      "bytes": 37191,
+      "sha256": "7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/TRAVERSAL_OCCURRENCE_PROFILE.md": {
+      "bytes": 83968,
+      "sha256": "2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/UX_METHOD.md": {
+      "bytes": 37237,
+      "sha256": "6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/WORLD_MODEL_METHOD.md": {
+      "bytes": 64522,
+      "sha256": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/WRITING_GUIDE.md": {
+      "bytes": 4205,
+      "sha256": "284c155448284e995b6eb2f98ee5d47b43f1d1c11a37896175ba743d2f229c0f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3556,
+      "sha256": "e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 9582,
+      "sha256": "e7ca92dc949a04351a9aec902b1c77528769e942a017dfa81471b22ad771a0e2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/README.md": {
+      "bytes": 6598,
+      "sha256": "6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 779,
+      "sha256": "7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2008,
+      "sha256": "07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3190,
+      "sha256": "57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1747,
+      "sha256": "8ae18a05be06c6f2ebc4407638f5e15968bd400572df6da165c991597e52af57"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1693,
+      "sha256": "d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2830,
+      "sha256": "ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/corpus/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 367,
+      "sha256": "67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/plan.json": {
+      "bytes": 10586,
+      "sha256": "f30c33db4ba32a3369b570ae9d47ab4954508a0dd7bfdccacf9f43ae132b63cf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/direct/source-manifest.json": {
+      "bytes": 13078,
+      "sha256": "8b5356c859a5906c5715e8ec85036fb0568890311f708397a3ea91c724f5d067"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/actor-settings.json": {
+      "bytes": 158,
+      "sha256": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/chunks.json": {
+      "bytes": 1707107,
+      "sha256": "b9d22a07e33692255dd8112c7289c38c31357f7d2d52383ee82955a430f59488"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/AXIOMATIC_CALCULUS.md": {
+      "bytes": 57552,
+      "sha256": "16076adadc7ae9372779eddc5b08ca78e142e29306b00d6e81913771df01c5b0"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/DESIGN_MODULE_METHOD.md": {
+      "bytes": 127008,
+      "sha256": "0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/FOUNDATIONS.md": {
+      "bytes": 85448,
+      "sha256": "2363eaa8d458a1be8bf25601ff43b13d850d860a87d32fa5275a621ef774a25e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/GLOSSARY_GUIDE.md": {
+      "bytes": 23252,
+      "sha256": "9332a68e51caaeeb089e21de98d52279f05cbbe1c0cf12659f74a59d8e9709ab"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/IDENTITY_METHOD.md": {
+      "bytes": 23451,
+      "sha256": "ed0663535d456fad20b5e69b2c1649b48a8a39c0a0bd3e29f274a4fad1d5c90e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/ODD_METHOD.md": {
+      "bytes": 90389,
+      "sha256": "821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/POSTING_GUIDE.md": {
+      "bytes": 5717,
+      "sha256": "a1c0e8829a2619ba26ac30cfdc244e903e96c062e5dd63674cef75f41c9cf179"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/README.md": {
+      "bytes": 10542,
+      "sha256": "bf66c98ad418e0a4e4f09a6987b3287d5a55e4454b2796c07d8c6317d5d93324"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/REFERENCE_FRAME_METHOD.md": {
+      "bytes": 75399,
+      "sha256": "41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/RELEASE_METHOD.md": {
+      "bytes": 43529,
+      "sha256": "be88e35064d62a912827ac5578e9336f2718b242dfb1c3efa12216bb87dd59de"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/SPEC_METHOD.md": {
+      "bytes": 200904,
+      "sha256": "ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/STDO_REFERENCE_FRAME_BASELINE.md": {
+      "bytes": 154727,
+      "sha256": "1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/TICKET_METHOD.md": {
+      "bytes": 80581,
+      "sha256": "682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/TRANSFORMATION_LIBRARY.md": {
+      "bytes": 37191,
+      "sha256": "7ff0f44223749453deeddef7a5ca0b7192424973a330617cf21651b1c4eb46f6"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/TRAVERSAL_OCCURRENCE_PROFILE.md": {
+      "bytes": 83968,
+      "sha256": "2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/UX_METHOD.md": {
+      "bytes": 37237,
+      "sha256": "6dd7724830959bc2de4d3d7fc35093f3145141054c791a72bb79c47000e5143d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/WORLD_MODEL_METHOD.md": {
+      "bytes": 64522,
+      "sha256": "fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/WRITING_GUIDE.md": {
+      "bytes": 4205,
+      "sha256": "284c155448284e995b6eb2f98ee5d47b43f1d1c11a37896175ba743d2f229c0f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/schemas/installed-release-manifest.schema.json": {
+      "bytes": 5903,
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/schemas/product-definition.schema.json": {
+      "bytes": 15346,
+      "sha256": "e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/AGENTS_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/CLAUDE_TEMPLATE.md": {
+      "bytes": 1508,
+      "sha256": "e27610545d3b9648ca8655052a067b64f93941dd096afd8e8b25c8722b1cb20e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/GOALS_TEMPLATE.md": {
+      "bytes": 521,
+      "sha256": "2dc711293f5e7129389efe0e5c3ea86e111c528569e6b72dad983cdbc2c71c3d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/INTENT_TEMPLATE.md": {
+      "bytes": 371,
+      "sha256": "85b1e6c83b30d619e9f7f8018315022b6963edaa03f908e7aac38a16d5bdab26"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json": {
+      "bytes": 3556,
+      "sha256": "e4189e5e51d525b7d7926ca88c9b9182b4686b8adf81108e72e24b847db94d34"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/PRODUCT_TEMPLATE.md": {
+      "bytes": 1267,
+      "sha256": "0e5365e4c87faecbaccb20aa8a106364afcd07635ca52dffbbf4a223873256f9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": {
+      "bytes": 9582,
+      "sha256": "e7ca92dc949a04351a9aec902b1c77528769e942a017dfa81471b22ad771a0e2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/README.md": {
+      "bytes": 6598,
+      "sha256": "6e30d6e945a758bb4d34612c181a4ac694f9c19b8533b67d7ae0e73a57195a31"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md": {
+      "bytes": 1803,
+      "sha256": "8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/common/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "e88790f0521229ca41cadc82af434908e5d8782748ccc93eb287d0e2fb5efae8"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/common/design/README_TEMPLATE.md": {
+      "bytes": 779,
+      "sha256": "7bfaf3873571c9d8a267aa8acc8e47522fc48cd90cfdef9d50216c9ae008e6bd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 2008,
+      "sha256": "07d28d93675b86b51953b84584aa7119cf80269354a76aa2356ff18397c7c4cd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md": {
+      "bytes": 3190,
+      "sha256": "57fd95e135d36059611bca65bc091dafb94809ab521db834a4457513f91737e7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/README_TEMPLATE.md": {
+      "bytes": 206,
+      "sha256": "0236d71e75b917f4b008474478eda7662e62fc7b11cc7409b8299b2e26f3ef96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/README_TEMPLATE.md": {
+      "bytes": 1747,
+      "sha256": "8ae18a05be06c6f2ebc4407638f5e15968bd400572df6da165c991597e52af57"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md": {
+      "bytes": 1693,
+      "sha256": "d2f77e99fcbafb0b3a2603e4c5854333ae22b65d78ed82a418f7a3b9ecbd988b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md": {
+      "bytes": 2830,
+      "sha256": "ae46291f42650da55c279b2aa09ac9ae1c91285b50ff73c0f4d2e538f68a3591"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md": {
+      "bytes": 432,
+      "sha256": "76e33d7a4a75d77644eec20f6d5d3611894320eab05e36580d29cf90c28a4490"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md": {
+      "bytes": 353,
+      "sha256": "4542edc7e3a51bfba843530f1ee6b03fd3615f27a65d0f8815ae054225a5594c"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json": {
+      "bytes": 426,
+      "sha256": "996e1f2cd55090519e7c487ec46333afd2994a546c15190bb11d862e3a0683c4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md": {
+      "bytes": 220,
+      "sha256": "1432362afe35b5816259e6bef0163ffc38db6639557cd4541d2804ff04d02991"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/docs/README_TEMPLATE.md": {
+      "bytes": 188,
+      "sha256": "9c3425ff8b49c2b5573e9b8f0130b7a3e5f7d3ddcc01204aec363327e0872e7f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/requirements/README_TEMPLATE.md": {
+      "bytes": 838,
+      "sha256": "4eacc1d3604e4859b60fc29c4bc6555fcd5de11d9ca1773258eedfb398e0f4a9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/corpus/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md": {
+      "bytes": 367,
+      "sha256": "67e2061e7eb7757bdb71cff5775cfea90b33b5019ba31e1509e4d456cf66e5dd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/coverage.json": {
+      "bytes": 344053,
+      "sha256": "f5f1d131db31e07a0b849a8a4068599091123fc8b112f2565254e4e364cdd833"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graph.json": {
+      "bytes": 538705,
+      "sha256": "852d388d5e1e0235871e9ee557c0f54d5f7d4313b8be84d17ac4f839491d12bb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/01729b560d5395da010f065318a69e64bfd21de732c11d088c403f32fc8cf0da.json": {
+      "bytes": 153425,
+      "sha256": "7a8944988702696dfbe7e9e911e6c81ec8ddcbff8c4361e191f300644d120cb2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/023a7ee7ceefcc2ce6ecc47947350329be95f50359cbe56e473ed46bb7fe9012.json": {
+      "bytes": 10118,
+      "sha256": "645aaac96748d0628ec5f0fb8ee05d13cb346578a44517e654541a6e436d7a51"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0782a3f0eb1e4057f4d1a7abb96586415a7d52692962bf1cf9da4ee5c64689b5.json": {
+      "bytes": 1149,
+      "sha256": "829cce2915270827c2adafab92c6e3f63096b20a7e2ef56ff42246da2e0cef99"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/083c0399351d59adc18b0139fac45451d78c782da8414065bf292ebd50dd04ac.json": {
+      "bytes": 70644,
+      "sha256": "f55ee6508b4493e40541f296213ed50758e465e94d97c7cf1b28d689b127e4f2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0aaca7cdf42fdf60cd7a660ad2262ba24b90276db789d1db9fb7cae0fac0102b.json": {
+      "bytes": 3652,
+      "sha256": "6ddd35bb01fb098653803f7acee58ba6aebbb311caf46bb9c2ae2920a2b89763"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0d5725ba97226e14247459c8a658fa7e8e9503ffbb254415607734eb44d42680.json": {
+      "bytes": 70263,
+      "sha256": "b90c8805c107d333bf8f654d0892e5099cba2e9f1007a3966f08e3937b6924c2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/0dc73f3fbbe1f22cc5f2f41a7e150c17f0b25ac4445b300816cbcb789bee5704.json": {
+      "bytes": 5981,
+      "sha256": "1396667a61f4f459f78d99f8c82a635ff3e0b6996b589f9414dbdb0c83283bdb"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/12a8cd474f71de7a23f2e08ca7d8200bf1a9706ff440b49193098e4a89961508.json": {
+      "bytes": 51178,
+      "sha256": "0dc8c5f2eceb06baa1ee572a8c9fb8770388544ca0ff011effb142742e893de7"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1584ccbf845b7cf4f1570589df53f79c9c386d2203480c49374a03a986293479.json": {
+      "bytes": 9395,
+      "sha256": "a16011296871a9e7cd49fab645509c8a95945d2c33a1e163f83b563aeb8c4387"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/183c44ea7229a2523344c362179633ee4e4a5bcf6f872879a611738675807ab2.json": {
+      "bytes": 102249,
+      "sha256": "36141c54a5159b8cbdc690036b4f7bd4eee93b5734fc19b1358c869dc02b85e9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/190e04ab622ef51099ac1a821fc76587ab1305110e44023c7eced6cbe8ee1075.json": {
+      "bytes": 11294,
+      "sha256": "ea97e470b9e0ffa65c0b231df34d853a7497264313b088038fa4289093aebb9b"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1c53f687786d8bb1aab82cc5747851d65be4ac15a43b904234e1dafaf52e6246.json": {
+      "bytes": 1091,
+      "sha256": "647783467bf31295ac934f561aee07cfc51056563f64432ca07e5f3de8413a72"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/1e87938eca49add5ecd413347509fbc117f4a9bbcf4398690794ce538dd50530.json": {
+      "bytes": 2431,
+      "sha256": "3200c6659c282eb08accc5ec2c1dce49ce01cffb010528fbac34d1a24750af2a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/222b0d3171cf878d529b4286e4c3f3ff0d47fc1516a49538c08e2c2bf9f5d69f.json": {
+      "bytes": 1887,
+      "sha256": "a1c596ac918b9558378c7f68b49807ba97693d2cbf3a268aefd8af04133b56ce"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/23c12c9c58aab20ed5beb0df5a32d0ecec38f3a89cef0698a67208565bfc8b62.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/2fd58cfd17d0835ad9203634d1d35df0f692614369288f81842937dbe8630d93.json": {
+      "bytes": 13091,
+      "sha256": "e8d1452e20febe28493006fd952bfa639bf0754f94b1efe49d4db29c4b627f96"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/328df278be8b3650e8904607240fcb6270f885d6f224a4de54f0279df734c4d5.json": {
+      "bytes": 17926,
+      "sha256": "1b403e2f02fb1eb16e4d00aa0a03ef879f4654f4e80edb01414a0eb880513901"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/35fc68a9dc3dcb42e0c1a84e285feb33052c059b29f8f8825b4fd3afc95db41d.json": {
+      "bytes": 4342,
+      "sha256": "9085ffab7079a338e00f9ad2f55914301e7cdbb1eac414e882119f101581830f"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/48712fb29bef1fa957b0f6a20011d2913232afd6c82a296868acad845cad3ec7.json": {
+      "bytes": 5643,
+      "sha256": "67180b4a031cda19f9ef505b086d6cd552f739e3b4678b94690f1adba6822565"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/519c00f6dca091a36b9a669b625f68b669bc180d756ed3dc4e08a98c452945de.json": {
+      "bytes": 22460,
+      "sha256": "c1ca63f248d48452a620a781a84035a9cf9a3822ecd398ad78390c720a08dd4d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/521becafe45fcbbd986d5ea2f0ba4d6e3b5384cc8be8a7dcc5570cd8da84405e.json": {
+      "bytes": 53664,
+      "sha256": "1627cd45e0bef9aa3953f3503c42642f0883c6fb8043111793db8dd208146e75"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/54ce7489f5a539c393b7cf4182710d2ad6926a8cc83781cd3fbf41216a74bc5b.json": {
+      "bytes": 5462,
+      "sha256": "96047d2f87b668ec384d43bd3b0f47db1cf9d06a812dce83f7de3d8a5e972fd4"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/573e8bc917c7a7aa97488d8492487f0010c2797b471a8902b1c5b82d5091c259.json": {
+      "bytes": 5696,
+      "sha256": "7e7dc40c3a98bd321269c2b1a5ff63bf7f34877af5715978677c5fddeab17ca3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/6e7339e29469bc7c0c453ac309515ea26be23947d404f87232a9172c08b9c630.json": {
+      "bytes": 5658,
+      "sha256": "5b047da1816462f043aeabe38fe0bfd18be51cc187d74e48b9ecb123586e406a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/6fab7674400fae3abd741122da6e1aa0a65469c1505e55ab3b0a97df8d5d23e4.json": {
+      "bytes": 3830,
+      "sha256": "ff886f28d94d30cc0593aaca2d3ad7d41462f7c75ef708d938508dbe530cc5bd"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/729bb9ff6cc8a02834628f1622b3b9fd49daa0ae898bce6b1c43b9d058ea8281.json": {
+      "bytes": 1803,
+      "sha256": "42041660cad8bfa3da3bfd36200df6c0caa0ba27f4cb77db2fe3a19f41f6ced2"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/8850186ce396e401682bebf9febe98d3643cca44efdb7483ffcc5f8b0625352b.json": {
+      "bytes": 3981,
+      "sha256": "73b1f69a32385ba7b9b0fdd7f5e7a03dd54909b7c7f4208b6560b5c94a34d656"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/90e6cae55b225a292cda1726c8d8dee25498490b2d4c1b8e097e79bf59400976.json": {
+      "bytes": 23697,
+      "sha256": "d9a1c982849fe03266c83089fab273148e5782c59288af58d3c0f84cba34299d"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/9a788635ade61989429f30f1930b85dc78e0267ab75648290df7de9d12dcc9ef.json": {
+      "bytes": 22341,
+      "sha256": "be5be5f3fe3a6fd8182ed827c7136c291d4239ec8a3019a1e3760d6fad94c704"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/9c0592869f1efb66d56e3e7a5312ed7eb0d4d65ac8cff9cd10f5091d6af5028c.json": {
+      "bytes": 71547,
+      "sha256": "608c0fc9de61e59e86cec1f11d64d6e89aa16e0ffe87fefecbdf1dca76947d72"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a01245375703d9a772c168cb0c2cac27af3f6e339ac783f5e1013f4da6772a6c.json": {
+      "bytes": 1026,
+      "sha256": "89f08e7d6bf3552c7071176a7a20d76c8ec652c9dda15cc4b243d0b8767dfaab"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/a1684c260b9f38a134d5563f640c2243df86e0663a161e34475fb066b5f77647.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/ab77a4752955a91aa24d0095ca097e917343427291d16e8d5589149fe04fb128.json": {
+      "bytes": 67804,
+      "sha256": "5bb29e47aff1930c8a75f1b17fe673fd2aa43935bf79dfdcafcb76b84a5ea48e"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/aca160562fd5f3664ee8669165f37dee1fa59b4eed53e788c099e72c2344928d.json": {
+      "bytes": 1149,
+      "sha256": "285723b5d5eee3059d7b5b1499d37ac2740938e1ec324ce933afca5162647918"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/b574515b1d354ea5f5eb50423ac769b4ebfd2bc4fd66e4d9985f79762df7811d.json": {
+      "bytes": 982,
+      "sha256": "0f510fbd729f35c12996ca6074c844589de13fcd2ee047c64c58ed30b41ec31a"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/c29d9b28056e4e1f25e1e1700c75c441bec0d1734875572713a0d07ecf86f864.json": {
+      "bytes": 27543,
+      "sha256": "2dbc24a30f695cdddf65ebb39b6618c9d526ee37a6ac10b7ec00166f7996a5ca"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cc1fdb5344972be023d4da1c197650b6464a68d8a4184e8076928253fca4959c.json": {
+      "bytes": 1187,
+      "sha256": "695895a5665426b029f1640987e8cdd4d146d3c67aa31da98014274fff294ebe"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cc81621e72d8e0313d877563b394f36eb6f6b1ae10e24e7949b3aeb0c0ec8269.json": {
+      "bytes": 74,
+      "sha256": "436b073b1a2c5e3a10ba314bda87a18b7fe7deedf14c79b99583a5b4457f9e52"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/ce9851250f7940b5a87b7d47abc354dd6324f012f303f4753e2340fa590ac0bd.json": {
+      "bytes": 6004,
+      "sha256": "70c661ea066edb1adb4a97e58f995a29445f64b4479e3bd3f1a9424895489fcc"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/cea19b49fba44fc6c202235e7810d8ba6c925dfd7029458e5fc6ebe5fa7da6b0.json": {
+      "bytes": 866,
+      "sha256": "0b1ef39aeab5c063d6820e1a4a5428d2f5fad12a9c6d31df435abbfc07ea1d28"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/e421dfd786117930ef30d2eb2a8cd803db1cb8af1768b1e920f3ca8e1d2cab76.json": {
+      "bytes": 6334,
+      "sha256": "f09a75031335d6f2349955a3c5c7b548fe0c5c863a6c2f7a8e535310b34b3431"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/ed562b60fe7bd170f9d47e02477d088888947e6601c1318cdbd2fc552c5d54d3.json": {
+      "bytes": 1713,
+      "sha256": "42d31bab2c4a4508c10b19921ba0ca29a6ef0f2a5a1560063b050be952f1de58"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/fd67b3b39831a1b5f9c4e1ad7381731582d7fc32491a0db55d79ff89b1b64170.json": {
+      "bytes": 55581,
+      "sha256": "ff5ea3782e23b8b71f470b298442a38e0702a242ac1b3c854137d12350d6e8c9"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/ast/vunknown-s15-g56e2fe729e1d/fe127371b1dff8b935a104d60cbcb4d3d5bbaa93adf5ed1a65b0d7c181f082a9.json": {
+      "bytes": 29576,
+      "sha256": "9ac52b340c9e79a59f0b27e065b80869fdbf2ef68debe10871a4cf4eab29dd53"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/graphify-out/cache/stat-index.json": {
+      "bytes": 11323,
+      "sha256": "6ec131b7a1d84e7e904ef7901b8a7198fc9a1b629858b5459b55ef61add766e3"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/result.json": {
+      "bytes": 1046,
+      "sha256": "b81a5321eb0bb066b0609f196301032465bf9aa752c03dc7ddc724b7e8f98d65"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/discovery/structural.json": {
+      "bytes": 607750,
+      "sha256": "6fadd66778c5cfa653377d4bd461d49198267554245da0506fcfdfe11cd54051"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/plan.json": {
+      "bytes": 10926,
+      "sha256": "492f7a0da6b2318aaaf104ea3a83f40e7bfaccb8f19b159ee471c8d8aaacab42"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/runs-v2/codex/graphify-ac/source-manifest.json": {
+      "bytes": 13078,
+      "sha256": "8b5356c859a5906c5715e8ec85036fb0568890311f708397a3ea91c724f5d067"
+    },
+    "a_c/dogfood/stdo-v3-generation-rc9/summarize_generation.py": {
+      "bytes": 7930,
+      "sha256": "d6d7aebf6577fa5bf72589aeb58df4e251542bb9b8ec7a7968989d5d76e94dbd"
+    }
+  },
+  "frozen_at": "2026-10-18T07:36:01.735727+00:00",
+  "frozen_before_evaluated_model_answers": true,
+  "initial_call_count": 60,
+  "mutable_report_paths": [
+    "README.md",
+    "results.json",
+    "comparison.json",
+    "COMPARISON.md"
+  ],
+  "old_generation_freeze": "../stdo-v3-generation/freeze-v2.json",
+  "profile": "ac.generation.rc9-study-freeze/1",
+  "settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "config_path": "/Users/jim/.codex/config.toml",
+    "config_sha256": "6b412812de72895a10a1cd2ec2c51e0bf697c0f4814fbea172ef9a4ebedd8909",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "profile": "ac.generation.rc9-launch-review/1",
+  "closed_at": "2026-10-18T07:39:16.730864+00:00",
+  "assessor": "/root/ac_generation_design",
+  "verdict": "No actionable defect for the bounded RC9 rebuild launch.",
+  "freeze_sha256": "66510c4329b5ce11fb44ce0c88ed8e089367398527e3479a72651f00302de69b",
+  "repair_freeze_sha256": "7b40afe340bdb8bd5938b3fb802ed1ffdf6d4d3b7f4c979e24e1afebdb99c67b",
+  "verified": {
+    "generation_freeze_pins": 426,
+    "repair_freeze_pins": 18,
+    "shared_files_exact_to_checkpoint": 15,
+    "source_treatment_prompts_recomputed": 60,
+    "within_candidate_chunks_equal": true,
+    "old_new_codex_content_partitions_identical": 11,
+    "claude_changed_partition_ordinals": [
+      2,
+      3,
+      9
+    ],
+    "settings_config_cli_unchanged": true,
+    "old_study_and_shared_implementation_unchanged": true,
+    "actual_upstream_clean_at_pin": true,
+    "stat_indexes_contain_only_their_own_source_files": [
+      44,
+      49
+    ],
+    "raw_semantic_nodes_and_edges": 0
+  },
+  "phase_barrier": "All fresh author retries close before any repair reservation. Author-only coordinator excluded thereafter; combined per-chunk limit3, global max4.",
+  "test_basis": "Exact shared code/test hashes match the previously passed107-test actual-upstream run; no redundant test rerun. New subject assembly still requires native and pinned-upstream verification.",
+  "limits": "Read-only launch and source/implementation custody review. No actor output, semantic assessment, conformance, acceptance or performance conclusion."
+}
