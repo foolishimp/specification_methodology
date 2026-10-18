@@ -18,7 +18,8 @@ frozen RC4 package unless the repair is named.
 The affected-consumer inspection found one additional fidelity defect in the
 drift determination's argument: it still offered “wrong code or stale governing
 stack” as exhaustive alternatives and retained “constitutional renewal” as the
-gap response. The source had already replaced those shortcuts. The current
+gap response. The Constitutional Chain argument also retained an old Goals/Intent endpoint.
+The source had already replaced those shortcuts. The current
 account now preserves causal diagnosis, possible inadequate observation and
 the smallest owning re-entry. This is a representation repair under the same
 source owner, not new method law.
