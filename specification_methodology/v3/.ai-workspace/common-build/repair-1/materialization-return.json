@@ -1,0 +1,44 @@
+{
+  "kind": "stdo.common-repair-materialization-return",
+  "valid": true,
+  "candidate_commit": "7d0516f37716298f038548c4152a1a697ce70f95",
+  "candidate_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+  "candidate_inventory": {
+    "path": "package-inventory.json",
+    "sha256": "187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd"
+  },
+  "checker_sha256": "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac",
+  "coordinates": {
+    "path": "materialization-coordinates.json",
+    "sha256": "607cc103096c9b82743e538a349ee9fee89f8f1528d0e5df5a7f752a2aa00d94"
+  },
+  "manifest": {
+    "path": "materialized-manifest.json",
+    "sha256": "820b9cbcff67f26123b4888266e3715dcd807bc7ad06839da5cf478c5b0a0f46"
+  },
+  "receipt": {
+    "path": "installed-verifier.json",
+    "sha256": "00c47891b4ff681fdd08912b0e63fef0a4f917b12da8a618bb8944daabe61244"
+  },
+  "program": {
+    "path": "verify_installed.py",
+    "sha256": "741addc2cfe8079a9b5bd78e84b6eff6a79174132bf25d5d3ea5e26206324520"
+  },
+  "runtime": {
+    "executable": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "jsonschema_version": "4.26.0",
+    "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "stdo_toolchain_version": "0.1.5"
+  },
+  "installed_basis_schema": {
+    "errors": [],
+    "label": "installed_basis_schema",
+    "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/schemas/installed-release-manifest.schema.json",
+    "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+    "valid": true
+  },
+  "package_members": 81,
+  "same_candidate_member_bytes": true,
+  "installed_verifier_failures": [],
+  "standing": "Mechanical verification of materialization from committed candidate bytes with explicit prospective coordinates. No release-shaped source-tree attestation, published tag, live installation, acceptance or qualification."
+}

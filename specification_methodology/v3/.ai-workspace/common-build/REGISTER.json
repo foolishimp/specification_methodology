@@ -991,13 +991,18 @@
     "path": "repair-1/package-inventory.json",
     "sha256": "187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd"
   },
-  "candidate_commit": null,
-  "candidate_tree": null,
+  "candidate_commit": "7d0516f37716298f038548c4152a1a697ce70f95",
+  "candidate_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
   "standalone_decision_register": "repair-1/DECISIONS.json",
   "standalone_decision_readback": "repair-1/DECISIONS.md",
   "review_readback": {
     "source": "repair-1/inputs/PINS.json",
-    "status": "B1-B3 author repairs integrated; D1-D4 explicitly pending; supplementary review and installed verification in progress"
+    "status": "B1-B3 and records repairs passed bounded same-family nonauthor supplementary review; D1-D4 and existing decisions remain pending; covering review unassigned",
+    "supplementary_review": {
+      "path": "../comments/codex/20261018T173900Z_COMMON_REPAIR_SUPPLEMENTARY_REVIEW.md",
+      "sha256": "0debb44a04e0ae7bead52612c1e69c5071147d63e54feb1433222274a72629b7",
+      "standing": "bounded same-family nonauthor review, not covering independent review"
+    }
   },
   "candidate_history": [
     {

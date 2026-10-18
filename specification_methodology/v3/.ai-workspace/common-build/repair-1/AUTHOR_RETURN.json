@@ -1,6 +1,6 @@
 {
   "kind": "stdo.common-review-repair-author-return",
-  "status": "candidate_ready_for_supplementary_review",
+  "status": "bounded_repairs_checked_owner_decisions_and_covering_review_pending",
   "standing": "Author construction return; not covering review, owner acceptance, qualification or release freeze.",
   "preimage_commit": "d60dead410b1d7e19d88ed80037d8a22708d8cc4",
   "review_input": "inputs/PINS.json",
@@ -266,7 +266,16 @@
     "P1": "covering reviewer class; wording conflict remains explicit",
     "Q10": "existing unresolved scope interpretation; not settled by copy editing",
     "actual_use_qualification": "not performed for repaired subject",
-    "identity_record_follow_through": "D1 semantic-address and digest-format checks remain outside B1 repair verdict"
+    "identity_record_follow_through": "D1 semantic-address and digest-format rules incomplete before a runnable identity-record claim; independently confirmed by supplementary reviewer."
   },
-  "installed_verification": "pending; first-build result is not reused as proof for these bytes"
+  "installed_verification": {
+    "path": "materialization-return.json",
+    "valid": true,
+    "scope": "Mechanical verification of materialization from committed candidate bytes with explicit prospective coordinates. No release-shaped source-tree attestation, published tag, live installation, acceptance or qualification."
+  },
+  "supplementary_review": {
+    "path": "../comments/codex/20261018T173900Z_COMMON_REPAIR_SUPPLEMENTARY_REVIEW.md",
+    "sha256": "0debb44a04e0ae7bead52612c1e69c5071147d63e54feb1433222274a72629b7",
+    "standing": "bounded same-family nonauthor review, not covering independent review"
+  }
 }

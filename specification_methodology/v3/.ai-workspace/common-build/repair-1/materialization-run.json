@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-c",
+    "import hashlib,pathlib,sys\np=pathlib.Path(sys.argv[1]);b=p.read_bytes()\nif hashlib.sha256(b).hexdigest()!=sys.argv[2]:raise SystemExit(\"checker identity mismatch\")\nsys.argv=[str(p)]+sys.argv[3:]\nexec(compile(b,str(p),\"exec\"),{\"__name__\":\"__main__\",\"__file__\":str(p),\"__authenticated_checker_sha256__\":hashlib.sha256(b).hexdigest()})",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/tools/package_tools.py",
+    "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac",
+    "materialize",
+    "--root",
+    "/private/tmp/stdo-common-repair1-eoaa7kai/source/specification_methodology/v3/build_tenants/common",
+    "--inventory",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/repair-1/package-inventory.json",
+    "--inventory-sha256",
+    "187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd",
+    "--coordinates",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/repair-1/materialization-coordinates.json",
+    "--coordinates-sha256",
+    "607cc103096c9b82743e538a349ee9fee89f8f1528d0e5df5a7f752a2aa00d94",
+    "--destination",
+    "/private/tmp/stdo-common-repair1-eoaa7kai/materialized",
+    "--report",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/repair-1/materialization-check.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"failures\": [], \"advisory_signals\": [{\"path\": \"plugins/spec/references/GETTING_STARTED.md\", \"line\": 604, \"pattern\": \"complete Product view\", \"text\": \"uncertainty. Executive combines that evidence with the complete Product view\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 370, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1274, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1825, \"pattern\": \"complete Product view\", \"text\": \"against the complete Product view and the current MVP or release\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/ODD.md\", \"line\": 14, \"pattern\": \"result algebra is\", \"text\": \"the core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results).\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/TRAVERSAL_OCCURRENCE.md\", \"line\": 15, \"pattern\": \"result algebra is\", \"text\": \"core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results),\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/UX.md\", \"line\": 16, \"pattern\": \"result algebra is\", \"text\": \"again: the core result algebra is\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 67, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 651, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}], \"parsed_json_count\": 7, \"checked_local_reference_count\": 5860, \"external_or_template_references\": [], \"reference_scope\": \"Markdown inline/reference/HTML links outside code examples; JSON $ref, explicit standards/plugins routes and non-template path-shaped fields. Prose and generated-project paths require review.\", \"kind\": \"stdo.common-package-check\", \"publication_policy\": \"standalone-v3-publication-1\", \"package_root\": \"/private/tmp/stdo-common-repair1-eoaa7kai/source/specification_methodology/v3/build_tenants/common\", \"inventory_sha256\": \"187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd\", \"member_count\": 81, \"empty_directories\": [], \"checker_sha256\": \"30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac\", \"checker_authentication\": \"pinned inline launcher before execution\", \"project_helpers\": [], \"valid\": true, \"standing\": \"isolated canonical layout materialized with declared coordinates; no Git-object attestation, published release or installation\", \"destination\": \"/private/tmp/stdo-common-repair1-eoaa7kai/materialized\", \"coordinates_sha256\": \"607cc103096c9b82743e538a349ee9fee89f8f1528d0e5df5a7f752a2aa00d94\", \"manifest_sha256\": \"820b9cbcff67f26123b4888266e3715dcd807bc7ad06839da5cf478c5b0a0f46\", \"standards_member_set_sha256\": \"3b97fc16469da5d4d8d27317ff1c179b549a12f2bc357e24db2571c7ee6759ce\", \"full_package_members_transferred\": 81}\n",
+  "stderr": "",
+  "restoration": {
+    "commit": "7d0516f37716298f038548c4152a1a697ce70f95",
+    "archive_path": "specification_methodology/v3/build_tenants/common",
+    "candidate_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+    "archive_sha256": "8dfb686433c894829bd71ee2a841fc2f4f4e417e84b51c4588fb1702dc363de5"
+  }
+}
