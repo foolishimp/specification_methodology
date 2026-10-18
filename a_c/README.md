@@ -15,6 +15,17 @@ Read [stdo_a_c.json](stdo_a_c.json), [Goals](specification/GOALS.md),
 The exact calculus remains owned by the selected published STDO standard; this
 project does not create a competing definition of `a_c`.
 
+The additional [F_D support toolset](specification/PRODUCT.md#f_d-support-for-f_p-development-actors)
+is specified for F_P Executives, Workers and Reviewers. STDO3.0 owns the
+methodology; these tools support its exact caller-selected contracts through
+acquisition, context assembly, deterministic checks, dispatch/capture and
+evidence operations. The [requirements and source-owner map](specification/requirements/README.md#deterministic-support-tools)
+record the provisional common V3 derivation reference without adopting it as
+this Product's installed builder or a runtime dependency. [T-007](.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md)
+is specification work only: new tenant design, public interfaces,
+implementation and qualification are pending. Existing scripts are building
+blocks, and frozen methodology models are not a live whole-workspace index.
+
 This is a development candidate, with no Product acceptance or release claim.
 See the tenant README for runnable commands and the bounded qualification claim.
 

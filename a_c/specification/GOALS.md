@@ -1,5 +1,19 @@
 # Goals
 
+The current source increment is
+[T-007](../.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md):
+specify additional [deterministic support tools](requirements/fd-support-tools.md)
+for F_P Executives, Workers and Reviewers. STDO3.0 owns the method/lifecycle
+contracts; a_c specifies exact inputs/outputs, acquisition, assembly, declared
+checks, dispatch/capture and evidence operations. The
+[source-owner map](requirements/fd-source-owner-map.md) pins provisional common
+V3 clauses without changing the installed v2.5.1-rc.2 builder, adopting V3 or
+creating a sibling/runtime dependency. Product and requirement authoring are
+in scope; owning design, implementation, public runtime interfaces and
+qualification are pending (Deferred). Existing source-to-model F_P authoring
+and frozen comparison studies remain unchanged. No method acceptance,
+performance gain or release claim follows from this specification increment.
+
 The completed comparison-preparation increment is
 [T-006](../.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md):
 [fresh Codex/Claude RC9 representations](../dogfood/stdo-v3-generation-rc9/README.md)

@@ -27,3 +27,23 @@ Physical file layout and Graphify-specific record grammar belong to tenant HOW.
 Interpretation fidelity, representation preservation, actual use, semantic
 acceptance and release are separate deciding questions. Their evidence and
 residuals remain explicit even when a mechanical check succeeds.
+
+## Deterministic support tools
+
+The additional toolset supports F_P Executives, Workers and Reviewers under
+STDO3.0-owned method contracts. It does not own another lifecycle, frame/packet
+definition, applicability policy, result algebra or review/acceptance path.
+The exact provisional contract derivation and the separate builder/consumer
+basis roles are in the [source-owner map](fd-source-owner-map.md).
+
+| Family | Category | Status and scope |
+|---|---|---|
+| [REQ-AC-FD-*](fd-support-tools.md) | Capability | Deferred: exact public tool inputs, deterministic output/checks, acquired content, executor observations and evidence interfaces; owning design and realization pending. |
+| [REQ-AC-FDV-*](fd-support-verification.md) | Verification | Deferred: ordinary actor use, source/evidence-bound refusal/recovery scenarios and accepted-result usefulness/cost; execution and qualification pending. |
+
+Deferred records delivery status without withdrawing the owner-requested
+Product outcome. These families apply to implementations declaring the
+additional support capability and supplement, without rewriting, AC-R-001..015.
+They do not retrospectively qualify existing scripts or frozen study artifacts.
+The separate existing source-to-model F_P authoring capability remains intact.
+Protocol, CLI/MCP, schemas, storage, providers and executors belong to tenant HOW.
