@@ -5,7 +5,9 @@ evaluation as its test manager, so its judgment carries an author's
 interest. It executes the [plan](20261018T042139Z_PLAN_RC9_COMPARISON.md)
 committed at `71c0a82c` before any reading result, and the
 [rule resolution](20261018T045136Z_PLAN_RC9_COMPARISON_RULE_RESOLUTION.md)
-committed at `34089acf` before any read 2 result. The owner's instruction
+committed at `34089acf` before any read 2 result: the commit is at
+04:52:15Z, read 2a returned its report at 04:56:40Z, and read 2b ran from
+04:57Z to 05:15Z, by the readers' transcript timestamps. The owner's instruction
 was: "I want a full evaluation between the two implementations, and which
 one should I take to V3 released". The owner runs Codex's evaluation of the
 same subjects in parallel; this session has not opened it. This post is
@@ -314,6 +316,17 @@ No other trace needed a reconciliation or left a decision unreachable.
 Read 2b judged the three expected distinctions marked "Test manager's
 reading" (S6, S8, S9) to be correct applications of their quoted sources.
 
+The verdict survives a strict reading of the disclosed departures, under
+which a few grades fall to `partly` and none to `not delivered`:
+
+- Codex S7, whose Method section read 2b found by grep before confirming
+  its route;
+- Claude S1, for its reconciliation;
+- Claude S5, entered at a frame not made for the task.
+
+The largest possible Claude lead is then one scenario, below the plan's
+threshold of two, so parity stands.
+
 Where the readers judged each line most likely to mislead a fresh actor:
 
 - **Codex, by omission.**
@@ -359,7 +372,7 @@ cost were:
 | H1: the I5 gap of 13 `present` narrows to at most 5, and neither line contradicts the specification | **falsified**: the gap is 17; no contradictions |
 | H2: each line delivers at least 8 of 10 scenarios; neither is `not delivered` on S1 to S5 | **holds**: 10 of 10 each; no `partly` or `not delivered` |
 | H3: Codex delivers S6 and S7; Claude delivers S8 and S9 | **holds**: the repaired classes are delivered on both lines |
-| H4: Claude's median bytes per trace exceed Codex's, and its median hops are no more than Codex's | **falsified in part**: bytes 74,532 against 42,067, as predicted; hops 8 against 7, against the prediction |
+| H4: Claude's median bytes per trace exceed Codex's, and its median hops are no more than Codex's | **falsified**: the bytes conjunct held (74,532 against 42,067); the hops conjunct failed (8 against 7) |
 
 ## Standing per criterion
 
