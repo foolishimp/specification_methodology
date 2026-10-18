@@ -1,7 +1,7 @@
-# STDO 3.0.0 RC7, Claude line candidate
+# STDO 3.0.0 RC8, Claude line candidate
 
-Release note of the Claude line's seventh release-candidate cut of the STDO
-Specification Methodology, version line 3.0.0, candidate 7. It is
+Release note of the Claude line's eighth release-candidate cut of the STDO
+Specification Methodology, version line 3.0.0, candidate 8. It is
 reconciled to the exact subject it ships with: the freeze commit on
 `tenant/claude/c3-synthesis` (commit A of RELEASE §7's two-commit
 construction) that holds this file. The cut is not published: the local
@@ -13,14 +13,15 @@ below is read from the record (`qualification/C3-ITER5/COUNTS.json`).
 
 ## Identity and refs
 
-- Version line `3.0.0`, candidate `rc.7`; local tag
-  `specification_methodology-claude/v3.0.0-rc.7` over commit A. Candidates
+- Version line `3.0.0`, candidate `rc.8`; local tag
+  `specification_methodology-claude/v3.0.0-rc.8` over commit A. Candidates
   1, 2, 3 and 5 stay immutable at `af3b8b7`, `ba882bc`, `9e90169` and
   `4a63c92` with their tags `specification_methodology-claude/v3.0.0-rc.1`,
   `-rc.2`, `-rc.3` and `-rc.5`. Candidate 4, `7c64978` with its tag `-rc.4`
   and manifest commit `336b264`, was superseded before review by
-  candidate 5. Candidate 6, `9905497` with its tag `-rc.6` and manifest
-  commit `d3d8d8c`, was superseded before review by candidate 7.
+  candidate 5. Candidates 6, `9905497` with its tag `-rc.6` and manifest
+  commit `d3d8d8c`, and 7, `7cea510` with its tag `-rc.7` and manifest
+  commit `ede430e`, were superseded before review by candidate 8.
 - Project subtree root `specification_methodology/v3/build_tenants/claude`.
 - Common input: C3-I5-06 at `4c340f7`; last reviewed candidate on this
   line: candidate 5, `4a63c92`.
@@ -57,6 +58,14 @@ localisation or ACTIVATION §1 Feedback and diagnosis. With C5-01 this adds
 four proposed supersessions and extends the drift-signals row, all pending
 the product owner's acceptance; Q19 now covers eight rows. No stored reading
 covers the changed sections.
+
+The consumers paragraphs of the three diagnosis owners now name the
+sections that route to them: ACTIVATION's feedback-and-diagnosis row names
+DESIGN_MODULE §5 Proportional design sequencing, EXECUTIVE_BASELINE §20 and
+ASSURANCE §1; ASSURANCE's counterexample-localisation row names §1; and
+SPEC_METHOD's first change-management row names the constitutional chain,
+the renewal path, the eleventh spec-drivenness condition and the drift
+signals. The determination record carries the same consumers.
 
 Found by this line's final check: the interpretation's freeze script wrote
 the README's artifact digests before its consumers step regenerated
@@ -155,7 +164,7 @@ authority compressions out of scope for the baseline.
 
 ## Plugin inventory
 
-`plugins/spec`, 17 files, version label `3.0.0-rc.7` in both plugin
+`plugins/spec`, 17 files, version label `3.0.0-rc.8` in both plugin
 manifests, digests in `release/manifest.json`.
 
 ## Manager inventory

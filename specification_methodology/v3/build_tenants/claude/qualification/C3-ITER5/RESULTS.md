@@ -1,8 +1,8 @@
-# Results, iteration 5, candidate 7 (I5-09)
+# Results, iteration 5, candidate 8 (I5-09)
 
 The standing of this candidate against the six member acceptance criteria
 of the C3 Construction Contract and the integrated closure checks, at the
-candidate 7 freeze. Every figure here is read from the record by
+candidate 8 freeze. Every figure here is read from the record by
 `qualification/C3-ITER5/tools/counts.py` (`COUNTS.json`). Values are the
 ratified ones; `unresolved` is a state of the work, never a judgment;
 nothing here is `satisfied` as a criterion, because no criterion has had

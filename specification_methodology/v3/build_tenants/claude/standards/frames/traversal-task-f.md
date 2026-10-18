@@ -6,7 +6,7 @@ Purpose: The owning sections for occurrence events, relation families, constrain
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
 - An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=999878fc125b35047cadc804e7a904d7c1095a7669a28f05c55d690642397d17 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
@@ -1147,7 +1147,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
+Source: ACTIVATION.md#effects sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487
 
 ### Effects
 

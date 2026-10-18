@@ -6,7 +6,7 @@ Purpose: The owning sections for the method's canonical statement; the product l
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -50,7 +50,7 @@ Routes, in order:
 
 Size of this frame: 86163 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=a9af987337606202ae4feccfbf807e3c8910685ec3e02520cf42c8f9cce65300
+Source: SPEC_METHOD.md#canonical-statement sha256=b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24
 
 ### Canonical statement
 
@@ -503,7 +503,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
+Source: ACTIVATION.md#intake sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487
 
 ### Intake
 
@@ -547,7 +547,7 @@ this section consumes those laws and creates no second design package
 and the engagement basis (rc.2 RF #establish-the-evaluation-basis).
 
 
-Source: ACTIVATION.md#admission sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
+Source: ACTIVATION.md#admission sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487
 
 ### Admission
 
@@ -591,7 +591,7 @@ the selection of the carrier (ticket, sprint entry, run-scoped contract)
 is tier-2 law in the [TICKETS](../TICKETS.md) member, which disposes those rows.
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=c2009a691e33a374ea221e8ece7202d9086dfb2fe83f326d70232a039a191fc3
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487
 
 ## 2. Context construction under an envelope
 
@@ -1104,7 +1104,7 @@ global context, universal completeness or domain authority inferred from
 adopting the member. §15 records dispositions and decides nothing.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=a9af987337606202ae4feccfbf807e3c8910685ec3e02520cf42c8f9cce65300 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
