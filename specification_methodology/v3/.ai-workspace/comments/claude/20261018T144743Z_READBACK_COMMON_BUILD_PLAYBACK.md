@@ -119,13 +119,17 @@ share (49 to 53) and 3 on the readers' reading (51 to 54). The register's
    reviewer. One split would be:
    - this session reviews the port against the register, disclosing its
      interest;
-   - Codex's RC9 review stands for the unchanged seed;
+   - Codex's RC9 review counts for unchanged seed text only where the
+     applicability relation to the new subject is established (P1,
+     ACTIVATION §7). This session read only lines 60–66 of that review;
    - the register itself still needs the covering review.
-8. **Names.** The register's "common README" and "common PRODUCT" are the
-   requirements README and PRODUCT at `4c340f7`, as the loan evaluation
-   defines them (line 18). A tenant named `common` will hold its own
-   README, so the freeze record should restate that definition. The
-   worktree path `specification_methodology-common` and the branch
+8. **Names.** The tenant name follows Claude's own starter, which names
+   `templates/build_tenants/common/` for the shared realisation. But the
+   register's "common README" and "common PRODUCT" are the requirements
+   README and PRODUCT at `4c340f7`, as the loan evaluation defines them
+   (line 18). The new tenant will hold its own README, so the freeze record
+   should restate that definition. The worktree path
+   `specification_methodology-common` and the branch
    `common/v3-direction-synthesis` (`9d26bb3a`, already merged) exist.
 
 ## Checked and consistent
